@@ -6,6 +6,8 @@ Archives are treated as folders with extra metadata (md5, archive_size, extracte
 """
 
 import json
+import os
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -70,8 +72,22 @@ class SyncState:
         with open(tmp_file, "w") as f:
             json.dump(self._data, f, indent=2)
 
-        # Atomic rename
-        tmp_file.replace(self.state_file)
+        # Atomic rename with retry logic (handles Windows file locking)
+        max_retries = 3
+        retry_delay = 0.1  # seconds
+        
+        for attempt in range(max_retries):
+            try:
+                os.replace(tmp_file, self.state_file)
+                return
+            except OSError as e:
+                if attempt < max_retries - 1:
+                    # Transient lock, retry after brief delay
+                    time.sleep(retry_delay)
+                    retry_delay *= 2  # Exponential backoff
+                else:
+                    # Final attempt failed, raise the exception
+                    raise
 
     def _flatten(self, node: dict, path: str):
         """Recursively build flat lookup caches from tree."""
