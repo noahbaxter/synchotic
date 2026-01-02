@@ -15,13 +15,21 @@ def set_terminal_size(cols: int = 90, rows: int = 40):
         cols: Number of columns (width)
         rows: Number of rows (height)
     """
-    if os.name == 'nt':
-        # Windows: use mode command
-        os.system(f'mode con: cols={cols} lines={rows}')
-    else:
-        # macOS/Linux: use ANSI escape sequence
-        # \x1b[8;{rows};{cols}t sets window size
-        print(f'\x1b[8;{rows};{cols}t', end='', flush=True)
+    try:
+        if os.name == 'nt':
+            # Windows: use mode command (may fail if not in a proper console)
+            import subprocess
+            subprocess.run(
+                f'mode con: cols={cols} lines={rows}',
+                shell=True,
+                capture_output=True
+            )
+        else:
+            # macOS/Linux: use ANSI escape sequence
+            # \x1b[8;{rows};{cols}t sets window size
+            print(f'\x1b[8;{rows};{cols}t', end='', flush=True)
+    except Exception:
+        pass  # Fail silently if terminal resize isn't supported
 
 
 def clear_screen():

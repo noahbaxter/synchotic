@@ -14,6 +14,7 @@ Directory structure:
     path/to/Sync Charts/    - Downloaded chart files
 """
 
+import os
 import sys
 from pathlib import Path
 
@@ -39,9 +40,14 @@ def get_app_dir() -> Path:
     """
     Get the directory where the app is located.
 
+    For launcher builds: uses SYNCHOTIC_ROOT env var (set by launcher)
     For frozen (PyInstaller): directory containing the executable
     For development: directory containing sync.py (repo root)
     """
+    # Launcher sets this to point to the user-facing exe location
+    root = os.environ.get("SYNCHOTIC_ROOT")
+    if root:
+        return Path(root)
     if getattr(sys, "frozen", False):
         return Path(sys.executable).parent
     # Development: repo root (parent of src/core/)

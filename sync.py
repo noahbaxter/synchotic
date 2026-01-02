@@ -545,6 +545,13 @@ class SyncApp:
 
         self.load_manifest()
 
+        # Show startup time if launched via launcher
+        start_time = os.environ.get("SYNCHOTIC_START_TIME")
+        if start_time:
+            import time
+            elapsed = time.time() - float(start_time)
+            print(f"  Ready in {elapsed:.2f}s")
+
         selected_index = 0  # Track selected position for maintaining after actions
         menu_cache = None  # Cache for expensive menu calculations
 
@@ -621,8 +628,9 @@ class SyncApp:
 
 def main():
     """Entry point."""
-    # Set terminal to consistent size for proper rendering
-    set_terminal_size(90, 40)
+    # Set terminal size (skip if launched via launcher - it handles this)
+    if not os.environ.get("SYNCHOTIC_ROOT"):
+        set_terminal_size(90, 40)
 
     parser = argparse.ArgumentParser(
         description="DM Chart Sync - Download charts from Google Drive"
