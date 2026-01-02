@@ -3,120 +3,16 @@ name: Release
 on:
   push:
     branches: [main]
-    paths: ['VERSION']
+    paths: [VERSION]
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  test:
-    strategy:
-      matrix:
-        include:
-          - os: macos-latest
-            name: macos
-          - os: windows-latest
-            name: windows
-
-    runs-on: ${{ matrix.os }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Setup UnRAR library
-        uses: ./.github/actions/setup-unrar
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest
-
-      - name: Run tests
-        run: pytest tests/ -v -m "not stress"
-
   build:
-    needs: test
-    strategy:
-      matrix:
-        include:
-          - os: macos-latest
-            name: macos
-            artifact: synchotic-macos
-          - os: windows-latest
-            name: windows
-            artifact: synchotic.exe
-
-    runs-on: ${{ matrix.os }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pyinstaller
-
-      - name: Inject API key for build
-        env:
-          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-        run: |
-          if [ "${{ matrix.name }}" = "windows" ]; then
-            sed -i 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
-          else
-            sed -i '' 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
-          fi
-        shell: bash
-
-      - name: Setup UnRAR library
-        uses: ./.github/actions/setup-unrar
-
-      - name: Build executable (macOS)
-        if: matrix.name == 'macos'
-        run: |
-          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
-          pyinstaller --onefile --name synchotic-macos --clean --noconfirm \
-            --add-data "drives.json:." \
-            --add-data "VERSION:." \
-            --add-data "$CERTIFI_PATH:certifi" \
-            --add-binary "libs/bin/unrar:." \
-            --hidden-import certifi \
-            --hidden-import rarfile \
-            sync.py
-
-      - name: Build executable (Windows)
-        if: matrix.name == 'windows'
-        run: |
-          $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
-          pyinstaller --onefile --name synchotic --clean --noconfirm `
-            --add-data "drives.json;." `
-            --add-data "VERSION;." `
-            --add-data "$CERTIFI_PATH;certifi" `
-            --add-binary "libs/bin/UnRAR.exe;." `
-            --hidden-import certifi `
-            --hidden-import rarfile `
-            sync.py
-        shell: pwsh
-
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ matrix.artifact }}
-          path: dist/${{ matrix.artifact }}
+    uses: ./.github/workflows/build-app.yml
+    secrets: inherit
 
   release:
     needs: build
@@ -130,7 +26,7 @@ jobs:
         id: version
         run: echo "version=v$(cat VERSION)" >> $GITHUB_OUTPUT
 
-      - name: Download all artifacts
+      - name: Download artifacts
         uses: actions/download-artifact@v4
         with:
           path: artifacts
@@ -143,23 +39,22 @@ jobs:
           VERSION="${{ steps.version.outputs.version }}"
 
           if gh release view "$VERSION" > /dev/null 2>&1; then
-            # Release exists - just update assets, preserve notes
+            echo "Updating existing release $VERSION..."
             gh release upload "$VERSION" \
-              artifacts/synchotic-macos/synchotic-macos \
-              artifacts/synchotic.exe/synchotic.exe \
+              artifacts/app-macos.zip/app-macos.zip \
+              artifacts/app-windows.zip/app-windows.zip \
               --clobber
           else
-            # New release - create with default notes
+            echo "Creating new release $VERSION..."
             gh release create "$VERSION" \
               --title "Synchotic $VERSION" \
               --notes "Release $VERSION" \
-              artifacts/synchotic-macos/synchotic-macos \
-              artifacts/synchotic.exe/synchotic.exe
+              artifacts/app-macos.zip/app-macos.zip \
+              artifacts/app-windows.zip/app-windows.zip
           fi
 
       - name: Summary
         run: |
-          echo "### Release Created" >> $GITHUB_STEP_SUMMARY
-          echo "- Version: ${{ steps.version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
-          echo "- macOS: synchotic-macos" >> $GITHUB_STEP_SUMMARY
-          echo "- Windows: synchotic.exe" >> $GITHUB_STEP_SUMMARY
+          echo "### Release ${{ steps.version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
+          echo "- macOS: app-macos.zip" >> $GITHUB_STEP_SUMMARY
+          echo "- Windows: app-windows.zip" >> $GITHUB_STEP_SUMMARY

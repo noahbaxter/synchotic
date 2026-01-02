@@ -1,59 +1,24 @@
-name: CI
+name: Build App
 
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-permissions:
-  contents: read
+  workflow_call:
+    inputs:
+      upload_artifacts:
+        description: 'Whether to upload build artifacts'
+        type: boolean
+        default: true
 
 jobs:
-  test:
-    strategy:
-      matrix:
-        include:
-          - os: macos-latest
-            name: macos
-          - os: windows-latest
-            name: windows
-
-    runs-on: ${{ matrix.os }}
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Setup UnRAR library
-        uses: ./.github/actions/setup-unrar
-
-      - name: Install dependencies
-        run: |
-          pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install pytest
-
-      - name: Run tests
-        run: pytest tests/ -v -m "not stress"
-
   build:
-    needs: test
-    if: github.ref == 'refs/heads/main'
     strategy:
       matrix:
         include:
           - os: macos-latest
             name: macos
-            artifact: synchotic-macos
+            artifact: app-macos.zip
           - os: windows-latest
             name: windows
-            artifact: synchotic.exe
+            artifact: app-windows.zip
 
     runs-on: ${{ matrix.os }}
 
@@ -76,7 +41,6 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
-          # Replace the env var lookup with the actual key for the build
           if [ "${{ matrix.name }}" = "windows" ]; then
             sed -i 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
           else
@@ -87,12 +51,11 @@ jobs:
       - name: Setup UnRAR library
         uses: ./.github/actions/setup-unrar
 
-      - name: Build executable (macOS)
+      - name: Build app (macOS)
         if: matrix.name == 'macos'
         run: |
-          # Include certifi CA bundle for SSL verification in bundled app
           CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
-          pyinstaller --onefile --name synchotic-macos --clean --noconfirm \
+          pyinstaller --onedir --name synchotic-app --clean --noconfirm \
             --add-data "drives.json:." \
             --add-data "VERSION:." \
             --add-data "$CERTIFI_PATH:certifi" \
@@ -101,12 +64,11 @@ jobs:
             --hidden-import rarfile \
             sync.py
 
-      - name: Build executable (Windows)
+      - name: Build app (Windows)
         if: matrix.name == 'windows'
         run: |
-          # Include certifi CA bundle for SSL verification in bundled app
           $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
-          pyinstaller --onefile --name synchotic --clean --noconfirm `
+          pyinstaller --onedir --name synchotic-app --clean --noconfirm `
             --add-data "drives.json;." `
             --add-data "VERSION;." `
             --add-data "$CERTIFI_PATH;certifi" `
@@ -116,7 +78,25 @@ jobs:
             sync.py
         shell: pwsh
 
+      - name: Add version file
+        run: cp VERSION dist/synchotic-app/.version
+        shell: bash
+
+      - name: Create app zip (macOS)
+        if: matrix.name == 'macos'
+        run: |
+          cd dist
+          zip -r -q app-macos.zip synchotic-app
+
+      - name: Create app zip (Windows)
+        if: matrix.name == 'windows'
+        run: |
+          cd dist
+          Compress-Archive -Path "synchotic-app\*" -DestinationPath "app-windows.zip" -Force
+        shell: pwsh
+
       - name: Upload artifact
+        if: inputs.upload_artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact }}
