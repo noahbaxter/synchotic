@@ -6,9 +6,15 @@
 #   ./build.sh           Build app only (default, used by CI)
 #   ./build.sh app       Build app only (onedir → zip)
 #   ./build.sh launcher  Build launcher only (tiny onefile)
+#   ./build.sh dev <dir> Build both and copy to target dir for local testing
 #   ./build.sh --clean   Remove build artifacts
 #
 # The launcher is built rarely (stable). App builds happen on every release.
+#
+# Dev mode usage:
+#   ./build.sh dev /mnt/t/TEMP
+#   Then run: launcher.exe --dev         (keeps settings, replaces app)
+#             launcher.exe --dev --clean (fresh install)
 #
 
 set -e
@@ -235,6 +241,56 @@ clean() {
     echo_info "Clean complete"
 }
 
+# Build both launcher and app, copy to target dir for local testing
+build_dev() {
+    local TARGET_DIR="$1"
+
+    if [ -z "$TARGET_DIR" ]; then
+        echo_error "Target directory required: ./build.sh dev <dir>"
+        exit 1
+    fi
+
+    # Resolve to absolute path
+    TARGET_DIR=$(cd "$TARGET_DIR" 2>/dev/null && pwd || echo "$TARGET_DIR")
+
+    if [ ! -d "$TARGET_DIR" ]; then
+        echo_error "Target directory does not exist: $TARGET_DIR"
+        exit 1
+    fi
+
+    echo_info "Dev build → $TARGET_DIR"
+    echo ""
+
+    # Build launcher
+    build_launcher
+
+    # Build app
+    build_app
+
+    # Determine filenames based on platform
+    if [ "$PLATFORM" = "macos" ]; then
+        LAUNCHER_FILE="dist/synchotic-launcher-macos"
+        APP_ZIP="dist/app-macos.zip"
+    else
+        LAUNCHER_FILE="dist/synchotic-launcher.exe"
+        APP_ZIP="dist/app-windows.zip"
+    fi
+
+    echo ""
+    echo_info "Copying to $TARGET_DIR..."
+
+    cp "$LAUNCHER_FILE" "$TARGET_DIR/"
+    cp "$APP_ZIP" "$TARGET_DIR/"
+
+    echo_info "Done! Files copied:"
+    echo_info "  - $(basename "$LAUNCHER_FILE")"
+    echo_info "  - $(basename "$APP_ZIP")"
+    echo ""
+    echo_info "To test:"
+    echo_info "  --dev         keeps settings, replaces app, deletes zip"
+    echo_info "  --dev --clean fresh install (nukes .dm-sync first)"
+}
+
 usage() {
     echo "Usage: $0 [mode]"
     echo ""
@@ -242,13 +298,15 @@ usage() {
     echo "  (none)     Build app only (default, for CI)"
     echo "  app        Build app only (onedir → zip)"
     echo "  launcher   Build launcher only (tiny onefile)"
+    echo "  dev <dir>  Build both and copy to target dir for local testing"
     echo "  --clean    Remove build artifacts"
     echo "  --help     Show this help"
     echo ""
     echo "Output is created in the 'dist' directory."
     echo ""
-    echo "The launcher is built rarely and distributed separately."
-    echo "App builds happen on every release."
+    echo "Dev mode example:"
+    echo "  ./build.sh dev /mnt/t/TEMP"
+    echo "  Then run: launcher.exe --dev"
 }
 
 main() {
@@ -270,6 +328,12 @@ main() {
             check_deps
             setup_venv
             build_launcher
+            ;;
+        dev)
+            detect_platform
+            check_deps
+            setup_venv
+            build_dev "$2"
             ;;
         *)
             echo_error "Unknown option: $1"

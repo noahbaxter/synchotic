@@ -56,6 +56,7 @@ class UserSettings:
                 settings.delete_videos = data.get("delete_videos", True)
                 settings.oauth_prompted = data.get("oauth_prompted", False)
                 settings.delta_mode = data.get("delta_mode", "size")
+                settings._is_new = data.get("use_default_drives", False)
             except (json.JSONDecodeError, IOError):
                 settings._is_new = True
         else:
@@ -72,6 +73,7 @@ class UserSettings:
             "delete_videos": self.delete_videos,
             "oauth_prompted": self.oauth_prompted,
             "delta_mode": self.delta_mode,
+            "use_default_drives": self._is_new,
         }
         with open(self.path, "w") as f:
             json.dump(data, f, indent=2)

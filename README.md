@@ -86,6 +86,33 @@ pip install pyinstaller
 pyinstaller --onefile --name synchotic sync.py
 ```
 
+### Local Testing (Windows builds from WSL/macOS)
+
+For testing Windows builds locally without pushing to GitHub:
+
+```bash
+# Build launcher + app, copy to a test folder
+./build.sh dev /mnt/t/TEST      # WSL example
+./build.sh dev ~/Desktop/test   # macOS example
+```
+
+Then run the launcher with dev flags:
+
+```
+# Windows (in target folder)
+synchotic-launcher.exe --dev           # Replace app, keep settings
+synchotic-launcher.exe --dev --clean   # Fresh install (nuke .dm-sync)
+
+# macOS
+./synchotic-launcher-macos --dev
+./synchotic-launcher-macos --dev --clean
+```
+
+**How it works:**
+- `--dev`: If `app-windows.zip` (or `app-macos.zip`) exists, extracts it and deletes the zip. If no zip, uses existing `_app` folder.
+- `--clean`: Nukes entire `.dm-sync/` folder first (fresh install).
+- Subsequent `--dev` runs without a new zip just use the existing app.
+
 ### Manifest Updates
 
 The manifest auto-updates daily via GitHub Actions.

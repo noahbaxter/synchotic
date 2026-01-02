@@ -22,6 +22,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 _start_time = time.time()
+_log_file = None
 
 GITHUB_REPO = "noahbaxter/synchotic"
 GITHUB_API_BASE = f"https://api.github.com/repos/{GITHUB_REPO}/releases"
@@ -40,6 +41,16 @@ def get_release_url() -> str:
 def is_offline_mode() -> bool:
     """Check if running in offline mode (skip update check)."""
     return "--offline" in sys.argv
+
+
+def is_dev_mode() -> bool:
+    """Check if running in dev mode (use local zip, no GitHub)."""
+    return "--dev" in sys.argv
+
+
+def is_clean_mode() -> bool:
+    """Check if running in clean mode (nuke .dm-sync/ first)."""
+    return "--clean" in sys.argv
 
 
 def get_launcher_dir() -> Path:
@@ -78,6 +89,11 @@ def get_asset_name() -> str:
     if sys.platform == "win32":
         return "app-windows.zip"
     return "app-macos.zip"
+
+
+def get_local_zip_path() -> Path:
+    """Get path to local app zip (same folder as launcher)."""
+    return get_launcher_dir() / get_asset_name()
 
 
 def get_version_file() -> Path:
@@ -127,6 +143,45 @@ def write_state(state: dict):
     state_file.write_text(json.dumps(state, indent=2))
 
 
+# --- Logging ---
+
+def init_logging():
+    """Initialize daily log file."""
+    global _log_file
+    log_dir = get_dm_sync_dir()
+    log_dir.mkdir(parents=True, exist_ok=True)
+    date_str = time.strftime("%Y-%m-%d")
+    log_path = log_dir / f"launcher-{date_str}.log"
+    try:
+        _log_file = open(log_path, "a", encoding="utf-8")
+        log(f"=== Launcher started at {time.strftime('%Y-%m-%d %H:%M:%S')} ===")
+    except Exception:
+        pass
+
+
+def log(message: str):
+    """Write message to log file."""
+    if _log_file:
+        try:
+            timestamp = time.strftime("%H:%M:%S")
+            _log_file.write(f"[{timestamp}] {message}\n")
+            _log_file.flush()
+        except Exception:
+            pass
+
+
+def close_logging():
+    """Close log file."""
+    global _log_file
+    if _log_file:
+        try:
+            log("=== Launcher exiting ===")
+            _log_file.close()
+        except Exception:
+            pass
+        _log_file = None
+
+
 # --- Directory change handling ---
 
 def _save_launcher_state(current_path: str):
@@ -158,11 +213,13 @@ def _prompt_directory_action() -> str:
 
 def _do_delete(old_dm_sync: Path):
     """Delete old .dm-sync folder."""
+    log(f"Deleting old data: {old_dm_sync}")
     print(f"\nDeleting old data at {old_dm_sync}...")
     try:
         shutil.rmtree(old_dm_sync)
         print("Done!")
     except Exception as e:
+        log(f"Delete failed: {e}")
         print(f"Warning: Failed to delete: {e}")
         print("Continuing anyway...")
 
@@ -170,12 +227,14 @@ def _do_delete(old_dm_sync: Path):
 def _do_move(old_dm_sync: Path) -> bool:
     """Move old .dm-sync to new location. Returns True on success."""
     new_dm_sync = get_dm_sync_dir()
+    log(f"Moving data: {old_dm_sync} -> {new_dm_sync}")
 
     if new_dm_sync.exists():
         print(f"\nNote: {new_dm_sync} already exists, removing it first...")
         try:
             shutil.rmtree(new_dm_sync)
         except Exception as e:
+            log(f"Failed to remove existing folder: {e}")
             print(f"Failed to remove existing folder: {e}")
             return False
 
@@ -185,6 +244,7 @@ def _do_move(old_dm_sync: Path) -> bool:
         print("Done!")
         return True
     except Exception as e:
+        log(f"Move failed: {e}")
         print(f"Failed to move: {e}")
         return False
 
@@ -224,12 +284,15 @@ def handle_directory_change():
         _save_launcher_state(current_path)
         return
 
+    log(f"Launcher moved: {old_path} -> {current_path}")
+
     # Prompt user
     print(f"\nIt looks like you moved the launcher from:")
     print(f"  {Path(old_path).parent}")
     print(f"\nFound cached app data at old location.")
 
     choice = _prompt_directory_action()
+    log(f"User chose: {choice}")
 
     if choice == "M":
         if not _do_move(old_dm_sync):
@@ -238,6 +301,7 @@ def handle_directory_change():
     if choice == "D":
         _do_delete(old_dm_sync)
     elif choice == "I":
+        log("Ignoring old data")
         print("\nIgnoring old data, will download fresh.")
 
     _save_launcher_state(current_path)
@@ -357,80 +421,148 @@ def extract_app(zip_path: Path, version: str):
 
 # --- Main ---
 
+def wait_for_keypress():
+    """Wait for any key press."""
+    if sys.platform == "win32":
+        import msvcrt
+        msvcrt.getch()
+    else:
+        import termios
+        import tty
+        fd = sys.stdin.fileno()
+        old = termios.tcgetattr(fd)
+        try:
+            tty.setraw(fd)
+            sys.stdin.read(1)
+        finally:
+            termios.tcsetattr(fd, termios.TCSADRAIN, old)
+
+
 def error_exit(message: str) -> NoReturn:
     """Print error message and exit."""
+    log(f"ERROR: {message}")
+    close_logging()
     print(f"\n{'=' * 40}")
     print("ERROR")
     print("=" * 40)
     print(f"\n{message}")
-    print("\nPress Enter to exit...")
+    print("\nPress any key to exit...")
     try:
-        input()
-    except (EOFError, KeyboardInterrupt):
+        wait_for_keypress()
+    except (EOFError, KeyboardInterrupt, Exception):
         pass
     sys.exit(1)
 
 
 def set_terminal_size(cols: int = 90, rows: int = 40):
-    """Set terminal window size."""
+    """Set terminal window size. Works on cmd.exe and PowerShell, not Windows Terminal."""
     if sys.platform == "win32":
-        try:
-            subprocess.run(
-                f"mode con: cols={cols} lines={rows}",
-                shell=True,
-                capture_output=True,
-            )
-        except Exception:
-            pass
+        os.system(f"mode con: cols={cols} lines={rows}")
+    else:
+        # macOS/Linux: ANSI escape sequence
+        print(f"\x1b[8;{rows};{cols}t", end="", flush=True)
 
 
 def main():
     set_terminal_size(90, 40)
+    init_logging()
 
     print("\nSynchotic Launcher")
     print("=" * 40)
 
-    handle_directory_change()
+    # Handle --dev: local development mode
+    if is_dev_mode():
+        log("Dev mode")
+        print("[DEV MODE]")
 
-    app_exe = get_app_dir() / get_app_exe_name()
+        local_zip = get_local_zip_path()
+        app_dir = get_app_dir()
 
-    if is_offline_mode():
+        # --clean: nuke entire .dm-sync/
+        if is_clean_mode():
+            dm_sync = get_dm_sync_dir()
+            if dm_sync.exists():
+                log(f"Clean mode - deleting {dm_sync}")
+                close_logging()
+                print(f"  Cleaning {dm_sync}...")
+                shutil.rmtree(dm_sync)
+                init_logging()
+
+        if local_zip.exists():
+            # Zip found: replace _app only, delete zip after
+            log(f"Found local zip: {local_zip}")
+            print(f"  Found: {local_zip.name}")
+
+            # Remove old _app if exists
+            if app_dir.exists():
+                shutil.rmtree(app_dir)
+
+            extract_app(local_zip, "dev")
+            print("  Extracted!")
+
+            # Delete the zip
+            local_zip.unlink()
+            log("Deleted zip after extraction")
+            print("  Zip deleted.")
+        elif app_dir.exists():
+            # No zip, but _app exists - use it
+            log("No zip found, using existing _app")
+            print("  No zip found, using existing app.")
+        else:
+            error_exit("No local zip and no existing app. Run build.sh dev first.")
+
+    elif is_offline_mode():
+        log("Offline mode - skipping update check")
         print("[OFFLINE MODE] Skipping update check...")
+        app_exe = get_app_dir() / get_app_exe_name()
         if not app_exe.exists():
             error_exit("No cached app found. Run without --offline to download.")
     else:
+        handle_directory_change()
+
         print("Checking for updates...")
         release = fetch_latest_release()
         download_url, remote_version = get_download_url(release)
+        log(f"Remote version: v{remote_version}")
 
         installed_version = get_installed_version()
+        log(f"Installed version: v{installed_version}" if installed_version else "No version installed")
 
         needs_download = False
+        app_exe = get_app_dir() / get_app_exe_name()
         if not app_exe.exists():
+            log("App not installed, will download")
             print(f"  App not installed, downloading v{remote_version}...")
             needs_download = True
         elif installed_version != remote_version:
+            log(f"Update available: v{installed_version} -> v{remote_version}")
             print(f"  Update available: v{installed_version} -> v{remote_version}")
             needs_download = True
         else:
+            log("Already up to date")
             print(f"  Up to date (v{installed_version})")
 
         if needs_download:
             with tempfile.TemporaryDirectory() as tmp:
                 zip_path = Path(tmp) / "app.zip"
                 print("\nDownloading...")
+                log(f"Downloading from: {download_url}")
                 download_with_progress(download_url, zip_path)
                 extract_app(zip_path, remote_version)
+                log(f"Extracted v{remote_version}")
                 print("  Done!")
+
+    app_exe = get_app_dir() / get_app_exe_name()
 
     if not app_exe.exists():
         error_exit(f"App executable not found after installation:\n{app_exe}")
 
+    log(f"Launching app: {app_exe}")
     print(f"\nLaunching synchotic...")
     print("=" * 40 + "\n")
 
     # Filter out launcher-specific args before passing to app
-    launcher_flags = {"--offline"}
+    launcher_flags = {"--offline", "--dev", "--clean"}
     launcher_opts = {"--test-release"}  # These consume the next arg too
     filtered_args = []
     skip_next = False
@@ -446,6 +578,8 @@ def main():
     env = os.environ.copy()
     env["SYNCHOTIC_ROOT"] = str(get_launcher_dir())
     env["SYNCHOTIC_START_TIME"] = str(_start_time)
+
+    close_logging()
 
     if sys.platform == "win32":
         result = subprocess.run(args, env=env)
