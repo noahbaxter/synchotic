@@ -1,0 +1,93 @@
+name: Release Launcher
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g., launcher-v1)'
+        required: true
+        default: 'launcher-v1'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            name: macos
+            artifact: synchotic-launcher-macos
+          - os: windows-latest
+            name: windows
+            artifact: synchotic-launcher.exe
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PyInstaller
+        run: pip install pyinstaller
+
+      - name: Build launcher (macOS)
+        if: matrix.name == 'macos'
+        run: |
+          pyinstaller --onefile --name synchotic-launcher-macos --clean --noconfirm launcher.py
+
+      - name: Build launcher (Windows)
+        if: matrix.name == 'windows'
+        run: |
+          pyinstaller --onefile --name synchotic-launcher --clean --noconfirm launcher.py
+        shell: pwsh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: dist/${{ matrix.artifact }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create or Update Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          TAG="${{ github.event.inputs.tag }}"
+
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "Updating existing release $TAG..."
+            gh release upload "$TAG" \
+              artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
+              artifacts/synchotic-launcher-macos/synchotic-launcher-macos \
+              --clobber
+          else
+            echo "Creating new release $TAG..."
+            gh release create "$TAG" \
+              --title "Synchotic Launcher" \
+              --notes "Downloads and auto-updates the Synchotic app." \
+              artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
+              artifacts/synchotic-launcher-macos/synchotic-launcher-macos
+          fi
+
+      - name: Summary
+        run: |
+          echo "### Launcher Release ${{ github.event.inputs.tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Windows: synchotic-launcher.exe" >> $GITHUB_STEP_SUMMARY
+          echo "- macOS: synchotic-launcher-macos" >> $GITHUB_STEP_SUMMARY
