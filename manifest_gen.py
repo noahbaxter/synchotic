@@ -253,13 +253,111 @@ def find_shortcuts_in_folder(client: DriveClient, folder_id: str) -> list[dict]:
     return shortcuts
 
 
+def sample_files_for_shortcut(manifest: Manifest, parent_folder_id: str, shortcut_name: str, sample_size: int = 3) -> list[dict]:
+    """
+    Get a sample of files under a shortcut path from the manifest.
+
+    Returns the N most recently modified files (best chance of detecting changes).
+    """
+    parent_folder = manifest.get_folder(parent_folder_id)
+    if not parent_folder:
+        return []
+
+    prefix = shortcut_name + "/"
+    matching_files = []
+
+    for f in parent_folder.files:
+        path = f.get("path", "") if isinstance(f, dict) else f.path
+        if path.startswith(prefix):
+            modified = f.get("modified", "") if isinstance(f, dict) else getattr(f, "modified", "")
+            file_id = f.get("id", "") if isinstance(f, dict) else f.id
+            if file_id and modified:
+                matching_files.append({"id": file_id, "modified": modified, "path": path})
+
+    # Sort by modified time descending, take top N
+    matching_files.sort(key=lambda x: x["modified"], reverse=True)
+    return matching_files[:sample_size]
+
+
+def check_files_changed(client: DriveClient, files: list[dict]) -> bool:
+    """
+    Check if any of the sampled files have been modified.
+
+    Returns True if any file's modifiedTime differs from manifest.
+    """
+    for f in files:
+        try:
+            meta = client.get_file_metadata(f["id"], fields="id,modifiedTime")
+            if meta:
+                current = meta.get("modifiedTime", "")
+                if current != f["modified"]:
+                    return True
+            else:
+                # File was deleted
+                return True
+        except Exception:
+            # If we can't check, assume it might have changed
+            return True
+    return False
+
+
+def count_immediate_children(client: DriveClient, folder_id: str) -> int:
+    """Count immediate children in a folder (quick check for new/deleted items)."""
+    params = client._get_params(
+        q=f"'{folder_id}' in parents and trashed = false",
+        fields="files(id)",
+        pageSize=1000,
+        supportsAllDrives="true",
+        includeItemsFromAllDrives="true",
+    )
+    try:
+        response = client._request_with_retry(
+            "GET", client.API_FILES,
+            params=params,
+            headers=client._get_headers()
+        )
+        return len(response.json().get("files", []))
+    except Exception:
+        return -1  # Unknown, will trigger rescan
+
+
+def get_stored_child_count(manifest: Manifest, shortcut_id: str) -> int:
+    """Get stored child count for a shortcut, or -1 if not tracked."""
+    stored = manifest.shortcut_folders.get(shortcut_id, {})
+    return stored.get("child_count", -1)
+
+
+def should_force_rescan(manifest: Manifest, shortcut_id: str, hours: int = 6) -> bool:
+    """Check if shortcut hasn't been rescanned in N hours (safety net)."""
+    from datetime import datetime, timezone
+    stored = manifest.shortcut_folders.get(shortcut_id, {})
+    last_rescan = stored.get("last_rescan", "")
+    if not last_rescan:
+        return True  # Never rescanned
+    try:
+        last_dt = datetime.fromisoformat(last_rescan.replace("Z", "+00:00"))
+        now = datetime.now(timezone.utc)
+        hours_since = (now - last_dt).total_seconds() / 3600
+        return hours_since >= hours
+    except (ValueError, TypeError):
+        return True
+
+
 def check_shortcut_folders(
     client: DriveClient,
     manifest: Manifest,
     root_folders: list[dict],
+    drives_config: DrivesConfig = None,
 ) -> list[dict]:
     """
-    Check all shortcut folders for changes.
+    Check shortcut folders for changes using multiple strategies:
+
+    1. Time-based: Force rescan if not checked in N hours (per-drive, from drives.json)
+    2. Child count: If immediate children count changed (new/deleted folders)
+    3. File sampling: Check if sampled files' modifiedTime changed
+
+    Args:
+        drives_config: Optional DrivesConfig for per-drive rescan_hours settings
 
     Returns list of shortcuts that need rescanning:
     [{shortcut_id, target_id, name, parent_folder_id, parent_name}]
@@ -270,46 +368,66 @@ def check_shortcut_folders(
         folder_id = folder_info["folder_id"]
         folder_name = folder_info["name"]
 
+        # Get per-drive rescan hours (default 6, 0 = never force rescan)
+        rescan_hours = 6
+        if drives_config:
+            drive = drives_config.get_drive(folder_id)
+            if drive:
+                rescan_hours = drive.rescan_hours
+
         # Find shortcuts in this folder
         shortcuts = find_shortcuts_in_folder(client, folder_id)
 
         for sc in shortcuts:
             shortcut_id = sc["shortcut_id"]
             target_id = sc["target_id"]
+            shortcut_name = sc["name"]
 
-            # Get target folder's current modifiedTime
-            target_meta = client.get_file_metadata(
-                target_id,
-                fields="id,modifiedTime"
-            )
-            if not target_meta:
-                continue
+            needs_rescan = False
+            current_child_count = -1
 
-            current_modified = target_meta.get("modifiedTime", "")
+            # Check 0: Time-based force rescan (safety net) - skip if rescan_hours=0
+            if rescan_hours > 0 and should_force_rescan(manifest, shortcut_id, rescan_hours):
+                needs_rescan = True
 
-            # Check if we have this shortcut tracked
-            stored = manifest.shortcut_folders.get(shortcut_id)
+            # Check 1: Child count changed? (new/deleted top-level items)
+            if not needs_rescan:
+                stored_count = get_stored_child_count(manifest, shortcut_id)
+                current_child_count = count_immediate_children(client, target_id)
 
-            if stored:
-                # Already tracked - check if modified since last scan
-                stored_modified = stored.get("last_modified", "")
-                if current_modified != stored_modified:
-                    changed.append({
-                        "shortcut_id": shortcut_id,
-                        "target_id": target_id,
-                        "name": sc["name"],
-                        "parent_folder_id": folder_id,
-                        "parent_name": folder_name,
-                        "current_modified": current_modified,
-                    })
-            # If not tracked yet, just record it (don't trigger rescan)
+                if stored_count != current_child_count:
+                    needs_rescan = True
 
-            # Update stored info (even if not changed, ensures we track all)
+            # Check 2: Sample files for modifications (only if other checks passed)
+            if not needs_rescan:
+                sample = sample_files_for_shortcut(manifest, folder_id, shortcut_name)
+                if not sample:
+                    # No files tracked yet - need initial scan
+                    needs_rescan = True
+                elif check_files_changed(client, sample):
+                    needs_rescan = True
+
+            if needs_rescan:
+                # Get child count if we didn't already
+                if current_child_count < 0:
+                    current_child_count = count_immediate_children(client, target_id)
+                changed.append({
+                    "shortcut_id": shortcut_id,
+                    "target_id": target_id,
+                    "name": shortcut_name,
+                    "parent_folder_id": folder_id,
+                    "parent_name": folder_name,
+                    "current_child_count": current_child_count,
+                })
+
+            # Track the shortcut (update child count even if not changed)
+            stored = manifest.shortcut_folders.get(shortcut_id, {})
             manifest.shortcut_folders[shortcut_id] = {
                 "target_id": target_id,
-                "name": sc["name"],
+                "name": shortcut_name,
                 "parent_folder_id": folder_id,
-                "last_modified": current_modified,
+                "child_count": current_child_count if current_child_count >= 0 else stored.get("child_count", -1),
+                "last_rescan": stored.get("last_rescan", ""),  # Preserve until actually rescanned
             }
 
     return changed
@@ -439,7 +557,8 @@ def generate_incremental():
     # Load manifest
     manifest = Manifest.load(MANIFEST_PATH)
 
-    # Load root folders to check if all drives have been scanned
+    # Load drives config and root folders
+    drives_config = DrivesConfig.load(DRIVES_PATH) if DRIVES_PATH.exists() else None
     root_folders = load_root_folders()
     expected_ids = {f["folder_id"] for f in root_folders}
 
@@ -496,9 +615,10 @@ def generate_incremental():
     print()
 
     # Check shortcut folders for changes (catches external/shared files)
-    print("Checking shortcut folders for changes...")
+    # Uses sampling: checks child count + 3 most recent files per shortcut
+    print("Checking shortcut folders...")
     start_api = client.api_calls
-    changed_shortcuts = check_shortcut_folders(client, manifest, root_folders)
+    changed_shortcuts = check_shortcut_folders(client, manifest, root_folders, drives_config)
     shortcut_api_calls = client.api_calls - start_api
 
     total_sc_added = 0
@@ -520,11 +640,13 @@ def generate_incremental():
             if sc_added or sc_modified or sc_removed:
                 print(f"    +{sc_added} -{sc_removed} ~{sc_modified}")
 
-        # Update shortcut timestamps after successful rescan
-        for sc in changed_shortcuts:
-            manifest.shortcut_folders[sc["shortcut_id"]]["last_modified"] = sc["current_modified"]
+            # Update metadata after successful rescan
+            if sc["shortcut_id"] in manifest.shortcut_folders:
+                from datetime import datetime, timezone
+                manifest.shortcut_folders[sc["shortcut_id"]]["child_count"] = sc.get("current_child_count", -1)
+                manifest.shortcut_folders[sc["shortcut_id"]]["last_rescan"] = datetime.now(timezone.utc).isoformat()
     else:
-        print(f"  No shortcut folder changes ({shortcut_api_calls} API calls)")
+        print(f"  No changes detected ({shortcut_api_calls} API calls)")
     print()
 
     # Combine totals
