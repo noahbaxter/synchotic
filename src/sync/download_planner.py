@@ -127,7 +127,22 @@ def plan_downloads(
                 missing = sync_state.check_files_exist(archive_files)
                 is_synced = len(missing) == 0
         else:
-            is_synced = file_exists_with_size(local_path, file_size)
+            # For regular files: check sync_state first (tracks actual downloaded size),
+            # then fall back to manifest size check
+            is_synced = False
+            if sync_state and sync_state.is_file_synced(rel_path, file_size):
+                # Sync state matches manifest - verify file still exists
+                is_synced = local_path.exists()
+            elif sync_state:
+                # Check if file is tracked with different size (manifest may be stale)
+                tracked = sync_state._files.get(rel_path)
+                if tracked and tracked.get("md5") == file_md5:
+                    # Same MD5, just different size - trust sync_state
+                    tracked_size = tracked.get("size", 0)
+                    is_synced = file_exists_with_size(local_path, tracked_size)
+            if not is_synced:
+                # Final fallback: check manifest size
+                is_synced = file_exists_with_size(local_path, file_size)
 
         # Add to download list or skip
         if is_synced:

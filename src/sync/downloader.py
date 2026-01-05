@@ -491,9 +491,10 @@ class FileDownloader:
                             if progress and result.bytes_downloaded > 0:
                                 progress.add_downloaded_bytes(result.bytes_downloaded)
 
-                            # Track direct files in sync state
+                            # Track direct files in sync state (use actual downloaded size, not manifest)
                             if not task.is_archive and sync_state and task.rel_path:
-                                sync_state.add_file(task.rel_path, task.size, task.md5)
+                                actual_size = result.bytes_downloaded if result.bytes_downloaded > 0 else task.size
+                                sync_state.add_file(task.rel_path, actual_size, task.md5)
                                 sync_state.save()
 
                             if progress:
