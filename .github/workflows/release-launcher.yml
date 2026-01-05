@@ -82,6 +82,7 @@ jobs:
             gh release create "$TAG" \
               --title "Synchotic Launcher" \
               --notes "Downloads and auto-updates the Synchotic app." \
+              --latest=false \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
               artifacts/synchotic-launcher-macos/synchotic-launcher-macos
           fi
