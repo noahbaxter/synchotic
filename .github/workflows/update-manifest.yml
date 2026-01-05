@@ -12,6 +12,11 @@ on:
         required: false
         default: 'false'
         type: boolean
+      branch:
+        description: 'Branch to run from (for testing)'
+        required: false
+        default: 'main'
+        type: string
 
 permissions:
   contents: write
@@ -23,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch || 'main' }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
