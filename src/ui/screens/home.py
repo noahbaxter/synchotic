@@ -162,14 +162,13 @@ def compute_main_menu_cache(
             global_status.synced_size += status.synced_size
             if status.is_actual_charts:
                 global_status.is_actual_charts = True
+            # Count setlists only for enabled drives
+            global_total_setlists += total_setlists
+            global_enabled_setlists += enabled_setlists
         # Always aggregate purgeable (disabled drives may have content to remove)
         global_purge_count += folder_purge_count
         global_purge_charts += folder_purge_charts
         global_purge_size += folder_purge_size
-
-        # Count setlists (already computed above for display string)
-        global_total_setlists += total_setlists
-        global_enabled_setlists += enabled_setlists
 
         cache.folder_stats[folder_id] = display_string
 
