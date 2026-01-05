@@ -18,7 +18,7 @@ jobs:
         include:
           - os: macos-latest
             name: macos
-            artifact: synchotic-launcher-macos
+            artifact: synchotic-launcher-macos.zip
           - os: windows-latest
             name: windows
             artifact: synchotic-launcher.exe
@@ -41,11 +41,12 @@ jobs:
         if: matrix.name == 'macos'
         run: |
           CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
-          pyinstaller --onefile --name synchotic-launcher-macos --clean --noconfirm \
+          pyinstaller --onedir --windowed --name "Synchotic Launcher" --clean --noconfirm \
             --add-data "$CERTIFI_PATH:certifi" \
             --hidden-import certifi \
             launcher.py
-          chmod +x dist/synchotic-launcher-macos
+          # Zip the .app bundle
+          cd dist && zip -r synchotic-launcher-macos.zip "Synchotic Launcher.app"
 
       - name: Build launcher (Windows)
         if: matrix.name == 'windows'
@@ -84,7 +85,7 @@ jobs:
             echo "Updating existing release $TAG..."
             gh release upload "$TAG" \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
-              artifacts/synchotic-launcher-macos/synchotic-launcher-macos \
+              artifacts/synchotic-launcher-macos.zip/synchotic-launcher-macos.zip \
               --clobber
           else
             echo "Creating new release $TAG..."
@@ -93,11 +94,11 @@ jobs:
               --notes "Downloads and auto-updates the Synchotic app." \
               --latest=false \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
-              artifacts/synchotic-launcher-macos/synchotic-launcher-macos
+              artifacts/synchotic-launcher-macos.zip/synchotic-launcher-macos.zip
           fi
 
       - name: Summary
         run: |
           echo "### Launcher Release ${{ github.event.inputs.tag }}" >> $GITHUB_STEP_SUMMARY
           echo "- Windows: synchotic-launcher.exe" >> $GITHUB_STEP_SUMMARY
-          echo "- macOS: synchotic-launcher-macos" >> $GITHUB_STEP_SUMMARY
+          echo "- macOS: synchotic-launcher-macos.zip (contains Synchotic Launcher.app)" >> $GITHUB_STEP_SUMMARY

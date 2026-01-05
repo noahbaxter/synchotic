@@ -8,12 +8,11 @@ A Clone Hero chart downloader. Browse community chart packs, pick what you want,
 
 **[Download the launcher here](../../releases/tag/launcher-v1.1)**
 
-- **Windows:** Download `synchotic-launcher.exe` and run it
-- **macOS:** Download `synchotic-launcher-macos`. macOS blocks apps from unknown developers:
-  - **Option 1:** Right-click the file → Open → click "Open" in the dialog
-  - **Option 2:** Terminal: `chmod +x ~/Downloads/synchotic-launcher-macos && xattr -d com.apple.quarantine ~/Downloads/synchotic-launcher-macos`
+- **Windows:** Download `synchotic-launcher.exe`, put it where you want your charts, and run it
+- **macOS:** Download `synchotic-launcher-macos.zip`, unzip it, drag `Synchotic Launcher.app` to where you want your charts, then:
+  - Right-click → Open → click "Open" (required first time, macOS blocks unsigned apps)
 
-The launcher automatically downloads and updates the app.
+The launcher downloads charts to wherever you put it. Put the launcher in your Clone Hero songs folder and run it from there.
 
 ## How It Works
 

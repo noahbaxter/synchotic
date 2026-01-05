@@ -77,9 +77,14 @@ def is_clean_mode() -> bool:
 
 
 def get_launcher_dir() -> Path:
-    """Get directory containing the launcher exe."""
+    """Get directory containing the launcher (or .app bundle on macOS)."""
     if getattr(sys, "frozen", False):
-        return Path(sys.executable).parent
+        exe_path = Path(sys.executable)
+        # If inside a .app bundle, return folder containing the .app
+        for parent in exe_path.parents:
+            if parent.suffix == ".app":
+                return parent.parent
+        return exe_path.parent
     return Path(__file__).parent
 
 
@@ -609,6 +614,10 @@ def main():
 
     if not app_exe.exists():
         error_exit(f"App executable not found after installation:\n{app_exe}")
+
+    # Ensure executable permission on macOS/Linux
+    if sys.platform != "win32":
+        os.chmod(app_exe, 0o755)
 
     log(f"Launching app: {app_exe}")
     print(f"\nLaunching synchotic...")
