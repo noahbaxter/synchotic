@@ -6,14 +6,12 @@ A Clone Hero chart downloader. Browse community chart packs, pick what you want,
 
 ## Download
 
-**[Download the launcher here](../../releases/tag/launcher-v1)**
+**[Download the launcher here](../../releases/tag/launcher-v1.1)**
 
 - **Windows:** Download `synchotic-launcher.exe` and run it
-- **macOS:** Download `synchotic-launcher-macos`. macOS blocks apps from unknown developers, so open Terminal and run:
-  ```
-  cd ~/Downloads && chmod +x synchotic-launcher-macos && xattr -d com.apple.quarantine synchotic-launcher-macos
-  ```
-  Then double-click to run.
+- **macOS:** Download `synchotic-launcher-macos`. macOS blocks apps from unknown developers:
+  - **Option 1:** Right-click the file → Open → click "Open" in the dialog
+  - **Option 2:** Terminal: `chmod +x ~/Downloads/synchotic-launcher-macos && xattr -d com.apple.quarantine ~/Downloads/synchotic-launcher-macos`
 
 The launcher automatically downloads and updates the app.
 
