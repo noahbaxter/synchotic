@@ -61,6 +61,9 @@ class SyncApp:
     """Main application controller."""
 
     def __init__(self, use_local_manifest: bool = False):
+        import time as _t
+        _t0 = _t.time()
+
         client_config = DriveClientConfig(api_key=API_KEY)
         self.client = DriveClient(client_config)
 
@@ -74,17 +77,24 @@ class SyncApp:
         # Unified auth manager (handles user + admin fallback, token refresh)
         self.auth = AuthManager(token_path=get_token_path())
 
+        print(f"    [init] configs loaded: {(_t.time() - _t0)*1000:.0f}ms")
+
         # Clean up any leftover temp files from interrupted operations
+        _t1 = _t.time()
         cleanup_tmp_dir()
+        print(f"    [init] cleanup_tmp_dir: {(_t.time() - _t1)*1000:.0f}ms")
 
         # Load sync state (tracks all synced files)
+        _t2 = _t.time()
         self.sync_state = SyncState()
         self.sync_state.load()
+        print(f"    [init] sync_state.load: {(_t.time() - _t2)*1000:.0f}ms")
 
-        # Clean up legacy check.txt files (replaced by sync_state.json)
-        deleted = self.sync_state.cleanup_check_txt_files()
-        if deleted > 0:
-            print(f"Cleaned up {deleted} legacy check.txt file(s)")
+        # Handle legacy check.txt migration (one-time)
+        if self.sync_state.needs_check_txt_migration():
+            self._prompt_legacy_migration()
+        else:
+            print(f"    [init] check_txt: already migrated")
 
         self.sync = FolderSync(
             self.client,
@@ -95,6 +105,56 @@ class SyncApp:
         self.folders = []
         self.use_local_manifest = use_local_manifest
         self.folder_stats_cache = FolderStatsCache()
+
+    def _prompt_legacy_migration(self):
+        """Prompt user about legacy check.txt file migration."""
+        import time as _t
+
+        print("\n" + "=" * 50)
+        print("Legacy File Migration")
+        print("=" * 50)
+        print("\nFound existing charts folder without sync state.")
+        print("This is a one-time migration.")
+        print()
+        print("Options:")
+        print("  [S] Scan for legacy check.txt files")
+        print("      - Slower startup this once (scans all folders)")
+        print("      - Preserves download verification state")
+        print()
+        print("  [K] Skip scan")
+        print("      - Fast startup")
+        print("      - May re-download some archives if sizes mismatch")
+        print()
+
+        while True:
+            try:
+                choice = input("Choice [S/K]: ").strip().upper()
+            except (EOFError, KeyboardInterrupt):
+                print("\nDefaulting to skip...")
+                choice = "K"
+                break
+
+            if choice in ("S", "K"):
+                break
+            print("Please enter S or K.")
+
+        print()
+
+        if choice == "S":
+            print("Scanning for legacy files...")
+            _t0 = _t.time()
+            deleted = self.sync_state.cleanup_check_txt_files()
+            elapsed = (_t.time() - _t0) * 1000
+            print(f"    [init] cleanup_check_txt: {elapsed:.0f}ms")
+            if deleted > 0:
+                print(f"Cleaned up {deleted} legacy check.txt file(s)")
+            else:
+                print("No legacy files found.")
+        else:
+            print("Skipping scan...")
+            self.sync_state.skip_check_txt_migration()
+
+        print()
 
     def load_manifest(self, quiet: bool = False):
         """Load manifest folders (includes custom folders)."""
@@ -543,17 +603,14 @@ class SyncApp:
                 clear_screen()
                 print_header()
 
+        import time as _time
+        _t_manifest = _time.time()
         self.load_manifest()
-
-        # Show startup time if launched via launcher
-        start_time = os.environ.get("SYNCHOTIC_START_TIME")
-        if start_time:
-            import time
-            elapsed = time.time() - float(start_time)
-            print(f"  Ready in {elapsed:.2f}s")
+        print(f"  [timing] manifest: {(_time.time() - _t_manifest)*1000:.0f}ms")
 
         selected_index = 0  # Track selected position for maintaining after actions
         menu_cache = None  # Cache for expensive menu calculations
+        start_time = os.environ.get("SYNCHOTIC_START_TIME")  # For startup timing
 
         while True:
             if not self.folders:
@@ -572,6 +629,13 @@ class SyncApp:
                     get_download_path(), combined_drives,
                     self.sync_state, self.folder_stats_cache
                 )
+
+            # Show startup time after first cache computation (actual "ready" state)
+            if start_time:
+                import time
+                elapsed = time.time() - float(start_time)
+                print(f"  Ready in {elapsed:.2f}s")
+                start_time = None  # Only show once
 
             action, value, menu_pos = show_main_menu(
                 self.folders, self.user_settings, selected_index,
@@ -628,6 +692,9 @@ class SyncApp:
 
 def main():
     """Entry point."""
+    import time as _time
+    _t0 = _time.time()
+
     # Set terminal size (skip if launched via launcher - it handles this)
     if not os.environ.get("SYNCHOTIC_ROOT"):
         set_terminal_size(90, 40)
@@ -649,13 +716,18 @@ def main():
     tee = TeeOutput(log_path)
     sys.stdout = tee
 
+    print(f"  [timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")
+
     # Migrate legacy files from old locations to .dm-sync/
     # Must run BEFORE creating SyncApp so paths resolve correctly
     migrated = migrate_legacy_files()
     if migrated:
         print(f"Migrated settings to .dm-sync/: {', '.join(migrated)}")
 
+    _t1 = _time.time()
     app = SyncApp(use_local_manifest=args.local_manifest)
+    print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
+
     app.run()
 
 

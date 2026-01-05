@@ -296,17 +296,34 @@ class SyncState:
             "last_sync": self._data.get("last_sync"),
         }
 
+    def needs_check_txt_migration(self) -> bool:
+        """Check if legacy check.txt migration is needed."""
+        return not self._data.get("check_txt_migrated", False)
+
+    def skip_check_txt_migration(self):
+        """Mark migration as done without scanning (user chose to skip)."""
+        self._data["check_txt_migrated"] = True
+        self._data["check_txt_skipped"] = True
+        self.save()
+
     def cleanup_check_txt_files(self) -> int:
         """
         Delete all check.txt files from the sync root.
 
         Called on startup to clean up legacy checksum files now that we use sync_state.json.
+        Only runs once - sets a flag in state to skip on future startups.
 
         Returns:
-            Number of check.txt files deleted
+            Number of check.txt files deleted (0 if already migrated)
         """
+        # Skip if already done (expensive rglob on large folders)
+        if self._data.get("check_txt_migrated"):
+            return 0
+
         deleted = 0
         if not self.sync_root.exists():
+            self._data["check_txt_migrated"] = True
+            self.save()
             return deleted
 
         for check_file in self.sync_root.rglob("check.txt"):
@@ -315,6 +332,10 @@ class SyncState:
                 deleted += 1
             except OSError:
                 pass
+
+        # Mark as done so we never scan again
+        self._data["check_txt_migrated"] = True
+        self.save()
 
         return deleted
 
