@@ -22,13 +22,15 @@
       "name": "Rock Band",
       "folder_id": "1jUnIkQ3k6j3vnMxxIAfyOewNB10Tygb8",
       "description": "Rock Band exports (all games)",
-      "group": "Games"
+      "group": "Games",
+      "rescan_hours": 168
     },
     {
       "name": "Guitar Hero",
       "folder_id": "1tQXLCLRbHQfJbnqq-WqliymvqO0mw8e5",
       "description": "Guitar Hero exports (all games)",
-      "group": "Games"
+      "group": "Games",
+      "rescan_hours": 168
     }
   ]
 }

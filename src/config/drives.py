@@ -18,6 +18,7 @@ class DriveConfig:
     description: str = ""
     group: str = ""  # Optional group name for categorization
     hidden: bool = False  # If True, hide from sync UI (still in manifest)
+    rescan_hours: int = 6  # How often to force rescan shortcuts (0 = only on detected changes)
 
     def to_dict(self) -> dict:
         d = {
@@ -29,6 +30,8 @@ class DriveConfig:
             d["group"] = self.group
         if self.hidden:
             d["hidden"] = self.hidden
+        if self.rescan_hours != 6:  # Only include if non-default
+            d["rescan_hours"] = self.rescan_hours
         return d
 
     @classmethod
@@ -39,6 +42,7 @@ class DriveConfig:
             description=data.get("description", ""),
             group=data.get("group", ""),
             hidden=data.get("hidden", False),
+            rescan_hours=data.get("rescan_hours", 6),
         )
 
 
