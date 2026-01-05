@@ -225,12 +225,13 @@ class TestPlanDownloadsRegularFiles:
         assert len(tasks) == 0
         assert skipped == 1
 
-    def test_disk_always_verified_even_with_sync_state(self, temp_dir):
+    def test_sync_state_trusted_over_disk_size(self, temp_dir):
         """
-        Disk is always verified - sync_state is not blindly trusted for regular files.
+        sync_state is trusted for regular files when it matches manifest.
 
-        sync_state can become stale (user modifies files, disk corruption, etc.)
-        so we always verify file existence and size on disk.
+        This prevents re-downloads when manifest has stale sizes (common with
+        Google Drive shortcuts where manifest may lag behind actual file changes).
+        We only verify file EXISTS, not that disk size matches manifest.
         """
         # Create file on disk with DIFFERENT size than manifest
         local_file = temp_dir / "folder" / "song.ini"
@@ -248,9 +249,78 @@ class TestPlanDownloadsRegularFiles:
             files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
         )
 
-        # Disk is always verified - sync_state is NOT trusted for regular files
-        # File has wrong size on disk, so it needs to be downloaded
-        assert len(tasks) == 1, "disk should always be verified"
+        # sync_state matches manifest AND file exists - trust it, don't re-download
+        assert len(tasks) == 0, "sync_state should be trusted when it matches manifest"
+        assert skipped == 1
+
+    def test_file_missing_from_disk_triggers_download(self, temp_dir):
+        """
+        Even if sync_state says file is synced, missing file triggers download.
+
+        We trust sync_state for SIZE, but always verify file EXISTS.
+        """
+        # NO file on disk
+
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_file("TestDrive/folder/song.ini", size=100)
+
+        files = [{"id": "1", "path": "folder/song.ini", "size": 100, "md5": "abc"}]
+        tasks, skipped, _ = plan_downloads(
+            files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
+        )
+
+        # File doesn't exist - must download
+        assert len(tasks) == 1, "missing file should trigger download"
+        assert skipped == 0
+
+    def test_sync_state_size_differs_from_manifest_same_md5(self, temp_dir):
+        """
+        When sync_state has different size than manifest but same MD5, trust sync_state.
+
+        This handles the case where manifest is stale (common with shortcuts).
+        If MD5 matches, the content is the same - just different recorded sizes.
+        """
+        local_file = temp_dir / "folder" / "song.ini"
+        local_file.parent.mkdir(parents=True)
+        local_file.write_text("actual content")  # 14 bytes
+
+        # sync_state tracked the actual downloaded size (14 bytes)
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_file("TestDrive/folder/song.ini", size=14, md5="abc123")
+
+        # Manifest has stale size (10 bytes) but same MD5
+        files = [{"id": "1", "path": "folder/song.ini", "size": 10, "md5": "abc123"}]
+        tasks, skipped, _ = plan_downloads(
+            files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
+        )
+
+        # Same MD5 means same content - trust sync_state, don't re-download
+        assert len(tasks) == 0, "same MD5 should trust sync_state despite size mismatch"
+        assert skipped == 1
+
+    def test_md5_changed_triggers_redownload(self, temp_dir):
+        """
+        When manifest MD5 differs from sync_state, file was updated - re-download.
+        """
+        local_file = temp_dir / "folder" / "song.ini"
+        local_file.parent.mkdir(parents=True)
+        local_file.write_text("old content")
+
+        # sync_state has old MD5
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_file("TestDrive/folder/song.ini", size=11, md5="old_md5")
+
+        # Manifest has NEW MD5 (file was updated upstream)
+        files = [{"id": "1", "path": "folder/song.ini", "size": 15, "md5": "new_md5"}]
+        tasks, skipped, _ = plan_downloads(
+            files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
+        )
+
+        # Different MD5 = content changed, must re-download
+        assert len(tasks) == 1, "changed MD5 should trigger re-download"
         assert skipped == 0
 
 

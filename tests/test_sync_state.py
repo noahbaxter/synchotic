@@ -433,12 +433,13 @@ class TestStatusMatchesDownloadPlanner:
         assert len(tasks) == 0, "Download planner has tasks"
         assert status.synced_charts == status.total_charts
 
-    def test_status_and_download_agree_when_disk_differs_from_sync_state(self, temp_dir):
+    def test_status_and_download_agree_when_sync_state_matches_manifest(self, temp_dir):
         """
-        When disk has different size than manifest, download_planner verifies on disk.
+        When sync_state matches manifest, files are trusted as synced.
 
-        Note: We always verify on disk for regular files, sync_state is NOT trusted.
-        This ensures consistency even if sync_state becomes stale.
+        Note: sync_state is trusted when it matches manifest. This prevents
+        re-downloads when manifest has stale sizes (common with shortcuts).
+        We only verify file EXISTS, not that disk size matches manifest.
         """
         from src.sync.download_planner import plan_downloads
 
@@ -482,10 +483,9 @@ class TestStatusMatchesDownloadPlanner:
             folder_name="TestDrive",
         )
 
-        # Disk is always verified - notes.mid has wrong size, needs download
-        assert len(tasks) == 1, "notes.mid has wrong size on disk, should be downloaded"
-        assert tasks[0].local_path.name == "notes.mid"
-        assert skipped == 1  # song.ini is correct
+        # sync_state matches manifest AND files exist - trust it, don't re-download
+        assert len(tasks) == 0, "sync_state matches manifest, should trust it"
+        assert skipped == 2  # Both files trusted via sync_state
 
     def test_status_and_download_agree_when_file_not_in_sync_state(self, temp_dir):
         """
