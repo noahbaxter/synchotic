@@ -286,9 +286,8 @@ build_dev() {
     echo_info "  - $(basename "$LAUNCHER_FILE")"
     echo_info "  - $(basename "$APP_ZIP")"
     echo ""
-    echo_info "To test:"
-    echo_info "  --dev         keeps settings, replaces app, deletes zip"
-    echo_info "  --dev --clean fresh install (nukes .dm-sync first)"
+    echo_info "Just double-click the launcher - it auto-detects the zip."
+    echo_info "Use --clean flag for fresh install (nukes .dm-sync first)"
 }
 
 usage() {

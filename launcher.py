@@ -44,8 +44,16 @@ def is_offline_mode() -> bool:
 
 
 def is_dev_mode() -> bool:
-    """Check if running in dev mode (use local zip, no GitHub)."""
-    return "--dev" in sys.argv
+    """Check if running in dev mode (use local zip, no GitHub).
+
+    Dev mode is active if:
+    - --dev flag is passed, OR
+    - A local app zip exists in the launcher directory (auto-detect for dev builds)
+    """
+    if "--dev" in sys.argv:
+        return True
+    # Auto-detect: if local zip exists, assume dev mode
+    return get_local_zip_path().exists()
 
 
 def is_clean_mode() -> bool:
