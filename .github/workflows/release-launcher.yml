@@ -34,18 +34,27 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: Install PyInstaller
-        run: pip install pyinstaller
+      - name: Install dependencies
+        run: pip install pyinstaller certifi
 
       - name: Build launcher (macOS)
         if: matrix.name == 'macos'
         run: |
-          pyinstaller --onefile --name synchotic-launcher-macos --clean --noconfirm launcher.py
+          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
+          pyinstaller --onefile --name synchotic-launcher-macos --clean --noconfirm \
+            --add-data "$CERTIFI_PATH:certifi" \
+            --hidden-import certifi \
+            launcher.py
+          chmod +x dist/synchotic-launcher-macos
 
       - name: Build launcher (Windows)
         if: matrix.name == 'windows'
         run: |
-          pyinstaller --onefile --name synchotic-launcher --clean --noconfirm launcher.py
+          $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
+          pyinstaller --onefile --name synchotic-launcher --clean --noconfirm `
+            --add-data "$CERTIFI_PATH;certifi" `
+            --hidden-import certifi `
+            launcher.py
         shell: pwsh
 
       - name: Upload artifact

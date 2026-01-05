@@ -11,6 +11,7 @@ Tiny launcher that fetches the app from GitHub releases.
 import json
 import os
 import shutil
+import ssl
 import subprocess
 import sys
 import tempfile
@@ -20,6 +21,20 @@ from pathlib import Path
 from typing import NoReturn
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+
+
+def get_ssl_context():
+    """Get SSL context with certifi certs, handling PyInstaller bundles."""
+    try:
+        import certifi
+
+        if getattr(sys, "frozen", False):
+            cafile = str(Path(sys._MEIPASS) / "certifi" / "cacert.pem")
+        else:
+            cafile = certifi.where()
+        return ssl.create_default_context(cafile=cafile)
+    except ImportError:
+        return ssl.create_default_context()
 
 _start_time = time.time()
 _log_file = None
@@ -326,7 +341,7 @@ def fetch_latest_release() -> dict:
     req.add_header("User-Agent", "synchotic-launcher")
 
     try:
-        with urlopen(req, timeout=30) as resp:
+        with urlopen(req, timeout=30, context=get_ssl_context()) as resp:
             return json.loads(resp.read().decode("utf-8"))
     except HTTPError as e:
         if e.code == 403:
@@ -336,7 +351,22 @@ def fetch_latest_release() -> dict:
         else:
             error_exit(f"GitHub API error: HTTP {e.code}")
     except URLError as e:
-        error_exit(f"Could not reach GitHub. Check your internet connection.\n\nDetails: {e.reason}")
+        reason = str(e.reason)
+        if "WRONG_VERSION_NUMBER" in reason:
+            error_exit(
+                "Could not reach GitHub: SSL/TLS error.\n\n"
+                "This usually means a proxy or firewall is intercepting the connection.\n"
+                "Try disabling VPN/proxy or using a different network.\n"
+                f"\nDetails: {reason}"
+            )
+        elif "CERTIFICATE" in reason:
+            error_exit(
+                "Could not reach GitHub: SSL certificate error.\n\n"
+                "Try updating your system or report this issue.\n"
+                f"\nDetails: {reason}"
+            )
+        else:
+            error_exit(f"Could not reach GitHub. Check your internet connection.\n\nDetails: {reason}")
     except Exception as e:
         error_exit(f"Unexpected error checking for updates: {e}")
 
@@ -359,7 +389,7 @@ def download_with_progress(url: str, dest: Path):
     req.add_header("User-Agent", "synchotic-launcher")
 
     try:
-        with urlopen(req, timeout=120) as resp:
+        with urlopen(req, timeout=120, context=get_ssl_context()) as resp:
             total_size = int(resp.headers.get("Content-Length", 0))
             downloaded = 0
             chunk_size = 64 * 1024
@@ -388,7 +418,22 @@ def download_with_progress(url: str, dest: Path):
     except HTTPError as e:
         error_exit(f"Failed to download update: HTTP {e.code}")
     except URLError as e:
-        error_exit(f"Download failed. Check your connection.\n\nDetails: {e.reason}")
+        reason = str(e.reason)
+        if "WRONG_VERSION_NUMBER" in reason:
+            error_exit(
+                "Download failed: SSL/TLS error.\n\n"
+                "This usually means a proxy or firewall is intercepting the connection.\n"
+                "Try disabling VPN/proxy or using a different network.\n"
+                f"\nDetails: {reason}"
+            )
+        elif "CERTIFICATE" in reason:
+            error_exit(
+                "Download failed: SSL certificate error.\n\n"
+                "Try updating your system or report this issue.\n"
+                f"\nDetails: {reason}"
+            )
+        else:
+            error_exit(f"Download failed. Check your connection.\n\nDetails: {reason}")
     except Exception as e:
         error_exit(f"Download failed: {e}")
 
