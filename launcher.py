@@ -220,8 +220,21 @@ def _save_launcher_state(current_path: str):
     write_state(state)
 
 
+def _has_terminal() -> bool:
+    """Check if we have an interactive terminal for prompts."""
+    try:
+        return sys.stdin is not None and sys.stdin.isatty()
+    except Exception:
+        return False
+
+
 def _prompt_directory_action() -> str:
     """Prompt user for directory change action. Returns 'M', 'D', or 'I'."""
+    # No terminal - auto-ignore to avoid blocking
+    if not _has_terminal():
+        log("No terminal available, auto-ignoring old data")
+        return "I"
+
     print("\nWhat would you like to do?")
     print("  [M] Move the data to the new location (faster startup)")
     print("  [D] Delete the old data (fresh download)")
@@ -279,6 +292,11 @@ def _do_move(old_dm_sync: Path) -> bool:
 
 def _prompt_fallback() -> str:
     """Prompt for fallback action after move fails. Returns 'D' or 'I'."""
+    # No terminal - auto-ignore
+    if not _has_terminal():
+        log("No terminal available, auto-ignoring after move failure")
+        return "I"
+
     print("\nWould you like to:")
     print("  [D] Delete the old data instead")
     print("  [I] Ignore and download fresh")

@@ -85,8 +85,8 @@ jobs:
       - name: Create app zip (macOS)
         if: matrix.name == 'macos'
         run: |
-          cd dist
-          zip -r -q app-macos.zip synchotic-app
+          cd dist/synchotic-app
+          zip -r -q ../app-macos.zip .
 
       - name: Create app zip (Windows)
         if: matrix.name == 'windows'
