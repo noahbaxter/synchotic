@@ -22,6 +22,8 @@ from typing import NoReturn
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
+LAUNCHER_VERSION = "1.1"
+
 
 def get_ssl_context():
     """Get SSL context with certifi certs, handling PyInstaller bundles."""
@@ -384,8 +386,8 @@ def fetch_latest_release() -> dict:
             )
         elif "CERTIFICATE" in reason:
             error_exit(
-                "Could not reach GitHub: SSL certificate error.\n\n"
-                "Try updating your system or report this issue.\n"
+                f"Could not reach GitHub: SSL certificate error.\n\n"
+                f"Launcher v{LAUNCHER_VERSION} - update at https://github.com/{GITHUB_REPO}/releases\n"
                 f"\nDetails: {reason}"
             )
         else:
@@ -451,8 +453,8 @@ def download_with_progress(url: str, dest: Path):
             )
         elif "CERTIFICATE" in reason:
             error_exit(
-                "Download failed: SSL certificate error.\n\n"
-                "Try updating your system or report this issue.\n"
+                f"Download failed: SSL certificate error.\n\n"
+                f"Launcher v{LAUNCHER_VERSION} - update at https://github.com/{GITHUB_REPO}/releases\n"
                 f"\nDetails: {reason}"
             )
         else:
@@ -542,8 +544,9 @@ def set_terminal_size(cols: int = 90, rows: int = 40):
 def main():
     set_terminal_size(90, 40)
     init_logging()
+    log(f"Launcher v{LAUNCHER_VERSION}")
 
-    print("\nSynchotic Launcher")
+    print(f"\nSynchotic Launcher v{LAUNCHER_VERSION}")
     print("=" * 40)
 
     # Handle --dev: local development mode

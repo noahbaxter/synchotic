@@ -88,7 +88,7 @@ jobs:
           else
             echo "Creating new release $TAG..."
             gh release create "$TAG" \
-              --title "Synchotic Launcher" \
+              --title "Synchotic Launcher $TAG" \
               --notes "Downloads and auto-updates the Synchotic app." \
               --latest=false \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
