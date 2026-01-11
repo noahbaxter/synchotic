@@ -12,7 +12,6 @@ import sys
 import time
 import argparse
 from pathlib import Path
-from urllib.parse import urlparse
 
 # Load .env file if it exists
 env_path = Path(__file__).parent / ".env"
@@ -37,108 +36,57 @@ from src.ui.primitives import print_progress
 
 API_KEY = os.environ.get("GOOGLE_API_KEY", "")
 MANIFEST_PATH = Path(__file__).parent / "manifest.json"
-DRIVES_PATH = Path(__file__).parent / "drives.json"
 SOURCES_PATH = Path(__file__).parent / "sources.json"
+STATIC_SOURCES_DIR = Path(__file__).parent / "static_sources"
 
 
 def load_static_sources() -> list[FolderEntry]:
-    """Load static sources from sources.json and convert to FolderEntry objects."""
-    if not SOURCES_PATH.exists():
-        return []
+    """Load pre-computed static sources from static_sources/ directory.
 
-    with open(SOURCES_PATH) as f:
-        data = json.load(f)
+    Each JSON file is a complete FolderEntry with group/collection metadata.
+    Directory structure: static_sources/{collection}/{setlist}.json
+    """
+    if not STATIC_SOURCES_DIR.exists():
+        return []
 
     folder_entries = []
 
-    for type_info in data.get("types", []):
-        type_name = type_info.get("name", "")
+    for json_file in sorted(STATIC_SOURCES_DIR.rglob("*.json")):
+        try:
+            with open(json_file) as f:
+                data = json.load(f)
 
-        for group in type_info.get("groups", []):
-            group_id = group.get("id", "")
-            group_name = group.get("name", "")
-            setlists = group.get("setlists", [])
+            # Use explicit group/collection, fallback to parent folder name
+            collection = data.get("collection", json_file.parent.name)
+            group = data.get("group", "")
 
-            # Skip dynamic sources (setlists = "discover")
-            if setlists == "discover" or not isinstance(setlists, list):
-                continue
-
-            # Build file entries from setlists
-            files = []
-            total_size = 0
-            total_charts = 0
-
-            for idx, setlist in enumerate(setlists):
-                source = setlist.get("source", {})
-                source_type = source.get("type", "")
-                setlist_name = setlist.get("name", "")
-                size = setlist.get("size", 0)
-                md5 = setlist.get("md5", "")
-                chart_count = setlist.get("chart_count", 0)
-
-                # Determine filename and file entry fields
-                if source_type == "gdrive_file":
-                    # GDrive file - use file_id, assume .7z extension
-                    file_entry = {
-                        "id": source.get("file_id", ""),
-                        "path": f"{group_name}/{setlist_name}.7z",
-                        "name": f"{setlist_name}.7z",
-                        "size": size,
-                        "md5": md5,
-                    }
-                elif source_type == "cdn_url":
-                    # CDN URL - extract filename from URL, add url field
-                    url = source.get("url", "")
-                    # Extract extension from URL path (handles query params and fragments)
-                    parsed = urlparse(url)
-                    ext = Path(parsed.path).suffix or ".rar"
-                    # Generate unique ID: use explicit id, or fallback to index
-                    setlist_id = setlist.get("id") or f"idx{idx}"
-                    file_entry = {
-                        "id": f"cdn-{group_id}-{setlist_id}",
-                        "path": f"{group_name}/{setlist_name}{ext}",
-                        "name": f"{setlist_name}{ext}",
-                        "size": size,
-                        "md5": md5,
-                        "url": url,
-                    }
-                elif source_type == "gdrive_folder":
-                    # GDrive folder - skip for now (needs scanning)
-                    continue
-                else:
-                    continue
-
-                files.append(file_entry)
-                total_size += size
-                total_charts += chart_count
-
-            if not files:
-                continue
-
-            # Create folder entry for this group
-            folder_entry = FolderEntry(
-                name=group_name,
-                folder_id=f"static-{group_id}",
-                description=f"{type_name} - {group_name}",
-                file_count=len(files),
-                total_size=total_size,
-                files=files,
-                chart_count=total_charts,
+            folder = FolderEntry(
+                name=data["name"],
+                folder_id=data.get("folder_id", f"static-{json_file.stem}"),
+                description=data.get("description", ""),
+                group=group,
+                collection=collection,
+                chart_count=data.get("chart_count", 0),
+                total_size=data.get("total_size", 0),
+                file_count=data.get("file_count", len(data.get("files", []))),
+                files=data.get("files", []),
                 complete=True,
             )
-            folder_entries.append(folder_entry)
+            folder_entries.append(folder)
+        except Exception as e:
+            print(f"Warning: Failed to load {json_file}: {e}")
 
     return folder_entries
 
 
 def load_root_folders() -> list[dict]:
-    """Load root folders from drives.json."""
-    if not DRIVES_PATH.exists():
-        print(f"Warning: drives.json not found at {DRIVES_PATH}")
-        print("Using empty folder list. Create drives.json to define drives.")
+    """Load dynamic sources from sources.json for scanning."""
+    if not SOURCES_PATH.exists():
+        print(f"Warning: sources.json not found at {SOURCES_PATH}")
+        print("Using empty folder list. Create sources.json to define sources.")
         return []
 
-    drives_config = DrivesConfig.load(DRIVES_PATH)
+    drives_config = DrivesConfig.load(SOURCES_PATH)
     return drives_config.to_root_folders_list()
 
 # ============================================================================
@@ -158,7 +106,7 @@ def generate_full(force_rescan: bool = False):
     print("=" * 60)
     print()
 
-    # Load root folders from drives.json
+    # Load root folders from sources.json
     root_folders = load_root_folders()
     if not root_folders:
         print("No folders to scan. Exiting.")
@@ -178,13 +126,13 @@ def generate_full(force_rescan: bool = False):
     else:
         manifest = Manifest.load(MANIFEST_PATH)
 
-        # Remove drives that are no longer in drives.json
+        # Remove drives that are no longer in sources.json
         orphaned_ids = manifest.get_folder_ids() - expected_ids
         if orphaned_ids:
             for orphan_id in orphaned_ids:
                 folder = manifest.get_folder(orphan_id)
                 if folder:
-                    print(f"Removing '{folder.name}' (no longer in drives.json)")
+                    print(f"Removing '{folder.name}' (no longer in sources.json)")
                 manifest.remove_folder(orphan_id)
             manifest.save()
             print()
@@ -457,7 +405,7 @@ def check_shortcut_folders(
     """
     Check shortcut folders for changes using multiple strategies:
 
-    1. Time-based: Force rescan if not checked in N hours (per-drive, from drives.json)
+    1. Time-based: Force rescan if not checked in N hours (per-drive, from sources.json)
     2. Child count: If immediate children count changed (new/deleted folders)
     3. File sampling: Check if sampled files' modifiedTime changed
 
@@ -667,13 +615,13 @@ def generate_incremental():
     root_folders = load_root_folders()
     expected_ids = {f["folder_id"] for f in root_folders}
 
-    # Remove drives that are no longer in drives.json
+    # Remove drives that are no longer in sources.json
     orphaned_ids = manifest.get_folder_ids() - expected_ids
     if orphaned_ids:
         for orphan_id in orphaned_ids:
             folder = manifest.get_folder(orphan_id)
             if folder:
-                print(f"Removing '{folder.name}' (no longer in drives.json)")
+                print(f"Removing '{folder.name}' (no longer in sources.json)")
             manifest.remove_folder(orphan_id)
         manifest.save()
         print()

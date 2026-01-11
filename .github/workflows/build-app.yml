@@ -56,7 +56,7 @@ jobs:
         run: |
           CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
           pyinstaller --onedir --name synchotic-app --clean --noconfirm \
-            --add-data "drives.json:." \
+            --add-data "sources.json:." \
             --add-data "VERSION:." \
             --add-data "$CERTIFI_PATH:certifi" \
             --add-binary "libs/bin/unrar:." \
@@ -69,7 +69,7 @@ jobs:
         run: |
           $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
           pyinstaller --onedir --name synchotic-app --clean --noconfirm `
-            --add-data "drives.json;." `
+            --add-data "sources.json;." `
             --add-data "VERSION;." `
             --add-data "$CERTIFI_PATH;certifi" `
             --add-binary "libs/bin/UnRAR.exe;." `

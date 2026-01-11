@@ -103,9 +103,15 @@ def get_download_path() -> Path:
     return get_app_dir() / DOWNLOAD_FOLDER_NAME
 
 
+def get_sources_config_path() -> Path:
+    """Get path to sources config file (bundled with app)."""
+    return get_bundle_dir() / "sources.json"
+
+
+# Backward compatibility alias
 def get_drives_config_path() -> Path:
-    """Get path to drives config file (bundled with app)."""
-    return get_bundle_dir() / "drives.json"
+    """Deprecated: Use get_sources_config_path() instead."""
+    return get_sources_config_path()
 
 
 def get_sync_state_path() -> Path:

@@ -46,6 +46,9 @@ class FolderEntry:
     name: str
     folder_id: str
     description: str = ""
+    # Grouping fields for UI organization
+    group: str = ""        # Top-level category (e.g., "Games", "Community", "Drums")
+    collection: str = ""   # Sub-category (e.g., "Guitar Hero", "CSC Setlists")
     file_count: int = 0
     total_size: int = 0
     files: list = field(default_factory=list)
@@ -66,6 +69,11 @@ class FolderEntry:
             "files": [f.to_dict() if isinstance(f, FileEntry) else f for f in self.files],
             "complete": self.complete,
         }
+        # Include grouping fields if present
+        if self.group:
+            result["group"] = self.group
+        if self.collection:
+            result["collection"] = self.collection
         # Include chart stats if present
         if self.chart_count > 0 or self.charts:
             result["chart_count"] = self.chart_count
@@ -80,6 +88,8 @@ class FolderEntry:
             name=data.get("name", ""),
             folder_id=data.get("folder_id", ""),
             description=data.get("description", ""),
+            group=data.get("group", ""),
+            collection=data.get("collection", ""),
             file_count=data.get("file_count", 0),
             total_size=data.get("total_size", 0),
             files=data.get("files", []),

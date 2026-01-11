@@ -47,7 +47,7 @@ Write-Info "Copying source files..."
 Copy-Item -Path "$SourceDir\sync.py" -Destination $BuildDir
 Copy-Item -Path "$SourceDir\launcher.py" -Destination $BuildDir
 Copy-Item -Path "$SourceDir\VERSION" -Destination $BuildDir
-Copy-Item -Path "$SourceDir\drives.json" -Destination $BuildDir
+Copy-Item -Path "$SourceDir\sources.json" -Destination $BuildDir
 Copy-Item -Path "$SourceDir\src" -Destination $BuildDir -Recurse
 
 if ($Mode -eq "Launcher") {
@@ -95,7 +95,7 @@ if ($Mode -eq "Launcher") {
     Write-Info "Building app (onedir)..."
     Push-Location $BuildDir
     python -m PyInstaller --onedir --name $AppName --clean --noconfirm `
-        --add-data "drives.json;." `
+        --add-data "sources.json;." `
         --add-data "VERSION;." `
         --add-data "$CertifiPath;certifi" `
         --add-binary "libs\bin\UnRAR.exe;." `
