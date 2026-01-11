@@ -78,6 +78,73 @@ class FileDownloader:
             return self._auth_token()
         return self._auth_token
 
+    async def _download_url_async(
+        self,
+        session: aiohttp.ClientSession,
+        task: DownloadTask,
+        semaphore: asyncio.Semaphore,
+        progress_tracker: Optional[FolderProgress] = None,
+    ) -> DownloadResult:
+        """Download from a direct URL (CDN sources)."""
+        display_name = format_download_name(task.local_path)
+
+        async with semaphore:
+            for attempt in range(self.max_retries):
+                try:
+                    async with session.get(task.url, allow_redirects=True) as response:
+                        response.raise_for_status()
+
+                        # Detect HTML error pages (CDN returned error page instead of file)
+                        content_type = response.headers.get("content-type", "")
+                        if "text/html" in content_type:
+                            return DownloadResult(
+                                success=False,
+                                file_path=task.local_path,
+                                message=f"ERR (received HTML error page): {display_name}",
+                                retryable=False,
+                            )
+
+                        return await self._write_response(response, task, progress_tracker)
+
+                except asyncio.TimeoutError:
+                    if attempt < self.max_retries - 1:
+                        await asyncio.sleep(1.0 * (attempt + 1))
+                        continue
+                    return DownloadResult(
+                        success=False,
+                        file_path=task.local_path,
+                        message=f"ERR (timeout): {display_name}",
+                        retryable=True,
+                    )
+
+                except aiohttp.ClientResponseError as e:
+                    if attempt < self.max_retries - 1:
+                        await asyncio.sleep(1.0 * (attempt + 1))
+                        continue
+                    return DownloadResult(
+                        success=False,
+                        file_path=task.local_path,
+                        message=f"ERR (HTTP {e.status}): {display_name}",
+                        retryable=e.status in (429, 503),
+                    )
+
+                except asyncio.CancelledError:
+                    raise
+
+                except Exception as e:
+                    if attempt < self.max_retries - 1:
+                        await asyncio.sleep(1.0 * (attempt + 1))
+                        continue
+                    return DownloadResult(
+                        success=False,
+                        file_path=task.local_path,
+                        message=f"ERR: {display_name} - {e}",
+                    )
+
+        # Unreachable: loop always returns on last attempt or success
+        # Added for type checker satisfaction
+        raise RuntimeError("Retry loop exited unexpectedly")
+
     async def _download_file_async(
         self,
         session: aiohttp.ClientSession,
@@ -86,6 +153,10 @@ class FileDownloader:
         progress_tracker: Optional[FolderProgress] = None,
     ) -> DownloadResult:
         """Download a single file with retries (async)."""
+        # Use URL download for CDN sources
+        if task.url:
+            return await self._download_url_async(session, task, semaphore, progress_tracker)
+
         display_name = format_download_name(task.local_path)
 
         async with semaphore:

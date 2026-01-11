@@ -49,6 +49,7 @@ class DownloadTask:
     md5: str = ""
     is_archive: bool = False  # If True, needs extraction after download
     rel_path: str = ""  # Relative path in manifest (for sync state tracking)
+    url: str = ""  # Direct download URL (for CDN sources, bypasses GDrive)
 
 
 def is_archive_file(filename: str) -> bool:
@@ -155,6 +156,7 @@ def plan_downloads(
                 md5=file_md5,
                 is_archive=is_archive,
                 rel_path=rel_path,
+                url=f.get("url", ""),  # CDN URL for static sources
             ))
 
     return to_download, skipped, long_paths

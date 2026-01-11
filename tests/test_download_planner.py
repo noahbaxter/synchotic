@@ -686,5 +686,138 @@ class TestCleanupPartialDownloads:
         assert cleaned == 0
 
 
+class TestPlanDownloadsWithCDN:
+    """Tests for CDN URL handling in download planning."""
+
+    @pytest.fixture
+    def temp_dir(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            yield Path(tmpdir)
+
+    def test_cdn_url_propagated_to_task(self, temp_dir):
+        """URL field from manifest is propagated to DownloadTask."""
+        files = [{
+            "id": "cdn-group1-setlist1",
+            "path": "Test Group/Setlist.rar",
+            "size": 12345,
+            "md5": "abc123",
+            "url": "https://cdn.example.com/files/setlist.rar"
+        }]
+        tasks, skipped, _ = plan_downloads(files, temp_dir)
+
+        assert len(tasks) == 1
+        assert tasks[0].url == "https://cdn.example.com/files/setlist.rar"
+        assert tasks[0].file_id == "cdn-group1-setlist1"
+
+    def test_gdrive_file_url_empty(self, temp_dir):
+        """Non-CDN files (GDrive) have empty url field."""
+        files = [{
+            "id": "1abc123xyz",
+            "path": "Folder/chart.7z",
+            "size": 5000,
+            "md5": "def456"
+            # No "url" field = GDrive file
+        }]
+        tasks, skipped, _ = plan_downloads(files, temp_dir)
+
+        assert len(tasks) == 1
+        assert tasks[0].url == ""
+        assert tasks[0].file_id == "1abc123xyz"
+
+    def test_mixed_cdn_and_gdrive_files(self, temp_dir):
+        """Batch with both CDN and GDrive files processes correctly."""
+        files = [
+            {
+                "id": "cdn-1",
+                "path": "Group/cdn_file.rar",
+                "size": 1000,
+                "md5": "md5a",
+                "url": "https://cdn.example.com/a.rar"
+            },
+            {
+                "id": "gdrive-123",
+                "path": "Group/gdrive_file.7z",
+                "size": 2000,
+                "md5": "md5b"
+                # No URL
+            },
+            {
+                "id": "cdn-2",
+                "path": "Group/cdn_file2.7z",
+                "size": 3000,
+                "md5": "md5c",
+                "url": "https://cdn.example.com/b.7z"
+            }
+        ]
+        tasks, skipped, _ = plan_downloads(files, temp_dir)
+
+        assert len(tasks) == 3
+        cdn_tasks = [t for t in tasks if t.url]
+        gdrive_tasks = [t for t in tasks if not t.url]
+        assert len(cdn_tasks) == 2
+        assert len(gdrive_tasks) == 1
+
+    def test_cdn_archive_detected(self, temp_dir):
+        """CDN files with archive extensions are marked as archives."""
+        for ext in [".rar", ".7z", ".zip"]:
+            files = [{
+                "id": f"cdn-{ext}",
+                "path": f"Group/file{ext}",
+                "size": 1000,
+                "md5": "abc",
+                "url": f"https://cdn.example.com/file{ext}"
+            }]
+            tasks, _, _ = plan_downloads(files, temp_dir)
+            assert tasks[0].is_archive, f"CDN {ext} should be detected as archive"
+
+    def test_cdn_regular_file_existing_skipped(self, temp_dir):
+        """CDN regular files (non-archive) that already exist are skipped."""
+        # Create a non-archive file on disk
+        (temp_dir / "Group").mkdir()
+        target = temp_dir / "Group" / "existing.txt"
+        target.write_bytes(b"x" * 1000)
+
+        files = [{
+            "id": "cdn-existing",
+            "path": "Group/existing.txt",
+            "size": 1000,
+            "md5": "abc",
+            "url": "https://cdn.example.com/existing.txt"
+        }]
+        tasks, skipped, _ = plan_downloads(files, temp_dir)
+
+        assert len(tasks) == 0
+        assert skipped == 1
+
+    def test_cdn_archive_uses_sync_state(self, temp_dir):
+        """CDN archives use sync_state for skip detection."""
+        # Archives download to _download_ prefix and extract
+        # They're tracked via sync_state, not direct file existence
+        (temp_dir / "Group").mkdir()
+        (temp_dir / "Group" / "extracted_song").mkdir()
+        (temp_dir / "Group" / "extracted_song" / "notes.chart").write_text("chart")
+
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_archive(
+            "Group/existing.rar",
+            md5="abc123",
+            archive_size=1000,
+            files={"extracted_song/notes.chart": 5}
+        )
+
+        files = [{
+            "id": "cdn-existing",
+            "path": "Group/existing.rar",
+            "size": 1000,
+            "md5": "abc123",
+            "url": "https://cdn.example.com/existing.rar"
+        }]
+        tasks, skipped, _ = plan_downloads(files, temp_dir, sync_state=sync_state)
+
+        assert len(tasks) == 0
+        assert skipped == 1
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

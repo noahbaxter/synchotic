@@ -6,11 +6,13 @@ Generates the manifest.json file containing the complete file tree.
 Supports incremental updates via Google Drive Changes API.
 """
 
+import json
 import os
 import sys
 import time
 import argparse
 from pathlib import Path
+from urllib.parse import urlparse
 
 # Load .env file if it exists
 env_path = Path(__file__).parent / ".env"
@@ -36,6 +38,97 @@ from src.ui.primitives import print_progress
 API_KEY = os.environ.get("GOOGLE_API_KEY", "")
 MANIFEST_PATH = Path(__file__).parent / "manifest.json"
 DRIVES_PATH = Path(__file__).parent / "drives.json"
+SOURCES_PATH = Path(__file__).parent / "sources.json"
+
+
+def load_static_sources() -> list[FolderEntry]:
+    """Load static sources from sources.json and convert to FolderEntry objects."""
+    if not SOURCES_PATH.exists():
+        return []
+
+    with open(SOURCES_PATH) as f:
+        data = json.load(f)
+
+    folder_entries = []
+
+    for type_info in data.get("types", []):
+        type_name = type_info.get("name", "")
+
+        for group in type_info.get("groups", []):
+            group_id = group.get("id", "")
+            group_name = group.get("name", "")
+            setlists = group.get("setlists", [])
+
+            # Skip dynamic sources (setlists = "discover")
+            if setlists == "discover" or not isinstance(setlists, list):
+                continue
+
+            # Build file entries from setlists
+            files = []
+            total_size = 0
+            total_charts = 0
+
+            for idx, setlist in enumerate(setlists):
+                source = setlist.get("source", {})
+                source_type = source.get("type", "")
+                setlist_name = setlist.get("name", "")
+                size = setlist.get("size", 0)
+                md5 = setlist.get("md5", "")
+                chart_count = setlist.get("chart_count", 0)
+
+                # Determine filename and file entry fields
+                if source_type == "gdrive_file":
+                    # GDrive file - use file_id, assume .7z extension
+                    file_entry = {
+                        "id": source.get("file_id", ""),
+                        "path": f"{group_name}/{setlist_name}.7z",
+                        "name": f"{setlist_name}.7z",
+                        "size": size,
+                        "md5": md5,
+                    }
+                elif source_type == "cdn_url":
+                    # CDN URL - extract filename from URL, add url field
+                    url = source.get("url", "")
+                    # Extract extension from URL path (handles query params and fragments)
+                    parsed = urlparse(url)
+                    ext = Path(parsed.path).suffix or ".rar"
+                    # Generate unique ID: use explicit id, or fallback to index
+                    setlist_id = setlist.get("id") or f"idx{idx}"
+                    file_entry = {
+                        "id": f"cdn-{group_id}-{setlist_id}",
+                        "path": f"{group_name}/{setlist_name}{ext}",
+                        "name": f"{setlist_name}{ext}",
+                        "size": size,
+                        "md5": md5,
+                        "url": url,
+                    }
+                elif source_type == "gdrive_folder":
+                    # GDrive folder - skip for now (needs scanning)
+                    continue
+                else:
+                    continue
+
+                files.append(file_entry)
+                total_size += size
+                total_charts += chart_count
+
+            if not files:
+                continue
+
+            # Create folder entry for this group
+            folder_entry = FolderEntry(
+                name=group_name,
+                folder_id=f"static-{group_id}",
+                description=f"{type_name} - {group_name}",
+                file_count=len(files),
+                total_size=total_size,
+                files=files,
+                chart_count=total_charts,
+                complete=True,
+            )
+            folder_entries.append(folder_entry)
+
+    return folder_entries
 
 
 def load_root_folders() -> list[dict]:
@@ -200,6 +293,18 @@ def generate_full(force_rescan: bool = False):
             except Exception as e:
                 print(f"  Warning: Could not save token: {e}")
             print()
+
+    # Add static sources from sources.json
+    static_sources = load_static_sources()
+    if static_sources:
+        print(f"Adding {len(static_sources)} static source(s)...")
+        for static_folder in static_sources:
+            # Remove existing static folder with same ID (replace)
+            manifest.folders = [f for f in manifest.folders if f.folder_id != static_folder.folder_id]
+            manifest.add_folder(static_folder)
+            print(f"  {static_folder.name}: {static_folder.file_count} files, {static_folder.chart_count} charts")
+        manifest.save()
+        print()
 
     # Summary
     print("=" * 60)
