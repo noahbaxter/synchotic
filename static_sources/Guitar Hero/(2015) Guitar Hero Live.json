@@ -1,0 +1,348 @@
+{
+  "name": "(2015) Guitar Hero Live",
+  "folder_id": "static-gh-live",
+  "group": "Games",
+  "collection": "Guitar Hero",
+  "description": "",
+  "chart_count": 42,
+  "total_size": 413880589,
+  "file_count": 42,
+  "files": [
+    {
+      "id": "1TQ9GI2cH7lDaZDZO6h5cCjzC9yqMndzW",
+      "path": "Neon Trees - Everybody Talks.zip",
+      "name": "Neon Trees - Everybody Talks.zip",
+      "size": 8640290,
+      "md5": "43533a621a4cab672c6920046c7c1783",
+      "modified": "2025-02-13T23:29:05.000Z"
+    },
+    {
+      "id": "1ZJ--MeGpPd9m0wsptps1gh_vea9ObRxN",
+      "path": "Mumford & Sons - I Will Wait.zip",
+      "name": "Mumford & Sons - I Will Wait.zip",
+      "size": 12994379,
+      "md5": "a9585a2590b37b637a3af48f9a7b04bf",
+      "modified": "2025-02-13T23:29:05.000Z"
+    },
+    {
+      "id": "1Jigb4g0GUentGaw-S88CnPcQdDonhxZs",
+      "path": "Of Monsters And Men - Mountain Sound.zip",
+      "name": "Of Monsters And Men - Mountain Sound.zip",
+      "size": 10344305,
+      "md5": "067ba178b7f0f93771aa3aec50273382",
+      "modified": "2025-02-13T23:29:05.000Z"
+    },
+    {
+      "id": "1mMaOhj37qCtICFOWznOs5xtCudXhROlo",
+      "path": "OneRepublic - Counting Stars.zip",
+      "name": "OneRepublic - Counting Stars.zip",
+      "size": 11646408,
+      "md5": "58e4ba21261609301f932d82ee1caad2",
+      "modified": "2025-02-13T23:29:05.000Z"
+    },
+    {
+      "id": "1F0J3xq95Pjj7TD2hYahEwKdYb1tuhFLq",
+      "path": "Of Mice & Men - Bones Exposed.zip",
+      "name": "Of Mice & Men - Bones Exposed.zip",
+      "size": 11136141,
+      "md5": "2d3990ce568f1344b4a86ed1c025f9c0",
+      "modified": "2025-02-13T23:29:05.000Z"
+    },
+    {
+      "id": "1dxi82CGxdIpQFZhPT4Wy-kiQPl9yacDy",
+      "path": "Imagine Dragons - Demons.zip",
+      "name": "Imagine Dragons - Demons.zip",
+      "size": 7923241,
+      "md5": "fe2a2afa231ff697753943f6bb0878a4",
+      "modified": "2025-02-13T23:29:04.000Z"
+    },
+    {
+      "id": "1d-ahfJsFLF4cPnKeOMvFaM9KHlqZilJs",
+      "path": "Jack White - Lazaretto.zip",
+      "name": "Jack White - Lazaretto.zip",
+      "size": 9268163,
+      "md5": "f4b4e4c1dcf685dc2b359cf994821c88",
+      "modified": "2025-02-13T23:29:04.000Z"
+    },
+    {
+      "id": "1WOADv1UrTXPdoBccnlKvr4v3kYBEXo1_",
+      "path": "Linkin Park - Wastelands.zip",
+      "name": "Linkin Park - Wastelands.zip",
+      "size": 8547138,
+      "md5": "8e4f52f58f1e49b494b9fff7fbde4e44",
+      "modified": "2025-02-13T23:29:04.000Z"
+    },
+    {
+      "id": "18eWxYa39rixKUHgXxB4ff57i7MQxcki1",
+      "path": "Kasabian - Club Foot.zip",
+      "name": "Kasabian - Club Foot.zip",
+      "size": 8859293,
+      "md5": "e21fd101cdddc26eee76cecfb74553e8",
+      "modified": "2025-02-13T23:29:04.000Z"
+    },
+    {
+      "id": "1oaCASOIyVsfaRoFK0K2BBLeVzLUL8THV",
+      "path": "Katy Perry - Waking Up In Vegas.zip",
+      "name": "Katy Perry - Waking Up In Vegas.zip",
+      "size": 9195658,
+      "md5": "69833ddc33877ce9a34fa11efd6acbb0",
+      "modified": "2025-02-13T23:29:04.000Z"
+    },
+    {
+      "id": "1TPSbScp9ADiflTJAs0dfUfP-4B6moice",
+      "path": "Fall Out Boy - My Songs Know What You Did In The Dark (Light Em Up).zip",
+      "name": "Fall Out Boy - My Songs Know What You Did In The Dark (Light Em Up).zip",
+      "size": 8231709,
+      "md5": "7befb590fcbefee8212b2eec45b164f3",
+      "modified": "2025-02-13T23:29:03.000Z"
+    },
+    {
+      "id": "1sAy44W5HPHlfWLkt87oM9DER6y9dvGIk",
+      "path": "Elbow - Grounds For Divorce.zip",
+      "name": "Elbow - Grounds For Divorce.zip",
+      "size": 10179565,
+      "md5": "d3634ff74cbf3cf1a2f715eddce709c9",
+      "modified": "2025-02-13T23:29:03.000Z"
+    },
+    {
+      "id": "1_TLFYS74Z3BzEbGRU_6jOWSbGiezZ58b",
+      "path": "Good Charlotte - The Anthem.zip",
+      "name": "Good Charlotte - The Anthem.zip",
+      "size": 8128401,
+      "md5": "d1ae8c545edddb0fd9b1f7f3596ab30a",
+      "modified": "2025-02-13T23:29:03.000Z"
+    },
+    {
+      "id": "1aNPtApH-3GGkF2qB3MfJJI20yp21pJGc",
+      "path": "Green Day - Nuclear Family.zip",
+      "name": "Green Day - Nuclear Family.zip",
+      "size": 8524349,
+      "md5": "f54625fa2a9f65e31e643df537157177",
+      "modified": "2025-02-13T23:29:03.000Z"
+    },
+    {
+      "id": "1oKQoRKUSSPxc6atl8a6is1a0LqQUsOxY",
+      "path": "Eminem - Berzerk.zip",
+      "name": "Eminem - Berzerk.zip",
+      "size": 9466509,
+      "md5": "7e7becc81ff0bf4d2beea9c62e03b27f",
+      "modified": "2025-02-13T23:29:03.000Z"
+    },
+    {
+      "id": "152wuJ47FzCEBfPGU1pB22lB8GER5mfc-",
+      "path": "Halestorm - Love Bites (So Do I).zip",
+      "name": "Halestorm - Love Bites (So Do I).zip",
+      "size": 8866065,
+      "md5": "d5fc0d28b8f5b9c0e07ca118a86f31f6",
+      "modified": "2025-02-13T23:29:03.000Z"
+    },
+    {
+      "id": "1ka3I0Gz4p-Kjyqm-JcCNQN3vSbb2lFEW",
+      "path": "Bring Me The Horizon - Shadow Moses.zip",
+      "name": "Bring Me The Horizon - Shadow Moses.zip",
+      "size": 10207332,
+      "md5": "635d2101cad93f96917095cd9b059075",
+      "modified": "2025-02-13T23:29:02.000Z"
+    },
+    {
+      "id": "1TocJRaHZyPFKfBq_7n2PLE9Ri7W-OYv9",
+      "path": "Avril Lavigne - Here's To Never Growing Up.zip",
+      "name": "Avril Lavigne - Here's To Never Growing Up.zip",
+      "size": 10124465,
+      "md5": "d2ef6a971d84ec11a221d40bb5029e5a",
+      "modified": "2025-02-13T23:29:02.000Z"
+    },
+    {
+      "id": "1L6D_xFrQ8GeDW5vbrgXRSnnXGSw0oXRK",
+      "path": "Biffy Clyro - Victory Over The Sun.zip",
+      "name": "Biffy Clyro - Victory Over The Sun.zip",
+      "size": 11022905,
+      "md5": "08313d62e5632dbcfa31cc3159c3f5b7",
+      "modified": "2025-02-13T23:29:02.000Z"
+    },
+    {
+      "id": "1Jv_j3hnrMWwLs-0stzrheHNOfJpbsRmt",
+      "path": "Blink-182 - The Rock Show.zip",
+      "name": "Blink-182 - The Rock Show.zip",
+      "size": 7327520,
+      "md5": "1d971484ded19b8424fca0054b96e646",
+      "modified": "2025-02-13T23:29:02.000Z"
+    },
+    {
+      "id": "1CwBE0XbNpBpGMZt9xC8ScDVz2TZm2gEv",
+      "path": "Deap Vally - Lies.zip",
+      "name": "Deap Vally - Lies.zip",
+      "size": 8953483,
+      "md5": "d9aa377d2da83ad7d5d7d77d09cb8942",
+      "modified": "2025-02-13T23:29:02.000Z"
+    },
+    {
+      "id": "15wAdo0GAbKEagVz5la6MERS3bgs8aRaC",
+      "path": "The Who - Won't Get Fooled Again.zip",
+      "name": "The Who - Won't Get Fooled Again.zip",
+      "size": 10677653,
+      "md5": "a7988addebe2366f66766824ee50dabc",
+      "modified": "2025-02-13T23:29:01.000Z"
+    },
+    {
+      "id": "1aiuolABUHAgmgDgkADEIMrcggBLsDP57",
+      "path": "You Me At Six - Lived A Lie.zip",
+      "name": "You Me At Six - Lived A Lie.zip",
+      "size": 9722350,
+      "md5": "23e3afdd39a503645536821089a0bcb6",
+      "modified": "2025-02-13T23:29:01.000Z"
+    },
+    {
+      "id": "1LhFbCtEAb_PpCvLC1omi4fr_DwkjkCFu",
+      "path": "Arctic Monkeys - R U Mine.zip",
+      "name": "Arctic Monkeys - R U Mine.zip",
+      "size": 9250770,
+      "md5": "283f83631fa65296274215d16fdb9a66",
+      "modified": "2025-02-13T23:29:01.000Z"
+    },
+    {
+      "id": "1A8qZwwJqifKtSn8akhVRNnBR7QNRTQEz",
+      "path": "Thirty Seconds To Mars - The Kill.zip",
+      "name": "Thirty Seconds To Mars - The Kill.zip",
+      "size": 10865629,
+      "md5": "ceac887160238b1a85291d869d76bf14",
+      "modified": "2025-02-13T23:29:01.000Z"
+    },
+    {
+      "id": "1rvZ2D5TqA7i8UWaniVa7JX7y3tNfgWeS",
+      "path": "Wolfmother - Sundial.zip",
+      "name": "Wolfmother - Sundial.zip",
+      "size": 10649521,
+      "md5": "b913d6b5f5caa26938d028e5c0cb6d30",
+      "modified": "2025-02-13T23:29:01.000Z"
+    },
+    {
+      "id": "1CGeUnx5FFPGQnMFrdIalGc1O0PQBzSHW",
+      "path": "The Killers - When You Were Young.zip",
+      "name": "The Killers - When You Were Young.zip",
+      "size": 9927879,
+      "md5": "c16c47989039fda1ee33db142d48f7a0",
+      "modified": "2025-02-13T23:29:00.000Z"
+    },
+    {
+      "id": "1-z8oLsZffmRCXX11_OH5GWwMSCrgYydm",
+      "path": "The Black Keys - Gold On The Ceiling.zip",
+      "name": "The Black Keys - Gold On The Ceiling.zip",
+      "size": 10546920,
+      "md5": "3b15a04e366ac0aa6dabf3d8e34bd9da",
+      "modified": "2025-02-13T23:29:00.000Z"
+    },
+    {
+      "id": "1QsEghc-mY6OZY8P9I23r1UH3mgJLgE_d",
+      "path": "The Gaslight Anthem - 45.zip",
+      "name": "The Gaslight Anthem - 45.zip",
+      "size": 9545902,
+      "md5": "ac1ee4a72b23040d1311a737cc1d3c7c",
+      "modified": "2025-02-13T23:29:00.000Z"
+    },
+    {
+      "id": "1Q7nq-7yruRsjndY7J08BaDUFjHnvWyuC",
+      "path": "The Lumineers - Ho Hey.zip",
+      "name": "The Lumineers - Ho Hey.zip",
+      "size": 7254960,
+      "md5": "e5d9b9b8dee7e58741a3223d32b2eaed",
+      "modified": "2025-02-13T23:29:00.000Z"
+    },
+    {
+      "id": "19JHKvkLrMKTgWKfR3Og5ZniYCrXPT1RR",
+      "path": "The Rolling Stones - Paint It Black.zip",
+      "name": "The Rolling Stones - Paint It Black.zip",
+      "size": 10917349,
+      "md5": "eb3e8dedf0f4eb4163fddbaf2c4f08b6",
+      "modified": "2025-02-13T23:29:00.000Z"
+    },
+    {
+      "id": "1l10AmmO_PJ3jgg4QmEWxws9BTW2K-mIU",
+      "path": "Royal Blood - Little Monster.zip",
+      "name": "Royal Blood - Little Monster.zip",
+      "size": 9304653,
+      "md5": "9f976110b31b35c9d7a241768f9910ef",
+      "modified": "2025-02-13T23:28:59.000Z"
+    },
+    {
+      "id": "1WmQJ53rIRmpmf9wqJIIzalO389Xn6BxZ",
+      "path": "Soundgarden - Been Away Too Long.zip",
+      "name": "Soundgarden - Been Away Too Long.zip",
+      "size": 9834205,
+      "md5": "6bb65a432a93bf6f64c2f6adbf7515f3",
+      "modified": "2025-02-13T23:28:59.000Z"
+    },
+    {
+      "id": "1DN4wDSYUyqhEb3daPJ1ODv8XDYtrnz6a",
+      "path": "The 1975 - Girls.zip",
+      "name": "The 1975 - Girls.zip",
+      "size": 12093339,
+      "md5": "60b6292795eb860878a55eb2f0f4cde8",
+      "modified": "2025-02-13T23:28:59.000Z"
+    },
+    {
+      "id": "1LWuUoV0Ov9KpfpW4911B4lpBUNEUB78o",
+      "path": "Rival Sons - Keep On Swinging.zip",
+      "name": "Rival Sons - Keep On Swinging.zip",
+      "size": 11195817,
+      "md5": "7b1a29887de1473f616b72b6e8332055",
+      "modified": "2025-02-13T23:28:59.000Z"
+    },
+    {
+      "id": "1_He0B_XnojyJ1pztnArwU4gq3TqRzNN8",
+      "path": "Skrillex - Bangarang (ft. Sirah).zip",
+      "name": "Skrillex - Bangarang (ft. Sirah).zip",
+      "size": 10286452,
+      "md5": "b97a73c37d91e918051e1946e8d2e34e",
+      "modified": "2025-02-13T23:28:59.000Z"
+    },
+    {
+      "id": "1JbOJH3bEPrM3NlqMV3mYVhjTHPFTC--M",
+      "path": "Queen - Tie Your Mother Down.zip",
+      "name": "Queen - Tie Your Mother Down.zip",
+      "size": 10151207,
+      "md5": "78631e8314288b5f417cb3b6f0c5fd47",
+      "modified": "2025-02-13T23:28:58.000Z"
+    },
+    {
+      "id": "1AbwnDPYqicW-T60tm7SsHeSLp6iNj0_Z",
+      "path": "Pierce The Veil - King For A Day (ft. Kellin Quinn).zip",
+      "name": "Pierce The Veil - King For A Day (ft. Kellin Quinn).zip",
+      "size": 10869098,
+      "md5": "83f31d1939a809fd770746c5c6610047",
+      "modified": "2025-02-13T23:28:58.000Z"
+    },
+    {
+      "id": "12J2L9u9geWDe-bNmXiaY6LE-ULkr72tJ",
+      "path": "Rise Against - Tragedy + Time.zip",
+      "name": "Rise Against - Tragedy + Time.zip",
+      "size": 11652913,
+      "md5": "859972ad77b277deba87cad1718b720b",
+      "modified": "2025-02-13T23:28:58.000Z"
+    },
+    {
+      "id": "1QthMUxXQVh83mEls_fjRuo2vauHthFSO",
+      "path": "Rihanna - California King Bed.zip",
+      "name": "Rihanna - California King Bed.zip",
+      "size": 11398502,
+      "md5": "64b59df6f8da15455568b99bd5966008",
+      "modified": "2025-02-13T23:28:58.000Z"
+    },
+    {
+      "id": "1KMJtRsA8BCokeE07j_as7vt37BcsmH7E",
+      "path": "Pearl Jam - Mind Your Manners.zip",
+      "name": "Pearl Jam - Mind Your Manners.zip",
+      "size": 7207978,
+      "md5": "599cfb21cc6ad36fd9fdc17da3c82346",
+      "modified": "2025-02-13T23:28:57.000Z"
+    },
+    {
+      "id": "1kD-B8JAEvFyvCyZgdwI1VxEM-PvRx1ED",
+      "path": "Paramore - Now.zip",
+      "name": "Paramore - Now.zip",
+      "size": 10940173,
+      "md5": "e4321797d3399a05af888086168f5c1f",
+      "modified": "2025-02-13T23:28:57.000Z"
+    }
+  ]
+}
