@@ -22,137 +22,133 @@
   "Games": {
     "Guitar Hero": [
       {
-        "name": "(2005) Guitar Hero", "type": "file",
+        "name": "(2005) Guitar Hero", "type": "file", "release_date": "2005-11-08",
         "link": "1Z6tPssOVX81VVi_1XqQO9GpsNUtIhabH"
       },
       {
-        "name": "(2006) Guitar Hero II", "type": "file",
+        "name": "(2006) Guitar Hero II", "type": "file", "release_date": "2006-11-07",
         "link": "1flR2SdIvdLBuLuN4JgQzxLHXwXJJzop6"
       },
       {
-        "name": "(2007) Guitar Hero III", "type": "file",
+        "name": "(2007) Guitar Hero III", "type": "file", "release_date": "2007-10-28",
         "link": "17Jbl3mBg116GnRYbvVGbHt_P57rN3ZnT"
       },
       {
-        "name": "(2007) Guitar Hero Encore Rocks the 80s", "type": "file",
-        "link": "1zLHtqxadChMmuG1UEBcYxeKR36LiVJKO"
-      },
-      {
-        "name": "(2008) Guitar Hero World Tour", "type": "file",
+        "name": "(2008) Guitar Hero World Tour", "type": "file", "release_date": "2008-10-26",
         "link": "1DsRIpbvicrGhAkLQ5qxASybNGuEJ_dB6"
       },
       {
-        "name": "(2008) Guitar Hero Aerosmith", "type": "file",
-        "link": "1DP1oi9EDm3FGgR_7Ew2r9X5c9ahnq3NH"
-      },
-      {
-        "name": "(2008) Guitar Hero On Tour", "type": "file",
-        "link": "1SQbyclFNQOFCAAqzjnyNRqt306lznW2W"
-      },
-      {
-        "name": "(2008) Guitar Hero On Tour - Decades", "type": "file",
-        "link": "1ooe0A0nNnFg92qQOpZRF2SRel5SlVE_8"
-      },
-      {
-        "name": "(2009) Guitar Hero 5", "type": "file",
+        "name": "(2009) Guitar Hero 5", "type": "file", "release_date": "2009-09-01",
         "link": "1zYYtwtj-wYdgkYbVSRlGtx-StHxowIU8"
       },
       {
-        "name": "(2009) Guitar Hero - Metallica", "type": "file",
-        "link": "1tmQYWZnn70HdN_dYAQzUo7EyPdFHmswp"
-      },
-      {
-        "name": "(2009) Guitar Hero - Smash Hits", "type": "file",
-        "link": "1eB6p6ovL7zpYNLYlSjtf8t0MWIMAMLsx"
-      },
-      {
-        "name": "(2009) Guitar Hero Van Halen", "type": "file",
-        "link": "1QhFixrIttVLd6WnuY5sw5LG4L19tmiQO"
-      },
-      {
-        "name": "(2009) Guitar Hero On Tour - Modern Hits", "type": "file",
-        "link": "1agEboWOACQi9sZVVOPuScExqp_j8pTbQ"
-      },
-      {
-        "name": "(2009) Band Hero", "type": "file",
-        "link": "1l6mm5Sdi8GLm-_8H8zxuEUghmrvO-riI"
-      },
-      {
-        "name": "(2009) Band Hero 2 Full Band", "type": "file",
-        "link": "1D382RKeLokD0P1OExRvN-MOqEo2i1uB7"
-      },
-      {
-        "name": "(2009) DJ Hero Guitar Charts", "type": "file",
-        "link": "1Rn3jIyIWJv2MYBtFS0LP1xP-YXlR3HO3"
-      },
-      {
-        "name": "(2010) Guitar Hero - Warriors of Rock", "type": "file",
+        "name": "(2010) Guitar Hero - Warriors of Rock", "type": "file", "release_date": "2010-09-24",
         "link": "1ekGknfrdAS0MGP-7X0wdGJQGYUNk_5W1"
       },
       {
-        "name": "(2015) Guitar Hero Live", "type": "folder",
+        "name": "(2015) Guitar Hero Live", "type": "folder", "release_date": "2015-10-20",
         "link": "1k28eqRc_mDR6mTpwAXBT7dR_R6yslxKS"
+      },
+      {
+        "name": "(2007) Guitar Hero Encore Rocks the 80s", "type": "file", "release_date": "2007-07-24",
+        "link": "1zLHtqxadChMmuG1UEBcYxeKR36LiVJKO"
+      },
+      {
+        "name": "(2008) Guitar Hero Aerosmith", "type": "file", "release_date": "2008-06-29",
+        "link": "1DP1oi9EDm3FGgR_7Ew2r9X5c9ahnq3NH"
+      },
+      {
+        "name": "(2009) Guitar Hero - Metallica", "type": "file", "release_date": "2009-03-29",
+        "link": "1tmQYWZnn70HdN_dYAQzUo7EyPdFHmswp"
+      },
+      {
+        "name": "(2009) Guitar Hero - Smash Hits", "type": "file", "release_date": "2009-06-16",
+        "link": "1eB6p6ovL7zpYNLYlSjtf8t0MWIMAMLsx"
+      },
+      {
+        "name": "(2009) Guitar Hero Van Halen", "type": "file", "release_date": "2009-12-22",
+        "link": "1QhFixrIttVLd6WnuY5sw5LG4L19tmiQO"
+      },
+      {
+        "name": "(2008) Guitar Hero On Tour", "type": "file", "release_date": "2008-06-22",
+        "link": "1SQbyclFNQOFCAAqzjnyNRqt306lznW2W"
+      },
+      {
+        "name": "(2008) Guitar Hero On Tour - Decades", "type": "file", "release_date": "2008-11-16",
+        "link": "1ooe0A0nNnFg92qQOpZRF2SRel5SlVE_8"
+      },
+      {
+        "name": "(2009) Guitar Hero On Tour - Modern Hits", "type": "file", "release_date": "2009-06-09",
+        "link": "1agEboWOACQi9sZVVOPuScExqp_j8pTbQ"
+      },
+      {
+        "name": "(2009) Band Hero", "type": "file", "release_date": "2009-11-03",
+        "link": "1l6mm5Sdi8GLm-_8H8zxuEUghmrvO-riI"
+      },
+      {
+        "name": "(2009) DJ Hero Guitar Charts", "type": "file", "release_date": "2009-10-27",
+        "link": "1Rn3jIyIWJv2MYBtFS0LP1xP-YXlR3HO3"
       }
     ],
     "Rock Band": [
       {
-        "name": "(2007) Rock Band", "type": "folder",
+        "name": "(2007) Rock Band", "type": "folder", "release_date": "2007-11-20",
         "link": "1fU-ZTbKda4T1z4nG5XLefLvkjzVRQfYL"
       },
       {
-        "name": "(2008) Rock Band 2", "type": "folder",
-        "link": "1ffllyyoo8lfcMMCCefmx-T9eXGY1sFlB"
-      },
-      {
-        "name": "(2009) Lego Rock Band", "type": "folder",
+        "name": "(2008) Rock Band 2", "type": "folder", "release_date": "2008-09-14",
         "link": "1YIXEh4bSedxuF6jhySIWjD282nyXJwHG"
       },
       {
-        "name": "(2009) The Beatles Rock Band", "type": "folder",
-        "link": "1d2T2MwyNKJ5s-PgeDuPUfcCBff5v0usg"
-      },
-      {
-        "name": "(2010) Green Day Rock Band", "type": "folder",
-        "link": "1cad-u4KHI4aumU35Mw15iTIjEC9nWkHS"
-      },
-      {
-        "name": "(2010) Rock Band 3", "type": "folder",
-        "link": "1jgwluK968CwngGOIhg0kB37yyPT8vfe3"
-      },
-      {
-        "name": "(2012) Rock Band Blitz", "type": "folder",
+        "name": "(2010) Rock Band 3", "type": "folder", "release_date": "2010-10-26",
         "link": "1_-VAx0V7jcK95Sc1k79EBMST8wyUSMi7"
       },
       {
-        "name": "(2015) Rock Band 4", "type": "folder",
-        "link": "11mUZ3NILbLFHIMPtv5GWbEgJjZmIGngQ"
-      },
-      {
-        "name": "(2016) Rock Band Rivals", "type": "folder",
+        "name": "(2015) Rock Band 4", "type": "folder", "release_date": "2015-10-06",
         "link": "1heiLMOCInvj9vqUMdUlnH7Jp0_MUe4nc"
       },
       {
-        "name": "Rock Band 1 DLC", "type": "folder",
+        "name": "(2016) Rock Band Rivals", "type": "folder", "release_date": "2016-10-18",
         "link": "1De328_NZTZKMamUc6U2cx1lg8P1ePOCi"
       },
       {
-        "name": "Rock Band 2 DLC", "type": "folder",
+        "name": "(2009) Lego Rock Band", "type": "folder", "release_date": "2009-11-03",
+        "link": "1d2T2MwyNKJ5s-PgeDuPUfcCBff5v0usg"
+      },
+      {
+        "name": "(2009) The Beatles Rock Band", "type": "folder", "release_date": "2009-09-09",
+        "link": "1cad-u4KHI4aumU35Mw15iTIjEC9nWkHS"
+      },
+      {
+        "name": "(2010) Green Day Rock Band", "type": "folder", "release_date": "2010-06-08",
+        "link": "1jgwluK968CwngGOIhg0kB37yyPT8vfe3"
+      },
+      {
+        "name": "(2012) Rock Band Blitz", "type": "folder", "release_date": "2012-08-28",
+        "link": "11mUZ3NILbLFHIMPtv5GWbEgJjZmIGngQ"
+      },
+      {
+        "name": "Rock Band 1 DLC", "type": "folder",
         "link": "1HOUoDds2WCMNPHAX2ryE2p0L4QsZLoM8"
       },
       {
-        "name": "Rock Band 3 DLC", "type": "folder",
+        "name": "Rock Band 2 DLC", "type": "folder",
         "link": "1tRIlN13UCuNPt4je1Tjy2Qi7tB7CvQBm"
       },
       {
-        "name": "Rock Band 4 DLC", "type": "folder",
+        "name": "Rock Band 3 DLC", "type": "folder",
         "link": "1ONgW-GCSsEkZF9EfhKXOMbny6V65bYh2"
       },
       {
-        "name": "Rock Band ACDC Live Track Pack", "type": "folder",
+        "name": "Rock Band 4 DLC", "type": "folder",
         "link": "1Jq8bNQjiVnnGRCuul6m34vg7IWy7UG_0"
       },
       {
         "name": "Rock Band Network", "type": "folder",
+        "link": "1ffllyyoo8lfcMMCCefmx-T9eXGY1sFlB"
+      },
+      {
+        "name": "Rock Band ACDC Live Track Pack", "type": "folder", "release_date": "2008-09-29",
         "link": "1YsvN8SHBmTZx-mkuY1rDudF4NEDxHPED"
       }
     ]
@@ -160,132 +156,132 @@
   "Community": {
     "CSC Setlists": [
       {
-        "name": "Alhambra Discography", "type": "file",
-        "link": "10FUPVK9OfU9VWZOKT192QGVOEZ89bwC5"
-      },
-      {
-        "name": "Anti Hero", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Anti%20Hero.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Anti Hero 2", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Anti%20Hero%202.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Anti Hero: Beach Episode", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Anti%20Hero%20-%20Beach%20Episode.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Attention Span", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Attention%20Span.7z?ref=customsongscentral.com"
-      },
-      {
-        "name": "Bitcrusher", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/BITCRUSHER.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Carpal Tunnel Hero", "type": "url",
+        "name": "Carpal Tunnel Hero", "type": "url", "release_date": "2016-10-10",
         "link": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%20-%20%20Remastered.rar?ref=customsongscentral.com"
       },
       {
-        "name": "Carpal Tunnel Hero 2", "type": "url",
+        "name": "Carpal Tunnel Hero 2", "type": "url", "release_date": "2017-09-29",
         "link": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%202.rar?v=2&ref=customsongscentral.com"
       },
       {
-        "name": "Carpal Tunnel Hero 3", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%203.rar?ref=customsongscentral.com"
+        "name": "Anti Hero", "type": "url", "release_date": "2018-02-14",
+        "link": "https://customsongscentral.b-cdn.net/Anti%20Hero.rar?ref=customsongscentral.com"
       },
       {
-        "name": "CHARTS", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/CHARTS.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "CHARTS 2", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/CHARTS%202.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Circuit Breaker", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Circuit%20Breaker.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Code Red: Volume 1", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Code%20Red%20-%20Vol.1.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Digitizer", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Digitizer.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Easy Access", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Easy%20Access.7z?ref=customsongscentral.com"
-      },
-      {
-        "name": "Focal Point 2", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Focal%20Point%202.zip?ref=customsongscentral.com"
-      },
-      {
-        "name": "Fuse Box", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Fuse%20Box.7z?ref=customsongscentral.com"
-      },
-      {
-        "name": "Guitar Grief", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Guitar%20Grief.7z?ref=customsongscentral.com"
-      },
-      {
-        "name": "Guitar Hero X-II", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Guitar%20Hero%20X-II.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Guitar Zero 2", "type": "file",
-        "link": "1wyIJ8xpKygp_v8H6qc8-YrlGdHLNm3vg"
-      },
-      {
-        "name": "Marathon Hero", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Marathon%20Hero.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Marathon Hero 2", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Marathon%20Hero%202.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Max Altitude", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Max%20Altitude.7z?ref=customsongscentral.com"
-      },
-      {
-        "name": "Parallax Hero", "type": "file",
-        "link": "1Fm71mLfiRERv-O7mt66MXyG4TajzMio-"
-      },
-      {
-        "name": "Post-Hardcore Hero", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/PHCH.7z?ref=customsongscentral.com"
-      },
-      {
-        "name": "Redemption Arc", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Redemption%20Arc.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "S Hero", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/S%20Hero.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Symphony X Discography Setlist", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/Symphony%20X%20Discography%20Setlist.rar"
-      },
-      {
-        "name": "The Fall of Troy Hero", "type": "url",
-        "link": "https://customsongscentral.b-cdn.net/The%20Fall%20of%20Troy%20Hero.rar?ref=customsongscentral.com"
-      },
-      {
-        "name": "Vortex Hero", "type": "url",
+        "name": "Vortex Hero", "type": "url", "release_date": "2018-04-15",
         "link": "https://customsongscentral.b-cdn.net/Vortex%20Hero.rar?v=2&ref=customsongscentral.com"
       },
       {
-        "name": "Zero Gravity: Space Battle", "type": "url",
+        "name": "Anti Hero: Beach Episode", "type": "url", "release_date": "2018-07-01",
+        "link": "https://customsongscentral.b-cdn.net/Anti%20Hero%20-%20Beach%20Episode.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Marathon Hero", "type": "url", "release_date": "2018-08-11",
+        "link": "https://customsongscentral.b-cdn.net/Marathon%20Hero.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Redemption Arc", "type": "url", "release_date": "2019-01-07",
+        "link": "https://customsongscentral.b-cdn.net/Redemption%20Arc.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "CHARTS", "type": "url", "release_date": "2019-01-25",
+        "link": "https://customsongscentral.b-cdn.net/CHARTS.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "The Fall of Troy Hero", "type": "url", "release_date": "2019-03-15",
+        "link": "https://customsongscentral.b-cdn.net/The%20Fall%20of%20Troy%20Hero.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Circuit Breaker", "type": "url", "release_date": "2019-03-29",
+        "link": "https://customsongscentral.b-cdn.net/Circuit%20Breaker.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Anti Hero 2", "type": "url", "release_date": "2019-08-18",
+        "link": "https://customsongscentral.b-cdn.net/Anti%20Hero%202.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Digitizer", "type": "url", "release_date": "2019-11-15",
+        "link": "https://customsongscentral.b-cdn.net/Digitizer.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "CHARTS 2", "type": "url", "release_date": "2020-08-02",
+        "link": "https://customsongscentral.b-cdn.net/CHARTS%202.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Focal Point 2", "type": "url", "release_date": "2020-10-02",
+        "link": "https://customsongscentral.b-cdn.net/Focal%20Point%202.zip?ref=customsongscentral.com"
+      },
+      {
+        "name": "Marathon Hero 2", "type": "url", "release_date": "2021-01-08",
+        "link": "https://customsongscentral.b-cdn.net/Marathon%20Hero%202.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Zero Gravity: Space Battle", "type": "url", "release_date": "2021-04-23",
         "link": "https://customsongscentral.b-cdn.net/Zero%20Gravity%20-%20Space%20Battle.rar?ref=customsongscentral.com"
       },
       {
-        "name": "Zero Gravity 3D", "type": "url",
+        "name": "Guitar Zero 2", "type": "file", "release_date": "2021-06-22",
+        "link": "1wyIJ8xpKygp_v8H6qc8-YrlGdHLNm3vg"
+      },
+      {
+        "name": "Symphony X Discography Setlist", "type": "url", "release_date": "2021-06-26",
+        "link": "https://customsongscentral.b-cdn.net/Symphony%20X%20Discography%20Setlist.rar"
+      },
+      {
+        "name": "Bitcrusher", "type": "url", "release_date": "2021-09-10",
+        "link": "https://customsongscentral.b-cdn.net/BITCRUSHER.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Guitar Hero X-II", "type": "url", "release_date": "2021-10-02",
+        "link": "https://customsongscentral.b-cdn.net/Guitar%20Hero%20X-II.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Carpal Tunnel Hero 3", "type": "url", "release_date": "2021-12-11",
+        "link": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%203.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Max Altitude", "type": "url", "release_date": "2022-02-25",
+        "link": "https://customsongscentral.b-cdn.net/Max%20Altitude.7z?ref=customsongscentral.com"
+      },
+      {
+        "name": "S Hero", "type": "url", "release_date": "2022-06-18",
+        "link": "https://customsongscentral.b-cdn.net/S%20Hero.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Code Red: Volume 1", "type": "url", "release_date": "2022-09-16",
+        "link": "https://customsongscentral.b-cdn.net/Code%20Red%20-%20Vol.1.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Parallax Hero", "type": "file", "release_date": "2022-10-21",
+        "link": "1Fm71mLfiRERv-O7mt66MXyG4TajzMio-"
+      },
+      {
+        "name": "Fuse Box", "type": "url", "release_date": "2023-03-29",
+        "link": "https://customsongscentral.b-cdn.net/Fuse%20Box.7z?ref=customsongscentral.com"
+      },
+      {
+        "name": "Easy Access", "type": "url", "release_date": "2023-12-19",
+        "link": "https://customsongscentral.b-cdn.net/Easy%20Access.7z?ref=customsongscentral.com"
+      },
+      {
+        "name": "Zero Gravity 3D", "type": "url", "release_date": "2025-02-18",
         "link": "https://customsongscentral.b-cdn.net/Zero%20Gravity%203D.rar?ref=customsongscentral.com"
+      },
+      {
+        "name": "Post-Hardcore Hero", "type": "url", "release_date": "2025-08-01",
+        "link": "https://customsongscentral.b-cdn.net/PHCH.7z?ref=customsongscentral.com"
+      },
+      {
+        "name": "Attention Span", "type": "url", "release_date": "2025-08-15",
+        "link": "https://customsongscentral.b-cdn.net/Attention%20Span.7z?ref=customsongscentral.com"
+      },
+      {
+        "name": "Alhambra Discography", "type": "file", "release_date": "2025-09-15",
+        "link": "10FUPVK9OfU9VWZOKT192QGVOEZ89bwC5"
+      },
+      {
+        "name": "Guitar Grief", "type": "url", "release_date": "2025-11-09",
+        "link": "https://customsongscentral.b-cdn.net/Guitar%20Grief.7z?ref=customsongscentral.com"
       }
     ]
   }
