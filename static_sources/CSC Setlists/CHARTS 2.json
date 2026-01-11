@@ -1,0 +1,20 @@
+{
+  "name": "CHARTS 2",
+  "folder_id": "static-charts-2",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 139,
+  "total_size": 3140123290,
+  "file_count": 708,
+  "files": [
+    {
+      "id": "cdn-csc-charts-2",
+      "path": "CHARTS 2/CHARTS 2.rar",
+      "name": "CHARTS 2.rar",
+      "size": 3140123290,
+      "md5": "9f19d5066cfeaf03c72c939af55f9bab",
+      "url": "https://customsongscentral.b-cdn.net/CHARTS%202.rar?ref=customsongscentral.com"
+    }
+  ]
+}

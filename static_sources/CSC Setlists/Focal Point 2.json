@@ -1,0 +1,20 @@
+{
+  "name": "Focal Point 2",
+  "folder_id": "static-focal-point-2",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 186,
+  "total_size": 2169640406,
+  "file_count": 748,
+  "files": [
+    {
+      "id": "cdn-csc-focal-point-2",
+      "path": "Focal Point 2/Focal Point 2.zip",
+      "name": "Focal Point 2.zip",
+      "size": 2169640406,
+      "md5": "d3a6d2574d6b066cb46f17bdd13a2b1f",
+      "url": "https://customsongscentral.b-cdn.net/Focal%20Point%202.zip?ref=customsongscentral.com"
+    }
+  ]
+}

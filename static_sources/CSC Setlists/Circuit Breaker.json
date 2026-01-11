@@ -1,0 +1,20 @@
+{
+  "name": "Circuit Breaker",
+  "folder_id": "static-circuit-breaker",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 117,
+  "total_size": 1157920208,
+  "file_count": 506,
+  "files": [
+    {
+      "id": "cdn-csc-circuit-breaker",
+      "path": "Circuit Breaker/Circuit Breaker.rar",
+      "name": "Circuit Breaker.rar",
+      "size": 1157920208,
+      "md5": "c2a369fca7b804797ded863b810fb933",
+      "url": "https://customsongscentral.b-cdn.net/Circuit%20Breaker.rar?ref=customsongscentral.com"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "(2009) Guitar Hero - Smash Hits",
+  "folder_id": "static-gh-smash-hits",
+  "group": "Games",
+  "collection": "Guitar Hero",
+  "description": "",
+  "chart_count": 50,
+  "total_size": 1890165402,
+  "file_count": 650,
+  "files": [
+    {
+      "id": "1eB6p6ovL7zpYNLYlSjtf8t0MWIMAMLsx",
+      "path": "(2009) Guitar Hero Smash Hits/Guitar Hero - Smash Hits.zip",
+      "name": "Guitar Hero - Smash Hits.zip",
+      "size": 1890165402,
+      "md5": "f064664ff8187cca0f4129fc852c20cb"
+    }
+  ]
+}

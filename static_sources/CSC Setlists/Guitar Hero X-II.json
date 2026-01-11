@@ -1,0 +1,20 @@
+{
+  "name": "Guitar Hero X-II",
+  "folder_id": "static-gh-x-ii",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 157,
+  "total_size": 3998539474,
+  "file_count": 949,
+  "files": [
+    {
+      "id": "cdn-csc-gh-x-ii",
+      "path": "Guitar Hero X-II/Guitar Hero X-II.rar",
+      "name": "Guitar Hero X-II.rar",
+      "size": 3998539474,
+      "md5": "c2d40fbf27f41b03d6164070cbd9985f",
+      "url": "https://customsongscentral.b-cdn.net/Guitar%20Hero%20X-II.rar?ref=customsongscentral.com"
+    }
+  ]
+}

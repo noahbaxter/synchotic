@@ -1,0 +1,20 @@
+{
+  "name": "Guitar Grief",
+  "folder_id": "static-guitar-grief",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 122,
+  "total_size": 1250007169,
+  "file_count": 610,
+  "files": [
+    {
+      "id": "cdn-csc-guitar-grief",
+      "path": "Guitar Grief/Guitar Grief.7z",
+      "name": "Guitar Grief.7z",
+      "size": 1250007169,
+      "md5": "2bf150fb40d11cba722ec8388c8c3ac4",
+      "url": "https://customsongscentral.b-cdn.net/Guitar%20Grief.7z?ref=customsongscentral.com"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Vortex Hero",
+  "folder_id": "static-vortex-hero",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 222,
+  "total_size": 2654219028,
+  "file_count": 893,
+  "files": [
+    {
+      "id": "cdn-csc-vortex-hero",
+      "path": "Vortex Hero/Vortex Hero.rar",
+      "name": "Vortex Hero.rar",
+      "size": 2654219028,
+      "md5": "5a686f9324b5e3ddcad458e8cdca5aaf",
+      "url": "https://customsongscentral.b-cdn.net/Vortex%20Hero.rar?v=2&ref=customsongscentral.com"
+    }
+  ]
+}

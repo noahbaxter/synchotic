@@ -1,0 +1,19 @@
+{
+  "name": "(2006) Guitar Hero II",
+  "folder_id": "static-gh-2",
+  "group": "Games",
+  "collection": "Guitar Hero",
+  "description": "",
+  "chart_count": 100,
+  "total_size": 1546101579,
+  "file_count": 615,
+  "files": [
+    {
+      "id": "1flR2SdIvdLBuLuN4JgQzxLHXwXJJzop6",
+      "path": "(2006) Guitar Hero II/Guitar Hero II.7z",
+      "name": "Guitar Hero II.7z",
+      "size": 1546101579,
+      "md5": "eef0d8a61f1e4b8676a2808f92eee6ae"
+    }
+  ]
+}

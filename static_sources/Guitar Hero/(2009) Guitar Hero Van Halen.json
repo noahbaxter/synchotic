@@ -1,0 +1,19 @@
+{
+  "name": "(2009) Guitar Hero Van Halen",
+  "folder_id": "static-gh-van-halen",
+  "group": "Games",
+  "collection": "Guitar Hero",
+  "description": "",
+  "chart_count": 47,
+  "total_size": 1610660760,
+  "file_count": 565,
+  "files": [
+    {
+      "id": "1QhFixrIttVLd6WnuY5sw5LG4L19tmiQO",
+      "path": "(2009) Guitar Hero - Van Halen/Guitar Hero Van Halen.7z",
+      "name": "Guitar Hero Van Halen.7z",
+      "size": 1610660760,
+      "md5": "372076231dd77900f1a1a491c4d71c7d"
+    }
+  ]
+}

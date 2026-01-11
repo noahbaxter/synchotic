@@ -1,0 +1,19 @@
+{
+  "name": "(2009) Guitar Hero 5",
+  "folder_id": "static-gh-5",
+  "group": "Games",
+  "collection": "Guitar Hero",
+  "description": "",
+  "chart_count": 90,
+  "total_size": 2771735799,
+  "file_count": 997,
+  "files": [
+    {
+      "id": "1zYYtwtj-wYdgkYbVSRlGtx-StHxowIU8",
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5.7z",
+      "name": "Guitar Hero 5.7z",
+      "size": 2771735799,
+      "md5": "bb3afe6a4f2a2c874c9ef18325960cc3"
+    }
+  ]
+}

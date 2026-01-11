@@ -1,0 +1,20 @@
+{
+  "name": "S Hero",
+  "folder_id": "static-s-hero",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 223,
+  "total_size": 2776992276,
+  "file_count": 1115,
+  "files": [
+    {
+      "id": "cdn-csc-s-hero",
+      "path": "S Hero/S Hero.rar",
+      "name": "S Hero.rar",
+      "size": 2776992276,
+      "md5": "c6295daf03bef7de7fba07542a183740",
+      "url": "https://customsongscentral.b-cdn.net/S%20Hero.rar?ref=customsongscentral.com"
+    }
+  ]
+}

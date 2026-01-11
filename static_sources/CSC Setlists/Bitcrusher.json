@@ -1,0 +1,20 @@
+{
+  "name": "Bitcrusher",
+  "folder_id": "static-bitcrusher",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 74,
+  "total_size": 573098473,
+  "file_count": 375,
+  "files": [
+    {
+      "id": "cdn-csc-bitcrusher",
+      "path": "Bitcrusher/Bitcrusher.rar",
+      "name": "Bitcrusher.rar",
+      "size": 573098473,
+      "md5": "0d9f809a3eda1b227d7410d0278f2ffc",
+      "url": "https://customsongscentral.b-cdn.net/BITCRUSHER.rar?ref=customsongscentral.com"
+    }
+  ]
+}

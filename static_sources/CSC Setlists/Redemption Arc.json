@@ -1,0 +1,20 @@
+{
+  "name": "Redemption Arc",
+  "folder_id": "static-redemption-arc",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 100,
+  "total_size": 1000042322,
+  "file_count": 404,
+  "files": [
+    {
+      "id": "cdn-csc-redemption-arc",
+      "path": "Redemption Arc/Redemption Arc.rar",
+      "name": "Redemption Arc.rar",
+      "size": 1000042322,
+      "md5": "9560e0fdb18c0d3618ff5da67263270a",
+      "url": "https://customsongscentral.b-cdn.net/Redemption%20Arc.rar?ref=customsongscentral.com"
+    }
+  ]
+}

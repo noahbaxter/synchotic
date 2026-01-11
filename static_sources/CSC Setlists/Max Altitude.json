@@ -1,0 +1,20 @@
+{
+  "name": "Max Altitude",
+  "folder_id": "static-max-altitude",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 130,
+  "total_size": 1067576444,
+  "file_count": 676,
+  "files": [
+    {
+      "id": "cdn-csc-max-altitude",
+      "path": "Max Altitude/Max Altitude.7z",
+      "name": "Max Altitude.7z",
+      "size": 1067576444,
+      "md5": "2618e25a3bae24138d360ab77b7de441",
+      "url": "https://customsongscentral.b-cdn.net/Max%20Altitude.7z?ref=customsongscentral.com"
+    }
+  ]
+}

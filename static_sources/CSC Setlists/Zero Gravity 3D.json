@@ -1,0 +1,20 @@
+{
+  "name": "Zero Gravity 3D",
+  "folder_id": "static-zero-gravity-3d",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 272,
+  "total_size": 3689747044,
+  "file_count": 1437,
+  "files": [
+    {
+      "id": "cdn-csc-zero-gravity-3d",
+      "path": "Zero Gravity 3D/Zero Gravity 3D.rar",
+      "name": "Zero Gravity 3D.rar",
+      "size": 3689747044,
+      "md5": "2120b27a4b8a2a400bf4fbfbbd47077f",
+      "url": "https://customsongscentral.b-cdn.net/Zero%20Gravity%203D.rar?ref=customsongscentral.com"
+    }
+  ]
+}

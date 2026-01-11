@@ -1,0 +1,20 @@
+{
+  "name": "Marathon Hero 2",
+  "folder_id": "static-marathon-hero-2",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 152,
+  "total_size": 6267217757,
+  "file_count": 765,
+  "files": [
+    {
+      "id": "cdn-csc-marathon-hero-2",
+      "path": "Marathon Hero 2/Marathon Hero 2.rar",
+      "name": "Marathon Hero 2.rar",
+      "size": 6267217757,
+      "md5": "d6fb57f2c2e4afae97043fd49176dc1c",
+      "url": "https://customsongscentral.b-cdn.net/Marathon%20Hero%202.rar?ref=customsongscentral.com"
+    }
+  ]
+}

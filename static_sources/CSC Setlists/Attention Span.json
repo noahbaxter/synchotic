@@ -1,0 +1,20 @@
+{
+  "name": "Attention Span",
+  "folder_id": "static-attention-span",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 331,
+  "total_size": 1326843374,
+  "file_count": 1537,
+  "files": [
+    {
+      "id": "cdn-csc-attention-span",
+      "path": "Attention Span/Attention Span.7z",
+      "name": "Attention Span.7z",
+      "size": 1326843374,
+      "md5": "063073ac7f533d22ee730803916e8bad",
+      "url": "https://customsongscentral.b-cdn.net/Attention%20Span.7z?ref=customsongscentral.com"
+    }
+  ]
+}

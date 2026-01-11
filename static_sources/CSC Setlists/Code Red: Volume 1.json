@@ -1,0 +1,20 @@
+{
+  "name": "Code Red: Volume 1",
+  "folder_id": "static-code-red-1",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 201,
+  "total_size": 2427788594,
+  "file_count": 1023,
+  "files": [
+    {
+      "id": "cdn-csc-code-red-1",
+      "path": "Code Red: Volume 1/Code Red: Volume 1.rar",
+      "name": "Code Red: Volume 1.rar",
+      "size": 2427788594,
+      "md5": "ebe26e17d07c40b1ac5e20b5c683cc78",
+      "url": "https://customsongscentral.b-cdn.net/Code%20Red%20-%20Vol.1.rar?ref=customsongscentral.com"
+    }
+  ]
+}

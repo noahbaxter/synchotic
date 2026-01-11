@@ -1,0 +1,20 @@
+{
+  "name": "Marathon Hero",
+  "folder_id": "static-marathon-hero-1",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 49,
+  "total_size": 2389501040,
+  "file_count": 200,
+  "files": [
+    {
+      "id": "cdn-csc-marathon-hero-1",
+      "path": "Marathon Hero/Marathon Hero.rar",
+      "name": "Marathon Hero.rar",
+      "size": 2389501040,
+      "md5": "6743b6b0ba5bd46725185f68b0d7f708",
+      "url": "https://customsongscentral.b-cdn.net/Marathon%20Hero.rar?ref=customsongscentral.com"
+    }
+  ]
+}

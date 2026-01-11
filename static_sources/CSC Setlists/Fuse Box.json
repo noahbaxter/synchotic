@@ -1,0 +1,20 @@
+{
+  "name": "Fuse Box",
+  "folder_id": "static-fuse-box",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 255,
+  "total_size": 2971302938,
+  "file_count": 1205,
+  "files": [
+    {
+      "id": "cdn-csc-fuse-box",
+      "path": "Fuse Box/Fuse Box.7z",
+      "name": "Fuse Box.7z",
+      "size": 2971302938,
+      "md5": "5636703034ac3b91c6313e08e58b6459",
+      "url": "https://customsongscentral.b-cdn.net/Fuse%20Box.7z?ref=customsongscentral.com"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Digitizer",
+  "folder_id": "static-digitizer",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 82,
+  "total_size": 973550079,
+  "file_count": 335,
+  "files": [
+    {
+      "id": "cdn-csc-digitizer",
+      "path": "Digitizer/Digitizer.rar",
+      "name": "Digitizer.rar",
+      "size": 973550079,
+      "md5": "8c8b9f111d3cdecb3d0a427a3181248e",
+      "url": "https://customsongscentral.b-cdn.net/Digitizer.rar?ref=customsongscentral.com"
+    }
+  ]
+}

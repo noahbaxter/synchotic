@@ -1,0 +1,20 @@
+{
+  "name": "Anti Hero",
+  "folder_id": "static-anti-hero-1",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 402,
+  "total_size": 3753442433,
+  "file_count": 1616,
+  "files": [
+    {
+      "id": "cdn-csc-anti-hero-1",
+      "path": "Anti Hero/Anti Hero.rar",
+      "name": "Anti Hero.rar",
+      "size": 3753442433,
+      "md5": "75e535504658c89a3e6a5e5d4078b172",
+      "url": "https://customsongscentral.b-cdn.net/Anti%20Hero.rar?ref=customsongscentral.com"
+    }
+  ]
+}

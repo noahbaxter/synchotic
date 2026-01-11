@@ -1,0 +1,19 @@
+{
+  "name": "Alhambra Discography",
+  "folder_id": "static-alhambra",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 49,
+  "total_size": 1106821953,
+  "file_count": 245,
+  "files": [
+    {
+      "id": "10FUPVK9OfU9VWZOKT192QGVOEZ89bwC5",
+      "path": "Alhambra Discography/Alhambra Discography.7z",
+      "name": "Alhambra Discography.7z",
+      "size": 1106821953,
+      "md5": "cdbd304184102a689d00735a2b826c0a"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "(2008) Guitar Hero World Tour",
+  "folder_id": "static-gh-wt",
+  "group": "Games",
+  "collection": "Guitar Hero",
+  "description": "",
+  "chart_count": 86,
+  "total_size": 3182249655,
+  "file_count": 982,
+  "files": [
+    {
+      "id": "1DsRIpbvicrGhAkLQ5qxASybNGuEJ_dB6",
+      "path": "(2008) Guitar Hero World Tour/Guitar Hero World Tour.7z",
+      "name": "Guitar Hero World Tour.7z",
+      "size": 3182249655,
+      "md5": "15c50c9c07974068585383718a485ccb"
+    }
+  ]
+}

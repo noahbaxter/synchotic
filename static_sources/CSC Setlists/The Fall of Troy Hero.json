@@ -1,0 +1,20 @@
+{
+  "name": "The Fall of Troy Hero",
+  "folder_id": "static-fall-of-troy",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 70,
+  "total_size": 1531023854,
+  "file_count": 281,
+  "files": [
+    {
+      "id": "cdn-csc-fall-of-troy",
+      "path": "The Fall of Troy Hero/The Fall of Troy Hero.rar",
+      "name": "The Fall of Troy Hero.rar",
+      "size": 1531023854,
+      "md5": "3d9f24bff96aa706cfd0d2e54f305d3d",
+      "url": "https://customsongscentral.b-cdn.net/The%20Fall%20of%20Troy%20Hero.rar?ref=customsongscentral.com"
+    }
+  ]
+}

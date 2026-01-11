@@ -1,0 +1,20 @@
+{
+  "name": "Symphony X Discography Setlist",
+  "folder_id": "static-symphony-x",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 101,
+  "total_size": 2366503208,
+  "file_count": 506,
+  "files": [
+    {
+      "id": "cdn-csc-symphony-x",
+      "path": "Symphony X Discography Setlist/Symphony X Discography Setlist.rar",
+      "name": "Symphony X Discography Setlist.rar",
+      "size": 2366503208,
+      "md5": "54369f29ebaa0482f33ae1b08653e8f6",
+      "url": "https://customsongscentral.b-cdn.net/Symphony%20X%20Discography%20Setlist.rar"
+    }
+  ]
+}

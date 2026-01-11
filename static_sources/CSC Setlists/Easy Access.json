@@ -1,0 +1,20 @@
+{
+  "name": "Easy Access",
+  "folder_id": "static-easy-access",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 69,
+  "total_size": 669468896,
+  "file_count": 346,
+  "files": [
+    {
+      "id": "cdn-csc-easy-access",
+      "path": "Easy Access/Easy Access.7z",
+      "name": "Easy Access.7z",
+      "size": 669468896,
+      "md5": "386a27e9b47d2ce7ef9c6bbe3c5baff4",
+      "url": "https://customsongscentral.b-cdn.net/Easy%20Access.7z?ref=customsongscentral.com"
+    }
+  ]
+}

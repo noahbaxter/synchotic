@@ -1,0 +1,20 @@
+{
+  "name": "Post-Hardcore Hero",
+  "folder_id": "static-post-hardcore",
+  "group": "Community",
+  "collection": "CSC Setlists",
+  "description": "",
+  "chart_count": 116,
+  "total_size": 637489612,
+  "file_count": 580,
+  "files": [
+    {
+      "id": "cdn-csc-post-hardcore",
+      "path": "Post-Hardcore Hero/Post-Hardcore Hero.7z",
+      "name": "Post-Hardcore Hero.7z",
+      "size": 637489612,
+      "md5": "11039c3c4c7998c04dab26ef84882a59",
+      "url": "https://customsongscentral.b-cdn.net/PHCH.7z?ref=customsongscentral.com"
+    }
+  ]
+}
