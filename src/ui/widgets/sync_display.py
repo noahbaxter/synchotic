@@ -182,6 +182,16 @@ def folder_complete(downloaded: int, bytes_downloaded: int, duration: float, err
     print(summary)
 
 
+def extra_files_deleted(count: int):
+    """Display message about deleted extra files (clean sync mode)."""
+    print(f"  {_c.DIM}Removed {count} extra file{'s' if count != 1 else ''}{_c.RESET}")
+
+
+def extra_files_detected(count: int):
+    """Display message about detected extra files (dirty sync mode)."""
+    print(f"  {_c.YELLOW}Note:{_c.RESET} {count} extra file{'s' if count != 1 else ''} detected")
+
+
 # === Multi-folder completion summary ===
 
 def sync_cancelled(downloaded: int = 0):

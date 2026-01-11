@@ -33,6 +33,8 @@ class UserSettings:
         self.group_expanded: dict[str, bool] = {}
         # Whether to delete video files from extracted archive charts
         self.delete_videos: bool = True
+        # Whether to keep static sources clean (delete extra files) or allow dirty (warn only)
+        self.clean_sync: bool = True
         # Whether user has been prompted to sign in to Google
         self.oauth_prompted: bool = False
         # Delta display mode: "size", "files", or "charts"
@@ -54,6 +56,7 @@ class UserSettings:
                 settings.subfolder_toggles = data.get("subfolder_toggles", {})
                 settings.group_expanded = data.get("group_expanded", {})
                 settings.delete_videos = data.get("delete_videos", True)
+                settings.clean_sync = data.get("clean_sync", True)
                 settings.oauth_prompted = data.get("oauth_prompted", False)
                 settings.delta_mode = data.get("delta_mode", "size")
                 settings._is_new = data.get("use_default_drives", False)
@@ -71,6 +74,7 @@ class UserSettings:
             "subfolder_toggles": self.subfolder_toggles,
             "group_expanded": self.group_expanded,
             "delete_videos": self.delete_videos,
+            "clean_sync": self.clean_sync,
             "oauth_prompted": self.oauth_prompted,
             "delta_mode": self.delta_mode,
             "use_default_drives": self._is_new,

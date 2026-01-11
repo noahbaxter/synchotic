@@ -17,6 +17,7 @@ from .download_planner import plan_downloads
 from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
 from .state import SyncState
+from .extractor import find_extra_files, delete_extra_files
 
 
 class FolderSync:
@@ -27,11 +28,13 @@ class FolderSync:
         client: DriveClient,
         auth_token: Optional[Union[str, Callable[[], Optional[str]]]] = None,
         delete_videos: bool = True,
+        clean_sync: bool = True,
         sync_state: Optional[SyncState] = None,
     ):
         self.client = client
         self.auth_token = auth_token
         self.delete_videos = delete_videos
+        self.clean_sync = clean_sync
         self.sync_state = sync_state
         # Import here to avoid circular dependency
         from .downloader import FileDownloader
@@ -130,10 +133,45 @@ class FolderSync:
         if not cancelled:
             display.folder_complete(downloaded, bytes_downloaded, download_time, errors)
 
+        # Check for extra files (not part of the setlist)
+        if not cancelled and self.sync_state:
+            self._handle_extra_files(folder, folder_path)
+
         # Clear cache for this folder after download
         clear_folder_cache(folder_path)
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
+
+    def _handle_extra_files(self, folder: dict, folder_path: Path):
+        """Check for and handle extra files not part of the setlist."""
+        folder_name = folder.get("name", "")
+
+        # Get tracked files for this folder from sync_state
+        tracked_files = set()
+        for path in self.sync_state.get_all_files():
+            # Only include files under this folder
+            if path.startswith(folder_name + "/"):
+                # Convert to path relative to folder_path
+                rel_path = path[len(folder_name) + 1:]
+                tracked_files.add(rel_path)
+
+        if not tracked_files:
+            return
+
+        # Find extra files
+        extra_files, _ = find_extra_files(folder_path, tracked_files, folder_path)
+
+        if not extra_files:
+            return
+
+        if self.clean_sync:
+            # Clean mode: delete extra files
+            deleted = delete_extra_files(extra_files)
+            if deleted > 0:
+                display.extra_files_deleted(deleted)
+        else:
+            # Dirty mode: just warn
+            display.extra_files_detected(len(extra_files))
 
     def download_folders(
         self,

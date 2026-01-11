@@ -100,6 +100,7 @@ class SyncApp:
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
+            clean_sync=self.user_settings.clean_sync,
             sync_state=self.sync_state,
         )
         self.folders = []
@@ -470,6 +471,7 @@ class SyncApp:
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
+            clean_sync=self.user_settings.clean_sync,
             sync_state=self.sync_state,
         )
 

@@ -13,6 +13,8 @@ from .purger import delete_files
 from .folder_sync import FolderSync, purge_all_folders
 from .downloader import FileDownloader, DownloadResult
 from .state import SyncState
+from .existing_scanner import scan_existing_archives, collect_archives_from_sources
+from .extractor import is_system_junk, scan_extracted_files, find_extra_files, delete_extra_files
 
 # Backwards compatibility aliases
 clear_scan_cache = clear_cache
@@ -47,4 +49,11 @@ __all__ = [
     "DownloadResult",
     # Sync state
     "SyncState",
+    # Existing content scanner
+    "scan_existing_archives",
+    "collect_archives_from_sources",
+    "is_system_junk",
+    "scan_extracted_files",
+    "find_extra_files",
+    "delete_extra_files",
 ]
