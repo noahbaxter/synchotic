@@ -3,18 +3,4479 @@
   "folder_id": "static-s-hero",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 223,
-  "total_size": 2776992276,
-  "file_count": 1115,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-s-hero",
-      "path": "S Hero/S Hero.rar",
+      "url": "https://customsongscentral.b-cdn.net/S%20Hero.rar?ref=customsongscentral.com",
       "name": "S Hero.rar",
       "size": 2776992276,
-      "md5": "c6295daf03bef7de7fba07542a183740",
-      "url": "https://customsongscentral.b-cdn.net/S%20Hero.rar?ref=customsongscentral.com"
+      "md5": "c6295daf03bef7de7fba07542a183740"
     }
-  ]
+  ],
+  "download_size": 2776992276,
+  "files": [
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Alice in Chains - Sludge Factory (Unplugged) [7777villain]/album.png",
+      "size": 499439
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Alice in Chains - Sludge Factory (Unplugged) [7777villain]/background.jpg",
+      "size": 443214
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Alice in Chains - Sludge Factory (Unplugged) [7777villain]/notes.chart",
+      "size": 38522
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Alice in Chains - Sludge Factory (Unplugged) [7777villain]/song.ini",
+      "size": 429
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Alice in Chains - Sludge Factory (Unplugged) [7777villain]/song.ogg",
+      "size": 9572119
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Brothers of Metal - Son of Odin [torqqes]/album.png",
+      "size": 574596
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Brothers of Metal - Son of Odin [torqqes]/notes.chart",
+      "size": 33923
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Brothers of Metal - Son of Odin [torqqes]/song.ini",
+      "size": 350
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Brothers of Metal - Son of Odin [torqqes]/song.ogg",
+      "size": 7839752
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Buckethead - S [Peddy]/album.png",
+      "size": 279407
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Buckethead - S [Peddy]/background.jpg",
+      "size": 203695
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Buckethead - S [Peddy]/notes.chart",
+      "size": 9177
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Buckethead - S [Peddy]/song.ini",
+      "size": 266
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Buckethead - S [Peddy]/song.ogg",
+      "size": 1625239
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Darude & John Coltrane - Sandstorm but it's Giant Steps [\u03a9HM]/album.png",
+      "size": 396624
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Darude & John Coltrane - Sandstorm but it's Giant Steps [\u03a9HM]/background.jpg",
+      "size": 414519
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Darude & John Coltrane - Sandstorm but it's Giant Steps [\u03a9HM]/notes.chart",
+      "size": 13222
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Darude & John Coltrane - Sandstorm but it's Giant Steps [\u03a9HM]/song.ini",
+      "size": 344
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Darude & John Coltrane - Sandstorm but it's Giant Steps [\u03a9HM]/song.ogg",
+      "size": 3980587
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Lil Kleine & Ronnie Flex - Stoff und Schnaps [Chezy]/album.png",
+      "size": 433897
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Lil Kleine & Ronnie Flex - Stoff und Schnaps [Chezy]/background.jpg",
+      "size": 1942268
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Lil Kleine & Ronnie Flex - Stoff und Schnaps [Chezy]/notes.chart",
+      "size": 27077
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Lil Kleine & Ronnie Flex - Stoff und Schnaps [Chezy]/song.ini",
+      "size": 572
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/Lil Kleine & Ronnie Flex - Stoff und Schnaps [Chezy]/song.ogg",
+      "size": 4882632
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/The Weeknd - Sacrifice [Chezy]/album.png",
+      "size": 301279
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/The Weeknd - Sacrifice [Chezy]/background.jpg",
+      "size": 1087190
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/The Weeknd - Sacrifice [Chezy]/notes.chart",
+      "size": 29448
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/The Weeknd - Sacrifice [Chezy]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "S Hero/[S] 01 - It's free real S-tate/The Weeknd - Sacrifice [Chezy]/song.ogg",
+      "size": 6492940
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Epica - Sacred & Wild (Powerwolf cover) [BurpLeTurtle]/album.png",
+      "size": 522022
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Epica - Sacred & Wild (Powerwolf cover) [BurpLeTurtle]/background.jpg",
+      "size": 490928
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Epica - Sacred & Wild (Powerwolf cover) [BurpLeTurtle]/notes.chart",
+      "size": 38763
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Epica - Sacred & Wild (Powerwolf cover) [BurpLeTurtle]/song.ini",
+      "size": 474
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Epica - Sacred & Wild (Powerwolf cover) [BurpLeTurtle]/song.ogg",
+      "size": 8079628
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Magdalena Bay - Secrets (Your Fire) [Chezy]/album.png",
+      "size": 510358
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Magdalena Bay - Secrets (Your Fire) [Chezy]/background.jpg",
+      "size": 2107755
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Magdalena Bay - Secrets (Your Fire) [Chezy]/notes.chart",
+      "size": 40370
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Magdalena Bay - Secrets (Your Fire) [Chezy]/song.ini",
+      "size": 557
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Magdalena Bay - Secrets (Your Fire) [Chezy]/song.ogg",
+      "size": 8099010
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Minniva - Storytime (Nightwish cover) [Spachi, Chezy]/album.png",
+      "size": 464039
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Minniva - Storytime (Nightwish cover) [Spachi, Chezy]/background.jpg",
+      "size": 601111
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Minniva - Storytime (Nightwish cover) [Spachi, Chezy]/notes.chart",
+      "size": 75462
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Minniva - Storytime (Nightwish cover) [Spachi, Chezy]/song.ini",
+      "size": 478
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Minniva - Storytime (Nightwish cover) [Spachi, Chezy]/song.ogg",
+      "size": 10271113
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Peach Pit - Seventeen [7777villain]/album.png",
+      "size": 532009
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Peach Pit - Seventeen [7777villain]/background.jpg",
+      "size": 496415
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Peach Pit - Seventeen [7777villain]/notes.chart",
+      "size": 31807
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Peach Pit - Seventeen [7777villain]/song.ini",
+      "size": 351
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Peach Pit - Seventeen [7777villain]/song.ogg",
+      "size": 7020168
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Rammstein - SEX [BurpLeTurtle]/album.png",
+      "size": 191360
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Rammstein - SEX [BurpLeTurtle]/background.jpg",
+      "size": 401901
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Rammstein - SEX [BurpLeTurtle]/notes.chart",
+      "size": 34350
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Rammstein - SEX [BurpLeTurtle]/song.ini",
+      "size": 326
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Rammstein - SEX [BurpLeTurtle]/song.ogg",
+      "size": 7502402
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Shubh Saran - Slip [Peddy]/album.png",
+      "size": 451176
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Shubh Saran - Slip [Peddy]/background.jpg",
+      "size": 800614
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Shubh Saran - Slip [Peddy]/notes.chart",
+      "size": 24930
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Shubh Saran - Slip [Peddy]/song.ini",
+      "size": 344
+    },
+    {
+      "path": "S Hero/[S] 02 - S-cape from reality/Shubh Saran - Slip [Peddy]/song.ogg",
+      "size": 7518728
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Greenleaf - Stray Bullit Woman [BurpLeTurtle]/album.png",
+      "size": 383663
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Greenleaf - Stray Bullit Woman [BurpLeTurtle]/background.jpg",
+      "size": 934012
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Greenleaf - Stray Bullit Woman [BurpLeTurtle]/notes.chart",
+      "size": 17657
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Greenleaf - Stray Bullit Woman [BurpLeTurtle]/song.ini",
+      "size": 388
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Greenleaf - Stray Bullit Woman [BurpLeTurtle]/song.ogg",
+      "size": 4308800
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Kim Petras - Slut Pop [Chezy]/album.png",
+      "size": 462139
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Kim Petras - Slut Pop [Chezy]/background.jpg",
+      "size": 1820292
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Kim Petras - Slut Pop [Chezy]/notes.chart",
+      "size": 20734
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Kim Petras - Slut Pop [Chezy]/song.ini",
+      "size": 848
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Kim Petras - Slut Pop [Chezy]/song.ogg",
+      "size": 4063658
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Neck Deep - Staircase Wit [iZenPenguin]/album.png",
+      "size": 510970
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Neck Deep - Staircase Wit [iZenPenguin]/background.jpg",
+      "size": 515911
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Neck Deep - Staircase Wit [iZenPenguin]/notes.chart",
+      "size": 33850
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Neck Deep - Staircase Wit [iZenPenguin]/song.ini",
+      "size": 321
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Neck Deep - Staircase Wit [iZenPenguin]/song.ogg",
+      "size": 5532612
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Porcupine Tree - Shallow [iZenPenguin]/album.png",
+      "size": 482358
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Porcupine Tree - Shallow [iZenPenguin]/background.jpg",
+      "size": 1291705
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Porcupine Tree - Shallow [iZenPenguin]/notes.chart",
+      "size": 44373
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Porcupine Tree - Shallow [iZenPenguin]/song.ini",
+      "size": 355
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/Porcupine Tree - Shallow [iZenPenguin]/song.ogg",
+      "size": 8329272
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/System of a Down - Science [Peddy]/album.png",
+      "size": 558511
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/System of a Down - Science [Peddy]/background.jpg",
+      "size": 211320
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/System of a Down - Science [Peddy]/notes.chart",
+      "size": 26739
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/System of a Down - Science [Peddy]/song.ini",
+      "size": 403
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/System of a Down - Science [Peddy]/song.ogg",
+      "size": 5364371
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/U2 - Sunday Bloody Sunday [iZenPenguin]/album.png",
+      "size": 337579
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/U2 - Sunday Bloody Sunday [iZenPenguin]/background.jpg",
+      "size": 473613
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/U2 - Sunday Bloody Sunday [iZenPenguin]/notes.chart",
+      "size": 38700
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/U2 - Sunday Bloody Sunday [iZenPenguin]/song.ini",
+      "size": 367
+    },
+    {
+      "path": "S Hero/[S] 03 - An exc-S of charts/U2 - Sunday Bloody Sunday [iZenPenguin]/song.ogg",
+      "size": 7552273
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Atarashii Gakko! - Shiken Zenya [Spachi]/album.png",
+      "size": 509718
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Atarashii Gakko! - Shiken Zenya [Spachi]/background.jpg",
+      "size": 171974
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Atarashii Gakko! - Shiken Zenya [Spachi]/notes.chart",
+      "size": 36836
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Atarashii Gakko! - Shiken Zenya [Spachi]/song.ini",
+      "size": 387
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Atarashii Gakko! - Shiken Zenya [Spachi]/song.ogg",
+      "size": 8260192
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Blur - Star Shaped [\u03a9HM]/album.png",
+      "size": 693632
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Blur - Star Shaped [\u03a9HM]/background.jpg",
+      "size": 334309
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Blur - Star Shaped [\u03a9HM]/notes.chart",
+      "size": 33643
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Blur - Star Shaped [\u03a9HM]/song.ini",
+      "size": 297
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Blur - Star Shaped [\u03a9HM]/song.ogg",
+      "size": 8943873
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Die Mayrhofner -Schei-wi-dei-wi-du [TFG85]/album.jpg",
+      "size": 215473
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Die Mayrhofner -Schei-wi-dei-wi-du [TFG85]/background.jpg",
+      "size": 212358
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Die Mayrhofner -Schei-wi-dei-wi-du [TFG85]/notes.chart",
+      "size": 43914
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Die Mayrhofner -Schei-wi-dei-wi-du [TFG85]/song.ini",
+      "size": 425
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Die Mayrhofner -Schei-wi-dei-wi-du [TFG85]/song.ogg",
+      "size": 7848720
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Every Stranger Looks Like You - Smoking Crack at Your Funeral [Chezy]/album.png",
+      "size": 206921
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Every Stranger Looks Like You - Smoking Crack at Your Funeral [Chezy]/background.jpg",
+      "size": 948399
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Every Stranger Looks Like You - Smoking Crack at Your Funeral [Chezy]/notes.chart",
+      "size": 27331
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Every Stranger Looks Like You - Smoking Crack at Your Funeral [Chezy]/song.ini",
+      "size": 783
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Every Stranger Looks Like You - Smoking Crack at Your Funeral [Chezy]/song.ogg",
+      "size": 4754946
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Soledad - Sun of June [TFG85]/album.png",
+      "size": 263188
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Soledad - Sun of June [TFG85]/background.jpg",
+      "size": 304857
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Soledad - Sun of June [TFG85]/notes.chart",
+      "size": 51686
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Soledad - Sun of June [TFG85]/song.ini",
+      "size": 751
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/Soledad - Sun of June [TFG85]/song.ogg",
+      "size": 22134067
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/System of a Down - Suite-Pee [Peddy]/album.png",
+      "size": 181691
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/System of a Down - Suite-Pee [Peddy]/background.jpg",
+      "size": 158183
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/System of a Down - Suite-Pee [Peddy]/notes.chart",
+      "size": 30427
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/System of a Down - Suite-Pee [Peddy]/song.ini",
+      "size": 304
+    },
+    {
+      "path": "S Hero/[S] 04 - A sonic S-sault/System of a Down - Suite-Pee [Peddy]/song.ogg",
+      "size": 5294986
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Every Time I Die - Sly [Chezy]/album.png",
+      "size": 419253
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Every Time I Die - Sly [Chezy]/background.jpg",
+      "size": 2419233
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Every Time I Die - Sly [Chezy]/notes.chart",
+      "size": 34349
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Every Time I Die - Sly [Chezy]/song.ini",
+      "size": 470
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Every Time I Die - Sly [Chezy]/song.ogg",
+      "size": 5272005
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/HANABIE. - Sunrise Miso-Soup [Spachi]/album.png",
+      "size": 492726
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/HANABIE. - Sunrise Miso-Soup [Spachi]/background.jpg",
+      "size": 477229
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/HANABIE. - Sunrise Miso-Soup [Spachi]/notes.chart",
+      "size": 52028
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/HANABIE. - Sunrise Miso-Soup [Spachi]/song.ini",
+      "size": 436
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/HANABIE. - Sunrise Miso-Soup [Spachi]/song.ogg",
+      "size": 7651289
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Moon Hooch - St. Louis [\u03a9HM]/album.png",
+      "size": 494195
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Moon Hooch - St. Louis [\u03a9HM]/background.jpg",
+      "size": 391200
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Moon Hooch - St. Louis [\u03a9HM]/notes.chart",
+      "size": 35729
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Moon Hooch - St. Louis [\u03a9HM]/song.ini",
+      "size": 334
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Moon Hooch - St. Louis [\u03a9HM]/song.ogg",
+      "size": 9575191
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Queen - Stone Cold Crazy [Peddy]/album.png",
+      "size": 495848
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Queen - Stone Cold Crazy [Peddy]/background.jpg",
+      "size": 227815
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Queen - Stone Cold Crazy [Peddy]/notes.chart",
+      "size": 21495
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Queen - Stone Cold Crazy [Peddy]/song.ini",
+      "size": 363
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Queen - Stone Cold Crazy [Peddy]/song.ogg",
+      "size": 4300551
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/System of a Down - Sad Statue [Chezy]/album.png",
+      "size": 373841
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/System of a Down - Sad Statue [Chezy]/background.jpg",
+      "size": 213126
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/System of a Down - Sad Statue [Chezy]/notes.chart",
+      "size": 40518
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/System of a Down - Sad Statue [Chezy]/song.ini",
+      "size": 605
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/System of a Down - Sad Statue [Chezy]/song.ogg",
+      "size": 6739420
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Television - See No Evil [7777villain]/album.png",
+      "size": 302857
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Television - See No Evil [7777villain]/background.jpg",
+      "size": 295341
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Television - See No Evil [7777villain]/notes.chart",
+      "size": 40875
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Television - See No Evil [7777villain]/song.ini",
+      "size": 414
+    },
+    {
+      "path": "S Hero/[S] 05 - Rough S-timate/Television - See No Evil [7777villain]/song.ogg",
+      "size": 7548720
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Every Time I Die - sexsexsex [Chezy]/album.png",
+      "size": 419253
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Every Time I Die - sexsexsex [Chezy]/background.jpg",
+      "size": 2419233
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Every Time I Die - sexsexsex [Chezy]/notes.chart",
+      "size": 34063
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Every Time I Die - sexsexsex [Chezy]/song.ini",
+      "size": 866
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Every Time I Die - sexsexsex [Chezy]/song.ogg",
+      "size": 6942123
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Red Hot Chili Peppers - Snow (Hey Oh) [Peddy]/album.png",
+      "size": 423966
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Red Hot Chili Peppers - Snow (Hey Oh) [Peddy]/background.jpg",
+      "size": 292388
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Red Hot Chili Peppers - Snow (Hey Oh) [Peddy]/notes.chart",
+      "size": 108358
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Red Hot Chili Peppers - Snow (Hey Oh) [Peddy]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Red Hot Chili Peppers - Snow (Hey Oh) [Peddy]/song.ogg",
+      "size": 12164322
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Trivium - Silence in the Snow (Sn\u00f8fall) [Miscellany]/album.png",
+      "size": 106434
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Trivium - Silence in the Snow (Sn\u00f8fall) [Miscellany]/background.jpg",
+      "size": 65604
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Trivium - Silence in the Snow (Sn\u00f8fall) [Miscellany]/guitar.ogg",
+      "size": 11171388
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Trivium - Silence in the Snow (Sn\u00f8fall) [Miscellany]/notes.chart",
+      "size": 27222
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Trivium - Silence in the Snow (Sn\u00f8fall) [Miscellany]/song.ini",
+      "size": 673
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Unlucky Morpheus - Salome [Spachi]/album.png",
+      "size": 341277
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Unlucky Morpheus - Salome [Spachi]/background.jpg",
+      "size": 202544
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Unlucky Morpheus - Salome [Spachi]/notes.chart",
+      "size": 31605
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Unlucky Morpheus - Salome [Spachi]/song.ini",
+      "size": 707
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Unlucky Morpheus - Salome [Spachi]/song.ogg",
+      "size": 7363479
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Van Halen - Somebody Get Me a Doctor [Peddy]/album.png",
+      "size": 128526
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Van Halen - Somebody Get Me a Doctor [Peddy]/background.jpg",
+      "size": 344406
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Van Halen - Somebody Get Me a Doctor [Peddy]/notes.chart",
+      "size": 30833
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Van Halen - Somebody Get Me a Doctor [Peddy]/song.ini",
+      "size": 283
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/Van Halen - Somebody Get Me a Doctor [Peddy]/song.ogg",
+      "size": 5499651
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/six impala - SWEETSWEETSWEETLIKEBUBBLEGUM [Chezy]/album.png",
+      "size": 560290
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/six impala - SWEETSWEETSWEETLIKEBUBBLEGUM [Chezy]/background.jpg",
+      "size": 1571367
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/six impala - SWEETSWEETSWEETLIKEBUBBLEGUM [Chezy]/notes.chart",
+      "size": 32257
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/six impala - SWEETSWEETSWEETLIKEBUBBLEGUM [Chezy]/song.ini",
+      "size": 708
+    },
+    {
+      "path": "S Hero/[S] 06 - Highly S-teemed/six impala - SWEETSWEETSWEETLIKEBUBBLEGUM [Chezy]/song.ogg",
+      "size": 4940958
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Amyl and The Sniffers - Some Mutts (Can't Be Muzzled) [Chezy]/album.png",
+      "size": 431999
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Amyl and The Sniffers - Some Mutts (Can't Be Muzzled) [Chezy]/background.jpg",
+      "size": 2326525
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Amyl and The Sniffers - Some Mutts (Can't Be Muzzled) [Chezy]/notes.chart",
+      "size": 50467
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Amyl and The Sniffers - Some Mutts (Can't Be Muzzled) [Chezy]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Amyl and The Sniffers - Some Mutts (Can't Be Muzzled) [Chezy]/song.ogg",
+      "size": 8361047
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Code Orange - Sulfur Surrounding [Miscellany]/album.png",
+      "size": 410829
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Code Orange - Sulfur Surrounding [Miscellany]/background.jpg",
+      "size": 83103
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Code Orange - Sulfur Surrounding [Miscellany]/guitar.ogg",
+      "size": 7879120
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Code Orange - Sulfur Surrounding [Miscellany]/notes.chart",
+      "size": 26972
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Code Orange - Sulfur Surrounding [Miscellany]/song.ini",
+      "size": 934
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Exodus - Shroud of Urine [7777villain]/album.png",
+      "size": 550575
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Exodus - Shroud of Urine [7777villain]/background.jpg",
+      "size": 205276
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Exodus - Shroud of Urine [7777villain]/notes.chart",
+      "size": 56001
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Exodus - Shroud of Urine [7777villain]/song.ini",
+      "size": 483
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Exodus - Shroud of Urine [7777villain]/song.ogg",
+      "size": 10522300
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Michael Jackson - Speed Demon [Raspberriel]/album.png",
+      "size": 189578
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Michael Jackson - Speed Demon [Raspberriel]/background.jpg",
+      "size": 170582
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Michael Jackson - Speed Demon [Raspberriel]/guitar.ogg",
+      "size": 9271435
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Michael Jackson - Speed Demon [Raspberriel]/notes.mid",
+      "size": 24003
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Michael Jackson - Speed Demon [Raspberriel]/song.ini",
+      "size": 600
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Opeth - Serenity Painted Death [\u03a9HM]/album.png",
+      "size": 575513
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Opeth - Serenity Painted Death [\u03a9HM]/background.jpg",
+      "size": 488835
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Opeth - Serenity Painted Death [\u03a9HM]/notes.chart",
+      "size": 82793
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Opeth - Serenity Painted Death [\u03a9HM]/song.ini",
+      "size": 306
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Opeth - Serenity Painted Death [\u03a9HM]/song.ogg",
+      "size": 18294482
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Shady Cicada - Sweet Pea [HattMeafy]/album.png",
+      "size": 17384
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Shady Cicada - Sweet Pea [HattMeafy]/background.png",
+      "size": 101110
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Shady Cicada - Sweet Pea [HattMeafy]/notes.chart",
+      "size": 29259
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Shady Cicada - Sweet Pea [HattMeafy]/song.ini",
+      "size": 410
+    },
+    {
+      "path": "S Hero/[S] 07 - Progr-S-ing further/Shady Cicada - Sweet Pea [HattMeafy]/song.ogg",
+      "size": 8007647
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Christopher Larkin - Sealed Vessel [TFG85]/album.jpg",
+      "size": 69407
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Christopher Larkin - Sealed Vessel [TFG85]/background.jpg",
+      "size": 271834
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Christopher Larkin - Sealed Vessel [TFG85]/notes.chart",
+      "size": 29123
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Christopher Larkin - Sealed Vessel [TFG85]/song.ini",
+      "size": 562
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Christopher Larkin - Sealed Vessel [TFG85]/song.ogg",
+      "size": 17969255
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Fearofdark - Surfing on a Sine Wave [3-UP]/album.png",
+      "size": 37068
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Fearofdark - Surfing on a Sine Wave [3-UP]/background.png",
+      "size": 33268
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Fearofdark - Surfing on a Sine Wave [3-UP]/notes.chart",
+      "size": 41232
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Fearofdark - Surfing on a Sine Wave [3-UP]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Fearofdark - Surfing on a Sine Wave [3-UP]/song.ogg",
+      "size": 8824938
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Sithu Aye - Skye [\u03a9HM]/album.png",
+      "size": 395173
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Sithu Aye - Skye [\u03a9HM]/background.jpg",
+      "size": 530736
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Sithu Aye - Skye [\u03a9HM]/notes.chart",
+      "size": 33524
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Sithu Aye - Skye [\u03a9HM]/song.ini",
+      "size": 342
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Sithu Aye - Skye [\u03a9HM]/song.ogg",
+      "size": 17296876
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Spiritbox - Secret Garden [iZenPenguin]/album.png",
+      "size": 475566
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Spiritbox - Secret Garden [iZenPenguin]/background.jpg",
+      "size": 227561
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Spiritbox - Secret Garden [iZenPenguin]/notes.chart",
+      "size": 49175
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Spiritbox - Secret Garden [iZenPenguin]/song.ini",
+      "size": 400
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Spiritbox - Secret Garden [iZenPenguin]/song.ogg",
+      "size": 6618292
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Thundercat - Special Stage [\u03a9HM]/album.png",
+      "size": 251476
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Thundercat - Special Stage [\u03a9HM]/background.jpg",
+      "size": 681845
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Thundercat - Special Stage [\u03a9HM]/notes.chart",
+      "size": 30640
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Thundercat - Special Stage [\u03a9HM]/song.ini",
+      "size": 414
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/Thundercat - Special Stage [\u03a9HM]/song.ogg",
+      "size": 5290590
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/meganeko - Space Magic [Peddy]/album.png",
+      "size": 566500
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/meganeko - Space Magic [Peddy]/background.jpg",
+      "size": 1033915
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/meganeko - Space Magic [Peddy]/notes.chart",
+      "size": 56824
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/meganeko - Space Magic [Peddy]/song.ini",
+      "size": 390
+    },
+    {
+      "path": "S Hero/[S] 08 - Peak S-thetics/meganeko - Space Magic [Peddy]/song.ogg",
+      "size": 9545803
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Allan Holdsworth - Secrets [\u03a9HM]/album.png",
+      "size": 536540
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Allan Holdsworth - Secrets [\u03a9HM]/background.jpg",
+      "size": 427568
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Allan Holdsworth - Secrets [\u03a9HM]/notes.chart",
+      "size": 41330
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Allan Holdsworth - Secrets [\u03a9HM]/song.ini",
+      "size": 438
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Allan Holdsworth - Secrets [\u03a9HM]/song.ogg",
+      "size": 10352179
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Death - See Through Dreams [7777villain]/album.png",
+      "size": 789893
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Death - See Through Dreams [7777villain]/background.jpg",
+      "size": 1231608
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Death - See Through Dreams [7777villain]/notes.chart",
+      "size": 49253
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Death - See Through Dreams [7777villain]/song.ini",
+      "size": 373
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Death - See Through Dreams [7777villain]/song.ogg",
+      "size": 9125465
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Dio - Stand Up and Shout [Peddy]/album.png",
+      "size": 692845
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Dio - Stand Up and Shout [Peddy]/background.jpg",
+      "size": 625162
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Dio - Stand Up and Shout [Peddy]/notes.chart",
+      "size": 40540
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Dio - Stand Up and Shout [Peddy]/song.ini",
+      "size": 267
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Dio - Stand Up and Shout [Peddy]/song.ogg",
+      "size": 5841508
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Eliminate - Stupid [Chezy]/album.png",
+      "size": 505336
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Eliminate - Stupid [Chezy]/background.jpg",
+      "size": 1279427
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Eliminate - Stupid [Chezy]/notes.chart",
+      "size": 34041
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Eliminate - Stupid [Chezy]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Eliminate - Stupid [Chezy]/song.ogg",
+      "size": 6555879
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Lagwagon - Surviving California [Chezy]/album.png",
+      "size": 393287
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Lagwagon - Surviving California [Chezy]/background.jpg",
+      "size": 1692648
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Lagwagon - Surviving California [Chezy]/notes.chart",
+      "size": 40380
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Lagwagon - Surviving California [Chezy]/song.ini",
+      "size": 332
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Lagwagon - Surviving California [Chezy]/song.ogg",
+      "size": 5626401
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Power Trip - Suffer No Fool [Miscellany]/album.png",
+      "size": 130400
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Power Trip - Suffer No Fool [Miscellany]/background.jpg",
+      "size": 703339
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Power Trip - Suffer No Fool [Miscellany]/guitar.ogg",
+      "size": 5083179
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Power Trip - Suffer No Fool [Miscellany]/notes.chart",
+      "size": 23090
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Power Trip - Suffer No Fool [Miscellany]/song.ini",
+      "size": 667
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Red Hot Chili Peppers - Show Me Your Soul [Raspberriel]/album.png",
+      "size": 558130
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Red Hot Chili Peppers - Show Me Your Soul [Raspberriel]/background.jpg",
+      "size": 774129
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Red Hot Chili Peppers - Show Me Your Soul [Raspberriel]/guitar.ogg",
+      "size": 8813192
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Red Hot Chili Peppers - Show Me Your Soul [Raspberriel]/notes.mid",
+      "size": 31909
+    },
+    {
+      "path": "S Hero/[S] 09 - Don't be an S-hole/Red Hot Chili Peppers - Show Me Your Soul [Raspberriel]/song.ini",
+      "size": 440
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Candlemass - Solitude [7777villain]/album.png",
+      "size": 160832
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Candlemass - Solitude [7777villain]/background.jpg",
+      "size": 395889
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Candlemass - Solitude [7777villain]/notes.chart",
+      "size": 31446
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Candlemass - Solitude [7777villain]/song.ini",
+      "size": 560
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Candlemass - Solitude [7777villain]/song.ogg",
+      "size": 11006867
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/I Am Abomination - Since 1848 [Chezy]/album.png",
+      "size": 446751
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/I Am Abomination - Since 1848 [Chezy]/background.jpg",
+      "size": 1945545
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/I Am Abomination - Since 1848 [Chezy]/notes.chart",
+      "size": 52273
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/I Am Abomination - Since 1848 [Chezy]/song.ini",
+      "size": 495
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/I Am Abomination - Since 1848 [Chezy]/song.ogg",
+      "size": 7143081
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Iron Maiden - Still Life [7777villain]/album.png",
+      "size": 666547
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Iron Maiden - Still Life [7777villain]/background.jpg",
+      "size": 293963
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Iron Maiden - Still Life [7777villain]/notes.chart",
+      "size": 41168
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Iron Maiden - Still Life [7777villain]/song.ini",
+      "size": 571
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Iron Maiden - Still Life [7777villain]/song.ogg",
+      "size": 10795929
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Polkadot Stingray - Surrender [torqqes]/album.png",
+      "size": 337882
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Polkadot Stingray - Surrender [torqqes]/background.jpg",
+      "size": 444096
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Polkadot Stingray - Surrender [torqqes]/notes.chart",
+      "size": 43486
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Polkadot Stingray - Surrender [torqqes]/song.ini",
+      "size": 368
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Polkadot Stingray - Surrender [torqqes]/song.ogg",
+      "size": 6606928
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Rhapsody of Fire - Steelgods of the Last Apocalypse [Peddy]/album.png",
+      "size": 535039
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Rhapsody of Fire - Steelgods of the Last Apocalypse [Peddy]/background.jpg",
+      "size": 577925
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Rhapsody of Fire - Steelgods of the Last Apocalypse [Peddy]/notes.chart",
+      "size": 57261
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Rhapsody of Fire - Steelgods of the Last Apocalypse [Peddy]/song.ini",
+      "size": 389
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Rhapsody of Fire - Steelgods of the Last Apocalypse [Peddy]/song.ogg",
+      "size": 11066833
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/VOLA - Stray the Skies [TFG85]/album.jpg",
+      "size": 144686
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/VOLA - Stray the Skies [TFG85]/background.jpg",
+      "size": 743418
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/VOLA - Stray the Skies [TFG85]/notes.chart",
+      "size": 32624
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/VOLA - Stray the Skies [TFG85]/song.ini",
+      "size": 507
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/VOLA - Stray the Skies [TFG85]/song.ogg",
+      "size": 12049332
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Wintersun - Starchild [BurpLeTurtle]/album.png",
+      "size": 508695
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Wintersun - Starchild [BurpLeTurtle]/background.jpg",
+      "size": 477841
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Wintersun - Starchild [BurpLeTurtle]/notes.chart",
+      "size": 66396
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Wintersun - Starchild [BurpLeTurtle]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "S Hero/[S] 10 - S-tablished in 1848/Wintersun - Starchild [BurpLeTurtle]/song.ogg",
+      "size": 16559413
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Darkest Hour - Sound the Surrender [Miscellany]/album.png",
+      "size": 624619
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Darkest Hour - Sound the Surrender [Miscellany]/background.jpg",
+      "size": 691203
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Darkest Hour - Sound the Surrender [Miscellany]/guitar.ogg",
+      "size": 7487805
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Darkest Hour - Sound the Surrender [Miscellany]/notes.chart",
+      "size": 45435
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Darkest Hour - Sound the Surrender [Miscellany]/song.ini",
+      "size": 882
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Star One - Set Your Controls (Live) [Miscellany & iZenPenguin]/album.png",
+      "size": 428721
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Star One - Set Your Controls (Live) [Miscellany & iZenPenguin]/background.jpg",
+      "size": 784024
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Star One - Set Your Controls (Live) [Miscellany & iZenPenguin]/guitar.ogg",
+      "size": 12982103
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Star One - Set Your Controls (Live) [Miscellany & iZenPenguin]/notes.chart",
+      "size": 69316
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Star One - Set Your Controls (Live) [Miscellany & iZenPenguin]/song.ini",
+      "size": 772
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Stratovarius - Stand My Ground [Peddy]/album.png",
+      "size": 589373
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Stratovarius - Stand My Ground [Peddy]/background.jpg",
+      "size": 690402
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Stratovarius - Stand My Ground [Peddy]/notes.chart",
+      "size": 36432
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Stratovarius - Stand My Ground [Peddy]/song.ini",
+      "size": 362
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Stratovarius - Stand My Ground [Peddy]/song.ogg",
+      "size": 7949313
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/TEXTURES - Storm Warning [\u03a9HM]/album.png",
+      "size": 564231
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/TEXTURES - Storm Warning [\u03a9HM]/background.jpg",
+      "size": 916988
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/TEXTURES - Storm Warning [\u03a9HM]/notes.chart",
+      "size": 61775
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/TEXTURES - Storm Warning [\u03a9HM]/song.ini",
+      "size": 370
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/TEXTURES - Storm Warning [\u03a9HM]/song.ogg",
+      "size": 10608224
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/The Smashing Pumpkins - Soma [7777villain]/album.png",
+      "size": 552337
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/The Smashing Pumpkins - Soma [7777villain]/background.jpg",
+      "size": 327142
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/The Smashing Pumpkins - Soma [7777villain]/notes.chart",
+      "size": 36691
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/The Smashing Pumpkins - Soma [7777villain]/song.ini",
+      "size": 362
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/The Smashing Pumpkins - Soma [7777villain]/song.ogg",
+      "size": 11354178
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Umpfel - Shleep [Chezy]/album.png",
+      "size": 365222
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Umpfel - Shleep [Chezy]/background.jpg",
+      "size": 1694509
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Umpfel - Shleep [Chezy]/notes.chart",
+      "size": 117245
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Umpfel - Shleep [Chezy]/song.ini",
+      "size": 411
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/Umpfel - Shleep [Chezy]/song.ogg",
+      "size": 25105181
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/WillRock - Shoot Em' Up! [3-UP]/album.png",
+      "size": 409887
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/WillRock - Shoot Em' Up! [3-UP]/background.png",
+      "size": 23008
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/WillRock - Shoot Em' Up! [3-UP]/notes.chart",
+      "size": 47567
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/WillRock - Shoot Em' Up! [3-UP]/song.ini",
+      "size": 405
+    },
+    {
+      "path": "S Hero/[S] 11 - Don't fall S-leep/WillRock - Shoot Em' Up! [3-UP]/song.ogg",
+      "size": 12325314
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Aldious - Spirit Black [Spachi]/album.png",
+      "size": 475643
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Aldious - Spirit Black [Spachi]/background.jpg",
+      "size": 278872
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Aldious - Spirit Black [Spachi]/notes.chart",
+      "size": 41309
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Aldious - Spirit Black [Spachi]/song.ini",
+      "size": 411
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Aldious - Spirit Black [Spachi]/song.ogg",
+      "size": 9218093
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Car Bomb - Solid Grey [\u03a9HM]/album.png",
+      "size": 658483
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Car Bomb - Solid Grey [\u03a9HM]/background.jpg",
+      "size": 1354677
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Car Bomb - Solid Grey [\u03a9HM]/notes.chart",
+      "size": 25872
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Car Bomb - Solid Grey [\u03a9HM]/song.ini",
+      "size": 265
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Car Bomb - Solid Grey [\u03a9HM]/song.ogg",
+      "size": 3680479
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Guns N' Roses - Sweet Child o' Mine [iZenPenguin]/album.png",
+      "size": 206311
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Guns N' Roses - Sweet Child o' Mine [iZenPenguin]/background.jpg",
+      "size": 197511
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Guns N' Roses - Sweet Child o' Mine [iZenPenguin]/notes.chart",
+      "size": 40566
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Guns N' Roses - Sweet Child o' Mine [iZenPenguin]/song.ini",
+      "size": 437
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Guns N' Roses - Sweet Child o' Mine [iZenPenguin]/song.ogg",
+      "size": 11094309
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Lamb of God - Set to Fail [Peddy]/album.png",
+      "size": 504906
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Lamb of God - Set to Fail [Peddy]/background.jpg",
+      "size": 312107
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Lamb of God - Set to Fail [Peddy]/notes.chart",
+      "size": 46547
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Lamb of God - Set to Fail [Peddy]/song.ini",
+      "size": 398
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Lamb of God - Set to Fail [Peddy]/song.ogg",
+      "size": 7356323
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Pagan's Mind - Spirit Starcruiser [jdurandTV]/album.jpg",
+      "size": 125589
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Pagan's Mind - Spirit Starcruiser [jdurandTV]/background.jpg",
+      "size": 227760
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Pagan's Mind - Spirit Starcruiser [jdurandTV]/notes.chart",
+      "size": 52891
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Pagan's Mind - Spirit Starcruiser [jdurandTV]/song.ini",
+      "size": 579
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Pagan's Mind - Spirit Starcruiser [jdurandTV]/song.ogg",
+      "size": 11550478
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Sonata Arctica - San Sebastian (Revisited) [Peddy]/album.png",
+      "size": 542309
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Sonata Arctica - San Sebastian (Revisited) [Peddy]/background.jpg",
+      "size": 372660
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Sonata Arctica - San Sebastian (Revisited) [Peddy]/notes.chart",
+      "size": 48908
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Sonata Arctica - San Sebastian (Revisited) [Peddy]/song.ini",
+      "size": 364
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Sonata Arctica - San Sebastian (Revisited) [Peddy]/song.ogg",
+      "size": 9912487
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Wintergatan - Sommarf\u00e5gel [3-UP]/album.png",
+      "size": 336225
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Wintergatan - Sommarf\u00e5gel [3-UP]/background.jpg",
+      "size": 129190
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Wintergatan - Sommarf\u00e5gel [3-UP]/notes.chart",
+      "size": 40221
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Wintergatan - Sommarf\u00e5gel [3-UP]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "S Hero/[S] 12 - Str-S free zone/Wintergatan - Sommarf\u00e5gel [3-UP]/song.ogg",
+      "size": 6734116
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Circus Maximus - Sin [iZenPenguin]/album.png",
+      "size": 385113
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Circus Maximus - Sin [iZenPenguin]/background.jpg",
+      "size": 1464374
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Circus Maximus - Sin [iZenPenguin]/notes.chart",
+      "size": 61928
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Circus Maximus - Sin [iZenPenguin]/song.ini",
+      "size": 321
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Circus Maximus - Sin [iZenPenguin]/song.ogg",
+      "size": 10619005
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/PassCode - Seize Approaching Brand New Era [Spachi]/album.png",
+      "size": 457036
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/PassCode - Seize Approaching Brand New Era [Spachi]/background.jpg",
+      "size": 68382
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/PassCode - Seize Approaching Brand New Era [Spachi]/notes.chart",
+      "size": 54216
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/PassCode - Seize Approaching Brand New Era [Spachi]/song.ini",
+      "size": 449
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/PassCode - Seize Approaching Brand New Era [Spachi]/song.ogg",
+      "size": 7408940
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Serdce - Samadhi [iZenPenguin]/album.png",
+      "size": 484099
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Serdce - Samadhi [iZenPenguin]/background.jpg",
+      "size": 2063625
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Serdce - Samadhi [iZenPenguin]/notes.chart",
+      "size": 70491
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Serdce - Samadhi [iZenPenguin]/song.ini",
+      "size": 300
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Serdce - Samadhi [iZenPenguin]/song.ogg",
+      "size": 12283936
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Tiasu - Stolen [TFG85]/album.png",
+      "size": 218455
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Tiasu - Stolen [TFG85]/background.jpg",
+      "size": 160700
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Tiasu - Stolen [TFG85]/notes.chart",
+      "size": 30463
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Tiasu - Stolen [TFG85]/song.ini",
+      "size": 410
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Tiasu - Stolen [TFG85]/song.ogg",
+      "size": 15473770
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Volbeat - Say No More [HattMeafy]/album.png",
+      "size": 420031
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Volbeat - Say No More [HattMeafy]/background.jpg",
+      "size": 386063
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Volbeat - Say No More [HattMeafy]/notes.chart",
+      "size": 45740
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Volbeat - Say No More [HattMeafy]/song.ini",
+      "size": 330
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Volbeat - Say No More [HattMeafy]/song.ogg",
+      "size": 9272785
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Yousei Teikoku - Solitude [Spachi]/album.png",
+      "size": 658505
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Yousei Teikoku - Solitude [Spachi]/background.jpg",
+      "size": 968760
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Yousei Teikoku - Solitude [Spachi]/notes.chart",
+      "size": 64898
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Yousei Teikoku - Solitude [Spachi]/song.ini",
+      "size": 341
+    },
+    {
+      "path": "S Hero/[S] 13 - Bl-S you/Yousei Teikoku - Solitude [Spachi]/song.ogg",
+      "size": 8080076
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/BAND-MAID - So, What [Spachi]/album.png",
+      "size": 375173
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/BAND-MAID - So, What [Spachi]/background.jpg",
+      "size": 533296
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/BAND-MAID - So, What [Spachi]/notes.chart",
+      "size": 44670
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/BAND-MAID - So, What [Spachi]/song.ini",
+      "size": 399
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/BAND-MAID - So, What [Spachi]/song.ogg",
+      "size": 7643793
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Caligula's Horse - Songs for No One [iZenPenguin]/album.png",
+      "size": 361153
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Caligula's Horse - Songs for No One [iZenPenguin]/background.jpg",
+      "size": 875408
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Caligula's Horse - Songs for No One [iZenPenguin]/notes.chart",
+      "size": 69526
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Caligula's Horse - Songs for No One [iZenPenguin]/song.ini",
+      "size": 316
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Caligula's Horse - Songs for No One [iZenPenguin]/song.ogg",
+      "size": 14596918
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Metallica - Spit Out the Bone [Miscellany]/album.png",
+      "size": 47747
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Metallica - Spit Out the Bone [Miscellany]/background.jpg",
+      "size": 120965
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Metallica - Spit Out the Bone [Miscellany]/guitar.ogg",
+      "size": 13787317
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Metallica - Spit Out the Bone [Miscellany]/notes.chart",
+      "size": 80578
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Metallica - Spit Out the Bone [Miscellany]/song.ini",
+      "size": 683
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Protest the Hero - Sex Tapes [Chezy]/album.png",
+      "size": 743789
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Protest the Hero - Sex Tapes [Chezy]/background.jpg",
+      "size": 1578259
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Protest the Hero - Sex Tapes [Chezy]/notes.chart",
+      "size": 65356
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Protest the Hero - Sex Tapes [Chezy]/song.ini",
+      "size": 603
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Protest the Hero - Sex Tapes [Chezy]/song.ogg",
+      "size": 8611359
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Sleep Terror - Sixes and Sevens [\u03a9HM]/album.png",
+      "size": 138704
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Sleep Terror - Sixes and Sevens [\u03a9HM]/background.jpg",
+      "size": 1046251
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Sleep Terror - Sixes and Sevens [\u03a9HM]/notes.chart",
+      "size": 29278
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Sleep Terror - Sixes and Sevens [\u03a9HM]/song.ini",
+      "size": 403
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Sleep Terror - Sixes and Sevens [\u03a9HM]/song.ogg",
+      "size": 6021541
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Yesten's Legacy - SEXSEXSEXSEXSEX [Chezy]/album.png",
+      "size": 226077
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Yesten's Legacy - SEXSEXSEXSEXSEX [Chezy]/background.jpg",
+      "size": 473803
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Yesten's Legacy - SEXSEXSEXSEXSEX [Chezy]/notes.chart",
+      "size": 39256
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Yesten's Legacy - SEXSEXSEXSEXSEX [Chezy]/song.ini",
+      "size": 578
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/Yesten's Legacy - SEXSEXSEXSEXSEX [Chezy]/song.ogg",
+      "size": 5179346
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/penoreri - Sulfur (Dioxide Form) [Raspberriel]/album.png",
+      "size": 634219
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/penoreri - Sulfur (Dioxide Form) [Raspberriel]/background.jpg",
+      "size": 165001
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/penoreri - Sulfur (Dioxide Form) [Raspberriel]/guitar.ogg",
+      "size": 8134241
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/penoreri - Sulfur (Dioxide Form) [Raspberriel]/notes.mid",
+      "size": 16593
+    },
+    {
+      "path": "S Hero/[S] 14 - S-paragus salad/penoreri - Sulfur (Dioxide Form) [Raspberriel]/song.ini",
+      "size": 495
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/After the Burial - Sleeper [\u03a9HM]/album.png",
+      "size": 674073
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/After the Burial - Sleeper [\u03a9HM]/background.jpg",
+      "size": 474696
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/After the Burial - Sleeper [\u03a9HM]/notes.chart",
+      "size": 34892
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/After the Burial - Sleeper [\u03a9HM]/song.ini",
+      "size": 308
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/After the Burial - Sleeper [\u03a9HM]/song.ogg",
+      "size": 8182894
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Cat Company - Sad Dance [iZenPenguin]/album.png",
+      "size": 425714
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Cat Company - Sad Dance [iZenPenguin]/background.jpg",
+      "size": 1257163
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Cat Company - Sad Dance [iZenPenguin]/notes.chart",
+      "size": 73150
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Cat Company - Sad Dance [iZenPenguin]/song.ini",
+      "size": 413
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Cat Company - Sad Dance [iZenPenguin]/song.ogg",
+      "size": 9029148
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Hiromi - Summer Rain [\u03a9HM]/album.png",
+      "size": 488555
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Hiromi - Summer Rain [\u03a9HM]/background.jpg",
+      "size": 2098702
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Hiromi - Summer Rain [\u03a9HM]/notes.chart",
+      "size": 70929
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Hiromi - Summer Rain [\u03a9HM]/song.ini",
+      "size": 255
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Hiromi - Summer Rain [\u03a9HM]/song.ogg",
+      "size": 16981976
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Moron Police - Steve Jobs is Dead, But I'm Not [Miscellany]/album.png",
+      "size": 467307
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Moron Police - Steve Jobs is Dead, But I'm Not [Miscellany]/background.jpg",
+      "size": 116134
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Moron Police - Steve Jobs is Dead, But I'm Not [Miscellany]/guitar.ogg",
+      "size": 7611101
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Moron Police - Steve Jobs is Dead, But I'm Not [Miscellany]/notes.chart",
+      "size": 61292
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Moron Police - Steve Jobs is Dead, But I'm Not [Miscellany]/song.ini",
+      "size": 591
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Polarization - Shape Shifter [XEntombmentX]/album.png",
+      "size": 403394
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Polarization - Shape Shifter [XEntombmentX]/background.jpg",
+      "size": 404965
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Polarization - Shape Shifter [XEntombmentX]/notes.chart",
+      "size": 35621
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Polarization - Shape Shifter [XEntombmentX]/song.ini",
+      "size": 495
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Polarization - Shape Shifter [XEntombmentX]/song.ogg",
+      "size": 7626082
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Testament - Sins of Omission [Peddy]/album.png",
+      "size": 515582
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Testament - Sins of Omission [Peddy]/background.jpg",
+      "size": 605579
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Testament - Sins of Omission [Peddy]/notes.chart",
+      "size": 71635
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Testament - Sins of Omission [Peddy]/song.ini",
+      "size": 385
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Testament - Sins of Omission [Peddy]/song.ogg",
+      "size": 9963244
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Whispered - Sakura Omen [BurpLeTurtle]/album.png",
+      "size": 674993
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Whispered - Sakura Omen [BurpLeTurtle]/background.jpg",
+      "size": 478624
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Whispered - Sakura Omen [BurpLeTurtle]/notes.chart",
+      "size": 70667
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Whispered - Sakura Omen [BurpLeTurtle]/song.ini",
+      "size": 623
+    },
+    {
+      "path": "S Hero/[S] 15 - The great S-cent/Whispered - Sakura Omen [BurpLeTurtle]/song.ogg",
+      "size": 15195760
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Blood Incantation - Slave Species of the Gods [\u03a9HM]/album.png",
+      "size": 441655
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Blood Incantation - Slave Species of the Gods [\u03a9HM]/background.jpg",
+      "size": 821039
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Blood Incantation - Slave Species of the Gods [\u03a9HM]/notes.chart",
+      "size": 67947
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Blood Incantation - Slave Species of the Gods [\u03a9HM]/song.ini",
+      "size": 430
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Blood Incantation - Slave Species of the Gods [\u03a9HM]/song.ogg",
+      "size": 10518366
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Eumeria - Secret Places [Peddy]/album.png",
+      "size": 747490
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Eumeria - Secret Places [Peddy]/background.jpg",
+      "size": 572983
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Eumeria - Secret Places [Peddy]/notes.chart",
+      "size": 46063
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Eumeria - Secret Places [Peddy]/song.ini",
+      "size": 318
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Eumeria - Secret Places [Peddy]/song.ogg",
+      "size": 9229759
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Joboj - Screaming Chicken [jdurandTV]/album.png",
+      "size": 426771
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Joboj - Screaming Chicken [jdurandTV]/background.jpg",
+      "size": 138703
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Joboj - Screaming Chicken [jdurandTV]/notes.chart",
+      "size": 24182
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Joboj - Screaming Chicken [jdurandTV]/song.ini",
+      "size": 379
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Joboj - Screaming Chicken [jdurandTV]/song.ogg",
+      "size": 5245727
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Onslaught - Strike Fast Strike Hard [iZenPenguin]/album.png",
+      "size": 479905
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Onslaught - Strike Fast Strike Hard [iZenPenguin]/background.jpg",
+      "size": 237198
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Onslaught - Strike Fast Strike Hard [iZenPenguin]/notes.chart",
+      "size": 65632
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Onslaught - Strike Fast Strike Hard [iZenPenguin]/song.ini",
+      "size": 450
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Onslaught - Strike Fast Strike Hard [iZenPenguin]/song.ogg",
+      "size": 9097964
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Scar Symmetry - Slaves to the Subliminal [Peddy]/album.png",
+      "size": 576531
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Scar Symmetry - Slaves to the Subliminal [Peddy]/background.jpg",
+      "size": 291688
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Scar Symmetry - Slaves to the Subliminal [Peddy]/notes.chart",
+      "size": 55386
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Scar Symmetry - Slaves to the Subliminal [Peddy]/song.ini",
+      "size": 397
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/Scar Symmetry - Slaves to the Subliminal [Peddy]/song.ogg",
+      "size": 10253512
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/THEORY - Strangers Descent (feat. Derek Sherinian) [iZenPenguin]/album.png",
+      "size": 557455
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/THEORY - Strangers Descent (feat. Derek Sherinian) [iZenPenguin]/background.jpg",
+      "size": 647574
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/THEORY - Strangers Descent (feat. Derek Sherinian) [iZenPenguin]/notes.chart",
+      "size": 47929
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/THEORY - Strangers Descent (feat. Derek Sherinian) [iZenPenguin]/song.ini",
+      "size": 353
+    },
+    {
+      "path": "S Hero/[S] 16 - An S-symmetrical design/THEORY - Strangers Descent (feat. Derek Sherinian) [iZenPenguin]/song.ogg",
+      "size": 8036614
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Foi - Sink to Swim [iZenPenguin]/album.png",
+      "size": 484525
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Foi - Sink to Swim [iZenPenguin]/background.jpg",
+      "size": 1489037
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Foi - Sink to Swim [iZenPenguin]/notes.chart",
+      "size": 34305
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Foi - Sink to Swim [iZenPenguin]/song.ini",
+      "size": 473
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Foi - Sink to Swim [iZenPenguin]/song.ogg",
+      "size": 6571939
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Gamma Ray - Salvation's Calling [Peddy]/album.png",
+      "size": 618306
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Gamma Ray - Salvation's Calling [Peddy]/background.jpg",
+      "size": 424556
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Gamma Ray - Salvation's Calling [Peddy]/notes.chart",
+      "size": 62207
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Gamma Ray - Salvation's Calling [Peddy]/song.ini",
+      "size": 384
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Gamma Ray - Salvation's Calling [Peddy]/song.ogg",
+      "size": 9217896
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Hatriot - Superkillafragsadisticactsaresoatrocious [Miscellany]/album.png",
+      "size": 414812
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Hatriot - Superkillafragsadisticactsaresoatrocious [Miscellany]/background.jpg",
+      "size": 745818
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Hatriot - Superkillafragsadisticactsaresoatrocious [Miscellany]/guitar.ogg",
+      "size": 10626211
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Hatriot - Superkillafragsadisticactsaresoatrocious [Miscellany]/notes.chart",
+      "size": 58962
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Hatriot - Superkillafragsadisticactsaresoatrocious [Miscellany]/song.ini",
+      "size": 843
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Joe Satriani - Summer Song [Peddy]/album.png",
+      "size": 357335
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Joe Satriani - Summer Song [Peddy]/background.jpg",
+      "size": 331257
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Joe Satriani - Summer Song [Peddy]/notes.chart",
+      "size": 36816
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Joe Satriani - Summer Song [Peddy]/song.ini",
+      "size": 370
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Joe Satriani - Summer Song [Peddy]/song.ogg",
+      "size": 9207529
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Lost Society - Spurgatory - Game Over [Miscellany]/album.png",
+      "size": 655942
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Lost Society - Spurgatory - Game Over [Miscellany]/background.jpg",
+      "size": 697020
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Lost Society - Spurgatory - Game Over [Miscellany]/guitar.ogg",
+      "size": 12583567
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Lost Society - Spurgatory - Game Over [Miscellany]/notes.chart",
+      "size": 67534
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Lost Society - Spurgatory - Game Over [Miscellany]/song.ini",
+      "size": 551
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Mahito Yokota & Koji Kondo - Super Mario Galaxy Ultimate Medley [TFG85]/album.png",
+      "size": 371940
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Mahito Yokota & Koji Kondo - Super Mario Galaxy Ultimate Medley [TFG85]/background.jpg",
+      "size": 876335
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Mahito Yokota & Koji Kondo - Super Mario Galaxy Ultimate Medley [TFG85]/notes.chart",
+      "size": 502992
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Mahito Yokota & Koji Kondo - Super Mario Galaxy Ultimate Medley [TFG85]/song.ini",
+      "size": 710
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/Mahito Yokota & Koji Kondo - Super Mario Galaxy Ultimate Medley [TFG85]/song.ogg",
+      "size": 175052177
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/The User Lives - Stranded [XEntombmentX]/album.png",
+      "size": 509563
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/The User Lives - Stranded [XEntombmentX]/background.jpg",
+      "size": 546364
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/The User Lives - Stranded [XEntombmentX]/notes.chart",
+      "size": 71533
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/The User Lives - Stranded [XEntombmentX]/song.ini",
+      "size": 529
+    },
+    {
+      "path": "S Hero/[S] 17 - The S-tronomic tier/The User Lives - Stranded [XEntombmentX]/song.ogg",
+      "size": 14296161
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Cannibal Corpse - Sarcophagic Frenzy [\u03a9HM]/album.png",
+      "size": 504598
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Cannibal Corpse - Sarcophagic Frenzy [\u03a9HM]/background.jpg",
+      "size": 611118
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Cannibal Corpse - Sarcophagic Frenzy [\u03a9HM]/notes.chart",
+      "size": 56726
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Cannibal Corpse - Sarcophagic Frenzy [\u03a9HM]/song.ini",
+      "size": 372
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Cannibal Corpse - Sarcophagic Frenzy [\u03a9HM]/song.ogg",
+      "size": 9016005
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/DEZOLVE - Shaping the Future [\u03a9HM]/album.png",
+      "size": 638439
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/DEZOLVE - Shaping the Future [\u03a9HM]/background.jpg",
+      "size": 297885
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/DEZOLVE - Shaping the Future [\u03a9HM]/notes.chart",
+      "size": 45635
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/DEZOLVE - Shaping the Future [\u03a9HM]/song.ini",
+      "size": 381
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/DEZOLVE - Shaping the Future [\u03a9HM]/song.ogg",
+      "size": 17867764
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Loudness - Soldier of Fortune [Peddy]/album.png",
+      "size": 301109
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Loudness - Soldier of Fortune [Peddy]/background.jpg",
+      "size": 291960
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Loudness - Soldier of Fortune [Peddy]/notes.chart",
+      "size": 49198
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Loudness - Soldier of Fortune [Peddy]/song.ini",
+      "size": 351
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Loudness - Soldier of Fortune [Peddy]/song.ogg",
+      "size": 7429639
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Night Ranger - Sign of the Times [Peddy]/album.png",
+      "size": 550669
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Night Ranger - Sign of the Times [Peddy]/background.jpg",
+      "size": 438512
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Night Ranger - Sign of the Times [Peddy]/notes.chart",
+      "size": 56492
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Night Ranger - Sign of the Times [Peddy]/song.ini",
+      "size": 429
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Night Ranger - Sign of the Times [Peddy]/song.ogg",
+      "size": 10407783
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Pathogen - Sovngarde [Chezy]/album.png",
+      "size": 523314
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Pathogen - Sovngarde [Chezy]/background.jpg",
+      "size": 2237558
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Pathogen - Sovngarde [Chezy]/notes.chart",
+      "size": 54541
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Pathogen - Sovngarde [Chezy]/song.ini",
+      "size": 439
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Pathogen - Sovngarde [Chezy]/song.ogg",
+      "size": 8497777
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Stam1na - Sirkkeli [HattMeafy]/album.png",
+      "size": 657503
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Stam1na - Sirkkeli [HattMeafy]/background.jpg",
+      "size": 660761
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Stam1na - Sirkkeli [HattMeafy]/notes.chart",
+      "size": 44367
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Stam1na - Sirkkeli [HattMeafy]/song.ini",
+      "size": 511
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Stam1na - Sirkkeli [HattMeafy]/song.ogg",
+      "size": 6913897
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Vinnie Moore - Shadows of Yesterday [iZenPenguin]/album.png",
+      "size": 371696
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Vinnie Moore - Shadows of Yesterday [iZenPenguin]/background.jpg",
+      "size": 430229
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Vinnie Moore - Shadows of Yesterday [iZenPenguin]/notes.chart",
+      "size": 34559
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Vinnie Moore - Shadows of Yesterday [iZenPenguin]/song.ini",
+      "size": 322
+    },
+    {
+      "path": "S Hero/[S] 18 - An impr-S-ive feat/Vinnie Moore - Shadows of Yesterday [iZenPenguin]/song.ogg",
+      "size": 7376477
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Adagio - Second Sight [Peddy]/album.png",
+      "size": 482383
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Adagio - Second Sight [Peddy]/background.jpg",
+      "size": 796934
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Adagio - Second Sight [Peddy]/notes.chart",
+      "size": 70971
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Adagio - Second Sight [Peddy]/song.ini",
+      "size": 321
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Adagio - Second Sight [Peddy]/song.ogg",
+      "size": 12260221
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Dynazty - Starlight [Peddy]/album.png",
+      "size": 375984
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Dynazty - Starlight [Peddy]/background.jpg",
+      "size": 940884
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Dynazty - Starlight [Peddy]/notes.chart",
+      "size": 64015
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Dynazty - Starlight [Peddy]/song.ini",
+      "size": 299
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Dynazty - Starlight [Peddy]/song.ogg",
+      "size": 7032289
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Gorod - Sailing Into The Earth [\u03a9HM]/album.png",
+      "size": 728059
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Gorod - Sailing Into The Earth [\u03a9HM]/background.jpg",
+      "size": 639006
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Gorod - Sailing Into The Earth [\u03a9HM]/notes.chart",
+      "size": 74892
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Gorod - Sailing Into The Earth [\u03a9HM]/song.ini",
+      "size": 399
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Gorod - Sailing Into The Earth [\u03a9HM]/song.ogg",
+      "size": 10610745
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Lingua Mortis Orchestra, Rage - Scapegoat [Peddy]/album.png",
+      "size": 401869
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Lingua Mortis Orchestra, Rage - Scapegoat [Peddy]/background.jpg",
+      "size": 578416
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Lingua Mortis Orchestra, Rage - Scapegoat [Peddy]/notes.chart",
+      "size": 63823
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Lingua Mortis Orchestra, Rage - Scapegoat [Peddy]/song.ini",
+      "size": 623
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Lingua Mortis Orchestra, Rage - Scapegoat [Peddy]/song.ogg",
+      "size": 13400052
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Moron Police - Satan Bor I Spind [Miscellany]/album.png",
+      "size": 629906
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Moron Police - Satan Bor I Spind [Miscellany]/background.jpg",
+      "size": 787876
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Moron Police - Satan Bor I Spind [Miscellany]/guitar.ogg",
+      "size": 5556087
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Moron Police - Satan Bor I Spind [Miscellany]/notes.chart",
+      "size": 33391
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Moron Police - Satan Bor I Spind [Miscellany]/song.ini",
+      "size": 554
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Slayer - Skeleton Christ [\u03a9HM]/album.png",
+      "size": 661213
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Slayer - Skeleton Christ [\u03a9HM]/background.jpg",
+      "size": 428447
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Slayer - Skeleton Christ [\u03a9HM]/notes.chart",
+      "size": 58352
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Slayer - Skeleton Christ [\u03a9HM]/song.ini",
+      "size": 266
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Slayer - Skeleton Christ [\u03a9HM]/song.ogg",
+      "size": 12048972
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Syncatto - Spicy [\u03a9HM]/album.png",
+      "size": 259768
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Syncatto - Spicy [\u03a9HM]/background.jpg",
+      "size": 341101
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Syncatto - Spicy [\u03a9HM]/notes.chart",
+      "size": 34158
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Syncatto - Spicy [\u03a9HM]/song.ini",
+      "size": 291
+    },
+    {
+      "path": "S Hero/[S] 19 - S-pire to greatness/Syncatto - Spicy [\u03a9HM]/song.ogg",
+      "size": 12663893
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/David Maxim Micic - Smile (feat. Jeff Loomis) [iZenPenguin]/album.png",
+      "size": 552227
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/David Maxim Micic - Smile (feat. Jeff Loomis) [iZenPenguin]/background.jpg",
+      "size": 247553
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/David Maxim Micic - Smile (feat. Jeff Loomis) [iZenPenguin]/notes.chart",
+      "size": 85537
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/David Maxim Micic - Smile (feat. Jeff Loomis) [iZenPenguin]/song.ini",
+      "size": 398
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/David Maxim Micic - Smile (feat. Jeff Loomis) [iZenPenguin]/song.ogg",
+      "size": 17170021
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Guthrie Govan - Sevens [Peddy]/album.png",
+      "size": 588926
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Guthrie Govan - Sevens [Peddy]/background.jpg",
+      "size": 73298
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Guthrie Govan - Sevens [Peddy]/notes.chart",
+      "size": 76241
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Guthrie Govan - Sevens [Peddy]/song.ini",
+      "size": 381
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Guthrie Govan - Sevens [Peddy]/song.ogg",
+      "size": 12166897
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Luca Lush x Lil Texas - Sucker Punch [Chezy]/album.png",
+      "size": 570099
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Luca Lush x Lil Texas - Sucker Punch [Chezy]/background.jpg",
+      "size": 1711724
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Luca Lush x Lil Texas - Sucker Punch [Chezy]/notes.chart",
+      "size": 73981
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Luca Lush x Lil Texas - Sucker Punch [Chezy]/song.ini",
+      "size": 491
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Luca Lush x Lil Texas - Sucker Punch [Chezy]/song.ogg",
+      "size": 9637685
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Psyopus - Scissor Fuck Paper Doll [\u03a9HM]/album.png",
+      "size": 493539
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Psyopus - Scissor Fuck Paper Doll [\u03a9HM]/background.jpg",
+      "size": 592302
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Psyopus - Scissor Fuck Paper Doll [\u03a9HM]/notes.chart",
+      "size": 47833
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Psyopus - Scissor Fuck Paper Doll [\u03a9HM]/song.ini",
+      "size": 378
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Psyopus - Scissor Fuck Paper Doll [\u03a9HM]/song.ogg",
+      "size": 7104531
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Richard Andersson's Space Odyssey - Seduction of Life [Peddy]/album.png",
+      "size": 442353
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Richard Andersson's Space Odyssey - Seduction of Life [Peddy]/background.jpg",
+      "size": 472326
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Richard Andersson's Space Odyssey - Seduction of Life [Peddy]/notes.chart",
+      "size": 65574
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Richard Andersson's Space Odyssey - Seduction of Life [Peddy]/song.ini",
+      "size": 438
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/Richard Andersson's Space Odyssey - Seduction of Life [Peddy]/song.ogg",
+      "size": 11258788
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/The Helix Nebula - Sailing Stone (ft. Plini) [Peddy]/album.png",
+      "size": 373507
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/The Helix Nebula - Sailing Stone (ft. Plini) [Peddy]/background.jpg",
+      "size": 299424
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/The Helix Nebula - Sailing Stone (ft. Plini) [Peddy]/notes.chart",
+      "size": 45546
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/The Helix Nebula - Sailing Stone (ft. Plini) [Peddy]/song.ini",
+      "size": 367
+    },
+    {
+      "path": "S Hero/[S] 20 - Progr-S-ive bangers/The Helix Nebula - Sailing Stone (ft. Plini) [Peddy]/song.ogg",
+      "size": 11377249
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 01. Scene One - Regression [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 01. Scene One - Regression [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 01. Scene One - Regression [Peddy]/notes.chart",
+      "size": 16000
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 01. Scene One - Regression [Peddy]/song.ini",
+      "size": 684
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 01. Scene One - Regression [Peddy]/song.ogg",
+      "size": 4333052
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 02. Scene Two - I. Overture 1928 [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 02. Scene Two - I. Overture 1928 [Peddy]/background.jpg",
+      "size": 489376
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 02. Scene Two - I. Overture 1928 [Peddy]/notes.chart",
+      "size": 31140
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 02. Scene Two - I. Overture 1928 [Peddy]/song.ini",
+      "size": 539
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 02. Scene Two - I. Overture 1928 [Peddy]/song.ogg",
+      "size": 7241737
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 03. Scene Two - II. Strange D\u00e9j\u00e0 Vu [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 03. Scene Two - II. Strange D\u00e9j\u00e0 Vu [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 03. Scene Two - II. Strange D\u00e9j\u00e0 Vu [Peddy]/notes.chart",
+      "size": 46756
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 03. Scene Two - II. Strange D\u00e9j\u00e0 Vu [Peddy]/song.ini",
+      "size": 536
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 03. Scene Two - II. Strange D\u00e9j\u00e0 Vu [Peddy]/song.ogg",
+      "size": 10347566
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 04. Scene Three - I. Through My Words [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 04. Scene Three - I. Through My Words [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 04. Scene Three - I. Through My Words [Peddy]/notes.chart",
+      "size": 8549
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 04. Scene Three - I. Through My Words [Peddy]/song.ini",
+      "size": 585
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 04. Scene Three - I. Through My Words [Peddy]/song.ogg",
+      "size": 1691828
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 05. Scene Three - II. Fatal Tragedy [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 05. Scene Three - II. Fatal Tragedy [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 05. Scene Three - II. Fatal Tragedy [Peddy]/notes.chart",
+      "size": 82006
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 05. Scene Three - II. Fatal Tragedy [Peddy]/song.ini",
+      "size": 536
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 05. Scene Three - II. Fatal Tragedy [Peddy]/song.ogg",
+      "size": 13513013
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 06. Scene Four - Beyond This Life [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 06. Scene Four - Beyond This Life [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 06. Scene Four - Beyond This Life [Peddy]/notes.chart",
+      "size": 113484
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 06. Scene Four - Beyond This Life [Peddy]/song.ini",
+      "size": 601
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 06. Scene Four - Beyond This Life [Peddy]/song.ogg",
+      "size": 23335730
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 07. Scene Five - Through Her Eyes [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 07. Scene Five - Through Her Eyes [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 07. Scene Five - Through Her Eyes [Peddy]/notes.chart",
+      "size": 28860
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 07. Scene Five - Through Her Eyes [Peddy]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 07. Scene Five - Through Her Eyes [Peddy]/song.ogg",
+      "size": 9941038
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 08. Scene Six - Home [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 08. Scene Six - Home [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 08. Scene Six - Home [Peddy]/notes.chart",
+      "size": 120524
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 08. Scene Six - Home [Peddy]/song.ini",
+      "size": 386
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 08. Scene Six - Home [Peddy]/song.ogg",
+      "size": 26407432
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 09. Scene Seven - I. The Dance of Eternity [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 09. Scene Seven - I. The Dance of Eternity [Peddy]/background.jpg",
+      "size": 489376
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 09. Scene Seven - I. The Dance of Eternity [Peddy]/notes.chart",
+      "size": 83143
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 09. Scene Seven - I. The Dance of Eternity [Peddy]/song.ini",
+      "size": 351
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 09. Scene Seven - I. The Dance of Eternity [Peddy]/song.ogg",
+      "size": 12906889
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 10. Scene Seven - II. One Last Time [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 10. Scene Seven - II. One Last Time [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 10. Scene Seven - II. One Last Time [Peddy]/notes.chart",
+      "size": 30000
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 10. Scene Seven - II. One Last Time [Peddy]/song.ini",
+      "size": 479
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 10. Scene Seven - II. One Last Time [Peddy]/song.ogg",
+      "size": 7329466
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 11. Scene Eight - The Spirit Carries On [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 11. Scene Eight - The Spirit Carries On [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 11. Scene Eight - The Spirit Carries On [Peddy]/notes.chart",
+      "size": 44207
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 11. Scene Eight - The Spirit Carries On [Peddy]/song.ini",
+      "size": 369
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 11. Scene Eight - The Spirit Carries On [Peddy]/song.ogg",
+      "size": 13038123
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 12. Scene Nine - Finally Free [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 12. Scene Nine - Finally Free [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 12. Scene Nine - Finally Free [Peddy]/notes.chart",
+      "size": 62072
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 12. Scene Nine - Finally Free [Peddy]/song.ini",
+      "size": 397
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - 12. Scene Nine - Finally Free [Peddy]/song.ogg",
+      "size": 23075023
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory (Full Album) [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory (Full Album) [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory (Full Album) [Peddy]/notes.chart",
+      "size": 698170
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory (Full Album) [Peddy]/song.ini",
+      "size": 375
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory (Full Album) [Peddy]/song.ogg",
+      "size": 153677816
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory Solo Medley [Peddy]/album.png",
+      "size": 403449
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory Solo Medley [Peddy]/background.jpg",
+      "size": 478136
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory Solo Medley [Peddy]/notes.chart",
+      "size": 127590
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory Solo Medley [Peddy]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "S Hero/[S] 21 - Metropol-S Pt. 2 Full Album/Dream Theater - Scenes From a Memory Solo Medley [Peddy]/song.ogg",
+      "size": 21047523
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Allegaeon - Saturnine [Miscellany]/album.png",
+      "size": 612901
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Allegaeon - Saturnine [Miscellany]/background.jpg",
+      "size": 390408
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Allegaeon - Saturnine [Miscellany]/guitar.ogg",
+      "size": 10209205
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Allegaeon - Saturnine [Miscellany]/notes.chart",
+      "size": 82005
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Allegaeon - Saturnine [Miscellany]/song.ini",
+      "size": 651
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Almanac - Self-Blinded Eyes [Peddy]/album.png",
+      "size": 532909
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Almanac - Self-Blinded Eyes [Peddy]/background.jpg",
+      "size": 289513
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Almanac - Self-Blinded Eyes [Peddy]/notes.chart",
+      "size": 70025
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Almanac - Self-Blinded Eyes [Peddy]/song.ini",
+      "size": 362
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Almanac - Self-Blinded Eyes [Peddy]/song.ogg",
+      "size": 12419246
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/BABYMETAL - Sis. Anger [Spachi]/album.png",
+      "size": 395283
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/BABYMETAL - Sis. Anger [Spachi]/background.jpg",
+      "size": 331350
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/BABYMETAL - Sis. Anger [Spachi]/notes.chart",
+      "size": 47711
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/BABYMETAL - Sis. Anger [Spachi]/song.ini",
+      "size": 390
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/BABYMETAL - Sis. Anger [Spachi]/song.ogg",
+      "size": 8298450
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Kotipelto - Seeds of Sorrow [Peddy]/album.png",
+      "size": 369223
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Kotipelto - Seeds of Sorrow [Peddy]/background.jpg",
+      "size": 328793
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Kotipelto - Seeds of Sorrow [Peddy]/notes.chart",
+      "size": 51836
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Kotipelto - Seeds of Sorrow [Peddy]/song.ini",
+      "size": 437
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Kotipelto - Seeds of Sorrow [Peddy]/song.ogg",
+      "size": 7799243
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Lizard Professor -  Simply Complex [iZenPenguin]/album.png",
+      "size": 273368
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Lizard Professor -  Simply Complex [iZenPenguin]/background.jpg",
+      "size": 1784897
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Lizard Professor -  Simply Complex [iZenPenguin]/notes.chart",
+      "size": 96784
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Lizard Professor -  Simply Complex [iZenPenguin]/song.ini",
+      "size": 304
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Lizard Professor -  Simply Complex [iZenPenguin]/song.ogg",
+      "size": 14736239
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Marco Sfogli - Speed Limit [iZenPenguin]/album.png",
+      "size": 292506
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Marco Sfogli - Speed Limit [iZenPenguin]/background.jpg",
+      "size": 523652
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Marco Sfogli - Speed Limit [iZenPenguin]/notes.chart",
+      "size": 42682
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Marco Sfogli - Speed Limit [iZenPenguin]/song.ini",
+      "size": 307
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/Marco Sfogli - Speed Limit [iZenPenguin]/song.ogg",
+      "size": 9955015
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/SikTh - Summer Rain [Chezy]/album.png",
+      "size": 431301
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/SikTh - Summer Rain [Chezy]/background.jpg",
+      "size": 857737
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/SikTh - Summer Rain [Chezy]/notes.chart",
+      "size": 54460
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/SikTh - Summer Rain [Chezy]/song.ini",
+      "size": 605
+    },
+    {
+      "path": "S Hero/[S] 22 - Feeling S-static/SikTh - Summer Rain [Chezy]/song.ogg",
+      "size": 7191665
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Andy Rowland, Ant Law - SOC [Inixix, HattMeafy]/album.png",
+      "size": 615737
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Andy Rowland, Ant Law - SOC [Inixix, HattMeafy]/background.jpg",
+      "size": 300824
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Andy Rowland, Ant Law - SOC [Inixix, HattMeafy]/notes.chart",
+      "size": 112924
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Andy Rowland, Ant Law - SOC [Inixix, HattMeafy]/song.ini",
+      "size": 637
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Andy Rowland, Ant Law - SOC [Inixix, HattMeafy]/song.ogg",
+      "size": 21430107
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Battle Beast - Speed And Danger [HattMeafy]/album.png",
+      "size": 550001
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Battle Beast - Speed And Danger [HattMeafy]/background.jpg",
+      "size": 147385
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Battle Beast - Speed And Danger [HattMeafy]/notes.chart",
+      "size": 38181
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Battle Beast - Speed And Danger [HattMeafy]/song.ini",
+      "size": 452
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Battle Beast - Speed And Danger [HattMeafy]/song.ogg",
+      "size": 9298792
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/DragonForce - Symphony of the Night [Miscellany]/album.png",
+      "size": 680720
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/DragonForce - Symphony of the Night [Miscellany]/background.jpg",
+      "size": 1168098
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/DragonForce - Symphony of the Night [Miscellany]/guitar.ogg",
+      "size": 10861154
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/DragonForce - Symphony of the Night [Miscellany]/notes.chart",
+      "size": 56737
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/DragonForce - Symphony of the Night [Miscellany]/song.ini",
+      "size": 617
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Edu Falaschi - Sea of Uncertainties [Peddy]/album.png",
+      "size": 513672
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Edu Falaschi - Sea of Uncertainties [Peddy]/background.jpg",
+      "size": 1018560
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Edu Falaschi - Sea of Uncertainties [Peddy]/notes.chart",
+      "size": 52943
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Edu Falaschi - Sea of Uncertainties [Peddy]/song.ini",
+      "size": 328
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Edu Falaschi - Sea of Uncertainties [Peddy]/song.ogg",
+      "size": 9796181
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Morgan Wick - Solar Storm [Peddy]/album.png",
+      "size": 307446
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Morgan Wick - Solar Storm [Peddy]/background.jpg",
+      "size": 251846
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Morgan Wick - Solar Storm [Peddy]/notes.chart",
+      "size": 58549
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Morgan Wick - Solar Storm [Peddy]/song.ini",
+      "size": 335
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Morgan Wick - Solar Storm [Peddy]/song.ogg",
+      "size": 13325958
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Paul Gilbert - Silence Followed by a Deafening Roar [Peddy]/album.png",
+      "size": 381449
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Paul Gilbert - Silence Followed by a Deafening Roar [Peddy]/background.jpg",
+      "size": 409321
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Paul Gilbert - Silence Followed by a Deafening Roar [Peddy]/notes.chart",
+      "size": 51646
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Paul Gilbert - Silence Followed by a Deafening Roar [Peddy]/song.ini",
+      "size": 405
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Paul Gilbert - Silence Followed by a Deafening Roar [Peddy]/song.ogg",
+      "size": 6993219
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Pusher - Sleep [Chezy]/album.png",
+      "size": 599875
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Pusher - Sleep [Chezy]/background.jpg",
+      "size": 1458680
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Pusher - Sleep [Chezy]/notes.chart",
+      "size": 13826
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Pusher - Sleep [Chezy]/song.ini",
+      "size": 397
+    },
+    {
+      "path": "S Hero/[S] 23 - An S-pecially shreddy tier/Pusher - Sleep [Chezy]/song.ogg",
+      "size": 1344910
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Andy James - Synergy [Peddy]/album.png",
+      "size": 347219
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Andy James - Synergy [Peddy]/background.jpg",
+      "size": 585695
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Andy James - Synergy [Peddy]/notes.chart",
+      "size": 28906
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Andy James - Synergy [Peddy]/song.ini",
+      "size": 335
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Andy James - Synergy [Peddy]/song.ogg",
+      "size": 7427698
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/DGM - Some Day, One Day [Peddy]/album.png",
+      "size": 666738
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/DGM - Some Day, One Day [Peddy]/background.jpg",
+      "size": 417189
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/DGM - Some Day, One Day [Peddy]/notes.chart",
+      "size": 44709
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/DGM - Some Day, One Day [Peddy]/song.ini",
+      "size": 407
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/DGM - Some Day, One Day [Peddy]/song.ogg",
+      "size": 10193424
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/ERRA - Snowblood [iZenPenguin]/album.png",
+      "size": 142714
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/ERRA - Snowblood [iZenPenguin]/background.jpg",
+      "size": 1604382
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/ERRA - Snowblood [iZenPenguin]/notes.chart",
+      "size": 48616
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/ERRA - Snowblood [iZenPenguin]/song.ini",
+      "size": 344
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/ERRA - Snowblood [iZenPenguin]/song.ogg",
+      "size": 8642114
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Evile - Schizophrenia [Peddy]/album.png",
+      "size": 447414
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Evile - Schizophrenia [Peddy]/background.jpg",
+      "size": 201372
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Evile - Schizophrenia [Peddy]/notes.chart",
+      "size": 58358
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Evile - Schizophrenia [Peddy]/song.ini",
+      "size": 437
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Evile - Schizophrenia [Peddy]/song.ogg",
+      "size": 9033343
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Frank Zappa - Sunrise Redeemer [\u03a9HM]/album.png",
+      "size": 620073
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Frank Zappa - Sunrise Redeemer [\u03a9HM]/background.jpg",
+      "size": 875302
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Frank Zappa - Sunrise Redeemer [\u03a9HM]/notes.chart",
+      "size": 29211
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Frank Zappa - Sunrise Redeemer [\u03a9HM]/song.ini",
+      "size": 346
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/Frank Zappa - Sunrise Redeemer [\u03a9HM]/song.ogg",
+      "size": 9452602
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/LOVEBITES - Shadowmaker [Spachi]/album.png",
+      "size": 523638
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/LOVEBITES - Shadowmaker [Spachi]/background.jpg",
+      "size": 359591
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/LOVEBITES - Shadowmaker [Spachi]/notes.chart",
+      "size": 58392
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/LOVEBITES - Shadowmaker [Spachi]/song.ini",
+      "size": 547
+    },
+    {
+      "path": "S Hero/[S] 24 - S-calating in difficulty/LOVEBITES - Shadowmaker [Spachi]/song.ogg",
+      "size": 11197550
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Anthriel - Siren's Song [Peddy]/album.png",
+      "size": 588326
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Anthriel - Siren's Song [Peddy]/background.jpg",
+      "size": 232887
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Anthriel - Siren's Song [Peddy]/notes.chart",
+      "size": 67187
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Anthriel - Siren's Song [Peddy]/song.ini",
+      "size": 338
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Anthriel - Siren's Song [Peddy]/song.ogg",
+      "size": 12686869
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Casiopea - Swallow [Peddy]/album.png",
+      "size": 542375
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Casiopea - Swallow [Peddy]/background.jpg",
+      "size": 265535
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Casiopea - Swallow [Peddy]/notes.chart",
+      "size": 39790
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Casiopea - Swallow [Peddy]/song.ini",
+      "size": 319
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Casiopea - Swallow [Peddy]/song.ogg",
+      "size": 9708643
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Eniac Requiem - Shadows Fall [Peddy]/album.png",
+      "size": 337208
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Eniac Requiem - Shadows Fall [Peddy]/background.jpg",
+      "size": 201383
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Eniac Requiem - Shadows Fall [Peddy]/notes.chart",
+      "size": 43546
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Eniac Requiem - Shadows Fall [Peddy]/song.ini",
+      "size": 334
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Eniac Requiem - Shadows Fall [Peddy]/song.ogg",
+      "size": 8133249
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Impellitteri - Shine On [Peddy]/album.png",
+      "size": 573693
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Impellitteri - Shine On [Peddy]/background.jpg",
+      "size": 882015
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Impellitteri - Shine On [Peddy]/notes.chart",
+      "size": 38505
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Impellitteri - Shine On [Peddy]/song.ini",
+      "size": 301
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Impellitteri - Shine On [Peddy]/song.ogg",
+      "size": 7158033
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/MASAKI - Scarlet Lance [Mintorment]/album.png",
+      "size": 466648
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/MASAKI - Scarlet Lance [Mintorment]/background.jpg",
+      "size": 1144939
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/MASAKI - Scarlet Lance [Mintorment]/notes.chart",
+      "size": 22815
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/MASAKI - Scarlet Lance [Mintorment]/song.ini",
+      "size": 590
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/MASAKI - Scarlet Lance [Mintorment]/song.ogg",
+      "size": 5302900
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Shred Attack - Speed Kills [Sygenysis]/album.png",
+      "size": 139525
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Shred Attack - Speed Kills [Sygenysis]/background.jpg",
+      "size": 614059
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Shred Attack - Speed Kills [Sygenysis]/guitar.ogg",
+      "size": 8771312
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Shred Attack - Speed Kills [Sygenysis]/notes.mid",
+      "size": 17299
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Shred Attack - Speed Kills [Sygenysis]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Van Halen - Spanish Fly [\u03a9HM]/album.png",
+      "size": 128526
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Van Halen - Spanish Fly [\u03a9HM]/background.jpg",
+      "size": 575477
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Van Halen - Spanish Fly [\u03a9HM]/notes.chart",
+      "size": 18023
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Van Halen - Spanish Fly [\u03a9HM]/song.ini",
+      "size": 381
+    },
+    {
+      "path": "S Hero/[S] 25 - S-cargot recipe/Van Halen - Spanish Fly [\u03a9HM]/song.ogg",
+      "size": 2276676
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Bob Katsionis - Scary Groovie [iZenPenguin]/album.png",
+      "size": 472395
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Bob Katsionis - Scary Groovie [iZenPenguin]/background.jpg",
+      "size": 598282
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Bob Katsionis - Scary Groovie [iZenPenguin]/notes.chart",
+      "size": 39882
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Bob Katsionis - Scary Groovie [iZenPenguin]/song.ini",
+      "size": 367
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Bob Katsionis - Scary Groovie [iZenPenguin]/song.ogg",
+      "size": 5303160
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Code of Perfection - Shred It! [Peddy]/album.png",
+      "size": 366977
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Code of Perfection - Shred It! [Peddy]/background.jpg",
+      "size": 580400
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Code of Perfection - Shred It! [Peddy]/notes.chart",
+      "size": 54504
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Code of Perfection - Shred It! [Peddy]/song.ini",
+      "size": 374
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Code of Perfection - Shred It! [Peddy]/song.ogg",
+      "size": 12082934
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Joe Satriani - Searching [iZenPenguin]/album.png",
+      "size": 385487
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Joe Satriani - Searching [iZenPenguin]/background.jpg",
+      "size": 1232386
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Joe Satriani - Searching [iZenPenguin]/notes.chart",
+      "size": 82778
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Joe Satriani - Searching [iZenPenguin]/song.ini",
+      "size": 336
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Joe Satriani - Searching [iZenPenguin]/song.ogg",
+      "size": 17835965
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Lee Luland - Sagittarius A [iZenPenguin]/album.png",
+      "size": 549071
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Lee Luland - Sagittarius A [iZenPenguin]/background.jpg",
+      "size": 407484
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Lee Luland - Sagittarius A [iZenPenguin]/notes.chart",
+      "size": 54037
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Lee Luland - Sagittarius A [iZenPenguin]/song.ini",
+      "size": 303
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Lee Luland - Sagittarius A [iZenPenguin]/song.ogg",
+      "size": 9594946
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Royal Hunt - SK 983 [Peddy]/album.png",
+      "size": 624348
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Royal Hunt - SK 983 [Peddy]/background.jpg",
+      "size": 255178
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Royal Hunt - SK 983 [Peddy]/notes.chart",
+      "size": 59849
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Royal Hunt - SK 983 [Peddy]/song.ini",
+      "size": 305
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Royal Hunt - SK 983 [Peddy]/song.ogg",
+      "size": 9811414
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Todd Duane - Sloppy Seconds [iZenPenguin]/album.png",
+      "size": 348559
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Todd Duane - Sloppy Seconds [iZenPenguin]/background.jpg",
+      "size": 1245718
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Todd Duane - Sloppy Seconds [iZenPenguin]/notes.chart",
+      "size": 26421
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Todd Duane - Sloppy Seconds [iZenPenguin]/song.ini",
+      "size": 303
+    },
+    {
+      "path": "S Hero/[S] 26 - An S-sortment of instrumentals/Todd Duane - Sloppy Seconds [iZenPenguin]/song.ogg",
+      "size": 4693005
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/BEMANI Sound Team Yvya - Saiph (GITADORA HIGH-VOLTAGE) [GuitarZero132]/album.png",
+      "size": 554368
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/BEMANI Sound Team Yvya - Saiph (GITADORA HIGH-VOLTAGE) [GuitarZero132]/background.jpg",
+      "size": 1166123
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/BEMANI Sound Team Yvya - Saiph (GITADORA HIGH-VOLTAGE) [GuitarZero132]/notes.chart",
+      "size": 22297
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/BEMANI Sound Team Yvya - Saiph (GITADORA HIGH-VOLTAGE) [GuitarZero132]/song.ini",
+      "size": 382
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/BEMANI Sound Team Yvya - Saiph (GITADORA HIGH-VOLTAGE) [GuitarZero132]/song.ogg",
+      "size": 4262259
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Dream Theater - S2N [Peddy]/album.png",
+      "size": 229122
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Dream Theater - S2N [Peddy]/background.jpg",
+      "size": 277935
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Dream Theater - S2N [Peddy]/notes.chart",
+      "size": 64299
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Dream Theater - S2N [Peddy]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Dream Theater - S2N [Peddy]/song.ogg",
+      "size": 12484815
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Iron Mask - Shadow of the Red Baron [iZenPenguin]/album.png",
+      "size": 512030
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Iron Mask - Shadow of the Red Baron [iZenPenguin]/background.jpg",
+      "size": 347123
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Iron Mask - Shadow of the Red Baron [iZenPenguin]/notes.chart",
+      "size": 76744
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Iron Mask - Shadow of the Red Baron [iZenPenguin]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Iron Mask - Shadow of the Red Baron [iZenPenguin]/song.ogg",
+      "size": 16408680
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/John Petrucci - Suspended Animation Solo Medley [iZenPenguin & Peddy]/album.png",
+      "size": 486297
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/John Petrucci - Suspended Animation Solo Medley [iZenPenguin & Peddy]/background.jpg",
+      "size": 351513
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/John Petrucci - Suspended Animation Solo Medley [iZenPenguin & Peddy]/notes.chart",
+      "size": 135313
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/John Petrucci - Suspended Animation Solo Medley [iZenPenguin & Peddy]/song.ini",
+      "size": 335
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/John Petrucci - Suspended Animation Solo Medley [iZenPenguin & Peddy]/song.ogg",
+      "size": 23358339
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Sifting - Stop Calling Me Liberty [iZenPenguin]/album.png",
+      "size": 496569
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Sifting - Stop Calling Me Liberty [iZenPenguin]/background.jpg",
+      "size": 550841
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Sifting - Stop Calling Me Liberty [iZenPenguin]/notes.chart",
+      "size": 92499
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Sifting - Stop Calling Me Liberty [iZenPenguin]/song.ini",
+      "size": 335
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Sifting - Stop Calling Me Liberty [iZenPenguin]/song.ogg",
+      "size": 14464714
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Sector A Undead [Peddy]/album.png",
+      "size": 590431
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Sector A Undead [Peddy]/background.jpg",
+      "size": 1083180
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Sector A Undead [Peddy]/notes.chart",
+      "size": 76346
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Sector A Undead [Peddy]/song.ini",
+      "size": 399
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Sector A Undead [Peddy]/song.ogg",
+      "size": 14048015
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Short Virtuosity Etude [Peddy]/album.png",
+      "size": 590431
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Short Virtuosity Etude [Peddy]/background.jpg",
+      "size": 1083180
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Short Virtuosity Etude [Peddy]/notes.chart",
+      "size": 20831
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Short Virtuosity Etude [Peddy]/song.ini",
+      "size": 396
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Stephan Fort\u00e9 - Short Virtuosity Etude [Peddy]/song.ogg",
+      "size": 2336165
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Thy Art Is Murder - Soldiers of Immortality [\u03a9HM]/album.png",
+      "size": 549894
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Thy Art Is Murder - Soldiers of Immortality [\u03a9HM]/background.jpg",
+      "size": 620458
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Thy Art Is Murder - Soldiers of Immortality [\u03a9HM]/notes.chart",
+      "size": 45813
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Thy Art Is Murder - Soldiers of Immortality [\u03a9HM]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "S Hero/[S] 27 - S-phyxiating charts/Thy Art Is Murder - Soldiers of Immortality [\u03a9HM]/song.ogg",
+      "size": 9188408
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Archspire - Scream Feeding [\u03a9HM]/album.png",
+      "size": 680932
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Archspire - Scream Feeding [\u03a9HM]/background.jpg",
+      "size": 690094
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Archspire - Scream Feeding [\u03a9HM]/notes.chart",
+      "size": 72587
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Archspire - Scream Feeding [\u03a9HM]/song.ini",
+      "size": 325
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Archspire - Scream Feeding [\u03a9HM]/song.ogg",
+      "size": 12052182
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Artension - Song of the Desert [Peddy]/album.png",
+      "size": 441721
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Artension - Song of the Desert [Peddy]/background.jpg",
+      "size": 522735
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Artension - Song of the Desert [Peddy]/notes.chart",
+      "size": 59275
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Artension - Song of the Desert [Peddy]/song.ini",
+      "size": 393
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Artension - Song of the Desert [Peddy]/song.ogg",
+      "size": 6171172
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Azure - Self-Crucifixion [Miscellany]/album.png",
+      "size": 616081
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Azure - Self-Crucifixion [Miscellany]/background.jpg",
+      "size": 629507
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Azure - Self-Crucifixion [Miscellany]/guitar.ogg",
+      "size": 8245139
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Azure - Self-Crucifixion [Miscellany]/notes.chart",
+      "size": 50755
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Azure - Self-Crucifixion [Miscellany]/song.ini",
+      "size": 630
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Dream Theater - Stream of Consciousness [iZenPenguin]/album.png",
+      "size": 303528
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Dream Theater - Stream of Consciousness [iZenPenguin]/background.jpg",
+      "size": 472759
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Dream Theater - Stream of Consciousness [iZenPenguin]/notes.chart",
+      "size": 93406
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Dream Theater - Stream of Consciousness [iZenPenguin]/song.ini",
+      "size": 373
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Dream Theater - Stream of Consciousness [iZenPenguin]/song.ogg",
+      "size": 22284532
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Exarsis - Suicide Disorder [iZenPenguin]/album.png",
+      "size": 490189
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Exarsis - Suicide Disorder [iZenPenguin]/background.jpg",
+      "size": 229489
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Exarsis - Suicide Disorder [iZenPenguin]/notes.chart",
+      "size": 61818
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Exarsis - Suicide Disorder [iZenPenguin]/song.ini",
+      "size": 361
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Exarsis - Suicide Disorder [iZenPenguin]/song.ogg",
+      "size": 7569562
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Galneryus - See the Light of Freedom [Peddy]/album.png",
+      "size": 291498
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Galneryus - See the Light of Freedom [Peddy]/background.jpg",
+      "size": 373536
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Galneryus - See the Light of Freedom [Peddy]/notes.chart",
+      "size": 90400
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Galneryus - See the Light of Freedom [Peddy]/song.ini",
+      "size": 349
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Galneryus - See the Light of Freedom [Peddy]/song.ogg",
+      "size": 15494229
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Syu - Street Lethal (Racer X cover) [Peddy]/album.png",
+      "size": 321255
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Syu - Street Lethal (Racer X cover) [Peddy]/background.jpg",
+      "size": 536213
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Syu - Street Lethal (Racer X cover) [Peddy]/notes.chart",
+      "size": 56620
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Syu - Street Lethal (Racer X cover) [Peddy]/song.ini",
+      "size": 437
+    },
+    {
+      "path": "S Hero/[S] 28 - Losing consciousn-S/Syu - Street Lethal (Racer X cover) [Peddy]/song.ogg",
+      "size": 9423959
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Archspire - Seven Crowns and the Oblivion Chain [iZenPenguin]/album.png",
+      "size": 499855
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Archspire - Seven Crowns and the Oblivion Chain [iZenPenguin]/background.jpg",
+      "size": 463806
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Archspire - Seven Crowns and the Oblivion Chain [iZenPenguin]/notes.chart",
+      "size": 80706
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Archspire - Seven Crowns and the Oblivion Chain [iZenPenguin]/song.ini",
+      "size": 409
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Archspire - Seven Crowns and the Oblivion Chain [iZenPenguin]/song.ogg",
+      "size": 10113667
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/DragonForce - Soldiers of the Wasteland [Peddy]/album.png",
+      "size": 560921
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/DragonForce - Soldiers of the Wasteland [Peddy]/background.jpg",
+      "size": 485639
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/DragonForce - Soldiers of the Wasteland [Peddy]/notes.chart",
+      "size": 122326
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/DragonForce - Soldiers of the Wasteland [Peddy]/song.ini",
+      "size": 481
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/DragonForce - Soldiers of the Wasteland [Peddy]/song.ogg",
+      "size": 20196125
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/JAUZ & Megalodon - Shark Attack [iZenPenguin]/album.png",
+      "size": 280106
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/JAUZ & Megalodon - Shark Attack [iZenPenguin]/background.jpg",
+      "size": 819497
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/JAUZ & Megalodon - Shark Attack [iZenPenguin]/notes.chart",
+      "size": 68918
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/JAUZ & Megalodon - Shark Attack [iZenPenguin]/song.ini",
+      "size": 337
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/JAUZ & Megalodon - Shark Attack [iZenPenguin]/song.ogg",
+      "size": 8790463
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Niels Vejlyt - Samurai [iZenPenguin]/album.png",
+      "size": 414082
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Niels Vejlyt - Samurai [iZenPenguin]/background.jpg",
+      "size": 645237
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Niels Vejlyt - Samurai [iZenPenguin]/notes.chart",
+      "size": 50882
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Niels Vejlyt - Samurai [iZenPenguin]/song.ini",
+      "size": 275
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Niels Vejlyt - Samurai [iZenPenguin]/song.ogg",
+      "size": 8068655
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Sun Caged Solo Medley [Peddy, iZenPenguin & Miscellany]/album.png",
+      "size": 250822
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Sun Caged Solo Medley [Peddy, iZenPenguin & Miscellany]/background.jpg",
+      "size": 565962
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Sun Caged Solo Medley [Peddy, iZenPenguin & Miscellany]/notes.chart",
+      "size": 202783
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Sun Caged Solo Medley [Peddy, iZenPenguin & Miscellany]/song.ini",
+      "size": 588
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Sun Caged Solo Medley [Peddy, iZenPenguin & Miscellany]/song.ogg",
+      "size": 24300690
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Yngwie Malmsteen - Soldier Without Faith [Peddy]/album.png",
+      "size": 354227
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Yngwie Malmsteen - Soldier Without Faith [Peddy]/background.jpg",
+      "size": 606497
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Yngwie Malmsteen - Soldier Without Faith [Peddy]/notes.chart",
+      "size": 68303
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Yngwie Malmsteen - Soldier Without Faith [Peddy]/song.ini",
+      "size": 433
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/Yngwie Malmsteen - Soldier Without Faith [Peddy]/song.ogg",
+      "size": 8745563
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/w-tre respect for AT&HU - Schur's Theorem [Raspberriel]/album.png",
+      "size": 449952
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/w-tre respect for AT&HU - Schur's Theorem [Raspberriel]/background.jpg",
+      "size": 190633
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/w-tre respect for AT&HU - Schur's Theorem [Raspberriel]/guitar.ogg",
+      "size": 3522054
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/w-tre respect for AT&HU - Schur's Theorem [Raspberriel]/notes.mid",
+      "size": 7991
+    },
+    {
+      "path": "S Hero/[S] 29 - S-tounding skills required/w-tre respect for AT&HU - Schur's Theorem [Raspberriel]/song.ini",
+      "size": 414
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Jake Guy - Spandex Poodle Mania [iZenPenguin]/album.png",
+      "size": 563572
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Jake Guy - Spandex Poodle Mania [iZenPenguin]/background.jpg",
+      "size": 195176
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Jake Guy - Spandex Poodle Mania [iZenPenguin]/notes.chart",
+      "size": 57003
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Jake Guy - Spandex Poodle Mania [iZenPenguin]/song.ini",
+      "size": 293
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Jake Guy - Spandex Poodle Mania [iZenPenguin]/song.ogg",
+      "size": 9918124
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Ophidian I - Spiral to Oblivion [Peddy]/album.png",
+      "size": 517838
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Ophidian I - Spiral to Oblivion [Peddy]/background.jpg",
+      "size": 990581
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Ophidian I - Spiral to Oblivion [Peddy]/notes.chart",
+      "size": 54940
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Ophidian I - Spiral to Oblivion [Peddy]/song.ini",
+      "size": 365
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Ophidian I - Spiral to Oblivion [Peddy]/song.ogg",
+      "size": 8413700
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Scar Symmetry Solo Medley [Peddy]/album.png",
+      "size": 237551
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Scar Symmetry Solo Medley [Peddy]/background.jpg",
+      "size": 144496
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Scar Symmetry Solo Medley [Peddy]/notes.chart",
+      "size": 219308
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Scar Symmetry Solo Medley [Peddy]/song.ini",
+      "size": 311
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Scar Symmetry Solo Medley [Peddy]/song.ogg",
+      "size": 26426778
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Starkill - Sword, Spear, Blood, Fire [Miscellany]/album.png",
+      "size": 665068
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Starkill - Sword, Spear, Blood, Fire [Miscellany]/background.jpg",
+      "size": 748310
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Starkill - Sword, Spear, Blood, Fire [Miscellany]/guitar.ogg",
+      "size": 17488082
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Starkill - Sword, Spear, Blood, Fire [Miscellany]/notes.chart",
+      "size": 62643
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Starkill - Sword, Spear, Blood, Fire [Miscellany]/song.ini",
+      "size": 525
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu & Yuhki - Swell in the Chaos [Peddy]/album.png",
+      "size": 279721
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu & Yuhki - Swell in the Chaos [Peddy]/background.jpg",
+      "size": 696285
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu & Yuhki - Swell in the Chaos [Peddy]/notes.chart",
+      "size": 54799
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu & Yuhki - Swell in the Chaos [Peddy]/song.ini",
+      "size": 356
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu & Yuhki - Swell in the Chaos [Peddy]/song.ogg",
+      "size": 6881122
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu - Spearhead [Peddy]/album.png",
+      "size": 240743
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu - Spearhead [Peddy]/background.jpg",
+      "size": 133957
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu - Spearhead [Peddy]/notes.chart",
+      "size": 59752
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu - Spearhead [Peddy]/song.ini",
+      "size": 377
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/Syu - Spearhead [Peddy]/song.ogg",
+      "size": 11985967
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/XI & BlackY - \u015aiva [iZenPenguin]/album.png",
+      "size": 407269
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/XI & BlackY - \u015aiva [iZenPenguin]/background.jpg",
+      "size": 660346
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/XI & BlackY - \u015aiva [iZenPenguin]/notes.chart",
+      "size": 87633
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/XI & BlackY - \u015aiva [iZenPenguin]/song.ini",
+      "size": 318
+    },
+    {
+      "path": "S Hero/[S] 30 - S-tonishingly hard/XI & BlackY - \u015aiva [iZenPenguin]/song.ogg",
+      "size": 6966705
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Bumblefoot - Swatting Flies [Peddy]/album.png",
+      "size": 539948
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Bumblefoot - Swatting Flies [Peddy]/background.jpg",
+      "size": 168812
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Bumblefoot - Swatting Flies [Peddy]/notes.chart",
+      "size": 55611
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Bumblefoot - Swatting Flies [Peddy]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Bumblefoot - Swatting Flies [Peddy]/song.ogg",
+      "size": 7730402
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/First Fragment - Soif Br\u00fblante [Miscellany]/album.png",
+      "size": 687716
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/First Fragment - Soif Br\u00fblante [Miscellany]/background.jpg",
+      "size": 722683
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/First Fragment - Soif Br\u00fblante [Miscellany]/guitar.ogg",
+      "size": 14440361
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/First Fragment - Soif Br\u00fblante [Miscellany]/notes.chart",
+      "size": 100571
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/First Fragment - Soif Br\u00fblante [Miscellany]/song.ini",
+      "size": 621
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Mendel - Shiva Quantum [iZenPenguin]/album.png",
+      "size": 556989
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Mendel - Shiva Quantum [iZenPenguin]/background.jpg",
+      "size": 662692
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Mendel - Shiva Quantum [iZenPenguin]/notes.chart",
+      "size": 33956
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Mendel - Shiva Quantum [iZenPenguin]/song.ini",
+      "size": 321
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Mendel - Shiva Quantum [iZenPenguin]/song.ogg",
+      "size": 7977476
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Prof. Sakamoto - Stage 4 Saturn [Peddy]/album.png",
+      "size": 198850
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Prof. Sakamoto - Stage 4 Saturn [Peddy]/background.jpg",
+      "size": 495096
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Prof. Sakamoto - Stage 4 Saturn [Peddy]/notes.chart",
+      "size": 67014
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Prof. Sakamoto - Stage 4 Saturn [Peddy]/song.ini",
+      "size": 336
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Prof. Sakamoto - Stage 4 Saturn [Peddy]/song.ogg",
+      "size": 9572171
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Scandinavian Solo Suite [S Hero Team]/album.png",
+      "size": 381338
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Scandinavian Solo Suite [S Hero Team]/background.jpg",
+      "size": 570389
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Scandinavian Solo Suite [S Hero Team]/notes.chart",
+      "size": 181528
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Scandinavian Solo Suite [S Hero Team]/song.ini",
+      "size": 730
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Scandinavian Solo Suite [S Hero Team]/song.ogg",
+      "size": 25589691
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Two Face Sinner - Satanic Altar [OrangeHat]/album.png",
+      "size": 489089
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Two Face Sinner - Satanic Altar [OrangeHat]/background.jpg",
+      "size": 988371
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Two Face Sinner - Satanic Altar [OrangeHat]/notes.chart",
+      "size": 136216
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Two Face Sinner - Satanic Altar [OrangeHat]/song.ini",
+      "size": 336
+    },
+    {
+      "path": "S Hero/[S] 31 - The upper S-chelon/Two Face Sinner - Satanic Altar [OrangeHat]/song.ogg",
+      "size": 12234579
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Cryptopsy - Slit Your Guts [iZenPenguin]/album.png",
+      "size": 368365
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Cryptopsy - Slit Your Guts [iZenPenguin]/background.jpg",
+      "size": 707149
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Cryptopsy - Slit Your Guts [iZenPenguin]/notes.chart",
+      "size": 66906
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Cryptopsy - Slit Your Guts [iZenPenguin]/song.ini",
+      "size": 309
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Cryptopsy - Slit Your Guts [iZenPenguin]/song.ogg",
+      "size": 7517376
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/DragonForce - Storming the Burning Fields [iZenPenguin]/album.png",
+      "size": 518062
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/DragonForce - Storming the Burning Fields [iZenPenguin]/background.jpg",
+      "size": 656670
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/DragonForce - Storming the Burning Fields [iZenPenguin]/notes.chart",
+      "size": 95480
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/DragonForce - Storming the Burning Fields [iZenPenguin]/song.ini",
+      "size": 312
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/DragonForce - Storming the Burning Fields [iZenPenguin]/song.ogg",
+      "size": 9663852
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Kevin MacLeod - Spazzmatica Polka [Peddy]/album.png",
+      "size": 94872
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Kevin MacLeod - Spazzmatica Polka [Peddy]/background.jpg",
+      "size": 148676
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Kevin MacLeod - Spazzmatica Polka [Peddy]/notes.chart",
+      "size": 80515
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Kevin MacLeod - Spazzmatica Polka [Peddy]/song.ini",
+      "size": 289
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Kevin MacLeod - Spazzmatica Polka [Peddy]/song.ogg",
+      "size": 3053629
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Shadow Gallery Solo Medley [Peddy]/album.png",
+      "size": 257980
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Shadow Gallery Solo Medley [Peddy]/background.jpg",
+      "size": 254964
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Shadow Gallery Solo Medley [Peddy]/notes.chart",
+      "size": 196259
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Shadow Gallery Solo Medley [Peddy]/song.ini",
+      "size": 424
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Shadow Gallery Solo Medley [Peddy]/song.ogg",
+      "size": 30260661
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Tanger - SUSSY BAKA (feat. Schwank, Lil Triangle, and Tanger) [Impostor]/album.png",
+      "size": 471442
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Tanger - SUSSY BAKA (feat. Schwank, Lil Triangle, and Tanger) [Impostor]/background.jpg",
+      "size": 277484
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Tanger - SUSSY BAKA (feat. Schwank, Lil Triangle, and Tanger) [Impostor]/guitar.ogg",
+      "size": 12048152
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Tanger - SUSSY BAKA (feat. Schwank, Lil Triangle, and Tanger) [Impostor]/notes.mid",
+      "size": 45065
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Tanger - SUSSY BAKA (feat. Schwank, Lil Triangle, and Tanger) [Impostor]/preview.ogg",
+      "size": 581270
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Tanger - SUSSY BAKA (feat. Schwank, Lil Triangle, and Tanger) [Impostor]/song.ini",
+      "size": 298
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Vitalij Kuprij - Solar Impact [iZenPenguin]/album.png",
+      "size": 486007
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Vitalij Kuprij - Solar Impact [iZenPenguin]/background.jpg",
+      "size": 410936
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Vitalij Kuprij - Solar Impact [iZenPenguin]/notes.chart",
+      "size": 76182
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Vitalij Kuprij - Solar Impact [iZenPenguin]/song.ini",
+      "size": 333
+    },
+    {
+      "path": "S Hero/[S] 32 - S-sentially impossible/Vitalij Kuprij - Solar Impact [iZenPenguin]/song.ogg",
+      "size": 8104390
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Blitz Lunar - Sirius Bismuth [Peddy]/album.png",
+      "size": 115403
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Blitz Lunar - Sirius Bismuth [Peddy]/background.jpg",
+      "size": 327363
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Blitz Lunar - Sirius Bismuth [Peddy]/notes.chart",
+      "size": 134602
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Blitz Lunar - Sirius Bismuth [Peddy]/song.ini",
+      "size": 402
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Blitz Lunar - Sirius Bismuth [Peddy]/song.ogg",
+      "size": 5999089
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Dubmood - Sucker for Arpeggios [Peddy]/album.png",
+      "size": 202742
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Dubmood - Sucker for Arpeggios [Peddy]/background.jpg",
+      "size": 115972
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Dubmood - Sucker for Arpeggios [Peddy]/notes.chart",
+      "size": 138760
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Dubmood - Sucker for Arpeggios [Peddy]/song.ini",
+      "size": 312
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Dubmood - Sucker for Arpeggios [Peddy]/song.ogg",
+      "size": 8848516
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MASTER BOOT RECORD - SMARTDRV.EXE [Peddy]/album.png",
+      "size": 150991
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MASTER BOOT RECORD - SMARTDRV.EXE [Peddy]/background.jpg",
+      "size": 927308
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MASTER BOOT RECORD - SMARTDRV.EXE [Peddy]/notes.chart",
+      "size": 62080
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MASTER BOOT RECORD - SMARTDRV.EXE [Peddy]/song.ini",
+      "size": 288
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MASTER BOOT RECORD - SMARTDRV.EXE [Peddy]/song.ogg",
+      "size": 8342125
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MDK - Super Ultra [Peddy]/album.png",
+      "size": 424735
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MDK - Super Ultra [Peddy]/background.jpg",
+      "size": 528134
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MDK - Super Ultra [Peddy]/notes.chart",
+      "size": 91360
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MDK - Super Ultra [Peddy]/song.ini",
+      "size": 322
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/MDK - Super Ultra [Peddy]/song.ogg",
+      "size": 8298770
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Pablo G. Soler - Speed [Peddy]/album.png",
+      "size": 381571
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Pablo G. Soler - Speed [Peddy]/background.jpg",
+      "size": 406701
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Pablo G. Soler - Speed [Peddy]/notes.chart",
+      "size": 25932
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Pablo G. Soler - Speed [Peddy]/song.ini",
+      "size": 266
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Pablo G. Soler - Speed [Peddy]/song.ogg",
+      "size": 1818692
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Zorldo Kang - Spo0py [OrangeHat]/album.png",
+      "size": 307552
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Zorldo Kang - Spo0py [OrangeHat]/background.jpg",
+      "size": 263347
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Zorldo Kang - Spo0py [OrangeHat]/notes.chart",
+      "size": 74131
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Zorldo Kang - Spo0py [OrangeHat]/song.ini",
+      "size": 292
+    },
+    {
+      "path": "S Hero/[S] 33 - The S Tier/Zorldo Kang - Spo0py [OrangeHat]/song.ogg",
+      "size": 3433684
+    }
+  ],
+  "extracted_size": 2794397815,
+  "file_count": 1115,
+  "chart_count": 223,
+  "release_date": "2022-06-18"
 }

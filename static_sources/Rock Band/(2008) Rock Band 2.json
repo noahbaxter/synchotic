@@ -1,0 +1,4107 @@
+{
+  "name": "(2008) Rock Band 2",
+  "folder_id": "static-2008-rock-band-2",
+  "group": "Games",
+  "collection": "Rock Band",
+  "downloads": [
+    {
+      "id": "1HBkr71iCi4j5ZAYRbHOWnUX-KW38gwTh",
+      "name": "Rock Band 2 20.zip",
+      "size": 35823244,
+      "md5": "4ac573223b7e1103b46b554fd2cd109c",
+      "path": "Rock Band 2 20.zip"
+    },
+    {
+      "id": "1GAvhVyzkqmGcCBFbpjEs974D3ZyfKUMk",
+      "name": "Rock Band 2 19.zip",
+      "size": 30360451,
+      "md5": "103161de2be4b3dd0f332947f50ad190",
+      "path": "Rock Band 2 19.zip"
+    },
+    {
+      "id": "18StdwQlh8FaWsEF0DJ45ZdDLbPEef_bJ",
+      "name": "Rock Band 2 17.zip",
+      "size": 45928080,
+      "md5": "7a917ad53448324f92b557ca6e20a276",
+      "path": "Rock Band 2 17.zip"
+    },
+    {
+      "id": "13NOsDTFgzxVsWgFHLb9N3VAHwszf0a41",
+      "name": "Rock Band 2 6.zip",
+      "size": 33957041,
+      "md5": "de4a7e645224396b1919e2a17f180892",
+      "path": "Rock Band 2 6.zip"
+    },
+    {
+      "id": "19SKFwwZTMO-ppR43apNt8FfTQn429p7o",
+      "name": "Rock Band 2 1.zip",
+      "size": 22979977,
+      "md5": "6c0566b314fbdd837527c2bfdbbacd7f",
+      "path": "Rock Band 2 1.zip"
+    },
+    {
+      "id": "1XZXY98o3Ge3c3wfWE-fd4yq6DqUQvuw9",
+      "name": "Rock Band 2 50.7z",
+      "size": 27852091,
+      "md5": "fe0ff521e2165007673c60530ad3a171",
+      "path": "Rock Band 2 50.7z"
+    },
+    {
+      "id": "17zJukaBKLLSo8Chy234j_9kIAtYjV7MF",
+      "name": "Rock Band 2 84.7z",
+      "size": 24280693,
+      "md5": "48edf96c3595353097b01621a4ddead7",
+      "path": "Rock Band 2 84.7z"
+    },
+    {
+      "id": "1vfSwUyn3tVkPlNNRvAeVjTXd0Je2ZM7q",
+      "name": "Rock Band 2 83.7z",
+      "size": 22727545,
+      "md5": "9cf6817720d4faef392a48876f59717c",
+      "path": "Rock Band 2 83.7z"
+    },
+    {
+      "id": "1Pne12bbTnPFQKcd72KwAeKIepdf9xX34",
+      "name": "Rock Band 2 82.7z",
+      "size": 35381033,
+      "md5": "2527d2efa23461c863248774794aad67",
+      "path": "Rock Band 2 82.7z"
+    },
+    {
+      "id": "1AZqYaCG-NxNXacdmjw-5Bp_UNZxifvmL",
+      "name": "Rock Band 2 81.7z",
+      "size": 36936897,
+      "md5": "d949863712c6bada39c5df54b8786233",
+      "path": "Rock Band 2 81.7z"
+    },
+    {
+      "id": "16VQONAkGVLn2x5V2Yx1E-VrG02KLSN_b",
+      "name": "Rock Band 2 80.7z",
+      "size": 22518300,
+      "md5": "c1abd64e1cb342ab38ce0d7d477d4e27",
+      "path": "Rock Band 2 80.7z"
+    },
+    {
+      "id": "1-Jplcis9l5F1BEUcwl5lp5XjYY4sp74k",
+      "name": "Rock Band 2 79.7z",
+      "size": 33101819,
+      "md5": "6d5afc381e9b7b4e80f56037d3c47fc5",
+      "path": "Rock Band 2 79.7z"
+    },
+    {
+      "id": "1Hn0YbmRZHEhxaBz9oJ92p_rkFKSNu50_",
+      "name": "Rock Band 2 78.7z",
+      "size": 37023876,
+      "md5": "153e983fe4644f2c5ddad8c3b8c93642",
+      "path": "Rock Band 2 78.7z"
+    },
+    {
+      "id": "18KBk-j91M-EPNEaeA0BN9t0MjXl3s65C",
+      "name": "Rock Band 2 77.7z",
+      "size": 28462591,
+      "md5": "c488bf6efb67c65ef18f6f4cbbd4ff2a",
+      "path": "Rock Band 2 77.7z"
+    },
+    {
+      "id": "1o8k-ct0iVa4TQWhRISzOQUiRscCPHOZ5",
+      "name": "Rock Band 2 76.7z",
+      "size": 26240611,
+      "md5": "3f42268c51be44ad8df7eb0b2644ac6f",
+      "path": "Rock Band 2 76.7z"
+    },
+    {
+      "id": "1mTQ-sCrl3VtnUH1NsZD_YlWjFiDMdHwm",
+      "name": "Rock Band 2 75.7z",
+      "size": 33383699,
+      "md5": "5b6cd6ff8c7c82ce5c4d8174f46d0e2b",
+      "path": "Rock Band 2 75.7z"
+    },
+    {
+      "id": "1z-adK09k7xsCDSzcdxZavPUG-JgWEW4t",
+      "name": "Rock Band 2 74.7z",
+      "size": 31421068,
+      "md5": "b16a958e0a4983464541575f441ec8db",
+      "path": "Rock Band 2 74.7z"
+    },
+    {
+      "id": "1NyIPLt1qUFCt1rurZxw4mqZj5hWU4jLp",
+      "name": "Rock Band 2 73.7z",
+      "size": 32122137,
+      "md5": "c95650ba8c439d913b9f71d4fdd7f6cd",
+      "path": "Rock Band 2 73.7z"
+    },
+    {
+      "id": "1U_Z6lfTkc9oCMjlXwEK56Mj8Iafx-odF",
+      "name": "Rock Band 2 72.7z",
+      "size": 38569055,
+      "md5": "a8601bae19013091c0a20e36ecf7f84e",
+      "path": "Rock Band 2 72.7z"
+    },
+    {
+      "id": "1BrM-WRhfL63PvnMbdVmIxytmSggqTJri",
+      "name": "Rock Band 2 71.7z",
+      "size": 31546150,
+      "md5": "597728fb7ca64c1a805432b44a9f52ea",
+      "path": "Rock Band 2 71.7z"
+    },
+    {
+      "id": "1enievfP5R6HJFa9Y2Tj2xjrWY_9Cg0ZZ",
+      "name": "Rock Band 2 70.7z",
+      "size": 26400854,
+      "md5": "2def5f95a922e8f47043297702bd3d5e",
+      "path": "Rock Band 2 70.7z"
+    },
+    {
+      "id": "16nuMUeEXDPzEIbmKsHGBMd2fm5L275j-",
+      "name": "Rock Band 2 69.7z",
+      "size": 15281287,
+      "md5": "32aaee86fdea8d0fbdff22240e2659e9",
+      "path": "Rock Band 2 69.7z"
+    },
+    {
+      "id": "14FQQEhdyl3dmxNuRliI23bIX3b-yAegb",
+      "name": "Rock Band 2 68.7z",
+      "size": 39505658,
+      "md5": "78c450afdcdb527beae3dfbc9a081b04",
+      "path": "Rock Band 2 68.7z"
+    },
+    {
+      "id": "1MKr1TO6cloU_nG08iFwyf86SVc2OGSYp",
+      "name": "Rock Band 2 67.7z",
+      "size": 36378347,
+      "md5": "c1fdc1ca0c81b48a95a421b9c3f1982c",
+      "path": "Rock Band 2 67.7z"
+    },
+    {
+      "id": "1G58yB9BbXUxQjzr52vGUWvsBJEB1ItRp",
+      "name": "Rock Band 2 66.7z",
+      "size": 46365904,
+      "md5": "fdeeca129ed1d18a7bbe73f8b79c1768",
+      "path": "Rock Band 2 66.7z"
+    },
+    {
+      "id": "1xdpsXMmFDdAE1DLekJI3SBDtUS_Bg7cS",
+      "name": "Rock Band 2 65.7z",
+      "size": 34256990,
+      "md5": "7732fedf814c3d39835a47693574db80",
+      "path": "Rock Band 2 65.7z"
+    },
+    {
+      "id": "1lF9PQVMrw8n-7vUY2fnNevF-t17gvmdN",
+      "name": "Rock Band 2 64.7z",
+      "size": 36156755,
+      "md5": "3a391d4b62e8286ab97396a640b3b637",
+      "path": "Rock Band 2 64.7z"
+    },
+    {
+      "id": "1PbxX2WCWQdu9cBvoNCTHDtlHeW5MGmi7",
+      "name": "Rock Band 2 63.7z",
+      "size": 37931454,
+      "md5": "6ce200e2bde0c5490885f9e538543f6c",
+      "path": "Rock Band 2 63.7z"
+    },
+    {
+      "id": "1b2YcdTEKSGN998rVCm49kS1RxK_P4vDt",
+      "name": "Rock Band 2 62.7z",
+      "size": 35130512,
+      "md5": "192a7c01e4ae919ea65502e366d561fb",
+      "path": "Rock Band 2 62.7z"
+    },
+    {
+      "id": "1PaMTBhEVX-5j8anRhPFsRCtefsGYCEUL",
+      "name": "Rock Band 2 61.7z",
+      "size": 43470563,
+      "md5": "d6d1354c9c3a3c9a1652331a74b43f8d",
+      "path": "Rock Band 2 61.7z"
+    },
+    {
+      "id": "15Iu2MDM1Uz40x3H1K10AcPDfYt4_UA7i",
+      "name": "Rock Band 2 60.7z",
+      "size": 64213104,
+      "md5": "ba0f5e198bf991f97fdceab821d6bdc1",
+      "path": "Rock Band 2 60.7z"
+    },
+    {
+      "id": "1sas8bmB0YgBlVXKk8I6Uh3tqyMOdnehF",
+      "name": "Rock Band 2 59.7z",
+      "size": 35877060,
+      "md5": "0c9343bfbf8c7fab0f53d4d5a135c1e6",
+      "path": "Rock Band 2 59.7z"
+    },
+    {
+      "id": "19MpfeHKylpwIuD_LXwDoluoWvaNV6qlF",
+      "name": "Rock Band 2 58.7z",
+      "size": 48604720,
+      "md5": "3000249a172989eda162a6ff3f96be32",
+      "path": "Rock Band 2 58.7z"
+    },
+    {
+      "id": "1UOQvnzlFjX0Sp3WbSMxcYkk-HDcNcSQ0",
+      "name": "Rock Band 2 57.7z",
+      "size": 24478247,
+      "md5": "efd8e01a7013b87dbf75e6b40c7a1ac4",
+      "path": "Rock Band 2 57.7z"
+    },
+    {
+      "id": "1gZs1n7HCfhJrcigabVCJSnz8dh6YYpHj",
+      "name": "Rock Band 2 56.7z",
+      "size": 27791885,
+      "md5": "7ae3a3cc930e93a1042e5e3e0b135aad",
+      "path": "Rock Band 2 56.7z"
+    },
+    {
+      "id": "1nDsiZEN3XBjfiCgjM6kK5NLi7mWPeSSP",
+      "name": "Rock Band 2 55.7z",
+      "size": 52199918,
+      "md5": "fc261c9009bd7f111dba7f8eb34f57ce",
+      "path": "Rock Band 2 55.7z"
+    },
+    {
+      "id": "1vg-PxJEP1OrB1FTtF-u9kzeZabqyMWc1",
+      "name": "Rock Band 2 54.7z",
+      "size": 49521450,
+      "md5": "19b6faa9231f697592b77879fd4ccbd9",
+      "path": "Rock Band 2 54.7z"
+    },
+    {
+      "id": "1APlOQmPMWEcjVFapCBjqNdDJkazm_HZP",
+      "name": "Rock Band 2 53.7z",
+      "size": 24885710,
+      "md5": "f76259a8d6225cbe88e82d5c3d55f410",
+      "path": "Rock Band 2 53.7z"
+    },
+    {
+      "id": "1bBPQruPpj4n-1wnc3gnhVegIhB3NKEi9",
+      "name": "Rock Band 2 52.7z",
+      "size": 66302696,
+      "md5": "98ed6e9342de7c806c1d443f32f8bc6d",
+      "path": "Rock Band 2 52.7z"
+    },
+    {
+      "id": "1cbZCKrSG0nOCMaMePp9nwPyFUe9vKI5_",
+      "name": "Rock Band 2 51.7z",
+      "size": 41024241,
+      "md5": "0af2b6b5ab1c1ac1434e365c1e027255",
+      "path": "Rock Band 2 51.7z"
+    },
+    {
+      "id": "1maLvmMB1sbNVsSW6XoFTSVUC7c3vptQ7",
+      "name": "Rock Band 2 49.7z",
+      "size": 33180771,
+      "md5": "d4bfad8710931f1738f4cbd002bec126",
+      "path": "Rock Band 2 49.7z"
+    },
+    {
+      "id": "1ionrwcn1E-74gXi2x-ISpPkk84RS6O7v",
+      "name": "Rock Band 2 48.7z",
+      "size": 39967901,
+      "md5": "70882763a0e9e8beda87cf1edb794ea9",
+      "path": "Rock Band 2 48.7z"
+    },
+    {
+      "id": "1CPYuL1vX6nPcX4a_QfRJqNrvbZbcsqNt",
+      "name": "Rock Band 2 47.7z",
+      "size": 23284195,
+      "md5": "9952edfd7e2a0035a2c8b0c480322672",
+      "path": "Rock Band 2 47.7z"
+    },
+    {
+      "id": "199Hf3ASRymLvtXaDqTIYX0dqSY1slnar",
+      "name": "Rock Band 2 46.7z",
+      "size": 30430114,
+      "md5": "e00fc661d8ca56bafbe87fc9314a3d52",
+      "path": "Rock Band 2 46.7z"
+    },
+    {
+      "id": "1Q2_dLNZJp-YYLQY-ICB99ww5z1YKhxsv",
+      "name": "Rock Band 2 45.7z",
+      "size": 38921766,
+      "md5": "7bc6cae2d23e4957d531d4caa49c97bc",
+      "path": "Rock Band 2 45.7z"
+    },
+    {
+      "id": "1T3510ZotxEhBh7kVOFU_oiU-yhxms6mP",
+      "name": "Rock Band 2 44.7z",
+      "size": 37137680,
+      "md5": "689a49313403ef71822230b340674f81",
+      "path": "Rock Band 2 44.7z"
+    },
+    {
+      "id": "1gxKOrRZWhLkWfFYnmIMigoNIHRMV12ZV",
+      "name": "Rock Band 2 43.7z",
+      "size": 35119633,
+      "md5": "e0556b28add4c47035740da24e0a34e6",
+      "path": "Rock Band 2 43.7z"
+    },
+    {
+      "id": "1X4YLR-egT8yHBQRallnr3heXG92kPnY7",
+      "name": "Rock Band 2 42.7z",
+      "size": 32711719,
+      "md5": "f3ceb250ef73fc41c168e9eaf87e5be3",
+      "path": "Rock Band 2 42.7z"
+    },
+    {
+      "id": "1lwc-MObjYWxIZ0fqNbbBP8HnNXC58XQA",
+      "name": "Rock Band 2 41.7z",
+      "size": 32304972,
+      "md5": "0712bc68306d1811986343ced750cf50",
+      "path": "Rock Band 2 41.7z"
+    },
+    {
+      "id": "1cZbfC8fETlXHvjRFaHUA1Mqlc-qicqC6",
+      "name": "Rock Band 2 40.7z",
+      "size": 22680192,
+      "md5": "35636061e05065c11a281055afe25d92",
+      "path": "Rock Band 2 40.7z"
+    },
+    {
+      "id": "1nzyADNCULK-8-2ad6uQMTAXboSkh3DyG",
+      "name": "Rock Band 2 39.7z",
+      "size": 17309079,
+      "md5": "828d638b0a4a2228e0f6ca3cae4e509a",
+      "path": "Rock Band 2 39.7z"
+    },
+    {
+      "id": "1h8dD05aV9I7Nbz8WJlIEsM_9H0A1x3mn",
+      "name": "Rock Band 2 38.7z",
+      "size": 32721186,
+      "md5": "48abd346f77243a81115657bc762cabd",
+      "path": "Rock Band 2 38.7z"
+    },
+    {
+      "id": "1zoOtL_cvtH7s77IVLfMk2Xo28KZ_bBKA",
+      "name": "Rock Band 2 37.7z",
+      "size": 43755599,
+      "md5": "3994e97675d04cdfd6c940b330f7b93e",
+      "path": "Rock Band 2 37.7z"
+    },
+    {
+      "id": "1adjN74AsuCeD9vhD-dNFcL7XPrGSDVJH",
+      "name": "Rock Band 2 36.7z",
+      "size": 51156620,
+      "md5": "e64674302d6cae45dcb8624920291e45",
+      "path": "Rock Band 2 36.7z"
+    },
+    {
+      "id": "1uSqI4HuldbIeYYy-TU_c-n04h2Qkvx1a",
+      "name": "Rock Band 2 35.7z",
+      "size": 53963695,
+      "md5": "8d56ef9773175cbdf132f6698f88e5e7",
+      "path": "Rock Band 2 35.7z"
+    },
+    {
+      "id": "1RixhFt1P2AoLFg6Jptxx1mYHkWec-PYS",
+      "name": "Rock Band 2 34.7z",
+      "size": 38396158,
+      "md5": "629068292a50f34f9c446f6ffa179385",
+      "path": "Rock Band 2 34.7z"
+    },
+    {
+      "id": "1kCXuQlRd0vOMFFRHU__aYS-9YKc920Au",
+      "name": "Rock Band 2 33.7z",
+      "size": 28740336,
+      "md5": "c940cb92f843243e28d7c5171c4e91e2",
+      "path": "Rock Band 2 33.7z"
+    },
+    {
+      "id": "1MdBkYXoBHzhlTUlI67vOziYy0xTNY3wI",
+      "name": "Rock Band 2 32.7z",
+      "size": 31464207,
+      "md5": "b8eb4b1828b981ea1f77eb23d4da531a",
+      "path": "Rock Band 2 32.7z"
+    },
+    {
+      "id": "1qSPB4BZ0V_Qd-UWIYWfidZHis-uqvAxB",
+      "name": "Rock Band 2 31.7z",
+      "size": 46729000,
+      "md5": "0efd7023f29aa775eef13ae0091b54da",
+      "path": "Rock Band 2 31.7z"
+    },
+    {
+      "id": "12CMb-BpK2ihHUdwfR3RcDq1BUJExRBnW",
+      "name": "Rock Band 2 30.7z",
+      "size": 44809756,
+      "md5": "f8e55c2b82ef4914be5c11ea251ae675",
+      "path": "Rock Band 2 30.7z"
+    },
+    {
+      "id": "1vDCrwjV0rlJ5iMILTbiu5BHRbgGMJ_DM",
+      "name": "Rock Band 2 29.7z",
+      "size": 35555402,
+      "md5": "6dbcd631dff4ab525f6ae94bf9f59db7",
+      "path": "Rock Band 2 29.7z"
+    },
+    {
+      "id": "1asnB0X3cJNTuMhqkkNKxcwbOTEWXyzOU",
+      "name": "Rock Band 2 28.7z",
+      "size": 39425326,
+      "md5": "fdc08a107b1ac5918fc6c9c5bbfd6a87",
+      "path": "Rock Band 2 28.7z"
+    },
+    {
+      "id": "1n7kVZPWNQSREA7fiOmoFd-RJkSTn2VDo",
+      "name": "Rock Band 2 27.7z",
+      "size": 40229226,
+      "md5": "9d0d800eb34610d0f525856420b263f0",
+      "path": "Rock Band 2 27.7z"
+    },
+    {
+      "id": "1Mx4RxoUBlbfgCSW_UzbQYm2R2NweV9Ze",
+      "name": "Rock Band 2 26.7z",
+      "size": 46431446,
+      "md5": "e0a668951326274f800eb3ad8285f730",
+      "path": "Rock Band 2 26.7z"
+    },
+    {
+      "id": "1JXmJ2xb7UhRLmSj5CwOWAu66mLZIgoK6",
+      "name": "Rock Band 2 25.7z",
+      "size": 44837826,
+      "md5": "b4ed9737050a4f9276e01763f5d09438",
+      "path": "Rock Band 2 25.7z"
+    },
+    {
+      "id": "1367XuWfbh3HzDIaBimkwMwsUISZnV0Ys",
+      "name": "Rock Band 2 24.7z",
+      "size": 36598368,
+      "md5": "d85f0b88c20ad83847590f8ad04d680d",
+      "path": "Rock Band 2 24.7z"
+    },
+    {
+      "id": "1_RSPTdRCb3R1OvrobTuiXXcdiaj4EPWB",
+      "name": "Rock Band 2 23.7z",
+      "size": 40205177,
+      "md5": "f080fed9a25d4f9f3048188aa77da4dd",
+      "path": "Rock Band 2 23.7z"
+    },
+    {
+      "id": "1tpwW5P1UxKbZXiniTyE9ZO1YLqsv-Rhj",
+      "name": "Rock Band 2 22.7z",
+      "size": 69889668,
+      "md5": "2fb9e966c045f9b3367f12c387e76da5",
+      "path": "Rock Band 2 22.7z"
+    },
+    {
+      "id": "1sc7t348lFuzsM6ZlY33i6rhAtf7_Rh88",
+      "name": "Rock Band 2 21.7z",
+      "size": 43351775,
+      "md5": "bb6d2c8d66e4a430a91d2f20b42f9d69",
+      "path": "Rock Band 2 21.7z"
+    },
+    {
+      "id": "1EmKqwaGqcDPwCcevE3D4lU3dNAlYUU4w",
+      "name": "Rock Band 2 18.7z",
+      "size": 11366151,
+      "md5": "41360444c5494465028b3a15f2f477b7",
+      "path": "Rock Band 2 18.7z"
+    },
+    {
+      "id": "1JWg1OOmQit7MimqB5GNsbvKO63hWTXgx",
+      "name": "Rock Band 2 16.7z",
+      "size": 46667168,
+      "md5": "0fa84b473092d16c7c0d0b8ba75d36bb",
+      "path": "Rock Band 2 16.7z"
+    },
+    {
+      "id": "1m3JfSB-XwU9hxdnYhDUr7525u5hLAZvD",
+      "name": "Rock Band 2 15.7z",
+      "size": 41491180,
+      "md5": "70558f39f0a1fc770b00b7a391fd8e29",
+      "path": "Rock Band 2 15.7z"
+    },
+    {
+      "id": "1dTdXcXbQexaY-q1tI9bYuMpPdfLGRWbt",
+      "name": "Rock Band 2 14.7z",
+      "size": 42176674,
+      "md5": "b2cdfbbde0abd9b1095838e1107e5bea",
+      "path": "Rock Band 2 14.7z"
+    },
+    {
+      "id": "1cImmfBdKSPFUk9wS4e8g0PMq6W1poTlB",
+      "name": "Rock Band 2 13.7z",
+      "size": 48584135,
+      "md5": "716dcaaa76acc54c4dee3a8a0a15b307",
+      "path": "Rock Band 2 13.7z"
+    },
+    {
+      "id": "1n4vSsbWbJNmXvtGLW7lXt7r6yxHdwnd_",
+      "name": "Rock Band 2 12.7z",
+      "size": 18384128,
+      "md5": "b2249cd737d7587f50a31778adb5cc2f",
+      "path": "Rock Band 2 12.7z"
+    },
+    {
+      "id": "1Vz10HDlXTfgLlqJ3YogVGWE2ZZ-pKW_r",
+      "name": "Rock Band 2 11.7z",
+      "size": 22412592,
+      "md5": "0fc13deb8eaebbd09f4e19c72608aeca",
+      "path": "Rock Band 2 11.7z"
+    },
+    {
+      "id": "19J11sDxcbelr72aplkQulsluSKX1Jt58",
+      "name": "Rock Band 2 10.7z",
+      "size": 23649399,
+      "md5": "6f44188e53e2f5f4dcba03f237a54c9b",
+      "path": "Rock Band 2 10.7z"
+    },
+    {
+      "id": "1rkYribBQgJT_UkEoEJ0JdGl05EiWdeqe",
+      "name": "Rock Band 2 9.7z",
+      "size": 20428790,
+      "md5": "9a87fe5d6fb28481deff872d36e3a427",
+      "path": "Rock Band 2 9.7z"
+    },
+    {
+      "id": "1RQJ9Z7WlRq2xXTJ2SwFj5pC64y6JLyN5",
+      "name": "Rock Band 2 8.7z",
+      "size": 63624609,
+      "md5": "3dea7a5d351ce187c7b37c1fd14ae34a",
+      "path": "Rock Band 2 8.7z"
+    },
+    {
+      "id": "1XbplDdgSMTNx1hqvNOV8FKR9l_91S08q",
+      "name": "Rock Band 2 7.7z",
+      "size": 37231113,
+      "md5": "47edc227c0429c199860d5e41f558aa2",
+      "path": "Rock Band 2 7.7z"
+    },
+    {
+      "id": "1IhiuGD-fFCrRrqGSmn1AAtt7Ik-XWczz",
+      "name": "Rock Band 2 5.7z",
+      "size": 54893611,
+      "md5": "e368a7e3063f07ca2a8d086b88fee300",
+      "path": "Rock Band 2 5.7z"
+    },
+    {
+      "id": "12UYi3i-s2tUw_9JoO1-VQ-_u9Fv5xEZD",
+      "name": "Rock Band 2 4.7z",
+      "size": 30062352,
+      "md5": "8cd6b119130c5bfc596b81ca68f762f2",
+      "path": "Rock Band 2 4.7z"
+    },
+    {
+      "id": "1Pqf0r_AjkGgSjfk1Cm2e9OKEg9aFVoUt",
+      "name": "Rock Band 2 3.7z",
+      "size": 32947587,
+      "md5": "c03ea296bf6797b996d0243847c2aa46",
+      "path": "Rock Band 2 3.7z"
+    },
+    {
+      "id": "1fjFn-eIrPm299cMst4a-Phb6U0Zhfsfd",
+      "name": "Rock Band 2 2.7z",
+      "size": 59366081,
+      "md5": "e03e98e951292135161870e8c679a570",
+      "path": "Rock Band 2 2.7z"
+    }
+  ],
+  "download_size": 3080988076,
+  "files": [
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/album.jpg",
+      "size": 262809
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 2714144
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 2517775
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 5769654
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 4115590
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/notes.mid",
+      "size": 167888
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/original.mid",
+      "size": 161839
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 2371358
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/song.ini",
+      "size": 752
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/song.ogg",
+      "size": 1792564
+    },
+    {
+      "path": "(2008) Rock Band 2/Abnormality - Visions (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 3616077
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/album.jpg",
+      "size": 484451
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/drums.ogg",
+      "size": 4862256
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/guitar.ogg",
+      "size": 7053293
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/notes.mid",
+      "size": 99964
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/rhythm.ogg",
+      "size": 2617223
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/song.ini",
+      "size": 745
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/song.ogg",
+      "size": 5367124
+    },
+    {
+      "path": "(2008) Rock Band 2/Beastie Boys - So What'cha Want/vocals.ogg",
+      "size": 3973471
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/album.jpg",
+      "size": 279607
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/drums_1.ogg",
+      "size": 2459218
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/drums_2.ogg",
+      "size": 5387509
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/guitar.ogg",
+      "size": 5179854
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/notes.mid",
+      "size": 94709
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/rhythm.ogg",
+      "size": 1750958
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/song.ini",
+      "size": 767
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/song.ogg",
+      "size": 3391500
+    },
+    {
+      "path": "(2008) Rock Band 2/Beck - E-Pro/vocals.ogg",
+      "size": 4134907
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/album.jpg",
+      "size": 554162
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/album_alt.jpg",
+      "size": 154842
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/drums_1.ogg",
+      "size": 1700704
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/drums_2.ogg",
+      "size": 2096982
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/drums_3.ogg",
+      "size": 4218110
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/guitar.ogg",
+      "size": 3985425
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/notes.mid",
+      "size": 101287
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/rhythm.ogg",
+      "size": 1885768
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/song.ini",
+      "size": 734
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/song.ogg",
+      "size": 2110059
+    },
+    {
+      "path": "(2008) Rock Band 2/Bikini Kill - Rebel Girl/vocals.ogg",
+      "size": 1798842
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/album.jpg",
+      "size": 370039
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/crowd.ogg",
+      "size": 6313996
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/drums_1.ogg",
+      "size": 3397030
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/drums_2.ogg",
+      "size": 6824236
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/drums_3.ogg",
+      "size": 7892681
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/guitar.ogg",
+      "size": 7161898
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/notes.mid",
+      "size": 145205
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/rhythm.ogg",
+      "size": 3235689
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/song.ini",
+      "size": 782
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/song.ogg",
+      "size": 7078551
+    },
+    {
+      "path": "(2008) Rock Band 2/Billy Idol - White Wedding (Part 1)/vocals.ogg",
+      "size": 6431197
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/album.jpg",
+      "size": 221123
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/crowd.ogg",
+      "size": 6527368
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/drums_1.ogg",
+      "size": 2898695
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/drums_2.ogg",
+      "size": 5514263
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/drums_3.ogg",
+      "size": 6983167
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/guitar.ogg",
+      "size": 5842964
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/notes.mid",
+      "size": 140571
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/rhythm.ogg",
+      "size": 2611807
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/song.ini",
+      "size": 770
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/song.ogg",
+      "size": 6383778
+    },
+    {
+      "path": "(2008) Rock Band 2/Blondie - One Way or Another/vocals.ogg",
+      "size": 5390623
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/album.jpg",
+      "size": 378965
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/drums.ogg",
+      "size": 10879051
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/guitar.ogg",
+      "size": 9273059
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/notes.mid",
+      "size": 189121
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/rhythm.ogg",
+      "size": 3930370
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/song.ogg",
+      "size": 10952094
+    },
+    {
+      "path": "(2008) Rock Band 2/Bob Dylan - Tangled Up in Blue/vocals.ogg",
+      "size": 6359929
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/album.jpg",
+      "size": 749710
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/crowd.ogg",
+      "size": 5112709
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/drums_1.ogg",
+      "size": 3562022
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/drums_2.ogg",
+      "size": 6889102
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/drums_3.ogg",
+      "size": 8296025
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/guitar.ogg",
+      "size": 6449388
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/notes.mid",
+      "size": 127010
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/rhythm.ogg",
+      "size": 3146464
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/song.ini",
+      "size": 754
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/song.ogg",
+      "size": 7511149
+    },
+    {
+      "path": "(2008) Rock Band 2/Bon Jovi - Livin' on a Prayer/vocals.ogg",
+      "size": 5227136
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/album.jpg",
+      "size": 284984
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 4186778
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 7574574
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 8338558
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 7711954
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/notes.mid",
+      "size": 186102
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/original.mid",
+      "size": 181182
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4993999
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/song.ogg",
+      "size": 5657109
+    },
+    {
+      "path": "(2008) Rock Band 2/Breaking Wheel - Shoulder to the Plow (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 7314458
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/album.jpg",
+      "size": 400617
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/album_alt.jpg",
+      "size": 168124
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/drums_1.ogg",
+      "size": 816239
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/drums_2.ogg",
+      "size": 1161227
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/drums_3.ogg",
+      "size": 2619661
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/guitar.ogg",
+      "size": 2412053
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/notes.mid",
+      "size": 54755
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/rhythm.ogg",
+      "size": 1600388
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/song.ini",
+      "size": 733
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/song.ogg",
+      "size": 246618
+    },
+    {
+      "path": "(2008) Rock Band 2/Cheap Trick - Hello There/vocals.ogg",
+      "size": 1999678
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/album.jpg",
+      "size": 370647
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/crowd.ogg",
+      "size": 4567208
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/drums_1.ogg",
+      "size": 2372005
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/drums_2.ogg",
+      "size": 2150532
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/drums_3.ogg",
+      "size": 5883137
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/guitar.ogg",
+      "size": 5073677
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/notes.mid",
+      "size": 137750
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/rhythm.ogg",
+      "size": 1943792
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/song.ini",
+      "size": 768
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/song.ogg",
+      "size": 3941333
+    },
+    {
+      "path": "(2008) Rock Band 2/Devo - Uncontrollable Urge/vocals.ogg",
+      "size": 4196886
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/album.jpg",
+      "size": 418025
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/drums_1.ogg",
+      "size": 9515863
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/drums_2.ogg",
+      "size": 9528940
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/drums_3.ogg",
+      "size": 10278061
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/guitar.ogg",
+      "size": 8317857
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/notes.mid",
+      "size": 238366
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/rhythm.ogg",
+      "size": 7310979
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/song.ini",
+      "size": 788
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/song.ogg",
+      "size": 4932633
+    },
+    {
+      "path": "(2008) Rock Band 2/ACDC - Let There Be Rock/vocals.ogg",
+      "size": 9536626
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/album.jpg",
+      "size": 437876
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/drums_1.ogg",
+      "size": 5975384
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/drums_2.ogg",
+      "size": 6946210
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/drums_3.ogg",
+      "size": 7803145
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/guitar.ogg",
+      "size": 6051933
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/notes.mid",
+      "size": 144169
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/rhythm.ogg",
+      "size": 3127911
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/song.ini",
+      "size": 773
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/song.ogg",
+      "size": 850334
+    },
+    {
+      "path": "(2008) Rock Band 2/Dinosaur Jr. - Feel the Pain/vocals.ogg",
+      "size": 4731542
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/album.jpg",
+      "size": 391487
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/drums_1.ogg",
+      "size": 3796699
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/drums_2.ogg",
+      "size": 3425050
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/drums_3.ogg",
+      "size": 8409212
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/guitar.ogg",
+      "size": 7575385
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/notes.mid",
+      "size": 153826
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/rhythm.ogg",
+      "size": 7207964
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/song.ogg",
+      "size": 7055717
+    },
+    {
+      "path": "(2008) Rock Band 2/Disturbed - Down with the Sickness/vocals.ogg",
+      "size": 5645355
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/album.jpg",
+      "size": 194357
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 6381541
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 11309681
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 14267977
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 11873694
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/notes.mid",
+      "size": 308990
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/original.mid",
+      "size": 297258
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 6801774
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/song.ini",
+      "size": 903
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/song.ogg",
+      "size": 10220985
+    },
+    {
+      "path": "(2008) Rock Band 2/Dream Theater - Panic Attack (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 9091902
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/album.jpg",
+      "size": 216478
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/crowd.ogg",
+      "size": 6047613
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/drums_1.ogg",
+      "size": 3100841
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/drums_2.ogg",
+      "size": 7508562
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/guitar.ogg",
+      "size": 7125343
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/notes.mid",
+      "size": 125951
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/rhythm.ogg",
+      "size": 3549616
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/song.ini",
+      "size": 729
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/song.ogg",
+      "size": 7582127
+    },
+    {
+      "path": "(2008) Rock Band 2/Duran Duran - Hungry Like the Wolf/vocals.ogg",
+      "size": 5228008
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/album.jpg",
+      "size": 307159
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/crowd.ogg",
+      "size": 3948695
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/drums_1.ogg",
+      "size": 2749690
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/drums_2.ogg",
+      "size": 5677629
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/drums_3.ogg",
+      "size": 6366927
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/guitar.ogg",
+      "size": 5100543
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/notes.mid",
+      "size": 141883
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/rhythm.ogg",
+      "size": 3100124
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/song.ini",
+      "size": 760
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/song.ogg",
+      "size": 5354331
+    },
+    {
+      "path": "(2008) Rock Band 2/Elvis Costello - Pump It Up/vocals.ogg",
+      "size": 4159305
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/album.jpg",
+      "size": 171771
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/crowd.ogg",
+      "size": 5415035
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/drums_1.ogg",
+      "size": 5159974
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/drums_2.ogg",
+      "size": 5855179
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/drums_3.ogg",
+      "size": 6976348
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/guitar.ogg",
+      "size": 6648370
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/notes.mid",
+      "size": 145702
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/rhythm.ogg",
+      "size": 2819751
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/song.ini",
+      "size": 777
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/song.ogg",
+      "size": 7801176
+    },
+    {
+      "path": "(2008) Rock Band 2/Fleetwood Mac - Go Your Own Way/vocals.ogg",
+      "size": 4199785
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/album.jpg",
+      "size": 165211
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/crowd.ogg",
+      "size": 4278247
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/drums_1.ogg",
+      "size": 5904013
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/drums_2.ogg",
+      "size": 5735238
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/drums_3.ogg",
+      "size": 7454916
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/guitar.ogg",
+      "size": 6874030
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/notes.mid",
+      "size": 172267
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/rhythm.ogg",
+      "size": 5498647
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/song.ini",
+      "size": 840
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/song.ogg",
+      "size": 5807246
+    },
+    {
+      "path": "(2008) Rock Band 2/Foo Fighters - Everlong/vocals.ogg",
+      "size": 5041568
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/album.jpg",
+      "size": 301062
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/crowd.ogg",
+      "size": 5314037
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/drums_1.ogg",
+      "size": 2912701
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/drums_2.ogg",
+      "size": 5598910
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/drums_3.ogg",
+      "size": 7090576
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/guitar.ogg",
+      "size": 5866870
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/notes.mid",
+      "size": 155675
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/rhythm.ogg",
+      "size": 2715935
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/song.ini",
+      "size": 762
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/song.ogg",
+      "size": 6369356
+    },
+    {
+      "path": "(2008) Rock Band 2/Grateful Dead - Alabama Getaway/vocals.ogg",
+      "size": 4246468
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/album.jpg",
+      "size": 232742
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/album_alt.jpg",
+      "size": 289524
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/drums_1.ogg",
+      "size": 4945710
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/drums_2.ogg",
+      "size": 5106898
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/drums_3.ogg",
+      "size": 6175542
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/guitar.ogg",
+      "size": 6240623
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/notes.mid",
+      "size": 113864
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/rhythm.ogg",
+      "size": 5721804
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/song.ini",
+      "size": 855
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/song.ogg",
+      "size": 5883286
+    },
+    {
+      "path": "(2008) Rock Band 2/Guns N' Roses - Shackler's Revenge/vocals.ogg",
+      "size": 5027777
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/album.jpg",
+      "size": 85296
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/drums_1.ogg",
+      "size": 3572631
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/drums_2.ogg",
+      "size": 3723954
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/drums_3.ogg",
+      "size": 8146992
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/guitar.ogg",
+      "size": 8196175
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/notes.mid",
+      "size": 156993
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/rhythm.ogg",
+      "size": 2620779
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/song.ini",
+      "size": 754
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/song.ogg",
+      "size": 5152709
+    },
+    {
+      "path": "(2008) Rock Band 2/Interpol - PDA/vocals.ogg",
+      "size": 4549563
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/album.jpg",
+      "size": 479919
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/drums_1.ogg",
+      "size": 4528991
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/drums_2.ogg",
+      "size": 5011757
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/drums_3.ogg",
+      "size": 5169392
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/guitar.ogg",
+      "size": 4903352
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/notes.mid",
+      "size": 100703
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/rhythm.ogg",
+      "size": 4972861
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/song.ini",
+      "size": 677
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/song.ogg",
+      "size": 3547551
+    },
+    {
+      "path": "(2008) Rock Band 2/AFI - Girl's Not Grey/vocals.ogg",
+      "size": 4566793
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/album.jpg",
+      "size": 358351
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/album_alt.jpg",
+      "size": 183530
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/crowd.ogg",
+      "size": 5177496
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/drums_1.ogg",
+      "size": 5336932
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/drums_2.ogg",
+      "size": 5966880
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/drums_3.ogg",
+      "size": 7127473
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/guitar.ogg",
+      "size": 6063840
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/notes.mid",
+      "size": 143166
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/rhythm.ogg",
+      "size": 2731188
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/song.ini",
+      "size": 794
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/song.ogg",
+      "size": 6605512
+    },
+    {
+      "path": "(2008) Rock Band 2/Jane's Addiction - Mountain Song/vocals.ogg",
+      "size": 5542337
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/album.jpg",
+      "size": 559994
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/crowd.ogg",
+      "size": 3901547
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/drums.ogg",
+      "size": 9841518
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/guitar.ogg",
+      "size": 11840999
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/notes.mid",
+      "size": 184020
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/rhythm.ogg",
+      "size": 3930235
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/song.ogg",
+      "size": 8974657
+    },
+    {
+      "path": "(2008) Rock Band 2/Jethro Tull - Aqualung/vocals.ogg",
+      "size": 7871887
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/album.jpg",
+      "size": 512010
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/crowd.ogg",
+      "size": 3761389
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/drums_1.ogg",
+      "size": 2164477
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/drums_2.ogg",
+      "size": 4257920
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/drums_3.ogg",
+      "size": 5373596
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/guitar.ogg",
+      "size": 4901662
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/notes.mid",
+      "size": 98027
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/rhythm.ogg",
+      "size": 1434734
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/song.ini",
+      "size": 785
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/song.ogg",
+      "size": 5334455
+    },
+    {
+      "path": "(2008) Rock Band 2/Jimmy Eat World - The Middle/vocals.ogg",
+      "size": 3923099
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/album.jpg",
+      "size": 346979
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/crowd.ogg",
+      "size": 3824400
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/drums_1.ogg",
+      "size": 2610030
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/drums_2.ogg",
+      "size": 2612947
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/drums_3.ogg",
+      "size": 5629831
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/guitar.ogg",
+      "size": 4831824
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/notes.mid",
+      "size": 124865
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/rhythm.ogg",
+      "size": 2197006
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/song.ini",
+      "size": 753
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/song.ogg",
+      "size": 4533366
+    },
+    {
+      "path": "(2008) Rock Band 2/Joan Jett - Bad Reputation/vocals.ogg",
+      "size": 2257615
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/album.jpg",
+      "size": 417841
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/crowd.ogg",
+      "size": 4755621
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/drums_1.ogg",
+      "size": 4458800
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/drums_2.ogg",
+      "size": 4874834
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/drums_3.ogg",
+      "size": 5884297
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/guitar.ogg",
+      "size": 5253391
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/notes.mid",
+      "size": 93273
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/rhythm.ogg",
+      "size": 2448368
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/song.ini",
+      "size": 771
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/song.ogg",
+      "size": 5334504
+    },
+    {
+      "path": "(2008) Rock Band 2/Journey - Any Way You Want It/vocals.ogg",
+      "size": 5081820
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/album.jpg",
+      "size": 427488
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 5726474
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 9798724
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 11103365
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 9393315
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/notes.mid",
+      "size": 230935
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/original.mid",
+      "size": 222983
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4976912
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/song.ogg",
+      "size": 5089126
+    },
+    {
+      "path": "(2008) Rock Band 2/Judas Priest - Painkiller (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 7635181
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/album.jpg",
+      "size": 445810
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/crowd.ogg",
+      "size": 6494864
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/drums_1.ogg",
+      "size": 4146125
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/drums_2.ogg",
+      "size": 7514483
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/drums_3.ogg",
+      "size": 8528643
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/guitar.ogg",
+      "size": 8203725
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/notes.mid",
+      "size": 161364
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/rhythm.ogg",
+      "size": 3332939
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/song.ini",
+      "size": 841
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/song.ogg",
+      "size": 8024823
+    },
+    {
+      "path": "(2008) Rock Band 2/Kansas - Carry on Wayward Son/vocals.ogg",
+      "size": 4705994
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/album.jpg",
+      "size": 390149
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/crowd.ogg",
+      "size": 4934969
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/drums_1.ogg",
+      "size": 3221222
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/drums_2.ogg",
+      "size": 6395795
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/drums_3.ogg",
+      "size": 7869412
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/guitar.ogg",
+      "size": 6607437
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/notes.mid",
+      "size": 102587
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/rhythm.ogg",
+      "size": 3190070
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/song.ini",
+      "size": 825
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/song.ogg",
+      "size": 6218842
+    },
+    {
+      "path": "(2008) Rock Band 2/L7 - Pretend We're Dead/vocals.ogg",
+      "size": 5176020
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/album.jpg",
+      "size": 249205
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/drums_1.ogg",
+      "size": 2579481
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/drums_2.ogg",
+      "size": 4739798
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/drums_3.ogg",
+      "size": 6430778
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/guitar.ogg",
+      "size": 5395495
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/notes.mid",
+      "size": 99303
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/original.mid",
+      "size": 99191
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/rhythm.ogg",
+      "size": 2643480
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/song.ini",
+      "size": 694
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/song.ogg",
+      "size": 6623008
+    },
+    {
+      "path": "(2008) Rock Band 2/Lacuna Coil - Our Truth/vocals.ogg",
+      "size": 4209280
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/album.jpg",
+      "size": 340217
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/album_alt.jpg",
+      "size": 349173
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/drums_1.ogg",
+      "size": 2072198
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/drums_2.ogg",
+      "size": 2007083
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/drums_3.ogg",
+      "size": 3844554
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/guitar.ogg",
+      "size": 3699042
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/notes.mid",
+      "size": 108502
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/rhythm.ogg",
+      "size": 1563759
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/song.ini",
+      "size": 828
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/song.ogg",
+      "size": 565622
+    },
+    {
+      "path": "(2008) Rock Band 2/Libyans - Welcome to the Neighborhood/vocals.ogg",
+      "size": 3126298
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/album.jpg",
+      "size": 247350
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/drums.ogg",
+      "size": 7803943
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/guitar.ogg",
+      "size": 6472734
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/notes.mid",
+      "size": 120741
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/rhythm.ogg",
+      "size": 2775079
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/song.ini",
+      "size": 824
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/song.ogg",
+      "size": 6174124
+    },
+    {
+      "path": "(2008) Rock Band 2/Alanis Morissette - You Oughta Know/vocals.ogg",
+      "size": 6770976
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/album.jpg",
+      "size": 496281
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/drums_1.ogg",
+      "size": 1756871
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/drums_2.ogg",
+      "size": 2656385
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/drums_3.ogg",
+      "size": 4674551
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/guitar.ogg",
+      "size": 3921600
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/notes.mid",
+      "size": 83272
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/rhythm.ogg",
+      "size": 1775611
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/song.ini",
+      "size": 733
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/song.ogg",
+      "size": 4297041
+    },
+    {
+      "path": "(2008) Rock Band 2/Linkin Park - One Step Closer/vocals.ogg",
+      "size": 3511788
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/album.jpg",
+      "size": 300887
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/crowd.ogg",
+      "size": 3734914
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/drums_1.ogg",
+      "size": 3969317
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/drums_2.ogg",
+      "size": 4112924
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/drums_3.ogg",
+      "size": 5234727
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/guitar.ogg",
+      "size": 4293867
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/notes.mid",
+      "size": 81845
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/rhythm.ogg",
+      "size": 2972963
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/song.ini",
+      "size": 776
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/song.ogg",
+      "size": 4061946
+    },
+    {
+      "path": "(2008) Rock Band 2/Lit - My Own Worst Enemy/vocals.ogg",
+      "size": 3806389
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/album.jpg",
+      "size": 165856
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/drums_1.ogg",
+      "size": 4390058
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/drums_2.ogg",
+      "size": 4287673
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/drums_3.ogg",
+      "size": 4998042
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/guitar.ogg",
+      "size": 6611461
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/notes.mid",
+      "size": 115302
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/rhythm.ogg",
+      "size": 2304019
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/song.ini",
+      "size": 743
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/song.ogg",
+      "size": 5638421
+    },
+    {
+      "path": "(2008) Rock Band 2/Lush - De-luxe/vocals.ogg",
+      "size": 4500795
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/album.jpg",
+      "size": 463105
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 3155627
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 6375857
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 6799034
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 6786534
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/notes.mid",
+      "size": 149294
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/original.mid",
+      "size": 122706
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 3484994
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/song.ini",
+      "size": 766
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/song.ogg",
+      "size": 6359163
+    },
+    {
+      "path": "(2008) Rock Band 2/Mastodon - Colony of Birchmen (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 1882096
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/album.jpg",
+      "size": 252981
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 6666301
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 5913170
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 7475464
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 5987431
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/notes.mid",
+      "size": 153457
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/original.mid",
+      "size": 151033
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 3334655
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/song.ini",
+      "size": 737
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/song.ogg",
+      "size": 2891605
+    },
+    {
+      "path": "(2008) Rock Band 2/Megadeth - Peace Sells (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 4738779
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/album.jpg",
+      "size": 389669
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 3863949
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 6220731
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 9721533
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 8533255
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/notes.mid",
+      "size": 213532
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/original.mid",
+      "size": 210804
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4443567
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/song.ini",
+      "size": 750
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/song.ogg",
+      "size": 2892597
+    },
+    {
+      "path": "(2008) Rock Band 2/Metallica - Battery (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 3034134
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/album.jpg",
+      "size": 122294
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/crowd.ogg",
+      "size": 4277565
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/drums_1.ogg",
+      "size": 2471586
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/drums_2.ogg",
+      "size": 2111816
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/drums_3.ogg",
+      "size": 5872334
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/guitar.ogg",
+      "size": 4390331
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/notes.mid",
+      "size": 76589
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/rhythm.ogg",
+      "size": 2145791
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/song.ogg",
+      "size": 5447270
+    },
+    {
+      "path": "(2008) Rock Band 2/Modest Mouse - Float On/vocals.ogg",
+      "size": 3788750
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/album.jpg",
+      "size": 393312
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/drums_1.ogg",
+      "size": 2230041
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/drums_2.ogg",
+      "size": 4247090
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/drums_3.ogg",
+      "size": 4992511
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/guitar.ogg",
+      "size": 3991599
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/notes.mid",
+      "size": 120090
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/rhythm.ogg",
+      "size": 2301221
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/song.ini",
+      "size": 729
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/song.ogg",
+      "size": 1852099
+    },
+    {
+      "path": "(2008) Rock Band 2/Mot\u00f6rhead - Ace of Spades '08/vocals.ogg",
+      "size": 3380227
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/album.jpg",
+      "size": 368865
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/crowd.ogg",
+      "size": 5232848
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/drums_1.ogg",
+      "size": 3083931
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/drums_2.ogg",
+      "size": 5560579
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/drums_3.ogg",
+      "size": 7055720
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/guitar.ogg",
+      "size": 6165927
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/notes.mid",
+      "size": 128516
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/rhythm.ogg",
+      "size": 2944723
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/song.ini",
+      "size": 735
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/song.ogg",
+      "size": 4509848
+    },
+    {
+      "path": "(2008) Rock Band 2/Nirvana - Drain You/vocals.ogg",
+      "size": 5126205
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/album.jpg",
+      "size": 157719
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/crowd.ogg",
+      "size": 5751851
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/drums.ogg",
+      "size": 6677956
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/guitar.ogg",
+      "size": 9597420
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/notes.mid",
+      "size": 129105
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/rhythm.ogg",
+      "size": 1594324
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/song.ini",
+      "size": 788
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/song.ogg",
+      "size": 7061828
+    },
+    {
+      "path": "(2008) Rock Band 2/Norman Greenbaum - Spirit in the Sky/vocals.ogg",
+      "size": 2574717
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/album.jpg",
+      "size": 255776
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/crowd.ogg",
+      "size": 7309239
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/drums_1.ogg",
+      "size": 7210484
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/drums_2.ogg",
+      "size": 7818727
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/drums_3.ogg",
+      "size": 8233439
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/guitar.ogg",
+      "size": 7647465
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/notes.mid",
+      "size": 105922
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/rhythm.ogg",
+      "size": 4478370
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/song.ini",
+      "size": 722
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/song.ogg",
+      "size": 6363161
+    },
+    {
+      "path": "(2008) Rock Band 2/Alice in Chains - Man in the Box/vocals.ogg",
+      "size": 5761875
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/album.jpg",
+      "size": 762685
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/drums_1.ogg",
+      "size": 3410599
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/drums_2.ogg",
+      "size": 3457049
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/drums_3.ogg",
+      "size": 4312716
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/guitar.ogg",
+      "size": 4123260
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/notes.mid",
+      "size": 67999
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/rhythm.ogg",
+      "size": 2326996
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/song.ini",
+      "size": 746
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/song.ogg",
+      "size": 5503940
+    },
+    {
+      "path": "(2008) Rock Band 2/Panic! At the Disco - Nine in the Afternoon/vocals.ogg",
+      "size": 4024517
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/album.jpg",
+      "size": 786138
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/album_alt.jpg",
+      "size": 529240
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/crowd.ogg",
+      "size": 4911616
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/drums_1.ogg",
+      "size": 2816027
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/drums_2.ogg",
+      "size": 4722280
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/drums_3.ogg",
+      "size": 6550401
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/guitar.ogg",
+      "size": 5845655
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/notes.mid",
+      "size": 125830
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/rhythm.ogg",
+      "size": 2854239
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/song.ini",
+      "size": 756
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/song.ogg",
+      "size": 6670399
+    },
+    {
+      "path": "(2008) Rock Band 2/Paramore - That's What You Get/vocals.ogg",
+      "size": 5613615
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/album.jpg",
+      "size": 401817
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/drums_1.ogg",
+      "size": 8039202
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/drums_2.ogg",
+      "size": 8606903
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/drums_3.ogg",
+      "size": 11665669
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/guitar.ogg",
+      "size": 8419896
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/notes.mid",
+      "size": 167060
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/rhythm.ogg",
+      "size": 9689935
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/song.ini",
+      "size": 772
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/song.ogg",
+      "size": 11461495
+    },
+    {
+      "path": "(2008) Rock Band 2/Pearl Jam - Alive/vocals.ogg",
+      "size": 8522102
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/album.jpg",
+      "size": 355352
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/drums_1.ogg",
+      "size": 2735287
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/drums_2.ogg",
+      "size": 2949460
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/drums_3.ogg",
+      "size": 6243369
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/guitar.ogg",
+      "size": 4930156
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/notes.mid",
+      "size": 114648
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/rhythm.ogg",
+      "size": 3633185
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/song.ogg",
+      "size": 568120
+    },
+    {
+      "path": "(2008) Rock Band 2/Rage Against the Machine - Testify/vocals.ogg",
+      "size": 3802502
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/album.jpg",
+      "size": 248477
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/crowd.ogg",
+      "size": 5832132
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/drums_1.ogg",
+      "size": 6255185
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/drums_2.ogg",
+      "size": 6993497
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/drums_3.ogg",
+      "size": 9115204
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/guitar.ogg",
+      "size": 7496805
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/notes.mid",
+      "size": 148921
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/rhythm.ogg",
+      "size": 3528642
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/song.ini",
+      "size": 743
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/song.ogg",
+      "size": 5209981
+    },
+    {
+      "path": "(2008) Rock Band 2/Ratt - Round and Round/vocals.ogg",
+      "size": 5013505
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/album.jpg",
+      "size": 381646
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/drums_1.ogg",
+      "size": 4193006
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/drums_2.ogg",
+      "size": 8825242
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/drums_3.ogg",
+      "size": 11372930
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/guitar.ogg",
+      "size": 7692935
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/notes.mid",
+      "size": 146641
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/rhythm.ogg",
+      "size": 3799622
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/song.ini",
+      "size": 789
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/song.ogg",
+      "size": 8765380
+    },
+    {
+      "path": "(2008) Rock Band 2/Red Hot Chili Peppers - Give it Away/vocals.ogg",
+      "size": 7634051
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/album.jpg",
+      "size": 562042
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/crowd.ogg",
+      "size": 3374627
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/drums_1.ogg",
+      "size": 2333015
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/drums_2.ogg",
+      "size": 2377374
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/drums_3.ogg",
+      "size": 5158006
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/guitar.ogg",
+      "size": 4883781
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/notes.mid",
+      "size": 115300
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/rhythm.ogg",
+      "size": 2368633
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/song.ini",
+      "size": 728
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/song.ogg",
+      "size": 2676280
+    },
+    {
+      "path": "(2008) Rock Band 2/Rise Against - Give it All/vocals.ogg",
+      "size": 4189216
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/album.jpg",
+      "size": 363473
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/drums.ogg",
+      "size": 6998274
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/guitar.ogg",
+      "size": 7391987
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/notes.mid",
+      "size": 128607
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/original.mid",
+      "size": 128863
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/rhythm.ogg",
+      "size": 4866495
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/song.ini",
+      "size": 812
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/song.ogg",
+      "size": 2712095
+    },
+    {
+      "path": "(2008) Rock Band 2/Rush - The Trees (Vault Edition)/vocals.ogg",
+      "size": 2411922
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/album.jpg",
+      "size": 277508
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/drums_1.ogg",
+      "size": 4670020
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/drums_2.ogg",
+      "size": 4998020
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/drums_3.ogg",
+      "size": 10698102
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/guitar.ogg",
+      "size": 9530884
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/notes.mid",
+      "size": 233919
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/rhythm.ogg",
+      "size": 7709087
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/song.ini",
+      "size": 770
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/song.ogg",
+      "size": 7941427
+    },
+    {
+      "path": "(2008) Rock Band 2/Silversun Pickups - Lazy Eye/vocals.ogg",
+      "size": 3097952
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/album.jpg",
+      "size": 198963
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/album_alt.jpg",
+      "size": 374115
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/crowd.ogg",
+      "size": 4934962
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/drums_1.ogg",
+      "size": 3080982
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/drums_2.ogg",
+      "size": 3059521
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/drums_3.ogg",
+      "size": 6905420
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/guitar.ogg",
+      "size": 5802724
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/notes.mid",
+      "size": 115985
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/rhythm.ogg",
+      "size": 2382274
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/song.ini",
+      "size": 733
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/song.ogg",
+      "size": 4298971
+    },
+    {
+      "path": "(2008) Rock Band 2/Social Distortion - I Was Wrong/vocals.ogg",
+      "size": 5109095
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/album.jpg",
+      "size": 168177
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/album_alt.jpg",
+      "size": 79203
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 5507590
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 5296176
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 6906312
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 5545693
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/notes.mid",
+      "size": 115759
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/original.mid",
+      "size": 97228
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 1752295
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/song.ini",
+      "size": 772
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/song.ogg",
+      "size": 3674780
+    },
+    {
+      "path": "(2008) Rock Band 2/Anarchy Club - Get Clean (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 5272184
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/album.jpg",
+      "size": 495690
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/drums_1.ogg",
+      "size": 5444220
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/drums_2.ogg",
+      "size": 11022355
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/drums_3.ogg",
+      "size": 12826632
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/guitar.ogg",
+      "size": 11227533
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/notes.mid",
+      "size": 247243
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/rhythm.ogg",
+      "size": 5018351
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/song.ini",
+      "size": 779
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/song.ogg",
+      "size": 9710287
+    },
+    {
+      "path": "(2008) Rock Band 2/Sonic Youth - Teen Age Riot/vocals.ogg",
+      "size": 8563573
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/album.jpg",
+      "size": 178472
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/drums_1.ogg",
+      "size": 3491313
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/drums_2.ogg",
+      "size": 6276193
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/drums_3.ogg",
+      "size": 8243114
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/guitar.ogg",
+      "size": 7528276
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/notes.mid",
+      "size": 139097
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/rhythm.ogg",
+      "size": 3240681
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/song.ini",
+      "size": 746
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/song.ogg",
+      "size": 8467540
+    },
+    {
+      "path": "(2008) Rock Band 2/Soundgarden - Spoonman/vocals.ogg",
+      "size": 6243025
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/album.jpg",
+      "size": 382458
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/album_alt.jpg",
+      "size": 368445
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/drums_1.ogg",
+      "size": 2694373
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/drums_2.ogg",
+      "size": 5453608
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/drums_3.ogg",
+      "size": 7085262
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/guitar.ogg",
+      "size": 5324077
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/notes.mid",
+      "size": 145463
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/rhythm.ogg",
+      "size": 2432403
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/song.ini",
+      "size": 799
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/song.ogg",
+      "size": 6381698
+    },
+    {
+      "path": "(2008) Rock Band 2/Speck - Conventional Lover/vocals.ogg",
+      "size": 5170059
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/album.jpg",
+      "size": 129571
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/drums_1.ogg",
+      "size": 4418046
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/drums_2.ogg",
+      "size": 5604601
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/drums_3.ogg",
+      "size": 5977244
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/guitar.ogg",
+      "size": 5615487
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/notes.mid",
+      "size": 95852
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/rhythm.ogg",
+      "size": 4716122
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/song.ini",
+      "size": 758
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/song.ogg",
+      "size": 6843697
+    },
+    {
+      "path": "(2008) Rock Band 2/Squeeze - Cool for Cats/vocals.ogg",
+      "size": 4780395
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/album.jpg",
+      "size": 214278
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/drums_1.ogg",
+      "size": 4087864
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/drums_2.ogg",
+      "size": 9385934
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/guitar.ogg",
+      "size": 8277658
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/notes.mid",
+      "size": 195400
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/rhythm.ogg",
+      "size": 3665857
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/song.ogg",
+      "size": 9098060
+    },
+    {
+      "path": "(2008) Rock Band 2/Steely Dan - Bodhisattva/vocals.ogg",
+      "size": 1768685
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/album.jpg",
+      "size": 220087
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/crowd.ogg",
+      "size": 4684578
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/drums_1.ogg",
+      "size": 2343088
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/drums_2.ogg",
+      "size": 5561476
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/drums_3.ogg",
+      "size": 6400169
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/guitar.ogg",
+      "size": 6324713
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/notes.mid",
+      "size": 100091
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/rhythm.ogg",
+      "size": 2250813
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/song.ini",
+      "size": 762
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/song.ogg",
+      "size": 2608313
+    },
+    {
+      "path": "(2008) Rock Band 2/Steve Miller Band - Rock'n Me/vocals.ogg",
+      "size": 4206210
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/album.jpg",
+      "size": 530842
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/crowd.ogg",
+      "size": 5673457
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/drums_1.ogg",
+      "size": 3098802
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/drums_2.ogg",
+      "size": 6084413
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/drums_3.ogg",
+      "size": 7757016
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/guitar.ogg",
+      "size": 8471619
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/notes.mid",
+      "size": 114771
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/rhythm.ogg",
+      "size": 2612966
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/song.ini",
+      "size": 770
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/song.ogg",
+      "size": 7197992
+    },
+    {
+      "path": "(2008) Rock Band 2/Survivor - Eye of the Tiger/vocals.ogg",
+      "size": 5130491
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/album.jpg",
+      "size": 667218
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/crowd.ogg",
+      "size": 4233612
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/drums_1.ogg",
+      "size": 4428625
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/drums_2.ogg",
+      "size": 3620202
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/drums_3.ogg",
+      "size": 6001423
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/guitar.ogg",
+      "size": 5990988
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/notes.mid",
+      "size": 126701
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/rhythm.ogg",
+      "size": 2569560
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/song.ini",
+      "size": 755
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/song.ogg",
+      "size": 5251359
+    },
+    {
+      "path": "(2008) Rock Band 2/System of a Down - Chop Suey/vocals.ogg",
+      "size": 3942775
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/album.jpg",
+      "size": 63253
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/crowd.ogg",
+      "size": 4875772
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/drums_1.ogg",
+      "size": 3266980
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/drums_2.ogg",
+      "size": 6369572
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/drums_3.ogg",
+      "size": 6238219
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/guitar.ogg",
+      "size": 6734611
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/notes.mid",
+      "size": 125343
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/rhythm.ogg",
+      "size": 2895169
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/song.ini",
+      "size": 810
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/song.ogg",
+      "size": 5345448
+    },
+    {
+      "path": "(2008) Rock Band 2/Talking Heads - Psycho Killer/vocals.ogg",
+      "size": 4201096
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/album.jpg",
+      "size": 417286
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 1047091
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 1862175
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 2239844
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 4944176
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/notes.mid",
+      "size": 66291
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/original.mid",
+      "size": 56614
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 852507
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/song.ini",
+      "size": 775
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/song.ogg",
+      "size": 2232020
+    },
+    {
+      "path": "(2008) Rock Band 2/Tenacious D - Master Exploder (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 2824903
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/album.jpg",
+      "size": 101097
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 5855444
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 5958062
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 7278147
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 6090197
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/notes.mid",
+      "size": 163249
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/original.mid",
+      "size": 162225
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 5272022
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/song.ini",
+      "size": 752
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/song.ogg",
+      "size": 3547350
+    },
+    {
+      "path": "(2008) Rock Band 2/Avenged Sevenfold - Almost Easy (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 3538131
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/album.jpg",
+      "size": 445863
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 2520580
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 5748627
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 6488194
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 5194727
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/notes.mid",
+      "size": 131085
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/original.mid",
+      "size": 130813
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 2049170
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/song.ogg",
+      "size": 1215066
+    },
+    {
+      "path": "(2008) Rock Band 2/Testament - Souls of Black (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 2974775
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/album.jpg",
+      "size": 466985
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/drums_1.ogg",
+      "size": 1702331
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/drums_2.ogg",
+      "size": 5126474
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/drums_3.ogg",
+      "size": 5527203
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/guitar.ogg",
+      "size": 5233006
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/notes.mid",
+      "size": 101048
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/rhythm.ogg",
+      "size": 2243999
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/song.ini",
+      "size": 777
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/song.ogg",
+      "size": 5324522
+    },
+    {
+      "path": "(2008) Rock Band 2/That Handsome Devil - Rob the Prez-O-Dent/vocals.ogg",
+      "size": 6095672
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/album.jpg",
+      "size": 596658
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/crowd.ogg",
+      "size": 3564260
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/drums.ogg",
+      "size": 9801820
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/guitar.ogg",
+      "size": 8228580
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/notes.mid",
+      "size": 222259
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/rhythm.ogg",
+      "size": 4344937
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/song.ini",
+      "size": 761
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/song.ogg",
+      "size": 8981570
+    },
+    {
+      "path": "(2008) Rock Band 2/The Allman Brothers Band - Ramblin' Man/vocals.ogg",
+      "size": 3229050
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/album.jpg",
+      "size": 426401
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/drums_1.ogg",
+      "size": 2667321
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/drums_2.ogg",
+      "size": 3699738
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/drums_3.ogg",
+      "size": 6569983
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/guitar.ogg",
+      "size": 5782426
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/notes.mid",
+      "size": 103114
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/rhythm.ogg",
+      "size": 2447407
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/song.ini",
+      "size": 753
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/song.ogg",
+      "size": 5933596
+    },
+    {
+      "path": "(2008) Rock Band 2/The Donnas - New Kid in School/vocals.ogg",
+      "size": 5059066
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/album.jpg",
+      "size": 390300
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/crowd.ogg",
+      "size": 2824909
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/drums_1.ogg",
+      "size": 3720738
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/drums_2.ogg",
+      "size": 4449468
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/drums_3.ogg",
+      "size": 4676493
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/guitar.ogg",
+      "size": 4196128
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/notes.mid",
+      "size": 95433
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/rhythm.ogg",
+      "size": 3475412
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/song.ini",
+      "size": 793
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/song.ogg",
+      "size": 4084312
+    },
+    {
+      "path": "(2008) Rock Band 2/The Go-Go's - We Got the Beat/vocals.ogg",
+      "size": 3820238
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/album.jpg",
+      "size": 286540
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/crowd.ogg",
+      "size": 6013999
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/drums.ogg",
+      "size": 7239519
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/guitar.ogg",
+      "size": 6212921
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/notes.mid",
+      "size": 121029
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/rhythm.ogg",
+      "size": 2943316
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/song.ini",
+      "size": 767
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/song.ogg",
+      "size": 6711162
+    },
+    {
+      "path": "(2008) Rock Band 2/The Guess Who - American Woman/vocals.ogg",
+      "size": 4114293
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/album.jpg",
+      "size": 255913
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/drums.ogg",
+      "size": 6351907
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/guitar.ogg",
+      "size": 5058116
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/notes.mid",
+      "size": 111129
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/rhythm.ogg",
+      "size": 1443379
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/song.ini",
+      "size": 799
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/song.ogg",
+      "size": 7468704
+    },
+    {
+      "path": "(2008) Rock Band 2/The Main Drag - A Jagged Gorgeous Winter/vocals.ogg",
+      "size": 5869428
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/album.jpg",
+      "size": 426104
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/album_alt.jpg",
+      "size": 83356
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/drums_1.ogg",
+      "size": 2600820
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/drums_2.ogg",
+      "size": 5618040
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/guitar.ogg",
+      "size": 5174774
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/notes.mid",
+      "size": 112371
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/rhythm.ogg",
+      "size": 5004872
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/song.ini",
+      "size": 793
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/song.ogg",
+      "size": 5362571
+    },
+    {
+      "path": "(2008) Rock Band 2/The Mighty Mighty Bosstones - Where'd You Go/vocals.ogg",
+      "size": 4325683
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/album.jpg",
+      "size": 267199
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/crowd.ogg",
+      "size": 3497157
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/drums_1.ogg",
+      "size": 4728984
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/drums_2.ogg",
+      "size": 5229371
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/drums_3.ogg",
+      "size": 6816690
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/guitar.ogg",
+      "size": 6406395
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/notes.mid",
+      "size": 156019
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/rhythm.ogg",
+      "size": 2875268
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/song.ini",
+      "size": 829
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/song.ogg",
+      "size": 3715157
+    },
+    {
+      "path": "(2008) Rock Band 2/The Muffs - Kids in America/vocals.ogg",
+      "size": 3709802
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/album.jpg",
+      "size": 109240
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/crowd.ogg",
+      "size": 3870018
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/drums_1.ogg",
+      "size": 2714798
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/drums_2.ogg",
+      "size": 5065862
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/drums_3.ogg",
+      "size": 5927334
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/guitar.ogg",
+      "size": 5473956
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/notes.mid",
+      "size": 127382
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/rhythm.ogg",
+      "size": 4572425
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/song.ogg",
+      "size": 1434869
+    },
+    {
+      "path": "(2008) Rock Band 2/The Offspring - Come Out and Play (Keep 'Em Separated)/vocals.ogg",
+      "size": 4139062
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/album.jpg",
+      "size": 319861
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/crowd.ogg",
+      "size": 8320189
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/drums_1.ogg",
+      "size": 4686109
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/drums_2.ogg",
+      "size": 8969850
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/drums_3.ogg",
+      "size": 10265699
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/guitar.ogg",
+      "size": 9524837
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/notes.mid",
+      "size": 159301
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/rhythm.ogg",
+      "size": 4242182
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/song.ini",
+      "size": 767
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/song.ogg",
+      "size": 9203641
+    },
+    {
+      "path": "(2008) Rock Band 2/Bad Company - Shooting Star/vocals.ogg",
+      "size": 8429930
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/album.jpg",
+      "size": 476066
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/drums_1.ogg",
+      "size": 1695278
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/drums_2.ogg",
+      "size": 3019717
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/drums_3.ogg",
+      "size": 4075248
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/guitar.ogg",
+      "size": 3178986
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/notes.mid",
+      "size": 92715
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/rhythm.ogg",
+      "size": 3806492
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/song.ini",
+      "size": 842
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/song.ogg",
+      "size": 3136271
+    },
+    {
+      "path": "(2008) Rock Band 2/The Presidents of the United States of America - Lump/vocals.ogg",
+      "size": 3245583
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/album.jpg",
+      "size": 195191
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/crowd.ogg",
+      "size": 4096887
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/drums_1.ogg",
+      "size": 4850407
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/drums_2.ogg",
+      "size": 5556059
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/drums_3.ogg",
+      "size": 6272832
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/guitar.ogg",
+      "size": 5119767
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/notes.mid",
+      "size": 111487
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/rhythm.ogg",
+      "size": 2552606
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/song.ini",
+      "size": 803
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/song.ogg",
+      "size": 3412118
+    },
+    {
+      "path": "(2008) Rock Band 2/The Replacements - Alex Chilton/vocals.ogg",
+      "size": 5022194
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/album.jpg",
+      "size": 386247
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/crowd.ogg",
+      "size": 4831535
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/drums_1.ogg",
+      "size": 4265600
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/drums_2.ogg",
+      "size": 4506681
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/drums_3.ogg",
+      "size": 5738485
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/guitar.ogg",
+      "size": 5174025
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/notes.mid",
+      "size": 103657
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/rhythm.ogg",
+      "size": 3425491
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/song.ini",
+      "size": 865
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/song.ogg",
+      "size": 3565878
+    },
+    {
+      "path": "(2008) Rock Band 2/The Smashing Pumpkins - Today/vocals.ogg",
+      "size": 4005157
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/album.jpg",
+      "size": 293207
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/drums_1.ogg",
+      "size": 1948213
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/drums_2.ogg",
+      "size": 2209797
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/drums_3.ogg",
+      "size": 4467718
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/guitar.ogg",
+      "size": 4206341
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/notes.mid",
+      "size": 101400
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/rhythm.ogg",
+      "size": 2135413
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/song.ini",
+      "size": 737
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/song.ogg",
+      "size": 4089482
+    },
+    {
+      "path": "(2008) Rock Band 2/The Sterns - Supreme Girl/vocals.ogg",
+      "size": 3497526
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/album.jpg",
+      "size": 350459
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/crowd.ogg",
+      "size": 2937525
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/drums.ogg",
+      "size": 4818125
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/guitar.ogg",
+      "size": 5309354
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/notes.mid",
+      "size": 83859
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/rhythm.ogg",
+      "size": 2442711
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/song.ini",
+      "size": 726
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/song.ogg",
+      "size": 4160795
+    },
+    {
+      "path": "(2008) Rock Band 2/The Who - Pinball Wizard/vocals.ogg",
+      "size": 4401578
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/album.jpg",
+      "size": 447686
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/album_alt.jpg",
+      "size": 204121
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/drums.ogg",
+      "size": 6698632
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/guitar.ogg",
+      "size": 6343725
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/notes.mid",
+      "size": 122581
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/rhythm.ogg",
+      "size": 2172823
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/song.ini",
+      "size": 713
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/song.ogg",
+      "size": 1269556
+    },
+    {
+      "path": "(2008) Rock Band 2/Bang Camaro - Night Lies/vocals.ogg",
+      "size": 3431408
+    }
+  ],
+  "extracted_size": 3114500760,
+  "file_count": 876,
+  "chart_count": 84,
+  "release_date": "2008-09-14"
+}

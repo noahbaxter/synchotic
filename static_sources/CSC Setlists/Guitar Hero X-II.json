@@ -1,20 +1,3817 @@
 {
   "name": "Guitar Hero X-II",
-  "folder_id": "static-gh-x-ii",
+  "folder_id": "static-guitar-hero-x-ii",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 157,
-  "total_size": 3998539474,
-  "file_count": 949,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-gh-x-ii",
-      "path": "Guitar Hero X-II/Guitar Hero X-II.rar",
+      "url": "https://customsongscentral.b-cdn.net/Guitar%20Hero%20X-II.rar?ref=customsongscentral.com",
       "name": "Guitar Hero X-II.rar",
       "size": 3998539474,
-      "md5": "c2d40fbf27f41b03d6164070cbd9985f",
-      "url": "https://customsongscentral.b-cdn.net/Guitar%20Hero%20X-II.rar?ref=customsongscentral.com"
+      "md5": "c2d40fbf27f41b03d6164070cbd9985f"
     }
-  ]
+  ],
+  "download_size": 3998539474,
+  "files": [
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/C2C - Down The Road/album.png",
+      "size": 631417
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/C2C - Down The Road/background.png",
+      "size": 1286088
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/C2C - Down The Road/notes.chart",
+      "size": 33249
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/C2C - Down The Road/path.png",
+      "size": 104185
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/C2C - Down The Road/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/C2C - Down The Road/song.ogg",
+      "size": 9078937
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Dream Theater - Surrounded/album.png",
+      "size": 2216330
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Dream Theater - Surrounded/background.png",
+      "size": 1673803
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Dream Theater - Surrounded/notes.chart",
+      "size": 47845
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Dream Theater - Surrounded/path.png",
+      "size": 201288
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Dream Theater - Surrounded/song.ini",
+      "size": 687
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Dream Theater - Surrounded/song.ogg",
+      "size": 14553742
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/MOMOLAND - Bboom Bboom/album.png",
+      "size": 574157
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/MOMOLAND - Bboom Bboom/background.png",
+      "size": 4176781
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/MOMOLAND - Bboom Bboom/notes.chart",
+      "size": 73535
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/MOMOLAND - Bboom Bboom/path.png",
+      "size": 104016
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/MOMOLAND - Bboom Bboom/song.ini",
+      "size": 651
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/MOMOLAND - Bboom Bboom/song.ogg",
+      "size": 9217361
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/MOMOLAND - Bboom Bboom/video.mp4",
+      "size": 85879304
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Pendulum - Crush/album.png",
+      "size": 525543
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Pendulum - Crush/background.png",
+      "size": 4157367
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Pendulum - Crush/notes.chart",
+      "size": 54974
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Pendulum - Crush/path.png",
+      "size": 160844
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Pendulum - Crush/song.ini",
+      "size": 709
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Pendulum - Crush/song.ogg",
+      "size": 12135820
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Rata Blanca - Mujer Amante/album.png",
+      "size": 385679
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Rata Blanca - Mujer Amante/background.jpg",
+      "size": 350926
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Rata Blanca - Mujer Amante/notes.chart",
+      "size": 38247
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Rata Blanca - Mujer Amante/path.png",
+      "size": 164769
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Rata Blanca - Mujer Amante/song.ini",
+      "size": 588
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Rata Blanca - Mujer Amante/song.ogg",
+      "size": 15899141
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Snot - Snot/album.png",
+      "size": 829827
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Snot - Snot/background.jpg",
+      "size": 567143
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Snot - Snot/notes.chart",
+      "size": 115070
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Snot - Snot/path.png",
+      "size": 115365
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Snot - Snot/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Snot - Snot/song.ogg",
+      "size": 8910127
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/System Of A Down - Vicinity Of Obscenity/album.png",
+      "size": 86477
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/System Of A Down - Vicinity Of Obscenity/background.png",
+      "size": 2315634
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/System Of A Down - Vicinity Of Obscenity/notes.chart",
+      "size": 47945
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/System Of A Down - Vicinity Of Obscenity/path.png",
+      "size": 102497
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/System Of A Down - Vicinity Of Obscenity/song.ini",
+      "size": 615
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/System Of A Down - Vicinity Of Obscenity/song.ogg",
+      "size": 7598226
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Tool - Jambi/album.png",
+      "size": 214943
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Tool - Jambi/background.jpg",
+      "size": 1036861
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Tool - Jambi/notes.chart",
+      "size": 69568
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Tool - Jambi/path.png",
+      "size": 220131
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Tool - Jambi/song.ini",
+      "size": 628
+    },
+    {
+      "path": "Guitar Hero X-II/01 - Starting Off Smoothly/Tool - Jambi/song.ogg",
+      "size": 19593940
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Alestorm - Wolves Of The Sea (Pirates Of The Sea Cover)/album.png",
+      "size": 433752
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Alestorm - Wolves Of The Sea (Pirates Of The Sea Cover)/background.png",
+      "size": 4439720
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Alestorm - Wolves Of The Sea (Pirates Of The Sea Cover)/notes.chart",
+      "size": 51001
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Alestorm - Wolves Of The Sea (Pirates Of The Sea Cover)/path.png",
+      "size": 123706
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Alestorm - Wolves Of The Sea (Pirates Of The Sea Cover)/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Alestorm - Wolves Of The Sea (Pirates Of The Sea Cover)/song.ogg",
+      "size": 9459428
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Gareth Nevin - Dragonforce vs Eminem/album.png",
+      "size": 366040
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Gareth Nevin - Dragonforce vs Eminem/background.png",
+      "size": 3091400
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Gareth Nevin - Dragonforce vs Eminem/notes.chart",
+      "size": 95171
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Gareth Nevin - Dragonforce vs Eminem/path.png",
+      "size": 239647
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Gareth Nevin - Dragonforce vs Eminem/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Gareth Nevin - Dragonforce vs Eminem/song.ogg",
+      "size": 14449027
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Hotel California But It_s All SWEEPING (Eagles Cover)/album.png",
+      "size": 718864
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Hotel California But It_s All SWEEPING (Eagles Cover)/background.png",
+      "size": 1705630
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Hotel California But It_s All SWEEPING (Eagles Cover)/notes.chart",
+      "size": 20117
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Hotel California But It_s All SWEEPING (Eagles Cover)/path.png",
+      "size": 64166
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Hotel California But It_s All SWEEPING (Eagles Cover)/song.ini",
+      "size": 608
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Hotel California But It_s All SWEEPING (Eagles Cover)/song.ogg",
+      "size": 3570888
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Killswitch Engage - Holy Diver (Dio Cover)/album.png",
+      "size": 491608
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Killswitch Engage - Holy Diver (Dio Cover)/background.png",
+      "size": 4403942
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Killswitch Engage - Holy Diver (Dio Cover)/notes.chart",
+      "size": 39784
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Killswitch Engage - Holy Diver (Dio Cover)/path.png",
+      "size": 110386
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Killswitch Engage - Holy Diver (Dio Cover)/song.ini",
+      "size": 631
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Killswitch Engage - Holy Diver (Dio Cover)/song.ogg",
+      "size": 11045147
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Metallica - Am I Evil (Diamond Head Cover)/album.png",
+      "size": 413649
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Metallica - Am I Evil (Diamond Head Cover)/background.png",
+      "size": 4889877
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Metallica - Am I Evil (Diamond Head Cover)/notes.chart",
+      "size": 74407
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Metallica - Am I Evil (Diamond Head Cover)/path.png",
+      "size": 293104
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Metallica - Am I Evil (Diamond Head Cover)/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Metallica - Am I Evil (Diamond Head Cover)/song.ogg",
+      "size": 20730854
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Paul Gilbert - Spanish Fly (Van Halen Cover)/album.png",
+      "size": 700672
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Paul Gilbert - Spanish Fly (Van Halen Cover)/background.png",
+      "size": 1947527
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Paul Gilbert - Spanish Fly (Van Halen Cover)/notes.chart",
+      "size": 30609
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Paul Gilbert - Spanish Fly (Van Halen Cover)/path.png",
+      "size": 66784
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Paul Gilbert - Spanish Fly (Van Halen Cover)/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Paul Gilbert - Spanish Fly (Van Halen Cover)/song.ogg",
+      "size": 3850479
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Yngwie Malmsteen - Purple Haze (Jimi Hendrix Cover)/album.png",
+      "size": 398376
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Yngwie Malmsteen - Purple Haze (Jimi Hendrix Cover)/background.png",
+      "size": 3778498
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Yngwie Malmsteen - Purple Haze (Jimi Hendrix Cover)/notes.chart",
+      "size": 37146
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Yngwie Malmsteen - Purple Haze (Jimi Hendrix Cover)/path.png",
+      "size": 144177
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Yngwie Malmsteen - Purple Haze (Jimi Hendrix Cover)/song.ini",
+      "size": 563
+    },
+    {
+      "path": "Guitar Hero X-II/02 - Nothing Beats The Original, Right/Yngwie Malmsteen - Purple Haze (Jimi Hendrix Cover)/song.ogg",
+      "size": 10350456
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Autograph - Turn Up The Radio/album.png",
+      "size": 62654
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Autograph - Turn Up The Radio/background.png",
+      "size": 1944511
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Autograph - Turn Up The Radio/notes.chart",
+      "size": 34065
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Autograph - Turn Up The Radio/path.png",
+      "size": 123742
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Autograph - Turn Up The Radio/song.ini",
+      "size": 641
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Autograph - Turn Up The Radio/song.ogg",
+      "size": 11997158
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Aya Hirano - God Knows/album.png",
+      "size": 211099
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Aya Hirano - God Knows/background.png",
+      "size": 2716562
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Aya Hirano - God Knows/notes.chart",
+      "size": 61911
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Aya Hirano - God Knows/path.png",
+      "size": 163425
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Aya Hirano - God Knows/song.ini",
+      "size": 568
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Aya Hirano - God Knows/song.ogg",
+      "size": 12248275
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Boston - Smokin/album.png",
+      "size": 136063
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Boston - Smokin/background.png",
+      "size": 1534729
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Boston - Smokin/guitar.ogg",
+      "size": 11525680
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Boston - Smokin/notes.chart",
+      "size": 55629
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Boston - Smokin/path.png",
+      "size": 190998
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Boston - Smokin/song.ini",
+      "size": 518
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Boston - Smokin/song.ogg",
+      "size": 11455487
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Charles Aznavour - Je m_Voyais D\u00e9j\u00e0/album.png",
+      "size": 69101
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Charles Aznavour - Je m_Voyais D\u00e9j\u00e0/background.jpg",
+      "size": 701663
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Charles Aznavour - Je m_Voyais D\u00e9j\u00e0/notes.chart",
+      "size": 56838
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Charles Aznavour - Je m_Voyais D\u00e9j\u00e0/path.png",
+      "size": 115357
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Charles Aznavour - Je m_Voyais D\u00e9j\u00e0/song.ini",
+      "size": 673
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Charles Aznavour - Je m_Voyais D\u00e9j\u00e0/song.ogg",
+      "size": 8975106
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Extreme - Get The Funk Out/album.png",
+      "size": 318243
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Extreme - Get The Funk Out/background.jpg",
+      "size": 427081
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Extreme - Get The Funk Out/notes.chart",
+      "size": 48914
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Extreme - Get The Funk Out/path.png",
+      "size": 118243
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Extreme - Get The Funk Out/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Extreme - Get The Funk Out/song.ogg",
+      "size": 11689569
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Hironobu Kageyama - WE GOTTA POWER/album.png",
+      "size": 56035
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Hironobu Kageyama - WE GOTTA POWER/background.jpg",
+      "size": 673393
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Hironobu Kageyama - WE GOTTA POWER/notes.chart",
+      "size": 42460
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Hironobu Kageyama - WE GOTTA POWER/path.png",
+      "size": 140048
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Hironobu Kageyama - WE GOTTA POWER/song.ini",
+      "size": 562
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Hironobu Kageyama - WE GOTTA POWER/song.ogg",
+      "size": 7071029
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Lucas De La Rosa - Jordan Rudess Playing Over Crab Rave/album.png",
+      "size": 121105
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Lucas De La Rosa - Jordan Rudess Playing Over Crab Rave/background.jpg",
+      "size": 659688
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Lucas De La Rosa - Jordan Rudess Playing Over Crab Rave/notes.chart",
+      "size": 13364
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Lucas De La Rosa - Jordan Rudess Playing Over Crab Rave/path.png",
+      "size": 32631
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Lucas De La Rosa - Jordan Rudess Playing Over Crab Rave/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Lucas De La Rosa - Jordan Rudess Playing Over Crab Rave/song.ogg",
+      "size": 1691585
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Muse - Reapers/album.png",
+      "size": 67535
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Muse - Reapers/background.jpg",
+      "size": 390555
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Muse - Reapers/notes.chart",
+      "size": 60627
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Muse - Reapers/path.png",
+      "size": 168852
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Muse - Reapers/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Guitar Hero X-II/03 - A Few Random Picks/Muse - Reapers/song.ogg",
+      "size": 10528767
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Judas Priest - Hellrider/album.png",
+      "size": 449540
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Judas Priest - Hellrider/background.png",
+      "size": 4459037
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Judas Priest - Hellrider/notes.chart",
+      "size": 77757
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Judas Priest - Hellrider/path.png",
+      "size": 225609
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Judas Priest - Hellrider/song.ini",
+      "size": 553
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Judas Priest - Hellrider/song.ogg",
+      "size": 16863520
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Kreator - Riot of Violence/album.png",
+      "size": 2000975
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Kreator - Riot of Violence/background.png",
+      "size": 1617379
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Kreator - Riot of Violence/notes.chart",
+      "size": 57071
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Kreator - Riot of Violence/path.png",
+      "size": 213344
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Kreator - Riot of Violence/song.ini",
+      "size": 557
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Kreator - Riot of Violence/song.ogg",
+      "size": 12822046
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/album.png",
+      "size": 382304
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/background.png",
+      "size": 3674617
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/guitar.ogg",
+      "size": 15337826
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/notes.chart",
+      "size": 54677
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/path.png",
+      "size": 172871
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/rhythm.ogg",
+      "size": 12859086
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/song.ini",
+      "size": 736
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Living Colour - Cult Of Personality (Extended)/song.ogg",
+      "size": 15610892
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Megadeth - Sudden Death _11/album.png",
+      "size": 841300
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Megadeth - Sudden Death _11/background.png",
+      "size": 3828798
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Megadeth - Sudden Death _11/notes.chart",
+      "size": 63049
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Megadeth - Sudden Death _11/path.png",
+      "size": 190149
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Megadeth - Sudden Death _11/song.ini",
+      "size": 669
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Megadeth - Sudden Death _11/song.ogg",
+      "size": 13546703
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Motorhead - Overkill _07/album.png",
+      "size": 126498
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Motorhead - Overkill _07/background.jpg",
+      "size": 619957
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Motorhead - Overkill _07/notes.chart",
+      "size": 53609
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Motorhead - Overkill _07/path.png",
+      "size": 187163
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Motorhead - Overkill _07/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Motorhead - Overkill _07/song.ogg",
+      "size": 15369481
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Nitro - Freight Train/album.png",
+      "size": 516904
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Nitro - Freight Train/background.png",
+      "size": 4242688
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Nitro - Freight Train/notes.chart",
+      "size": 55559
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Nitro - Freight Train/path.png",
+      "size": 190028
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Nitro - Freight Train/song.ini",
+      "size": 652
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Nitro - Freight Train/song.ogg",
+      "size": 10285408
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Rata Blanca - La Leyenda Del Hada Y Del Mago/album.png",
+      "size": 385679
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Rata Blanca - La Leyenda Del Hada Y Del Mago/background.jpg",
+      "size": 873502
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Rata Blanca - La Leyenda Del Hada Y Del Mago/notes.chart",
+      "size": 56526
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Rata Blanca - La Leyenda Del Hada Y Del Mago/path.png",
+      "size": 197575
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Rata Blanca - La Leyenda Del Hada Y Del Mago/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Rata Blanca - La Leyenda Del Hada Y Del Mago/song.ogg",
+      "size": 14129947
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Slayer - Necrophobic/album.png",
+      "size": 564867
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Slayer - Necrophobic/background.jpg",
+      "size": 485967
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Slayer - Necrophobic/notes.chart",
+      "size": 30588
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Slayer - Necrophobic/path.png",
+      "size": 96757
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Slayer - Necrophobic/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Guitar Hero X-II/04 - Let_s Get Old School/Slayer - Necrophobic/song.ogg",
+      "size": 4467508
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/John 5 - The Washing Away Of Wrong (feat. Eric Johnson)/album.png",
+      "size": 1722368
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/John 5 - The Washing Away Of Wrong (feat. Eric Johnson)/background.png",
+      "size": 2187765
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/John 5 - The Washing Away Of Wrong (feat. Eric Johnson)/notes.chart",
+      "size": 84553
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/John 5 - The Washing Away Of Wrong (feat. Eric Johnson)/path.png",
+      "size": 315941
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/John 5 - The Washing Away Of Wrong (feat. Eric Johnson)/song.ini",
+      "size": 730
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/John 5 - The Washing Away Of Wrong (feat. Eric Johnson)/song.ogg",
+      "size": 23058741
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Mattias IA Eklundh - Special Agent Bauer (ft. Bumblefoot)/album.png",
+      "size": 165404
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Mattias IA Eklundh - Special Agent Bauer (ft. Bumblefoot)/background.png",
+      "size": 2305759
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Mattias IA Eklundh - Special Agent Bauer (ft. Bumblefoot)/notes.chart",
+      "size": 30253
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Mattias IA Eklundh - Special Agent Bauer (ft. Bumblefoot)/path.png",
+      "size": 83960
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Mattias IA Eklundh - Special Agent Bauer (ft. Bumblefoot)/song.ini",
+      "size": 560
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Mattias IA Eklundh - Special Agent Bauer (ft. Bumblefoot)/song.ogg",
+      "size": 5545970
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Noturnall - Wake Up (feat. Mike Orlando)/album.png",
+      "size": 145691
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Noturnall - Wake Up (feat. Mike Orlando)/background.png",
+      "size": 3671362
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Noturnall - Wake Up (feat. Mike Orlando)/notes.chart",
+      "size": 63236
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Noturnall - Wake Up (feat. Mike Orlando)/path.png",
+      "size": 232410
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Noturnall - Wake Up (feat. Mike Orlando)/song.ini",
+      "size": 492
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Noturnall - Wake Up (feat. Mike Orlando)/song.ogg",
+      "size": 13986708
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/ONI - The Only Cure (feat. Randy Blythe)/album.png",
+      "size": 177241
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/ONI - The Only Cure (feat. Randy Blythe)/background.png",
+      "size": 2527902
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/ONI - The Only Cure (feat. Randy Blythe)/notes.chart",
+      "size": 67864
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/ONI - The Only Cure (feat. Randy Blythe)/path.png",
+      "size": 211811
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/ONI - The Only Cure (feat. Randy Blythe)/song.ini",
+      "size": 681
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/ONI - The Only Cure (feat. Randy Blythe)/song.ogg",
+      "size": 13469712
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Periphery - Have A Blast (feat. Guthrie Govan)/album.png",
+      "size": 47918
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Periphery - Have A Blast (feat. Guthrie Govan)/background.png",
+      "size": 1712504
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Periphery - Have A Blast (feat. Guthrie Govan)/notes.chart",
+      "size": 64152
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Periphery - Have A Blast (feat. Guthrie Govan)/path.png",
+      "size": 191221
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Periphery - Have A Blast (feat. Guthrie Govan)/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Periphery - Have A Blast (feat. Guthrie Govan)/song.ogg",
+      "size": 15689398
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/SYU - Euphoria (ft. Jacky Vincent)/album.png",
+      "size": 163868
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/SYU - Euphoria (ft. Jacky Vincent)/background.png",
+      "size": 2212187
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/SYU - Euphoria (ft. Jacky Vincent)/notes.chart",
+      "size": 130893
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/SYU - Euphoria (ft. Jacky Vincent)/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/SYU - Euphoria (ft. Jacky Vincent)/song.ogg",
+      "size": 14245237
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/St\u00e9phan Fort\u00e9 - De Praestigiis Daemonum (feat. Mattias IA Eklundh)/album.png",
+      "size": 154789
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/St\u00e9phan Fort\u00e9 - De Praestigiis Daemonum (feat. Mattias IA Eklundh)/background.png",
+      "size": 2615064
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/St\u00e9phan Fort\u00e9 - De Praestigiis Daemonum (feat. Mattias IA Eklundh)/notes.chart",
+      "size": 35626
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/St\u00e9phan Fort\u00e9 - De Praestigiis Daemonum (feat. Mattias IA Eklundh)/path.png",
+      "size": 183299
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/St\u00e9phan Fort\u00e9 - De Praestigiis Daemonum (feat. Mattias IA Eklundh)/song.ini",
+      "size": 729
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/St\u00e9phan Fort\u00e9 - De Praestigiis Daemonum (feat. Mattias IA Eklundh)/song.ogg",
+      "size": 13649153
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Violent Storm - Fire In The Unknown (feat. Yngwie Malmsteen)/album.png",
+      "size": 332428
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Violent Storm - Fire In The Unknown (feat. Yngwie Malmsteen)/background.png",
+      "size": 3911588
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Violent Storm - Fire In The Unknown (feat. Yngwie Malmsteen)/notes.chart",
+      "size": 50250
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Violent Storm - Fire In The Unknown (feat. Yngwie Malmsteen)/path.png",
+      "size": 135106
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Violent Storm - Fire In The Unknown (feat. Yngwie Malmsteen)/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Guitar Hero X-II/05 - Bring Your Friends/Violent Storm - Fire In The Unknown (feat. Yngwie Malmsteen)/song.ogg",
+      "size": 10887296
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Demoniac - Myths of Metal/album.png",
+      "size": 4116779
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Demoniac - Myths of Metal/background.png",
+      "size": 3119816
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Demoniac - Myths of Metal/notes.chart",
+      "size": 49307
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Demoniac - Myths of Metal/path.png",
+      "size": 160267
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Demoniac - Myths of Metal/song.ini",
+      "size": 840
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Demoniac - Myths of Metal/song.ogg",
+      "size": 9588362
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dragonforce - Lost Souls In Endless Time/album.png",
+      "size": 611472
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dragonforce - Lost Souls In Endless Time/background.png",
+      "size": 2891397
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dragonforce - Lost Souls In Endless Time/notes.chart",
+      "size": 102653
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dragonforce - Lost Souls In Endless Time/path.png",
+      "size": 262448
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dragonforce - Lost Souls In Endless Time/song.ini",
+      "size": 723
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dragonforce - Lost Souls In Endless Time/song.ogg",
+      "size": 16823164
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dream Theater - Six Degrees Of Inner Turbulence/album.png",
+      "size": 1140964
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dream Theater - Six Degrees Of Inner Turbulence/background.png",
+      "size": 3280749
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dream Theater - Six Degrees Of Inner Turbulence/notes.chart",
+      "size": 401063
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dream Theater - Six Degrees Of Inner Turbulence/path.png",
+      "size": 1446346
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dream Theater - Six Degrees Of Inner Turbulence/song.ini",
+      "size": 1015
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Dream Theater - Six Degrees Of Inner Turbulence/song.ogg",
+      "size": 108144488
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Galneryus - The Shadow Within (Live)/album.png",
+      "size": 6839875
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Galneryus - The Shadow Within (Live)/background.png",
+      "size": 5684814
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Galneryus - The Shadow Within (Live)/notes.chart",
+      "size": 70935
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Galneryus - The Shadow Within (Live)/path.png",
+      "size": 219633
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Galneryus - The Shadow Within (Live)/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Galneryus - The Shadow Within (Live)/song.ogg",
+      "size": 16250314
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Galneryus - The Shadow Within (Live)/video.mp4",
+      "size": 306325851
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Leprous - Slave (Live)/album.png",
+      "size": 753485
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Leprous - Slave (Live)/background.png",
+      "size": 2102615
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Leprous - Slave (Live)/notes.chart",
+      "size": 37056
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Leprous - Slave (Live)/path.png",
+      "size": 130948
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Leprous - Slave (Live)/song.ini",
+      "size": 812
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Leprous - Slave (Live)/song.ogg",
+      "size": 18041481
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Leprous - Slave (Live)/video.mp4",
+      "size": 219407664
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Masatoshi Ono - You_re The Only/album.png",
+      "size": 590979
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Masatoshi Ono - You_re The Only/background.png",
+      "size": 2200494
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Masatoshi Ono - You_re The Only/notes.chart",
+      "size": 26075
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Masatoshi Ono - You_re The Only/path.png",
+      "size": 86633
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Masatoshi Ono - You_re The Only/song.ini",
+      "size": 600
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Masatoshi Ono - You_re The Only/song.ogg",
+      "size": 12031591
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Tor Oddmund Suhrke _ Einar Solberg - SMS/album.png",
+      "size": 100186
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Tor Oddmund Suhrke _ Einar Solberg - SMS/background.png",
+      "size": 3599636
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Tor Oddmund Suhrke _ Einar Solberg - SMS/notes.chart",
+      "size": 43569
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Tor Oddmund Suhrke _ Einar Solberg - SMS/path.png",
+      "size": 92357
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Tor Oddmund Suhrke _ Einar Solberg - SMS/song.ini",
+      "size": 563
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Tor Oddmund Suhrke _ Einar Solberg - SMS/song.ogg",
+      "size": 8341506
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Winter Rose - Asylum City/album.png",
+      "size": 1033111
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Winter Rose - Asylum City/background.png",
+      "size": 2993904
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Winter Rose - Asylum City/notes.chart",
+      "size": 44258
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Winter Rose - Asylum City/path.png",
+      "size": 152212
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Winter Rose - Asylum City/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Guitar Hero X-II/06 - Wait, Are These The Same Musicians/Winter Rose - Asylum City/song.ogg",
+      "size": 9347905
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Breath Of Nibiru - Parralels/album.png",
+      "size": 341340
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Breath Of Nibiru - Parralels/background.png",
+      "size": 1599557
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Breath Of Nibiru - Parralels/notes.chart",
+      "size": 48466
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Breath Of Nibiru - Parralels/path.png",
+      "size": 168328
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Breath Of Nibiru - Parralels/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Breath Of Nibiru - Parralels/song.ogg",
+      "size": 10406877
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Derek Sherinian - The Phoenix (feat. Zakk Wylde)/album.png",
+      "size": 112361
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Derek Sherinian - The Phoenix (feat. Zakk Wylde)/background.png",
+      "size": 3651739
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Derek Sherinian - The Phoenix (feat. Zakk Wylde)/notes.chart",
+      "size": 66413
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Derek Sherinian - The Phoenix (feat. Zakk Wylde)/path.png",
+      "size": 195066
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Derek Sherinian - The Phoenix (feat. Zakk Wylde)/song.ini",
+      "size": 572
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Derek Sherinian - The Phoenix (feat. Zakk Wylde)/song.ogg",
+      "size": 14198839
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Derek Sherinian - The Phoenix (feat. Zakk Wylde)/song.ogg.sfk",
+      "size": 489176
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Electrocution 250 - Funky Lizard/album.png",
+      "size": 114192
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Electrocution 250 - Funky Lizard/background.png",
+      "size": 1951090
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Electrocution 250 - Funky Lizard/notes.chart",
+      "size": 47348
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Electrocution 250 - Funky Lizard/path.png",
+      "size": 177698
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Electrocution 250 - Funky Lizard/song.ini",
+      "size": 631
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Electrocution 250 - Funky Lizard/song.ogg",
+      "size": 11425866
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Gentaro Satomura - Attack of the Aliens/album.png",
+      "size": 441386
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Gentaro Satomura - Attack of the Aliens/background.png",
+      "size": 2375395
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Gentaro Satomura - Attack of the Aliens/notes.chart",
+      "size": 50349
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Gentaro Satomura - Attack of the Aliens/path.png",
+      "size": 220406
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Gentaro Satomura - Attack of the Aliens/song.ini",
+      "size": 494
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Gentaro Satomura - Attack of the Aliens/song.ogg",
+      "size": 12060976
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Gentaro Satomura - Attack of the Aliens/song.ogg.sfk",
+      "size": 413832
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Ichika Nito - When A Band Only Give You 5 Seconds To Audition/album.png",
+      "size": 380177
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Ichika Nito - When A Band Only Give You 5 Seconds To Audition/background.png",
+      "size": 3211460
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Ichika Nito - When A Band Only Give You 5 Seconds To Audition/notes.chart",
+      "size": 2271
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Ichika Nito - When A Band Only Give You 5 Seconds To Audition/path.png",
+      "size": 19642
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Ichika Nito - When A Band Only Give You 5 Seconds To Audition/song.ini",
+      "size": 640
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Ichika Nito - When A Band Only Give You 5 Seconds To Audition/song.ogg",
+      "size": 335197
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Rata Blanca - Preludio Obsesivo/album.png",
+      "size": 385679
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Rata Blanca - Preludio Obsesivo/background.png",
+      "size": 2345714
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Rata Blanca - Preludio Obsesivo/notes.chart",
+      "size": 41079
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Rata Blanca - Preludio Obsesivo/path.png",
+      "size": 195389
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Rata Blanca - Preludio Obsesivo/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Rata Blanca - Preludio Obsesivo/song.ogg",
+      "size": 9590137
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Vitalism - Pagan, Pt.2/album.png",
+      "size": 286378
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Vitalism - Pagan, Pt.2/background.png",
+      "size": 1410406
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Vitalism - Pagan, Pt.2/notes.chart",
+      "size": 88233
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Vitalism - Pagan, Pt.2/path.png",
+      "size": 177295
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Vitalism - Pagan, Pt.2/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Guitar Hero X-II/07 - Make Up Your Own Vocals/Vitalism - Pagan, Pt.2/song.ogg",
+      "size": 14196636
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/1 - Creatures Ov Deception/album.png",
+      "size": 89662
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/1 - Creatures Ov Deception/background.jpg",
+      "size": 558744
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/1 - Creatures Ov Deception/notes.chart",
+      "size": 38832
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/1 - Creatures Ov Deception/path.png",
+      "size": 133586
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/1 - Creatures Ov Deception/song.ini",
+      "size": 671
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/1 - Creatures Ov Deception/song.ogg",
+      "size": 8525057
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/2 - The Primordial Booze/album.png",
+      "size": 89662
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/2 - The Primordial Booze/background.jpg",
+      "size": 558744
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/2 - The Primordial Booze/notes.chart",
+      "size": 49221
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/2 - The Primordial Booze/path.png",
+      "size": 110976
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/2 - The Primordial Booze/song.ini",
+      "size": 642
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/2 - The Primordial Booze/song.ogg",
+      "size": 7534011
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/3 - The Replicator/album.png",
+      "size": 89662
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/3 - The Replicator/background.jpg",
+      "size": 558744
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/3 - The Replicator/notes.chart",
+      "size": 22275
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/3 - The Replicator/path.png",
+      "size": 84831
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/3 - The Replicator/song.ini",
+      "size": 649
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/3 - The Replicator/song.ogg",
+      "size": 5432748
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/4 - Heavy Weather - The Storm ov The Undead/album.png",
+      "size": 89662
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/4 - Heavy Weather - The Storm ov The Undead/background.jpg",
+      "size": 558744
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/4 - Heavy Weather - The Storm ov The Undead/guitar.ogg",
+      "size": 10120919
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/4 - Heavy Weather - The Storm ov The Undead/notes.chart",
+      "size": 77867
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/4 - Heavy Weather - The Storm ov The Undead/path.png",
+      "size": 162287
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/4 - Heavy Weather - The Storm ov The Undead/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/4 - Heavy Weather - The Storm ov The Undead/song.ogg",
+      "size": 10163883
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/5 - Fortune_s Dividend/album.png",
+      "size": 89662
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/5 - Fortune_s Dividend/background.jpg",
+      "size": 558744
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/5 - Fortune_s Dividend/notes.chart",
+      "size": 64340
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/5 - Fortune_s Dividend/path.png",
+      "size": 143078
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/5 - Fortune_s Dividend/song.ini",
+      "size": 639
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/5 - Fortune_s Dividend/song.ogg",
+      "size": 11216999
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/6 - Hate Castle/album.png",
+      "size": 89662
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/6 - Hate Castle/background.jpg",
+      "size": 558744
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/6 - Hate Castle/notes.chart",
+      "size": 36311
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/6 - Hate Castle/path.png",
+      "size": 146756
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/6 - Hate Castle/song.ini",
+      "size": 607
+    },
+    {
+      "path": "Guitar Hero X-II/08 - The Primordial Booze/6 - Hate Castle/song.ogg",
+      "size": 9414794
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Adagio - Dominate/album.png",
+      "size": 127945
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Adagio - Dominate/background.jpg",
+      "size": 316221
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Adagio - Dominate/notes.chart",
+      "size": 78642
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Adagio - Dominate/path.png",
+      "size": 251914
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Adagio - Dominate/song.ini",
+      "size": 560
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Adagio - Dominate/song.ogg",
+      "size": 15810954
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Avantasia - Shelter From The Rain/album.png",
+      "size": 64100
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Avantasia - Shelter From The Rain/background.jpg",
+      "size": 924380
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Avantasia - Shelter From The Rain/notes.chart",
+      "size": 48644
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Avantasia - Shelter From The Rain/path.png",
+      "size": 190130
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Avantasia - Shelter From The Rain/song.ini",
+      "size": 634
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Avantasia - Shelter From The Rain/song.ogg",
+      "size": 16127829
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/BABYMETAL - Arkadia/album.png",
+      "size": 179833
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/BABYMETAL - Arkadia/background.jpg",
+      "size": 4994026
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/BABYMETAL - Arkadia/notes.chart",
+      "size": 56771
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/BABYMETAL - Arkadia/path.png",
+      "size": 208031
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/BABYMETAL - Arkadia/song.ini",
+      "size": 745
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/BABYMETAL - Arkadia/song.ogg",
+      "size": 14087327
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Pathfinder - Fifth Element/album.png",
+      "size": 93878
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Pathfinder - Fifth Element/background.jpg",
+      "size": 796619
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Pathfinder - Fifth Element/notes.chart",
+      "size": 231588
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Pathfinder - Fifth Element/path.png",
+      "size": 356621
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Pathfinder - Fifth Element/song.ini",
+      "size": 637
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Pathfinder - Fifth Element/song.ogg",
+      "size": 23075823
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Project Aegis - Angel In The Ashes/album.png",
+      "size": 505330
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Project Aegis - Angel In The Ashes/background.png",
+      "size": 2192536
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Project Aegis - Angel In The Ashes/notes.chart",
+      "size": 43586
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Project Aegis - Angel In The Ashes/path.png",
+      "size": 178461
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Project Aegis - Angel In The Ashes/song.ini",
+      "size": 597
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Project Aegis - Angel In The Ashes/song.ogg",
+      "size": 13750540
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Ring Of Fire - Circle Of Time/album.png",
+      "size": 69731
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Ring Of Fire - Circle Of Time/background.jpg",
+      "size": 1268351
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Ring Of Fire - Circle Of Time/notes.chart",
+      "size": 88298
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Ring Of Fire - Circle Of Time/path.png",
+      "size": 197388
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Ring Of Fire - Circle Of Time/song.ini",
+      "size": 657
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Ring Of Fire - Circle Of Time/song.ogg",
+      "size": 14419683
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Theocracy - Laying The Demon To Rest/album.png",
+      "size": 553502
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Theocracy - Laying The Demon To Rest/background.jpg",
+      "size": 822023
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Theocracy - Laying The Demon To Rest/notes.chart",
+      "size": 203506
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Theocracy - Laying The Demon To Rest/path.png",
+      "size": 295791
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Theocracy - Laying The Demon To Rest/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Guitar Hero X-II/09 - Don_t Get Overpowered/Theocracy - Laying The Demon To Rest/song.ogg",
+      "size": 25472378
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Between The Buried And Me - Aspirations/album.png",
+      "size": 64873
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Between The Buried And Me - Aspirations/background.png",
+      "size": 819849
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Between The Buried And Me - Aspirations/notes.chart",
+      "size": 56206
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Between The Buried And Me - Aspirations/path.png",
+      "size": 228149
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Between The Buried And Me - Aspirations/song.ini",
+      "size": 766
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Between The Buried And Me - Aspirations/song.ogg",
+      "size": 15181183
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Buckethead - Romero One Mind Any Weapon/album.png",
+      "size": 1391844
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Buckethead - Romero One Mind Any Weapon/background.png",
+      "size": 1072381
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Buckethead - Romero One Mind Any Weapon/notes.chart",
+      "size": 123064
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Buckethead - Romero One Mind Any Weapon/path.png",
+      "size": 356304
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Buckethead - Romero One Mind Any Weapon/song.ini",
+      "size": 789
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Buckethead - Romero One Mind Any Weapon/song.ogg",
+      "size": 23653379
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/album.png",
+      "size": 2834407
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/background.png",
+      "size": 2103913
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/guitar.ogg",
+      "size": 18163763
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/guitar.ogg.sfk",
+      "size": 619088
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/notes.chart",
+      "size": 80176
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/path.png",
+      "size": 235850
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/song.ini",
+      "size": 657
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Dream Theater - Fatal Tragedy/song.ogg",
+      "size": 18218045
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Haken - Puzzle Box/album.png",
+      "size": 43800
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Haken - Puzzle Box/background.png",
+      "size": 3446538
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Haken - Puzzle Box/notes.chart",
+      "size": 183622
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Haken - Puzzle Box/path++.png",
+      "size": 444399
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Haken - Puzzle Box/path.png",
+      "size": 443294
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Haken - Puzzle Box/song.ini",
+      "size": 706
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Haken - Puzzle Box/song.ogg",
+      "size": 20297288
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Opeth - The Wilde Flowers/album.png",
+      "size": 368733
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Opeth - The Wilde Flowers/background.png",
+      "size": 3383419
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Opeth - The Wilde Flowers/notes.chart",
+      "size": 52497
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Opeth - The Wilde Flowers/path.png",
+      "size": 147356
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Opeth - The Wilde Flowers/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Opeth - The Wilde Flowers/song.ogg",
+      "size": 17500492
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Periphery - Reptile (Live)/album.png",
+      "size": 477329
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Periphery - Reptile (Live)/background.png",
+      "size": 3908526
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Periphery - Reptile (Live)/notes.chart",
+      "size": 129347
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Periphery - Reptile (Live)/path.png",
+      "size": 477864
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Periphery - Reptile (Live)/song.ini",
+      "size": 490
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Periphery - Reptile (Live)/song.ogg",
+      "size": 44739318
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Wintersun - Death And The Healing/album.png",
+      "size": 148531
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Wintersun - Death And The Healing/background.jpg",
+      "size": 816683
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Wintersun - Death And The Healing/notes.chart",
+      "size": 43493
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Wintersun - Death And The Healing/path.png",
+      "size": 233759
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Wintersun - Death And The Healing/song.ini",
+      "size": 638
+    },
+    {
+      "path": "Guitar Hero X-II/10 - Oh, Complex Music, I Must Be Smart/Wintersun - Death And The Healing/song.ogg",
+      "size": 18978215
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Day Of Reckoning - Left To Follow/album.png",
+      "size": 871003
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Day Of Reckoning - Left To Follow/background.png",
+      "size": 878591
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Day Of Reckoning - Left To Follow/notes.chart",
+      "size": 47652
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Day Of Reckoning - Left To Follow/path.png",
+      "size": 153250
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Day Of Reckoning - Left To Follow/song.ini",
+      "size": 719
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Day Of Reckoning - Left To Follow/song.ogg",
+      "size": 9688220
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Last Gasp - RRR/album.png",
+      "size": 357945
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Last Gasp - RRR/background.png",
+      "size": 1256460
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Last Gasp - RRR/notes.chart",
+      "size": 42694
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Last Gasp - RRR/path.png",
+      "size": 138974
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Last Gasp - RRR/song.ini",
+      "size": 452
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Last Gasp - RRR/song.ogg",
+      "size": 8727384
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Slayer - Hate Worldwide/album.png",
+      "size": 344676
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Slayer - Hate Worldwide/background.jpg",
+      "size": 551902
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Slayer - Hate Worldwide/notes.chart",
+      "size": 45351
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Slayer - Hate Worldwide/path.png",
+      "size": 143962
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Slayer - Hate Worldwide/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Slayer - Hate Worldwide/song.ogg",
+      "size": 7619590
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Sunless Rise - Into the Nightmare/album.png",
+      "size": 449269
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Sunless Rise - Into the Nightmare/background.jpg",
+      "size": 329004
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Sunless Rise - Into the Nightmare/notes.chart",
+      "size": 74929
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Sunless Rise - Into the Nightmare/path.png",
+      "size": 165672
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Sunless Rise - Into the Nightmare/song.ini",
+      "size": 650
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Sunless Rise - Into the Nightmare/song.ogg",
+      "size": 12566197
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Black Dahlia Murder - I Will Return/album.png",
+      "size": 784872
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Black Dahlia Murder - I Will Return/background.png",
+      "size": 2590283
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Black Dahlia Murder - I Will Return/notes.chart",
+      "size": 75603
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Black Dahlia Murder - I Will Return/path.png",
+      "size": 228702
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Black Dahlia Murder - I Will Return/song.ini",
+      "size": 581
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Black Dahlia Murder - I Will Return/song.ogg",
+      "size": 14710656
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Myriad Burial - Death Quota For Purification/album.png",
+      "size": 200099
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Myriad Burial - Death Quota For Purification/background.jpg",
+      "size": 452256
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Myriad Burial - Death Quota For Purification/notes.chart",
+      "size": 87080
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Myriad Burial - Death Quota For Purification/path.png",
+      "size": 293815
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Myriad Burial - Death Quota For Purification/song.ini",
+      "size": 614
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Myriad Burial - Death Quota For Purification/song.ogg",
+      "size": 18888970
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Word Alive - The Hounds Of Anubis/album.png",
+      "size": 85341
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Word Alive - The Hounds Of Anubis/background.jpg",
+      "size": 369044
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Word Alive - The Hounds Of Anubis/notes.chart",
+      "size": 97721
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Word Alive - The Hounds Of Anubis/path.png",
+      "size": 140198
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Word Alive - The Hounds Of Anubis/song.ini",
+      "size": 632
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/The Word Alive - The Hounds Of Anubis/song.ogg",
+      "size": 11110268
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Yngwie Malmsteen - Red Devil/album.png",
+      "size": 268429
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Yngwie Malmsteen - Red Devil/background.jpg",
+      "size": 496250
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Yngwie Malmsteen - Red Devil/guitar.ogg",
+      "size": 4910440
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Yngwie Malmsteen - Red Devil/notes.chart",
+      "size": 43142
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Yngwie Malmsteen - Red Devil/path.png",
+      "size": 168286
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Yngwie Malmsteen - Red Devil/song.ini",
+      "size": 570
+    },
+    {
+      "path": "Guitar Hero X-II/11 - New Century Metal/Yngwie Malmsteen - Red Devil/song.ogg",
+      "size": 10875626
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/331Erock - UN Owen Was Her/album.png",
+      "size": 102695
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/331Erock - UN Owen Was Her/background.png",
+      "size": 4260975
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/331Erock - UN Owen Was Her/notes.chart",
+      "size": 34324
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/331Erock - UN Owen Was Her/path.png",
+      "size": 94200
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/331Erock - UN Owen Was Her/song.ini",
+      "size": 557
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/331Erock - UN Owen Was Her/song.ogg",
+      "size": 7784265
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/ACE+ - Mechanical Rhythm/album.png",
+      "size": 103765
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/ACE+ - Mechanical Rhythm/background.png",
+      "size": 2660413
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/ACE+ - Mechanical Rhythm/notes.chart",
+      "size": 24829
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/ACE+ - Mechanical Rhythm/path.png",
+      "size": 101294
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/ACE+ - Mechanical Rhythm/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/ACE+ - Mechanical Rhythm/song.ogg",
+      "size": 8063789
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Chipzel - Focus/album.png",
+      "size": 372690
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Chipzel - Focus/background.png",
+      "size": 199165
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Chipzel - Focus/notes.chart",
+      "size": 65831
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Chipzel - Focus/path.png",
+      "size": 102901
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Chipzel - Focus/song.ini",
+      "size": 702
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Chipzel - Focus/song.ogg",
+      "size": 7409101
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Darren Korb - The Unseen Ones/album.png",
+      "size": 558110
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Darren Korb - The Unseen Ones/background.png",
+      "size": 2959913
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Darren Korb - The Unseen Ones/notes.chart",
+      "size": 38770
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Darren Korb - The Unseen Ones/path.png",
+      "size": 161634
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Darren Korb - The Unseen Ones/song.ini",
+      "size": 827
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Darren Korb - The Unseen Ones/song.ogg",
+      "size": 11474796
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Darren Korb - The Unseen Ones/song.ogg.sfk",
+      "size": 393600
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Tim Follin - Silver Surfer Medley/album.png",
+      "size": 266127
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Tim Follin - Silver Surfer Medley/background.png",
+      "size": 3533893
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Tim Follin - Silver Surfer Medley/notes.chart",
+      "size": 169726
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Tim Follin - Silver Surfer Medley/path.png",
+      "size": 264597
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Tim Follin - Silver Surfer Medley/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Tim Follin - Silver Surfer Medley/song.ogg",
+      "size": 19729980
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Yasufumi Fukuda - Mute City (Brawl)/album.png",
+      "size": 634039
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Yasufumi Fukuda - Mute City (Brawl)/background.png",
+      "size": 2991508
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Yasufumi Fukuda - Mute City (Brawl)/notes.chart",
+      "size": 22949
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Yasufumi Fukuda - Mute City (Brawl)/path.png",
+      "size": 145936
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Yasufumi Fukuda - Mute City (Brawl)/song.ini",
+      "size": 647
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/Yasufumi Fukuda - Mute City (Brawl)/song.ogg",
+      "size": 9693046
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/dB Soundworks - The Battle Of Lil Slugger (Extended)/album.png",
+      "size": 16434
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/dB Soundworks - The Battle Of Lil Slugger (Extended)/background.png",
+      "size": 805131
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/dB Soundworks - The Battle Of Lil Slugger (Extended)/guitar.ogg",
+      "size": 9102761
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/dB Soundworks - The Battle Of Lil Slugger (Extended)/notes.chart",
+      "size": 43288
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/dB Soundworks - The Battle Of Lil Slugger (Extended)/path.png",
+      "size": 100671
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/dB Soundworks - The Battle Of Lil Slugger (Extended)/song.ini",
+      "size": 621
+    },
+    {
+      "path": "Guitar Hero X-II/12 - Video Game Music On a Music Video Game/dB Soundworks - The Battle Of Lil Slugger (Extended)/song.ogg",
+      "size": 9156763
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/1 - Kill _Em All Solo Medley/album.png",
+      "size": 128370
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/1 - Kill _Em All Solo Medley/background.png",
+      "size": 933812
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/1 - Kill _Em All Solo Medley/notes.chart",
+      "size": 110411
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/1 - Kill _Em All Solo Medley/song.ini",
+      "size": 716
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/1 - Kill _Em All Solo Medley/song.ogg",
+      "size": 25812529
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/10 - Hardwired Solo Medley/album.png",
+      "size": 357238
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/10 - Hardwired Solo Medley/background.png",
+      "size": 2110874
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/10 - Hardwired Solo Medley/notes.chart",
+      "size": 104663
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/10 - Hardwired Solo Medley/song.ini",
+      "size": 795
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/10 - Hardwired Solo Medley/song.ogg",
+      "size": 27464241
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/2 - Ride The Lightning Solo Medley/album.png",
+      "size": 511162
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/2 - Ride The Lightning Solo Medley/background.png",
+      "size": 4216670
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/2 - Ride The Lightning Solo Medley/notes.chart",
+      "size": 86609
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/2 - Ride The Lightning Solo Medley/song.ini",
+      "size": 771
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/2 - Ride The Lightning Solo Medley/song.ogg",
+      "size": 25878379
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/3 - Master Of Puppets Solo Medley/album.png",
+      "size": 709680
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/3 - Master Of Puppets Solo Medley/background.png",
+      "size": 485957
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/3 - Master Of Puppets Solo Medley/notes.chart",
+      "size": 79673
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/3 - Master Of Puppets Solo Medley/song.ini",
+      "size": 866
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/3 - Master Of Puppets Solo Medley/song.ogg",
+      "size": 21492968
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/4 - And Justice For All Solo Medley/album.png",
+      "size": 648114
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/4 - And Justice For All Solo Medley/background.png",
+      "size": 3021202
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/4 - And Justice For All Solo Medley/notes.chart",
+      "size": 93408
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/4 - And Justice For All Solo Medley/song.ini",
+      "size": 961
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/4 - And Justice For All Solo Medley/song.ogg",
+      "size": 22071650
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/5 - Black Album Solo Medley/album.png",
+      "size": 316569
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/5 - Black Album Solo Medley/background.png",
+      "size": 1573198
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/5 - Black Album Solo Medley/notes.chart",
+      "size": 90247
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/5 - Black Album Solo Medley/song.ini",
+      "size": 804
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/5 - Black Album Solo Medley/song.ogg",
+      "size": 30000520
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/6 - Load Solo Medley/album.png",
+      "size": 736833
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/6 - Load Solo Medley/background.png",
+      "size": 3804163
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/6 - Load Solo Medley/notes.chart",
+      "size": 41749
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/6 - Load Solo Medley/song.ini",
+      "size": 672
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/6 - Load Solo Medley/song.ogg",
+      "size": 14556431
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/7 - Reload Solo Medley/album.png",
+      "size": 399552
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/7 - Reload Solo Medley/background.png",
+      "size": 3005919
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/7 - Reload Solo Medley/notes.chart",
+      "size": 72112
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/7 - Reload Solo Medley/song.ini",
+      "size": 878
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/7 - Reload Solo Medley/song.ogg",
+      "size": 22644747
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/8 - St Anger Solo Medley/album.png",
+      "size": 484842
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/8 - St Anger Solo Medley/background.png",
+      "size": 1245666
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/8 - St Anger Solo Medley/notes.chart",
+      "size": 223979
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/8 - St Anger Solo Medley/notes.msce",
+      "size": 223764
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/8 - St Anger Solo Medley/song.ini",
+      "size": 772
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/8 - St Anger Solo Medley/song.ogg",
+      "size": 11786694
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/album.png",
+      "size": 695750
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/background.png",
+      "size": 2827025
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/guitar.ogg",
+      "size": 28824588
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/guitar.ogg.sfl",
+      "size": 32
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/notes.chart",
+      "size": 247587
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/path.png",
+      "size": 534417
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/song.ini",
+      "size": 809
+    },
+    {
+      "path": "Guitar Hero X-II/13 - Metallica Solo Medleys/9 - Death Magnetic Solo Medley/song.ogg",
+      "size": 28752406
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Little BIG - Everyday I_m Drinking/album.png",
+      "size": 232412
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Little BIG - Everyday I_m Drinking/background.jpg",
+      "size": 781846
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Little BIG - Everyday I_m Drinking/notes.chart",
+      "size": 203511
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Little BIG - Everyday I_m Drinking/song.ini",
+      "size": 726
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Little BIG - Everyday I_m Drinking/song.ogg",
+      "size": 7328657
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Little BIG - Everyday I_m Drinking/video.mp4",
+      "size": 104939049
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Pendulum - Set Me On Fire/album.png",
+      "size": 378465
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Pendulum - Set Me On Fire/background.jpg",
+      "size": 427709
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Pendulum - Set Me On Fire/notes.chart",
+      "size": 56959
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Pendulum - Set Me On Fire/path.png",
+      "size": 146612
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Pendulum - Set Me On Fire/song.ini",
+      "size": 645
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Pendulum - Set Me On Fire/song.ogg",
+      "size": 13274951
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Razihel - One For All, All For One/album.png",
+      "size": 38613
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Razihel - One For All, All For One/background.png",
+      "size": 655021
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Razihel - One For All, All For One/notes.chart",
+      "size": 53496
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Razihel - One For All, All For One/path.png",
+      "size": 158344
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Razihel - One For All, All For One/song.ini",
+      "size": 748
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Razihel - One For All, All For One/song.ogg",
+      "size": 11486469
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Simba _ Tuck Chesta - Spade/album.png",
+      "size": 467303
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Simba _ Tuck Chesta - Spade/background.png",
+      "size": 1600363
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Simba _ Tuck Chesta - Spade/notes.chart",
+      "size": 63013
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Simba _ Tuck Chesta - Spade/path.png",
+      "size": 181327
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Simba _ Tuck Chesta - Spade/song.ini",
+      "size": 482
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Simba _ Tuck Chesta - Spade/song.ogg",
+      "size": 14070893
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Sta - 99 Glooms/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Sta - 99 Glooms/background.png",
+      "size": 1844625
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Sta - 99 Glooms/notes.chart",
+      "size": 39444
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Sta - 99 Glooms/path.png",
+      "size": 111112
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Sta - 99 Glooms/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Sta - 99 Glooms/song.ogg",
+      "size": 7152689
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Svidden - We Are/album.png",
+      "size": 283103
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Svidden - We Are/background.png",
+      "size": 3075967
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Svidden - We Are/notes.chart",
+      "size": 74767
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Svidden - We Are/path.png",
+      "size": 171457
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Svidden - We Are/song.ini",
+      "size": 785
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Svidden - We Are/song.ogg",
+      "size": 15269371
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Tatsh _ Naoki - Red Zone/album.png",
+      "size": 116502
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Tatsh _ Naoki - Red Zone/background.jpg",
+      "size": 175416
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Tatsh _ Naoki - Red Zone/notes.chart",
+      "size": 25704
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Tatsh _ Naoki - Red Zone/song.ini",
+      "size": 608
+    },
+    {
+      "path": "Guitar Hero X-II/14 - Who Needs a Guitar/Tatsh _ Naoki - Red Zone/song.ogg",
+      "size": 4750066
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Buckethead Lesson/album.png",
+      "size": 106226
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Buckethead Lesson/background.png",
+      "size": 1954606
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Buckethead Lesson/notes.chart",
+      "size": 53337
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Buckethead Lesson/path.png",
+      "size": 152678
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Buckethead Lesson/song.ini",
+      "size": 455
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Buckethead Lesson/song.ogg",
+      "size": 9070642
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Buckethead Lesson/video.mp4",
+      "size": 83090605
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Fernando Miyata - Insanely Amazing Guitar Solo 3/album.png",
+      "size": 85667
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Fernando Miyata - Insanely Amazing Guitar Solo 3/background.png",
+      "size": 3287282
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Fernando Miyata - Insanely Amazing Guitar Solo 3/notes.chart",
+      "size": 48635
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Fernando Miyata - Insanely Amazing Guitar Solo 3/song.ini",
+      "size": 814
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Fernando Miyata - Insanely Amazing Guitar Solo 3/song.ogg",
+      "size": 8529156
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Fernando Miyata - Insanely Amazing Guitar Solo 3/video.mp4",
+      "size": 9102981
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Francesco Fareri - Evolution/album.png",
+      "size": 499336
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Francesco Fareri - Evolution/background.png",
+      "size": 2338217
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Francesco Fareri - Evolution/notes.chart",
+      "size": 109672
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Francesco Fareri - Evolution/path.png",
+      "size": 312020
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Francesco Fareri - Evolution/song.ini",
+      "size": 814
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Francesco Fareri - Evolution/song.ogg",
+      "size": 21679008
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/John 5 - Welcome To Violence/album.png",
+      "size": 110583
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/John 5 - Welcome To Violence/background.png",
+      "size": 1137574
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/John 5 - Welcome To Violence/notes.chart",
+      "size": 50278
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/John 5 - Welcome To Violence/path.png",
+      "size": 215681
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/John 5 - Welcome To Violence/song.ini",
+      "size": 662
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/John 5 - Welcome To Violence/song.ogg",
+      "size": 11021619
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Mike Orlando - Burn/album.png",
+      "size": 88719
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Mike Orlando - Burn/background.png",
+      "size": 1721308
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Mike Orlando - Burn/guitar.ogg",
+      "size": 11241464
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Mike Orlando - Burn/notes.chart",
+      "size": 56074
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Mike Orlando - Burn/song.ini",
+      "size": 660
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Mike Orlando - Burn/song.ogg",
+      "size": 11294505
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Todd Duane - Overture-Barnyard Scuttle/album.png",
+      "size": 32059
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Todd Duane - Overture-Barnyard Scuttle/background.png",
+      "size": 2649901
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Todd Duane - Overture-Barnyard Scuttle/notes.chart",
+      "size": 54768
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Todd Duane - Overture-Barnyard Scuttle/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Todd Duane - Overture-Barnyard Scuttle/song.ogg",
+      "size": 11971676
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Various Guitarists - RenaissancE Guitar Jam - Chapter Spring/album.PNG",
+      "size": 664523
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Various Guitarists - RenaissancE Guitar Jam - Chapter Spring/background.png",
+      "size": 1061474
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Various Guitarists - RenaissancE Guitar Jam - Chapter Spring/notes.chart",
+      "size": 77558
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Various Guitarists - RenaissancE Guitar Jam - Chapter Spring/path.png",
+      "size": 320448
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Various Guitarists - RenaissancE Guitar Jam - Chapter Spring/song.ini",
+      "size": 611
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Various Guitarists - RenaissancE Guitar Jam - Chapter Spring/song.ogg",
+      "size": 15568390
+    },
+    {
+      "path": "Guitar Hero X-II/15 - Guitarists Are Not Musicians/Various Guitarists - RenaissancE Guitar Jam - Chapter Spring/song.ogg.sfk",
+      "size": 532048
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/3R2 - Celestial Sounds (KIVA Remix)/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/3R2 - Celestial Sounds (KIVA Remix)/background.png",
+      "size": 306633
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/3R2 - Celestial Sounds (KIVA Remix)/notes.chart",
+      "size": 71891
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/3R2 - Celestial Sounds (KIVA Remix)/path.png",
+      "size": 146319
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/3R2 - Celestial Sounds (KIVA Remix)/song.ini",
+      "size": 588
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/3R2 - Celestial Sounds (KIVA Remix)/song.ogg",
+      "size": 13885899
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/ICE - iL/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/ICE - iL/background.png",
+      "size": 1784259
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/ICE - iL/notes.chart",
+      "size": 55436
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/ICE - iL/path.png",
+      "size": 103451
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/ICE - iL/song.ini",
+      "size": 511
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/ICE - iL/song.ogg",
+      "size": 8013583
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Kyo-ta - Circus Time/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Kyo-ta - Circus Time/background.png",
+      "size": 2898465
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Kyo-ta - Circus Time/notes.chart",
+      "size": 19500
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Kyo-ta - Circus Time/path.png",
+      "size": 84635
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Kyo-ta - Circus Time/song.ini",
+      "size": 495
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Kyo-ta - Circus Time/song.ogg",
+      "size": 6264467
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/NeLiME vs. Apo11o - ReVELATION/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/NeLiME vs. Apo11o - ReVELATION/background.png",
+      "size": 3156158
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/NeLiME vs. Apo11o - ReVELATION/notes.chart",
+      "size": 47416
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/NeLiME vs. Apo11o - ReVELATION/path.png",
+      "size": 120527
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/NeLiME vs. Apo11o - ReVELATION/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/NeLiME vs. Apo11o - ReVELATION/song.ogg",
+      "size": 5005825
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Sta - The Ricochet/album.png",
+      "size": 148495
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Sta - The Ricochet/background.png",
+      "size": 2616672
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Sta - The Ricochet/notes.chart",
+      "size": 52250
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Sta - The Ricochet/path.png",
+      "size": 101643
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Sta - The Ricochet/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Sta - The Ricochet/song.ogg",
+      "size": 5878460
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/XI - Glorious Crown/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/XI - Glorious Crown/background.png",
+      "size": 2144363
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/XI - Glorious Crown/notes.chart",
+      "size": 75027
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/XI - Glorious Crown/path.png",
+      "size": 208141
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/XI - Glorious Crown/song.ini",
+      "size": 625
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/XI - Glorious Crown/song.ogg",
+      "size": 10877826
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Yohei Kimura - Violet/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Yohei Kimura - Violet/background.png",
+      "size": 1213687
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Yohei Kimura - Violet/notes.chart",
+      "size": 25767
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Yohei Kimura - Violet/path.png",
+      "size": 129436
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Yohei Kimura - Violet/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Guitar Hero X-II/16 - Welcome To The cyTus/Yohei Kimura - Violet/song.ogg",
+      "size": 7582969
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Iconoclast Solo Medley/album.png",
+      "size": 795363
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Iconoclast Solo Medley/background.png",
+      "size": 2837934
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Iconoclast Solo Medley/notes.chart",
+      "size": 119414
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Iconoclast Solo Medley/song.ini",
+      "size": 709
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Iconoclast Solo Medley/song.ogg",
+      "size": 26140344
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Necrophagist Solo Medley/album.png",
+      "size": 2022390
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Necrophagist Solo Medley/background.png",
+      "size": 3084097
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Necrophagist Solo Medley/notes.chart",
+      "size": 86085
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Necrophagist Solo Medley/path.png",
+      "size": 338359
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Necrophagist Solo Medley/song.ini",
+      "size": 616
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Necrophagist Solo Medley/song.ogg",
+      "size": 23706317
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Perpetual Flame Solo Medley/album.png",
+      "size": 268429
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Perpetual Flame Solo Medley/background.jpg",
+      "size": 379281
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Perpetual Flame Solo Medley/notes.chart",
+      "size": 155250
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Perpetual Flame Solo Medley/song.ini",
+      "size": 731
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Perpetual Flame Solo Medley/song.ogg",
+      "size": 32462517
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/The Nature Of The Beast Solo Medley/album.png",
+      "size": 333562
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/The Nature Of The Beast Solo Medley/background.png",
+      "size": 3168858
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/The Nature Of The Beast Solo Medley/notes.chart",
+      "size": 105560
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/The Nature Of The Beast Solo Medley/song.ini",
+      "size": 637
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/The Nature Of The Beast Solo Medley/song.ogg",
+      "size": 23008087
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Trunk_s Solo Suite 3 REMASTERED/album.png",
+      "size": 4009064
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Trunk_s Solo Suite 3 REMASTERED/background.png",
+      "size": 3043266
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Trunk_s Solo Suite 3 REMASTERED/notes.chart",
+      "size": 189521
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Trunk_s Solo Suite 3 REMASTERED/path.png",
+      "size": 570865
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Trunk_s Solo Suite 3 REMASTERED/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Trunk_s Solo Suite 3 REMASTERED/song.ogg",
+      "size": 35281155
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vetelgyus Solo Medley/album.png",
+      "size": 50977
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vetelgyus Solo Medley/background.png",
+      "size": 1300711
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vetelgyus Solo Medley/notes.chart",
+      "size": 135708
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vetelgyus Solo Medley/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vetelgyus Solo Medley/song.ogg",
+      "size": 26928869
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vorvados Solo Medley/album.png",
+      "size": 163868
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vorvados Solo Medley/background.png",
+      "size": 3024095
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vorvados Solo Medley/notes.chart",
+      "size": 108022
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vorvados Solo Medley/path.png",
+      "size": 359911
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vorvados Solo Medley/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/Vorvados Solo Medley/song.ogg",
+      "size": 22495799
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/You Play Hard Medley/album.png",
+      "size": 66852
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/You Play Hard Medley/background.png",
+      "size": 3919100
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/You Play Hard Medley/notes.chart",
+      "size": 200514
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/You Play Hard Medley/path.png",
+      "size": 596555
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/You Play Hard Medley/song.ini",
+      "size": 651
+    },
+    {
+      "path": "Guitar Hero X-II/17 - Are You Here Just For The Solos/You Play Hard Medley/song.ogg",
+      "size": 35505779
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/Adam Gyorgy - Hungarian Rhapsody No.2/album.png",
+      "size": 276390
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/Adam Gyorgy - Hungarian Rhapsody No.2/background.jpg",
+      "size": 177336
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/Adam Gyorgy - Hungarian Rhapsody No.2/notes.chart",
+      "size": 147312
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/Adam Gyorgy - Hungarian Rhapsody No.2/path.png",
+      "size": 337245
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/Adam Gyorgy - Hungarian Rhapsody No.2/song.ini",
+      "size": 644
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/Adam Gyorgy - Hungarian Rhapsody No.2/song.ogg",
+      "size": 22892497
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much (Dubmood Remix)/album.png",
+      "size": 182886
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much (Dubmood Remix)/background.png",
+      "size": 738214
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much (Dubmood Remix)/notes.chart",
+      "size": 207758
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much (Dubmood Remix)/song.ini",
+      "size": 472
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much (Dubmood Remix)/song.ogg",
+      "size": 12240709
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much/album.png",
+      "size": 182886
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much/background.png",
+      "size": 691333
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much/notes.chart",
+      "size": 499803
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much/path--.png",
+      "size": 132704
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much/path.png",
+      "size": 139434
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/MisfitChris - Fake Bit Much/song.ogg",
+      "size": 8974892
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/N.M.S.T. - Fur War, Pur War/album.png",
+      "size": 276800
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/N.M.S.T. - Fur War, Pur War/background.png",
+      "size": 1409557
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/N.M.S.T. - Fur War, Pur War/notes.chart",
+      "size": 82177
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/N.M.S.T. - Fur War, Pur War/path.png",
+      "size": 118826
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/N.M.S.T. - Fur War, Pur War/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/N.M.S.T. - Fur War, Pur War/song.ogg",
+      "size": 7984623
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/TWICE - Sunset/album.png",
+      "size": 185415
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/TWICE - Sunset/background.png",
+      "size": 2684000
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/TWICE - Sunset/notes.chart",
+      "size": 162275
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/TWICE - Sunset/path.png",
+      "size": 145979
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/TWICE - Sunset/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/TWICE - Sunset/song.ogg",
+      "size": 9779549
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/The Algorithm - Tr0jans EP/album.png",
+      "size": 35264
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/The Algorithm - Tr0jans EP/background.png",
+      "size": 2349121
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/The Algorithm - Tr0jans EP/notes.chart",
+      "size": 571592
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/The Algorithm - Tr0jans EP/path -- .png",
+      "size": 533256
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/The Algorithm - Tr0jans EP/path.png",
+      "size": 541624
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/The Algorithm - Tr0jans EP/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/The Algorithm - Tr0jans EP/song.ogg",
+      "size": 30942780
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/XI - Death Piano/album.png",
+      "size": 187458
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/XI - Death Piano/background.png",
+      "size": 1978753
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/XI - Death Piano/notes.chart",
+      "size": 72761
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/XI - Death Piano/path.png",
+      "size": 130899
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/XI - Death Piano/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Guitar Hero X-II/18 - The Ultimate Challenge/XI - Death Piano/song.ogg",
+      "size": 7539662
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 1/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 1/background.png",
+      "size": 2950822
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 1/notes.chart",
+      "size": 54592
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 1/path.png",
+      "size": 270194
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 1/song.ini",
+      "size": 377
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 1/song.ogg",
+      "size": 19075848
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 10/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 10/background.png",
+      "size": 1658858
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 10/notes.chart",
+      "size": 185213
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 10/path.png",
+      "size": 504494
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 10/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 10/song.ogg",
+      "size": 27497252
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 2/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 2/background.png",
+      "size": 3658017
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 2/notes.chart",
+      "size": 59077
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 2/path.png",
+      "size": 211325
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 2/song.ini",
+      "size": 377
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 2/song.ogg",
+      "size": 16212572
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 3/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 3/background.png",
+      "size": 3372123
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 3/notes.chart",
+      "size": 69513
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 3/path.png",
+      "size": 284195
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 3/song.ini",
+      "size": 375
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 3/song.ogg",
+      "size": 16761348
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 4/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 4/background.png",
+      "size": 2786515
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 4/notes.chart",
+      "size": 70510
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 4/path.png",
+      "size": 278447
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 4/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 4/song.ogg",
+      "size": 18638895
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 5/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 5/background.png",
+      "size": 3506207
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 5/notes.chart",
+      "size": 88509
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 5/path.png",
+      "size": 299258
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 5/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 5/song.ogg",
+      "size": 21165133
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 6/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 6/background.png",
+      "size": 3747562
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 6/notes.chart",
+      "size": 124372
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 6/path.png",
+      "size": 425286
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 6/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 6/song.ogg",
+      "size": 26176014
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 7/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 7/background.png",
+      "size": 3326549
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 7/notes.chart",
+      "size": 131396
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 7/path.png",
+      "size": 460938
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 7/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 7/song.ogg",
+      "size": 26537203
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 8/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 8/background.png",
+      "size": 3235532
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 8/notes.chart",
+      "size": 113431
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 8/path.png",
+      "size": 312302
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 8/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 8/song.ogg",
+      "size": 19085033
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 9/album.png",
+      "size": 226370
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 9/background.png",
+      "size": 3726411
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 9/notes.chart",
+      "size": 131684
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 9/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Guitar Hero X-II/19 - BONUS - GHX-I Solo Medleys/GHXSM LEVEL 9/song.ogg",
+      "size": 21368831
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/1 - Valley Of The Damned Solo Medley/album.png",
+      "size": 160991
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/1 - Valley Of The Damned Solo Medley/background.png",
+      "size": 3971184
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/1 - Valley Of The Damned Solo Medley/notes.chart",
+      "size": 171425
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/1 - Valley Of The Damned Solo Medley/song.ini",
+      "size": 457
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/1 - Valley Of The Damned Solo Medley/song.ogg",
+      "size": 36894458
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/1 - Valley Of The Damned Solo Medley/song.ogg.sfk",
+      "size": 1256320
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/2 - Sonic Firestorm Solo Medley/album.png",
+      "size": 116645
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/2 - Sonic Firestorm Solo Medley/background.png",
+      "size": 2850383
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/2 - Sonic Firestorm Solo Medley/notes.chart",
+      "size": 233059
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/2 - Sonic Firestorm Solo Medley/song.ini",
+      "size": 413
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/2 - Sonic Firestorm Solo Medley/song.ogg",
+      "size": 45958871
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/2 - Sonic Firestorm Solo Medley/song.ogg.sfk",
+      "size": 1571928
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/3 - Inhuman Rampage Solo Medley/album.png",
+      "size": 148323
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/3 - Inhuman Rampage Solo Medley/background.png",
+      "size": 2784079
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/3 - Inhuman Rampage Solo Medley/notes.chart",
+      "size": 251830
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/3 - Inhuman Rampage Solo Medley/song.ini",
+      "size": 412
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/3 - Inhuman Rampage Solo Medley/song.ogg",
+      "size": 43092270
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/3 - Inhuman Rampage Solo Medley/song.ogg.sfk",
+      "size": 1466704
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/4 - Ultra Beatdown Solo Medley/album.png",
+      "size": 115803
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/4 - Ultra Beatdown Solo Medley/background.png",
+      "size": 2097726
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/4 - Ultra Beatdown Solo Medley/notes.chart",
+      "size": 249116
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/4 - Ultra Beatdown Solo Medley/song.ini",
+      "size": 412
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/4 - Ultra Beatdown Solo Medley/song.ogg",
+      "size": 45767878
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/4 - Ultra Beatdown Solo Medley/song.ogg.sfk",
+      "size": 1557800
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/5 - The Power Within Solo Medley/album.png",
+      "size": 133232
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/5 - The Power Within Solo Medley/background.png",
+      "size": 2613339
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/5 - The Power Within Solo Medley/notes.chart",
+      "size": 110983
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/5 - The Power Within Solo Medley/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/5 - The Power Within Solo Medley/song.ogg",
+      "size": 24021945
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/5 - The Power Within Solo Medley/song.ogg.sfk",
+      "size": 820400
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/6 - Maximum Overload Solo Medley/album.png",
+      "size": 171908
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/6 - Maximum Overload Solo Medley/background.png",
+      "size": 4309862
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/6 - Maximum Overload Solo Medley/notes.chart",
+      "size": 240289
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/6 - Maximum Overload Solo Medley/song.ini",
+      "size": 413
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/6 - Maximum Overload Solo Medley/song.ogg",
+      "size": 43885422
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/6 - Maximum Overload Solo Medley/song.ogg.sfk",
+      "size": 1498856
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/7 - Reaching Into Infinity Solo Medley/album.png",
+      "size": 192189
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/7 - Reaching Into Infinity Solo Medley/background.png",
+      "size": 4592593
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/7 - Reaching Into Infinity Solo Medley/notes.chart",
+      "size": 249400
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/7 - Reaching Into Infinity Solo Medley/song.ini",
+      "size": 459
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/7 - Reaching Into Infinity Solo Medley/song.ogg",
+      "size": 38619058
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/7 - Reaching Into Infinity Solo Medley/song.ogg.sfk",
+      "size": 1317920
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/8 - Extreme Power Metal Solo Medley/album.png",
+      "size": 181035
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/8 - Extreme Power Metal Solo Medley/background.png",
+      "size": 4141806
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/8 - Extreme Power Metal Solo Medley/notes.chart",
+      "size": 189801
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/8 - Extreme Power Metal Solo Medley/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/8 - Extreme Power Metal Solo Medley/song.ogg",
+      "size": 36547974
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/8 - Extreme Power Metal Solo Medley/song.ogg.sfk",
+      "size": 1242112
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Dragonforce Strumming Challenge/album.png",
+      "size": 593905
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Dragonforce Strumming Challenge/background.png",
+      "size": 3835983
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Dragonforce Strumming Challenge/notes.chart",
+      "size": 108949
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Dragonforce Strumming Challenge/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Dragonforce Strumming Challenge/song.ogg",
+      "size": 14522603
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Dragonforce Strumming Challenge/song.ogg.sfk",
+      "size": 495000
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/album.png",
+      "size": 1810043
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/background.png",
+      "size": 1436514
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/guitar.ogg",
+      "size": 19373271
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/guitar.ogg.sfk",
+      "size": 661160
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/notes.chart",
+      "size": 70641
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/song.ogg",
+      "size": 19323005
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/TTFLUTE/song.ogg.sfk",
+      "size": 661160
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity (No Pity Edition)/album.png",
+      "size": 1810043
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity (No Pity Edition)/background.png",
+      "size": 3835983
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity (No Pity Edition)/notes.chart",
+      "size": 61544
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity (No Pity Edition)/song.ini",
+      "size": 414
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity (No Pity Edition)/song.ogg",
+      "size": 3580435
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity (No Pity Edition)/song.ogg.sfk",
+      "size": 123816
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity 2k20/album.png",
+      "size": 1810043
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity 2k20/background.png",
+      "size": 3835983
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity 2k20/notes.chart",
+      "size": 119643
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity 2k20/song.ini",
+      "size": 417
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity 2k20/song.ogg",
+      "size": 14428288
+    },
+    {
+      "path": "Guitar Hero X-II/20 - BONUS II - Dragonforce Medleys/Trills For Eternity 2k20/song.ogg.sfk",
+      "size": 492816
+    },
+    {
+      "path": "Guitar Hero X-II/ghx2setlist.png",
+      "size": 3969
+    }
+  ],
+  "extracted_size": 4021926005,
+  "file_count": 949,
+  "chart_count": 157,
+  "release_date": "2021-10-02"
 }

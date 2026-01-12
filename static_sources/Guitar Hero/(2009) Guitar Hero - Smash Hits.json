@@ -1,19 +1,2413 @@
 {
   "name": "(2009) Guitar Hero - Smash Hits",
-  "folder_id": "static-gh-smash-hits",
+  "folder_id": "static-2009-guitar-hero---smash-hits",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 50,
-  "total_size": 1890165402,
-  "file_count": 650,
-  "files": [
+  "downloads": [
     {
       "id": "1eB6p6ovL7zpYNLYlSjtf8t0MWIMAMLsx",
-      "path": "(2009) Guitar Hero Smash Hits/Guitar Hero - Smash Hits.zip",
       "name": "Guitar Hero - Smash Hits.zip",
       "size": 1890165402,
       "md5": "f064664ff8187cca0f4129fc852c20cb"
     }
-  ]
+  ],
+  "download_size": 1890165402,
+  "files": [
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/album.png",
+      "size": 30515
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/bass.ogg",
+      "size": 4205408
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/crowd.ogg",
+      "size": 1705639
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/drums_1.ogg",
+      "size": 4238205
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/drums_2.ogg",
+      "size": 5426410
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/drums_3.ogg",
+      "size": 1585505
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/drums_4.ogg",
+      "size": 5888091
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/guitar.ogg",
+      "size": 5183419
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/notes.mid",
+      "size": 94270
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/notes.mid.backup",
+      "size": 94270
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/song.ini",
+      "size": 1116
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/song.ini.backup",
+      "size": 1116
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/song.ogg",
+      "size": 7024670
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/AFI - Miss Murder/vocals.ogg",
+      "size": 4973142
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/album.png",
+      "size": 13167
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/bass.ogg",
+      "size": 5293733
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/crowd.ogg",
+      "size": 32123
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/drums_1.ogg",
+      "size": 6524175
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/drums_2.ogg",
+      "size": 6200401
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/drums_3.ogg",
+      "size": 1956039
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/drums_4.ogg",
+      "size": 6717617
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/guitar.ogg",
+      "size": 7330267
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/notes.mid",
+      "size": 144067
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/notes.mid.backup",
+      "size": 144067
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/song.ini",
+      "size": 1043
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/song.ini.backup",
+      "size": 1043
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/song.ogg",
+      "size": 9156177
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Aerosmith - Back in the Saddle/vocals.ogg",
+      "size": 5214104
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/album.png",
+      "size": 192636
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/bass.ogg",
+      "size": 2765204
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/crowd.ogg",
+      "size": 19131
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/drums_1.ogg",
+      "size": 3309302
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/drums_2.ogg",
+      "size": 3834106
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/drums_3.ogg",
+      "size": 223216
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/drums_4.ogg",
+      "size": 4548592
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/guitar.ogg",
+      "size": 3664529
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/notes.mid",
+      "size": 78477
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/song.ini",
+      "size": 1121
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/song.ogg",
+      "size": 1263098
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Alice in Chains - Them Bones/vocals.ogg",
+      "size": 2699497
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/album.png",
+      "size": 219070
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/bass.ogg",
+      "size": 6528204
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/crowd.ogg",
+      "size": 33796
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/drums_1.ogg",
+      "size": 7207429
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/drums_2.ogg",
+      "size": 7029749
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/drums_3.ogg",
+      "size": 835864
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/drums_4.ogg",
+      "size": 9322363
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/guitar.ogg",
+      "size": 7336796
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/notes.mid",
+      "size": 186560
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/song.ini",
+      "size": 1052
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/song.ogg",
+      "size": 1343570
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Anthrax - Caught in a Mosh/vocals.ogg",
+      "size": 6725054
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/album.png",
+      "size": 42950
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/bass.ogg",
+      "size": 7624743
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/crowd.ogg",
+      "size": 2609205
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/drums_1.ogg",
+      "size": 8495338
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/drums_2.ogg",
+      "size": 8956613
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/drums_3.ogg",
+      "size": 1182149
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/drums_4.ogg",
+      "size": 11117867
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/guitar.ogg",
+      "size": 7904922
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/notes.mid",
+      "size": 203915
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/song.ini",
+      "size": 1094
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/song.ogg",
+      "size": 5887465
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Avenged Sevenfold - Beast and the Harlot/vocals.ogg",
+      "size": 6056548
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/album.png",
+      "size": 215740
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/bass.ogg",
+      "size": 4641949
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/crowd.ogg",
+      "size": 26266
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/drums_1.ogg",
+      "size": 4955775
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/drums_2.ogg",
+      "size": 5514655
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/drums_3.ogg",
+      "size": 252929
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/drums_4.ogg",
+      "size": 6046161
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/guitar.ogg",
+      "size": 5691089
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/notes.mid",
+      "size": 79806
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/song.ini",
+      "size": 1085
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/song.ogg",
+      "size": 3728969
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Blue Oyster Cult - Godzilla/vocals.ogg",
+      "size": 5289598
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/album.png",
+      "size": 198874
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/bass.ogg",
+      "size": 4589279
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/crowd.ogg",
+      "size": 31490
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/drums_1.ogg",
+      "size": 4820973
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/drums_2.ogg",
+      "size": 4989467
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/drums_3.ogg",
+      "size": 345830
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/drums_4.ogg",
+      "size": 7242679
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/guitar.ogg",
+      "size": 8068290
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/notes.mid",
+      "size": 91778
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/song.ini",
+      "size": 1100
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/song.ogg",
+      "size": 5858566
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Boston - More Than a Feeling/vocals.ogg",
+      "size": 5163179
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/album.png",
+      "size": 23610
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/bass.ogg",
+      "size": 3906059
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/crowd.ogg",
+      "size": 24765
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/drums_1.ogg",
+      "size": 2744804
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/drums_2.ogg",
+      "size": 3031627
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/drums_3.ogg",
+      "size": 474086
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/drums_4.ogg",
+      "size": 6355846
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/guitar.ogg",
+      "size": 5361001
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/notes.mid",
+      "size": 85896
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/song.ini",
+      "size": 1039
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/song.ogg",
+      "size": 4641531
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Danzig - Mother/vocals.ogg",
+      "size": 4209326
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/album.png",
+      "size": 31295
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/bass.ogg",
+      "size": 6135736
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/crowd.ogg",
+      "size": 1136419
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/drums_1.ogg",
+      "size": 4764821
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/drums_2.ogg",
+      "size": 6874784
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/drums_3.ogg",
+      "size": 343583
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/drums_4.ogg",
+      "size": 9485142
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/guitar.ogg",
+      "size": 7978967
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/notes.mid",
+      "size": 124054
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/song.ini",
+      "size": 1071
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/song.ogg",
+      "size": 3830246
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Deep Purple - Smoke on the Water/vocals.ogg",
+      "size": 6888197
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/album.png",
+      "size": 286194
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/bass.ogg",
+      "size": 8060568
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/crowd.ogg",
+      "size": 47604
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/drums_1.ogg",
+      "size": 8907809
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/drums_2.ogg",
+      "size": 10176261
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/drums_3.ogg",
+      "size": 1723165
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/drums_4.ogg",
+      "size": 13264806
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/guitar.ogg",
+      "size": 10773947
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/notes.mid",
+      "size": 313188
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/notes.mid.backup",
+      "size": 409892
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/song.ini",
+      "size": 1082
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/song.ini.backup",
+      "size": 1078
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/song.ogg",
+      "size": 12264865
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Dragonforce - Through the Fire and Flames/vocals.ogg",
+      "size": 5821853
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/album.png",
+      "size": 127508
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/bass.ogg",
+      "size": 4298225
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/drums_1.ogg",
+      "size": 5386879
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/drums_2.ogg",
+      "size": 5633266
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/drums_3.ogg",
+      "size": 41060
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/drums_4.ogg",
+      "size": 6737867
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/guitar.ogg",
+      "size": 5548580
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/notes.mid",
+      "size": 114473
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/song.ini",
+      "size": 1095
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/song.ogg",
+      "size": 4630342
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extras/KISS - Rock and Roll All Nite ft Steve Ouimette/vocals.ogg",
+      "size": 4597392
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/album.png",
+      "size": 204421
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/bass.ogg",
+      "size": 4767149
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/crowd.ogg",
+      "size": 24879
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/drums_1.ogg",
+      "size": 4383892
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/drums_2.ogg",
+      "size": 5143741
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/drums_3.ogg",
+      "size": 978565
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/drums_4.ogg",
+      "size": 6307902
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/guitar.ogg",
+      "size": 5633608
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/notes.mid",
+      "size": 116750
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/song.ini",
+      "size": 1041
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/song.ogg",
+      "size": 1325916
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Extreme - Play With Me/vocals.ogg",
+      "size": 5165488
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/album.png",
+      "size": 12073
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/bass.ogg",
+      "size": 4850244
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/crowd.ogg",
+      "size": 1717741
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/drums_1.ogg",
+      "size": 5089557
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/drums_2.ogg",
+      "size": 5514000
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/drums_3.ogg",
+      "size": 27184
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/drums_4.ogg",
+      "size": 7469019
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/guitar.ogg",
+      "size": 5773297
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/notes.mid",
+      "size": 153786
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/song.ini",
+      "size": 1097
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/song.ogg",
+      "size": 1268362
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Foo Fighters - Monkey Wrench/vocals.ogg",
+      "size": 5329293
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/album.png",
+      "size": 124438
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/bass.ogg",
+      "size": 5180713
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/crowd.ogg",
+      "size": 27809
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/drums_1.ogg",
+      "size": 5159221
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/drums_2.ogg",
+      "size": 2037767
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/drums_3.ogg",
+      "size": 27809
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/drums_4.ogg",
+      "size": 6926707
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/guitar.ogg",
+      "size": 5499558
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/notes.mid",
+      "size": 98417
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/song.ini",
+      "size": 1133
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/song.ogg",
+      "size": 3635793
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Franz Ferdinand - Take Me Out/vocals.ogg",
+      "size": 3538901
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Fran\u00e7ois Jalbert - Beenox Logo/album.png",
+      "size": 492537
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Fran\u00e7ois Jalbert - Beenox Logo/guitar.ogg",
+      "size": 538987
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Fran\u00e7ois Jalbert - Beenox Logo/notes.mid",
+      "size": 53336
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Fran\u00e7ois Jalbert - Beenox Logo/song.ini",
+      "size": 1129
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/album.png",
+      "size": 35102
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/bass.ogg",
+      "size": 4763682
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/crowd.ogg",
+      "size": 30277
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/drums_1.ogg",
+      "size": 6195504
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/drums_2.ogg",
+      "size": 4383467
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/drums_3.ogg",
+      "size": 168413
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/drums_4.ogg",
+      "size": 8761688
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/guitar.ogg",
+      "size": 6772780
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/notes.mid",
+      "size": 134055
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/song.ini",
+      "size": 1037
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/song.ogg",
+      "size": 5339201
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Heart - Barracuda/vocals.ogg",
+      "size": 4136448
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/album.png",
+      "size": 13046
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/bass.ogg",
+      "size": 5047511
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/crowd.ogg",
+      "size": 26611
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/drums_1.ogg",
+      "size": 4788452
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/drums_2.ogg",
+      "size": 5533265
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/drums_3.ogg",
+      "size": 97879
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/drums_4.ogg",
+      "size": 7297100
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/guitar.ogg",
+      "size": 5050017
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/notes.mid",
+      "size": 137656
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/song.ini",
+      "size": 1057
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/song.ogg",
+      "size": 5641181
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Helmet - Unsung/vocals.ogg",
+      "size": 2433695
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/album.png",
+      "size": 147269
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/bass.ogg",
+      "size": 4087049
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/crowd.ogg",
+      "size": 2705784
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/drums_1.ogg",
+      "size": 4144359
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/drums_2.ogg",
+      "size": 4768884
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/drums_3.ogg",
+      "size": 213352
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/drums_4.ogg",
+      "size": 6024230
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/guitar.ogg",
+      "size": 5806477
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/notes.mid",
+      "size": 83856
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/song.ini",
+      "size": 1009
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/song.ogg",
+      "size": 3286762
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Incubus - Stellar/vocals.ogg",
+      "size": 4702199
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/album.png",
+      "size": 235996
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/bass.ogg",
+      "size": 5502284
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/crowd.ogg",
+      "size": 29083
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/drums_1.ogg",
+      "size": 3447096
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/drums_2.ogg",
+      "size": 5629161
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/drums_3.ogg",
+      "size": 962046
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/drums_4.ogg",
+      "size": 7408480
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/guitar.ogg",
+      "size": 6194542
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/notes.mid",
+      "size": 161050
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/song.ini",
+      "size": 1051
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/song.ogg",
+      "size": 5039589
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Iron Maiden - The Trooper/vocals.ogg",
+      "size": 5119392
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/album.png",
+      "size": 40930
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/bass.ogg",
+      "size": 5732613
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/crowd.ogg",
+      "size": 29494
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/drums_1.ogg",
+      "size": 4625247
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/drums_2.ogg",
+      "size": 5931746
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/drums_3.ogg",
+      "size": 451874
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/drums_4.ogg",
+      "size": 6584433
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/guitar.ogg",
+      "size": 5473450
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/notes.mid",
+      "size": 105954
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/song.ini",
+      "size": 1125
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/song.ogg",
+      "size": 3937527
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Jane's Addiction - Stop!/vocals.ogg",
+      "size": 4652066
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/album.png",
+      "size": 182473
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/bass.ogg",
+      "size": 3617691
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/crowd.ogg",
+      "size": 1890274
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/drums_1.ogg",
+      "size": 4234738
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/drums_2.ogg",
+      "size": 3868004
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/drums_3.ogg",
+      "size": 21715
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/drums_4.ogg",
+      "size": 4920260
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/guitar.ogg",
+      "size": 4900921
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/notes.mid",
+      "size": 49938
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/song.ini",
+      "size": 1124
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/song.ogg",
+      "size": 3982473
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Joan Jett And The Blackhearts - I Love Rock and Roll/vocals.ogg",
+      "size": 4466414
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/album.png",
+      "size": 42289
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/bass.ogg",
+      "size": 5182332
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/crowd.ogg",
+      "size": 29390
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/drums_1.ogg",
+      "size": 6586280
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/drums_2.ogg",
+      "size": 6207435
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/drums_3.ogg",
+      "size": 29390
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/drums_4.ogg",
+      "size": 8172255
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/guitar.ogg",
+      "size": 6531746
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/notes.mid",
+      "size": 135106
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/song.ini",
+      "size": 1101
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/song.ogg",
+      "size": 3349575
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Judas Priest - Electric Eye/vocals.ogg",
+      "size": 3093743
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/album.png",
+      "size": 31769
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/bass.ogg",
+      "size": 5124143
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/crowd.ogg",
+      "size": 2305379
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/drums_1.ogg",
+      "size": 5928062
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/drums_2.ogg",
+      "size": 2511145
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/drums_3.ogg",
+      "size": 356474
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/drums_4.ogg",
+      "size": 7885637
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/guitar.ogg",
+      "size": 7730351
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/notes.mid",
+      "size": 122835
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/song.ini",
+      "size": 1103
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/song.ogg",
+      "size": 7666560
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kansas - Carry On Wayward Son/vocals.ogg",
+      "size": 6797865
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/album.png",
+      "size": 127508
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/bass.ogg",
+      "size": 3600033
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/crowd.ogg",
+      "size": 3571221
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/drums_1.ogg",
+      "size": 4205500
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/drums_2.ogg",
+      "size": 4633554
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/drums_3.ogg",
+      "size": 122483
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/drums_4.ogg",
+      "size": 5311292
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/guitar.ogg",
+      "size": 4676951
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/notes.mid",
+      "size": 75015
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/song.ini",
+      "size": 1050
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/song.ogg",
+      "size": 3240120
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Kiss - Rock and Roll All Nite/vocals.ogg",
+      "size": 4385686
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/album.png",
+      "size": 268006
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/bass.ogg",
+      "size": 4601899
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/crowd.ogg",
+      "size": 26741
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/drums_1.ogg",
+      "size": 5604291
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/drums_2.ogg",
+      "size": 5528162
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/drums_3.ogg",
+      "size": 699879
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/drums_4.ogg",
+      "size": 6462710
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/guitar.ogg",
+      "size": 5846112
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/notes.mid",
+      "size": 161557
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/song.ini",
+      "size": 1056
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/song.ogg",
+      "size": 2123505
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lamb of God - Laid to Rest/vocals.ogg",
+      "size": 4711146
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/album.png",
+      "size": 252919
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/bass.ogg",
+      "size": 5723611
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/crowd.ogg",
+      "size": 32968
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/drums_1.ogg",
+      "size": 6552952
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/drums_2.ogg",
+      "size": 7218485
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/drums_3.ogg",
+      "size": 696707
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/drums_4.ogg",
+      "size": 9052820
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/guitar.ogg",
+      "size": 7699886
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/notes.mid",
+      "size": 135678
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/song.ini",
+      "size": 1301
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/song.ogg",
+      "size": 2477853
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Living Colour - Cult of Personality/vocals.ogg",
+      "size": 5534595
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/album.png",
+      "size": 203826
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/bass.ogg",
+      "size": 11209464
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/crowd.ogg",
+      "size": 5069523
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/drums_1.ogg",
+      "size": 14333821
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/drums_2.ogg",
+      "size": 11203295
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/drums_3.ogg",
+      "size": 802367
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/drums_4.ogg",
+      "size": 15198613
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/guitar.ogg",
+      "size": 13487718
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/notes.mid",
+      "size": 267745
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/song.ini",
+      "size": 1127
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/song.ogg",
+      "size": 16664593
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Lynyrd Skynyrd - Free Bird/vocals.ogg",
+      "size": 9185249
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/album.png",
+      "size": 24738
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/bass.ogg",
+      "size": 4383485
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/crowd.ogg",
+      "size": 1120253
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/drums_1.ogg",
+      "size": 5190732
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/drums_2.ogg",
+      "size": 6241216
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/drums_3.ogg",
+      "size": 404745
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/drums_4.ogg",
+      "size": 7076568
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/guitar.ogg",
+      "size": 5400782
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/notes.mid",
+      "size": 100912
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/song.ini",
+      "size": 1042
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/song.ogg",
+      "size": 4313530
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Motley Crue - Shout at the Devil/vocals.ogg",
+      "size": 4844317
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/album.png",
+      "size": 20677
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/bass.ogg",
+      "size": 6068641
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/crowd.ogg",
+      "size": 3888692
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/drums_1.ogg",
+      "size": 5860127
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/drums_2.ogg",
+      "size": 6324757
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/drums_3.ogg",
+      "size": 7265126
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/drums_4.ogg",
+      "size": 8582195
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/guitar.ogg",
+      "size": 7342580
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/notes.mid",
+      "size": 120425
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/song.ini",
+      "size": 1055
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/song.ogg",
+      "size": 6387919
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Nirvana - Heart-Shaped Box/vocals.ogg",
+      "size": 6151483
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/album.png",
+      "size": 188508
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/bass.ogg",
+      "size": 4884668
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/crowd.ogg",
+      "size": 2465950
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/drums_1.ogg",
+      "size": 5320397
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/drums_2.ogg",
+      "size": 5703957
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/drums_3.ogg",
+      "size": 147267
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/drums_4.ogg",
+      "size": 6901645
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/guitar.ogg",
+      "size": 6179806
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/notes.mid",
+      "size": 136189
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/song.ini",
+      "size": 1080
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/song.ogg",
+      "size": 6467327
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ozzy Osbourne - Bark at the Moon/vocals.ogg",
+      "size": 5272131
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/album.png",
+      "size": 209851
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/bass.ogg",
+      "size": 6104734
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/crowd.ogg",
+      "size": 31135
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/drums_1.ogg",
+      "size": 5383102
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/drums_2.ogg",
+      "size": 5934932
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/drums_3.ogg",
+      "size": 1078633
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/drums_4.ogg",
+      "size": 6368038
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/guitar.ogg",
+      "size": 5712624
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/notes.mid",
+      "size": 161975
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/song.ini",
+      "size": 1082
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/song.ogg",
+      "size": 2651822
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pantera - Cowboys From Hell/vocals.ogg",
+      "size": 4959600
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/album.png",
+      "size": 185404
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/bass.ogg",
+      "size": 3587371
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/crowd.ogg",
+      "size": 1592282
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/drums_1.ogg",
+      "size": 3617625
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/drums_2.ogg",
+      "size": 2589083
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/drums_3.ogg",
+      "size": 614859
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/drums_4.ogg",
+      "size": 4019721
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/guitar.ogg",
+      "size": 4653277
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/notes.mid",
+      "size": 69014
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/song.ini",
+      "size": 1126
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/song.ogg",
+      "size": 4702099
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Pat Benetar - Hit Me With Your Best Shot/vocals.ogg",
+      "size": 4625929
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/album.png",
+      "size": 287113
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/bass.ogg",
+      "size": 5154502
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/crowd.ogg",
+      "size": 1646678
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/drums_1.ogg",
+      "size": 4800293
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/drums_2.ogg",
+      "size": 5077400
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/drums_3.ogg",
+      "size": 497492
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/drums_4.ogg",
+      "size": 6490832
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/guitar.ogg",
+      "size": 5393938
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/notes.mid",
+      "size": 84980
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/song.ini",
+      "size": 1045
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/song.ogg",
+      "size": 2739654
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Poison - Nothin' But a Good Time/vocals.ogg",
+      "size": 4968448
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/album.png",
+      "size": 240398
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/bass.ogg",
+      "size": 4313166
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/crowd.ogg",
+      "size": 1757281
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/drums_1.ogg",
+      "size": 3879070
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/drums_2.ogg",
+      "size": 4026021
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/drums_3.ogg",
+      "size": 252216
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/drums_4.ogg",
+      "size": 5539143
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/guitar.ogg",
+      "size": 4971132
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/notes.mid",
+      "size": 97973
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/song.ini",
+      "size": 1063
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/song.ogg",
+      "size": 2483205
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Priestess - Lay Down/vocals.ogg",
+      "size": 3880697
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/album.png",
+      "size": 35680
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/bass.ogg",
+      "size": 2696322
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/crowd.ogg",
+      "size": 21994
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/drums_1.ogg",
+      "size": 1631606
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/drums_2.ogg",
+      "size": 3175057
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/drums_3.ogg",
+      "size": 689020
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/drums_4.ogg",
+      "size": 4503012
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/guitar.ogg",
+      "size": 4254714
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/notes.mid",
+      "size": 54615
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/song.ini",
+      "size": 1041
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/song.ogg",
+      "size": 3315247
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queen - Killer Queen/vocals.ogg",
+      "size": 3269174
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/album.png",
+      "size": 16634
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/bass.ogg",
+      "size": 4867238
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/crowd.ogg",
+      "size": 29512
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/drums_1.ogg",
+      "size": 4938285
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/drums_2.ogg",
+      "size": 4005286
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/drums_3.ogg",
+      "size": 768712
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/drums_4.ogg",
+      "size": 7415783
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/guitar.ogg",
+      "size": 6305758
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/notes.mid",
+      "size": 139787
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/song.ini",
+      "size": 1086
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/song.ogg",
+      "size": 764284
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Queens of the Stone Age - No One Knows/vocals.ogg",
+      "size": 4509093
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/album.png",
+      "size": 234940
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/bass.ogg",
+      "size": 8729920
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/crowd.ogg",
+      "size": 35409
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/drums_1.ogg",
+      "size": 7232624
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/drums_2.ogg",
+      "size": 8354593
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/drums_3.ogg",
+      "size": 1018249
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/drums_4.ogg",
+      "size": 10727774
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/guitar.ogg",
+      "size": 7676314
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/notes.mid",
+      "size": 151193
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/song.ini",
+      "size": 1089
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/song.ogg",
+      "size": 1496560
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rage Against the Machine - Killing in the Name/vocals.ogg",
+      "size": 6281574
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/album.png",
+      "size": 18961
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/bass.ogg",
+      "size": 5784302
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/crowd.ogg",
+      "size": 30814
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/drums_1.ogg",
+      "size": 5096173
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/drums_2.ogg",
+      "size": 6046820
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/drums_3.ogg",
+      "size": 5002746
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/drums_4.ogg",
+      "size": 8929265
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/guitar.ogg",
+      "size": 6051632
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/notes.mid",
+      "size": 125647
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/song.ini",
+      "size": 1034
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/song.ogg",
+      "size": 4552438
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Ratt - Round and Round/vocals.ogg",
+      "size": 5267630
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/album.png",
+      "size": 156242
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/bass.ogg",
+      "size": 6554087
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/crowd.ogg",
+      "size": 30718
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/drums_1.ogg",
+      "size": 5205335
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/drums_2.ogg",
+      "size": 2793473
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/drums_3.ogg",
+      "size": 501573
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/drums_4.ogg",
+      "size": 7361684
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/guitar.ogg",
+      "size": 6381767
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/notes.mid",
+      "size": 122597
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/song.ini",
+      "size": 1066
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/song.ogg",
+      "size": 1840669
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Rush - YYZ/vocals.ogg",
+      "size": 30871
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/album.png",
+      "size": 235559
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/bass.ogg",
+      "size": 3051534
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/crowd.ogg",
+      "size": 25859
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/drums_1.ogg",
+      "size": 4236694
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/drums_2.ogg",
+      "size": 2520516
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/drums_3.ogg",
+      "size": 1359403
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/drums_4.ogg",
+      "size": 5127432
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/guitar.ogg",
+      "size": 5548113
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/notes.mid",
+      "size": 128642
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/song.ini",
+      "size": 990
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/song.ogg",
+      "size": 4377973
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Slayer - Raining Blood/vocals.ogg",
+      "size": 2577612
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/album.png",
+      "size": 10844
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/bass.ogg",
+      "size": 3097286
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/crowd.ogg",
+      "size": 21561
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/drums_1.ogg",
+      "size": 3731033
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/drums_2.ogg",
+      "size": 4172296
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/drums_3.ogg",
+      "size": 46929
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/drums_4.ogg",
+      "size": 5708462
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/guitar.ogg",
+      "size": 4759443
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/notes.mid",
+      "size": 94726
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/song.ini",
+      "size": 1183
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/song.ogg",
+      "size": 4553676
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/vocals.ogg",
+      "size": 4388084
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/album.png",
+      "size": 234538
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/bass.ogg",
+      "size": 2921038
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/crowd.ogg",
+      "size": 20128
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/drums_1.ogg",
+      "size": 3088287
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/drums_2.ogg",
+      "size": 3909371
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/drums_3.ogg",
+      "size": 192751
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/drums_4.ogg",
+      "size": 4711482
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/guitar.ogg",
+      "size": 4635081
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/notes.mid",
+      "size": 80969
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/song.ini",
+      "size": 1072
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/song.ogg",
+      "size": 1691766
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Donnas - Take It Off/vocals.ogg",
+      "size": 2537043
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/album.png",
+      "size": 50720
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/bass.ogg",
+      "size": 7654884
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/crowd.ogg",
+      "size": 3069448
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/drums_1.ogg",
+      "size": 5167366
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/drums_2.ogg",
+      "size": 5372383
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/drums_3.ogg",
+      "size": 1554058
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/drums_4.ogg",
+      "size": 6206626
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/guitar.ogg",
+      "size": 6181680
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/notes.mid",
+      "size": 131976
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/song.ini",
+      "size": 1057
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/song.ogg",
+      "size": 3047003
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Exies - Hey You/vocals.ogg",
+      "size": 5104007
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/album.png",
+      "size": 47777
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/bass.ogg",
+      "size": 5012163
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/crowd.ogg",
+      "size": 31504
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/drums_1.ogg",
+      "size": 3843675
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/drums_2.ogg",
+      "size": 3205158
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/drums_3.ogg",
+      "size": 491633
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/drums_4.ogg",
+      "size": 8445884
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/guitar.ogg",
+      "size": 7538732
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/notes.mid",
+      "size": 120158
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/song.ini",
+      "size": 1194
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/song.ogg",
+      "size": 4095383
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Police - Message in a Bottle/vocals.ogg",
+      "size": 6362148
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/album.png",
+      "size": 188578
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/bass.ogg",
+      "size": 3348547
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/crowd.ogg",
+      "size": 19716
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/drums_1.ogg",
+      "size": 2952380
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/drums_2.ogg",
+      "size": 3724725
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/drums_3.ogg",
+      "size": 187649
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/drums_4.ogg",
+      "size": 4922318
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/guitar.ogg",
+      "size": 3600871
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/notes.mid",
+      "size": 80513
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/song.ini",
+      "size": 1127
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/song.ogg",
+      "size": 19716
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Reverend Horton Heat - Psychobilly Freakout/vocals.ogg",
+      "size": 2960833
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/album.png",
+      "size": 49407
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/bass.ogg",
+      "size": 4801630
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/crowd.ogg",
+      "size": 30672
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/drums_1.ogg",
+      "size": 4467712
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/drums_2.ogg",
+      "size": 5973667
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/drums_3.ogg",
+      "size": 307665
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/drums_4.ogg",
+      "size": 8305277
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/guitar.ogg",
+      "size": 5791449
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/notes.mid",
+      "size": 126558
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/song.ini",
+      "size": 1039
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/song.ogg",
+      "size": 1051870
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/The Sword - Freya/vocals.ogg",
+      "size": 1792281
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/album.png",
+      "size": 238893
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/bass.ogg",
+      "size": 3454177
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/crowd.ogg",
+      "size": 2191417
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/drums_1.ogg",
+      "size": 4880839
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/drums_2.ogg",
+      "size": 4779110
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/drums_3.ogg",
+      "size": 264181
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/drums_4.ogg",
+      "size": 5772059
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/guitar.ogg",
+      "size": 4504193
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/notes.mid",
+      "size": 79231
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/song.ini",
+      "size": 1055
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/song.ogg",
+      "size": 1645177
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Twisted Sister - I Wanna Rock/vocals.ogg",
+      "size": 4397453
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/album.png",
+      "size": 18517
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/bass.ogg",
+      "size": 3998482
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/crowd.ogg",
+      "size": 23703
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/drums_1.ogg",
+      "size": 4323113
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/drums_2.ogg",
+      "size": 3850657
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/drums_3.ogg",
+      "size": 683235
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/drums_4.ogg",
+      "size": 5035686
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/guitar.ogg",
+      "size": 4925519
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/notes.mid",
+      "size": 70787
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/song.ini",
+      "size": 1046
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/song.ogg",
+      "size": 2842271
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Warrant - Cherry Pie/vocals.ogg",
+      "size": 5063186
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/album.png",
+      "size": 48115
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/bass.ogg",
+      "size": 4493218
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/crowd.ogg",
+      "size": 27602
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/drums_1.ogg",
+      "size": 5246672
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/drums_2.ogg",
+      "size": 4893827
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/drums_3.ogg",
+      "size": 558875
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/drums_4.ogg",
+      "size": 7022577
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/guitar.ogg",
+      "size": 5693858
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/notes.mid",
+      "size": 114445
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/song.ini",
+      "size": 1075
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/song.ogg",
+      "size": 6265908
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/White Zombie - Thunder Kiss '65/vocals.ogg",
+      "size": 4570047
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/album.png",
+      "size": 186387
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/bass.ogg",
+      "size": 3289856
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/crowd.ogg",
+      "size": 21104
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/drums_1.ogg",
+      "size": 3523944
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/drums_2.ogg",
+      "size": 4061435
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/drums_3.ogg",
+      "size": 354564
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/drums_4.ogg",
+      "size": 4727871
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/guitar.ogg",
+      "size": 4114914
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/notes.mid",
+      "size": 87526
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/song.ini",
+      "size": 1051
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/song.ogg",
+      "size": 3462192
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/Wolfmother - Woman/vocals.ogg",
+      "size": 3925214
+    },
+    {
+      "path": "(2009) Guitar Hero - Smash Hits/changelog.txt",
+      "size": 733
+    }
+  ],
+  "extracted_size": 1926149774,
+  "file_count": 598,
+  "chart_count": 50,
+  "release_date": "2009-06-16"
 }

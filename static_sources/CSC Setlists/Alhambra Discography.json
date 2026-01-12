@@ -1,19 +1,1001 @@
 {
   "name": "Alhambra Discography",
-  "folder_id": "static-alhambra",
+  "folder_id": "static-alhambra-discography",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 49,
-  "total_size": 1106821953,
-  "file_count": 245,
-  "files": [
+  "downloads": [
     {
       "id": "10FUPVK9OfU9VWZOKT192QGVOEZ89bwC5",
-      "path": "Alhambra Discography/Alhambra Discography.7z",
-      "name": "Alhambra Discography.7z",
+      "name": "Alhambra Discography Setlist.rar",
       "size": 1106821953,
       "md5": "cdbd304184102a689d00735a2b826c0a"
     }
-  ]
+  ],
+  "download_size": 1106821953,
+  "files": [
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/01. Mistiness/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/01. Mistiness/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/01. Mistiness/notes.chart",
+      "size": 17682
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/01. Mistiness/song.ini",
+      "size": 662
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/01. Mistiness/song.ogg",
+      "size": 3410598
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/02. Lost in a Revery/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/02. Lost in a Revery/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/02. Lost in a Revery/notes.chart",
+      "size": 54689
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/02. Lost in a Revery/song.ini",
+      "size": 398
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/02. Lost in a Revery/song.ogg",
+      "size": 12846544
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/03. Missing You/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/03. Missing You/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/03. Missing You/notes.chart",
+      "size": 90955
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/03. Missing You/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/03. Missing You/song.ogg",
+      "size": 12076220
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/04. Doll's Solitude/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/04. Doll's Solitude/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/04. Doll's Solitude/notes.chart",
+      "size": 50595
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/04. Doll's Solitude/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/04. Doll's Solitude/song.ogg",
+      "size": 10247886
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/05. Orion/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/05. Orion/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/05. Orion/notes.chart",
+      "size": 87400
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/05. Orion/song.ini",
+      "size": 460
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/05. Orion/song.ogg",
+      "size": 13192891
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/06. Your Favorite Melodies/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/06. Your Favorite Melodies/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/06. Your Favorite Melodies/notes.chart",
+      "size": 46526
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/06. Your Favorite Melodies/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/06. Your Favorite Melodies/song.ogg",
+      "size": 9470205
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/07. Faith/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/07. Faith/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/07. Faith/notes.chart",
+      "size": 40808
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/07. Faith/song.ini",
+      "size": 348
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/07. Faith/song.ogg",
+      "size": 8108541
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/08. God Keeper/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/08. God Keeper/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/08. God Keeper/notes.chart",
+      "size": 80715
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/08. God Keeper/song.ini",
+      "size": 295
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/08. God Keeper/song.ogg",
+      "size": 11683002
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/09. A Far Cry to You/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/09. A Far Cry to You/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/09. A Far Cry to You/notes.chart",
+      "size": 119112
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/09. A Far Cry to You/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/09. A Far Cry to You/song.ogg",
+      "size": 25466885
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/10. Radiance/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/10. Radiance/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/10. Radiance/notes.chart",
+      "size": 56941
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/10. Radiance/song.ini",
+      "size": 442
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/10. Radiance/song.ogg",
+      "size": 11345020
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/11. Aretha/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/11. Aretha/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/11. Aretha/notes.chart",
+      "size": 55294
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/11. Aretha/song.ini",
+      "size": 472
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/11. Aretha/song.ogg",
+      "size": 10042403
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to You (Full Album)/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to You (Full Album)/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to You (Full Album)/notes.chart",
+      "size": 734398
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to You (Full Album)/song.ini",
+      "size": 337
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to You (Full Album)/song.ogg",
+      "size": 128332958
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to Your Solo Medley/album.png",
+      "size": 410473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to Your Solo Medley/background.jpg",
+      "size": 505697
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to Your Solo Medley/notes.chart",
+      "size": 223631
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to Your Solo Medley/song.ini",
+      "size": 316
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 01. A Far Cry to You/A Far Cry to Your Solo Medley/song.ogg",
+      "size": 31085297
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/01. Morning Calm/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/01. Morning Calm/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/01. Morning Calm/notes.chart",
+      "size": 3475
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/01. Morning Calm/song.ini",
+      "size": 359
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/01. Morning Calm/song.ogg",
+      "size": 2551983
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/02. The Infinite Ocean/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/02. The Infinite Ocean/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/02. The Infinite Ocean/notes.chart",
+      "size": 51658
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/02. The Infinite Ocean/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/02. The Infinite Ocean/song.ogg",
+      "size": 9471751
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/03. Labyrinth/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/03. Labyrinth/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/03. Labyrinth/notes.chart",
+      "size": 60268
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/03. Labyrinth/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/03. Labyrinth/song.ogg",
+      "size": 13167213
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/04. Utopia/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/04. Utopia/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/04. Utopia/notes.chart",
+      "size": 54972
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/04. Utopia/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/04. Utopia/song.ogg",
+      "size": 11925314
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/05. The Rain of Farewell Cerise/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/05. The Rain of Farewell Cerise/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/05. The Rain of Farewell Cerise/notes.chart",
+      "size": 63382
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/05. The Rain of Farewell Cerise/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/05. The Rain of Farewell Cerise/song.ogg",
+      "size": 14524625
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/06. A Wish For Angel's Sky/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/06. A Wish For Angel's Sky/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/06. A Wish For Angel's Sky/notes.chart",
+      "size": 41322
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/06. A Wish For Angel's Sky/song.ini",
+      "size": 459
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/06. A Wish For Angel's Sky/song.ogg",
+      "size": 9895130
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/07. Fadista/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/07. Fadista/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/07. Fadista/notes.chart",
+      "size": 83324
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/07. Fadista/song.ini",
+      "size": 328
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/07. Fadista/song.ogg",
+      "size": 18812928
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/08. Estacion Aburasadora/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/08. Estacion Aburasadora/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/08. Estacion Aburasadora/notes.chart",
+      "size": 70161
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/08. Estacion Aburasadora/song.ini",
+      "size": 525
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/08. Estacion Aburasadora/song.ogg",
+      "size": 12042737
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/09. Die Walk\u00fcre/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/09. Die Walk\u00fcre/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/09. Die Walk\u00fcre/notes.chart",
+      "size": 121626
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/09. Die Walk\u00fcre/song.ini",
+      "size": 404
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/09. Die Walk\u00fcre/song.ogg",
+      "size": 22725501
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/10. Life to Love/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/10. Life to Love/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/10. Life to Love/notes.chart",
+      "size": 32496
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/10. Life to Love/song.ini",
+      "size": 331
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/10. Life to Love/song.ogg",
+      "size": 6955444
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista (Full Album)/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista (Full Album)/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista (Full Album)/notes.chart",
+      "size": 609484
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista (Full Album)/song.ini",
+      "size": 294
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista (Full Album)/song.ogg",
+      "size": 122037480
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista Solo Medley/album.png",
+      "size": 465605
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista Solo Medley/background.jpg",
+      "size": 999995
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista Solo Medley/notes.chart",
+      "size": 150851
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista Solo Medley/song.ini",
+      "size": 305
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 02. Fadista/Fadista Solo Medley/song.ogg",
+      "size": 23183488
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/01. Maze of Tragedy/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/01. Maze of Tragedy/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/01. Maze of Tragedy/notes.chart",
+      "size": 90219
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/01. Maze of Tragedy/song.ini",
+      "size": 446
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/01. Maze of Tragedy/song.ogg",
+      "size": 15031922
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/02. Perfect Blue/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/02. Perfect Blue/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/02. Perfect Blue/notes.chart",
+      "size": 77740
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/02. Perfect Blue/song.ini",
+      "size": 317
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/02. Perfect Blue/song.ogg",
+      "size": 13433777
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/03. Forever/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/03. Forever/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/03. Forever/notes.chart",
+      "size": 80449
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/03. Forever/song.ini",
+      "size": 434
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/03. Forever/song.ogg",
+      "size": 16837551
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/04. Fleeting Circus/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/04. Fleeting Circus/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/04. Fleeting Circus/notes.chart",
+      "size": 33588
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/04. Fleeting Circus/song.ini",
+      "size": 328
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/04. Fleeting Circus/song.ogg",
+      "size": 8108176
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/05. Dear Friend/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/05. Dear Friend/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/05. Dear Friend/notes.chart",
+      "size": 52840
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/05. Dear Friend/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/05. Dear Friend/song.ogg",
+      "size": 11561847
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/06. Siegfried #1 Nothung/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/06. Siegfried #1 Nothung/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/06. Siegfried #1 Nothung/notes.chart",
+      "size": 21431
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/06. Siegfried #1 Nothung/song.ini",
+      "size": 541
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/06. Siegfried #1 Nothung/song.ogg",
+      "size": 3562389
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/07. Siegfried #2 Battle in the Dark Forest/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/07. Siegfried #2 Battle in the Dark Forest/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/07. Siegfried #2 Battle in the Dark Forest/notes.chart",
+      "size": 78264
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/07. Siegfried #2 Battle in the Dark Forest/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/07. Siegfried #2 Battle in the Dark Forest/song.ogg",
+      "size": 15590786
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/08. Siegfried #3 Fate of the Gods/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/08. Siegfried #3 Fate of the Gods/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/08. Siegfried #3 Fate of the Gods/notes.chart",
+      "size": 33912
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/08. Siegfried #3 Fate of the Gods/song.ini",
+      "size": 561
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/08. Siegfried #3 Fate of the Gods/song.ogg",
+      "size": 8357973
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/09. Siegfried #4 All for the Reason/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/09. Siegfried #4 All for the Reason/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/09. Siegfried #4 All for the Reason/notes.chart",
+      "size": 85216
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/09. Siegfried #4 All for the Reason/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/09. Siegfried #4 All for the Reason/song.ogg",
+      "size": 15502486
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/10. Siegfried (Full Suite)/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/10. Siegfried (Full Suite)/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/10. Siegfried (Full Suite)/notes.chart",
+      "size": 222666
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/10. Siegfried (Full Suite)/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/10. Siegfried (Full Suite)/song.ogg",
+      "size": 42863835
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried (Full Album)/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried (Full Album)/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried (Full Album)/notes.chart",
+      "size": 577259
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried (Full Album)/song.ini",
+      "size": 300
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried (Full Album)/song.ogg",
+      "size": 105957161
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried Solo Medley (New)/album.png",
+      "size": 499661
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried Solo Medley (New)/background.jpg",
+      "size": 888473
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried Solo Medley (New)/notes.chart",
+      "size": 137487
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried Solo Medley (New)/song.ini",
+      "size": 337
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 03. Siegfried/Siegfried Solo Medley (New)/song.ogg",
+      "size": 21416016
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/01. Appassionata/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/01. Appassionata/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/01. Appassionata/notes.chart",
+      "size": 28906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/01. Appassionata/song.ini",
+      "size": 345
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/01. Appassionata/song.ogg",
+      "size": 5070556
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/02. Earnest/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/02. Earnest/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/02. Earnest/notes.chart",
+      "size": 86969
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/02. Earnest/song.ini",
+      "size": 402
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/02. Earnest/song.ogg",
+      "size": 12555180
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/03. OO (Double O)/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/03. OO (Double O)/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/03. OO (Double O)/notes.chart",
+      "size": 67475
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/03. OO (Double O)/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/03. OO (Double O)/song.ogg",
+      "size": 10532395
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/04. Warning You/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/04. Warning You/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/04. Warning You/notes.chart",
+      "size": 70603
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/04. Warning You/song.ini",
+      "size": 696
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/04. Warning You/song.ogg",
+      "size": 12666558
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/05. Solitude/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/05. Solitude/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/05. Solitude/notes.chart",
+      "size": 67201
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/05. Solitude/song.ini",
+      "size": 307
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/05. Solitude/song.ogg",
+      "size": 14536122
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/06. The Key to Wish/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/06. The Key to Wish/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/06. The Key to Wish/notes.chart",
+      "size": 54675
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/06. The Key to Wish/song.ini",
+      "size": 419
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/06. The Key to Wish/song.ogg",
+      "size": 10696077
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/07. The Earth (Die Erde)/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/07. The Earth (Die Erde)/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/07. The Earth (Die Erde)/notes.chart",
+      "size": 55215
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/07. The Earth (Die Erde)/song.ini",
+      "size": 387
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/07. The Earth (Die Erde)/song.ogg",
+      "size": 9225030
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/08. Close Your Eyes/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/08. Close Your Eyes/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/08. Close Your Eyes/notes.chart",
+      "size": 4702
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/08. Close Your Eyes/song.ini",
+      "size": 320
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/08. Close Your Eyes/song.ogg",
+      "size": 2063887
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/09. Das Rheingold/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/09. Das Rheingold/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/09. Das Rheingold/notes.chart",
+      "size": 87211
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/09. Das Rheingold/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/09. Das Rheingold/song.ogg",
+      "size": 13150663
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/10. Ha.ru.u.sa.gi/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/10. Ha.ru.u.sa.gi/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/10. Ha.ru.u.sa.gi/notes.chart",
+      "size": 34578
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/10. Ha.ru.u.sa.gi/song.ini",
+      "size": 400
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/10. Ha.ru.u.sa.gi/song.ogg",
+      "size": 6344590
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Solo Medley Trilogy/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Solo Medley Trilogy/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Solo Medley Trilogy/notes.chart",
+      "size": 151510
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Solo Medley Trilogy/song.ini",
+      "size": 335
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Solo Medley Trilogy/song.ogg",
+      "size": 22472026
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Trilogy (Full Album)/album.png",
+      "size": 368906
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Trilogy (Full Album)/background.jpg",
+      "size": 715997
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Trilogy (Full Album)/notes.chart",
+      "size": 581584
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Trilogy (Full Album)/song.ini",
+      "size": 330
+    },
+    {
+      "path": "Alhambra Discography/[ALH] 04. The Earnest Trilogy/The Earnest Trilogy (Full Album)/song.ogg",
+      "size": 96682334
+    }
+  ],
+  "extracted_size": 1113799045,
+  "file_count": 245,
+  "chart_count": 49,
+  "release_date": "2025-09-15"
 }

@@ -1,0 +1,1202 @@
+{
+  "name": "(2012) Rock Band Blitz",
+  "folder_id": "static-2012-rock-band-blitz",
+  "group": "Games",
+  "collection": "Rock Band",
+  "downloads": [
+    {
+      "id": "1M9a0JjRcd_3BUPBAplvpXAzhoWZ_vAFq",
+      "name": "Rock Band Blitz 17.7z",
+      "size": 40682793,
+      "md5": "7935de882aabea081ee66ba5f7a1a3dd",
+      "path": "Rock Band Blitz 17.7z"
+    },
+    {
+      "id": "1y9xXmUv1940eOWhfGxz6C2SWLEvDHtMA",
+      "name": "Rock Band Blitz 25.7z",
+      "size": 54718548,
+      "md5": "9b3c998ab5b1b91f5b5f4a19c146fc10",
+      "path": "Rock Band Blitz 25.7z"
+    },
+    {
+      "id": "16iIGDhxcgKe-9WpSmEu3TFS0SJmCnch0",
+      "name": "Rock Band Blitz 24.7z",
+      "size": 77364195,
+      "md5": "6e92718ac74cbfe681e7516faa0fcdff",
+      "path": "Rock Band Blitz 24.7z"
+    },
+    {
+      "id": "1y7BS5dMSW3Yoe9_Ca4dhzT4BouvYOoY7",
+      "name": "Rock Band Blitz 23.7z",
+      "size": 44267173,
+      "md5": "a09f5d3d55a622dcd75e406f0004d540",
+      "path": "Rock Band Blitz 23.7z"
+    },
+    {
+      "id": "1KWmM7TQB3rstT7MhIXyW01ELNBlwBfoS",
+      "name": "Rock Band Blitz 22.7z",
+      "size": 54169565,
+      "md5": "abb665c2c23d9e76cd84aa7f1d21e91a",
+      "path": "Rock Band Blitz 22.7z"
+    },
+    {
+      "id": "1Gedd7bo4dbuWCaYFnZsOd0RTvkfzhPlT",
+      "name": "Rock Band Blitz 21.7z",
+      "size": 34970518,
+      "md5": "938cd3d22a4384511b6d719fa6133610",
+      "path": "Rock Band Blitz 21.7z"
+    },
+    {
+      "id": "1LGLUPG6xuupH5EIkphsmoerCE6EnfkJo",
+      "name": "Rock Band Blitz 20.7z",
+      "size": 60133330,
+      "md5": "6ddcdd18e12f3b554a47ba25b1418380",
+      "path": "Rock Band Blitz 20.7z"
+    },
+    {
+      "id": "1C3jBRiDiB-GCyKO3e5_dmJztFH1Vcqay",
+      "name": "Rock Band Blitz 19.7z",
+      "size": 42798694,
+      "md5": "bb72ffd22988120d7bbeea1daf6ebdc0",
+      "path": "Rock Band Blitz 19.7z"
+    },
+    {
+      "id": "1pzITsJx5EOXi_XzcrHrMyxR-_UebqpY5",
+      "name": "Rock Band Blitz 18.7z",
+      "size": 36955778,
+      "md5": "ffa90da09754e0f7a1afdb793cc6bf0a",
+      "path": "Rock Band Blitz 18.7z"
+    },
+    {
+      "id": "1PoVXAUJTQMe6bYm4Q3Dwqoy4wCd6iTmG",
+      "name": "Rock Band Blitz 16.7z",
+      "size": 43110878,
+      "md5": "98f1d06236e33ab8c492d57e9b864575",
+      "path": "Rock Band Blitz 16.7z"
+    },
+    {
+      "id": "1RaOMA0a7qKckPEknoldGxzGm0nYUSOhp",
+      "name": "Rock Band Blitz 15.7z",
+      "size": 33515635,
+      "md5": "5656b0caa1c188edebd8aa9e13e04b18",
+      "path": "Rock Band Blitz 15.7z"
+    },
+    {
+      "id": "19-MBR70RC7shbb1MSlPowWqZcvItY7ul",
+      "name": "Rock Band Blitz 14.7z",
+      "size": 42293669,
+      "md5": "e84ad238558424d00943f25be752ff59",
+      "path": "Rock Band Blitz 14.7z"
+    },
+    {
+      "id": "1TO_YENovGd4YfrjhfOZYlSN1j8ahKjVe",
+      "name": "Rock Band Blitz 13.7z",
+      "size": 30506652,
+      "md5": "b9f2caf499a39b65b29c3fdaafe156b6",
+      "path": "Rock Band Blitz 13.7z"
+    },
+    {
+      "id": "1GQty4CGonBPWcbO61tbtQ_lAuWswwEbb",
+      "name": "Rock Band Blitz 12.7z",
+      "size": 37558799,
+      "md5": "564638e1d6da869194d4330a8e0eb10a",
+      "path": "Rock Band Blitz 12.7z"
+    },
+    {
+      "id": "1oZqiRr12CgBbX5IMR3WCORGqUjD0MOAx",
+      "name": "Rock Band Blitz 11.7z",
+      "size": 46368146,
+      "md5": "52cc2468527958620767e555e54bc88f",
+      "path": "Rock Band Blitz 11.7z"
+    },
+    {
+      "id": "1JFvqjTCrVoaXxjCqf5QMLtbEEioDuiVZ",
+      "name": "Rock Band Blitz 10.7z",
+      "size": 57902004,
+      "md5": "a3a5c1425fb174db0465b09687efd32d",
+      "path": "Rock Band Blitz 10.7z"
+    },
+    {
+      "id": "1FJn3A3rGao5CCtvqzwH6tkKmOD20HDWS",
+      "name": "Rock Band Blitz 9.7z",
+      "size": 37760441,
+      "md5": "7051eed2272159ad593a01e4cf8a3e25",
+      "path": "Rock Band Blitz 9.7z"
+    },
+    {
+      "id": "1Xfp2o9ti_HHPw4ewvG9XsSb67gkCrJMr",
+      "name": "Rock Band Blitz 8.7z",
+      "size": 49159564,
+      "md5": "68c97f20bf054362176ae7ec68aea12a",
+      "path": "Rock Band Blitz 8.7z"
+    },
+    {
+      "id": "1kVe0icp_4w1MDHflWTmVvU2CQdRztEUj",
+      "name": "Rock Band Blitz 7.7z",
+      "size": 44886130,
+      "md5": "5ef3e1c1317dc5f095b122888208d7aa",
+      "path": "Rock Band Blitz 7.7z"
+    },
+    {
+      "id": "1uyUbF0uU9GLP7ecKFsVdo7tIbxSzWCIT",
+      "name": "Rock Band Blitz 6.7z",
+      "size": 23179256,
+      "md5": "fb443e7666725fad9dc267e30063ad4c",
+      "path": "Rock Band Blitz 6.7z"
+    },
+    {
+      "id": "1KlCfB1vmUzWAyHQRiRpKOToa-yKqG0WZ",
+      "name": "Rock Band Blitz 5.7z",
+      "size": 33057374,
+      "md5": "472491bcfdc1993470ef943e89ddb078",
+      "path": "Rock Band Blitz 5.7z"
+    },
+    {
+      "id": "1Hii9nO-ECIb_hMv5UkWlNPjdiD_BfhiY",
+      "name": "Rock Band Blitz 4.7z",
+      "size": 39775832,
+      "md5": "b4790c7181f358459a0fbc0834e54faf",
+      "path": "Rock Band Blitz 4.7z"
+    },
+    {
+      "id": "1wej6bqm96FERwN819wZKy9BM6esgqX-5",
+      "name": "Rock Band Blitz 3.7z",
+      "size": 45728379,
+      "md5": "e0260600d6875193a0f4a0edc430a7df",
+      "path": "Rock Band Blitz 3.7z"
+    },
+    {
+      "id": "1F8XWs6cAdpsM6NYAhPbudIbRalDMVuaa",
+      "name": "Rock Band Blitz 2.7z",
+      "size": 31943554,
+      "md5": "d1d7ec604e297491b4ba54dcfa731aa0",
+      "path": "Rock Band Blitz 2.7z"
+    },
+    {
+      "id": "14N-9G1OuT70x37rwqxmnnMzamno-0ePv",
+      "name": "Rock Band Blitz 1.7z",
+      "size": 54402062,
+      "md5": "3e2e5d00b37de56166333bcf8b7e3984",
+      "path": "Rock Band Blitz 1.7z"
+    }
+  ],
+  "download_size": 1097208969,
+  "files": [
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/album.jpg",
+      "size": 490756
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/drums_1.ogg",
+      "size": 4303329
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/drums_2.ogg",
+      "size": 9093656
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/guitar.ogg",
+      "size": 8485265
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/keys.ogg",
+      "size": 8438198
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/notes.mid",
+      "size": 144471
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/rhythm.ogg",
+      "size": 4207901
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/song.ini",
+      "size": 641
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/song.ogg",
+      "size": 11089524
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Avenged Sevenfold - So Far Away/vocals.ogg",
+      "size": 8998738
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/album.jpg",
+      "size": 330746
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/drums_1.ogg",
+      "size": 4269106
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/drums_2.ogg",
+      "size": 4282429
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/drums_3.ogg",
+      "size": 10172438
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/guitar.ogg",
+      "size": 8848439
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/keys.ogg",
+      "size": 10092687
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/notes.mid",
+      "size": 311891
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/rhythm.ogg",
+      "size": 4537831
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/song.ini",
+      "size": 647
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/song.ogg",
+      "size": 8590035
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Great White - Once Bitten Twice Shy/vocals.ogg",
+      "size": 7344209
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/album.jpg",
+      "size": 378620
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 4172401
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 8504025
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 7211119
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/keys.ogg",
+      "size": 7611723
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/notes.mid",
+      "size": 292896
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4194856
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/song.ogg",
+      "size": 7322610
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Iron Maiden - The Wicker Man (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 7206429
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/album.jpg",
+      "size": 455140
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/drums.ogg",
+      "size": 6923117
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/guitar.ogg",
+      "size": 6351747
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/keys.ogg",
+      "size": 6989124
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/notes.mid",
+      "size": 173647
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/rhythm.ogg",
+      "size": 10588223
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/song.ini",
+      "size": 661
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/song.ogg",
+      "size": 76567
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kelly Clarkson - Stronger (What Doesn't Kill You)/vocals.ogg",
+      "size": 6513665
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/album.jpg",
+      "size": 423145
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/drums_1.ogg",
+      "size": 2213230
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/drums_2.ogg",
+      "size": 2802206
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/drums_3.ogg",
+      "size": 5543373
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/guitar.ogg",
+      "size": 4544351
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/keys.ogg",
+      "size": 5097758
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/notes.mid",
+      "size": 161567
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/rhythm.ogg",
+      "size": 1912280
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/song.ogg",
+      "size": 3136689
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Kool & The Gang - Jungle Boogie/vocals.ogg",
+      "size": 5092865
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/album.jpg",
+      "size": 496969
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/drums_1.ogg",
+      "size": 4025208
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/drums_2.ogg",
+      "size": 9677876
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/guitar.ogg",
+      "size": 8106741
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/notes.mid",
+      "size": 198098
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/rhythm.ogg",
+      "size": 4632062
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/song.ini",
+      "size": 639
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/song.ogg",
+      "size": 7845699
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Living Colour - Cult of Personality/vocals.ogg",
+      "size": 7704365
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/album.jpg",
+      "size": 191768
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/drums.ogg",
+      "size": 6105988
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/guitar.ogg",
+      "size": 6684821
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/keys.ogg",
+      "size": 5282827
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/notes.mid",
+      "size": 140760
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/rhythm.ogg",
+      "size": 3401300
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/song.ini",
+      "size": 669
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/song.ogg",
+      "size": 6263484
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Maroon 5 ft. Christina Aguilera - Moves Like Jagger/vocals.ogg",
+      "size": 5881066
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/album.jpg",
+      "size": 487379
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/drums.ogg",
+      "size": 8485281
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/guitar.ogg",
+      "size": 6918960
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/keys.ogg",
+      "size": 9266759
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/notes.mid",
+      "size": 178911
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/rhythm.ogg",
+      "size": 2958146
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/song.ini",
+      "size": 677
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/song.ogg",
+      "size": 7911595
+    },
+    {
+      "path": "(2012) Rock Band Blitz/My Chemical Romance - Sing/vocals.ogg",
+      "size": 7536326
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/album.jpg",
+      "size": 215641
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/drums_1.ogg",
+      "size": 2896711
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/drums_2.ogg",
+      "size": 5117356
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/drums_3.ogg",
+      "size": 5623375
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/guitar.ogg",
+      "size": 6696026
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/keys.ogg",
+      "size": 5574369
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/notes.mid",
+      "size": 137154
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/rhythm.ogg",
+      "size": 3958568
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/song.ini",
+      "size": 653
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/song.ogg",
+      "size": 5053685
+    },
+    {
+      "path": "(2012) Rock Band Blitz/P!nk - Raise Your Glass/vocals.ogg",
+      "size": 5836422
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/album.jpg",
+      "size": 206422
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/drums_1.ogg",
+      "size": 3052776
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/drums_2.ogg",
+      "size": 3112831
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/drums_3.ogg",
+      "size": 6151180
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/guitar.ogg",
+      "size": 5087737
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/keys.ogg",
+      "size": 6283976
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/notes.mid",
+      "size": 142487
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/rhythm.ogg",
+      "size": 2789166
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/song.ini",
+      "size": 671
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/song.ogg",
+      "size": 5422071
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Queen - Death on Two Legs (Dedicated to__)/vocals.ogg",
+      "size": 5451397
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/album.jpg",
+      "size": 528919
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/drums_1.ogg",
+      "size": 4532283
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/drums_2.ogg",
+      "size": 9219483
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/guitar.ogg",
+      "size": 8054584
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/notes.mid",
+      "size": 154693
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/rhythm.ogg",
+      "size": 4611083
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/song.ini",
+      "size": 657
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/song.ogg",
+      "size": 7946874
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Quiet Riot - Bang Your Head (Metal Health)/vocals.ogg",
+      "size": 8159849
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/album.jpg",
+      "size": 454835
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/drums_1.ogg",
+      "size": 2057474
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/drums_2.ogg",
+      "size": 4449178
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/drums_3.ogg",
+      "size": 4183882
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/guitar.ogg",
+      "size": 4846149
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/keys.ogg",
+      "size": 4216127
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/notes.mid",
+      "size": 129554
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/rhythm.ogg",
+      "size": 2284372
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/song.ini",
+      "size": 632
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/song.ogg",
+      "size": 5319581
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Barenaked Ladies - One Week/vocals.ogg",
+      "size": 4365673
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/album.jpg",
+      "size": 381646
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/drums_1.ogg",
+      "size": 4304949
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/drums_2.ogg",
+      "size": 8907681
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/drums_3.ogg",
+      "size": 11496269
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/guitar.ogg",
+      "size": 7655120
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/keys.ogg",
+      "size": 7051752
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/notes.mid",
+      "size": 242688
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/rhythm.ogg",
+      "size": 4360284
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/song.ini",
+      "size": 662
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/song.ogg",
+      "size": 8870135
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Red Hot Chili Peppers - Give It Away (RB3 version)/vocals.ogg",
+      "size": 7679086
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/album.jpg",
+      "size": 419874
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/drums_1.ogg",
+      "size": 2532027
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/drums_2.ogg",
+      "size": 2611209
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/drums_3.ogg",
+      "size": 5946053
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/guitar.ogg",
+      "size": 6992728
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/keys.ogg",
+      "size": 5080138
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/notes.mid",
+      "size": 196845
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/rhythm.ogg",
+      "size": 1995516
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/song.ini",
+      "size": 654
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/song.ogg",
+      "size": 4311809
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Rick Springfield - Jessie's Girl/vocals.ogg",
+      "size": 5474863
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/album.jpg",
+      "size": 136470
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/drums_1.ogg",
+      "size": 4439792
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/drums_2.ogg",
+      "size": 10433835
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/guitar.ogg",
+      "size": 9383863
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/keys.ogg",
+      "size": 8202416
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/notes.mid",
+      "size": 220729
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/rhythm.ogg",
+      "size": 3536467
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/song.ini",
+      "size": 680
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/song.ogg",
+      "size": 9445595
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Shinedown - Diamond Eyes (Boom-Lay Boom-Lay Boom)/vocals.ogg",
+      "size": 9136302
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/album.jpg",
+      "size": 178472
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/drums_1.ogg",
+      "size": 3534425
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/drums_2.ogg",
+      "size": 6388225
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/drums_3.ogg",
+      "size": 8237010
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/guitar.ogg",
+      "size": 7432546
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/notes.mid",
+      "size": 181573
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/rhythm.ogg",
+      "size": 3270525
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/song.ini",
+      "size": 636
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/song.ogg",
+      "size": 8913588
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Soundgarden - Spoonman (RB3 version)/vocals.ogg",
+      "size": 6536719
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/album.jpg",
+      "size": 386812
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/drums_1.ogg",
+      "size": 5083039
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/drums_2.ogg",
+      "size": 9744161
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/drums_3.ogg",
+      "size": 9980810
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/guitar.ogg",
+      "size": 8872626
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/keys.ogg",
+      "size": 10652691
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/notes.mid",
+      "size": 199860
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/rhythm.ogg",
+      "size": 9964727
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/song.ini",
+      "size": 651
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/song.ogg",
+      "size": 12838432
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Tears for Fears - Shout/vocals.ogg",
+      "size": 10141936
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/album.jpg",
+      "size": 444526
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/drums_1.ogg",
+      "size": 3696555
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/drums_2.ogg",
+      "size": 3509199
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/drums_3.ogg",
+      "size": 8402096
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/guitar.ogg",
+      "size": 7313846
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/keys.ogg",
+      "size": 7495655
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/notes.mid",
+      "size": 167505
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/rhythm.ogg",
+      "size": 8795755
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/song.ini",
+      "size": 662
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/song.ogg",
+      "size": 8181825
+    },
+    {
+      "path": "(2012) Rock Band Blitz/The All-American Rejects - Kids in the Street/vocals.ogg",
+      "size": 7235248
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/album.jpg",
+      "size": 347998
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/drums_1.ogg",
+      "size": 3440055
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/drums_2.ogg",
+      "size": 6154271
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/drums_3.ogg",
+      "size": 7976874
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/guitar.ogg",
+      "size": 6850824
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/keys.ogg",
+      "size": 5909723
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/notes.mid",
+      "size": 187604
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/rhythm.ogg",
+      "size": 2994459
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/song.ini",
+      "size": 627
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/song.ogg",
+      "size": 6220678
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Blink-182 - Always/vocals.ogg",
+      "size": 6410147
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/album.jpg",
+      "size": 366082
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/album_alt.jpg",
+      "size": 12445
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/drums.ogg",
+      "size": 9756396
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/guitar.ogg",
+      "size": 9354851
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/notes.mid",
+      "size": 153720
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/rhythm.ogg",
+      "size": 4240761
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/song.ini",
+      "size": 665
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/song.ogg",
+      "size": 8002823
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Collective Soul - Shine/vocals.ogg",
+      "size": 8377212
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/album.jpg",
+      "size": 51403
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/drums_1.ogg",
+      "size": 2719218
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/drums_2.ogg",
+      "size": 6297831
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/guitar.ogg",
+      "size": 4947866
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/keys.ogg",
+      "size": 5981510
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/notes.mid",
+      "size": 176362
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/rhythm.ogg",
+      "size": 3099418
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/song.ogg",
+      "size": 4836494
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Elton John - I'm Still Standing/vocals.ogg",
+      "size": 5521086
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/album.jpg",
+      "size": 343634
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/drums_1.ogg",
+      "size": 2351882
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/drums_2.ogg",
+      "size": 5063435
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/guitar.ogg",
+      "size": 4487960
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/notes.mid",
+      "size": 91385
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/rhythm.ogg",
+      "size": 2019657
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/song.ini",
+      "size": 700
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/song.ogg",
+      "size": 4529731
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fall Out Boy - A Little Less Sixteen Candles, a Little More (Touch Me)/vocals.ogg",
+      "size": 4625047
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/album.jpg",
+      "size": 257689
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/drums_1.ogg",
+      "size": 3965024
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/drums_2.ogg",
+      "size": 4111303
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/drums_3.ogg",
+      "size": 8749967
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/guitar.ogg",
+      "size": 9570599
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/notes.mid",
+      "size": 152237
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/rhythm.ogg",
+      "size": 4069098
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/song.ini",
+      "size": 647
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/song.ogg",
+      "size": 7741672
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foo Fighters - These Days/vocals.ogg",
+      "size": 6864486
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/album.jpg",
+      "size": 348325
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/drums_1.ogg",
+      "size": 6893322
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/drums_2.ogg",
+      "size": 7165454
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/drums_3.ogg",
+      "size": 6758298
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/guitar.ogg",
+      "size": 5364485
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/keys.ogg",
+      "size": 5539220
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/notes.mid",
+      "size": 146269
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/rhythm.ogg",
+      "size": 5004401
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/song.ini",
+      "size": 648
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/song.ogg",
+      "size": 6209787
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Foster the People - Pumped Up Kicks/vocals.ogg",
+      "size": 6204805
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/album.jpg",
+      "size": 259138
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/drums.ogg",
+      "size": 6492736
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/guitar.ogg",
+      "size": 6514491
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/keys.ogg",
+      "size": 6965495
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/notes.mid",
+      "size": 173804
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/rhythm.ogg",
+      "size": 4151759
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/song.ogg",
+      "size": 6494884
+    },
+    {
+      "path": "(2012) Rock Band Blitz/Fun. ft. Janelle Mon\u00e1e - We Are Young/vocals.ogg",
+      "size": 7161226
+    }
+  ],
+  "extracted_size": 1111105084,
+  "file_count": 253,
+  "chart_count": 25,
+  "release_date": "2012-08-28"
+}

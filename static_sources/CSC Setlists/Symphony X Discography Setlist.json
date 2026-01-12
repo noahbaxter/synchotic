@@ -1,20 +1,2045 @@
 {
   "name": "Symphony X Discography Setlist",
-  "folder_id": "static-symphony-x",
+  "folder_id": "static-symphony-x-discography-setlist",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 101,
-  "total_size": 2366503208,
-  "file_count": 506,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-symphony-x",
-      "path": "Symphony X Discography Setlist/Symphony X Discography Setlist.rar",
+      "url": "https://customsongscentral.b-cdn.net/Symphony%20X%20Discography%20Setlist.rar",
       "name": "Symphony X Discography Setlist.rar",
       "size": 2366503208,
-      "md5": "54369f29ebaa0482f33ae1b08653e8f6",
-      "url": "https://customsongscentral.b-cdn.net/Symphony%20X%20Discography%20Setlist.rar"
+      "md5": "54369f29ebaa0482f33ae1b08653e8f6"
     }
-  ]
+  ],
+  "download_size": 2366503208,
+  "files": [
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 01. Into the Dementia/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 01. Into the Dementia/background.jpg",
+      "size": 109052
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 01. Into the Dementia/notes.chart",
+      "size": 8728
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 01. Into the Dementia/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 01. Into the Dementia/song.ogg",
+      "size": 1609801
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 02. The Raging Season/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 02. The Raging Season/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 02. The Raging Season/notes.chart",
+      "size": 55959
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 02. The Raging Season/song.ini",
+      "size": 701
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 02. The Raging Season/song.ogg",
+      "size": 10278773
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 03. Premonition/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 03. Premonition/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 03. Premonition/notes.chart",
+      "size": 51795
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 03. Premonition/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 03. Premonition/song.ogg",
+      "size": 10914046
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 04. Masquerade/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 04. Masquerade/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 04. Masquerade/notes.chart",
+      "size": 53442
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 04. Masquerade/song.ini",
+      "size": 374
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 04. Masquerade/song.ogg",
+      "size": 9413457
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 05. Absinthe and Rue/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 05. Absinthe and Rue/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 05. Absinthe and Rue/notes.chart",
+      "size": 71710
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 05. Absinthe and Rue/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 05. Absinthe and Rue/song.ogg",
+      "size": 14740616
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 06. Shades of Grey/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 06. Shades of Grey/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 06. Shades of Grey/notes.chart",
+      "size": 40302
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 06. Shades of Grey/song.ini",
+      "size": 309
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 06. Shades of Grey/song.ogg",
+      "size": 9709422
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 07. Taunting the Notorious/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 07. Taunting the Notorious/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 07. Taunting the Notorious/notes.chart",
+      "size": 45244
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 07. Taunting the Notorious/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 07. Taunting the Notorious/song.ogg",
+      "size": 6782523
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 08. Rapture or Pain/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 08. Rapture or Pain/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 08. Rapture or Pain/notes.chart",
+      "size": 48087
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 08. Rapture or Pain/song.ini",
+      "size": 385
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 08. Rapture or Pain/song.ogg",
+      "size": 9767491
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 09. Thorns of Sorrow/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 09. Thorns of Sorrow/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 09. Thorns of Sorrow/notes.chart",
+      "size": 36694
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 09. Thorns of Sorrow/song.ini",
+      "size": 340
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 09. Thorns of Sorrow/song.ogg",
+      "size": 7997321
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 10. A Lesson Before Dying/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 10. A Lesson Before Dying/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 10. A Lesson Before Dying/notes.chart",
+      "size": 103346
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 10. A Lesson Before Dying/song.ini",
+      "size": 322
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - 10. A Lesson Before Dying/song.ogg",
+      "size": 23604647
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - Self Titled (Full Album)/album.png",
+      "size": 559121
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - Self Titled (Full Album)/background.jpg",
+      "size": 109095
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - Self Titled (Full Album)/notes.chart",
+      "size": 536574
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - Self Titled (Full Album)/song.ini",
+      "size": 340
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 01. Symphony X/Symphony X - Self Titled (Full Album)/song.ogg",
+      "size": 106770214
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 01. The Damnation Game/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 01. The Damnation Game/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 01. The Damnation Game/notes.chart",
+      "size": 59933
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 01. The Damnation Game/song.ini",
+      "size": 365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 01. The Damnation Game/song.ogg",
+      "size": 9476235
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 02. Dressed to Kill/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 02. Dressed to Kill/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 02. Dressed to Kill/notes.chart",
+      "size": 54918
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 02. Dressed to Kill/song.ini",
+      "size": 360
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 02. Dressed to Kill/song.ogg",
+      "size": 9641021
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 03. The Edge of Forever/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 03. The Edge of Forever/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 03. The Edge of Forever/notes.chart",
+      "size": 76614
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 03. The Edge of Forever/song.ini",
+      "size": 423
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 03. The Edge of Forever/song.ogg",
+      "size": 17698517
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 03. The Edge of Forever/why.ogg",
+      "size": 17947918
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 04. Savage Curtain/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 04. Savage Curtain/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 04. Savage Curtain/notes.chart",
+      "size": 50405
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 04. Savage Curtain/song.ini",
+      "size": 458
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 04. Savage Curtain/song.ogg",
+      "size": 7283162
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 05. Whispers/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 05. Whispers/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 05. Whispers/notes.chart",
+      "size": 29786
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 05. Whispers/song.ini",
+      "size": 341
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 05. Whispers/song.ogg",
+      "size": 9060267
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 06. The Haunting/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 06. The Haunting/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 06. The Haunting/notes.chart",
+      "size": 55732
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 06. The Haunting/song.ini",
+      "size": 307
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 06. The Haunting/song.ogg",
+      "size": 10735662
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 07. Secrets/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 07. Secrets/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 07. Secrets/notes.chart",
+      "size": 52713
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 07. Secrets/song.ini",
+      "size": 408
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 07. Secrets/song.ogg",
+      "size": 11549000
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 08. A Winter's Dream - Prelude (Part I)/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 08. A Winter's Dream - Prelude (Part I)/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 08. A Winter's Dream - Prelude (Part I)/notes.chart",
+      "size": 19752
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 08. A Winter's Dream - Prelude (Part I)/song.ini",
+      "size": 434
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 08. A Winter's Dream - Prelude (Part I)/song.ogg",
+      "size": 5648622
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 09. A Winter's Dream - The Ascension (Part II)/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 09. A Winter's Dream - The Ascension (Part II)/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 09. A Winter's Dream - The Ascension (Part II)/notes.chart",
+      "size": 45655
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 09. A Winter's Dream - The Ascension (Part II)/song.ini",
+      "size": 407
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - 09. A Winter's Dream - The Ascension (Part II)/song.ogg",
+      "size": 11163265
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - The Damnation Game (Full Album)/album.png",
+      "size": 616317
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - The Damnation Game (Full Album)/background.jpg",
+      "size": 214094
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - The Damnation Game (Full Album)/notes.chart",
+      "size": 461739
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - The Damnation Game (Full Album)/song.ini",
+      "size": 325
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 02. The Damnation Game/Symphony X - The Damnation Game (Full Album)/song.ogg",
+      "size": 93032236
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 01. Of Sins and Shadows/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 01. Of Sins and Shadows/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 01. Of Sins and Shadows/notes.chart",
+      "size": 49371
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 01. Of Sins and Shadows/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 01. Of Sins and Shadows/song.ogg",
+      "size": 9800218
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 02. Sea of Lies/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 02. Sea of Lies/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 02. Sea of Lies/notes.chart",
+      "size": 58442
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 02. Sea of Lies/song.ini",
+      "size": 372
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 02. Sea of Lies/song.ogg",
+      "size": 8854441
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 03. Out of the Ashes/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 03. Out of the Ashes/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 03. Out of the Ashes/notes.chart",
+      "size": 45555
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 03. Out of the Ashes/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 03. Out of the Ashes/song.ogg",
+      "size": 7485571
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 04. The Accolade/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 04. The Accolade/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 04. The Accolade/notes.chart",
+      "size": 71631
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 04. The Accolade/song.ini",
+      "size": 314
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 04. The Accolade/song.ogg",
+      "size": 19863491
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 05. Pharaoh/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 05. Pharaoh/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 05. Pharaoh/notes.chart",
+      "size": 49481
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 05. Pharaoh/song.ini",
+      "size": 340
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 05. Pharaoh/song.ogg",
+      "size": 10935433
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 06. The Eyes of Medusa/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 06. The Eyes of Medusa/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 06. The Eyes of Medusa/notes.chart",
+      "size": 52587
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 06. The Eyes of Medusa/song.ini",
+      "size": 397
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 06. The Eyes of Medusa/song.ogg",
+      "size": 10887384
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 07. The Witching Hour/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 07. The Witching Hour/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 07. The Witching Hour/notes.chart",
+      "size": 46007
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 07. The Witching Hour/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 07. The Witching Hour/song.ogg",
+      "size": 8830892
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 08. The Divine Wings of Tragedy/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 08. The Divine Wings of Tragedy/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 08. The Divine Wings of Tragedy/notes.chart",
+      "size": 149760
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 08. The Divine Wings of Tragedy/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 08. The Divine Wings of Tragedy/song.ogg",
+      "size": 39951717
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 09. Candlelight Fantasia/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 09. Candlelight Fantasia/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 09. Candlelight Fantasia/notes.chart",
+      "size": 59144
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 09. Candlelight Fantasia/song.ini",
+      "size": 294
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - 09. Candlelight Fantasia/song.ogg",
+      "size": 13048648
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - The Divine Wings of Tragedy (Full Album)/album.png",
+      "size": 680436
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - The Divine Wings of Tragedy (Full Album)/background.jpg",
+      "size": 175534
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - The Divine Wings of Tragedy (Full Album)/notes.chart",
+      "size": 606906
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - The Divine Wings of Tragedy (Full Album)/song.ini",
+      "size": 352
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 03. The Divine Wings of Tragedy/Symphony X - The Divine Wings of Tragedy (Full Album)/song.ogg",
+      "size": 130192026
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 01. Smoke and Mirrors/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 01. Smoke and Mirrors/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 01. Smoke and Mirrors/notes.chart",
+      "size": 75915
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 01. Smoke and Mirrors/song.ini",
+      "size": 535
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 01. Smoke and Mirrors/song.ogg",
+      "size": 12269945
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 02. Church of the Machine/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 02. Church of the Machine/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 02. Church of the Machine/notes.chart",
+      "size": 63694
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 02. Church of the Machine/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 02. Church of the Machine/song.ogg",
+      "size": 17488179
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 03. Sonata/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 03. Sonata/background.jpg",
+      "size": 233828
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 03. Sonata/notes.chart",
+      "size": 7608
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 03. Sonata/song.ini",
+      "size": 679
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 03. Sonata/song.ogg",
+      "size": 2404606
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 04. In the Dragon's Den/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 04. In the Dragon's Den/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 04. In the Dragon's Den/notes.chart",
+      "size": 39343
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 04. In the Dragon's Den/song.ini",
+      "size": 427
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 04. In the Dragon's Den/song.ogg",
+      "size": 7815107
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 05. Through the Looking Glass/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 05. Through the Looking Glass/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 05. Through the Looking Glass/notes.chart",
+      "size": 95931
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 05. Through the Looking Glass/song.ini",
+      "size": 431
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 05. Through the Looking Glass/song.ogg",
+      "size": 25266416
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 06. The Relic/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 06. The Relic/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 06. The Relic/notes.chart",
+      "size": 50576
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 06. The Relic/song.ini",
+      "size": 361
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 06. The Relic/song.ogg",
+      "size": 9979986
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 07. Orion - The Hunter/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 07. Orion - The Hunter/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 07. Orion - The Hunter/notes.chart",
+      "size": 76417
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 07. Orion - The Hunter/song.ini",
+      "size": 514
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 07. Orion - The Hunter/song.ogg",
+      "size": 13656685
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 08. Lady of the Snow/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 08. Lady of the Snow/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 08. Lady of the Snow/notes.chart",
+      "size": 36752
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 08. Lady of the Snow/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - 08. Lady of the Snow/song.ogg",
+      "size": 13010125
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - Twilight in Olympus (Full Album)/album.png",
+      "size": 702347
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - Twilight in Olympus (Full Album)/background.jpg",
+      "size": 232359
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - Twilight in Olympus (Full Album)/notes.chart",
+      "size": 461923
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - Twilight in Olympus (Full Album)/song.ini",
+      "size": 328
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 04. Twilight in Olympus/Symphony X - Twilight in Olympus (Full Album)/song.ogg",
+      "size": 102800977
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 01. Prelude/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 01. Prelude/background.jpg",
+      "size": 483756
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 01. Prelude/notes.chart",
+      "size": 12904
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 01. Prelude/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 01. Prelude/song.ogg",
+      "size": 2043695
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 02. Evolution (The Grand Design)/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 02. Evolution (The Grand Design)/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 02. Evolution (The Grand Design)/notes.chart",
+      "size": 65585
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 02. Evolution (The Grand Design)/song.ini",
+      "size": 757
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 02. Evolution (The Grand Design)/song.ogg",
+      "size": 10969599
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 03. Fallen/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 03. Fallen/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 03. Fallen/notes.chart",
+      "size": 69070
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 03. Fallen/song.ini",
+      "size": 769
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 03. Fallen/song.ogg",
+      "size": 11839466
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 04. Transcendence (Segue)/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 04. Transcendence (Segue)/background.jpg",
+      "size": 483756
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 04. Transcendence (Segue)/notes.chart",
+      "size": 1456
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 04. Transcendence (Segue)/song.ini",
+      "size": 685
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 04. Transcendence (Segue)/song.ogg",
+      "size": 1119778
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 05. Communion and the Oracle/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 05. Communion and the Oracle/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 05. Communion and the Oracle/notes.chart",
+      "size": 54393
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 05. Communion and the Oracle/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 05. Communion and the Oracle/song.ogg",
+      "size": 15609644
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 06. The Bird Serpent War - Cataclysm/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 06. The Bird Serpent War - Cataclysm/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 06. The Bird Serpent War - Cataclysm/notes.chart",
+      "size": 39012
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 06. The Bird Serpent War - Cataclysm/song.ini",
+      "size": 773
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 06. The Bird Serpent War - Cataclysm/song.ogg",
+      "size": 7929664
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 07. On the Breath of Poseidon (Segue)/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 07. On the Breath of Poseidon (Segue)/background.jpg",
+      "size": 483756
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 07. On the Breath of Poseidon (Segue)/notes.chart",
+      "size": 19150
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 07. On the Breath of Poseidon (Segue)/song.ini",
+      "size": 570
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 07. On the Breath of Poseidon (Segue)/song.ogg",
+      "size": 5561330
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 08. Egypt/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 08. Egypt/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 08. Egypt/notes.chart",
+      "size": 56594
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 08. Egypt/song.ini",
+      "size": 775
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 08. Egypt/song.ogg",
+      "size": 13898055
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 09. The Death of Balance - Lacrymosa/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 09. The Death of Balance - Lacrymosa/background.jpg",
+      "size": 483756
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 09. The Death of Balance - Lacrymosa/notes.chart",
+      "size": 18930
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 09. The Death of Balance - Lacrymosa/song.ini",
+      "size": 684
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 09. The Death of Balance - Lacrymosa/song.ogg",
+      "size": 7043258
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 10. Absence of Light/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 10. Absence of Light/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 10. Absence of Light/notes.chart",
+      "size": 74709
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 10. Absence of Light/song.ini",
+      "size": 506
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 10. Absence of Light/song.ogg",
+      "size": 9969324
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 11. A Fool's Paradise/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 11. A Fool's Paradise/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 11. A Fool's Paradise/notes.chart",
+      "size": 75346
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 11. A Fool's Paradise/song.ini",
+      "size": 482
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 11. A Fool's Paradise/song.ogg",
+      "size": 11692037
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 12. Rediscovery (Segue)/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 12. Rediscovery (Segue)/background.jpg",
+      "size": 483756
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 12. Rediscovery (Segue)/notes.chart",
+      "size": 7399
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 12. Rediscovery (Segue)/song.ini",
+      "size": 786
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 12. Rediscovery (Segue)/song.ogg",
+      "size": 2330504
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 13. Rediscovery (Part II) - The New Mythology/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 13. Rediscovery (Part II) - The New Mythology/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 13. Rediscovery (Part II) - The New Mythology/notes.chart",
+      "size": 104871
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 13. Rediscovery (Part II) - The New Mythology/song.ini",
+      "size": 536
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - 13. Rediscovery (Part II) - The New Mythology/song.ogg",
+      "size": 23651036
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - V The New Mythology Suite (Full Album)/album.png",
+      "size": 581415
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - V The New Mythology Suite (Full Album)/background.jpg",
+      "size": 474365
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - V The New Mythology Suite (Full Album)/notes.chart",
+      "size": 630581
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - V The New Mythology Suite (Full Album)/song.ini",
+      "size": 375
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 05. V The New Mythology Suite/Symphony X - V The New Mythology Suite (Full Album)/song.ogg",
+      "size": 124217165
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 01. Inferno (Unleash the Fire)/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 01. Inferno (Unleash the Fire)/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 01. Inferno (Unleash the Fire)/notes.chart",
+      "size": 59083
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 01. Inferno (Unleash the Fire)/song.ini",
+      "size": 485
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 01. Inferno (Unleash the Fire)/song.ogg",
+      "size": 11125643
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 02. Wicked/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 02. Wicked/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 02. Wicked/notes.chart",
+      "size": 54060
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 02. Wicked/song.ini",
+      "size": 326
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 02. Wicked/song.ogg",
+      "size": 10594788
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 03. Incantations of the Apprentice/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 03. Incantations of the Apprentice/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 03. Incantations of the Apprentice/notes.chart",
+      "size": 47018
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 03. Incantations of the Apprentice/song.ini",
+      "size": 561
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 03. Incantations of the Apprentice/song.ogg",
+      "size": 8781234
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 04. Accolade II/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 04. Accolade II/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 04. Accolade II/notes.chart",
+      "size": 55801
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 04. Accolade II/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 04. Accolade II/song.ogg",
+      "size": 15560297
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 05. King of Terrors/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 05. King of Terrors/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 05. King of Terrors/notes.chart",
+      "size": 67497
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 05. King of Terrors/song.ini",
+      "size": 541
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 05. King of Terrors/song.ogg",
+      "size": 12792231
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 06. The Turning/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 06. The Turning/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 06. The Turning/notes.chart",
+      "size": 52296
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 06. The Turning/song.ini",
+      "size": 324
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 06. The Turning/song.ogg",
+      "size": 9632286
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 07. Awakenings/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 07. Awakenings/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 07. Awakenings/notes.chart",
+      "size": 77672
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 07. Awakenings/song.ini",
+      "size": 435
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 07. Awakenings/song.ogg",
+      "size": 16232442
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 08. The Odyssey/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 08. The Odyssey/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 08. The Odyssey/notes.chart",
+      "size": 213758
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 08. The Odyssey/song.ini",
+      "size": 726
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 08. The Odyssey/song.ogg",
+      "size": 47901894
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 09. Masquerade (Re-recorded)/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 09. Masquerade (Re-recorded)/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 09. Masquerade (Re-recorded)/notes.chart",
+      "size": 58837
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 09. Masquerade (Re-recorded)/song.ini",
+      "size": 516
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 09. Masquerade (Re-recorded)/song.ogg",
+      "size": 11679298
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 10. Frontiers/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 10. Frontiers/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 10. Frontiers/notes.chart",
+      "size": 35715
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 10. Frontiers/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - 10. Frontiers/song.ogg",
+      "size": 9770896
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - The Odyssey (Full Album)/album.png",
+      "size": 596520
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - The Odyssey (Full Album)/background.jpg",
+      "size": 490964
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - The Odyssey (Full Album)/notes.chart",
+      "size": 755695
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - The Odyssey (Full Album)/song.ini",
+      "size": 329
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 06. The Odyssey/Symphony X - The Odyssey (Full Album)/song.ogg",
+      "size": 155940792
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 01. Oculus Ex Inferni/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 01. Oculus Ex Inferni/background.jpg",
+      "size": 231430
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 01. Oculus Ex Inferni/notes.chart",
+      "size": 18202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 01. Oculus Ex Inferni/song.ini",
+      "size": 576
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 01. Oculus Ex Inferni/song.ogg",
+      "size": 4862651
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 02. Set the World on Fire (The Lie of Lies)/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 02. Set the World on Fire (The Lie of Lies)/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 02. Set the World on Fire (The Lie of Lies)/notes.chart",
+      "size": 65513
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 02. Set the World on Fire (The Lie of Lies)/song.ini",
+      "size": 515
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 02. Set the World on Fire (The Lie of Lies)/song.ogg",
+      "size": 11842070
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 03. Domination/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 03. Domination/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 03. Domination/notes.chart",
+      "size": 79735
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 03. Domination/song.ini",
+      "size": 705
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 03. Domination/song.ogg",
+      "size": 13174797
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 04. Serpent's Kiss/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 04. Serpent's Kiss/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 04. Serpent's Kiss/notes.chart",
+      "size": 45636
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 04. Serpent's Kiss/song.ini",
+      "size": 361
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 04. Serpent's Kiss/song.ogg",
+      "size": 9962091
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 05. Paradise Lost/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 05. Paradise Lost/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 05. Paradise Lost/notes.chart",
+      "size": 43778
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 05. Paradise Lost/song.ini",
+      "size": 398
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 05. Paradise Lost/song.ogg",
+      "size": 13085140
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 06. Eve of Seduction/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 06. Eve of Seduction/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 06. Eve of Seduction/notes.chart",
+      "size": 125265
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 06. Eve of Seduction/song.ini",
+      "size": 529
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 06. Eve of Seduction/song.ogg",
+      "size": 10230945
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 07. The Walls of Babylon/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 07. The Walls of Babylon/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 07. The Walls of Babylon/notes.chart",
+      "size": 85165
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 07. The Walls of Babylon/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 07. The Walls of Babylon/song.ogg",
+      "size": 15887468
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 08. Seven/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 08. Seven/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 08. Seven/notes.chart",
+      "size": 86706
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 08. Seven/song.ini",
+      "size": 314
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 08. Seven/song.ogg",
+      "size": 13966168
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 09. The Sacrifice/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 09. The Sacrifice/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 09. The Sacrifice/notes.chart",
+      "size": 30106
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 09. The Sacrifice/song.ini",
+      "size": 353
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 09. The Sacrifice/song.ogg",
+      "size": 9458665
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 10. Revelation (Divus Pennae Ex Tragoedia)/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 10. Revelation (Divus Pennae Ex Tragoedia)/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 10. Revelation (Divus Pennae Ex Tragoedia)/notes.chart",
+      "size": 76040
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 10. Revelation (Divus Pennae Ex Tragoedia)/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - 10. Revelation (Divus Pennae Ex Tragoedia)/song.ogg",
+      "size": 18129993
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - Paradise Lost (Full Album)/album.png",
+      "size": 416780
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - Paradise Lost (Full Album)/background.jpg",
+      "size": 233527
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - Paradise Lost (Full Album)/notes.chart",
+      "size": 612179
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - Paradise Lost (Full Album)/song.ini",
+      "size": 346
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 07. Paradise Lost/Symphony X - Paradise Lost (Full Album)/song.ogg",
+      "size": 121697983
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 01. Iconoclast/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 01. Iconoclast/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 01. Iconoclast/notes.chart",
+      "size": 109754
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 01. Iconoclast/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 01. Iconoclast/song.ogg",
+      "size": 21748704
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 02. The End of Innocence/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 02. The End of Innocence/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 02. The End of Innocence/notes.chart",
+      "size": 49075
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 02. The End of Innocence/song.ini",
+      "size": 341
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 02. The End of Innocence/song.ogg",
+      "size": 11109761
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 03. Dehumanized/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 03. Dehumanized/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 03. Dehumanized/notes.chart",
+      "size": 63719
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 03. Dehumanized/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 03. Dehumanized/song.ogg",
+      "size": 13353495
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 04. Bastards of the Machine/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 04. Bastards of the Machine/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 04. Bastards of the Machine/notes.chart",
+      "size": 53938
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 04. Bastards of the Machine/song.ini",
+      "size": 326
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 04. Bastards of the Machine/song.ogg",
+      "size": 10057416
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 05. Heretic/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 05. Heretic/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 05. Heretic/notes.chart",
+      "size": 59174
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 05. Heretic/song.ini",
+      "size": 330
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 05. Heretic/song.ogg",
+      "size": 13189921
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 06. Children of a Faceless God/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 06. Children of a Faceless God/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 06. Children of a Faceless God/notes.chart",
+      "size": 70754
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 06. Children of a Faceless God/song.ini",
+      "size": 431
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 06. Children of a Faceless God/song.ogg",
+      "size": 12646032
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 07. When All Is Lost/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 07. When All Is Lost/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 07. When All Is Lost/notes.chart",
+      "size": 74654
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 07. When All Is Lost/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 07. When All Is Lost/song.ogg",
+      "size": 17174384
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 08. Electric Messiah/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 08. Electric Messiah/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 08. Electric Messiah/notes.chart",
+      "size": 60157
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 08. Electric Messiah/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 08. Electric Messiah/song.ogg",
+      "size": 12165849
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 09. Prometheus (I Am Alive)/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 09. Prometheus (I Am Alive)/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 09. Prometheus (I Am Alive)/notes.chart",
+      "size": 112145
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 09. Prometheus (I Am Alive)/song.ini",
+      "size": 661
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 09. Prometheus (I Am Alive)/song.ogg",
+      "size": 13479876
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 10. Light up the Night/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 10. Light up the Night/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 10. Light up the Night/notes.chart",
+      "size": 64176
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 10. Light up the Night/song.ini",
+      "size": 371
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 10. Light up the Night/song.ogg",
+      "size": 10507561
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 11. The Lords of Chaos/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 11. The Lords of Chaos/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 11. The Lords of Chaos/notes.chart",
+      "size": 58851
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 11. The Lords of Chaos/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 11. The Lords of Chaos/song.ogg",
+      "size": 12187323
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 12. Reign in Madness/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 12. Reign in Madness/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 12. Reign in Madness/notes.chart",
+      "size": 80658
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 12. Reign in Madness/song.ini",
+      "size": 351
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - 12. Reign in Madness/song.ogg",
+      "size": 17108694
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - Iconoclast (Full Album)/album.png",
+      "size": 579293
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - Iconoclast (Full Album)/background.jpg",
+      "size": 424202
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - Iconoclast (Full Album)/notes.chart",
+      "size": 831832
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - Iconoclast (Full Album)/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 08. Iconoclast/Symphony X - Iconoclast (Full Album)/song.ogg",
+      "size": 164669934
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 01. Overture/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 01. Overture/background.jpg",
+      "size": 187147
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 01. Overture/notes.chart",
+      "size": 8809
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 01. Overture/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 01. Overture/song.ogg",
+      "size": 4117059
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 02. Nevermore/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 02. Nevermore/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 02. Nevermore/notes.chart",
+      "size": 67675
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 02. Nevermore/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 02. Nevermore/song.ogg",
+      "size": 11789609
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 03. Underworld/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 03. Underworld/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 03. Underworld/notes.chart",
+      "size": 71170
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 03. Underworld/song.ini",
+      "size": 611
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 03. Underworld/song.ogg",
+      "size": 20701623
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 04. Without You/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 04. Without You/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 04. Without You/notes.chart",
+      "size": 37006
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 04. Without You/song.ini",
+      "size": 394
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 04. Without You/song.ogg",
+      "size": 12501700
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 05. Kiss of Fire/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 05. Kiss of Fire/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 05. Kiss of Fire/notes.chart",
+      "size": 56882
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 05. Kiss of Fire/song.ini",
+      "size": 419
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 05. Kiss of Fire/song.ogg",
+      "size": 10950694
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 06. Charon/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 06. Charon/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 06. Charon/notes.chart",
+      "size": 56247
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 06. Charon/song.ini",
+      "size": 345
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 06. Charon/song.ogg",
+      "size": 13104914
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 07. To Hell and Back/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 07. To Hell and Back/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 07. To Hell and Back/notes.chart",
+      "size": 97360
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 07. To Hell and Back/song.ini",
+      "size": 654
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 07. To Hell and Back/song.ogg",
+      "size": 19348018
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 08. In My Darkest Hour/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 08. In My Darkest Hour/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 08. In My Darkest Hour/notes.chart",
+      "size": 37269
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 08. In My Darkest Hour/song.ini",
+      "size": 340
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 08. In My Darkest Hour/song.ogg",
+      "size": 9239476
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 09. Run with the Devil/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 09. Run with the Devil/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 09. Run with the Devil/notes.chart",
+      "size": 62444
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 09. Run with the Devil/song.ini",
+      "size": 355
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 09. Run with the Devil/song.ogg",
+      "size": 12046969
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 10. Swan Song/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 10. Swan Song/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 10. Swan Song/notes.chart",
+      "size": 54501
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 10. Swan Song/song.ini",
+      "size": 337
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 10. Swan Song/song.ogg",
+      "size": 14894074
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 11. Legend/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 11. Legend/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 11. Legend/notes.chart",
+      "size": 93346
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 11. Legend/song.ini",
+      "size": 399
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - 11. Legend/song.ogg",
+      "size": 13716720
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - Underworld (Full Album)/album.png",
+      "size": 247731
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - Underworld (Full Album)/background.jpg",
+      "size": 182949
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - Underworld (Full Album)/notes.chart",
+      "size": 645217
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - Underworld (Full Album)/song.ini",
+      "size": 337
+    },
+    {
+      "path": "Symphony X Discography Setlist/[SX] 09. Underworld/Symphony X - Underworld (Full Album)/song.ogg",
+      "size": 131153256
+    }
+  ],
+  "extracted_size": 2378355606,
+  "file_count": 506,
+  "chart_count": 101,
+  "release_date": "2021-06-26"
 }

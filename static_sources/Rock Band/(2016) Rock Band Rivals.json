@@ -1,0 +1,966 @@
+{
+  "name": "(2016) Rock Band Rivals",
+  "folder_id": "static-2016-rock-band-rivals",
+  "group": "Games",
+  "collection": "Rock Band",
+  "downloads": [
+    {
+      "id": "1m17qXQwZtlMJZ8nNjZhcQeBLdCerK1Xx",
+      "name": "~~~ rivals.txt",
+      "size": 721,
+      "md5": "2981b3411465b7ea2efd51c4499e38c2",
+      "path": "~~~ rivals.txt"
+    },
+    {
+      "id": "1VpjCJSkGF93HDgi8GDJEq6ff_J4xGCEo",
+      "name": "Rock Band Rivals 13.7z",
+      "size": 38546308,
+      "md5": "35c62845c38316424ee7d3f8ca4a7f36",
+      "path": "Rock Band Rivals 13.7z"
+    },
+    {
+      "id": "1jiiqcA5rwgs3KjRXFuhE-e5iWPGLJU_f",
+      "name": "Rock Band Rivals 24.7z",
+      "size": 38271363,
+      "md5": "31d15f8c4289345e1c86f0c8575f36c5",
+      "path": "Rock Band Rivals 24.7z"
+    },
+    {
+      "id": "18d4aAKyjx8j034MkXBR5pvl8AhkAhmyi",
+      "name": "Rock Band Rivals 23.7z",
+      "size": 33560017,
+      "md5": "60af8db0414ade91a2455fe77febd258",
+      "path": "Rock Band Rivals 23.7z"
+    },
+    {
+      "id": "1dCDLa3WSz9KYTGsJkQvLyWP7vDCSVyVL",
+      "name": "Rock Band Rivals 22.7z",
+      "size": 29919499,
+      "md5": "afa2403e08bd373499700e79376f2a8d",
+      "path": "Rock Band Rivals 22.7z"
+    },
+    {
+      "id": "1BCir5eLpzxjcLvhxKFsGDDSecnHluEQl",
+      "name": "Rock Band Rivals 21.7z",
+      "size": 22650646,
+      "md5": "60630eb25ff60bbbab77b644d9dc6580",
+      "path": "Rock Band Rivals 21.7z"
+    },
+    {
+      "id": "1kSNuLQ4TWSc8ubFm8DOSFYgIiIZX6RBq",
+      "name": "Rock Band Rivals 20.7z",
+      "size": 22353209,
+      "md5": "adee9afd2debb8b5ee42fb3c5a24771d",
+      "path": "Rock Band Rivals 20.7z"
+    },
+    {
+      "id": "1MHC8UTtlKIum5uv1XEo3kRgYw7huoVIR",
+      "name": "Rock Band Rivals 19.7z",
+      "size": 21940973,
+      "md5": "bd9c2989b86f10d1bb8eda04fe35c9ad",
+      "path": "Rock Band Rivals 19.7z"
+    },
+    {
+      "id": "1VcZCw2nt_7nbgXcCrJlxVkDfy90Jm3Q-",
+      "name": "Rock Band Rivals 18.7z",
+      "size": 37238727,
+      "md5": "1986cbc66df5d384e7c5fd8d1d9a3b46",
+      "path": "Rock Band Rivals 18.7z"
+    },
+    {
+      "id": "1qFDe2bDc1WH2FQQeCojV2mJTxd87FIJb",
+      "name": "Rock Band Rivals 17.7z",
+      "size": 33497571,
+      "md5": "9511c34417289936bb2be7b285a2852d",
+      "path": "Rock Band Rivals 17.7z"
+    },
+    {
+      "id": "1qq6mNIptCEgP5d5sZyncDcg9hVC1oDsF",
+      "name": "Rock Band Rivals 16.7z",
+      "size": 26301374,
+      "md5": "ebd7c16dd7ed019f52bb71170d2a7854",
+      "path": "Rock Band Rivals 16.7z"
+    },
+    {
+      "id": "1YXbCjeAe4A7dHXu51ywM8JBSkuHv8vpl",
+      "name": "Rock Band Rivals 15.7z",
+      "size": 21328074,
+      "md5": "a940cc3a12f3654b9bf574707b9ef0a3",
+      "path": "Rock Band Rivals 15.7z"
+    },
+    {
+      "id": "1KGzzSzrXKgeLejfFw_BasiEW_83-qeHm",
+      "name": "Rock Band Rivals 14.7z",
+      "size": 32272685,
+      "md5": "5107fbc9cbd210b2ff44bcaa45d7b223",
+      "path": "Rock Band Rivals 14.7z"
+    },
+    {
+      "id": "1YqDeFG5Lr7ajeOE_Xnib4NcJmRvaqdUV",
+      "name": "Rock Band Rivals 12.7z",
+      "size": 42324456,
+      "md5": "b0f82eafd711a82f7e81a7e662b92a72",
+      "path": "Rock Band Rivals 12.7z"
+    },
+    {
+      "id": "1AqfXR9VRG2Rgf15aOz-PYcqqPVO61mRY",
+      "name": "Rock Band Rivals 11.7z",
+      "size": 18669073,
+      "md5": "75cd0a9e905a5101dd8af3df5088d258",
+      "path": "Rock Band Rivals 11.7z"
+    },
+    {
+      "id": "1AGLiu0wI4Yr0ur181uRJ24kq_0GdUPsr",
+      "name": "Rock Band Rivals 10.7z",
+      "size": 25073864,
+      "md5": "077804e50be353cf722de3ee0d18e096",
+      "path": "Rock Band Rivals 10.7z"
+    },
+    {
+      "id": "1WgERozlvYpcdknajODSrVpCv2IIpwC-p",
+      "name": "Rock Band Rivals 9.7z",
+      "size": 26279887,
+      "md5": "e918d0628379ffa28427e4317f13e175",
+      "path": "Rock Band Rivals 9.7z"
+    },
+    {
+      "id": "1Xg-z_NQATADLIFAgGrXtW1EwbmtjF_z6",
+      "name": "Rock Band Rivals 8.7z",
+      "size": 21587004,
+      "md5": "107016172c1e21444bc6ff1440224d23",
+      "path": "Rock Band Rivals 8.7z"
+    },
+    {
+      "id": "1tafoJsdMjPpcaCVvuqijyfFt5rTZ-l5p",
+      "name": "Rock Band Rivals 7.7z",
+      "size": 34517523,
+      "md5": "e3778b6d4a1987380daf933dad02ba49",
+      "path": "Rock Band Rivals 7.7z"
+    },
+    {
+      "id": "1H9qVGxsda_vntdwwu161fTzHsqjozWk_",
+      "name": "Rock Band Rivals 6.7z",
+      "size": 26268553,
+      "md5": "2877672cf3b4e7562f756e00667735a1",
+      "path": "Rock Band Rivals 6.7z"
+    },
+    {
+      "id": "1sw6-9Ovn587Sms85NRUTmvI1vRhzxRqo",
+      "name": "Rock Band Rivals 5.7z",
+      "size": 32502714,
+      "md5": "9c34fb6d6166c2076b2d712993b0cd5b",
+      "path": "Rock Band Rivals 5.7z"
+    },
+    {
+      "id": "16hNwiYXXjJvwrxHk9WH6Y0qJpvB9BMnk",
+      "name": "Rock Band Rivals 4.7z",
+      "size": 13149731,
+      "md5": "6e2ea013ec3bcbcf8a96104b74c1f5ae",
+      "path": "Rock Band Rivals 4.7z"
+    },
+    {
+      "id": "1hAW_kjBAsvVnqWj7SFP-0ajyfVQ1GxBV",
+      "name": "Rock Band Rivals 3.7z",
+      "size": 41442379,
+      "md5": "d381a9f11ba5503446bb52cf94b741eb",
+      "path": "Rock Band Rivals 3.7z"
+    },
+    {
+      "id": "15GqVuBfQtQMGHp7CnBjnYPpiS-P3b2yt",
+      "name": "Rock Band Rivals 2.7z",
+      "size": 30226137,
+      "md5": "ab6f81281c561e6f24295946adccb977",
+      "path": "Rock Band Rivals 2.7z"
+    },
+    {
+      "id": "1nEmeoUVU5i89ptAbr6-LAAPVgssWTJgM",
+      "name": "Rock Band Rivals 1.7z",
+      "size": 26229177,
+      "md5": "e1b3921f3d1a2534dbcfe42e308368c7",
+      "path": "Rock Band Rivals 1.7z"
+    }
+  ],
+  "download_size": 696151665,
+  "files": [
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/drums.ogg",
+      "size": 6227038
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/guitar.ogg",
+      "size": 5995625
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/notes.mid",
+      "size": 98825
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/rhythm.ogg",
+      "size": 3215734
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/song.ini",
+      "size": 738
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/song.ogg",
+      "size": 5272900
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Animal Flag - Sink/vocals.ogg",
+      "size": 5337447
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/drums.ogg",
+      "size": 5498720
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/guitar.ogg",
+      "size": 4704840
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/notes.mid",
+      "size": 67544
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/rhythm.ogg",
+      "size": 4156027
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/song.ini",
+      "size": 755
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/song.ogg",
+      "size": 4270812
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Michael Christmas - Cross That Line/vocals.ogg",
+      "size": 6227274
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/album.jpg",
+      "size": 405753
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/drums.ogg",
+      "size": 4079659
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/guitar.ogg",
+      "size": 3807127
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/notes.mid",
+      "size": 78471
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/rhythm.ogg",
+      "size": 3303250
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/song.ini",
+      "size": 728
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/song.ogg",
+      "size": 3747377
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Nemes - Black Streak/vocals.ogg",
+      "size": 3480371
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/album.jpg",
+      "size": 391964
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/drums.ogg",
+      "size": 9669015
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/guitar.ogg",
+      "size": 9540967
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/notes.mid",
+      "size": 161804
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/rhythm.ogg",
+      "size": 7196419
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/song.ini",
+      "size": 727
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/song.ogg",
+      "size": 7683169
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Newfane - I Recognize/vocals.ogg",
+      "size": 8297153
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/album.jpg",
+      "size": 57349
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/drums.ogg",
+      "size": 8714171
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/guitar.ogg",
+      "size": 8028242
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/notes.mid",
+      "size": 125355
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/rhythm.ogg",
+      "size": 6345653
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/song.ini",
+      "size": 748
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/song.ogg",
+      "size": 7737180
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Parlour Bells - Never Let 'Em Hold Ya Back!/vocals.ogg",
+      "size": 8063103
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/album.jpg",
+      "size": 228638
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/drums.ogg",
+      "size": 6592238
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/guitar.ogg",
+      "size": 6395834
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/notes.mid",
+      "size": 130704
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/rhythm.ogg",
+      "size": 8339202
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/song.ini",
+      "size": 772
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/song.ogg",
+      "size": 5529938
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Party Bois - True Confessional/vocals.ogg",
+      "size": 5386478
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/album.jpg",
+      "size": 152558
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/drums.ogg",
+      "size": 4491608
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/guitar.ogg",
+      "size": 4261637
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/notes.mid",
+      "size": 101283
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/rhythm.ogg",
+      "size": 4541001
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/song.ini",
+      "size": 734
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/song.ogg",
+      "size": 3967292
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Petty Morals - Mean Girls/vocals.ogg",
+      "size": 4088708
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/album.jpg",
+      "size": 355798
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/drums.ogg",
+      "size": 5582030
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/guitar.ogg",
+      "size": 5654410
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/notes.mid",
+      "size": 83714
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/rhythm.ogg",
+      "size": 3766577
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/song.ogg",
+      "size": 5951017
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Pain Killer/vocals.ogg",
+      "size": 5378157
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/drums.ogg",
+      "size": 7242209
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/guitar.ogg",
+      "size": 6403972
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/notes.mid",
+      "size": 105192
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/rhythm.ogg",
+      "size": 7134947
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/song.ini",
+      "size": 744
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/song.ogg",
+      "size": 6480289
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Ruby Rose Fox - Skydiver/vocals.ogg",
+      "size": 6111478
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/album.jpg",
+      "size": 223398
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/drums.ogg",
+      "size": 8451655
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/guitar.ogg",
+      "size": 7101564
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/notes.mid",
+      "size": 132102
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/rhythm.ogg",
+      "size": 7091681
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/song.ogg",
+      "size": 7705505
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Skratch'N Snyf - S.O.M.P/vocals.ogg",
+      "size": 6878398
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/drums.ogg",
+      "size": 4834828
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/guitar.ogg",
+      "size": 4032613
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/notes.mid",
+      "size": 92910
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/rhythm.ogg",
+      "size": 3530466
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/song.ini",
+      "size": 735
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/song.ogg",
+      "size": 4362431
+    },
+    {
+      "path": "(2016) Rock Band Rivals/STL GLD - Good/vocals.ogg",
+      "size": 5307310
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/album.jpg",
+      "size": 251135
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/drums.ogg",
+      "size": 6403963
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/guitar.ogg",
+      "size": 5903167
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/notes.mid",
+      "size": 110708
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/rhythm.ogg",
+      "size": 5638471
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/song.ini",
+      "size": 718
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/song.ogg",
+      "size": 6421874
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bearstronaut - Shadow/vocals.ogg",
+      "size": 5736507
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/album.jpg",
+      "size": 360339
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/drums.ogg",
+      "size": 5851901
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 4652868
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/notes.mid",
+      "size": 118894
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/original.mid",
+      "size": 115562
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 3500914
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/song.ini",
+      "size": 742
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/song.ogg",
+      "size": 3845654
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Red Chord - Hour of Rats (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 4389778
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/album.jpg",
+      "size": 369890
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/drums.ogg",
+      "size": 5470023
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/guitar.ogg",
+      "size": 4588496
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/notes.mid",
+      "size": 113766
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/rhythm.ogg",
+      "size": 3232769
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/song.ini",
+      "size": 726
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/song.ogg",
+      "size": 4589671
+    },
+    {
+      "path": "(2016) Rock Band Rivals/The Warning Shots - Closer, Closer/vocals.ogg",
+      "size": 4767689
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/drums.ogg",
+      "size": 6454715
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/guitar.ogg",
+      "size": 5865359
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/notes.mid",
+      "size": 128124
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/rhythm.ogg",
+      "size": 5876186
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/song.ini",
+      "size": 742
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/song.ogg",
+      "size": 4963064
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Tigerman WOAH - Alone Time/vocals.ogg",
+      "size": 6500699
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/album.jpg",
+      "size": 280598
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/drums.ogg",
+      "size": 7995629
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/guitar.ogg",
+      "size": 7271461
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/notes.mid",
+      "size": 123384
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/rhythm.ogg",
+      "size": 4577121
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/song.ini",
+      "size": 746
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/song.ogg",
+      "size": 6927618
+    },
+    {
+      "path": "(2016) Rock Band Rivals/When Particles Collide - Constant Disaster/vocals.ogg",
+      "size": 6930478
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/album.jpg",
+      "size": 388694
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/drums.ogg",
+      "size": 7418561
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/guitar.ogg",
+      "size": 7287659
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/notes.mid",
+      "size": 149582
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/rhythm.ogg",
+      "size": 11189112
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/song.ini",
+      "size": 724
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/song.ogg",
+      "size": 6445341
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Worshipper - Black Corridor/vocals.ogg",
+      "size": 6320006
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/drums.ogg",
+      "size": 9583684
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/guitar.ogg",
+      "size": 8741935
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/notes.mid",
+      "size": 108048
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/rhythm.ogg",
+      "size": 6566717
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/song.ini",
+      "size": 745
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/song.ogg",
+      "size": 8638592
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Bent Knee - These Hands/vocals.ogg",
+      "size": 7967369
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/drums.ogg",
+      "size": 3023791
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/guitar.ogg",
+      "size": 2606950
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/notes.mid",
+      "size": 70087
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/rhythm.ogg",
+      "size": 2100475
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/song.ini",
+      "size": 743
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/song.ogg",
+      "size": 2560612
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Black Beach - No Place for Me/vocals.ogg",
+      "size": 2653940
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/drums.ogg",
+      "size": 5547039
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/guitar.ogg",
+      "size": 8859358
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/notes.mid",
+      "size": 86294
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/rhythm.ogg",
+      "size": 6020501
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/song.ini",
+      "size": 743
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/song.ogg",
+      "size": 6702857
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Creaturos - History Repeats/vocals.ogg",
+      "size": 5390664
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/drums.ogg",
+      "size": 6940863
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/guitar.ogg",
+      "size": 4545074
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/notes.mid",
+      "size": 136329
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/rhythm.ogg",
+      "size": 3447136
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/song.ini",
+      "size": 745
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/song.ogg",
+      "size": 4767258
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Dutch ReBelle - RudeBoys/vocals.ogg",
+      "size": 6650603
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/album.jpg",
+      "size": 374381
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/drums.ogg",
+      "size": 7923648
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/guitar.ogg",
+      "size": 6730189
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/notes.mid",
+      "size": 140419
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/rhythm.ogg",
+      "size": 6397061
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/song.ini",
+      "size": 726
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/song.ogg",
+      "size": 6824909
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Goddamn Draculas - Bethany/vocals.ogg",
+      "size": 6543321
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/drums.ogg",
+      "size": 5151679
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/guitar.ogg",
+      "size": 4484517
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/notes.mid",
+      "size": 106298
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/rhythm.ogg",
+      "size": 2511481
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/song.ini",
+      "size": 762
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/song.ogg",
+      "size": 4363604
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Julie Rhodes - Hurry Up (& Wait for You)/vocals.ogg",
+      "size": 4878017
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/album.jpg",
+      "size": 391567
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/drums.ogg",
+      "size": 6104107
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/guitar.ogg",
+      "size": 6239322
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/notes.mid",
+      "size": 74484
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/rhythm.ogg",
+      "size": 3974253
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/song.ini",
+      "size": 743
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/song.ogg",
+      "size": 4670869
+    },
+    {
+      "path": "(2016) Rock Band Rivals/Littlefoot - Casablanca/vocals.ogg",
+      "size": 5246279
+    },
+    {
+      "path": "(2016) Rock Band Rivals/~~~ rivals.txt",
+      "size": 721
+    }
+  ],
+  "extracted_size": 706496246,
+  "file_count": 194,
+  "chart_count": 24,
+  "release_date": "2016-10-18"
+}

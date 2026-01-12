@@ -1,20 +1,821 @@
 {
   "name": "Marathon Hero",
-  "folder_id": "static-marathon-hero-1",
+  "folder_id": "static-marathon-hero",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 49,
-  "total_size": 2389501040,
-  "file_count": 200,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-marathon-hero-1",
-      "path": "Marathon Hero/Marathon Hero.rar",
+      "url": "https://customsongscentral.b-cdn.net/Marathon%20Hero.rar?ref=customsongscentral.com",
       "name": "Marathon Hero.rar",
       "size": 2389501040,
-      "md5": "6743b6b0ba5bd46725185f68b0d7f708",
-      "url": "https://customsongscentral.b-cdn.net/Marathon%20Hero.rar?ref=customsongscentral.com"
+      "md5": "6743b6b0ba5bd46725185f68b0d7f708"
     }
-  ]
+  ],
+  "download_size": 2389501040,
+  "files": [
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/FROST - Black Light Machine/album.png",
+      "size": 406336
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/FROST - Black Light Machine/guitar.ogg",
+      "size": 28537493
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/FROST - Black Light Machine/notes.chart",
+      "size": 46701
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/FROST - Black Light Machine/song.ini",
+      "size": 358
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/La Bionda - Sandstorm/album.png",
+      "size": 610897
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/La Bionda - Sandstorm/notes.chart",
+      "size": 62627
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/La Bionda - Sandstorm/song.ini",
+      "size": 382
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/La Bionda - Sandstorm/song.ogg",
+      "size": 14700339
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Santa Esmeralda - Don_t Let Me Be Misunderstood/album.png",
+      "size": 463783
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Santa Esmeralda - Don_t Let Me Be Misunderstood/notes.chart",
+      "size": 80437
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Santa Esmeralda - Don_t Let Me Be Misunderstood/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Santa Esmeralda - Don_t Let Me Be Misunderstood/song.ogg",
+      "size": 24755369
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Theocracy - Wynter Fever/album.png",
+      "size": 276030
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Theocracy - Wynter Fever/guitar.ogg",
+      "size": 14592802
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Theocracy - Wynter Fever/notes.chart",
+      "size": 69088
+    },
+    {
+      "path": "Marathon Hero/Tier 01 - Size Doesn't Matter/Theocracy - Wynter Fever/song.ini",
+      "size": 737
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Hemina - I/album.png",
+      "size": 466871
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Hemina - I/notes.chart",
+      "size": 66153
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Hemina - I/song.ini",
+      "size": 226
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Hemina - I/song.ogg",
+      "size": 37513657
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/King Gizzard & the Lizard Wizard - Crumbling Castle/album.png",
+      "size": 2273545
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/King Gizzard & the Lizard Wizard - Crumbling Castle/notes.chart",
+      "size": 44116
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/King Gizzard & the Lizard Wizard - Crumbling Castle/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/King Gizzard & the Lizard Wizard - Crumbling Castle/song.ogg",
+      "size": 26175845
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Metallica - The Outlaw Torn (Unencumbered by Manufacturing Restrictions Version)/album.png",
+      "size": 1003434
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Metallica - The Outlaw Torn (Unencumbered by Manufacturing Restrictions Version)/notes.chart",
+      "size": 74005
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Metallica - The Outlaw Torn (Unencumbered by Manufacturing Restrictions Version)/song.ini",
+      "size": 612
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/Metallica - The Outlaw Torn (Unencumbered by Manufacturing Restrictions Version)/song.ogg",
+      "size": 19439805
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/The Mars Volta - L'Via L'Viaquez/album.png",
+      "size": 235542
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/The Mars Volta - L'Via L'Viaquez/notes.chart",
+      "size": 68071
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/The Mars Volta - L'Via L'Viaquez/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Marathon Hero/Tier 02 - A Gentle Jog/The Mars Volta - L'Via L'Viaquez/song.ogg",
+      "size": 38010943
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Avenged Sevenfold - Save Me/album.png",
+      "size": 611507
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Avenged Sevenfold - Save Me/notes.chart",
+      "size": 65276
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Avenged Sevenfold - Save Me/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Avenged Sevenfold - Save Me/song.ogg",
+      "size": 20509136
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Black Bomb A - Hell on Earth/album.png",
+      "size": 115404
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Black Bomb A - Hell on Earth/guitar.ogg",
+      "size": 39703077
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Black Bomb A - Hell on Earth/notes.chart",
+      "size": 75882
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Black Bomb A - Hell on Earth/notes.mid",
+      "size": 29136
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Black Bomb A - Hell on Earth/song.ini",
+      "size": 294
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Dream Theater - Raise The Knife/album.png",
+      "size": 195425
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Dream Theater - Raise The Knife/guitar.ogg",
+      "size": 24823406
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Dream Theater - Raise The Knife/notes.mid",
+      "size": 25258
+    },
+    {
+      "path": "Marathon Hero/Tier 03 - My Grandma Got Eaten By a Bear Yesterday, Please Play This Tier/Dream Theater - Raise The Knife/song.ini",
+      "size": 322
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress I/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress I/notes.chart",
+      "size": 140268
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress I/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress I/song.ogg",
+      "size": 24294308
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress II/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress II/notes.chart",
+      "size": 165428
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress II/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress II/song.ogg",
+      "size": 27970690
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress III/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress III/notes.chart",
+      "size": 123780
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress III/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Marathon Hero/Tier 04 - Chezy's Open Relationship/Protest The Hero - Fortress III/song.ogg",
+      "size": 20380627
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Boston - Walk On/album.png",
+      "size": 242893
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Boston - Walk On/notes.chart",
+      "size": 124275
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Boston - Walk On/song.ini",
+      "size": 417
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Boston - Walk On/song.mp3",
+      "size": 28119853
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Circus Maximus - Mouth of Madness/album.png",
+      "size": 497759
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Circus Maximus - Mouth of Madness/notes.chart",
+      "size": 82239
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Circus Maximus - Mouth of Madness/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Circus Maximus - Mouth of Madness/song.ogg",
+      "size": 24138568
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Mark Varney Project - Splatch/album.png",
+      "size": 54730
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Mark Varney Project - Splatch/notes.chart",
+      "size": 171008
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Mark Varney Project - Splatch/song.ini",
+      "size": 294
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/Mark Varney Project - Splatch/song.ogg",
+      "size": 21951244
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/The Contortionist - The Source-Language I & II/album.png",
+      "size": 464657
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/The Contortionist - The Source-Language I & II/notes.chart",
+      "size": 62073
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/The Contortionist - The Source-Language I & II/song.ini",
+      "size": 413
+    },
+    {
+      "path": "Marathon Hero/Tier 05 - Creative Tier Name/The Contortionist - The Source-Language I & II/song.ogg",
+      "size": 40649976
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Bane of Winterstorm - Dust Upon The Throne/album.png",
+      "size": 205956
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Bane of Winterstorm - Dust Upon The Throne/guitar.ogg",
+      "size": 31997145
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Bane of Winterstorm - Dust Upon The Throne/notes.chart",
+      "size": 54010
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Bane of Winterstorm - Dust Upon The Throne/notes.mid",
+      "size": 21247
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Bane of Winterstorm - Dust Upon The Throne/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Buckethead - Disintegration Mirrors/album.png",
+      "size": 132064
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Buckethead - Disintegration Mirrors/notes.chart",
+      "size": 147983
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Buckethead - Disintegration Mirrors/song.ini",
+      "size": 399
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Buckethead - Disintegration Mirrors/song.ogg",
+      "size": 14206818
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Spires - Broken Hourglass/album.png",
+      "size": 523180
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Spires - Broken Hourglass/notes.chart",
+      "size": 76476
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Spires - Broken Hourglass/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Spires - Broken Hourglass/song.mp3",
+      "size": 31082511
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Vektor - Accelerating Universe/album.png",
+      "size": 460931
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Vektor - Accelerating Universe/guitar.ogg",
+      "size": 35532572
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Vektor - Accelerating Universe/notes.chart",
+      "size": 144793
+    },
+    {
+      "path": "Marathon Hero/Tier 06 - Lucky Thirteen/Vektor - Accelerating Universe/song.ini",
+      "size": 303
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Celtic Frost - (Triptych) Synagoga Satanae/album.png",
+      "size": 90499
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Celtic Frost - (Triptych) Synagoga Satanae/guitar.ogg",
+      "size": 36345962
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Celtic Frost - (Triptych) Synagoga Satanae/notes.chart",
+      "size": 39141
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Celtic Frost - (Triptych) Synagoga Satanae/notes.mid",
+      "size": 15180
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Celtic Frost - (Triptych) Synagoga Satanae/song.ini",
+      "size": 300
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Herbie Hancock - Chameleon/album.png",
+      "size": 594505
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Herbie Hancock - Chameleon/notes.chart",
+      "size": 149645
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Herbie Hancock - Chameleon/song.ini",
+      "size": 239
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Herbie Hancock - Chameleon/song.ogg",
+      "size": 17685635
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Periphery - Somewhere in Time/album.png",
+      "size": 95091
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Periphery - Somewhere in Time/guitar.ogg",
+      "size": 51607937
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Periphery - Somewhere in Time/notes.chart",
+      "size": 72752
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/Periphery - Somewhere in Time/song.ini",
+      "size": 452
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/The Hirsch Effekt - Lysios/album.png",
+      "size": 379778
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/The Hirsch Effekt - Lysios/notes.chart",
+      "size": 268690
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/The Hirsch Effekt - Lysios/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Marathon Hero/Tier 07 - We Waited 9 Months For This/The Hirsch Effekt - Lysios/song.ogg",
+      "size": 24549764
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Between The Buried And Me - Swim To The Moon/album.png",
+      "size": 753612
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Between The Buried And Me - Swim To The Moon/notes.chart",
+      "size": 144767
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Between The Buried And Me - Swim To The Moon/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Between The Buried And Me - Swim To The Moon/song.ogg",
+      "size": 30187314
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Little Feat - Dixie Chicken Tripe Face Boogie (Live)/album.png",
+      "size": 1635794
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Little Feat - Dixie Chicken Tripe Face Boogie (Live)/notes.chart",
+      "size": 120299
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Little Feat - Dixie Chicken Tripe Face Boogie (Live)/song.ini",
+      "size": 459
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Little Feat - Dixie Chicken Tripe Face Boogie (Live)/song.ogg",
+      "size": 39129035
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/MASTER BOOT RECORD - 33MHz/album.png",
+      "size": 188081
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/MASTER BOOT RECORD - 33MHz/notes.chart",
+      "size": 214534
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/MASTER BOOT RECORD - 33MHz/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/MASTER BOOT RECORD - 33MHz/song.ogg",
+      "size": 19730799
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Versailles - Faith and Decision/album.png",
+      "size": 4465453
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Versailles - Faith and Decision/notes.chart",
+      "size": 1042122
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Versailles - Faith and Decision/song.ini",
+      "size": 446
+    },
+    {
+      "path": "Marathon Hero/Tier 08 - A Small Achievement/Versailles - Faith and Decision/song.ogg",
+      "size": 20407391
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Haken - Crystallised/album.png",
+      "size": 1073139
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Haken - Crystallised/guitar.ogg",
+      "size": 33598635
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Haken - Crystallised/notes.chart",
+      "size": 97761
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Haken - Crystallised/song.ini",
+      "size": 352
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Herbie Hancock - Hang Up Your Hangups (Live)/album.png",
+      "size": 630319
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Herbie Hancock - Hang Up Your Hangups (Live)/notes.chart",
+      "size": 233383
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Herbie Hancock - Hang Up Your Hangups (Live)/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Herbie Hancock - Hang Up Your Hangups (Live)/song.ogg",
+      "size": 47366143
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Others By No One - Dr Breacher and the Time Travel Anomaly/album.png",
+      "size": 387006
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Others By No One - Dr Breacher and the Time Travel Anomaly/guitar.ogg",
+      "size": 62908310
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Others By No One - Dr Breacher and the Time Travel Anomaly/notes.chart",
+      "size": 95189
+    },
+    {
+      "path": "Marathon Hero/Tier 09 - This Took So Long We Only Charted After 10PM/Others By No One - Dr Breacher and the Time Travel Anomaly/song.ini",
+      "size": 400
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Dream Theater - Beyond This Life (Live At Budokan)/album.png",
+      "size": 53140
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Dream Theater - Beyond This Life (Live At Budokan)/notes.chart",
+      "size": 259115
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Dream Theater - Beyond This Life (Live At Budokan)/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Dream Theater - Beyond This Life (Live At Budokan)/song.mp3",
+      "size": 44775986
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Estradasphere - Hunger Strike/album.png",
+      "size": 515928
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Estradasphere - Hunger Strike/guitar.ogg",
+      "size": 23085946
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Estradasphere - Hunger Strike/notes.chart",
+      "size": 251961
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Estradasphere - Hunger Strike/song.ini",
+      "size": 292
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Various Artists - Eternal Dropmix 01/album.png",
+      "size": 425342
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Various Artists - Eternal Dropmix 01/notes.chart",
+      "size": 233611
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Various Artists - Eternal Dropmix 01/song.ini",
+      "size": 712
+    },
+    {
+      "path": "Marathon Hero/Tier 10 - Three Charts the Chartographers don't want you to see - Number 2 will shock you!/Various Artists - Eternal Dropmix 01/song.ogg",
+      "size": 43081879
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Allegaeon - Proponent For Sentience/album.png",
+      "size": 134664
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Allegaeon - Proponent For Sentience/guitar.ogg",
+      "size": 78089615
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Allegaeon - Proponent For Sentience/notes.chart",
+      "size": 183991
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Allegaeon - Proponent For Sentience/notes.mid",
+      "size": 64642
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Allegaeon - Proponent For Sentience/song.ini",
+      "size": 289
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Aquamedley/album.png",
+      "size": 1370056
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Aquamedley/notes.chart",
+      "size": 171898
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Aquamedley/song.ini",
+      "size": 387
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Aquamedley/song.ogg",
+      "size": 59773271
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Visions/album.png",
+      "size": 133885
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Visions/guitar.ogg",
+      "size": 36836461
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Visions/notes.chart",
+      "size": 758539
+    },
+    {
+      "path": "Marathon Hero/Tier 11 - And you thought Return of the King was long/Haken - Visions/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 1)/album.png",
+      "size": 465945
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 1)/notes.chart",
+      "size": 161008
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 1)/song.ini",
+      "size": 396
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 1)/song.ogg",
+      "size": 48742687
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 2)/album.png",
+      "size": 465945
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 2)/notes.chart",
+      "size": 178506
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 2)/song.ini",
+      "size": 396
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Asturias - In Search of Soul Trees (Part 2)/song.ogg",
+      "size": 50352497
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Theocracy - Mirror of Souls/album.png",
+      "size": 302938
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Theocracy - Mirror of Souls/guitar.ogg",
+      "size": 56308955
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Theocracy - Mirror of Souls/notes.mid",
+      "size": 45490
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Theocracy - Mirror of Souls/song.ini",
+      "size": 291
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Uneven Structure - 8/album.png",
+      "size": 258532
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Uneven Structure - 8/notes.chart",
+      "size": 111452
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Uneven Structure - 8/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Marathon Hero/Tier 12 - Clone Hero-friendly Organized Repository of User-provided Songs/Uneven Structure - 8/song.ogg",
+      "size": 81249316
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Amberian Dawn - AD Discography Solo Medley/album.png",
+      "size": 370743
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Amberian Dawn - AD Discography Solo Medley/guitar.ogg",
+      "size": 87551577
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Amberian Dawn - AD Discography Solo Medley/notes.chart",
+      "size": 453292
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Amberian Dawn - AD Discography Solo Medley/song.ini",
+      "size": 508
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/FROST - Milliontown/album.png",
+      "size": 406336
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/FROST - Milliontown/guitar.mp3",
+      "size": 63822392
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/FROST - Milliontown/notes.chart",
+      "size": 210333
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/FROST - Milliontown/song.ini",
+      "size": 351
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Jethro Tull - Thick as a Brick/album.png",
+      "size": 1200310
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Jethro Tull - Thick as a Brick/notes.chart",
+      "size": 351255
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Jethro Tull - Thick as a Brick/song.ini",
+      "size": 408
+    },
+    {
+      "path": "Marathon Hero/Tier 13 - We Are Solo/Jethro Tull - Thick as a Brick/song.ogg",
+      "size": 105944415
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Ayreon - The Human Equation/album.png",
+      "size": 342549
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Ayreon - The Human Equation/guitar.ogg",
+      "size": 341533593
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Ayreon - The Human Equation/notes.chart",
+      "size": 686150
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Ayreon - The Human Equation/song.ini",
+      "size": 274
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Between The Buried And Me - Automata/album.png",
+      "size": 169357
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Between The Buried And Me - Automata/guitar.ogg",
+      "size": 180648132
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Between The Buried And Me - Automata/notes.chart",
+      "size": 405274
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/Between The Buried And Me - Automata/song.ini",
+      "size": 468
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/The Hirsch Effekt - Eskapist/album.png",
+      "size": 379778
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/The Hirsch Effekt - Eskapist/notes.chart",
+      "size": 493284
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/The Hirsch Effekt - Eskapist/song.ini",
+      "size": 493
+    },
+    {
+      "path": "Marathon Hero/Tier 14 - An 'Olympian' Effort/The Hirsch Effekt - Eskapist/song.ogg",
+      "size": 96972007
+    }
+  ],
+  "extracted_size": 2409017808,
+  "file_count": 200,
+  "chart_count": 49,
+  "release_date": "2018-08-11"
 }

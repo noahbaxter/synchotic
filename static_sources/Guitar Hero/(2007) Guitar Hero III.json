@@ -1,19 +1,2165 @@
 {
   "name": "(2007) Guitar Hero III",
-  "folder_id": "static-gh-3",
+  "folder_id": "static-2007-guitar-hero-iii",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 75,
-  "total_size": 1554037809,
-  "file_count": 611,
-  "files": [
+  "downloads": [
     {
       "id": "17Jbl3mBg116GnRYbvVGbHt_P57rN3ZnT",
-      "path": "(2007) Guitar Hero III - Legends of Rock/Guitar Hero III.rar",
       "name": "Guitar Hero III.rar",
       "size": 1554037809,
       "md5": "d189a10dc8b5e42fbb6d88a1d1c9efb2"
     }
-  ]
+  ],
+  "download_size": 1554037809,
+  "files": [
+    {
+      "path": "(2007) Guitar Hero III/Bonus/An Endless Sporadic - Impulse/album.png",
+      "size": 73896
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/An Endless Sporadic - Impulse/guitar.ogg",
+      "size": 6907436
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/An Endless Sporadic - Impulse/notes.mid",
+      "size": 70827
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/An Endless Sporadic - Impulse/preview.ogg",
+      "size": 696450
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/An Endless Sporadic - Impulse/rhythm.ogg",
+      "size": 6610366
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/An Endless Sporadic - Impulse/song.ini",
+      "size": 801
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/An Endless Sporadic - Impulse/song.ogg",
+      "size": 7826893
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Backyard Babies - Minus Celsius/album.png",
+      "size": 431917
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Backyard Babies - Minus Celsius/guitar.ogg",
+      "size": 6419371
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Backyard Babies - Minus Celsius/notes.mid",
+      "size": 61352
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Backyard Babies - Minus Celsius/preview.ogg",
+      "size": 735955
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Backyard Babies - Minus Celsius/rhythm.ogg",
+      "size": 5505148
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Backyard Babies - Minus Celsius/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Backyard Babies - Minus Celsius/song.ogg",
+      "size": 6018140
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/album.png",
+      "size": 198877
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/guitar.ogg",
+      "size": 4497787
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/notes.mid",
+      "size": 53352
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/preview.ogg",
+      "size": 717261
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/rhythm.ogg",
+      "size": 4642925
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/song.ini",
+      "size": 797
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Bret Michaels Band - Go That Far/song.ogg",
+      "size": 4402543
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Die Toten Hosen - Hier Kommt Alex/album.png",
+      "size": 575297
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Die Toten Hosen - Hier Kommt Alex/guitar.ogg",
+      "size": 6304729
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Die Toten Hosen - Hier Kommt Alex/notes.mid",
+      "size": 82949
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Die Toten Hosen - Hier Kommt Alex/preview.ogg",
+      "size": 861140
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Die Toten Hosen - Hier Kommt Alex/rhythm.ogg",
+      "size": 5974787
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Die Toten Hosen - Hier Kommt Alex/song.ini",
+      "size": 817
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Die Toten Hosen - Hier Kommt Alex/song.ogg",
+      "size": 6845966
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dope - Nothing For Me Here/album.png",
+      "size": 358877
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dope - Nothing For Me Here/guitar.ogg",
+      "size": 4339216
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dope - Nothing For Me Here/notes.mid",
+      "size": 65105
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dope - Nothing For Me Here/preview.ogg",
+      "size": 517498
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dope - Nothing For Me Here/rhythm.ogg",
+      "size": 5809206
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dope - Nothing For Me Here/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dope - Nothing For Me Here/song.ogg",
+      "size": 4991948
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/album.png",
+      "size": 605058
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/guitar.ogg",
+      "size": 11303926
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/notes.mid",
+      "size": 227017
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/preview.ogg",
+      "size": 692417
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/rhythm.ogg",
+      "size": 11199715
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/song.ini",
+      "size": 884
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames (Co-op)/song.ogg",
+      "size": 13765084
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames/album.png",
+      "size": 605058
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames/guitar.ogg",
+      "size": 11252320
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames/notes.mid",
+      "size": 123016
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames/preview.ogg",
+      "size": 692417
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames/song.ini",
+      "size": 876
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Dragonforce - Through The Fire & Flames/song.ogg",
+      "size": 13810175
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Gallows - In The Belly Of A Shark/album.png",
+      "size": 347633
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Gallows - In The Belly Of A Shark/guitar.ogg",
+      "size": 4493889
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Gallows - In The Belly Of A Shark/notes.mid",
+      "size": 54957
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Gallows - In The Belly Of A Shark/preview.ogg",
+      "size": 562047
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Gallows - In The Belly Of A Shark/rhythm.ogg",
+      "size": 4707788
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Gallows - In The Belly Of A Shark/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Gallows - In The Belly Of A Shark/song.ogg",
+      "size": 4693719
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/album.png",
+      "size": 464272
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/guitar.ogg",
+      "size": 9068339
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/notes.mid",
+      "size": 98246
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/preview.ogg",
+      "size": 945507
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/rhythm.ogg",
+      "size": 9629005
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/song.ini",
+      "size": 910
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/H\u00e9roes Del Silencio - Avalancha/song.ogg",
+      "size": 10586148
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/In Flames - Take This Life/album.png",
+      "size": 220764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/In Flames - Take This Life/guitar.ogg",
+      "size": 5991433
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/In Flames - Take This Life/notes.mid",
+      "size": 114329
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/In Flames - Take This Life/preview.ogg",
+      "size": 678669
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/In Flames - Take This Life/rhythm.ogg",
+      "size": 5937521
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/In Flames - Take This Life/song.ini",
+      "size": 800
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/In Flames - Take This Life/song.ogg",
+      "size": 7224399
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Kaiser Chiefs - Ruby/album.png",
+      "size": 267635
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Kaiser Chiefs - Ruby/guitar.ogg",
+      "size": 5328151
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Kaiser Chiefs - Ruby/notes.mid",
+      "size": 42721
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Kaiser Chiefs - Ruby/preview.ogg",
+      "size": 808557
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Kaiser Chiefs - Ruby/rhythm.ogg",
+      "size": 5233982
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Kaiser Chiefs - Ruby/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Kaiser Chiefs - Ruby/song.ogg",
+      "size": 5970371
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Killswitch Engage - My Curse/album.png",
+      "size": 470471
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Killswitch Engage - My Curse/guitar.ogg",
+      "size": 6736111
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Killswitch Engage - My Curse/notes.mid",
+      "size": 79339
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Killswitch Engage - My Curse/preview.ogg",
+      "size": 630356
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Killswitch Engage - My Curse/rhythm.ogg",
+      "size": 6590536
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Killswitch Engage - My Curse/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Killswitch Engage - My Curse/song.ogg",
+      "size": 7412899
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/L.A. Slum Lords - Down N' Dirty/album.png",
+      "size": 423866
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/L.A. Slum Lords - Down N' Dirty/guitar.ogg",
+      "size": 8174982
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/L.A. Slum Lords - Down N' Dirty/notes.mid",
+      "size": 103463
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/L.A. Slum Lords - Down N' Dirty/preview.ogg",
+      "size": 772675
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/L.A. Slum Lords - Down N' Dirty/rhythm.ogg",
+      "size": 7588848
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/L.A. Slum Lords - Down N' Dirty/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/L.A. Slum Lords - Down N' Dirty/song.ogg",
+      "size": 9740964
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lacuna Coil - Closer/album.png",
+      "size": 491564
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lacuna Coil - Closer/guitar.ogg",
+      "size": 4800474
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lacuna Coil - Closer/notes.mid",
+      "size": 53795
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lacuna Coil - Closer/preview.ogg",
+      "size": 612334
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lacuna Coil - Closer/rhythm.ogg",
+      "size": 5058219
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lacuna Coil - Closer/song.ini",
+      "size": 784
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lacuna Coil - Closer/song.ogg",
+      "size": 5151069
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lions - Metal Heavy Lady/album.png",
+      "size": 71044
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lions - Metal Heavy Lady/guitar.ogg",
+      "size": 3685897
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lions - Metal Heavy Lady/notes.mid",
+      "size": 48464
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lions - Metal Heavy Lady/preview.ogg",
+      "size": 508926
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lions - Metal Heavy Lady/rhythm.ogg",
+      "size": 4707991
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lions - Metal Heavy Lady/song.ini",
+      "size": 781
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Lions - Metal Heavy Lady/song.ogg",
+      "size": 4342160
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Naast - Mauvais Gar\u00e7on/album.png",
+      "size": 168651
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Naast - Mauvais Gar\u00e7on/guitar.ogg",
+      "size": 5311552
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Naast - Mauvais Gar\u00e7on/notes.mid",
+      "size": 59541
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Naast - Mauvais Gar\u00e7on/preview.ogg",
+      "size": 701102
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Naast - Mauvais Gar\u00e7on/rhythm.ogg",
+      "size": 4687394
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Naast - Mauvais Gar\u00e7on/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Naast - Mauvais Gar\u00e7on/song.ogg",
+      "size": 4840201
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Prototype - The Way It Ends/album.png",
+      "size": 373313
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Prototype - The Way It Ends/guitar.ogg",
+      "size": 8337892
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Prototype - The Way It Ends/notes.mid",
+      "size": 116267
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Prototype - The Way It Ends/preview.ogg",
+      "size": 909771
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Prototype - The Way It Ends/rhythm.ogg",
+      "size": 9104269
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Prototype - The Way It Ends/song.ini",
+      "size": 791
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Prototype - The Way It Ends/song.ogg",
+      "size": 10541599
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Revolverheld - Generation Rock/album.png",
+      "size": 539997
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Revolverheld - Generation Rock/guitar.ogg",
+      "size": 4764166
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Revolverheld - Generation Rock/notes.mid",
+      "size": 51761
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Revolverheld - Generation Rock/preview.ogg",
+      "size": 558514
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Revolverheld - Generation Rock/rhythm.ogg",
+      "size": 4095753
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Revolverheld - Generation Rock/song.ini",
+      "size": 789
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Revolverheld - Generation Rock/song.ogg",
+      "size": 4740517
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Rise Against - Prayer Of The Refugee/album.png",
+      "size": 368215
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Rise Against - Prayer Of The Refugee/guitar.ogg",
+      "size": 5412706
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Rise Against - Prayer Of The Refugee/notes.mid",
+      "size": 73180
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Rise Against - Prayer Of The Refugee/preview.ogg",
+      "size": 558095
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Rise Against - Prayer Of The Refugee/rhythm.ogg",
+      "size": 5047304
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Rise Against - Prayer Of The Refugee/song.ini",
+      "size": 814
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Rise Against - Prayer Of The Refugee/song.ogg",
+      "size": 6054251
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Scouts Of St. Sebastian - In Love/album.png",
+      "size": 107334
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Scouts Of St. Sebastian - In Love/guitar.ogg",
+      "size": 6363950
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Scouts Of St. Sebastian - In Love/notes.mid",
+      "size": 64324
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Scouts Of St. Sebastian - In Love/preview.ogg",
+      "size": 589099
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Scouts Of St. Sebastian - In Love/rhythm.ogg",
+      "size": 5067242
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Scouts Of St. Sebastian - In Love/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Scouts Of St. Sebastian - In Love/song.ogg",
+      "size": 6484915
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Senses Fail - Can't Be Saved/album.png",
+      "size": 744648
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Senses Fail - Can't Be Saved/guitar.ogg",
+      "size": 5134844
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Senses Fail - Can't Be Saved/notes.mid",
+      "size": 63019
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Senses Fail - Can't Be Saved/preview.ogg",
+      "size": 808033
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Senses Fail - Can't Be Saved/rhythm.ogg",
+      "size": 5232450
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Senses Fail - Can't Be Saved/song.ini",
+      "size": 789
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Senses Fail - Can't Be Saved/song.ogg",
+      "size": 5512318
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Superbus - Radio Song/album.png",
+      "size": 329896
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Superbus - Radio Song/guitar.ogg",
+      "size": 3671791
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Superbus - Radio Song/notes.mid",
+      "size": 45429
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Superbus - Radio Song/preview.ogg",
+      "size": 808156
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Superbus - Radio Song/rhythm.ogg",
+      "size": 3594596
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Superbus - Radio Song/song.ini",
+      "size": 782
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/Superbus - Radio Song/song.ogg",
+      "size": 4152893
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Fall Of Troy - F.C.P.R.E.M.I.X/album.png",
+      "size": 412626
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Fall Of Troy - F.C.P.R.E.M.I.X/guitar.ogg",
+      "size": 7056462
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Fall Of Troy - F.C.P.R.E.M.I.X/notes.mid",
+      "size": 95694
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Fall Of Troy - F.C.P.R.E.M.I.X/preview.ogg",
+      "size": 718105
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Fall Of Troy - F.C.P.R.E.M.I.X/rhythm.ogg",
+      "size": 7178765
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Fall Of Troy - F.C.P.R.E.M.I.X/song.ini",
+      "size": 806
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Fall Of Troy - F.C.P.R.E.M.I.X/song.ogg",
+      "size": 6933403
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Hellacopters - I'm In The Band/album.png",
+      "size": 328838
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Hellacopters - I'm In The Band/guitar.ogg",
+      "size": 5877011
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Hellacopters - I'm In The Band/notes.mid",
+      "size": 67408
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Hellacopters - I'm In The Band/preview.ogg",
+      "size": 644780
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Hellacopters - I'm In The Band/rhythm.ogg",
+      "size": 4797797
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Hellacopters - I'm In The Band/song.ini",
+      "size": 800
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Hellacopters - I'm In The Band/song.ogg",
+      "size": 5964203
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Sleeping - Don't Hold Back/album.png",
+      "size": 401522
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Sleeping - Don't Hold Back/guitar.ogg",
+      "size": 7681538
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Sleeping - Don't Hold Back/notes.mid",
+      "size": 79733
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Sleeping - Don't Hold Back/preview.ogg",
+      "size": 849319
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Sleeping - Don't Hold Back/rhythm.ogg",
+      "size": 6348930
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Sleeping - Don't Hold Back/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Sleeping - Don't Hold Back/song.ogg",
+      "size": 8103356
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Stone Roses - She Bangs The Drums/album.png",
+      "size": 573044
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Stone Roses - She Bangs The Drums/guitar.ogg",
+      "size": 6274498
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Stone Roses - She Bangs The Drums/notes.mid",
+      "size": 66946
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Stone Roses - She Bangs The Drums/preview.ogg",
+      "size": 653806
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Stone Roses - She Bangs The Drums/rhythm.ogg",
+      "size": 5970211
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Stone Roses - She Bangs The Drums/song.ini",
+      "size": 822
+    },
+    {
+      "path": "(2007) Guitar Hero III/Bonus/The Stone Roses - She Bangs The Drums/song.ogg",
+      "size": 6700536
+    },
+    {
+      "path": "(2007) Guitar Hero III/GH3 Rips v5.txt",
+      "size": 2494
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/AFI - Miss Murder/album.png",
+      "size": 476541
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/AFI - Miss Murder/guitar.ogg",
+      "size": 5749861
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/AFI - Miss Murder/notes.mid",
+      "size": 60972
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/AFI - Miss Murder/preview.ogg",
+      "size": 579034
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/AFI - Miss Murder/rhythm.ogg",
+      "size": 5388828
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/AFI - Miss Murder/song.ini",
+      "size": 918
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/AFI - Miss Murder/song.ogg",
+      "size": 5632755
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/album.png",
+      "size": 231534
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/guitar.ogg",
+      "size": 4655955
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/notes.mid",
+      "size": 47703
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/preview.ogg",
+      "size": 629396
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/rhythm.ogg",
+      "size": 5472361
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/song.ini",
+      "size": 930
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Aerosmith - Same Old Song & Dance/song.ogg",
+      "size": 4845851
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Alice Cooper - School's Out/album.png",
+      "size": 581207
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Alice Cooper - School's Out/guitar.ogg",
+      "size": 5330245
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Alice Cooper - School's Out/notes.mid",
+      "size": 47750
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Alice Cooper - School's Out/preview.ogg",
+      "size": 578678
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Alice Cooper - School's Out/rhythm.ogg",
+      "size": 5613921
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Alice Cooper - School's Out/song.ini",
+      "size": 932
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Alice Cooper - School's Out/song.ogg",
+      "size": 5182040
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Beastie Boys - Sabotage/album.png",
+      "size": 622498
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Beastie Boys - Sabotage/guitar.ogg",
+      "size": 4575947
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Beastie Boys - Sabotage/notes.mid",
+      "size": 56476
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Beastie Boys - Sabotage/preview.ogg",
+      "size": 554355
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Beastie Boys - Sabotage/rhythm.ogg",
+      "size": 4549450
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Beastie Boys - Sabotage/song.ini",
+      "size": 918
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Beastie Boys - Sabotage/song.ogg",
+      "size": 5102947
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Black Sabbath - Paranoid/album.png",
+      "size": 412135
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Black Sabbath - Paranoid/guitar.ogg",
+      "size": 5140376
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Black Sabbath - Paranoid/notes.mid",
+      "size": 62660
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Black Sabbath - Paranoid/preview.ogg",
+      "size": 789436
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Black Sabbath - Paranoid/rhythm.ogg",
+      "size": 4329835
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Black Sabbath - Paranoid/song.ini",
+      "size": 925
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Black Sabbath - Paranoid/song.ogg",
+      "size": 4611673
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/album.png",
+      "size": 165216
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/guitar.ogg",
+      "size": 6145734
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/notes.mid",
+      "size": 97728
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/preview.ogg",
+      "size": 922951
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/rhythm.ogg",
+      "size": 6819910
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/song.ini",
+      "size": 910
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Bloc Party - Helicopter/song.ogg",
+      "size": 6623846
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Blue \u00d6yster Cult - Cities On Flame With Rock & Roll/album.png",
+      "size": 205483
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Blue \u00d6yster Cult - Cities On Flame With Rock & Roll/guitar.ogg",
+      "size": 7128388
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Blue \u00d6yster Cult - Cities On Flame With Rock & Roll/notes.mid",
+      "size": 61422
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Blue \u00d6yster Cult - Cities On Flame With Rock & Roll/preview.ogg",
+      "size": 519272
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Blue \u00d6yster Cult - Cities On Flame With Rock & Roll/rhythm.ogg",
+      "size": 7241982
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Blue \u00d6yster Cult - Cities On Flame With Rock & Roll/song.ini",
+      "size": 958
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Blue \u00d6yster Cult - Cities On Flame With Rock & Roll/song.ogg",
+      "size": 6686838
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Cream - Sunshine Of Your Love/album.png",
+      "size": 564075
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Cream - Sunshine Of Your Love/guitar.ogg",
+      "size": 5795629
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Cream - Sunshine Of Your Love/notes.mid",
+      "size": 60218
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Cream - Sunshine Of Your Love/preview.ogg",
+      "size": 622826
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Cream - Sunshine Of Your Love/rhythm.ogg",
+      "size": 5883848
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Cream - Sunshine Of Your Love/song.ini",
+      "size": 925
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Cream - Sunshine Of Your Love/song.ogg",
+      "size": 6798688
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Disturbed - Stricken/album.png",
+      "size": 353176
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Disturbed - Stricken/guitar.ogg",
+      "size": 6912506
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Disturbed - Stricken/notes.mid",
+      "size": 93896
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Disturbed - Stricken/preview.ogg",
+      "size": 1005683
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Disturbed - Stricken/rhythm.ogg",
+      "size": 6587916
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Disturbed - Stricken/song.ini",
+      "size": 920
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Disturbed - Stricken/song.ogg",
+      "size": 6793437
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Eric Johnson - Cliffs Of Dover/album.png",
+      "size": 62295
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Eric Johnson - Cliffs Of Dover/guitar.ogg",
+      "size": 5985731
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Eric Johnson - Cliffs Of Dover/notes.mid",
+      "size": 72546
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Eric Johnson - Cliffs Of Dover/preview.ogg",
+      "size": 752464
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Eric Johnson - Cliffs Of Dover/rhythm.ogg",
+      "size": 6080551
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Eric Johnson - Cliffs Of Dover/song.ini",
+      "size": 921
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Eric Johnson - Cliffs Of Dover/song.ogg",
+      "size": 7794487
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Foghat - Slow Ride/album.png",
+      "size": 482699
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Foghat - Slow Ride/guitar.ogg",
+      "size": 7046053
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Foghat - Slow Ride/notes.mid",
+      "size": 55810
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Foghat - Slow Ride/preview.ogg",
+      "size": 836954
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Foghat - Slow Ride/rhythm.ogg",
+      "size": 6221742
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Foghat - Slow Ride/song.ini",
+      "size": 890
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Foghat - Slow Ride/song.ogg",
+      "size": 7577310
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Guns N' Roses - Welcome To The Jungle/album.png",
+      "size": 174895
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Guns N' Roses - Welcome To The Jungle/guitar.ogg",
+      "size": 7974181
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Guns N' Roses - Welcome To The Jungle/notes.mid",
+      "size": 77710
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Guns N' Roses - Welcome To The Jungle/preview.ogg",
+      "size": 595273
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Guns N' Roses - Welcome To The Jungle/rhythm.ogg",
+      "size": 7119578
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Guns N' Roses - Welcome To The Jungle/song.ini",
+      "size": 954
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Guns N' Roses - Welcome To The Jungle/song.ogg",
+      "size": 7816336
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/album.png",
+      "size": 447098
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/guitar.ogg",
+      "size": 7704198
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/notes.mid",
+      "size": 78607
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/notesold.mid",
+      "size": 78599
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/preview.ogg",
+      "size": 623442
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/rhythm.ogg",
+      "size": 6155009
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/song.ini",
+      "size": 1036
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/song.ogg",
+      "size": 7094429
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Heart - Barracuda/song_original.ogg",
+      "size": 7216277
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Iron Maiden - The Number Of The Beast/album.png",
+      "size": 615228
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Iron Maiden - The Number Of The Beast/guitar.ogg",
+      "size": 7241274
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Iron Maiden - The Number Of The Beast/notes.mid",
+      "size": 118176
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Iron Maiden - The Number Of The Beast/preview.ogg",
+      "size": 502515
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Iron Maiden - The Number Of The Beast/rhythm.ogg",
+      "size": 6847764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Iron Maiden - The Number Of The Beast/song.ini",
+      "size": 942
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Iron Maiden - The Number Of The Beast/song.ogg",
+      "size": 7900759
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/KISS - Rock & Roll All Nite/album.png",
+      "size": 277811
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/KISS - Rock & Roll All Nite/guitar.ogg",
+      "size": 5649625
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/KISS - Rock & Roll All Nite/notes.mid",
+      "size": 42402
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/KISS - Rock & Roll All Nite/preview.ogg",
+      "size": 656565
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/KISS - Rock & Roll All Nite/rhythm.ogg",
+      "size": 5467833
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/KISS - Rock & Roll All Nite/song.ini",
+      "size": 937
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/KISS - Rock & Roll All Nite/song.ogg",
+      "size": 6762224
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Living Colour - Cult Of Personality/album.png",
+      "size": 177077
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Living Colour - Cult Of Personality/guitar.ogg",
+      "size": 8527229
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Living Colour - Cult Of Personality/notes.mid",
+      "size": 81599
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Living Colour - Cult Of Personality/preview.ogg",
+      "size": 692466
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Living Colour - Cult Of Personality/rhythm.ogg",
+      "size": 7319329
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Living Colour - Cult Of Personality/song.ini",
+      "size": 933
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Living Colour - Cult Of Personality/song.ogg",
+      "size": 8661022
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Matchbook Romance - Monsters/album.png",
+      "size": 94889
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Matchbook Romance - Monsters/guitar.ogg",
+      "size": 6186767
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Matchbook Romance - Monsters/notes.mid",
+      "size": 75408
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Matchbook Romance - Monsters/preview.ogg",
+      "size": 722386
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Matchbook Romance - Monsters/rhythm.ogg",
+      "size": 5425752
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Matchbook Romance - Monsters/song.ini",
+      "size": 908
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Matchbook Romance - Monsters/song.ogg",
+      "size": 6629410
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/album.png",
+      "size": 257868
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/guitar.ogg",
+      "size": 12194065
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/notes.mid",
+      "size": 166575
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/preview.ogg",
+      "size": 1319956
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/rhythm.ogg",
+      "size": 12684783
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/song.ini",
+      "size": 916
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One (Co-op)/song.ogg",
+      "size": 12948691
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One/album.png",
+      "size": 257868
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One/guitar.ogg",
+      "size": 13188491
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One/notes.mid",
+      "size": 88295
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One/preview.ogg",
+      "size": 1319956
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One/song.ini",
+      "size": 908
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Metallica - One/song.ogg",
+      "size": 13028337
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Mountain - Mississippi Queen/album.png",
+      "size": 252926
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Mountain - Mississippi Queen/guitar.ogg",
+      "size": 3636628
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Mountain - Mississippi Queen/notes.mid",
+      "size": 34674
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Mountain - Mississippi Queen/preview.ogg",
+      "size": 726843
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Mountain - Mississippi Queen/rhythm.ogg",
+      "size": 3624358
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Mountain - Mississippi Queen/song.ini",
+      "size": 919
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Mountain - Mississippi Queen/song.ogg",
+      "size": 4077680
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Muse - Knights Of Cydonia/album.png",
+      "size": 486956
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Muse - Knights Of Cydonia/guitar.ogg",
+      "size": 10251285
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Muse - Knights Of Cydonia/notes.mid",
+      "size": 121852
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Muse - Knights Of Cydonia/preview.ogg",
+      "size": 898988
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Muse - Knights Of Cydonia/rhythm.ogg",
+      "size": 9231429
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Muse - Knights Of Cydonia/song.ini",
+      "size": 937
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Muse - Knights Of Cydonia/song.ogg",
+      "size": 10214676
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pat Benatar - Hit Me with Your Best Shot/album.png",
+      "size": 508043
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pat Benatar - Hit Me with Your Best Shot/guitar.ogg",
+      "size": 5086394
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pat Benatar - Hit Me with Your Best Shot/notes.mid",
+      "size": 40774
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pat Benatar - Hit Me with Your Best Shot/preview.ogg",
+      "size": 554794
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pat Benatar - Hit Me with Your Best Shot/rhythm.ogg",
+      "size": 4393713
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pat Benatar - Hit Me with Your Best Shot/song.ini",
+      "size": 907
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pat Benatar - Hit Me with Your Best Shot/song.ogg",
+      "size": 4773085
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pearl Jam - Even Flow/album.png",
+      "size": 547314
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pearl Jam - Even Flow/guitar.ogg",
+      "size": 9036344
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pearl Jam - Even Flow/notes.mid",
+      "size": 76629
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pearl Jam - Even Flow/preview.ogg",
+      "size": 763219
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pearl Jam - Even Flow/rhythm.ogg",
+      "size": 7368005
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pearl Jam - Even Flow/song.ini",
+      "size": 895
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Pearl Jam - Even Flow/song.ogg",
+      "size": 8708414
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Poison - Talk Dirty to Me/album.png",
+      "size": 371185
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Poison - Talk Dirty to Me/guitar.ogg",
+      "size": 6375565
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Poison - Talk Dirty to Me/notes.mid",
+      "size": 59575
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Poison - Talk Dirty to Me/preview.ogg",
+      "size": 818490
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Poison - Talk Dirty to Me/rhythm.ogg",
+      "size": 6132834
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Poison - Talk Dirty to Me/song.ini",
+      "size": 890
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Poison - Talk Dirty to Me/song.ogg",
+      "size": 6561929
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Priestess - Lay Down/album.png",
+      "size": 422531
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Priestess - Lay Down/guitar.ogg",
+      "size": 5429350
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Priestess - Lay Down/notes.mid",
+      "size": 66884
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Priestess - Lay Down/preview.ogg",
+      "size": 826905
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Priestess - Lay Down/rhythm.ogg",
+      "size": 5138123
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Priestess - Lay Down/song.ini",
+      "size": 912
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Priestess - Lay Down/song.ogg",
+      "size": 5458608
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Queens Of The Stone Age - 3's & 7's/album.png",
+      "size": 417108
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Queens Of The Stone Age - 3's & 7's/guitar.ogg",
+      "size": 6011122
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Queens Of The Stone Age - 3's & 7's/notes.mid",
+      "size": 74637
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Queens Of The Stone Age - 3's & 7's/preview.ogg",
+      "size": 682963
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Queens Of The Stone Age - 3's & 7's/rhythm.ogg",
+      "size": 6612321
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Queens Of The Stone Age - 3's & 7's/song.ini",
+      "size": 925
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Queens Of The Stone Age - 3's & 7's/song.ogg",
+      "size": 5892640
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Rage Against The Machine - Bulls On Parade/album.png",
+      "size": 280544
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Rage Against The Machine - Bulls On Parade/guitar.ogg",
+      "size": 6824559
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Rage Against The Machine - Bulls On Parade/notes.mid",
+      "size": 57728
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Rage Against The Machine - Bulls On Parade/preview.ogg",
+      "size": 769528
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Rage Against The Machine - Bulls On Parade/rhythm.ogg",
+      "size": 6390707
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Rage Against The Machine - Bulls On Parade/song.ini",
+      "size": 930
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Rage Against The Machine - Bulls On Parade/song.ogg",
+      "size": 6421301
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Red Hot Chili Peppers - Suck My Kiss/album.png",
+      "size": 617619
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Red Hot Chili Peppers - Suck My Kiss/guitar.ogg",
+      "size": 5775657
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Red Hot Chili Peppers - Suck My Kiss/notes.mid",
+      "size": 54529
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Red Hot Chili Peppers - Suck My Kiss/preview.ogg",
+      "size": 660095
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Red Hot Chili Peppers - Suck My Kiss/rhythm.ogg",
+      "size": 5580173
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Red Hot Chili Peppers - Suck My Kiss/song.ini",
+      "size": 939
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Red Hot Chili Peppers - Suck My Kiss/song.ogg",
+      "size": 6453180
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Santana - Black Magic Woman/album.png",
+      "size": 114714
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Santana - Black Magic Woman/guitar.ogg",
+      "size": 7979117
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Santana - Black Magic Woman/notes.mid",
+      "size": 73065
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Santana - Black Magic Woman/preview.ogg",
+      "size": 496337
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Santana - Black Magic Woman/rhythm.ogg",
+      "size": 7224837
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Santana - Black Magic Woman/song.ini",
+      "size": 915
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Santana - Black Magic Woman/song.ogg",
+      "size": 10451443
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Scorpions - Rock You Like A Hurricane/album.png",
+      "size": 163046
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Scorpions - Rock You Like A Hurricane/guitar.ogg",
+      "size": 6851868
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Scorpions - Rock You Like A Hurricane/notes.mid",
+      "size": 64639
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Scorpions - Rock You Like A Hurricane/preview.ogg",
+      "size": 623049
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Scorpions - Rock You Like A Hurricane/rhythm.ogg",
+      "size": 6602019
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Scorpions - Rock You Like A Hurricane/song.ini",
+      "size": 941
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Scorpions - Rock You Like A Hurricane/song.ogg",
+      "size": 6572337
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/album.png",
+      "size": 423866
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/guitar.ogg",
+      "size": 5822952
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/notes.mid",
+      "size": 59430
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/preview.ogg",
+      "size": 694954
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/rhythm.ogg",
+      "size": 5774402
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/song.ini",
+      "size": 688
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slash - Guitar Battle vs. Slash/song.ogg",
+      "size": 6391741
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/album.png",
+      "size": 234857
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/guitar.ogg",
+      "size": 5798085
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/notes.mid",
+      "size": 80139
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/preview.ogg",
+      "size": 757497
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/rhythm.ogg",
+      "size": 5044986
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/song.ini",
+      "size": 826
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/song.ogg",
+      "size": 6300063
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slayer - Raining Blood/song_original.ogg",
+      "size": 7043389
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slipknot - Before I Forget/album.png",
+      "size": 510492
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slipknot - Before I Forget/guitar.ogg",
+      "size": 7887661
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slipknot - Before I Forget/notes.mid",
+      "size": 94391
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slipknot - Before I Forget/preview.ogg",
+      "size": 811472
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slipknot - Before I Forget/rhythm.ogg",
+      "size": 5517790
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slipknot - Before I Forget/song.ini",
+      "size": 926
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Slipknot - Before I Forget/song.ogg",
+      "size": 7412875
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Social Distortion - Story of My Life/album.png",
+      "size": 462830
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Social Distortion - Story of My Life/guitar.ogg",
+      "size": 8173922
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Social Distortion - Story of My Life/notes.mid",
+      "size": 89212
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Social Distortion - Story of My Life/preview.ogg",
+      "size": 919675
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Social Distortion - Story of My Life/rhythm.ogg",
+      "size": 7935382
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Social Distortion - Story of My Life/song.ini",
+      "size": 884
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Social Distortion - Story of My Life/song.ogg",
+      "size": 10123566
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Sonic Youth - Kool Thing/album.png",
+      "size": 241657
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Sonic Youth - Kool Thing/guitar.ogg",
+      "size": 5767568
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Sonic Youth - Kool Thing/notes.mid",
+      "size": 74464
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Sonic Youth - Kool Thing/preview.ogg",
+      "size": 523867
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Sonic Youth - Kool Thing/rhythm.ogg",
+      "size": 6418216
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Sonic Youth - Kool Thing/song.ini",
+      "size": 909
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Sonic Youth - Kool Thing/song.ogg",
+      "size": 6621137
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/album.png",
+      "size": 423866
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/guitar.ogg",
+      "size": 10708239
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/notes.mid",
+      "size": 172886
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/preview.ogg",
+      "size": 937439
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/rhythm.ogg",
+      "size": 10577476
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/song.ini",
+      "size": 733
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Steve Ouimette - The Devil Went Down to Georgia/song.ogg",
+      "size": 11698938
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Stevie Ray Vaughan - Pride & Joy/album.png",
+      "size": 62479
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Stevie Ray Vaughan - Pride & Joy/guitar.ogg",
+      "size": 5974532
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Stevie Ray Vaughan - Pride & Joy/notes.mid",
+      "size": 77316
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Stevie Ray Vaughan - Pride & Joy/preview.ogg",
+      "size": 773542
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Stevie Ray Vaughan - Pride & Joy/rhythm.ogg",
+      "size": 5318291
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Stevie Ray Vaughan - Pride & Joy/song.ini",
+      "size": 933
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Stevie Ray Vaughan - Pride & Joy/song.ogg",
+      "size": 6357466
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tenacious D - The Metal/album.png",
+      "size": 183374
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tenacious D - The Metal/guitar.ogg",
+      "size": 4604728
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tenacious D - The Metal/notes.mid",
+      "size": 49133
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tenacious D - The Metal/preview.ogg",
+      "size": 571908
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tenacious D - The Metal/rhythm.ogg",
+      "size": 4259446
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tenacious D - The Metal/song.ini",
+      "size": 924
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tenacious D - The Metal/song.ogg",
+      "size": 4648062
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Dead Kennedys - Holiday In Cambodia/album.png",
+      "size": 163018
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Dead Kennedys - Holiday In Cambodia/guitar.ogg",
+      "size": 6454556
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Dead Kennedys - Holiday In Cambodia/notes.mid",
+      "size": 108575
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Dead Kennedys - Holiday In Cambodia/preview.ogg",
+      "size": 491876
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Dead Kennedys - Holiday In Cambodia/rhythm.ogg",
+      "size": 7625583
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Dead Kennedys - Holiday In Cambodia/song.ini",
+      "size": 959
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Dead Kennedys - Holiday In Cambodia/song.ogg",
+      "size": 8295460
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Killers - When You Were Young/album.png",
+      "size": 445499
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Killers - When You Were Young/guitar.ogg",
+      "size": 6258596
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Killers - When You Were Young/notes.mid",
+      "size": 63010
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Killers - When You Were Young/preview.ogg",
+      "size": 630077
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Killers - When You Were Young/rhythm.ogg",
+      "size": 6272797
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Killers - When You Were Young/song.ini",
+      "size": 919
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Killers - When You Were Young/song.ogg",
+      "size": 6270440
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Rolling Stones - Paint It Black/album.png",
+      "size": 317783
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Rolling Stones - Paint It Black/guitar.ogg",
+      "size": 5868719
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Rolling Stones - Paint It Black/notes.mid",
+      "size": 76021
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Rolling Stones - Paint It Black/preview.ogg",
+      "size": 680970
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Rolling Stones - Paint It Black/rhythm.ogg",
+      "size": 4844498
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Rolling Stones - Paint It Black/song.ini",
+      "size": 916
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Rolling Stones - Paint It Black/song.ogg",
+      "size": 5786198
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Sex Pistols - Anarchy In The UK/album.png",
+      "size": 179619
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Sex Pistols - Anarchy In The UK/guitar.ogg",
+      "size": 4655505
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Sex Pistols - Anarchy In The UK/notes.mid",
+      "size": 71919
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Sex Pistols - Anarchy In The UK/preview.ogg",
+      "size": 498305
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Sex Pistols - Anarchy In The UK/rhythm.ogg",
+      "size": 5691559
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Sex Pistols - Anarchy In The UK/song.ini",
+      "size": 1076
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Sex Pistols - Anarchy In The UK/song.ogg",
+      "size": 5792688
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Smashing Pumpkins - Cherub Rock/album.png",
+      "size": 307647
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Smashing Pumpkins - Cherub Rock/guitar.ogg",
+      "size": 7544062
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Smashing Pumpkins - Cherub Rock/notes.mid",
+      "size": 92006
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Smashing Pumpkins - Cherub Rock/preview.ogg",
+      "size": 791056
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Smashing Pumpkins - Cherub Rock/rhythm.ogg",
+      "size": 6752036
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Smashing Pumpkins - Cherub Rock/song.ini",
+      "size": 930
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Smashing Pumpkins - Cherub Rock/song.ogg",
+      "size": 8102449
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Strokes - Reptilia/album.png",
+      "size": 631534
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Strokes - Reptilia/guitar.ogg",
+      "size": 5007996
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Strokes - Reptilia/notes.mid",
+      "size": 70206
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Strokes - Reptilia/preview.ogg",
+      "size": 942909
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Strokes - Reptilia/rhythm.ogg",
+      "size": 5236989
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Strokes - Reptilia/song.ini",
+      "size": 909
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Strokes - Reptilia/song.ogg",
+      "size": 6174005
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Who - The Seeker/album.png",
+      "size": 537121
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Who - The Seeker/guitar.ogg",
+      "size": 5484777
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Who - The Seeker/notes.mid",
+      "size": 57159
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Who - The Seeker/preview.ogg",
+      "size": 678013
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Who - The Seeker/rhythm.ogg",
+      "size": 3824204
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Who - The Seeker/song.ini",
+      "size": 943
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/The Who - The Seeker/song.ogg",
+      "size": 5838087
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/album.png",
+      "size": 423866
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/guitar.ogg",
+      "size": 5020778
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/notes.mid",
+      "size": 42834
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/preview.ogg",
+      "size": 704325
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/rhythm.ogg",
+      "size": 4941049
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/song.ini",
+      "size": 722
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Tom Morello - Guitar Battle vs. Tom Morello/song.ogg",
+      "size": 5463042
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Weezer - My Name Is Jonas/album.png",
+      "size": 270804
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Weezer - My Name Is Jonas/guitar.ogg",
+      "size": 5605060
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Weezer - My Name Is Jonas/notes.mid",
+      "size": 62331
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Weezer - My Name Is Jonas/preview.ogg",
+      "size": 684851
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Weezer - My Name Is Jonas/rhythm.ogg",
+      "size": 4600073
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Weezer - My Name Is Jonas/song.ini",
+      "size": 926
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/Weezer - My Name Is Jonas/song.ogg",
+      "size": 6116446
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/White Zombie - Black Sunshine/album.png",
+      "size": 420057
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/White Zombie - Black Sunshine/guitar.ogg",
+      "size": 7460030
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/White Zombie - Black Sunshine/notes.mid",
+      "size": 82527
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/White Zombie - Black Sunshine/preview.ogg",
+      "size": 708003
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/White Zombie - Black Sunshine/rhythm.ogg",
+      "size": 7088623
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/White Zombie - Black Sunshine/song.ini",
+      "size": 946
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/White Zombie - Black Sunshine/song.ogg",
+      "size": 7762911
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/ZZ Top - La Grange/album.png",
+      "size": 189508
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/ZZ Top - La Grange/guitar.ogg",
+      "size": 5956668
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/ZZ Top - La Grange/notes.mid",
+      "size": 67655
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/ZZ Top - La Grange/preview.ogg",
+      "size": 685621
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/ZZ Top - La Grange/rhythm.ogg",
+      "size": 4897048
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/ZZ Top - La Grange/song.ini",
+      "size": 918
+    },
+    {
+      "path": "(2007) Guitar Hero III/Quickplay/ZZ Top - La Grange/song.ogg",
+      "size": 7230425
+    }
+  ],
+  "extracted_size": 1568328949,
+  "file_count": 536,
+  "chart_count": 75,
+  "release_date": "2007-10-28"
 }

@@ -1,0 +1,2949 @@
+{
+  "name": "(2007) Rock Band 1",
+  "folder_id": "static-2007-rock-band-1",
+  "group": "Games",
+  "collection": "Rock Band",
+  "downloads": [
+    {
+      "id": "1mdaKhD6nsJhLzieYC2ruFO3HG-wz9tol",
+      "name": "Rock Band 1 43.7z",
+      "size": 27990549,
+      "md5": "5a9c2f3ae6bbf704e7a5556397853322",
+      "path": "Rock Band 1 43.7z"
+    },
+    {
+      "id": "1Pg80KzgduFtvsIC4QnWrtKOuNVL2qoLA",
+      "name": "Rock Band 1 62.7z",
+      "size": 31888093,
+      "md5": "c0f4fb466d0a37d6e7d4b0f3bdcd35cd",
+      "path": "Rock Band 1 62.7z"
+    },
+    {
+      "id": "1xvEJpH030ExtrsfR_oQegPgSRBZJNT4f",
+      "name": "Rock Band 1 61.7z",
+      "size": 36672941,
+      "md5": "eaf7bc0430c36d05544e784bfb11ee5e",
+      "path": "Rock Band 1 61.7z"
+    },
+    {
+      "id": "1sGVnLJ7bRtvU3UAp-dIJfdF2JanDm_n2",
+      "name": "Rock Band 1 60.7z",
+      "size": 31308284,
+      "md5": "9093913faeaad3ff1da568b0076ad5ff",
+      "path": "Rock Band 1 60.7z"
+    },
+    {
+      "id": "1kHdHcgqJ_TNtB2gUnQUgU9D6P0FJqTsu",
+      "name": "Rock Band 1 59.7z",
+      "size": 46361126,
+      "md5": "b4336a526c7ea9d490a140a1ce4f4d38",
+      "path": "Rock Band 1 59.7z"
+    },
+    {
+      "id": "1ySIqyYw-sV3H-Qb-zIHrfU9W0apz2kvW",
+      "name": "Rock Band 1 58.7z",
+      "size": 16309478,
+      "md5": "4af168975a6d606e9190ee66fdfd44a2",
+      "path": "Rock Band 1 58.7z"
+    },
+    {
+      "id": "1razwTmX-YVlZqY9p8p5XviU5_xtz9Ic0",
+      "name": "Rock Band 1 57.7z",
+      "size": 24449493,
+      "md5": "5ac14c90115e932d1782645488b51862",
+      "path": "Rock Band 1 57.7z"
+    },
+    {
+      "id": "1UUQ8et8h2LNMAacpf65D9F0jFby53YGN",
+      "name": "Rock Band 1 56.7z",
+      "size": 57849279,
+      "md5": "5e597b439154df11debf357d34ba546e",
+      "path": "Rock Band 1 56.7z"
+    },
+    {
+      "id": "1CNrn7seYnca3RGMf5sgf71ztSTMjfRb2",
+      "name": "Rock Band 1 55.7z",
+      "size": 26867350,
+      "md5": "5b85390026fb07f0de744029aaaa7e97",
+      "path": "Rock Band 1 55.7z"
+    },
+    {
+      "id": "1iCvRq7aMxUoPqb-7hocf631TZR02qV21",
+      "name": "Rock Band 1 54.7z",
+      "size": 36888376,
+      "md5": "8d490e55a6d119ade011a32ddb12d244",
+      "path": "Rock Band 1 54.7z"
+    },
+    {
+      "id": "1fKfVP6T612vqWO680k7DvnerzamGW5G-",
+      "name": "Rock Band 1 53.7z",
+      "size": 29998498,
+      "md5": "f16577faae568429ece7bdd1f7b8b0d4",
+      "path": "Rock Band 1 53.7z"
+    },
+    {
+      "id": "1fWiagQg_l_wM_LWuq5y8YIssY9b536uF",
+      "name": "Rock Band 1 52.7z",
+      "size": 27825489,
+      "md5": "c712f63f0055c26b8a1969f11609a042",
+      "path": "Rock Band 1 52.7z"
+    },
+    {
+      "id": "1EAN5VF4XGtxZPprGJ2cGgvbN0gB3H47g",
+      "name": "Rock Band 1 51.7z",
+      "size": 86097335,
+      "md5": "632c6ec6b74a7801e4041e59e4272400",
+      "path": "Rock Band 1 51.7z"
+    },
+    {
+      "id": "1QrfA7U2mtM74ccXptl03PBAoJjJGY3k4",
+      "name": "Rock Band 1 50.7z",
+      "size": 15460784,
+      "md5": "edd6b6b547f40cca5caec848384759c7",
+      "path": "Rock Band 1 50.7z"
+    },
+    {
+      "id": "1zTmDahqN57s0eMKkcYrq-I-2bPK20PPD",
+      "name": "Rock Band 1 49.7z",
+      "size": 26413396,
+      "md5": "bae142b419c9894cc8ef16e357564586",
+      "path": "Rock Band 1 49.7z"
+    },
+    {
+      "id": "17aYJqRIAOqXcjkzNqxalfnkjR0FkfECb",
+      "name": "Rock Band 1 48.7z",
+      "size": 29307522,
+      "md5": "2a9e8d8fa0878478f74c1944966883ce",
+      "path": "Rock Band 1 48.7z"
+    },
+    {
+      "id": "1xoMeK5mlOgXPOtYW-Ss3WeJUK7GtTJfz",
+      "name": "Rock Band 1 47.7z",
+      "size": 20308005,
+      "md5": "bd52645ddfd9b2ac37030a6c13030ccb",
+      "path": "Rock Band 1 47.7z"
+    },
+    {
+      "id": "1Uw77ThcdMZoiYIRawZ0V6W9EV_94NVLC",
+      "name": "Rock Band 1 46.7z",
+      "size": 29475729,
+      "md5": "f58bac239a0317a1f9c832f1cfe8f0de",
+      "path": "Rock Band 1 46.7z"
+    },
+    {
+      "id": "1yLmLfo9Uols1wlKnB744k-mRZcbmh0vb",
+      "name": "Rock Band 1 45.7z",
+      "size": 22029334,
+      "md5": "ce06d632539dbbe2174cd736b026cc92",
+      "path": "Rock Band 1 45.7z"
+    },
+    {
+      "id": "1f8iBhWDBlQ3pAZbuztjeaiOf_khqvQHt",
+      "name": "Rock Band 1 44.7z",
+      "size": 34055949,
+      "md5": "7ec2dc6abdec44c7688a763f852c8fd2",
+      "path": "Rock Band 1 44.7z"
+    },
+    {
+      "id": "1OVZvVPcc89_rt27CHeUlroiLhbT5x1lB",
+      "name": "Rock Band 1 42.7z",
+      "size": 35750270,
+      "md5": "221e71261270d35e1256861e81a7b527",
+      "path": "Rock Band 1 42.7z"
+    },
+    {
+      "id": "1yKka8htZ6DsZKn9d9sob7PamM5dZaXwx",
+      "name": "Rock Band 1 41.7z",
+      "size": 27691096,
+      "md5": "3aeeaf780da9ce88136d8307c73a43b3",
+      "path": "Rock Band 1 41.7z"
+    },
+    {
+      "id": "1Jagk0o3kD7I6Chp7JMOSBlUzxKWpjk6z",
+      "name": "Rock Band 1 40.7z",
+      "size": 52646377,
+      "md5": "4812a01e527fc9c0b5e2dda55b810cdc",
+      "path": "Rock Band 1 40.7z"
+    },
+    {
+      "id": "1VpzoSOcaFfSXXJKhDWORHzSF3hHopfMF",
+      "name": "Rock Band 1 39.7z",
+      "size": 41287994,
+      "md5": "81b2402702f7c3fe74616edc499e7def",
+      "path": "Rock Band 1 39.7z"
+    },
+    {
+      "id": "1oQ6TzEZ3fvnC0x0Eyjq0Ir12YOPhCOr0",
+      "name": "Rock Band 1 38.7z",
+      "size": 45260272,
+      "md5": "eaef050b5deff81beda608d6e8377f15",
+      "path": "Rock Band 1 38.7z"
+    },
+    {
+      "id": "1Bdo4gj4GIy5gTprGQocr1z4HX_bAZRn9",
+      "name": "Rock Band 1 37.7z",
+      "size": 21906747,
+      "md5": "8a0790ce92edfb921c9cca02bc2fdf9b",
+      "path": "Rock Band 1 37.7z"
+    },
+    {
+      "id": "13bVSCNSRgOyHCd900C73mex-hosHsjH3",
+      "name": "Rock Band 1 36.7z",
+      "size": 39229121,
+      "md5": "f4a1760e373fec64e57a75910d32b3dc",
+      "path": "Rock Band 1 36.7z"
+    },
+    {
+      "id": "1jb-2JosxrCAVIvhSwXuLVrSOMFEhBX0r",
+      "name": "Rock Band 1 35.7z",
+      "size": 42572438,
+      "md5": "58f13e78eb198d1e5b2d3f599a70f554",
+      "path": "Rock Band 1 35.7z"
+    },
+    {
+      "id": "1oBKvpJbFBNzZum7IBIa0tHg-KiyX4pM4",
+      "name": "Rock Band 1 34.7z",
+      "size": 33577549,
+      "md5": "87c3fd3a5d41e5aee95c71dcc99e42db",
+      "path": "Rock Band 1 34.7z"
+    },
+    {
+      "id": "1udXH_ncNGZdc7zb6JRpFvAt_bpeVr1ZS",
+      "name": "Rock Band 1 33.7z",
+      "size": 19015104,
+      "md5": "db28d9b95a7642d6db4cd65b453989c9",
+      "path": "Rock Band 1 33.7z"
+    },
+    {
+      "id": "1WJsK51kLsfkdecPNdeJ9GYUTW4UsjPV0",
+      "name": "Rock Band 1 32.7z",
+      "size": 29035349,
+      "md5": "3084309cf2bdb9d757acf6f836c8a092",
+      "path": "Rock Band 1 32.7z"
+    },
+    {
+      "id": "1nLqfJiuQgJONUkx_Nb324oGN6lj5BiV0",
+      "name": "Rock Band 1 31.7z",
+      "size": 39948755,
+      "md5": "c0ead7a1af601eda675689ec00ec87be",
+      "path": "Rock Band 1 31.7z"
+    },
+    {
+      "id": "12C655FXYJGTv3IMJpEj_pW2hYWuWNbqY",
+      "name": "Rock Band 1 30.7z",
+      "size": 34710633,
+      "md5": "a3677e3b7cc100df8caf675ef71e956b",
+      "path": "Rock Band 1 30.7z"
+    },
+    {
+      "id": "1WnQaWDZY-RIuvrbNfrpPejX_YgHGA_xt",
+      "name": "Rock Band 1 29.7z",
+      "size": 22487979,
+      "md5": "4f028775f3ed0cb00c78e471a816ad1c",
+      "path": "Rock Band 1 29.7z"
+    },
+    {
+      "id": "1YqfKuRgumCZEnlpgUDjpjgmmWmpxwnZ0",
+      "name": "Rock Band 1 28.7z",
+      "size": 52769001,
+      "md5": "c3a0320d1758515a924f686ee42d3413",
+      "path": "Rock Band 1 28.7z"
+    },
+    {
+      "id": "159szQidVqKxYi398H3oFoy72lSpMmClG",
+      "name": "Rock Band 1 27.7z",
+      "size": 45885047,
+      "md5": "1cebdef338751dce7da7a6f339bba8c1",
+      "path": "Rock Band 1 27.7z"
+    },
+    {
+      "id": "1jOWMnndsO0grWL7aXqI0q0lz2S7nKo7i",
+      "name": "Rock Band 1 26.7z",
+      "size": 26657428,
+      "md5": "282acba0ac2650001ca279917a3e6fe3",
+      "path": "Rock Band 1 26.7z"
+    },
+    {
+      "id": "1vG-5HT7CH3NqLHzeH0Tjel1vg9Hpr8Cu",
+      "name": "Rock Band 1 25.7z",
+      "size": 27548217,
+      "md5": "57b06da324e32167d5f06c0bbf32c60e",
+      "path": "Rock Band 1 25.7z"
+    },
+    {
+      "id": "1qtXh1MnmToQnOz1wJtMcgH_d3rfekxdU",
+      "name": "Rock Band 1 24.7z",
+      "size": 35927074,
+      "md5": "d1c74aac745fb363112b2f0eec5d6514",
+      "path": "Rock Band 1 24.7z"
+    },
+    {
+      "id": "1w4aWfrpoIJyRHe0Dp2CyigP6x2wRB0Nn",
+      "name": "Rock Band 1 23.7z",
+      "size": 35303209,
+      "md5": "0bf62541bb4faa9163d399f647886fc9",
+      "path": "Rock Band 1 23.7z"
+    },
+    {
+      "id": "13Cj3DDqT13x9uKvJjouNXXAWPnQyPcO7",
+      "name": "Rock Band 1 22.7z",
+      "size": 31535548,
+      "md5": "1051b55b0fb8aab1e270f358dc8bc226",
+      "path": "Rock Band 1 22.7z"
+    },
+    {
+      "id": "1Mip0sTvzn4nGQkX8kF8XJiwII_PZCanU",
+      "name": "Rock Band 1 21.7z",
+      "size": 34633713,
+      "md5": "fc06cb6d65e8d8fbb5f80a8acb44823a",
+      "path": "Rock Band 1 21.7z"
+    },
+    {
+      "id": "188y7f1iMRy4A8eOc--To6yt_t2Nxqi3q",
+      "name": "Rock Band 1 20.7z",
+      "size": 18529383,
+      "md5": "ce3bf3fc21b52c2a8563382bf5027ec8",
+      "path": "Rock Band 1 20.7z"
+    },
+    {
+      "id": "1GeURBhazOg96jSg4YAXbpyLO4X3ibEVm",
+      "name": "Rock Band 1 19.7z",
+      "size": 39915076,
+      "md5": "f39b578ee490d183cc97531506760481",
+      "path": "Rock Band 1 19.7z"
+    },
+    {
+      "id": "1zKvkrgrscbiM7HD7qyKK7mhrthO7uiYT",
+      "name": "Rock Band 1 18.7z",
+      "size": 29558500,
+      "md5": "c529b30dfdf9110043b69e5ead9a246e",
+      "path": "Rock Band 1 18.7z"
+    },
+    {
+      "id": "1fxyIh2jwEPhMAtHf7mLc-0txcf1o3-k9",
+      "name": "Rock Band 1 17.7z",
+      "size": 27225254,
+      "md5": "9ceeaa330ac7b2d99d2c96fabc22c9a3",
+      "path": "Rock Band 1 17.7z"
+    },
+    {
+      "id": "1tLZD-XeAaGppCHlZ94I7P-mVErielSlC",
+      "name": "Rock Band 1 16.7z",
+      "size": 47924883,
+      "md5": "e04527e7c8309693c6e7d62377215b05",
+      "path": "Rock Band 1 16.7z"
+    },
+    {
+      "id": "1JHmQMJ0chcZFS6PvIlJ5_ulkmfYoEbCr",
+      "name": "Rock Band 1 15.7z",
+      "size": 57916651,
+      "md5": "016cc81534feead3708b10f77cbcfa26",
+      "path": "Rock Band 1 15.7z"
+    },
+    {
+      "id": "1BDt2-Af8IsRaYAOyhyiy_JGWSUztEeks",
+      "name": "Rock Band 1 14.7z",
+      "size": 44318400,
+      "md5": "d793d5f931653c8218a2be957b6c94d0",
+      "path": "Rock Band 1 14.7z"
+    },
+    {
+      "id": "1Psmmr2PbNohlsYzjbbjELp3DK_GpPrA1",
+      "name": "Rock Band 1 13.7z",
+      "size": 33446730,
+      "md5": "09eafb06eeba17f50b0fd07dfddba636",
+      "path": "Rock Band 1 13.7z"
+    },
+    {
+      "id": "13uTlkoNYQ56lY12Y8vR495mkyAzW7AMv",
+      "name": "Rock Band 1 12.7z",
+      "size": 37264814,
+      "md5": "93b29a9b097910cf68a7770132d01090",
+      "path": "Rock Band 1 12.7z"
+    },
+    {
+      "id": "1Z4XMcbWndn7tWRmOmy8u5xpMAqslqJ2E",
+      "name": "Rock Band 1 11.7z",
+      "size": 56727734,
+      "md5": "d0f2cc3cabc6618899b8305cbe31208d",
+      "path": "Rock Band 1 11.7z"
+    },
+    {
+      "id": "1QFMzAaRdcsnMjHbs_ywW7CgXty1ZcPlg",
+      "name": "Rock Band 1 10.7z",
+      "size": 25188553,
+      "md5": "f83e262e2c9b834721138c21c624a9c3",
+      "path": "Rock Band 1 10.7z"
+    },
+    {
+      "id": "1qNitutG8VPmFcnqDS1dHVyH13eC6cEUz",
+      "name": "Rock Band 1 9.7z",
+      "size": 86219394,
+      "md5": "d51b0e07c1425fb056599a296febf570",
+      "path": "Rock Band 1 9.7z"
+    },
+    {
+      "id": "1CQXxhirO0p6FRweJ8XoIwMFsnlkfpcSc",
+      "name": "Rock Band 1 8.7z",
+      "size": 48149010,
+      "md5": "ac115209b81f6287d241235bd3e2368f",
+      "path": "Rock Band 1 8.7z"
+    },
+    {
+      "id": "1zC0UOB0UEJKruY53e8jWEBW22AsUW-oy",
+      "name": "Rock Band 1 7.7z",
+      "size": 50803053,
+      "md5": "aa887e103cdb96b7b27ffb318df62675",
+      "path": "Rock Band 1 7.7z"
+    },
+    {
+      "id": "1-vliiPiGOy1XNYzj0wOIBOLEtyNiiJfR",
+      "name": "Rock Band 1 6.7z",
+      "size": 22879500,
+      "md5": "1012e8099aec210e071739498d50accd",
+      "path": "Rock Band 1 6.7z"
+    },
+    {
+      "id": "1bEK_L24c_EH6ztugcyyZMxhQdcqaoCoJ",
+      "name": "Rock Band 1 5.7z",
+      "size": 25865294,
+      "md5": "b724e9c6f34bc10bc80a801e5ca72c66",
+      "path": "Rock Band 1 5.7z"
+    },
+    {
+      "id": "1JNjkC_RDQf3dNp4K74KuGaCArKOGcF0d",
+      "name": "Rock Band 1 4.7z",
+      "size": 30416994,
+      "md5": "1b7ec2e51d75b59af5a302b12dc3c75e",
+      "path": "Rock Band 1 4.7z"
+    },
+    {
+      "id": "1U9CBN36Qus0Xl45A85onIkHsO9XCFLyS",
+      "name": "Rock Band 1 3.7z",
+      "size": 23888242,
+      "md5": "a99e99fb4e19629ed5ec3bcb54c30ca3",
+      "path": "Rock Band 1 3.7z"
+    },
+    {
+      "id": "1buYLNzcv1y3GtSdSkJJ_qJf2jHyOM4U_",
+      "name": "Rock Band 1 2.7z",
+      "size": 10333935,
+      "md5": "fe3e3abea838f3b661ce23bccc226731",
+      "path": "Rock Band 1 2.7z"
+    },
+    {
+      "id": "1rh9Yt0-Fwyw2CQwXObU_eSnBueeX686X",
+      "name": "Rock Band 1 1.7z",
+      "size": 42011978,
+      "md5": "b669e7d7999b6044f715dc588bce5004",
+      "path": "Rock Band 1 1.7z"
+    }
+  ],
+  "download_size": 2191519309,
+  "files": [
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/album.jpg",
+      "size": 329353
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/drums_1.ogg",
+      "size": 3301628
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/drums_2.ogg",
+      "size": 4290671
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/drums_3.ogg",
+      "size": 9775227
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/guitar.ogg",
+      "size": 9172693
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/notes.mid",
+      "size": 169300
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/rhythm.ogg",
+      "size": 3821646
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/song.ini",
+      "size": 800
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/song.ogg",
+      "size": 5642161
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin'/vocals.ogg",
+      "size": 6003892
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Long Time (Vocal Version)/album.jpg",
+      "size": 423253
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Long Time (Vocal Version)/crowd.ogg",
+      "size": 6527491
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Long Time (Vocal Version)/notes.mid",
+      "size": 151597
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Long Time (Vocal Version)/song.ini",
+      "size": 705
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Long Time (Vocal Version)/song.ogg",
+      "size": 10359416
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Long Time (Vocal Version)/vocals.ogg",
+      "size": 7988801
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/album.jpg",
+      "size": 145921
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/album_alt.jpg",
+      "size": 320768
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/crowd.ogg",
+      "size": 3961296
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 4986015
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 4650583
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 10963608
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 9640594
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/notes.mid",
+      "size": 189141
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/original.mid",
+      "size": 189133
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 5482219
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/song.ini",
+      "size": 853
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/song.ogg",
+      "size": 10201618
+    },
+    {
+      "path": "(2007) Rock Band 1/Coheed and Cambria - Welcome Home (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 6683128
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/album.jpg",
+      "size": 290264
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/album_alt.jpg",
+      "size": 288767
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 6651025
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 5812029
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 9016144
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 6876450
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/notes.mid",
+      "size": 128312
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/original.mid",
+      "size": 127004
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 2991854
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/song.ini",
+      "size": 742
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/song.ogg",
+      "size": 1880759
+    },
+    {
+      "path": "(2007) Rock Band 1/Crooked X - Nightmare (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 3660562
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/album.jpg",
+      "size": 467552
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/crowd.ogg",
+      "size": 5366092
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/drums_1.ogg",
+      "size": 2702211
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/drums_2.ogg",
+      "size": 6316021
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/guitar.ogg",
+      "size": 6073303
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/notes.mid",
+      "size": 128619
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/rhythm.ogg",
+      "size": 2455641
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/song.ini",
+      "size": 759
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/song.ogg",
+      "size": 5807824
+    },
+    {
+      "path": "(2007) Rock Band 1/David Bowie - Suffragette City/vocals.ogg",
+      "size": 4357367
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/album.jpg",
+      "size": 548639
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/drums_1.ogg",
+      "size": 5054460
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/drums_2.ogg",
+      "size": 5517476
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/drums_3.ogg",
+      "size": 7586256
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/guitar.ogg",
+      "size": 6296200
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/notes.mid",
+      "size": 119707
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/original.mid",
+      "size": 92042
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/rhythm.ogg",
+      "size": 5536104
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/song.ini",
+      "size": 779
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/song.ogg",
+      "size": 7364692
+    },
+    {
+      "path": "(2007) Rock Band 1/Death of the Cool - Can't Let Go/vocals.ogg",
+      "size": 6687889
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/album.jpg",
+      "size": 504585
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/drums_1.ogg",
+      "size": 7982830
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/drums_2.ogg",
+      "size": 8964836
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/drums_3.ogg",
+      "size": 9979278
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/guitar.ogg",
+      "size": 9725746
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/notes.mid",
+      "size": 225529
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/original.mid",
+      "size": 225280
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/rhythm.ogg",
+      "size": 4149948
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/song.ini",
+      "size": 800
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/song.ogg",
+      "size": 8938105
+    },
+    {
+      "path": "(2007) Rock Band 1/Deep Purple - Highway Star/vocals.ogg",
+      "size": 7840107
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/album.jpg",
+      "size": 414599
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/crowd.ogg",
+      "size": 3982757
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/drums_1.ogg",
+      "size": 3737286
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/drums_2.ogg",
+      "size": 6812460
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/drums_3.ogg",
+      "size": 8464393
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/guitar.ogg",
+      "size": 7076518
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/notes.mid",
+      "size": 122819
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/rhythm.ogg",
+      "size": 3796746
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/song.ini",
+      "size": 744
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/song.ogg",
+      "size": 7547038
+    },
+    {
+      "path": "(2007) Rock Band 1/Faith No More - Epic/vocals.ogg",
+      "size": 6401568
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/album.jpg",
+      "size": 383556
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/drums_1.ogg",
+      "size": 2655837
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/drums_2.ogg",
+      "size": 2553705
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/drums_3.ogg",
+      "size": 5357756
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/guitar.ogg",
+      "size": 5329117
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/notes.mid",
+      "size": 134361
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/rhythm.ogg",
+      "size": 2418215
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/song.ini",
+      "size": 791
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/song.ogg",
+      "size": 4584325
+    },
+    {
+      "path": "(2007) Rock Band 1/Fall Out Boy - Dead on Arrival/vocals.ogg",
+      "size": 4078825
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/album.jpg",
+      "size": 387067
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/drums_1.ogg",
+      "size": 2483362
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/drums_2.ogg",
+      "size": 4588469
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/drums_3.ogg",
+      "size": 5340941
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/guitar.ogg",
+      "size": 4973637
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/notes.mid",
+      "size": 91263
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/rhythm.ogg",
+      "size": 2463370
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/song.ini",
+      "size": 760
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/song.ogg",
+      "size": 4630828
+    },
+    {
+      "path": "(2007) Rock Band 1/Flyleaf - I'm So Sick/vocals.ogg",
+      "size": 4828778
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/album.jpg",
+      "size": 382945
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/crowd.ogg",
+      "size": 5262619
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/drums_1.ogg",
+      "size": 5728589
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/drums_2.ogg",
+      "size": 5331528
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/drums_3.ogg",
+      "size": 6783521
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/guitar.ogg",
+      "size": 5936557
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/notes.mid",
+      "size": 117640
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/rhythm.ogg",
+      "size": 2766060
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/song.ini",
+      "size": 761
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/song.ogg",
+      "size": 3228985
+    },
+    {
+      "path": "(2007) Rock Band 1/Foo Fighters - Learn to Fly/vocals.ogg",
+      "size": 4826132
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin' (Vocal Version)/album.jpg",
+      "size": 329353
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin' (Vocal Version)/notes.mid",
+      "size": 113204
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin' (Vocal Version)/song.ini",
+      "size": 736
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin' (Vocal Version)/song.ogg",
+      "size": 6548792
+    },
+    {
+      "path": "(2007) Rock Band 1/Aerosmith (WaveGroup) - Train Kept A-Rollin' (Vocal Version)/vocals.ogg",
+      "size": 3476865
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/album.jpg",
+      "size": 124176
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/drums_1.ogg",
+      "size": 1006726
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/drums_2.ogg",
+      "size": 1244494
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/drums_3.ogg",
+      "size": 3860752
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/guitar.ogg",
+      "size": 3172398
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/notes.mid",
+      "size": 60209
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/rhythm.ogg",
+      "size": 3580310
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/song.ini",
+      "size": 742
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/song.ogg",
+      "size": 3650750
+    },
+    {
+      "path": "(2007) Rock Band 1/Freezepop - Brainpower/vocals.ogg",
+      "size": 2257130
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/album.jpg",
+      "size": 323956
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/drums_1.ogg",
+      "size": 2826993
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/drums_2.ogg",
+      "size": 5959732
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/drums_3.ogg",
+      "size": 5716845
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/guitar.ogg",
+      "size": 5985699
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/notes.mid",
+      "size": 70628
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/rhythm.ogg",
+      "size": 2666968
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/song.ini",
+      "size": 792
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/song.ogg",
+      "size": 6646494
+    },
+    {
+      "path": "(2007) Rock Band 1/Garbage - I Think I'm Paranoid/vocals.ogg",
+      "size": 5000042
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/album.jpg",
+      "size": 173767
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/crowd.ogg",
+      "size": 2975466
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/drums_1.ogg",
+      "size": 2345230
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/drums_2.ogg",
+      "size": 4450801
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/drums_3.ogg",
+      "size": 5159694
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/guitar.ogg",
+      "size": 5480906
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/notes.mid",
+      "size": 70319
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/rhythm.ogg",
+      "size": 2430672
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/song.ini",
+      "size": 736
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/song.ogg",
+      "size": 4633901
+    },
+    {
+      "path": "(2007) Rock Band 1/Hole - Celebrity Skin/vocals.ogg",
+      "size": 4002378
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/album.jpg",
+      "size": 324994
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/drums_1.ogg",
+      "size": 3376835
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/drums_2.ogg",
+      "size": 3617497
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/drums_3.ogg",
+      "size": 7583769
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/guitar.ogg",
+      "size": 5749392
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/notes.mid",
+      "size": 99593
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/rhythm.ogg",
+      "size": 5511677
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/song.ini",
+      "size": 755
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/song.ogg",
+      "size": 5684549
+    },
+    {
+      "path": "(2007) Rock Band 1/Honest Bob and the Factory-to-Dealer Incentives - I Get By/vocals.ogg",
+      "size": 3577585
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/album.jpg",
+      "size": 568689
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/crowd.ogg",
+      "size": 3659457
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/drums_1.ogg",
+      "size": 2885904
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/drums_2.ogg",
+      "size": 3328239
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/drums_3.ogg",
+      "size": 7041016
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/guitar.ogg",
+      "size": 6119838
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/notes.mid",
+      "size": 163593
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/rhythm.ogg",
+      "size": 2856017
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/song.ini",
+      "size": 786
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/song.ogg",
+      "size": 4550618
+    },
+    {
+      "path": "(2007) Rock Band 1/Iron Maiden (WaveGroup) - Run to the Hills/vocals.ogg",
+      "size": 5192500
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/album.jpg",
+      "size": 398535
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/crowd.ogg",
+      "size": 4307189
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/drums_1.ogg",
+      "size": 2492576
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/drums_2.ogg",
+      "size": 4409525
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/drums_3.ogg",
+      "size": 5716361
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/guitar.ogg",
+      "size": 4735401
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/notes.mid",
+      "size": 106914
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/rhythm.ogg",
+      "size": 1925240
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/song.ini",
+      "size": 754
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/song.ogg",
+      "size": 1951047
+    },
+    {
+      "path": "(2007) Rock Band 1/Jet - Are You Gonna Be My Girl/vocals.ogg",
+      "size": 1872484
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/album.jpg",
+      "size": 531125
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/drums_1.ogg",
+      "size": 3335793
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/drums_2.ogg",
+      "size": 6540709
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/guitar.ogg",
+      "size": 6476361
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/notes.mid",
+      "size": 117107
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/rhythm.ogg",
+      "size": 2759300
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/song.ini",
+      "size": 778
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/song.ogg",
+      "size": 3782275
+    },
+    {
+      "path": "(2007) Rock Band 1/KISS - Detroit Rock City/vocals.ogg",
+      "size": 3327279
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/album.jpg",
+      "size": 45571
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/crowd.ogg",
+      "size": 2656202
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/drums_1.ogg",
+      "size": 4008448
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/drums_2.ogg",
+      "size": 3347533
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/drums_3.ogg",
+      "size": 9458088
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/guitar.ogg",
+      "size": 8767528
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/notes.mid",
+      "size": 180478
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/rhythm.ogg",
+      "size": 4361388
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/song.ini",
+      "size": 755
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/song.ogg",
+      "size": 7617618
+    },
+    {
+      "path": "(2007) Rock Band 1/Metallica - Enter Sandman/vocals.ogg",
+      "size": 5821562
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/album.jpg",
+      "size": 572768
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/drums_1.ogg",
+      "size": 7237208
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/drums_2.ogg",
+      "size": 7507476
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/drums_3.ogg",
+      "size": 8568076
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/guitar.ogg",
+      "size": 9014224
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/notes.mid",
+      "size": 183162
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/rhythm.ogg",
+      "size": 4319012
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/song.ini",
+      "size": 804
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/song.ogg",
+      "size": 8530607
+    },
+    {
+      "path": "(2007) Rock Band 1/Molly Hatchet - Flirtin' with Disaster/vocals.ogg",
+      "size": 7204345
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/album.jpg",
+      "size": 263411
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/drums_1.ogg",
+      "size": 1867666
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/drums_2.ogg",
+      "size": 3308845
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/drums_3.ogg",
+      "size": 4583637
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/guitar.ogg",
+      "size": 4032787
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/notes.mid",
+      "size": 69388
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/rhythm.ogg",
+      "size": 1618218
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/song.ini",
+      "size": 834
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/song.ogg",
+      "size": 4303574
+    },
+    {
+      "path": "(2007) Rock Band 1/Mountain (WaveGroup) - Mississippi Queen/vocals.ogg",
+      "size": 2640251
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/album.jpg",
+      "size": 66118
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/drums_1.ogg",
+      "size": 1372182
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/drums_2.ogg",
+      "size": 4143679
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/drums_3.ogg",
+      "size": 5150474
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/guitar.ogg",
+      "size": 4172956
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/notes.mid",
+      "size": 63886
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/rhythm.ogg",
+      "size": 1543744
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/song.ini",
+      "size": 778
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/song.ogg",
+      "size": 4388072
+    },
+    {
+      "path": "(2007) Rock Band 1/Anarchy Club - Blood Doll/vocals.ogg",
+      "size": 4313345
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/album.jpg",
+      "size": 239190
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/drums_1.ogg",
+      "size": 2848117
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/drums_2.ogg",
+      "size": 2950930
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/drums_3.ogg",
+      "size": 5346982
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/guitar.ogg",
+      "size": 5769196
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/notes.mid",
+      "size": 110231
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/rhythm.ogg",
+      "size": 7155149
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/song.ini",
+      "size": 812
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/song.ogg",
+      "size": 5435165
+    },
+    {
+      "path": "(2007) Rock Band 1/Nine Inch Nails - The Hand That Feeds/vocals.ogg",
+      "size": 5235661
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/album.jpg",
+      "size": 368865
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/crowd.ogg",
+      "size": 4538685
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/drums_1.ogg",
+      "size": 3418518
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/drums_2.ogg",
+      "size": 6407111
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/drums_3.ogg",
+      "size": 7501516
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/guitar.ogg",
+      "size": 6154241
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/notes.mid",
+      "size": 123742
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/rhythm.ogg",
+      "size": 3371235
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/song.ini",
+      "size": 723
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/song.ogg",
+      "size": 3128864
+    },
+    {
+      "path": "(2007) Rock Band 1/Nirvana - In Bloom/vocals.ogg",
+      "size": 5216670
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/album.jpg",
+      "size": 208057
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/drums_1.ogg",
+      "size": 3903330
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/drums_2.ogg",
+      "size": 4094761
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/drums_3.ogg",
+      "size": 4685219
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/guitar.ogg",
+      "size": 5821737
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/notes.mid",
+      "size": 77323
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/rhythm.ogg",
+      "size": 3679639
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/song.ini",
+      "size": 695
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/song.ogg",
+      "size": 3143069
+    },
+    {
+      "path": "(2007) Rock Band 1/OK Go - Here It Goes Again/vocals.ogg",
+      "size": 3736117
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/album.jpg",
+      "size": 575726
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/drums_1.ogg",
+      "size": 3000138
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/drums_2.ogg",
+      "size": 3139144
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/drums_3.ogg",
+      "size": 3808685
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/guitar.ogg",
+      "size": 3184263
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/notes.mid",
+      "size": 65610
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/rhythm.ogg",
+      "size": 1615009
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/song.ini",
+      "size": 820
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/song.ogg",
+      "size": 1422654
+    },
+    {
+      "path": "(2007) Rock Band 1/Pixies - Wave of Mutilation/vocals.ogg",
+      "size": 2361838
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/album.jpg",
+      "size": 92445
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/drums_1.ogg",
+      "size": 4883944
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/drums_2.ogg",
+      "size": 4835753
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/drums_3.ogg",
+      "size": 5379599
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/guitar.ogg",
+      "size": 4426097
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/notes.mid",
+      "size": 124090
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/rhythm.ogg",
+      "size": 4074303
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/song.ini",
+      "size": 799
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/song.ogg",
+      "size": 5752006
+    },
+    {
+      "path": "(2007) Rock Band 1/Queens of the Stone Age - Go with the Flow/vocals.ogg",
+      "size": 4303261
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/album.jpg",
+      "size": 403836
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/crowd.ogg",
+      "size": 4611590
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/drums_1.ogg",
+      "size": 5702362
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/drums_2.ogg",
+      "size": 6400861
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/drums_3.ogg",
+      "size": 5056503
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/guitar.ogg",
+      "size": 6444267
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/notes.mid",
+      "size": 109316
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/rhythm.ogg",
+      "size": 2822512
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/song.ini",
+      "size": 740
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/song.ogg",
+      "size": 6128337
+    },
+    {
+      "path": "(2007) Rock Band 1/R.E.M. - Orange Crush/vocals.ogg",
+      "size": 5154990
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/album.jpg",
+      "size": 445928
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/crowd.ogg",
+      "size": 5711755
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/drums_1.ogg",
+      "size": 2929961
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/drums_2.ogg",
+      "size": 5835817
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/drums_3.ogg",
+      "size": 6934390
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/guitar.ogg",
+      "size": 6277284
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/notes.mid",
+      "size": 90171
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/rhythm.ogg",
+      "size": 2824932
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/song.ini",
+      "size": 737
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/song.ogg",
+      "size": 1913319
+    },
+    {
+      "path": "(2007) Rock Band 1/Radiohead - Creep/vocals.ogg",
+      "size": 6520543
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/album.jpg",
+      "size": 604464
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/crowd.ogg",
+      "size": 3549084
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/drums_1.ogg",
+      "size": 1080805
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/drums_2.ogg",
+      "size": 1381872
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/drums_3.ogg",
+      "size": 3818881
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/guitar.ogg",
+      "size": 2498541
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/notes.mid",
+      "size": 70161
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/rhythm.ogg",
+      "size": 2374245
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/song.ini",
+      "size": 722
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/song.ogg",
+      "size": 3147301
+    },
+    {
+      "path": "(2007) Rock Band 1/Ramones - Blitzkrieg Bop/vocals.ogg",
+      "size": 3806736
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/album.jpg",
+      "size": 378607
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/crowd.ogg",
+      "size": 3297957
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/drums_1.ogg",
+      "size": 6165689
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/drums_2.ogg",
+      "size": 6629443
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/drums_3.ogg",
+      "size": 7758624
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/guitar.ogg",
+      "size": 8193834
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/notes.mid",
+      "size": 157494
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/rhythm.ogg",
+      "size": 3936160
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/song.ini",
+      "size": 822
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/song.ogg",
+      "size": 4106512
+    },
+    {
+      "path": "(2007) Rock Band 1/Red Hot Chili Peppers - Dani California/vocals.ogg",
+      "size": 5071740
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/album.jpg",
+      "size": 441492
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 3540951
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 6659745
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 8841531
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 7067985
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/notes.mid",
+      "size": 131632
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/original.mid",
+      "size": 131532
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4463875
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/song.ogg",
+      "size": 7415301
+    },
+    {
+      "path": "(2007) Rock Band 1/Rush (WaveGroup) - Tom Sawyer (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 3073603
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/album.jpg",
+      "size": 409220
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/drums_1.ogg",
+      "size": 2469742
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/drums_2.ogg",
+      "size": 4791172
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/drums_3.ogg",
+      "size": 6293022
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/guitar.ogg",
+      "size": 5606336
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/notes.mid",
+      "size": 108120
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/rhythm.ogg",
+      "size": 1976306
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/song.ini",
+      "size": 786
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/song.ogg",
+      "size": 5738476
+    },
+    {
+      "path": "(2007) Rock Band 1/Bang Camaro - Pleasure (Pleasure)/vocals.ogg",
+      "size": 3351689
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/album.jpg",
+      "size": 178472
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/crowd.ogg",
+      "size": 7891006
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/drums_1.ogg",
+      "size": 4045701
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/drums_2.ogg",
+      "size": 6942586
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/drums_3.ogg",
+      "size": 8673028
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/guitar.ogg",
+      "size": 8602163
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/notes.mid",
+      "size": 102004
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/rhythm.ogg",
+      "size": 3722618
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/song.ini",
+      "size": 733
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/song.ogg",
+      "size": 6513374
+    },
+    {
+      "path": "(2007) Rock Band 1/Soundgarden - Black Hole Sun/vocals.ogg",
+      "size": 6434496
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/album.jpg",
+      "size": 458697
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/drums_1.ogg",
+      "size": 4378407
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/drums_2.ogg",
+      "size": 4398912
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/drums_3.ogg",
+      "size": 5324462
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/guitar.ogg",
+      "size": 4373575
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/notes.mid",
+      "size": 102568
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/rhythm.ogg",
+      "size": 2487048
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/song.ini",
+      "size": 835
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/song.ogg",
+      "size": 2759942
+    },
+    {
+      "path": "(2007) Rock Band 1/Stone Temple Pilots - Vasoline/vocals.ogg",
+      "size": 3687653
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/album.jpg",
+      "size": 495630
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/drums_1.ogg",
+      "size": 5535949
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/drums_2.ogg",
+      "size": 5673677
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/drums_3.ogg",
+      "size": 4837108
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/guitar.ogg",
+      "size": 6501957
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/notes.mid",
+      "size": 145479
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/rhythm.ogg",
+      "size": 2540125
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/song.ini",
+      "size": 815
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/song.ogg",
+      "size": 5752929
+    },
+    {
+      "path": "(2007) Rock Band 1/Sweet (WaveGroup) - Ballroom Blitz/vocals.ogg",
+      "size": 4639516
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/album.jpg",
+      "size": 407875
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/drums_1.ogg",
+      "size": 4361228
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/drums_2.ogg",
+      "size": 4410881
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/drums_3.ogg",
+      "size": 5285232
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/guitar.ogg",
+      "size": 4802690
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/notes.mid",
+      "size": 118912
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/rhythm.ogg",
+      "size": 1981616
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/song.ini",
+      "size": 806
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/song.ogg",
+      "size": 3739952
+    },
+    {
+      "path": "(2007) Rock Band 1/The Acro-brats - Day Late, Dollar Short/vocals.ogg",
+      "size": 3127915
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/album.jpg",
+      "size": 467153
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/crowd.ogg",
+      "size": 4553560
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/drums_1.ogg",
+      "size": 4643855
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/drums_2.ogg",
+      "size": 4706843
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/drums_3.ogg",
+      "size": 4065788
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/guitar.ogg",
+      "size": 5458978
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/notes.mid",
+      "size": 67958
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/rhythm.ogg",
+      "size": 2140496
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/song.ini",
+      "size": 788
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/song.ogg",
+      "size": 3728619
+    },
+    {
+      "path": "(2007) Rock Band 1/The Clash - Should I Stay or Should I Go/vocals.ogg",
+      "size": 4615648
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/album.jpg",
+      "size": 136089
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/crowd.ogg",
+      "size": 1005974
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/drums_1.ogg",
+      "size": 1887750
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/drums_2.ogg",
+      "size": 1864443
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/drums_3.ogg",
+      "size": 4195217
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/guitar.ogg",
+      "size": 3974913
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/notes.mid",
+      "size": 78049
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/rhythm.ogg",
+      "size": 1764950
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/song.ini",
+      "size": 774
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/song.ogg",
+      "size": 4182817
+    },
+    {
+      "path": "(2007) Rock Band 1/The Hives - Main Offender/vocals.ogg",
+      "size": 3109931
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/album.jpg",
+      "size": 409097
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/drums_1.ogg",
+      "size": 2565533
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/drums_2.ogg",
+      "size": 2840134
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/drums_3.ogg",
+      "size": 5704237
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/guitar.ogg",
+      "size": 5127244
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/notes.mid",
+      "size": 113043
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/rhythm.ogg",
+      "size": 2850379
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/song.ini",
+      "size": 782
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/song.ogg",
+      "size": 5422103
+    },
+    {
+      "path": "(2007) Rock Band 1/The Killers - When You Were Young/vocals.ogg",
+      "size": 4751123
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/album.jpg",
+      "size": 361188
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/drums_1.ogg",
+      "size": 20078
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/drums_2.ogg",
+      "size": 2449971
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/drums_3.ogg",
+      "size": 4935022
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/guitar.ogg",
+      "size": 4428472
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/notes.mid",
+      "size": 91736
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/rhythm.ogg",
+      "size": 2181731
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/song.ini",
+      "size": 698
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/song.ogg",
+      "size": 1703927
+    },
+    {
+      "path": "(2007) Rock Band 1/The Konks - 29 Fingers/vocals.ogg",
+      "size": 4294706
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/album.jpg",
+      "size": 402313
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/drums_1.ogg",
+      "size": 2422173
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/drums_2.ogg",
+      "size": 2795366
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/drums_3.ogg",
+      "size": 6188829
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/guitar.ogg",
+      "size": 4491523
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/notes.mid",
+      "size": 77431
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/rhythm.ogg",
+      "size": 4450452
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/song.ini",
+      "size": 720
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/song.ogg",
+      "size": 5340077
+    },
+    {
+      "path": "(2007) Rock Band 1/The Mother Hips - Time We Had/vocals.ogg",
+      "size": 3383601
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/album.jpg",
+      "size": 174350
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/drums_1.ogg",
+      "size": 2351617
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/drums_2.ogg",
+      "size": 4152606
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/drums_3.ogg",
+      "size": 5358454
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/guitar.ogg",
+      "size": 4122440
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/notes.mid",
+      "size": 122229
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/rhythm.ogg",
+      "size": 2234537
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/song.ogg",
+      "size": 4439301
+    },
+    {
+      "path": "(2007) Rock Band 1/The New Pornographers - Electric Version/vocals.ogg",
+      "size": 3681239
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/album.jpg",
+      "size": 461327
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/crowd.ogg",
+      "size": 1854379
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/drums_1.ogg",
+      "size": 1771533
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/drums_2.ogg",
+      "size": 4312145
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/drums_3.ogg",
+      "size": 4522857
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/guitar.ogg",
+      "size": 3942940
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/notes.mid",
+      "size": 88047
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/rhythm.ogg",
+      "size": 2255713
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/song.ini",
+      "size": 711
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/song.ogg",
+      "size": 3968770
+    },
+    {
+      "path": "(2007) Rock Band 1/Beastie Boys - Sabotage/vocals.ogg",
+      "size": 2865701
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass (Vocal Version)/album.jpg",
+      "size": 346533
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass (Vocal Version)/notes.mid",
+      "size": 169588
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass (Vocal Version)/song.ini",
+      "size": 744
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass (Vocal Version)/song.ogg",
+      "size": 8732466
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass (Vocal Version)/vocals.ogg",
+      "size": 6458512
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/album.jpg",
+      "size": 346533
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/drums_1.ogg",
+      "size": 7478953
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/drums_2.ogg",
+      "size": 14040967
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/drums_3.ogg",
+      "size": 17606637
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/guitar.ogg",
+      "size": 15543300
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/notes.mid",
+      "size": 344012
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/rhythm.ogg",
+      "size": 7079318
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/song.ini",
+      "size": 859
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/song.ogg",
+      "size": 15728302
+    },
+    {
+      "path": "(2007) Rock Band 1/The Outlaws (WaveGroup) - Green Grass and High Tides/vocals.ogg",
+      "size": 8649276
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/album.jpg",
+      "size": 266015
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/drums_1.ogg",
+      "size": 3785844
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/drums_2.ogg",
+      "size": 4053199
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/drums_3.ogg",
+      "size": 4533181
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/guitar.ogg",
+      "size": 4234884
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/notes.mid",
+      "size": 107897
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/rhythm.ogg",
+      "size": 4129258
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/song.ini",
+      "size": 762
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/song.ogg",
+      "size": 3336073
+    },
+    {
+      "path": "(2007) Rock Band 1/The Police - Next to You/vocals.ogg",
+      "size": 3575540
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/album.jpg",
+      "size": 336879
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/drums.ogg",
+      "size": 6610829
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/guitar.ogg",
+      "size": 8054385
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/notes.mid",
+      "size": 141485
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/rhythm.ogg",
+      "size": 3004399
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/song.ogg",
+      "size": 7606702
+    },
+    {
+      "path": "(2007) Rock Band 1/The Rolling Stones - Gimme Shelter/vocals.ogg",
+      "size": 4747702
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/album.jpg",
+      "size": 386247
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/drums_1.ogg",
+      "size": 3958872
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/drums_2.ogg",
+      "size": 4233088
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/drums_3.ogg",
+      "size": 9084668
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/guitar.ogg",
+      "size": 7680395
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/notes.mid",
+      "size": 151025
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/rhythm.ogg",
+      "size": 3205085
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/song.ini",
+      "size": 751
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/song.ogg",
+      "size": 2081836
+    },
+    {
+      "path": "(2007) Rock Band 1/The Smashing Pumpkins - Cherub Rock/vocals.ogg",
+      "size": 6429328
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/album.jpg",
+      "size": 351283
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/drums_1.ogg",
+      "size": 2864469
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/drums_2.ogg",
+      "size": 2996640
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/drums_3.ogg",
+      "size": 7300561
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/guitar.ogg",
+      "size": 4640713
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/notes.mid",
+      "size": 128945
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/rhythm.ogg",
+      "size": 2657447
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/song.ogg",
+      "size": 3512200
+    },
+    {
+      "path": "(2007) Rock Band 1/The Strokes - Reptilia/vocals.ogg",
+      "size": 2828815
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/album.jpg",
+      "size": 470069
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/crowd.ogg",
+      "size": 4991342
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/drums.ogg",
+      "size": 12016320
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/guitar.ogg",
+      "size": 13415173
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/notes.mid",
+      "size": 231474
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/rhythm.ogg",
+      "size": 5340922
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/song.ini",
+      "size": 747
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/song.ogg",
+      "size": 15949352
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again/vocals.ogg",
+      "size": 5997484
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again (Vocal Version)/album.jpg",
+      "size": 470069
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again (Vocal Version)/crowd.ogg",
+      "size": 5000314
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again (Vocal Version)/notes.mid",
+      "size": 225269
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again (Vocal Version)/song.ini",
+      "size": 711
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again (Vocal Version)/song.ogg",
+      "size": 13204697
+    },
+    {
+      "path": "(2007) Rock Band 1/The Who - Won't Get Fooled Again (Vocal Version)/vocals.ogg",
+      "size": 5955776
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/album.jpg",
+      "size": 240423
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/drums_1.ogg",
+      "size": 1691028
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/drums_2.ogg",
+      "size": 1783450
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/drums_3.ogg",
+      "size": 4015623
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/guitar.ogg",
+      "size": 3165385
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/notes.mid",
+      "size": 78228
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/rhythm.ogg",
+      "size": 1058240
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/song.ini",
+      "size": 710
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/song.ogg",
+      "size": 2270088
+    },
+    {
+      "path": "(2007) Rock Band 1/Timmy & the Lords of the Underworld - Timmy & the Lords of the Underworld/vocals.ogg",
+      "size": 2156616
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/album.jpg",
+      "size": 614215
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/drums_1.ogg",
+      "size": 6753259
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/drums_2.ogg",
+      "size": 5636425
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/drums_3.ogg",
+      "size": 9158578
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/guitar.ogg",
+      "size": 7663764
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/notes.mid",
+      "size": 124468
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/rhythm.ogg",
+      "size": 3153661
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/song.ini",
+      "size": 750
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/song.ogg",
+      "size": 8371611
+    },
+    {
+      "path": "(2007) Rock Band 1/Tribe - Outside/vocals.ogg",
+      "size": 5229872
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/album.jpg",
+      "size": 165011
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/drums_1.ogg",
+      "size": 2314815
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/drums_2.ogg",
+      "size": 1106115
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/drums_3.ogg",
+      "size": 4893860
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/guitar.ogg",
+      "size": 6738706
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/notes.mid",
+      "size": 116493
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/original.mid",
+      "size": 113690
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/rhythm.ogg",
+      "size": 1953423
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/song.ini",
+      "size": 768
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/song.ogg",
+      "size": 1837132
+    },
+    {
+      "path": "(2007) Rock Band 1/Black Sabbath (WaveGroup) - Paranoid/vocals.ogg",
+      "size": 4099025
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/album.jpg",
+      "size": 215929
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/drums_1.ogg",
+      "size": 3250370
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/drums_2.ogg",
+      "size": 3545167
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/drums_3.ogg",
+      "size": 6935879
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/guitar.ogg",
+      "size": 6430924
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/notes.mid",
+      "size": 137035
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/rhythm.ogg",
+      "size": 3071444
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/song.ini",
+      "size": 714
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/song.ogg",
+      "size": 2626633
+    },
+    {
+      "path": "(2007) Rock Band 1/VAGIANT - Seven/vocals.ogg",
+      "size": 5575021
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/album.jpg",
+      "size": 211343
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/crowd.ogg",
+      "size": 6719459
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/drums_1.ogg",
+      "size": 2894831
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/drums_2.ogg",
+      "size": 3067242
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/drums_3.ogg",
+      "size": 6575286
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/guitar.ogg",
+      "size": 6413799
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/notes.mid",
+      "size": 83735
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/rhythm.ogg",
+      "size": 2762730
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/song.ini",
+      "size": 752
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/song.ogg",
+      "size": 3813132
+    },
+    {
+      "path": "(2007) Rock Band 1/Weezer - Say It Ain't So/vocals.ogg",
+      "size": 4610738
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/album.jpg",
+      "size": 386390
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/drums_1.ogg",
+      "size": 4868219
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/drums_2.ogg",
+      "size": 4736932
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/drums_3.ogg",
+      "size": 5633430
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/guitar.ogg",
+      "size": 4659870
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/notes.mid",
+      "size": 95678
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/rhythm.ogg",
+      "size": 2962011
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/song.ini",
+      "size": 763
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/song.ogg",
+      "size": 5275375
+    },
+    {
+      "path": "(2007) Rock Band 1/Yeah Yeah Yeahs - Maps/vocals.ogg",
+      "size": 3698623
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/album.jpg",
+      "size": 322622
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/drums_1.ogg",
+      "size": 7992094
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/drums_2.ogg",
+      "size": 8293900
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/drums_3.ogg",
+      "size": 9200684
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/guitar.ogg",
+      "size": 8203722
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/notes.mid",
+      "size": 186738
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/rhythm.ogg",
+      "size": 4038033
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/song.ini",
+      "size": 742
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/song.ogg",
+      "size": 8695634
+    },
+    {
+      "path": "(2007) Rock Band 1/Blue \u00d6yster Cult - (Don't Fear) The Reaper/vocals.ogg",
+      "size": 4165765
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/album.jpg",
+      "size": 749710
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/crowd.ogg",
+      "size": 7044500
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/drums_1.ogg",
+      "size": 3324894
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/drums_2.ogg",
+      "size": 5173287
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/drums_3.ogg",
+      "size": 6995314
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/guitar.ogg",
+      "size": 8303116
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/notes.mid",
+      "size": 87552
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/rhythm.ogg",
+      "size": 2611846
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/song.ini",
+      "size": 747
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/song.ogg",
+      "size": 8396841
+    },
+    {
+      "path": "(2007) Rock Band 1/Bon Jovi - Wanted Dead or Alive/vocals.ogg",
+      "size": 5821763
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/album.jpg",
+      "size": 423253
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/crowd.ogg",
+      "size": 7326378
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/drums_1.ogg",
+      "size": 11529970
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/drums_2.ogg",
+      "size": 9722754
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/drums_3.ogg",
+      "size": 12503813
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/guitar.ogg",
+      "size": 13864339
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/notes.mid",
+      "size": 199564
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/rhythm.ogg",
+      "size": 5655380
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/song.ini",
+      "size": 749
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/song.ogg",
+      "size": 14570685
+    },
+    {
+      "path": "(2007) Rock Band 1/Boston - Foreplay Long Time/vocals.ogg",
+      "size": 11323288
+    }
+  ],
+  "extracted_size": 2214921304,
+  "file_count": 625,
+  "chart_count": 62,
+  "release_date": "2007-11-20"
+}

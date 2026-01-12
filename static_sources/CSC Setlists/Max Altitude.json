@@ -3,18 +3,2719 @@
   "folder_id": "static-max-altitude",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 130,
-  "total_size": 1067576444,
-  "file_count": 676,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-max-altitude",
-      "path": "Max Altitude/Max Altitude.7z",
+      "url": "https://customsongscentral.b-cdn.net/Max%20Altitude.7z?ref=customsongscentral.com",
       "name": "Max Altitude.7z",
       "size": 1067576444,
-      "md5": "2618e25a3bae24138d360ab77b7de441",
-      "url": "https://customsongscentral.b-cdn.net/Max%20Altitude.7z?ref=customsongscentral.com"
+      "md5": "2618e25a3bae24138d360ab77b7de441"
     }
-  ]
+  ],
+  "download_size": 1067576444,
+  "files": [
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/311-1.png",
+      "size": 626681
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/311-2.png",
+      "size": 624364
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/311-3.png",
+      "size": 648576
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/aristocrats1.png",
+      "size": 220177
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/aristocrats2.png",
+      "size": 234466
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/gg1.png",
+      "size": 649053
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/gg2.png",
+      "size": 629365
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/gg3.png",
+      "size": 588347
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/guthriegovan.png",
+      "size": 125459
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/nonagoninfinity.png",
+      "size": 659739
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/polkadot1.png",
+      "size": 335646
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/polkadot2.png",
+      "size": 332964
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/polkadot3.png",
+      "size": 337424
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/Extra Highways/sketchesofbrunswickeast.png",
+      "size": 614169
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/MA Color Profile.ini",
+      "size": 3644
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/MA Highway.png",
+      "size": 477632
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/[1] Max Altitude Rundown.txt",
+      "size": 3375
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/[2] Full Difficulty Guide.txt",
+      "size": 3229
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/[3] A Bit of Backstory.txt",
+      "size": 1829
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/[4] Setlist Stats.txt",
+      "size": 3313
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/[5] Credits.txt",
+      "size": 2206
+    },
+    {
+      "path": "Max Altitude/- Welcome Folder -/proto logo.png",
+      "size": 6892
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Arctic Monkeys - I Bet You Look Good... [torqqes]/album.png",
+      "size": 350425
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Arctic Monkeys - I Bet You Look Good... [torqqes]/background.jpg",
+      "size": 195878
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Arctic Monkeys - I Bet You Look Good... [torqqes]/notes.chart",
+      "size": 76769
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Arctic Monkeys - I Bet You Look Good... [torqqes]/song.ini",
+      "size": 629
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Arctic Monkeys - I Bet You Look Good... [torqqes]/song.ogg",
+      "size": 5407445
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Kero Kero Bonito - You Know How It Is [Haggis]/album.png",
+      "size": 368462
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Kero Kero Bonito - You Know How It Is [Haggis]/background.jpg",
+      "size": 178439
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Kero Kero Bonito - You Know How It Is [Haggis]/notes.chart",
+      "size": 59980
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Kero Kero Bonito - You Know How It Is [Haggis]/song.ini",
+      "size": 441
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Kero Kero Bonito - You Know How It Is [Haggis]/song.ogg",
+      "size": 3169839
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Lemon Demon - Lifetime Achievement Award [torqqes]/album.png",
+      "size": 347365
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Lemon Demon - Lifetime Achievement Award [torqqes]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Lemon Demon - Lifetime Achievement Award [torqqes]/notes.chart",
+      "size": 79059
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Lemon Demon - Lifetime Achievement Award [torqqes]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Lemon Demon - Lifetime Achievement Award [torqqes]/song.ogg",
+      "size": 11942451
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Moron Police - The Dog Song [Caret]/album.png",
+      "size": 498213
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Moron Police - The Dog Song [Caret]/background.jpg",
+      "size": 359607
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Moron Police - The Dog Song [Caret]/notes.chart",
+      "size": 36432
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Moron Police - The Dog Song [Caret]/song.ini",
+      "size": 329
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Moron Police - The Dog Song [Caret]/song.ogg",
+      "size": 6843523
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Neutral Milk Hotel - The King of Carrot Flowers [Vasasasasa]/album.jpg",
+      "size": 208459
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Neutral Milk Hotel - The King of Carrot Flowers [Vasasasasa]/background.jpg",
+      "size": 457849
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Neutral Milk Hotel - The King of Carrot Flowers [Vasasasasa]/notes.chart",
+      "size": 120632
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Neutral Milk Hotel - The King of Carrot Flowers [Vasasasasa]/song.ini",
+      "size": 326
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Neutral Milk Hotel - The King of Carrot Flowers [Vasasasasa]/song.ogg",
+      "size": 10092845
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Steven Wilson - The Pin Drop [Smoochums]/album.jpg",
+      "size": 40381
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Steven Wilson - The Pin Drop [Smoochums]/background.jpg",
+      "size": 461663
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Steven Wilson - The Pin Drop [Smoochums]/notes.chart",
+      "size": 59591
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Steven Wilson - The Pin Drop [Smoochums]/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/Steven Wilson - The Pin Drop [Smoochums]/song.ogg",
+      "size": 9286068
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Bravery - An Honest Mistake [CyclopsDragon]/album.png",
+      "size": 338661
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Bravery - An Honest Mistake [CyclopsDragon]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Bravery - An Honest Mistake [CyclopsDragon]/guitar.ogg",
+      "size": 7368513
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Bravery - An Honest Mistake [CyclopsDragon]/notes.chart",
+      "size": 29636
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Bravery - An Honest Mistake [CyclopsDragon]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Drums - Money [torqqes]/album.png",
+      "size": 398377
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Drums - Money [torqqes]/background.jpg",
+      "size": 164557
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Drums - Money [torqqes]/notes.chart",
+      "size": 77017
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Drums - Money [torqqes]/song.ini",
+      "size": 290
+    },
+    {
+      "path": "Max Altitude/[MA] 01. Base Camp Bops/The Drums - Money [torqqes]/song.ogg",
+      "size": 6667035
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Come Original [torqqes]/album.png",
+      "size": 315436
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Come Original [torqqes]/background.jpg",
+      "size": 359863
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Come Original [torqqes]/notes.chart",
+      "size": 87077
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Come Original [torqqes]/song.ini",
+      "size": 424
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Come Original [torqqes]/song.ogg",
+      "size": 7495811
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Love Song (The Cure cover) [torqqes]/album.png",
+      "size": 171967
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Love Song (The Cure cover) [torqqes]/background.jpg",
+      "size": 113889
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Love Song (The Cure cover) [torqqes]/notes.chart",
+      "size": 19644
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Love Song (The Cure cover) [torqqes]/song.ini",
+      "size": 550
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - Love Song (The Cure cover) [torqqes]/song.ogg",
+      "size": 6874477
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - You Wouldn't Believe [torqqes]/album.png",
+      "size": 705472
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - You Wouldn't Believe [torqqes]/background.jpg",
+      "size": 171105
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - You Wouldn't Believe [torqqes]/notes.chart",
+      "size": 96351
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - You Wouldn't Believe [torqqes]/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Max Altitude/[MA] 01a. 311/311 - You Wouldn't Believe [torqqes]/song.ogg",
+      "size": 7479461
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Daughters - Sweet Georgia Brown [Vasasasasa]/album.jpg",
+      "size": 112596
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Daughters - Sweet Georgia Brown [Vasasasasa]/background.jpg",
+      "size": 97378
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Daughters - Sweet Georgia Brown [Vasasasasa]/notes.chart",
+      "size": 48358
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Daughters - Sweet Georgia Brown [Vasasasasa]/song.ini",
+      "size": 623
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Daughters - Sweet Georgia Brown [Vasasasasa]/song.ogg",
+      "size": 6237921
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Queens of the Stone Age - Little Sister [XEntombmentX]/album.png",
+      "size": 259236
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Queens of the Stone Age - Little Sister [XEntombmentX]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Queens of the Stone Age - Little Sister [XEntombmentX]/highway.png",
+      "size": 477632
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Queens of the Stone Age - Little Sister [XEntombmentX]/notes.chart",
+      "size": 34938
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Queens of the Stone Age - Little Sister [XEntombmentX]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Queens of the Stone Age - Little Sister [XEntombmentX]/song.ogg",
+      "size": 5627640
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Radkey - P.A.W [torqqes]/album.png",
+      "size": 370088
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Radkey - P.A.W [torqqes]/background.jpg",
+      "size": 314786
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Radkey - P.A.W [torqqes]/notes.chart",
+      "size": 27259
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Radkey - P.A.W [torqqes]/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Radkey - P.A.W [torqqes]/song.ogg",
+      "size": 4771707
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Rise Against - Wolves [torqqes]/album.png",
+      "size": 337493
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Rise Against - Wolves [torqqes]/background.jpg",
+      "size": 411565
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Rise Against - Wolves [torqqes]/notes.chart",
+      "size": 45139
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Rise Against - Wolves [torqqes]/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Rise Against - Wolves [torqqes]/song.ogg",
+      "size": 6951726
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Royal Blood - Figure It Out [torqqes]/album.png",
+      "size": 128365
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Royal Blood - Figure It Out [torqqes]/background.jpg",
+      "size": 155206
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Royal Blood - Figure It Out [torqqes]/notes.chart",
+      "size": 26122
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Royal Blood - Figure It Out [torqqes]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Royal Blood - Figure It Out [torqqes]/song.ogg",
+      "size": 5564242
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Turbowolf - The Free Life [ThundahK]/album.jpg",
+      "size": 133460
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Turbowolf - The Free Life [ThundahK]/background.jpg",
+      "size": 321075
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Turbowolf - The Free Life [ThundahK]/notes.chart",
+      "size": 124899
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Turbowolf - The Free Life [ThundahK]/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/Turbowolf - The Free Life [ThundahK]/song.ogg",
+      "size": 11178748
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/We Are Scientists - The Great Escape [torqqes]/album.png",
+      "size": 505962
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/We Are Scientists - The Great Escape [torqqes]/background.jpg",
+      "size": 115978
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/We Are Scientists - The Great Escape [torqqes]/notes.chart",
+      "size": 104014
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/We Are Scientists - The Great Escape [torqqes]/song.ini",
+      "size": 462
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/We Are Scientists - The Great Escape [torqqes]/song.ogg",
+      "size": 6118465
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/White Denim - Holda You (I'm Psycho) [Raspberriel]/album.png",
+      "size": 581024
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/White Denim - Holda You (I'm Psycho) [Raspberriel]/background.jpg",
+      "size": 507989
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/White Denim - Holda You (I'm Psycho) [Raspberriel]/guitar.ogg",
+      "size": 7815660
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/White Denim - Holda You (I'm Psycho) [Raspberriel]/notes.mid",
+      "size": 53452
+    },
+    {
+      "path": "Max Altitude/[MA] 02. Ridge Rockers/White Denim - Holda You (I'm Psycho) [Raspberriel]/song.ini",
+      "size": 550
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Black Math [torqqes]/album.png",
+      "size": 309713
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Black Math [torqqes]/background.jpg",
+      "size": 400913
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Black Math [torqqes]/notes.chart",
+      "size": 80268
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Black Math [torqqes]/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Black Math [torqqes]/song.ogg",
+      "size": 4721350
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Blue Orchid (Live) [torqqes]/album.png",
+      "size": 286385
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Blue Orchid (Live) [torqqes]/background.jpg",
+      "size": 309239
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Blue Orchid (Live) [torqqes]/notes.chart",
+      "size": 40597
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Blue Orchid (Live) [torqqes]/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Blue Orchid (Live) [torqqes]/song.ogg",
+      "size": 5229761
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Girl, You Have No Faith... [XEntombmentX]/album.png",
+      "size": 309713
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Girl, You Have No Faith... [XEntombmentX]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Girl, You Have No Faith... [XEntombmentX]/notes.chart",
+      "size": 50662
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Girl, You Have No Faith... [XEntombmentX]/song.ini",
+      "size": 643
+    },
+    {
+      "path": "Max Altitude/[MA] 02a. The White Stripes/The White Stripes - Girl, You Have No Faith... [XEntombmentX]/song.ogg",
+      "size": 5415882
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Anarbor - Dopamine [XEntombmentX]/album.png",
+      "size": 97627
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Anarbor - Dopamine [XEntombmentX]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Anarbor - Dopamine [XEntombmentX]/notes.chart",
+      "size": 25776
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Anarbor - Dopamine [XEntombmentX]/song.ini",
+      "size": 494
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Anarbor - Dopamine [XEntombmentX]/song.ogg",
+      "size": 6018459
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Good Game - Supercollider_ I Just Met Her [torqqes]/album.png",
+      "size": 400781
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Good Game - Supercollider_ I Just Met Her [torqqes]/background.jpg",
+      "size": 442184
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Good Game - Supercollider_ I Just Met Her [torqqes]/notes.chart",
+      "size": 36364
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Good Game - Supercollider_ I Just Met Her [torqqes]/song.ini",
+      "size": 599
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Good Game - Supercollider_ I Just Met Her [torqqes]/song.ogg",
+      "size": 5195127
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Ling tosite sigure - Abnormalize [CyclopsDragon]/album.png",
+      "size": 448509
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Ling tosite sigure - Abnormalize [CyclopsDragon]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Ling tosite sigure - Abnormalize [CyclopsDragon]/guitar.ogg",
+      "size": 6737214
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Ling tosite sigure - Abnormalize [CyclopsDragon]/notes.chart",
+      "size": 44807
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Ling tosite sigure - Abnormalize [CyclopsDragon]/song.ini",
+      "size": 350
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/PMtoday - Progress Is a Lemon [XEntombmentX]/album.png",
+      "size": 453500
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/PMtoday - Progress Is a Lemon [XEntombmentX]/background.jpg",
+      "size": 370349
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/PMtoday - Progress Is a Lemon [XEntombmentX]/notes.chart",
+      "size": 61008
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/PMtoday - Progress Is a Lemon [XEntombmentX]/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/PMtoday - Progress Is a Lemon [XEntombmentX]/song.ogg",
+      "size": 9086896
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Paramore - Looking Up [torqqes]/album.png",
+      "size": 432025
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Paramore - Looking Up [torqqes]/background.jpg",
+      "size": 146228
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Paramore - Looking Up [torqqes]/notes.chart",
+      "size": 46907
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Paramore - Looking Up [torqqes]/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Paramore - Looking Up [torqqes]/song.ogg",
+      "size": 6631988
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Two Door Cinema Club - Sleep Alone [XEntombmentX]/album.png",
+      "size": 310204
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Two Door Cinema Club - Sleep Alone [XEntombmentX]/background.jpg",
+      "size": 424965
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Two Door Cinema Club - Sleep Alone [XEntombmentX]/notes.chart",
+      "size": 32151
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Two Door Cinema Club - Sleep Alone [XEntombmentX]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Two Door Cinema Club - Sleep Alone [XEntombmentX]/song.ogg",
+      "size": 7680383
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Vinyl Theatre - New Machines [XEntombmentX]/album.png",
+      "size": 547213
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Vinyl Theatre - New Machines [XEntombmentX]/background.jpg",
+      "size": 533732
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Vinyl Theatre - New Machines [XEntombmentX]/notes.chart",
+      "size": 36799
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Vinyl Theatre - New Machines [XEntombmentX]/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/Vinyl Theatre - New Machines [XEntombmentX]/song.ogg",
+      "size": 7644582
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/WALK THE MOON - Spend Your $$$ [torqqes]/album.png",
+      "size": 239637
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/WALK THE MOON - Spend Your $$$ [torqqes]/background.jpg",
+      "size": 137255
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/WALK THE MOON - Spend Your $$$ [torqqes]/notes.chart",
+      "size": 72816
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/WALK THE MOON - Spend Your $$$ [torqqes]/song.ini",
+      "size": 375
+    },
+    {
+      "path": "Max Altitude/[MA] 03. Higher Than the Empire State/WALK THE MOON - Spend Your $$$ [torqqes]/song.ogg",
+      "size": 6544125
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Juicebox [torqqes]/album.png",
+      "size": 109843
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Juicebox [torqqes]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Juicebox [torqqes]/notes.chart",
+      "size": 70472
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Juicebox [torqqes]/song.ini",
+      "size": 534
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Juicebox [torqqes]/song.ogg",
+      "size": 6680724
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - OBLIVIUS [ThundahK]/album.png",
+      "size": 97854
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - OBLIVIUS [ThundahK]/background.jpg",
+      "size": 160757
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - OBLIVIUS [ThundahK]/notes.chart",
+      "size": 111132
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - OBLIVIUS [ThundahK]/song.ini",
+      "size": 396
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - OBLIVIUS [ThundahK]/song.ogg",
+      "size": 9307569
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Why Are Sundays So Depressing [ThundahK]/album.png",
+      "size": 645621
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Why Are Sundays So Depressing [ThundahK]/background.jpg",
+      "size": 671956
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Why Are Sundays So Depressing [ThundahK]/notes.chart",
+      "size": 87828
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Why Are Sundays So Depressing [ThundahK]/song.ini",
+      "size": 375
+    },
+    {
+      "path": "Max Altitude/[MA] 03a. The Strokes/The Strokes - Why Are Sundays So Depressing [ThundahK]/song.ogg",
+      "size": 9821152
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Dan Luke and the Raid - Exoskeleton [torqqes]/album.png",
+      "size": 266662
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Dan Luke and the Raid - Exoskeleton [torqqes]/background.jpg",
+      "size": 207995
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Dan Luke and the Raid - Exoskeleton [torqqes]/notes.chart",
+      "size": 59161
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Dan Luke and the Raid - Exoskeleton [torqqes]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Dan Luke and the Raid - Exoskeleton [torqqes]/song.ogg",
+      "size": 5292871
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/HushPuppies - Moloko Sound Club [torqqes]/album.png",
+      "size": 412114
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/HushPuppies - Moloko Sound Club [torqqes]/background.jpg",
+      "size": 297476
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/HushPuppies - Moloko Sound Club [torqqes]/notes.chart",
+      "size": 81499
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/HushPuppies - Moloko Sound Club [torqqes]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/HushPuppies - Moloko Sound Club [torqqes]/song.ogg",
+      "size": 5761716
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Jane's Addiction - Had a Dad [Smoochums]/album.png",
+      "size": 463307
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Jane's Addiction - Had a Dad [Smoochums]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Jane's Addiction - Had a Dad [Smoochums]/notes.chart",
+      "size": 39112
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Jane's Addiction - Had a Dad [Smoochums]/song.ini",
+      "size": 386
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Jane's Addiction - Had a Dad [Smoochums]/song.ogg",
+      "size": 7676580
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Melt-Banana - Chain-Shot to Have Some Fun [torqqes]/album.png",
+      "size": 289608
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Melt-Banana - Chain-Shot to Have Some Fun [torqqes]/background.jpg",
+      "size": 153539
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Melt-Banana - Chain-Shot to Have Some Fun [torqqes]/notes.chart",
+      "size": 82820
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Melt-Banana - Chain-Shot to Have Some Fun [torqqes]/song.ini",
+      "size": 547
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Melt-Banana - Chain-Shot to Have Some Fun [torqqes]/song.ogg",
+      "size": 6252808
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Oingo Boingo - War Again [Caret]/album.png",
+      "size": 318993
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Oingo Boingo - War Again [Caret]/background.jpg",
+      "size": 322888
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Oingo Boingo - War Again [Caret]/notes.chart",
+      "size": 52915
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Oingo Boingo - War Again [Caret]/song.ini",
+      "size": 753
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Oingo Boingo - War Again [Caret]/song.ogg",
+      "size": 11038737
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Sonic Youth - Sugar Kane [7777villain]/album.png",
+      "size": 486098
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Sonic Youth - Sugar Kane [7777villain]/background.jpg",
+      "size": 245972
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Sonic Youth - Sugar Kane [7777villain]/notes.chart",
+      "size": 50415
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Sonic Youth - Sugar Kane [7777villain]/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Sonic Youth - Sugar Kane [7777villain]/song.ogg",
+      "size": 11683975
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Talking Heads - Uh-Oh, Love Comes to Town [Smoochums]/album.jpg",
+      "size": 27204
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Talking Heads - Uh-Oh, Love Comes to Town [Smoochums]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Talking Heads - Uh-Oh, Love Comes to Town [Smoochums]/notes.chart",
+      "size": 33948
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Talking Heads - Uh-Oh, Love Comes to Town [Smoochums]/song.ini",
+      "size": 363
+    },
+    {
+      "path": "Max Altitude/[MA] 04. Mountain Songs/Talking Heads - Uh-Oh, Love Comes to Town [Smoochums]/song.ogg",
+      "size": 5384528
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/ANTEMASQUE - I Got No Remorse [torqqes]/album.png",
+      "size": 35424
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/ANTEMASQUE - I Got No Remorse [torqqes]/background.jpg",
+      "size": 332584
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/ANTEMASQUE - I Got No Remorse [torqqes]/notes.chart",
+      "size": 58241
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/ANTEMASQUE - I Got No Remorse [torqqes]/song.ini",
+      "size": 609
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/ANTEMASQUE - I Got No Remorse [torqqes]/song.ogg",
+      "size": 5974881
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/At the Drive-In - Arcarsenal [torqqes]/album.png",
+      "size": 449657
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/At the Drive-In - Arcarsenal [torqqes]/background.jpg",
+      "size": 272092
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/At the Drive-In - Arcarsenal [torqqes]/notes.chart",
+      "size": 58093
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/At the Drive-In - Arcarsenal [torqqes]/song.ini",
+      "size": 435
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/At the Drive-In - Arcarsenal [torqqes]/song.ogg",
+      "size": 5626524
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/The Mars Volta - Inertiatic ESP [XEntombmentX]/album.png",
+      "size": 278377
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/The Mars Volta - Inertiatic ESP [XEntombmentX]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/The Mars Volta - Inertiatic ESP [XEntombmentX]/notes.chart",
+      "size": 46741
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/The Mars Volta - Inertiatic ESP [XEntombmentX]/song.ini",
+      "size": 765
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/The Mars Volta - Inertiatic ESP [XEntombmentX]/song.ogg",
+      "size": 8860317
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/[MA] Intermission I - The Eccentric/Weird Al Yankovic - The Alternative Polka [7777villain]/album.png",
+      "size": 514559
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/[MA] Intermission I - The Eccentric/Weird Al Yankovic - The Alternative Polka [7777villain]/background.jpg",
+      "size": 563218
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/[MA] Intermission I - The Eccentric/Weird Al Yankovic - The Alternative Polka [7777villain]/notes.chart",
+      "size": 179224
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/[MA] Intermission I - The Eccentric/Weird Al Yankovic - The Alternative Polka [7777villain]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Max Altitude/[MA] 04a. Cedric & Omar/[MA] Intermission I - The Eccentric/Weird Al Yankovic - The Alternative Polka [7777villain]/song.ogg",
+      "size": 9238204
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/385 - Makkani Moeteiru... [torqqes]/album.png",
+      "size": 278742
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/385 - Makkani Moeteiru... [torqqes]/background.jpg",
+      "size": 230759
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/385 - Makkani Moeteiru... [torqqes]/notes.chart",
+      "size": 102181
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/385 - Makkani Moeteiru... [torqqes]/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/385 - Makkani Moeteiru... [torqqes]/song.ogg",
+      "size": 4018019
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Abney Park - Dominion of Dust [torqqes]/album.png",
+      "size": 484225
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Abney Park - Dominion of Dust [torqqes]/background.jpg",
+      "size": 227146
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Abney Park - Dominion of Dust [torqqes]/notes.chart",
+      "size": 43096
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Abney Park - Dominion of Dust [torqqes]/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Abney Park - Dominion of Dust [torqqes]/song.ogg",
+      "size": 8943024
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/DIIV - Doused [torqqes]/album.png",
+      "size": 487771
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/DIIV - Doused [torqqes]/background.jpg",
+      "size": 200100
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/DIIV - Doused [torqqes]/notes.chart",
+      "size": 25970
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/DIIV - Doused [torqqes]/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/DIIV - Doused [torqqes]/song.ogg",
+      "size": 6605556
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Hippo Campus - Bad Dream Baby [torqqes]/album.png",
+      "size": 374799
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Hippo Campus - Bad Dream Baby [torqqes]/background.jpg",
+      "size": 184850
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Hippo Campus - Bad Dream Baby [torqqes]/notes.chart",
+      "size": 29607
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Hippo Campus - Bad Dream Baby [torqqes]/song.ini",
+      "size": 627
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Hippo Campus - Bad Dream Baby [torqqes]/song.ogg",
+      "size": 5963161
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Minus the Bear - Cold Company [XEntombmentX]/album.png",
+      "size": 475883
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Minus the Bear - Cold Company [XEntombmentX]/background.jpg",
+      "size": 366380
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Minus the Bear - Cold Company [XEntombmentX]/notes.chart",
+      "size": 49152
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Minus the Bear - Cold Company [XEntombmentX]/song.ini",
+      "size": 508
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Minus the Bear - Cold Company [XEntombmentX]/song.ogg",
+      "size": 9240851
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Primus - Frizzle Fry [7777villain]/album.png",
+      "size": 719376
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Primus - Frizzle Fry [7777villain]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Primus - Frizzle Fry [7777villain]/notes.chart",
+      "size": 43316
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Primus - Frizzle Fry [7777villain]/song.ini",
+      "size": 594
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Primus - Frizzle Fry [7777villain]/song.ogg",
+      "size": 10922507
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Spiderbait - Black Betty [NeroSomething]/album.png",
+      "size": 82744
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Spiderbait - Black Betty [NeroSomething]/background.jpg",
+      "size": 106896
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Spiderbait - Black Betty [NeroSomething]/notes.chart",
+      "size": 33997
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Spiderbait - Black Betty [NeroSomething]/secretbg.jpg",
+      "size": 229709
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Spiderbait - Black Betty [NeroSomething]/song.ini",
+      "size": 554
+    },
+    {
+      "path": "Max Altitude/[MA] 05. Alliterative Ascent/Spiderbait - Black Betty [NeroSomething]/song.ogg",
+      "size": 6251389
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Ain't No Rest... [torqqes]/album.png",
+      "size": 582525
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Ain't No Rest... [torqqes]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Ain't No Rest... [torqqes]/notes.chart",
+      "size": 71059
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Ain't No Rest... [torqqes]/song.ini",
+      "size": 524
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Ain't No Rest... [torqqes]/song.ogg",
+      "size": 6296044
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Free Love [torqqes]/album.png",
+      "size": 582525
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Free Love [torqqes]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Free Love [torqqes]/notes.chart",
+      "size": 37455
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Free Love [torqqes]/song.ini",
+      "size": 295
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Free Love [torqqes]/song.ogg",
+      "size": 6749726
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Teeth [torqqes]/album.png",
+      "size": 441340
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Teeth [torqqes]/background.jpg",
+      "size": 265218
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Teeth [torqqes]/notes.chart",
+      "size": 61571
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Teeth [torqqes]/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Max Altitude/[MA] 05a. Cage the Elephant/Cage the Elephant - Teeth [torqqes]/song.ogg",
+      "size": 10287717
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Artifex Pereo - I, the Surgeon [XEntombmentX]/album.png",
+      "size": 455536
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Artifex Pereo - I, the Surgeon [XEntombmentX]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Artifex Pereo - I, the Surgeon [XEntombmentX]/notes.chart",
+      "size": 26478
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Artifex Pereo - I, the Surgeon [XEntombmentX]/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Artifex Pereo - I, the Surgeon [XEntombmentX]/song.ogg",
+      "size": 6273024
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Covet - Charybdis [Smoochums]/album.jpg",
+      "size": 411955
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Covet - Charybdis [Smoochums]/background.jpg",
+      "size": 911403
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Covet - Charybdis [Smoochums]/notes.chart",
+      "size": 49817
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Covet - Charybdis [Smoochums]/song.ini",
+      "size": 379
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Covet - Charybdis [Smoochums]/song.ogg",
+      "size": 5778497
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Interpol - All the Rage Back Home [torqqes]/album.png",
+      "size": 127569
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Interpol - All the Rage Back Home [torqqes]/background.jpg",
+      "size": 46465
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Interpol - All the Rage Back Home [torqqes]/notes.chart",
+      "size": 78769
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Interpol - All the Rage Back Home [torqqes]/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Interpol - All the Rage Back Home [torqqes]/song.ogg",
+      "size": 7265037
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/MGMT - Kids [torqqes]/album.png",
+      "size": 365566
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/MGMT - Kids [torqqes]/background.jpg",
+      "size": 294983
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/MGMT - Kids [torqqes]/notes.chart",
+      "size": 80725
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/MGMT - Kids [torqqes]/song.ini",
+      "size": 590
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/MGMT - Kids [torqqes]/song.ogg",
+      "size": 10516698
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Marmalade butcher - SYAKUNETSU [torqqes]/album.png",
+      "size": 246049
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Marmalade butcher - SYAKUNETSU [torqqes]/background.jpg",
+      "size": 240589
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Marmalade butcher - SYAKUNETSU [torqqes]/notes.chart",
+      "size": 94704
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Marmalade butcher - SYAKUNETSU [torqqes]/song.ini",
+      "size": 459
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Marmalade butcher - SYAKUNETSU [torqqes]/song.ogg",
+      "size": 6774227
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/St. Vincent - Human Racing [Smoochums]/album.png",
+      "size": 221395
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/St. Vincent - Human Racing [Smoochums]/background.jpg",
+      "size": 282218
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/St. Vincent - Human Racing [Smoochums]/notes.chart",
+      "size": 91262
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/St. Vincent - Human Racing [Smoochums]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/St. Vincent - Human Racing [Smoochums]/song.ogg",
+      "size": 7621088
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Tears for Fears - Broken [Smoochums]/album.jpg",
+      "size": 39164
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Tears for Fears - Broken [Smoochums]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Tears for Fears - Broken [Smoochums]/notes.chart",
+      "size": 53160
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Tears for Fears - Broken [Smoochums]/song.ini",
+      "size": 437
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/Tears for Fears - Broken [Smoochums]/song.ogg",
+      "size": 5461813
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/The Dismemberment Plan - A Life of Possibilities [Smoochums]/album.jpg",
+      "size": 270792
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/The Dismemberment Plan - A Life of Possibilities [Smoochums]/background.jpg",
+      "size": 255688
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/The Dismemberment Plan - A Life of Possibilities [Smoochums]/notes.chart",
+      "size": 34530
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/The Dismemberment Plan - A Life of Possibilities [Smoochums]/song.ini",
+      "size": 457
+    },
+    {
+      "path": "Max Altitude/[MA] 06. I Can See My House From Here/The Dismemberment Plan - A Life of Possibilities [Smoochums]/song.ogg",
+      "size": 9094552
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - Boogieman Sam [Smoochums]/album.jpg",
+      "size": 85405
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - Boogieman Sam [Smoochums]/background.jpg",
+      "size": 316666
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - Boogieman Sam [Smoochums]/notes.chart",
+      "size": 134672
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - Boogieman Sam [Smoochums]/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - Boogieman Sam [Smoochums]/song.ogg",
+      "size": 9936411
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - People-Vultures [XEntombmentX]/album.png",
+      "size": 456230
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - People-Vultures [XEntombmentX]/background.jpg",
+      "size": 302692
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - People-Vultures [XEntombmentX]/notes.chart",
+      "size": 41236
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - People-Vultures [XEntombmentX]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard - People-Vultures [XEntombmentX]/song.ogg",
+      "size": 10538173
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard, Mild High Club - Tezeta [Smoochums]/album.png",
+      "size": 153057
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard, Mild High Club - Tezeta [Smoochums]/background.jpg",
+      "size": 773789
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard, Mild High Club - Tezeta [Smoochums]/notes.chart",
+      "size": 85228
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard, Mild High Club - Tezeta [Smoochums]/song.ini",
+      "size": 483
+    },
+    {
+      "path": "Max Altitude/[MA] 06a. King Gizzard & the Lizard Wizard/King Gizzard & the Lizard Wizard, Mild High Club - Tezeta [Smoochums]/song.ogg",
+      "size": 7207900
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/From First to Last - Emily [Supradyke]/album.png",
+      "size": 499413
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/From First to Last - Emily [Supradyke]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/From First to Last - Emily [Supradyke]/notes.chart",
+      "size": 46316
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/From First to Last - Emily [Supradyke]/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/From First to Last - Emily [Supradyke]/song.ogg",
+      "size": 5490202
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/I love you Orchestra - Rooftop Sniper [torqqes]/album.png",
+      "size": 530260
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/I love you Orchestra - Rooftop Sniper [torqqes]/background.jpg",
+      "size": 400936
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/I love you Orchestra - Rooftop Sniper [torqqes]/notes.chart",
+      "size": 56999
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/I love you Orchestra - Rooftop Sniper [torqqes]/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/I love you Orchestra - Rooftop Sniper [torqqes]/song.ogg",
+      "size": 4931357
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Mass of the Fermenting Dregs - Kono Speed no Saki e [Haggis]/album.png",
+      "size": 147775
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Mass of the Fermenting Dregs - Kono Speed no Saki e [Haggis]/background.jpg",
+      "size": 136831
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Mass of the Fermenting Dregs - Kono Speed no Saki e [Haggis]/notes.chart",
+      "size": 83411
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Mass of the Fermenting Dregs - Kono Speed no Saki e [Haggis]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Mass of the Fermenting Dregs - Kono Speed no Saki e [Haggis]/song.ogg",
+      "size": 6306594
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Moore Ave Underground - How You've Grown [torqqes]/album.png",
+      "size": 322982
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Moore Ave Underground - How You've Grown [torqqes]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Moore Ave Underground - How You've Grown [torqqes]/notes.chart",
+      "size": 46456
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Moore Ave Underground - How You've Grown [torqqes]/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Moore Ave Underground - How You've Grown [torqqes]/song.ogg",
+      "size": 9804811
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Omni - Wire [NeroSomething]/album.png",
+      "size": 110512
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Omni - Wire [NeroSomething]/background.jpg",
+      "size": 776359
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Omni - Wire [NeroSomething]/notes.chart",
+      "size": 33199
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Omni - Wire [NeroSomething]/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Omni - Wire [NeroSomething]/song.ogg",
+      "size": 5604471
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Refractions - Anna [torqqes]/album.png",
+      "size": 245525
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Refractions - Anna [torqqes]/background.jpg",
+      "size": 491523
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Refractions - Anna [torqqes]/notes.chart",
+      "size": 36865
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Refractions - Anna [torqqes]/song.ini",
+      "size": 427
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/Refractions - Anna [torqqes]/song.ogg",
+      "size": 7626156
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/The Smiths - Heaven Knows Im Miserable Now [Haggis]/album.png",
+      "size": 160032
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/The Smiths - Heaven Knows Im Miserable Now [Haggis]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/The Smiths - Heaven Knows Im Miserable Now [Haggis]/notes.chart",
+      "size": 69744
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/The Smiths - Heaven Knows Im Miserable Now [Haggis]/song.ini",
+      "size": 499
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/The Smiths - Heaven Knows Im Miserable Now [Haggis]/song.ogg",
+      "size": 7093147
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/miRthkon - Honey Key Jamboree [Smoochums]/album.png",
+      "size": 125355
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/miRthkon - Honey Key Jamboree [Smoochums]/background.jpg",
+      "size": 105411
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/miRthkon - Honey Key Jamboree [Smoochums]/notes.chart",
+      "size": 164428
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/miRthkon - Honey Key Jamboree [Smoochums]/song.ini",
+      "size": 315
+    },
+    {
+      "path": "Max Altitude/[MA] 07. Don't Look Down/miRthkon - Honey Key Jamboree [Smoochums]/song.ogg",
+      "size": 11582248
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Goodbye Angels [Smoochums]/album.png",
+      "size": 545079
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Goodbye Angels [Smoochums]/background.jpg",
+      "size": 394706
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Goodbye Angels [Smoochums]/notes.chart",
+      "size": 120411
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Goodbye Angels [Smoochums]/song.ini",
+      "size": 677
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Goodbye Angels [Smoochums]/song.ogg",
+      "size": 8056211
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Nobody Weird Like Me [Raspberriel]/album.png",
+      "size": 303336
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Nobody Weird Like Me [Raspberriel]/background.jpg",
+      "size": 390026
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Nobody Weird Like Me [Raspberriel]/guitar.ogg",
+      "size": 7826110
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Nobody Weird Like Me [Raspberriel]/notes.mid",
+      "size": 51628
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Nobody Weird Like Me [Raspberriel]/song.ini",
+      "size": 612
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Shallow Be Thy Game [torqqes]/album.png",
+      "size": 514236
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Shallow Be Thy Game [torqqes]/background.jpg",
+      "size": 147780
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Shallow Be Thy Game [torqqes]/notes.chart",
+      "size": 69739
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Shallow Be Thy Game [torqqes]/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Max Altitude/[MA] 07a. Red Hot Chili Peppers/Red Hot Chili Peppers - Shallow Be Thy Game [torqqes]/song.ogg",
+      "size": 8833256
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Adebisi Shank - Masa [Smoochums]/album.jpg",
+      "size": 274872
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Adebisi Shank - Masa [Smoochums]/background.jpg",
+      "size": 400936
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Adebisi Shank - Masa [Smoochums]/notes.chart",
+      "size": 46176
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Adebisi Shank - Masa [Smoochums]/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Adebisi Shank - Masa [Smoochums]/song.ogg",
+      "size": 7198436
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Hail the Sun - Devotion Cuts [iZenPenguin]/album.png",
+      "size": 278469
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Hail the Sun - Devotion Cuts [iZenPenguin]/background.jpg",
+      "size": 343270
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Hail the Sun - Devotion Cuts [iZenPenguin]/notes.chart",
+      "size": 108229
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Hail the Sun - Devotion Cuts [iZenPenguin]/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Hail the Sun - Devotion Cuts [iZenPenguin]/song.ogg",
+      "size": 7563022
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Parquet Courts - Extinction [Smoochums]/album.jpg",
+      "size": 46025
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Parquet Courts - Extinction [Smoochums]/background.jpg",
+      "size": 339491
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Parquet Courts - Extinction [Smoochums]/notes.chart",
+      "size": 34700
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Parquet Courts - Extinction [Smoochums]/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Parquet Courts - Extinction [Smoochums]/song.ogg",
+      "size": 3265506
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Snail Mail - Heat Wave [Smoochums]/album.jpg",
+      "size": 25225
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Snail Mail - Heat Wave [Smoochums]/background.jpg",
+      "size": 176024
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Snail Mail - Heat Wave [Smoochums]/notes.chart",
+      "size": 43212
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Snail Mail - Heat Wave [Smoochums]/song.ini",
+      "size": 483
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Snail Mail - Heat Wave [Smoochums]/song.ogg",
+      "size": 8889474
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stone Roses - Driving South [torqqes]/album.png",
+      "size": 611613
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stone Roses - Driving South [torqqes]/background.jpg",
+      "size": 345935
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stone Roses - Driving South [torqqes]/notes.chart",
+      "size": 45675
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stone Roses - Driving South [torqqes]/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stone Roses - Driving South [torqqes]/song.ogg",
+      "size": 9926418
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stranglers - No More Heroes [Raspberriel]/album.png",
+      "size": 642988
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stranglers - No More Heroes [Raspberriel]/background.jpg",
+      "size": 140571
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stranglers - No More Heroes [Raspberriel]/guitar.ogg",
+      "size": 6513074
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stranglers - No More Heroes [Raspberriel]/notes.mid",
+      "size": 28247
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/The Stranglers - No More Heroes [Raspberriel]/song.ini",
+      "size": 629
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Weezer - Hero [torqqes]/album.png",
+      "size": 610262
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Weezer - Hero [torqqes]/background.jpg",
+      "size": 117147
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Weezer - Hero [torqqes]/notes.chart",
+      "size": 36608
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Weezer - Hero [torqqes]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Weezer - Hero [torqqes]/song.ogg",
+      "size": 7101855
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Zo\u00e9 - C\u00e1mara Lenta [torqqes]/album.png",
+      "size": 672914
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Zo\u00e9 - C\u00e1mara Lenta [torqqes]/background.jpg",
+      "size": 109730
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Zo\u00e9 - C\u00e1mara Lenta [torqqes]/notes.chart",
+      "size": 52035
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Zo\u00e9 - C\u00e1mara Lenta [torqqes]/song.ini",
+      "size": 360
+    },
+    {
+      "path": "Max Altitude/[MA] 08. Mountaineering the Top/Zo\u00e9 - C\u00e1mara Lenta [torqqes]/song.ogg",
+      "size": 10415091
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - TOMHANKS_S_ES(EM)ANTICS_S_ES [Smoochums]/album.jpg",
+      "size": 69268
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - TOMHANKS_S_ES(EM)ANTICS_S_ES [Smoochums]/background.jpg",
+      "size": 278717
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - TOMHANKS_S_ES(EM)ANTICS_S_ES [Smoochums]/notes.chart",
+      "size": 39032
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - TOMHANKS_S_ES(EM)ANTICS_S_ES [Smoochums]/song.ini",
+      "size": 689
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - TOMHANKS_S_ES(EM)ANTICS_S_ES [Smoochums]/song.ogg",
+      "size": 5706952
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - Totally Boneless!!! [Smoochums]/album.png",
+      "size": 608125
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - Totally Boneless!!! [Smoochums]/background.jpg",
+      "size": 400936
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - Totally Boneless!!! [Smoochums]/notes.chart",
+      "size": 86732
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - Totally Boneless!!! [Smoochums]/song.ini",
+      "size": 587
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - Totally Boneless!!! [Smoochums]/song.ogg",
+      "size": 4900969
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - When the Catholic Girls... [torqqes]/album.png",
+      "size": 642559
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - When the Catholic Girls... [torqqes]/background.jpg",
+      "size": 163959
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - When the Catholic Girls... [torqqes]/notes.chart",
+      "size": 116856
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - When the Catholic Girls... [torqqes]/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/Giraffes_ Giraffes! - When the Catholic Girls... [torqqes]/song.ogg",
+      "size": 5753426
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/[MA] Intermission II - The Eternal/\u00c6ternity - Shake Me Down (Cage the Elephant cover) [Aren Eternal]/album.png",
+      "size": 226976
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/[MA] Intermission II - The Eternal/\u00c6ternity - Shake Me Down (Cage the Elephant cover) [Aren Eternal]/background.jpg",
+      "size": 252566
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/[MA] Intermission II - The Eternal/\u00c6ternity - Shake Me Down (Cage the Elephant cover) [Aren Eternal]/notes.chart",
+      "size": 45042
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/[MA] Intermission II - The Eternal/\u00c6ternity - Shake Me Down (Cage the Elephant cover) [Aren Eternal]/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Max Altitude/[MA] 08a. Giraffes\u203d Giraffes!/[MA] Intermission II - The Eternal/\u00c6ternity - Shake Me Down (Cage the Elephant cover) [Aren Eternal]/song.ogg",
+      "size": 6880410
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Ben Levin - What a Special Day [Smoochums]/album.jpg",
+      "size": 61986
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Ben Levin - What a Special Day [Smoochums]/background.jpg",
+      "size": 144812
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Ben Levin - What a Special Day [Smoochums]/notes.chart",
+      "size": 103137
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Ben Levin - What a Special Day [Smoochums]/song.ini",
+      "size": 336
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Ben Levin - What a Special Day [Smoochums]/song.ogg",
+      "size": 9044837
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Dead Kennedys - Too Drunk to Fuck [Smoochums]/album.jpg",
+      "size": 100646
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Dead Kennedys - Too Drunk to Fuck [Smoochums]/background.jpg",
+      "size": 240347
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Dead Kennedys - Too Drunk to Fuck [Smoochums]/notes.chart",
+      "size": 63458
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Dead Kennedys - Too Drunk to Fuck [Smoochums]/song.ini",
+      "size": 371
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Dead Kennedys - Too Drunk to Fuck [Smoochums]/song.ogg",
+      "size": 4310375
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Eagles of Death Metal - Chase the Devil [XEntombmentX]/album.png",
+      "size": 272851
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Eagles of Death Metal - Chase the Devil [XEntombmentX]/background.jpg",
+      "size": 245972
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Eagles of Death Metal - Chase the Devil [XEntombmentX]/notes.chart",
+      "size": 39060
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Eagles of Death Metal - Chase the Devil [XEntombmentX]/song.ini",
+      "size": 436
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Eagles of Death Metal - Chase the Devil [XEntombmentX]/song.ogg",
+      "size": 6553718
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Electric Six - Simulated Love [torqqes]/album.png",
+      "size": 638761
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Electric Six - Simulated Love [torqqes]/background.jpg",
+      "size": 85342
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Electric Six - Simulated Love [torqqes]/notes.chart",
+      "size": 32875
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Electric Six - Simulated Love [torqqes]/song.ini",
+      "size": 766
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Electric Six - Simulated Love [torqqes]/song.ogg",
+      "size": 6989334
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Franz Ferdinand - What She Came For [torqqes]/album.png",
+      "size": 251043
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Franz Ferdinand - What She Came For [torqqes]/background.jpg",
+      "size": 172395
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Franz Ferdinand - What She Came For [torqqes]/notes.chart",
+      "size": 33878
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Franz Ferdinand - What She Came For [torqqes]/song.ini",
+      "size": 563
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Franz Ferdinand - What She Came For [torqqes]/song.ogg",
+      "size": 7297064
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Guerilla Toss - Skull Pop [Smoochums]/album.jpg",
+      "size": 188866
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Guerilla Toss - Skull Pop [Smoochums]/background.jpg",
+      "size": 202972
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Guerilla Toss - Skull Pop [Smoochums]/notes.chart",
+      "size": 209110
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Guerilla Toss - Skull Pop [Smoochums]/notes2.chart",
+      "size": 190348
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Guerilla Toss - Skull Pop [Smoochums]/song.ini",
+      "size": 455
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Guerilla Toss - Skull Pop [Smoochums]/song.ogg",
+      "size": 10240883
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Test Icicles - Catch It! [torqqes]/album.png",
+      "size": 499099
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Test Icicles - Catch It! [torqqes]/background.jpg",
+      "size": 209084
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Test Icicles - Catch It! [torqqes]/notes.chart",
+      "size": 137450
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Test Icicles - Catch It! [torqqes]/song.ini",
+      "size": 646
+    },
+    {
+      "path": "Max Altitude/[MA] 09. Stratospheric Strangeness/Test Icicles - Catch It! [torqqes]/song.ogg",
+      "size": 7949076
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/Guthrie Govan - Erotic Cakes [XEntombmentX]/album.png",
+      "size": 448491
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/Guthrie Govan - Erotic Cakes [XEntombmentX]/background.jpg",
+      "size": 252823
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/Guthrie Govan - Erotic Cakes [XEntombmentX]/notes.chart",
+      "size": 37167
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/Guthrie Govan - Erotic Cakes [XEntombmentX]/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/Guthrie Govan - Erotic Cakes [XEntombmentX]/song.ogg",
+      "size": 8673344
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Furtive Jack [Smoochums]/album.jpg",
+      "size": 62844
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Furtive Jack [Smoochums]/background.jpg",
+      "size": 593942
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Furtive Jack [Smoochums]/notes.chart",
+      "size": 44794
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Furtive Jack [Smoochums]/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Furtive Jack [Smoochums]/song.ogg",
+      "size": 13015282
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Stupid 7 [torqqes]/album.png",
+      "size": 313418
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Stupid 7 [torqqes]/background.jpg",
+      "size": 252823
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Stupid 7 [torqqes]/notes.chart",
+      "size": 40843
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Stupid 7 [torqqes]/song.ini",
+      "size": 414
+    },
+    {
+      "path": "Max Altitude/[MA] 09a. Guthrie Govan & The Aristocrats/The Aristocrats - Stupid 7 [torqqes]/song.ogg",
+      "size": 7503199
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/American Football - You Know I Should Be Leaving Soon [Smoochums]/album.jpg",
+      "size": 28120
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/American Football - You Know I Should Be Leaving Soon [Smoochums]/background.jpg",
+      "size": 83414
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/American Football - You Know I Should Be Leaving Soon [Smoochums]/notes.chart",
+      "size": 45442
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/American Football - You Know I Should Be Leaving Soon [Smoochums]/song.ini",
+      "size": 479
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/American Football - You Know I Should Be Leaving Soon [Smoochums]/song.ogg",
+      "size": 6702719
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Battles - The Yabba [Caret]/album.jpg",
+      "size": 69719
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Battles - The Yabba [Caret]/background.jpg",
+      "size": 387311
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Battles - The Yabba [Caret]/notes.chart",
+      "size": 218309
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Battles - The Yabba [Caret]/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Battles - The Yabba [Caret]/song.ogg",
+      "size": 14737966
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Canadian Softball - Mathematical [Caret]/album.jpg",
+      "size": 144416
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Canadian Softball - Mathematical [Caret]/background.jpg",
+      "size": 537632
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Canadian Softball - Mathematical [Caret]/notes.chart",
+      "size": 54910
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Canadian Softball - Mathematical [Caret]/song.ini",
+      "size": 395
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Canadian Softball - Mathematical [Caret]/song.ogg",
+      "size": 4970309
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Drive Like Jehu - Here Come the Rome Plows [7777villain]/album.png",
+      "size": 234450
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Drive Like Jehu - Here Come the Rome Plows [7777villain]/background.jpg",
+      "size": 315221
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Drive Like Jehu - Here Come the Rome Plows [7777villain]/notes.chart",
+      "size": 74913
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Drive Like Jehu - Here Come the Rome Plows [7777villain]/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Drive Like Jehu - Here Come the Rome Plows [7777villain]/song.ogg",
+      "size": 10824809
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Hella - 1-800-GHOST-DANCE [Smoochums]/album.png",
+      "size": 31756
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Hella - 1-800-GHOST-DANCE [Smoochums]/background.jpg",
+      "size": 231929
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Hella - 1-800-GHOST-DANCE [Smoochums]/notes.chart",
+      "size": 101656
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Hella - 1-800-GHOST-DANCE [Smoochums]/song.ini",
+      "size": 371
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/Hella - 1-800-GHOST-DANCE [Smoochums]/song.ogg",
+      "size": 7274908
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/TTNG - Havoc in the Forum [Smoochums]/album.jpg",
+      "size": 65139
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/TTNG - Havoc in the Forum [Smoochums]/background.jpg",
+      "size": 367843
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/TTNG - Havoc in the Forum [Smoochums]/notes.chart",
+      "size": 34491
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/TTNG - Havoc in the Forum [Smoochums]/song.ini",
+      "size": 455
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/TTNG - Havoc in the Forum [Smoochums]/song.ogg",
+      "size": 6614926
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/black midi - 953 [Vasasasasa]/album.jpg",
+      "size": 132094
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/black midi - 953 [Vasasasasa]/background.jpg",
+      "size": 441927
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/black midi - 953 [Vasasasasa]/notes.chart",
+      "size": 114175
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/black midi - 953 [Vasasasasa]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/black midi - 953 [Vasasasasa]/song.ogg",
+      "size": 9800739
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/fago.sepia - Quinze [Smoochums]/album.jpg",
+      "size": 34283
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/fago.sepia - Quinze [Smoochums]/background.jpg",
+      "size": 252823
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/fago.sepia - Quinze [Smoochums]/notes.chart",
+      "size": 41190
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/fago.sepia - Quinze [Smoochums]/song.ini",
+      "size": 373
+    },
+    {
+      "path": "Max Altitude/[MA] 10. Summit All Up/fago.sepia - Quinze [Smoochums]/song.ogg",
+      "size": 7896701
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Otoshimae [torqqes]/album.png",
+      "size": 339187
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Otoshimae [torqqes]/background.jpg",
+      "size": 245972
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Otoshimae [torqqes]/notes.chart",
+      "size": 47732
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Otoshimae [torqqes]/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Otoshimae [torqqes]/song.ogg",
+      "size": 6391817
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Oyasumi [torqqes]/album.png",
+      "size": 339187
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Oyasumi [torqqes]/background.jpg",
+      "size": 473337
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Oyasumi [torqqes]/notes.chart",
+      "size": 44147
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Oyasumi [torqqes]/song.ini",
+      "size": 455
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Oyasumi [torqqes]/song.ogg",
+      "size": 7426917
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Synchronisica [torqqes]/album.png",
+      "size": 310931
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Synchronisica [torqqes]/background.jpg",
+      "size": 245972
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Synchronisica [torqqes]/notes.chart",
+      "size": 61947
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Synchronisica [torqqes]/song.ini",
+      "size": 388
+    },
+    {
+      "path": "Max Altitude/[MA] 10a. Polkadot Stingray/Polkadot Stingray - Synchronisica [torqqes]/song.ogg",
+      "size": 9441836
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/An Albatross - Dimensional Gymnastics [torqqes]/album.png",
+      "size": 445135
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/An Albatross - Dimensional Gymnastics [torqqes]/background.jpg",
+      "size": 275452
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/An Albatross - Dimensional Gymnastics [torqqes]/notes.chart",
+      "size": 10920
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/An Albatross - Dimensional Gymnastics [torqqes]/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/An Albatross - Dimensional Gymnastics [torqqes]/song.ogg",
+      "size": 1522246
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Anywhere - Sunset Ruins [torqqes]/album.png",
+      "size": 401784
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Anywhere - Sunset Ruins [torqqes]/background.jpg",
+      "size": 424912
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Anywhere - Sunset Ruins [torqqes]/notes.chart",
+      "size": 40692
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Anywhere - Sunset Ruins [torqqes]/song.ini",
+      "size": 462
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Anywhere - Sunset Ruins [torqqes]/song.ogg",
+      "size": 9216400
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Corridor - Mi-homme, mi-fus\u00e9e [torqqes]/album.png",
+      "size": 216454
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Corridor - Mi-homme, mi-fus\u00e9e [torqqes]/background.jpg",
+      "size": 199886
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Corridor - Mi-homme, mi-fus\u00e9e [torqqes]/notes.chart",
+      "size": 12568
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Corridor - Mi-homme, mi-fus\u00e9e [torqqes]/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Corridor - Mi-homme, mi-fus\u00e9e [torqqes]/song.ogg",
+      "size": 3922750
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Elliott Smith - Shooting Star [7777villain]/album.png",
+      "size": 379663
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Elliott Smith - Shooting Star [7777villain]/background.jpg",
+      "size": 670781
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Elliott Smith - Shooting Star [7777villain]/notes.chart",
+      "size": 49401
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Elliott Smith - Shooting Star [7777villain]/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Elliott Smith - Shooting Star [7777villain]/song.ogg",
+      "size": 11928807
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Radiohead - Motion Picture Soundtrack [Vasasasasa, 7777villain]/album.jpg",
+      "size": 182021
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Radiohead - Motion Picture Soundtrack [Vasasasasa, 7777villain]/background.jpg",
+      "size": 248427
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Radiohead - Motion Picture Soundtrack [Vasasasasa, 7777villain]/notes.chart",
+      "size": 115357
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Radiohead - Motion Picture Soundtrack [Vasasasasa, 7777villain]/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Radiohead - Motion Picture Soundtrack [Vasasasasa, 7777villain]/song.ogg",
+      "size": 5949315
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Self - Out Wiith a Bang [Caret]/album.jpg",
+      "size": 284172
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Self - Out Wiith a Bang [Caret]/background.jpg",
+      "size": 166060
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Self - Out Wiith a Bang [Caret]/notes.chart",
+      "size": 85938
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Self - Out Wiith a Bang [Caret]/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Self - Out Wiith a Bang [Caret]/song.ogg",
+      "size": 6220782
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Sianvar - Omniphobia [XEntombmentX]/album.png",
+      "size": 428090
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Sianvar - Omniphobia [XEntombmentX]/background.jpg",
+      "size": 435836
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Sianvar - Omniphobia [XEntombmentX]/notes.chart",
+      "size": 53774
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Sianvar - Omniphobia [XEntombmentX]/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/Sianvar - Omniphobia [XEntombmentX]/song.ogg",
+      "size": 9951361
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/The Only Ones - Another Girl, Another Planet [Raspberriel]/album.png",
+      "size": 588831
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/The Only Ones - Another Girl, Another Planet [Raspberriel]/background.jpg",
+      "size": 377985
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/The Only Ones - Another Girl, Another Planet [Raspberriel]/guitar.ogg",
+      "size": 5849452
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/The Only Ones - Another Girl, Another Planet [Raspberriel]/notes.mid",
+      "size": 33083
+    },
+    {
+      "path": "Max Altitude/[MA] 11. Peak Performance/The Only Ones - Another Girl, Another Planet [Raspberriel]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - PhYSAliA [torqqes]/album.png",
+      "size": 130828
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - PhYSAliA [torqqes]/background.jpg",
+      "size": 246498
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - PhYSAliA [torqqes]/notes.chart",
+      "size": 52660
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - PhYSAliA [torqqes]/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - PhYSAliA [torqqes]/song.ogg",
+      "size": 6408886
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - hidarime [torqqes]/album.png",
+      "size": 66739
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - hidarime [torqqes]/background.jpg",
+      "size": 289561
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - hidarime [torqqes]/notes.chart",
+      "size": 49764
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - hidarime [torqqes]/song.ini",
+      "size": 292
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - hidarime [torqqes]/song.ogg",
+      "size": 7079026
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - ochitasemiwomiteiru [torqqes]/album.png",
+      "size": 130828
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - ochitasemiwomiteiru [torqqes]/background.jpg",
+      "size": 1333224
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - ochitasemiwomiteiru [torqqes]/notes.chart",
+      "size": 123230
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - ochitasemiwomiteiru [torqqes]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Max Altitude/[MA] 11a. Sleeping Pola/Sleeping Pola - ochitasemiwomiteiru [torqqes]/song.ogg",
+      "size": 6557705
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/3nd - Monsoon [Smoochums]/album.jpg",
+      "size": 121238
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/3nd - Monsoon [Smoochums]/background.jpg",
+      "size": 623143
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/3nd - Monsoon [Smoochums]/notes.chart",
+      "size": 107820
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/3nd - Monsoon [Smoochums]/song.ini",
+      "size": 282
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/3nd - Monsoon [Smoochums]/song.ogg",
+      "size": 7506455
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Floral - Marsh Partition [Smoochums]/album.jpg",
+      "size": 129721
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Floral - Marsh Partition [Smoochums]/background.jpg",
+      "size": 914752
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Floral - Marsh Partition [Smoochums]/notes.chart",
+      "size": 33491
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Floral - Marsh Partition [Smoochums]/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Floral - Marsh Partition [Smoochums]/song.ogg",
+      "size": 6251797
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Lightning Bolt - Dead Cowboy [torqqes]/album.png",
+      "size": 716291
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Lightning Bolt - Dead Cowboy [torqqes]/background.jpg",
+      "size": 312334
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Lightning Bolt - Dead Cowboy [torqqes]/notes.chart",
+      "size": 87122
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Lightning Bolt - Dead Cowboy [torqqes]/song.ini",
+      "size": 345
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Lightning Bolt - Dead Cowboy [torqqes]/song.ogg",
+      "size": 14712149
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/POLYSICS - Be a Human [torqqes]/album.png",
+      "size": 584518
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/POLYSICS - Be a Human [torqqes]/background.jpg",
+      "size": 194126
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/POLYSICS - Be a Human [torqqes]/notes.chart",
+      "size": 71398
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/POLYSICS - Be a Human [torqqes]/song.ini",
+      "size": 333
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/POLYSICS - Be a Human [torqqes]/song.ogg",
+      "size": 6349067
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Living End - Closing In [torqqes]/album.png",
+      "size": 527987
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Living End - Closing In [torqqes]/background.jpg",
+      "size": 678988
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Living End - Closing In [torqqes]/notes.chart",
+      "size": 29949
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Living End - Closing In [torqqes]/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Living End - Closing In [torqqes]/song.ogg",
+      "size": 6432513
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Smashing Pumpkins - Fuck You (An Ode...) [7777villain]/album.png",
+      "size": 514197
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Smashing Pumpkins - Fuck You (An Ode...) [7777villain]/background.jpg",
+      "size": 744444
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Smashing Pumpkins - Fuck You (An Ode...) [7777villain]/notes.chart",
+      "size": 112633
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Smashing Pumpkins - Fuck You (An Ode...) [7777villain]/song.ini",
+      "size": 464
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/The Smashing Pumpkins - Fuck You (An Ode...) [7777villain]/song.ogg",
+      "size": 9396657
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Weatherday - Come In [7777villain]/album.png",
+      "size": 200317
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Weatherday - Come In [7777villain]/background.jpg",
+      "size": 150027
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Weatherday - Come In [7777villain]/notes.chart",
+      "size": 40692
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Weatherday - Come In [7777villain]/song.ini",
+      "size": 302
+    },
+    {
+      "path": "Max Altitude/[MA] 12. Maximum Altitude/Weatherday - Come In [7777villain]/song.ogg",
+      "size": 2874674
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Astro Cortex [torqqes]/album.png",
+      "size": 550378
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Astro Cortex [torqqes]/background.jpg",
+      "size": 669060
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Astro Cortex [torqqes]/notes.chart",
+      "size": 172207
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Astro Cortex [torqqes]/song.ini",
+      "size": 409
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Astro Cortex [torqqes]/song.ogg",
+      "size": 9925121
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Kick 98 [Smoochums]/album.jpg",
+      "size": 171190
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Kick 98 [Smoochums]/background.jpg",
+      "size": 149849
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Kick 98 [Smoochums]/notes.chart",
+      "size": 241597
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Kick 98 [Smoochums]/song.ini",
+      "size": 642
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Kick 98 [Smoochums]/song.ogg",
+      "size": 12192228
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Neurochasm [torqqes]/album.png",
+      "size": 577058
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Neurochasm [torqqes]/background.jpg",
+      "size": 494019
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Neurochasm [torqqes]/notes.chart",
+      "size": 117612
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Neurochasm [torqqes]/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Max Altitude/[MA] 12a. Ozric Tentacles/Ozric Tentacles - Neurochasm [torqqes]/song.ogg",
+      "size": 14367853
+    }
+  ],
+  "extracted_size": 1086067889,
+  "file_count": 675,
+  "chart_count": 130,
+  "release_date": "2022-02-25"
 }

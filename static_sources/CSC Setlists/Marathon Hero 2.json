@@ -3,18 +3,3079 @@
   "folder_id": "static-marathon-hero-2",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 152,
-  "total_size": 6267217757,
-  "file_count": 765,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-marathon-hero-2",
-      "path": "Marathon Hero 2/Marathon Hero 2.rar",
+      "url": "https://customsongscentral.b-cdn.net/Marathon%20Hero%202.rar?ref=customsongscentral.com",
       "name": "Marathon Hero 2.rar",
       "size": 6267217757,
-      "md5": "d6fb57f2c2e4afae97043fd49176dc1c",
-      "url": "https://customsongscentral.b-cdn.net/Marathon%20Hero%202.rar?ref=customsongscentral.com"
+      "md5": "d6fb57f2c2e4afae97043fd49176dc1c"
     }
-  ]
+  ],
+  "download_size": 6267217757,
+  "files": [
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/01 Blind Guardian - Wheel of Time/album.jpg",
+      "size": 58553
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/01 Blind Guardian - Wheel of Time/background.jpg",
+      "size": 791081
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/01 Blind Guardian - Wheel of Time/notes.chart",
+      "size": 70391
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/01 Blind Guardian - Wheel of Time/song.ini",
+      "size": 534
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/01 Blind Guardian - Wheel of Time/song.ogg",
+      "size": 17502799
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/02 Cellar Darling - Death/album.jpg",
+      "size": 65786
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/02 Cellar Darling - Death/background.jpg",
+      "size": 388603
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/02 Cellar Darling - Death/notes.chart",
+      "size": 52023
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/02 Cellar Darling - Death/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/02 Cellar Darling - Death/song.ogg",
+      "size": 13043130
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/03 Nightwish - Poet and the Pendulum/album.jpg",
+      "size": 48435
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/03 Nightwish - Poet and the Pendulum/background.jpg",
+      "size": 216027
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/03 Nightwish - Poet and the Pendulum/guitar.ogg",
+      "size": 24740146
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/03 Nightwish - Poet and the Pendulum/notes.chart",
+      "size": 118078
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/03 Nightwish - Poet and the Pendulum/song.ini",
+      "size": 608
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/04 Black Sheep Wall - The Wailing and the Gnashing and the Teeth/album.jpg",
+      "size": 48383
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/04 Black Sheep Wall - The Wailing and the Gnashing and the Teeth/background.jpg",
+      "size": 992652
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/04 Black Sheep Wall - The Wailing and the Gnashing and the Teeth/notes.chart",
+      "size": 55849
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/04 Black Sheep Wall - The Wailing and the Gnashing and the Teeth/song.ini",
+      "size": 1027
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/04 Black Sheep Wall - The Wailing and the Gnashing and the Teeth/song.ogg",
+      "size": 14807785
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/05 Tool - 7empest/album.jpg",
+      "size": 43242
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/05 Tool - 7empest/background.jpg",
+      "size": 418362
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/05 Tool - 7empest/notes.chart",
+      "size": 90681
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/05 Tool - 7empest/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/05 Tool - 7empest/song.ogg",
+      "size": 27552300
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/06 Various Artists - Very Hard Solo Medley/album.jpg",
+      "size": 30413
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/06 Various Artists - Very Hard Solo Medley/background.jpg",
+      "size": 431861
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/06 Various Artists - Very Hard Solo Medley/notes.chart",
+      "size": 39342
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/06 Various Artists - Very Hard Solo Medley/preview.ogg",
+      "size": 1104138
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/06 Various Artists - Very Hard Solo Medley/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Marathon Hero 2/01 - Right On Schedule/06 Various Artists - Very Hard Solo Medley/song.ogg",
+      "size": 22455263
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/01 Diablo Swing Orchestra - Justice for Saint Mary/album.jpg",
+      "size": 36178
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/01 Diablo Swing Orchestra - Justice for Saint Mary/background.jpg",
+      "size": 296287
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/01 Diablo Swing Orchestra - Justice for Saint Mary/notes.chart",
+      "size": 62249
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/01 Diablo Swing Orchestra - Justice for Saint Mary/song.ini",
+      "size": 644
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/01 Diablo Swing Orchestra - Justice for Saint Mary/song.ogg",
+      "size": 15850658
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/02 Deodato - Super Strut/album.jpg",
+      "size": 47613
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/02 Deodato - Super Strut/background.jpg",
+      "size": 135223
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/02 Deodato - Super Strut/notes.chart",
+      "size": 80402
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/02 Deodato - Super Strut/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/02 Deodato - Super Strut/song.ogg",
+      "size": 17359474
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/03 Laserboys - Super Weltuntergang 5000 (Das d\u00fcmmste Lied der Welt)/album.jpg",
+      "size": 39796
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/03 Laserboys - Super Weltuntergang 5000 (Das d\u00fcmmste Lied der Welt)/background.jpg",
+      "size": 862580
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/03 Laserboys - Super Weltuntergang 5000 (Das d\u00fcmmste Lied der Welt)/notes.chart",
+      "size": 131627
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/03 Laserboys - Super Weltuntergang 5000 (Das d\u00fcmmste Lied der Welt)/song.ini",
+      "size": 755
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/03 Laserboys - Super Weltuntergang 5000 (Das d\u00fcmmste Lied der Welt)/song.ogg",
+      "size": 24725670
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/04 Haken - Falling Back To Earth/album.jpg",
+      "size": 76757
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/04 Haken - Falling Back To Earth/background.jpg",
+      "size": 901190
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/04 Haken - Falling Back To Earth/notes.chart",
+      "size": 266804
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/04 Haken - Falling Back To Earth/song.ini",
+      "size": 972
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/04 Haken - Falling Back To Earth/song.ogg",
+      "size": 22313364
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/05 Richard Henshall - Pupa Cocoon Silken Chains/album.jpg",
+      "size": 73685
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/05 Richard Henshall - Pupa Cocoon Silken Chains/background.jpg",
+      "size": 388330
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/05 Richard Henshall - Pupa Cocoon Silken Chains/guitar.ogg",
+      "size": 42742490
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/05 Richard Henshall - Pupa Cocoon Silken Chains/notes.chart",
+      "size": 167424
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/05 Richard Henshall - Pupa Cocoon Silken Chains/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/06 Paralydium - Worlds Beyond Solo Medley/album.jpg",
+      "size": 345048
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/06 Paralydium - Worlds Beyond Solo Medley/background.jpg",
+      "size": 333088
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/06 Paralydium - Worlds Beyond Solo Medley/guitar.ogg",
+      "size": 14183844
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/06 Paralydium - Worlds Beyond Solo Medley/notes.chart",
+      "size": 91873
+    },
+    {
+      "path": "Marathon Hero 2/02 - Die d\u00fcmmste Stufe der Welt/06 Paralydium - Worlds Beyond Solo Medley/song.ini",
+      "size": 794
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/01 Daft Punk - Touch (feat. Paul Williams)/album.jpg",
+      "size": 21843
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/01 Daft Punk - Touch (feat. Paul Williams)/background.jpg",
+      "size": 353322
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/01 Daft Punk - Touch (feat. Paul Williams)/notes.chart",
+      "size": 78112
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/01 Daft Punk - Touch (feat. Paul Williams)/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/01 Daft Punk - Touch (feat. Paul Williams)/song.ogg",
+      "size": 14898162
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/02 Los Lonely Boys - Onda/album.jpg",
+      "size": 32287
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/02 Los Lonely Boys - Onda/background.jpg",
+      "size": 873467
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/02 Los Lonely Boys - Onda/guitar.ogg",
+      "size": 16681271
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/02 Los Lonely Boys - Onda/notes.mid",
+      "size": 34993
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/02 Los Lonely Boys - Onda/song.ini",
+      "size": 495
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/03 Reel Big Fish - SR (Live)/album.jpg",
+      "size": 84553
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/03 Reel Big Fish - SR (Live)/background.jpg",
+      "size": 240255
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/03 Reel Big Fish - SR (Live)/notes.chart",
+      "size": 106623
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/03 Reel Big Fish - SR (Live)/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/03 Reel Big Fish - SR (Live)/song.ogg",
+      "size": 18341738
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/04 The Hirsch Effekt - Cotard/album.jpg",
+      "size": 33748
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/04 The Hirsch Effekt - Cotard/background.jpg",
+      "size": 1057358
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/04 The Hirsch Effekt - Cotard/notes.chart",
+      "size": 81382
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/04 The Hirsch Effekt - Cotard/song.ini",
+      "size": 863
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/04 The Hirsch Effekt - Cotard/song.ogg",
+      "size": 16919644
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/05 Rhapsody of Fire - Heroes of the Waterfalls_ Kingdom/album.jpg",
+      "size": 40827
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/05 Rhapsody of Fire - Heroes of the Waterfalls_ Kingdom/background.jpg",
+      "size": 354430
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/05 Rhapsody of Fire - Heroes of the Waterfalls_ Kingdom/notes.chart",
+      "size": 200980
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/05 Rhapsody of Fire - Heroes of the Waterfalls_ Kingdom/song.ini",
+      "size": 773
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/05 Rhapsody of Fire - Heroes of the Waterfalls_ Kingdom/song.ogg",
+      "size": 34335926
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/06 Haken - 2009-2016 Solo Medley/album.jpg",
+      "size": 383434
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/06 Haken - 2009-2016 Solo Medley/background.jpg",
+      "size": 233722
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/06 Haken - 2009-2016 Solo Medley/guitar.ogg",
+      "size": 41968695
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/06 Haken - 2009-2016 Solo Medley/notes.chart",
+      "size": 193841
+    },
+    {
+      "path": "Marathon Hero 2/03 - Open Tournament/06 Haken - 2009-2016 Solo Medley/song.ini",
+      "size": 587
+    },
+    {
+      "path": "Marathon Hero 2/04 - FULL ALBUM - Metallica - St. Anger/00 St. Anger (Full Album)/album.jpg",
+      "size": 73232
+    },
+    {
+      "path": "Marathon Hero 2/04 - FULL ALBUM - Metallica - St. Anger/00 St. Anger (Full Album)/background.jpg",
+      "size": 292141
+    },
+    {
+      "path": "Marathon Hero 2/04 - FULL ALBUM - Metallica - St. Anger/00 St. Anger (Full Album)/guitar.ogg",
+      "size": 145240641
+    },
+    {
+      "path": "Marathon Hero 2/04 - FULL ALBUM - Metallica - St. Anger/00 St. Anger (Full Album)/notes.chart",
+      "size": 816569
+    },
+    {
+      "path": "Marathon Hero 2/04 - FULL ALBUM - Metallica - St. Anger/00 St. Anger (Full Album)/song.ini",
+      "size": 669
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/01 Opeth - Heir Apparent/album.jpg",
+      "size": 35236
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/01 Opeth - Heir Apparent/background.jpg",
+      "size": 402048
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/01 Opeth - Heir Apparent/notes.chart",
+      "size": 66417
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/01 Opeth - Heir Apparent/song.ini",
+      "size": 536
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/01 Opeth - Heir Apparent/song.ogg",
+      "size": 16991491
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/02 Monobody - Curry Courier Career/album.jpg",
+      "size": 9273
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/02 Monobody - Curry Courier Career/background.jpg",
+      "size": 214722
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/02 Monobody - Curry Courier Career/guitar.ogg",
+      "size": 14820408
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/02 Monobody - Curry Courier Career/notes.mid",
+      "size": 27878
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/02 Monobody - Curry Courier Career/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/03 Epica - Kingdom of Heaven/album.jpg",
+      "size": 52527
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/03 Epica - Kingdom of Heaven/background.jpg",
+      "size": 379171
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/03 Epica - Kingdom of Heaven/notes.chart",
+      "size": 111150
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/03 Epica - Kingdom of Heaven/song.ini",
+      "size": 713
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/03 Epica - Kingdom of Heaven/song.ogg",
+      "size": 25629399
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/04 The Contortionist - Exoplanet I-III/album.jpg",
+      "size": 37554
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/04 The Contortionist - Exoplanet I-III/background.jpg",
+      "size": 533534
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/04 The Contortionist - Exoplanet I-III/notes.chart",
+      "size": 96471
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/04 The Contortionist - Exoplanet I-III/song.ini",
+      "size": 855
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/04 The Contortionist - Exoplanet I-III/song.ogg",
+      "size": 25535166
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/05 Jack the Joker - Venus and Mars/album.jpg",
+      "size": 69242
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/05 Jack the Joker - Venus and Mars/background.jpg",
+      "size": 145866
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/05 Jack the Joker - Venus and Mars/guitar.ogg",
+      "size": 50625192
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/05 Jack the Joker - Venus and Mars/notes.chart",
+      "size": 181455
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/05 Jack the Joker - Venus and Mars/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/06 Alex Argento - Ego Solo Medley/album.jpg",
+      "size": 74743
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/06 Alex Argento - Ego Solo Medley/background.jpg",
+      "size": 837537
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/06 Alex Argento - Ego Solo Medley/notes.chart",
+      "size": 197935
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/06 Alex Argento - Ego Solo Medley/song.ini",
+      "size": 718
+    },
+    {
+      "path": "Marathon Hero 2/05 - Interplanetary Kingdom/06 Alex Argento - Ego Solo Medley/song.ogg",
+      "size": 26901756
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/01 Apocalyptica - Shadowmaker/album.jpg",
+      "size": 24608
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/01 Apocalyptica - Shadowmaker/background.jpg",
+      "size": 620939
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/01 Apocalyptica - Shadowmaker/notes.mid",
+      "size": 36854
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/01 Apocalyptica - Shadowmaker/song.ini",
+      "size": 886
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/01 Apocalyptica - Shadowmaker/song.ogg",
+      "size": 15066133
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/02 Blackfoot - Highway Song/album.jpg",
+      "size": 32240
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/02 Blackfoot - Highway Song/background.jpg",
+      "size": 677078
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/02 Blackfoot - Highway Song/notes.chart",
+      "size": 53487
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/02 Blackfoot - Highway Song/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/02 Blackfoot - Highway Song/song.ogg",
+      "size": 13279182
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/03 Between the Buried and Me - Disease, Injury, Madness/album.jpg",
+      "size": 55378
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/03 Between the Buried and Me - Disease, Injury, Madness/background.jpg",
+      "size": 907520
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/03 Between the Buried and Me - Disease, Injury, Madness/notes.chart",
+      "size": 90357
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/03 Between the Buried and Me - Disease, Injury, Madness/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/03 Between the Buried and Me - Disease, Injury, Madness/song.ogg",
+      "size": 21566963
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/04 Leprous - Contaminate Me/album.jpg",
+      "size": 74526
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/04 Leprous - Contaminate Me/background.jpg",
+      "size": 60136
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/04 Leprous - Contaminate Me/guitar.ogg",
+      "size": 17767934
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/04 Leprous - Contaminate Me/notes.chart",
+      "size": 65786
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/04 Leprous - Contaminate Me/song.ini",
+      "size": 494
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/05 Gorod - Transcendence/album.jpg",
+      "size": 68309
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/05 Gorod - Transcendence/background.jpg",
+      "size": 974763
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/05 Gorod - Transcendence/notes.chart",
+      "size": 147426
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/05 Gorod - Transcendence/song.ini",
+      "size": 467
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/05 Gorod - Transcendence/song.ogg",
+      "size": 31626592
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/06 Thank You Scientist - Solo Medley/album.jpg",
+      "size": 76896
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/06 Thank You Scientist - Solo Medley/background.jpg",
+      "size": 1313537
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/06 Thank You Scientist - Solo Medley/notes.chart",
+      "size": 135009
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/06 Thank You Scientist - Solo Medley/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Marathon Hero 2/06 - Find the Vaccine/06 Thank You Scientist - Solo Medley/song.ogg",
+      "size": 23383791
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/01 Thrashist Regime - Laughter Then Madness Then Death/album.jpg",
+      "size": 162943
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/01 Thrashist Regime - Laughter Then Madness Then Death/background.jpg",
+      "size": 1357896
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/01 Thrashist Regime - Laughter Then Madness Then Death/guitar.ogg",
+      "size": 18001858
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/01 Thrashist Regime - Laughter Then Madness Then Death/notes.mid",
+      "size": 63048
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/01 Thrashist Regime - Laughter Then Madness Then Death/song.ini",
+      "size": 1051
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/02 Mammoth - Unlimited Access To the None/album.jpg",
+      "size": 53427
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/02 Mammoth - Unlimited Access To the None/background.jpg",
+      "size": 737980
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/02 Mammoth - Unlimited Access To the None/notes.chart",
+      "size": 65710
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/02 Mammoth - Unlimited Access To the None/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/02 Mammoth - Unlimited Access To the None/song.ogg",
+      "size": 15629502
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/03 Haken - 1985/1985.chart",
+      "size": 73585
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/03 Haken - 1985/album.jpg",
+      "size": 35714
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/03 Haken - 1985/background.jpg",
+      "size": 412748
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/03 Haken - 1985/notes.chart",
+      "size": 73060
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/03 Haken - 1985/song.ini",
+      "size": 524
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/03 Haken - 1985/song.ogg",
+      "size": 17599677
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/04 Pangaea - Survivor_s Guilt/album.jpg",
+      "size": 35265
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/04 Pangaea - Survivor_s Guilt/background.jpg",
+      "size": 412326
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/04 Pangaea - Survivor_s Guilt/notes.chart",
+      "size": 113044
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/04 Pangaea - Survivor_s Guilt/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/04 Pangaea - Survivor_s Guilt/song.ogg",
+      "size": 18008569
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/05 The Allman Brothers Band - You Don_t Love Me (Live)/album.jpg",
+      "size": 49375
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/05 The Allman Brothers Band - You Don_t Love Me (Live)/background.jpg",
+      "size": 708842
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/05 The Allman Brothers Band - You Don_t Love Me (Live)/guitar.ogg",
+      "size": 37172856
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/05 The Allman Brothers Band - You Don_t Love Me (Live)/notes.mid",
+      "size": 76131
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/05 The Allman Brothers Band - You Don_t Love Me (Live)/song.ini",
+      "size": 698
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/06 FROST_ - FROST_ Solo Medley/album.jpg",
+      "size": 11273
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/06 FROST_ - FROST_ Solo Medley/background.jpg",
+      "size": 122609
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/06 FROST_ - FROST_ Solo Medley/guitar.ogg",
+      "size": 27999853
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/06 FROST_ - FROST_ Solo Medley/notes.chart",
+      "size": 155410
+    },
+    {
+      "path": "Marathon Hero 2/07 - Back to the Permafrost/06 FROST_ - FROST_ Solo Medley/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Marathon Hero 2/08 - FULL ALBUM - Queensryche - Operation Mindcrime/00 Operation Mindcrime (Full Album)/album.jpg",
+      "size": 85714
+    },
+    {
+      "path": "Marathon Hero 2/08 - FULL ALBUM - Queensryche - Operation Mindcrime/00 Operation Mindcrime (Full Album)/background.jpg",
+      "size": 959531
+    },
+    {
+      "path": "Marathon Hero 2/08 - FULL ALBUM - Queensryche - Operation Mindcrime/00 Operation Mindcrime (Full Album)/notes.chart",
+      "size": 378000
+    },
+    {
+      "path": "Marathon Hero 2/08 - FULL ALBUM - Queensryche - Operation Mindcrime/00 Operation Mindcrime (Full Album)/song.ini",
+      "size": 922
+    },
+    {
+      "path": "Marathon Hero 2/08 - FULL ALBUM - Queensryche - Operation Mindcrime/00 Operation Mindcrime (Full Album)/song.ogg",
+      "size": 107119664
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/01 Between the Buried and Me - The Coma Machine/album.jpg",
+      "size": 53485
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/01 Between the Buried and Me - The Coma Machine/background.jpg",
+      "size": 250332
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/01 Between the Buried and Me - The Coma Machine/notes.chart",
+      "size": 54299
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/01 Between the Buried and Me - The Coma Machine/song.ini",
+      "size": 687
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/01 Between the Buried and Me - The Coma Machine/song.ogg",
+      "size": 14960962
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/02 Muse - Stockholm Syndrome (Live)/album.jpg",
+      "size": 28010
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/02 Muse - Stockholm Syndrome (Live)/background.jpg",
+      "size": 294976
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/02 Muse - Stockholm Syndrome (Live)/notes.chart",
+      "size": 94346
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/02 Muse - Stockholm Syndrome (Live)/song.ini",
+      "size": 623
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/02 Muse - Stockholm Syndrome (Live)/song.ogg",
+      "size": 13410554
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/03 Shnabubula - Playing Super Mario World While Taking Mushrooms/album.jpg",
+      "size": 90224
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/03 Shnabubula - Playing Super Mario World While Taking Mushrooms/background.jpg",
+      "size": 219430
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/03 Shnabubula - Playing Super Mario World While Taking Mushrooms/notes.chart",
+      "size": 91819
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/03 Shnabubula - Playing Super Mario World While Taking Mushrooms/song.ini",
+      "size": 818
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/03 Shnabubula - Playing Super Mario World While Taking Mushrooms/song.ogg",
+      "size": 16031813
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/04 Lana Del Rey - Venice Bitch/album.jpg",
+      "size": 311087
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/04 Lana Del Rey - Venice Bitch/background.jpg",
+      "size": 437729
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/04 Lana Del Rey - Venice Bitch/notes.chart",
+      "size": 97114
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/04 Lana Del Rey - Venice Bitch/song.ini",
+      "size": 493
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/04 Lana Del Rey - Venice Bitch/song.ogg",
+      "size": 16472860
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/05 Blood Incantation - Awakening From the Dream of the Existence to the Multidimensional Nature of Our Reality (Mirror of the Soul)/album.jpg",
+      "size": 51465
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/05 Blood Incantation - Awakening From the Dream of the Existence to the Multidimensional Nature of Our Reality (Mirror of the Soul)/background.jpg",
+      "size": 988971
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/05 Blood Incantation - Awakening From the Dream of the Existence to the Multidimensional Nature of Our Reality (Mirror of the Soul)/notes.chart",
+      "size": 123285
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/05 Blood Incantation - Awakening From the Dream of the Existence to the Multidimensional Nature of Our Reality (Mirror of the Soul)/song.ini",
+      "size": 599
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/05 Blood Incantation - Awakening From the Dream of the Existence to the Multidimensional Nature of Our Reality (Mirror of the Soul)/song.ogg",
+      "size": 31134069
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/06 Various Artists - Halo Solo Medley/album.jpg",
+      "size": 95216
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/06 Various Artists - Halo Solo Medley/background.jpg",
+      "size": 165760
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/06 Various Artists - Halo Solo Medley/guitar.ogg",
+      "size": 18823637
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/06 Various Artists - Halo Solo Medley/notes.chart",
+      "size": 76882
+    },
+    {
+      "path": "Marathon Hero 2/09 - DMCA Hero/06 Various Artists - Halo Solo Medley/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/01 Lich King - Agnosticism/album.jpg",
+      "size": 96616
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/01 Lich King - Agnosticism/background.jpg",
+      "size": 101898
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/01 Lich King - Agnosticism/guitar.ogg",
+      "size": 16556252
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/01 Lich King - Agnosticism/notes.chart",
+      "size": 62616
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/01 Lich King - Agnosticism/song.ini",
+      "size": 589
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/02 Paralydium - New Frontier/album.jpg",
+      "size": 109317
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/02 Paralydium - New Frontier/background.jpg",
+      "size": 333088
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/02 Paralydium - New Frontier/guitar.ogg",
+      "size": 16878566
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/02 Paralydium - New Frontier/notes.chart",
+      "size": 60913
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/02 Paralydium - New Frontier/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/03 King Gizzard and the Lizzard Wizzard - The Lord of Lightning vs. Balrog/album.jpg",
+      "size": 71313
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/03 King Gizzard and the Lizzard Wizzard - The Lord of Lightning vs. Balrog/background.jpg",
+      "size": 355150
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/03 King Gizzard and the Lizzard Wizzard - The Lord of Lightning vs. Balrog/notes.chart",
+      "size": 122393
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/03 King Gizzard and the Lizzard Wizzard - The Lord of Lightning vs. Balrog/song.ini",
+      "size": 562
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/03 King Gizzard and the Lizzard Wizzard - The Lord of Lightning vs. Balrog/song.ogg",
+      "size": 27990777
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/04 Bad Salad - The Second Calling/album.jpg",
+      "size": 239853
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/04 Bad Salad - The Second Calling/background.jpg",
+      "size": 811496
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/04 Bad Salad - The Second Calling/notes.chart",
+      "size": 130211
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/04 Bad Salad - The Second Calling/song.ini",
+      "size": 646
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/04 Bad Salad - The Second Calling/song.ogg",
+      "size": 25324997
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/05 HeXeN - Nocturne/album.jpg",
+      "size": 66557
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/05 HeXeN - Nocturne/background.jpg",
+      "size": 251649
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/05 HeXeN - Nocturne/notes.chart",
+      "size": 142578
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/05 HeXeN - Nocturne/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/05 HeXeN - Nocturne/song.ogg",
+      "size": 29743859
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/06 Paul Gilbert - Solo Medley/album.jpg",
+      "size": 34657
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/06 Paul Gilbert - Solo Medley/background.jpg",
+      "size": 633733
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/06 Paul Gilbert - Solo Medley/notes.chart",
+      "size": 114446
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/06 Paul Gilbert - Solo Medley/song.ini",
+      "size": 596
+    },
+    {
+      "path": "Marathon Hero 2/10 - Fight of the Superheroes/06 Paul Gilbert - Solo Medley/song.ogg",
+      "size": 14451859
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/01 Metallica - The Call of Ktulu/album.jpg",
+      "size": 37199
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/01 Metallica - The Call of Ktulu/background.jpg",
+      "size": 90197
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/01 Metallica - The Call of Ktulu/guitar.ogg",
+      "size": 17187248
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/01 Metallica - The Call of Ktulu/notes.chart",
+      "size": 58493
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/01 Metallica - The Call of Ktulu/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/02 Blitz Lunar - ENDING/album.jpg",
+      "size": 34378
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/02 Blitz Lunar - ENDING/background.jpg",
+      "size": 234693
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/02 Blitz Lunar - ENDING/notes.chart",
+      "size": 75383
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/02 Blitz Lunar - ENDING/song.ini",
+      "size": 465
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/02 Blitz Lunar - ENDING/song.ogg",
+      "size": 13064508
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/03 Mastodon - The Czar/album.jpg",
+      "size": 77486
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/03 Mastodon - The Czar/background.jpg",
+      "size": 982015
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/03 Mastodon - The Czar/notes.chart",
+      "size": 84760
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/03 Mastodon - The Czar/song.ini",
+      "size": 697
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/03 Mastodon - The Czar/song.ogg",
+      "size": 19679491
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/04 Rush - La Villa Strangiato (Live in Canada, 1980)/album.jpg",
+      "size": 34047
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/04 Rush - La Villa Strangiato (Live in Canada, 1980)/background.jpg",
+      "size": 625814
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/04 Rush - La Villa Strangiato (Live in Canada, 1980)/guitar.ogg",
+      "size": 17585041
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/04 Rush - La Villa Strangiato (Live in Canada, 1980)/notes.mid",
+      "size": 32627
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/04 Rush - La Villa Strangiato (Live in Canada, 1980)/song.ini",
+      "size": 568
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/05 Sun Caged - Ashtamangala (The 8 Auspicious Symbols)/album.jpg",
+      "size": 88391
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/05 Sun Caged - Ashtamangala (The 8 Auspicious Symbols)/background.jpg",
+      "size": 355209
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/05 Sun Caged - Ashtamangala (The 8 Auspicious Symbols)/guitar.ogg",
+      "size": 47614201
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/05 Sun Caged - Ashtamangala (The 8 Auspicious Symbols)/notes.chart",
+      "size": 241957
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/05 Sun Caged - Ashtamangala (The 8 Auspicious Symbols)/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/06 Time Requiem - Solo Medley 1.5/album.jpg",
+      "size": 33072
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/06 Time Requiem - Solo Medley 1.5/background.jpg",
+      "size": 313014
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/06 Time Requiem - Solo Medley 1.5/notes.chart",
+      "size": 332535
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/06 Time Requiem - Solo Medley 1.5/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Marathon Hero 2/11 - Believe in Yourself/06 Time Requiem - Solo Medley 1.5/song.ogg",
+      "size": 30652815
+    },
+    {
+      "path": "Marathon Hero 2/12 - FULL ALBUM - Haken - Vector _ Virus/00 Vector_Virus/album.jpg",
+      "size": 32571
+    },
+    {
+      "path": "Marathon Hero 2/12 - FULL ALBUM - Haken - Vector _ Virus/00 Vector_Virus/background.jpg",
+      "size": 281433
+    },
+    {
+      "path": "Marathon Hero 2/12 - FULL ALBUM - Haken - Vector _ Virus/00 Vector_Virus/notes.chart",
+      "size": 808688
+    },
+    {
+      "path": "Marathon Hero 2/12 - FULL ALBUM - Haken - Vector _ Virus/00 Vector_Virus/song.ini",
+      "size": 561
+    },
+    {
+      "path": "Marathon Hero 2/12 - FULL ALBUM - Haken - Vector _ Virus/00 Vector_Virus/song.ogg",
+      "size": 182480071
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/01 Seventh Wonder - Against the Grain/album.jpg",
+      "size": 38103
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/01 Seventh Wonder - Against the Grain/background.jpg",
+      "size": 278349
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/01 Seventh Wonder - Against the Grain/notes.chart",
+      "size": 53567
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/01 Seventh Wonder - Against the Grain/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/01 Seventh Wonder - Against the Grain/song.ogg",
+      "size": 13194314
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/02 Aviations - Captain No Beard/album.jpg",
+      "size": 42380
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/02 Aviations - Captain No Beard/background.jpg",
+      "size": 1488991
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/02 Aviations - Captain No Beard/notes.chart",
+      "size": 59382
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/02 Aviations - Captain No Beard/song.ini",
+      "size": 656
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/02 Aviations - Captain No Beard/song.ogg",
+      "size": 15624415
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/03 Exodus - Architect of Pain/album.jpg",
+      "size": 149613
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/03 Exodus - Architect of Pain/background.jpg",
+      "size": 585025
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/03 Exodus - Architect of Pain/guitar.ogg",
+      "size": 21560883
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/03 Exodus - Architect of Pain/notes.mid",
+      "size": 47232
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/03 Exodus - Architect of Pain/song.ini",
+      "size": 1002
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/04 Buckethead - Aunt Suzie/album.jpg",
+      "size": 103791
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/04 Buckethead - Aunt Suzie/background.jpg",
+      "size": 450356
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/04 Buckethead - Aunt Suzie/notes.chart",
+      "size": 54998
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/04 Buckethead - Aunt Suzie/song.ini",
+      "size": 521
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/04 Buckethead - Aunt Suzie/song.ogg",
+      "size": 16021524
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/05 Paul Gilbert - The Jam/album.jpg",
+      "size": 53698
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/05 Paul Gilbert - The Jam/background.jpg",
+      "size": 355503
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/05 Paul Gilbert - The Jam/notes.chart",
+      "size": 239690
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/05 Paul Gilbert - The Jam/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/05 Paul Gilbert - The Jam/song.ogg",
+      "size": 35707576
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/06 Bradley Hall - 2020 Shred Collab (ft. Various Artists)/album.jpg",
+      "size": 53402
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/06 Bradley Hall - 2020 Shred Collab (ft. Various Artists)/background.jpg",
+      "size": 575085
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/06 Bradley Hall - 2020 Shred Collab (ft. Various Artists)/notes.chart",
+      "size": 131865
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/06 Bradley Hall - 2020 Shred Collab (ft. Various Artists)/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Marathon Hero 2/13 - Escape from 2020/06 Bradley Hall - 2020 Shred Collab (ft. Various Artists)/song.ogg",
+      "size": 19870035
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/01 Alter Bridge - Blackbird/album.jpg",
+      "size": 74912
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/01 Alter Bridge - Blackbird/background.jpg",
+      "size": 139388
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/01 Alter Bridge - Blackbird/guitar.ogg",
+      "size": 15644662
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/01 Alter Bridge - Blackbird/notes.chart",
+      "size": 59990
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/01 Alter Bridge - Blackbird/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/02 Whispered - Tsukiakari/album.jpg",
+      "size": 94735
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/02 Whispered - Tsukiakari/background.jpg",
+      "size": 449748
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/02 Whispered - Tsukiakari/notes.chart",
+      "size": 83015
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/02 Whispered - Tsukiakari/song.ini",
+      "size": 450
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/02 Whispered - Tsukiakari/song.ogg",
+      "size": 16058066
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/03 Exodus - The Atrocity Exhibition/album.jpg",
+      "size": 49010
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/03 Exodus - The Atrocity Exhibition/background.jpg",
+      "size": 316468
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/03 Exodus - The Atrocity Exhibition/notes.chart",
+      "size": 91312
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/03 Exodus - The Atrocity Exhibition/song.ini",
+      "size": 541
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/03 Exodus - The Atrocity Exhibition/song.ogg",
+      "size": 20001233
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/04 Hevisaurus - 100/album.jpg",
+      "size": 74380
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/04 Hevisaurus - 100/background.jpg",
+      "size": 369759
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/04 Hevisaurus - 100/guitar.ogg",
+      "size": 17328613
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/04 Hevisaurus - 100/notes.mid",
+      "size": 62325
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/04 Hevisaurus - 100/song.ini",
+      "size": 833
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/05 Arch Echo - My Head Sometimes_My Heart Sometimes/album.jpg",
+      "size": 360250
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/05 Arch Echo - My Head Sometimes_My Heart Sometimes/background.jpg",
+      "size": 299398
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/05 Arch Echo - My Head Sometimes_My Heart Sometimes/guitar.ogg",
+      "size": 29795535
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/05 Arch Echo - My Head Sometimes_My Heart Sometimes/notes.chart",
+      "size": 98912
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/05 Arch Echo - My Head Sometimes_My Heart Sometimes/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/06 Sons of Apollo - MMXX Solo Medley/album.jpg",
+      "size": 43644
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/06 Sons of Apollo - MMXX Solo Medley/background.jpg",
+      "size": 134337
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/06 Sons of Apollo - MMXX Solo Medley/notes.chart",
+      "size": 152172
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/06 Sons of Apollo - MMXX Solo Medley/song.ini",
+      "size": 437
+    },
+    {
+      "path": "Marathon Hero 2/14 - My Tier Sometimes/06 Sons of Apollo - MMXX Solo Medley/song.ogg",
+      "size": 17389584
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/01 Sithu Aye - Constants and Variables/album.jpg",
+      "size": 55275
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/01 Sithu Aye - Constants and Variables/background.jpg",
+      "size": 145259
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/01 Sithu Aye - Constants and Variables/notes.chart",
+      "size": 44023
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/01 Sithu Aye - Constants and Variables/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/01 Sithu Aye - Constants and Variables/song.ogg",
+      "size": 15934712
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/02 Chiaroscura - Another Day in the Maze/album.jpg",
+      "size": 45031
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/02 Chiaroscura - Another Day in the Maze/background.jpg",
+      "size": 228947
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/02 Chiaroscura - Another Day in the Maze/guitar.ogg",
+      "size": 16655226
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/02 Chiaroscura - Another Day in the Maze/notes.mid",
+      "size": 42272
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/02 Chiaroscura - Another Day in the Maze/song.ini",
+      "size": 1008
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/03 Meola, McLaughlin, De Lucia - Mediterranean Sundance-Rio  Ancho (Live)/album.jpg",
+      "size": 34053
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/03 Meola, McLaughlin, De Lucia - Mediterranean Sundance-Rio  Ancho (Live)/background.jpg",
+      "size": 311048
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/03 Meola, McLaughlin, De Lucia - Mediterranean Sundance-Rio  Ancho (Live)/notes.chart",
+      "size": 100373
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/03 Meola, McLaughlin, De Lucia - Mediterranean Sundance-Rio  Ancho (Live)/song.ini",
+      "size": 553
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/03 Meola, McLaughlin, De Lucia - Mediterranean Sundance-Rio  Ancho (Live)/song.ogg",
+      "size": 24964809
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/04 Pomegranate Tiger - New Breed/album.jpg",
+      "size": 60167
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/04 Pomegranate Tiger - New Breed/background.jpg",
+      "size": 334311
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/04 Pomegranate Tiger - New Breed/notes.chart",
+      "size": 95669
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/04 Pomegranate Tiger - New Breed/song.ini",
+      "size": 770
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/04 Pomegranate Tiger - New Breed/song.ogg",
+      "size": 20844243
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/05 Absu - A Song for Ea/album.jpg",
+      "size": 54573
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/05 Absu - A Song for Ea/background.jpg",
+      "size": 335916
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/05 Absu - A Song for Ea/guitar.ogg",
+      "size": 27734528
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/05 Absu - A Song for Ea/notes.chart",
+      "size": 197517
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/05 Absu - A Song for Ea/song.ini",
+      "size": 751
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/06 Dream Theater Solo Medley (1992-2019)/album.jpg",
+      "size": 47783
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/06 Dream Theater Solo Medley (1992-2019)/background.jpg",
+      "size": 615606
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/06 Dream Theater Solo Medley (1992-2019)/notes.chart",
+      "size": 225118
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/06 Dream Theater Solo Medley (1992-2019)/song.ini",
+      "size": 458
+    },
+    {
+      "path": "Marathon Hero 2/15 - EA Sports, It_s in the Tier/06 Dream Theater Solo Medley (1992-2019)/song.ogg",
+      "size": 40517199
+    },
+    {
+      "path": "Marathon Hero 2/16 - FULL ALBUM - DGM - Tragic Separation/00 Tragic Separation (Full Album)/album.jpg",
+      "size": 46700
+    },
+    {
+      "path": "Marathon Hero 2/16 - FULL ALBUM - DGM - Tragic Separation/00 Tragic Separation (Full Album)/background.jpg",
+      "size": 379180
+    },
+    {
+      "path": "Marathon Hero 2/16 - FULL ALBUM - DGM - Tragic Separation/00 Tragic Separation (Full Album)/notes.chart",
+      "size": 569519
+    },
+    {
+      "path": "Marathon Hero 2/16 - FULL ALBUM - DGM - Tragic Separation/00 Tragic Separation (Full Album)/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Marathon Hero 2/16 - FULL ALBUM - DGM - Tragic Separation/00 Tragic Separation (Full Album)/song.ogg",
+      "size": 116038782
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/01 Pagan_s Mind - Taken/album.jpg",
+      "size": 138579
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/01 Pagan_s Mind - Taken/background.jpg",
+      "size": 400671
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/01 Pagan_s Mind - Taken/notes.chart",
+      "size": 68479
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/01 Pagan_s Mind - Taken/song.ini",
+      "size": 842
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/01 Pagan_s Mind - Taken/song.ogg",
+      "size": 14168668
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/02 Adrenaline Mob - Black Sabbath Medley/album.jpg",
+      "size": 49284
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/02 Adrenaline Mob - Black Sabbath Medley/background.jpg",
+      "size": 679411
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/02 Adrenaline Mob - Black Sabbath Medley/notes.chart",
+      "size": 74425
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/02 Adrenaline Mob - Black Sabbath Medley/song.ini",
+      "size": 560
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/02 Adrenaline Mob - Black Sabbath Medley/song.ogg",
+      "size": 16318029
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/03 The Mars Volta - Day of the Baphomets/album.jpg",
+      "size": 47693
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/03 The Mars Volta - Day of the Baphomets/background.jpg",
+      "size": 268451
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/03 The Mars Volta - Day of the Baphomets/notes.chart",
+      "size": 126603
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/03 The Mars Volta - Day of the Baphomets/song.ini",
+      "size": 701
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/03 The Mars Volta - Day of the Baphomets/song.ogg",
+      "size": 27863523
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/04 Dream Theater - Blind Faith/album.jpg",
+      "size": 63424
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/04 Dream Theater - Blind Faith/background.jpg",
+      "size": 190796
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/04 Dream Theater - Blind Faith/notes.chart",
+      "size": 81598
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/04 Dream Theater - Blind Faith/song.ini",
+      "size": 486
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/04 Dream Theater - Blind Faith/song.ogg",
+      "size": 20278452
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/05 Iron Mask - Cursed in the Devils Mill/album.jpg",
+      "size": 452878
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/05 Iron Mask - Cursed in the Devils Mill/background.jpg",
+      "size": 710709
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/05 Iron Mask - Cursed in the Devils Mill/notes.chart",
+      "size": 127443
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/05 Iron Mask - Cursed in the Devils Mill/song.ini",
+      "size": 439
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/05 Iron Mask - Cursed in the Devils Mill/song.ogg",
+      "size": 28154117
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/06 Symphony X 1994 - 1998 Solo Medley (Remastered)/album.jpg",
+      "size": 34451
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/06 Symphony X 1994 - 1998 Solo Medley (Remastered)/background.jpg",
+      "size": 145956
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/06 Symphony X 1994 - 1998 Solo Medley (Remastered)/notes.chart",
+      "size": 272874
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/06 Symphony X 1994 - 1998 Solo Medley (Remastered)/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Marathon Hero 2/17 - Progressing Up a Level/06 Symphony X 1994 - 1998 Solo Medley (Remastered)/song.ogg",
+      "size": 36717735
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/01 Dali_s Dilemma - Miracles in Yesteryear/album.jpg",
+      "size": 29993
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/01 Dali_s Dilemma - Miracles in Yesteryear/background.jpg",
+      "size": 577609
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/01 Dali_s Dilemma - Miracles in Yesteryear/notes.chart",
+      "size": 72972
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/01 Dali_s Dilemma - Miracles in Yesteryear/song.ini",
+      "size": 568
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/01 Dali_s Dilemma - Miracles in Yesteryear/song.ogg",
+      "size": 14261104
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/02 Time Requiem - Watching the Tower of Skies/album.jpg",
+      "size": 53143
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/02 Time Requiem - Watching the Tower of Skies/background.jpg",
+      "size": 229389
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/02 Time Requiem - Watching the Tower of Skies/notes.chart",
+      "size": 95114
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/02 Time Requiem - Watching the Tower of Skies/song.ini",
+      "size": 436
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/02 Time Requiem - Watching the Tower of Skies/song.ogg",
+      "size": 16988799
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/03 Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon)/album.jpg",
+      "size": 53912
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/03 Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon)/background.jpg",
+      "size": 427612
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/03 Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon)/notes.chart",
+      "size": 116312
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/03 Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon)/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/03 Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon)/song.ogg",
+      "size": 20111547
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/04 Rob Rock - The Hour of Dawn/album.jpg",
+      "size": 52429
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/04 Rob Rock - The Hour of Dawn/background.jpg",
+      "size": 299816
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/04 Rob Rock - The Hour of Dawn/notes.chart",
+      "size": 111127
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/04 Rob Rock - The Hour of Dawn/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/04 Rob Rock - The Hour of Dawn/song.ogg",
+      "size": 22591580
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/05 Stephen Taranto - Pixel Heart (Verdant _ Celestial)/album.jpg",
+      "size": 52400
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/05 Stephen Taranto - Pixel Heart (Verdant _ Celestial)/background.jpg",
+      "size": 395400
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/05 Stephen Taranto - Pixel Heart (Verdant _ Celestial)/notes.chart",
+      "size": 130973
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/05 Stephen Taranto - Pixel Heart (Verdant _ Celestial)/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/05 Stephen Taranto - Pixel Heart (Verdant _ Celestial)/song.ogg",
+      "size": 27300564
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/06 Jimi Hendrix Live! Solo Medley/album.jpg",
+      "size": 49687
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/06 Jimi Hendrix Live! Solo Medley/background.jpg",
+      "size": 112087
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/06 Jimi Hendrix Live! Solo Medley/notes.chart",
+      "size": 277663
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/06 Jimi Hendrix Live! Solo Medley/song.ini",
+      "size": 515
+    },
+    {
+      "path": "Marathon Hero 2/18 - Marathon Hero 2 Live!/06 Jimi Hendrix Live! Solo Medley/song.ogg",
+      "size": 53741496
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/01 Circuit of Suns - Solarflare Tsunami/album.jpg",
+      "size": 45220
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/01 Circuit of Suns - Solarflare Tsunami/background.jpg",
+      "size": 893102
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/01 Circuit of Suns - Solarflare Tsunami/notes.chart",
+      "size": 137103
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/01 Circuit of Suns - Solarflare Tsunami/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/01 Circuit of Suns - Solarflare Tsunami/song.ogg",
+      "size": 17873184
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/02 Vinnie Moore - Fear and Trepidation/album.jpg",
+      "size": 308470
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/02 Vinnie Moore - Fear and Trepidation/background.jpg",
+      "size": 394307
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/02 Vinnie Moore - Fear and Trepidation/notes.chart",
+      "size": 52457
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/02 Vinnie Moore - Fear and Trepidation/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/02 Vinnie Moore - Fear and Trepidation/song.ogg",
+      "size": 15302284
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/03 Frank Zappa - King Kong_Chunga_s Revenge_Mr. Green Genes (Live At The Roxy, 1973)/album.jpg",
+      "size": 58243
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/03 Frank Zappa - King Kong_Chunga_s Revenge_Mr. Green Genes (Live At The Roxy, 1973)/background.jpg",
+      "size": 559157
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/03 Frank Zappa - King Kong_Chunga_s Revenge_Mr. Green Genes (Live At The Roxy, 1973)/notes.chart",
+      "size": 68852
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/03 Frank Zappa - King Kong_Chunga_s Revenge_Mr. Green Genes (Live At The Roxy, 1973)/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/03 Frank Zappa - King Kong_Chunga_s Revenge_Mr. Green Genes (Live At The Roxy, 1973)/song.ogg",
+      "size": 16768343
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/04 Becomes Astral - Praise the Sun/album.jpg",
+      "size": 61131
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/04 Becomes Astral - Praise the Sun/background.jpg",
+      "size": 768400
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/04 Becomes Astral - Praise the Sun/guitar.ogg",
+      "size": 26856546
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/04 Becomes Astral - Praise the Sun/notes.chart",
+      "size": 164267
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/04 Becomes Astral - Praise the Sun/song.ini",
+      "size": 483
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/05 Codex Orzhova - Baja Blasted/album.jpg",
+      "size": 51341
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/05 Codex Orzhova - Baja Blasted/background.jpg",
+      "size": 125786
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/05 Codex Orzhova - Baja Blasted/notes.chart",
+      "size": 1054211
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/05 Codex Orzhova - Baja Blasted/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/05 Codex Orzhova - Baja Blasted/song.ogg",
+      "size": 32639645
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/06 Various Artists - Chiptune Solo Medley/album.jpg",
+      "size": 33254
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/06 Various Artists - Chiptune Solo Medley/background.jpg",
+      "size": 256799
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/06 Various Artists - Chiptune Solo Medley/notes.chart",
+      "size": 179618
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/06 Various Artists - Chiptune Solo Medley/song.ini",
+      "size": 577
+    },
+    {
+      "path": "Marathon Hero 2/19 - Blasting into the Sun/06 Various Artists - Chiptune Solo Medley/song.ogg",
+      "size": 26747561
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/00 Reincarnation (Full Album)/album.jpg",
+      "size": 74439
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/00 Reincarnation (Full Album)/background.jpg",
+      "size": 140262
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/00 Reincarnation (Full Album)/notes.chart",
+      "size": 852536
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/00 Reincarnation (Full Album)/song.ini",
+      "size": 693
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/00 Reincarnation (Full Album)/song.ogg",
+      "size": 153774665
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/13 Reincarnation Solo Medley/album.jpg",
+      "size": 74439
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/13 Reincarnation Solo Medley/background.jpg",
+      "size": 140262
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/13 Reincarnation Solo Medley/notes.chart",
+      "size": 158079
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/13 Reincarnation Solo Medley/song.ini",
+      "size": 726
+    },
+    {
+      "path": "Marathon Hero 2/20 - FULL ALBUM - Galneryus - Reincarnation/13 Reincarnation Solo Medley/song.ogg",
+      "size": 32798027
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/01 Allegaeon - Roundabout (Yes cover)/album.jpg",
+      "size": 44965
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/01 Allegaeon - Roundabout (Yes cover)/background.jpg",
+      "size": 312649
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/01 Allegaeon - Roundabout (Yes cover)/guitar.ogg",
+      "size": 16966304
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/01 Allegaeon - Roundabout (Yes cover)/notes.chart",
+      "size": 109998
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/01 Allegaeon - Roundabout (Yes cover)/song.ini",
+      "size": 611
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/02 Dream Theater - Guitar Solo (Live)/album.jpg",
+      "size": 25560
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/02 Dream Theater - Guitar Solo (Live)/background.jpg",
+      "size": 290035
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/02 Dream Theater - Guitar Solo (Live)/notes.chart",
+      "size": 45833
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/02 Dream Theater - Guitar Solo (Live)/song.ini",
+      "size": 392
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/02 Dream Theater - Guitar Solo (Live)/song.ogg",
+      "size": 13693263
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/03 Hiromi - Double Personality/album.jpg",
+      "size": 102247
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/03 Hiromi - Double Personality/background.jpg",
+      "size": 537958
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/03 Hiromi - Double Personality/notes.chart",
+      "size": 150264
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/03 Hiromi - Double Personality/song.ini",
+      "size": 538
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/03 Hiromi - Double Personality/song.ogg",
+      "size": 23193325
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/04 Virvum - I_ A New Journey Awaits - II_ A Final Warming Shine_ Ascension and Trespassing/album.jpg",
+      "size": 43424
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/04 Virvum - I_ A New Journey Awaits - II_ A Final Warming Shine_ Ascension and Trespassing/background.jpg",
+      "size": 715198
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/04 Virvum - I_ A New Journey Awaits - II_ A Final Warming Shine_ Ascension and Trespassing/guitar.ogg",
+      "size": 23203013
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/04 Virvum - I_ A New Journey Awaits - II_ A Final Warming Shine_ Ascension and Trespassing/notes.chart",
+      "size": 145054
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/04 Virvum - I_ A New Journey Awaits - II_ A Final Warming Shine_ Ascension and Trespassing/song.ini",
+      "size": 612
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/05 Richard Campbell - Frankenstein/album.jpg",
+      "size": 45147
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/05 Richard Campbell - Frankenstein/background.jpg",
+      "size": 149877
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/05 Richard Campbell - Frankenstein/guitar.ogg",
+      "size": 123415284
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/05 Richard Campbell - Frankenstein/notes.chart",
+      "size": 574347
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/05 Richard Campbell - Frankenstein/song.ini",
+      "size": 678
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/06 Van Halen - Van Halen Solo Medley/album.jpg",
+      "size": 33350
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/06 Van Halen - Van Halen Solo Medley/background.jpg",
+      "size": 375324
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/06 Van Halen - Van Halen Solo Medley/guitar.ogg",
+      "size": 29064200
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/06 Van Halen - Van Halen Solo Medley/notes.chart",
+      "size": 203938
+    },
+    {
+      "path": "Marathon Hero 2/21 - It_s Pronounced A-lee-jun/06 Van Halen - Van Halen Solo Medley/song.ini",
+      "size": 451
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/01 Point Below Zero - Passage/album.jpg",
+      "size": 34262
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/01 Point Below Zero - Passage/background.jpg",
+      "size": 240370
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/01 Point Below Zero - Passage/notes.chart",
+      "size": 68310
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/01 Point Below Zero - Passage/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/01 Point Below Zero - Passage/song.ogg",
+      "size": 14779703
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/02 Eumeria - Rebel Mind/album.jpg",
+      "size": 102241
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/02 Eumeria - Rebel Mind/background.jpg",
+      "size": 887146
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/02 Eumeria - Rebel Mind/notes.chart",
+      "size": 75790
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/02 Eumeria - Rebel Mind/song.ini",
+      "size": 718
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/02 Eumeria - Rebel Mind/song.ogg",
+      "size": 14271557
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/03 \u00c6ternity - The Edge of the World (DragonForce cover)/album.jpg",
+      "size": 41288
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/03 \u00c6ternity - The Edge of the World (DragonForce cover)/background.jpg",
+      "size": 566825
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/03 \u00c6ternity - The Edge of the World (DragonForce cover)/notes.chart",
+      "size": 99089
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/03 \u00c6ternity - The Edge of the World (DragonForce cover)/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/03 \u00c6ternity - The Edge of the World (DragonForce cover)/song.ogg",
+      "size": 21035849
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/04 The Resonance Project - The Anthem/album.jpg",
+      "size": 34533
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/04 The Resonance Project - The Anthem/background.jpg",
+      "size": 1024631
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/04 The Resonance Project - The Anthem/notes.chart",
+      "size": 113840
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/04 The Resonance Project - The Anthem/song.ini",
+      "size": 850
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/04 The Resonance Project - The Anthem/song.ogg",
+      "size": 25173376
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/05 Magma - Z\u00ebss (Live)/album.jpg",
+      "size": 15296
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/05 Magma - Z\u00ebss (Live)/background.jpg",
+      "size": 67739
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/05 Magma - Z\u00ebss (Live)/notes.chart",
+      "size": 274054
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/05 Magma - Z\u00ebss (Live)/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/05 Magma - Z\u00ebss (Live)/song.ogg",
+      "size": 66899956
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/06 Various Artists - Thrash Metal Solo Medley 2 Big 4 Edition/album.jpg",
+      "size": 33713
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/06 Various Artists - Thrash Metal Solo Medley 2 Big 4 Edition/background.jpg",
+      "size": 870954
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/06 Various Artists - Thrash Metal Solo Medley 2 Big 4 Edition/guitar.ogg",
+      "size": 27962470
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/06 Various Artists - Thrash Metal Solo Medley 2 Big 4 Edition/notes.chart",
+      "size": 168073
+    },
+    {
+      "path": "Marathon Hero 2/22 - I Don_t Know About You/06 Various Artists - Thrash Metal Solo Medley 2 Big 4 Edition/song.ini",
+      "size": 723
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/01 Morimori Atsushi - Time Capsule/album.jpg",
+      "size": 48078
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/01 Morimori Atsushi - Time Capsule/background.jpg",
+      "size": 388434
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/01 Morimori Atsushi - Time Capsule/notes.chart",
+      "size": 74932
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/01 Morimori Atsushi - Time Capsule/song.ini",
+      "size": 589
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/01 Morimori Atsushi - Time Capsule/song.ogg",
+      "size": 15026888
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/02 Yngwie Malmsteen - Trilogy Suite Op. 5/album.jpg",
+      "size": 305920
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/02 Yngwie Malmsteen - Trilogy Suite Op. 5/background.jpg",
+      "size": 299926
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/02 Yngwie Malmsteen - Trilogy Suite Op. 5/notes.chart",
+      "size": 80780
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/02 Yngwie Malmsteen - Trilogy Suite Op. 5/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/02 Yngwie Malmsteen - Trilogy Suite Op. 5/song.ogg",
+      "size": 13062966
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/03 Franz Liszt - Hungarian Rhapsody No. 2 (Rousseau)/album.jpg",
+      "size": 31938
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/03 Franz Liszt - Hungarian Rhapsody No. 2 (Rousseau)/background.jpg",
+      "size": 375962
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/03 Franz Liszt - Hungarian Rhapsody No. 2 (Rousseau)/guitar.ogg",
+      "size": 19787182
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/03 Franz Liszt - Hungarian Rhapsody No. 2 (Rousseau)/notes.mid",
+      "size": 43563
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/03 Franz Liszt - Hungarian Rhapsody No. 2 (Rousseau)/song.ini",
+      "size": 552
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/04 Steve Vai - Opposites Attract, Pt. 2 [The Indulgent Version]/album.jpg",
+      "size": 65107
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/04 Steve Vai - Opposites Attract, Pt. 2 [The Indulgent Version]/background.jpg",
+      "size": 453095
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/04 Steve Vai - Opposites Attract, Pt. 2 [The Indulgent Version]/notes.chart",
+      "size": 77352
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/04 Steve Vai - Opposites Attract, Pt. 2 [The Indulgent Version]/song.ini",
+      "size": 563
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/04 Steve Vai - Opposites Attract, Pt. 2 [The Indulgent Version]/song.ogg",
+      "size": 19724412
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/05 Fredrik Thordendal_s Special Defects - Sol Niger Within/album.jpg",
+      "size": 52300
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/05 Fredrik Thordendal_s Special Defects - Sol Niger Within/background.jpg",
+      "size": 692420
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/05 Fredrik Thordendal_s Special Defects - Sol Niger Within/notes.chart",
+      "size": 423125
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/05 Fredrik Thordendal_s Special Defects - Sol Niger Within/song.ini",
+      "size": 922
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/05 Fredrik Thordendal_s Special Defects - Sol Niger Within/song.ogg",
+      "size": 99339307
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/06 Fredrik Thordendal_s Special Defects - _Solo_ Niger Within/album.jpg",
+      "size": 52300
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/06 Fredrik Thordendal_s Special Defects - _Solo_ Niger Within/background.jpg",
+      "size": 692420
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/06 Fredrik Thordendal_s Special Defects - _Solo_ Niger Within/notes.chart",
+      "size": 235995
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/06 Fredrik Thordendal_s Special Defects - _Solo_ Niger Within/song.ini",
+      "size": 955
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/06 Fredrik Thordendal_s Special Defects - _Solo_ Niger Within/song.ogg",
+      "size": 47607834
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/07 Various Artists - Extreme Metal Solo Medley/album.jpg",
+      "size": 39300
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/07 Various Artists - Extreme Metal Solo Medley/background.jpg",
+      "size": 59770
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/07 Various Artists - Extreme Metal Solo Medley/notes.chart",
+      "size": 207131
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/07 Various Artists - Extreme Metal Solo Medley/preview.ogg",
+      "size": 873174
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/07 Various Artists - Extreme Metal Solo Medley/song.ini",
+      "size": 567
+    },
+    {
+      "path": "Marathon Hero 2/23 - A Classical Experience/07 Various Artists - Extreme Metal Solo Medley/song.ogg",
+      "size": 28721005
+    },
+    {
+      "path": "Marathon Hero 2/24 - FULL ALBUM - Slayer - Reign in Blood/00 Reign in Blood (Full Album)/album.jpg",
+      "size": 112530
+    },
+    {
+      "path": "Marathon Hero 2/24 - FULL ALBUM - Slayer - Reign in Blood/00 Reign in Blood (Full Album)/background.jpg",
+      "size": 618828
+    },
+    {
+      "path": "Marathon Hero 2/24 - FULL ALBUM - Slayer - Reign in Blood/00 Reign in Blood (Full Album)/notes.chart",
+      "size": 431998
+    },
+    {
+      "path": "Marathon Hero 2/24 - FULL ALBUM - Slayer - Reign in Blood/00 Reign in Blood (Full Album)/song.ini",
+      "size": 733
+    },
+    {
+      "path": "Marathon Hero 2/24 - FULL ALBUM - Slayer - Reign in Blood/00 Reign in Blood (Full Album)/song.ogg",
+      "size": 54434985
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/01 Behold... the Arctopus - Cognitive Emancipation/album.jpg",
+      "size": 68119
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/01 Behold... the Arctopus - Cognitive Emancipation/background.jpg",
+      "size": 434447
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/01 Behold... the Arctopus - Cognitive Emancipation/notes.chart",
+      "size": 79222
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/01 Behold... the Arctopus - Cognitive Emancipation/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/01 Behold... the Arctopus - Cognitive Emancipation/song.ogg",
+      "size": 12489638
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/02 Mercyful Fate - A Corpse Without a Soul/album.jpg",
+      "size": 23336
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/02 Mercyful Fate - A Corpse Without a Soul/background.jpg",
+      "size": 687137
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/02 Mercyful Fate - A Corpse Without a Soul/notes.chart",
+      "size": 78747
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/02 Mercyful Fate - A Corpse Without a Soul/song.ini",
+      "size": 606
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/02 Mercyful Fate - A Corpse Without a Soul/song.ogg",
+      "size": 12361128
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/03 Liquid Tension Experiment - Paradigm Shift/album.jpg",
+      "size": 79966
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/03 Liquid Tension Experiment - Paradigm Shift/background.jpg",
+      "size": 163270
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/03 Liquid Tension Experiment - Paradigm Shift/notes.chart",
+      "size": 80017
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/03 Liquid Tension Experiment - Paradigm Shift/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/03 Liquid Tension Experiment - Paradigm Shift/song.ogg",
+      "size": 18343735
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/04 Lich King - The Chronicles of Lich King/album.jpg",
+      "size": 79580
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/04 Lich King - The Chronicles of Lich King/background.jpg",
+      "size": 290684
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/04 Lich King - The Chronicles of Lich King/guitar.ogg",
+      "size": 66298118
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/04 Lich King - The Chronicles of Lich King/notes.chart",
+      "size": 391776
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/04 Lich King - The Chronicles of Lich King/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/05 Adagio - Discography Solo Medley/album.jpg",
+      "size": 47676
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/05 Adagio - Discography Solo Medley/background.jpg",
+      "size": 217545
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/05 Adagio - Discography Solo Medley/notes.chart",
+      "size": 562805
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/05 Adagio - Discography Solo Medley/song.ini",
+      "size": 419
+    },
+    {
+      "path": "Marathon Hero 2/25 - Behold... the Lich King/05 Adagio - Discography Solo Medley/song.ogg",
+      "size": 82062753
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/01 John 5 - The Washing Away of Wrong (feat. Eric Johnson)/album.jpg",
+      "size": 44474
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/01 John 5 - The Washing Away of Wrong (feat. Eric Johnson)/background.jpg",
+      "size": 160671
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/01 John 5 - The Washing Away of Wrong (feat. Eric Johnson)/notes.chart",
+      "size": 86547
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/01 John 5 - The Washing Away of Wrong (feat. Eric Johnson)/song.ini",
+      "size": 506
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/01 John 5 - The Washing Away of Wrong (feat. Eric Johnson)/song.ogg",
+      "size": 14761458
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/02 Frank Zappa - Inca Roads/album.jpg",
+      "size": 54092
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/02 Frank Zappa - Inca Roads/background.jpg",
+      "size": 84621
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/02 Frank Zappa - Inca Roads/notes.chart",
+      "size": 112201
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/02 Frank Zappa - Inca Roads/song.ini",
+      "size": 597
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/02 Frank Zappa - Inca Roads/song.ogg",
+      "size": 17681464
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/03 Carnivora - Burn the Witch (feat. J\u00f8rn Viggo Lofstad)/album.jpg",
+      "size": 87068
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/03 Carnivora - Burn the Witch (feat. J\u00f8rn Viggo Lofstad)/background.jpg",
+      "size": 576664
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/03 Carnivora - Burn the Witch (feat. J\u00f8rn Viggo Lofstad)/notes.chart",
+      "size": 114856
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/03 Carnivora - Burn the Witch (feat. J\u00f8rn Viggo Lofstad)/song.ini",
+      "size": 1032
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/03 Carnivora - Burn the Witch (feat. J\u00f8rn Viggo Lofstad)/song.ogg",
+      "size": 16968824
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/04 Liquid Tension Experiment - When the Water Breaks/album.jpg",
+      "size": 41641
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/04 Liquid Tension Experiment - When the Water Breaks/background.jpg",
+      "size": 364170
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/04 Liquid Tension Experiment - When the Water Breaks/notes.chart",
+      "size": 147585
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/04 Liquid Tension Experiment - When the Water Breaks/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/04 Liquid Tension Experiment - When the Water Breaks/song.ogg",
+      "size": 35294893
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/05 Various Artists - Power Metal Solo Medley/album.jpg",
+      "size": 24642
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/05 Various Artists - Power Metal Solo Medley/background.jpg",
+      "size": 484505
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/05 Various Artists - Power Metal Solo Medley/notes.chart",
+      "size": 364645
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/05 Various Artists - Power Metal Solo Medley/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Marathon Hero 2/26 - Powering to the Finish/05 Various Artists - Power Metal Solo Medley/song.ogg",
+      "size": 51771675
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/01 Scar Symmetry - Neohuman/album.jpg",
+      "size": 40894
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/01 Scar Symmetry - Neohuman/background.jpg",
+      "size": 1083579
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/01 Scar Symmetry - Neohuman/notes.chart",
+      "size": 108949
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/01 Scar Symmetry - Neohuman/song.ini",
+      "size": 725
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/01 Scar Symmetry - Neohuman/song.ogg",
+      "size": 17883292
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/02 Crimson Shadows - Betrayed by Thy King/album.jpg",
+      "size": 59136
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/02 Crimson Shadows - Betrayed by Thy King/background.jpg",
+      "size": 986227
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/02 Crimson Shadows - Betrayed by Thy King/notes.chart",
+      "size": 87513
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/02 Crimson Shadows - Betrayed by Thy King/song.ini",
+      "size": 426
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/02 Crimson Shadows - Betrayed by Thy King/song.ogg",
+      "size": 18322502
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/03 Dream Theater - This Dying Soul/album.jpg",
+      "size": 40308
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/03 Dream Theater - This Dying Soul/background.jpg",
+      "size": 218432
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/03 Dream Theater - This Dying Soul/notes.chart",
+      "size": 133951
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/03 Dream Theater - This Dying Soul/song.ini",
+      "size": 445
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/03 Dream Theater - This Dying Soul/song.ogg",
+      "size": 22645240
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/04 HertzDevil - Destroyer X-Ray/album.jpg",
+      "size": 38618
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/04 HertzDevil - Destroyer X-Ray/background.jpg",
+      "size": 172514
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/04 HertzDevil - Destroyer X-Ray/notes.chart",
+      "size": 88659
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/04 HertzDevil - Destroyer X-Ray/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/04 HertzDevil - Destroyer X-Ray/song.ogg",
+      "size": 13702296
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/05 Andromeda - Veil of Illumination/album.jpg",
+      "size": 52316
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/05 Andromeda - Veil of Illumination/background.jpg",
+      "size": 438002
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/05 Andromeda - Veil of Illumination/guitar.ogg",
+      "size": 31477958
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/05 Andromeda - Veil of Illumination/notes.chart",
+      "size": 158409
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/05 Andromeda - Veil of Illumination/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/06 The Virtuosity Effect - Celestial Apocalypse Solo Medley/album.jpg",
+      "size": 31087
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/06 The Virtuosity Effect - Celestial Apocalypse Solo Medley/background.jpg",
+      "size": 365406
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/06 The Virtuosity Effect - Celestial Apocalypse Solo Medley/notes.chart",
+      "size": 195082
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/06 The Virtuosity Effect - Celestial Apocalypse Solo Medley/song.ini",
+      "size": 664
+    },
+    {
+      "path": "Marathon Hero 2/27 - Lair of the Cockroach King/06 The Virtuosity Effect - Celestial Apocalypse Solo Medley/song.ogg",
+      "size": 29934975
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/00 Sky Empire - The Dark Tower (Full Album)/album.jpg",
+      "size": 51291
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/00 Sky Empire - The Dark Tower (Full Album)/background.jpg",
+      "size": 334826
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/00 Sky Empire - The Dark Tower (Full Album)/notes.chart",
+      "size": 673900
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/00 Sky Empire - The Dark Tower (Full Album)/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/00 Sky Empire - The Dark Tower (Full Album)/song.ogg",
+      "size": 155326076
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/06 Sky Empire - The Dark Tower Solo Medley/album.jpg",
+      "size": 51291
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/06 Sky Empire - The Dark Tower Solo Medley/background.jpg",
+      "size": 334826
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/06 Sky Empire - The Dark Tower Solo Medley/notes.chart",
+      "size": 280044
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/06 Sky Empire - The Dark Tower Solo Medley/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Marathon Hero 2/28 - FULL ALBUM - Sky Empire - The Dark Tower/06 Sky Empire - The Dark Tower Solo Medley/song.ogg",
+      "size": 47520851
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/01 Ice - L/album.jpg",
+      "size": 35630
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/01 Ice - L/background.jpg",
+      "size": 408872
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/01 Ice - L/notes.chart",
+      "size": 123897
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/01 Ice - L/song.ini",
+      "size": 609
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/01 Ice - L/song.ogg",
+      "size": 15915784
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/02 Ozric Tentacles - Xingu/album.jpg",
+      "size": 63134
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/02 Ozric Tentacles - Xingu/background.jpg",
+      "size": 162253
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/02 Ozric Tentacles - Xingu/notes.chart",
+      "size": 131238
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/02 Ozric Tentacles - Xingu/song.ini",
+      "size": 607
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/02 Ozric Tentacles - Xingu/song.ogg",
+      "size": 15390126
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/03 Buckethead - Hamdens Hollow (Pike 242)/album.jpg",
+      "size": 74558
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/03 Buckethead - Hamdens Hollow (Pike 242)/background.jpg",
+      "size": 76791
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/03 Buckethead - Hamdens Hollow (Pike 242)/notes.chart",
+      "size": 392910
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/03 Buckethead - Hamdens Hollow (Pike 242)/song.ini",
+      "size": 408
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/03 Buckethead - Hamdens Hollow (Pike 242)/song.ogg",
+      "size": 57459334
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/04 Infant Annihilator - Behold the Kingdom of the Wretched Undying/album.jpg",
+      "size": 56664
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/04 Infant Annihilator - Behold the Kingdom of the Wretched Undying/background.jpg",
+      "size": 242165
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/04 Infant Annihilator - Behold the Kingdom of the Wretched Undying/guitar.ogg",
+      "size": 38424098
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/04 Infant Annihilator - Behold the Kingdom of the Wretched Undying/notes.chart",
+      "size": 249195
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/04 Infant Annihilator - Behold the Kingdom of the Wretched Undying/song.ini",
+      "size": 671
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/05 Rusty Cooley Solo Medley/album.jpg",
+      "size": 42107
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/05 Rusty Cooley Solo Medley/background.jpg",
+      "size": 85159
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/05 Rusty Cooley Solo Medley/notes.chart",
+      "size": 402616
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/05 Rusty Cooley Solo Medley/song.ini",
+      "size": 364
+    },
+    {
+      "path": "Marathon Hero 2/29 - Take this Crusty L/05 Rusty Cooley Solo Medley/song.ogg",
+      "size": 54582108
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/01 Firewind - The Fire and the Fury (Live)/album.jpg",
+      "size": 57868
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/01 Firewind - The Fire and the Fury (Live)/background.jpg",
+      "size": 176168
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/01 Firewind - The Fire and the Fury (Live)/notes.chart",
+      "size": 99112
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/01 Firewind - The Fire and the Fury (Live)/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/01 Firewind - The Fire and the Fury (Live)/song.ogg",
+      "size": 13828507
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/02 Buckethead - 20th Century Boy (T. Rex cover) (xX760Xx)/album.jpg",
+      "size": 68026
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/02 Buckethead - 20th Century Boy (T. Rex cover) (xX760Xx)/background.jpg",
+      "size": 107445
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/02 Buckethead - 20th Century Boy (T. Rex cover) (xX760Xx)/notes.chart",
+      "size": 117421
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/02 Buckethead - 20th Century Boy (T. Rex cover) (xX760Xx)/song.ini",
+      "size": 600
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/02 Buckethead - 20th Century Boy (T. Rex cover) (xX760Xx)/song.ogg",
+      "size": 16871733
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/03 Liquid Trio Experiment 2 - Close Encounter of the Liquid Kind/album.jpg",
+      "size": 44189
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/03 Liquid Trio Experiment 2 - Close Encounter of the Liquid Kind/background.jpg",
+      "size": 326542
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/03 Liquid Trio Experiment 2 - Close Encounter of the Liquid Kind/notes.chart",
+      "size": 119573
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/03 Liquid Trio Experiment 2 - Close Encounter of the Liquid Kind/song.ini",
+      "size": 560
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/03 Liquid Trio Experiment 2 - Close Encounter of the Liquid Kind/song.ogg",
+      "size": 26104329
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/04 Jordan Rudess - Insectsamongus/album.jpg",
+      "size": 41076
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/04 Jordan Rudess - Insectsamongus/background.jpg",
+      "size": 222023
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/04 Jordan Rudess - Insectsamongus/notes.chart",
+      "size": 118052
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/04 Jordan Rudess - Insectsamongus/song.ini",
+      "size": 640
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/04 Jordan Rudess - Insectsamongus/song.ogg",
+      "size": 21940411
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/05 HalfDuck - Megalodon (Jarvis9999 Cover)/album.jpg",
+      "size": 65907
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/05 HalfDuck - Megalodon (Jarvis9999 Cover)/background.jpg",
+      "size": 41964
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/05 HalfDuck - Megalodon (Jarvis9999 Cover)/notes.chart",
+      "size": 386912
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/05 HalfDuck - Megalodon (Jarvis9999 Cover)/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/05 HalfDuck - Megalodon (Jarvis9999 Cover)/song.ogg",
+      "size": 28837641
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/06 Pagan_s Mind Discography Solo Medley/album.jpg",
+      "size": 137134
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/06 Pagan_s Mind Discography Solo Medley/background.jpg",
+      "size": 921348
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/06 Pagan_s Mind Discography Solo Medley/notes.chart",
+      "size": 641061
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/06 Pagan_s Mind Discography Solo Medley/song.ini",
+      "size": 831
+    },
+    {
+      "path": "Marathon Hero 2/30 - Rise of the Megalodon/06 Pagan_s Mind Discography Solo Medley/song.ogg",
+      "size": 87567924
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/01 Phi Yaan-Zek with Marco Minneman - The Shrine of the Augmented Weave/album.jpg",
+      "size": 48870
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/01 Phi Yaan-Zek with Marco Minneman - The Shrine of the Augmented Weave/background.jpg",
+      "size": 204432
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/01 Phi Yaan-Zek with Marco Minneman - The Shrine of the Augmented Weave/notes.chart",
+      "size": 153072
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/01 Phi Yaan-Zek with Marco Minneman - The Shrine of the Augmented Weave/song.ini",
+      "size": 741
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/01 Phi Yaan-Zek with Marco Minneman - The Shrine of the Augmented Weave/song.ogg",
+      "size": 16323993
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/02 PROTODOME - 4000AD/album.jpg",
+      "size": 42205
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/02 PROTODOME - 4000AD/background.jpg",
+      "size": 158373
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/02 PROTODOME - 4000AD/notes.chart",
+      "size": 213226
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/02 PROTODOME - 4000AD/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/02 PROTODOME - 4000AD/song.ogg",
+      "size": 15389145
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/03 Vitalij Kuprij - Destination/album.jpg",
+      "size": 38284
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/03 Vitalij Kuprij - Destination/background.jpg",
+      "size": 121882
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/03 Vitalij Kuprij - Destination/notes.chart",
+      "size": 132464
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/03 Vitalij Kuprij - Destination/song.ini",
+      "size": 359
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/03 Vitalij Kuprij - Destination/song.ogg",
+      "size": 18993301
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/04 Buckethead - Pike 47 - Roller Coaster Track Repair/album.jpg",
+      "size": 55761
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/04 Buckethead - Pike 47 - Roller Coaster Track Repair/background.jpg",
+      "size": 401101
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/04 Buckethead - Pike 47 - Roller Coaster Track Repair/notes.chart",
+      "size": 506050
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/04 Buckethead - Pike 47 - Roller Coaster Track Repair/song.ini",
+      "size": 513
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/04 Buckethead - Pike 47 - Roller Coaster Track Repair/song.ogg",
+      "size": 53458020
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/05 Vektor - The Tale of Iso Subject 5/album.jpg",
+      "size": 20772
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/05 Vektor - The Tale of Iso Subject 5/background.jpg",
+      "size": 403723
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/05 Vektor - The Tale of Iso Subject 5/guitar.ogg",
+      "size": 162787121
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/05 Vektor - The Tale of Iso Subject 5/notes.chart",
+      "size": 1203811
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/05 Vektor - The Tale of Iso Subject 5/song.ini",
+      "size": 1290
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/06 Ayreon - A _Best of _ Solo Medley/album.jpg",
+      "size": 58792
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/06 Ayreon - A _Best of _ Solo Medley/background.jpg",
+      "size": 714423
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/06 Ayreon - A _Best of _ Solo Medley/guitar.ogg",
+      "size": 69691449
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/06 Ayreon - A _Best of _ Solo Medley/notes.chart",
+      "size": 459358
+    },
+    {
+      "path": "Marathon Hero 2/31 - Carpal Tunnel Finger Repair/06 Ayreon - A _Best of _ Solo Medley/song.ini",
+      "size": 760
+    },
+    {
+      "path": "Marathon Hero 2/32 - Let Me Tell You a Story/Ayreon - The Forever Saga/album.png",
+      "size": 657875
+    },
+    {
+      "path": "Marathon Hero 2/32 - Let Me Tell You a Story/Ayreon - The Forever Saga/background.jpg",
+      "size": 714423
+    },
+    {
+      "path": "Marathon Hero 2/32 - Let Me Tell You a Story/Ayreon - The Forever Saga/notes.chart",
+      "size": 5694233
+    },
+    {
+      "path": "Marathon Hero 2/32 - Let Me Tell You a Story/Ayreon - The Forever Saga/song.ini",
+      "size": 1235
+    },
+    {
+      "path": "Marathon Hero 2/32 - Let Me Tell You a Story/Ayreon - The Forever Saga/song.ogg",
+      "size": 1358355820
+    },
+    {
+      "path": "README - IMPORTANT.txt",
+      "size": 785
+    },
+    {
+      "path": "marathonhero2.png",
+      "size": 39687
+    }
+  ],
+  "extracted_size": 6310039453,
+  "file_count": 765,
+  "chart_count": 152,
+  "release_date": "2021-01-08"
 }

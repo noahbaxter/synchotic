@@ -3,18 +3,1403 @@
   "folder_id": "static-easy-access",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 69,
-  "total_size": 669468896,
-  "file_count": 346,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-easy-access",
-      "path": "Easy Access/Easy Access.7z",
+      "url": "https://customsongscentral.b-cdn.net/Easy%20Access.7z?ref=customsongscentral.com",
       "name": "Easy Access.7z",
       "size": 669468896,
-      "md5": "386a27e9b47d2ce7ef9c6bbe3c5baff4",
-      "url": "https://customsongscentral.b-cdn.net/Easy%20Access.7z?ref=customsongscentral.com"
+      "md5": "386a27e9b47d2ce7ef9c6bbe3c5baff4"
     }
-  ]
+  ],
+  "download_size": 669468896,
+  "files": [
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/2003 Toyota Corolla - 2009 Toyota Corolla (Lovelydaze remix) [Deltarak]/album.png",
+      "size": 47160
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/2003 Toyota Corolla - 2009 Toyota Corolla (Lovelydaze remix) [Deltarak]/background.jpg",
+      "size": 525171
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/2003 Toyota Corolla - 2009 Toyota Corolla (Lovelydaze remix) [Deltarak]/notes.chart",
+      "size": 10517
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/2003 Toyota Corolla - 2009 Toyota Corolla (Lovelydaze remix) [Deltarak]/song.ini",
+      "size": 5595
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/2003 Toyota Corolla - 2009 Toyota Corolla (Lovelydaze remix) [Deltarak]/song.ogg",
+      "size": 5806155
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Adriel Genet - Battle Hymn of the History Nerd [Deltarak]/album.png",
+      "size": 68810
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Adriel Genet - Battle Hymn of the History Nerd [Deltarak]/background.jpg",
+      "size": 638138
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Adriel Genet - Battle Hymn of the History Nerd [Deltarak]/notes.chart",
+      "size": 9403
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Adriel Genet - Battle Hymn of the History Nerd [Deltarak]/song.ini",
+      "size": 476
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Adriel Genet - Battle Hymn of the History Nerd [Deltarak]/song.ogg",
+      "size": 4462406
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Bo Burnham - Look Who_s Inside Again [Deltarak]/album.png",
+      "size": 57443
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Bo Burnham - Look Who_s Inside Again [Deltarak]/background.jpg",
+      "size": 481062
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Bo Burnham - Look Who_s Inside Again [Deltarak]/notes.chart",
+      "size": 14343
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Bo Burnham - Look Who_s Inside Again [Deltarak]/song.ini",
+      "size": 441
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Bo Burnham - Look Who_s Inside Again [Deltarak]/song.ogg",
+      "size": 2789878
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Gaspode - Secret Labyrinths [Deltarak]/album.png",
+      "size": 110847
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Gaspode - Secret Labyrinths [Deltarak]/background.jpg",
+      "size": 337404
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Gaspode - Secret Labyrinths [Deltarak]/notes.chart",
+      "size": 18673
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Gaspode - Secret Labyrinths [Deltarak]/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Gaspode - Secret Labyrinths [Deltarak]/song.ogg",
+      "size": 6950108
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Lorde - Yellow Flicker Beat [Deltarak]/album.png",
+      "size": 92725
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Lorde - Yellow Flicker Beat [Deltarak]/background.jpg",
+      "size": 621876
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Lorde - Yellow Flicker Beat [Deltarak]/notes.chart",
+      "size": 23425
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Lorde - Yellow Flicker Beat [Deltarak]/song.ini",
+      "size": 479
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Lorde - Yellow Flicker Beat [Deltarak]/song.ogg",
+      "size": 6065235
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Muse - The 2nd Law_Isolated System [Deltarak]/album.png",
+      "size": 54174
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Muse - The 2nd Law_Isolated System [Deltarak]/background.jpg",
+      "size": 482791
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Muse - The 2nd Law_Isolated System [Deltarak]/notes.chart",
+      "size": 35693
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Muse - The 2nd Law_Isolated System [Deltarak]/song.ini",
+      "size": 437
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Muse - The 2nd Law_Isolated System [Deltarak]/song.ogg",
+      "size": 8323091
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/No Wyld - Odyssey [Deltarak]/album.png",
+      "size": 82801
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/No Wyld - Odyssey [Deltarak]/background.jpg",
+      "size": 103864
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/No Wyld - Odyssey [Deltarak]/notes.chart",
+      "size": 42383
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/No Wyld - Odyssey [Deltarak]/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/No Wyld - Odyssey [Deltarak]/song.ogg",
+      "size": 8066518
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Seven Spires - Depths [Deltarak]/album.png",
+      "size": 46724
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Seven Spires - Depths [Deltarak]/background.jpg",
+      "size": 63573
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Seven Spires - Depths [Deltarak]/notes.chart",
+      "size": 14146
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Seven Spires - Depths [Deltarak]/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Seven Spires - Depths [Deltarak]/song.ogg",
+      "size": 7795147
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Sir Sly - High [Deltarak]/album.png",
+      "size": 13925
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Sir Sly - High [Deltarak]/background.jpg",
+      "size": 586367
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Sir Sly - High [Deltarak]/notes.chart",
+      "size": 27741
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Sir Sly - High [Deltarak]/song.ini",
+      "size": 356
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/Sir Sly - High [Deltarak]/song.ogg",
+      "size": 7510650
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/The Morgana Phase - Alastor the Blind [Deltarak]/album.png",
+      "size": 493483
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/The Morgana Phase - Alastor the Blind [Deltarak]/background.jpg",
+      "size": 576358
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/The Morgana Phase - Alastor the Blind [Deltarak]/notes.chart",
+      "size": 31721
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/The Morgana Phase - Alastor the Blind [Deltarak]/song.ini",
+      "size": 458
+    },
+    {
+      "path": "Easy Access/[EA] Tier 1 - It_s In The Game/The Morgana Phase - Alastor the Blind [Deltarak]/song.ogg",
+      "size": 10893238
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Blasterjaxx _ Timmy Trumpet - Narco [Deltarak]/album.png",
+      "size": 91768
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Blasterjaxx _ Timmy Trumpet - Narco [Deltarak]/background.jpg",
+      "size": 913077
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Blasterjaxx _ Timmy Trumpet - Narco [Deltarak]/notes.chart",
+      "size": 22128
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Blasterjaxx _ Timmy Trumpet - Narco [Deltarak]/song.ini",
+      "size": 561
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Blasterjaxx _ Timmy Trumpet - Narco [Deltarak]/song.ogg",
+      "size": 7526278
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Dear Sherlock - Supernova [Deltarak]/album.png",
+      "size": 32759
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Dear Sherlock - Supernova [Deltarak]/background.jpg",
+      "size": 855470
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Dear Sherlock - Supernova [Deltarak]/notes.chart",
+      "size": 36168
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Dear Sherlock - Supernova [Deltarak]/song.ini",
+      "size": 424
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Dear Sherlock - Supernova [Deltarak]/song.ogg",
+      "size": 8825102
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ghost - Bite of Passage_Respite on the Spitalfields [Deltarak]/album.png",
+      "size": 5684143
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ghost - Bite of Passage_Respite on the Spitalfields [Deltarak]/background.jpg",
+      "size": 1133458
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ghost - Bite of Passage_Respite on the Spitalfields [Deltarak]/notes.chart",
+      "size": 44763
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ghost - Bite of Passage_Respite on the Spitalfields [Deltarak]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ghost - Bite of Passage_Respite on the Spitalfields [Deltarak]/song.ogg",
+      "size": 13728809
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Gracchus - Facelift [Deltarak]/album.png",
+      "size": 59577
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Gracchus - Facelift [Deltarak]/background.jpg",
+      "size": 127538
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Gracchus - Facelift [Deltarak]/notes.chart",
+      "size": 21475
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Gracchus - Facelift [Deltarak]/song.ini",
+      "size": 310
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Gracchus - Facelift [Deltarak]/song.ogg",
+      "size": 7736927
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ignea - \u00cd Tokuni (Eiv\u00f8r cover) [Deltarak]/album.png",
+      "size": 66863
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ignea - \u00cd Tokuni (Eiv\u00f8r cover) [Deltarak]/background.jpg",
+      "size": 148740
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ignea - \u00cd Tokuni (Eiv\u00f8r cover) [Deltarak]/notes.chart",
+      "size": 24765
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ignea - \u00cd Tokuni (Eiv\u00f8r cover) [Deltarak]/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Ignea - \u00cd Tokuni (Eiv\u00f8r cover) [Deltarak]/song.ogg",
+      "size": 7027906
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Lil Nas X - MONTERO (Call Me By Your Name) [Deltarak]/album.png",
+      "size": 68016
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Lil Nas X - MONTERO (Call Me By Your Name) [Deltarak]/background.jpg",
+      "size": 126144
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Lil Nas X - MONTERO (Call Me By Your Name) [Deltarak]/notes.chart",
+      "size": 19076
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Lil Nas X - MONTERO (Call Me By Your Name) [Deltarak]/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Lil Nas X - MONTERO (Call Me By Your Name) [Deltarak]/song.ogg",
+      "size": 5233586
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Nightwish - Amaranth [Deltarak]/album.png",
+      "size": 80335
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Nightwish - Amaranth [Deltarak]/background.jpg",
+      "size": 796007
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Nightwish - Amaranth [Deltarak]/notes.chart",
+      "size": 33531
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Nightwish - Amaranth [Deltarak]/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Nightwish - Amaranth [Deltarak]/song.ogg",
+      "size": 6896143
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Royal Blood - My Sharona (The Knack cover, Live) [Deltarak]/album.png",
+      "size": 61939
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Royal Blood - My Sharona (The Knack cover, Live) [Deltarak]/background.jpg",
+      "size": 560088
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Royal Blood - My Sharona (The Knack cover, Live) [Deltarak]/notes.chart",
+      "size": 21894
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Royal Blood - My Sharona (The Knack cover, Live) [Deltarak]/song.ini",
+      "size": 481
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Royal Blood - My Sharona (The Knack cover, Live) [Deltarak]/song.ogg",
+      "size": 4325245
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Steely Dan - Monkey in Your Soul [Deltarak]/album.png",
+      "size": 61920
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Steely Dan - Monkey in Your Soul [Deltarak]/background.jpg",
+      "size": 765383
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Steely Dan - Monkey in Your Soul [Deltarak]/notes.chart",
+      "size": 18166
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Steely Dan - Monkey in Your Soul [Deltarak]/song.ini",
+      "size": 339
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/Steely Dan - Monkey in Your Soul [Deltarak]/song.ogg",
+      "size": 5006763
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/VGR - Driftveil City [Deltarak]/album.png",
+      "size": 17118
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/VGR - Driftveil City [Deltarak]/background.jpg",
+      "size": 1206660
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/VGR - Driftveil City [Deltarak]/notes.chart",
+      "size": 23806
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/VGR - Driftveil City [Deltarak]/song.ini",
+      "size": 611
+    },
+    {
+      "path": "Easy Access/[EA] Tier 2 - Vibe Whiplash/VGR - Driftveil City [Deltarak]/song.ogg",
+      "size": 8000023
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/AWOLNATION - Sail [Deltarak]/album.png",
+      "size": 33764
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/AWOLNATION - Sail [Deltarak]/background.jpg",
+      "size": 322286
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/AWOLNATION - Sail [Deltarak]/notes.chart",
+      "size": 25776
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/AWOLNATION - Sail [Deltarak]/song.ini",
+      "size": 388
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/AWOLNATION - Sail [Deltarak]/song.ogg",
+      "size": 9224767
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Aurora View - Honey Oil [Deltarak]/album.png",
+      "size": 601261
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Aurora View - Honey Oil [Deltarak]/background.jpg",
+      "size": 1236258
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Aurora View - Honey Oil [Deltarak]/notes.chart",
+      "size": 25859
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Aurora View - Honey Oil [Deltarak]/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Aurora View - Honey Oil [Deltarak]/song.ogg",
+      "size": 6797356
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Monster Truck - Righteous Smoke [Deltarak]/album.png",
+      "size": 79380
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Monster Truck - Righteous Smoke [Deltarak]/background.jpg",
+      "size": 521897
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Monster Truck - Righteous Smoke [Deltarak]/notes.chart",
+      "size": 21937
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Monster Truck - Righteous Smoke [Deltarak]/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Monster Truck - Righteous Smoke [Deltarak]/song.ogg",
+      "size": 5928939
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Mute Frank - Fuck The Queen [Deltarak]/album.png",
+      "size": 43152
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Mute Frank - Fuck The Queen [Deltarak]/background.jpg",
+      "size": 91098
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Mute Frank - Fuck The Queen [Deltarak]/notes.chart",
+      "size": 31951
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Mute Frank - Fuck The Queen [Deltarak]/song.ini",
+      "size": 344
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Mute Frank - Fuck The Queen [Deltarak]/song.ogg",
+      "size": 4568831
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Noisestorm - Heist [Deltarak]/album.png",
+      "size": 62236
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Noisestorm - Heist [Deltarak]/background.jpg",
+      "size": 77405
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Noisestorm - Heist [Deltarak]/notes.chart",
+      "size": 18228
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Noisestorm - Heist [Deltarak]/song.ini",
+      "size": 420
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Noisestorm - Heist [Deltarak]/song.ogg",
+      "size": 6448062
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Nothing But Thieves - Can You Afford To Be An Individual [Deltarak]/album.png",
+      "size": 27979
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Nothing But Thieves - Can You Afford To Be An Individual [Deltarak]/background.jpg",
+      "size": 700491
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Nothing But Thieves - Can You Afford To Be An Individual [Deltarak]/notes.chart",
+      "size": 32048
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Nothing But Thieves - Can You Afford To Be An Individual [Deltarak]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Nothing But Thieves - Can You Afford To Be An Individual [Deltarak]/song.ogg",
+      "size": 7987527
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Rage Against the Machine - Bombtrack [Deltarak]/album.png",
+      "size": 39577
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Rage Against the Machine - Bombtrack [Deltarak]/background.jpg",
+      "size": 756468
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Rage Against the Machine - Bombtrack [Deltarak]/notes.chart",
+      "size": 36565
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Rage Against the Machine - Bombtrack [Deltarak]/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Rage Against the Machine - Bombtrack [Deltarak]/song.ogg",
+      "size": 8323304
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Sarah and the Safe Word - All The Rage (feat. Jamee Cornelia) [Deltarak]/album.png",
+      "size": 85344
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Sarah and the Safe Word - All The Rage (feat. Jamee Cornelia) [Deltarak]/background.jpg",
+      "size": 551751
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Sarah and the Safe Word - All The Rage (feat. Jamee Cornelia) [Deltarak]/notes.chart",
+      "size": 37155
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Sarah and the Safe Word - All The Rage (feat. Jamee Cornelia) [Deltarak]/song.ini",
+      "size": 412
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Sarah and the Safe Word - All The Rage (feat. Jamee Cornelia) [Deltarak]/song.ogg",
+      "size": 5743370
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Thousand Foot Krutch - Light Up the Sky [Deltarak]/album.png",
+      "size": 387493
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Thousand Foot Krutch - Light Up the Sky [Deltarak]/background.jpg",
+      "size": 544240
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Thousand Foot Krutch - Light Up the Sky [Deltarak]/notes.chart",
+      "size": 35310
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Thousand Foot Krutch - Light Up the Sky [Deltarak]/song.ini",
+      "size": 423
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/Thousand Foot Krutch - Light Up the Sky [Deltarak]/song.ogg",
+      "size": 7852493
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/\u00c6ther Realm - Death (Starfaux Remix) [Deltarak]/album.png",
+      "size": 61160
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/\u00c6ther Realm - Death (Starfaux Remix) [Deltarak]/background.jpg",
+      "size": 1338406
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/\u00c6ther Realm - Death (Starfaux Remix) [Deltarak]/notes.chart",
+      "size": 23762
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/\u00c6ther Realm - Death (Starfaux Remix) [Deltarak]/song.ini",
+      "size": 373
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3 - Anger Management/\u00c6ther Realm - Death (Starfaux Remix) [Deltarak]/song.ogg",
+      "size": 6852319
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3.5 - We_ll Be Right Back/Kevin MacLeod - Local Forecast - Elevator [Deltarak]/album.png",
+      "size": 28737
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3.5 - We_ll Be Right Back/Kevin MacLeod - Local Forecast - Elevator [Deltarak]/background.jpg",
+      "size": 515327
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3.5 - We_ll Be Right Back/Kevin MacLeod - Local Forecast - Elevator [Deltarak]/notes.chart",
+      "size": 14270
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3.5 - We_ll Be Right Back/Kevin MacLeod - Local Forecast - Elevator [Deltarak]/song.ini",
+      "size": 335
+    },
+    {
+      "path": "Easy Access/[EA] Tier 3.5 - We_ll Be Right Back/Kevin MacLeod - Local Forecast - Elevator [Deltarak]/song.ogg",
+      "size": 5483856
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Aephanemer - At Eternity_s Gate [Deltarak]/album.png",
+      "size": 146266
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Aephanemer - At Eternity_s Gate [Deltarak]/background.jpg",
+      "size": 880767
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Aephanemer - At Eternity_s Gate [Deltarak]/notes.chart",
+      "size": 10748
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Aephanemer - At Eternity_s Gate [Deltarak]/song.ini",
+      "size": 319
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Aephanemer - At Eternity_s Gate [Deltarak]/song.ogg",
+      "size": 5598995
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Amaranthe - Archangel [Deltarak]/album.png",
+      "size": 64827
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Amaranthe - Archangel [Deltarak]/background.jpg",
+      "size": 677201
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Amaranthe - Archangel [Deltarak]/notes.chart",
+      "size": 32110
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Amaranthe - Archangel [Deltarak]/song.ini",
+      "size": 388
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Amaranthe - Archangel [Deltarak]/song.ogg",
+      "size": 11965827
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Dirty Honey - Fire Away [Deltarak]/album.png",
+      "size": 40453
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Dirty Honey - Fire Away [Deltarak]/background.jpg",
+      "size": 226370
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Dirty Honey - Fire Away [Deltarak]/notes.chart",
+      "size": 35039
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Dirty Honey - Fire Away [Deltarak]/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Dirty Honey - Fire Away [Deltarak]/song.ogg",
+      "size": 8355435
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Kurt Travis - Casting Dreams [Deltarak]/album.png",
+      "size": 112558
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Kurt Travis - Casting Dreams [Deltarak]/background.jpg",
+      "size": 1032463
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Kurt Travis - Casting Dreams [Deltarak]/notes.chart",
+      "size": 23636
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Kurt Travis - Casting Dreams [Deltarak]/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Kurt Travis - Casting Dreams [Deltarak]/song.ogg",
+      "size": 5355095
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metallica - For Whom the Bell Tolls (Wubbaduck remix) [Deltarak]/album.png",
+      "size": 24191
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metallica - For Whom the Bell Tolls (Wubbaduck remix) [Deltarak]/background.jpg",
+      "size": 1026543
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metallica - For Whom the Bell Tolls (Wubbaduck remix) [Deltarak]/notes.chart",
+      "size": 28865
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metallica - For Whom the Bell Tolls (Wubbaduck remix) [Deltarak]/song.ini",
+      "size": 354
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metallica - For Whom the Bell Tolls (Wubbaduck remix) [Deltarak]/song.ogg",
+      "size": 8633113
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metric - Breathing Underwater [Deltarak]/album.png",
+      "size": 36694
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metric - Breathing Underwater [Deltarak]/background.jpg",
+      "size": 561031
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metric - Breathing Underwater [Deltarak]/notes.chart",
+      "size": 43585
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metric - Breathing Underwater [Deltarak]/song.ini",
+      "size": 407
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Metric - Breathing Underwater [Deltarak]/song.ogg",
+      "size": 6083375
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Synthion - Waltz Capriccio [Deltarak]/album.png",
+      "size": 46418
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Synthion - Waltz Capriccio [Deltarak]/background.jpg",
+      "size": 274582
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Synthion - Waltz Capriccio [Deltarak]/notes.chart",
+      "size": 21066
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Synthion - Waltz Capriccio [Deltarak]/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Synthion - Waltz Capriccio [Deltarak]/song.ogg",
+      "size": 6744930
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Birthday Massacre - Sleepwalking [Deltarak]/album.png",
+      "size": 75773
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Birthday Massacre - Sleepwalking [Deltarak]/background.jpg",
+      "size": 453368
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Birthday Massacre - Sleepwalking [Deltarak]/notes.chart",
+      "size": 37409
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Birthday Massacre - Sleepwalking [Deltarak]/song.ini",
+      "size": 405
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Birthday Massacre - Sleepwalking [Deltarak]/song.ogg",
+      "size": 11188272
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Dear Hunter - Dig Your Own Grave [Deltarak]/album.png",
+      "size": 15014
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Dear Hunter - Dig Your Own Grave [Deltarak]/background.jpg",
+      "size": 167720
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Dear Hunter - Dig Your Own Grave [Deltarak]/notes.chart",
+      "size": 41576
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Dear Hunter - Dig Your Own Grave [Deltarak]/song.ini",
+      "size": 492
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/The Dear Hunter - Dig Your Own Grave [Deltarak]/song.ogg",
+      "size": 5828069
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Varien _ 7 Minutes Dead - Mirai Sekai (Continuous Mix) [Deltarak]/album.png",
+      "size": 64814
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Varien _ 7 Minutes Dead - Mirai Sekai (Continuous Mix) [Deltarak]/background.jpg",
+      "size": 939240
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Varien _ 7 Minutes Dead - Mirai Sekai (Continuous Mix) [Deltarak]/notes.chart",
+      "size": 75603
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Varien _ 7 Minutes Dead - Mirai Sekai (Continuous Mix) [Deltarak]/song.ini",
+      "size": 480
+    },
+    {
+      "path": "Easy Access/[EA] Tier 4 - Returned _ Remixed/Varien _ 7 Minutes Dead - Mirai Sekai (Continuous Mix) [Deltarak]/song.ogg",
+      "size": 28134324
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Burn The Ballroom - Threnody [Deltarak]/album.png",
+      "size": 48642
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Burn The Ballroom - Threnody [Deltarak]/background.jpg",
+      "size": 598366
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Burn The Ballroom - Threnody [Deltarak]/notes.chart",
+      "size": 50772
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Burn The Ballroom - Threnody [Deltarak]/song.ini",
+      "size": 346
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Burn The Ballroom - Threnody [Deltarak]/song.ogg",
+      "size": 11841103
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Coheed and Cambria - The Willing Well IV The Final Cut [Deltarak]/album.png",
+      "size": 152468
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Coheed and Cambria - The Willing Well IV The Final Cut [Deltarak]/background.jpg",
+      "size": 1329969
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Coheed and Cambria - The Willing Well IV The Final Cut [Deltarak]/notes.chart",
+      "size": 41129
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Coheed and Cambria - The Willing Well IV The Final Cut [Deltarak]/song.ini",
+      "size": 587
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Coheed and Cambria - The Willing Well IV The Final Cut [Deltarak]/song.ogg",
+      "size": 14860339
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/DANCE WITH THE DEAD - Hex [Deltarak]/album.png",
+      "size": 42605
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/DANCE WITH THE DEAD - Hex [Deltarak]/background.jpg",
+      "size": 388330
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/DANCE WITH THE DEAD - Hex [Deltarak]/notes.chart",
+      "size": 33528
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/DANCE WITH THE DEAD - Hex [Deltarak]/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/DANCE WITH THE DEAD - Hex [Deltarak]/song.ogg",
+      "size": 7197122
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Eluveitie - A Rose for Epona [Deltarak]/album.png",
+      "size": 35377
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Eluveitie - A Rose for Epona [Deltarak]/background.jpg",
+      "size": 277646
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Eluveitie - A Rose for Epona [Deltarak]/notes.chart",
+      "size": 39735
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Eluveitie - A Rose for Epona [Deltarak]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Eluveitie - A Rose for Epona [Deltarak]/song.ogg",
+      "size": 8458458
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Grim Salvo - HEART OF DARKNESS (feat. Cardeair\u00e9 Latrelle) [Deltarak]/album.png",
+      "size": 50386
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Grim Salvo - HEART OF DARKNESS (feat. Cardeair\u00e9 Latrelle) [Deltarak]/background.jpg",
+      "size": 232908
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Grim Salvo - HEART OF DARKNESS (feat. Cardeair\u00e9 Latrelle) [Deltarak]/notes.chart",
+      "size": 60853
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Grim Salvo - HEART OF DARKNESS (feat. Cardeair\u00e9 Latrelle) [Deltarak]/song.ini",
+      "size": 358
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Grim Salvo - HEART OF DARKNESS (feat. Cardeair\u00e9 Latrelle) [Deltarak]/song.ogg",
+      "size": 12863651
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Kobra and the Lotus - Black Velvet (Alannah Myles cover) [Deltarak]/album.png",
+      "size": 130600
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Kobra and the Lotus - Black Velvet (Alannah Myles cover) [Deltarak]/background.jpg",
+      "size": 943207
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Kobra and the Lotus - Black Velvet (Alannah Myles cover) [Deltarak]/notes.chart",
+      "size": 31641
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Kobra and the Lotus - Black Velvet (Alannah Myles cover) [Deltarak]/song.ini",
+      "size": 588
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Kobra and the Lotus - Black Velvet (Alannah Myles cover) [Deltarak]/song.ogg",
+      "size": 9330275
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Mister Misery - Welcome Insanity [Deltarak]/album.png",
+      "size": 47036
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Mister Misery - Welcome Insanity [Deltarak]/background.jpg",
+      "size": 317634
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Mister Misery - Welcome Insanity [Deltarak]/notes.chart",
+      "size": 40779
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Mister Misery - Welcome Insanity [Deltarak]/song.ini",
+      "size": 498
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Mister Misery - Welcome Insanity [Deltarak]/song.ogg",
+      "size": 7063042
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Phantom Sage - Holystone [Deltarak]/album.png",
+      "size": 38863
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Phantom Sage - Holystone [Deltarak]/background.jpg",
+      "size": 788317
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Phantom Sage - Holystone [Deltarak]/notes.chart",
+      "size": 134870
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Phantom Sage - Holystone [Deltarak]/song.ini",
+      "size": 370
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Phantom Sage - Holystone [Deltarak]/song.ogg",
+      "size": 13114045
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Spiritbox - Holy Roller [Deltarak]/album.png",
+      "size": 58973
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Spiritbox - Holy Roller [Deltarak]/background.jpg",
+      "size": 649572
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Spiritbox - Holy Roller [Deltarak]/notes.chart",
+      "size": 25220
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Spiritbox - Holy Roller [Deltarak]/song.ini",
+      "size": 348
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Spiritbox - Holy Roller [Deltarak]/song.ogg",
+      "size": 5780343
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Syncatto - Red Velvet (feat. Coen Strouken) [Deltarak]/album.png",
+      "size": 16002
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Syncatto - Red Velvet (feat. Coen Strouken) [Deltarak]/background.jpg",
+      "size": 1180391
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Syncatto - Red Velvet (feat. Coen Strouken) [Deltarak]/notes.chart",
+      "size": 38917
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Syncatto - Red Velvet (feat. Coen Strouken) [Deltarak]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Easy Access/[EA] Tier 5 - Not 2 Easy/Syncatto - Red Velvet (feat. Coen Strouken) [Deltarak]/song.ogg",
+      "size": 10047730
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/ (FULL EP) Hyper Potions - Mario Remixes [Deltarak]/album.png",
+      "size": 35776
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/ (FULL EP) Hyper Potions - Mario Remixes [Deltarak]/background.jpg",
+      "size": 220845
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/ (FULL EP) Hyper Potions - Mario Remixes [Deltarak]/notes.chart",
+      "size": 80941
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/ (FULL EP) Hyper Potions - Mario Remixes [Deltarak]/song.ini",
+      "size": 328
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/ (FULL EP) Hyper Potions - Mario Remixes [Deltarak]/song.ogg",
+      "size": 29878138
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Delfino Plaza [Deltarak]/album.png",
+      "size": 35776
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Delfino Plaza [Deltarak]/background.jpg",
+      "size": 43270
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Delfino Plaza [Deltarak]/notes.chart",
+      "size": 19085
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Delfino Plaza [Deltarak]/song.ini",
+      "size": 387
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Delfino Plaza [Deltarak]/song.ogg",
+      "size": 6783711
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - File Select [Deltarak]/album.png",
+      "size": 35776
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - File Select [Deltarak]/background.jpg",
+      "size": 42814
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - File Select [Deltarak]/notes.chart",
+      "size": 12789
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - File Select [Deltarak]/song.ini",
+      "size": 419
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - File Select [Deltarak]/song.ogg",
+      "size": 5447455
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Koopa Troopa Beach [Deltarak]/album.png",
+      "size": 35776
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Koopa Troopa Beach [Deltarak]/background.jpg",
+      "size": 33320
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Koopa Troopa Beach [Deltarak]/notes.chart",
+      "size": 15693
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Koopa Troopa Beach [Deltarak]/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Koopa Troopa Beach [Deltarak]/song.ogg",
+      "size": 6285977
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Mario Circuit [Deltarak]/album.png",
+      "size": 35776
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Mario Circuit [Deltarak]/background.jpg",
+      "size": 53562
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Mario Circuit [Deltarak]/notes.chart",
+      "size": 13849
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Mario Circuit [Deltarak]/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Mario Circuit [Deltarak]/song.ogg",
+      "size": 3957479
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Pinna Park Beach [Deltarak]/album.png",
+      "size": 35776
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Pinna Park Beach [Deltarak]/background.jpg",
+      "size": 40287
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Pinna Park Beach [Deltarak]/notes.chart",
+      "size": 16501
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Pinna Park Beach [Deltarak]/song.ini",
+      "size": 475
+    },
+    {
+      "path": "Easy Access/[EA] Tier 6 - It Is Me, Mario/Hyper Potions - Pinna Park Beach [Deltarak]/song.ogg",
+      "size": 6811570
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/(FULL ALBUM) Fall Out Boy - American Beauty_American Psycho [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/(FULL ALBUM) Fall Out Boy - American Beauty_American Psycho [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/(FULL ALBUM) Fall Out Boy - American Beauty_American Psycho [Deltarak]/notes.chart",
+      "size": 386635
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/(FULL ALBUM) Fall Out Boy - American Beauty_American Psycho [Deltarak]/song.ini",
+      "size": 409
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/(FULL ALBUM) Fall Out Boy - American Beauty_American Psycho [Deltarak]/song.ogg",
+      "size": 77293334
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - American Beauty_American Psycho [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - American Beauty_American Psycho [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - American Beauty_American Psycho [Deltarak]/notes.chart",
+      "size": 28285
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - American Beauty_American Psycho [Deltarak]/song.ini",
+      "size": 472
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - American Beauty_American Psycho [Deltarak]/song.ogg",
+      "size": 6150877
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Centuries [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Centuries [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Centuries [Deltarak]/notes.chart",
+      "size": 34524
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Centuries [Deltarak]/song.ini",
+      "size": 383
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Centuries [Deltarak]/song.ogg",
+      "size": 6431937
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Favorite Record [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Favorite Record [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Favorite Record [Deltarak]/notes.chart",
+      "size": 32889
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Favorite Record [Deltarak]/song.ini",
+      "size": 366
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Favorite Record [Deltarak]/song.ogg",
+      "size": 6585912
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Fourth of July [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Fourth of July [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Fourth of July [Deltarak]/notes.chart",
+      "size": 46071
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Fourth of July [Deltarak]/song.ini",
+      "size": 404
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Fourth of July [Deltarak]/song.ogg",
+      "size": 7728728
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Immortals [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Immortals [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Immortals [Deltarak]/notes.chart",
+      "size": 32340
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Immortals [Deltarak]/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Immortals [Deltarak]/song.ogg",
+      "size": 6418755
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Irresistible [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Irresistible [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Irresistible [Deltarak]/notes.chart",
+      "size": 30819
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Irresistible [Deltarak]/song.ini",
+      "size": 415
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Irresistible [Deltarak]/song.ogg",
+      "size": 6571248
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Jet Pack Blues [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Jet Pack Blues [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Jet Pack Blues [Deltarak]/notes.chart",
+      "size": 23036
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Jet Pack Blues [Deltarak]/song.ini",
+      "size": 367
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Jet Pack Blues [Deltarak]/song.ogg",
+      "size": 5805425
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Novocaine [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Novocaine [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Novocaine [Deltarak]/notes.chart",
+      "size": 33697
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Novocaine [Deltarak]/song.ini",
+      "size": 543
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Novocaine [Deltarak]/song.ogg",
+      "size": 7150226
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - The Kids Aren_t Alright [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - The Kids Aren_t Alright [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - The Kids Aren_t Alright [Deltarak]/notes.chart",
+      "size": 39110
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - The Kids Aren_t Alright [Deltarak]/song.ini",
+      "size": 353
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - The Kids Aren_t Alright [Deltarak]/song.ogg",
+      "size": 8345089
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Twin Skeleton_s (Hotel in NYC) [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Twin Skeleton_s (Hotel in NYC) [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Twin Skeleton_s (Hotel in NYC) [Deltarak]/notes.chart",
+      "size": 32844
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Twin Skeleton_s (Hotel in NYC) [Deltarak]/song.ini",
+      "size": 476
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Twin Skeleton_s (Hotel in NYC) [Deltarak]/song.ogg",
+      "size": 7040916
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Uma Thurman [Deltarak]/album.png",
+      "size": 82374
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Uma Thurman [Deltarak]/background.jpg",
+      "size": 156619
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Uma Thurman [Deltarak]/notes.chart",
+      "size": 37215
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Uma Thurman [Deltarak]/song.ini",
+      "size": 550
+    },
+    {
+      "path": "Easy Access/[EA] Tier 7 - Canadian Psycho/Fall Out Boy - Uma Thurman [Deltarak]/song.ogg",
+      "size": 7068315
+    },
+    {
+      "path": "Easy Access/easyaccess.png",
+      "size": 11631
+    }
+  ],
+  "extracted_size": 675142698,
+  "file_count": 346,
+  "chart_count": 69,
+  "release_date": "2023-12-19"
 }

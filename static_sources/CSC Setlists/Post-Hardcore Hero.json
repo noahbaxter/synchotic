@@ -1,20 +1,2341 @@
 {
   "name": "Post-Hardcore Hero",
-  "folder_id": "static-post-hardcore",
+  "folder_id": "static-post-hardcore-hero",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 116,
-  "total_size": 637489612,
-  "file_count": 580,
+  "downloads": [
+    {
+      "url": "https://customsongscentral.b-cdn.net/PHCH.7z?ref=customsongscentral.com",
+      "name": "PHCH.7z",
+      "size": 637489612,
+      "md5": "11039c3c4c7998c04dab26ef84882a59"
+    }
+  ],
+  "download_size": 637489612,
   "files": [
     {
-      "id": "cdn-csc-post-hardcore",
-      "path": "Post-Hardcore Hero/Post-Hardcore Hero.7z",
-      "name": "Post-Hardcore Hero.7z",
-      "size": 637489612,
-      "md5": "11039c3c4c7998c04dab26ef84882a59",
-      "url": "https://customsongscentral.b-cdn.net/PHCH.7z?ref=customsongscentral.com"
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/At the Drive-In - Pattern Against User [python]/album.png",
+      "size": 431294
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/At the Drive-In - Pattern Against User [python]/background.png",
+      "size": 1227409
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/At the Drive-In - Pattern Against User [python]/notes.chart",
+      "size": 66736
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/At the Drive-In - Pattern Against User [python]/song.ini",
+      "size": 820
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/At the Drive-In - Pattern Against User [python]/song.opus",
+      "size": 3010502
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Balance And Composure - I Tore You Apart In My Head [python]/album.png",
+      "size": 409610
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Balance And Composure - I Tore You Apart In My Head [python]/background.png",
+      "size": 1143213
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Balance And Composure - I Tore You Apart In My Head [python]/notes.chart",
+      "size": 62079
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Balance And Composure - I Tore You Apart In My Head [python]/song.ini",
+      "size": 371
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Balance And Composure - I Tore You Apart In My Head [python]/song.opus",
+      "size": 2095482
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Funeral for a Friend - Streetcar [python]/album.png",
+      "size": 349604
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Funeral for a Friend - Streetcar [python]/background.png",
+      "size": 1250339
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Funeral for a Friend - Streetcar [python]/notes.chart",
+      "size": 81037
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Funeral for a Friend - Streetcar [python]/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Funeral for a Friend - Streetcar [python]/song.opus",
+      "size": 2125205
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/In Aviate - Redefining Automation [python]/album.png",
+      "size": 480822
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/In Aviate - Redefining Automation [python]/background.png",
+      "size": 1508580
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/In Aviate - Redefining Automation [python]/notes.chart",
+      "size": 101792
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/In Aviate - Redefining Automation [python]/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/In Aviate - Redefining Automation [python]/song.opus",
+      "size": 3233316
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/L.S. Dunes - Benadryl Subreddit [OCBG0LD]/album.png",
+      "size": 437622
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/L.S. Dunes - Benadryl Subreddit [OCBG0LD]/background.png",
+      "size": 4211187
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/L.S. Dunes - Benadryl Subreddit [OCBG0LD]/notes.chart",
+      "size": 121469
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/L.S. Dunes - Benadryl Subreddit [OCBG0LD]/song.ini",
+      "size": 714
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/L.S. Dunes - Benadryl Subreddit [OCBG0LD]/song.opus",
+      "size": 2005207
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Poison the Well - Ghostchant [python]/album.png",
+      "size": 2917853
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Poison the Well - Ghostchant [python]/background.png",
+      "size": 1266255
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Poison the Well - Ghostchant [python]/notes.chart",
+      "size": 87424
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Poison the Well - Ghostchant [python]/song.ini",
+      "size": 480
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Poison the Well - Ghostchant [python]/song.opus",
+      "size": 2063716
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Saosin - It_s So Simple [python]/album.png",
+      "size": 98809
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Saosin - It_s So Simple [python]/background.png",
+      "size": 304049
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Saosin - It_s So Simple [python]/notes.chart",
+      "size": 64068
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Saosin - It_s So Simple [python]/song.ini",
+      "size": 446
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 01 - Tier 1/Saosin - It_s So Simple [python]/song.opus",
+      "size": 2573935
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Alexisonfire - Counterparts and Number Them [python]/album.png",
+      "size": 307154
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Alexisonfire - Counterparts and Number Them [python]/background.png",
+      "size": 1373225
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Alexisonfire - Counterparts and Number Them [python]/notes.chart",
+      "size": 50390
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Alexisonfire - Counterparts and Number Them [python]/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Alexisonfire - Counterparts and Number Them [python]/song.opus",
+      "size": 1380140
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Confide - Can_t See The Forest For The Trees [python]/album.png",
+      "size": 463268
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Confide - Can_t See The Forest For The Trees [python]/background.png",
+      "size": 1301236
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Confide - Can_t See The Forest For The Trees [python]/notes.chart",
+      "size": 59693
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Confide - Can_t See The Forest For The Trees [python]/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Confide - Can_t See The Forest For The Trees [python]/song.opus",
+      "size": 1388976
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Dance Gavin Dance - Straight From The Heart [python]/album.png",
+      "size": 270559
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Dance Gavin Dance - Straight From The Heart [python]/background.png",
+      "size": 3640022
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Dance Gavin Dance - Straight From The Heart [python]/notes.chart",
+      "size": 112955
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Dance Gavin Dance - Straight From The Heart [python]/song.ini",
+      "size": 489
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Dance Gavin Dance - Straight From The Heart [python]/song.ogg",
+      "size": 7111364
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Glassjaw - Mu Empire [python]/album.png",
+      "size": 454923
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Glassjaw - Mu Empire [python]/background.png",
+      "size": 2016762
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Glassjaw - Mu Empire [python]/notes.chart",
+      "size": 91137
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Glassjaw - Mu Empire [python]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Glassjaw - Mu Empire [python]/song.opus",
+      "size": 2153843
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/My Chemical Romance - Drowning Lessons [python]/album.png",
+      "size": 584631
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/My Chemical Romance - Drowning Lessons [python]/background.png",
+      "size": 3395461
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/My Chemical Romance - Drowning Lessons [python]/notes.chart",
+      "size": 123640
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/My Chemical Romance - Drowning Lessons [python]/song.ini",
+      "size": 608
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/My Chemical Romance - Drowning Lessons [python]/song.opus",
+      "size": 2503704
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Thirty Nights - Blue Nitrile Touch [python]/album.png",
+      "size": 262311
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Thirty Nights - Blue Nitrile Touch [python]/background.png",
+      "size": 905148
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Thirty Nights - Blue Nitrile Touch [python]/notes.chart",
+      "size": 55803
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Thirty Nights - Blue Nitrile Touch [python]/song.ini",
+      "size": 475
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/Thirty Nights - Blue Nitrile Touch [python]/song.opus",
+      "size": 1731030
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/pulses. - Yo! Champ in the Making! [python]/album.png",
+      "size": 305753
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/pulses. - Yo! Champ in the Making! [python]/background.png",
+      "size": 2009556
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/pulses. - Yo! Champ in the Making! [python]/notes.chart",
+      "size": 66192
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/pulses. - Yo! Champ in the Making! [python]/song.ini",
+      "size": 550
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 02 - Tier 2/pulses. - Yo! Champ in the Making! [python]/song.opus",
+      "size": 1612919
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Body Thief - Night Owls in Mating Season [SirMonkfish]/album.png",
+      "size": 1940224
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Body Thief - Night Owls in Mating Season [SirMonkfish]/background.png",
+      "size": 3217340
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Body Thief - Night Owls in Mating Season [SirMonkfish]/notes.chart",
+      "size": 155538
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Body Thief - Night Owls in Mating Season [SirMonkfish]/song.ini",
+      "size": 890
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Body Thief - Night Owls in Mating Season [SirMonkfish]/song.opus",
+      "size": 4157517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Our Last Night - Symptoms of A Failing System [OCBG0LD]/album.png",
+      "size": 303475
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Our Last Night - Symptoms of A Failing System [OCBG0LD]/background.png",
+      "size": 729482
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Our Last Night - Symptoms of A Failing System [OCBG0LD]/notes.chart",
+      "size": 117481
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Our Last Night - Symptoms of A Failing System [OCBG0LD]/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Our Last Night - Symptoms of A Failing System [OCBG0LD]/song.ogg",
+      "size": 8350951
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Pianos Become the Teeth - Shared Bodies [python]/album.png",
+      "size": 285573
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Pianos Become the Teeth - Shared Bodies [python]/background.png",
+      "size": 2074471
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Pianos Become the Teeth - Shared Bodies [python]/notes.chart",
+      "size": 77924
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Pianos Become the Teeth - Shared Bodies [python]/song.ini",
+      "size": 888
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Pianos Become the Teeth - Shared Bodies [python]/song.opus",
+      "size": 2258127
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Resilia - Bad Lemon [python]/album.png",
+      "size": 577465
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Resilia - Bad Lemon [python]/background.png",
+      "size": 4130792
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Resilia - Bad Lemon [python]/notes.chart",
+      "size": 24412
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Resilia - Bad Lemon [python]/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Resilia - Bad Lemon [python]/song.opus",
+      "size": 1086089
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Sentient Moss - Greener [python]/album.png",
+      "size": 573591
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Sentient Moss - Greener [python]/background.png",
+      "size": 3534930
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Sentient Moss - Greener [python]/notes.chart",
+      "size": 67472
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Sentient Moss - Greener [python]/song.ini",
+      "size": 413
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/Sentient Moss - Greener [python]/song.opus",
+      "size": 1928921
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Chariot - Forget [FigNeutered, python]/album.png",
+      "size": 596614
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Chariot - Forget [FigNeutered, python]/background.png",
+      "size": 1658154
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Chariot - Forget [FigNeutered, python]/notes.chart",
+      "size": 57786
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Chariot - Forget [FigNeutered, python]/song.ini",
+      "size": 647
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Chariot - Forget [FigNeutered, python]/song.opus",
+      "size": 2149354
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Ongoing Concept - Saloon [python]/album.png",
+      "size": 484454
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Ongoing Concept - Saloon [python]/background.png",
+      "size": 3303897
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Ongoing Concept - Saloon [python]/notes.chart",
+      "size": 79443
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Ongoing Concept - Saloon [python]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 03 - Tier 3/The Ongoing Concept - Saloon [python]/song.opus",
+      "size": 2051320
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Blight Town - Al Gore Rhythm [python]/album.png",
+      "size": 372262
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Blight Town - Al Gore Rhythm [python]/background.png",
+      "size": 3712658
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Blight Town - Al Gore Rhythm [python]/notes.chart",
+      "size": 64260
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Blight Town - Al Gore Rhythm [python]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Blight Town - Al Gore Rhythm [python]/song.opus",
+      "size": 1450309
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Capstan - Moloch [FigNeutered, python]/album.png",
+      "size": 707328
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Capstan - Moloch [FigNeutered, python]/background.png",
+      "size": 3851465
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Capstan - Moloch [FigNeutered, python]/notes.chart",
+      "size": 34283
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Capstan - Moloch [FigNeutered, python]/song.ini",
+      "size": 651
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Capstan - Moloch [FigNeutered, python]/song.opus",
+      "size": 1202574
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Cat Company - Morpheus The Black [OCBG0LD]/album.png",
+      "size": 591979
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Cat Company - Morpheus The Black [OCBG0LD]/background.png",
+      "size": 4252997
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Cat Company - Morpheus The Black [OCBG0LD]/notes.chart",
+      "size": 171728
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Cat Company - Morpheus The Black [OCBG0LD]/song.ini",
+      "size": 629
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Cat Company - Morpheus The Black [OCBG0LD]/song.ogg",
+      "size": 8857181
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Humble Abode - Status Quo Syndrome [python]/album.png",
+      "size": 439494
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Humble Abode - Status Quo Syndrome [python]/background.png",
+      "size": 2850947
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Humble Abode - Status Quo Syndrome [python]/notes.chart",
+      "size": 71168
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Humble Abode - Status Quo Syndrome [python]/song.ini",
+      "size": 385
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Humble Abode - Status Quo Syndrome [python]/song.opus",
+      "size": 2174906
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/In Angles - Melonhead [python]/album.png",
+      "size": 179195
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/In Angles - Melonhead [python]/background.png",
+      "size": 2885458
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/In Angles - Melonhead [python]/notes.chart",
+      "size": 61429
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/In Angles - Melonhead [python]/song.ini",
+      "size": 404
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/In Angles - Melonhead [python]/song.opus",
+      "size": 2694660
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Secret Band - No One I Know [SirMonkfish]/album.png",
+      "size": 449962
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Secret Band - No One I Know [SirMonkfish]/background.png",
+      "size": 3054904
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Secret Band - No One I Know [SirMonkfish]/notes.chart",
+      "size": 143184
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Secret Band - No One I Know [SirMonkfish]/song.ini",
+      "size": 495
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Secret Band - No One I Know [SirMonkfish]/song.opus",
+      "size": 2877590
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Thomas Erak & The Ouroboros - Conjugal Visits [python]/album.png",
+      "size": 342248
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Thomas Erak & The Ouroboros - Conjugal Visits [python]/background.png",
+      "size": 1912851
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Thomas Erak & The Ouroboros - Conjugal Visits [python]/notes.chart",
+      "size": 53078
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Thomas Erak & The Ouroboros - Conjugal Visits [python]/song.ini",
+      "size": 725
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 04 - Tier 4/Thomas Erak & The Ouroboros - Conjugal Visits [python]/song.opus",
+      "size": 1620747
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/AnimalJam - Pm Ny Wadi [OCBG0LD]/album.png",
+      "size": 316306
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/AnimalJam - Pm Ny Wadi [OCBG0LD]/background.png",
+      "size": 1615215
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/AnimalJam - Pm Ny Wadi [OCBG0LD]/notes.chart",
+      "size": 128614
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/AnimalJam - Pm Ny Wadi [OCBG0LD]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/AnimalJam - Pm Ny Wadi [OCBG0LD]/song.ogg",
+      "size": 11722885
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Duck Duck Goose - Red, I Don_t Have Time For This [python]/album.png",
+      "size": 482882
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Duck Duck Goose - Red, I Don_t Have Time For This [python]/background.png",
+      "size": 4468866
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Duck Duck Goose - Red, I Don_t Have Time For This [python]/notes.chart",
+      "size": 59623
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Duck Duck Goose - Red, I Don_t Have Time For This [python]/song.ini",
+      "size": 394
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Duck Duck Goose - Red, I Don_t Have Time For This [python]/song.opus",
+      "size": 2166506
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/He Is Legend - I Am Hollywood [python]/album.png",
+      "size": 488029
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/He Is Legend - I Am Hollywood [python]/background.png",
+      "size": 1315910
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/He Is Legend - I Am Hollywood [python]/notes.chart",
+      "size": 67572
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/He Is Legend - I Am Hollywood [python]/song.ini",
+      "size": 515
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/He Is Legend - I Am Hollywood [python]/song.opus",
+      "size": 2431421
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/House of Leaves - Set it to _W_ for Wumbo [python]/album.png",
+      "size": 326978
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/House of Leaves - Set it to _W_ for Wumbo [python]/background.png",
+      "size": 1345799
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/House of Leaves - Set it to _W_ for Wumbo [python]/notes.chart",
+      "size": 115120
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/House of Leaves - Set it to _W_ for Wumbo [python]/song.ini",
+      "size": 397
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/House of Leaves - Set it to _W_ for Wumbo [python]/song.opus",
+      "size": 1898609
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Mara Bloom - Hateful Little Things (feat. Properties of Nature) [python]/album.png",
+      "size": 556832
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Mara Bloom - Hateful Little Things (feat. Properties of Nature) [python]/background.png",
+      "size": 2709253
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Mara Bloom - Hateful Little Things (feat. Properties of Nature) [python]/notes.chart",
+      "size": 102025
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Mara Bloom - Hateful Little Things (feat. Properties of Nature) [python]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Mara Bloom - Hateful Little Things (feat. Properties of Nature) [python]/song.opus",
+      "size": 4128931
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Oranges - Snow Monkeys (So You Think This Is a Fucking Game_) [python]/album.png",
+      "size": 210556
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Oranges - Snow Monkeys (So You Think This Is a Fucking Game_) [python]/background.png",
+      "size": 1198093
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Oranges - Snow Monkeys (So You Think This Is a Fucking Game_) [python]/notes.chart",
+      "size": 62328
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Oranges - Snow Monkeys (So You Think This Is a Fucking Game_) [python]/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Oranges - Snow Monkeys (So You Think This Is a Fucking Game_) [python]/song.opus",
+      "size": 2725083
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Wolf & Bear - Sight [FigNeutered, python]/album.png",
+      "size": 119684
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Wolf & Bear - Sight [FigNeutered, python]/background.png",
+      "size": 637487
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Wolf & Bear - Sight [FigNeutered, python]/notes.chart",
+      "size": 125159
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Wolf & Bear - Sight [FigNeutered, python]/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 05 - Tier 5/Wolf & Bear - Sight [FigNeutered, python]/song.opus",
+      "size": 3155224
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Eidola - A Bridge Of Iron And Blood [OCBG0LD]/album.png",
+      "size": 327750
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Eidola - A Bridge Of Iron And Blood [OCBG0LD]/background.jpg",
+      "size": 177097
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Eidola - A Bridge Of Iron And Blood [OCBG0LD]/notes.chart",
+      "size": 93281
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Eidola - A Bridge Of Iron And Blood [OCBG0LD]/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Eidola - A Bridge Of Iron And Blood [OCBG0LD]/song.opus",
+      "size": 2153424
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Red Museum - Exhibit A (A Past Life) [python]/album.png",
+      "size": 100675
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Red Museum - Exhibit A (A Past Life) [python]/background.png",
+      "size": 1856365
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Red Museum - Exhibit A (A Past Life) [python]/notes.chart",
+      "size": 92242
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Red Museum - Exhibit A (A Past Life) [python]/song.ini",
+      "size": 507
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Red Museum - Exhibit A (A Past Life) [python]/song.opus",
+      "size": 2310659
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sea in the Sky - Wait, Patiently [FigNeutered, python]/album.png",
+      "size": 454445
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sea in the Sky - Wait, Patiently [FigNeutered, python]/background.png",
+      "size": 2891920
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sea in the Sky - Wait, Patiently [FigNeutered, python]/notes.chart",
+      "size": 149599
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sea in the Sky - Wait, Patiently [FigNeutered, python]/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sea in the Sky - Wait, Patiently [FigNeutered, python]/song.opus",
+      "size": 6565739
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Space Weather - Dancing Demons [python]/album.png",
+      "size": 590371
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Space Weather - Dancing Demons [python]/background.png",
+      "size": 3612611
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Space Weather - Dancing Demons [python]/notes.chart",
+      "size": 91684
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Space Weather - Dancing Demons [python]/song.ini",
+      "size": 417
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Space Weather - Dancing Demons [python]/song.opus",
+      "size": 2238037
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Subtlety - Tongue and Teeth [FigNeutered, python]/album.png",
+      "size": 142969
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Subtlety - Tongue and Teeth [FigNeutered, python]/background.png",
+      "size": 653826
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Subtlety - Tongue and Teeth [FigNeutered, python]/notes.chart",
+      "size": 90417
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Subtlety - Tongue and Teeth [FigNeutered, python]/song.ini",
+      "size": 672
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Subtlety - Tongue and Teeth [FigNeutered, python]/song.opus",
+      "size": 2326287
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sufferer - Chair [FigNeutered, python]/album.jpg",
+      "size": 41387
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sufferer - Chair [FigNeutered, python]/background.jpg",
+      "size": 429214
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sufferer - Chair [FigNeutered, python]/notes.chart",
+      "size": 74052
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sufferer - Chair [FigNeutered, python]/song.ini",
+      "size": 668
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/Sufferer - Chair [FigNeutered, python]/song.opus",
+      "size": 2067994
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/The Fall of Troy - Inside _ Out [python]/album.png",
+      "size": 471111
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/The Fall of Troy - Inside _ Out [python]/background.png",
+      "size": 2939981
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/The Fall of Troy - Inside _ Out [python]/notes.chart",
+      "size": 123999
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/The Fall of Troy - Inside _ Out [python]/song.ini",
+      "size": 398
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] 06 - Tier 6/The Fall of Troy - Inside _ Out [python]/song.opus",
+      "size": 4282283
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/01 - Adventurer - Snow Day/album.png",
+      "size": 493326
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/01 - Adventurer - Snow Day/background.png",
+      "size": 2391487
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/01 - Adventurer - Snow Day/notes.chart",
+      "size": 97999
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/01 - Adventurer - Snow Day/song.ini",
+      "size": 513
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/01 - Adventurer - Snow Day/song.opus",
+      "size": 1751366
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/02 - Adventurer - Nova Chrono/album.png",
+      "size": 493326
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/02 - Adventurer - Nova Chrono/background.png",
+      "size": 2391487
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/02 - Adventurer - Nova Chrono/notes.chart",
+      "size": 116516
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/02 - Adventurer - Nova Chrono/song.ini",
+      "size": 530
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/02 - Adventurer - Nova Chrono/song.opus",
+      "size": 2350939
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/03 - AnimalJam - Seashell/album.png",
+      "size": 493326
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/03 - AnimalJam - Seashell/background.png",
+      "size": 2391487
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/03 - AnimalJam - Seashell/notes.chart",
+      "size": 92222
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/03 - AnimalJam - Seashell/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/03 - AnimalJam - Seashell/song.opus",
+      "size": 2188921
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/04 - AnimalJam - Vent/album.png",
+      "size": 493326
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/04 - AnimalJam - Vent/background.png",
+      "size": 2391487
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/04 - AnimalJam - Vent/notes.chart",
+      "size": 154835
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/04 - AnimalJam - Vent/song.ini",
+      "size": 525
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/04 - AnimalJam - Vent/song.opus",
+      "size": 3684433
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/05 - [advent-anima] (Full EP)/album.png",
+      "size": 450840
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/05 - [advent-anima] (Full EP)/background.png",
+      "size": 2391487
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/05 - [advent-anima] (Full EP)/notes.chart",
+      "size": 476643
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/05 - [advent-anima] (Full EP)/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a1 - [advent-anima]/05 - [advent-anima] (Full EP)/song.opus",
+      "size": 9444267
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/01 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore/album.png",
+      "size": 707488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/01 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/01 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore/notes.chart",
+      "size": 84238
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/01 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore/song.ini",
+      "size": 793
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/01 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore/song.opus",
+      "size": 2082365
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/02 - L.S.F.H.Q.P (feat. Isaac Wilson)/album.png",
+      "size": 707488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/02 - L.S.F.H.Q.P (feat. Isaac Wilson)/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/02 - L.S.F.H.Q.P (feat. Isaac Wilson)/notes.chart",
+      "size": 95700
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/02 - L.S.F.H.Q.P (feat. Isaac Wilson)/song.ini",
+      "size": 867
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/02 - L.S.F.H.Q.P (feat. Isaac Wilson)/song.opus",
+      "size": 2278971
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/03 - Sorry Excuse/album.png",
+      "size": 707488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/03 - Sorry Excuse/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/03 - Sorry Excuse/notes.chart",
+      "size": 79187
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/03 - Sorry Excuse/song.ini",
+      "size": 760
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/03 - Sorry Excuse/song.opus",
+      "size": 1830572
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/04 - Sarcoma/album.png",
+      "size": 707488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/04 - Sarcoma/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/04 - Sarcoma/notes.chart",
+      "size": 56794
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/04 - Sarcoma/song.ini",
+      "size": 750
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/04 - Sarcoma/song.opus",
+      "size": 1378221
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/05 - One Nightstand/album.png",
+      "size": 707488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/05 - One Nightstand/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/05 - One Nightstand/notes.chart",
+      "size": 182235
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/05 - One Nightstand/song.ini",
+      "size": 764
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/05 - One Nightstand/song.opus",
+      "size": 4063837
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/06 - Giraffulo/album.png",
+      "size": 811825
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/06 - Giraffulo/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/06 - Giraffulo/notes.chart",
+      "size": 124003
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/06 - Giraffulo/song.ini",
+      "size": 749
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/06 - Giraffulo/song.opus",
+      "size": 2354664
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/07 - You Didn_t Start a Fire in My Heart, You Started It in My House!/album.png",
+      "size": 707488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/07 - You Didn_t Start a Fire in My Heart, You Started It in My House!/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/07 - You Didn_t Start a Fire in My Heart, You Started It in My House!/notes.chart",
+      "size": 144552
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/07 - You Didn_t Start a Fire in My Heart, You Started It in My House!/song.ini",
+      "size": 865
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/07 - You Didn_t Start a Fire in My Heart, You Started It in My House!/song.opus",
+      "size": 3613529
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/08 - Wolves in Business Suits (Full Album)/album.png",
+      "size": 707488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/08 - Wolves in Business Suits (Full Album)/background.png",
+      "size": 3460615
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/08 - Wolves in Business Suits (Full Album)/notes.chart",
+      "size": 791257
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/08 - Wolves in Business Suits (Full Album)/song.ini",
+      "size": 936
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/08 - Wolves in Business Suits (Full Album)/song.opus",
+      "size": 26707815
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/09 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/09 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/09 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore (Instrumental)/notes.chart",
+      "size": 71184
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/09 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore (Instrumental)/song.ini",
+      "size": 823
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/09 - Pirates Don\u2019t Say \u201cYarr\u201d Anymore (Instrumental)/song.opus",
+      "size": 3312713
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/10 - L.S.F.H.Q.P (feat. Isaac Wilson) (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/10 - L.S.F.H.Q.P (feat. Isaac Wilson) (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/10 - L.S.F.H.Q.P (feat. Isaac Wilson) (Instrumental)/notes.chart",
+      "size": 83387
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/10 - L.S.F.H.Q.P (feat. Isaac Wilson) (Instrumental)/song.ini",
+      "size": 898
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/10 - L.S.F.H.Q.P (feat. Isaac Wilson) (Instrumental)/song.opus",
+      "size": 3669626
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/11 - Sorry Excuse (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/11 - Sorry Excuse (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/11 - Sorry Excuse (Instrumental)/notes.chart",
+      "size": 67382
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/11 - Sorry Excuse (Instrumental)/song.ini",
+      "size": 791
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/11 - Sorry Excuse (Instrumental)/song.opus",
+      "size": 2948674
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/12 - Sarcoma (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/12 - Sarcoma (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/12 - Sarcoma (Instrumental)/notes.chart",
+      "size": 47050
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/12 - Sarcoma (Instrumental)/song.ini",
+      "size": 781
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/12 - Sarcoma (Instrumental)/song.opus",
+      "size": 2192319
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/13 - One Nightstand (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/13 - One Nightstand (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/13 - One Nightstand (Instrumental)/notes.chart",
+      "size": 149465
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/13 - One Nightstand (Instrumental)/song.ini",
+      "size": 795
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/13 - One Nightstand (Instrumental)/song.opus",
+      "size": 6659472
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/14 - Giraffulo (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/14 - Giraffulo (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/14 - Giraffulo (Instrumental)/notes.chart",
+      "size": 108081
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/14 - Giraffulo (Instrumental)/song.ini",
+      "size": 780
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/14 - Giraffulo (Instrumental)/song.opus",
+      "size": 3816138
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/15 - You Didn_t Start a Fire in My Heart, You Started It in My House! (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/15 - You Didn_t Start a Fire in My Heart, You Started It in My House! (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/15 - You Didn_t Start a Fire in My Heart, You Started It in My House! (Instrumental)/notes.chart",
+      "size": 121117
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/15 - You Didn_t Start a Fire in My Heart, You Started It in My House! (Instrumental)/song.ini",
+      "size": 896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/15 - You Didn_t Start a Fire in My Heart, You Started It in My House! (Instrumental)/song.opus",
+      "size": 5786718
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/16 - Wolves in Business Suits (Full Album) (Instrumental)/album.png",
+      "size": 549208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/16 - Wolves in Business Suits (Full Album) (Instrumental)/background.png",
+      "size": 2256801
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/16 - Wolves in Business Suits (Full Album) (Instrumental)/notes.chart",
+      "size": 669289
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/16 - Wolves in Business Suits (Full Album) (Instrumental)/song.ini",
+      "size": 967
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a2 - Wolves in Business Suits/16 - Wolves in Business Suits (Full Album) (Instrumental)/song.opus",
+      "size": 28426380
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/01 - I Did Not Create the Rules/album.png",
+      "size": 335013
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/01 - I Did Not Create the Rules/background.png",
+      "size": 3735259
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/01 - I Did Not Create the Rules/notes.chart",
+      "size": 42004
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/01 - I Did Not Create the Rules/song.ini",
+      "size": 400
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/01 - I Did Not Create the Rules/song.opus",
+      "size": 1214967
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/02 - You_ll Get Nothing and Like It/album.png",
+      "size": 335013
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/02 - You_ll Get Nothing and Like It/background.png",
+      "size": 3735259
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/02 - You_ll Get Nothing and Like It/notes.chart",
+      "size": 39455
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/02 - You_ll Get Nothing and Like It/song.ini",
+      "size": 408
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/02 - You_ll Get Nothing and Like It/song.opus",
+      "size": 1098843
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/03 - Your Face as an Effigy/album.png",
+      "size": 335013
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/03 - Your Face as an Effigy/background.png",
+      "size": 3735259
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/03 - Your Face as an Effigy/notes.chart",
+      "size": 59183
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/03 - Your Face as an Effigy/song.ini",
+      "size": 392
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/03 - Your Face as an Effigy/song.opus",
+      "size": 1471292
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/04 - Exit Wounds/album.png",
+      "size": 335013
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/04 - Exit Wounds/background.png",
+      "size": 3735259
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/04 - Exit Wounds/notes.chart",
+      "size": 33170
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/04 - Exit Wounds/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/04 - Exit Wounds/song.opus",
+      "size": 907313
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/05 - Ephemera/album.png",
+      "size": 335013
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/05 - Ephemera/background.png",
+      "size": 3735259
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/05 - Ephemera/notes.chart",
+      "size": 59824
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/05 - Ephemera/song.ini",
+      "size": 364
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/05 - Ephemera/song.opus",
+      "size": 1874064
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/06 - Ephemera (Full EP)/album.png",
+      "size": 335013
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/06 - Ephemera (Full EP)/background.png",
+      "size": 3735259
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/06 - Ephemera (Full EP)/notes.chart",
+      "size": 240844
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/06 - Ephemera (Full EP)/song.ini",
+      "size": 1038
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a3 - Ephemera/06 - Ephemera (Full EP)/song.opus",
+      "size": 6534682
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/01 - Orange Time Machines Care/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/01 - Orange Time Machines Care/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/01 - Orange Time Machines Care/notes.chart",
+      "size": 101260
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/01 - Orange Time Machines Care/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/01 - Orange Time Machines Care/song.opus",
+      "size": 2865489
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/02 - Think Dirty Out Loud/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/02 - Think Dirty Out Loud/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/02 - Think Dirty Out Loud/notes.chart",
+      "size": 104997
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/02 - Think Dirty Out Loud/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/02 - Think Dirty Out Loud/song.opus",
+      "size": 2410750
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/03 - Vanity_s Fair/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/03 - Vanity_s Fair/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/03 - Vanity_s Fair/notes.chart",
+      "size": 120769
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/03 - Vanity_s Fair/song.ini",
+      "size": 415
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/03 - Vanity_s Fair/song.opus",
+      "size": 3243452
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/04 - Properties of Friction/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/04 - Properties of Friction/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/04 - Properties of Friction/notes.chart",
+      "size": 82441
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/04 - Properties of Friction/song.ini",
+      "size": 458
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/04 - Properties of Friction/song.opus",
+      "size": 3433234
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/05 - Truly Random Code/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/05 - Truly Random Code/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/05 - Truly Random Code/notes.chart",
+      "size": 109154
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/05 - Truly Random Code/song.ini",
+      "size": 437
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/05 - Truly Random Code/song.opus",
+      "size": 2940267
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/06 - Abbr/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/06 - Abbr/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/06 - Abbr/notes.chart",
+      "size": 16327
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/06 - Abbr/song.ini",
+      "size": 423
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/06 - Abbr/song.opus",
+      "size": 811680
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/07 - The Blowtorch Is Applied to the Sugar/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/07 - The Blowtorch Is Applied to the Sugar/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/07 - The Blowtorch Is Applied to the Sugar/notes.chart",
+      "size": 76095
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/07 - The Blowtorch Is Applied to the Sugar/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/07 - The Blowtorch Is Applied to the Sugar/song.opus",
+      "size": 2740932
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/08 - A Satire of a Satire of a Satire Is Tiring/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/08 - A Satire of a Satire of a Satire Is Tiring/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/08 - A Satire of a Satire of a Satire Is Tiring/notes.chart",
+      "size": 59915
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/08 - A Satire of a Satire of a Satire Is Tiring/song.ini",
+      "size": 483
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/08 - A Satire of a Satire of a Satire Is Tiring/song.opus",
+      "size": 2290478
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/09 - Seasame Street Is No Place for Me/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/09 - Seasame Street Is No Place for Me/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/09 - Seasame Street Is No Place for Me/notes.chart",
+      "size": 70163
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/09 - Seasame Street Is No Place for Me/song.ini",
+      "size": 478
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/09 - Seasame Street Is No Place for Me/song.opus",
+      "size": 2443872
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/10 - Tantrum (Far from the Tree, The Apple Grew Rotten)/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/10 - Tantrum (Far from the Tree, The Apple Grew Rotten)/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/10 - Tantrum (Far from the Tree, The Apple Grew Rotten)/notes.chart",
+      "size": 125414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/10 - Tantrum (Far from the Tree, The Apple Grew Rotten)/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/10 - Tantrum (Far from the Tree, The Apple Grew Rotten)/song.opus",
+      "size": 4363153
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/11 - What Didn_t Kill Me Just Got Stronger/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/11 - What Didn_t Kill Me Just Got Stronger/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/11 - What Didn_t Kill Me Just Got Stronger/notes.chart",
+      "size": 97315
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/11 - What Didn_t Kill Me Just Got Stronger/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/11 - What Didn_t Kill Me Just Got Stronger/song.opus",
+      "size": 2511924
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/12 - Conversation Piece (Full Album)/album.png",
+      "size": 543896
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/12 - Conversation Piece (Full Album)/background.png",
+      "size": 3083414
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/12 - Conversation Piece (Full Album)/notes.chart",
+      "size": 1008721
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/12 - Conversation Piece (Full Album)/song.ini",
+      "size": 611
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a4 - Conversation Piece/12 - Conversation Piece (Full Album)/song.opus",
+      "size": 29272991
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/01 - MIDI GRIDI/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/01 - MIDI GRIDI/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/01 - MIDI GRIDI/notes.chart",
+      "size": 120122
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/01 - MIDI GRIDI/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/01 - MIDI GRIDI/song.opus",
+      "size": 2118932
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/02 - i LUFS u/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/02 - i LUFS u/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/02 - i LUFS u/notes.chart",
+      "size": 131837
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/02 - i LUFS u/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/02 - i LUFS u/song.opus",
+      "size": 2185026
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/03 - Watts Up/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/03 - Watts Up/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/03 - Watts Up/notes.chart",
+      "size": 87332
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/03 - Watts Up/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/03 - Watts Up/song.opus",
+      "size": 1807634
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/04 - FrEQed Out/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/04 - FrEQed Out/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/04 - FrEQed Out/notes.chart",
+      "size": 83444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/04 - FrEQed Out/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/04 - FrEQed Out/song.opus",
+      "size": 1712560
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/05 - Outta My WAV/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/05 - Outta My WAV/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/05 - Outta My WAV/notes.chart",
+      "size": 103925
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/05 - Outta My WAV/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/05 - Outta My WAV/song.opus",
+      "size": 1763604
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/06 - Audios, Amigos/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/06 - Audios, Amigos/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/06 - Audios, Amigos/notes.chart",
+      "size": 110390
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/06 - Audios, Amigos/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/06 - Audios, Amigos/song.opus",
+      "size": 2138404
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/07 - MegaHurtz/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/07 - MegaHurtz/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/07 - MegaHurtz/notes.chart",
+      "size": 77243
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/07 - MegaHurtz/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/07 - MegaHurtz/song.opus",
+      "size": 2271138
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/08 - Just The TRS (feat. Jakub Zytecki)/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/08 - Just The TRS (feat. Jakub Zytecki)/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/08 - Just The TRS (feat. Jakub Zytecki)/notes.chart",
+      "size": 106803
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/08 - Just The TRS (feat. Jakub Zytecki)/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/08 - Just The TRS (feat. Jakub Zytecki)/song.opus",
+      "size": 2411607
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/09 - Osquirreloscope/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/09 - Osquirreloscope/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/09 - Osquirreloscope/notes.chart",
+      "size": 98764
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/09 - Osquirreloscope/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/09 - Osquirreloscope/song.opus",
+      "size": 2307943
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/10 - Basic Bit/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/10 - Basic Bit/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/10 - Basic Bit/notes.chart",
+      "size": 70932
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/10 - Basic Bit/song.ini",
+      "size": 576
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/10 - Basic Bit/song.opus",
+      "size": 1565392
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/11 - Final Boss r37/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/11 - Final Boss r37/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/11 - Final Boss r37/notes.chart",
+      "size": 27773
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/11 - Final Boss r37/song.ini",
+      "size": 634
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/11 - Final Boss r37/song.opus",
+      "size": 857185
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/12 - Ox Send (Full Album)/album.jpg",
+      "size": 88107
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/12 - Ox Send (Full Album)/background.png",
+      "size": 4045449
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/12 - Ox Send (Full Album)/notes.chart",
+      "size": 1059753
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/12 - Ox Send (Full Album)/song.ini",
+      "size": 721
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a5 - Ox Send/12 - Ox Send (Full Album)/song.opus",
+      "size": 20889208
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/01 - Anhedonia/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/01 - Anhedonia/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/01 - Anhedonia/notes.chart",
+      "size": 92484
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/01 - Anhedonia/song.ini",
+      "size": 368
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/01 - Anhedonia/song.opus",
+      "size": 2408079
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/02 - Bellwether/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/02 - Bellwether/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/02 - Bellwether/notes.chart",
+      "size": 115463
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/02 - Bellwether/song.ini",
+      "size": 370
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/02 - Bellwether/song.opus",
+      "size": 2856754
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/03 - Maximizer/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/03 - Maximizer/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/03 - Maximizer/notes.chart",
+      "size": 102506
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/03 - Maximizer/song.ini",
+      "size": 368
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/03 - Maximizer/song.opus",
+      "size": 2917121
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/04 - Damage Divison/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/04 - Damage Divison/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/04 - Damage Divison/notes.chart",
+      "size": 103596
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/04 - Damage Divison/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/04 - Damage Divison/song.opus",
+      "size": 2474582
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/05 - Anecdoche/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/05 - Anecdoche/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/05 - Anecdoche/notes.chart",
+      "size": 99946
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/05 - Anecdoche/song.ini",
+      "size": 364
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/05 - Anecdoche/song.opus",
+      "size": 2593098
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/06 - Cold & Unmanageable/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/06 - Cold & Unmanageable/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/06 - Cold & Unmanageable/notes.chart",
+      "size": 129587
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/06 - Cold & Unmanageable/song.ini",
+      "size": 562
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/06 - Cold & Unmanageable/song.opus",
+      "size": 3749439
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/07 - Catalyst/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/07 - Catalyst/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/07 - Catalyst/notes.chart",
+      "size": 108274
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/07 - Catalyst/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/07 - Catalyst/song.opus",
+      "size": 2663106
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/08 - Euphoria/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/08 - Euphoria/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/08 - Euphoria/notes.chart",
+      "size": 94097
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/08 - Euphoria/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/08 - Euphoria/song.opus",
+      "size": 2338659
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/09 - Pacesetter/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/09 - Pacesetter/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/09 - Pacesetter/notes.chart",
+      "size": 100573
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/09 - Pacesetter/song.ini",
+      "size": 544
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/09 - Pacesetter/song.opus",
+      "size": 2178977
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/10 - Metempsychosis/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/10 - Metempsychosis/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/10 - Metempsychosis/notes.chart",
+      "size": 144210
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/10 - Metempsychosis/song.ini",
+      "size": 506
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/10 - Metempsychosis/song.opus",
+      "size": 3901877
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/11 - Stolas (Full Album)/album.png",
+      "size": 430442
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/11 - Stolas (Full Album)/background.png",
+      "size": 1588444
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/11 - Stolas (Full Album)/notes.chart",
+      "size": 1156097
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/11 - Stolas (Full Album)/song.ini",
+      "size": 689
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a6 - Stolas/11 - Stolas (Full Album)/song.opus",
+      "size": 43349930
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/01 - Pharmakokinetic/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/01 - Pharmakokinetic/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/01 - Pharmakokinetic/notes.chart",
+      "size": 128116
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/01 - Pharmakokinetic/song.ini",
+      "size": 440
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/01 - Pharmakokinetic/song.opus",
+      "size": 2590685
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/02 - Thorough. Modern/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/02 - Thorough. Modern/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/02 - Thorough. Modern/notes.chart",
+      "size": 112561
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/02 - Thorough. Modern/song.ini",
+      "size": 618
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/02 - Thorough. Modern/song.opus",
+      "size": 1992391
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/03 - Through the Thicket... Across Endless Mountains/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/03 - Through the Thicket... Across Endless Mountains/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/03 - Through the Thicket... Across Endless Mountains/notes.chart",
+      "size": 156240
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/03 - Through the Thicket... Across Endless Mountains/song.ini",
+      "size": 678
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/03 - Through the Thicket... Across Endless Mountains/song.opus",
+      "size": 3213787
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/04 - You Make Wonderful Pictures/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/04 - You Make Wonderful Pictures/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/04 - You Make Wonderful Pictures/notes.chart",
+      "size": 130333
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/04 - You Make Wonderful Pictures/song.ini",
+      "size": 464
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/04 - You Make Wonderful Pictures/song.opus",
+      "size": 2682693
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/05 - Apis Bull/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/05 - Apis Bull/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/05 - Apis Bull/notes.chart",
+      "size": 108092
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/05 - Apis Bull/song.ini",
+      "size": 624
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/05 - Apis Bull/song.opus",
+      "size": 2609028
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/06 - M.U.M.B/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/06 - M.U.M.B/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/06 - M.U.M.B/notes.chart",
+      "size": 16051
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/06 - M.U.M.B/song.ini",
+      "size": 395
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/06 - M.U.M.B/song.opus",
+      "size": 1747454
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/07 - The Great Explainer/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/07 - The Great Explainer/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/07 - The Great Explainer/notes.chart",
+      "size": 92865
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/07 - The Great Explainer/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/07 - The Great Explainer/song.opus",
+      "size": 1973524
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/08 - Kaspar Hauser Could See the Stars in the Daytime/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/08 - Kaspar Hauser Could See the Stars in the Daytime/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/08 - Kaspar Hauser Could See the Stars in the Daytime/notes.chart",
+      "size": 116054
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/08 - Kaspar Hauser Could See the Stars in the Daytime/song.ini",
+      "size": 693
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/08 - Kaspar Hauser Could See the Stars in the Daytime/song.opus",
+      "size": 2760687
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/09 - Gypsy Among the Pines/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/09 - Gypsy Among the Pines/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/09 - Gypsy Among the Pines/notes.chart",
+      "size": 22018
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/09 - Gypsy Among the Pines/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/09 - Gypsy Among the Pines/song.opus",
+      "size": 2277998
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/10 - Whores of Babel/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/10 - Whores of Babel/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/10 - Whores of Babel/notes.chart",
+      "size": 101762
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/10 - Whores of Babel/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/10 - Whores of Babel/song.opus",
+      "size": 2175299
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/11 - Arcology/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/11 - Arcology/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/11 - Arcology/notes.chart",
+      "size": 134480
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/11 - Arcology/song.ini",
+      "size": 872
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/11 - Arcology/song.opus",
+      "size": 3347803
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/12 - Tree of Tongues (Full Album)/album.png",
+      "size": 275386
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/12 - Tree of Tongues (Full Album)/background.png",
+      "size": 887517
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/12 - Tree of Tongues (Full Album)/notes.chart",
+      "size": 1173211
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/12 - Tree of Tongues (Full Album)/song.ini",
+      "size": 800
+    },
+    {
+      "path": "Post-Hardcore Hero/[PHCH] a7 - Tree of Tongues/12 - Tree of Tongues (Full Album)/song.opus",
+      "size": 27261876
     }
-  ]
+  ],
+  "extracted_size": 842546727,
+  "file_count": 580,
+  "chart_count": 116,
+  "release_date": "2025-08-01"
 }

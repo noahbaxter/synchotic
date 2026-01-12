@@ -1,20 +1,4781 @@
 {
   "name": "Zero Gravity: Space Battle",
-  "folder_id": "static-zero-gravity-1",
+  "folder_id": "static-zero-gravity-space-battle",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 236,
-  "total_size": 3136607204,
-  "file_count": 1191,
+  "downloads": [
+    {
+      "url": "https://customsongscentral.b-cdn.net/Zero%20Gravity%20-%20Space%20Battle.rar?ref=customsongscentral.com",
+      "name": "Zero Gravity - Space Battle.rar",
+      "size": 3136607204,
+      "md5": "881b668bc729454438733beb8332483f"
+    }
+  ],
+  "download_size": 3136607204,
   "files": [
     {
-      "id": "cdn-csc-zero-gravity-1",
-      "path": "Zero Gravity: Space Battle/Zero Gravity: Space Battle.rar",
-      "name": "Zero Gravity: Space Battle.rar",
-      "size": 3136607204,
-      "md5": "881b668bc729454438733beb8332483f",
-      "url": "https://customsongscentral.b-cdn.net/Zero%20Gravity%20-%20Space%20Battle.rar?ref=customsongscentral.com"
+      "path": "Zero Gravity: Space Battle/ZGSB - Highways/ZGSB01.png",
+      "size": 1090369
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Highways/ZGSB02.png",
+      "size": 847347
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Highways/ZGSB03.png",
+      "size": 1045822
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Highways/ZGSB04.png",
+      "size": 1208897
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Highways/ZGSB05.png",
+      "size": 1059713
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Highways/ZGSB06.png",
+      "size": 1060118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Highways/ZGSB07.png",
+      "size": 1108415
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/1. The Toilet Bowl Cleaners - Zero-Gravity Poop (Astronaut Poop Song)/album.png",
+      "size": 80705
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/1. The Toilet Bowl Cleaners - Zero-Gravity Poop (Astronaut Poop Song)/background.png",
+      "size": 778032
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/1. The Toilet Bowl Cleaners - Zero-Gravity Poop (Astronaut Poop Song)/guitar.ogg",
+      "size": 1941845
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/1. The Toilet Bowl Cleaners - Zero-Gravity Poop (Astronaut Poop Song)/notes.mid",
+      "size": 4235
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/1. The Toilet Bowl Cleaners - Zero-Gravity Poop (Astronaut Poop Song)/song.ini",
+      "size": 740
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/2. MC Chris - I'm Han Solo/album.png",
+      "size": 52286
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/2. MC Chris - I'm Han Solo/background.png",
+      "size": 1333956
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/2. MC Chris - I'm Han Solo/notes.chart",
+      "size": 36198
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/2. MC Chris - I'm Han Solo/song.ini",
+      "size": 417
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/2. MC Chris - I'm Han Solo/song.ogg",
+      "size": 4320477
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/3. Ella Fitzgerald - Two Little Men in a Flying Saucer/album.png",
+      "size": 328832
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/3. Ella Fitzgerald - Two Little Men in a Flying Saucer/background.jpg",
+      "size": 396956
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/3. Ella Fitzgerald - Two Little Men in a Flying Saucer/notes.chart",
+      "size": 35973
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/3. Ella Fitzgerald - Two Little Men in a Flying Saucer/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/3. Ella Fitzgerald - Two Little Men in a Flying Saucer/song.ogg",
+      "size": 4747941
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/4. Klaatu - Anus of Uranus/album.png",
+      "size": 527574
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/4. Klaatu - Anus of Uranus/background.jpg",
+      "size": 945821
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/4. Klaatu - Anus of Uranus/notes.chart",
+      "size": 29278
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/4. Klaatu - Anus of Uranus/song.ini",
+      "size": 591
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/4. Klaatu - Anus of Uranus/song.ogg",
+      "size": 7025289
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/5. Eiffel 65 - Blue (Da Ba Dee)/album.png",
+      "size": 409145
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/5. Eiffel 65 - Blue (Da Ba Dee)/background.jpg",
+      "size": 137219
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/5. Eiffel 65 - Blue (Da Ba Dee)/notes.chart",
+      "size": 38386
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/5. Eiffel 65 - Blue (Da Ba Dee)/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/5. Eiffel 65 - Blue (Da Ba Dee)/song.ogg",
+      "size": 6975042
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/5. Eiffel 65 - Blue (Da Ba Dee)/video.webm",
+      "size": 16043183
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/6. Clown Core - The Area 51 Snack Bar Sucks/album.png",
+      "size": 139729
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/6. Clown Core - The Area 51 Snack Bar Sucks/background.jpg",
+      "size": 322761
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/6. Clown Core - The Area 51 Snack Bar Sucks/notes.chart",
+      "size": 4360
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/6. Clown Core - The Area 51 Snack Bar Sucks/song.ini",
+      "size": 476
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 00 - Shitposts/6. Clown Core - The Area 51 Snack Bar Sucks/song.ogg",
+      "size": 1640278
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/1. Blink-182 - Aliens Exist/album.png",
+      "size": 58434
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/1. Blink-182 - Aliens Exist/background.png",
+      "size": 654544
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/1. Blink-182 - Aliens Exist/guitar.ogg",
+      "size": 5968371
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/1. Blink-182 - Aliens Exist/notes.mid",
+      "size": 15080
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/1. Blink-182 - Aliens Exist/song.ini",
+      "size": 718
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/10. Satyr - Andromeda/album.jpg",
+      "size": 206279
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/10. Satyr - Andromeda/background.jpg",
+      "size": 212914
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/10. Satyr - Andromeda/notes.chart",
+      "size": 102630
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/10. Satyr - Andromeda/song.ini",
+      "size": 475
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/10. Satyr - Andromeda/song.ogg",
+      "size": 3984574
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/11. Blood Incantation - Starspawn/album.png",
+      "size": 576262
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/11. Blood Incantation - Starspawn/background.jpg",
+      "size": 231277
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/11. Blood Incantation - Starspawn/notes.chart",
+      "size": 40336
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/11. Blood Incantation - Starspawn/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/11. Blood Incantation - Starspawn/song.ogg",
+      "size": 8204814
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/12. Kotori and Synthion - Orbit/album.jpg",
+      "size": 42201
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/12. Kotori and Synthion - Orbit/background.jpg",
+      "size": 1300679
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/12. Kotori and Synthion - Orbit/notes.chart",
+      "size": 40413
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/12. Kotori and Synthion - Orbit/song.ini",
+      "size": 399
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/12. Kotori and Synthion - Orbit/song.ogg",
+      "size": 9587964
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/2. Misfits - I Turned Into a Martian/album.png",
+      "size": 439963
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/2. Misfits - I Turned Into a Martian/background.jpg",
+      "size": 329985
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/2. Misfits - I Turned Into a Martian/notes.chart",
+      "size": 33517
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/2. Misfits - I Turned Into a Martian/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/2. Misfits - I Turned Into a Martian/song.ogg",
+      "size": 2656900
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/3. Vangelis - Blade Runner Blues/album.jpg",
+      "size": 58278
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/3. Vangelis - Blade Runner Blues/background.jpg",
+      "size": 203056
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/3. Vangelis - Blade Runner Blues/notes.chart",
+      "size": 26884
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/3. Vangelis - Blade Runner Blues/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/3. Vangelis - Blade Runner Blues/song.ogg",
+      "size": 15291838
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/4. Hum - Stars/album.png",
+      "size": 106541
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/4. Hum - Stars/background.jpg",
+      "size": 231271
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/4. Hum - Stars/guitar.ogg",
+      "size": 8194822
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/4. Hum - Stars/notes.mid",
+      "size": 25635
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/4. Hum - Stars/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/5. Black Veil Brides - Knives and Pens/album.png",
+      "size": 429579
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/5. Black Veil Brides - Knives and Pens/background.png",
+      "size": 2576590
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/5. Black Veil Brides - Knives and Pens/notes.chart",
+      "size": 36462
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/5. Black Veil Brides - Knives and Pens/song.ini",
+      "size": 508
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/5. Black Veil Brides - Knives and Pens/song.ogg",
+      "size": 8193541
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/6. Culprate and Bloom - Aurora/album.png",
+      "size": 425596
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/6. Culprate and Bloom - Aurora/background.jpg",
+      "size": 201055
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/6. Culprate and Bloom - Aurora/notes.chart",
+      "size": 35769
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/6. Culprate and Bloom - Aurora/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/6. Culprate and Bloom - Aurora/song.ogg",
+      "size": 8099578
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/7. Auras - Solar Pulse/album.png",
+      "size": 382776
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/7. Auras - Solar Pulse/background.jpg",
+      "size": 186351
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/7. Auras - Solar Pulse/notes.chart",
+      "size": 49635
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/7. Auras - Solar Pulse/song.ini",
+      "size": 644
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/7. Auras - Solar Pulse/song.ogg",
+      "size": 21677654
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/8. BLANK BANSHEE - Meteor Blade/album.jpg",
+      "size": 175026
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/8. BLANK BANSHEE - Meteor Blade/background.jpg",
+      "size": 285001
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/8. BLANK BANSHEE - Meteor Blade/notes.chart",
+      "size": 16848
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/8. BLANK BANSHEE - Meteor Blade/song.ini",
+      "size": 619
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/8. BLANK BANSHEE - Meteor Blade/song.ogg",
+      "size": 5097340
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/9. Sithu Aye - Lost in the (Space) Sauce + Primary Ignition/album.png",
+      "size": 370384
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/9. Sithu Aye - Lost in the (Space) Sauce + Primary Ignition/background.jpg",
+      "size": 220416
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/9. Sithu Aye - Lost in the (Space) Sauce + Primary Ignition/notes.chart",
+      "size": 34167
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/9. Sithu Aye - Lost in the (Space) Sauce + Primary Ignition/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 01 - Take Off/9. Sithu Aye - Lost in the (Space) Sauce + Primary Ignition/song.ogg",
+      "size": 6578954
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/1. Andreas Molnar - BEER/album.jpg",
+      "size": 117134
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/1. Andreas Molnar - BEER/background.png",
+      "size": 204622
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/1. Andreas Molnar - BEER/notes.chart",
+      "size": 6842
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/1. Andreas Molnar - BEER/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/1. Andreas Molnar - BEER/song.ogg",
+      "size": 1360765
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/10. Hiromi - Desert on the Moon/album.jpg",
+      "size": 34652
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/10. Hiromi - Desert on the Moon/background.jpg",
+      "size": 681246
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/10. Hiromi - Desert on the Moon/notes.chart",
+      "size": 91317
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/10. Hiromi - Desert on the Moon/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/10. Hiromi - Desert on the Moon/song.ogg",
+      "size": 13859002
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/11. StarSystems - Space Pirates/album.png",
+      "size": 528880
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/11. StarSystems - Space Pirates/background.png",
+      "size": 813435
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/11. StarSystems - Space Pirates/notes.chart",
+      "size": 35048
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/11. StarSystems - Space Pirates/song.ini",
+      "size": 414
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/11. StarSystems - Space Pirates/song.mp3",
+      "size": 10380661
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/12. Colate - Starbow/album.png",
+      "size": 459203
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/12. Colate - Starbow/background.jpg",
+      "size": 385353
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/12. Colate - Starbow/notes.chart",
+      "size": 80838
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/12. Colate - Starbow/song.ini",
+      "size": 561
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/12. Colate - Starbow/song.ogg",
+      "size": 10254906
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/2. Virtual Self - Key/album.png",
+      "size": 340531
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/2. Virtual Self - Key/background.jpg",
+      "size": 150678
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/2. Virtual Self - Key/notes.chart",
+      "size": 12528
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/2. Virtual Self - Key/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/2. Virtual Self - Key/song.ogg",
+      "size": 12063427
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/3. Parliament - P-Funk (Wants to Get Funked Up)/album.jpg",
+      "size": 147381
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/3. Parliament - P-Funk (Wants to Get Funked Up)/background.jpg",
+      "size": 750391
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/3. Parliament - P-Funk (Wants to Get Funked Up)/notes.chart",
+      "size": 88305
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/3. Parliament - P-Funk (Wants to Get Funked Up)/song.ini",
+      "size": 492
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/3. Parliament - P-Funk (Wants to Get Funked Up)/song.ogg",
+      "size": 16366688
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/4. Moon Hooch - They're Already Here/album.png",
+      "size": 210316
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/4. Moon Hooch - They're Already Here/background.jpg",
+      "size": 210423
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/4. Moon Hooch - They're Already Here/notes.chart",
+      "size": 24722
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/4. Moon Hooch - They're Already Here/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/4. Moon Hooch - They're Already Here/song.ogg",
+      "size": 5196679
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/5. Mastodon - Rufus Lives/album.png",
+      "size": 21455
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/5. Mastodon - Rufus Lives/background.jpg",
+      "size": 166136
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/5. Mastodon - Rufus Lives/guitar.ogg",
+      "size": 4712409
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/5. Mastodon - Rufus Lives/notes.mid",
+      "size": 23524
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/5. Mastodon - Rufus Lives/song.ini",
+      "size": 767
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/6. Simon Viklund - Deep Space Monstrosity/album.png",
+      "size": 350332
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/6. Simon Viklund - Deep Space Monstrosity/background.jpg",
+      "size": 343567
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/6. Simon Viklund - Deep Space Monstrosity/notes.chart",
+      "size": 27231
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/6. Simon Viklund - Deep Space Monstrosity/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/6. Simon Viklund - Deep Space Monstrosity/song.ogg",
+      "size": 7326901
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/7. Wolfheart - Zero Gravity/album.png",
+      "size": 466989
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/7. Wolfheart - Zero Gravity/background.jpg",
+      "size": 277447
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/7. Wolfheart - Zero Gravity/notes.chart",
+      "size": 50159
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/7. Wolfheart - Zero Gravity/song.ini",
+      "size": 618
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/7. Wolfheart - Zero Gravity/song.ogg",
+      "size": 10303721
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/8. Trivium - Beneath the Sun/album.png",
+      "size": 106434
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/8. Trivium - Beneath the Sun/background.jpg",
+      "size": 66796
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/8. Trivium - Beneath the Sun/guitar.ogg",
+      "size": 8621006
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/8. Trivium - Beneath the Sun/notes.chart",
+      "size": 24730
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/8. Trivium - Beneath the Sun/song.ini",
+      "size": 474
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/9. Alien Ant Farm - Courage/album.jpg",
+      "size": 63392
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/9. Alien Ant Farm - Courage/background.jpg",
+      "size": 234079
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/9. Alien Ant Farm - Courage/notes.chart",
+      "size": 36914
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/9. Alien Ant Farm - Courage/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 02 - Threat Detected/9. Alien Ant Farm - Courage/song.ogg",
+      "size": 7303942
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/1. Josh Mancell - Oxide Station/album.png",
+      "size": 118747
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/1. Josh Mancell - Oxide Station/background.jpg",
+      "size": 509507
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/1. Josh Mancell - Oxide Station/notes.chart",
+      "size": 9731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/1. Josh Mancell - Oxide Station/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/1. Josh Mancell - Oxide Station/song.ogg",
+      "size": 2192699
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/10. Steve Vai - Dark Matter/album.jpg",
+      "size": 146293
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/10. Steve Vai - Dark Matter/background.jpg",
+      "size": 625556
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/10. Steve Vai - Dark Matter/notes.chart",
+      "size": 33208
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/10. Steve Vai - Dark Matter/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/10. Steve Vai - Dark Matter/song.ogg",
+      "size": 8330583
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/11. HIYA! - Kiss in the Dark/album.png",
+      "size": 47515
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/11. HIYA! - Kiss in the Dark/background.png",
+      "size": 36976
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/11. HIYA! - Kiss in the Dark/notes.chart",
+      "size": 11155
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/11. HIYA! - Kiss in the Dark/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/11. HIYA! - Kiss in the Dark/song.ogg",
+      "size": 4080775
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/12. Mors Principium Est - Lost in a Starless Aeon/album.png",
+      "size": 40065
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/12. Mors Principium Est - Lost in a Starless Aeon/background.jpg",
+      "size": 211312
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/12. Mors Principium Est - Lost in a Starless Aeon/guitar.ogg",
+      "size": 7778856
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/12. Mors Principium Est - Lost in a Starless Aeon/notes.mid",
+      "size": 40664
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/12. Mors Principium Est - Lost in a Starless Aeon/song.ini",
+      "size": 724
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/2. Real Sickies - Out of Space/album.PNG",
+      "size": 608452
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/2. Real Sickies - Out of Space/background.png",
+      "size": 826464
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/2. Real Sickies - Out of Space/guitar.ogg",
+      "size": 2893530
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/2. Real Sickies - Out of Space/notes.mid",
+      "size": 13381
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/2. Real Sickies - Out of Space/song.ini",
+      "size": 1044
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/3. Kelly Bailey - Hard Technology Rock/album.jpg",
+      "size": 89795
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/3. Kelly Bailey - Hard Technology Rock/background.jpg",
+      "size": 277411
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/3. Kelly Bailey - Hard Technology Rock/notes.chart",
+      "size": 7943
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/3. Kelly Bailey - Hard Technology Rock/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/3. Kelly Bailey - Hard Technology Rock/song.ogg",
+      "size": 4398484
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/4. Delta Heavy - Gravity/album.png",
+      "size": 711834
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/4. Delta Heavy - Gravity/background.png",
+      "size": 275181
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/4. Delta Heavy - Gravity/notes.chart",
+      "size": 38734
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/4. Delta Heavy - Gravity/song.ini",
+      "size": 624
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/4. Delta Heavy - Gravity/song.ogg",
+      "size": 4702790
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/5. Royal Coda - All in Question/album.png",
+      "size": 407582
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/5. Royal Coda - All in Question/background.png",
+      "size": 1136503
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/5. Royal Coda - All in Question/notes.chart",
+      "size": 45230
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/5. Royal Coda - All in Question/song.ini",
+      "size": 394
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/5. Royal Coda - All in Question/song.mp3",
+      "size": 8924131
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/6. Battle Beast - Machine Revolution/album.png",
+      "size": 476526
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/6. Battle Beast - Machine Revolution/background.jpg",
+      "size": 165602
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/6. Battle Beast - Machine Revolution/notes.chart",
+      "size": 31594
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/6. Battle Beast - Machine Revolution/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/6. Battle Beast - Machine Revolution/song.ogg",
+      "size": 7859727
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/7. Knower - Lose My Mind/album.png",
+      "size": 319763
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/7. Knower - Lose My Mind/background.jpg",
+      "size": 588126
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/7. Knower - Lose My Mind/notes.chart",
+      "size": 47408
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/7. Knower - Lose My Mind/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/7. Knower - Lose My Mind/song.ogg",
+      "size": 6234397
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/8. In Flames - Moonshield (The Jester's Dance)/album.png",
+      "size": 627960
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/8. In Flames - Moonshield (The Jester's Dance)/background.jpg",
+      "size": 630389
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/8. In Flames - Moonshield (The Jester's Dance)/guitar.ogg",
+      "size": 19530574
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/8. In Flames - Moonshield (The Jester's Dance)/notes.chart",
+      "size": 46066
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/8. In Flames - Moonshield (The Jester's Dance)/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/9. Jeroen Tel - Tintin on the Moon/album.png",
+      "size": 506461
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/9. Jeroen Tel - Tintin on the Moon/background.jpg",
+      "size": 770353
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/9. Jeroen Tel - Tintin on the Moon/notes.chart",
+      "size": 51980
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/9. Jeroen Tel - Tintin on the Moon/song.ini",
+      "size": 750
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 03 - Alien Technology/9. Jeroen Tel - Tintin on the Moon/song.ogg",
+      "size": 4837867
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/1. 30 Seconds to Mars - Battle of One/album.png",
+      "size": 369964
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/1. 30 Seconds to Mars - Battle of One/background.jpg",
+      "size": 294314
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/1. 30 Seconds to Mars - Battle of One/notes.chart",
+      "size": 25629
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/1. 30 Seconds to Mars - Battle of One/song.ini",
+      "size": 556
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/1. 30 Seconds to Mars - Battle of One/song.ogg",
+      "size": 4952896
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/10. Howe, Chambers, Wooten - Proto Cosmos/album.png",
+      "size": 615293
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/10. Howe, Chambers, Wooten - Proto Cosmos/background.jpg",
+      "size": 246109
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/10. Howe, Chambers, Wooten - Proto Cosmos/notes.chart",
+      "size": 41263
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/10. Howe, Chambers, Wooten - Proto Cosmos/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/10. Howe, Chambers, Wooten - Proto Cosmos/song.ogg",
+      "size": 8550118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/11. LOVEBITES - The Apocalypse (Awakened Version)/album.png",
+      "size": 581173
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/11. LOVEBITES - The Apocalypse (Awakened Version)/background.jpg",
+      "size": 494999
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/11. LOVEBITES - The Apocalypse (Awakened Version)/notes.chart",
+      "size": 49069
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/11. LOVEBITES - The Apocalypse (Awakened Version)/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/11. LOVEBITES - The Apocalypse (Awakened Version)/song.ogg",
+      "size": 9629613
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/2. Poppin'Party - STAR BEAT! ~hoshi no kodou~/album.png",
+      "size": 723983
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/2. Poppin'Party - STAR BEAT! ~hoshi no kodou~/background.jpg",
+      "size": 470179
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/2. Poppin'Party - STAR BEAT! ~hoshi no kodou~/guitar.ogg",
+      "size": 11066292
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/2. Poppin'Party - STAR BEAT! ~hoshi no kodou~/notes.mid",
+      "size": 34214
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/2. Poppin'Party - STAR BEAT! ~hoshi no kodou~/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/3. Voivod - Fix My Heart/album.png",
+      "size": 342538
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/3. Voivod - Fix My Heart/background.png",
+      "size": 816145
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/3. Voivod - Fix My Heart/guitar.ogg",
+      "size": 9177949
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/3. Voivod - Fix My Heart/notes.mid",
+      "size": 32311
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/3. Voivod - Fix My Heart/song.ini",
+      "size": 398
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/4. Jeff Wayne - Forever Autumn Thunder Child/album.png",
+      "size": 556221
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/4. Jeff Wayne - Forever Autumn Thunder Child/background.jpg",
+      "size": 223268
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/4. Jeff Wayne - Forever Autumn Thunder Child/guitar.ogg",
+      "size": 26415127
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/4. Jeff Wayne - Forever Autumn Thunder Child/notes.mid",
+      "size": 44038
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/4. Jeff Wayne - Forever Autumn Thunder Child/song.ini",
+      "size": 1307
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/5. Wide Eyes - Traversing the Oort Cloud/album.jpg",
+      "size": 178001
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/5. Wide Eyes - Traversing the Oort Cloud/background.png",
+      "size": 2932863
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/5. Wide Eyes - Traversing the Oort Cloud/notes.chart",
+      "size": 40300
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/5. Wide Eyes - Traversing the Oort Cloud/song.ini",
+      "size": 604
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/5. Wide Eyes - Traversing the Oort Cloud/song.ogg",
+      "size": 9398114
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/6. Michiel van den Bos - UNATCO/album.jpg",
+      "size": 79476
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/6. Michiel van den Bos - UNATCO/background.jpg",
+      "size": 309470
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/6. Michiel van den Bos - UNATCO/notes.chart",
+      "size": 56725
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/6. Michiel van den Bos - UNATCO/song.ini",
+      "size": 475
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/6. Michiel van den Bos - UNATCO/song.ogg",
+      "size": 7089859
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/7. Firewind - Space Cowboy/album.png",
+      "size": 446148
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/7. Firewind - Space Cowboy/background.jpg",
+      "size": 207053
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/7. Firewind - Space Cowboy/guitar.ogg",
+      "size": 4763056
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/7. Firewind - Space Cowboy/notes.mid",
+      "size": 20883
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/7. Firewind - Space Cowboy/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/8. I Am Abomination - Deicide (feat. Ben Duerr)/album.png",
+      "size": 616444
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/8. I Am Abomination - Deicide (feat. Ben Duerr)/background.png",
+      "size": 2103660
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/8. I Am Abomination - Deicide (feat. Ben Duerr)/notes.chart",
+      "size": 33975
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/8. I Am Abomination - Deicide (feat. Ben Duerr)/song.ini",
+      "size": 601
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/8. I Am Abomination - Deicide (feat. Ben Duerr)/song.ogg",
+      "size": 7781582
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/9. Skaven - Cannon Angel/album.png",
+      "size": 21954
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/9. Skaven - Cannon Angel/background.jpg",
+      "size": 327311
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/9. Skaven - Cannon Angel/notes.chart",
+      "size": 28077
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/9. Skaven - Cannon Angel/song.ini",
+      "size": 694
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 04 - Brace for Impact/9. Skaven - Cannon Angel/song.ogg",
+      "size": 10913470
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/1. Misfits - Astro Zombies/album.png",
+      "size": 459452
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/1. Misfits - Astro Zombies/background.png",
+      "size": 1251411
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/1. Misfits - Astro Zombies/guitar.ogg",
+      "size": 3719662
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/1. Misfits - Astro Zombies/notes.mid",
+      "size": 18755
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/1. Misfits - Astro Zombies/song.ini",
+      "size": 676
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/10. The Aristocrats - Bad Asteroid/album.jpg",
+      "size": 51135
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/10. The Aristocrats - Bad Asteroid/background.jpg",
+      "size": 234308
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/10. The Aristocrats - Bad Asteroid/notes.chart",
+      "size": 43407
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/10. The Aristocrats - Bad Asteroid/song.ini",
+      "size": 440
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/10. The Aristocrats - Bad Asteroid/song.ogg",
+      "size": 10833832
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/11. nyu. - Tesla/album.png",
+      "size": 465264
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/11. nyu. - Tesla/background.png",
+      "size": 1216326
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/11. nyu. - Tesla/notes.chart",
+      "size": 43008
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/11. nyu. - Tesla/song.ini",
+      "size": 285
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/11. nyu. - Tesla/song.ogg",
+      "size": 8301486
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/2. Nova Charisma - Float Up. Stay There/album.png",
+      "size": 409812
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/2. Nova Charisma - Float Up. Stay There/background.jpg",
+      "size": 233792
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/2. Nova Charisma - Float Up. Stay There/notes.chart",
+      "size": 29438
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/2. Nova Charisma - Float Up. Stay There/song.ini",
+      "size": 487
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/2. Nova Charisma - Float Up. Stay There/song.mp3",
+      "size": 8589038
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/3. TesseracT - Of Mind - Nocturne/album.png",
+      "size": 253801
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/3. TesseracT - Of Mind - Nocturne/background.jpg",
+      "size": 234217
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/3. TesseracT - Of Mind - Nocturne/notes.chart",
+      "size": 37083
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/3. TesseracT - Of Mind - Nocturne/song.ini",
+      "size": 790
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/3. TesseracT - Of Mind - Nocturne/song.ogg",
+      "size": 19894938
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/4. Alexander Brandon - Interlude II/album.jpg",
+      "size": 106707
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/4. Alexander Brandon - Interlude II/background.jpg",
+      "size": 318026
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/4. Alexander Brandon - Interlude II/notes.chart",
+      "size": 19207
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/4. Alexander Brandon - Interlude II/song.ini",
+      "size": 609
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/4. Alexander Brandon - Interlude II/song.ogg",
+      "size": 8463824
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/5. Rick Wakeman - Olympus Mons/album.jpg",
+      "size": 276136
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/5. Rick Wakeman - Olympus Mons/background.jpg",
+      "size": 713548
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/5. Rick Wakeman - Olympus Mons/notes.chart",
+      "size": 52890
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/5. Rick Wakeman - Olympus Mons/song.ini",
+      "size": 612
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/5. Rick Wakeman - Olympus Mons/song.ogg",
+      "size": 10874383
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/6. DEZOLVE - Orbital Revolution/album.jpg",
+      "size": 63062
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/6. DEZOLVE - Orbital Revolution/background.jpg",
+      "size": 866188
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/6. DEZOLVE - Orbital Revolution/notes.chart",
+      "size": 32587
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/6. DEZOLVE - Orbital Revolution/song.ini",
+      "size": 440
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/6. DEZOLVE - Orbital Revolution/song.ogg",
+      "size": 8708031
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/7. Dance Gavin Dance - Nothing Shameful/album.png",
+      "size": 767661
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/7. Dance Gavin Dance - Nothing Shameful/background.png",
+      "size": 4245979
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/7. Dance Gavin Dance - Nothing Shameful/notes.chart",
+      "size": 45922
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/7. Dance Gavin Dance - Nothing Shameful/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/7. Dance Gavin Dance - Nothing Shameful/song.ogg",
+      "size": 7627605
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/8. GWAR - Let Us Slay/album.png",
+      "size": 528279
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/8. GWAR - Let Us Slay/background.jpg",
+      "size": 413921
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/8. GWAR - Let Us Slay/notes.chart",
+      "size": 55047
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/8. GWAR - Let Us Slay/song.ini",
+      "size": 508
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/8. GWAR - Let Us Slay/song.ogg",
+      "size": 6598346
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/9. The Contortionist - Causality/album.png",
+      "size": 454397
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/9. The Contortionist - Causality/background.jpg",
+      "size": 348405
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/9. The Contortionist - Causality/notes.chart",
+      "size": 31542
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/9. The Contortionist - Causality/song.ini",
+      "size": 905
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 05 - Alien Battle/9. The Contortionist - Causality/song.ogg",
+      "size": 14506702
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/1. Virtual Self - Ghost Voices/album.png",
+      "size": 340531
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/1. Virtual Self - Ghost Voices/background.jpg",
+      "size": 150678
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/1. Virtual Self - Ghost Voices/notes.chart",
+      "size": 28395
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/1. Virtual Self - Ghost Voices/song.ini",
+      "size": 807
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/1. Virtual Self - Ghost Voices/song.ogg",
+      "size": 14824113
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/10. Greg LoPiccolo - Cyberspace/album.jpg",
+      "size": 95547
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/10. Greg LoPiccolo - Cyberspace/background.png",
+      "size": 54601
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/10. Greg LoPiccolo - Cyberspace/notes.chart",
+      "size": 45233
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/10. Greg LoPiccolo - Cyberspace/song.ini",
+      "size": 656
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/10. Greg LoPiccolo - Cyberspace/song.ogg",
+      "size": 6607684
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/11. Marc Pattison - Space Jam/album.png",
+      "size": 44059
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/11. Marc Pattison - Space Jam/background.jpg",
+      "size": 198188
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/11. Marc Pattison - Space Jam/notes.chart",
+      "size": 59872
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/11. Marc Pattison - Space Jam/song.ini",
+      "size": 541
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/11. Marc Pattison - Space Jam/song.ogg",
+      "size": 8312324
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/12. Lalle Larsson Trio - Interstellar/album.png",
+      "size": 275899
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/12. Lalle Larsson Trio - Interstellar/background.jpg",
+      "size": 334987
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/12. Lalle Larsson Trio - Interstellar/notes.chart",
+      "size": 76713
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/12. Lalle Larsson Trio - Interstellar/song.ini",
+      "size": 476
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/12. Lalle Larsson Trio - Interstellar/song.ogg",
+      "size": 10059468
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/2. Anomalie - New Space/album.jpg",
+      "size": 30685
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/2. Anomalie - New Space/background.jpg",
+      "size": 328068
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/2. Anomalie - New Space/notes.chart",
+      "size": 25647
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/2. Anomalie - New Space/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/2. Anomalie - New Space/song.ogg",
+      "size": 6919478
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/3. Owl City - Galaxies/album.jpg",
+      "size": 160690
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/3. Owl City - Galaxies/background.jpg",
+      "size": 324459
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/3. Owl City - Galaxies/notes.chart",
+      "size": 52260
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/3. Owl City - Galaxies/song.ini",
+      "size": 473
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/3. Owl City - Galaxies/song.ogg",
+      "size": 8220936
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/4. Audioslave - One and the Same/album.png",
+      "size": 63888
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/4. Audioslave - One and the Same/background.png",
+      "size": 825239
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/4. Audioslave - One and the Same/guitar.ogg",
+      "size": 5886866
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/4. Audioslave - One and the Same/notes.mid",
+      "size": 18793
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/4. Audioslave - One and the Same/song.ini",
+      "size": 855
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/5. Pendulum - Another Planet (Original Mix)/album.jpg",
+      "size": 74422
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/5. Pendulum - Another Planet (Original Mix)/background.jpg",
+      "size": 486510
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/5. Pendulum - Another Planet (Original Mix)/notes.chart",
+      "size": 76412
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/5. Pendulum - Another Planet (Original Mix)/song.ini",
+      "size": 510
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/5. Pendulum - Another Planet (Original Mix)/song.ogg",
+      "size": 13416214
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/6. Dethklok - Comet Song/album.png",
+      "size": 159076
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/6. Dethklok - Comet Song/background.jpg",
+      "size": 256675
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/6. Dethklok - Comet Song/guitar.ogg",
+      "size": 4565696
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/6. Dethklok - Comet Song/notes.chart",
+      "size": 42025
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/6. Dethklok - Comet Song/song.ini",
+      "size": 536
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/7. PROTODOME - Moonbound/album.png",
+      "size": 131060
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/7. PROTODOME - Moonbound/background.png",
+      "size": 46907
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/7. PROTODOME - Moonbound/notes.chart",
+      "size": 34671
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/7. PROTODOME - Moonbound/song.ini",
+      "size": 547
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/7. PROTODOME - Moonbound/song.ogg",
+      "size": 5751897
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/8. Iron Maiden - Wasted Years/album.jpg",
+      "size": 87600
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/8. Iron Maiden - Wasted Years/background.jpg",
+      "size": 348196
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/8. Iron Maiden - Wasted Years/notes.chart",
+      "size": 77660
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/8. Iron Maiden - Wasted Years/song.ini",
+      "size": 584
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/8. Iron Maiden - Wasted Years/song.ogg",
+      "size": 10259362
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/9. Sonny Sharrock - Hit Single/album.jpg",
+      "size": 126397
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/9. Sonny Sharrock - Hit Single/background.png",
+      "size": 847228
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/9. Sonny Sharrock - Hit Single/notes.chart",
+      "size": 15683
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/9. Sonny Sharrock - Hit Single/song.ini",
+      "size": 435
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 06 - Devastating Blow/9. Sonny Sharrock - Hit Single/song.ogg",
+      "size": 2075098
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/1. Thundercat - Jameel's Space Ride/album.png",
+      "size": 350228
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/1. Thundercat - Jameel's Space Ride/background.png",
+      "size": 2888510
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/1. Thundercat - Jameel's Space Ride/notes.chart",
+      "size": 16129
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/1. Thundercat - Jameel's Space Ride/song.ini",
+      "size": 642
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/1. Thundercat - Jameel's Space Ride/song.ogg",
+      "size": 1366656
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/10. Rumpelstiltskin Grinder - Stealing E.T/album.png",
+      "size": 991264
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/10. Rumpelstiltskin Grinder - Stealing E.T/background.png",
+      "size": 975276
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/10. Rumpelstiltskin Grinder - Stealing E.T/notes.chart",
+      "size": 57400
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/10. Rumpelstiltskin Grinder - Stealing E.T/song.ini",
+      "size": 749
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/10. Rumpelstiltskin Grinder - Stealing E.T/song.ogg",
+      "size": 5562142
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/11. Fearofdark - Birth of a Universe/album.png",
+      "size": 1196
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/11. Fearofdark - Birth of a Universe/background.png",
+      "size": 36011
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/11. Fearofdark - Birth of a Universe/notes.chart",
+      "size": 74407
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/11. Fearofdark - Birth of a Universe/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/11. Fearofdark - Birth of a Universe/song.ogg",
+      "size": 7613895
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/2. Coheed and Cambria - The Dark Sentencer/album.jpg",
+      "size": 325097
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/2. Coheed and Cambria - The Dark Sentencer/background.jpg",
+      "size": 570519
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/2. Coheed and Cambria - The Dark Sentencer/notes.chart",
+      "size": 91278
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/2. Coheed and Cambria - The Dark Sentencer/song.ini",
+      "size": 654
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/2. Coheed and Cambria - The Dark Sentencer/song.ogg",
+      "size": 14975677
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/3. Tigran Hamasyan - Vortex (ft. Tosin Abasi)/album.png",
+      "size": 790537
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/3. Tigran Hamasyan - Vortex (ft. Tosin Abasi)/background.jpg",
+      "size": 437810
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/3. Tigran Hamasyan - Vortex (ft. Tosin Abasi)/notes.chart",
+      "size": 52348
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/3. Tigran Hamasyan - Vortex (ft. Tosin Abasi)/song.ini",
+      "size": 449
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/3. Tigran Hamasyan - Vortex (ft. Tosin Abasi)/song.ogg",
+      "size": 10371752
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/4. Huntress - Zenith/album.png",
+      "size": 489868
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/4. Huntress - Zenith/background.jpg",
+      "size": 233801
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/4. Huntress - Zenith/notes.chart",
+      "size": 38730
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/4. Huntress - Zenith/song.ini",
+      "size": 388
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/4. Huntress - Zenith/song.ogg",
+      "size": 7909938
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/5. Walking Across Jupiter - I Feel Your Breath/album.png",
+      "size": 284715
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/5. Walking Across Jupiter - I Feel Your Breath/background.jpg",
+      "size": 227040
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/5. Walking Across Jupiter - I Feel Your Breath/notes.chart",
+      "size": 30932
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/5. Walking Across Jupiter - I Feel Your Breath/song.ini",
+      "size": 568
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/5. Walking Across Jupiter - I Feel Your Breath/song.ogg",
+      "size": 7959523
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/6. Periphery - The Bad Thing/album.png",
+      "size": 327545
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/6. Periphery - The Bad Thing/background.jpg",
+      "size": 956748
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/6. Periphery - The Bad Thing/notes.chart",
+      "size": 43175
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/6. Periphery - The Bad Thing/song.ini",
+      "size": 597
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/6. Periphery - The Bad Thing/song.ogg",
+      "size": 20090682
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/7. Samie Sahim - Andromeda/album.png",
+      "size": 518022
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/7. Samie Sahim - Andromeda/background.jpg",
+      "size": 370018
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/7. Samie Sahim - Andromeda/notes.chart",
+      "size": 40099
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/7. Samie Sahim - Andromeda/song.ini",
+      "size": 493
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/7. Samie Sahim - Andromeda/song.ogg",
+      "size": 8669894
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/8. Alexander Brandon - The Synapse (Hong Kong Streets)/album.jpg",
+      "size": 79476
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/8. Alexander Brandon - The Synapse (Hong Kong Streets)/background.jpg",
+      "size": 312918
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/8. Alexander Brandon - The Synapse (Hong Kong Streets)/notes.chart",
+      "size": 25833
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/8. Alexander Brandon - The Synapse (Hong Kong Streets)/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/8. Alexander Brandon - The Synapse (Hong Kong Streets)/song.ogg",
+      "size": 8777207
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/9. Car Bomb - Infinite Sun/album.png",
+      "size": 133607
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/9. Car Bomb - Infinite Sun/background.jpg",
+      "size": 1034010
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/9. Car Bomb - Infinite Sun/notes.chart",
+      "size": 42445
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/9. Car Bomb - Infinite Sun/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 07 - Down but Not Out/9. Car Bomb - Infinite Sun/song.ogg",
+      "size": 10333882
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/1. Greg LoPiccolo - Energy Systems/album.jpg",
+      "size": 95547
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/1. Greg LoPiccolo - Energy Systems/background.png",
+      "size": 274638
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/1. Greg LoPiccolo - Energy Systems/notes.chart",
+      "size": 13909
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/1. Greg LoPiccolo - Energy Systems/song.ini",
+      "size": 562
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/1. Greg LoPiccolo - Energy Systems/song.ogg",
+      "size": 4793014
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/10. Kostarev Group - Lapsha/album.png",
+      "size": 469114
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/10. Kostarev Group - Lapsha/background.jpg",
+      "size": 916551
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/10. Kostarev Group - Lapsha/notes.chart",
+      "size": 44699
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/10. Kostarev Group - Lapsha/song.ini",
+      "size": 687
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/10. Kostarev Group - Lapsha/song.ogg",
+      "size": 9424883
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/11. Jordan Rudess - Quantum Soup/album.jpg",
+      "size": 409630
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/11. Jordan Rudess - Quantum Soup/background.jpg",
+      "size": 326246
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/11. Jordan Rudess - Quantum Soup/notes.chart",
+      "size": 118962
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/11. Jordan Rudess - Quantum Soup/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/11. Jordan Rudess - Quantum Soup/song.ogg",
+      "size": 22202461
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/2. Erra - Monolith/album.png",
+      "size": 555620
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/2. Erra - Monolith/background.jpg",
+      "size": 176122
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/2. Erra - Monolith/notes.chart",
+      "size": 38274
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/2. Erra - Monolith/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/2. Erra - Monolith/song.ogg",
+      "size": 14156565
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/3. In Flames - Behind Space '99/album.png",
+      "size": 506909
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/3. In Flames - Behind Space '99/background.jpg",
+      "size": 228775
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/3. In Flames - Behind Space '99/guitar.ogg",
+      "size": 5059979
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/3. In Flames - Behind Space '99/notes.chart",
+      "size": 40844
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/3. In Flames - Behind Space '99/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/4. Arjen Anthony Lucassen's Star One - Set Your Controls/album.jpg",
+      "size": 130513
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/4. Arjen Anthony Lucassen's Star One - Set Your Controls/background.jpg",
+      "size": 408371
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/4. Arjen Anthony Lucassen's Star One - Set Your Controls/notes.chart",
+      "size": 68453
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/4. Arjen Anthony Lucassen's Star One - Set Your Controls/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/4. Arjen Anthony Lucassen's Star One - Set Your Controls/song.ogg",
+      "size": 11622665
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/5. Foreign Objects - Test It Out/album.png",
+      "size": 79306
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/5. Foreign Objects - Test It Out/background.png",
+      "size": 423928
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/5. Foreign Objects - Test It Out/guitar.ogg",
+      "size": 5299993
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/5. Foreign Objects - Test It Out/notes.mid",
+      "size": 15271
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/5. Foreign Objects - Test It Out/song.ini",
+      "size": 867
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/6. Afterbirth - Rooms To Nowhere/album.png",
+      "size": 694287
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/6. Afterbirth - Rooms To Nowhere/background.jpg",
+      "size": 328654
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/6. Afterbirth - Rooms To Nowhere/notes.chart",
+      "size": 48919
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/6. Afterbirth - Rooms To Nowhere/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/6. Afterbirth - Rooms To Nowhere/song.ogg",
+      "size": 7210795
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/7. Rie aka Suzaku - Stardust/album.jpg",
+      "size": 246914
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/7. Rie aka Suzaku - Stardust/background.jpg",
+      "size": 500439
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/7. Rie aka Suzaku - Stardust/notes.chart",
+      "size": 27731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/7. Rie aka Suzaku - Stardust/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/7. Rie aka Suzaku - Stardust/song.ogg",
+      "size": 10817717
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/8. Dwellings - Sins as Wonders/album.png",
+      "size": 562070
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/8. Dwellings - Sins as Wonders/background.jpg",
+      "size": 378871
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/8. Dwellings - Sins as Wonders/notes.chart",
+      "size": 80871
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/8. Dwellings - Sins as Wonders/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/8. Dwellings - Sins as Wonders/song.ogg",
+      "size": 10938200
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/9. Danimal Cannon - The Big Crunch/album.png",
+      "size": 574341
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/9. Danimal Cannon - The Big Crunch/background.png",
+      "size": 593610
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/9. Danimal Cannon - The Big Crunch/notes.chart",
+      "size": 30917
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/9. Danimal Cannon - The Big Crunch/song.ini",
+      "size": 664
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 08 - Recovery/9. Danimal Cannon - The Big Crunch/song.ogg",
+      "size": 5930544
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/1. Fire From The Gods - End Transmission/album.png",
+      "size": 471341
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/1. Fire From The Gods - End Transmission/background.jpg",
+      "size": 215557
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/1. Fire From The Gods - End Transmission/notes.chart",
+      "size": 28827
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/1. Fire From The Gods - End Transmission/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/1. Fire From The Gods - End Transmission/song.ogg",
+      "size": 12521433
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/10. Katy Perry - E.T. (KATFYR Remix)/album.jpg",
+      "size": 54189
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/10. Katy Perry - E.T. (KATFYR Remix)/background.jpg",
+      "size": 280728
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/10. Katy Perry - E.T. (KATFYR Remix)/notes.chart",
+      "size": 72754
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/10. Katy Perry - E.T. (KATFYR Remix)/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/10. Katy Perry - E.T. (KATFYR Remix)/song.ogg",
+      "size": 9671476
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/11. Buckethead - Part Two - Falling Through the Vacuum/album.png",
+      "size": 708683
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/11. Buckethead - Part Two - Falling Through the Vacuum/background.jpg",
+      "size": 213902
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/11. Buckethead - Part Two - Falling Through the Vacuum/notes.chart",
+      "size": 89789
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/11. Buckethead - Part Two - Falling Through the Vacuum/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/11. Buckethead - Part Two - Falling Through the Vacuum/song.ogg",
+      "size": 9825300
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/2. Eric Brosius - Med Sci 2/album.jpg",
+      "size": 72544
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/2. Eric Brosius - Med Sci 2/background.jpg",
+      "size": 198729
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/2. Eric Brosius - Med Sci 2/notes.chart",
+      "size": 18254
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/2. Eric Brosius - Med Sci 2/song.ini",
+      "size": 621
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/2. Eric Brosius - Med Sci 2/song.ogg",
+      "size": 5893864
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/3. Ayreon - The Eye of Ra (Live)/album.png",
+      "size": 653711
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/3. Ayreon - The Eye of Ra (Live)/guitar.ogg",
+      "size": 14917704
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/3. Ayreon - The Eye of Ra (Live)/notes.chart",
+      "size": 35276
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/3. Ayreon - The Eye of Ra (Live)/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/3. Ayreon - The Eye of Ra (Live)/video.mp4",
+      "size": 358662371
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/4. Hail the Sun - Cosmic Narcissism/album.jpg",
+      "size": 126595
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/4. Hail the Sun - Cosmic Narcissism/background.png",
+      "size": 287593
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/4. Hail the Sun - Cosmic Narcissism/notes.chart",
+      "size": 45501
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/4. Hail the Sun - Cosmic Narcissism/song.ini",
+      "size": 604
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/4. Hail the Sun - Cosmic Narcissism/song.ogg",
+      "size": 9446676
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/5. Killswitch Engage - To the Great Beyond/album.png",
+      "size": 268007
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/5. Killswitch Engage - To the Great Beyond/background.png",
+      "size": 1066125
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/5. Killswitch Engage - To the Great Beyond/guitar.ogg",
+      "size": 6955735
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/5. Killswitch Engage - To the Great Beyond/notes.mid",
+      "size": 28567
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/5. Killswitch Engage - To the Great Beyond/song.ini",
+      "size": 783
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/6. Avatar - Wormhole/album.png",
+      "size": 526209
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/6. Avatar - Wormhole/background.jpg",
+      "size": 460418
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/6. Avatar - Wormhole/guitar.ogg",
+      "size": 12592151
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/6. Avatar - Wormhole/notes.chart",
+      "size": 44789
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/6. Avatar - Wormhole/song.ini",
+      "size": 607
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/7. Dynazty - The Human Paradox/album.png",
+      "size": 532543
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/7. Dynazty - The Human Paradox/background.jpg",
+      "size": 409801
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/7. Dynazty - The Human Paradox/notes.chart",
+      "size": 35982
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/7. Dynazty - The Human Paradox/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/7. Dynazty - The Human Paradox/song.ogg",
+      "size": 8496591
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/8. Becoming The Archetype - The Time Bender/album.png",
+      "size": 590383
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/8. Becoming The Archetype - The Time Bender/background.png",
+      "size": 3367182
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/8. Becoming The Archetype - The Time Bender/notes.chart",
+      "size": 34175
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/8. Becoming The Archetype - The Time Bender/song.ini",
+      "size": 524
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/8. Becoming The Archetype - The Time Bender/song.ogg",
+      "size": 6668513
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/9. The Black Dahlia Murder - Moonlight Equilibrium/album.png",
+      "size": 154266
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/9. The Black Dahlia Murder - Moonlight Equilibrium/background.jpg",
+      "size": 308020
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/9. The Black Dahlia Murder - Moonlight Equilibrium/guitar.ogg",
+      "size": 7485893
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/9. The Black Dahlia Murder - Moonlight Equilibrium/notes.mid",
+      "size": 28724
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 09 - Take Off Once More/9. The Black Dahlia Murder - Moonlight Equilibrium/song.ini",
+      "size": 729
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/1. PassCode - STARRY SKY/album.png",
+      "size": 2802537
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/1. PassCode - STARRY SKY/background.png",
+      "size": 1237264
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/1. PassCode - STARRY SKY/notes.chart",
+      "size": 51842
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/1. PassCode - STARRY SKY/song.ini",
+      "size": 493
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/1. PassCode - STARRY SKY/song.ogg",
+      "size": 4793246
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/10. Vinnie Moore - Defying Gravity/album.jpg",
+      "size": 240020
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/10. Vinnie Moore - Defying Gravity/background.jpg",
+      "size": 1365182
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/10. Vinnie Moore - Defying Gravity/notes.chart",
+      "size": 47791
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/10. Vinnie Moore - Defying Gravity/song.ini",
+      "size": 413
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/10. Vinnie Moore - Defying Gravity/song.ogg",
+      "size": 9352256
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/11. Florian Haack - Corneria/album.png",
+      "size": 234320
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/11. Florian Haack - Corneria/background.png",
+      "size": 569444
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/11. Florian Haack - Corneria/notes.chart",
+      "size": 16927
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/11. Florian Haack - Corneria/song.ini",
+      "size": 679
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/11. Florian Haack - Corneria/song.ogg",
+      "size": 1420292
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/2. Virtual Self - Particle Arts/album.png",
+      "size": 374376
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/2. Virtual Self - Particle Arts/background.jpg",
+      "size": 150678
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/2. Virtual Self - Particle Arts/guitar.ogg",
+      "size": 7018312
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/2. Virtual Self - Particle Arts/notes.mid",
+      "size": 13242
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/2. Virtual Self - Particle Arts/song.ini",
+      "size": 733
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/3. Mastodon - Quintessence/album.png",
+      "size": 635944
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/3. Mastodon - Quintessence/background.jpg",
+      "size": 438769
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/3. Mastodon - Quintessence/notes.chart",
+      "size": 75255
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/3. Mastodon - Quintessence/song.ini",
+      "size": 752
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/3. Mastodon - Quintessence/song.ogg",
+      "size": 10337512
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/4. Priestess - Trapped in Space & Time/album.png",
+      "size": 54235
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/4. Priestess - Trapped in Space & Time/background.png",
+      "size": 1549185
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/4. Priestess - Trapped in Space & Time/guitar.ogg",
+      "size": 6376246
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/4. Priestess - Trapped in Space & Time/notes.chart",
+      "size": 44318
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/4. Priestess - Trapped in Space & Time/song.ini",
+      "size": 937
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/5. Landon Tewers - Debate/album.png",
+      "size": 160232
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/5. Landon Tewers - Debate/background.png",
+      "size": 3499307
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/5. Landon Tewers - Debate/notes.chart",
+      "size": 29385
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/5. Landon Tewers - Debate/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/5. Landon Tewers - Debate/song.ogg",
+      "size": 5296393
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/6. Pagan's Mind - Shine Eternally/album.jpg",
+      "size": 195149
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/6. Pagan's Mind - Shine Eternally/background.jpg",
+      "size": 887509
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/6. Pagan's Mind - Shine Eternally/notes.chart",
+      "size": 70909
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/6. Pagan's Mind - Shine Eternally/song.ini",
+      "size": 806
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/6. Pagan's Mind - Shine Eternally/song.ogg",
+      "size": 14902736
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/7. MASTER BOOT RECORD - Skynet/album.png",
+      "size": 223163
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/7. MASTER BOOT RECORD - Skynet/background.jpg",
+      "size": 853527
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/7. MASTER BOOT RECORD - Skynet/guitar.ogg",
+      "size": 7710314
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/7. MASTER BOOT RECORD - Skynet/notes.chart",
+      "size": 37682
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/7. MASTER BOOT RECORD - Skynet/song.ini",
+      "size": 412
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/8. Body Theif - Innerverse/album.png",
+      "size": 381540
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/8. Body Theif - Innerverse/background.jpg",
+      "size": 186749
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/8. Body Theif - Innerverse/notes.chart",
+      "size": 83547
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/8. Body Theif - Innerverse/song.ini",
+      "size": 462
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/8. Body Theif - Innerverse/song.mp3",
+      "size": 11145396
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/9. Abodean Skye - Return of the Fleet/album.png",
+      "size": 673818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/9. Abodean Skye - Return of the Fleet/background.jpg",
+      "size": 178554
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/9. Abodean Skye - Return of the Fleet/guitar.ogg",
+      "size": 14519611
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/9. Abodean Skye - Return of the Fleet/notes.mid",
+      "size": 44078
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 10 - Target Locked/9. Abodean Skye - Return of the Fleet/song.ini",
+      "size": 956
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/1. Andreas Molnar - Rock Garden/album.jpg",
+      "size": 117134
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/1. Andreas Molnar - Rock Garden/background.png",
+      "size": 204622
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/1. Andreas Molnar - Rock Garden/notes.chart",
+      "size": 16383
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/1. Andreas Molnar - Rock Garden/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/1. Andreas Molnar - Rock Garden/song.ogg",
+      "size": 2651495
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/10. Camellia - Body F10ating in the Zero Gravity Space/album.png",
+      "size": 368820
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/10. Camellia - Body F10ating in the Zero Gravity Space/background.jpg",
+      "size": 111280
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/10. Camellia - Body F10ating in the Zero Gravity Space/guitar.ogg",
+      "size": 10163617
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/10. Camellia - Body F10ating in the Zero Gravity Space/notes.mid",
+      "size": 18709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/10. Camellia - Body F10ating in the Zero Gravity Space/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/11. Derek Sherinian and Steve Vai - Clouds of Ganymede/album.jpg",
+      "size": 136231
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/11. Derek Sherinian and Steve Vai - Clouds of Ganymede/background.jpg",
+      "size": 665729
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/11. Derek Sherinian and Steve Vai - Clouds of Ganymede/notes.chart",
+      "size": 71017
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/11. Derek Sherinian and Steve Vai - Clouds of Ganymede/song.ini",
+      "size": 468
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/11. Derek Sherinian and Steve Vai - Clouds of Ganymede/song.ogg",
+      "size": 10506422
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/2. Make Them Suffer - Vortex/album.png",
+      "size": 477946
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/2. Make Them Suffer - Vortex/background.jpg",
+      "size": 651447
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/2. Make Them Suffer - Vortex/notes.chart",
+      "size": 35814
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/2. Make Them Suffer - Vortex/song.ini",
+      "size": 482
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/2. Make Them Suffer - Vortex/song.ogg",
+      "size": 7674056
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/3. The Mars Volta - Inertiatic ESP/album.png",
+      "size": 298999
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/3. The Mars Volta - Inertiatic ESP/background.jpg",
+      "size": 235211
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/3. The Mars Volta - Inertiatic ESP/notes.chart",
+      "size": 57473
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/3. The Mars Volta - Inertiatic ESP/song.ini",
+      "size": 498
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/3. The Mars Volta - Inertiatic ESP/song.ogg",
+      "size": 10152901
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/4. Cydonia - Masters of Stars/album.png",
+      "size": 109408
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/4. Cydonia - Masters of Stars/background.jpg",
+      "size": 349664
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/4. Cydonia - Masters of Stars/guitar.ogg",
+      "size": 10222395
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/4. Cydonia - Masters of Stars/notes.mid",
+      "size": 13999
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/4. Cydonia - Masters of Stars/song.ini",
+      "size": 881
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/5. Wolf and Raven - Lunal Festival/album.jpg",
+      "size": 266825
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/5. Wolf and Raven - Lunal Festival/background.jpg",
+      "size": 380322
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/5. Wolf and Raven - Lunal Festival/notes.chart",
+      "size": 40169
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/5. Wolf and Raven - Lunal Festival/song.ini",
+      "size": 518
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/5. Wolf and Raven - Lunal Festival/song.ogg",
+      "size": 10062142
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/6. GaMetal - Dream Chaser/album.png",
+      "size": 477336
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/6. GaMetal - Dream Chaser/background.jpg",
+      "size": 88125
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/6. GaMetal - Dream Chaser/notes.chart",
+      "size": 28857
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/6. GaMetal - Dream Chaser/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/6. GaMetal - Dream Chaser/song.ogg",
+      "size": 8083475
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/7. Modern Day Babylon - Water Drops (feat. Plini)/album.png",
+      "size": 634448
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/7. Modern Day Babylon - Water Drops (feat. Plini)/background.jpg",
+      "size": 389623
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/7. Modern Day Babylon - Water Drops (feat. Plini)/notes.chart",
+      "size": 27338
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/7. Modern Day Babylon - Water Drops (feat. Plini)/song.ini",
+      "size": 625
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/7. Modern Day Babylon - Water Drops (feat. Plini)/song.ogg",
+      "size": 9037704
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/8. Sanctus - Creature from Vercenta/album.png",
+      "size": 52126
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/8. Sanctus - Creature from Vercenta/background.png",
+      "size": 47265
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/8. Sanctus - Creature from Vercenta/guitar.ogg",
+      "size": 12461598
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/8. Sanctus - Creature from Vercenta/notes.mid",
+      "size": 31207
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/8. Sanctus - Creature from Vercenta/song.ini",
+      "size": 1001
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/9. Vektor - Activate/album.png",
+      "size": 633377
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/9. Vektor - Activate/background.png",
+      "size": 1093598
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/9. Vektor - Activate/guitar.ogg",
+      "size": 9849315
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/9. Vektor - Activate/notes.chart",
+      "size": 40976
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 11 - In the Burning Sun/9. Vektor - Activate/song.ini",
+      "size": 657
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/1. Nekrogoblikon - Giraffe/album.png",
+      "size": 133828
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/1. Nekrogoblikon - Giraffe/background.png",
+      "size": 1622738
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/1. Nekrogoblikon - Giraffe/notes.chart",
+      "size": 27063
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/1. Nekrogoblikon - Giraffe/song.ini",
+      "size": 603
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/1. Nekrogoblikon - Giraffe/song.ogg",
+      "size": 3604954
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/10. Continuum - Into the Void/album.png",
+      "size": 534101
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/10. Continuum - Into the Void/background.jpg",
+      "size": 131888
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/10. Continuum - Into the Void/notes.chart",
+      "size": 53271
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/10. Continuum - Into the Void/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/10. Continuum - Into the Void/song.ogg",
+      "size": 8976519
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/11. Sentenced to Dissection - Astral Projection/album.png",
+      "size": 633971
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/11. Sentenced to Dissection - Astral Projection/background.jpg",
+      "size": 587038
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/11. Sentenced to Dissection - Astral Projection/notes.chart",
+      "size": 54044
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/11. Sentenced to Dissection - Astral Projection/song.ini",
+      "size": 618
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/11. Sentenced to Dissection - Astral Projection/song.ogg",
+      "size": 7476107
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/2. Alexander Brandon - Laboratory Level/album.jpg",
+      "size": 129456
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/2. Alexander Brandon - Laboratory Level/background.jpg",
+      "size": 854337
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/2. Alexander Brandon - Laboratory Level/notes.chart",
+      "size": 29342
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/2. Alexander Brandon - Laboratory Level/song.ini",
+      "size": 473
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/2. Alexander Brandon - Laboratory Level/song.ogg",
+      "size": 4306635
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/3. John Williams - Cantina Band/album.jpg",
+      "size": 35503
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/3. John Williams - Cantina Band/background.png",
+      "size": 212450
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/3. John Williams - Cantina Band/notes.chart",
+      "size": 32648
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/3. John Williams - Cantina Band/song.ini",
+      "size": 359
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/3. John Williams - Cantina Band/song.ogg",
+      "size": 5656752
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/4. The Contortionist - Holomovement/album.png",
+      "size": 443026
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/4. The Contortionist - Holomovement/background.jpg",
+      "size": 298181
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/4. The Contortionist - Holomovement/notes.chart",
+      "size": 45015
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/4. The Contortionist - Holomovement/song.ini",
+      "size": 642
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/4. The Contortionist - Holomovement/song.ogg",
+      "size": 12275618
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/5. Seda - Stellar Crescent (\u83ef\u9ce5\u98a8\u6708 X Only My Railgun)/album.png",
+      "size": 1539014
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/5. Seda - Stellar Crescent (\u83ef\u9ce5\u98a8\u6708 X Only My Railgun)/background.jpg",
+      "size": 445342
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/5. Seda - Stellar Crescent (\u83ef\u9ce5\u98a8\u6708 X Only My Railgun)/notes.chart",
+      "size": 52443
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/5. Seda - Stellar Crescent (\u83ef\u9ce5\u98a8\u6708 X Only My Railgun)/song.ini",
+      "size": 565
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/5. Seda - Stellar Crescent (\u83ef\u9ce5\u98a8\u6708 X Only My Railgun)/song.ogg",
+      "size": 12224835
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/6. Sergey Golovin - Renegade/album.png",
+      "size": 433179
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/6. Sergey Golovin - Renegade/background.png",
+      "size": 639130
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/6. Sergey Golovin - Renegade/notes.chart",
+      "size": 49688
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/6. Sergey Golovin - Renegade/song.ini",
+      "size": 687
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/6. Sergey Golovin - Renegade/song.mp3",
+      "size": 11834785
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/7. Polaris - Consume/album.png",
+      "size": 234991
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/7. Polaris - Consume/background.jpg",
+      "size": 79151
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/7. Polaris - Consume/notes.chart",
+      "size": 47427
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/7. Polaris - Consume/song.ini",
+      "size": 669
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/7. Polaris - Consume/song.ogg",
+      "size": 14425659
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/8. Stratovarius - Glory of the World/album.png",
+      "size": 645707
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/8. Stratovarius - Glory of the World/background.jpg",
+      "size": 450220
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/8. Stratovarius - Glory of the World/guitar.ogg",
+      "size": 12455346
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/8. Stratovarius - Glory of the World/notes.chart",
+      "size": 65413
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/8. Stratovarius - Glory of the World/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/9. Gross Reality - Into the Vault/album.png",
+      "size": 149944
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/9. Gross Reality - Into the Vault/background.png",
+      "size": 1135661
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/9. Gross Reality - Into the Vault/guitar.ogg",
+      "size": 9047357
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/9. Gross Reality - Into the Vault/notes.mid",
+      "size": 32210
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 12 - Leave No Trace/9. Gross Reality - Into the Vault/song.ini",
+      "size": 679
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/1. Colour - Over the Moon/album.jpg",
+      "size": 55188
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/1. Colour - Over the Moon/background.jpg",
+      "size": 184178
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/1. Colour - Over the Moon/notes.chart",
+      "size": 65452
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/1. Colour - Over the Moon/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/1. Colour - Over the Moon/song.ogg",
+      "size": 10683019
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/10. Aeon Bridge - Solar Requiem/album.png",
+      "size": 1324426
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/10. Aeon Bridge - Solar Requiem/background.png",
+      "size": 2135014
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/10. Aeon Bridge - Solar Requiem/notes.chart",
+      "size": 57312
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/10. Aeon Bridge - Solar Requiem/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/10. Aeon Bridge - Solar Requiem/song.ogg",
+      "size": 6243858
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/11. Vektor - Oblivion/album.png",
+      "size": 415994
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/11. Vektor - Oblivion/background.jpg",
+      "size": 655303
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/11. Vektor - Oblivion/guitar.ogg",
+      "size": 13237177
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/11. Vektor - Oblivion/notes.chart",
+      "size": 59635
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/11. Vektor - Oblivion/song.ini",
+      "size": 506
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/2. Auras - Another Place/album.png",
+      "size": 707711
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/2. Auras - Another Place/background.jpg",
+      "size": 186351
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/2. Auras - Another Place/notes.chart",
+      "size": 36729
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/2. Auras - Another Place/song.ini",
+      "size": 646
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/2. Auras - Another Place/song.ogg",
+      "size": 13028204
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/3. Deadmau5 - HR 8938 Cephei/album.jpg",
+      "size": 12365
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/3. Deadmau5 - HR 8938 Cephei/background.jpg",
+      "size": 421571
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/3. Deadmau5 - HR 8938 Cephei/notes.chart",
+      "size": 106705
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/3. Deadmau5 - HR 8938 Cephei/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/3. Deadmau5 - HR 8938 Cephei/song.ogg",
+      "size": 20257599
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/4. Gojira - Space Time/album.png",
+      "size": 308499
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/4. Gojira - Space Time/background.jpg",
+      "size": 1085552
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/4. Gojira - Space Time/notes.chart",
+      "size": 57384
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/4. Gojira - Space Time/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/4. Gojira - Space Time/song.ogg",
+      "size": 9675622
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/5. Plini - Away/album.png",
+      "size": 521083
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/5. Plini - Away/background.jpg",
+      "size": 190843
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/5. Plini - Away/notes.chart",
+      "size": 39098
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/5. Plini - Away/song.ini",
+      "size": 317
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/5. Plini - Away/song.mp3",
+      "size": 8483333
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/6. RichaadEB - Deoxys Battle/album.png",
+      "size": 290136
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/6. RichaadEB - Deoxys Battle/background.jpg",
+      "size": 142419
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/6. RichaadEB - Deoxys Battle/guitar.ogg",
+      "size": 5674261
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/6. RichaadEB - Deoxys Battle/notes.mid",
+      "size": 12659
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/6. RichaadEB - Deoxys Battle/song.ini",
+      "size": 543
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/7. Fallujah - Scar Queen/album.png",
+      "size": 464095
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/7. Fallujah - Scar Queen/background.jpg",
+      "size": 225153
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/7. Fallujah - Scar Queen/notes.chart",
+      "size": 49280
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/7. Fallujah - Scar Queen/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/7. Fallujah - Scar Queen/song.ogg",
+      "size": 14975299
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/8. Iapetus - For Creatures Such as We/album.jpg",
+      "size": 430276
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/8. Iapetus - For Creatures Such as We/background.jpg",
+      "size": 1531988
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/8. Iapetus - For Creatures Such as We/notes.chart",
+      "size": 162374
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/8. Iapetus - For Creatures Such as We/song.ini",
+      "size": 607
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/8. Iapetus - For Creatures Such as We/song.ogg",
+      "size": 25201940
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/9. Rings of Saturn - Fruitless Existence/album.png",
+      "size": 592066
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/9. Rings of Saturn - Fruitless Existence/background.jpg",
+      "size": 278404
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/9. Rings of Saturn - Fruitless Existence/notes.chart",
+      "size": 41904
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/9. Rings of Saturn - Fruitless Existence/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 13 - Surrender/9. Rings of Saturn - Fruitless Existence/song.ogg",
+      "size": 7209256
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/1. Bind the Sacrifice - Seasons of Flies/album.png",
+      "size": 108441
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/1. Bind the Sacrifice - Seasons of Flies/background.png",
+      "size": 3276382
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/1. Bind the Sacrifice - Seasons of Flies/notes.chart",
+      "size": 39638
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/1. Bind the Sacrifice - Seasons of Flies/song.ini",
+      "size": 554
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/1. Bind the Sacrifice - Seasons of Flies/song.ogg",
+      "size": 9674767
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/10. kanone - CO5M1C R4ILR0AD (nora2r Remix)/album.png",
+      "size": 448760
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/10. kanone - CO5M1C R4ILR0AD (nora2r Remix)/background.jpg",
+      "size": 188768
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/10. kanone - CO5M1C R4ILR0AD (nora2r Remix)/guitar.ogg",
+      "size": 8419702
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/10. kanone - CO5M1C R4ILR0AD (nora2r Remix)/notes.mid",
+      "size": 25422
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/10. kanone - CO5M1C R4ILR0AD (nora2r Remix)/song.ini",
+      "size": 576
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/11. Vektor - Destroying the Cosmos/album.png",
+      "size": 521473
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/11. Vektor - Destroying the Cosmos/background.png",
+      "size": 853828
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/11. Vektor - Destroying the Cosmos/notes.chart",
+      "size": 91883
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/11. Vektor - Destroying the Cosmos/song.ini",
+      "size": 387
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/11. Vektor - Destroying the Cosmos/song.mp3",
+      "size": 15533897
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/12. Queen Kona - Roswell [iZenPenguin]/album.jpg",
+      "size": 261965
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/12. Queen Kona - Roswell [iZenPenguin]/background.jpg",
+      "size": 2043475
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/12. Queen Kona - Roswell [iZenPenguin]/notes.chart",
+      "size": 62041
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/12. Queen Kona - Roswell [iZenPenguin]/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/12. Queen Kona - Roswell [iZenPenguin]/song.ogg",
+      "size": 8372936
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/2. Austrian Death Machine - Recalling Mars, I Turned into a Martian/album.png",
+      "size": 495304
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/2. Austrian Death Machine - Recalling Mars, I Turned into a Martian/background.jpg",
+      "size": 141566
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/2. Austrian Death Machine - Recalling Mars, I Turned into a Martian/guitar.ogg",
+      "size": 2308536
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/2. Austrian Death Machine - Recalling Mars, I Turned into a Martian/notes.chart",
+      "size": 26928
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/2. Austrian Death Machine - Recalling Mars, I Turned into a Martian/song.ini",
+      "size": 739
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/3. Argent - The Coming of Kohoutek/album.png",
+      "size": 317567
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/3. Argent - The Coming of Kohoutek/background.jpg",
+      "size": 167008
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/3. Argent - The Coming of Kohoutek/guitar.ogg",
+      "size": 6182719
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/3. Argent - The Coming of Kohoutek/notes.mid",
+      "size": 7109
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/3. Argent - The Coming of Kohoutek/song.ini",
+      "size": 688
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/4. Rectangles - Cosmic Metaphysical Verisimilitude/album.jpg",
+      "size": 38223
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/4. Rectangles - Cosmic Metaphysical Verisimilitude/background.jpg",
+      "size": 819204
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/4. Rectangles - Cosmic Metaphysical Verisimilitude/notes.chart",
+      "size": 33539
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/4. Rectangles - Cosmic Metaphysical Verisimilitude/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/4. Rectangles - Cosmic Metaphysical Verisimilitude/song.ogg",
+      "size": 9655115
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/5. Eric Brosius - Med Sci 1/album.jpg",
+      "size": 72544
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/5. Eric Brosius - Med Sci 1/background.jpg",
+      "size": 198729
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/5. Eric Brosius - Med Sci 1/notes.chart",
+      "size": 37826
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/5. Eric Brosius - Med Sci 1/song.ini",
+      "size": 797
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/5. Eric Brosius - Med Sci 1/song.ogg",
+      "size": 6284517
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/6. Mili - Imagined Flight/album.png",
+      "size": 417792
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/6. Mili - Imagined Flight/background.jpg",
+      "size": 399116
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/6. Mili - Imagined Flight/guitar.ogg",
+      "size": 6594179
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/6. Mili - Imagined Flight/notes.mid",
+      "size": 16591
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/6. Mili - Imagined Flight/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/7. Fallujah - The Void Alone/album.png",
+      "size": 464095
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/7. Fallujah - The Void Alone/background.jpg",
+      "size": 225153
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/7. Fallujah - The Void Alone/guitar.ogg",
+      "size": 10806995
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/7. Fallujah - The Void Alone/notes.chart",
+      "size": 35766
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/7. Fallujah - The Void Alone/song.ini",
+      "size": 442
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/8. Galaxy 2 Galaxy - A Moment In Time/album.png",
+      "size": 528975
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/8. Galaxy 2 Galaxy - A Moment In Time/background.jpg",
+      "size": 1157649
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/8. Galaxy 2 Galaxy - A Moment In Time/notes.chart",
+      "size": 30795
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/8. Galaxy 2 Galaxy - A Moment In Time/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/8. Galaxy 2 Galaxy - A Moment In Time/song.ogg",
+      "size": 3807171
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/9. Jacob Rabin - Sunfall/album.jpg",
+      "size": 187474
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/9. Jacob Rabin - Sunfall/background.jpg",
+      "size": 131404
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/9. Jacob Rabin - Sunfall/notes.chart",
+      "size": 67228
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/9. Jacob Rabin - Sunfall/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 14 - Target Neutralized/9. Jacob Rabin - Sunfall/song.ogg",
+      "size": 11387235
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/1. Attila - Let's Get Abducted/album.png",
+      "size": 390866
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/1. Attila - Let's Get Abducted/background.jpg",
+      "size": 427482
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/1. Attila - Let's Get Abducted/notes.chart",
+      "size": 37028
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/1. Attila - Let's Get Abducted/song.ini",
+      "size": 930
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/1. Attila - Let's Get Abducted/song.ogg",
+      "size": 12498963
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/10. Apo11o program - SolarOrbit -Connected with the Espabrother-/album.png",
+      "size": 876921
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/10. Apo11o program - SolarOrbit -Connected with the Espabrother-/background.jpg",
+      "size": 268684
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/10. Apo11o program - SolarOrbit -Connected with the Espabrother-/guitar.ogg",
+      "size": 4997397
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/10. Apo11o program - SolarOrbit -Connected with the Espabrother-/notes.mid",
+      "size": 15402
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/10. Apo11o program - SolarOrbit -Connected with the Espabrother-/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/11. Magnus Karlsson\u2019s Free Fall - On My Way Back To Earth [HattMeafy]/album.png",
+      "size": 442292
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/11. Magnus Karlsson\u2019s Free Fall - On My Way Back To Earth [HattMeafy]/background.jpg",
+      "size": 339065
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/11. Magnus Karlsson\u2019s Free Fall - On My Way Back To Earth [HattMeafy]/notes.chart",
+      "size": 31776
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/11. Magnus Karlsson\u2019s Free Fall - On My Way Back To Earth [HattMeafy]/song.ini",
+      "size": 649
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/11. Magnus Karlsson\u2019s Free Fall - On My Way Back To Earth [HattMeafy]/song.ogg",
+      "size": 8988587
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/12. Rings of Saturn - Divine Authority/album.png",
+      "size": 797388
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/12. Rings of Saturn - Divine Authority/background.png",
+      "size": 6145515
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/12. Rings of Saturn - Divine Authority/notes.chart",
+      "size": 84887
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/12. Rings of Saturn - Divine Authority/song.ini",
+      "size": 493
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/12. Rings of Saturn - Divine Authority/song.ogg",
+      "size": 6992603
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/2. An Endless Sporadic - Spaceship Factory (\u03a9HM)/album.png",
+      "size": 692790
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/2. An Endless Sporadic - Spaceship Factory (\u03a9HM)/background.jpg",
+      "size": 523948
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/2. An Endless Sporadic - Spaceship Factory (\u03a9HM)/notes.chart",
+      "size": 54031
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/2. An Endless Sporadic - Spaceship Factory (\u03a9HM)/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/2. An Endless Sporadic - Spaceship Factory (\u03a9HM)/song.ogg",
+      "size": 13469780
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/3. Alexander Brandon - Go Down/album.jpg",
+      "size": 100964
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/3. Alexander Brandon - Go Down/background.jpg",
+      "size": 376724
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/3. Alexander Brandon - Go Down/notes.chart",
+      "size": 37191
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/3. Alexander Brandon - Go Down/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/3. Alexander Brandon - Go Down/song.ogg",
+      "size": 6044369
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/4. Pestilence - Mind Reflections/album.png",
+      "size": 162641
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/4. Pestilence - Mind Reflections/background.png",
+      "size": 1253804
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/4. Pestilence - Mind Reflections/guitar.ogg",
+      "size": 4445614
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/4. Pestilence - Mind Reflections/notes.mid",
+      "size": 17289
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/4. Pestilence - Mind Reflections/song.ini",
+      "size": 826
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/5. Hollow Prophet - Infernal Cleansing/album.png",
+      "size": 752213
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/5. Hollow Prophet - Infernal Cleansing/background.png",
+      "size": 2145650
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/5. Hollow Prophet - Infernal Cleansing/notes.chart",
+      "size": 41459
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/5. Hollow Prophet - Infernal Cleansing/song.ini",
+      "size": 577
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/5. Hollow Prophet - Infernal Cleansing/song.ogg",
+      "size": 7698620
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/6. Shokran - Revival of Darkness/album.png",
+      "size": 447586
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/6. Shokran - Revival of Darkness/background.png",
+      "size": 1449724
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/6. Shokran - Revival of Darkness/notes.chart",
+      "size": 44736
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/6. Shokran - Revival of Darkness/song.ini",
+      "size": 462
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/6. Shokran - Revival of Darkness/song.ogg",
+      "size": 7320436
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/7. Dark Arena - Alien World/album.png",
+      "size": 631618
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/7. Dark Arena - Alien World/background.jpg",
+      "size": 119798
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/7. Dark Arena - Alien World/guitar.ogg",
+      "size": 11169460
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/7. Dark Arena - Alien World/notes.mid",
+      "size": 35174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/7. Dark Arena - Alien World/song.ini",
+      "size": 1060
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/8. Blasteroid - Planetary Annihilation/album.png",
+      "size": 43580
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/8. Blasteroid - Planetary Annihilation/background.png",
+      "size": 1516722
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/8. Blasteroid - Planetary Annihilation/guitar.ogg",
+      "size": 5923055
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/8. Blasteroid - Planetary Annihilation/notes.mid",
+      "size": 29729
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/8. Blasteroid - Planetary Annihilation/song.ini",
+      "size": 760
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/9. Gorod - And the Moon Turned Black/album.png",
+      "size": 1453879
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/9. Gorod - And the Moon Turned Black/background.jpg",
+      "size": 185790
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/9. Gorod - And the Moon Turned Black/notes.chart",
+      "size": 64720
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/9. Gorod - And the Moon Turned Black/song.ini",
+      "size": 402
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 15 - Configuring Next Target/9. Gorod - And the Moon Turned Black/song.ogg",
+      "size": 8817221
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/1. Nicolas Waldo - Master of the Universe Solo Medley/album.jpg",
+      "size": 197166
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/1. Nicolas Waldo - Master of the Universe Solo Medley/background.jpg",
+      "size": 721806
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/1. Nicolas Waldo - Master of the Universe Solo Medley/notes.chart",
+      "size": 120000
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/1. Nicolas Waldo - Master of the Universe Solo Medley/song.ini",
+      "size": 642
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/1. Nicolas Waldo - Master of the Universe Solo Medley/song.ogg",
+      "size": 14863090
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/2. Rings of Saturn - Rings of Saturn Medley/album.jpg",
+      "size": 616218
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/2. Rings of Saturn - Rings of Saturn Medley/background.jpg",
+      "size": 691882
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/2. Rings of Saturn - Rings of Saturn Medley/notes.chart",
+      "size": 214589
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/2. Rings of Saturn - Rings of Saturn Medley/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB - Tier 16 - The Solo Medleys/2. Rings of Saturn - Rings of Saturn Medley/song.ogg",
+      "size": 18817342
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/1. ABAWCLOEWHWRYABNONHWG/album.png",
+      "size": 232428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/1. ABAWCLOEWHWRYABNONHWG/background.png",
+      "size": 1667318
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/1. ABAWCLOEWHWRYABNONHWG/notes.chart",
+      "size": 23732
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/1. ABAWCLOEWHWRYABNONHWG/song.ini",
+      "size": 1451
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/1. ABAWCLOEWHWRYABNONHWG/song.ogg",
+      "size": 5903942
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/2. Enter - Funny Monkey!/album.png",
+      "size": 232428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/2. Enter - Funny Monkey!/background.jpg",
+      "size": 818495
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/2. Enter - Funny Monkey!/notes.chart",
+      "size": 52179
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/2. Enter - Funny Monkey!/song.ini",
+      "size": 1207
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/2. Enter - Funny Monkey!/song.ogg",
+      "size": 6681734
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/3 Space Chase Base to Base/album.png",
+      "size": 232428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/3 Space Chase Base to Base/background.jpg",
+      "size": 327536
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/3 Space Chase Base to Base/notes.chart",
+      "size": 24801
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/3 Space Chase Base to Base/song.ini",
+      "size": 960
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/3 Space Chase Base to Base/song.ogg",
+      "size": 4395271
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/4. Radioactive Rampage/album.png",
+      "size": 232428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/4. Radioactive Rampage/background.jpg",
+      "size": 263328
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/4. Radioactive Rampage/notes.chart",
+      "size": 49103
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/4. Radioactive Rampage/song.ini",
+      "size": 1049
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/4. Radioactive Rampage/song.ogg",
+      "size": 8647426
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/5. Return of the Funny Monkey/album.png",
+      "size": 232428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/5. Return of the Funny Monkey/background.png",
+      "size": 1757295
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/5. Return of the Funny Monkey/notes.chart",
+      "size": 29390
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/5. Return of the Funny Monkey/song.ini",
+      "size": 1230
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/5. Return of the Funny Monkey/song.ogg",
+      "size": 6603048
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/6. Instant Reality - Attack of the Funny Monkey (Full Album)/album.png",
+      "size": 232428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/6. Instant Reality - Attack of the Funny Monkey (Full Album)/background.png",
+      "size": 1837293
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/6. Instant Reality - Attack of the Funny Monkey (Full Album)/notes.chart",
+      "size": 186014
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/6. Instant Reality - Attack of the Funny Monkey (Full Album)/song.ini",
+      "size": 324
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB EP1 - Instant Reality - Attack of the Funny Monkey/6. Instant Reality - Attack of the Funny Monkey (Full Album)/song.ogg",
+      "size": 32265460
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/1. Up Into the Ether/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/1. Up Into the Ether/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/1. Up Into the Ether/notes.chart",
+      "size": 46380
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/1. Up Into the Ether/song.ini",
+      "size": 530
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/1. Up Into the Ether/song.ogg",
+      "size": 9578891
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/10. Moonbow/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/10. Moonbow/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/10. Moonbow/notes.chart",
+      "size": 33547
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/10. Moonbow/song.ini",
+      "size": 426
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/10. Moonbow/song.ogg",
+      "size": 8215564
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/11. The Zenith Rise Solo Medley/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/11. The Zenith Rise Solo Medley/background.jpg",
+      "size": 465055
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/11. The Zenith Rise Solo Medley/notes.chart",
+      "size": 73106
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/11. The Zenith Rise Solo Medley/song.ini",
+      "size": 456
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/11. The Zenith Rise Solo Medley/song.ogg",
+      "size": 14450465
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/12. The Zenith Rise (Full Album)/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/12. The Zenith Rise (Full Album)/background.jpg",
+      "size": 465055
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/12. The Zenith Rise (Full Album)/notes.chart",
+      "size": 426350
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/12. The Zenith Rise (Full Album)/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/12. The Zenith Rise (Full Album)/song.ogg",
+      "size": 86085259
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/2. Journey to Aurora/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/2. Journey to Aurora/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/2. Journey to Aurora/notes.chart",
+      "size": 35094
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/2. Journey to Aurora/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/2. Journey to Aurora/song.ogg",
+      "size": 8462759
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/3. Wormhole Traveler/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/3. Wormhole Traveler/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/3. Wormhole Traveler/notes.chart",
+      "size": 32668
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/3. Wormhole Traveler/song.ini",
+      "size": 581
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/3. Wormhole Traveler/song.ogg",
+      "size": 9032437
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/4. Stellar Evolution/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/4. Stellar Evolution/background.jpg",
+      "size": 472644
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/4. Stellar Evolution/notes.chart",
+      "size": 51568
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/4. Stellar Evolution/song.ini",
+      "size": 474
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/4. Stellar Evolution/song.ogg",
+      "size": 9221079
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/5. Light Pillars/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/5. Light Pillars/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/5. Light Pillars/notes.chart",
+      "size": 39990
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/5. Light Pillars/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/5. Light Pillars/song.ogg",
+      "size": 6645228
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/6. Stars and Darkness/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/6. Stars and Darkness/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/6. Stars and Darkness/notes.chart",
+      "size": 52863
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/6. Stars and Darkness/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/6. Stars and Darkness/song.ogg",
+      "size": 9282489
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/7. The Zenith Rise/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/7. The Zenith Rise/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/7. The Zenith Rise/notes.chart",
+      "size": 58145
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/7. The Zenith Rise/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/7. The Zenith Rise/song.ogg",
+      "size": 11268420
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/8. The Only Way Out Is Up/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/8. The Only Way Out Is Up/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/8. The Only Way Out Is Up/notes.chart",
+      "size": 30125
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/8. The Only Way Out Is Up/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/8. The Only Way Out Is Up/song.ogg",
+      "size": 7828374
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/9. Diamond Dust/album.jpg",
+      "size": 97118
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/9. Diamond Dust/background.jpg",
+      "size": 456272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/9. Diamond Dust/notes.chart",
+      "size": 26636
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/9. Diamond Dust/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP1 - I Built the Sky - The Zenith Rise/9. Diamond Dust/song.ogg",
+      "size": 8223273
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/1. A Clock Without A Craftsman/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/1. A Clock Without A Craftsman/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/1. A Clock Without A Craftsman/notes.chart",
+      "size": 46123
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/1. A Clock Without A Craftsman/song.ini",
+      "size": 360
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/1. A Clock Without A Craftsman/song.ogg",
+      "size": 6929231
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/10. Infinite Mind (Full Album)/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/10. Infinite Mind (Full Album)/background.png",
+      "size": 876597
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/10. Infinite Mind (Full Album)/notes.chart",
+      "size": 264463
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/10. Infinite Mind (Full Album)/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/10. Infinite Mind (Full Album)/song.ogg",
+      "size": 54351178
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/2. Amanuensis/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/2. Amanuensis/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/2. Amanuensis/notes.chart",
+      "size": 34155
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/2. Amanuensis/song.ini",
+      "size": 394
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/2. Amanuensis/song.ogg",
+      "size": 7440320
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/3. Rising Tide/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/3. Rising Tide/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/3. Rising Tide/notes.chart",
+      "size": 30492
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/3. Rising Tide/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/3. Rising Tide/song.ogg",
+      "size": 6051011
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/4. The Sun and The Wind/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/4. The Sun and The Wind/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/4. The Sun and The Wind/notes.chart",
+      "size": 26592
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/4. The Sun and The Wind/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/4. The Sun and The Wind/song.mp3",
+      "size": 9173033
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/5. A Neverending Explosion/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/5. A Neverending Explosion/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/5. A Neverending Explosion/notes.chart",
+      "size": 26624
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/5. A Neverending Explosion/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/5. A Neverending Explosion/song.ogg",
+      "size": 7468778
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/6. Astrolabe/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/6. Astrolabe/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/6. Astrolabe/notes.chart",
+      "size": 32023
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/6. Astrolabe/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/6. Astrolabe/song.ogg",
+      "size": 7279376
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/7. Truthsayer/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/7. Truthsayer/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/7. Truthsayer/notes.chart",
+      "size": 18703
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/7. Truthsayer/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/7. Truthsayer/song.ogg",
+      "size": 6347404
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/8. Infinite Mind/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/8. Infinite Mind/background.png",
+      "size": 890709
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/8. Infinite Mind/notes.chart",
+      "size": 37147
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/8. Infinite Mind/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/8. Infinite Mind/song.ogg",
+      "size": 6209526
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/9. Infinite Medley/album.png",
+      "size": 417731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/9. Infinite Medley/background.png",
+      "size": 876597
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/9. Infinite Medley/notes.chart",
+      "size": 32978
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/9. Infinite Medley/song.ini",
+      "size": 322
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP2 - Lee McKinney - Infinite Mind/9. Infinite Medley/song.ogg",
+      "size": 6252820
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/1 + 2. Into the Terrorvortex of Kor-Virliath & The Siege of Dunkeld/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/1 + 2. Into the Terrorvortex of Kor-Virliath & The Siege of Dunkeld/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/1 + 2. Into the Terrorvortex of Kor-Virliath & The Siege of Dunkeld/notes.chart",
+      "size": 72026
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/1 + 2. Into the Terrorvortex of Kor-Virliath & The Siege of Dunkeld/song.ini",
+      "size": 731
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/1 + 2. Into the Terrorvortex of Kor-Virliath & The Siege of Dunkeld/song.ogg",
+      "size": 6829320
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/10. The Fires of Ancient Cosmic Destiny/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/10. The Fires of Ancient Cosmic Destiny/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/10. The Fires of Ancient Cosmic Destiny/notes.chart",
+      "size": 137176
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/10. The Fires of Ancient Cosmic Destiny/song.ini",
+      "size": 747
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/10. The Fires of Ancient Cosmic Destiny/song.ogg",
+      "size": 14340412
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/11. Solos from Beyond the Galactic Terrorvortex/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/11. Solos from Beyond the Galactic Terrorvortex/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/11. Solos from Beyond the Galactic Terrorvortex/notes.chart",
+      "size": 118955
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/11. Solos from Beyond the Galactic Terrorvortex/song.ini",
+      "size": 601
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/11. Solos from Beyond the Galactic Terrorvortex/song.ogg",
+      "size": 9925596
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/12. Legends from Beyond the Galactic Terrorvortex (Full Album)/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/12. Legends from Beyond the Galactic Terrorvortex (Full Album)/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/12. Legends from Beyond the Galactic Terrorvortex (Full Album)/notes.chart",
+      "size": 591380
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/12. Legends from Beyond the Galactic Terrorvortex (Full Album)/song.ini",
+      "size": 664
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/12. Legends from Beyond the Galactic Terrorvortex (Full Album)/song.ogg",
+      "size": 56571531
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/3. Masters of the Galaxy/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/3. Masters of the Galaxy/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/3. Masters of the Galaxy/notes.chart",
+      "size": 49672
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/3. Masters of the Galaxy/song.ini",
+      "size": 681
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/3. Masters of the Galaxy/song.ogg",
+      "size": 11600070
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/4. The Land of Unicorns/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/4. The Land of Unicorns/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/4. The Land of Unicorns/notes.chart",
+      "size": 48665
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/4. The Land of Unicorns/song.ini",
+      "size": 752
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/4. The Land of Unicorns/song.ogg",
+      "size": 5018538
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/5. Power of the Laser Dragon Fire/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/5. Power of the Laser Dragon Fire/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/5. Power of the Laser Dragon Fire/notes.chart",
+      "size": 52077
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/5. Power of the Laser Dragon Fire/song.ini",
+      "size": 721
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/5. Power of the Laser Dragon Fire/song.ogg",
+      "size": 5706272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/6. Legendary Enchanted Jetpack/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/6. Legendary Enchanted Jetpack/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/6. Legendary Enchanted Jetpack/notes.chart",
+      "size": 44437
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/6. Legendary Enchanted Jetpack/song.ini",
+      "size": 695
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/6. Legendary Enchanted Jetpack/song.ogg",
+      "size": 9105672
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/7. Gloryhammer/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/7. Gloryhammer/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/7. Gloryhammer/notes.chart",
+      "size": 59765
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/7. Gloryhammer/song.ini",
+      "size": 674
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/7. Gloryhammer/song.ogg",
+      "size": 5595356
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/7. Gloryhammer/video.mp4",
+      "size": 87142211
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/8. Hootsforce/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/8. Hootsforce/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/8. Hootsforce/notes.chart",
+      "size": 53227
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/8. Hootsforce/song.ini",
+      "size": 710
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/8. Hootsforce/song.ogg",
+      "size": 4356186
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/8. Hootsforce/video.mp4",
+      "size": 71881683
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/9. Battle for Eternity/album.png",
+      "size": 2205174
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/9. Battle for Eternity/background.png",
+      "size": 2225084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/9. Battle for Eternity/notes.chart",
+      "size": 50456
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/9. Battle for Eternity/song.ini",
+      "size": 743
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP3 - Gloryhammer - Legends from Beyond the Galactic Terrorvortex/9. Battle for Eternity/song.ogg",
+      "size": 4474967
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/1. Begin/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/1. Begin/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/1. Begin/notes.chart",
+      "size": 15662
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/1. Begin/song.ini",
+      "size": 757
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/1. Begin/song.ogg",
+      "size": 3381076
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/2. Divinity/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/2. Divinity/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/2. Divinity/notes.chart",
+      "size": 30599
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/2. Divinity/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/2. Divinity/song.ogg",
+      "size": 6091084
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/3. Fortress/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/3. Fortress/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/3. Fortress/notes.chart",
+      "size": 45035
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/3. Fortress/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/3. Fortress/song.ogg",
+      "size": 6675365
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/4. Charlotte/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/4. Charlotte/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/4. Charlotte/notes.chart",
+      "size": 50810
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/4. Charlotte/song.ini",
+      "size": 626
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/4. Charlotte/song.ogg",
+      "size": 6344871
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/5. The Branded/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/5. The Branded/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/5. The Branded/notes.chart",
+      "size": 29104
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/5. The Branded/song.ini",
+      "size": 755
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/5. The Branded/song.ogg",
+      "size": 5333376
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/6. Claw Marks/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/6. Claw Marks/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/6. Claw Marks/notes.chart",
+      "size": 31527
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/6. Claw Marks/song.ini",
+      "size": 584
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/6. Claw Marks/song.ogg",
+      "size": 4524358
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/7. Beast of Darkness/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/7. Beast of Darkness/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/7. Beast of Darkness/notes.chart",
+      "size": 35972
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/7. Beast of Darkness/song.ini",
+      "size": 597
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/7. Beast of Darkness/song.ogg",
+      "size": 5747050
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/8. God Hand/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/8. God Hand/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/8. God Hand/notes.chart",
+      "size": 25755
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/8. God Hand/song.ini",
+      "size": 761
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/8. God Hand/song.ogg",
+      "size": 5763646
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/9. God Hand (Full Album)/album.png",
+      "size": 658770
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/9. God Hand (Full Album)/background.png",
+      "size": 3067818
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/9. God Hand (Full Album)/notes.chart",
+      "size": 273122
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/9. God Hand (Full Album)/song.ini",
+      "size": 638
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP4 - Brand of Sacrifice - God Hand/9. God Hand (Full Album)/song.ogg",
+      "size": 43987545
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/10. Planetary Annihilation (Full Album)/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/10. Planetary Annihilation (Full Album)/background.jpg",
+      "size": 942726
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/10. Planetary Annihilation (Full Album)/notes.chart",
+      "size": 432580
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/10. Planetary Annihilation (Full Album)/song.ini",
+      "size": 812
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/10. Planetary Annihilation (Full Album)/song.ogg",
+      "size": 51705628
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/2. Planetary Annihilation/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/2. Planetary Annihilation/background.jpg",
+      "size": 365602
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/2. Planetary Annihilation/notes.chart",
+      "size": 51663
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/2. Planetary Annihilation/song.ini",
+      "size": 480
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/2. Planetary Annihilation/song.ogg",
+      "size": 6766686
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/3. The Human Cleansing/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/3. The Human Cleansing/background.jpg",
+      "size": 349376
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/3. The Human Cleansing/notes.chart",
+      "size": 31226
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/3. The Human Cleansing/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/3. The Human Cleansing/song.ogg",
+      "size": 6389331
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/4. Alien Conspiracy/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/4. Alien Conspiracy/background.jpg",
+      "size": 890719
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/4. Alien Conspiracy/notes.chart",
+      "size": 60456
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/4. Alien Conspiracy/song.ini",
+      "size": 413
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/4. Alien Conspiracy/song.ogg",
+      "size": 7053253
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/5. Internecivus Raptus/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/5. Internecivus Raptus/background.jpg",
+      "size": 697002
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/5. Internecivus Raptus/notes.chart",
+      "size": 71529
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/5. Internecivus Raptus/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/5. Internecivus Raptus/song.ogg",
+      "size": 7853154
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/6. U.F.O/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/6. U.F.O/background.jpg",
+      "size": 502290
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/6. U.F.O/notes.chart",
+      "size": 86887
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/6. U.F.O/song.ini",
+      "size": 400
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/6. U.F.O/song.ogg",
+      "size": 8445359
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/7. Manipulation of DNA/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/7. Manipulation of DNA/background.jpg",
+      "size": 610402
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/7. Manipulation of DNA/notes.chart",
+      "size": 50391
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/7. Manipulation of DNA/song.ini",
+      "size": 484
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/7. Manipulation of DNA/song.ogg",
+      "size": 6921272
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/8. New World Order/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/8. New World Order/background.jpg",
+      "size": 842821
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/8. New World Order/notes.chart",
+      "size": 59815
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/8. New World Order/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/8. New World Order/song.ogg",
+      "size": 8741144
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/9. The Solo Medley That's Literally About Guitars That Destroyed the World/album.png",
+      "size": 259998
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/9. The Solo Medley That's Literally About Guitars That Destroyed the World/background.jpg",
+      "size": 758160
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/9. The Solo Medley That's Literally About Guitars That Destroyed the World/notes.chart",
+      "size": 36420
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/9. The Solo Medley That's Literally About Guitars That Destroyed the World/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Zero Gravity: Space Battle/ZGSB LP5 - NEPTUNUS - Planetary Annihilation/9. The Solo Medley That's Literally About Guitars That Destroyed the World/song.ogg",
+      "size": 5641297
     }
-  ]
+  ],
+  "extracted_size": 3167807330,
+  "file_count": 1190,
+  "chart_count": 236,
+  "release_date": "2021-04-23"
 }

@@ -1,20 +1,2101 @@
 {
   "name": "Carpal Tunnel Hero",
-  "folder_id": "static-cth-1",
+  "folder_id": "static-carpal-tunnel-hero",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 104,
-  "total_size": 1530237473,
-  "file_count": 524,
+  "downloads": [
+    {
+      "url": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%20-%20%20Remastered.rar?ref=customsongscentral.com",
+      "name": "Carpal Tunnel Hero -  Remastered.rar",
+      "size": 1530237473,
+      "md5": "4a76924c7b29f18d3e43fb1b90daf307"
+    }
+  ],
+  "download_size": 1530237473,
   "files": [
     {
-      "id": "cdn-csc-cth-1",
-      "path": "Carpal Tunnel Hero/Carpal Tunnel Hero.rar",
-      "name": "Carpal Tunnel Hero.rar",
-      "size": 1530237473,
-      "md5": "4a76924c7b29f18d3e43fb1b90daf307",
-      "url": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%20-%20%20Remastered.rar?ref=customsongscentral.com"
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/1. Paul Gilbert - Everybody Use Your Goddamn Turn Signal (Chemfinal)/album.jpg",
+      "size": 92617
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/1. Paul Gilbert - Everybody Use Your Goddamn Turn Signal (Chemfinal)/background.jpg",
+      "size": 204119
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/1. Paul Gilbert - Everybody Use Your Goddamn Turn Signal (Chemfinal)/guitar.ogg",
+      "size": 10496838
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/1. Paul Gilbert - Everybody Use Your Goddamn Turn Signal (Chemfinal)/notes.chart",
+      "size": 38760
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/1. Paul Gilbert - Everybody Use Your Goddamn Turn Signal (Chemfinal)/song.ini",
+      "size": 518
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/2. Mindless Self Indulgence - Stupid MF (JRabes)/album.jpg",
+      "size": 134949
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/2. Mindless Self Indulgence - Stupid MF (JRabes)/background.jpg",
+      "size": 331617
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/2. Mindless Self Indulgence - Stupid MF (JRabes)/notes.chart",
+      "size": 39571
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/2. Mindless Self Indulgence - Stupid MF (JRabes)/song.ini",
+      "size": 480
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/2. Mindless Self Indulgence - Stupid MF (JRabes)/song.ogg",
+      "size": 4983846
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/3. Iced Earth - Pure Evil (OrangeHat)/album.jpg",
+      "size": 73739
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/3. Iced Earth - Pure Evil (OrangeHat)/background.jpg",
+      "size": 295668
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/3. Iced Earth - Pure Evil (OrangeHat)/notes.chart",
+      "size": 90361
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/3. Iced Earth - Pure Evil (OrangeHat)/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/3. Iced Earth - Pure Evil (OrangeHat)/song.ogg",
+      "size": 13288236
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/7. Maynard Ferguson - Birdland (Sygenysis)/album.png",
+      "size": 687600
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/7. Maynard Ferguson - Birdland (Sygenysis)/background.jpg",
+      "size": 370364
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/7. Maynard Ferguson - Birdland (Sygenysis)/guitar.ogg",
+      "size": 11319389
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/7. Maynard Ferguson - Birdland (Sygenysis)/notes.mid",
+      "size": 10151
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/7. Maynard Ferguson - Birdland (Sygenysis)/song.ini",
+      "size": 707
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/8. A Sense of Gravity - Echo Chasers (XEntombmentX)/album.png",
+      "size": 492924
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/8. A Sense of Gravity - Echo Chasers (XEntombmentX)/background.jpg",
+      "size": 192683
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/8. A Sense of Gravity - Echo Chasers (XEntombmentX)/notes.chart",
+      "size": 66760
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/8. A Sense of Gravity - Echo Chasers (XEntombmentX)/song.ini",
+      "size": 597
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/8. A Sense of Gravity - Echo Chasers (XEntombmentX)/song.ogg",
+      "size": 10286731
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Periphery - Absolomb/album.jpg",
+      "size": 96045
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Periphery - Absolomb/background.jpg",
+      "size": 254400
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Periphery - Absolomb/notes.chart",
+      "size": 70587
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Periphery - Absolomb/song.ini",
+      "size": 594
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Periphery - Absolomb/song.ogg",
+      "size": 14350254
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Protest the Hero - Cold Water/album.png",
+      "size": 643257
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Protest the Hero - Cold Water/background.jpg",
+      "size": 286395
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Protest the Hero - Cold Water/notes.chart",
+      "size": 70936
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Protest the Hero - Cold Water/song.ini",
+      "size": 730
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Protest the Hero - Cold Water/song.ogg",
+      "size": 11568080
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Rx Bandits - My Lonesome Only Friend (Raspberriel)/album.png",
+      "size": 420119
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Rx Bandits - My Lonesome Only Friend (Raspberriel)/background.jpg",
+      "size": 253336
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Rx Bandits - My Lonesome Only Friend (Raspberriel)/guitar.ogg",
+      "size": 7203449
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Rx Bandits - My Lonesome Only Friend (Raspberriel)/notes.mid",
+      "size": 26323
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 01 - ...And the Journey Begins!/Rx Bandits - My Lonesome Only Friend (Raspberriel)/song.ini",
+      "size": 737
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/1. Rhapsody of Fire - Gargoyles, Angels of Darkness (BurpLeTurtle)/album.png",
+      "size": 586091
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/1. Rhapsody of Fire - Gargoyles, Angels of Darkness (BurpLeTurtle)/background.jpg",
+      "size": 277040
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/1. Rhapsody of Fire - Gargoyles, Angels of Darkness (BurpLeTurtle)/notes.chart",
+      "size": 148111
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/1. Rhapsody of Fire - Gargoyles, Angels of Darkness (BurpLeTurtle)/song.ini",
+      "size": 672
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/1. Rhapsody of Fire - Gargoyles, Angels of Darkness (BurpLeTurtle)/song.ogg",
+      "size": 34515819
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/2. Scar Symmetry - The Anomaly (Miscellany)/album.png",
+      "size": 618119
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/2. Scar Symmetry - The Anomaly (Miscellany)/background.jpg",
+      "size": 165008
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/2. Scar Symmetry - The Anomaly (Miscellany)/guitar.ogg",
+      "size": 10091236
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/2. Scar Symmetry - The Anomaly (Miscellany)/notes.chart",
+      "size": 51496
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/2. Scar Symmetry - The Anomaly (Miscellany)/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/3. An Endless Sporadic - Impulse II (jdurandTV)/album.jpg",
+      "size": 151548
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/3. An Endless Sporadic - Impulse II (jdurandTV)/background.jpg",
+      "size": 689632
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/3. An Endless Sporadic - Impulse II (jdurandTV)/notes.chart",
+      "size": 36788
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/3. An Endless Sporadic - Impulse II (jdurandTV)/song.ini",
+      "size": 612
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/3. An Endless Sporadic - Impulse II (jdurandTV)/song.ogg",
+      "size": 8544855
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/4. Animals as Leaders - Ka$cade (XEntombmentX)/album.png",
+      "size": 747773
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/4. Animals as Leaders - Ka$cade (XEntombmentX)/background.jpg",
+      "size": 440457
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/4. Animals as Leaders - Ka$cade (XEntombmentX)/notes.chart",
+      "size": 51350
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/4. Animals as Leaders - Ka$cade (XEntombmentX)/song.ini",
+      "size": 659
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/4. Animals as Leaders - Ka$cade (XEntombmentX)/song.ogg",
+      "size": 11216209
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/5. Guthrie Govan - Waves (xX760Xx)/album.png",
+      "size": 580624
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/5. Guthrie Govan - Waves (xX760Xx)/background.jpg",
+      "size": 472507
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/5. Guthrie Govan - Waves (xX760Xx)/notes.chart",
+      "size": 36222
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/5. Guthrie Govan - Waves (xX760Xx)/song.ini",
+      "size": 616
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/5. Guthrie Govan - Waves (xX760Xx)/song.ogg",
+      "size": 11213260
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/6. Periphery - Somewhere in Time (Miscellany)/album.png",
+      "size": 47636
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/6. Periphery - Somewhere in Time (Miscellany)/background.jpg",
+      "size": 108586
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/6. Periphery - Somewhere in Time (Miscellany)/guitar.ogg",
+      "size": 51607937
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/6. Periphery - Somewhere in Time (Miscellany)/notes.chart",
+      "size": 93345
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/6. Periphery - Somewhere in Time (Miscellany)/song.ini",
+      "size": 720
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/7. Opeth - The Baying of The Hounds (LemonGH & captaintoasty)/album.png",
+      "size": 448174
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/7. Opeth - The Baying of The Hounds (LemonGH & captaintoasty)/background.jpg",
+      "size": 409067
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/7. Opeth - The Baying of The Hounds (LemonGH & captaintoasty)/notes.chart",
+      "size": 98086
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/7. Opeth - The Baying of The Hounds (LemonGH & captaintoasty)/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 02 - Learning the Ropes/7. Opeth - The Baying of The Hounds (LemonGH & captaintoasty)/song.ogg",
+      "size": 22873822
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/1. Dream Theater - The Test That Stumped Them All (GHX & JRabes)/album.jpg",
+      "size": 130679
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/1. Dream Theater - The Test That Stumped Them All (GHX & JRabes)/background.jpg",
+      "size": 194517
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/1. Dream Theater - The Test That Stumped Them All (GHX & JRabes)/guitar.ogg",
+      "size": 10182171
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/1. Dream Theater - The Test That Stumped Them All (GHX & JRabes)/notes.chart",
+      "size": 75608
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/1. Dream Theater - The Test That Stumped Them All (GHX & JRabes)/song.ini",
+      "size": 826
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/2. Vitalij Kuprij - Phantom Flurries (OHM)/album.jpg",
+      "size": 75736
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/2. Vitalij Kuprij - Phantom Flurries (OHM)/background.jpg",
+      "size": 411470
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/2. Vitalij Kuprij - Phantom Flurries (OHM)/notes.chart",
+      "size": 24522
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/2. Vitalij Kuprij - Phantom Flurries (OHM)/song.ini",
+      "size": 576
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/2. Vitalij Kuprij - Phantom Flurries (OHM)/song.ogg",
+      "size": 1713779
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/3. Shawn Lane - Gray Pianos Flying (Angevil)/album.jpg",
+      "size": 84455
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/3. Shawn Lane - Gray Pianos Flying (Angevil)/background.jpg",
+      "size": 250088
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/3. Shawn Lane - Gray Pianos Flying (Angevil)/notes.chart",
+      "size": 34342
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/3. Shawn Lane - Gray Pianos Flying (Angevil)/song.ini",
+      "size": 596
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/3. Shawn Lane - Gray Pianos Flying (Angevil)/song.ogg",
+      "size": 6283387
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/4. Anus - Coin, Coin ! (GHX)/album.jpg",
+      "size": 50808
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/4. Anus - Coin, Coin ! (GHX)/background.jpg",
+      "size": 303464
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/4. Anus - Coin, Coin ! (GHX)/notes.chart",
+      "size": 74694
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/4. Anus - Coin, Coin ! (GHX)/song.ini",
+      "size": 484
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/4. Anus - Coin, Coin ! (GHX)/song.ogg",
+      "size": 6169605
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/5. Symphony X - Nevermore (JRabes)/album.jpg",
+      "size": 40087
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/5. Symphony X - Nevermore (JRabes)/background.jpg",
+      "size": 298312
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/5. Symphony X - Nevermore (JRabes)/notes.chart",
+      "size": 61656
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/5. Symphony X - Nevermore (JRabes)/song.ini",
+      "size": 675
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/5. Symphony X - Nevermore (JRabes)/song.ogg",
+      "size": 20331730
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/6. Metallica - Moth Into Flame (Miscellany)/album.png",
+      "size": 47747
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/6. Metallica - Moth Into Flame (Miscellany)/background.jpg",
+      "size": 75616
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/6. Metallica - Moth Into Flame (Miscellany)/guitar.ogg",
+      "size": 14236666
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/6. Metallica - Moth Into Flame (Miscellany)/notes.chart",
+      "size": 69569
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/6. Metallica - Moth Into Flame (Miscellany)/song.ini",
+      "size": 648
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/7. Octavision - Three Lives (jdurandTV & Chemfinal)/album.jpg",
+      "size": 73517
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/7. Octavision - Three Lives (jdurandTV & Chemfinal)/background.jpg",
+      "size": 540081
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/7. Octavision - Three Lives (jdurandTV & Chemfinal)/notes.chart",
+      "size": 81752
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/7. Octavision - Three Lives (jdurandTV & Chemfinal)/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 03 - Realization/7. Octavision - Three Lives (jdurandTV & Chemfinal)/song.ogg",
+      "size": 20310271
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/1. Evile - We Who Are About to Die (Angevil)/album.jpg",
+      "size": 94168
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/1. Evile - We Who Are About to Die (Angevil)/background.jpg",
+      "size": 290358
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/1. Evile - We Who Are About to Die (Angevil)/notes.chart",
+      "size": 57996
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/1. Evile - We Who Are About to Die (Angevil)/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/1. Evile - We Who Are About to Die (Angevil)/song.ogg",
+      "size": 15183888
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/2. 311Erock - Livin' on a Prayer (feat. PelleK & Cole Rolland) (Miscellany)/album.png",
+      "size": 94351
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/2. 311Erock - Livin' on a Prayer (feat. PelleK & Cole Rolland) (Miscellany)/background.jpg",
+      "size": 280576
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/2. 311Erock - Livin' on a Prayer (feat. PelleK & Cole Rolland) (Miscellany)/guitar.ogg",
+      "size": 13658811
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/2. 311Erock - Livin' on a Prayer (feat. PelleK & Cole Rolland) (Miscellany)/notes.chart",
+      "size": 42744
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/2. 311Erock - Livin' on a Prayer (feat. PelleK & Cole Rolland) (Miscellany)/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/3. After the Burial - Ometh (captaintoasty & XEntombmentX)/album.jpg",
+      "size": 102752
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/3. After the Burial - Ometh (captaintoasty & XEntombmentX)/background.jpg",
+      "size": 285411
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/3. After the Burial - Ometh (captaintoasty & XEntombmentX)/notes.chart",
+      "size": 55374
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/3. After the Burial - Ometh (captaintoasty & XEntombmentX)/song.ini",
+      "size": 736
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/3. After the Burial - Ometh (captaintoasty & XEntombmentX)/song.ogg",
+      "size": 8337020
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/4. Obscura - Akr\u00f3asis (Miscellany)/album.jpg",
+      "size": 122997
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/4. Obscura - Akr\u00f3asis (Miscellany)/background.jpg",
+      "size": 259224
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/4. Obscura - Akr\u00f3asis (Miscellany)/guitar.ogg",
+      "size": 10852950
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/4. Obscura - Akr\u00f3asis (Miscellany)/notes.chart",
+      "size": 48131
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/4. Obscura - Akr\u00f3asis (Miscellany)/song.ini",
+      "size": 687
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/5. The Fall of Troy - Inside  Out (xX760Xx)/album.jpg",
+      "size": 134851
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/5. The Fall of Troy - Inside  Out (xX760Xx)/background.jpg",
+      "size": 463547
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/5. The Fall of Troy - Inside  Out (xX760Xx)/notes.chart",
+      "size": 61662
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/5. The Fall of Troy - Inside  Out (xX760Xx)/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/5. The Fall of Troy - Inside  Out (xX760Xx)/song.ogg",
+      "size": 9044717
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/6. Disarmonia Mundi - Celestial Furnace (Angevil)/album.jpg",
+      "size": 126863
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/6. Disarmonia Mundi - Celestial Furnace (Angevil)/background.jpg",
+      "size": 301982
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/6. Disarmonia Mundi - Celestial Furnace (Angevil)/notes.chart",
+      "size": 48067
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/6. Disarmonia Mundi - Celestial Furnace (Angevil)/song.ini",
+      "size": 632
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/6. Disarmonia Mundi - Celestial Furnace (Angevil)/song.ogg",
+      "size": 7425919
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/7. Haken - Celestial Elixir (Miscellany)/album.jpg",
+      "size": 82822
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/7. Haken - Celestial Elixir (Miscellany)/background.jpg",
+      "size": 290314
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/7. Haken - Celestial Elixir (Miscellany)/guitar.ogg",
+      "size": 41672086
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/7. Haken - Celestial Elixir (Miscellany)/notes.chart",
+      "size": 107410
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/7. Haken - Celestial Elixir (Miscellany)/song.ini",
+      "size": 809
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/8. Angel Vivaldi - An Erisian Autumn (Angevil)/album.jpg",
+      "size": 130200
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/8. Angel Vivaldi - An Erisian Autumn (Angevil)/background.jpg",
+      "size": 531592
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/8. Angel Vivaldi - An Erisian Autumn (Angevil)/notes.chart",
+      "size": 62701
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/8. Angel Vivaldi - An Erisian Autumn (Angevil)/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 04 - Rising Above It All/8. Angel Vivaldi - An Erisian Autumn (Angevil)/song.ogg",
+      "size": 10697087
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/1. Pagan's Mind - Enigmatic Mission (jdurandTV)/album.jpg",
+      "size": 141319
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/1. Pagan's Mind - Enigmatic Mission (jdurandTV)/background.jpg",
+      "size": 400671
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/1. Pagan's Mind - Enigmatic Mission (jdurandTV)/notes.chart",
+      "size": 79190
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/1. Pagan's Mind - Enigmatic Mission (jdurandTV)/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/1. Pagan's Mind - Enigmatic Mission (jdurandTV)/song.ogg",
+      "size": 10819273
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/2. myGRAIN - Into the Parallel Universe (OHM)/album.jpg",
+      "size": 208647
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/2. myGRAIN - Into the Parallel Universe (OHM)/background.jpg",
+      "size": 265551
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/2. myGRAIN - Into the Parallel Universe (OHM)/notes.chart",
+      "size": 80063
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/2. myGRAIN - Into the Parallel Universe (OHM)/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/2. myGRAIN - Into the Parallel Universe (OHM)/song.ogg",
+      "size": 14358261
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/3. Steve Vai - Juice (OHM)/album.jpg",
+      "size": 115526
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/3. Steve Vai - Juice (OHM)/background.jpg",
+      "size": 247086
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/3. Steve Vai - Juice (OHM)/notes.chart",
+      "size": 44037
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/3. Steve Vai - Juice (OHM)/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/3. Steve Vai - Juice (OHM)/song.ogg",
+      "size": 9384042
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/4. Racer X - Street Lethal (Sygenysis)/album.jpg",
+      "size": 87408
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/4. Racer X - Street Lethal (Sygenysis)/background.jpg",
+      "size": 304281
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/4. Racer X - Street Lethal (Sygenysis)/guitar.ogg",
+      "size": 6378462
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/4. Racer X - Street Lethal (Sygenysis)/notes.mid",
+      "size": 18018
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/4. Racer X - Street Lethal (Sygenysis)/song.ini",
+      "size": 772
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/5. Protest the Hero - Goddess Bound (Chezy)/album.jpg",
+      "size": 194120
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/5. Protest the Hero - Goddess Bound (Chezy)/background.jpg",
+      "size": 495239
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/5. Protest the Hero - Goddess Bound (Chezy)/notes.chart",
+      "size": 55438
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/5. Protest the Hero - Goddess Bound (Chezy)/song.ini",
+      "size": 680
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/5. Protest the Hero - Goddess Bound (Chezy)/song.ogg",
+      "size": 7124727
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/6. Little Tybee - Left Right (Angevil & jdurandTV)/album.jpg",
+      "size": 46138
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/6. Little Tybee - Left Right (Angevil & jdurandTV)/background.jpg",
+      "size": 244440
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/6. Little Tybee - Left Right (Angevil & jdurandTV)/notes.chart",
+      "size": 43764
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/6. Little Tybee - Left Right (Angevil & jdurandTV)/song.ini",
+      "size": 648
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/6. Little Tybee - Left Right (Angevil & jdurandTV)/song.ogg",
+      "size": 5157726
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/7. Adrenaline Mob - Indifferent (xX760Xx)/album.jpg",
+      "size": 99224
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/7. Adrenaline Mob - Indifferent (xX760Xx)/background.jpg",
+      "size": 529864
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/7. Adrenaline Mob - Indifferent (xX760Xx)/notes.chart",
+      "size": 51240
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/7. Adrenaline Mob - Indifferent (xX760Xx)/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/7. Adrenaline Mob - Indifferent (xX760Xx)/song.ogg",
+      "size": 8938027
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/8. xi - Halcyon (Mintorment)/album.jpg",
+      "size": 85887
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/8. xi - Halcyon (Mintorment)/background.jpg",
+      "size": 228856
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/8. xi - Halcyon (Mintorment)/notes.chart",
+      "size": 54462
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/8. xi - Halcyon (Mintorment)/song.ini",
+      "size": 777
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 05 - Beyond Earth/8. xi - Halcyon (Mintorment)/song.ogg",
+      "size": 11930324
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/1. Trivium - Into the Mouth of Hell We March (Miscellany)/album.jpg",
+      "size": 176943
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/1. Trivium - Into the Mouth of Hell We March (Miscellany)/background.jpg",
+      "size": 202961
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/1. Trivium - Into the Mouth of Hell We March (Miscellany)/guitar.ogg",
+      "size": 20732045
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/1. Trivium - Into the Mouth of Hell We March (Miscellany)/notes.chart",
+      "size": 60701
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/1. Trivium - Into the Mouth of Hell We March (Miscellany)/song.ini",
+      "size": 650
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/2. Jeff Loomis - Miles of Machines (Chemfinal)/album.jpg",
+      "size": 70229
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/2. Jeff Loomis - Miles of Machines (Chemfinal)/background.jpg",
+      "size": 362440
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/2. Jeff Loomis - Miles of Machines (Chemfinal)/notes.chart",
+      "size": 46154
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/2. Jeff Loomis - Miles of Machines (Chemfinal)/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/2. Jeff Loomis - Miles of Machines (Chemfinal)/song.ogg",
+      "size": 12447158
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/3. Testament - The Persecuted Won't Forget (Peddy)/album.jpg",
+      "size": 107374
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/3. Testament - The Persecuted Won't Forget (Peddy)/background.jpg",
+      "size": 535507
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/3. Testament - The Persecuted Won't Forget (Peddy)/notes.chart",
+      "size": 71090
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/3. Testament - The Persecuted Won't Forget (Peddy)/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/3. Testament - The Persecuted Won't Forget (Peddy)/song.ogg",
+      "size": 12047474
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/4. Scar Symmetry - Neuromancers (Miscellany)/album.jpg",
+      "size": 99499
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/4. Scar Symmetry - Neuromancers (Miscellany)/background.jpg",
+      "size": 248317
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/4. Scar Symmetry - Neuromancers (Miscellany)/guitar.ogg",
+      "size": 13804109
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/4. Scar Symmetry - Neuromancers (Miscellany)/notes.chart",
+      "size": 64600
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/4. Scar Symmetry - Neuromancers (Miscellany)/song.ini",
+      "size": 635
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/5. Annihilator - Deadlock (Sygenysis)/album.jpg",
+      "size": 127855
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/5. Annihilator - Deadlock (Sygenysis)/background.jpg",
+      "size": 161062
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/5. Annihilator - Deadlock (Sygenysis)/guitar.ogg",
+      "size": 8166113
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/5. Annihilator - Deadlock (Sygenysis)/notes.mid",
+      "size": 36838
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/5. Annihilator - Deadlock (Sygenysis)/song.ini",
+      "size": 725
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/6. Dire Straits - Sultans of Swing (Live) (Angevil & jdurandTV)/album.jpg",
+      "size": 93162
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/6. Dire Straits - Sultans of Swing (Live) (Angevil & jdurandTV)/background.jpg",
+      "size": 163250
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/6. Dire Straits - Sultans of Swing (Live) (Angevil & jdurandTV)/notes.chart",
+      "size": 114436
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/6. Dire Straits - Sultans of Swing (Live) (Angevil & jdurandTV)/song.ini",
+      "size": 656
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/6. Dire Straits - Sultans of Swing (Live) (Angevil & jdurandTV)/song.ogg",
+      "size": 19439951
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/7. Between the Buried and Me - Telos (XEntombmentX)/album.jpg",
+      "size": 138386
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/7. Between the Buried and Me - Telos (XEntombmentX)/background.jpg",
+      "size": 372410
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/7. Between the Buried and Me - Telos (XEntombmentX)/notes.chart",
+      "size": 101777
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/7. Between the Buried and Me - Telos (XEntombmentX)/song.ini",
+      "size": 656
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/7. Between the Buried and Me - Telos (XEntombmentX)/song.ogg",
+      "size": 18849219
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/8. Pathfinder - Stardust (xX760Xx)/album.jpg",
+      "size": 115398
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/8. Pathfinder - Stardust (xX760Xx)/background.jpg",
+      "size": 458955
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/8. Pathfinder - Stardust (xX760Xx)/notes.chart",
+      "size": 66954
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/8. Pathfinder - Stardust (xX760Xx)/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/8. Pathfinder - Stardust (xX760Xx)/song.ogg",
+      "size": 16478397
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/9. Pagan's Mind - Into the Aftermath (jdurandTV)/album.jpg",
+      "size": 184054
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/9. Pagan's Mind - Into the Aftermath (jdurandTV)/background.jpg",
+      "size": 448946
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/9. Pagan's Mind - Into the Aftermath (jdurandTV)/notes.chart",
+      "size": 80174
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/9. Pagan's Mind - Into the Aftermath (jdurandTV)/song.ini",
+      "size": 657
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 06 - Into the Aftermath/9. Pagan's Mind - Into the Aftermath (jdurandTV)/song.ogg",
+      "size": 10261390
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/1. Kelly Simonz - Sign of the Times (Chemfinal)/album.png",
+      "size": 271011
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/1. Kelly Simonz - Sign of the Times (Chemfinal)/background.jpg",
+      "size": 483440
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/1. Kelly Simonz - Sign of the Times (Chemfinal)/notes.chart",
+      "size": 85890
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/1. Kelly Simonz - Sign of the Times (Chemfinal)/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/1. Kelly Simonz - Sign of the Times (Chemfinal)/song.ogg",
+      "size": 14117893
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/2. BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/album.jpg",
+      "size": 112426
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/2. BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/background.jpg",
+      "size": 332376
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/2. BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/guitar.ogg",
+      "size": 10886913
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/2. BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/notes.mid",
+      "size": 21130
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/2. BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/song.ini",
+      "size": 618
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/3. Brain Drill - Apocalyptic Feasting (LemonGH)/album.jpg",
+      "size": 112979
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/3. Brain Drill - Apocalyptic Feasting (LemonGH)/background.jpg",
+      "size": 431086
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/3. Brain Drill - Apocalyptic Feasting (LemonGH)/notes.chart",
+      "size": 73756
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/3. Brain Drill - Apocalyptic Feasting (LemonGH)/song.ini",
+      "size": 699
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/3. Brain Drill - Apocalyptic Feasting (LemonGH)/song.ogg",
+      "size": 8280928
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/4. Children of Bodom Solo Medley Deluxe (Chemfinal)/album.jpg",
+      "size": 99629
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/4. Children of Bodom Solo Medley Deluxe (Chemfinal)/background.jpg",
+      "size": 192372
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/4. Children of Bodom Solo Medley Deluxe (Chemfinal)/notes.chart",
+      "size": 179588
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/4. Children of Bodom Solo Medley Deluxe (Chemfinal)/song.ini",
+      "size": 782
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/4. Children of Bodom Solo Medley Deluxe (Chemfinal)/song.ogg",
+      "size": 23439336
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/5. Pathfinder - Vita Reducta Through the Portal, Pathway to the Moon (Raspberriel)/album.jpg",
+      "size": 100355
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/5. Pathfinder - Vita Reducta Through the Portal, Pathway to the Moon (Raspberriel)/background.jpg",
+      "size": 395494
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/5. Pathfinder - Vita Reducta Through the Portal, Pathway to the Moon (Raspberriel)/guitar.ogg",
+      "size": 15360830
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/5. Pathfinder - Vita Reducta Through the Portal, Pathway to the Moon (Raspberriel)/notes.mid",
+      "size": 46912
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/5. Pathfinder - Vita Reducta Through the Portal, Pathway to the Moon (Raspberriel)/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/6. Exmortus - Moonlight Sonata (Act 3) (Sygenysis)/album.jpg",
+      "size": 118421
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/6. Exmortus - Moonlight Sonata (Act 3) (Sygenysis)/background.jpg",
+      "size": 331402
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/6. Exmortus - Moonlight Sonata (Act 3) (Sygenysis)/guitar.ogg",
+      "size": 12003754
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/6. Exmortus - Moonlight Sonata (Act 3) (Sygenysis)/notes.mid",
+      "size": 21921
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/6. Exmortus - Moonlight Sonata (Act 3) (Sygenysis)/song.ini",
+      "size": 690
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/7. Animals as Leaders - Inamorata (XEntombmentX)/album.jpg",
+      "size": 87935
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/7. Animals as Leaders - Inamorata (XEntombmentX)/background.jpg",
+      "size": 459516
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/7. Animals as Leaders - Inamorata (XEntombmentX)/notes.chart",
+      "size": 87688
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/7. Animals as Leaders - Inamorata (XEntombmentX)/song.ini",
+      "size": 572
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 07 - Portal to Another Dimension/7. Animals as Leaders - Inamorata (XEntombmentX)/song.ogg",
+      "size": 11913009
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/01. Slayer - Angel of Death (OHM)/album.jpg",
+      "size": 120758
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/01. Slayer - Angel of Death (OHM)/background.jpg",
+      "size": 433372
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/01. Slayer - Angel of Death (OHM)/notes.chart",
+      "size": 69370
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/01. Slayer - Angel of Death (OHM)/song.ini",
+      "size": 584
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/01. Slayer - Angel of Death (OHM)/song.ogg",
+      "size": 11925482
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/02. Rings of Saturn - Eviscerate (OHM)/album.jpg",
+      "size": 225336
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/02. Rings of Saturn - Eviscerate (OHM)/background.jpg",
+      "size": 356002
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/02. Rings of Saturn - Eviscerate (OHM)/notes.chart",
+      "size": 88120
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/02. Rings of Saturn - Eviscerate (OHM)/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/02. Rings of Saturn - Eviscerate (OHM)/song.ogg",
+      "size": 9063335
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/03. Rhapsody of Fire - Very Rhapsody, Much Fire (BurpLeTurtle)/album.jpg",
+      "size": 123882
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/03. Rhapsody of Fire - Very Rhapsody, Much Fire (BurpLeTurtle)/background.jpg",
+      "size": 465525
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/03. Rhapsody of Fire - Very Rhapsody, Much Fire (BurpLeTurtle)/notes.chart",
+      "size": 92305
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/03. Rhapsody of Fire - Very Rhapsody, Much Fire (BurpLeTurtle)/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/03. Rhapsody of Fire - Very Rhapsody, Much Fire (BurpLeTurtle)/song.ogg",
+      "size": 13939086
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/04. Mike Orlando - Circles in Squares (Chemfinal)/album.jpg",
+      "size": 85672
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/04. Mike Orlando - Circles in Squares (Chemfinal)/background.jpg",
+      "size": 221973
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/04. Mike Orlando - Circles in Squares (Chemfinal)/notes.chart",
+      "size": 92772
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/04. Mike Orlando - Circles in Squares (Chemfinal)/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/04. Mike Orlando - Circles in Squares (Chemfinal)/song.ogg",
+      "size": 19199962
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/05. Animals as Leaders - Tempting Time (XEntombmentX)/album.jpg",
+      "size": 87935
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/05. Animals as Leaders - Tempting Time (XEntombmentX)/background.jpg",
+      "size": 230387
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/05. Animals as Leaders - Tempting Time (XEntombmentX)/notes.chart",
+      "size": 67360
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/05. Animals as Leaders - Tempting Time (XEntombmentX)/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/05. Animals as Leaders - Tempting Time (XEntombmentX)/song.ogg",
+      "size": 10849561
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/06. Children of Bodom - Hate Crew Deathroll Solo Medley Redux (Miscellany & Chemfinal)/album.jpg",
+      "size": 127067
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/06. Children of Bodom - Hate Crew Deathroll Solo Medley Redux (Miscellany & Chemfinal)/background.jpg",
+      "size": 487662
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/06. Children of Bodom - Hate Crew Deathroll Solo Medley Redux (Miscellany & Chemfinal)/guitar.ogg",
+      "size": 22535777
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/06. Children of Bodom - Hate Crew Deathroll Solo Medley Redux (Miscellany & Chemfinal)/notes.chart",
+      "size": 132021
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/06. Children of Bodom - Hate Crew Deathroll Solo Medley Redux (Miscellany & Chemfinal)/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/07. Animals as Leaders - CAFO (xX760Xx)/album.jpg",
+      "size": 87935
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/07. Animals as Leaders - CAFO (xX760Xx)/background.jpg",
+      "size": 423099
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/07. Animals as Leaders - CAFO (xX760Xx)/notes.chart",
+      "size": 96197
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/07. Animals as Leaders - CAFO (xX760Xx)/song.ini",
+      "size": 713
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/07. Animals as Leaders - CAFO (xX760Xx)/song.ogg",
+      "size": 13099708
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/08. Galneryus - T.T.F.B. (Chemfinal)/album.jpg",
+      "size": 145657
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/08. Galneryus - T.T.F.B. (Chemfinal)/background.jpg",
+      "size": 411847
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/08. Galneryus - T.T.F.B. (Chemfinal)/notes.chart",
+      "size": 76803
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/08. Galneryus - T.T.F.B. (Chemfinal)/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/08. Galneryus - T.T.F.B. (Chemfinal)/song.ogg",
+      "size": 14555484
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/09. Destrage - Destroy Create Transform Sublimate (Angevil)/album.jpg",
+      "size": 211674
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/09. Destrage - Destroy Create Transform Sublimate (Angevil)/background.jpg",
+      "size": 423348
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/09. Destrage - Destroy Create Transform Sublimate (Angevil)/notes.chart",
+      "size": 73864
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/09. Destrage - Destroy Create Transform Sublimate (Angevil)/song.ini",
+      "size": 598
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/09. Destrage - Destroy Create Transform Sublimate (Angevil)/song.ogg",
+      "size": 11587646
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/10. Dream Theater - Octavarium (Miscellany)/album.jpg",
+      "size": 55656
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/10. Dream Theater - Octavarium (Miscellany)/background.jpg",
+      "size": 209398
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/10. Dream Theater - Octavarium (Miscellany)/guitar.ogg",
+      "size": 57439396
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/10. Dream Theater - Octavarium (Miscellany)/notes.chart",
+      "size": 176598
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 08 - Taken From Reality/10. Dream Theater - Octavarium (Miscellany)/song.ini",
+      "size": 627
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/1. Dream Theater - The Glass Prison (Miscellany)/album.jpg",
+      "size": 144844
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/1. Dream Theater - The Glass Prison (Miscellany)/background.jpg",
+      "size": 269776
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/1. Dream Theater - The Glass Prison (Miscellany)/guitar.ogg",
+      "size": 34891554
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/1. Dream Theater - The Glass Prison (Miscellany)/notes.chart",
+      "size": 176459
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/1. Dream Theater - The Glass Prison (Miscellany)/song.ini",
+      "size": 750
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/2. Vitalij Kuprij - Track on Fire (xX760Xx & Miscellany)/album.jpg",
+      "size": 98518
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/2. Vitalij Kuprij - Track on Fire (xX760Xx & Miscellany)/background.jpg",
+      "size": 389819
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/2. Vitalij Kuprij - Track on Fire (xX760Xx & Miscellany)/notes.chart",
+      "size": 117790
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/2. Vitalij Kuprij - Track on Fire (xX760Xx & Miscellany)/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/2. Vitalij Kuprij - Track on Fire (xX760Xx & Miscellany)/song.ogg",
+      "size": 11680051
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/3. Mike Orlando - Full Speed X (feat. Michael Romeo) (Chemfinal)/album.jpg",
+      "size": 86464
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/3. Mike Orlando - Full Speed X (feat. Michael Romeo) (Chemfinal)/background.jpg",
+      "size": 180302
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/3. Mike Orlando - Full Speed X (feat. Michael Romeo) (Chemfinal)/guitar.ogg",
+      "size": 11213600
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/3. Mike Orlando - Full Speed X (feat. Michael Romeo) (Chemfinal)/notes.chart",
+      "size": 80391
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/3. Mike Orlando - Full Speed X (feat. Michael Romeo) (Chemfinal)/song.ini",
+      "size": 629
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/4. Cannibal Corpse - Frantic Disembowelement (Miscellany)/album.jpg",
+      "size": 141438
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/4. Cannibal Corpse - Frantic Disembowelement (Miscellany)/background.jpg",
+      "size": 368637
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/4. Cannibal Corpse - Frantic Disembowelement (Miscellany)/guitar.ogg",
+      "size": 7174717
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/4. Cannibal Corpse - Frantic Disembowelement (Miscellany)/notes.chart",
+      "size": 49591
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/4. Cannibal Corpse - Frantic Disembowelement (Miscellany)/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/5. Sunless Rise - Sunless Rise (Siavash & CyclopsDragon)/album.jpg",
+      "size": 118170
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/5. Sunless Rise - Sunless Rise (Siavash & CyclopsDragon)/background.jpg",
+      "size": 639440
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/5. Sunless Rise - Sunless Rise (Siavash & CyclopsDragon)/guitar.ogg",
+      "size": 9418805
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/5. Sunless Rise - Sunless Rise (Siavash & CyclopsDragon)/notes.mid",
+      "size": 31064
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/5. Sunless Rise - Sunless Rise (Siavash & CyclopsDragon)/song.ini",
+      "size": 841
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/6. Rusty Cooley - Under the Influence (Chemfinal)/album.jpg",
+      "size": 134416
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/6. Rusty Cooley - Under the Influence (Chemfinal)/background.jpg",
+      "size": 303955
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/6. Rusty Cooley - Under the Influence (Chemfinal)/notes.chart",
+      "size": 82442
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/6. Rusty Cooley - Under the Influence (Chemfinal)/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/6. Rusty Cooley - Under the Influence (Chemfinal)/song.ogg",
+      "size": 14251268
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/7. Mike Orlando - My Black Cat Moaned (CyclopsDragon)/album.jpg",
+      "size": 86464
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/7. Mike Orlando - My Black Cat Moaned (CyclopsDragon)/background.jpg",
+      "size": 158612
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/7. Mike Orlando - My Black Cat Moaned (CyclopsDragon)/guitar.ogg",
+      "size": 14507956
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/7. Mike Orlando - My Black Cat Moaned (CyclopsDragon)/notes.chart",
+      "size": 108830
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/7. Mike Orlando - My Black Cat Moaned (CyclopsDragon)/song.ini",
+      "size": 673
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/8. Zakk Wylde Solo Medley Deluxe (jdurandTV & xX760Xx)/album.jpg",
+      "size": 175572
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/8. Zakk Wylde Solo Medley Deluxe (jdurandTV & xX760Xx)/background.jpg",
+      "size": 455382
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/8. Zakk Wylde Solo Medley Deluxe (jdurandTV & xX760Xx)/notes.chart",
+      "size": 170489
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/8. Zakk Wylde Solo Medley Deluxe (jdurandTV & xX760Xx)/song.ini",
+      "size": 544
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 09 - Trapped Inside a Prison a Vengeful Escape/8. Zakk Wylde Solo Medley Deluxe (jdurandTV & xX760Xx)/song.ogg",
+      "size": 23467990
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/01. An Endless Sporadic - Galactic Tactic (jdurandTV)/album.jpg",
+      "size": 152839
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/01. An Endless Sporadic - Galactic Tactic (jdurandTV)/background.jpg",
+      "size": 354054
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/01. An Endless Sporadic - Galactic Tactic (jdurandTV)/notes.chart",
+      "size": 94221
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/01. An Endless Sporadic - Galactic Tactic (jdurandTV)/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/01. An Endless Sporadic - Galactic Tactic (jdurandTV)/song.ogg",
+      "size": 5739258
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/02. Galneryus - Cry for the Dark (Chemfinal)/album.jpg",
+      "size": 106519
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/02. Galneryus - Cry for the Dark (Chemfinal)/background.jpg",
+      "size": 297887
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/02. Galneryus - Cry for the Dark (Chemfinal)/notes.chart",
+      "size": 125133
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/02. Galneryus - Cry for the Dark (Chemfinal)/song.ini",
+      "size": 565
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/02. Galneryus - Cry for the Dark (Chemfinal)/song.ogg",
+      "size": 14128824
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/03. Origin - The Aftermath (Angevil)/album.jpg",
+      "size": 112639
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/03. Origin - The Aftermath (Angevil)/background.jpg",
+      "size": 583596
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/03. Origin - The Aftermath (Angevil)/notes.chart",
+      "size": 86290
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/03. Origin - The Aftermath (Angevil)/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/03. Origin - The Aftermath (Angevil)/song.ogg",
+      "size": 9879885
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/04. Derek Sherinian - The Sons of Anu (Chemfinal)/album.jpg",
+      "size": 111710
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/04. Derek Sherinian - The Sons of Anu (Chemfinal)/background.jpg",
+      "size": 537753
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/04. Derek Sherinian - The Sons of Anu (Chemfinal)/notes.chart",
+      "size": 86167
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/04. Derek Sherinian - The Sons of Anu (Chemfinal)/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/04. Derek Sherinian - The Sons of Anu (Chemfinal)/song.ogg",
+      "size": 13363967
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/05. Vektor - LCD (Liquid Crystal Disease) (xX760Xx)/album.jpg",
+      "size": 82763
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/05. Vektor - LCD (Liquid Crystal Disease) (xX760Xx)/background.jpg",
+      "size": 230161
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/05. Vektor - LCD (Liquid Crystal Disease) (xX760Xx)/notes.chart",
+      "size": 119253
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/05. Vektor - LCD (Liquid Crystal Disease) (xX760Xx)/song.ini",
+      "size": 565
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/05. Vektor - LCD (Liquid Crystal Disease) (xX760Xx)/song.ogg",
+      "size": 15967989
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/06. Galneryus - Resurrection (Chemfinal)/album.jpg",
+      "size": 191400
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/06. Galneryus - Resurrection (Chemfinal)/background.jpg",
+      "size": 267470
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/06. Galneryus - Resurrection (Chemfinal)/notes.chart",
+      "size": 174085
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/06. Galneryus - Resurrection (Chemfinal)/song.ini",
+      "size": 485
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/06. Galneryus - Resurrection (Chemfinal)/song.ogg",
+      "size": 27352329
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/07. Andromeda Solo Medley (CyclopsDragon)/album.jpg",
+      "size": 73909
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/07. Andromeda Solo Medley (CyclopsDragon)/background.jpg",
+      "size": 485369
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/07. Andromeda Solo Medley (CyclopsDragon)/guitar.ogg",
+      "size": 16173554
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/07. Andromeda Solo Medley (CyclopsDragon)/notes.chart",
+      "size": 130416
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/07. Andromeda Solo Medley (CyclopsDragon)/song.ini",
+      "size": 638
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/08. The Algorithm - Brute Force (XEntombmentX)/album.jpg",
+      "size": 46694
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/08. The Algorithm - Brute Force (XEntombmentX)/background.jpg",
+      "size": 418902
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/08. The Algorithm - Brute Force (XEntombmentX)/notes.chart",
+      "size": 254377
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/08. The Algorithm - Brute Force (XEntombmentX)/song.ini",
+      "size": 756
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/08. The Algorithm - Brute Force (XEntombmentX)/song.ogg",
+      "size": 10553356
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/09. Zef - Gambit (CyclopsDragon)/album.jpg",
+      "size": 49254
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/09. Zef - Gambit (CyclopsDragon)/background.jpg",
+      "size": 94015
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/09. Zef - Gambit (CyclopsDragon)/guitar.ogg",
+      "size": 9935764
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/09. Zef - Gambit (CyclopsDragon)/notes.chart",
+      "size": 261054
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/09. Zef - Gambit (CyclopsDragon)/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/10. Electrocution 250 Solo Medley Deluxe (CTH1R Team)/album.jpg",
+      "size": 141726
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/10. Electrocution 250 Solo Medley Deluxe (CTH1R Team)/background.jpg",
+      "size": 261522
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/10. Electrocution 250 Solo Medley Deluxe (CTH1R Team)/notes.chart",
+      "size": 247403
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/10. Electrocution 250 Solo Medley Deluxe (CTH1R Team)/song.ini",
+      "size": 750
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 10 - Intergalactic War (Battle to Save Our Universe)/10. Electrocution 250 Solo Medley Deluxe (CTH1R Team)/song.ogg",
+      "size": 26552007
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/01. Demons & Wizards - Fiddler on the Green (BurpLeTurtle)/album.jpg",
+      "size": 112462
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/01. Demons & Wizards - Fiddler on the Green (BurpLeTurtle)/background.jpg",
+      "size": 440482
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/01. Demons & Wizards - Fiddler on the Green (BurpLeTurtle)/notes.chart",
+      "size": 55547
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/01. Demons & Wizards - Fiddler on the Green (BurpLeTurtle)/song.ini",
+      "size": 668
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/01. Demons & Wizards - Fiddler on the Green (BurpLeTurtle)/song.ogg",
+      "size": 12258779
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/02. Utsu-P - I Want to Become a Stuffed Animal (feat. MAYU) (CyclopsDragon)/album.png",
+      "size": 540849
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/02. Utsu-P - I Want to Become a Stuffed Animal (feat. MAYU) (CyclopsDragon)/background.jpg",
+      "size": 316245
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/02. Utsu-P - I Want to Become a Stuffed Animal (feat. MAYU) (CyclopsDragon)/guitar.ogg",
+      "size": 8709357
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/02. Utsu-P - I Want to Become a Stuffed Animal (feat. MAYU) (CyclopsDragon)/notes.chart",
+      "size": 59178
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/02. Utsu-P - I Want to Become a Stuffed Animal (feat. MAYU) (CyclopsDragon)/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/03. Carnivore - World Wars III and IV (Sygenysis)/album.png",
+      "size": 194365
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/03. Carnivore - World Wars III and IV (Sygenysis)/background.jpg",
+      "size": 127108
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/03. Carnivore - World Wars III and IV (Sygenysis)/guitar.ogg",
+      "size": 16051111
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/03. Carnivore - World Wars III and IV (Sygenysis)/notes.mid",
+      "size": 23049
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/03. Carnivore - World Wars III and IV (Sygenysis)/song.ini",
+      "size": 723
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/04. FamilyJules - Trial of Thunder (5-3) (MercuryHg34)/album.png",
+      "size": 612604
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/04. FamilyJules - Trial of Thunder (5-3) (MercuryHg34)/background.jpg",
+      "size": 467550
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/04. FamilyJules - Trial of Thunder (5-3) (MercuryHg34)/guitar.ogg",
+      "size": 6139574
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/04. FamilyJules - Trial of Thunder (5-3) (MercuryHg34)/notes.chart",
+      "size": 22665
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/04. FamilyJules - Trial of Thunder (5-3) (MercuryHg34)/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/05. Ministry - Jesus Built My Hotrod (feat. Gibby Haynes) (JRabes)/album.jpg",
+      "size": 59070
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/05. Ministry - Jesus Built My Hotrod (feat. Gibby Haynes) (JRabes)/background.jpg",
+      "size": 418014
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/05. Ministry - Jesus Built My Hotrod (feat. Gibby Haynes) (JRabes)/notes.chart",
+      "size": 70963
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/05. Ministry - Jesus Built My Hotrod (feat. Gibby Haynes) (JRabes)/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/05. Ministry - Jesus Built My Hotrod (feat. Gibby Haynes) (JRabes)/song.ogg",
+      "size": 17717259
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/06. EBIMAYO - GOODRAGE (Raspberriel)/album.png",
+      "size": 191819
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/06. EBIMAYO - GOODRAGE (Raspberriel)/background.jpg",
+      "size": 341173
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/06. EBIMAYO - GOODRAGE (Raspberriel)/guitar.ogg",
+      "size": 8896583
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/06. EBIMAYO - GOODRAGE (Raspberriel)/notes.mid",
+      "size": 23210
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/06. EBIMAYO - GOODRAGE (Raspberriel)/song.ini",
+      "size": 674
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/07. Zomboy - End Game (TYNAN Remix) (Chezy)/album.png",
+      "size": 259157
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/07. Zomboy - End Game (TYNAN Remix) (Chezy)/background.jpg",
+      "size": 179502
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/07. Zomboy - End Game (TYNAN Remix) (Chezy)/notes.chart",
+      "size": 40311
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/07. Zomboy - End Game (TYNAN Remix) (Chezy)/song.ini",
+      "size": 490
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/07. Zomboy - End Game (TYNAN Remix) (Chezy)/song.ogg",
+      "size": 9397117
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/08. Louis Cole - Thinking (Live Sesh) (OHM)/album.jpg",
+      "size": 13105
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/08. Louis Cole - Thinking (Live Sesh) (OHM)/background.jpg",
+      "size": 371528
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/08. Louis Cole - Thinking (Live Sesh) (OHM)/notes.chart",
+      "size": 61148
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/08. Louis Cole - Thinking (Live Sesh) (OHM)/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/08. Louis Cole - Thinking (Live Sesh) (OHM)/song.ogg",
+      "size": 9527341
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/09. L.E.D. - THE CANNONBALLER (FULLSIZE MIX) (feat. YURiCa) (Mintorment)/album.png",
+      "size": 492985
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/09. L.E.D. - THE CANNONBALLER (FULLSIZE MIX) (feat. YURiCa) (Mintorment)/background.jpg",
+      "size": 263662
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/09. L.E.D. - THE CANNONBALLER (FULLSIZE MIX) (feat. YURiCa) (Mintorment)/notes.chart",
+      "size": 67607
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/09. L.E.D. - THE CANNONBALLER (FULLSIZE MIX) (feat. YURiCa) (Mintorment)/song.ini",
+      "size": 616
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/09. L.E.D. - THE CANNONBALLER (FULLSIZE MIX) (feat. YURiCa) (Mintorment)/song.ogg",
+      "size": 10046985
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/10. Jeff Hughell - Night Terrors (feat. Tyler Layne & Marco Pitruzzella) (LemonGH)/album.jpg",
+      "size": 78588
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/10. Jeff Hughell - Night Terrors (feat. Tyler Layne & Marco Pitruzzella) (LemonGH)/background.jpg",
+      "size": 329584
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/10. Jeff Hughell - Night Terrors (feat. Tyler Layne & Marco Pitruzzella) (LemonGH)/notes.chart",
+      "size": 55421
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/10. Jeff Hughell - Night Terrors (feat. Tyler Layne & Marco Pitruzzella) (LemonGH)/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/10. Jeff Hughell - Night Terrors (feat. Tyler Layne & Marco Pitruzzella) (LemonGH)/song.ogg",
+      "size": 12308728
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/11. Guns N' Roses - Paradise City (xX760Xx)/album.png",
+      "size": 189958
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/11. Guns N' Roses - Paradise City (xX760Xx)/background.jpg",
+      "size": 704015
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/11. Guns N' Roses - Paradise City (xX760Xx)/notes.chart",
+      "size": 67180
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/11. Guns N' Roses - Paradise City (xX760Xx)/song.ini",
+      "size": 646
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/11. Guns N' Roses - Paradise City (xX760Xx)/song.ogg",
+      "size": 12616851
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/12. Lost Horizon - Sworn in the Metal Wind (GHX & xX760Xx)/album.png",
+      "size": 776763
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/12. Lost Horizon - Sworn in the Metal Wind (GHX & xX760Xx)/background.jpg",
+      "size": 632443
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/12. Lost Horizon - Sworn in the Metal Wind (GHX & xX760Xx)/notes.chart",
+      "size": 73374
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/12. Lost Horizon - Sworn in the Metal Wind (GHX & xX760Xx)/song.ini",
+      "size": 700
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/12. Lost Horizon - Sworn in the Metal Wind (GHX & xX760Xx)/song.ogg",
+      "size": 12026788
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/13. ONI - The Only Cure (feat. Randy Blythe) (XEntombmentX)/album.png",
+      "size": 413118
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/13. ONI - The Only Cure (feat. Randy Blythe) (XEntombmentX)/background.jpg",
+      "size": 471015
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/13. ONI - The Only Cure (feat. Randy Blythe) (XEntombmentX)/notes.chart",
+      "size": 67378
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/13. ONI - The Only Cure (feat. Randy Blythe) (XEntombmentX)/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/13. ONI - The Only Cure (feat. Randy Blythe) (XEntombmentX)/song.ogg",
+      "size": 9621037
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/14. Lalle Larsson Trio - Homeland (OrangeHat)/album.png",
+      "size": 269823
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/14. Lalle Larsson Trio - Homeland (OrangeHat)/background.jpg",
+      "size": 317275
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/14. Lalle Larsson Trio - Homeland (OrangeHat)/notes.chart",
+      "size": 55699
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/14. Lalle Larsson Trio - Homeland (OrangeHat)/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/14. Lalle Larsson Trio - Homeland (OrangeHat)/song.ogg",
+      "size": 10795966
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/15. Todd Duane - Scatterbrained (Peddy)/album.png",
+      "size": 661701
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/15. Todd Duane - Scatterbrained (Peddy)/background.jpg",
+      "size": 406528
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/15. Todd Duane - Scatterbrained (Peddy)/notes.chart",
+      "size": 34026
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/15. Todd Duane - Scatterbrained (Peddy)/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/15. Todd Duane - Scatterbrained (Peddy)/song.ogg",
+      "size": 7248085
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/16. Angra - The Temple of Hate (Paturages)/album.png",
+      "size": 573541
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/16. Angra - The Temple of Hate (Paturages)/background.jpg",
+      "size": 173483
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/16. Angra - The Temple of Hate (Paturages)/guitar.ogg",
+      "size": 10922246
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/16. Angra - The Temple of Hate (Paturages)/notes.chart",
+      "size": 56761
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/16. Angra - The Temple of Hate (Paturages)/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/17. Alkoholizer - Fatal Failure (Miscellany)/album.jpg",
+      "size": 114946
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/17. Alkoholizer - Fatal Failure (Miscellany)/background.jpg",
+      "size": 115343
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/17. Alkoholizer - Fatal Failure (Miscellany)/guitar.ogg",
+      "size": 19305969
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/17. Alkoholizer - Fatal Failure (Miscellany)/notes.chart",
+      "size": 79534
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/17. Alkoholizer - Fatal Failure (Miscellany)/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/18. Buckethead - Siege Engine (Siavash)/album.png",
+      "size": 576481
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/18. Buckethead - Siege Engine (Siavash)/background.jpg",
+      "size": 157382
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/18. Buckethead - Siege Engine (Siavash)/guitar.ogg",
+      "size": 15488947
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/18. Buckethead - Siege Engine (Siavash)/notes.mid",
+      "size": 26635
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/18. Buckethead - Siege Engine (Siavash)/song.ini",
+      "size": 446
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/19. Victor Wooten - Classical Thump (Angevil)/album.jpg",
+      "size": 36954
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/19. Victor Wooten - Classical Thump (Angevil)/background.jpg",
+      "size": 496159
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/19. Victor Wooten - Classical Thump (Angevil)/notes.chart",
+      "size": 60508
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/19. Victor Wooten - Classical Thump (Angevil)/song.ini",
+      "size": 468
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/19. Victor Wooten - Classical Thump (Angevil)/song.ogg",
+      "size": 9114281
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/20. Fernando Miyata - Insanely Amazing Guitar Solo (jdurandTV & xX760Xx)/album.png",
+      "size": 374086
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/20. Fernando Miyata - Insanely Amazing Guitar Solo (jdurandTV & xX760Xx)/background.jpg",
+      "size": 248502
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/20. Fernando Miyata - Insanely Amazing Guitar Solo (jdurandTV & xX760Xx)/notes.chart",
+      "size": 108409
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/20. Fernando Miyata - Insanely Amazing Guitar Solo (jdurandTV & xX760Xx)/song.ini",
+      "size": 556
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/20. Fernando Miyata - Insanely Amazing Guitar Solo (jdurandTV & xX760Xx)/song.ogg",
+      "size": 5299145
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/21. Galneryus - Resurrection Solo Medley (Chemfinal)/album.jpg",
+      "size": 196512
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/21. Galneryus - Resurrection Solo Medley (Chemfinal)/background.jpg",
+      "size": 319293
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/21. Galneryus - Resurrection Solo Medley (Chemfinal)/guitar.ogg",
+      "size": 28603821
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/21. Galneryus - Resurrection Solo Medley (Chemfinal)/notes.chart",
+      "size": 203516
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/21. Galneryus - Resurrection Solo Medley (Chemfinal)/song.ini",
+      "size": 645
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/22. Carpal Tunnel Hero Remastered Solo Medley (CTH1R Team)/album.png",
+      "size": 296590
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/22. Carpal Tunnel Hero Remastered Solo Medley (CTH1R Team)/background.jpg",
+      "size": 404268
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/22. Carpal Tunnel Hero Remastered Solo Medley (CTH1R Team)/notes.chart",
+      "size": 341444
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/22. Carpal Tunnel Hero Remastered Solo Medley (CTH1R Team)/song.ini",
+      "size": 643
+    },
+    {
+      "path": "Carpal Tunnel Hero/[CTH1R] 11 - Bonus Tier (Contributions to Those Who Helped)/22. Carpal Tunnel Hero Remastered Solo Medley (CTH1R Team)/song.ogg",
+      "size": 33754491
     }
-  ]
+  ],
+  "extracted_size": 1542829842,
+  "file_count": 520,
+  "chart_count": 104,
+  "release_date": "2016-10-10"
 }

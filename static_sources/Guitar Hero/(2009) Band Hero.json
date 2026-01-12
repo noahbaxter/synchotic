@@ -1,19 +1,3405 @@
 {
   "name": "(2009) Band Hero",
-  "folder_id": "static-gh-band-hero",
+  "folder_id": "static-2009-band-hero",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 65,
-  "total_size": 2510724635,
-  "file_count": 912,
-  "files": [
+  "downloads": [
     {
       "id": "1l6mm5Sdi8GLm-_8H8zxuEUghmrvO-riI",
-      "path": "(2009) Band Hero/Band Hero.zip",
       "name": "Band Hero.zip",
       "size": 2510724635,
       "md5": "7aaf06b3e7ab722adb93826fe13de30d"
     }
-  ]
+  ],
+  "download_size": 2510724635,
+  "files": [
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/album.png",
+      "size": 110671
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/bass.ogg",
+      "size": 4620702
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/crowd.ogg",
+      "size": 31614
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/drums_1.ogg",
+      "size": 4852286
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/drums_2.ogg",
+      "size": 4288782
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/drums_3.ogg",
+      "size": 335224
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/drums_4.ogg",
+      "size": 6779681
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/guitar.ogg",
+      "size": 6451905
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/notes.mid",
+      "size": 91246
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/preview.ogg",
+      "size": 739520
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/song.ini",
+      "size": 954
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/song.ogg",
+      "size": 5441638
+    },
+    {
+      "path": "(2009) Band Hero/3 Doors Down - When I'm Gone/vocals.ogg",
+      "size": 5488709
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/album.png",
+      "size": 482345
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/bass.ogg",
+      "size": 3498439
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/crowd.ogg",
+      "size": 22168
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/drums_1.ogg",
+      "size": 4293884
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/drums_2.ogg",
+      "size": 4519842
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/drums_3.ogg",
+      "size": 3214177
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/drums_4.ogg",
+      "size": 4551564
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/guitar.ogg",
+      "size": 5292022
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/notes.mid",
+      "size": 89573
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/preview.ogg",
+      "size": 928521
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/song.ini",
+      "size": 913
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/song.ogg",
+      "size": 6209427
+    },
+    {
+      "path": "(2009) Band Hero/Alphabeat - Fascination/vocals.ogg",
+      "size": 4927702
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/album.png",
+      "size": 283000
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/bass.ogg",
+      "size": 2728831
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/crowd.ogg",
+      "size": 19439
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/drums_1.ogg",
+      "size": 2613321
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/drums_2.ogg",
+      "size": 444743
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/drums_3.ogg",
+      "size": 198911
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/drums_4.ogg",
+      "size": 3745729
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/guitar.ogg",
+      "size": 2916358
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/notes.mid",
+      "size": 60356
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/preview.ogg",
+      "size": 859395
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/song.ini",
+      "size": 965
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/song.ogg",
+      "size": 3849186
+    },
+    {
+      "path": "(2009) Band Hero/Aly & AJ - Like Whoa/vocals.ogg",
+      "size": 4070096
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/album.png",
+      "size": 105614
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/bass.ogg",
+      "size": 4532503
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/crowd.ogg",
+      "size": 35343
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/drums_1.ogg",
+      "size": 4115195
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/drums_2.ogg",
+      "size": 3773892
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/drums_3.ogg",
+      "size": 2407098
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/drums_4.ogg",
+      "size": 5275776
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/guitar.ogg",
+      "size": 8230117
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/notes.mid",
+      "size": 119631
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/preview.ogg",
+      "size": 776085
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/song.ini",
+      "size": 966
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/song.ogg",
+      "size": 7148029
+    },
+    {
+      "path": "(2009) Band Hero/Angels & Airwaves - The Adventure/vocals.ogg",
+      "size": 5438395
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/album.png",
+      "size": 237770
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/bass.ogg",
+      "size": 3976168
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/crowd.ogg",
+      "size": 28658
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/drums_1.ogg",
+      "size": 4968511
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/drums_2.ogg",
+      "size": 2671626
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/drums_3.ogg",
+      "size": 428066
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/drums_4.ogg",
+      "size": 7214090
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/guitar.ogg",
+      "size": 5254328
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/notes.mid",
+      "size": 84350
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/preview.ogg",
+      "size": 959125
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/song.ini",
+      "size": 1001
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/song.ogg",
+      "size": 6653467
+    },
+    {
+      "path": "(2009) Band Hero/Ben Harper and the Innocent Criminals - Steal My Kisses/vocals.ogg",
+      "size": 6365889
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/album.png",
+      "size": 302642
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/bass.ogg",
+      "size": 4808832
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/crowd.ogg",
+      "size": 1894078
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/drums_1.ogg",
+      "size": 3225474
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/drums_2.ogg",
+      "size": 4814026
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/drums_3.ogg",
+      "size": 1607689
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/drums_4.ogg",
+      "size": 6768594
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/guitar.ogg",
+      "size": 5225171
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/notes.mid",
+      "size": 127315
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/preview.ogg",
+      "size": 688178
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/song.ini",
+      "size": 920
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/song.ogg",
+      "size": 4987180
+    },
+    {
+      "path": "(2009) Band Hero/Big Country - In A Big Country/vocals.ogg",
+      "size": 5863713
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/album.png",
+      "size": 432427
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/bass.ogg",
+      "size": 4459743
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/crowd.ogg",
+      "size": 2670868
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/drums_1.ogg",
+      "size": 4190834
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/drums_2.ogg",
+      "size": 3750682
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/drums_3.ogg",
+      "size": 157801
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/drums_4.ogg",
+      "size": 4770865
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/guitar.ogg",
+      "size": 5378338
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/notes.mid",
+      "size": 81243
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/preview.ogg",
+      "size": 688156
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/song.ini",
+      "size": 1053
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/song.ogg",
+      "size": 5577642
+    },
+    {
+      "path": "(2009) Band Hero/Carl Douglas - Kung Fu Fighting/vocals.ogg",
+      "size": 4968796
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/album.png",
+      "size": 388824
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/bass.ogg",
+      "size": 4077680
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/crowd.ogg",
+      "size": 3277085
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/drums_1.ogg",
+      "size": 4770875
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/drums_2.ogg",
+      "size": 5541528
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/drums_3.ogg",
+      "size": 25128
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/drums_4.ogg",
+      "size": 6523301
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/guitar.ogg",
+      "size": 4810919
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/notes.mid",
+      "size": 93350
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/preview.ogg",
+      "size": 654747
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/song.ini",
+      "size": 943
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/song.ogg",
+      "size": 3879874
+    },
+    {
+      "path": "(2009) Band Hero/Cheap Trick - I Want You To Want Me (Live)/vocals.ogg",
+      "size": 4939584
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/album.png",
+      "size": 343226
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/bass.ogg",
+      "size": 6013067
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/crowd.ogg",
+      "size": 26641
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/drums_1.ogg",
+      "size": 3353534
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/drums_2.ogg",
+      "size": 2640243
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/drums_3.ogg",
+      "size": 109739
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/drums_4.ogg",
+      "size": 5605286
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/guitar.ogg",
+      "size": 6249850
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/notes.mid",
+      "size": 68557
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/preview.ogg",
+      "size": 666122
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/song.ini",
+      "size": 973
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/song.ogg",
+      "size": 6854351
+    },
+    {
+      "path": "(2009) Band Hero/Cold War Kids - Hang Me Up To Dry/vocals.ogg",
+      "size": 5290749
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/album.png",
+      "size": 327576
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/bass.ogg",
+      "size": 4294521
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/crowd.ogg",
+      "size": 25611
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/drums_1.ogg",
+      "size": 4329179
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/drums_2.ogg",
+      "size": 4358797
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/drums_3.ogg",
+      "size": 2900870
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/drums_4.ogg",
+      "size": 4777384
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/guitar.ogg",
+      "size": 5770335
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/notes.mid",
+      "size": 55806
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/preview.ogg",
+      "size": 848153
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/song.ini",
+      "size": 1018
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/song.ogg",
+      "size": 6010346
+    },
+    {
+      "path": "(2009) Band Hero/Corinne Bailey Rae - Put Your Records On/vocals.ogg",
+      "size": 5402065
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/album.png",
+      "size": 372847
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/bass.ogg",
+      "size": 4766284
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/crowd.ogg",
+      "size": 25621
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/drums_1.ogg",
+      "size": 4360631
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/drums_2.ogg",
+      "size": 4412184
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/drums_3.ogg",
+      "size": 388582
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/drums_4.ogg",
+      "size": 6491608
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/guitar.ogg",
+      "size": 5312948
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/notes.mid",
+      "size": 127749
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/preview.ogg",
+      "size": 617322
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/song.ini",
+      "size": 935
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/song.ogg",
+      "size": 5430063
+    },
+    {
+      "path": "(2009) Band Hero/Counting Crows - Angels Of The Sliences/vocals.ogg",
+      "size": 4143373
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/album.png",
+      "size": 522042
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/bass.ogg",
+      "size": 5309968
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/crowd.ogg",
+      "size": 30842
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/drums_1.ogg",
+      "size": 5227097
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/drums_2.ogg",
+      "size": 3682082
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/drums_3.ogg",
+      "size": 30842
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/drums_4.ogg",
+      "size": 6393321
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/guitar.ogg",
+      "size": 7701740
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/notes.mid",
+      "size": 78912
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/preview.ogg",
+      "size": 685959
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/song.ini",
+      "size": 985
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/song.ogg",
+      "size": 7340558
+    },
+    {
+      "path": "(2009) Band Hero/Culture Club - Do You Really Want To Hurt Me/vocals.ogg",
+      "size": 8061796
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/album.png",
+      "size": 551370
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/bass.ogg",
+      "size": 3194088
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/crowd.ogg",
+      "size": 22781
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/drums_1.ogg",
+      "size": 2774806
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/drums_2.ogg",
+      "size": 2214336
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/drums_3.ogg",
+      "size": 480796
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/drums_4.ogg",
+      "size": 5662061
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/guitar.ogg",
+      "size": 4664645
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/notes.mid",
+      "size": 99075
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/preview.ogg",
+      "size": 686371
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/song.ini",
+      "size": 944
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/song.ogg",
+      "size": 1124778
+    },
+    {
+      "path": "(2009) Band Hero/Dashboard Confessional - Hands Down/vocals.ogg",
+      "size": 4129146
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/album.png",
+      "size": 303810
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/bass.ogg",
+      "size": 6954166
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/crowd.ogg",
+      "size": 33461
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/drums_1.ogg",
+      "size": 6810282
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/drums_2.ogg",
+      "size": 7508073
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/drums_3.ogg",
+      "size": 477687
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/drums_4.ogg",
+      "size": 8177284
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/guitar.ogg",
+      "size": 8188398
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/notes.mid",
+      "size": 93230
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/preview.ogg",
+      "size": 677887
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/song.ini",
+      "size": 964
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/song.ogg",
+      "size": 7038171
+    },
+    {
+      "path": "(2009) Band Hero/David Bowie - Let's Dance/vocals.ogg",
+      "size": 7938847
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/album.png",
+      "size": 376061
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/bass.ogg",
+      "size": 4134168
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/crowd.ogg",
+      "size": 20535
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/drums_1.ogg",
+      "size": 3450008
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/drums_2.ogg",
+      "size": 3921219
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/drums_3.ogg",
+      "size": 20535
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/drums_4.ogg",
+      "size": 5106664
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/guitar.ogg",
+      "size": 5031392
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/notes.mid",
+      "size": 73127
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/preview.ogg",
+      "size": 661119
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/song.ini",
+      "size": 961
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/song.ogg",
+      "size": 3584683
+    },
+    {
+      "path": "(2009) Band Hero/Devo - Whip It/vocals.ogg",
+      "size": 3847420
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/album.png",
+      "size": 250140
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/bass.ogg",
+      "size": 6236992
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/crowd.ogg",
+      "size": 3513466
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/drums_1.ogg",
+      "size": 3812711
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/drums_2.ogg",
+      "size": 2683545
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/drums_3.ogg",
+      "size": 450766
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/drums_4.ogg",
+      "size": 10126828
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/guitar.ogg",
+      "size": 11889848
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/notes.mid",
+      "size": 177842
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/preview.ogg",
+      "size": 613380
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/song.ini",
+      "size": 964
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/song.ogg",
+      "size": 8279339
+    },
+    {
+      "path": "(2009) Band Hero/Don McLean - American Pie/vocals.ogg",
+      "size": 12615714
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/album.png",
+      "size": 193294
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/bass.ogg",
+      "size": 4535379
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/crowd.ogg",
+      "size": 27041
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/drums_1.ogg",
+      "size": 4781421
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/drums_2.ogg",
+      "size": 2131616
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/drums_3.ogg",
+      "size": 335125
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/drums_4.ogg",
+      "size": 5419354
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/guitar.ogg",
+      "size": 6657917
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/notes.mid",
+      "size": 64187
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/preview.ogg",
+      "size": 794371
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/song.ini",
+      "size": 910
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/song.ogg",
+      "size": 6491641
+    },
+    {
+      "path": "(2009) Band Hero/Duffy - Warwick Avenue/vocals.ogg",
+      "size": 5562330
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/album.png",
+      "size": 293681
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/bass.ogg",
+      "size": 7040221
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/crowd.ogg",
+      "size": 3007858
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/drums_1.ogg",
+      "size": 4300745
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/drums_2.ogg",
+      "size": 4674614
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/drums_3.ogg",
+      "size": 10000360
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/drums_4.ogg",
+      "size": 12694039
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/guitar.ogg",
+      "size": 9908457
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/notes.mid",
+      "size": 142177
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/preview.ogg",
+      "size": 815796
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/song.ini",
+      "size": 914
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/song.ogg",
+      "size": 9457422
+    },
+    {
+      "path": "(2009) Band Hero/Duran Duran - Rio/vocals.ogg",
+      "size": 8735960
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/album.png",
+      "size": 271264
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/bass.ogg",
+      "size": 4271848
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/crowd.ogg",
+      "size": 28478
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/drums_1.ogg",
+      "size": 3038044
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/drums_2.ogg",
+      "size": 2492028
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/drums_3.ogg",
+      "size": 115625
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/drums_4.ogg",
+      "size": 5532737
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/guitar.ogg",
+      "size": 5463138
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/notes.mid",
+      "size": 91377
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/preview.ogg",
+      "size": 589986
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/song.ini",
+      "size": 973
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/song.ogg",
+      "size": 5542547
+    },
+    {
+      "path": "(2009) Band Hero/Evanescence - Bring Me To Life/vocals.ogg",
+      "size": 5395884
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/album.png",
+      "size": 479017
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/bass.ogg",
+      "size": 3240319
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/crowd.ogg",
+      "size": 2838120
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/drums_1.ogg",
+      "size": 3009245
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/drums_2.ogg",
+      "size": 2503422
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/drums_3.ogg",
+      "size": 443366
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/drums_4.ogg",
+      "size": 3983034
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/guitar.ogg",
+      "size": 4795464
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/notes.mid",
+      "size": 83735
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/preview.ogg",
+      "size": 667884
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/song.ini",
+      "size": 902
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/song.ogg",
+      "size": 1159951
+    },
+    {
+      "path": "(2009) Band Hero/Everclear - Santa Monica/vocals.ogg",
+      "size": 4005314
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/album.png",
+      "size": 362281
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/bass.ogg",
+      "size": 4438488
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/crowd.ogg",
+      "size": 3034946
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/drums_1.ogg",
+      "size": 4907872
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/drums_2.ogg",
+      "size": 4115152
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/drums_3.ogg",
+      "size": 2276810
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/drums_4.ogg",
+      "size": 6155529
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/guitar.ogg",
+      "size": 6130786
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/notes.mid",
+      "size": 104386
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/preview.ogg",
+      "size": 594992
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/song.ini",
+      "size": 984
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/song.ogg",
+      "size": 4452829
+    },
+    {
+      "path": "(2009) Band Hero/Fall Out Boy - Sugar, We're Goin Down/vocals.ogg",
+      "size": 5204594
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/album.png",
+      "size": 262923
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/bass.ogg",
+      "size": 7097721
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/crowd.ogg",
+      "size": 39773
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/drums_1.ogg",
+      "size": 5494651
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/drums_2.ogg",
+      "size": 8034613
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/drums_3.ogg",
+      "size": 239330
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/drums_4.ogg",
+      "size": 10928818
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/guitar.ogg",
+      "size": 11785133
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/notes.mid",
+      "size": 223419
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/preview.ogg",
+      "size": 787989
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/song.ini",
+      "size": 924
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/song.ogg",
+      "size": 10230460
+    },
+    {
+      "path": "(2009) Band Hero/Filter - Take A Picture/vocals.ogg",
+      "size": 6814556
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/album.png",
+      "size": 285869
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/bass.ogg",
+      "size": 2728771
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/crowd.ogg",
+      "size": 24821
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/drums_1.ogg",
+      "size": 2425230
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/drums_2.ogg",
+      "size": 2378631
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/drums_3.ogg",
+      "size": 94026
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/drums_4.ogg",
+      "size": 5748060
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/guitar.ogg",
+      "size": 5388827
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/notes.mid",
+      "size": 83805
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/preview.ogg",
+      "size": 655523
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/song.ini",
+      "size": 1004
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/song.ogg",
+      "size": 5331395
+    },
+    {
+      "path": "(2009) Band Hero/Finger Eleven - Paralyzer/vocals.ogg",
+      "size": 4653605
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/album.png",
+      "size": 336981
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/bass.ogg",
+      "size": 3640980
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/crowd.ogg",
+      "size": 2216092
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/drums_1.ogg",
+      "size": 3618940
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/drums_2.ogg",
+      "size": 2062953
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/drums_3.ogg",
+      "size": 58369
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/drums_4.ogg",
+      "size": 5174260
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/guitar.ogg",
+      "size": 4573990
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/notes.mid",
+      "size": 76635
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/preview.ogg",
+      "size": 755878
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/song.ini",
+      "size": 950
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/song.ogg",
+      "size": 4562690
+    },
+    {
+      "path": "(2009) Band Hero/Go-Go's - Our Lips Are Sealed/vocals.ogg",
+      "size": 4181000
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/album.png",
+      "size": 42241
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/bass.ogg",
+      "size": 3496022
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/crowd.ogg",
+      "size": 25402
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/drums_1.ogg",
+      "size": 4871052
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/drums_2.ogg",
+      "size": 4156080
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/drums_3.ogg",
+      "size": 116515
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/drums_4.ogg",
+      "size": 6046567
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/guitar.ogg",
+      "size": 5967394
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/notes.mid",
+      "size": 76671
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/preview.ogg",
+      "size": 883883
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/song.ini",
+      "size": 1057
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/song.ogg",
+      "size": 4771104
+    },
+    {
+      "path": "(2009) Band Hero/Hilary Duff - So Yesterday/vocals.ogg",
+      "size": 5692470
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/album.png",
+      "size": 356447
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/bass.ogg",
+      "size": 3995812
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/crowd.ogg",
+      "size": 30287
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/drums_1.ogg",
+      "size": 4281610
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/drums_2.ogg",
+      "size": 2649776
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/drums_3.ogg",
+      "size": 265380
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/drums_4.ogg",
+      "size": 7711251
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/guitar.ogg",
+      "size": 6345585
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/notes.mid",
+      "size": 76571
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/preview.ogg",
+      "size": 935983
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/song.ini",
+      "size": 1025
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/song.ogg",
+      "size": 6710192
+    },
+    {
+      "path": "(2009) Band Hero/Hinder - Lips Of An Angel/vocals.ogg",
+      "size": 5175523
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/album.png",
+      "size": 219457
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/bass.ogg",
+      "size": 4075957
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/crowd.ogg",
+      "size": 2937416
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/drums_1.ogg",
+      "size": 2037445
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/drums_2.ogg",
+      "size": 1255448
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/drums_3.ogg",
+      "size": 23537
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/drums_4.ogg",
+      "size": 4416496
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/guitar.ogg",
+      "size": 8239208
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/notes.mid",
+      "size": 79844
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/preview.ogg",
+      "size": 804554
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/song.ini",
+      "size": 940
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/song.ogg",
+      "size": 7394386
+    },
+    {
+      "path": "(2009) Band Hero/Jackson 5 - ABC/vocals.ogg",
+      "size": 5458278
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/album.png",
+      "size": 159193
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/bass.ogg",
+      "size": 5725191
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/crowd.ogg",
+      "size": 31091
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/drums_1.ogg",
+      "size": 6190911
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/drums_2.ogg",
+      "size": 6753132
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/drums_3.ogg",
+      "size": 825015
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/drums_4.ogg",
+      "size": 7999026
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/guitar.ogg",
+      "size": 7072494
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/notes.mid",
+      "size": 92893
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/preview.ogg",
+      "size": 811132
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/song.ini",
+      "size": 983
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/song.ogg",
+      "size": 8649841
+    },
+    {
+      "path": "(2009) Band Hero/Janet Jackson - Black Cat/vocals.ogg",
+      "size": 5775320
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/album.png",
+      "size": 177143
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/bass.ogg",
+      "size": 2687580
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/crowd.ogg",
+      "size": 25945
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/drums_1.ogg",
+      "size": 2343898
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/drums_2.ogg",
+      "size": 2942188
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/drums_3.ogg",
+      "size": 683141
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/drums_4.ogg",
+      "size": 4668908
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/guitar.ogg",
+      "size": 5562120
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/notes.mid",
+      "size": 75843
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/preview.ogg",
+      "size": 816812
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/song.ini",
+      "size": 956
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/song.ogg",
+      "size": 5883486
+    },
+    {
+      "path": "(2009) Band Hero/Jesse McCartney - Beautiful Soul/vocals.ogg",
+      "size": 5683144
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/album.png",
+      "size": 291529
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/bass.ogg",
+      "size": 3818528
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/crowd.ogg",
+      "size": 20415
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/drums_1.ogg",
+      "size": 4486306
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/drums_2.ogg",
+      "size": 2225648
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/drums_3.ogg",
+      "size": 1025227
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/drums_4.ogg",
+      "size": 3903528
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/guitar.ogg",
+      "size": 4551193
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/notes.mid",
+      "size": 93619
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/preview.ogg",
+      "size": 701260
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/song.ini",
+      "size": 973
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/song.ogg",
+      "size": 4572068
+    },
+    {
+      "path": "(2009) Band Hero/Joan Jett - Bad Reputation/vocals.ogg",
+      "size": 4665450
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/album.png",
+      "size": 407831
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/bass.ogg",
+      "size": 3941136
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/crowd.ogg",
+      "size": 28490
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/drums_1.ogg",
+      "size": 2347669
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/drums_2.ogg",
+      "size": 2657610
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/drums_3.ogg",
+      "size": 28490
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/drums_4.ogg",
+      "size": 5736426
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/guitar.ogg",
+      "size": 6038274
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/notes.mid",
+      "size": 103221
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/preview.ogg",
+      "size": 659038
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/song.ini",
+      "size": 973
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/song.ogg",
+      "size": 7059854
+    },
+    {
+      "path": "(2009) Band Hero/Joss Stone - You Had Me/vocals.ogg",
+      "size": 5650476
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/album.png",
+      "size": 262748
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/bass.ogg",
+      "size": 1416100
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/crowd.ogg",
+      "size": 21064
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/drums_1.ogg",
+      "size": 4566680
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/drums_2.ogg",
+      "size": 1278093
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/drums_3.ogg",
+      "size": 42843
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/drums_4.ogg",
+      "size": 6044699
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/guitar.ogg",
+      "size": 5559109
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/notes.mid",
+      "size": 63017
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/preview.ogg",
+      "size": 1079854
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/song.ini",
+      "size": 1071
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/song.ogg",
+      "size": 5610006
+    },
+    {
+      "path": "(2009) Band Hero/KT Tunstall - Black Horse and The Cherry Tree/vocals.ogg",
+      "size": 4576173
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/album.png",
+      "size": 35520
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/bass.ogg",
+      "size": 4576498
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/crowd.ogg",
+      "size": 2594849
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/drums_1.ogg",
+      "size": 5779750
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/drums_2.ogg",
+      "size": 6716668
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/drums_3.ogg",
+      "size": 27320
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/drums_4.ogg",
+      "size": 6611585
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/guitar.ogg",
+      "size": 6105618
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/notes.mid",
+      "size": 132365
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/preview.ogg",
+      "size": 709791
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/song.ini",
+      "size": 1056
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/song.ogg",
+      "size": 7785070
+    },
+    {
+      "path": "(2009) Band Hero/Katrina and the Waves - Walking On Sunshine/vocals.ogg",
+      "size": 5002800
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/album.png",
+      "size": 491144
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/bass.ogg",
+      "size": 5730735
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/crowd.ogg",
+      "size": 32475
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/drums_1.ogg",
+      "size": 2510073
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/drums_2.ogg",
+      "size": 4818781
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/drums_3.ogg",
+      "size": 345028
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/drums_4.ogg",
+      "size": 8107701
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/guitar.ogg",
+      "size": 7582699
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/notes.mid",
+      "size": 96847
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/preview.ogg",
+      "size": 632016
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/song.ini",
+      "size": 917
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/song.ogg",
+      "size": 10494153
+    },
+    {
+      "path": "(2009) Band Hero/Lily Allen - Take What You Take/vocals.ogg",
+      "size": 7140316
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/album.png",
+      "size": 498225
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/bass.ogg",
+      "size": 4475362
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/crowd.ogg",
+      "size": 3099629
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/drums_1.ogg",
+      "size": 4808757
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/drums_2.ogg",
+      "size": 1741758
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/drums_3.ogg",
+      "size": 248355
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/drums_4.ogg",
+      "size": 7352452
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/guitar.ogg",
+      "size": 6486903
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/notes.mid",
+      "size": 81057
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/preview.ogg",
+      "size": 680508
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/song.ini",
+      "size": 989
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/song.ogg",
+      "size": 8607902
+    },
+    {
+      "path": "(2009) Band Hero/Maroon 5 - She Will Be Loved/vocals.ogg",
+      "size": 6585478
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/album.png",
+      "size": 423283
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/bass.ogg",
+      "size": 4857657
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/crowd.ogg",
+      "size": 24495
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/drums_1.ogg",
+      "size": 3218546
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/drums_2.ogg",
+      "size": 166891
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/drums_3.ogg",
+      "size": 4564065
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/drums_4.ogg",
+      "size": 2061522
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/guitar.ogg",
+      "size": 5230178
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/notes.mid",
+      "size": 69410
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/preview.ogg",
+      "size": 692790
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/song.ini",
+      "size": 1057
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/song.ogg",
+      "size": 6033441
+    },
+    {
+      "path": "(2009) Band Hero/Marvin Gaye - I Heard It Through The Grapevine/vocals.ogg",
+      "size": 5060921
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/album.png",
+      "size": 357085
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/bass.ogg",
+      "size": 4897167
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/crowd.ogg",
+      "size": 30079
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/drums_1.ogg",
+      "size": 4257427
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/drums_2.ogg",
+      "size": 3624068
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/drums_3.ogg",
+      "size": 1408335
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/drums_4.ogg",
+      "size": 6411888
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/guitar.ogg",
+      "size": 10185312
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/notes.mid",
+      "size": 116775
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/preview.ogg",
+      "size": 770717
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/song.ini",
+      "size": 982
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/song.ogg",
+      "size": 7332498
+    },
+    {
+      "path": "(2009) Band Hero/NERD - Rock Star/vocals.ogg",
+      "size": 7780937
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/album.png",
+      "size": 384334
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/bass.ogg",
+      "size": 4453041
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/crowd.ogg",
+      "size": 30091
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/drums_1.ogg",
+      "size": 2859281
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/drums_2.ogg",
+      "size": 2443057
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/drums_3.ogg",
+      "size": 30091
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/drums_4.ogg",
+      "size": 5749143
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/guitar.ogg",
+      "size": 6916535
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/notes.mid",
+      "size": 83863
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/preview.ogg",
+      "size": 952620
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/song.ini",
+      "size": 1012
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/song.ogg",
+      "size": 7363271
+    },
+    {
+      "path": "(2009) Band Hero/Nelly Furtado - Turn Off The Light/vocals.ogg",
+      "size": 6377110
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/album.png",
+      "size": 425043
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/bass.ogg",
+      "size": 4657920
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/crowd.ogg",
+      "size": 3840440
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/drums_1.ogg",
+      "size": 4870801
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/drums_2.ogg",
+      "size": 2184698
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/drums_3.ogg",
+      "size": 365034
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/drums_4.ogg",
+      "size": 7110408
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/guitar.ogg",
+      "size": 9419740
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/notes.mid",
+      "size": 107442
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/preview.ogg",
+      "size": 667948
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/song.ini",
+      "size": 1017
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/song.ogg",
+      "size": 7711027
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Don't Speak/vocals.ogg",
+      "size": 6529125
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/album.png",
+      "size": 425043
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/bass.ogg",
+      "size": 4520451
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/crowd.ogg",
+      "size": 26192
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/drums_1.ogg",
+      "size": 3421847
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/drums_2.ogg",
+      "size": 4826212
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/drums_3.ogg",
+      "size": 71221
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/drums_4.ogg",
+      "size": 6631187
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/guitar.ogg",
+      "size": 6333690
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/notes.mid",
+      "size": 114446
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/preview.ogg",
+      "size": 788489
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/song.ini",
+      "size": 956
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/song.ogg",
+      "size": 5442156
+    },
+    {
+      "path": "(2009) Band Hero/No Doubt - Just A Girl/vocals.ogg",
+      "size": 5010785
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/album.png",
+      "size": 220965
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/bass.ogg",
+      "size": 4405086
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/crowd.ogg",
+      "size": 23485
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/drums_1.ogg",
+      "size": 4666860
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/drums_2.ogg",
+      "size": 2349276
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/drums_3.ogg",
+      "size": 36330
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/drums_4.ogg",
+      "size": 4694160
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/guitar.ogg",
+      "size": 4387908
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/notes.mid",
+      "size": 71307
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/preview.ogg",
+      "size": 581723
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/song.ini",
+      "size": 891
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/song.ogg",
+      "size": 4759439
+    },
+    {
+      "path": "(2009) Band Hero/OK Go - A Million Ways/vocals.ogg",
+      "size": 3992641
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/album.png",
+      "size": 264290
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/bass.ogg",
+      "size": 4420340
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/crowd.ogg",
+      "size": 28973
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/drums_1.ogg",
+      "size": 2769925
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/drums_2.ogg",
+      "size": 2644653
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/drums_3.ogg",
+      "size": 269486
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/drums_4.ogg",
+      "size": 6244915
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/guitar.ogg",
+      "size": 5964706
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/notes.mid",
+      "size": 110700
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/preview.ogg",
+      "size": 522761
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/song.ini",
+      "size": 1024
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/song.ogg",
+      "size": 5207515
+    },
+    {
+      "path": "(2009) Band Hero/Papa Roach - Lifeline/vocals.ogg",
+      "size": 6154848
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/album.png",
+      "size": 320201
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/bass.ogg",
+      "size": 3501738
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/crowd.ogg",
+      "size": 23196
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/drums_1.ogg",
+      "size": 3933207
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/drums_2.ogg",
+      "size": 2035255
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/drums_3.ogg",
+      "size": 129335
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/drums_4.ogg",
+      "size": 5077987
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/guitar.ogg",
+      "size": 6407627
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/notes.mid",
+      "size": 79826
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/preview.ogg",
+      "size": 766970
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/song.ini",
+      "size": 981
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/song.ogg",
+      "size": 6619732
+    },
+    {
+      "path": "(2009) Band Hero/Paracute - Back Again/vocals.ogg",
+      "size": 5235058
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/album.png",
+      "size": 68341
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/bass.ogg",
+      "size": 8359482
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/crowd.ogg",
+      "size": 36423
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/drums_1.ogg",
+      "size": 6917275
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/drums_2.ogg",
+      "size": 8678692
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/drums_3.ogg",
+      "size": 36423
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/drums_4.ogg",
+      "size": 11124779
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/guitar.ogg",
+      "size": 9184659
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/notes.mid",
+      "size": 122754
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/preview.ogg",
+      "size": 841732
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/song.ini",
+      "size": 956
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/song.ogg",
+      "size": 9263637
+    },
+    {
+      "path": "(2009) Band Hero/Pat Benatar - Love Is A Battlefield/vocals.ogg",
+      "size": 8934066
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/album.png",
+      "size": 490214
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/bass.ogg",
+      "size": 4643076
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/crowd.ogg",
+      "size": 3213161
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/drums_1.ogg",
+      "size": 5051191
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/drums_2.ogg",
+      "size": 2520415
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/drums_3.ogg",
+      "size": 209690
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/drums_4.ogg",
+      "size": 6149748
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/guitar.ogg",
+      "size": 8004999
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/notes.mid",
+      "size": 55116
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/preview.ogg",
+      "size": 655591
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/song.ini",
+      "size": 965
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/song.ogg",
+      "size": 6589406
+    },
+    {
+      "path": "(2009) Band Hero/Poison - Every Rose Has Its Thorn/vocals.ogg",
+      "size": 7832646
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/album.png",
+      "size": 276424
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/bass.ogg",
+      "size": 8822676
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/crowd.ogg",
+      "size": 33962
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/drums_1.ogg",
+      "size": 6668309
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/drums_2.ogg",
+      "size": 7113028
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/drums_3.ogg",
+      "size": 291514
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/drums_4.ogg",
+      "size": 7970564
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/guitar.ogg",
+      "size": 9545374
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/notes.mid",
+      "size": 144156
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/preview.ogg",
+      "size": 691655
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/song.ini",
+      "size": 958
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/song.ogg",
+      "size": 8432077
+    },
+    {
+      "path": "(2009) Band Hero/Robbie Williams and Kylie Minogue - Kids/vocals.ogg",
+      "size": 8301479
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/album.png",
+      "size": 313777
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/bass.ogg",
+      "size": 3024212
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/crowd.ogg",
+      "size": 23429
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/drums_1.ogg",
+      "size": 2838167
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/drums_2.ogg",
+      "size": 4372461
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/drums_3.ogg",
+      "size": 185226
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/drums_4.ogg",
+      "size": 5997719
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/guitar.ogg",
+      "size": 6347604
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/notes.mid",
+      "size": 79326
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/preview.ogg",
+      "size": 756706
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/song.ini",
+      "size": 1041
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/song.ogg",
+      "size": 4733773
+    },
+    {
+      "path": "(2009) Band Hero/Roy Orbison - Oh Pretty Woman/vocals.ogg",
+      "size": 4244105
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/album.png",
+      "size": 406938
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/bass.ogg",
+      "size": 4364713
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/crowd.ogg",
+      "size": 24909
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/drums_1.ogg",
+      "size": 3064924
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/drums_2.ogg",
+      "size": 3554586
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/drums_3.ogg",
+      "size": 4336174
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/drums_4.ogg",
+      "size": 4124419
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/guitar.ogg",
+      "size": 6718924
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/notes.mid",
+      "size": 105318
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/preview.ogg",
+      "size": 891407
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/song.ini",
+      "size": 950
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/song.ogg",
+      "size": 4630675
+    },
+    {
+      "path": "(2009) Band Hero/Santigold - LES Artistes/vocals.ogg",
+      "size": 5822062
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/album.png",
+      "size": 206190
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/bass.ogg",
+      "size": 4613549
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/crowd.ogg",
+      "size": 32025
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/drums_1.ogg",
+      "size": 5265481
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/drums_2.ogg",
+      "size": 5496061
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/drums_3.ogg",
+      "size": 112654
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/drums_4.ogg",
+      "size": 7477637
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/guitar.ogg",
+      "size": 7997845
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/notes.mid",
+      "size": 120416
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/preview.ogg",
+      "size": 717333
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/song.ini",
+      "size": 1064
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/song.ogg",
+      "size": 6192024
+    },
+    {
+      "path": "(2009) Band Hero/Snow Patrol - Take Back The City/vocals.ogg",
+      "size": 5663111
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/album.png",
+      "size": 97013
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/bass.ogg",
+      "size": 3549034
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/crowd.ogg",
+      "size": 2127976
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/drums_1.ogg",
+      "size": 3657134
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/drums_2.ogg",
+      "size": 3406514
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/drums_3.ogg",
+      "size": 20876
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/drums_4.ogg",
+      "size": 4186437
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/guitar.ogg",
+      "size": 4265869
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/notes.mid",
+      "size": 54957
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/preview.ogg",
+      "size": 821004
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/song.ini",
+      "size": 940
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/song.ogg",
+      "size": 4154547
+    },
+    {
+      "path": "(2009) Band Hero/Spice Girls - Wannabe/vocals.ogg",
+      "size": 4670134
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/album.png",
+      "size": 305059
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/bass.ogg",
+      "size": 6076341
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/crowd.ogg",
+      "size": 36385
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/drums_1.ogg",
+      "size": 5985760
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/drums_2.ogg",
+      "size": 3647096
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/drums_3.ogg",
+      "size": 124086
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/drums_4.ogg",
+      "size": 6369583
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/guitar.ogg",
+      "size": 8152888
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/notes.mid",
+      "size": 110821
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/preview.ogg",
+      "size": 609803
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/song.ini",
+      "size": 1320
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/song.ogg",
+      "size": 4333799
+    },
+    {
+      "path": "(2009) Band Hero/Styx - Mr Roboto/vocals.ogg",
+      "size": 6628242
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/album.png",
+      "size": 336780
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/bass.ogg",
+      "size": 3862189
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/crowd.ogg",
+      "size": 3831124
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/drums_1.ogg",
+      "size": 4795584
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/drums_2.ogg",
+      "size": 4215604
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/drums_3.ogg",
+      "size": 972442
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/drums_4.ogg",
+      "size": 6510491
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/guitar.ogg",
+      "size": 6008498
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/notes.mid",
+      "size": 83524
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/preview.ogg",
+      "size": 758528
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/song.ini",
+      "size": 973
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/song.ogg",
+      "size": 6097774
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Love Story/vocals.ogg",
+      "size": 5988840
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/album.png",
+      "size": 2727271
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/bass.ogg",
+      "size": 2970202
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/crowd.ogg",
+      "size": 1734197
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/drums_1.ogg",
+      "size": 3470382
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/drums_2.ogg",
+      "size": 2678786
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/drums_3.ogg",
+      "size": 238274
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/drums_4.ogg",
+      "size": 5173780
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/guitar.ogg",
+      "size": 4774241
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/notes.mid",
+      "size": 70655
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/preview.ogg",
+      "size": 692634
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/song.ini",
+      "size": 970
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/song.ogg",
+      "size": 4731260
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - Picture To Burn/vocals.ogg",
+      "size": 4075461
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/album.png",
+      "size": 342139
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/bass.ogg",
+      "size": 4622872
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/crowd.ogg",
+      "size": 26831
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/drums_1.ogg",
+      "size": 3117705
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/drums_2.ogg",
+      "size": 4079460
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/drums_3.ogg",
+      "size": 486984
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/drums_4.ogg",
+      "size": 6567319
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/guitar.ogg",
+      "size": 6203979
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/notes.mid",
+      "size": 100907
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/preview.ogg",
+      "size": 804074
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/song.ini",
+      "size": 966
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/song.ogg",
+      "size": 7202799
+    },
+    {
+      "path": "(2009) Band Hero/Taylor Swift - You Belong With Me/vocals.ogg",
+      "size": 5843878
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/album.png",
+      "size": 271638
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/bass.ogg",
+      "size": 4325878
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/crowd.ogg",
+      "size": 24603
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/drums_1.ogg",
+      "size": 4785274
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/drums_2.ogg",
+      "size": 4899146
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/drums_3.ogg",
+      "size": 646016
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/drums_4.ogg",
+      "size": 5123708
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/guitar.ogg",
+      "size": 4747920
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/notes.mid",
+      "size": 107498
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/preview.ogg",
+      "size": 752792
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/song.ini",
+      "size": 1013
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/song.ogg",
+      "size": 5154898
+    },
+    {
+      "path": "(2009) Band Hero/The Airborne Toxic Event - Gasoline/vocals.ogg",
+      "size": 5078764
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/album.png",
+      "size": 139999
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/bass.ogg",
+      "size": 4808216
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/crowd.ogg",
+      "size": 2140189
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/drums_1.ogg",
+      "size": 2926094
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/drums_2.ogg",
+      "size": 4104629
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/drums_3.ogg",
+      "size": 227637
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/drums_4.ogg",
+      "size": 5783643
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/guitar.ogg",
+      "size": 5290981
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/notes.mid",
+      "size": 91243
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/preview.ogg",
+      "size": 631777
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/song.ini",
+      "size": 966
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/song.ogg",
+      "size": 5377353
+    },
+    {
+      "path": "(2009) Band Hero/The All-American Rejects - Dirty Little Secret/vocals.ogg",
+      "size": 5860010
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/album.png",
+      "size": 73952
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/bass.ogg",
+      "size": 4652624
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/crowd.ogg",
+      "size": 27178
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/drums_1.ogg",
+      "size": 3238829
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/drums_2.ogg",
+      "size": 3226018
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/drums_3.ogg",
+      "size": 270782
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/drums_4.ogg",
+      "size": 6063278
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/guitar.ogg",
+      "size": 5703285
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/notes.mid",
+      "size": 122854
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/preview.ogg",
+      "size": 836828
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/song.ini",
+      "size": 954
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/song.ogg",
+      "size": 5554666
+    },
+    {
+      "path": "(2009) Band Hero/The Bravery - Believe/vocals.ogg",
+      "size": 4872056
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/album.png",
+      "size": 209169
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/bass.ogg",
+      "size": 3989653
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/crowd.ogg",
+      "size": 24849
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/drums_1.ogg",
+      "size": 3628730
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/drums_2.ogg",
+      "size": 3290783
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/drums_3.ogg",
+      "size": 209410
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/drums_4.ogg",
+      "size": 5630874
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/guitar.ogg",
+      "size": 5355284
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/notes.mid",
+      "size": 83983
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/preview.ogg",
+      "size": 557572
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/song.ini",
+      "size": 982
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/song.ogg",
+      "size": 4635194
+    },
+    {
+      "path": "(2009) Band Hero/The Kooks - Naive/vocals.ogg",
+      "size": 5386424
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/album.png",
+      "size": 387379
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/bass.ogg",
+      "size": 2629648
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/crowd.ogg",
+      "size": 23617
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/drums_1.ogg",
+      "size": 3048857
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/drums_2.ogg",
+      "size": 3758409
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/drums_3.ogg",
+      "size": 561410
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/drums_4.ogg",
+      "size": 5086787
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/guitar.ogg",
+      "size": 4934261
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/notes.mid",
+      "size": 65311
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/preview.ogg",
+      "size": 687437
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/song.ini",
+      "size": 998
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/song.ogg",
+      "size": 5663792
+    },
+    {
+      "path": "(2009) Band Hero/The Last Goodnight - Pictures Of You/vocals.ogg",
+      "size": 3791625
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/album.png",
+      "size": 209873
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/bass.ogg",
+      "size": 3309227
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/crowd.ogg",
+      "size": 1700983
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/drums_1.ogg",
+      "size": 4081218
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/drums_2.ogg",
+      "size": 3406044
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/drums_3.ogg",
+      "size": 103192
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/drums_4.ogg",
+      "size": 5821190
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/guitar.ogg",
+      "size": 4815670
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/notes.mid",
+      "size": 113121
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/preview.ogg",
+      "size": 746847
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/song.ini",
+      "size": 1026
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/song.ogg",
+      "size": 4296745
+    },
+    {
+      "path": "(2009) Band Hero/The Mighty Mighty Bosstones - The Impression That I Get/vocals.ogg",
+      "size": 3669057
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/album.png",
+      "size": 407066
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/bass.ogg",
+      "size": 4035958
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/crowd.ogg",
+      "size": 22787
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/drums_1.ogg",
+      "size": 2818995
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/drums_2.ogg",
+      "size": 2709332
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/drums_3.ogg",
+      "size": 68803
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/drums_4.ogg",
+      "size": 4823134
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/guitar.ogg",
+      "size": 5553826
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/notes.mid",
+      "size": 54513
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/preview.ogg",
+      "size": 873718
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/song.ini",
+      "size": 996
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/song.ogg",
+      "size": 5167409
+    },
+    {
+      "path": "(2009) Band Hero/The Rolling Stones - Honky Tonk Women/vocals.ogg",
+      "size": 4308271
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/album.png",
+      "size": 323787
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/bass.ogg",
+      "size": 4325420
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/crowd.ogg",
+      "size": 4111988
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/drums_1.ogg",
+      "size": 3806994
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/drums_2.ogg",
+      "size": 4224610
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/drums_3.ogg",
+      "size": 37989
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/drums_4.ogg",
+      "size": 4978986
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/guitar.ogg",
+      "size": 5164248
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/notes.mid",
+      "size": 65858
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/preview.ogg",
+      "size": 799280
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/song.ini",
+      "size": 1019
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/song.ogg",
+      "size": 4980725
+    },
+    {
+      "path": "(2009) Band Hero/The Turtles - Happy Together/vocals.ogg",
+      "size": 4618813
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/album.png",
+      "size": 342174
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/bass.ogg",
+      "size": 5248701
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/crowd.ogg",
+      "size": 30458
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/drums_1.ogg",
+      "size": 3741247
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/drums_2.ogg",
+      "size": 2714409
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/drums_3.ogg",
+      "size": 115525
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/drums_4.ogg",
+      "size": 7200917
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/guitar.ogg",
+      "size": 6818008
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/notes.mid",
+      "size": 95103
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/preview.ogg",
+      "size": 705054
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/song.ini",
+      "size": 956
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/song.ogg",
+      "size": 9053905
+    },
+    {
+      "path": "(2009) Band Hero/Tonic - If You Could Only See/vocals.ogg",
+      "size": 5648287
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/album.png",
+      "size": 599808
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/bass.ogg",
+      "size": 4430921
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/crowd.ogg",
+      "size": 3192444
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/drums_1.ogg",
+      "size": 4541336
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/drums_2.ogg",
+      "size": 5329862
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/drums_3.ogg",
+      "size": 144929
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/drums_4.ogg",
+      "size": 7378692
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/guitar.ogg",
+      "size": 5572391
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/notes.mid",
+      "size": 92027
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/preview.ogg",
+      "size": 950318
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/song.ini",
+      "size": 925
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/song.ogg",
+      "size": 7840727
+    },
+    {
+      "path": "(2009) Band Hero/Village People - YMCA/vocals.ogg",
+      "size": 6220723
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/album.png",
+      "size": 291967
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/bass.ogg",
+      "size": 4223653
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/crowd.ogg",
+      "size": 24953
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/drums_1.ogg",
+      "size": 3279681
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/drums_2.ogg",
+      "size": 2964907
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/drums_3.ogg",
+      "size": 241252
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/drums_4.ogg",
+      "size": 5676820
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/guitar.ogg",
+      "size": 5904309
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/notes.mid",
+      "size": 111025
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/preview.ogg",
+      "size": 641015
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/song.ini",
+      "size": 948
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/song.ogg",
+      "size": 4049640
+    },
+    {
+      "path": "(2009) Band Hero/Yellowcard - Ocean Avenue/vocals.ogg",
+      "size": 4486970
+    },
+    {
+      "path": "(2009) Band Hero/changelog.txt",
+      "size": 476
+    }
+  ],
+  "extracted_size": 2550660635,
+  "file_count": 846,
+  "chart_count": 65,
+  "release_date": "2009-11-03"
 }

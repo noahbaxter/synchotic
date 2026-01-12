@@ -1,19 +1,929 @@
 {
   "name": "(2007) Guitar Hero Encore Rocks the 80s",
-  "folder_id": "static-gh-80s",
+  "folder_id": "static-2007-guitar-hero-encore-rocks-the-80s",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 39,
-  "total_size": 627593688,
-  "file_count": 227,
-  "files": [
+  "downloads": [
     {
       "id": "1zLHtqxadChMmuG1UEBcYxeKR36LiVJKO",
-      "path": "(2007) Guitar Hero Encore - Rocks the 80s/Guitar Hero Encore Rocks the 80s.7z",
       "name": "Guitar Hero Encore Rocks the 80s.7z",
       "size": 627593688,
       "md5": "b62103ca5c4b5c98b40a1ba6fac909f7"
     }
-  ]
+  ],
+  "download_size": 627593688,
+  "files": [
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 2 Playing Notes/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 2 Playing Notes/guitar.ogg",
+      "size": 1938686
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 2 Playing Notes/notes.mid",
+      "size": 902
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 2 Playing Notes/song.ini",
+      "size": 699
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 2 Playing Notes/song.ogg",
+      "size": 2299368
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 3 Different Notes/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 3 Different Notes/guitar.ogg",
+      "size": 2001190
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 3 Different Notes/notes.mid",
+      "size": 1099
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 3 Different Notes/song.ini",
+      "size": 697
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 3 Different Notes/song.ogg",
+      "size": 2392718
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 4 Durations/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 4 Durations/guitar.ogg",
+      "size": 2057553
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 4 Durations/notes.mid",
+      "size": 541
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 4 Durations/song.ini",
+      "size": 735
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 4 Durations/song.ogg",
+      "size": 2586839
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 5 Chords/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 5 Chords/guitar.ogg",
+      "size": 1897027
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 5 Chords/notes.mid",
+      "size": 1572
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 5 Chords/song.ini",
+      "size": 676
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/Basic 5 Chords/song.ogg",
+      "size": 2299368
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 2 Combos/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 2 Combos/guitar.ogg",
+      "size": 1969989
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 2 Combos/notes.mid",
+      "size": 1990
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 2 Combos/song.ini",
+      "size": 700
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 2 Combos/song.ogg",
+      "size": 2299368
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 3 Whammy Bar/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 3 Whammy Bar/guitar.ogg",
+      "size": 1997339
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 3 Whammy Bar/notes.mid",
+      "size": 517
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 3 Whammy Bar/song.ini",
+      "size": 726
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 3 Whammy Bar/song.ogg",
+      "size": 2299368
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 4 Wail/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 4 Wail/guitar.ogg",
+      "size": 1979104
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 4 Wail/notes.mid",
+      "size": 1547
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 4 Wail/song.ini",
+      "size": 747
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 4 Wail/song.ogg",
+      "size": 2299368
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 5 Hammer-Ons/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 5 Hammer-Ons/guitar.ogg",
+      "size": 2394161
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 5 Hammer-Ons/notes.mid",
+      "size": 614
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 5 Hammer-Ons/song.ini",
+      "size": 740
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 5 Hammer-Ons/song.ogg",
+      "size": 2569057
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 6 Pull-Offs/album.png",
+      "size": 416653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 6 Pull-Offs/guitar.ogg",
+      "size": 2400065
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 6 Pull-Offs/notes.mid",
+      "size": 614
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 6 Pull-Offs/song.ini",
+      "size": 738
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Guitar Hero Encore Rocks the 80s Tutorials/StarPower 6 Pull-Offs/song.ogg",
+      "size": 2569057
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/.38 Special - Hold on Loosely/album.png",
+      "size": 518208
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/.38 Special - Hold on Loosely/bass.ogg",
+      "size": 4246668
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/.38 Special - Hold on Loosely/guitar.ogg",
+      "size": 9485742
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/.38 Special - Hold on Loosely/notes.mid",
+      "size": 35870
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/.38 Special - Hold on Loosely/song.ini",
+      "size": 738
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/.38 Special - Hold on Loosely/song.ogg",
+      "size": 9220268
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/A Flock of Seagulls - I Ran (So Far Away)/album.png",
+      "size": 410766
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/A Flock of Seagulls - I Ran (So Far Away)/bass.ogg",
+      "size": 4562912
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/A Flock of Seagulls - I Ran (So Far Away)/guitar.ogg",
+      "size": 9354145
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/A Flock of Seagulls - I Ran (So Far Away)/notes.mid",
+      "size": 42990
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/A Flock of Seagulls - I Ran (So Far Away)/song.ini",
+      "size": 717
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/A Flock of Seagulls - I Ran (So Far Away)/song.ogg",
+      "size": 9321355
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Accept - Balls to the Wall/album.png",
+      "size": 426815
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Accept - Balls to the Wall/bass.ogg",
+      "size": 5194508
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Accept - Balls to the Wall/guitar.ogg",
+      "size": 10741508
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Accept - Balls to the Wall/notes.mid",
+      "size": 45600
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Accept - Balls to the Wall/song.ini",
+      "size": 726
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Accept - Balls to the Wall/song.ogg",
+      "size": 11314891
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Anthrax - Caught in a Mosh/album.png",
+      "size": 280877
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Anthrax - Caught in a Mosh/bass.ogg",
+      "size": 5050082
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Anthrax - Caught in a Mosh/guitar.ogg",
+      "size": 9451299
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Anthrax - Caught in a Mosh/notes.mid",
+      "size": 75634
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Anthrax - Caught in a Mosh/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Anthrax - Caught in a Mosh/song.ogg",
+      "size": 9759284
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Asia - Heat of the Moment/album.png",
+      "size": 503185
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Asia - Heat of the Moment/bass.ogg",
+      "size": 3581232
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Asia - Heat of the Moment/guitar.ogg",
+      "size": 7710892
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Asia - Heat of the Moment/notes.mid",
+      "size": 27374
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Asia - Heat of the Moment/song.ini",
+      "size": 681
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Asia - Heat of the Moment/song.ogg",
+      "size": 7329688
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Billy Squier - Lonely Is the Night/album.png",
+      "size": 331200
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Billy Squier - Lonely Is the Night/bass.ogg",
+      "size": 4376798
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Billy Squier - Lonely Is the Night/guitar.ogg",
+      "size": 8494691
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Billy Squier - Lonely Is the Night/notes.mid",
+      "size": 41586
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Billy Squier - Lonely Is the Night/song.ini",
+      "size": 863
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Billy Squier - Lonely Is the Night/song.ogg",
+      "size": 8798996
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dead Kennedys - Police Truck/album.png",
+      "size": 520284
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dead Kennedys - Police Truck/bass.ogg",
+      "size": 2714416
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dead Kennedys - Police Truck/guitar.ogg",
+      "size": 4805543
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dead Kennedys - Police Truck/notes.mid",
+      "size": 33062
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dead Kennedys - Police Truck/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dead Kennedys - Police Truck/song.ogg",
+      "size": 4347008
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dio - Holy Diver/album.png",
+      "size": 583947
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dio - Holy Diver/bass.ogg",
+      "size": 4842538
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dio - Holy Diver/guitar.ogg",
+      "size": 10065693
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dio - Holy Diver/notes.mid",
+      "size": 38315
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dio - Holy Diver/song.ini",
+      "size": 713
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Dio - Holy Diver/song.ogg",
+      "size": 9866434
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Eddie Money - Shakin/album.png",
+      "size": 388876
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Eddie Money - Shakin/bass.ogg",
+      "size": 2828555
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Eddie Money - Shakin/guitar.ogg",
+      "size": 6153021
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Eddie Money - Shakin/notes.mid",
+      "size": 20470
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Eddie Money - Shakin/song.ini",
+      "size": 745
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Eddie Money - Shakin/song.ogg",
+      "size": 6076934
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Extreme - Play with Me/album.png",
+      "size": 404358
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Extreme - Play with Me/bass.ogg",
+      "size": 3627658
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Extreme - Play with Me/guitar.ogg",
+      "size": 6945097
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Extreme - Play with Me/notes.mid",
+      "size": 46067
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Extreme - Play with Me/song.ini",
+      "size": 699
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Extreme - Play with Me/song.ogg",
+      "size": 6679325
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Faster Pussycat - Bathroom Wall/album.png",
+      "size": 398384
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Faster Pussycat - Bathroom Wall/bass.ogg",
+      "size": 3496723
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Faster Pussycat - Bathroom Wall/guitar.ogg",
+      "size": 6390789
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Faster Pussycat - Bathroom Wall/notes.mid",
+      "size": 53019
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Faster Pussycat - Bathroom Wall/song.ini",
+      "size": 731
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Faster Pussycat - Bathroom Wall/song.ogg",
+      "size": 6867418
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/GH80s Rips v1.8.1.txt",
+      "size": 1404
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Iron Maiden - Wrathchild/US.mid",
+      "size": 31132
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Iron Maiden - Wrathchild/album.png",
+      "size": 454990
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Iron Maiden - Wrathchild/bass.ogg",
+      "size": 2925364
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Iron Maiden - Wrathchild/guitar.ogg",
+      "size": 5669308
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Iron Maiden - Wrathchild/notes.mid",
+      "size": 31138
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Iron Maiden - Wrathchild/song.ini",
+      "size": 751
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Iron Maiden - Wrathchild/song.ogg",
+      "size": 5961761
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Judas Priest - The Hellion & Electric Eye/album.png",
+      "size": 453578
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Judas Priest - The Hellion & Electric Eye/bass.ogg",
+      "size": 3955065
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Judas Priest - The Hellion & Electric Eye/guitar.ogg",
+      "size": 7489346
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Judas Priest - The Hellion & Electric Eye/notes.mid",
+      "size": 59562
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Judas Priest - The Hellion & Electric Eye/song.ini",
+      "size": 780
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Judas Priest - The Hellion & Electric Eye/song.ogg",
+      "size": 8194318
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Krokus - Ballroom Blitz/album.png",
+      "size": 403537
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Krokus - Ballroom Blitz/bass.ogg",
+      "size": 3630998
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Krokus - Ballroom Blitz/guitar.ogg",
+      "size": 7388421
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Krokus - Ballroom Blitz/notes.mid",
+      "size": 40469
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Krokus - Ballroom Blitz/song.ini",
+      "size": 855
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Krokus - Ballroom Blitz/song.ogg",
+      "size": 7541521
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Limozeen - Because, It's Midnite/album.png",
+      "size": 329427
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Limozeen - Because, It's Midnite/bass.ogg",
+      "size": 4677345
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Limozeen - Because, It's Midnite/guitar.ogg",
+      "size": 3592311
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Limozeen - Because, It's Midnite/notes.mid",
+      "size": 21125
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Limozeen - Because, It's Midnite/song.ini",
+      "size": 837
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Limozeen - Because, It's Midnite/song.ogg",
+      "size": 4344663
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Oingo Boingo - Only a Lad/album.png",
+      "size": 426816
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Oingo Boingo - Only a Lad/bass.ogg",
+      "size": 3697717
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Oingo Boingo - Only a Lad/guitar.ogg",
+      "size": 8275405
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Oingo Boingo - Only a Lad/notes.mid",
+      "size": 52732
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Oingo Boingo - Only a Lad/song.ini",
+      "size": 719
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Oingo Boingo - Only a Lad/song.ogg",
+      "size": 8440273
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Poison - Ain't Nothin' But a Good Time/album.png",
+      "size": 491622
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Poison - Ain't Nothin' But a Good Time/bass.ogg",
+      "size": 3661739
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Poison - Ain't Nothin' But a Good Time/guitar.ogg",
+      "size": 7264884
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Poison - Ain't Nothin' But a Good Time/notes.mid",
+      "size": 38499
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Poison - Ain't Nothin' But a Good Time/song.ini",
+      "size": 760
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Poison - Ain't Nothin' But a Good Time/song.ogg",
+      "size": 7631011
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Quiet Riot - (Bang Your Head) Metal Health/album.png",
+      "size": 457306
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Quiet Riot - (Bang Your Head) Metal Health/bass.ogg",
+      "size": 4560143
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Quiet Riot - (Bang Your Head) Metal Health/guitar.ogg",
+      "size": 9473566
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Quiet Riot - (Bang Your Head) Metal Health/notes.mid",
+      "size": 48923
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Quiet Riot - (Bang Your Head) Metal Health/song.ini",
+      "size": 758
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Quiet Riot - (Bang Your Head) Metal Health/song.ogg",
+      "size": 10526476
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Ratt - Round and Round/album.png",
+      "size": 447771
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Ratt - Round and Round/bass.ogg",
+      "size": 4414070
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Ratt - Round and Round/guitar.ogg",
+      "size": 8726226
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Ratt - Round and Round/notes.mid",
+      "size": 35360
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Ratt - Round and Round/song.ini",
+      "size": 771
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Ratt - Round and Round/song.ogg",
+      "size": 9348918
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scandal - The Warrior/album.png",
+      "size": 368515
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scandal - The Warrior/bass.ogg",
+      "size": 3598801
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scandal - The Warrior/guitar.ogg",
+      "size": 7907616
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scandal - The Warrior/notes.mid",
+      "size": 31413
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scandal - The Warrior/song.ini",
+      "size": 705
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scandal - The Warrior/song.ogg",
+      "size": 8003773
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scorpions - No One Like You/album.png",
+      "size": 441219
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scorpions - No One Like You/bass.ogg",
+      "size": 3542598
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scorpions - No One Like You/guitar.ogg",
+      "size": 7340032
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scorpions - No One Like You/notes.mid",
+      "size": 26653
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scorpions - No One Like You/song.ini",
+      "size": 764
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Scorpions - No One Like You/song.ogg",
+      "size": 8092567
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Skid Row - 18 and Life/album.png",
+      "size": 409552
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Skid Row - 18 and Life/bass.ogg",
+      "size": 3387322
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Skid Row - 18 and Life/guitar.ogg",
+      "size": 8021279
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Skid Row - 18 and Life/notes.mid",
+      "size": 23570
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Skid Row - 18 and Life/song.ini",
+      "size": 740
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Skid Row - 18 and Life/song.ogg",
+      "size": 7524202
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Go-Go's - We Got the Beat/album.png",
+      "size": 479037
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Go-Go's - We Got the Beat/bass.ogg",
+      "size": 2293644
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Go-Go's - We Got the Beat/guitar.ogg",
+      "size": 5378618
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Go-Go's - We Got the Beat/notes.mid",
+      "size": 26455
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Go-Go's - We Got the Beat/song.ini",
+      "size": 788
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Go-Go's - We Got the Beat/song.ogg",
+      "size": 4664947
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Police - Synchronicity II/album.png",
+      "size": 443868
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Police - Synchronicity II/bass.ogg",
+      "size": 5327387
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Police - Synchronicity II/guitar.ogg",
+      "size": 10750086
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Police - Synchronicity II/notes.mid",
+      "size": 53612
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Police - Synchronicity II/song.ini",
+      "size": 782
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Police - Synchronicity II/song.ogg",
+      "size": 9502877
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Romantics - What I Like About You/album.png",
+      "size": 360787
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Romantics - What I Like About You/bass.ogg",
+      "size": 2945092
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Romantics - What I Like About You/guitar.ogg",
+      "size": 5974221
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Romantics - What I Like About You/notes.mid",
+      "size": 44927
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Romantics - What I Like About You/song.ini",
+      "size": 739
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Romantics - What I Like About You/song.ogg",
+      "size": 5790116
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Vapors - Turning Japanese/album.png",
+      "size": 570283
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Vapors - Turning Japanese/bass.ogg",
+      "size": 8303877
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Vapors - Turning Japanese/guitar.ogg",
+      "size": 7874353
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Vapors - Turning Japanese/notes.mid",
+      "size": 50184
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Vapors - Turning Japanese/song.ini",
+      "size": 773
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/The Vapors - Turning Japanese/song.ogg",
+      "size": 7519594
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Twisted Sister - I Wanna Rock/album.png",
+      "size": 375834
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Twisted Sister - I Wanna Rock/bass.ogg",
+      "size": 2757559
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Twisted Sister - I Wanna Rock/guitar.ogg",
+      "size": 5453242
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Twisted Sister - I Wanna Rock/notes.mid",
+      "size": 36337
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Twisted Sister - I Wanna Rock/song.ini",
+      "size": 713
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Twisted Sister - I Wanna Rock/song.ogg",
+      "size": 6198253
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/White Lion - Radar Love/album.png",
+      "size": 534544
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/White Lion - Radar Love/bass.ogg",
+      "size": 12052895
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/White Lion - Radar Love/guitar.ogg",
+      "size": 10834285
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/White Lion - Radar Love/notes.mid",
+      "size": 45616
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/White Lion - Radar Love/song.ini",
+      "size": 705
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/White Lion - Radar Love/song.ogg",
+      "size": 12076880
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Winger - Seventeen/album.png",
+      "size": 572767
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Winger - Seventeen/bass.ogg",
+      "size": 3706021
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Winger - Seventeen/guitar.ogg",
+      "size": 8248390
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Winger - Seventeen/notes.mid",
+      "size": 40583
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Winger - Seventeen/song.ini",
+      "size": 767
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/Winger - Seventeen/song.ogg",
+      "size": 7946722
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/X - Los Angeles/album.png",
+      "size": 141077
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/X - Los Angeles/bass.ogg",
+      "size": 2647816
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/X - Los Angeles/guitar.ogg",
+      "size": 4428376
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/X - Los Angeles/notes.mid",
+      "size": 39408
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/X - Los Angeles/song.ini",
+      "size": 715
+    },
+    {
+      "path": "(2007) Guitar Hero Encore Rocks the 80s/X - Los Angeles/song.ogg",
+      "size": 4637602
+    }
+  ],
+  "extracted_size": 648030504,
+  "file_count": 227,
+  "chart_count": 39,
+  "release_date": "2007-07-24"
 }

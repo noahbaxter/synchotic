@@ -1,19 +1,1185 @@
 {
   "name": "(2005) Guitar Hero",
-  "folder_id": "static-gh-1",
+  "folder_id": "static-2005-guitar-hero",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 58,
-  "total_size": 744365116,
-  "file_count": 291,
-  "files": [
+  "downloads": [
     {
       "id": "1Z6tPssOVX81VVi_1XqQO9GpsNUtIhabH",
-      "path": "(2005) Guitar Hero/Guitar Hero.7z",
       "name": "Guitar Hero.7z",
       "size": 744365116,
       "md5": "3b25d03d4316f587636b61c38f4723a2"
     }
-  ]
+  ],
+  "download_size": 744365116,
+  "files": [
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 2 Playing Notes/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 2 Playing Notes/guitar.ogg",
+      "size": 1943678
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 2 Playing Notes/notes.mid",
+      "size": 900
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 2 Playing Notes/song.ini",
+      "size": 675
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 2 Playing Notes/song.ogg",
+      "size": 2300836
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 3 Different Notes/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 3 Different Notes/guitar.ogg",
+      "size": 2004929
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 3 Different Notes/notes.mid",
+      "size": 1097
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 3 Different Notes/song.ini",
+      "size": 673
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 3 Different Notes/song.ogg",
+      "size": 2394752
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 4 Durations/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 4 Durations/guitar.ogg",
+      "size": 2064522
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 4 Durations/notes.mid",
+      "size": 539
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 4 Durations/song.ini",
+      "size": 712
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 4 Durations/song.ogg",
+      "size": 2593550
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 5 Chords/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 5 Chords/guitar.ogg",
+      "size": 1904555
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 5 Chords/notes.mid",
+      "size": 1570
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 5 Chords/song.ini",
+      "size": 652
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/Basic 5 Chords/song.ogg",
+      "size": 2300836
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 2 Combos/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 2 Combos/guitar.ogg",
+      "size": 1977906
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 2 Combos/notes.mid",
+      "size": 1988
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 2 Combos/song.ini",
+      "size": 676
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 2 Combos/song.ogg",
+      "size": 2300836
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 3 Whammy Bar/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 3 Whammy Bar/guitar.ogg",
+      "size": 2006625
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 3 Whammy Bar/notes.mid",
+      "size": 517
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 3 Whammy Bar/song.ini",
+      "size": 702
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 3 Whammy Bar/song.ogg",
+      "size": 2300836
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 4 Wail/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 4 Wail/guitar.ogg",
+      "size": 1985529
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 4 Wail/notes.mid",
+      "size": 1547
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 4 Wail/song.ini",
+      "size": 723
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 4 Wail/song.ogg",
+      "size": 2300836
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 5 Hammer-Ons/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 5 Hammer-Ons/guitar.ogg",
+      "size": 2409087
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 5 Hammer-Ons/notes.mid",
+      "size": 612
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 5 Hammer-Ons/song.ini",
+      "size": 716
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 5 Hammer-Ons/song.ogg",
+      "size": 2571431
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 6 Pull-Offs/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 6 Pull-Offs/guitar.ogg",
+      "size": 2409975
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 6 Pull-Offs/notes.mid",
+      "size": 612
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 6 Pull-Offs/song.ini",
+      "size": 714
+    },
+    {
+      "path": "(2005) Guitar Hero/Guitar Hero Tutorials/StarPower 6 Pull-Offs/song.ogg",
+      "size": 2571431
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Anarchy Club - Behind the Mask/album.png",
+      "size": 245958
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Anarchy Club - Behind the Mask/guitar.ogg",
+      "size": 3984873
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Anarchy Club - Behind the Mask/notes.mid",
+      "size": 10345
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Anarchy Club - Behind the Mask/song.ini",
+      "size": 828
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Anarchy Club - Behind the Mask/song.ogg",
+      "size": 5066303
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Andraleia Buch - Trippolette/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Andraleia Buch - Trippolette/guitar.ogg",
+      "size": 3694238
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Andraleia Buch - Trippolette/notes.mid",
+      "size": 12905
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Andraleia Buch - Trippolette/song.ini",
+      "size": 729
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Andraleia Buch - Trippolette/song.ogg",
+      "size": 4479836
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Artillery - The Breaking Wheel/album.png",
+      "size": 322357
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Artillery - The Breaking Wheel/guitar.ogg",
+      "size": 6453833
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Artillery - The Breaking Wheel/notes.mid",
+      "size": 37509
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Artillery - The Breaking Wheel/song.ini",
+      "size": 775
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Artillery - The Breaking Wheel/song.ogg",
+      "size": 7738280
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Black Label Society - Fire it Up/album.png",
+      "size": 158924
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Black Label Society - Fire it Up/guitar.ogg",
+      "size": 7184263
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Black Label Society - Fire it Up/notes.mid",
+      "size": 20902
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Black Label Society - Fire it Up/song.ini",
+      "size": 756
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Black Label Society - Fire it Up/song.ogg",
+      "size": 7559522
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Count Zero - Sail Your Ship By/album.png",
+      "size": 301791
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Count Zero - Sail Your Ship By/guitar.ogg",
+      "size": 7862375
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Count Zero - Sail Your Ship By/notes.mid",
+      "size": 41913
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Count Zero - Sail Your Ship By/song.ini",
+      "size": 775
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Count Zero - Sail Your Ship By/song.ogg",
+      "size": 9408662
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Din - Fly on the Wall/album.png",
+      "size": 604523
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Din - Fly on the Wall/guitar.ogg",
+      "size": 4979167
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Din - Fly on the Wall/notes.mid",
+      "size": 21929
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Din - Fly on the Wall/song.ini",
+      "size": 720
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Din - Fly on the Wall/song.ogg",
+      "size": 5691715
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Drist - Decontrol/album.png",
+      "size": 157359
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Drist - Decontrol/guitar.ogg",
+      "size": 6999428
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Drist - Decontrol/notes.mid",
+      "size": 17805
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Drist - Decontrol/song.ini",
+      "size": 804
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Drist - Decontrol/song.ogg",
+      "size": 7167579
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Freezepop - Get Ready 2 Rokk/album.png",
+      "size": 168054
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Freezepop - Get Ready 2 Rokk/guitar.ogg",
+      "size": 5451507
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Freezepop - Get Ready 2 Rokk/notes.mid",
+      "size": 18800
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Freezepop - Get Ready 2 Rokk/song.ini",
+      "size": 821
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Freezepop - Get Ready 2 Rokk/song.ogg",
+      "size": 6702488
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Graveyard BBQ - Cheat on the Church/album.png",
+      "size": 250279
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Graveyard BBQ - Cheat on the Church/guitar.ogg",
+      "size": 6891604
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Graveyard BBQ - Cheat on the Church/notes.mid",
+      "size": 32807
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Graveyard BBQ - Cheat on the Church/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Graveyard BBQ - Cheat on the Church/song.ogg",
+      "size": 8483703
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Gurney - Graveyard Shift/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Gurney - Graveyard Shift/guitar.ogg",
+      "size": 3233728
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Gurney - Graveyard Shift/notes.mid",
+      "size": 19906
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Gurney - Graveyard Shift/song.ini",
+      "size": 698
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Gurney - Graveyard Shift/song.ogg",
+      "size": 3807523
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Hey/album.png",
+      "size": 427794
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Hey/guitar.ogg",
+      "size": 6093420
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Hey/notes.mid",
+      "size": 18497
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Hey/song.ini",
+      "size": 815
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Hey/song.ogg",
+      "size": 5460363
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Made in Mexico - Farewell Myth/album.png",
+      "size": 493665
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Made in Mexico - Farewell Myth/guitar.ogg",
+      "size": 7842856
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Made in Mexico - Farewell Myth/notes.mid",
+      "size": 29817
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Made in Mexico - Farewell Myth/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Made in Mexico - Farewell Myth/song.ogg",
+      "size": 6995838
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Monkey Steals the Peach - Guitar Hero/album.png",
+      "size": 429402
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Monkey Steals the Peach - Guitar Hero/guitar.ogg",
+      "size": 4734141
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Monkey Steals the Peach - Guitar Hero/notes.mid",
+      "size": 18820
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Monkey Steals the Peach - Guitar Hero/song.ini",
+      "size": 855
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Monkey Steals the Peach - Guitar Hero/song.ogg",
+      "size": 5403712
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Shaimus - All of This/album.png",
+      "size": 239034
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Shaimus - All of This/guitar.ogg",
+      "size": 4475774
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Shaimus - All of This/notes.mid",
+      "size": 24532
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Shaimus - All of This/song.ini",
+      "size": 792
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/Shaimus - All of This/song.ogg",
+      "size": 5045239
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Acro-Brats - Callout/album.png",
+      "size": 424921
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Acro-Brats - Callout/guitar.ogg",
+      "size": 5601276
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Acro-Brats - Callout/notes.mid",
+      "size": 19853
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Acro-Brats - Callout/song.ini",
+      "size": 784
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Acro-Brats - Callout/song.ogg",
+      "size": 6484564
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Bags - Cavemen Rejoice/album.png",
+      "size": 241364
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Bags - Cavemen Rejoice/guitar.ogg",
+      "size": 5578998
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Bags - Cavemen Rejoice/notes.mid",
+      "size": 26608
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Bags - Cavemen Rejoice/song.ini",
+      "size": 769
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Bags - Cavemen Rejoice/song.ogg",
+      "size": 6801759
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Model Sons - Story of My Love/album.PNG",
+      "size": 472373
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Model Sons - Story of My Love/guitar.ogg",
+      "size": 5919707
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Model Sons - Story of My Love/notes.mid",
+      "size": 23742
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Model Sons - Story of My Love/song.ini",
+      "size": 749
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Model Sons - Story of My Love/song.ogg",
+      "size": 6750867
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Slip - Even Rats/album.png",
+      "size": 248118
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Slip - Even Rats/guitar.ogg",
+      "size": 10327051
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Slip - Even Rats/notes.mid",
+      "size": 25100
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Slip - Even Rats/song.ini",
+      "size": 749
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Slip - Even Rats/song.ogg",
+      "size": 10491050
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Upper Crust - Eureka, I've Found Love/album.png",
+      "size": 477526
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Upper Crust - Eureka, I've Found Love/guitar.ogg",
+      "size": 5157690
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Upper Crust - Eureka, I've Found Love/notes.mid",
+      "size": 13768
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Upper Crust - Eureka, I've Found Love/song.ini",
+      "size": 777
+    },
+    {
+      "path": "(2005) Guitar Hero/Bonus/The Upper Crust - Eureka, I've Found Love/song.ogg",
+      "size": 6005890
+    },
+    {
+      "path": "(2005) Guitar Hero/GH Rips v2.4.1.txt",
+      "size": 1595
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Audioslave - Cochise/album.png",
+      "size": 452760
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Audioslave - Cochise/guitar.ogg",
+      "size": 6117365
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Audioslave - Cochise/notes.mid",
+      "size": 16087
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Audioslave - Cochise/song.ini",
+      "size": 785
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Audioslave - Cochise/song.ogg",
+      "size": 5712350
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Bad Religion - Infected/album.png",
+      "size": 234023
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Bad Religion - Infected/guitar.ogg",
+      "size": 7205664
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Bad Religion - Infected/notes.mid",
+      "size": 31309
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Bad Religion - Infected/song.ini",
+      "size": 682
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Bad Religion - Infected/song.ogg",
+      "size": 7741594
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Black Sabbath - Iron Man/album.png",
+      "size": 223485
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Black Sabbath - Iron Man/guitar.ogg",
+      "size": 7668964
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Black Sabbath - Iron Man/notes.mid",
+      "size": 19890
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Black Sabbath - Iron Man/song.ini",
+      "size": 713
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Black Sabbath - Iron Man/song.ogg",
+      "size": 7893898
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Blue \u00d6yster Cult - Godzilla/album.png",
+      "size": 466357
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Blue \u00d6yster Cult - Godzilla/guitar.ogg",
+      "size": 6950738
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Blue \u00d6yster Cult - Godzilla/notes.mid",
+      "size": 14244
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Blue \u00d6yster Cult - Godzilla/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Blue \u00d6yster Cult - Godzilla/song.ogg",
+      "size": 7578739
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Boston - More Than a Feeling/album.png",
+      "size": 454026
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Boston - More Than a Feeling/guitar.ogg",
+      "size": 10745009
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Boston - More Than a Feeling/notes.mid",
+      "size": 19384
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Boston - More Than a Feeling/song.ini",
+      "size": 709
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Boston - More Than a Feeling/song.ogg",
+      "size": 10413363
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Burning Brides - Heart Full of Black/album.png",
+      "size": 478610
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Burning Brides - Heart Full of Black/guitar.ogg",
+      "size": 6157005
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Burning Brides - Heart Full of Black/notes.mid",
+      "size": 25054
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Burning Brides - Heart Full of Black/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Burning Brides - Heart Full of Black/song.ogg",
+      "size": 7003653
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Cream - Crossroads/album.png",
+      "size": 279673
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Cream - Crossroads/guitar.ogg",
+      "size": 8361589
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Cream - Crossroads/notes.mid",
+      "size": 32740
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Cream - Crossroads/song.ini",
+      "size": 784
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Cream - Crossroads/song.ogg",
+      "size": 8030262
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/David Bowie - Ziggy Stardust/album.png",
+      "size": 531053
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/David Bowie - Ziggy Stardust/guitar.ogg",
+      "size": 7882798
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/David Bowie - Ziggy Stardust/notes.mid",
+      "size": 16065
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/David Bowie - Ziggy Stardust/song.ini",
+      "size": 828
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/David Bowie - Ziggy Stardust/song.ogg",
+      "size": 9660723
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Deep Purple - Smoke on the Water/album.png",
+      "size": 476715
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Deep Purple - Smoke on the Water/guitar.ogg",
+      "size": 11973183
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Deep Purple - Smoke on the Water/notes.mid",
+      "size": 37005
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Deep Purple - Smoke on the Water/song.ini",
+      "size": 696
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Deep Purple - Smoke on the Water/song.ogg",
+      "size": 12464532
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Franz Ferdinand - Take Me Out/album.png",
+      "size": 76335
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Franz Ferdinand - Take Me Out/guitar.ogg",
+      "size": 7383008
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Franz Ferdinand - Take Me Out/notes.mid",
+      "size": 35011
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Franz Ferdinand - Take Me Out/song.ini",
+      "size": 791
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Franz Ferdinand - Take Me Out/song.ogg",
+      "size": 8279096
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Helmet - Unsung/album.png",
+      "size": 371936
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Helmet - Unsung/guitar.ogg",
+      "size": 7535828
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Helmet - Unsung/notes.mid",
+      "size": 30849
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Helmet - Unsung/song.ini",
+      "size": 764
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Helmet - Unsung/song.ogg",
+      "size": 8565815
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Incubus - Stellar/album.png",
+      "size": 347964
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Incubus - Stellar/guitar.ogg",
+      "size": 6787466
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Incubus - Stellar/notes.mid",
+      "size": 14076
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Incubus - Stellar/song.ini",
+      "size": 765
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Incubus - Stellar/song.ogg",
+      "size": 6951293
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Joan Jett & the Blackhearts - I Love Rock 'n Roll/album.png",
+      "size": 455747
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Joan Jett & the Blackhearts - I Love Rock 'n Roll/guitar.ogg",
+      "size": 5761450
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Joan Jett & the Blackhearts - I Love Rock 'n Roll/notes.mid",
+      "size": 10666
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Joan Jett & the Blackhearts - I Love Rock 'n Roll/song.ini",
+      "size": 855
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Joan Jett & the Blackhearts - I Love Rock 'n Roll/song.ogg",
+      "size": 5940349
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Judas Priest - You've Got Another Thing Comin'/album.png",
+      "size": 453578
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Judas Priest - You've Got Another Thing Comin'/guitar.ogg",
+      "size": 10739590
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Judas Priest - You've Got Another Thing Comin'/notes.mid",
+      "size": 25993
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Judas Priest - You've Got Another Thing Comin'/song.ini",
+      "size": 767
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Judas Priest - You've Got Another Thing Comin'/song.ogg",
+      "size": 10595103
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Megadeth - Symphony of Destruction/album.png",
+      "size": 528398
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Megadeth - Symphony of Destruction/guitar.ogg",
+      "size": 7434123
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Megadeth - Symphony of Destruction/notes.mid",
+      "size": 16303
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Megadeth - Symphony of Destruction/song.ini",
+      "size": 821
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Megadeth - Symphony of Destruction/song.ogg",
+      "size": 7990235
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Mot\u00f6rhead - Ace of Spades/album.png",
+      "size": 509655
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Mot\u00f6rhead - Ace of Spades/guitar.ogg",
+      "size": 4908267
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Mot\u00f6rhead - Ace of Spades/notes.mid",
+      "size": 14735
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Mot\u00f6rhead - Ace of Spades/song.ini",
+      "size": 801
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Mot\u00f6rhead - Ace of Spades/song.ogg",
+      "size": 6365228
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ozzy Osbourne - Bark at the Moon/album.png",
+      "size": 462528
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ozzy Osbourne - Bark at the Moon/guitar.ogg",
+      "size": 8083411
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ozzy Osbourne - Bark at the Moon/notes.mid",
+      "size": 39083
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ozzy Osbourne - Bark at the Moon/song.ini",
+      "size": 688
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ozzy Osbourne - Bark at the Moon/song.ogg",
+      "size": 8134709
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Pantera - Cowboys from Hell/album.png",
+      "size": 497292
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Pantera - Cowboys from Hell/guitar.ogg",
+      "size": 7673459
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Pantera - Cowboys from Hell/notes.mid",
+      "size": 33413
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Pantera - Cowboys from Hell/song.ini",
+      "size": 747
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Pantera - Cowboys from Hell/song.ogg",
+      "size": 8333069
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queen - Killer Queen/album.png",
+      "size": 420008
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queen - Killer Queen/guitar.ogg",
+      "size": 6029641
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queen - Killer Queen/notes.mid",
+      "size": 12177
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queen - Killer Queen/song.ini",
+      "size": 758
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queen - Killer Queen/song.ogg",
+      "size": 6373921
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queens of the Stone Age - No One Knows/album.png",
+      "size": 53554
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queens of the Stone Age - No One Knows/guitar.ogg",
+      "size": 7624807
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queens of the Stone Age - No One Knows/notes.mid",
+      "size": 29496
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queens of the Stone Age - No One Knows/song.ini",
+      "size": 718
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Queens of the Stone Age - No One Knows/song.ogg",
+      "size": 8602647
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ramones - I Wanna Be Sedated/album.png",
+      "size": 298010
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ramones - I Wanna Be Sedated/guitar.ogg",
+      "size": 4975067
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ramones - I Wanna Be Sedated/notes.mid",
+      "size": 35040
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ramones - I Wanna Be Sedated/song.ini",
+      "size": 757
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Ramones - I Wanna Be Sedated/song.ogg",
+      "size": 6236525
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Red Hot Chili Peppers - Higher Ground/album.png",
+      "size": 287133
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Red Hot Chili Peppers - Higher Ground/guitar.ogg",
+      "size": 6161606
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Red Hot Chili Peppers - Higher Ground/notes.mid",
+      "size": 19009
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Red Hot Chili Peppers - Higher Ground/song.ini",
+      "size": 840
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Red Hot Chili Peppers - Higher Ground/song.ogg",
+      "size": 7167901
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Stevie Ray Vaughan - Texas Flood/album.png",
+      "size": 468990
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Stevie Ray Vaughan - Texas Flood/guitar.ogg",
+      "size": 10729043
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Stevie Ray Vaughan - Texas Flood/notes.mid",
+      "size": 29308
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Stevie Ray Vaughan - Texas Flood/song.ini",
+      "size": 803
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Stevie Ray Vaughan - Texas Flood/song.ogg",
+      "size": 11553493
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Sum 41 - Fat Lip/album.png",
+      "size": 333728
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Sum 41 - Fat Lip/guitar.ogg",
+      "size": 6192965
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Sum 41 - Fat Lip/notes.mid",
+      "size": 19097
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Sum 41 - Fat Lip/song.ini",
+      "size": 770
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/Sum 41 - Fat Lip/song.ogg",
+      "size": 6009171
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Donnas - Take it Off/album.png",
+      "size": 520699
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Donnas - Take it Off/guitar.ogg",
+      "size": 5140343
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Donnas - Take it Off/notes.mid",
+      "size": 13648
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Donnas - Take it Off/song.ini",
+      "size": 753
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Donnas - Take it Off/song.ogg",
+      "size": 5598454
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Edgar Winter Group - Frankenstein/album.png",
+      "size": 383789
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Edgar Winter Group - Frankenstein/guitar.ogg",
+      "size": 7917998
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Edgar Winter Group - Frankenstein/notes.mid",
+      "size": 27396
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Edgar Winter Group - Frankenstein/song.ini",
+      "size": 768
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Edgar Winter Group - Frankenstein/song.ogg",
+      "size": 8578470
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Exies - Hey You/album.png",
+      "size": 524739
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Exies - Hey You/guitar.ogg",
+      "size": 7192535
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Exies - Hey You/notes.mid",
+      "size": 14523
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Exies - Hey You/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Exies - Hey You/song.ogg",
+      "size": 8053673
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Jimi Hendrix Experience - Spanish Castle Magic/album.png",
+      "size": 558093
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Jimi Hendrix Experience - Spanish Castle Magic/guitar.ogg",
+      "size": 5973344
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Jimi Hendrix Experience - Spanish Castle Magic/notes.mid",
+      "size": 14749
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Jimi Hendrix Experience - Spanish Castle Magic/song.ini",
+      "size": 817
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/The Jimi Hendrix Experience - Spanish Castle Magic/song.ogg",
+      "size": 6122541
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/White Zombie - Thunder Kiss '65/album.png",
+      "size": 601348
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/White Zombie - Thunder Kiss '65/guitar.ogg",
+      "size": 8696661
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/White Zombie - Thunder Kiss '65/notes.mid",
+      "size": 29342
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/White Zombie - Thunder Kiss '65/song.ini",
+      "size": 789
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/White Zombie - Thunder Kiss '65/song.ogg",
+      "size": 7915892
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/ZZ Top - Sharp Dressed Man/album.png",
+      "size": 341835
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/ZZ Top - Sharp Dressed Man/guitar.ogg",
+      "size": 8319998
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/ZZ Top - Sharp Dressed Man/notes.mid",
+      "size": 18048
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/ZZ Top - Sharp Dressed Man/song.ini",
+      "size": 744
+    },
+    {
+      "path": "(2005) Guitar Hero/Quickplay/ZZ Top - Sharp Dressed Man/song.ogg",
+      "size": 9005622
+    }
+  ],
+  "extracted_size": 765211507,
+  "file_count": 291,
+  "chart_count": 58,
+  "release_date": "2005-11-08"
 }

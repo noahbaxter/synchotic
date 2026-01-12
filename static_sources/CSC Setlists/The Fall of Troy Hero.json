@@ -1,20 +1,1141 @@
 {
   "name": "The Fall of Troy Hero",
-  "folder_id": "static-fall-of-troy",
+  "folder_id": "static-the-fall-of-troy-hero",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 70,
-  "total_size": 1531023854,
-  "file_count": 281,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-fall-of-troy",
-      "path": "The Fall of Troy Hero/The Fall of Troy Hero.rar",
+      "url": "https://customsongscentral.b-cdn.net/The%20Fall%20of%20Troy%20Hero.rar?ref=customsongscentral.com",
       "name": "The Fall of Troy Hero.rar",
       "size": 1531023854,
-      "md5": "3d9f24bff96aa706cfd0d2e54f305d3d",
-      "url": "https://customsongscentral.b-cdn.net/The%20Fall%20of%20Troy%20Hero.rar?ref=customsongscentral.com"
+      "md5": "3d9f24bff96aa706cfd0d2e54f305d3d"
     }
-  ]
+  ],
+  "download_size": 1531023854,
+  "files": [
+    {
+      "path": "The Fall of Troy Hero/Tier 00 - An introduction/album.png",
+      "size": 53271
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 00 - An introduction/notes.chart",
+      "size": 586
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 00 - An introduction/song.ini",
+      "size": 488
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 00 - An introduction/song.ogg",
+      "size": 1363831
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/1 - Rockstar Nailbomb!/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/1 - Rockstar Nailbomb!/notes.chart",
+      "size": 26096
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/1 - Rockstar Nailbomb!/song.ini",
+      "size": 451
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/1 - Rockstar Nailbomb!/song.ogg",
+      "size": 4055119
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/10 - I Just Got this Symphony Goin' (Self-Titled)/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/10 - I Just Got this Symphony Goin' (Self-Titled)/notes.chart",
+      "size": 62236
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/10 - I Just Got this Symphony Goin' (Self-Titled)/song.ini",
+      "size": 456
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/10 - I Just Got this Symphony Goin' (Self-Titled)/song.ogg",
+      "size": 8047635
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/11 - What Sound Does a Mastodon Make/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/11 - What Sound Does a Mastodon Make/notes.chart",
+      "size": 85990
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/11 - What Sound Does a Mastodon Make/song.ini",
+      "size": 470
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/11 - What Sound Does a Mastodon Make/song.ogg",
+      "size": 14387138
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/2 - Spartacus/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/2 - Spartacus/notes.chart",
+      "size": 17611
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/2 - Spartacus/song.ini",
+      "size": 407
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/2 - Spartacus/song.ogg",
+      "size": 2453704
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/3 - The Circus That Has Brought Us Back to These Nights Yo Chocola/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/3 - The Circus That Has Brought Us Back to These Nights Yo Chocola/notes.chart",
+      "size": 45954
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/3 - The Circus That Has Brought Us Back to These Nights Yo Chocola/song.ini",
+      "size": 440
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/3 - The Circus That Has Brought Us Back to These Nights Yo Chocola/song.ogg",
+      "size": 6325554
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/4 - Mouths like Sidewinder Missiles (Self-Titled)/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/4 - Mouths like Sidewinder Missiles (Self-Titled)/notes.chart",
+      "size": 45325
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/4 - Mouths like Sidewinder Missiles (Self-Titled)/song.ini",
+      "size": 516
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/4 - Mouths like Sidewinder Missiles (Self-Titled)/song.ogg",
+      "size": 7616686
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/5 - The Last March of the Ents/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/5 - The Last March of the Ents/notes.chart",
+      "size": 42399
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/5 - The Last March of the Ents/song.ini",
+      "size": 477
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/5 - The Last March of the Ents/song.ogg",
+      "size": 5710202
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/6 - F.C.P.S.I.T.S.G.E.P.G.E.P.G.E.P/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/6 - F.C.P.S.I.T.S.G.E.P.G.E.P.G.E.P/notes.chart",
+      "size": 41209
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/6 - F.C.P.S.I.T.S.G.E.P.G.E.P.G.E.P/song.ini",
+      "size": 455
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/6 - F.C.P.S.I.T.S.G.E.P.G.E.P.G.E.P/song.ogg",
+      "size": 9273108
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/7 - Whacko Jacko Steals the Elephant Man's Bones (Self-Titled)/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/7 - Whacko Jacko Steals the Elephant Man's Bones (Self-Titled)/notes.chart",
+      "size": 56503
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/7 - Whacko Jacko Steals the Elephant Man's Bones (Self-Titled)/song.ini",
+      "size": 652
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/7 - Whacko Jacko Steals the Elephant Man's Bones (Self-Titled)/song.ogg",
+      "size": 9417548
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/8 - Reassurance Rests in the Sea/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/8 - Reassurance Rests in the Sea/notes.chart",
+      "size": 45385
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/8 - Reassurance Rests in the Sea/song.ini",
+      "size": 497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/8 - Reassurance Rests in the Sea/song.ogg",
+      "size": 9762252
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/9 - The Adventures of Allan Gordon/album.png",
+      "size": 577063
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/9 - The Adventures of Allan Gordon/notes.chart",
+      "size": 44942
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/9 - The Adventures of Allan Gordon/song.ini",
+      "size": 600
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 01 - The Fall of Troy/9 - The Adventures of Allan Gordon/song.ogg",
+      "size": 7958529
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/1 - I Just Got This Symphony Goin'/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/1 - I Just Got This Symphony Goin'/notes.chart",
+      "size": 62465
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/1 - I Just Got This Symphony Goin'/song.ini",
+      "size": 942
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/1 - I Just Got This Symphony Goin'/song.ogg",
+      "size": 7728701
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/10 - Tom Waits/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/10 - Tom Waits/notes.chart",
+      "size": 35730
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/10 - Tom Waits/song.ini",
+      "size": 982
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/10 - Tom Waits/song.ogg",
+      "size": 5888696
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/11 - Macauly McCulkin/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/11 - Macauly McCulkin/notes.chart",
+      "size": 73660
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/11 - Macauly McCulkin/song.ini",
+      "size": 1266
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/11 - Macauly McCulkin/song.ogg",
+      "size": 12468288
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/2 - Act One, Scene One/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/2 - Act One, Scene One/notes.chart",
+      "size": 59600
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/2 - Act One, Scene One/song.ini",
+      "size": 794
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/2 - Act One, Scene One/song.ogg",
+      "size": 7977296
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/3 - F.C.P.R.E.M.I.X/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/3 - F.C.P.R.E.M.I.X/notes.chart",
+      "size": 46127
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/3 - F.C.P.R.E.M.I.X/song.ini",
+      "size": 1004
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/3 - F.C.P.R.E.M.I.X/song.ogg",
+      "size": 7550800
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/4 - You Got a Death Wish, Johnny Truant/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/4 - You Got a Death Wish, Johnny Truant/notes.chart",
+      "size": 25970
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/4 - You Got a Death Wish, Johnny Truant/song.ini",
+      "size": 1026
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/4 - You Got a Death Wish, Johnny Truant/song.ogg",
+      "size": 4336118
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/5 - Mouths like Sidewinder Missiles/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/5 - Mouths like Sidewinder Missiles/notes.chart",
+      "size": 44507
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/5 - Mouths like Sidewinder Missiles/song.ini",
+      "size": 982
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/5 - Mouths like Sidewinder Missiles/song.ogg",
+      "size": 7038326
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/6 - The Hol[ ]y Tape/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/6 - The Hol[ ]y Tape/notes.chart",
+      "size": 46615
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/6 - The Hol[ ]y Tape/song.ini",
+      "size": 1032
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/6 - The Hol[ ]y Tape/song.ogg",
+      "size": 6894082
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/7 - Laces Out, Dan!/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/7 - Laces Out, Dan!/notes.chart",
+      "size": 71637
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/7 - Laces Out, Dan!/song.ini",
+      "size": 551
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/7 - Laces Out, Dan!/song.ogg",
+      "size": 4799778
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/8 - We Better Learn to Hotwire a Uterus/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/8 - We Better Learn to Hotwire a Uterus/notes.chart",
+      "size": 29854
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/8 - We Better Learn to Hotwire a Uterus/song.ini",
+      "size": 940
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/8 - We Better Learn to Hotwire a Uterus/song.ogg",
+      "size": 4054077
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/9 - Whacko Jacko Steals the Elephant Man's Bones/album.png",
+      "size": 380497
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/9 - Whacko Jacko Steals the Elephant Man's Bones/notes.chart",
+      "size": 59000
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/9 - Whacko Jacko Steals the Elephant Man's Bones/song.ini",
+      "size": 427
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 02 - Doppelg\u00e4nger/9 - Whacko Jacko Steals the Elephant Man's Bones/song.ogg",
+      "size": 9023250
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/1 - Cut Down All the Trees and Name the Streets After Them/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/1 - Cut Down All the Trees and Name the Streets After Them/notes.chart",
+      "size": 82413
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/1 - Cut Down All the Trees and Name the Streets After Them/song.ini",
+      "size": 488
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/1 - Cut Down All the Trees and Name the Streets After Them/song.ogg",
+      "size": 5139126
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/10 - Shhh!!! If You're Quiet, I'll Show You a Dinosaur/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/10 - Shhh!!! If You're Quiet, I'll Show You a Dinosaur/notes.chart",
+      "size": 32235
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/10 - Shhh!!! If You're Quiet, I'll Show You a Dinosaur/song.ini",
+      "size": 505
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/10 - Shhh!!! If You're Quiet, I'll Show You a Dinosaur/song.ogg",
+      "size": 5069320
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/11 - Caught Up/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/11 - Caught Up/notes.chart",
+      "size": 26840
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/11 - Caught Up/song.ini",
+      "size": 429
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/11 - Caught Up/song.ogg",
+      "size": 4064671
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/12 - A Man. A Plan. A Canal. Panama/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/12 - A Man. A Plan. A Canal. Panama/notes.chart",
+      "size": 122149
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/12 - A Man. A Plan. A Canal. Panama/song.ini",
+      "size": 392
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/12 - A Man. A Plan. A Canal. Panama/song.ogg",
+      "size": 16130307
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/2 - The Dark Trail/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/2 - The Dark Trail/notes.chart",
+      "size": 53985
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/2 - The Dark Trail/song.ini",
+      "size": 441
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/2 - The Dark Trail/song.ogg",
+      "size": 8653092
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/3 - Quarter Past/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/3 - Quarter Past/notes.chart",
+      "size": 51261
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/3 - Quarter Past/song.ini",
+      "size": 426
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/3 - Quarter Past/song.ogg",
+      "size": 8762403
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/4 - Problem!/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/4 - Problem!/notes.chart",
+      "size": 19216
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/4 - Problem!/song.ini",
+      "size": 575
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/4 - Problem!/song.ogg",
+      "size": 4012027
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/5 - Semi-Fiction/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/5 - Semi-Fiction/notes.chart",
+      "size": 71420
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/5 - Semi-Fiction/song.ini",
+      "size": 462
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/5 - Semi-Fiction/song.ogg",
+      "size": 8621591
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/6 - Oh! The Casino!/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/6 - Oh! The Casino!/notes.chart",
+      "size": 27087
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/6 - Oh! The Casino!/song.ini",
+      "size": 625
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/6 - Oh! The Casino!/song.ogg",
+      "size": 4351628
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/7 - Sledgehammer/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/7 - Sledgehammer/notes.chart",
+      "size": 73985
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/7 - Sledgehammer/song.ini",
+      "size": 421
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/7 - Sledgehammer/song.ogg",
+      "size": 11309116
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/8 - Seattlantis/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/8 - Seattlantis/notes.chart",
+      "size": 57536
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/8 - Seattlantis/song.ini",
+      "size": 430
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/8 - Seattlantis/song.ogg",
+      "size": 7851367
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/9 - Ex-Creations/album.png",
+      "size": 471946
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/9 - Ex-Creations/notes.chart",
+      "size": 40452
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/9 - Ex-Creations/song.ini",
+      "size": 401
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 03 - Manipulator/9 - Ex-Creations/song.ogg",
+      "size": 5858443
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/1 - Chapter I - Introverting Dimensions/album.png",
+      "size": 380741
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/1 - Chapter I - Introverting Dimensions/notes.chart",
+      "size": 88768
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/1 - Chapter I - Introverting Dimensions/song.ini",
+      "size": 515
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/1 - Chapter I - Introverting Dimensions/song.ogg",
+      "size": 20092895
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/2 - Chapter II - A Strange Conversation/album.png",
+      "size": 380741
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/2 - Chapter II - A Strange Conversation/notes.chart",
+      "size": 43342
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/2 - Chapter II - A Strange Conversation/song.ini",
+      "size": 561
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/2 - Chapter II - A Strange Conversation/song.ogg",
+      "size": 8676973
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/3 - Chapter III - Nostalgic Mannerisms/album.png",
+      "size": 380741
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/3 - Chapter III - Nostalgic Mannerisms/notes.chart",
+      "size": 69958
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/3 - Chapter III - Nostalgic Mannerisms/song.ini",
+      "size": 496
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/3 - Chapter III - Nostalgic Mannerisms/song.ogg",
+      "size": 14901119
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/4 - Chapter IV - Enter the Black Demon/album.png",
+      "size": 380741
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/4 - Chapter IV - Enter the Black Demon/notes.chart",
+      "size": 58506
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/4 - Chapter IV - Enter the Black Demon/song.ini",
+      "size": 490
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/4 - Chapter IV - Enter the Black Demon/song.ogg",
+      "size": 9846657
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/5 - Chapter V - The Walls Bled Lust/album.png",
+      "size": 380741
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/5 - Chapter V - The Walls Bled Lust/notes.chart",
+      "size": 83238
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/5 - Chapter V - The Walls Bled Lust/song.ini",
+      "size": 657
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 04 - Phantom on the Horizon/5 - Chapter V - The Walls Bled Lust/song.ogg",
+      "size": 15273925
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/1 - Panic Attack!/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/1 - Panic Attack!/notes.chart",
+      "size": 40490
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/1 - Panic Attack!/song.ini",
+      "size": 427
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/1 - Panic Attack!/song.ogg",
+      "size": 6944005
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/10 - Webs/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/10 - Webs/notes.chart",
+      "size": 26813
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/10 - Webs/song.ini",
+      "size": 353
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/10 - Webs/song.ogg",
+      "size": 4964061
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/11 - Walk of Fame/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/11 - Walk of Fame/notes.chart",
+      "size": 46519
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/11 - Walk of Fame/song.ini",
+      "size": 438
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/11 - Walk of Fame/song.ogg",
+      "size": 10763411
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/12 - Nature vs. Nurture/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/12 - Nature vs. Nurture/notes.chart",
+      "size": 57433
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/12 - Nature vs. Nurture/song.ini",
+      "size": 474
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/12 - Nature vs. Nurture/song.ogg",
+      "size": 11070374
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/13 - The Vomiting Winter/album.png",
+      "size": 455715
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/13 - The Vomiting Winter/notes.chart",
+      "size": 68802
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/13 - The Vomiting Winter/song.ini",
+      "size": 333
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/13 - The Vomiting Winter/song.ogg",
+      "size": 9066288
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/2 - Straight-Jacket Keelhauled/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/2 - Straight-Jacket Keelhauled/notes.chart",
+      "size": 35633
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/2 - Straight-Jacket Keelhauled/song.ini",
+      "size": 498
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/2 - Straight-Jacket Keelhauled/song.ogg",
+      "size": 8153447
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/3 - Battleship Graveyard/album.png",
+      "size": 531681
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/3 - Battleship Graveyard/notes.chart",
+      "size": 64088
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/3 - Battleship Graveyard/song.ini",
+      "size": 541
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/3 - Battleship Graveyard/song.ogg",
+      "size": 10227272
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/4 - A Classic Case of Transference/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/4 - A Classic Case of Transference/notes.chart",
+      "size": 61654
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/4 - A Classic Case of Transference/song.ini",
+      "size": 428
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/4 - A Classic Case of Transference/song.ogg",
+      "size": 9790994
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/5 - Single/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/5 - Single/notes.chart",
+      "size": 36882
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/5 - Single/song.ini",
+      "size": 438
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/5 - Single/song.ogg",
+      "size": 6316851
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/6 - Empty the Clip, the King Has Been Slain, Long Live the Queen/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/6 - Empty the Clip, the King Has Been Slain, Long Live the Queen/notes.chart",
+      "size": 42583
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/6 - Empty the Clip, the King Has Been Slain, Long Live the Queen/song.ini",
+      "size": 500
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/6 - Empty the Clip, the King Has Been Slain, Long Live the Queen/song.ogg",
+      "size": 6446814
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/7 - People and Their Lives/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/7 - People and Their Lives/notes.chart",
+      "size": 74035
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/7 - People and Their Lives/song.ini",
+      "size": 487
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/7 - People and Their Lives/song.ogg",
+      "size": 12434953
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/8 - Dirty Pillow Talk/album.png",
+      "size": 531681
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/8 - Dirty Pillow Talk/notes.chart",
+      "size": 46810
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/8 - Dirty Pillow Talk/song.ini",
+      "size": 484
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/8 - Dirty Pillow Talk/song.ogg",
+      "size": 5269136
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/9 - Nobody's Perfect/album.png",
+      "size": 535559
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/9 - Nobody's Perfect/notes.chart",
+      "size": 45748
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/9 - Nobody's Perfect/song.ini",
+      "size": 481
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 05 - In the Unlikely Event/9 - Nobody's Perfect/song.ogg",
+      "size": 9133707
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/1 - 401k/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/1 - 401k/notes.chart",
+      "size": 32384
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/1 - 401k/song.ini",
+      "size": 389
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/1 - 401k/song.ogg",
+      "size": 5558401
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/10 - Your Loss/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/10 - Your Loss/notes.chart",
+      "size": 60684
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/10 - Your Loss/song.ini",
+      "size": 506
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/10 - Your Loss/song.ogg",
+      "size": 9440463
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/2 - Inside Out/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/2 - Inside Out/notes.chart",
+      "size": 61459
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/2 - Inside Out/song.ini",
+      "size": 432
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/2 - Inside Out/song.ogg",
+      "size": 9044717
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/3 - Savior/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/3 - Savior/notes.chart",
+      "size": 53466
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/3 - Savior/song.ini",
+      "size": 399
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/3 - Savior/song.ogg",
+      "size": 6786495
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/4 - A Single Word/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/4 - A Single Word/notes.chart",
+      "size": 38871
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/4 - A Single Word/song.ini",
+      "size": 402
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/4 - A Single Word/song.ogg",
+      "size": 6939762
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/5 - Side by Side/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/5 - Side by Side/notes.chart",
+      "size": 29282
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/5 - Side by Side/song.ini",
+      "size": 430
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/5 - Side by Side/song.ogg",
+      "size": 4850330
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/6 - Suck-O-Matic/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/6 - Suck-O-Matic/notes.chart",
+      "size": 46158
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/6 - Suck-O-Matic/song.ini",
+      "size": 378
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/6 - Suck-O-Matic/song.ogg",
+      "size": 6179647
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/7 - An Ode to the Masochists/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/7 - An Ode to the Masochists/notes.chart",
+      "size": 31921
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/7 - An Ode to the Masochists/song.ini",
+      "size": 433
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/7 - An Ode to the Masochists/song.ogg",
+      "size": 4927505
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/8 - Auto Repeater/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/8 - Auto Repeater/notes.chart",
+      "size": 47268
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/8 - Auto Repeater/song.ini",
+      "size": 442
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/8 - Auto Repeater/song.ogg",
+      "size": 5469882
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/9 - Love Sick/album.png",
+      "size": 520711
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/9 - Love Sick/notes.chart",
+      "size": 23037
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/9 - Love Sick/song.ini",
+      "size": 387
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 06 - OK/9 - Love Sick/song.ogg",
+      "size": 4034626
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/1 - The Fall of Troy/album.png",
+      "size": 1526387
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/1 - The Fall of Troy/notes.chart",
+      "size": 527535
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/1 - The Fall of Troy/song.ini",
+      "size": 612
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/1 - The Fall of Troy/song.ogg",
+      "size": 82883741
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/2 - Doppelg\u00e4nger/album.png",
+      "size": 2031898
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/2 - Doppelg\u00e4nger/notes.chart",
+      "size": 535436
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/2 - Doppelg\u00e4nger/song.ini",
+      "size": 542
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/2 - Doppelg\u00e4nger/song.ogg",
+      "size": 78871332
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/3 - Manipulator/album.png",
+      "size": 2539663
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/3 - Manipulator/notes.chart",
+      "size": 635422
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/3 - Manipulator/song.ini",
+      "size": 493
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/3 - Manipulator/song.ogg",
+      "size": 90188272
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/4 - Phantom on the Horizon/album.png",
+      "size": 2014853
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/4 - Phantom on the Horizon/notes.chart",
+      "size": 348210
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/4 - Phantom on the Horizon/song.ini",
+      "size": 706
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/4 - Phantom on the Horizon/song.ogg",
+      "size": 68546716
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/5 - In the Unlikely Event/album.png",
+      "size": 3824367
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/5 - In the Unlikely Event/notes.chart",
+      "size": 677243
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/5 - In the Unlikely Event/song.ini",
+      "size": 859
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/5 - In the Unlikely Event/song.ogg",
+      "size": 111413819
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/6 - OK/album.png",
+      "size": 2888995
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/6 - OK/notes.chart",
+      "size": 436007
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/6 - OK/song.ini",
+      "size": 720
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 07 - Full Album Charts/6 - OK/song.ogg",
+      "size": 63100151
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 08 - Are you sure about this/1 - Endless Setlist/album.png",
+      "size": 590643
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 08 - Are you sure about this/1 - Endless Setlist/notes.chart",
+      "size": 3269612
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 08 - Are you sure about this/1 - Endless Setlist/song.ini",
+      "size": 691
+    },
+    {
+      "path": "The Fall of Troy Hero/Tier 08 - Are you sure about this/1 - Endless Setlist/song.ogg",
+      "size": 494442639
+    }
+  ],
+  "extracted_size": 1541269409,
+  "file_count": 280,
+  "chart_count": 70,
+  "release_date": "2019-03-15"
 }

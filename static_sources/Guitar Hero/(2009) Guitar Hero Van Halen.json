@@ -1,19 +1,2281 @@
 {
   "name": "(2009) Guitar Hero Van Halen",
-  "folder_id": "static-gh-van-halen",
+  "folder_id": "static-2009-guitar-hero-van-halen",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 47,
-  "total_size": 1610660760,
-  "file_count": 565,
-  "files": [
+  "downloads": [
     {
       "id": "1QhFixrIttVLd6WnuY5sw5LG4L19tmiQO",
-      "path": "(2009) Guitar Hero - Van Halen/Guitar Hero Van Halen.7z",
       "name": "Guitar Hero Van Halen.7z",
       "size": 1610660760,
       "md5": "372076231dd77900f1a1a491c4d71c7d"
     }
-  ]
+  ],
+  "download_size": 1610660760,
+  "files": [
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/album.png",
+      "size": 507819
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/bass.ogg",
+      "size": 5082297
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/crowd.ogg",
+      "size": 550669
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/drums_1.ogg",
+      "size": 5347522
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/drums_2.ogg",
+      "size": 4830217
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/drums_3.ogg",
+      "size": 1159521
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/drums_4.ogg",
+      "size": 7034687
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/guitar.ogg",
+      "size": 5935894
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/notes.mid",
+      "size": 107396
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/song.ini",
+      "size": 1178
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/song.ogg",
+      "size": 4534901
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Alter Bridge - Come to Life/vocals.ogg",
+      "size": 3376660
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/album.png",
+      "size": 383994
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/bass.ogg",
+      "size": 6064836
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/crowd.ogg",
+      "size": 706935
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/drums_1.ogg",
+      "size": 5625918
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/drums_2.ogg",
+      "size": 6882096
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/drums_3.ogg",
+      "size": 6429256
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/drums_4.ogg",
+      "size": 8101754
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/guitar.ogg",
+      "size": 7727889
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/notes.mid",
+      "size": 122892
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/song.ini",
+      "size": 1145
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/song.ogg",
+      "size": 7027511
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Billy Idol - White Wedding (Part 1)/vocals.ogg",
+      "size": 7779739
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/album.png",
+      "size": 60207
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/bass.ogg",
+      "size": 4126736
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/crowd.ogg",
+      "size": 1234224
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/drums_1.ogg",
+      "size": 2136472
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/drums_2.ogg",
+      "size": 4061743
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/drums_3.ogg",
+      "size": 967401
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/drums_4.ogg",
+      "size": 5817705
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/guitar.ogg",
+      "size": 4662214
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/notes.mid",
+      "size": 96403
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/song.ini",
+      "size": 1473
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/song.ogg",
+      "size": 2437655
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Blink-182 - First Date/vocals.ogg",
+      "size": 3542703
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/album.png",
+      "size": 324498
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/bass.ogg",
+      "size": 5707996
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/crowd.ogg",
+      "size": 2360159
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/drums_1.ogg",
+      "size": 3937988
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/drums_2.ogg",
+      "size": 4405215
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/drums_3.ogg",
+      "size": 1574992
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/drums_4.ogg",
+      "size": 4833870
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/guitar.ogg",
+      "size": 7014776
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/notes.mid",
+      "size": 113106
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/song.ini",
+      "size": 1195
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/song.ogg",
+      "size": 5151201
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Deep Purple - Space Truckin_/vocals.ogg",
+      "size": 6116590
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/album.png",
+      "size": 407891
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/bass.ogg",
+      "size": 5891605
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/crowd.ogg",
+      "size": 2428194
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/drums_1.ogg",
+      "size": 5086921
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/drums_2.ogg",
+      "size": 4837079
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/drums_3.ogg",
+      "size": 3519141
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/drums_4.ogg",
+      "size": 6124117
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/guitar.ogg",
+      "size": 6516647
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/notes.mid",
+      "size": 119158
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/song.ini",
+      "size": 1180
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/song.ogg",
+      "size": 6226854
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foo Fighters - Best of You/vocals.ogg",
+      "size": 6309708
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/album.png",
+      "size": 435164
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/bass.ogg",
+      "size": 4549832
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/crowd.ogg",
+      "size": 1896955
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/drums_1.ogg",
+      "size": 2638579
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/drums_2.ogg",
+      "size": 5528456
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/drums_3.ogg",
+      "size": 1360157
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/drums_4.ogg",
+      "size": 7186526
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/guitar.ogg",
+      "size": 7447250
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/notes.mid",
+      "size": 96577
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/song.ini",
+      "size": 1082
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/song.ogg",
+      "size": 5182487
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Foreigner - Double Vision/vocals.ogg",
+      "size": 5330461
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/album.png",
+      "size": 301083
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/bass.ogg",
+      "size": 4429892
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/crowd.ogg",
+      "size": 1309898
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/drums_1.ogg",
+      "size": 2510957
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/drums_2.ogg",
+      "size": 3965235
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/drums_3.ogg",
+      "size": 133897
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/drums_4.ogg",
+      "size": 4986223
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/guitar.ogg",
+      "size": 5777331
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/notes.mid",
+      "size": 88132
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/song.ini",
+      "size": 1521
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/song.ogg",
+      "size": 4350225
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Fountains of Wayne - Stacy_s Mom/vocals.ogg",
+      "size": 5764048
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/album.png",
+      "size": 133295
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/bass.ogg",
+      "size": 3725976
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/crowd.ogg",
+      "size": 747112
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/drums_1.ogg",
+      "size": 3920095
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/drums_2.ogg",
+      "size": 4209582
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/drums_3.ogg",
+      "size": 830504
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/drums_4.ogg",
+      "size": 3477559
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/guitar.ogg",
+      "size": 5355283
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/notes.mid",
+      "size": 88555
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/song.ini",
+      "size": 1168
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/song.ogg",
+      "size": 5106333
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Jimmy Eat World - Pain/vocals.ogg",
+      "size": 4434032
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/album.png",
+      "size": 446170
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/bass.ogg",
+      "size": 8977337
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/crowd.ogg",
+      "size": 2647059
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/drums_1.ogg",
+      "size": 10212469
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/drums_2.ogg",
+      "size": 9611246
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/drums_3.ogg",
+      "size": 1329311
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/drums_4.ogg",
+      "size": 10928844
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/guitar.ogg",
+      "size": 9214820
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/notes.mid",
+      "size": 217924
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/song.ini",
+      "size": 1176
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/song.ogg",
+      "size": 5046388
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Judas Priest - Painkiller/vocals.ogg",
+      "size": 7202228
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/album.png",
+      "size": 484297
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/bass.ogg",
+      "size": 6155136
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/crowd.ogg",
+      "size": 33818
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/drums_1.ogg",
+      "size": 7589779
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/drums_2.ogg",
+      "size": 6517777
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/drums_3.ogg",
+      "size": 1976663
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/drums_4.ogg",
+      "size": 9820346
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/guitar.ogg",
+      "size": 6911116
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/notes.mid",
+      "size": 143614
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/song.ini",
+      "size": 1440
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/song.ogg",
+      "size": 4527158
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Killswitch Engage - The End of Heartache/vocals.ogg",
+      "size": 7647032
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/album.png",
+      "size": 306011
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/bass.ogg",
+      "size": 4833036
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/crowd.ogg",
+      "size": 1678956
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/drums_1.ogg",
+      "size": 4617110
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/drums_2.ogg",
+      "size": 4495877
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/drums_3.ogg",
+      "size": 278705
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/drums_4.ogg",
+      "size": 5419275
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/guitar.ogg",
+      "size": 5475444
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/notes.mid",
+      "size": 76150
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/song.ini",
+      "size": 1150
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/song.ogg",
+      "size": 1504056
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Lenny Kravitz - Rock and Roll Is Dead/vocals.ogg",
+      "size": 3335934
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/album.png",
+      "size": 303113
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/bass.ogg",
+      "size": 4855998
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/crowd.ogg",
+      "size": 1842243
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/drums_1.ogg",
+      "size": 2075176
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/drums_2.ogg",
+      "size": 2456653
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/drums_3.ogg",
+      "size": 68427
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/drums_4.ogg",
+      "size": 7046930
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/guitar.ogg",
+      "size": 5863694
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/notes.mid",
+      "size": 72210
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/song.ini",
+      "size": 1224
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/song.ogg",
+      "size": 7071449
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queen - I Want It All/vocals.ogg",
+      "size": 5745900
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/album.png",
+      "size": 377582
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/bass.ogg",
+      "size": 4412211
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/crowd.ogg",
+      "size": 2034105
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/drums_1.ogg",
+      "size": 3193181
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/drums_2.ogg",
+      "size": 3180424
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/drums_3.ogg",
+      "size": 25569
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/drums_4.ogg",
+      "size": 6148913
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/guitar.ogg",
+      "size": 7285654
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/notes.mid",
+      "size": 125941
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/song.ini",
+      "size": 1166
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/song.ogg",
+      "size": 5124811
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Queens of the Stone Age - Sick, Sick, Sick/vocals.ogg",
+      "size": 5043148
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/album.png",
+      "size": 341342
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/bass.ogg",
+      "size": 1843963
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/crowd.ogg",
+      "size": 496631
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/drums_1.ogg",
+      "size": 1594709
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/drums_2.ogg",
+      "size": 1773141
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/drums_3.ogg",
+      "size": 292227
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/drums_4.ogg",
+      "size": 2235619
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/guitar.ogg",
+      "size": 5463325
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/notes.mid",
+      "size": 63576
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/song.ini",
+      "size": 1180
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/song.ogg",
+      "size": 1962075
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Tenacious D - Master Exploder/vocals.ogg",
+      "size": 3022470
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/album.png",
+      "size": 348436
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/bass.ogg",
+      "size": 4568804
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/crowd.ogg",
+      "size": 1318174
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/drums_1.ogg",
+      "size": 2817841
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/drums_2.ogg",
+      "size": 3880302
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/drums_3.ogg",
+      "size": 443459
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/drums_4.ogg",
+      "size": 6375742
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/guitar.ogg",
+      "size": 6462174
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/notes.mid",
+      "size": 83212
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/song.ini",
+      "size": 1458
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/song.ogg",
+      "size": 5915070
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Clash - Safe European Home/vocals.ogg",
+      "size": 5669290
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/album.png",
+      "size": 371444
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/bass.ogg",
+      "size": 3824228
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/crowd.ogg",
+      "size": 1199495
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/drums_1.ogg",
+      "size": 2693837
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/drums_2.ogg",
+      "size": 3542435
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/drums_3.ogg",
+      "size": 1090364
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/drums_4.ogg",
+      "size": 5971166
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/guitar.ogg",
+      "size": 4000577
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/notes.mid",
+      "size": 72482
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/song.ini",
+      "size": 1200
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/song.ogg",
+      "size": 1471493
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/The Offspring - Pretty Fly (For a White Guy)/vocals.ogg",
+      "size": 4695528
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/album.png",
+      "size": 286236
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/bass.ogg",
+      "size": 7927690
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/crowd.ogg",
+      "size": 1362580
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/drums_1.ogg",
+      "size": 6624500
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/drums_2.ogg",
+      "size": 6062813
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/drums_3.ogg",
+      "size": 1101996
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/drums_4.ogg",
+      "size": 8308567
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/guitar.ogg",
+      "size": 7884385
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/notes.mid",
+      "size": 112359
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/song.ini",
+      "size": 1136
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/song.ogg",
+      "size": 7461707
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Third Eye Blind - Semi-Charmed Life/vocals.ogg",
+      "size": 7999496
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/bass.ogg",
+      "size": 4751161
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/crowd.ogg",
+      "size": 1725412
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/drums_1.ogg",
+      "size": 3441774
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/drums_2.ogg",
+      "size": 5597563
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/drums_3.ogg",
+      "size": 323097
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/drums_4.ogg",
+      "size": 7506786
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/guitar.ogg",
+      "size": 5944165
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/notes.mid",
+      "size": 94622
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/song.ini",
+      "size": 1214
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/song.ogg",
+      "size": 421723
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ain_t Talkin_ _Bout Love/vocals.ogg",
+      "size": 4453137
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/album.png",
+      "size": 317247
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/bass.ogg",
+      "size": 4630327
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/crowd.ogg",
+      "size": 2259958
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/drums_1.ogg",
+      "size": 2891831
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/drums_2.ogg",
+      "size": 4640245
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/drums_3.ogg",
+      "size": 1640347
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/drums_4.ogg",
+      "size": 6965979
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/guitar.ogg",
+      "size": 5484056
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/notes.mid",
+      "size": 84380
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/song.ini",
+      "size": 1228
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/song.ogg",
+      "size": 4369957
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - And the Cradle Will Rock/vocals.ogg",
+      "size": 5076616
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/bass.ogg",
+      "size": 3405569
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/crowd.ogg",
+      "size": 286294
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/drums_1.ogg",
+      "size": 2201537
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/drums_2.ogg",
+      "size": 3306177
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/drums_3.ogg",
+      "size": 921629
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/drums_4.ogg",
+      "size": 5383608
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/guitar.ogg",
+      "size": 4799041
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/notes.mid",
+      "size": 93469
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/song.ini",
+      "size": 1180
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/song.ogg",
+      "size": 21988
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Atomic Punk/vocals.ogg",
+      "size": 2519764
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/album.png",
+      "size": 189787
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/bass.ogg",
+      "size": 5067246
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/crowd.ogg",
+      "size": 2650173
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/drums_1.ogg",
+      "size": 3530796
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/drums_2.ogg",
+      "size": 5198102
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/drums_3.ogg",
+      "size": 3042818
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/drums_4.ogg",
+      "size": 8307425
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/guitar.ogg",
+      "size": 6824173
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/notes.mid",
+      "size": 103703
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/song.ini",
+      "size": 1167
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/song.ogg",
+      "size": 27592
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Beautiful Girls/vocals.ogg",
+      "size": 5538436
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/album.png",
+      "size": 177143
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/bass.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/crowd.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/drums_1.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/drums_2.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/drums_3.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/drums_4.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/guitar.ogg",
+      "size": 2309863
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/notes.mid",
+      "size": 13631
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/song.ini",
+      "size": 1430
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/song.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Cathedral/vocals.ogg",
+      "size": 12524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/album.png",
+      "size": 189787
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/bass.ogg",
+      "size": 4104075
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/crowd.ogg",
+      "size": 2163691
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/drums_1.ogg",
+      "size": 2412917
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/drums_2.ogg",
+      "size": 4118799
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/drums_3.ogg",
+      "size": 1207053
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/drums_4.ogg",
+      "size": 6540887
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/guitar.ogg",
+      "size": 5254086
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/notes.mid",
+      "size": 88585
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/song.ini",
+      "size": 1457
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/song.ogg",
+      "size": 3574910
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Dance the Night Away/vocals.ogg",
+      "size": 4054349
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/bass.ogg",
+      "size": 295832
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/crowd.ogg",
+      "size": 14795
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/drums_1.ogg",
+      "size": 101992
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/drums_2.ogg",
+      "size": 646966
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/drums_3.ogg",
+      "size": 85558
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/drums_4.ogg",
+      "size": 478975
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/guitar.ogg",
+      "size": 2684027
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/notes.mid",
+      "size": 25398
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/song.ini",
+      "size": 1561
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/song.ogg",
+      "size": 14795
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Eruption/vocals.ogg",
+      "size": 14795
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/album.png",
+      "size": 317247
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/bass.ogg",
+      "size": 5519159
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/crowd.ogg",
+      "size": 1839922
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/drums_1.ogg",
+      "size": 5725565
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/drums_2.ogg",
+      "size": 3994675
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/drums_3.ogg",
+      "size": 4735127
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/drums_4.ogg",
+      "size": 5801151
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/guitar.ogg",
+      "size": 8447065
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/notes.mid",
+      "size": 137499
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/song.ini",
+      "size": 1481
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/song.ogg",
+      "size": 1401814
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Everybody Wants Some!!/vocals.ogg",
+      "size": 6091680
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/bass.ogg",
+      "size": 4051421
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/crowd.ogg",
+      "size": 1477000
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/drums_1.ogg",
+      "size": 2166015
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/drums_2.ogg",
+      "size": 3941567
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/drums_3.ogg",
+      "size": 3583525
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/drums_4.ogg",
+      "size": 6019085
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/guitar.ogg",
+      "size": 6235518
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/notes.mid",
+      "size": 84302
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/song.ini",
+      "size": 1108
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/song.ogg",
+      "size": 863465
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Feel Your Love Tonight/vocals.ogg",
+      "size": 4722687
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/album.png",
+      "size": 177143
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/bass.ogg",
+      "size": 4036775
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/crowd.ogg",
+      "size": 508046
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/drums_1.ogg",
+      "size": 2964998
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/drums_2.ogg",
+      "size": 4435716
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/drums_3.ogg",
+      "size": 366888
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/drums_4.ogg",
+      "size": 6018254
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/guitar.ogg",
+      "size": 5200590
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/notes.mid",
+      "size": 105791
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/song.ini",
+      "size": 1427
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/song.ogg",
+      "size": 550587
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hang _Em High/vocals.ogg",
+      "size": 4799494
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/album.png",
+      "size": 438142
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/bass.ogg",
+      "size": 5299760
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/crowd.ogg",
+      "size": 859059
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/drums_1.ogg",
+      "size": 3123811
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/drums_2.ogg",
+      "size": 5745372
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/drums_3.ogg",
+      "size": 491522
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/drums_4.ogg",
+      "size": 7925290
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/guitar.ogg",
+      "size": 7717503
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/notes.mid",
+      "size": 107711
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/song.ini",
+      "size": 1134
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/song.ogg",
+      "size": 3154338
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hear About It Later/vocals.ogg",
+      "size": 4979623
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/album.png",
+      "size": 420944
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/bass.ogg",
+      "size": 4243069
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/crowd.ogg",
+      "size": 1220215
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/drums_1.ogg",
+      "size": 6101210
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/drums_2.ogg",
+      "size": 5215938
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/drums_3.ogg",
+      "size": 1100875
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/drums_4.ogg",
+      "size": 6613868
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/guitar.ogg",
+      "size": 6760350
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/notes.mid",
+      "size": 149361
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/song.ini",
+      "size": 1581
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/song.ogg",
+      "size": 31866
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Hot for Teacher/vocals.ogg",
+      "size": 5241743
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/bass.ogg",
+      "size": 4600289
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/crowd.ogg",
+      "size": 1310168
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/drums_1.ogg",
+      "size": 4075496
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/drums_2.ogg",
+      "size": 4914288
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/drums_3.ogg",
+      "size": 2581942
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/drums_4.ogg",
+      "size": 6077462
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/guitar.ogg",
+      "size": 5193148
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/notes.mid",
+      "size": 123595
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/song.ini",
+      "size": 1096
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/song.ogg",
+      "size": 26286
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - I_m the One/vocals.ogg",
+      "size": 5047073
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/bass.ogg",
+      "size": 2791184
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/crowd.ogg",
+      "size": 1150326
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/drums_1.ogg",
+      "size": 1636795
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/drums_2.ogg",
+      "size": 3232083
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/drums_3.ogg",
+      "size": 1716000
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/drums_4.ogg",
+      "size": 3404445
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/guitar.ogg",
+      "size": 5542947
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/notes.mid",
+      "size": 70850
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/song.ini",
+      "size": 1131
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/song.ogg",
+      "size": 23731
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Ice Cream Man/vocals.ogg",
+      "size": 4233211
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/album.png",
+      "size": 177143
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/bass.ogg",
+      "size": 4908178
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/crowd.ogg",
+      "size": 2076871
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/drums_1.ogg",
+      "size": 2852428
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/drums_2.ogg",
+      "size": 6524078
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/drums_3.ogg",
+      "size": 303372
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/drums_4.ogg",
+      "size": 9032961
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/guitar.ogg",
+      "size": 6241736
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/notes.mid",
+      "size": 116895
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/song.ini",
+      "size": 1454
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/song.ogg",
+      "size": 3675604
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Intruder (Oh) Pretty Woman/vocals.ogg",
+      "size": 4544217
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/bass.ogg",
+      "size": 4492658
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/crowd.ogg",
+      "size": 1887024
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/drums_1.ogg",
+      "size": 2478895
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/drums_2.ogg",
+      "size": 5679273
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/drums_3.ogg",
+      "size": 216366
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/drums_4.ogg",
+      "size": 7511811
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/guitar.ogg",
+      "size": 5664983
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/notes.mid",
+      "size": 93444
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/song.ini",
+      "size": 1132
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/song.ogg",
+      "size": 1963208
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jamie_s Cryin_/vocals.ogg",
+      "size": 4377054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/album.png",
+      "size": 420944
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/bass.ogg",
+      "size": 4708445
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/crowd.ogg",
+      "size": 739934
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/drums_1.ogg",
+      "size": 4964615
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/drums_2.ogg",
+      "size": 5376469
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/drums_3.ogg",
+      "size": 2605518
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/drums_4.ogg",
+      "size": 8091117
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/guitar.ogg",
+      "size": 8512107
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/notes.mid",
+      "size": 91846
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/song.ini",
+      "size": 1120
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/song.ogg",
+      "size": 7128291
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Jump/vocals.ogg",
+      "size": 4495793
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/album.png",
+      "size": 177143
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/bass.ogg",
+      "size": 4535971
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/crowd.ogg",
+      "size": 983995
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/drums_1.ogg",
+      "size": 3054601
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/drums_2.ogg",
+      "size": 4584191
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/drums_3.ogg",
+      "size": 1788841
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/drums_4.ogg",
+      "size": 6809314
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/guitar.ogg",
+      "size": 7620520
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/notes.mid",
+      "size": 123088
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/song.ini",
+      "size": 1219
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/song.ogg",
+      "size": 1236566
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Little Guitars/vocals.ogg",
+      "size": 4221858
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/album.png",
+      "size": 317247
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/bass.ogg",
+      "size": 3336155
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/crowd.ogg",
+      "size": 1283208
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/drums_1.ogg",
+      "size": 2824989
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/drums_2.ogg",
+      "size": 3390045
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/drums_3.ogg",
+      "size": 276904
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/drums_4.ogg",
+      "size": 4691863
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/guitar.ogg",
+      "size": 4309943
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/notes.mid",
+      "size": 93473
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/song.ini",
+      "size": 1141
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/song.ogg",
+      "size": 72238
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Loss of Control/vocals.ogg",
+      "size": 3199666
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/album.png",
+      "size": 438142
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/bass.ogg",
+      "size": 5297718
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/crowd.ogg",
+      "size": 1974364
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/drums_1.ogg",
+      "size": 4642366
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/drums_2.ogg",
+      "size": 6008539
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/drums_3.ogg",
+      "size": 341308
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/drums_4.ogg",
+      "size": 9387072
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/guitar.ogg",
+      "size": 8694132
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/notes.mid",
+      "size": 133233
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/song.ini",
+      "size": 1135
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/song.ogg",
+      "size": 2216875
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Mean Street/vocals.ogg",
+      "size": 4367396
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/album.png",
+      "size": 304402
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/bass.ogg",
+      "size": 4102020
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/crowd.ogg",
+      "size": 1775865
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/drums_1.ogg",
+      "size": 4761818
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/drums_2.ogg",
+      "size": 4855598
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/drums_3.ogg",
+      "size": 491268
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/drums_4.ogg",
+      "size": 4864125
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/guitar.ogg",
+      "size": 6019103
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/notes.mid",
+      "size": 107767
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/song.ini",
+      "size": 1482
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/song.ogg",
+      "size": 1158835
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Panama/vocals.ogg",
+      "size": 4517277
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/album.png",
+      "size": 317247
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/bass.ogg",
+      "size": 5786393
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/crowd.ogg",
+      "size": 939473
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/drums_1.ogg",
+      "size": 3289066
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/drums_2.ogg",
+      "size": 3511109
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/drums_3.ogg",
+      "size": 1484446
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/drums_4.ogg",
+      "size": 9307954
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/guitar.ogg",
+      "size": 7253266
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/notes.mid",
+      "size": 153067
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/song.ini",
+      "size": 1167
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/song.ogg",
+      "size": 29730
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Romeo Delight/vocals.ogg",
+      "size": 4927355
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/bass.ogg",
+      "size": 4220640
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/crowd.ogg",
+      "size": 1832529
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/drums_1.ogg",
+      "size": 3982292
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/drums_2.ogg",
+      "size": 4987103
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/drums_3.ogg",
+      "size": 407121
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/drums_4.ogg",
+      "size": 6445092
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/guitar.ogg",
+      "size": 5461636
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/notes.mid",
+      "size": 70233
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/song.ini",
+      "size": 1202
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/song.ogg",
+      "size": 885051
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Runnin_ With the Devil/vocals.ogg",
+      "size": 5205624
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/album.png",
+      "size": 438142
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/bass.ogg",
+      "size": 3904133
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/crowd.ogg",
+      "size": 1004857
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/drums_1.ogg",
+      "size": 2600396
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/drums_2.ogg",
+      "size": 4229568
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/drums_3.ogg",
+      "size": 1127722
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/drums_4.ogg",
+      "size": 6090222
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/guitar.ogg",
+      "size": 4715706
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/notes.mid",
+      "size": 87063
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/song.ini",
+      "size": 1192
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/song.ogg",
+      "size": 2904685
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - So This Is Love/vocals.ogg",
+      "size": 3768343
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/album.png",
+      "size": 189787
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/bass.ogg",
+      "size": 3622524
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/crowd.ogg",
+      "size": 691883
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/drums_1.ogg",
+      "size": 2073220
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/drums_2.ogg",
+      "size": 2343050
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/drums_3.ogg",
+      "size": 708265
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/drums_4.ogg",
+      "size": 5780091
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/guitar.ogg",
+      "size": 4472821
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/notes.mid",
+      "size": 68619
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/song.ini",
+      "size": 1202
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/song.ogg",
+      "size": 21080
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Somebody Get Me a Doctor/vocals.ogg",
+      "size": 2863394
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/album.png",
+      "size": 189787
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/bass.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/crowd.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/drums_1.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/drums_2.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/drums_3.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/drums_4.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/guitar.ogg",
+      "size": 2288972
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/notes.mid",
+      "size": 17966
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/song.ini",
+      "size": 1470
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/song.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Spanish Fly/vocals.ogg",
+      "size": 10054
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/album.png",
+      "size": 438142
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/bass.ogg",
+      "size": 3923931
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/crowd.ogg",
+      "size": 1927290
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/drums_1.ogg",
+      "size": 2956755
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/drums_2.ogg",
+      "size": 4592643
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/drums_3.ogg",
+      "size": 553611
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/drums_4.ogg",
+      "size": 6969879
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/guitar.ogg",
+      "size": 5723930
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/notes.mid",
+      "size": 111618
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/song.ini",
+      "size": 1435
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/song.ogg",
+      "size": 1265313
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - Unchained/vocals.ogg",
+      "size": 4664365
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/album.png",
+      "size": 302172
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/bass.ogg",
+      "size": 2777188
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/crowd.ogg",
+      "size": 1342934
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/drums_1.ogg",
+      "size": 2249380
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/drums_2.ogg",
+      "size": 3572827
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/drums_3.ogg",
+      "size": 1059609
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/drums_4.ogg",
+      "size": 5030525
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/guitar.ogg",
+      "size": 3459270
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/notes.mid",
+      "size": 62112
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/song.ini",
+      "size": 1163
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/song.ogg",
+      "size": 20128
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Van Halen - You Really Got Me/vocals.ogg",
+      "size": 3184911
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/album.png",
+      "size": 420184
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/bass.ogg",
+      "size": 4801285
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/crowd.ogg",
+      "size": 1009527
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/drums_1.ogg",
+      "size": 1790957
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/drums_2.ogg",
+      "size": 2827784
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/drums_3.ogg",
+      "size": 442507
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/drums_4.ogg",
+      "size": 4448183
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/guitar.ogg",
+      "size": 3878980
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/notes.mid",
+      "size": 56936
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/song.ini",
+      "size": 1124
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/song.ogg",
+      "size": 1020422
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Weezer - Dope Nose/vocals.ogg",
+      "size": 3980638
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/album.png",
+      "size": 310220
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/bass.ogg",
+      "size": 5746006
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/crowd.ogg",
+      "size": 1384321
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/drums_1.ogg",
+      "size": 5115606
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/drums_2.ogg",
+      "size": 5517993
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/drums_3.ogg",
+      "size": 743229
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/drums_4.ogg",
+      "size": 6556981
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/guitar.ogg",
+      "size": 5640427
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/notes.mid",
+      "size": 134598
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/song.ini",
+      "size": 1115
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/song.ogg",
+      "size": 4055283
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/Yellowcard - The Takedown/vocals.ogg",
+      "size": 4434930
+    },
+    {
+      "path": "(2009) Guitar Hero Van Halen/changelog.txt",
+      "size": 393
+    }
+  ],
+  "extracted_size": 1610651906,
+  "file_count": 565,
+  "chart_count": 47,
+  "release_date": "2009-12-22"
 }

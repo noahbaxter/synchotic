@@ -1,19 +1,1401 @@
 {
   "name": "(2008) Guitar Hero Aerosmith",
-  "folder_id": "static-gh-aerosmith",
+  "folder_id": "static-2008-guitar-hero-aerosmith",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 47,
-  "total_size": 988787007,
-  "file_count": 392,
-  "files": [
+  "downloads": [
     {
       "id": "1DP1oi9EDm3FGgR_7Ew2r9X5c9ahnq3NH",
-      "path": "(2008) Guitar Hero - Aerosmith/Guitar Hero Aerosmith.rar",
       "name": "Guitar Hero Aerosmith.rar",
       "size": 988787007,
       "md5": "a85ba4882991ebb3b4f40f81bbf07522"
     }
-  ]
+  ],
+  "download_size": 988787007,
+  "files": [
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Combination/album.jpg",
+      "size": 40346
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Combination/guitar.ogg",
+      "size": 6687879
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Combination/notes.mid",
+      "size": 77117
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Combination/preview.ogg",
+      "size": 1080299
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Combination/rhythm.ogg",
+      "size": 5116533
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Combination/song.ini",
+      "size": 789
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Combination/song.ogg",
+      "size": 6400247
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/album.jpg",
+      "size": 217307
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/guitar.ogg",
+      "size": 3668926
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/notes.mid",
+      "size": 62772
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/preview.ogg",
+      "size": 916480
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/rhythm.ogg",
+      "size": 4016115
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/song.ini",
+      "size": 975
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle (Co-op)/song.ogg",
+      "size": 3796965
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle/album.jpg",
+      "size": 217307
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle/guitar.ogg",
+      "size": 5344731
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle/notes.mid",
+      "size": 47198
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle/preview.ogg",
+      "size": 916480
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle/song.ini",
+      "size": 967
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Joe Perry Guitar Battle/song.ogg",
+      "size": 3805224
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Kings & Queens/album.jpg",
+      "size": 99832
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Kings & Queens/guitar.ogg",
+      "size": 6782189
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Kings & Queens/notes.mid",
+      "size": 73605
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Kings & Queens/preview.ogg",
+      "size": 620508
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Kings & Queens/rhythm.ogg",
+      "size": 6799130
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Kings & Queens/song.ini",
+      "size": 802
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Kings & Queens/song.ogg",
+      "size": 8330447
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/album.jpg",
+      "size": 64017
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/guitar.ogg",
+      "size": 6270479
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/notes.mid",
+      "size": 93048
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/preview.ogg",
+      "size": 626940
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/rhythm.ogg",
+      "size": 6844343
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/song.ini",
+      "size": 818
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Let The Music Do The Talking/song.ogg",
+      "size": 7098012
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Mercy/album.jpg",
+      "size": 202035
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Mercy/guitar.ogg",
+      "size": 7394353
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Mercy/notes.mid",
+      "size": 99353
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Mercy/preview.ogg",
+      "size": 584262
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Mercy/rhythm.ogg",
+      "size": 6564998
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Mercy/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Mercy/song.ogg",
+      "size": 7029051
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pandora's Box/album.png",
+      "size": 1044423
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pandora's Box/guitar.ogg",
+      "size": 9298299
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pandora's Box/notes.mid",
+      "size": 91764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pandora's Box/preview.ogg",
+      "size": 673652
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pandora's Box/rhythm.ogg",
+      "size": 6895762
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pandora's Box/song.ini",
+      "size": 800
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pandora's Box/song.ogg",
+      "size": 9155968
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pink/album.jpg",
+      "size": 175185
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pink/guitar.ogg",
+      "size": 7272554
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pink/notes.mid",
+      "size": 61896
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pink/preview.ogg",
+      "size": 682600
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pink/rhythm.ogg",
+      "size": 5824902
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pink/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Pink/song.ogg",
+      "size": 6779055
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/album.jpg",
+      "size": 40346
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/guitar.ogg",
+      "size": 6258071
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/notes.mid",
+      "size": 101696
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/preview.ogg",
+      "size": 579501
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/rhythm.ogg",
+      "size": 9098619
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/song.ini",
+      "size": 804
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar (Co-op)/song.ogg",
+      "size": 7048255
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar/album.jpg",
+      "size": 40346
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar/guitar.ogg",
+      "size": 6865286
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar/notes.mid",
+      "size": 45503
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar/preview.ogg",
+      "size": 579501
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Rats In The Cellar/song.ogg",
+      "size": 7130321
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Shakin' My Cage/album.jpg",
+      "size": 202035
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Shakin' My Cage/guitar.ogg",
+      "size": 6759546
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Shakin' My Cage/notes.mid",
+      "size": 104161
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Shakin' My Cage/preview.ogg",
+      "size": 644077
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Shakin' My Cage/rhythm.ogg",
+      "size": 6696321
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Shakin' My Cage/song.ini",
+      "size": 797
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Shakin' My Cage/song.ogg",
+      "size": 7330188
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/album.jpg",
+      "size": 202035
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/guitar.ogg",
+      "size": 7233260
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/notes.mid",
+      "size": 51035
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/preview.ogg",
+      "size": 612929
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/rhythm.ogg",
+      "size": 6574427
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/song.ini",
+      "size": 802
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin' (Co-op)/song.ogg",
+      "size": 5541690
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin'/album.jpg",
+      "size": 202035
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin'/guitar.ogg",
+      "size": 7136411
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin'/notes.mid",
+      "size": 25742
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin'/preview.ogg",
+      "size": 612929
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin'/song.ini",
+      "size": 794
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Talk Talkin'/song.ogg",
+      "size": 5573078
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/album.jpg",
+      "size": 143804
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/crowd.ogg",
+      "size": 5802686
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/guitar.ogg",
+      "size": 7526750
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/notes.mid",
+      "size": 78499
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/preview.ogg",
+      "size": 731727
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/rhythm.ogg",
+      "size": 4758803
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/song.ini",
+      "size": 803
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Bonus/Walk This Way/song.ogg",
+      "size": 6454340
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/GHA Rips v5.txt",
+      "size": 1613
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/album.jpg",
+      "size": 103234
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/crowd.ogg",
+      "size": 3872180
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/guitar.ogg",
+      "size": 4144568
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/notes.mid",
+      "size": 52694
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/preview.ogg",
+      "size": 588857
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/rhythm.ogg",
+      "size": 3675656
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/song.ini",
+      "size": 824
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All Day & All Of The Night/song.ogg",
+      "size": 4488636
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/album.jpg",
+      "size": 45037
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/crowd.ogg",
+      "size": 7243100
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/guitar.ogg",
+      "size": 7474883
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/notes.mid",
+      "size": 55876
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/preview.ogg",
+      "size": 578192
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/rhythm.ogg",
+      "size": 6634313
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/song.ini",
+      "size": 828
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/All The Young Dudes/song.ogg",
+      "size": 8539902
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Always On The Run/album.jpg",
+      "size": 215212
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Always On The Run/guitar.ogg",
+      "size": 6860388
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Always On The Run/notes.mid",
+      "size": 70099
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Always On The Run/preview.ogg",
+      "size": 572468
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Always On The Run/rhythm.ogg",
+      "size": 5015501
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Always On The Run/song.ini",
+      "size": 821
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Always On The Run/song.ogg",
+      "size": 5856010
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Back In The Saddle/album.jpg",
+      "size": 40346
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Back In The Saddle/guitar.ogg",
+      "size": 7888827
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Back In The Saddle/notes.mid",
+      "size": 94513
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Back In The Saddle/preview.ogg",
+      "size": 755217
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Back In The Saddle/rhythm.ogg",
+      "size": 5764328
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Back In The Saddle/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Back In The Saddle/song.ogg",
+      "size": 7691531
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/album.png",
+      "size": 550177
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/guitar.ogg",
+      "size": 7892485
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/notes.mid",
+      "size": 67150
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/preview.ogg",
+      "size": 897267
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/rhythm.ogg",
+      "size": 8525767
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/song.ini",
+      "size": 811
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful (Co-op)/song.ogg",
+      "size": 9027859
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful/album.png",
+      "size": 550177
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful/guitar.ogg",
+      "size": 8064280
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful/notes.mid",
+      "size": 37249
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful/preview.ogg",
+      "size": 897267
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful/song.ini",
+      "size": 803
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Beyond Beautiful/song.ogg",
+      "size": 9001802
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Bright Light Fright/album.jpg",
+      "size": 99832
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Bright Light Fright/guitar.ogg",
+      "size": 3629393
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Bright Light Fright/notes.mid",
+      "size": 58898
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Bright Light Fright/preview.ogg",
+      "size": 573331
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Bright Light Fright/rhythm.ogg",
+      "size": 3454969
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Bright Light Fright/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Bright Light Fright/song.ogg",
+      "size": 3468618
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/album.jpg",
+      "size": 77898
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/crowd.ogg",
+      "size": 5442551
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/guitar.ogg",
+      "size": 6070165
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/notes.mid",
+      "size": 76101
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/preview.ogg",
+      "size": 564745
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/rhythm.ogg",
+      "size": 4753039
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Cat Scratch Fever/song.ogg",
+      "size": 5531278
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Complete Control/album.jpg",
+      "size": 98486
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Complete Control/guitar.ogg",
+      "size": 4848531
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Complete Control/notes.mid",
+      "size": 64881
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Complete Control/preview.ogg",
+      "size": 549365
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Complete Control/rhythm.ogg",
+      "size": 3258860
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Complete Control/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Complete Control/song.ogg",
+      "size": 4820619
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Draw The Line/album.jpg",
+      "size": 99832
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Draw The Line/guitar.ogg",
+      "size": 4777104
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Draw The Line/notes.mid",
+      "size": 65360
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Draw The Line/preview.ogg",
+      "size": 589617
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Draw The Line/rhythm.ogg",
+      "size": 3979685
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Draw The Line/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Draw The Line/song.ogg",
+      "size": 4881856
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/album.jpg",
+      "size": 156841
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/crowd.ogg",
+      "size": 7075381
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/guitar.ogg",
+      "size": 7350537
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/notes.mid",
+      "size": 47870
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/preview.ogg",
+      "size": 731571
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/rhythm.ogg",
+      "size": 5600980
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/song.ini",
+      "size": 790
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream On/song.ogg",
+      "size": 7577324
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/album.jpg",
+      "size": 330134
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/crowd.ogg",
+      "size": 3691144
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/guitar.ogg",
+      "size": 8051492
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/notes.mid",
+      "size": 75558
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/preview.ogg",
+      "size": 620302
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/rhythm.ogg",
+      "size": 5104680
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Dream Police/song.ogg",
+      "size": 6948716
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/album.jpg",
+      "size": 217307
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/guitar.ogg",
+      "size": 3668926
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/notes.mid",
+      "size": 53973
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/preview.ogg",
+      "size": 916515
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/rhythm.ogg",
+      "size": 4016115
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/song.ini",
+      "size": 1187
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Guitar Battle vs. Joe Perry/song.ogg",
+      "size": 3796965
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Hard To Handle/album.jpg",
+      "size": 23426
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Hard To Handle/guitar.ogg",
+      "size": 4701797
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Hard To Handle/notes.mid",
+      "size": 56338
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Hard To Handle/preview.ogg",
+      "size": 620960
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Hard To Handle/rhythm.ogg",
+      "size": 4043058
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Hard To Handle/song.ini",
+      "size": 833
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Hard To Handle/song.ogg",
+      "size": 5494745
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/album.jpg",
+      "size": 73851
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/crowd.ogg",
+      "size": 6255230
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/guitar.ogg",
+      "size": 5317017
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/notes.mid",
+      "size": 62801
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/preview.ogg",
+      "size": 607138
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/rhythm.ogg",
+      "size": 5430462
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/song.ini",
+      "size": 833
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/I Hate Myself For Loving You/song.ogg",
+      "size": 7032138
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/King Of Rock/album.jpg",
+      "size": 118514
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/King Of Rock/guitar.ogg",
+      "size": 8318474
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/King Of Rock/notes.mid",
+      "size": 68477
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/King Of Rock/preview.ogg",
+      "size": 611825
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/King Of Rock/rhythm.ogg",
+      "size": 4968396
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/King Of Rock/song.ini",
+      "size": 797
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/King Of Rock/song.ogg",
+      "size": 9013043
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/album.jpg",
+      "size": 148302
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/crowd.ogg",
+      "size": 9761494
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/guitar.ogg",
+      "size": 10143304
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/notes.mid",
+      "size": 83805
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/preview.ogg",
+      "size": 606857
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/rhythm.ogg",
+      "size": 7816569
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/song.ini",
+      "size": 801
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Livin' On The Edge/song.ogg",
+      "size": 10442119
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/album.png",
+      "size": 535693
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/crowd.ogg",
+      "size": 5192170
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/guitar.ogg",
+      "size": 9946995
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/notes.mid",
+      "size": 91047
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/preview.ogg",
+      "size": 650702
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/rhythm.ogg",
+      "size": 9747257
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Love In An Elevator/song.ogg",
+      "size": 9516251
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Make It/album.jpg",
+      "size": 156841
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Make It/guitar.ogg",
+      "size": 6597410
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Make It/notes.mid",
+      "size": 64054
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Make It/preview.ogg",
+      "size": 636988
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Make It/rhythm.ogg",
+      "size": 5911657
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Make It/song.ini",
+      "size": 788
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Make It/song.ogg",
+      "size": 6883289
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Mama Kin/album.jpg",
+      "size": 156841
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Mama Kin/guitar.ogg",
+      "size": 7584403
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Mama Kin/notes.mid",
+      "size": 92648
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Mama Kin/preview.ogg",
+      "size": 642566
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Mama Kin/rhythm.ogg",
+      "size": 7095650
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Mama Kin/song.ini",
+      "size": 790
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Mama Kin/song.ogg",
+      "size": 8033429
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Movin\u2019 Out/album.jpg",
+      "size": 156841
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Movin\u2019 Out/guitar.ogg",
+      "size": 8018409
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Movin\u2019 Out/notes.mid",
+      "size": 80094
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Movin\u2019 Out/preview.ogg",
+      "size": 641309
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Movin\u2019 Out/rhythm.ogg",
+      "size": 5400483
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Movin\u2019 Out/song.ini",
+      "size": 791
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Movin\u2019 Out/song.ogg",
+      "size": 8300988
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/album.jpg",
+      "size": 393535
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/guitar.ogg",
+      "size": 7305770
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/notes.mid",
+      "size": 91936
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/preview.ogg",
+      "size": 576470
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/rhythm.ogg",
+      "size": 8157625
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/song.ini",
+      "size": 807
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize (Co-op)/song.ogg",
+      "size": 8150097
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize/album.jpg",
+      "size": 393535
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize/guitar.ogg",
+      "size": 8130744
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize/notes.mid",
+      "size": 41363
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize/preview.ogg",
+      "size": 576470
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize/song.ini",
+      "size": 799
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/No Surprize/song.ogg",
+      "size": 8187597
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Nobody's Fault/album.jpg",
+      "size": 40346
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Nobody's Fault/guitar.ogg",
+      "size": 9297075
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Nobody's Fault/notes.mid",
+      "size": 95333
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Nobody's Fault/preview.ogg",
+      "size": 563710
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Nobody's Fault/rhythm.ogg",
+      "size": 6657654
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Nobody's Fault/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Nobody's Fault/song.ogg",
+      "size": 7323132
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Personality Crisis/album.jpg",
+      "size": 92920
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Personality Crisis/guitar.ogg",
+      "size": 5760481
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Personality Crisis/notes.mid",
+      "size": 86002
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Personality Crisis/preview.ogg",
+      "size": 581539
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Personality Crisis/rhythm.ogg",
+      "size": 5253393
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Personality Crisis/song.ini",
+      "size": 827
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Personality Crisis/song.ogg",
+      "size": 6362177
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/album.jpg",
+      "size": 380862
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/guitar.ogg",
+      "size": 7374611
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/notes.mid",
+      "size": 60427
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/preview.ogg",
+      "size": 653257
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/rhythm.ogg",
+      "size": 6169555
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/song.ini",
+      "size": 800
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Rag Doll/song.ogg",
+      "size": 7168709
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sex Type Thing/album.jpg",
+      "size": 555284
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sex Type Thing/guitar.ogg",
+      "size": 5533006
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sex Type Thing/notes.mid",
+      "size": 75749
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sex Type Thing/preview.ogg",
+      "size": 630639
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sex Type Thing/rhythm.ogg",
+      "size": 6462132
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sex Type Thing/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sex Type Thing/song.ogg",
+      "size": 5970010
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/She Sells Sanctuary/album.png",
+      "size": 124987
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/She Sells Sanctuary/guitar.ogg",
+      "size": 7126984
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/She Sells Sanctuary/notes.mid",
+      "size": 94525
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/She Sells Sanctuary/preview.ogg",
+      "size": 625361
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/She Sells Sanctuary/rhythm.ogg",
+      "size": 5765409
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/She Sells Sanctuary/song.ini",
+      "size": 797
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/She Sells Sanctuary/song.ogg",
+      "size": 7401689
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/album.jpg",
+      "size": 143804
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/crowd.ogg",
+      "size": 1370298
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/guitar.ogg",
+      "size": 8051334
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/notes.mid",
+      "size": 101485
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/preview.ogg",
+      "size": 686607
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/rhythm.ogg",
+      "size": 5748485
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/song.ini",
+      "size": 803
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Sweet Emotion/song.ogg",
+      "size": 8039673
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Toys In The Attic/album.jpg",
+      "size": 143804
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Toys In The Attic/guitar.ogg",
+      "size": 4285436
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Toys In The Attic/notes.mid",
+      "size": 72924
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Toys In The Attic/preview.ogg",
+      "size": 598715
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Toys In The Attic/rhythm.ogg",
+      "size": 3481971
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Toys In The Attic/song.ini",
+      "size": 807
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Toys In The Attic/song.ogg",
+      "size": 4559257
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Train Kept A Rollin'/album.png",
+      "size": 1044423
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Train Kept A Rollin'/guitar.ogg",
+      "size": 8487508
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Train Kept A Rollin'/notes.mid",
+      "size": 109323
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Train Kept A Rollin'/preview.ogg",
+      "size": 560418
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Train Kept A Rollin'/rhythm.ogg",
+      "size": 11895874
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Train Kept A Rollin'/song.ini",
+      "size": 807
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Train Kept A Rollin'/song.ogg",
+      "size": 8646699
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Uncle Salty/album.jpg",
+      "size": 143804
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Uncle Salty/guitar.ogg",
+      "size": 7463272
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Uncle Salty/notes.mid",
+      "size": 63783
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Uncle Salty/preview.ogg",
+      "size": 719137
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Uncle Salty/rhythm.ogg",
+      "size": 5146830
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Uncle Salty/song.ini",
+      "size": 803
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Uncle Salty/song.ogg",
+      "size": 6785619
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/album.jpg",
+      "size": 38381
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/crowd.ogg",
+      "size": 4262650
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/guitar.ogg",
+      "size": 8296709
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/notes.mid",
+      "size": 78754
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/preview.ogg",
+      "size": 639251
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/rhythm.ogg",
+      "size": 3460256
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/song.ini",
+      "size": 811
+    },
+    {
+      "path": "(2008) Guitar Hero Aerosmith/Quickplay/Walk This Way (Run DMC)/song.ogg",
+      "size": 7996118
+    }
+  ],
+  "extracted_size": 999891757,
+  "file_count": 345,
+  "chart_count": 47,
+  "release_date": "2008-06-29"
 }

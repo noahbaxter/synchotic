@@ -1,19 +1,2481 @@
 {
   "name": "(2006) Guitar Hero II",
-  "folder_id": "static-gh-2",
+  "folder_id": "static-2006-guitar-hero-ii",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 100,
-  "total_size": 1546101579,
-  "file_count": 615,
-  "files": [
+  "downloads": [
     {
       "id": "1flR2SdIvdLBuLuN4JgQzxLHXwXJJzop6",
-      "path": "(2006) Guitar Hero II/Guitar Hero II.7z",
       "name": "Guitar Hero II.7z",
       "size": 1546101579,
       "md5": "eef0d8a61f1e4b8676a2808f92eee6ae"
     }
-  ]
+  ],
+  "download_size": 1546101579,
+  "files": [
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 2 Playing Notes/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 2 Playing Notes/guitar.ogg",
+      "size": 1733270
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 2 Playing Notes/notes.mid",
+      "size": 902
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 2 Playing Notes/song.ini",
+      "size": 720
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 2 Playing Notes/song.ogg",
+      "size": 2152510
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 3 Different Notes/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 3 Different Notes/guitar.ogg",
+      "size": 1797934
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 3 Different Notes/notes.mid",
+      "size": 1099
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 3 Different Notes/song.ini",
+      "size": 718
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 3 Different Notes/song.ogg",
+      "size": 2239076
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 4 Durations/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 4 Durations/guitar.ogg",
+      "size": 1901123
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 4 Durations/notes.mid",
+      "size": 541
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 4 Durations/song.ini",
+      "size": 756
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 4 Durations/song.ogg",
+      "size": 2382479
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 5 Chords/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 5 Chords/guitar.ogg",
+      "size": 1714973
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 5 Chords/notes.mid",
+      "size": 1572
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 5 Chords/song.ini",
+      "size": 697
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/Basic 5 Chords/song.ogg",
+      "size": 2152492
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 2 Combos/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 2 Combos/guitar.ogg",
+      "size": 1812889
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 2 Combos/notes.mid",
+      "size": 1990
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 2 Combos/song.ini",
+      "size": 721
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 2 Combos/song.ogg",
+      "size": 2160103
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 3 Whammy Bar/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 3 Whammy Bar/guitar.ogg",
+      "size": 1795931
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 3 Whammy Bar/notes.mid",
+      "size": 517
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 3 Whammy Bar/song.ini",
+      "size": 747
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 3 Whammy Bar/song.ogg",
+      "size": 2156886
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 4 Wail/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 4 Wail/guitar.ogg",
+      "size": 1775732
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 4 Wail/notes.mid",
+      "size": 1547
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 4 Wail/song.ini",
+      "size": 768
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 4 Wail/song.ogg",
+      "size": 2156530
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 5 Hammer-Ons/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 5 Hammer-Ons/guitar.ogg",
+      "size": 2082809
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 5 Hammer-Ons/notes.mid",
+      "size": 614
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 5 Hammer-Ons/song.ini",
+      "size": 713
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 5 Hammer-Ons/song.ogg",
+      "size": 2386373
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 6 Pull-Offs/album.png",
+      "size": 360116
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 6 Pull-Offs/guitar.ogg",
+      "size": 2119145
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 6 Pull-Offs/notes.mid",
+      "size": 614
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 6 Pull-Offs/song.ini",
+      "size": 759
+    },
+    {
+      "path": "(2006) Guitar Hero II/Guitar Hero II Tutorials/StarPower 6 Pull-Offs/song.ogg",
+      "size": 2374919
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/All That Remains - Six/album.png",
+      "size": 442244
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/All That Remains - Six/bass.ogg",
+      "size": 2754747
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/All That Remains - Six/guitar.ogg",
+      "size": 4901898
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/All That Remains - Six/notes.mid",
+      "size": 47866
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/All That Remains - Six/song.ini",
+      "size": 785
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/All That Remains - Six/song.ogg",
+      "size": 5965884
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Anarchy Club - Collide/album.png",
+      "size": 93133
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Anarchy Club - Collide/bass.ogg",
+      "size": 3012899
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Anarchy Club - Collide/guitar.ogg",
+      "size": 5914965
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Anarchy Club - Collide/notes.mid",
+      "size": 32624
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Anarchy Club - Collide/song.ini",
+      "size": 882
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Anarchy Club - Collide/song.ogg",
+      "size": 6286997
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Bang Camaro - Push Push (Lady Lightning)/PS2.mid",
+      "size": 39407
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Bang Camaro - Push Push (Lady Lightning)/album.png",
+      "size": 331171
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Bang Camaro - Push Push (Lady Lightning)/bass.ogg",
+      "size": 2897597
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Bang Camaro - Push Push (Lady Lightning)/guitar.ogg",
+      "size": 6575300
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Bang Camaro - Push Push (Lady Lightning)/notes.mid",
+      "size": 39401
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Bang Camaro - Push Push (Lady Lightning)/song.ini",
+      "size": 823
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Bang Camaro - Push Push (Lady Lightning)/song.ogg",
+      "size": 8036814
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Brian Kahanek - Gemini/album.png",
+      "size": 295825
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Brian Kahanek - Gemini/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Brian Kahanek - Gemini/guitar.ogg",
+      "size": 5331515
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Brian Kahanek - Gemini/notes.mid",
+      "size": 62915
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Brian Kahanek - Gemini/rhythm.ogg",
+      "size": 5489324
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Brian Kahanek - Gemini/song.ini",
+      "size": 741
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Brian Kahanek - Gemini/song.ogg",
+      "size": 6769127
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Buckethead - Jordan/album.png",
+      "size": 74239
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Buckethead - Jordan/bass.ogg",
+      "size": 1629868
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Buckethead - Jordan/guitar.ogg",
+      "size": 6592911
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Buckethead - Jordan/notes.mid",
+      "size": 34559
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Buckethead - Jordan/song.ini",
+      "size": 753
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Buckethead - Jordan/song.ogg",
+      "size": 6502275
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Count Zero - Radium Eyes/album.png",
+      "size": 339989
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Count Zero - Radium Eyes/bass.ogg",
+      "size": 4964213
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Count Zero - Radium Eyes/guitar.ogg",
+      "size": 5518302
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Count Zero - Radium Eyes/notes.mid",
+      "size": 25203
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Count Zero - Radium Eyes/song.ini",
+      "size": 845
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Count Zero - Radium Eyes/song.ogg",
+      "size": 5742755
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Dethklok - Thunderhorse/album.png",
+      "size": 399820
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Dethklok - Thunderhorse/bass.ogg",
+      "size": 2457031
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Dethklok - Thunderhorse/guitar.ogg",
+      "size": 3800143
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Dethklok - Thunderhorse/notes.mid",
+      "size": 41169
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Dethklok - Thunderhorse/song.ini",
+      "size": 818
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Dethklok - Thunderhorse/song.ogg",
+      "size": 4332789
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/PS2.mid",
+      "size": 33732
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/album.png",
+      "size": 186271
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/guitar.ogg",
+      "size": 4570736
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/notes.mid",
+      "size": 33942
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/rhythm.ogg",
+      "size": 4235385
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/song.ini",
+      "size": 901
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black (Co-op)/song.ogg",
+      "size": 6360799
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black/PS2.mid",
+      "size": 18777
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black/album.png",
+      "size": 186271
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black/guitar.ogg",
+      "size": 5059082
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black/notes.mid",
+      "size": 18781
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black/song.ini",
+      "size": 911
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Drist - Arterial Black/song.ogg",
+      "size": 5751117
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Every Time I Die - The New Black/album.png",
+      "size": 594589
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Every Time I Die - The New Black/bass.ogg",
+      "size": 2217913
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Every Time I Die - The New Black/guitar.ogg",
+      "size": 4354447
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Every Time I Die - The New Black/notes.mid",
+      "size": 44052
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Every Time I Die - The New Black/song.ini",
+      "size": 794
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Every Time I Die - The New Black/song.ogg",
+      "size": 4341654
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk (Co-op)/album.png",
+      "size": 137304
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk (Co-op)/guitar.ogg",
+      "size": 8463135
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk (Co-op)/notes.mid",
+      "size": 44406
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk (Co-op)/rhythm.ogg",
+      "size": 7687672
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk (Co-op)/song.ini",
+      "size": 745
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk (Co-op)/song.ogg",
+      "size": 9205784
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk/album.png",
+      "size": 137304
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk/guitar.ogg",
+      "size": 7848556
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk/notes.mid",
+      "size": 24212
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk/song.ini",
+      "size": 755
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Freezepop - Less Talk More Rokk/song.ogg",
+      "size": 8995139
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb (Co-op)/album.png",
+      "size": 144438
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb (Co-op)/guitar.ogg",
+      "size": 2110831
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb (Co-op)/notes.mid",
+      "size": 25579
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb (Co-op)/rhythm.ogg",
+      "size": 2026409
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb (Co-op)/song.ini",
+      "size": 805
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb (Co-op)/song.ogg",
+      "size": 4358585
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb/album.png",
+      "size": 144438
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb/guitar.ogg",
+      "size": 3719899
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb/notes.mid",
+      "size": 12693
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb/song.ini",
+      "size": 815
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Honest Bob and the Factory-to-Dealer Incentives - Soy Bomb/song.ogg",
+      "size": 4295380
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Made in Mexico - Yes We Can/PS2.mid",
+      "size": 42809
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Made in Mexico - Yes We Can/album.png",
+      "size": 172162
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Made in Mexico - Yes We Can/bass.ogg",
+      "size": 3281736
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Made in Mexico - Yes We Can/guitar.ogg",
+      "size": 5896648
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Made in Mexico - Yes We Can/notes.mid",
+      "size": 42827
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Made in Mexico - Yes We Can/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Made in Mexico - Yes We Can/song.ogg",
+      "size": 7887951
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Megasus - Red Lottery/album.png",
+      "size": 631511
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Megasus - Red Lottery/bass.ogg",
+      "size": 4422411
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Megasus - Red Lottery/guitar.ogg",
+      "size": 7746855
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Megasus - Red Lottery/notes.mid",
+      "size": 66012
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Megasus - Red Lottery/song.ini",
+      "size": 760
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Megasus - Red Lottery/song.ogg",
+      "size": 9316317
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Noble Rot - Kicked to the Curb/album.png",
+      "size": 492355
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Noble Rot - Kicked to the Curb/bass.ogg",
+      "size": 3092164
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Noble Rot - Kicked to the Curb/guitar.ogg",
+      "size": 4799883
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Noble Rot - Kicked to the Curb/notes.mid",
+      "size": 38049
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Noble Rot - Kicked to the Curb/song.ini",
+      "size": 799
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Noble Rot - Kicked to the Curb/song.ogg",
+      "size": 6906763
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Ounce of Self - Drink Up/album.png",
+      "size": 354887
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Ounce of Self - Drink Up/bass.ogg",
+      "size": 2870254
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Ounce of Self - Drink Up/guitar.ogg",
+      "size": 4119802
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Ounce of Self - Drink Up/notes.mid",
+      "size": 32038
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Ounce of Self - Drink Up/song.ini",
+      "size": 797
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Ounce of Self - Drink Up/song.ogg",
+      "size": 4146731
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Shadows Fall - The Light That Blinds/album.png",
+      "size": 485289
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Shadows Fall - The Light That Blinds/bass.ogg",
+      "size": 4059744
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Shadows Fall - The Light That Blinds/guitar.ogg",
+      "size": 7436222
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Shadows Fall - The Light That Blinds/notes.mid",
+      "size": 48510
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Shadows Fall - The Light That Blinds/song.ini",
+      "size": 809
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Shadows Fall - The Light That Blinds/song.ogg",
+      "size": 8546443
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor (Co-op)/album.png",
+      "size": 329427
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor (Co-op)/guitar.ogg",
+      "size": 1377535
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor (Co-op)/notes.mid",
+      "size": 22139
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor (Co-op)/rhythm.ogg",
+      "size": 1317599
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor (Co-op)/song.ini",
+      "size": 822
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor (Co-op)/song.ogg",
+      "size": 2974863
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor/album.png",
+      "size": 329427
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor/guitar.ogg",
+      "size": 3278773
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor/notes.mid",
+      "size": 12326
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor/song.ini",
+      "size": 814
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Strong Bad - Trogdor/song.ogg",
+      "size": 2829732
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/That Handsome Devil - Elephant Bones/album.png",
+      "size": 321869
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/That Handsome Devil - Elephant Bones/bass.ogg",
+      "size": 1850676
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/That Handsome Devil - Elephant Bones/guitar.ogg",
+      "size": 5991009
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/That Handsome Devil - Elephant Bones/notes.mid",
+      "size": 26939
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/That Handsome Devil - Elephant Bones/song.ini",
+      "size": 829
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/That Handsome Devil - Elephant Bones/song.ogg",
+      "size": 5880959
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/PS2.mid",
+      "size": 32967
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/album.png",
+      "size": 321431
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/bass.ogg",
+      "size": 1968273
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/guitar.ogg",
+      "size": 3171735
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/notes.mid",
+      "size": 33115
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/rhythm.ogg",
+      "size": 2895124
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/song.ini",
+      "size": 843
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack (Co-op)/song.ogg",
+      "size": 4082132
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack/album.png",
+      "size": 321431
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack/guitar.ogg",
+      "size": 3665088
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack/notes.mid",
+      "size": 17909
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack/song.ini",
+      "size": 757
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Acro-Brats - Laughtrack/song.ogg",
+      "size": 4099608
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Amazing Crowns - Mr. Fix It/PS2.mid",
+      "size": 29221
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Amazing Crowns - Mr. Fix It/album.png",
+      "size": 485304
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Amazing Crowns - Mr. Fix It/bass.ogg",
+      "size": 2223691
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Amazing Crowns - Mr. Fix It/guitar.ogg",
+      "size": 3918072
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Amazing Crowns - Mr. Fix It/notes.mid",
+      "size": 29221
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Amazing Crowns - Mr. Fix It/song.ini",
+      "size": 831
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Amazing Crowns - Mr. Fix It/song.ogg",
+      "size": 4631532
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Breaking Wheel - One for the Road/album.png",
+      "size": 322357
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Breaking Wheel - One for the Road/bass.ogg",
+      "size": 10204717
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Breaking Wheel - One for the Road/guitar.ogg",
+      "size": 7824445
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Breaking Wheel - One for the Road/notes.mid",
+      "size": 81194
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Breaking Wheel - One for the Road/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Breaking Wheel - One for the Road/song.ogg",
+      "size": 9032641
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Last Vegas - Raw Dog/PS2.mid",
+      "size": 54785
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Last Vegas - Raw Dog/album.png",
+      "size": 551038
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Last Vegas - Raw Dog/bass.ogg",
+      "size": 4079427
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Last Vegas - Raw Dog/guitar.ogg",
+      "size": 5905502
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Last Vegas - Raw Dog/notes.mid",
+      "size": 54817
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Last Vegas - Raw Dog/song.ini",
+      "size": 900
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Last Vegas - Raw Dog/song.ogg",
+      "size": 5842889
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Neighborhoods - Parasite/album.png",
+      "size": 370072
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Neighborhoods - Parasite/bass.ogg",
+      "size": 4509399
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Neighborhoods - Parasite/guitar.ogg",
+      "size": 5164474
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Neighborhoods - Parasite/notes.mid",
+      "size": 26907
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Neighborhoods - Parasite/song.ini",
+      "size": 767
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/The Neighborhoods - Parasite/song.ogg",
+      "size": 5268315
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/VAGIANT - FTK/album.png",
+      "size": 268916
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/VAGIANT - FTK/bass.ogg",
+      "size": 2557497
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/VAGIANT - FTK/guitar.ogg",
+      "size": 4367371
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/VAGIANT - FTK/notes.mid",
+      "size": 53864
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/VAGIANT - FTK/song.ini",
+      "size": 798
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/VAGIANT - FTK/song.ogg",
+      "size": 5285764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Valient Thorr - Fall of Pangea/PS2.mid",
+      "size": 61458
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Valient Thorr - Fall of Pangea/album.png",
+      "size": 183613
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Valient Thorr - Fall of Pangea/bass.ogg",
+      "size": 7870057
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Valient Thorr - Fall of Pangea/guitar.ogg",
+      "size": 12379577
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Valient Thorr - Fall of Pangea/notes.mid",
+      "size": 61506
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Valient Thorr - Fall of Pangea/song.ini",
+      "size": 896
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Valient Thorr - Fall of Pangea/song.ogg",
+      "size": 12301240
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Voivod - X-Stream/PS2.mid",
+      "size": 100663
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Voivod - X-Stream/album.png",
+      "size": 275062
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Voivod - X-Stream/bass.ogg",
+      "size": 5541004
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Voivod - X-Stream/guitar.ogg",
+      "size": 7969736
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Voivod - X-Stream/notes.mid",
+      "size": 100889
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Voivod - X-Stream/song.ini",
+      "size": 871
+    },
+    {
+      "path": "(2006) Guitar Hero II/Bonus/Voivod - X-Stream/song.ogg",
+      "size": 8700620
+    },
+    {
+      "path": "(2006) Guitar Hero II/GHII Rips v2.3.1.txt",
+      "size": 1406
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child (Co-op)/album.png",
+      "size": 115284
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child (Co-op)/guitar.ogg",
+      "size": 6405355
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child (Co-op)/notes.mid",
+      "size": 36265
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child (Co-op)/rhythm.ogg",
+      "size": 5654971
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child (Co-op)/song.ini",
+      "size": 675
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child (Co-op)/song.ogg",
+      "size": 7229941
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child/album.png",
+      "size": 115284
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child/guitar.ogg",
+      "size": 7066360
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child/notes.mid",
+      "size": 17507
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child/song.ini",
+      "size": 708
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Aerosmith - Last Child/song.ogg",
+      "size": 7304544
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice Cooper - Billion Dollar Babies/album.png",
+      "size": 607808
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice Cooper - Billion Dollar Babies/bass.ogg",
+      "size": 2156517
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice Cooper - Billion Dollar Babies/guitar.ogg",
+      "size": 5995054
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice Cooper - Billion Dollar Babies/notes.mid",
+      "size": 24346
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice Cooper - Billion Dollar Babies/song.ini",
+      "size": 746
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice Cooper - Billion Dollar Babies/song.ogg",
+      "size": 6777224
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice in Chains - Them Bones/album.png",
+      "size": 384599
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice in Chains - Them Bones/bass.ogg",
+      "size": 1971018
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice in Chains - Them Bones/guitar.ogg",
+      "size": 3892044
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice in Chains - Them Bones/notes.mid",
+      "size": 34130
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice in Chains - Them Bones/song.ini",
+      "size": 684
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Alice in Chains - Them Bones/song.ogg",
+      "size": 4224322
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Anthrax - Madhouse/album.png",
+      "size": 438152
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Anthrax - Madhouse/bass.ogg",
+      "size": 3410788
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Anthrax - Madhouse/guitar.ogg",
+      "size": 7252379
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Anthrax - Madhouse/notes.mid",
+      "size": 52363
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Anthrax - Madhouse/song.ini",
+      "size": 718
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Anthrax - Madhouse/song.ogg",
+      "size": 7715908
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Avenged Sevenfold - Beast and the Harlot/album.png",
+      "size": 531908
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Avenged Sevenfold - Beast and the Harlot/bass.ogg",
+      "size": 5976403
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Avenged Sevenfold - Beast and the Harlot/guitar.ogg",
+      "size": 10255914
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Avenged Sevenfold - Beast and the Harlot/notes.mid",
+      "size": 55830
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Avenged Sevenfold - Beast and the Harlot/song.ini",
+      "size": 739
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Avenged Sevenfold - Beast and the Harlot/song.ogg",
+      "size": 11227659
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Black Sabbath - War Pigs/album.png",
+      "size": 223966
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Black Sabbath - War Pigs/bass.ogg",
+      "size": 9809572
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Black Sabbath - War Pigs/guitar.ogg",
+      "size": 12537118
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Black Sabbath - War Pigs/notes.mid",
+      "size": 83689
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Black Sabbath - War Pigs/song.ini",
+      "size": 717
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Black Sabbath - War Pigs/song.ogg",
+      "size": 12939790
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Cheap Trick - Surrender/PS2.mid",
+      "size": 37827
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Cheap Trick - Surrender/album.png",
+      "size": 456424
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Cheap Trick - Surrender/bass.ogg",
+      "size": 2207722
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Cheap Trick - Surrender/guitar.ogg",
+      "size": 7317883
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Cheap Trick - Surrender/notes.mid",
+      "size": 35838
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Cheap Trick - Surrender/song.ini",
+      "size": 789
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Cheap Trick - Surrender/song.ogg",
+      "size": 7322855
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/PS2.mid",
+      "size": 28670
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/album.png",
+      "size": 69073
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/guitar.ogg",
+      "size": 4154119
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/notes.mid",
+      "size": 28744
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/rhythm.ogg",
+      "size": 4088184
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/song.ini",
+      "size": 815
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother (Co-op)/song.ogg",
+      "size": 6634232
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother/PS2.mid",
+      "size": 16090
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother/album.png",
+      "size": 69073
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother/guitar.ogg",
+      "size": 5574696
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother/notes.mid",
+      "size": 16090
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother/song.ini",
+      "size": 810
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Danzig - Mother/song.ogg",
+      "size": 6715326
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Deep Purple - Hush/album.png",
+      "size": 409758
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Deep Purple - Hush/bass.ogg",
+      "size": 6928367
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Deep Purple - Hush/guitar.ogg",
+      "size": 6154907
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Deep Purple - Hush/notes.mid",
+      "size": 35905
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Deep Purple - Hush/song.ini",
+      "size": 698
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Deep Purple - Hush/song.ogg",
+      "size": 7893417
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Dick Dale - Misirlou/PS2.mid",
+      "size": 30074
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Dick Dale - Misirlou/album.png",
+      "size": 397818
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Dick Dale - Misirlou/bass.ogg",
+      "size": 1447163
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Dick Dale - Misirlou/guitar.ogg",
+      "size": 2340857
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Dick Dale - Misirlou/notes.mid",
+      "size": 30069
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Dick Dale - Misirlou/song.ini",
+      "size": 847
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Dick Dale - Misirlou/song.ogg",
+      "size": 4639666
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Foo Fighters - Monkey Wrench/PS2.mid",
+      "size": 55263
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Foo Fighters - Monkey Wrench/album.png",
+      "size": 109402
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Foo Fighters - Monkey Wrench/bass.ogg",
+      "size": 3895725
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Foo Fighters - Monkey Wrench/guitar.ogg",
+      "size": 6527916
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Foo Fighters - Monkey Wrench/notes.mid",
+      "size": 55364
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Foo Fighters - Monkey Wrench/song.ini",
+      "size": 844
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Foo Fighters - Monkey Wrench/song.ogg",
+      "size": 7020684
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Guns N' Roses - Sweet Child o' Mine/album.png",
+      "size": 452443
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Guns N' Roses - Sweet Child o' Mine/bass.ogg",
+      "size": 7874988
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Guns N' Roses - Sweet Child o' Mine/guitar.ogg",
+      "size": 7695678
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Guns N' Roses - Sweet Child o' Mine/notes.mid",
+      "size": 39653
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Guns N' Roses - Sweet Child o' Mine/song.ini",
+      "size": 721
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Guns N' Roses - Sweet Child o' Mine/song.ogg",
+      "size": 9521638
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Heart - Crazy on You/album.png",
+      "size": 336228
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Heart - Crazy on You/bass.ogg",
+      "size": 2955315
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Heart - Crazy on You/guitar.ogg",
+      "size": 9044374
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Heart - Crazy on You/notes.mid",
+      "size": 60418
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Heart - Crazy on You/song.ini",
+      "size": 710
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Heart - Crazy on You/song.ogg",
+      "size": 8251794
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iggy Pop and the Stooges - Search and Destroy/album.png",
+      "size": 160300
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iggy Pop and the Stooges - Search and Destroy/bass.ogg",
+      "size": 2455590
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iggy Pop and the Stooges - Search and Destroy/guitar.ogg",
+      "size": 5129936
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iggy Pop and the Stooges - Search and Destroy/notes.mid",
+      "size": 41342
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iggy Pop and the Stooges - Search and Destroy/song.ini",
+      "size": 745
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iggy Pop and the Stooges - Search and Destroy/song.ogg",
+      "size": 6146056
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iron Maiden - The Trooper/album.png",
+      "size": 435436
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iron Maiden - The Trooper/bass.ogg",
+      "size": 3312766
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iron Maiden - The Trooper/guitar.ogg",
+      "size": 6424753
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iron Maiden - The Trooper/notes.mid",
+      "size": 76985
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iron Maiden - The Trooper/song.ini",
+      "size": 724
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Iron Maiden - The Trooper/song.ogg",
+      "size": 7931918
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Jane's Addiction - Stop/PS2.mid",
+      "size": 35348
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Jane's Addiction - Stop/album.png",
+      "size": 551921
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Jane's Addiction - Stop/bass.ogg",
+      "size": 3299098
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Jane's Addiction - Stop/guitar.ogg",
+      "size": 5107808
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Jane's Addiction - Stop/notes.mid",
+      "size": 35372
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Jane's Addiction - Stop/song.ini",
+      "size": 756
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Jane's Addiction - Stop/song.ogg",
+      "size": 6710521
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kansas - Carry On Wayward Son/album.png",
+      "size": 517329
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kansas - Carry On Wayward Son/bass.ogg",
+      "size": 3861797
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kansas - Carry On Wayward Son/guitar.ogg",
+      "size": 8915136
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kansas - Carry On Wayward Son/notes.mid",
+      "size": 60486
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kansas - Carry On Wayward Son/song.ini",
+      "size": 738
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kansas - Carry On Wayward Son/song.ogg",
+      "size": 8588456
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter (Co-op)/album.png",
+      "size": 308525
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter (Co-op)/guitar.ogg",
+      "size": 4858587
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter (Co-op)/notes.mid",
+      "size": 26790
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter (Co-op)/rhythm.ogg",
+      "size": 4557653
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter (Co-op)/song.ini",
+      "size": 727
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter (Co-op)/song.ogg",
+      "size": 6252596
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter/album.png",
+      "size": 308525
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter/guitar.ogg",
+      "size": 4728395
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter/notes.mid",
+      "size": 18249
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter/song.ini",
+      "size": 680
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Kiss - Strutter/song.ogg",
+      "size": 6104817
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest (Co-op)/album.png",
+      "size": 461602
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest (Co-op)/guitar.ogg",
+      "size": 4335222
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest (Co-op)/notes.mid",
+      "size": 55426
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest (Co-op)/rhythm.ogg",
+      "size": 4833113
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest (Co-op)/song.ini",
+      "size": 779
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest (Co-op)/song.ogg",
+      "size": 7996498
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest/album.png",
+      "size": 461602
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest/guitar.ogg",
+      "size": 5791300
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest/notes.mid",
+      "size": 26398
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest/song.ini",
+      "size": 748
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lamb of God - Laid to Rest/song.ogg",
+      "size": 6819754
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird (Co-op)/album.png",
+      "size": 497950
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird (Co-op)/guitar.ogg",
+      "size": 15254026
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird (Co-op)/notes.mid",
+      "size": 98002
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird (Co-op)/rhythm.ogg",
+      "size": 16069178
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird (Co-op)/song.ini",
+      "size": 741
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird (Co-op)/song.ogg",
+      "size": 19137080
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird/album.png",
+      "size": 497950
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird/guitar.ogg",
+      "size": 16020938
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird/notes.mid",
+      "size": 44694
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird/song.ini",
+      "size": 757
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Lynyrd Skynyrd - Free Bird/song.ogg",
+      "size": 19105361
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend (Co-op)/album.png",
+      "size": 250578
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend (Co-op)/guitar.ogg",
+      "size": 2548974
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend (Co-op)/notes.mid",
+      "size": 32290
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend (Co-op)/rhythm.ogg",
+      "size": 2667407
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend (Co-op)/song.ini",
+      "size": 700
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend (Co-op)/song.ogg",
+      "size": 6194045
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend/album.png",
+      "size": 250578
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend/guitar.ogg",
+      "size": 4979349
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend/notes.mid",
+      "size": 16070
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend/song.ini",
+      "size": 743
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Matthew Sweet - Girlfriend/song.ogg",
+      "size": 6345727
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Megadeth - Hangar 18/album.png",
+      "size": 512419
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Megadeth - Hangar 18/bass.ogg",
+      "size": 4893870
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Megadeth - Hangar 18/guitar.ogg",
+      "size": 9529035
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Megadeth - Hangar 18/notes.mid",
+      "size": 67062
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Megadeth - Hangar 18/song.ini",
+      "size": 772
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Megadeth - Hangar 18/song.ogg",
+      "size": 9242180
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead! (Co-op)/album.png",
+      "size": 448068
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead! (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead! (Co-op)/guitar.ogg",
+      "size": 5700500
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead! (Co-op)/notes.mid",
+      "size": 52494
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead! (Co-op)/rhythm.ogg",
+      "size": 5147305
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead! (Co-op)/song.ini",
+      "size": 701
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead! (Co-op)/song.ogg",
+      "size": 5920724
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead!/album.png",
+      "size": 448068
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead!/guitar.ogg",
+      "size": 6287850
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead!/notes.mid",
+      "size": 27961
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead!/song.ini",
+      "size": 700
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/My Chemical Romance - Dead!/song.ogg",
+      "size": 6006145
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/M\u00f6tley Cr\u00fce - Shout at the Devil/PS2.mid",
+      "size": 34918
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/M\u00f6tley Cr\u00fce - Shout at the Devil/album.png",
+      "size": 288496
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/M\u00f6tley Cr\u00fce - Shout at the Devil/bass.ogg",
+      "size": 2336073
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/M\u00f6tley Cr\u00fce - Shout at the Devil/guitar.ogg",
+      "size": 5172129
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/M\u00f6tley Cr\u00fce - Shout at the Devil/notes.mid",
+      "size": 34414
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/M\u00f6tley Cr\u00fce - Shout at the Devil/song.ini",
+      "size": 850
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/M\u00f6tley Cr\u00fce - Shout at the Devil/song.ogg",
+      "size": 5773470
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Nirvana - Heart-Shaped Box/PS2.mid",
+      "size": 65380
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Nirvana - Heart-Shaped Box/album.png",
+      "size": 351515
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Nirvana - Heart-Shaped Box/bass.ogg",
+      "size": 5054263
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Nirvana - Heart-Shaped Box/guitar.ogg",
+      "size": 7990953
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Nirvana - Heart-Shaped Box/notes.mid",
+      "size": 65148
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Nirvana - Heart-Shaped Box/song.ini",
+      "size": 742
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Nirvana - Heart-Shaped Box/song.ogg",
+      "size": 8749534
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Pearl Jam - Life Wasted/album.png",
+      "size": 167331
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Pearl Jam - Life Wasted/bass.ogg",
+      "size": 3548563
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Pearl Jam - Life Wasted/guitar.ogg",
+      "size": 6869925
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Pearl Jam - Life Wasted/notes.mid",
+      "size": 32750
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Pearl Jam - Life Wasted/song.ini",
+      "size": 688
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Pearl Jam - Life Wasted/song.ogg",
+      "size": 8364493
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Primus - John the Fisherman/PS2.mid",
+      "size": 32684
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Primus - John the Fisherman/album.png",
+      "size": 374994
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Primus - John the Fisherman/bass.ogg",
+      "size": 5745686
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Primus - John the Fisherman/guitar.ogg",
+      "size": 6139166
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Primus - John the Fisherman/notes.mid",
+      "size": 32663
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Primus - John the Fisherman/song.ini",
+      "size": 826
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Primus - John the Fisherman/song.ogg",
+      "size": 6452685
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rage Against the Machine - Killing in the Name/album.png",
+      "size": 252922
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rage Against the Machine - Killing in the Name/bass.ogg",
+      "size": 4411931
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rage Against the Machine - Killing in the Name/guitar.ogg",
+      "size": 9738923
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rage Against the Machine - Killing in the Name/notes.mid",
+      "size": 84344
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rage Against the Machine - Killing in the Name/song.ini",
+      "size": 693
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rage Against the Machine - Killing in the Name/song.ogg",
+      "size": 9139326
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rancid - Salvation/album.png",
+      "size": 493601
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rancid - Salvation/bass.ogg",
+      "size": 3291551
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rancid - Salvation/guitar.ogg",
+      "size": 4587735
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rancid - Salvation/notes.mid",
+      "size": 28442
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rancid - Salvation/song.ini",
+      "size": 693
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rancid - Salvation/song.ogg",
+      "size": 6070872
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Reverend Horton Heat - Psychobilly Freakout/album.png",
+      "size": 465515
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Reverend Horton Heat - Psychobilly Freakout/bass.ogg",
+      "size": 1844165
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Reverend Horton Heat - Psychobilly Freakout/guitar.ogg",
+      "size": 4377898
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Reverend Horton Heat - Psychobilly Freakout/notes.mid",
+      "size": 41125
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Reverend Horton Heat - Psychobilly Freakout/song.ini",
+      "size": 761
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Reverend Horton Heat - Psychobilly Freakout/song.ogg",
+      "size": 5180640
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rick Derringer - Rock and Roll, Hoochie Koo/album.png",
+      "size": 156389
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rick Derringer - Rock and Roll, Hoochie Koo/bass.ogg",
+      "size": 3213697
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rick Derringer - Rock and Roll, Hoochie Koo/guitar.ogg",
+      "size": 5888185
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rick Derringer - Rock and Roll, Hoochie Koo/notes.mid",
+      "size": 37279
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rick Derringer - Rock and Roll, Hoochie Koo/song.ini",
+      "size": 734
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rick Derringer - Rock and Roll, Hoochie Koo/song.ogg",
+      "size": 8032654
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rush - YYZ/album.png",
+      "size": 338831
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rush - YYZ/bass.ogg",
+      "size": 7364808
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rush - YYZ/guitar.ogg",
+      "size": 6878971
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rush - YYZ/notes.mid",
+      "size": 43614
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rush - YYZ/song.ini",
+      "size": 675
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Rush - YYZ/song.ogg",
+      "size": 8959832
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight (Co-op)/album.png",
+      "size": 3065
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight (Co-op)/guitar.ogg",
+      "size": 3686024
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight (Co-op)/notes.mid",
+      "size": 27046
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight (Co-op)/rhythm.ogg",
+      "size": 3640835
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight (Co-op)/song.ini",
+      "size": 721
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight (Co-op)/song.ogg",
+      "size": 4159632
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight/album.png",
+      "size": 3065
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight/guitar.ogg",
+      "size": 3504946
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight/notes.mid",
+      "size": 12777
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight/song.ini",
+      "size": 792
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Spinal Tap - Tonight I'm Gonna Rock You Tonight/song.ogg",
+      "size": 3978023
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/album.png",
+      "size": 483534
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/bass.ogg",
+      "size": 1969921
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/guitar.ogg",
+      "size": 6001813
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/notes.mid",
+      "size": 35340
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/song.ini",
+      "size": 726
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stone Temple Pilots - Trippin' on a Hole in a Paper Heart/song.ogg",
+      "size": 5493787
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stray Cats - Rock This Town/album.png",
+      "size": 479633
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stray Cats - Rock This Town/bass.ogg",
+      "size": 3386725
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stray Cats - Rock This Town/guitar.ogg",
+      "size": 4671550
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stray Cats - Rock This Town/notes.mid",
+      "size": 42724
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stray Cats - Rock This Town/song.ini",
+      "size": 679
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Stray Cats - Rock This Town/song.ogg",
+      "size": 5563607
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/PS2.mid",
+      "size": 84966
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/album.png",
+      "size": 515877
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/guitar.ogg",
+      "size": 5136945
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/notes.mid",
+      "size": 84865
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/rhythm.ogg",
+      "size": 4788476
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/song.ini",
+      "size": 826
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized (Co-op)/song.ogg",
+      "size": 6302869
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized/PS2.mid",
+      "size": 46472
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized/album.png",
+      "size": 515877
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized/guitar.ogg",
+      "size": 5792483
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized/notes.mid",
+      "size": 46381
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized/song.ini",
+      "size": 922
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Suicidal Tendencies - Institutionalized/song.ogg",
+      "size": 6187367
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/PS2.mid",
+      "size": 65494
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/album.png",
+      "size": 592354
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/guitar.ogg",
+      "size": 8100526
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/notes.mid",
+      "size": 65682
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/rhythm.ogg",
+      "size": 8644440
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/song.ini",
+      "size": 808
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica (Co-op)/song.ogg",
+      "size": 12031964
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica/PS2.mid",
+      "size": 26764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica/album.png",
+      "size": 592354
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica/guitar.ogg",
+      "size": 8017874
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica/notes.mid",
+      "size": 26770
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica/song.ini",
+      "size": 842
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Allman Brothers Band - Jessica/song.ogg",
+      "size": 11618912
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night (Co-op)/album.png",
+      "size": 542191
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night (Co-op)/guitar.ogg",
+      "size": 5425693
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night (Co-op)/notes.mid",
+      "size": 64865
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night (Co-op)/rhythm.ogg",
+      "size": 4955731
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night (Co-op)/song.ini",
+      "size": 741
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night (Co-op)/song.ogg",
+      "size": 6649877
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night/album.png",
+      "size": 542191
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night/guitar.ogg",
+      "size": 5243243
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night/notes.mid",
+      "size": 37989
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night/song.ini",
+      "size": 709
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Butthole Surfers - Who Was in My Room Last Night/song.ogg",
+      "size": 6589663
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Living End - Carry Me Home/album.png",
+      "size": 305241
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Living End - Carry Me Home/bass.ogg",
+      "size": 5872711
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Living End - Carry Me Home/guitar.ogg",
+      "size": 5533834
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Living End - Carry Me Home/notes.mid",
+      "size": 53838
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Living End - Carry Me Home/song.ini",
+      "size": 805
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Living End - Carry Me Home/song.ogg",
+      "size": 6587161
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Police - Message in a Bottle/album.png",
+      "size": 362000
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Police - Message in a Bottle/bass.ogg",
+      "size": 6326845
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Police - Message in a Bottle/guitar.ogg",
+      "size": 9158565
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Police - Message in a Bottle/notes.mid",
+      "size": 42777
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Police - Message in a Bottle/song.ini",
+      "size": 727
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Police - Message in a Bottle/song.ogg",
+      "size": 9912986
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Pretenders - Tattooed Love Boys/album.png",
+      "size": 230748
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Pretenders - Tattooed Love Boys/bass.ogg",
+      "size": 2148649
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Pretenders - Tattooed Love Boys/guitar.ogg",
+      "size": 4744152
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Pretenders - Tattooed Love Boys/notes.mid",
+      "size": 60392
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Pretenders - Tattooed Love Boys/song.ini",
+      "size": 693
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Pretenders - Tattooed Love Boys/song.ogg",
+      "size": 5546117
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin (Co-op)/album.png",
+      "size": 276929
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin (Co-op)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin (Co-op)/guitar.ogg",
+      "size": 6494565
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin (Co-op)/notes.mid",
+      "size": 39952
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin (Co-op)/rhythm.ogg",
+      "size": 6148734
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin (Co-op)/song.ini",
+      "size": 771
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin (Co-op)/song.ogg",
+      "size": 7228808
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin/album.png",
+      "size": 276929
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin/guitar.ogg",
+      "size": 5903992
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin/notes.mid",
+      "size": 18767
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin/song.ini",
+      "size": 757
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Rolling Stones - Can't You Hear Me Knockin/song.ogg",
+      "size": 7085654
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Sword - Freya/album.png",
+      "size": 600388
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Sword - Freya/bass.ogg",
+      "size": 6358337
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Sword - Freya/guitar.ogg",
+      "size": 8109151
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Sword - Freya/notes.mid",
+      "size": 49420
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Sword - Freya/song.ini",
+      "size": 682
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/The Sword - Freya/song.ogg",
+      "size": 9175393
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Thin Lizzy - Bad Reputation/album.png",
+      "size": 46076
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Thin Lizzy - Bad Reputation/bass.ogg",
+      "size": 2451170
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Thin Lizzy - Bad Reputation/guitar.ogg",
+      "size": 4805113
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Thin Lizzy - Bad Reputation/notes.mid",
+      "size": 31593
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Thin Lizzy - Bad Reputation/song.ini",
+      "size": 689
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Thin Lizzy - Bad Reputation/song.ogg",
+      "size": 5803196
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Toadies - Possum Kingdom/album.png",
+      "size": 414927
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Toadies - Possum Kingdom/bass.ogg",
+      "size": 6137661
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Toadies - Possum Kingdom/guitar.ogg",
+      "size": 9140318
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Toadies - Possum Kingdom/notes.mid",
+      "size": 42348
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Toadies - Possum Kingdom/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Toadies - Possum Kingdom/song.ogg",
+      "size": 9071867
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Van Halen - You Really Got Me/album.png",
+      "size": 188677
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Van Halen - You Really Got Me/bass.ogg",
+      "size": 2029029
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Van Halen - You Really Got Me/guitar.ogg",
+      "size": 3710448
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Van Halen - You Really Got Me/notes.mid",
+      "size": 28717
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Van Halen - You Really Got Me/song.ini",
+      "size": 661
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Van Halen - You Really Got Me/song.ogg",
+      "size": 4357014
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Warrant - Cherry Pie/album.png",
+      "size": 178188
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Warrant - Cherry Pie/bass.ogg",
+      "size": 4443277
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Warrant - Cherry Pie/guitar.ogg",
+      "size": 5634061
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Warrant - Cherry Pie/notes.mid",
+      "size": 23054
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Warrant - Cherry Pie/song.ini",
+      "size": 675
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Warrant - Cherry Pie/song.ogg",
+      "size": 6604881
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Wolfmother - Woman/album.png",
+      "size": 420529
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Wolfmother - Woman/bass.ogg",
+      "size": 1853034
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Wolfmother - Woman/guitar.ogg",
+      "size": 4117236
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Wolfmother - Woman/notes.mid",
+      "size": 29643
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Wolfmother - Woman/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2006) Guitar Hero II/Quickplay/Wolfmother - Woman/song.ogg",
+      "size": 4670562
+    }
+  ],
+  "extracted_size": 1603771296,
+  "file_count": 615,
+  "chart_count": 100,
+  "release_date": "2006-11-07"
 }

@@ -1,20 +1,4113 @@
 {
   "name": "Code Red: Volume 1",
-  "folder_id": "static-code-red-1",
+  "folder_id": "static-code-red-volume-1",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 201,
-  "total_size": 2427788594,
-  "file_count": 1023,
+  "downloads": [
+    {
+      "url": "https://customsongscentral.b-cdn.net/Code%20Red%20-%20Vol.1.rar?ref=customsongscentral.com",
+      "name": "Code Red - Vol.1.rar",
+      "size": 2427788594,
+      "md5": "ebe26e17d07c40b1ac5e20b5c683cc78"
+    }
+  ],
+  "download_size": 2427788594,
   "files": [
     {
-      "id": "cdn-csc-code-red-1",
-      "path": "Code Red: Volume 1/Code Red: Volume 1.rar",
-      "name": "Code Red: Volume 1.rar",
-      "size": 2427788594,
-      "md5": "ebe26e17d07c40b1ac5e20b5c683cc78",
-      "url": "https://customsongscentral.b-cdn.net/Code%20Red%20-%20Vol.1.rar?ref=customsongscentral.com"
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/AC-DC - Code Red [HattMeafy]/album.png",
+      "size": 429126
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/AC-DC - Code Red [HattMeafy]/background.jpg",
+      "size": 584852
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/AC-DC - Code Red [HattMeafy]/notes.chart",
+      "size": 31902
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/AC-DC - Code Red [HattMeafy]/song.ini",
+      "size": 340
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/AC-DC - Code Red [HattMeafy]/song.ogg",
+      "size": 6583362
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Aesop Rock - Long Legged Larry [Deltarak]/album.png",
+      "size": 111005
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Aesop Rock - Long Legged Larry [Deltarak]/background.jpg",
+      "size": 599146
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Aesop Rock - Long Legged Larry [Deltarak]/notes.chart",
+      "size": 32446
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Aesop Rock - Long Legged Larry [Deltarak]/song.ini",
+      "size": 311
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Aesop Rock - Long Legged Larry [Deltarak]/song.ogg",
+      "size": 7314998
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bloc Party - Banquet [Haggis]/album.png",
+      "size": 116294
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bloc Party - Banquet [Haggis]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bloc Party - Banquet [Haggis]/notes.chart",
+      "size": 31960
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bloc Party - Banquet [Haggis]/song.ini",
+      "size": 398
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bloc Party - Banquet [Haggis]/song.ogg",
+      "size": 6233779
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bowling for Soup - 1985 (SR-71 cover) [Caret]/album.png",
+      "size": 375827
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bowling for Soup - 1985 (SR-71 cover) [Caret]/background.jpg",
+      "size": 440003
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bowling for Soup - 1985 (SR-71 cover) [Caret]/notes.chart",
+      "size": 37343
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bowling for Soup - 1985 (SR-71 cover) [Caret]/song.ini",
+      "size": 342
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Bowling for Soup - 1985 (SR-71 cover) [Caret]/song.ogg",
+      "size": 6528275
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Cepheid - Lie of Providence (feat. Zephyrianna) [Spachi]/album.png",
+      "size": 427525
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Cepheid - Lie of Providence (feat. Zephyrianna) [Spachi]/background.jpg",
+      "size": 266390
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Cepheid - Lie of Providence (feat. Zephyrianna) [Spachi]/notes.chart",
+      "size": 40053
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Cepheid - Lie of Providence (feat. Zephyrianna) [Spachi]/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Cepheid - Lie of Providence (feat. Zephyrianna) [Spachi]/song.ogg",
+      "size": 8167960
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Delta Sleep - The Detail (Live) [Pizza22]/album.png",
+      "size": 358932
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Delta Sleep - The Detail (Live) [Pizza22]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Delta Sleep - The Detail (Live) [Pizza22]/notes.chart",
+      "size": 45030
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Delta Sleep - The Detail (Live) [Pizza22]/song.ini",
+      "size": 444
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Delta Sleep - The Detail (Live) [Pizza22]/song.ogg",
+      "size": 8410267
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Fishmans - Shiawase-Sha (Live) [7777villain]/album.png",
+      "size": 561752
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Fishmans - Shiawase-Sha (Live) [7777villain]/background.png",
+      "size": 3500681
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Fishmans - Shiawase-Sha (Live) [7777villain]/notes.chart",
+      "size": 28392
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Fishmans - Shiawase-Sha (Live) [7777villain]/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Fishmans - Shiawase-Sha (Live) [7777villain]/song.ogg",
+      "size": 7121370
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Funtastic Power! - 300 This Is Sparta! [Caret]/album.png",
+      "size": 383329
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Funtastic Power! - 300 This Is Sparta! [Caret]/background.jpg",
+      "size": 356984
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Funtastic Power! - 300 This Is Sparta! [Caret]/notes.chart",
+      "size": 42068
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Funtastic Power! - 300 This Is Sparta! [Caret]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Funtastic Power! - 300 This Is Sparta! [Caret]/song.ogg",
+      "size": 4823409
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Make Them Suffer - Drown With Me [OHM]/album.png",
+      "size": 575565
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Make Them Suffer - Drown With Me [OHM]/background.jpg",
+      "size": 781053
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Make Them Suffer - Drown With Me [OHM]/notes.chart",
+      "size": 42842
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Make Them Suffer - Drown With Me [OHM]/song.ini",
+      "size": 411
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Make Them Suffer - Drown With Me [OHM]/song.ogg",
+      "size": 7504913
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Mori Calliope - Red [Raspberriel]/album.png",
+      "size": 573103
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Mori Calliope - Red [Raspberriel]/background.jpg",
+      "size": 328151
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Mori Calliope - Red [Raspberriel]/guitar.ogg",
+      "size": 7430089
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Mori Calliope - Red [Raspberriel]/notes.mid",
+      "size": 17782
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Mori Calliope - Red [Raspberriel]/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Scatterbrain - Down With the Ship (Slight Return) [Sygenysis]/album.png",
+      "size": 253739
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Scatterbrain - Down With the Ship (Slight Return) [Sygenysis]/background.jpg",
+      "size": 567280
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Scatterbrain - Down With the Ship (Slight Return) [Sygenysis]/guitar.ogg",
+      "size": 4722199
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Scatterbrain - Down With the Ship (Slight Return) [Sygenysis]/notes.mid",
+      "size": 15280
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Scatterbrain - Down With the Ship (Slight Return) [Sygenysis]/song.ini",
+      "size": 949
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Sunnyman - Happiness [Stickheadz32]/album.png",
+      "size": 408473
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Sunnyman - Happiness [Stickheadz32]/background.jpg",
+      "size": 625219
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Sunnyman - Happiness [Stickheadz32]/notes.chart",
+      "size": 6181
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Sunnyman - Happiness [Stickheadz32]/song.ini",
+      "size": 331
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/Sunnyman - Happiness [Stickheadz32]/song.ogg",
+      "size": 1446490
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/TOOL - The Grudge [7777villain]/album.png",
+      "size": 602111
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/TOOL - The Grudge [7777villain]/background.jpg",
+      "size": 338256
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/TOOL - The Grudge [7777villain]/notes.chart",
+      "size": 74466
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/TOOL - The Grudge [7777villain]/song.ini",
+      "size": 518
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/TOOL - The Grudge [7777villain]/song.ogg",
+      "size": 16197460
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Cardigans - Rise and Shine [7777villain]/album.png",
+      "size": 439920
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Cardigans - Rise and Shine [7777villain]/background.png",
+      "size": 2770627
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Cardigans - Rise and Shine [7777villain]/notes.chart",
+      "size": 30705
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Cardigans - Rise and Shine [7777villain]/song.ini",
+      "size": 472
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Cardigans - Rise and Shine [7777villain]/song.ogg",
+      "size": 7060224
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Get Up Kids - I'm a Loner Dottie, a Rebel [7777villain]/album.png",
+      "size": 586105
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Get Up Kids - I'm a Loner Dottie, a Rebel [7777villain]/background.jpg",
+      "size": 1345954
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Get Up Kids - I'm a Loner Dottie, a Rebel [7777villain]/notes.chart",
+      "size": 37511
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Get Up Kids - I'm a Loner Dottie, a Rebel [7777villain]/song.ini",
+      "size": 600
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/The Get Up Kids - I'm a Loner Dottie, a Rebel [7777villain]/song.ogg",
+      "size": 6217451
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/fem.love - \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0440\u0443\u044e \u0417\u0430\u043a\u0430\u0442 [Vasasasasa]/album.jpg",
+      "size": 17581
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/fem.love - \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0440\u0443\u044e \u0417\u0430\u043a\u0430\u0442 [Vasasasasa]/background.jpg",
+      "size": 86247
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/fem.love - \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0440\u0443\u044e \u0417\u0430\u043a\u0430\u0442 [Vasasasasa]/notes.chart",
+      "size": 97384
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/fem.love - \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0440\u0443\u044e \u0417\u0430\u043a\u0430\u0442 [Vasasasasa]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 01/fem.love - \u0424\u043e\u0442\u043e\u0433\u0440\u0430\u0444\u0438\u0440\u0443\u044e \u0417\u0430\u043a\u0430\u0442 [Vasasasasa]/song.ogg",
+      "size": 4550783
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bang Camaro - Can't Stop the Night [KhromaticScale]/album.png",
+      "size": 478072
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bang Camaro - Can't Stop the Night [KhromaticScale]/background.jpg",
+      "size": 417319
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bang Camaro - Can't Stop the Night [KhromaticScale]/notes.chart",
+      "size": 60181
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bang Camaro - Can't Stop the Night [KhromaticScale]/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bang Camaro - Can't Stop the Night [KhromaticScale]/song.ogg",
+      "size": 7878352
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bathory - Born for Burning [Stickheadz32]/album.jpg",
+      "size": 55255
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bathory - Born for Burning [Stickheadz32]/background.jpg",
+      "size": 97343
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bathory - Born for Burning [Stickheadz32]/notes.chart",
+      "size": 68200
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bathory - Born for Burning [Stickheadz32]/song.ini",
+      "size": 342
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bathory - Born for Burning [Stickheadz32]/song.ogg",
+      "size": 9920370
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bear Ghost - Necromancin Dancin [Caret]/album.png",
+      "size": 1660498
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bear Ghost - Necromancin Dancin [Caret]/background.jpg",
+      "size": 626661
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bear Ghost - Necromancin Dancin [Caret]/notes.chart",
+      "size": 37553
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bear Ghost - Necromancin Dancin [Caret]/song.ini",
+      "size": 725
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Bear Ghost - Necromancin Dancin [Caret]/song.ogg",
+      "size": 7350737
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Blue \u00d6yster Cult - Hungry Boys [Sygenysis]/album.png",
+      "size": 625453
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Blue \u00d6yster Cult - Hungry Boys [Sygenysis]/background.jpg",
+      "size": 976829
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Blue \u00d6yster Cult - Hungry Boys [Sygenysis]/guitar.ogg",
+      "size": 7157107
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Blue \u00d6yster Cult - Hungry Boys [Sygenysis]/notes.mid",
+      "size": 12946
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Blue \u00d6yster Cult - Hungry Boys [Sygenysis]/song.ini",
+      "size": 928
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Coheed and Cambria - Ten Speed (Of God's Blood & Burial) [Deltarak]/album.png",
+      "size": 77390
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Coheed and Cambria - Ten Speed (Of God's Blood & Burial) [Deltarak]/background.jpg",
+      "size": 716677
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Coheed and Cambria - Ten Speed (Of God's Blood & Burial) [Deltarak]/notes.chart",
+      "size": 43644
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Coheed and Cambria - Ten Speed (Of God's Blood & Burial) [Deltarak]/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Coheed and Cambria - Ten Speed (Of God's Blood & Burial) [Deltarak]/song.ogg",
+      "size": 7934391
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/DOLL$BOXX - Fragrance [Spachi]/album.png",
+      "size": 445434
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/DOLL$BOXX - Fragrance [Spachi]/background.jpg",
+      "size": 215569
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/DOLL$BOXX - Fragrance [Spachi]/notes.chart",
+      "size": 55043
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/DOLL$BOXX - Fragrance [Spachi]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/DOLL$BOXX - Fragrance [Spachi]/song.ogg",
+      "size": 8855125
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Dimension - Rise [OHM]/album.png",
+      "size": 210582
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Dimension - Rise [OHM]/background.jpg",
+      "size": 878456
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Dimension - Rise [OHM]/notes.chart",
+      "size": 44727
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Dimension - Rise [OHM]/song.ini",
+      "size": 422
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Dimension - Rise [OHM]/song.ogg",
+      "size": 12024448
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Echopraxia - Mortal Coil [ACJGaming89]/album.jpg",
+      "size": 119573
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Echopraxia - Mortal Coil [ACJGaming89]/background.jpg",
+      "size": 664845
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Echopraxia - Mortal Coil [ACJGaming89]/notes.chart",
+      "size": 33153
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Echopraxia - Mortal Coil [ACJGaming89]/song.ini",
+      "size": 462
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Echopraxia - Mortal Coil [ACJGaming89]/song.ogg",
+      "size": 8281774
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Finger Eleven - Slow Chemical [Nat]/album.png",
+      "size": 470704
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Finger Eleven - Slow Chemical [Nat]/background.jpg",
+      "size": 828445
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Finger Eleven - Slow Chemical [Nat]/notes.chart",
+      "size": 25265
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Finger Eleven - Slow Chemical [Nat]/song.ini",
+      "size": 514
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Finger Eleven - Slow Chemical [Nat]/song.ogg",
+      "size": 6077361
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Frank Klepacki - Grinder [Stickheadz32]/album.jpg",
+      "size": 67155
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Frank Klepacki - Grinder [Stickheadz32]/background.png",
+      "size": 545207
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Frank Klepacki - Grinder [Stickheadz32]/notes.chart",
+      "size": 19723
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Frank Klepacki - Grinder [Stickheadz32]/song.ini",
+      "size": 333
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Frank Klepacki - Grinder [Stickheadz32]/song.ogg",
+      "size": 4546496
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Ice Nine Kills - Hip to Be Scared [Miscellany]/album.png",
+      "size": 586398
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Ice Nine Kills - Hip to Be Scared [Miscellany]/background.jpg",
+      "size": 249876
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Ice Nine Kills - Hip to Be Scared [Miscellany]/guitar.ogg",
+      "size": 6670354
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Ice Nine Kills - Hip to Be Scared [Miscellany]/notes.chart",
+      "size": 39422
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Ice Nine Kills - Hip to Be Scared [Miscellany]/song.ini",
+      "size": 871
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Kurousa-P - Acute [Caret]/album.png",
+      "size": 509491
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Kurousa-P - Acute [Caret]/background.jpg",
+      "size": 606116
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Kurousa-P - Acute [Caret]/notes.chart",
+      "size": 45329
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Kurousa-P - Acute [Caret]/song.ini",
+      "size": 481
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Kurousa-P - Acute [Caret]/song.ogg",
+      "size": 8229436
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Machine Head - Circle the Drain [KhromaticScale]/album.png",
+      "size": 257176
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Machine Head - Circle the Drain [KhromaticScale]/background.jpg",
+      "size": 461795
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Machine Head - Circle the Drain [KhromaticScale]/notes.chart",
+      "size": 76739
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Machine Head - Circle the Drain [KhromaticScale]/song.ini",
+      "size": 486
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Machine Head - Circle the Drain [KhromaticScale]/song.ogg",
+      "size": 7604397
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Muse - Psycho [OHM]/album.png",
+      "size": 307270
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Muse - Psycho [OHM]/background.jpg",
+      "size": 392884
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Muse - Psycho [OHM]/notes.chart",
+      "size": 42512
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Muse - Psycho [OHM]/song.ini",
+      "size": 483
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Muse - Psycho [OHM]/song.ogg",
+      "size": 10018258
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nekonomicon - Heroes Out of Time (feat. Kylee Brielle) [Spachi]/album.png",
+      "size": 262589
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nekonomicon - Heroes Out of Time (feat. Kylee Brielle) [Spachi]/background.jpg",
+      "size": 144558
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nekonomicon - Heroes Out of Time (feat. Kylee Brielle) [Spachi]/notes.chart",
+      "size": 37142
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nekonomicon - Heroes Out of Time (feat. Kylee Brielle) [Spachi]/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nekonomicon - Heroes Out of Time (feat. Kylee Brielle) [Spachi]/song.ogg",
+      "size": 6948555
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nothing More - Salem (Burn the Witch) [Caret]/album.png",
+      "size": 220953
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nothing More - Salem (Burn the Witch) [Caret]/background.jpg",
+      "size": 656894
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nothing More - Salem (Burn the Witch) [Caret]/notes.chart",
+      "size": 42644
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nothing More - Salem (Burn the Witch) [Caret]/song.ini",
+      "size": 769
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Nothing More - Salem (Burn the Witch) [Caret]/song.ogg",
+      "size": 7199221
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Primus - DMV [7777villain]/album.png",
+      "size": 623141
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Primus - DMV [7777villain]/background.png",
+      "size": 1727510
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Primus - DMV [7777villain]/notes.chart",
+      "size": 53258
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Primus - DMV [7777villain]/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 02/Primus - DMV [7777villain]/song.ogg",
+      "size": 10246034
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/3 Inches of Blood - Leather Lord [Miscellany]/album.jpg",
+      "size": 140016
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/3 Inches of Blood - Leather Lord [Miscellany]/background.jpg",
+      "size": 775326
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/3 Inches of Blood - Leather Lord [Miscellany]/guitar.ogg",
+      "size": 10775502
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/3 Inches of Blood - Leather Lord [Miscellany]/notes.chart",
+      "size": 52425
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/3 Inches of Blood - Leather Lord [Miscellany]/song.ini",
+      "size": 581
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Button Masher - Come Back [OHM]/album.png",
+      "size": 580319
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Button Masher - Come Back [OHM]/background.jpg",
+      "size": 344192
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Button Masher - Come Back [OHM]/notes.chart",
+      "size": 41055
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Button Masher - Come Back [OHM]/song.ini",
+      "size": 455
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Button Masher - Come Back [OHM]/song.ogg",
+      "size": 10623289
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Crystal Lake - Disobey [Miscellany]/album.png",
+      "size": 207005
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Crystal Lake - Disobey [Miscellany]/background.jpg",
+      "size": 404427
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Crystal Lake - Disobey [Miscellany]/guitar.ogg",
+      "size": 7863533
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Crystal Lake - Disobey [Miscellany]/notes.chart",
+      "size": 23635
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Crystal Lake - Disobey [Miscellany]/song.ini",
+      "size": 570
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Infinity Shred - Long May You Run [3-UP]/album.png",
+      "size": 543865
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Infinity Shred - Long May You Run [3-UP]/background.jpg",
+      "size": 3344909
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Infinity Shred - Long May You Run [3-UP]/notes.chart",
+      "size": 51551
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Infinity Shred - Long May You Run [3-UP]/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Infinity Shred - Long May You Run [3-UP]/song.ogg",
+      "size": 11090304
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Makari - No Longer [Pizza22]/album.png",
+      "size": 276838
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Makari - No Longer [Pizza22]/background.jpg",
+      "size": 113240
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Makari - No Longer [Pizza22]/notes.chart",
+      "size": 45639
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Makari - No Longer [Pizza22]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Makari - No Longer [Pizza22]/song.ogg",
+      "size": 7316479
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Omnium Gatherum - Who Could Say [Miscellany]/album.png",
+      "size": 587998
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Omnium Gatherum - Who Could Say [Miscellany]/background.jpg",
+      "size": 620905
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Omnium Gatherum - Who Could Say [Miscellany]/guitar.ogg",
+      "size": 8943475
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Omnium Gatherum - Who Could Say [Miscellany]/notes.chart",
+      "size": 32147
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Omnium Gatherum - Who Could Say [Miscellany]/song.ini",
+      "size": 615
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Patrick Carney - BoJack's Theme [Vasasasasa]/album.jpg",
+      "size": 152514
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Patrick Carney - BoJack's Theme [Vasasasasa]/background.jpg",
+      "size": 162916
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Patrick Carney - BoJack's Theme [Vasasasasa]/notes.chart",
+      "size": 27855
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Patrick Carney - BoJack's Theme [Vasasasasa]/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Patrick Carney - BoJack's Theme [Vasasasasa]/song.ogg",
+      "size": 8042130
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Rafa Rodriguez - Ideally Attached [DaiJyoubs]/album.png",
+      "size": 568912
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Rafa Rodriguez - Ideally Attached [DaiJyoubs]/background.jpg",
+      "size": 1920321
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Rafa Rodriguez - Ideally Attached [DaiJyoubs]/notes.chart",
+      "size": 29861
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Rafa Rodriguez - Ideally Attached [DaiJyoubs]/song.ini",
+      "size": 568
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Rafa Rodriguez - Ideally Attached [DaiJyoubs]/song.ogg",
+      "size": 6644263
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Sonic Youth - Catholic Block [7777villain]/album.png",
+      "size": 669388
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Sonic Youth - Catholic Block [7777villain]/background.jpg",
+      "size": 408807
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Sonic Youth - Catholic Block [7777villain]/notes.chart",
+      "size": 34643
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Sonic Youth - Catholic Block [7777villain]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Sonic Youth - Catholic Block [7777villain]/song.ogg",
+      "size": 6755574
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Taeko Onuki - 4 00 AM [Haggis]/album.png",
+      "size": 358704
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Taeko Onuki - 4 00 AM [Haggis]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Taeko Onuki - 4 00 AM [Haggis]/notes.chart",
+      "size": 39896
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Taeko Onuki - 4 00 AM [Haggis]/song.ini",
+      "size": 312
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Taeko Onuki - 4 00 AM [Haggis]/song.ogg",
+      "size": 10766282
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Tom Morello - Let's Get the Party Started (feat. Bring Me the Horizon) [Spachi]/album.png",
+      "size": 351403
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Tom Morello - Let's Get the Party Started (feat. Bring Me the Horizon) [Spachi]/background.jpg",
+      "size": 205268
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Tom Morello - Let's Get the Party Started (feat. Bring Me the Horizon) [Spachi]/notes.chart",
+      "size": 35911
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Tom Morello - Let's Get the Party Started (feat. Bring Me the Horizon) [Spachi]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Tom Morello - Let's Get the Party Started (feat. Bring Me the Horizon) [Spachi]/song.ogg",
+      "size": 7008328
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Until I Wake - Octane [Miscellany]/album.png",
+      "size": 464706
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Until I Wake - Octane [Miscellany]/background.jpg",
+      "size": 114997
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Until I Wake - Octane [Miscellany]/guitar.ogg",
+      "size": 6822450
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Until I Wake - Octane [Miscellany]/notes.chart",
+      "size": 28798
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Until I Wake - Octane [Miscellany]/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Val Kilmer - Skeet Surfin' [Stickheadz32]/album.jpg",
+      "size": 61525
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Val Kilmer - Skeet Surfin' [Stickheadz32]/background.jpg",
+      "size": 125646
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Val Kilmer - Skeet Surfin' [Stickheadz32]/notes.chart",
+      "size": 47549
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Val Kilmer - Skeet Surfin' [Stickheadz32]/song.ini",
+      "size": 332
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Val Kilmer - Skeet Surfin' [Stickheadz32]/song.ogg",
+      "size": 4750344
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Wilco - Impossible Germany [7777villain]/album.png",
+      "size": 543208
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Wilco - Impossible Germany [7777villain]/background.png",
+      "size": 2629353
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Wilco - Impossible Germany [7777villain]/notes.chart",
+      "size": 34960
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Wilco - Impossible Germany [7777villain]/song.ini",
+      "size": 481
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Wilco - Impossible Germany [7777villain]/song.ogg",
+      "size": 11479072
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Yousei Teikoku - Geki [Spachi]/album.png",
+      "size": 213709
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Yousei Teikoku - Geki [Spachi]/background.jpg",
+      "size": 125925
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Yousei Teikoku - Geki [Spachi]/notes.chart",
+      "size": 60339
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Yousei Teikoku - Geki [Spachi]/song.ini",
+      "size": 445
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Yousei Teikoku - Geki [Spachi]/song.ogg",
+      "size": 8919946
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Zsasz - Obaka na Pop [Spachi]/album.png",
+      "size": 412095
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Zsasz - Obaka na Pop [Spachi]/background.jpg",
+      "size": 278785
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Zsasz - Obaka na Pop [Spachi]/notes.chart",
+      "size": 46419
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Zsasz - Obaka na Pop [Spachi]/song.ini",
+      "size": 366
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 03/Zsasz - Obaka na Pop [Spachi]/song.ogg",
+      "size": 8537414
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/01. Devin Townsend - Seventh Wave/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/01. Devin Townsend - Seventh Wave/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/01. Devin Townsend - Seventh Wave/notes.chart",
+      "size": 41497
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/01. Devin Townsend - Seventh Wave/song.ini",
+      "size": 554
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/01. Devin Townsend - Seventh Wave/song.ogg",
+      "size": 23286051
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/02. Devin Townsend - Life/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/02. Devin Townsend - Life/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/02. Devin Townsend - Life/notes.chart",
+      "size": 50679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/02. Devin Townsend - Life/song.ini",
+      "size": 725
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/02. Devin Townsend - Life/song.ogg",
+      "size": 15991643
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/03. Devin Townsend - Night/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/03. Devin Townsend - Night/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/03. Devin Townsend - Night/notes.chart",
+      "size": 59424
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/03. Devin Townsend - Night/song.ini",
+      "size": 839
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/03. Devin Townsend - Night/song.ogg",
+      "size": 16915154
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/04. Devin Townsend - Hide Nowhere/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/04. Devin Townsend - Hide Nowhere/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/04. Devin Townsend - Hide Nowhere/notes.chart",
+      "size": 45145
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/04. Devin Townsend - Hide Nowhere/song.ini",
+      "size": 724
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/04. Devin Townsend - Hide Nowhere/song.ogg",
+      "size": 18670996
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/05. Devin Townsend - Sister/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/05. Devin Townsend - Sister/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/05. Devin Townsend - Sister/notes.chart",
+      "size": 16492
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/05. Devin Townsend - Sister/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/05. Devin Townsend - Sister/song.ogg",
+      "size": 9788110
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/06. Devin Townsend - 3 A.M. - Voices in the Fan/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/06. Devin Townsend - 3 A.M. - Voices in the Fan/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/06. Devin Townsend - 3 A.M. - Voices in the Fan/notes.chart",
+      "size": 27360
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/06. Devin Townsend - 3 A.M. - Voices in the Fan/song.ini",
+      "size": 759
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/06. Devin Townsend - 3 A.M. - Voices in the Fan/song.ogg",
+      "size": 22324909
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/07. Devin Townsend - Greetings/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/07. Devin Townsend - Greetings/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/07. Devin Townsend - Greetings/notes.chart",
+      "size": 15902
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/07. Devin Townsend - Greetings/song.ini",
+      "size": 657
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/07. Devin Townsend - Greetings/song.ogg",
+      "size": 4899258
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/08. Devin Townsend - Regulator/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/08. Devin Townsend - Regulator/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/08. Devin Townsend - Regulator/notes.chart",
+      "size": 42131
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/08. Devin Townsend - Regulator/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/08. Devin Townsend - Regulator/song.ogg",
+      "size": 18229408
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/09. Devin Townsend - Funeral/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/09. Devin Townsend - Funeral/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/09. Devin Townsend - Funeral/notes.chart",
+      "size": 56488
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/09. Devin Townsend - Funeral/song.ini",
+      "size": 792
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/09. Devin Townsend - Funeral/song.ogg",
+      "size": 28082794
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/10. Devin Townsend - Bastard/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/10. Devin Townsend - Bastard/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/10. Devin Townsend - Bastard/notes.chart",
+      "size": 61280
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/10. Devin Townsend - Bastard/song.ini",
+      "size": 686
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/10. Devin Townsend - Bastard/song.ogg",
+      "size": 34736080
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/11. Devin Townsend - The Death of Music/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/11. Devin Townsend - The Death of Music/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/11. Devin Townsend - The Death of Music/notes.chart",
+      "size": 51562
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/11. Devin Townsend - The Death of Music/song.ini",
+      "size": 897
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/11. Devin Townsend - The Death of Music/song.ogg",
+      "size": 41177192
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/12. Devin Townsend - Thing Beyond Things/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/12. Devin Townsend - Thing Beyond Things/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/12. Devin Townsend - Thing Beyond Things/notes.chart",
+      "size": 15969
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/12. Devin Townsend - Thing Beyond Things/song.ini",
+      "size": 1136
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/12. Devin Townsend - Thing Beyond Things/song.ogg",
+      "size": 15878715
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/13. Devin Townsend - Ocean Machine (Full Album)/album.png",
+      "size": 560242
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/13. Devin Townsend - Ocean Machine (Full Album)/background.jpg",
+      "size": 545822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/13. Devin Townsend - Ocean Machine (Full Album)/notes.chart",
+      "size": 513145
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/13. Devin Townsend - Ocean Machine (Full Album)/song.ini",
+      "size": 482
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 04 - Devin Townsend - Ocean Machine (Full Album) [Sub]/13. Devin Townsend - Ocean Machine (Full Album)/song.ogg",
+      "size": 85635952
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Anaal Nathrakh - Endarkenment [Miscellany]/album.png",
+      "size": 319829
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Anaal Nathrakh - Endarkenment [Miscellany]/background.jpg",
+      "size": 270490
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Anaal Nathrakh - Endarkenment [Miscellany]/guitar.ogg",
+      "size": 10321810
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Anaal Nathrakh - Endarkenment [Miscellany]/notes.chart",
+      "size": 54846
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Anaal Nathrakh - Endarkenment [Miscellany]/song.ini",
+      "size": 672
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/BABYMETAL - Headbangeeeeerrrrr!!!!! [Spachi]/album.png",
+      "size": 345399
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/BABYMETAL - Headbangeeeeerrrrr!!!!! [Spachi]/background.jpg",
+      "size": 120253
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/BABYMETAL - Headbangeeeeerrrrr!!!!! [Spachi]/notes.chart",
+      "size": 56313
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/BABYMETAL - Headbangeeeeerrrrr!!!!! [Spachi]/song.ini",
+      "size": 615
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/BABYMETAL - Headbangeeeeerrrrr!!!!! [Spachi]/song.ogg",
+      "size": 8530371
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Edward Johnson - Everyday [Sygenysis]/album.png",
+      "size": 144191
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Edward Johnson - Everyday [Sygenysis]/background.jpg",
+      "size": 559893
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Edward Johnson - Everyday [Sygenysis]/guitar.ogg",
+      "size": 7914119
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Edward Johnson - Everyday [Sygenysis]/notes.mid",
+      "size": 19157
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Edward Johnson - Everyday [Sygenysis]/song.ini",
+      "size": 942
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Eidola - Counterfeit Shrines [Pizza22]/album.png",
+      "size": 344935
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Eidola - Counterfeit Shrines [Pizza22]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Eidola - Counterfeit Shrines [Pizza22]/notes.chart",
+      "size": 82303
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Eidola - Counterfeit Shrines [Pizza22]/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Eidola - Counterfeit Shrines [Pizza22]/song.ogg",
+      "size": 8717764
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Elliott Smith - Southern Belle [7777villain]/album.png",
+      "size": 215773
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Elliott Smith - Southern Belle [7777villain]/background.jpg",
+      "size": 345413
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Elliott Smith - Southern Belle [7777villain]/notes.chart",
+      "size": 33099
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Elliott Smith - Southern Belle [7777villain]/song.ini",
+      "size": 511
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Elliott Smith - Southern Belle [7777villain]/song.ogg",
+      "size": 7593619
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Iron Maiden - Invaders [FrOoGle]/album.png",
+      "size": 754299
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Iron Maiden - Invaders [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Iron Maiden - Invaders [FrOoGle]/guitar.ogg",
+      "size": 4664850
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Iron Maiden - Invaders [FrOoGle]/notes.mid",
+      "size": 26173
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Iron Maiden - Invaders [FrOoGle]/song.ini",
+      "size": 723
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Moron Police - Captain Awkward [Caret]/album.png",
+      "size": 498213
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Moron Police - Captain Awkward [Caret]/background.jpg",
+      "size": 484096
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Moron Police - Captain Awkward [Caret]/notes.chart",
+      "size": 50507
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Moron Police - Captain Awkward [Caret]/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Moron Police - Captain Awkward [Caret]/song.ogg",
+      "size": 9212260
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Odeon - playlove [Caret]/album.png",
+      "size": 39779
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Odeon - playlove [Caret]/background.jpg",
+      "size": 63125
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Odeon - playlove [Caret]/notes.chart",
+      "size": 35044
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Odeon - playlove [Caret]/song.ini",
+      "size": 685
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Odeon - playlove [Caret]/song.ogg",
+      "size": 6494128
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Pierce the Veil - Dive In [KhromaticScale]/album.png",
+      "size": 623083
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Pierce the Veil - Dive In [KhromaticScale]/background.jpg",
+      "size": 932430
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Pierce the Veil - Dive In [KhromaticScale]/notes.chart",
+      "size": 58256
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Pierce the Veil - Dive In [KhromaticScale]/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Pierce the Veil - Dive In [KhromaticScale]/song.ogg",
+      "size": 9435613
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Simon and Garfunkel - The Boxer [7777villain]/album.png",
+      "size": 458419
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Simon and Garfunkel - The Boxer [7777villain]/background.png",
+      "size": 2929581
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Simon and Garfunkel - The Boxer [7777villain]/notes.chart",
+      "size": 51462
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Simon and Garfunkel - The Boxer [7777villain]/song.ini",
+      "size": 538
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Simon and Garfunkel - The Boxer [7777villain]/song.ogg",
+      "size": 9771999
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Street - Sakura Fubuki [OHM]/album.png",
+      "size": 546062
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Street - Sakura Fubuki [OHM]/background.jpg",
+      "size": 1422597
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Street - Sakura Fubuki [OHM]/notes.chart",
+      "size": 18450
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Street - Sakura Fubuki [OHM]/song.ini",
+      "size": 474
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Street - Sakura Fubuki [OHM]/song.ogg",
+      "size": 4244489
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Strung Out - The Animal and the Machine [FrOoGle]/album.png",
+      "size": 41009
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Strung Out - The Animal and the Machine [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Strung Out - The Animal and the Machine [FrOoGle]/guitar.ogg",
+      "size": 4587832
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Strung Out - The Animal and the Machine [FrOoGle]/notes.mid",
+      "size": 26302
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Strung Out - The Animal and the Machine [FrOoGle]/song.ini",
+      "size": 891
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/TEXTURES - Laments of an Icarus [OHM]/album.png",
+      "size": 564231
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/TEXTURES - Laments of an Icarus [OHM]/background.jpg",
+      "size": 1514273
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/TEXTURES - Laments of an Icarus [OHM]/notes.chart",
+      "size": 56674
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/TEXTURES - Laments of an Icarus [OHM]/song.ini",
+      "size": 529
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/TEXTURES - Laments of an Icarus [OHM]/song.ogg",
+      "size": 7959801
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Trivium - In the Court of the Dragon [Miscellany]/album.png",
+      "size": 792191
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Trivium - In the Court of the Dragon [Miscellany]/background.jpg",
+      "size": 693512
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Trivium - In the Court of the Dragon [Miscellany]/guitar.ogg",
+      "size": 10567966
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Trivium - In the Court of the Dragon [Miscellany]/notes.chart",
+      "size": 56096
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Trivium - In the Court of the Dragon [Miscellany]/song.ini",
+      "size": 697
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Upon a Burning Body - Desperado [KhromaticScale]/album.png",
+      "size": 571065
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Upon a Burning Body - Desperado [KhromaticScale]/background.png",
+      "size": 3115533
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Upon a Burning Body - Desperado [KhromaticScale]/notes.chart",
+      "size": 40838
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Upon a Burning Body - Desperado [KhromaticScale]/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/Upon a Burning Body - Desperado [KhromaticScale]/song.ogg",
+      "size": 6776924
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/\u00dc Blue - Shreddy vs Margaret [Pizza22]/album.png",
+      "size": 454343
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/\u00dc Blue - Shreddy vs Margaret [Pizza22]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/\u00dc Blue - Shreddy vs Margaret [Pizza22]/notes.chart",
+      "size": 37328
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/\u00dc Blue - Shreddy vs Margaret [Pizza22]/song.ini",
+      "size": 366
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 05/\u00dc Blue - Shreddy vs Margaret [Pizza22]/song.ogg",
+      "size": 5492851
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/3 - The End Is Begun [Nat]/album.png",
+      "size": 411738
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/3 - The End Is Begun [Nat]/background.jpg",
+      "size": 643661
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/3 - The End Is Begun [Nat]/notes.chart",
+      "size": 36826
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/3 - The End Is Begun [Nat]/song.ini",
+      "size": 776
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/3 - The End Is Begun [Nat]/song.ogg",
+      "size": 14184715
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anima Tempo - Behind the Gates of a New-come [Stickheadz32]/album.jpg",
+      "size": 97152
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anima Tempo - Behind the Gates of a New-come [Stickheadz32]/background.jpg",
+      "size": 143766
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anima Tempo - Behind the Gates of a New-come [Stickheadz32]/notes.chart",
+      "size": 52562
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anima Tempo - Behind the Gates of a New-come [Stickheadz32]/song.ini",
+      "size": 422
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anima Tempo - Behind the Gates of a New-come [Stickheadz32]/song.ogg",
+      "size": 8411784
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anthriel - Under Burning Skies [Peddy]/album.png",
+      "size": 588326
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anthriel - Under Burning Skies [Peddy]/background.jpg",
+      "size": 232887
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anthriel - Under Burning Skies [Peddy]/notes.chart",
+      "size": 47596
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anthriel - Under Burning Skies [Peddy]/song.ini",
+      "size": 673
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Anthriel - Under Burning Skies [Peddy]/song.ogg",
+      "size": 10024619
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Autopsy - Burnt to a Fuck [Stickheadz32]/album.jpg",
+      "size": 27371
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Autopsy - Burnt to a Fuck [Stickheadz32]/background.jpg",
+      "size": 244519
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Autopsy - Burnt to a Fuck [Stickheadz32]/notes.chart",
+      "size": 58300
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Autopsy - Burnt to a Fuck [Stickheadz32]/song.ini",
+      "size": 310
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Autopsy - Burnt to a Fuck [Stickheadz32]/song.ogg",
+      "size": 7111285
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Beast in Black - Bella Donna [HattMeafy]/album.png",
+      "size": 661105
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Beast in Black - Bella Donna [HattMeafy]/background.jpg",
+      "size": 1183358
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Beast in Black - Bella Donna [HattMeafy]/notes.chart",
+      "size": 40506
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Beast in Black - Bella Donna [HattMeafy]/song.ini",
+      "size": 344
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Beast in Black - Bella Donna [HattMeafy]/song.ogg",
+      "size": 7598795
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Car Bomb - HeLa [OHM]/album.jpg",
+      "size": 53696
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Car Bomb - HeLa [OHM]/background.jpg",
+      "size": 1681941
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Car Bomb - HeLa [OHM]/notes.chart",
+      "size": 37629
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Car Bomb - HeLa [OHM]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Car Bomb - HeLa [OHM]/song.ogg",
+      "size": 6382088
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Infant Annihilator - A Rape of Sirens [Miscellany]/album.png",
+      "size": 102954
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Infant Annihilator - A Rape of Sirens [Miscellany]/background.jpg",
+      "size": 490187
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Infant Annihilator - A Rape of Sirens [Miscellany]/guitar.ogg",
+      "size": 10608589
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Infant Annihilator - A Rape of Sirens [Miscellany]/notes.chart",
+      "size": 57622
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Infant Annihilator - A Rape of Sirens [Miscellany]/song.ini",
+      "size": 682
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Joe Satriani - Raspberry Jam Delta-V [Raspberriel]/album.png",
+      "size": 218487
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Joe Satriani - Raspberry Jam Delta-V [Raspberriel]/background.jpg",
+      "size": 114880
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Joe Satriani - Raspberry Jam Delta-V [Raspberriel]/guitar.ogg",
+      "size": 10332750
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Joe Satriani - Raspberry Jam Delta-V [Raspberriel]/notes.mid",
+      "size": 31684
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Joe Satriani - Raspberry Jam Delta-V [Raspberriel]/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Lou Reed and Metallica - The View [7777villain]/album.png",
+      "size": 314837
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Lou Reed and Metallica - The View [7777villain]/background.png",
+      "size": 188929
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Lou Reed and Metallica - The View [7777villain]/notes.chart",
+      "size": 47075
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Lou Reed and Metallica - The View [7777villain]/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Lou Reed and Metallica - The View [7777villain]/song.ogg",
+      "size": 10898815
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Moon Symphony - Regulus [Mintorment]/album.png",
+      "size": 451663
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Moon Symphony - Regulus [Mintorment]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Moon Symphony - Regulus [Mintorment]/notes.chart",
+      "size": 30837
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Moon Symphony - Regulus [Mintorment]/song.ini",
+      "size": 588
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Moon Symphony - Regulus [Mintorment]/song.ogg",
+      "size": 4987746
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Powerwolf - Night of the Werewolves [KhromaticScale]/album.png",
+      "size": 426868
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Powerwolf - Night of the Werewolves [KhromaticScale]/background.png",
+      "size": 2748140
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Powerwolf - Night of the Werewolves [KhromaticScale]/notes.chart",
+      "size": 36875
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Powerwolf - Night of the Werewolves [KhromaticScale]/song.ini",
+      "size": 452
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Powerwolf - Night of the Werewolves [KhromaticScale]/song.ogg",
+      "size": 9112606
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Scythelord - Just a Memory [Stickheadz32]/album.jpg",
+      "size": 54302
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Scythelord - Just a Memory [Stickheadz32]/background.jpg",
+      "size": 664806
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Scythelord - Just a Memory [Stickheadz32]/notes.chart",
+      "size": 33928
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Scythelord - Just a Memory [Stickheadz32]/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Scythelord - Just a Memory [Stickheadz32]/song.ogg",
+      "size": 5820854
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Seven Spires - Gods of Debauchery [Deltarak]/album.png",
+      "size": 467986
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Seven Spires - Gods of Debauchery [Deltarak]/background.jpg",
+      "size": 644314
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Seven Spires - Gods of Debauchery [Deltarak]/notes.chart",
+      "size": 57881
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Seven Spires - Gods of Debauchery [Deltarak]/song.ini",
+      "size": 603
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Seven Spires - Gods of Debauchery [Deltarak]/song.ogg",
+      "size": 11340796
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Sianvar - Psychosis Succumbing [Pizza22]/album.png",
+      "size": 393129
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Sianvar - Psychosis Succumbing [Pizza22]/background.jpg",
+      "size": 201698
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Sianvar - Psychosis Succumbing [Pizza22]/notes.chart",
+      "size": 22634
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Sianvar - Psychosis Succumbing [Pizza22]/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Sianvar - Psychosis Succumbing [Pizza22]/song.ogg",
+      "size": 5892060
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Tatsh - Xevel [Mintorment]/album.png",
+      "size": 427638
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Tatsh - Xevel [Mintorment]/background.jpg",
+      "size": 502291
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Tatsh - Xevel [Mintorment]/notes.chart",
+      "size": 34867
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Tatsh - Xevel [Mintorment]/song.ini",
+      "size": 924
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Tatsh - Xevel [Mintorment]/song.ogg",
+      "size": 5562691
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Vixen - Angels from the Dust [Sygenysis]/album.png",
+      "size": 544192
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Vixen - Angels from the Dust [Sygenysis]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Vixen - Angels from the Dust [Sygenysis]/guitar.ogg",
+      "size": 8065809
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Vixen - Angels from the Dust [Sygenysis]/notes.mid",
+      "size": 15399
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 06/Vixen - Angels from the Dust [Sygenysis]/song.ini",
+      "size": 978
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Alyag - OptiMystic [Deltarak]/album.png",
+      "size": 85772
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Alyag - OptiMystic [Deltarak]/background.jpg",
+      "size": 141371
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Alyag - OptiMystic [Deltarak]/notes.chart",
+      "size": 40642
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Alyag - OptiMystic [Deltarak]/song.ini",
+      "size": 465
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Alyag - OptiMystic [Deltarak]/song.ogg",
+      "size": 8395585
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Corallium [Spachi, DaiJyoubs]/album.png",
+      "size": 409871
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Corallium [Spachi, DaiJyoubs]/background.jpg",
+      "size": 379250
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Corallium [Spachi, DaiJyoubs]/highway.png",
+      "size": 156645
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Corallium [Spachi, DaiJyoubs]/notes.chart",
+      "size": 51805
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Corallium [Spachi, DaiJyoubs]/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Corallium [Spachi, DaiJyoubs]/song.ogg",
+      "size": 8097511
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Hibana [Spachi]/album.png",
+      "size": 409871
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Hibana [Spachi]/background.jpg",
+      "size": 582776
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Hibana [Spachi]/highway.png",
+      "size": 156645
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Hibana [Spachi]/notes.chart",
+      "size": 57523
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Hibana [Spachi]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Hibana [Spachi]/song.ogg",
+      "size": 7952166
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Sense [Spachi]/album.png",
+      "size": 409871
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Sense [Spachi]/background.jpg",
+      "size": 657606
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Sense [Spachi]/highway.png",
+      "size": 156645
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Sense [Spachi]/notes.chart",
+      "size": 94247
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Sense [Spachi]/song.ini",
+      "size": 466
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/BAND-MAID - Sense [Spachi]/song.ogg",
+      "size": 6774145
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Bayside - The Wrong Way [Nat]/album.png",
+      "size": 387185
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Bayside - The Wrong Way [Nat]/background.jpg",
+      "size": 655182
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Bayside - The Wrong Way [Nat]/notes.chart",
+      "size": 32504
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Bayside - The Wrong Way [Nat]/song.ini",
+      "size": 385
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Bayside - The Wrong Way [Nat]/song.ogg",
+      "size": 11634304
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Carcass - Heartwork [FrOoGle]/album.png",
+      "size": 380554
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Carcass - Heartwork [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Carcass - Heartwork [FrOoGle]/guitar.ogg",
+      "size": 6811030
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Carcass - Heartwork [FrOoGle]/notes.mid",
+      "size": 27821
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Carcass - Heartwork [FrOoGle]/song.ini",
+      "size": 766
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Gama Bomb - Give Me Leather [Nat]/album.png",
+      "size": 520334
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Gama Bomb - Give Me Leather [Nat]/background.jpg",
+      "size": 543648
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Gama Bomb - Give Me Leather [Nat]/notes.chart",
+      "size": 52574
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Gama Bomb - Give Me Leather [Nat]/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Gama Bomb - Give Me Leather [Nat]/song.ogg",
+      "size": 13695800
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/HyperioN - Driller Killer [Sygenysis]/album.png",
+      "size": 575623
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/HyperioN - Driller Killer [Sygenysis]/background.jpg",
+      "size": 601952
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/HyperioN - Driller Killer [Sygenysis]/guitar.ogg",
+      "size": 8507025
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/HyperioN - Driller Killer [Sygenysis]/notes.mid",
+      "size": 23230
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/HyperioN - Driller Killer [Sygenysis]/song.ini",
+      "size": 865
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Jikuu Kaizoku Seven Seas - Parallel World [Sygenysis}/album.png",
+      "size": 86310
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Jikuu Kaizoku Seven Seas - Parallel World [Sygenysis}/background.jpg",
+      "size": 598977
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Jikuu Kaizoku Seven Seas - Parallel World [Sygenysis}/guitar.ogg",
+      "size": 7016220
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Jikuu Kaizoku Seven Seas - Parallel World [Sygenysis}/notes.mid",
+      "size": 14438
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Jikuu Kaizoku Seven Seas - Parallel World [Sygenysis}/song.ini",
+      "size": 989
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Kamelot - When the Lights Are Down [Peddy]/album.png",
+      "size": 484453
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Kamelot - When the Lights Are Down [Peddy]/background.jpg",
+      "size": 343792
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Kamelot - When the Lights Are Down [Peddy]/notes.chart",
+      "size": 43929
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Kamelot - When the Lights Are Down [Peddy]/song.ini",
+      "size": 335
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Kamelot - When the Lights Are Down [Peddy]/song.ogg",
+      "size": 7299073
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Lost Society - Blood on Your Hands [HattMeafy, Miscellany]/album.png",
+      "size": 467520
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Lost Society - Blood on Your Hands [HattMeafy, Miscellany]/background.jpg",
+      "size": 350799
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Lost Society - Blood on Your Hands [HattMeafy, Miscellany]/notes.chart",
+      "size": 50496
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Lost Society - Blood on Your Hands [HattMeafy, Miscellany]/song.ini",
+      "size": 731
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Lost Society - Blood on Your Hands [HattMeafy, Miscellany]/song.ogg",
+      "size": 7590536
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Seda - King Aura [OHM]/album.png",
+      "size": 507305
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Seda - King Aura [OHM]/background.jpg",
+      "size": 548208
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Seda - King Aura [OHM]/notes.chart",
+      "size": 34472
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Seda - King Aura [OHM]/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Seda - King Aura [OHM]/song.ogg",
+      "size": 8833489
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Sepultura - Phantom Self [Haggis]/album.png",
+      "size": 538744
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Sepultura - Phantom Self [Haggis]/background.jpg",
+      "size": 293866
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Sepultura - Phantom Self [Haggis]/notes.chart",
+      "size": 64059
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Sepultura - Phantom Self [Haggis]/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Sepultura - Phantom Self [Haggis]/song.ogg",
+      "size": 11675412
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Strawberry Girls - Honeydew [Pizza22]/album.png",
+      "size": 407757
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Strawberry Girls - Honeydew [Pizza22]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Strawberry Girls - Honeydew [Pizza22]/notes.chart",
+      "size": 30063
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Strawberry Girls - Honeydew [Pizza22]/song.ini",
+      "size": 459
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/Strawberry Girls - Honeydew [Pizza22]/song.ogg",
+      "size": 6168284
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/album.png",
+      "size": 439609
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/background.jpg",
+      "size": 314487
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/background1.jpg",
+      "size": 245665
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/background2.jpg",
+      "size": 285228
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/notes.chart",
+      "size": 73320
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/song.ini",
+      "size": 1025
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/song.mp3",
+      "size": 7882108
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/TUYU - I'm Getting on the Bus to the Other World, See Ya! [Ismaya Melasrana]/video.mp4",
+      "size": 33117042
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/The Smashing Pumpkins - Geek U.S.A [7777villain]/album.png",
+      "size": 552337
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/The Smashing Pumpkins - Geek U.S.A [7777villain]/background.png",
+      "size": 2748431
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/The Smashing Pumpkins - Geek U.S.A [7777villain]/notes.chart",
+      "size": 52254
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/The Smashing Pumpkins - Geek U.S.A [7777villain]/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 07/The Smashing Pumpkins - Geek U.S.A [7777villain]/song.ogg",
+      "size": 9502300
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/01. Epicenter - Transcendence [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/01. Epicenter - Transcendence [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/01. Epicenter - Transcendence [Miscellany]/guitar.ogg",
+      "size": 12075794
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/01. Epicenter - Transcendence [Miscellany]/notes.chart",
+      "size": 74222
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/01. Epicenter - Transcendence [Miscellany]/song.ini",
+      "size": 516
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/02. Epicenter - Nightmare Visions [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/02. Epicenter - Nightmare Visions [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/02. Epicenter - Nightmare Visions [Miscellany]/guitar.ogg",
+      "size": 10648658
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/02. Epicenter - Nightmare Visions [Miscellany]/notes.chart",
+      "size": 53736
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/02. Epicenter - Nightmare Visions [Miscellany]/song.ini",
+      "size": 600
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/03. Epicenter - Firepower [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/03. Epicenter - Firepower [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/03. Epicenter - Firepower [Miscellany]/guitar.ogg",
+      "size": 14192751
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/03. Epicenter - Firepower [Miscellany]/notes.chart",
+      "size": 66553
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/03. Epicenter - Firepower [Miscellany]/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/04. Epicenter - Useless Motion [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/04. Epicenter - Useless Motion [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/04. Epicenter - Useless Motion [Miscellany]/guitar.ogg",
+      "size": 10135125
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/04. Epicenter - Useless Motion [Miscellany]/notes.chart",
+      "size": 58272
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/04. Epicenter - Useless Motion [Miscellany]/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/05. Epicenter - The Wolves [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/05. Epicenter - The Wolves [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/05. Epicenter - The Wolves [Miscellany]/guitar.ogg",
+      "size": 8430342
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/05. Epicenter - The Wolves [Miscellany]/notes.chart",
+      "size": 41077
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/05. Epicenter - The Wolves [Miscellany]/song.ini",
+      "size": 535
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/06. Epicenter - Splatterbrain [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/06. Epicenter - Splatterbrain [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/06. Epicenter - Splatterbrain [Miscellany]/guitar.ogg",
+      "size": 8479832
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/06. Epicenter - Splatterbrain [Miscellany]/notes.chart",
+      "size": 53181
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/06. Epicenter - Splatterbrain [Miscellany]/song.ini",
+      "size": 718
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/07. Epicenter - Sheepdog [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/07. Epicenter - Sheepdog [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/07. Epicenter - Sheepdog [Miscellany]/guitar.ogg",
+      "size": 11059226
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/07. Epicenter - Sheepdog [Miscellany]/notes.chart",
+      "size": 52584
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/07. Epicenter - Sheepdog [Miscellany]/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/08. Epicenter - The Collector [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/08. Epicenter - The Collector [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/08. Epicenter - The Collector [Miscellany]/guitar.ogg",
+      "size": 11328561
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/08. Epicenter - The Collector [Miscellany]/notes.chart",
+      "size": 51241
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/08. Epicenter - The Collector [Miscellany]/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/09. Epicenter - The Fugitive [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/09. Epicenter - The Fugitive [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/09. Epicenter - The Fugitive [Miscellany]/guitar.ogg",
+      "size": 11185532
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/09. Epicenter - The Fugitive [Miscellany]/notes.chart",
+      "size": 55798
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/09. Epicenter - The Fugitive [Miscellany]/song.ini",
+      "size": 521
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/10. Epicenter - Drones [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/10. Epicenter - Drones [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/10. Epicenter - Drones [Miscellany]/guitar.ogg",
+      "size": 8298620
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/10. Epicenter - Drones [Miscellany]/notes.chart",
+      "size": 25450
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/10. Epicenter - Drones [Miscellany]/song.ini",
+      "size": 535
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/11. Epicenter - Proxy War [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/11. Epicenter - Proxy War [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/11. Epicenter - Proxy War [Miscellany]/guitar.ogg",
+      "size": 1698219
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/11. Epicenter - Proxy War [Miscellany]/notes.chart",
+      "size": 12963
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/11. Epicenter - Proxy War [Miscellany]/song.ini",
+      "size": 615
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/12. Epicenter - Subversion Solo Medley [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/12. Epicenter - Subversion Solo Medley [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/12. Epicenter - Subversion Solo Medley [Miscellany]/guitar.ogg",
+      "size": 15524672
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/12. Epicenter - Subversion Solo Medley [Miscellany]/notes.chart",
+      "size": 74296
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/12. Epicenter - Subversion Solo Medley [Miscellany]/song.ini",
+      "size": 535
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/13. Epicenter - Subversion [Full Album Chart] [Miscellany]/album.png",
+      "size": 588721
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/13. Epicenter - Subversion [Full Album Chart] [Miscellany]/background.jpg",
+      "size": 942400
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/13. Epicenter - Subversion [Full Album Chart] [Miscellany]/guitar.ogg",
+      "size": 107583107
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/13. Epicenter - Subversion [Full Album Chart] [Miscellany]/notes.chart",
+      "size": 558735
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 08 - Epicenter - Subversion (Full Album) [Miscellany]/13. Epicenter - Subversion [Full Album Chart] [Miscellany]/song.ini",
+      "size": 700
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Allegaeon - Metaphobia [Miscellany]/album.png",
+      "size": 97359
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Allegaeon - Metaphobia [Miscellany]/background.jpg",
+      "size": 497340
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Allegaeon - Metaphobia [Miscellany]/guitar.ogg",
+      "size": 10979610
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Allegaeon - Metaphobia [Miscellany]/notes.chart",
+      "size": 54886
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Allegaeon - Metaphobia [Miscellany]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Battle Beast - The Lightbringer [Peddy]/album.png",
+      "size": 578134
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Battle Beast - The Lightbringer [Peddy]/background.jpg",
+      "size": 786613
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Battle Beast - The Lightbringer [Peddy]/notes.chart",
+      "size": 45465
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Battle Beast - The Lightbringer [Peddy]/song.ini",
+      "size": 344
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Battle Beast - The Lightbringer [Peddy]/song.ogg",
+      "size": 8359671
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Belle and Sebastian - Me and the Major [7777villain]/album.png",
+      "size": 455919
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Belle and Sebastian - Me and the Major [7777villain]/background.jpg",
+      "size": 371856
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Belle and Sebastian - Me and the Major [7777villain]/notes.chart",
+      "size": 75990
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Belle and Sebastian - Me and the Major [7777villain]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Belle and Sebastian - Me and the Major [7777villain]/song.ogg",
+      "size": 7171292
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Bullet for My Valentine - Parasite [FrOoGle]/album.png",
+      "size": 274990
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Bullet for My Valentine - Parasite [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Bullet for My Valentine - Parasite [FrOoGle]/guitar.ogg",
+      "size": 5826910
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Bullet for My Valentine - Parasite [FrOoGle]/notes.mid",
+      "size": 45861
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Bullet for My Valentine - Parasite [FrOoGle]/song.ini",
+      "size": 839
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/DGM - Void [Peddy]/album.png",
+      "size": 171637
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/DGM - Void [Peddy]/background.jpg",
+      "size": 164929
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/DGM - Void [Peddy]/notes.chart",
+      "size": 65374
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/DGM - Void [Peddy]/song.ini",
+      "size": 347
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/DGM - Void [Peddy]/song.ogg",
+      "size": 12542189
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Daisuke Kurosawa - Scarlet Cage [Raspberriel]/album.png",
+      "size": 378597
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Daisuke Kurosawa - Scarlet Cage [Raspberriel]/background.jpg",
+      "size": 240765
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Daisuke Kurosawa - Scarlet Cage [Raspberriel]/guitar.ogg",
+      "size": 5064448
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Daisuke Kurosawa - Scarlet Cage [Raspberriel]/notes.mid",
+      "size": 21714
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Daisuke Kurosawa - Scarlet Cage [Raspberriel]/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Dimmu Borgir - Lightbringer [Deltarak]/album.png",
+      "size": 445706
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Dimmu Borgir - Lightbringer [Deltarak]/background.jpg",
+      "size": 1034860
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Dimmu Borgir - Lightbringer [Deltarak]/notes.chart",
+      "size": 52782
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Dimmu Borgir - Lightbringer [Deltarak]/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Dimmu Borgir - Lightbringer [Deltarak]/song.ogg",
+      "size": 11302452
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Iron Maiden - No Prayer for the Dying [7777villain]/album.png",
+      "size": 689969
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Iron Maiden - No Prayer for the Dying [7777villain]/background.jpg",
+      "size": 2199219
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Iron Maiden - No Prayer for the Dying [7777villain]/notes.chart",
+      "size": 35729
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Iron Maiden - No Prayer for the Dying [7777villain]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Iron Maiden - No Prayer for the Dying [7777villain]/song.ogg",
+      "size": 8535872
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kai - Orchestral Suite No.3 in D Major [Mintorment]/album.png",
+      "size": 455329
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kai - Orchestral Suite No.3 in D Major [Mintorment]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kai - Orchestral Suite No.3 in D Major [Mintorment]/notes.chart",
+      "size": 21723
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kai - Orchestral Suite No.3 in D Major [Mintorment]/song.ini",
+      "size": 914
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kai - Orchestral Suite No.3 in D Major [Mintorment]/song.ogg",
+      "size": 6665514
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kizan - Born from the Void [ACJGaming89]/album.jpg",
+      "size": 90436
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kizan - Born from the Void [ACJGaming89]/background.jpg",
+      "size": 530988
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kizan - Born from the Void [ACJGaming89]/notes.chart",
+      "size": 44054
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kizan - Born from the Void [ACJGaming89]/song.ini",
+      "size": 370
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kizan - Born from the Void [ACJGaming89]/song.ogg",
+      "size": 10190599
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kozen - Barricade [Caret]/album.png",
+      "size": 286134
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kozen - Barricade [Caret]/background.jpg",
+      "size": 442224
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kozen - Barricade [Caret]/notes.chart",
+      "size": 43788
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kozen - Barricade [Caret]/song.ini",
+      "size": 278
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Kozen - Barricade [Caret]/song.ogg",
+      "size": 7636030
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/LOVEBITES - A Frozen Serenade [Spachi, Haggis]/album.png",
+      "size": 442424
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/LOVEBITES - A Frozen Serenade [Spachi, Haggis]/background.jpg",
+      "size": 415560
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/LOVEBITES - A Frozen Serenade [Spachi, Haggis]/notes.chart",
+      "size": 52110
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/LOVEBITES - A Frozen Serenade [Spachi, Haggis]/song.ini",
+      "size": 781
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/LOVEBITES - A Frozen Serenade [Spachi, Haggis]/song.ogg",
+      "size": 12921974
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Rishloo - Scissorlips [Nat]/album.png",
+      "size": 433002
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Rishloo - Scissorlips [Nat]/background.png",
+      "size": 1573720
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Rishloo - Scissorlips [Nat]/notes.chart",
+      "size": 64778
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Rishloo - Scissorlips [Nat]/song.ini",
+      "size": 357
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Rishloo - Scissorlips [Nat]/song.ogg",
+      "size": 19696547
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Temple Balls - Bad Bad Bad [HattMeafy]/album.png",
+      "size": 580444
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Temple Balls - Bad Bad Bad [HattMeafy]/background.jpg",
+      "size": 422430
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Temple Balls - Bad Bad Bad [HattMeafy]/notes.chart",
+      "size": 68001
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Temple Balls - Bad Bad Bad [HattMeafy]/song.ini",
+      "size": 392
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Temple Balls - Bad Bad Bad [HattMeafy]/song.ogg",
+      "size": 7152997
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Troldhaugen - I Ordered a Taxi Driver, Not a Taxidermy [Caret]/album.png",
+      "size": 247183
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Troldhaugen - I Ordered a Taxi Driver, Not a Taxidermy [Caret]/background.jpg",
+      "size": 939333
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Troldhaugen - I Ordered a Taxi Driver, Not a Taxidermy [Caret]/notes.chart",
+      "size": 41138
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Troldhaugen - I Ordered a Taxi Driver, Not a Taxidermy [Caret]/song.ini",
+      "size": 330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/Troldhaugen - I Ordered a Taxi Driver, Not a Taxidermy [Caret]/song.ogg",
+      "size": 7775843
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/blue9devil - jevil if he italian [3-UP]/album.png",
+      "size": 244909
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/blue9devil - jevil if he italian [3-UP]/background.png",
+      "size": 143939
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/blue9devil - jevil if he italian [3-UP]/notes.chart",
+      "size": 20468
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/blue9devil - jevil if he italian [3-UP]/song.ini",
+      "size": 310
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 09/blue9devil - jevil if he italian [3-UP]/song.ogg",
+      "size": 3652172
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/A Wilhelm Scream - Jaws 3, People 0 [FrOoGle]/album.png",
+      "size": 77429
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/A Wilhelm Scream - Jaws 3, People 0 [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/A Wilhelm Scream - Jaws 3, People 0 [FrOoGle]/guitar.ogg",
+      "size": 3900966
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/A Wilhelm Scream - Jaws 3, People 0 [FrOoGle]/notes.mid",
+      "size": 21201
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/A Wilhelm Scream - Jaws 3, People 0 [FrOoGle]/song.ini",
+      "size": 814
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Armored Assault - Dead Before Dawn [Sygenysis]/album.png",
+      "size": 471951
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Armored Assault - Dead Before Dawn [Sygenysis]/background.jpg",
+      "size": 27766
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Armored Assault - Dead Before Dawn [Sygenysis]/guitar.ogg",
+      "size": 6505101
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Armored Assault - Dead Before Dawn [Sygenysis]/notes.mid",
+      "size": 18077
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Armored Assault - Dead Before Dawn [Sygenysis]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Dream Theater - The Root of All Evil [Peddy]/album.png",
+      "size": 348127
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Dream Theater - The Root of All Evil [Peddy]/background.jpg",
+      "size": 319973
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Dream Theater - The Root of All Evil [Peddy]/notes.chart",
+      "size": 72509
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Dream Theater - The Root of All Evil [Peddy]/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Dream Theater - The Root of All Evil [Peddy]/song.ogg",
+      "size": 14942286
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Firewind - All My Life [Peddy]/album.png",
+      "size": 524875
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Firewind - All My Life [Peddy]/background.jpg",
+      "size": 826394
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Firewind - All My Life [Peddy]/notes.chart",
+      "size": 36287
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Firewind - All My Life [Peddy]/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Firewind - All My Life [Peddy]/song.ogg",
+      "size": 7765129
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Gojira - ADORATION FOR NONE (feat. Randy Blythe) [KhromaticScale]/album.png",
+      "size": 401117
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Gojira - ADORATION FOR NONE (feat. Randy Blythe) [KhromaticScale]/background.jpg",
+      "size": 1057986
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Gojira - ADORATION FOR NONE (feat. Randy Blythe) [KhromaticScale]/notes.chart",
+      "size": 75766
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Gojira - ADORATION FOR NONE (feat. Randy Blythe) [KhromaticScale]/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Gojira - ADORATION FOR NONE (feat. Randy Blythe) [KhromaticScale]/song.ogg",
+      "size": 12281367
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Laur - Mutation [Mintorment]/album.png",
+      "size": 431908
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Laur - Mutation [Mintorment]/background.jpg",
+      "size": 379346
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Laur - Mutation [Mintorment]/notes.chart",
+      "size": 49785
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Laur - Mutation [Mintorment]/song.ini",
+      "size": 905
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Laur - Mutation [Mintorment]/song.ogg",
+      "size": 6655883
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Octopus - Confront the Fear Beyond [XEntombmentX]/album.png",
+      "size": 284287
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Octopus - Confront the Fear Beyond [XEntombmentX]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Octopus - Confront the Fear Beyond [XEntombmentX]/notes.chart",
+      "size": 50906
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Octopus - Confront the Fear Beyond [XEntombmentX]/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Octopus - Confront the Fear Beyond [XEntombmentX]/song.ogg",
+      "size": 9392326
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Parasite Inc. - Headfuck Rollercoaster [FrOoGle]/album.png",
+      "size": 502170
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Parasite Inc. - Headfuck Rollercoaster [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Parasite Inc. - Headfuck Rollercoaster [FrOoGle]/guitar.ogg",
+      "size": 5647657
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Parasite Inc. - Headfuck Rollercoaster [FrOoGle]/notes.mid",
+      "size": 43628
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Parasite Inc. - Headfuck Rollercoaster [FrOoGle]/song.ini",
+      "size": 850
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Scar Symmetry - Illuminoid Dream Sequence [Peddy]/album.png",
+      "size": 618821
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Scar Symmetry - Illuminoid Dream Sequence [Peddy]/background.jpg",
+      "size": 908837
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Scar Symmetry - Illuminoid Dream Sequence [Peddy]/notes.chart",
+      "size": 73611
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Scar Symmetry - Illuminoid Dream Sequence [Peddy]/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Scar Symmetry - Illuminoid Dream Sequence [Peddy]/song.ogg",
+      "size": 10694044
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Seventh Key - The Sun Will Rise [TFG85]/album.png",
+      "size": 537737
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Seventh Key - The Sun Will Rise [TFG85]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Seventh Key - The Sun Will Rise [TFG85]/notes.chart",
+      "size": 46489
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Seventh Key - The Sun Will Rise [TFG85]/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Seventh Key - The Sun Will Rise [TFG85]/song.ogg",
+      "size": 16019941
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sixx A.M. - Lies of the Beautiful People [Caret]/album.png",
+      "size": 331752
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sixx A.M. - Lies of the Beautiful People [Caret]/background.jpg",
+      "size": 732012
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sixx A.M. - Lies of the Beautiful People [Caret]/notes.chart",
+      "size": 89478
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sixx A.M. - Lies of the Beautiful People [Caret]/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sixx A.M. - Lies of the Beautiful People [Caret]/song.ogg",
+      "size": 6658441
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Stephen Taranto - Throne of the Anxious [OHM]/album.png",
+      "size": 484225
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Stephen Taranto - Throne of the Anxious [OHM]/background.jpg",
+      "size": 1329212
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Stephen Taranto - Throne of the Anxious [OHM]/notes.chart",
+      "size": 65154
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Stephen Taranto - Throne of the Anxious [OHM]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Stephen Taranto - Throne of the Anxious [OHM]/song.ogg",
+      "size": 13115434
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunrise - Live in Peace [Peddy]/album.png",
+      "size": 515130
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunrise - Live in Peace [Peddy]/background.jpg",
+      "size": 644604
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunrise - Live in Peace [Peddy]/notes.chart",
+      "size": 59418
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunrise - Live in Peace [Peddy]/song.ini",
+      "size": 308
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunrise - Live in Peace [Peddy]/song.ogg",
+      "size": 10441728
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunset Brigade - Manipulated [KhromaticScale]/album.png",
+      "size": 507450
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunset Brigade - Manipulated [KhromaticScale]/background.png",
+      "size": 2747632
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunset Brigade - Manipulated [KhromaticScale]/notes.chart",
+      "size": 41583
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunset Brigade - Manipulated [KhromaticScale]/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Sunset Brigade - Manipulated [KhromaticScale]/song.ogg",
+      "size": 8756310
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/The Red Chord - Mouthful of Precious Stones [Pizza22]/album.png",
+      "size": 441007
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/The Red Chord - Mouthful of Precious Stones [Pizza22]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/The Red Chord - Mouthful of Precious Stones [Pizza22]/notes.chart",
+      "size": 43357
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/The Red Chord - Mouthful of Precious Stones [Pizza22]/song.ini",
+      "size": 379
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/The Red Chord - Mouthful of Precious Stones [Pizza22]/song.ogg",
+      "size": 8422826
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Winds - What Is Beauty [Caret]/album.png",
+      "size": 454122
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Winds - What Is Beauty [Caret]/background.jpg",
+      "size": 1004670
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Winds - What Is Beauty [Caret]/notes.chart",
+      "size": 43069
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Winds - What Is Beauty [Caret]/song.ini",
+      "size": 611
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 10/Winds - What Is Beauty [Caret]/song.ogg",
+      "size": 8755576
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/1. Welcome to the Island/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/1. Welcome to the Island/background.jpg",
+      "size": 969036
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/1. Welcome to the Island/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/1. Welcome to the Island/notes.chart",
+      "size": 12037
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/1. Welcome to the Island/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/1. Welcome to the Island/song.ogg",
+      "size": 3026539
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/10. Georgia on My Mind (feat. Peter Criss)/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/10. Georgia on My Mind (feat. Peter Criss)/background.jpg",
+      "size": 1148846
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/10. Georgia on My Mind (feat. Peter Criss)/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/10. Georgia on My Mind (feat. Peter Criss)/notes.chart",
+      "size": 11280
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/10. Georgia on My Mind (feat. Peter Criss)/song.ini",
+      "size": 431
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/10. Georgia on My Mind (feat. Peter Criss)/song.ogg",
+      "size": 3313937
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/2. For I Have Sinned/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/2. For I Have Sinned/background.jpg",
+      "size": 411574
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/2. For I Have Sinned/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/2. For I Have Sinned/notes.chart",
+      "size": 46927
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/2. For I Have Sinned/song.ini",
+      "size": 396
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/2. For I Have Sinned/song.ogg",
+      "size": 8825217
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/3. Euphoria (feat. Carla Harvey)/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/3. Euphoria (feat. Carla Harvey)/background.jpg",
+      "size": 1149272
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/3. Euphoria (feat. Carla Harvey)/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/3. Euphoria (feat. Carla Harvey)/notes.chart",
+      "size": 52572
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/3. Euphoria (feat. Carla Harvey)/song.ini",
+      "size": 408
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/3. Euphoria (feat. Carla Harvey)/song.ogg",
+      "size": 7776265
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/4. Que Pasa (feat. Dave Mustaine)/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/4. Que Pasa (feat. Dave Mustaine)/background.jpg",
+      "size": 1018108
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/4. Que Pasa (feat. Dave Mustaine)/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/4. Que Pasa (feat. Dave Mustaine)/notes.chart",
+      "size": 41430
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/4. Que Pasa (feat. Dave Mustaine)/song.ini",
+      "size": 412
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/4. Que Pasa (feat. Dave Mustaine)/song.ogg",
+      "size": 7040026
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/5. How High the Moon/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/5. How High the Moon/background.jpg",
+      "size": 850167
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/5. How High the Moon/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/5. How High the Moon/notes.chart",
+      "size": 32260
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/5. How High the Moon/song.ini",
+      "size": 468
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/5. How High the Moon/song.ogg",
+      "size": 7407070
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/6. Creepshow/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/6. Creepshow/background.jpg",
+      "size": 666105
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/6. Creepshow/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/6. Creepshow/notes.chart",
+      "size": 33756
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/6. Creepshow/song.ini",
+      "size": 387
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/6. Creepshow/song.ogg",
+      "size": 7985438
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/7. Land of the Misfit Toys/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/7. Land of the Misfit Toys/background.jpg",
+      "size": 857724
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/7. Land of the Misfit Toys/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/7. Land of the Misfit Toys/notes.chart",
+      "size": 40702
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/7. Land of the Misfit Toys/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/7. Land of the Misfit Toys/song.ogg",
+      "size": 10115168
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/8. Crazy Little Thing Called Love (Queen cover)/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/8. Crazy Little Thing Called Love (Queen cover)/background.jpg",
+      "size": 311279
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/8. Crazy Little Thing Called Love (Queen cover)/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/8. Crazy Little Thing Called Love (Queen cover)/notes.chart",
+      "size": 21665
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/8. Crazy Little Thing Called Love (Queen cover)/song.ini",
+      "size": 466
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/8. Crazy Little Thing Called Love (Queen cover)/song.ogg",
+      "size": 5099717
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/9. This Is How I Do It/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/9. This Is How I Do It/background.jpg",
+      "size": 497245
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/9. This Is How I Do It/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/9. This Is How I Do It/notes.chart",
+      "size": 38563
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/9. This Is How I Do It/song.ini",
+      "size": 408
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/9. This Is How I Do It/song.ogg",
+      "size": 7861345
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner (Full Album Chart)/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner (Full Album Chart)/background.jpg",
+      "size": 1262727
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner (Full Album Chart)/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner (Full Album Chart)/notes.chart",
+      "size": 340851
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner (Full Album Chart)/song.ini",
+      "size": 376
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner (Full Album Chart)/song.ogg",
+      "size": 67056269
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner I Hardly Shredder Medley/album.png",
+      "size": 647650
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner I Hardly Shredder Medley/background.jpg",
+      "size": 1296675
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner I Hardly Shredder Medley/highway.png",
+      "size": 160679
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner I Hardly Shredder Medley/notes.chart",
+      "size": 162269
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner I Hardly Shredder Medley/song.ini",
+      "size": 431
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 11 - John 5 - Sinner (Full Album) [OHM]/Sinner I Hardly Shredder Medley/song.ogg",
+      "size": 25618201
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Allan Holdsworth - Road Games [OHM]/album.png",
+      "size": 672472
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Allan Holdsworth - Road Games [OHM]/background.jpg",
+      "size": 1040237
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Allan Holdsworth - Road Games [OHM]/notes.chart",
+      "size": 36812
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Allan Holdsworth - Road Games [OHM]/song.ini",
+      "size": 465
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Allan Holdsworth - Road Games [OHM]/song.ogg",
+      "size": 8271274
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Alogia - Egregor [Sygenysis]/album.jpg",
+      "size": 134139
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Alogia - Egregor [Sygenysis]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Alogia - Egregor [Sygenysis]/guitar.ogg",
+      "size": 6008320
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Alogia - Egregor [Sygenysis]/notes.mid",
+      "size": 14781
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Alogia - Egregor [Sygenysis]/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Annihilator - I Am Warfare [FrOoGle]/album.png",
+      "size": 70479
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Annihilator - I Am Warfare [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Annihilator - I Am Warfare [FrOoGle]/guitar.ogg",
+      "size": 6925850
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Annihilator - I Am Warfare [FrOoGle]/notes.mid",
+      "size": 33956
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Annihilator - I Am Warfare [FrOoGle]/song.ini",
+      "size": 713
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Arch Enemy - Yesterday Is Dead and Gone [FrOoGle]/album.png",
+      "size": 75253
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Arch Enemy - Yesterday Is Dead and Gone [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Arch Enemy - Yesterday Is Dead and Gone [FrOoGle]/guitar.ogg",
+      "size": 6390889
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Arch Enemy - Yesterday Is Dead and Gone [FrOoGle]/notes.mid",
+      "size": 27260
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Arch Enemy - Yesterday Is Dead and Gone [FrOoGle]/song.ini",
+      "size": 831
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Attack - The Battle's Lost [Sygenysis]/album.png",
+      "size": 117031
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Attack - The Battle's Lost [Sygenysis]/background.jpg",
+      "size": 282855
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Attack - The Battle's Lost [Sygenysis]/guitar.ogg",
+      "size": 7743248
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Attack - The Battle's Lost [Sygenysis]/notes.mid",
+      "size": 16413
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Attack - The Battle's Lost [Sygenysis]/song.ini",
+      "size": 927
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/DGM - Frontiers [Peddy]/album.png",
+      "size": 666738
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/DGM - Frontiers [Peddy]/background.jpg",
+      "size": 417189
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/DGM - Frontiers [Peddy]/notes.chart",
+      "size": 41675
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/DGM - Frontiers [Peddy]/song.ini",
+      "size": 417
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/DGM - Frontiers [Peddy]/song.ogg",
+      "size": 9222833
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/David Lee Roth - Elephant Gun [Peddy]/album.png",
+      "size": 527175
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/David Lee Roth - Elephant Gun [Peddy]/background.jpg",
+      "size": 635853
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/David Lee Roth - Elephant Gun [Peddy]/notes.chart",
+      "size": 43377
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/David Lee Roth - Elephant Gun [Peddy]/song.ini",
+      "size": 310
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/David Lee Roth - Elephant Gun [Peddy]/song.ogg",
+      "size": 4981471
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Havok - Fear Campaign [Miscellany]/album.png",
+      "size": 687097
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Havok - Fear Campaign [Miscellany]/background.png",
+      "size": 521161
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Havok - Fear Campaign [Miscellany]/guitar.ogg",
+      "size": 8363397
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Havok - Fear Campaign [Miscellany]/notes.chart",
+      "size": 52968
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Havok - Fear Campaign [Miscellany]/song.ini",
+      "size": 703
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Impellitteri - Spanish Fire [Nat]/album.png",
+      "size": 441185
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Impellitteri - Spanish Fire [Nat]/background.jpg",
+      "size": 64417
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Impellitteri - Spanish Fire [Nat]/notes.chart",
+      "size": 30598
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Impellitteri - Spanish Fire [Nat]/song.ini",
+      "size": 452
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Impellitteri - Spanish Fire [Nat]/song.ogg",
+      "size": 12491467
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Inferi - Mesmeric Horror [OHM]/album.png",
+      "size": 592220
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Inferi - Mesmeric Horror [OHM]/background.jpg",
+      "size": 675253
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Inferi - Mesmeric Horror [OHM]/notes.chart",
+      "size": 77857
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Inferi - Mesmeric Horror [OHM]/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Inferi - Mesmeric Horror [OHM]/song.ogg",
+      "size": 11204482
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Noveria - The Awakening [Peddy]/album.png",
+      "size": 501791
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Noveria - The Awakening [Peddy]/background.jpg",
+      "size": 913052
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Noveria - The Awakening [Peddy]/notes.chart",
+      "size": 79549
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Noveria - The Awakening [Peddy]/song.ini",
+      "size": 321
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Noveria - The Awakening [Peddy]/song.ogg",
+      "size": 12504757
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Rhapsody of Fire - Holy Thunderforce [Peddy]/album.png",
+      "size": 526647
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Rhapsody of Fire - Holy Thunderforce [Peddy]/background.jpg",
+      "size": 467159
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Rhapsody of Fire - Holy Thunderforce [Peddy]/notes.chart",
+      "size": 48297
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Rhapsody of Fire - Holy Thunderforce [Peddy]/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Rhapsody of Fire - Holy Thunderforce [Peddy]/song.ogg",
+      "size": 8432121
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Scardust - Queen of Insanity [Peddy]/album.png",
+      "size": 524174
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Scardust - Queen of Insanity [Peddy]/background.jpg",
+      "size": 940462
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Scardust - Queen of Insanity [Peddy]/notes.chart",
+      "size": 45500
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Scardust - Queen of Insanity [Peddy]/song.ini",
+      "size": 373
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Scardust - Queen of Insanity [Peddy]/song.ogg",
+      "size": 9048733
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Steve Vai - Bad Horsie [OHM]/album.png",
+      "size": 470330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Steve Vai - Bad Horsie [OHM]/background.jpg",
+      "size": 650727
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Steve Vai - Bad Horsie [OHM]/notes.chart",
+      "size": 57294
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Steve Vai - Bad Horsie [OHM]/song.ini",
+      "size": 567
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Steve Vai - Bad Horsie [OHM]/song.ogg",
+      "size": 10603905
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Von Citizen - Mechanic (feat. Olly Steele) [XEntombmentX]/album.png",
+      "size": 516213
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Von Citizen - Mechanic (feat. Olly Steele) [XEntombmentX]/background.jpg",
+      "size": 411291
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Von Citizen - Mechanic (feat. Olly Steele) [XEntombmentX]/notes.chart",
+      "size": 40832
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Von Citizen - Mechanic (feat. Olly Steele) [XEntombmentX]/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/Von Citizen - Mechanic (feat. Olly Steele) [XEntombmentX]/song.ogg",
+      "size": 9301829
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/t+pazolite VS Sakuzyo - Silentphobia [Mintorment]/album.png",
+      "size": 482564
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/t+pazolite VS Sakuzyo - Silentphobia [Mintorment]/background.jpg",
+      "size": 577196
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/t+pazolite VS Sakuzyo - Silentphobia [Mintorment]/notes.chart",
+      "size": 34666
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/t+pazolite VS Sakuzyo - Silentphobia [Mintorment]/song.ini",
+      "size": 834
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 12/t+pazolite VS Sakuzyo - Silentphobia [Mintorment]/song.ogg",
+      "size": 7395230
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/And Oceans - Five of Swords [Nat]/album.png",
+      "size": 624116
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/And Oceans - Five of Swords [Nat]/background.png",
+      "size": 62158
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/And Oceans - Five of Swords [Nat]/notes.chart",
+      "size": 70902
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/And Oceans - Five of Swords [Nat]/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/And Oceans - Five of Swords [Nat]/song.ogg",
+      "size": 17094497
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Andromeda - Another Step [OHM]/album.jpg",
+      "size": 52316
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Andromeda - Another Step [OHM]/background.jpg",
+      "size": 599354
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Andromeda - Another Step [OHM]/notes.chart",
+      "size": 74921
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Andromeda - Another Step [OHM]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Andromeda - Another Step [OHM]/song.ogg",
+      "size": 10943088
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Behemoth - Transmigrating Beyond Realms Ov Amenti [Nat]/album.png",
+      "size": 535990
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Behemoth - Transmigrating Beyond Realms Ov Amenti [Nat]/background.jpg",
+      "size": 794132
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Behemoth - Transmigrating Beyond Realms Ov Amenti [Nat]/notes.chart",
+      "size": 51608
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Behemoth - Transmigrating Beyond Realms Ov Amenti [Nat]/song.ini",
+      "size": 682
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Behemoth - Transmigrating Beyond Realms Ov Amenti [Nat]/song.ogg",
+      "size": 12490178
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Berried Alive - Raisin Hell [Stickheadz32]/album.jpg",
+      "size": 244969
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Berried Alive - Raisin Hell [Stickheadz32]/background.jpg",
+      "size": 849428
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Berried Alive - Raisin Hell [Stickheadz32]/notes.chart",
+      "size": 28099
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Berried Alive - Raisin Hell [Stickheadz32]/song.ini",
+      "size": 354
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Berried Alive - Raisin Hell [Stickheadz32]/song.ogg",
+      "size": 1426731
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Brand of Sacrifice - Mortal Vessel [Miscellany]/album.png",
+      "size": 664879
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Brand of Sacrifice - Mortal Vessel [Miscellany]/background.jpg",
+      "size": 826469
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Brand of Sacrifice - Mortal Vessel [Miscellany]/guitar.ogg",
+      "size": 8626912
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Brand of Sacrifice - Mortal Vessel [Miscellany]/notes.chart",
+      "size": 69107
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Brand of Sacrifice - Mortal Vessel [Miscellany]/song.ini",
+      "size": 1063
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Denis Shvarts - Dreamology Solo Medley [ACJGaming89]/album.jpg",
+      "size": 201299
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Denis Shvarts - Dreamology Solo Medley [ACJGaming89]/background.jpg",
+      "size": 273126
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Denis Shvarts - Dreamology Solo Medley [ACJGaming89]/notes.chart",
+      "size": 124933
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Denis Shvarts - Dreamology Solo Medley [ACJGaming89]/song.ini",
+      "size": 306
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Denis Shvarts - Dreamology Solo Medley [ACJGaming89]/song.ogg",
+      "size": 26934154
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Fleshgod Apocalypse - The Fool [Nat]/album.png",
+      "size": 441198
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Fleshgod Apocalypse - The Fool [Nat]/background.jpg",
+      "size": 882996
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Fleshgod Apocalypse - The Fool [Nat]/notes.chart",
+      "size": 54310
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Fleshgod Apocalypse - The Fool [Nat]/song.ini",
+      "size": 350
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Fleshgod Apocalypse - The Fool [Nat]/song.ogg",
+      "size": 14940601
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Frank Zappa - Drowning Witch [OHM]/album.png",
+      "size": 54297
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Frank Zappa - Drowning Witch [OHM]/background.jpg",
+      "size": 909172
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Frank Zappa - Drowning Witch [OHM]/notes.chart",
+      "size": 119118
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Frank Zappa - Drowning Witch [OHM]/song.ini",
+      "size": 426
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Frank Zappa - Drowning Witch [OHM]/song.ogg",
+      "size": 25111445
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/John 5 and the Creatures - Making Monsters [Nat]/album.jpg",
+      "size": 94394
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/John 5 and the Creatures - Making Monsters [Nat]/background.png",
+      "size": 1610282
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/John 5 and the Creatures - Making Monsters [Nat]/notes.chart",
+      "size": 40557
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/John 5 and the Creatures - Making Monsters [Nat]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/John 5 and the Creatures - Making Monsters [Nat]/song.ogg",
+      "size": 5489113
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Lucas de la Rosa - Sky (Feat. Sithu Aye) [TFG85]/album.jpg",
+      "size": 399499
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Lucas de la Rosa - Sky (Feat. Sithu Aye) [TFG85]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Lucas de la Rosa - Sky (Feat. Sithu Aye) [TFG85]/notes.chart",
+      "size": 50250
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Lucas de la Rosa - Sky (Feat. Sithu Aye) [TFG85]/song.ini",
+      "size": 647
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Lucas de la Rosa - Sky (Feat. Sithu Aye) [TFG85]/song.ogg",
+      "size": 8470238
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Luna Mortis - Anemic World [Sygenysis]/album.png",
+      "size": 470263
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Luna Mortis - Anemic World [Sygenysis]/background.jpg",
+      "size": 558585
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Luna Mortis - Anemic World [Sygenysis]/guitar.ogg",
+      "size": 10821619
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Luna Mortis - Anemic World [Sygenysis]/notes.mid",
+      "size": 40482
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Luna Mortis - Anemic World [Sygenysis]/song.ini",
+      "size": 874
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Machine Head - Become the Firestorm [FrOoGle]/album.png",
+      "size": 127038
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Machine Head - Become the Firestorm [FrOoGle]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Machine Head - Become the Firestorm [FrOoGle]/guitar.ogg",
+      "size": 7542508
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Machine Head - Become the Firestorm [FrOoGle]/notes.mid",
+      "size": 30744
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Machine Head - Become the Firestorm [FrOoGle]/song.ini",
+      "size": 854
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Majestic - Golden Sea [Peddy]/album.png",
+      "size": 631116
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Majestic - Golden Sea [Peddy]/background.jpg",
+      "size": 379606
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Majestic - Golden Sea [Peddy]/notes.chart",
+      "size": 101842
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Majestic - Golden Sea [Peddy]/song.ini",
+      "size": 356
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Majestic - Golden Sea [Peddy]/song.ogg",
+      "size": 12053649
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Massive New Krew - Big Bang [Xeratek]/album.jpg",
+      "size": 175114
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Massive New Krew - Big Bang [Xeratek]/background.jpg",
+      "size": 248814
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Massive New Krew - Big Bang [Xeratek]/notes.chart",
+      "size": 36822
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Massive New Krew - Big Bang [Xeratek]/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Massive New Krew - Big Bang [Xeratek]/song.ogg",
+      "size": 5462284
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Matduke - Welcome (To the Darkness) [Vasasasasa]/album.jpg",
+      "size": 152233
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Matduke - Welcome (To the Darkness) [Vasasasasa]/background.jpg",
+      "size": 187252
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Matduke - Welcome (To the Darkness) [Vasasasasa]/notes.chart",
+      "size": 83410
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Matduke - Welcome (To the Darkness) [Vasasasasa]/song.ini",
+      "size": 358
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/Matduke - Welcome (To the Darkness) [Vasasasasa]/song.ogg",
+      "size": 6764188
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/T-Square - Knight's Song [TFG85]/album.jpg",
+      "size": 47990
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/T-Square - Knight's Song [TFG85]/background.png",
+      "size": 1153330
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/T-Square - Knight's Song [TFG85]/notes.chart",
+      "size": 57563
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/T-Square - Knight's Song [TFG85]/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/T-Square - Knight's Song [TFG85]/song.ogg",
+      "size": 20690248
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Quick Brown Fox - Shake Your Tail [Stickheadz32]/album.jpg",
+      "size": 99607
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Quick Brown Fox - Shake Your Tail [Stickheadz32]/background.jpg",
+      "size": 286086
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Quick Brown Fox - Shake Your Tail [Stickheadz32]/notes.chart",
+      "size": 42662
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Quick Brown Fox - Shake Your Tail [Stickheadz32]/song.ini",
+      "size": 332
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Quick Brown Fox - Shake Your Tail [Stickheadz32]/song.ogg",
+      "size": 4542141
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Zenith Passage - Deus Deceptor [OHM]/album.png",
+      "size": 623620
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Zenith Passage - Deus Deceptor [OHM]/background.jpg",
+      "size": 697989
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Zenith Passage - Deus Deceptor [OHM]/notes.chart",
+      "size": 48000
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Zenith Passage - Deus Deceptor [OHM]/song.ini",
+      "size": 449
+    },
+    {
+      "path": "Code Red: Volume 1/Code Red - Volume 1/[CR1] Tier 13/The Zenith Passage - Deus Deceptor [OHM]/song.ogg",
+      "size": 8733437
     }
-  ]
+  ],
+  "extracted_size": 2441860267,
+  "file_count": 1023,
+  "chart_count": 201,
+  "release_date": "2022-09-16"
 }

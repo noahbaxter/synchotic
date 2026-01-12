@@ -3,18 +3,2043 @@
   "folder_id": "static-circuit-breaker",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 117,
-  "total_size": 1157920208,
-  "file_count": 506,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-circuit-breaker",
-      "path": "Circuit Breaker/Circuit Breaker.rar",
+      "url": "https://customsongscentral.b-cdn.net/Circuit%20Breaker.rar?ref=customsongscentral.com",
       "name": "Circuit Breaker.rar",
       "size": 1157920208,
-      "md5": "c2a369fca7b804797ded863b810fb933",
-      "url": "https://customsongscentral.b-cdn.net/Circuit%20Breaker.rar?ref=customsongscentral.com"
+      "md5": "c2a369fca7b804797ded863b810fb933"
     }
-  ]
+  ],
+  "download_size": 1157920208,
+  "files": [
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 00.png",
+      "size": 965039
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 01.png",
+      "size": 322988
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 02.png",
+      "size": 429478
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 03.png",
+      "size": 255629
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 04.png",
+      "size": 460057
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 05.png",
+      "size": 598996
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 06.png",
+      "size": 598030
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 07.png",
+      "size": 306101
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 08.png",
+      "size": 219543
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 09.png",
+      "size": 155398
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 10.png",
+      "size": 268223
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 11.png",
+      "size": 1159641
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 12.png",
+      "size": 599875
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 13.png",
+      "size": 1222254
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 14.png",
+      "size": 434425
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 15.png",
+      "size": 796044
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 16.png",
+      "size": 844821
+    },
+    {
+      "path": "Circuit Breaker/Custom/Highways/;CB - Tier 17.png",
+      "size": 637533
+    },
+    {
+      "path": "Circuit Breaker/README.txt",
+      "size": 3322
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 00 - An Introduction/Instant Reality - Sensory Deprivation (CB Intro) [Supradyke]/album.png",
+      "size": 301819
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 00 - An Introduction/Instant Reality - Sensory Deprivation (CB Intro) [Supradyke]/notes.chart",
+      "size": 19696
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 00 - An Introduction/Instant Reality - Sensory Deprivation (CB Intro) [Supradyke]/song.ini",
+      "size": 261
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 00 - An Introduction/Instant Reality - Sensory Deprivation (CB Intro) [Supradyke]/song.ogg",
+      "size": 2117207
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Feint - We Won't Be Alone (feat. Laura Brehm) [Siavash]/album.png",
+      "size": 367679
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Feint - We Won't Be Alone (feat. Laura Brehm) [Siavash]/guitar.ogg",
+      "size": 7221664
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Feint - We Won't Be Alone (feat. Laura Brehm) [Siavash]/notes.mid",
+      "size": 16367
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Feint - We Won't Be Alone (feat. Laura Brehm) [Siavash]/song.ini",
+      "size": 696
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Giga - LUVORATORRRRRY! (REOL Version) [CyclopsDragon]/album.png",
+      "size": 390350
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Giga - LUVORATORRRRRY! (REOL Version) [CyclopsDragon]/guitar.ogg",
+      "size": 8063094
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Giga - LUVORATORRRRRY! (REOL Version) [CyclopsDragon]/notes.chart",
+      "size": 120423
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Giga - LUVORATORRRRRY! (REOL Version) [CyclopsDragon]/song.ini",
+      "size": 598
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/I.Y.F.F.E., Auractic & Au5 - Sweet [Aren Eternal]/album.png",
+      "size": 350838
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/I.Y.F.F.E., Auractic & Au5 - Sweet [Aren Eternal]/notes.chart",
+      "size": 110537
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/I.Y.F.F.E., Auractic & Au5 - Sweet [Aren Eternal]/song.ini",
+      "size": 466
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/I.Y.F.F.E., Auractic & Au5 - Sweet [Aren Eternal]/song.ogg",
+      "size": 10942618
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Krewella - We Go Down [Aren Eternal]/album.png",
+      "size": 615688
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Krewella - We Go Down [Aren Eternal]/notes.chart",
+      "size": 71946
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Krewella - We Go Down [Aren Eternal]/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Krewella - We Go Down [Aren Eternal]/song.ogg",
+      "size": 6332414
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Miami Horror - Sometimes [XEntombmentX]/album.png",
+      "size": 425951
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Miami Horror - Sometimes [XEntombmentX]/notes.chart",
+      "size": 75530
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Miami Horror - Sometimes [XEntombmentX]/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Miami Horror - Sometimes [XEntombmentX]/song.ogg",
+      "size": 8430196
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/PSY - Gangnam Style [JoeyD]/album.PNG",
+      "size": 406978
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/PSY - Gangnam Style [JoeyD]/notes.chart",
+      "size": 106849
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/PSY - Gangnam Style [JoeyD]/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/PSY - Gangnam Style [JoeyD]/song.ogg",
+      "size": 6690593
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Teminite - A New Dawn [Geo]/.zip.001",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Teminite - A New Dawn [Geo]/album.png",
+      "size": 437465
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Teminite - A New Dawn [Geo]/guitar.ogg",
+      "size": 12156415
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Teminite - A New Dawn [Geo]/notes.chart",
+      "size": 110996
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Teminite - A New Dawn [Geo]/song.ini",
+      "size": 495
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Tiasu - The Ebb [Miscellany]/album.png",
+      "size": 59490
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Tiasu - The Ebb [Miscellany]/guitar.ogg",
+      "size": 9170077
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Tiasu - The Ebb [Miscellany]/notes.chart",
+      "size": 55698
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 01 - Enter the Circuit Breaker/Tiasu - The Ebb [Miscellany]/song.ini",
+      "size": 439
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Jake Bowen - Gravity and Friction [BigWhoopMagazine]/album.png",
+      "size": 565688
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Jake Bowen - Gravity and Friction [BigWhoopMagazine]/notes.chart",
+      "size": 118567
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Jake Bowen - Gravity and Friction [BigWhoopMagazine]/song.ini",
+      "size": 377
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Jake Bowen - Gravity and Friction [BigWhoopMagazine]/song.ogg",
+      "size": 15354977
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/M83 - Midnight City [XEntombmentX]/album.png",
+      "size": 442313
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/M83 - Midnight City [XEntombmentX]/notes.chart",
+      "size": 77956
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/M83 - Midnight City [XEntombmentX]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/M83 - Midnight City [XEntombmentX]/song.ogg",
+      "size": 7122249
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Neon Indian - Polish Girl [XEntombmentX]/.zip.002",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Neon Indian - Polish Girl [XEntombmentX]/album.png",
+      "size": 393011
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Neon Indian - Polish Girl [XEntombmentX]/notes.chart",
+      "size": 160898
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Neon Indian - Polish Girl [XEntombmentX]/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Neon Indian - Polish Girl [XEntombmentX]/song.ogg",
+      "size": 8128251
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/The Chain Gang of 1974 - Sleepwalking [XEntombmentX]/album.png",
+      "size": 332898
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/The Chain Gang of 1974 - Sleepwalking [XEntombmentX]/notes.chart",
+      "size": 72569
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/The Chain Gang of 1974 - Sleepwalking [XEntombmentX]/song.ini",
+      "size": 685
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/The Chain Gang of 1974 - Sleepwalking [XEntombmentX]/song.ogg",
+      "size": 6754235
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Tony Castles - Heart in the Pipes (KAUF Remix) [XEntombmentX]/album.png",
+      "size": 690951
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Tony Castles - Heart in the Pipes (KAUF Remix) [XEntombmentX]/notes.chart",
+      "size": 89662
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Tony Castles - Heart in the Pipes (KAUF Remix) [XEntombmentX]/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Tony Castles - Heart in the Pipes (KAUF Remix) [XEntombmentX]/song.ogg",
+      "size": 8519652
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Velvetine - The Great Divide (Seven Lions Remix) [EvaCH]/album.png",
+      "size": 57591
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Velvetine - The Great Divide (Seven Lions Remix) [EvaCH]/notes.chart",
+      "size": 101266
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Velvetine - The Great Divide (Seven Lions Remix) [EvaCH]/song.ini",
+      "size": 675
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/Velvetine - The Great Divide (Seven Lions Remix) [EvaCH]/song.ogg",
+      "size": 9394727
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/ZETA - The Distance [Big Whoop Magazine]/album.png",
+      "size": 253269
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/ZETA - The Distance [Big Whoop Magazine]/notes.chart",
+      "size": 91025
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/ZETA - The Distance [Big Whoop Magazine]/song.ini",
+      "size": 388
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 02 - Liquid Cooled/ZETA - The Distance [Big Whoop Magazine]/song.ogg",
+      "size": 13267084
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix) (Chezy)/album.png",
+      "size": 539953
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix) (Chezy)/notes.chart",
+      "size": 82729
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix) (Chezy)/song.ini",
+      "size": 730
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix) (Chezy)/song.ogg",
+      "size": 6502327
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Jasur Gaipov - Ming Afsus [gaebpls]/album.png",
+      "size": 25488
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Jasur Gaipov - Ming Afsus [gaebpls]/guitar.ogg",
+      "size": 7597726
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Jasur Gaipov - Ming Afsus [gaebpls]/notes.chart",
+      "size": 101623
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Jasur Gaipov - Ming Afsus [gaebpls]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Knife Party & Pegboard Nerds - Harpoon [Angevil]/album.png",
+      "size": 425698
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Knife Party & Pegboard Nerds - Harpoon [Angevil]/notes.chart",
+      "size": 104977
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Knife Party & Pegboard Nerds - Harpoon [Angevil]/song.ini",
+      "size": 432
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Knife Party & Pegboard Nerds - Harpoon [Angevil]/song.ogg",
+      "size": 11977956
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Nitro Fun - Final Boss [Aren Eternal]/album.png",
+      "size": 427868
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Nitro Fun - Final Boss [Aren Eternal]/notes.chart",
+      "size": 115386
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Nitro Fun - Final Boss [Aren Eternal]/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Nitro Fun - Final Boss [Aren Eternal]/song.ogg",
+      "size": 11211358
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Rjominn - Bassinn Mun Droppa [gaebpls]/album.png",
+      "size": 275238
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Rjominn - Bassinn Mun Droppa [gaebpls]/guitar.ogg",
+      "size": 9716790
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Rjominn - Bassinn Mun Droppa [gaebpls]/notes.chart",
+      "size": 100559
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Rjominn - Bassinn Mun Droppa [gaebpls]/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Thousand Synth Sky - The Eternal Ones [EvaCH]/.zip.003",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Thousand Synth Sky - The Eternal Ones [EvaCH]/album.png",
+      "size": 281201
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Thousand Synth Sky - The Eternal Ones [EvaCH]/notes.chart",
+      "size": 183959
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Thousand Synth Sky - The Eternal Ones [EvaCH]/song.ini",
+      "size": 460
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/Thousand Synth Sky - The Eternal Ones [EvaCH]/song.ogg",
+      "size": 7076994
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/XS Project - Bochka Bass Kolbaser [Chezy]/album.png",
+      "size": 582757
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/XS Project - Bochka Bass Kolbaser [Chezy]/notes.chart",
+      "size": 70847
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/XS Project - Bochka Bass Kolbaser [Chezy]/song.ini",
+      "size": 423
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 03 - Light up the Floor/XS Project - Bochka Bass Kolbaser [Chezy]/song.ogg",
+      "size": 6201289
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Acid-Notation - Waluigi Pinball Remix [JoeyD]/album.png",
+      "size": 216408
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Acid-Notation - Waluigi Pinball Remix [JoeyD]/notes.chart",
+      "size": 111151
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Acid-Notation - Waluigi Pinball Remix [JoeyD]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Acid-Notation - Waluigi Pinball Remix [JoeyD]/song.ogg",
+      "size": 9064628
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Aux Raus - This Is How It Works [Sygenysis]/album.png",
+      "size": 382094
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Aux Raus - This Is How It Works [Sygenysis]/guitar.ogg",
+      "size": 5718181
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Aux Raus - This Is How It Works [Sygenysis]/notes.mid",
+      "size": 21385
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Aux Raus - This Is How It Works [Sygenysis]/song.ini",
+      "size": 830
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Herbie Hancock - Rockit [JoeyD]/album.png",
+      "size": 265608
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Herbie Hancock - Rockit [JoeyD]/notes.chart",
+      "size": 120068
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Herbie Hancock - Rockit [JoeyD]/song.ini",
+      "size": 696
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Herbie Hancock - Rockit [JoeyD]/song.ogg",
+      "size": 13035796
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Lemon Demon - Super Hey Ya [GanonMetroid]/album.png",
+      "size": 272879
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Lemon Demon - Super Hey Ya [GanonMetroid]/notes.mid",
+      "size": 46203
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Lemon Demon - Super Hey Ya [GanonMetroid]/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Lemon Demon - Super Hey Ya [GanonMetroid]/song.ogg",
+      "size": 10132769
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Neil Cicierega - Wallspin [JoeyD]/album.png",
+      "size": 249832
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Neil Cicierega - Wallspin [JoeyD]/notes.chart",
+      "size": 126069
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Neil Cicierega - Wallspin [JoeyD]/song.ini",
+      "size": 524
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/Neil Cicierega - Wallspin [JoeyD]/song.ogg",
+      "size": 6231252
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/PSYQUI - Don't You Want Me (feat. Such) [Paturages]/.zip.004",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/PSYQUI - Don't You Want Me (feat. Such) [Paturages]/album.png",
+      "size": 513641
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/PSYQUI - Don't You Want Me (feat. Such) [Paturages]/guitar.ogg",
+      "size": 10574117
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/PSYQUI - Don't You Want Me (feat. Such) [Paturages]/notes.chart",
+      "size": 119587
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/PSYQUI - Don't You Want Me (feat. Such) [Paturages]/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/The Subs - Mitsubitchi [Paturages]/album.png",
+      "size": 90529
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/The Subs - Mitsubitchi [Paturages]/notes.chart",
+      "size": 111077
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/The Subs - Mitsubitchi [Paturages]/song.ini",
+      "size": 534
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 04 - Waves of Entropy/The Subs - Mitsubitchi [Paturages]/song.ogg",
+      "size": 10955569
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Flux Pavilion - Blow The Roof [Aren Eternal]/album.png",
+      "size": 196476
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Flux Pavilion - Blow The Roof [Aren Eternal]/notes.chart",
+      "size": 91412
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Flux Pavilion - Blow The Roof [Aren Eternal]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Flux Pavilion - Blow The Roof [Aren Eternal]/song.ogg",
+      "size": 7427199
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Gohma & ReeK - The Soltan Syndrome [Aren Eternal]/album.png",
+      "size": 297851
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Gohma & ReeK - The Soltan Syndrome [Aren Eternal]/notes.chart",
+      "size": 78594
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Gohma & ReeK - The Soltan Syndrome [Aren Eternal]/song.ini",
+      "size": 472
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Gohma & ReeK - The Soltan Syndrome [Aren Eternal]/song.ogg",
+      "size": 12097008
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Hellberg & Deutgen vs Splitbreed - Collide (Astronaut & Barely Alive Remix) [Aren Eternal]/album.png",
+      "size": 345088
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Hellberg & Deutgen vs Splitbreed - Collide (Astronaut & Barely Alive Remix) [Aren Eternal]/notes.chart",
+      "size": 98067
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Hellberg & Deutgen vs Splitbreed - Collide (Astronaut & Barely Alive Remix) [Aren Eternal]/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Hellberg & Deutgen vs Splitbreed - Collide (Astronaut & Barely Alive Remix) [Aren Eternal]/song.ogg",
+      "size": 10354382
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/KNOWER - Time Traveler [JoeyD]/.zip.005",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/KNOWER - Time Traveler [JoeyD]/album.png",
+      "size": 378076
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/KNOWER - Time Traveler [JoeyD]/notes.chart",
+      "size": 111809
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/KNOWER - Time Traveler [JoeyD]/song.ini",
+      "size": 473
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/KNOWER - Time Traveler [JoeyD]/song.ogg",
+      "size": 7736099
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Pegboard Nerds - Self Destruct [Aren Eternal]/album.png",
+      "size": 375662
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Pegboard Nerds - Self Destruct [Aren Eternal]/notes.chart",
+      "size": 62416
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Pegboard Nerds - Self Destruct [Aren Eternal]/song.ini",
+      "size": 480
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Pegboard Nerds - Self Destruct [Aren Eternal]/song.ogg",
+      "size": 7333287
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Teminite - Beastmode [Aren Eternal]/album.png",
+      "size": 525071
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Teminite - Beastmode [Aren Eternal]/notes.chart",
+      "size": 97232
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Teminite - Beastmode [Aren Eternal]/song.ini",
+      "size": 467
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 05 - Drop the Basestations/Teminite - Beastmode [Aren Eternal]/song.ogg",
+      "size": 11313138
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Haywyre - Let Me Hear That [JoeyD]/album.png",
+      "size": 484274
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Haywyre - Let Me Hear That [JoeyD]/notes.chart",
+      "size": 106190
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Haywyre - Let Me Hear That [JoeyD]/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Haywyre - Let Me Hear That [JoeyD]/song.ogg",
+      "size": 7790211
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Lenno - Fever [Chezy]/album.png",
+      "size": 379800
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Lenno - Fever [Chezy]/notes.chart",
+      "size": 98553
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Lenno - Fever [Chezy]/song.ini",
+      "size": 442
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Lenno - Fever [Chezy]/song.ogg",
+      "size": 5251027
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Louis Cole - Thinking [JoeyD]/album.png",
+      "size": 309784
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Louis Cole - Thinking [JoeyD]/notes.chart",
+      "size": 51225
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Louis Cole - Thinking [JoeyD]/song.ini",
+      "size": 556
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Louis Cole - Thinking [JoeyD]/song.ogg",
+      "size": 4028677
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Ratatat - Nightclub Amnesia [Supahfast198]/album.png",
+      "size": 293872
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Ratatat - Nightclub Amnesia [Supahfast198]/notes.chart",
+      "size": 84445
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Ratatat - Nightclub Amnesia [Supahfast198]/song.ini",
+      "size": 515
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Ratatat - Nightclub Amnesia [Supahfast198]/song.ogg",
+      "size": 11873771
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Rhodes\u300c\u30ed\u30fc\u30c9\u30b9\u300d- Sudden Kiss [Paturages]/album.png",
+      "size": 461221
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Rhodes\u300c\u30ed\u30fc\u30c9\u30b9\u300d- Sudden Kiss [Paturages]/notes.chart",
+      "size": 92192
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Rhodes\u300c\u30ed\u30fc\u30c9\u30b9\u300d- Sudden Kiss [Paturages]/song.ini",
+      "size": 498
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Rhodes\u300c\u30ed\u30fc\u30c9\u30b9\u300d- Sudden Kiss [Paturages]/song.ogg",
+      "size": 9442662
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/The Floozies - Sunroof Cadillac [JoeyD]/album.png",
+      "size": 491486
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/The Floozies - Sunroof Cadillac [JoeyD]/notes.chart",
+      "size": 102172
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/The Floozies - Sunroof Cadillac [JoeyD]/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/The Floozies - Sunroof Cadillac [JoeyD]/song.ogg",
+      "size": 8161687
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Varien & Razihel - Toothless Hawkins (And His Robot Jazz Band)/.zip.006",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Varien & Razihel - Toothless Hawkins (And His Robot Jazz Band)/album.png",
+      "size": 482010
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Varien & Razihel - Toothless Hawkins (And His Robot Jazz Band)/notes.chart",
+      "size": 89430
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Varien & Razihel - Toothless Hawkins (And His Robot Jazz Band)/song.ini",
+      "size": 671
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 06 - Getting in the Groove/Varien & Razihel - Toothless Hawkins (And His Robot Jazz Band)/song.ogg",
+      "size": 8166315
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Knife Party - Fire Hive (Krewella Remix) [Aren Eternal]/album.png",
+      "size": 378799
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Knife Party - Fire Hive (Krewella Remix) [Aren Eternal]/notes.chart",
+      "size": 73801
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Knife Party - Fire Hive (Krewella Remix) [Aren Eternal]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Knife Party - Fire Hive (Krewella Remix) [Aren Eternal]/song.ogg",
+      "size": 6468197
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MDK - Face Your Fears [Aren Eternal]/.zip.007",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MDK - Face Your Fears [Aren Eternal]/album.png",
+      "size": 598500
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MDK - Face Your Fears [Aren Eternal]/notes.chart",
+      "size": 85307
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MDK - Face Your Fears [Aren Eternal]/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MDK - Face Your Fears [Aren Eternal]/song.ogg",
+      "size": 7082361
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MUST DIE! - Neo Tokyo [Chezy]/album.png",
+      "size": 73441
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MUST DIE! - Neo Tokyo [Chezy]/notes.chart",
+      "size": 86448
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MUST DIE! - Neo Tokyo [Chezy]/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/MUST DIE! - Neo Tokyo [Chezy]/song.ogg",
+      "size": 6766013
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Muzzy - Letz Rock [Aren Eternal]/album.png",
+      "size": 384013
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Muzzy - Letz Rock [Aren Eternal]/notes.chart",
+      "size": 81989
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Muzzy - Letz Rock [Aren Eternal]/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Muzzy - Letz Rock [Aren Eternal]/song.ogg",
+      "size": 8814331
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Pegboard Nerds - Hero (feat. Elizaveta) (Teminite Remix) [Aren Eternal]/album.png",
+      "size": 509327
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Pegboard Nerds - Hero (feat. Elizaveta) (Teminite Remix) [Aren Eternal]/notes.chart",
+      "size": 104665
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Pegboard Nerds - Hero (feat. Elizaveta) (Teminite Remix) [Aren Eternal]/song.ini",
+      "size": 553
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Pegboard Nerds - Hero (feat. Elizaveta) (Teminite Remix) [Aren Eternal]/song.ogg",
+      "size": 10905292
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Soltan - Balkan's Hammer [Aren Eternal]/album.png",
+      "size": 598677
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Soltan - Balkan's Hammer [Aren Eternal]/notes.chart",
+      "size": 85517
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Soltan - Balkan's Hammer [Aren Eternal]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/Soltan - Balkan's Hammer [Aren Eternal]/song.ogg",
+      "size": 8411464
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix) [Chezy]/album.png",
+      "size": 431207
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix) [Chezy]/notes.chart",
+      "size": 113510
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix) [Chezy]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 07 - Watch Your Dubstep/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix) [Chezy]/song.ogg",
+      "size": 7635785
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Blitz Lunar - Not Big, Not Clever [Miscellany]/album.png",
+      "size": 56682
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Blitz Lunar - Not Big, Not Clever [Miscellany]/guitar.ogg",
+      "size": 5675978
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Blitz Lunar - Not Big, Not Clever [Miscellany]/notes.mid",
+      "size": 10619
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Blitz Lunar - Not Big, Not Clever [Miscellany]/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/MDK - Press Start [Aren Eternal]/.zip.008",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/MDK - Press Start [Aren Eternal]/album.png",
+      "size": 216522
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/MDK - Press Start [Aren Eternal]/notes.chart",
+      "size": 80316
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/MDK - Press Start [Aren Eternal]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/MDK - Press Start [Aren Eternal]/song.ogg",
+      "size": 7974481
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Madeon - Finale (feat. Nicholas Petricca) [Jaded]/album.png",
+      "size": 14407
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Madeon - Finale (feat. Nicholas Petricca) [Jaded]/notes.mid",
+      "size": 28615
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Madeon - Finale (feat. Nicholas Petricca) [Jaded]/song.ini",
+      "size": 748
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Madeon - Finale (feat. Nicholas Petricca) [Jaded]/song.ogg",
+      "size": 6580627
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Naruto - Artificial Intelligence Bomb [Geo]/album.png",
+      "size": 35993
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Naruto - Artificial Intelligence Bomb [Geo]/guitar.ogg",
+      "size": 4772273
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Naruto - Artificial Intelligence Bomb [Geo]/notes.chart",
+      "size": 69204
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Naruto - Artificial Intelligence Bomb [Geo]/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Rogue - Dynamite [Aren Eternal]/album.png",
+      "size": 369555
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Rogue - Dynamite [Aren Eternal]/notes.chart",
+      "size": 75178
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Rogue - Dynamite [Aren Eternal]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Rogue - Dynamite [Aren Eternal]/song.ogg",
+      "size": 9907034
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Savant - Splinter [JoeyD]/album.png",
+      "size": 452945
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Savant - Splinter [JoeyD]/notes.chart",
+      "size": 102676
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Savant - Splinter [JoeyD]/song.ini",
+      "size": 513
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Savant - Splinter [JoeyD]/song.ogg",
+      "size": 9924294
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Thousand Synth Sky - Enter the Circuit Breaker [EvaCH]/album.png",
+      "size": 308423
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Thousand Synth Sky - Enter the Circuit Breaker [EvaCH]/notes.chart",
+      "size": 132589
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Thousand Synth Sky - Enter the Circuit Breaker [EvaCH]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Thousand Synth Sky - Enter the Circuit Breaker [EvaCH]/song.ogg",
+      "size": 7125640
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Virtual Riot - PN35 [Chezy]/album.png",
+      "size": 678012
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Virtual Riot - PN35 [Chezy]/notes.chart",
+      "size": 53237
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Virtual Riot - PN35 [Chezy]/song.ini",
+      "size": 858
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 08 - Healthy Disks/Virtual Riot - PN35 [Chezy]/song.ogg",
+      "size": 4796581
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Iglooghost - Bug Thief [GanonMetroid]/album.png",
+      "size": 199734
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Iglooghost - Bug Thief [GanonMetroid]/notes.chart",
+      "size": 78095
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Iglooghost - Bug Thief [GanonMetroid]/song.ini",
+      "size": 552
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Iglooghost - Bug Thief [GanonMetroid]/song.ogg",
+      "size": 8209686
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Instant Reality - Breakaway [Supradyke]/album.png",
+      "size": 259653
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Instant Reality - Breakaway [Supradyke]/notes.chart",
+      "size": 155741
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Instant Reality - Breakaway [Supradyke]/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Instant Reality - Breakaway [Supradyke]/song.ogg",
+      "size": 7797486
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Kitsune\u00b2 - Rock My Emotions [Supradyke]/album.png",
+      "size": 322240
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Kitsune\u00b2 - Rock My Emotions [Supradyke]/notes.chart",
+      "size": 62165
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Kitsune\u00b2 - Rock My Emotions [Supradyke]/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Kitsune\u00b2 - Rock My Emotions [Supradyke]/song.ogg",
+      "size": 6070967
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Perturbator - Raw Power [Jackie]/.zip.009",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Perturbator - Raw Power [Jackie]/album.png",
+      "size": 772813
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Perturbator - Raw Power [Jackie]/notes.chart",
+      "size": 138216
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Perturbator - Raw Power [Jackie]/song.ini",
+      "size": 623
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Perturbator - Raw Power [Jackie]/song.ogg",
+      "size": 12256252
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Savant - Nazareth [Geo]/album.png",
+      "size": 652738
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Savant - Nazareth [Geo]/guitar.ogg",
+      "size": 17020073
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Savant - Nazareth [Geo]/notes.chart",
+      "size": 190965
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Savant - Nazareth [Geo]/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Simon St\u00e5lenhag - Fluvial Beat Deposits [Paturages]/album.png",
+      "size": 654743
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Simon St\u00e5lenhag - Fluvial Beat Deposits [Paturages]/guitar.ogg",
+      "size": 10306294
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Simon St\u00e5lenhag - Fluvial Beat Deposits [Paturages]/notes.chart",
+      "size": 56199
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Simon St\u00e5lenhag - Fluvial Beat Deposits [Paturages]/song.ini",
+      "size": 538
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Utsu-P - THE DYING MESSAGE -2014 MIX- (feat. Kagamine Rin) [CyclopsDragon]/album.png",
+      "size": 530445
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Utsu-P - THE DYING MESSAGE -2014 MIX- (feat. Kagamine Rin) [CyclopsDragon]/guitar.ogg",
+      "size": 10835887
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Utsu-P - THE DYING MESSAGE -2014 MIX- (feat. Kagamine Rin) [CyclopsDragon]/notes.chart",
+      "size": 124002
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Utsu-P - THE DYING MESSAGE -2014 MIX- (feat. Kagamine Rin) [CyclopsDragon]/song.ini",
+      "size": 513
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Wes Goodie & Prismatic - Whirlwind [Aren Eternal]/album.png",
+      "size": 360799
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Wes Goodie & Prismatic - Whirlwind [Aren Eternal]/notes.chart",
+      "size": 91014
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Wes Goodie & Prismatic - Whirlwind [Aren Eternal]/song.ini",
+      "size": 494
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 09 - Empty Space/Wes Goodie & Prismatic - Whirlwind [Aren Eternal]/song.ogg",
+      "size": 12142610
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Celldweller - Switchback [Jackie]/album.png",
+      "size": 561766
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Celldweller - Switchback [Jackie]/guitar.ogg",
+      "size": 9313265
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Celldweller - Switchback [Jackie]/notes.mid",
+      "size": 62383
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Celldweller - Switchback [Jackie]/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Dr. Mastermind - Bloodlust 01 Menu [Sygenysis]/album.png",
+      "size": 380216
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Dr. Mastermind - Bloodlust 01 Menu [Sygenysis]/guitar.ogg",
+      "size": 5421074
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Dr. Mastermind - Bloodlust 01 Menu [Sygenysis]/notes.mid",
+      "size": 8455
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Dr. Mastermind - Bloodlust 01 Menu [Sygenysis]/song.ini",
+      "size": 923
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Erock - Harder, Better, Faster, Stronger (Alive 2007) Meets Metal [Jackie & Aren Eternal]/album.png",
+      "size": 131442
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Erock - Harder, Better, Faster, Stronger (Alive 2007) Meets Metal [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 6397128
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Erock - Harder, Better, Faster, Stronger (Alive 2007) Meets Metal [Jackie & Aren Eternal]/notes.chart",
+      "size": 96411
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Erock - Harder, Better, Faster, Stronger (Alive 2007) Meets Metal [Jackie & Aren Eternal]/song.ini",
+      "size": 770
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Henry Bowers - TV Overdose [Sygenysis]/album.png",
+      "size": 647642
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Henry Bowers - TV Overdose [Sygenysis]/guitar.ogg",
+      "size": 6439901
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Henry Bowers - TV Overdose [Sygenysis]/notes.mid",
+      "size": 23553
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Henry Bowers - TV Overdose [Sygenysis]/song.ini",
+      "size": 845
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Korn - Narcissistic Cannibal (feat. Skrillex and Kill The Noise) [Jaded]/album.png",
+      "size": 75062
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Korn - Narcissistic Cannibal (feat. Skrillex and Kill The Noise) [Jaded]/notes.mid",
+      "size": 33913
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Korn - Narcissistic Cannibal (feat. Skrillex and Kill The Noise) [Jaded]/song.ini",
+      "size": 855
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Korn - Narcissistic Cannibal (feat. Skrillex and Kill The Noise) [Jaded]/song.ogg",
+      "size": 6359148
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Lich King - Act of War (8-Bit Remix) [Miscellany]/album.png",
+      "size": 61413
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Lich King - Act of War (8-Bit Remix) [Miscellany]/guitar.ogg",
+      "size": 13237162
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Lich King - Act of War (8-Bit Remix) [Miscellany]/notes.chart",
+      "size": 123338
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Lich King - Act of War (8-Bit Remix) [Miscellany]/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/MASTER BOOT RECORD - Castlevania [Jackie]/.zip.010",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/MASTER BOOT RECORD - Castlevania [Jackie]/album.png",
+      "size": 189969
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/MASTER BOOT RECORD - Castlevania [Jackie]/guitar.ogg",
+      "size": 8466195
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/MASTER BOOT RECORD - Castlevania [Jackie]/notes.mid",
+      "size": 83988
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/MASTER BOOT RECORD - Castlevania [Jackie]/song.ini",
+      "size": 743
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Neurotech - Divided Bliss [Sygenysis]/album.png",
+      "size": 177631
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Neurotech - Divided Bliss [Sygenysis]/guitar.ogg",
+      "size": 9497178
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Neurotech - Divided Bliss [Sygenysis]/notes.mid",
+      "size": 35646
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Neurotech - Divided Bliss [Sygenysis]/song.ini",
+      "size": 868
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Sunless Rise - Sunless Bass (Fatal FE Remix) [Siavash]/album.png",
+      "size": 514097
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Sunless Rise - Sunless Bass (Fatal FE Remix) [Siavash]/guitar.ogg",
+      "size": 6905804
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Sunless Rise - Sunless Bass (Fatal FE Remix) [Siavash]/notes.mid",
+      "size": 18542
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 10 - Cutting-Edge Technology/Sunless Rise - Sunless Bass (Fatal FE Remix) [Siavash]/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Instant Reality - Instant Reality Solo Medley [Supradyke]/.zip.011",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Instant Reality - Instant Reality Solo Medley [Supradyke]/album.png",
+      "size": 329235
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Instant Reality - Instant Reality Solo Medley [Supradyke]/notes.chart",
+      "size": 425053
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Instant Reality - Instant Reality Solo Medley [Supradyke]/song.ini",
+      "size": 610
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Instant Reality - Instant Reality Solo Medley [Supradyke]/song.ogg",
+      "size": 21282651
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Matduke - Disco Dancer [torqqes]/album.png",
+      "size": 288174
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Matduke - Disco Dancer [torqqes]/notes.chart",
+      "size": 98865
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Matduke - Disco Dancer [torqqes]/song.ini",
+      "size": 530
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Matduke - Disco Dancer [torqqes]/song.ogg",
+      "size": 7047836
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Mystery Skulls - Freaking Out [JoeyD]/album.png",
+      "size": 451330
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Mystery Skulls - Freaking Out [JoeyD]/notes.chart",
+      "size": 75643
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Mystery Skulls - Freaking Out [JoeyD]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Mystery Skulls - Freaking Out [JoeyD]/song.ogg",
+      "size": 6644544
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Renard - Intensive Care Unit [Supradyke]/album.png",
+      "size": 562085
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Renard - Intensive Care Unit [Supradyke]/notes.chart",
+      "size": 82778
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Renard - Intensive Care Unit [Supradyke]/song.ini",
+      "size": 479
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Renard - Intensive Care Unit [Supradyke]/song.ogg",
+      "size": 4748243
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Thousand Synth Sky - The Last Stop Before Chaos [EvaCH]/album.png",
+      "size": 161942
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Thousand Synth Sky - The Last Stop Before Chaos [EvaCH]/notes.chart",
+      "size": 159414
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Thousand Synth Sky - The Last Stop Before Chaos [EvaCH]/song.ini",
+      "size": 582
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Thousand Synth Sky - The Last Stop Before Chaos [EvaCH]/song.ogg",
+      "size": 8065694
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Virtual Riot - Idols [Aren Eternal]/album.png",
+      "size": 403112
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Virtual Riot - Idols [Aren Eternal]/notes.chart",
+      "size": 78216
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Virtual Riot - Idols [Aren Eternal]/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 11 - Randomly Accessed Memories/Virtual Riot - Idols [Aren Eternal]/song.ogg",
+      "size": 7186703
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Astronaut - Rain (Stephen Walking Remix) [Aren Eternal]/album.png",
+      "size": 332180
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Astronaut - Rain (Stephen Walking Remix) [Aren Eternal]/notes.chart",
+      "size": 86129
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Astronaut - Rain (Stephen Walking Remix) [Aren Eternal]/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Astronaut - Rain (Stephen Walking Remix) [Aren Eternal]/song.ogg",
+      "size": 10139053
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Au5 & Fractal - Smoke [Geo]/album.png",
+      "size": 409356
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Au5 & Fractal - Smoke [Geo]/guitar.ogg",
+      "size": 12697345
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Au5 & Fractal - Smoke [Geo]/notes.chart",
+      "size": 172354
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Au5 & Fractal - Smoke [Geo]/song.ini",
+      "size": 515
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Nitro Fun - New Game [Aren Eternal]/album.png",
+      "size": 332180
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Nitro Fun - New Game [Aren Eternal]/notes.chart",
+      "size": 99648
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Nitro Fun - New Game [Aren Eternal]/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Nitro Fun - New Game [Aren Eternal]/song.ogg",
+      "size": 9474355
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Noisia - Groundhog (Beat Juggle) [Aren Eternal]/.zip.012",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Noisia - Groundhog (Beat Juggle) [Aren Eternal]/album.png",
+      "size": 610777
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Noisia - Groundhog (Beat Juggle) [Aren Eternal]/notes.chart",
+      "size": 116970
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Noisia - Groundhog (Beat Juggle) [Aren Eternal]/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Noisia - Groundhog (Beat Juggle) [Aren Eternal]/song.ogg",
+      "size": 9337722
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Pegboard Nerds - Here It Comes [Aren Eternal]/album.png",
+      "size": 456639
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Pegboard Nerds - Here It Comes [Aren Eternal]/notes.chart",
+      "size": 71065
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Pegboard Nerds - Here It Comes [Aren Eternal]/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Pegboard Nerds - Here It Comes [Aren Eternal]/song.ogg",
+      "size": 7028418
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Teminite - Goin' In [Geo]/album.png",
+      "size": 571400
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Teminite - Goin' In [Geo]/guitar.ogg",
+      "size": 10521766
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Teminite - Goin' In [Geo]/notes.chart",
+      "size": 105431
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Teminite - Goin' In [Geo]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Tut Tut Child - Dance to It [Aren Eternal]/album.png",
+      "size": 310495
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Tut Tut Child - Dance to It [Aren Eternal]/notes.chart",
+      "size": 96040
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Tut Tut Child - Dance to It [Aren Eternal]/song.ini",
+      "size": 482
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 12 - Juggling the Beats/Tut Tut Child - Dance to It [Aren Eternal]/song.ogg",
+      "size": 8610065
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Aeon Bridge - Formula Neon [Jackie]/.zip.013",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Aeon Bridge - Formula Neon [Jackie]/album.png",
+      "size": 259463
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Aeon Bridge - Formula Neon [Jackie]/guitar.ogg",
+      "size": 9149870
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Aeon Bridge - Formula Neon [Jackie]/notes.mid",
+      "size": 63029
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Aeon Bridge - Formula Neon [Jackie]/song.ini",
+      "size": 666
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Caravan Palace - Dragons [Paturages]/album.png",
+      "size": 519626
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Caravan Palace - Dragons [Paturages]/notes.chart",
+      "size": 74643
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Caravan Palace - Dragons [Paturages]/song.ini",
+      "size": 554
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Caravan Palace - Dragons [Paturages]/song.ogg",
+      "size": 8224502
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/F-777 - Ludicrous Speed 1 [Angevil]/album.png",
+      "size": 459303
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/F-777 - Ludicrous Speed 1 [Angevil]/notes.chart",
+      "size": 150782
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/F-777 - Ludicrous Speed 1 [Angevil]/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/F-777 - Ludicrous Speed 1 [Angevil]/song.ogg",
+      "size": 5787236
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Manuel - Gas Gas Gas [Aren Eternal & Jackie]/album.png",
+      "size": 600968
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Manuel - Gas Gas Gas [Aren Eternal & Jackie]/notes.chart",
+      "size": 141977
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Manuel - Gas Gas Gas [Aren Eternal & Jackie]/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Manuel - Gas Gas Gas [Aren Eternal & Jackie]/song.ogg",
+      "size": 9306805
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/NOMA - Brain Power (Long Version) [Aren Eternal]/album.png",
+      "size": 383080
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/NOMA - Brain Power (Long Version) [Aren Eternal]/notes.chart",
+      "size": 156818
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/NOMA - Brain Power (Long Version) [Aren Eternal]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/NOMA - Brain Power (Long Version) [Aren Eternal]/song.ogg",
+      "size": 12184199
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/NOMA - Brain Power (Long Version) [Aren Eternal]/vocals.ogg",
+      "size": 10672634
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Panda Eyes & Teminite - Highscore [Aren Eternal]/album.png",
+      "size": 184004
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Panda Eyes & Teminite - Highscore [Aren Eternal]/notes.chart",
+      "size": 82921
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Panda Eyes & Teminite - Highscore [Aren Eternal]/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Panda Eyes & Teminite - Highscore [Aren Eternal]/song.ogg",
+      "size": 9889057
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Strangefruit - Kiwi [Chezy]/album.png",
+      "size": 321858
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Strangefruit - Kiwi [Chezy]/notes.chart",
+      "size": 160267
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Strangefruit - Kiwi [Chezy]/song.ini",
+      "size": 451
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 13 - The Grand Prix Circuit/Strangefruit - Kiwi [Chezy]/song.ogg",
+      "size": 8433684
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Hideyuki Fukasawa - Theme Of Zero [Supradyke]/album.png",
+      "size": 669079
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Hideyuki Fukasawa - Theme Of Zero [Supradyke]/notes.chart",
+      "size": 77969
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Hideyuki Fukasawa - Theme Of Zero [Supradyke]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Hideyuki Fukasawa - Theme Of Zero [Supradyke]/song.ogg",
+      "size": 4216144
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Claustrophobopolis [Supradyke]/album.png",
+      "size": 295649
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Claustrophobopolis [Supradyke]/notes.chart",
+      "size": 139263
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Claustrophobopolis [Supradyke]/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Claustrophobopolis [Supradyke]/song.ogg",
+      "size": 7011862
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Legends [Supradyke]/album.png",
+      "size": 301819
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Legends [Supradyke]/notes.chart",
+      "size": 44759
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Legends [Supradyke]/song.ini",
+      "size": 775
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Instant Reality - Legends [Supradyke]/song.ogg",
+      "size": 6176503
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Jake Kaufman - Strike the Earth! (Plains of Passage) [JoeyD]/album.png",
+      "size": 344329
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Jake Kaufman - Strike the Earth! (Plains of Passage) [JoeyD]/notes.chart",
+      "size": 28772
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Jake Kaufman - Strike the Earth! (Plains of Passage) [JoeyD]/song.ini",
+      "size": 544
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Jake Kaufman - Strike the Earth! (Plains of Passage) [JoeyD]/song.ogg",
+      "size": 1859820
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Rainbowdragoneyes - Seize My Day [Siavash]/.zip.014",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Rainbowdragoneyes - Seize My Day [Siavash]/album.png",
+      "size": 323311
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Rainbowdragoneyes - Seize My Day [Siavash]/guitar.ogg",
+      "size": 6175547
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Rainbowdragoneyes - Seize My Day [Siavash]/notes.mid",
+      "size": 27501
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Rainbowdragoneyes - Seize My Day [Siavash]/song.ini",
+      "size": 810
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Vahkiti - The Edge of the World (8-Bit DragonForce Cover) [Aren Eternal]/album.png",
+      "size": 105740
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Vahkiti - The Edge of the World (8-Bit DragonForce Cover) [Aren Eternal]/notes.chart",
+      "size": 191835
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Vahkiti - The Edge of the World (8-Bit DragonForce Cover) [Aren Eternal]/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Vahkiti - The Edge of the World (8-Bit DragonForce Cover) [Aren Eternal]/song.ogg",
+      "size": 21091837
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Zabutom - Zeta Force [Supradyke]/album.png",
+      "size": 486771
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Zabutom - Zeta Force [Supradyke]/notes.chart",
+      "size": 96145
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Zabutom - Zeta Force [Supradyke]/song.ini",
+      "size": 576
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 14 - The Bitcrusher/Zabutom - Zeta Force [Supradyke]/song.ogg",
+      "size": 4474618
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Aeon Bridge - No More Continues [Jackie]/album.png",
+      "size": 235418
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Aeon Bridge - No More Continues [Jackie]/guitar.ogg",
+      "size": 9854757
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Aeon Bridge - No More Continues [Jackie]/notes.mid",
+      "size": 76475
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Aeon Bridge - No More Continues [Jackie]/song.ini",
+      "size": 678
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/MASTER BOOT RECORD - BAYAREA.BMP [Jackie]/.zip.015",
+      "size": 550000
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/MASTER BOOT RECORD - BAYAREA.BMP [Jackie]/album.png",
+      "size": 125329
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/MASTER BOOT RECORD - BAYAREA.BMP [Jackie]/guitar.ogg",
+      "size": 7600472
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/MASTER BOOT RECORD - BAYAREA.BMP [Jackie]/notes.mid",
+      "size": 64944
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/MASTER BOOT RECORD - BAYAREA.BMP [Jackie]/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Meganeko - Nova [OrangeHat]/album.png",
+      "size": 519502
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Meganeko - Nova [OrangeHat]/notes.chart",
+      "size": 50229
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Meganeko - Nova [OrangeHat]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Meganeko - Nova [OrangeHat]/song.ogg",
+      "size": 3084562
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Pegboard Nerds - Fire in the Hole [Aren Eternal]/album.png",
+      "size": 389200
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Pegboard Nerds - Fire in the Hole [Aren Eternal]/notes.chart",
+      "size": 89721
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Pegboard Nerds - Fire in the Hole [Aren Eternal]/song.ini",
+      "size": 513
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Pegboard Nerds - Fire in the Hole [Aren Eternal]/song.ogg",
+      "size": 8048002
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Savant - Storm Trooper [Geo]/album.png",
+      "size": 478417
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Savant - Storm Trooper [Geo]/guitar.ogg",
+      "size": 15914799
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Savant - Storm Trooper [Geo]/notes.chart",
+      "size": 120736
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Savant - Storm Trooper [Geo]/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Virtual Riot - Beyond [Chezy]/album.png",
+      "size": 463733
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Virtual Riot - Beyond [Chezy]/notes.chart",
+      "size": 98078
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Virtual Riot - Beyond [Chezy]/song.ini",
+      "size": 499
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/Virtual Riot - Beyond [Chezy]/song.ogg",
+      "size": 6143762
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/cYsmix - Abandoned Shrine Party [CyclopsDragon]/album.png",
+      "size": 532846
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/cYsmix - Abandoned Shrine Party [CyclopsDragon]/guitar.ogg",
+      "size": 7790524
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/cYsmix - Abandoned Shrine Party [CyclopsDragon]/notes.chart",
+      "size": 69969
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 15 - Overclocked/cYsmix - Abandoned Shrine Party [CyclopsDragon]/song.ini",
+      "size": 510
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Acid-Notation - The Yandere's Puppet Show [Aren Eternal]/album.png",
+      "size": 195783
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Acid-Notation - The Yandere's Puppet Show [Aren Eternal]/notes.chart",
+      "size": 139775
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Acid-Notation - The Yandere's Puppet Show [Aren Eternal]/song.ini",
+      "size": 525
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Acid-Notation - The Yandere's Puppet Show [Aren Eternal]/song.ogg",
+      "size": 12458456
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/El Tigr3 - She Swallowed Burning Coals [Big Whoop Magazine]/album.png",
+      "size": 770654
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/El Tigr3 - She Swallowed Burning Coals [Big Whoop Magazine]/notes.chart",
+      "size": 127861
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/El Tigr3 - She Swallowed Burning Coals [Big Whoop Magazine]/song.ini",
+      "size": 554
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/El Tigr3 - She Swallowed Burning Coals [Big Whoop Magazine]/song.ogg",
+      "size": 15749123
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Instant Reality - End [Supradyke]/.zip.016",
+      "size": 508092
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Instant Reality - End [Supradyke]/album.png",
+      "size": 327930
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Instant Reality - End [Supradyke]/notes.chart",
+      "size": 316826
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Instant Reality - End [Supradyke]/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Instant Reality - End [Supradyke]/song.ogg",
+      "size": 15579804
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Riikira - Low Pass [Sygenysis]/album.png",
+      "size": 105234
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Riikira - Low Pass [Sygenysis]/guitar.ogg",
+      "size": 8017711
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Riikira - Low Pass [Sygenysis]/notes.mid",
+      "size": 24823
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Riikira - Low Pass [Sygenysis]/song.ini",
+      "size": 623
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Tee Lopes - Metallic Madness Zone (A_Rival Remix) [Aren Eternal]/album.png",
+      "size": 386165
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Tee Lopes - Metallic Madness Zone (A_Rival Remix) [Aren Eternal]/notes.chart",
+      "size": 84160
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Tee Lopes - Metallic Madness Zone (A_Rival Remix) [Aren Eternal]/song.ini",
+      "size": 570
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Tee Lopes - Metallic Madness Zone (A_Rival Remix) [Aren Eternal]/song.ogg",
+      "size": 6905434
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Teminite - Uprising [Aren Eternal]/album.png",
+      "size": 404401
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Teminite - Uprising [Aren Eternal]/notes.chart",
+      "size": 81321
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Teminite - Uprising [Aren Eternal]/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 16 - This is the Part Where They Kill You/Teminite - Uprising [Aren Eternal]/song.ogg",
+      "size": 10226473
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/Various Artists - Eternal Dropmix 02 [Aren Eternal]/album.png",
+      "size": 498840
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/Various Artists - Eternal Dropmix 02 [Aren Eternal]/notes.chart",
+      "size": 810379
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/Various Artists - Eternal Dropmix 02 [Aren Eternal]/song.ini",
+      "size": 936
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/Various Artists - Eternal Dropmix 02 [Aren Eternal]/song.ogg",
+      "size": 77559073
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/\u200b/album.png",
+      "size": 3433
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/\u200b/notes.chart",
+      "size": 312
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/\u200b/preview.ogg",
+      "size": 4225
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/\u200b/seek.txt",
+      "size": 3874
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/\u200b/song.ini",
+      "size": 164
+    },
+    {
+      "path": "Circuit Breaker/Songs/[Circuit Breaker] Tier 17 - Obligatory Bonus Tier/\u200b/song.ogg",
+      "size": 383674
+    }
+  ],
+  "extracted_size": 1172995336,
+  "file_count": 506,
+  "chart_count": 117,
+  "release_date": "2019-03-29"
 }

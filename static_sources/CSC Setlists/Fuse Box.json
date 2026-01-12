@@ -3,18 +3,4643 @@
   "folder_id": "static-fuse-box",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 255,
-  "total_size": 2971302938,
-  "file_count": 1205,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-fuse-box",
-      "path": "Fuse Box/Fuse Box.7z",
+      "url": "https://customsongscentral.b-cdn.net/Fuse%20Box.7z?ref=customsongscentral.com",
       "name": "Fuse Box.7z",
       "size": 2971302938,
-      "md5": "5636703034ac3b91c6313e08e58b6459",
-      "url": "https://customsongscentral.b-cdn.net/Fuse%20Box.7z?ref=customsongscentral.com"
+      "md5": "5636703034ac3b91c6313e08e58b6459"
     }
-  ]
+  ],
+  "download_size": 2971302938,
+  "files": [
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxAscension.webm",
+      "size": 89695264
+    },
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxCelestial.webm",
+      "size": 2991068
+    },
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxEarth.webm",
+      "size": 3079459
+    },
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxGalactic.webm",
+      "size": 5541128
+    },
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxInterstellar.webm",
+      "size": 18248996
+    },
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxMyez.webm",
+      "size": 5703572
+    },
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxOmni.webm",
+      "size": 37475578
+    },
+    {
+      "path": "Fuse Box/Custom/Video Backgrounds/FuseBoxVoltex.webm",
+      "size": 3177307
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxBubbles/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxBubbles/highway.webm",
+      "size": 3967870
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxConnected/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxConnected/highway.webm",
+      "size": 12858007
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxCyber/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxCyber/highway.webm",
+      "size": 2325586
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxCycle/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxCycle/highway.webm",
+      "size": 4736015
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxDisconnected/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxDisconnected/highway.webm",
+      "size": 16935629
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxFire/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxFire/highway.webm",
+      "size": 4511547
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxFlow/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxFlow/highway.webm",
+      "size": 1633952
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxGalactic/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxGalactic/highway.webm",
+      "size": 2337211
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxGlitched/config.ini",
+      "size": 193
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxGlitched/highway.webm",
+      "size": 428619
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxImprint/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxImprint/highway.webm",
+      "size": 3342014
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxInterstellar/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxInterstellar/highway.webm",
+      "size": 9506200
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxLanes/config.ini",
+      "size": 179
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxLanes/highway.webm",
+      "size": 1122376
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxMadness/config.ini",
+      "size": 179
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxMadness/highway.webm",
+      "size": 2556479
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxMatrix/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxMatrix/highway.webm",
+      "size": 2867780
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxMyez/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxMyez/highway.webm",
+      "size": 3898621
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxNeoJungle/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxNeoJungle/highway.webm",
+      "size": 844736
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxOmni/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxOmni/highway.webm",
+      "size": 97478760
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxSynthetic/config.ini",
+      "size": 179
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxSynthetic/highway.webm",
+      "size": 7341324
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxWaves/config.ini",
+      "size": 192
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseBoxWaves/highway.webm",
+      "size": 4834210
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxAscension/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxAscension/highway.webm",
+      "size": 39926246
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxBattle/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxBattle/highway.webm",
+      "size": 4479961
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxCelestial/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxCelestial/highway.webm",
+      "size": 2811708
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxCityscape/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxCityscape/highway.webm",
+      "size": 756175
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxEarth/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxEarth/highway.webm",
+      "size": 3039101
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxHexed/config.ini",
+      "size": 179
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxHexed/highway.webm",
+      "size": 3114097
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxVoltex/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxVoltex/highway.webm",
+      "size": 1829284
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxVoltexCycle/config.ini",
+      "size": 177
+    },
+    {
+      "path": "Fuse Box/Custom/Video Highways/FuseboxVoltexCycle/highway.webm",
+      "size": 1828312
+    },
+    {
+      "path": "Fuse Box/(BilliumMoto x Se-U-Ra x Silentroom) - Purple Palace [Stargazer]/album.png",
+      "size": 280783
+    },
+    {
+      "path": "Fuse Box/(BilliumMoto x Se-U-Ra x Silentroom) - Purple Palace [Stargazer]/notes.chart",
+      "size": 246608
+    },
+    {
+      "path": "Fuse Box/(BilliumMoto x Se-U-Ra x Silentroom) - Purple Palace [Stargazer]/song.ini",
+      "size": 424
+    },
+    {
+      "path": "Fuse Box/(BilliumMoto x Se-U-Ra x Silentroom) - Purple Palace [Stargazer]/song.opus",
+      "size": 5243008
+    },
+    {
+      "path": "Fuse Box/2 Mello - Twist Sound [Aren Eternal]/album.png",
+      "size": 481345
+    },
+    {
+      "path": "Fuse Box/2 Mello - Twist Sound [Aren Eternal]/notes.chart",
+      "size": 96970
+    },
+    {
+      "path": "Fuse Box/2 Mello - Twist Sound [Aren Eternal]/song.ini",
+      "size": 478
+    },
+    {
+      "path": "Fuse Box/2 Mello - Twist Sound [Aren Eternal]/song.opus",
+      "size": 2533390
+    },
+    {
+      "path": "Fuse Box/Acid-Notation - Masked Dedede Remix [Aren Eternal & Soup]/album.png",
+      "size": 233298
+    },
+    {
+      "path": "Fuse Box/Acid-Notation - Masked Dedede Remix [Aren Eternal & Soup]/notes.chart",
+      "size": 144865
+    },
+    {
+      "path": "Fuse Box/Acid-Notation - Masked Dedede Remix [Aren Eternal & Soup]/song.ini",
+      "size": 396
+    },
+    {
+      "path": "Fuse Box/Acid-Notation - Masked Dedede Remix [Aren Eternal & Soup]/song.opus",
+      "size": 3297378
+    },
+    {
+      "path": "Fuse Box/AdhesiveWombat - 8 Bit Adventure (SpikedGrin remix) [Aren Eternal]/album.png",
+      "size": 102576
+    },
+    {
+      "path": "Fuse Box/AdhesiveWombat - 8 Bit Adventure (SpikedGrin remix) [Aren Eternal]/notes.chart",
+      "size": 115355
+    },
+    {
+      "path": "Fuse Box/AdhesiveWombat - 8 Bit Adventure (SpikedGrin remix) [Aren Eternal]/song.ini",
+      "size": 440
+    },
+    {
+      "path": "Fuse Box/AdhesiveWombat - 8 Bit Adventure (SpikedGrin remix) [Aren Eternal]/song.opus",
+      "size": 3927411
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Intensive Care Unit (Renard cover) [Jackie & Aren Eternal]/album.png",
+      "size": 4113284
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Intensive Care Unit (Renard cover) [Jackie & Aren Eternal]/guitar.opus",
+      "size": 2195122
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Intensive Care Unit (Renard cover) [Jackie & Aren Eternal]/notes.chart",
+      "size": 93173
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Intensive Care Unit (Renard cover) [Jackie & Aren Eternal]/song.ini",
+      "size": 965
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Whirlwind (Wes Goodie & Prismatic cover) [Jackie & Aren Eternal]/album.png",
+      "size": 130171
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Whirlwind (Wes Goodie & Prismatic cover) [Jackie & Aren Eternal]/guitar.opus",
+      "size": 4113568
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Whirlwind (Wes Goodie & Prismatic cover) [Jackie & Aren Eternal]/notes.chart",
+      "size": 106603
+    },
+    {
+      "path": "Fuse Box/Aeon Bridge - Whirlwind (Wes Goodie & Prismatic cover) [Jackie & Aren Eternal]/song.ini",
+      "size": 972
+    },
+    {
+      "path": "Fuse Box/Alice Deejay - Better Off Alone [JRabes]/album.png",
+      "size": 511893
+    },
+    {
+      "path": "Fuse Box/Alice Deejay - Better Off Alone [JRabes]/notes.chart",
+      "size": 75651
+    },
+    {
+      "path": "Fuse Box/Alice Deejay - Better Off Alone [JRabes]/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Fuse Box/Alice Deejay - Better Off Alone [JRabes]/song.opus",
+      "size": 2797434
+    },
+    {
+      "path": "Fuse Box/Anamanaguchi - My Skateboard Will Go On [Spachi]/album.png",
+      "size": 258067
+    },
+    {
+      "path": "Fuse Box/Anamanaguchi - My Skateboard Will Go On [Spachi]/notes.chart",
+      "size": 62747
+    },
+    {
+      "path": "Fuse Box/Anamanaguchi - My Skateboard Will Go On [Spachi]/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Fuse Box/Anamanaguchi - My Skateboard Will Go On [Spachi]/song.opus",
+      "size": 2309232
+    },
+    {
+      "path": "Fuse Box/Andrew Huang - 7 (feat. Button Masher) [\u03a9HM]/album.png",
+      "size": 363998
+    },
+    {
+      "path": "Fuse Box/Andrew Huang - 7 (feat. Button Masher) [\u03a9HM]/notes.chart",
+      "size": 63570
+    },
+    {
+      "path": "Fuse Box/Andrew Huang - 7 (feat. Button Masher) [\u03a9HM]/song.ini",
+      "size": 518
+    },
+    {
+      "path": "Fuse Box/Andrew Huang - 7 (feat. Button Masher) [\u03a9HM]/song.opus",
+      "size": 2459255
+    },
+    {
+      "path": "Fuse Box/Android52 - ZERO [Pix_]/album.jpg",
+      "size": 309133
+    },
+    {
+      "path": "Fuse Box/Android52 - ZERO [Pix_]/background.jpg",
+      "size": 562707
+    },
+    {
+      "path": "Fuse Box/Android52 - ZERO [Pix_]/notes.chart",
+      "size": 93630
+    },
+    {
+      "path": "Fuse Box/Android52 - ZERO [Pix_]/song.ini",
+      "size": 638
+    },
+    {
+      "path": "Fuse Box/Android52 - ZERO [Pix_]/song.opus",
+      "size": 2514025
+    },
+    {
+      "path": "Fuse Box/Aperture Science Psychoacoustic Laboratories - Robots FTW [Raspberriel]/album.png",
+      "size": 415681
+    },
+    {
+      "path": "Fuse Box/Aperture Science Psychoacoustic Laboratories - Robots FTW [Raspberriel]/background.jpg",
+      "size": 172545
+    },
+    {
+      "path": "Fuse Box/Aperture Science Psychoacoustic Laboratories - Robots FTW [Raspberriel]/guitar.opus",
+      "size": 2901120
+    },
+    {
+      "path": "Fuse Box/Aperture Science Psychoacoustic Laboratories - Robots FTW [Raspberriel]/notes.mid",
+      "size": 32565
+    },
+    {
+      "path": "Fuse Box/Aperture Science Psychoacoustic Laboratories - Robots FTW [Raspberriel]/song.ini",
+      "size": 608
+    },
+    {
+      "path": "Fuse Box/Aphex Twin - Afx237 v.7 [Caret]/album.png",
+      "size": 570594
+    },
+    {
+      "path": "Fuse Box/Aphex Twin - Afx237 v.7 [Caret]/background.jpg",
+      "size": 187794
+    },
+    {
+      "path": "Fuse Box/Aphex Twin - Afx237 v.7 [Caret]/notes.chart",
+      "size": 120963
+    },
+    {
+      "path": "Fuse Box/Aphex Twin - Afx237 v.7 [Caret]/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Fuse Box/Aphex Twin - Afx237 v.7 [Caret]/song.opus",
+      "size": 3157211
+    },
+    {
+      "path": "Fuse Box/Astronaut - Witchcraft [Deltarak]/album.png",
+      "size": 40065
+    },
+    {
+      "path": "Fuse Box/Astronaut - Witchcraft [Deltarak]/notes.chart",
+      "size": 95099
+    },
+    {
+      "path": "Fuse Box/Astronaut - Witchcraft [Deltarak]/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Fuse Box/Astronaut - Witchcraft [Deltarak]/song.opus",
+      "size": 2661429
+    },
+    {
+      "path": "Fuse Box/Au5 & Fractal - Subvert (Haywyre remix) [Geo]/album.png",
+      "size": 421816
+    },
+    {
+      "path": "Fuse Box/Au5 & Fractal - Subvert (Haywyre remix) [Geo]/guitar.opus",
+      "size": 2442519
+    },
+    {
+      "path": "Fuse Box/Au5 & Fractal - Subvert (Haywyre remix) [Geo]/notes.chart",
+      "size": 68326
+    },
+    {
+      "path": "Fuse Box/Au5 & Fractal - Subvert (Haywyre remix) [Geo]/song.ini",
+      "size": 478
+    },
+    {
+      "path": "Fuse Box/Au5 - Blossom [MissMoo]/album.png",
+      "size": 6760443
+    },
+    {
+      "path": "Fuse Box/Au5 - Blossom [MissMoo]/background.png",
+      "size": 2988427
+    },
+    {
+      "path": "Fuse Box/Au5 - Blossom [MissMoo]/notes.chart",
+      "size": 182488
+    },
+    {
+      "path": "Fuse Box/Au5 - Blossom [MissMoo]/song.ini",
+      "size": 682
+    },
+    {
+      "path": "Fuse Box/Au5 - Blossom [MissMoo]/song.opus",
+      "size": 4499710
+    },
+    {
+      "path": "Fuse Box/Aylius - Psychotic (feat. Katie Joy) [Aren Eternal]/album.png",
+      "size": 213953
+    },
+    {
+      "path": "Fuse Box/Aylius - Psychotic (feat. Katie Joy) [Aren Eternal]/notes.chart",
+      "size": 115452
+    },
+    {
+      "path": "Fuse Box/Aylius - Psychotic (feat. Katie Joy) [Aren Eternal]/song.ini",
+      "size": 411
+    },
+    {
+      "path": "Fuse Box/Aylius - Psychotic (feat. Katie Joy) [Aren Eternal]/song.opus",
+      "size": 3170812
+    },
+    {
+      "path": "Fuse Box/Azazal - Scratch [Aren Eternal]/album.png",
+      "size": 321987
+    },
+    {
+      "path": "Fuse Box/Azazal - Scratch [Aren Eternal]/notes.chart",
+      "size": 56306
+    },
+    {
+      "path": "Fuse Box/Azazal - Scratch [Aren Eternal]/song.ini",
+      "size": 322
+    },
+    {
+      "path": "Fuse Box/Azazal - Scratch [Aren Eternal]/song.opus",
+      "size": 2439899
+    },
+    {
+      "path": "Fuse Box/Bemani Dropmix [Stargazer, Mintorment, Raspberriel, Miss Moo]/album.png",
+      "size": 381207
+    },
+    {
+      "path": "Fuse Box/Bemani Dropmix [Stargazer, Mintorment, Raspberriel, Miss Moo]/notes.chart",
+      "size": 889247
+    },
+    {
+      "path": "Fuse Box/Bemani Dropmix [Stargazer, Mintorment, Raspberriel, Miss Moo]/song.ini",
+      "size": 707
+    },
+    {
+      "path": "Fuse Box/Bemani Dropmix [Stargazer, Mintorment, Raspberriel, Miss Moo]/song.opus",
+      "size": 16878743
+    },
+    {
+      "path": "Fuse Box/Bemani Dropmix [Stargazer, Mintorment, Raspberriel, Miss Moo]/video.mp4",
+      "size": 2336166343
+    },
+    {
+      "path": "Fuse Box/Big Time Rush - Windows Down [Sygenysis]/album.png",
+      "size": 609673
+    },
+    {
+      "path": "Fuse Box/Big Time Rush - Windows Down [Sygenysis]/guitar.opus",
+      "size": 2265967
+    },
+    {
+      "path": "Fuse Box/Big Time Rush - Windows Down [Sygenysis]/notes.mid",
+      "size": 28759
+    },
+    {
+      "path": "Fuse Box/Big Time Rush - Windows Down [Sygenysis]/song.ini",
+      "size": 1025
+    },
+    {
+      "path": "Fuse Box/Bill Kiley - Chinatown [Pizza22]/album.png",
+      "size": 304335
+    },
+    {
+      "path": "Fuse Box/Bill Kiley - Chinatown [Pizza22]/notes.chart",
+      "size": 71038
+    },
+    {
+      "path": "Fuse Box/Bill Kiley - Chinatown [Pizza22]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Fuse Box/Bill Kiley - Chinatown [Pizza22]/song.opus",
+      "size": 2308957
+    },
+    {
+      "path": "Fuse Box/Blaqk Audio - Consort [MissMoo]/album.png",
+      "size": 439803
+    },
+    {
+      "path": "Fuse Box/Blaqk Audio - Consort [MissMoo]/background.png",
+      "size": 2999723
+    },
+    {
+      "path": "Fuse Box/Blaqk Audio - Consort [MissMoo]/notes.chart",
+      "size": 154861
+    },
+    {
+      "path": "Fuse Box/Blaqk Audio - Consort [MissMoo]/song.ini",
+      "size": 773
+    },
+    {
+      "path": "Fuse Box/Blaqk Audio - Consort [MissMoo]/song.opus",
+      "size": 3043164
+    },
+    {
+      "path": "Fuse Box/Bo Burnham - Bezos I [Aren Eternal]/album.png",
+      "size": 354764
+    },
+    {
+      "path": "Fuse Box/Bo Burnham - Bezos I [Aren Eternal]/notes.chart",
+      "size": 29219
+    },
+    {
+      "path": "Fuse Box/Bo Burnham - Bezos I [Aren Eternal]/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Fuse Box/Bo Burnham - Bezos I [Aren Eternal]/song.opus",
+      "size": 703664
+    },
+    {
+      "path": "Fuse Box/Boom Kitty & HeliXiX - Tokyo Takedown [Deltarak]/album.png",
+      "size": 60870
+    },
+    {
+      "path": "Fuse Box/Boom Kitty & HeliXiX - Tokyo Takedown [Deltarak]/notes.chart",
+      "size": 33442
+    },
+    {
+      "path": "Fuse Box/Boom Kitty & HeliXiX - Tokyo Takedown [Deltarak]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Fuse Box/Boom Kitty & HeliXiX - Tokyo Takedown [Deltarak]/song.opus",
+      "size": 1765324
+    },
+    {
+      "path": "Fuse Box/COOL&CREATE (beatMARIO)- Dogeza Stairs [Xeratek]/album.png",
+      "size": 518860
+    },
+    {
+      "path": "Fuse Box/COOL&CREATE (beatMARIO)- Dogeza Stairs [Xeratek]/notes.chart",
+      "size": 78533
+    },
+    {
+      "path": "Fuse Box/COOL&CREATE (beatMARIO)- Dogeza Stairs [Xeratek]/song.ini",
+      "size": 820
+    },
+    {
+      "path": "Fuse Box/COOL&CREATE (beatMARIO)- Dogeza Stairs [Xeratek]/song.opus",
+      "size": 1638303
+    },
+    {
+      "path": "Fuse Box/Camellia - #1f1e33 (#00102g version) [Stargazer]/album.png",
+      "size": 329956
+    },
+    {
+      "path": "Fuse Box/Camellia - #1f1e33 (#00102g version) [Stargazer]/notes.chart",
+      "size": 200993
+    },
+    {
+      "path": "Fuse Box/Camellia - #1f1e33 (#00102g version) [Stargazer]/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Fuse Box/Camellia - #1f1e33 (#00102g version) [Stargazer]/song.opus",
+      "size": 3926665
+    },
+    {
+      "path": "Fuse Box/Camellia - Bangin' Burst [Stargazer]/album.png",
+      "size": 711175
+    },
+    {
+      "path": "Fuse Box/Camellia - Bangin' Burst [Stargazer]/notes.chart",
+      "size": 120349
+    },
+    {
+      "path": "Fuse Box/Camellia - Bangin' Burst [Stargazer]/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Fuse Box/Camellia - Bangin' Burst [Stargazer]/song.opus",
+      "size": 3019129
+    },
+    {
+      "path": "Fuse Box/Camellia - Glitch Nerds [Stargazer & Aren Eternal]/album.png",
+      "size": 97829
+    },
+    {
+      "path": "Fuse Box/Camellia - Glitch Nerds [Stargazer & Aren Eternal]/notes.chart",
+      "size": 208634
+    },
+    {
+      "path": "Fuse Box/Camellia - Glitch Nerds [Stargazer & Aren Eternal]/song.ini",
+      "size": 476
+    },
+    {
+      "path": "Fuse Box/Camellia - Glitch Nerds [Stargazer & Aren Eternal]/song.opus",
+      "size": 3133121
+    },
+    {
+      "path": "Fuse Box/Camellia - Spin Eternally [Stargazer & Aren Eternal]/album.png",
+      "size": 139283
+    },
+    {
+      "path": "Fuse Box/Camellia - Spin Eternally [Stargazer & Aren Eternal]/notes.chart",
+      "size": 93129
+    },
+    {
+      "path": "Fuse Box/Camellia - Spin Eternally [Stargazer & Aren Eternal]/song.ini",
+      "size": 604
+    },
+    {
+      "path": "Fuse Box/Camellia - Spin Eternally [Stargazer & Aren Eternal]/song.opus",
+      "size": 2562720
+    },
+    {
+      "path": "Fuse Box/Camellia - crystallized [Mintorment & KhromaticScale]/album.png",
+      "size": 463196
+    },
+    {
+      "path": "Fuse Box/Camellia - crystallized [Mintorment & KhromaticScale]/notes.chart",
+      "size": 106667
+    },
+    {
+      "path": "Fuse Box/Camellia - crystallized [Mintorment & KhromaticScale]/song.ini",
+      "size": 763
+    },
+    {
+      "path": "Fuse Box/Camellia - crystallized [Mintorment & KhromaticScale]/song.opus",
+      "size": 3206937
+    },
+    {
+      "path": "Fuse Box/Carl Nor\u00e9n - Bullet Rain [Aren Eternal]/album.png",
+      "size": 219182
+    },
+    {
+      "path": "Fuse Box/Carl Nor\u00e9n - Bullet Rain [Aren Eternal]/notes.chart",
+      "size": 51555
+    },
+    {
+      "path": "Fuse Box/Carl Nor\u00e9n - Bullet Rain [Aren Eternal]/song.ini",
+      "size": 411
+    },
+    {
+      "path": "Fuse Box/Carl Nor\u00e9n - Bullet Rain [Aren Eternal]/song.opus",
+      "size": 2249295
+    },
+    {
+      "path": "Fuse Box/Cazok - The Final Battle [Jackie & Aren Eternal]/album.png",
+      "size": 272663
+    },
+    {
+      "path": "Fuse Box/Cazok - The Final Battle [Jackie & Aren Eternal]/guitar.opus",
+      "size": 1831880
+    },
+    {
+      "path": "Fuse Box/Cazok - The Final Battle [Jackie & Aren Eternal]/notes.chart",
+      "size": 69444
+    },
+    {
+      "path": "Fuse Box/Cazok - The Final Battle [Jackie & Aren Eternal]/song.ini",
+      "size": 925
+    },
+    {
+      "path": "Fuse Box/Cobra Starship - You Make Me Feel (RoughMath remix) [Aren Eternal]/album.png",
+      "size": 426570
+    },
+    {
+      "path": "Fuse Box/Cobra Starship - You Make Me Feel (RoughMath remix) [Aren Eternal]/notes.chart",
+      "size": 92555
+    },
+    {
+      "path": "Fuse Box/Cobra Starship - You Make Me Feel (RoughMath remix) [Aren Eternal]/song.ini",
+      "size": 514
+    },
+    {
+      "path": "Fuse Box/Cobra Starship - You Make Me Feel (RoughMath remix) [Aren Eternal]/song.opus",
+      "size": 3098624
+    },
+    {
+      "path": "Fuse Box/Cole Rolland - Every Time We Touch (Cascada cover feat. Lauren Babic) [HattMeafy, Spachi]/album.png",
+      "size": 363089
+    },
+    {
+      "path": "Fuse Box/Cole Rolland - Every Time We Touch (Cascada cover feat. Lauren Babic) [HattMeafy, Spachi]/background.jpg",
+      "size": 210273
+    },
+    {
+      "path": "Fuse Box/Cole Rolland - Every Time We Touch (Cascada cover feat. Lauren Babic) [HattMeafy, Spachi]/notes.chart",
+      "size": 72014
+    },
+    {
+      "path": "Fuse Box/Cole Rolland - Every Time We Touch (Cascada cover feat. Lauren Babic) [HattMeafy, Spachi]/song.ini",
+      "size": 543
+    },
+    {
+      "path": "Fuse Box/Cole Rolland - Every Time We Touch (Cascada cover feat. Lauren Babic) [HattMeafy, Spachi]/song.opus",
+      "size": 2607094
+    },
+    {
+      "path": "Fuse Box/Corey Feldman - Go 4 It (feat. Snoop Dogg) [Caret]/album.png",
+      "size": 614445
+    },
+    {
+      "path": "Fuse Box/Corey Feldman - Go 4 It (feat. Snoop Dogg) [Caret]/background.jpg",
+      "size": 597786
+    },
+    {
+      "path": "Fuse Box/Corey Feldman - Go 4 It (feat. Snoop Dogg) [Caret]/notes.chart",
+      "size": 128551
+    },
+    {
+      "path": "Fuse Box/Corey Feldman - Go 4 It (feat. Snoop Dogg) [Caret]/song.ini",
+      "size": 801
+    },
+    {
+      "path": "Fuse Box/Corey Feldman - Go 4 It (feat. Snoop Dogg) [Caret]/song.opus",
+      "size": 2235201
+    },
+    {
+      "path": "Fuse Box/Cranky - OLD GOLD [Mintorment]/album.png",
+      "size": 414353
+    },
+    {
+      "path": "Fuse Box/Cranky - OLD GOLD [Mintorment]/notes.chart",
+      "size": 130851
+    },
+    {
+      "path": "Fuse Box/Cranky - OLD GOLD [Mintorment]/song.ini",
+      "size": 1107
+    },
+    {
+      "path": "Fuse Box/Cranky - OLD GOLD [Mintorment]/song.opus",
+      "size": 2635927
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - Diabolic [Jackie]/album.png",
+      "size": 169917
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - Diabolic [Jackie]/guitar.opus",
+      "size": 3207826
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - Diabolic [Jackie]/notes.chart",
+      "size": 116811
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - Diabolic [Jackie]/song.ini",
+      "size": 937
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - From Hell [Aren Eternal & Deltarak]/album.png",
+      "size": 390971
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - From Hell [Aren Eternal & Deltarak]/notes.chart",
+      "size": 104238
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - From Hell [Aren Eternal & Deltarak]/song.ini",
+      "size": 392
+    },
+    {
+      "path": "Fuse Box/DANCE WITH THE DEAD - From Hell [Aren Eternal & Deltarak]/song.opus",
+      "size": 2634944
+    },
+    {
+      "path": "Fuse Box/DJ Blyatman & Boris - Slav King [JRabes]/album.png",
+      "size": 551007
+    },
+    {
+      "path": "Fuse Box/DJ Blyatman & Boris - Slav King [JRabes]/notes.chart",
+      "size": 67452
+    },
+    {
+      "path": "Fuse Box/DJ Blyatman & Boris - Slav King [JRabes]/song.ini",
+      "size": 581
+    },
+    {
+      "path": "Fuse Box/DJ Blyatman & Boris - Slav King [JRabes]/song.opus",
+      "size": 2221410
+    },
+    {
+      "path": "Fuse Box/DJ Moo - MissMoo's Monumental Megamix [MissMoo]/album.png",
+      "size": 267598
+    },
+    {
+      "path": "Fuse Box/DJ Moo - MissMoo's Monumental Megamix [MissMoo]/background.png",
+      "size": 1739549
+    },
+    {
+      "path": "Fuse Box/DJ Moo - MissMoo's Monumental Megamix [MissMoo]/notes.chart",
+      "size": 572546
+    },
+    {
+      "path": "Fuse Box/DJ Moo - MissMoo's Monumental Megamix [MissMoo]/song.ini",
+      "size": 662
+    },
+    {
+      "path": "Fuse Box/DJ Moo - MissMoo's Monumental Megamix [MissMoo]/song.opus",
+      "size": 11237602
+    },
+    {
+      "path": "Fuse Box/DJ Waves - Hands Up [JRabes]/album.png",
+      "size": 507367
+    },
+    {
+      "path": "Fuse Box/DJ Waves - Hands Up [JRabes]/notes.chart",
+      "size": 88171
+    },
+    {
+      "path": "Fuse Box/DJ Waves - Hands Up [JRabes]/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Fuse Box/DJ Waves - Hands Up [JRabes]/song.opus",
+      "size": 1637166
+    },
+    {
+      "path": "Fuse Box/DM DOKURO - Fly of Beelzebub [Soup]/album.png",
+      "size": 439667
+    },
+    {
+      "path": "Fuse Box/DM DOKURO - Fly of Beelzebub [Soup]/notes.chart",
+      "size": 180016
+    },
+    {
+      "path": "Fuse Box/DM DOKURO - Fly of Beelzebub [Soup]/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Fuse Box/DM DOKURO - Fly of Beelzebub [Soup]/song.opus",
+      "size": 3230447
+    },
+    {
+      "path": "Fuse Box/DV-i - Media Prototype (Text 888 For reinabe) [Mintorment]/album.png",
+      "size": 347542
+    },
+    {
+      "path": "Fuse Box/DV-i - Media Prototype (Text 888 For reinabe) [Mintorment]/notes.chart",
+      "size": 108078
+    },
+    {
+      "path": "Fuse Box/DV-i - Media Prototype (Text 888 For reinabe) [Mintorment]/song.ini",
+      "size": 934
+    },
+    {
+      "path": "Fuse Box/DV-i - Media Prototype (Text 888 For reinabe) [Mintorment]/song.opus",
+      "size": 2875220
+    },
+    {
+      "path": "Fuse Box/Daft Punk - ALIVE25 [Fuse Box Team]/album.png",
+      "size": 346261
+    },
+    {
+      "path": "Fuse Box/Daft Punk - ALIVE25 [Fuse Box Team]/background.jpg",
+      "size": 499753
+    },
+    {
+      "path": "Fuse Box/Daft Punk - ALIVE25 [Fuse Box Team]/notes.chart",
+      "size": 2512379
+    },
+    {
+      "path": "Fuse Box/Daft Punk - ALIVE25 [Fuse Box Team]/song.ini",
+      "size": 608
+    },
+    {
+      "path": "Fuse Box/Daft Punk - ALIVE25 [Fuse Box Team]/song.opus",
+      "size": 58466213
+    },
+    {
+      "path": "Fuse Box/Daft Punk - Homework Medley [\u03a9HM & Aren Eternal]/album.png",
+      "size": 407558
+    },
+    {
+      "path": "Fuse Box/Daft Punk - Homework Medley [\u03a9HM & Aren Eternal]/notes.chart",
+      "size": 386149
+    },
+    {
+      "path": "Fuse Box/Daft Punk - Homework Medley [\u03a9HM & Aren Eternal]/song.ini",
+      "size": 445
+    },
+    {
+      "path": "Fuse Box/Daft Punk - Homework Medley [\u03a9HM & Aren Eternal]/song.opus",
+      "size": 15635214
+    },
+    {
+      "path": "Fuse Box/Dancefloor is Lava - Why Oh You Are LOVE [MissMoo]/album.jpg",
+      "size": 188813
+    },
+    {
+      "path": "Fuse Box/Dancefloor is Lava - Why Oh You Are LOVE [MissMoo]/background.png",
+      "size": 3621672
+    },
+    {
+      "path": "Fuse Box/Dancefloor is Lava - Why Oh You Are LOVE [MissMoo]/notes.chart",
+      "size": 109998
+    },
+    {
+      "path": "Fuse Box/Dancefloor is Lava - Why Oh You Are LOVE [MissMoo]/song.ini",
+      "size": 613
+    },
+    {
+      "path": "Fuse Box/Dancefloor is Lava - Why Oh You Are LOVE [MissMoo]/song.opus",
+      "size": 1758104
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon & Slime Girls - Cherry Bomb [Adventium_]/album.png",
+      "size": 185287
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon & Slime Girls - Cherry Bomb [Adventium_]/notes.chart",
+      "size": 53087
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon & Slime Girls - Cherry Bomb [Adventium_]/song.ini",
+      "size": 736
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon & Slime Girls - Cherry Bomb [Adventium_]/song.opus",
+      "size": 1868672
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon - Halo of Dust [Adventium_]/album.png",
+      "size": 376237
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon - Halo of Dust [Adventium_]/notes.chart",
+      "size": 74352
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon - Halo of Dust [Adventium_]/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Fuse Box/Danimal Cannon - Halo of Dust [Adventium_]/song.opus",
+      "size": 2601010
+    },
+    {
+      "path": "Fuse Box/Digitalism - Blitz [Stickheadz32]/album.png",
+      "size": 3128
+    },
+    {
+      "path": "Fuse Box/Digitalism - Blitz [Stickheadz32]/notes.chart",
+      "size": 180962
+    },
+    {
+      "path": "Fuse Box/Digitalism - Blitz [Stickheadz32]/song.ini",
+      "size": 405
+    },
+    {
+      "path": "Fuse Box/Digitalism - Blitz [Stickheadz32]/song.opus",
+      "size": 3327339
+    },
+    {
+      "path": "Fuse Box/Doctor P - Flying Spaghetti Monster [Geo]/album.png",
+      "size": 559466
+    },
+    {
+      "path": "Fuse Box/Doctor P - Flying Spaghetti Monster [Geo]/guitar.opus",
+      "size": 3204257
+    },
+    {
+      "path": "Fuse Box/Doctor P - Flying Spaghetti Monster [Geo]/notes.chart",
+      "size": 178225
+    },
+    {
+      "path": "Fuse Box/Doctor P - Flying Spaghetti Monster [Geo]/song.ini",
+      "size": 567
+    },
+    {
+      "path": "Fuse Box/Doctor P - Voices [Froogs]/album.png",
+      "size": 640312
+    },
+    {
+      "path": "Fuse Box/Doctor P - Voices [Froogs]/guitar.opus",
+      "size": 2291620
+    },
+    {
+      "path": "Fuse Box/Doctor P - Voices [Froogs]/notes.mid",
+      "size": 32030
+    },
+    {
+      "path": "Fuse Box/Doctor P - Voices [Froogs]/song.ini",
+      "size": 688
+    },
+    {
+      "path": "Fuse Box/Douglas Holmquist - Hypersphere [Smoochums & Aren Eternal]/album.jpg",
+      "size": 36976
+    },
+    {
+      "path": "Fuse Box/Douglas Holmquist - Hypersphere [Smoochums & Aren Eternal]/notes.chart",
+      "size": 150022
+    },
+    {
+      "path": "Fuse Box/Douglas Holmquist - Hypersphere [Smoochums & Aren Eternal]/song.ini",
+      "size": 645
+    },
+    {
+      "path": "Fuse Box/Douglas Holmquist - Hypersphere [Smoochums & Aren Eternal]/song.opus",
+      "size": 4446962
+    },
+    {
+      "path": "Fuse Box/DragonForce - TTFAF (miiro Tropical House Remix) [Aren Eternal]/album.png",
+      "size": 343030
+    },
+    {
+      "path": "Fuse Box/DragonForce - TTFAF (miiro Tropical House Remix) [Aren Eternal]/notes.chart",
+      "size": 73289
+    },
+    {
+      "path": "Fuse Box/DragonForce - TTFAF (miiro Tropical House Remix) [Aren Eternal]/song.ini",
+      "size": 411
+    },
+    {
+      "path": "Fuse Box/DragonForce - TTFAF (miiro Tropical House Remix) [Aren Eternal]/song.opus",
+      "size": 2463829
+    },
+    {
+      "path": "Fuse Box/Droptek - Ekstasis [MissMoo]/album.png",
+      "size": 1284281
+    },
+    {
+      "path": "Fuse Box/Droptek - Ekstasis [MissMoo]/background.png",
+      "size": 782920
+    },
+    {
+      "path": "Fuse Box/Droptek - Ekstasis [MissMoo]/notes.chart",
+      "size": 183490
+    },
+    {
+      "path": "Fuse Box/Droptek - Ekstasis [MissMoo]/song.ini",
+      "size": 772
+    },
+    {
+      "path": "Fuse Box/Droptek - Ekstasis [MissMoo]/song.opus",
+      "size": 3171446
+    },
+    {
+      "path": "Fuse Box/Droptek - Fragments [MissMoo]/album.png",
+      "size": 1284281
+    },
+    {
+      "path": "Fuse Box/Droptek - Fragments [MissMoo]/background.png",
+      "size": 782920
+    },
+    {
+      "path": "Fuse Box/Droptek - Fragments [MissMoo]/notes.chart",
+      "size": 86630
+    },
+    {
+      "path": "Fuse Box/Droptek - Fragments [MissMoo]/song.ini",
+      "size": 623
+    },
+    {
+      "path": "Fuse Box/Droptek - Fragments [MissMoo]/song.opus",
+      "size": 3279877
+    },
+    {
+      "path": "Fuse Box/Droptek - Inject [MissMoo]/album.png",
+      "size": 1284281
+    },
+    {
+      "path": "Fuse Box/Droptek - Inject [MissMoo]/background.png",
+      "size": 782920
+    },
+    {
+      "path": "Fuse Box/Droptek - Inject [MissMoo]/notes.chart",
+      "size": 59652
+    },
+    {
+      "path": "Fuse Box/Droptek - Inject [MissMoo]/song.ini",
+      "size": 706
+    },
+    {
+      "path": "Fuse Box/Droptek - Inject [MissMoo]/song.opus",
+      "size": 2814172
+    },
+    {
+      "path": "Fuse Box/Droptek - Mimic [MissMoo]/album.png",
+      "size": 1284281
+    },
+    {
+      "path": "Fuse Box/Droptek - Mimic [MissMoo]/background.jpg",
+      "size": 117534
+    },
+    {
+      "path": "Fuse Box/Droptek - Mimic [MissMoo]/notes.chart",
+      "size": 152420
+    },
+    {
+      "path": "Fuse Box/Droptek - Mimic [MissMoo]/song.ini",
+      "size": 695
+    },
+    {
+      "path": "Fuse Box/Droptek - Mimic [MissMoo]/song.opus",
+      "size": 3413099
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Kiru [Geo]/album.png",
+      "size": 223882
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Kiru [Geo]/guitar.opus",
+      "size": 2528042
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Kiru [Geo]/notes.chart",
+      "size": 143244
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Kiru [Geo]/song.ini",
+      "size": 387
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Sine Cera [Geo]/album.png",
+      "size": 223882
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Sine Cera [Geo]/guitar.opus",
+      "size": 2741006
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Sine Cera [Geo]/notes.chart",
+      "size": 394772
+    },
+    {
+      "path": "Fuse Box/EX-LYD - Sine Cera [Geo]/song.ini",
+      "size": 415
+    },
+    {
+      "path": "Fuse Box/Electric Joy Ride & Frankk Loony - Forever (feat. Iain Mannix) [Aren Eternal]/album.png",
+      "size": 437312
+    },
+    {
+      "path": "Fuse Box/Electric Joy Ride & Frankk Loony - Forever (feat. Iain Mannix) [Aren Eternal]/notes.chart",
+      "size": 102345
+    },
+    {
+      "path": "Fuse Box/Electric Joy Ride & Frankk Loony - Forever (feat. Iain Mannix) [Aren Eternal]/song.ini",
+      "size": 451
+    },
+    {
+      "path": "Fuse Box/Electric Joy Ride & Frankk Loony - Forever (feat. Iain Mannix) [Aren Eternal]/song.opus",
+      "size": 3600544
+    },
+    {
+      "path": "Fuse Box/Eliminate - Crystallize (feat. Leah Culver) [Mintorment]/album.png",
+      "size": 359687
+    },
+    {
+      "path": "Fuse Box/Eliminate - Crystallize (feat. Leah Culver) [Mintorment]/notes.chart",
+      "size": 78042
+    },
+    {
+      "path": "Fuse Box/Eliminate - Crystallize (feat. Leah Culver) [Mintorment]/song.ini",
+      "size": 939
+    },
+    {
+      "path": "Fuse Box/Eliminate - Crystallize (feat. Leah Culver) [Mintorment]/song.opus",
+      "size": 2693073
+    },
+    {
+      "path": "Fuse Box/Eliminate - Weeble Wobble VIP [Chezy]/album.png",
+      "size": 505336
+    },
+    {
+      "path": "Fuse Box/Eliminate - Weeble Wobble VIP [Chezy]/background.jpg",
+      "size": 1279427
+    },
+    {
+      "path": "Fuse Box/Eliminate - Weeble Wobble VIP [Chezy]/notes.chart",
+      "size": 80181
+    },
+    {
+      "path": "Fuse Box/Eliminate - Weeble Wobble VIP [Chezy]/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Fuse Box/Eliminate - Weeble Wobble VIP [Chezy]/song.opus",
+      "size": 2320507
+    },
+    {
+      "path": "Fuse Box/EnV - Heaven Rd. 2 (NG mix) [Aren Eternal]/album.png",
+      "size": 298211
+    },
+    {
+      "path": "Fuse Box/EnV - Heaven Rd. 2 (NG mix) [Aren Eternal]/notes.chart",
+      "size": 95306
+    },
+    {
+      "path": "Fuse Box/EnV - Heaven Rd. 2 (NG mix) [Aren Eternal]/song.ini",
+      "size": 435
+    },
+    {
+      "path": "Fuse Box/EnV - Heaven Rd. 2 (NG mix) [Aren Eternal]/song.opus",
+      "size": 2470143
+    },
+    {
+      "path": "Fuse Box/Enter Shikari - Zzzonked [MissMoo]/album.png",
+      "size": 457611
+    },
+    {
+      "path": "Fuse Box/Enter Shikari - Zzzonked [MissMoo]/background.png",
+      "size": 4282699
+    },
+    {
+      "path": "Fuse Box/Enter Shikari - Zzzonked [MissMoo]/notes.chart",
+      "size": 76125
+    },
+    {
+      "path": "Fuse Box/Enter Shikari - Zzzonked [MissMoo]/song.ini",
+      "size": 745
+    },
+    {
+      "path": "Fuse Box/Enter Shikari - Zzzonked [MissMoo]/song.opus",
+      "size": 2307701
+    },
+    {
+      "path": "Fuse Box/Eptic - The End [Spachi]/album.png",
+      "size": 462580
+    },
+    {
+      "path": "Fuse Box/Eptic - The End [Spachi]/background.jpg",
+      "size": 545197
+    },
+    {
+      "path": "Fuse Box/Eptic - The End [Spachi]/notes.chart",
+      "size": 128442
+    },
+    {
+      "path": "Fuse Box/Eptic - The End [Spachi]/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Fuse Box/Eptic - The End [Spachi]/song.opus",
+      "size": 3076498
+    },
+    {
+      "path": "Fuse Box/Evanescence - Bring Me to Life (Teminite & The Arcturians remix) [Aren Eternal & KhromaticScale]/album.png",
+      "size": 319374
+    },
+    {
+      "path": "Fuse Box/Evanescence - Bring Me to Life (Teminite & The Arcturians remix) [Aren Eternal & KhromaticScale]/notes.chart",
+      "size": 82825
+    },
+    {
+      "path": "Fuse Box/Evanescence - Bring Me to Life (Teminite & The Arcturians remix) [Aren Eternal & KhromaticScale]/song.ini",
+      "size": 490
+    },
+    {
+      "path": "Fuse Box/Evanescence - Bring Me to Life (Teminite & The Arcturians remix) [Aren Eternal & KhromaticScale]/song.opus",
+      "size": 3118664
+    },
+    {
+      "path": "Fuse Box/Excision - X Rated [Stickheadz32]/album.jpg",
+      "size": 82221
+    },
+    {
+      "path": "Fuse Box/Excision - X Rated [Stickheadz32]/notes.chart",
+      "size": 77510
+    },
+    {
+      "path": "Fuse Box/Excision - X Rated [Stickheadz32]/song.ini",
+      "size": 350
+    },
+    {
+      "path": "Fuse Box/Excision - X Rated [Stickheadz32]/song.opus",
+      "size": 3673430
+    },
+    {
+      "path": "Fuse Box/Eyeliner - iPod Touch [iZenPenguin]/album.jpg",
+      "size": 144498
+    },
+    {
+      "path": "Fuse Box/Eyeliner - iPod Touch [iZenPenguin]/background.jpg",
+      "size": 498744
+    },
+    {
+      "path": "Fuse Box/Eyeliner - iPod Touch [iZenPenguin]/notes.chart",
+      "size": 71717
+    },
+    {
+      "path": "Fuse Box/Eyeliner - iPod Touch [iZenPenguin]/song.ini",
+      "size": 639
+    },
+    {
+      "path": "Fuse Box/Eyeliner - iPod Touch [iZenPenguin]/song.opus",
+      "size": 3580999
+    },
+    {
+      "path": "Fuse Box/F-777 - Fasten Your Seatbelts [Peddy]/album.png",
+      "size": 408783
+    },
+    {
+      "path": "Fuse Box/F-777 - Fasten Your Seatbelts [Peddy]/notes.chart",
+      "size": 225185
+    },
+    {
+      "path": "Fuse Box/F-777 - Fasten Your Seatbelts [Peddy]/song.ini",
+      "size": 474
+    },
+    {
+      "path": "Fuse Box/F-777 - Fasten Your Seatbelts [Peddy]/song.opus",
+      "size": 1880426
+    },
+    {
+      "path": "Fuse Box/F-777 - Pixel Hero [Eva]/album.png",
+      "size": 151152
+    },
+    {
+      "path": "Fuse Box/F-777 - Pixel Hero [Eva]/notes.chart",
+      "size": 151492
+    },
+    {
+      "path": "Fuse Box/F-777 - Pixel Hero [Eva]/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Fuse Box/F-777 - Pixel Hero [Eva]/song.opus",
+      "size": 3586419
+    },
+    {
+      "path": "Fuse Box/F-777 - The Kraken [Spachi]/album.png",
+      "size": 492073
+    },
+    {
+      "path": "Fuse Box/F-777 - The Kraken [Spachi]/background.jpg",
+      "size": 1620026
+    },
+    {
+      "path": "Fuse Box/F-777 - The Kraken [Spachi]/notes.chart",
+      "size": 71910
+    },
+    {
+      "path": "Fuse Box/F-777 - The Kraken [Spachi]/song.ini",
+      "size": 487
+    },
+    {
+      "path": "Fuse Box/F-777 - The Kraken [Spachi]/song.opus",
+      "size": 2453091
+    },
+    {
+      "path": "Fuse Box/FamilyJules - Long Live the New Fresh (Danimal Cannon cover) [Deltarak]/album.png",
+      "size": 298613
+    },
+    {
+      "path": "Fuse Box/FamilyJules - Long Live the New Fresh (Danimal Cannon cover) [Deltarak]/notes.chart",
+      "size": 79285
+    },
+    {
+      "path": "Fuse Box/FamilyJules - Long Live the New Fresh (Danimal Cannon cover) [Deltarak]/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Fuse Box/FamilyJules - Long Live the New Fresh (Danimal Cannon cover) [Deltarak]/song.opus",
+      "size": 3267364
+    },
+    {
+      "path": "Fuse Box/FantomenK - Jump Up and Bounce Down [Stickheadz32]/album.png",
+      "size": 52050
+    },
+    {
+      "path": "Fuse Box/FantomenK - Jump Up and Bounce Down [Stickheadz32]/notes.chart",
+      "size": 91189
+    },
+    {
+      "path": "Fuse Box/FantomenK - Jump Up and Bounce Down [Stickheadz32]/song.ini",
+      "size": 498
+    },
+    {
+      "path": "Fuse Box/FantomenK - Jump Up and Bounce Down [Stickheadz32]/song.opus",
+      "size": 3679830
+    },
+    {
+      "path": "Fuse Box/Feint - Words (feat. Laura Brehm) [Pizza22]/album.png",
+      "size": 312898
+    },
+    {
+      "path": "Fuse Box/Feint - Words (feat. Laura Brehm) [Pizza22]/notes.chart",
+      "size": 94727
+    },
+    {
+      "path": "Fuse Box/Feint - Words (feat. Laura Brehm) [Pizza22]/song.ini",
+      "size": 403
+    },
+    {
+      "path": "Fuse Box/Feint - Words (feat. Laura Brehm) [Pizza22]/song.opus",
+      "size": 3257479
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Arcahv [Stargazer]/album.png",
+      "size": 598284
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Arcahv [Stargazer]/notes.chart",
+      "size": 73044
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Arcahv [Stargazer]/song.ini",
+      "size": 420
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Arcahv [Stargazer]/song.opus",
+      "size": 2176189
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Monochrome Anomaly (feat. F9) [MissMoo]/album.png",
+      "size": 531240
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Monochrome Anomaly (feat. F9) [MissMoo]/background.png",
+      "size": 2717746
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Monochrome Anomaly (feat. F9) [MissMoo]/notes.chart",
+      "size": 149626
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Monochrome Anomaly (feat. F9) [MissMoo]/song.ini",
+      "size": 727
+    },
+    {
+      "path": "Fuse Box/Feryquitous - Monochrome Anomaly (feat. F9) [MissMoo]/song.opus",
+      "size": 3093705
+    },
+    {
+      "path": "Fuse Box/Flight Facilities - Crave You (Adventure Club remix) [Vasasasasa]/album.png",
+      "size": 317241
+    },
+    {
+      "path": "Fuse Box/Flight Facilities - Crave You (Adventure Club remix) [Vasasasasa]/background.jpg",
+      "size": 173727
+    },
+    {
+      "path": "Fuse Box/Flight Facilities - Crave You (Adventure Club remix) [Vasasasasa]/notes.chart",
+      "size": 138149
+    },
+    {
+      "path": "Fuse Box/Flight Facilities - Crave You (Adventure Club remix) [Vasasasasa]/song.ini",
+      "size": 524
+    },
+    {
+      "path": "Fuse Box/Flight Facilities - Crave You (Adventure Club remix) [Vasasasasa]/song.opus",
+      "size": 2882046
+    },
+    {
+      "path": "Fuse Box/Fox Stevenson - Simple Life [Aren Eternal]/album.png",
+      "size": 398861
+    },
+    {
+      "path": "Fuse Box/Fox Stevenson - Simple Life [Aren Eternal]/notes.chart",
+      "size": 74198
+    },
+    {
+      "path": "Fuse Box/Fox Stevenson - Simple Life [Aren Eternal]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Fuse Box/Fox Stevenson - Simple Life [Aren Eternal]/song.opus",
+      "size": 2317481
+    },
+    {
+      "path": "Fuse Box/Frank Stallone - Far from Over [Sygenysis]/album.png",
+      "size": 341322
+    },
+    {
+      "path": "Fuse Box/Frank Stallone - Far from Over [Sygenysis]/guitar.opus",
+      "size": 2891647
+    },
+    {
+      "path": "Fuse Box/Frank Stallone - Far from Over [Sygenysis]/notes.mid",
+      "size": 27291
+    },
+    {
+      "path": "Fuse Box/Frank Stallone - Far from Over [Sygenysis]/song.ini",
+      "size": 1038
+    },
+    {
+      "path": "Fuse Box/Frisco - Sea of Love (Hixxy Remix) [Caret]/album.png",
+      "size": 674708
+    },
+    {
+      "path": "Fuse Box/Frisco - Sea of Love (Hixxy Remix) [Caret]/background.jpg",
+      "size": 337024
+    },
+    {
+      "path": "Fuse Box/Frisco - Sea of Love (Hixxy Remix) [Caret]/notes.chart",
+      "size": 143220
+    },
+    {
+      "path": "Fuse Box/Frisco - Sea of Love (Hixxy Remix) [Caret]/song.ini",
+      "size": 790
+    },
+    {
+      "path": "Fuse Box/Frisco - Sea of Love (Hixxy Remix) [Caret]/song.opus",
+      "size": 2664768
+    },
+    {
+      "path": "Fuse Box/Geoxor - Stardust [Geo]/album.png",
+      "size": 414111
+    },
+    {
+      "path": "Fuse Box/Geoxor - Stardust [Geo]/notes.chart",
+      "size": 107941
+    },
+    {
+      "path": "Fuse Box/Geoxor - Stardust [Geo]/song.ini",
+      "size": 365
+    },
+    {
+      "path": "Fuse Box/Geoxor - Stardust [Geo]/song.opus",
+      "size": 3103312
+    },
+    {
+      "path": "Fuse Box/Getsix - Red Nightmare [Deltarak]/album.png",
+      "size": 487909
+    },
+    {
+      "path": "Fuse Box/Getsix - Red Nightmare [Deltarak]/notes.chart",
+      "size": 74092
+    },
+    {
+      "path": "Fuse Box/Getsix - Red Nightmare [Deltarak]/song.ini",
+      "size": 507
+    },
+    {
+      "path": "Fuse Box/Getsix - Red Nightmare [Deltarak]/song.opus",
+      "size": 2028381
+    },
+    {
+      "path": "Fuse Box/Go Ichinose - Champion Cynthia (Qumu Remix) [Spachi]/album.png",
+      "size": 199091
+    },
+    {
+      "path": "Fuse Box/Go Ichinose - Champion Cynthia (Qumu Remix) [Spachi]/background.jpg",
+      "size": 269282
+    },
+    {
+      "path": "Fuse Box/Go Ichinose - Champion Cynthia (Qumu Remix) [Spachi]/notes.chart",
+      "size": 80594
+    },
+    {
+      "path": "Fuse Box/Go Ichinose - Champion Cynthia (Qumu Remix) [Spachi]/song.ini",
+      "size": 479
+    },
+    {
+      "path": "Fuse Box/Go Ichinose - Champion Cynthia (Qumu Remix) [Spachi]/song.opus",
+      "size": 2522772
+    },
+    {
+      "path": "Fuse Box/Haezer - Bass Addict [Aren Eternal]/album.png",
+      "size": 325753
+    },
+    {
+      "path": "Fuse Box/Haezer - Bass Addict [Aren Eternal]/notes.chart",
+      "size": 80837
+    },
+    {
+      "path": "Fuse Box/Haezer - Bass Addict [Aren Eternal]/song.ini",
+      "size": 420
+    },
+    {
+      "path": "Fuse Box/Haezer - Bass Addict [Aren Eternal]/song.opus",
+      "size": 2062380
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride (Headphones remix) [Aren Eternal]/album.png",
+      "size": 482073
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride (Headphones remix) [Aren Eternal]/notes.chart",
+      "size": 51184
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride (Headphones remix) [Aren Eternal]/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride (Headphones remix) [Aren Eternal]/song.opus",
+      "size": 1598714
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride Main Theme [Aren Eternal]/album.png",
+      "size": 482073
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride Main Theme [Aren Eternal]/notes.chart",
+      "size": 50109
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride Main Theme [Aren Eternal]/song.ini",
+      "size": 436
+    },
+    {
+      "path": "Fuse Box/Halfbrick - Jetpack Joyride Main Theme [Aren Eternal]/song.opus",
+      "size": 1619316
+    },
+    {
+      "path": "Fuse Box/Haywyre - I Am Me, I Am You [Chezy]/album.png",
+      "size": 350495
+    },
+    {
+      "path": "Fuse Box/Haywyre - I Am Me, I Am You [Chezy]/background.jpg",
+      "size": 983412
+    },
+    {
+      "path": "Fuse Box/Haywyre - I Am Me, I Am You [Chezy]/notes.chart",
+      "size": 141604
+    },
+    {
+      "path": "Fuse Box/Haywyre - I Am Me, I Am You [Chezy]/song.ini",
+      "size": 745
+    },
+    {
+      "path": "Fuse Box/Haywyre - I Am Me, I Am You [Chezy]/song.opus",
+      "size": 4490056
+    },
+    {
+      "path": "Fuse Box/Haywyre - Let Me Hear That (Krafty Kuts remix) [JoeyD]/album.png",
+      "size": 374174
+    },
+    {
+      "path": "Fuse Box/Haywyre - Let Me Hear That (Krafty Kuts remix) [JoeyD]/notes.chart",
+      "size": 112218
+    },
+    {
+      "path": "Fuse Box/Haywyre - Let Me Hear That (Krafty Kuts remix) [JoeyD]/song.ini",
+      "size": 753
+    },
+    {
+      "path": "Fuse Box/Haywyre - Let Me Hear That (Krafty Kuts remix) [JoeyD]/song.opus",
+      "size": 3297094
+    },
+    {
+      "path": "Fuse Box/Hollywood Burns - Scherzo No. 5 in Death Minor [TFG85]/album.jpg",
+      "size": 587393
+    },
+    {
+      "path": "Fuse Box/Hollywood Burns - Scherzo No. 5 in Death Minor [TFG85]/background.jpg",
+      "size": 414326
+    },
+    {
+      "path": "Fuse Box/Hollywood Burns - Scherzo No. 5 in Death Minor [TFG85]/notes.chart",
+      "size": 148466
+    },
+    {
+      "path": "Fuse Box/Hollywood Burns - Scherzo No. 5 in Death Minor [TFG85]/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Fuse Box/Hollywood Burns - Scherzo No. 5 in Death Minor [TFG85]/song.opus",
+      "size": 3446812
+    },
+    {
+      "path": "Fuse Box/Hoshimachi Suisei - SelfishDazzling [Raspberriel]/album.png",
+      "size": 567541
+    },
+    {
+      "path": "Fuse Box/Hoshimachi Suisei - SelfishDazzling [Raspberriel]/background.jpg",
+      "size": 170192
+    },
+    {
+      "path": "Fuse Box/Hoshimachi Suisei - SelfishDazzling [Raspberriel]/guitar.opus",
+      "size": 2594998
+    },
+    {
+      "path": "Fuse Box/Hoshimachi Suisei - SelfishDazzling [Raspberriel]/notes.mid",
+      "size": 45780
+    },
+    {
+      "path": "Fuse Box/Hoshimachi Suisei - SelfishDazzling [Raspberriel]/song.ini",
+      "size": 681
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - New Year [Deltarak]/album.png",
+      "size": 490787
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - New Year [Deltarak]/notes.chart",
+      "size": 76012
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - New Year [Deltarak]/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - New Year [Deltarak]/song.opus",
+      "size": 2416659
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - Surf [Deltarak]/album.png",
+      "size": 25504
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - Surf [Deltarak]/notes.chart",
+      "size": 102915
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - Surf [Deltarak]/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Fuse Box/Hyper Potions - Surf [Deltarak]/song.opus",
+      "size": 3065983
+    },
+    {
+      "path": "Fuse Box/I Shot the Duck Hunt Dog - BGM 10 [MissMoo]/album.png",
+      "size": 405143
+    },
+    {
+      "path": "Fuse Box/I Shot the Duck Hunt Dog - BGM 10 [MissMoo]/background.png",
+      "size": 4820094
+    },
+    {
+      "path": "Fuse Box/I Shot the Duck Hunt Dog - BGM 10 [MissMoo]/notes.chart",
+      "size": 140085
+    },
+    {
+      "path": "Fuse Box/I Shot the Duck Hunt Dog - BGM 10 [MissMoo]/song.ini",
+      "size": 708
+    },
+    {
+      "path": "Fuse Box/I Shot the Duck Hunt Dog - BGM 10 [MissMoo]/song.opus",
+      "size": 2658410
+    },
+    {
+      "path": "Fuse Box/Icy Lust - Downtown Maglev [Geo & HattMeafy]/album.png",
+      "size": 369187
+    },
+    {
+      "path": "Fuse Box/Icy Lust - Downtown Maglev [Geo & HattMeafy]/notes.chart",
+      "size": 90870
+    },
+    {
+      "path": "Fuse Box/Icy Lust - Downtown Maglev [Geo & HattMeafy]/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Fuse Box/Icy Lust - Downtown Maglev [Geo & HattMeafy]/song.opus",
+      "size": 2912632
+    },
+    {
+      "path": "Fuse Box/Iglooghost - Peanut Choker [Pix_]/album.jpg",
+      "size": 176141
+    },
+    {
+      "path": "Fuse Box/Iglooghost - Peanut Choker [Pix_]/background.jpg",
+      "size": 157145
+    },
+    {
+      "path": "Fuse Box/Iglooghost - Peanut Choker [Pix_]/notes.chart",
+      "size": 131365
+    },
+    {
+      "path": "Fuse Box/Iglooghost - Peanut Choker [Pix_]/song.ini",
+      "size": 1105
+    },
+    {
+      "path": "Fuse Box/Iglooghost - Peanut Choker [Pix_]/song.opus",
+      "size": 2605875
+    },
+    {
+      "path": "Fuse Box/Irving Force - Touch the Corpse [Spachi]/album.png",
+      "size": 416809
+    },
+    {
+      "path": "Fuse Box/Irving Force - Touch the Corpse [Spachi]/background.jpg",
+      "size": 125818
+    },
+    {
+      "path": "Fuse Box/Irving Force - Touch the Corpse [Spachi]/notes.chart",
+      "size": 79118
+    },
+    {
+      "path": "Fuse Box/Irving Force - Touch the Corpse [Spachi]/song.ini",
+      "size": 560
+    },
+    {
+      "path": "Fuse Box/Irving Force - Touch the Corpse [Spachi]/song.opus",
+      "size": 1942796
+    },
+    {
+      "path": "Fuse Box/Jacob Rabin - So Long [JRabes]/album.png",
+      "size": 476514
+    },
+    {
+      "path": "Fuse Box/Jacob Rabin - So Long [JRabes]/notes.chart",
+      "size": 143210
+    },
+    {
+      "path": "Fuse Box/Jacob Rabin - So Long [JRabes]/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Fuse Box/Jacob Rabin - So Long [JRabes]/song.opus",
+      "size": 6127075
+    },
+    {
+      "path": "Fuse Box/James Landino - Funky Computer [Aren Eternal & KhromaticScale]/album.png",
+      "size": 135034
+    },
+    {
+      "path": "Fuse Box/James Landino - Funky Computer [Aren Eternal & KhromaticScale]/notes.chart",
+      "size": 64744
+    },
+    {
+      "path": "Fuse Box/James Landino - Funky Computer [Aren Eternal & KhromaticScale]/song.ini",
+      "size": 544
+    },
+    {
+      "path": "Fuse Box/James Landino - Funky Computer [Aren Eternal & KhromaticScale]/song.opus",
+      "size": 1600974
+    },
+    {
+      "path": "Fuse Box/Jayman (OurMusicBox) - Wrath of God [Jackie & Aren Eternal]/album.png",
+      "size": 272663
+    },
+    {
+      "path": "Fuse Box/Jayman (OurMusicBox) - Wrath of God [Jackie & Aren Eternal]/guitar.opus",
+      "size": 1676612
+    },
+    {
+      "path": "Fuse Box/Jayman (OurMusicBox) - Wrath of God [Jackie & Aren Eternal]/notes.chart",
+      "size": 48788
+    },
+    {
+      "path": "Fuse Box/Jayman (OurMusicBox) - Wrath of God [Jackie & Aren Eternal]/song.ini",
+      "size": 870
+    },
+    {
+      "path": "Fuse Box/Johnny Harris - Odyssey (Pt. 1) [\u03a9HM]/album.jpg",
+      "size": 75210
+    },
+    {
+      "path": "Fuse Box/Johnny Harris - Odyssey (Pt. 1) [\u03a9HM]/notes.chart",
+      "size": 104559
+    },
+    {
+      "path": "Fuse Box/Johnny Harris - Odyssey (Pt. 1) [\u03a9HM]/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Fuse Box/Johnny Harris - Odyssey (Pt. 1) [\u03a9HM]/song.opus",
+      "size": 3395159
+    },
+    {
+      "path": "Fuse Box/Jupiter - Starlighter [Sygenysis]/album.png",
+      "size": 308780
+    },
+    {
+      "path": "Fuse Box/Jupiter - Starlighter [Sygenysis]/guitar.opus",
+      "size": 2575499
+    },
+    {
+      "path": "Fuse Box/Jupiter - Starlighter [Sygenysis]/notes.mid",
+      "size": 17573
+    },
+    {
+      "path": "Fuse Box/Jupiter - Starlighter [Sygenysis]/song.ini",
+      "size": 880
+    },
+    {
+      "path": "Fuse Box/Justice - Waters Of Nazareth (Justice remix) [Pix_]/album.jpg",
+      "size": 1109271
+    },
+    {
+      "path": "Fuse Box/Justice - Waters Of Nazareth (Justice remix) [Pix_]/background.jpg",
+      "size": 994570
+    },
+    {
+      "path": "Fuse Box/Justice - Waters Of Nazareth (Justice remix) [Pix_]/notes.chart",
+      "size": 116457
+    },
+    {
+      "path": "Fuse Box/Justice - Waters Of Nazareth (Justice remix) [Pix_]/song.ini",
+      "size": 771
+    },
+    {
+      "path": "Fuse Box/Justice - Waters Of Nazareth (Justice remix) [Pix_]/song.opus",
+      "size": 3660571
+    },
+    {
+      "path": "Fuse Box/K-DA - POP-STARS [Nea7x & Aren Eternal]/album.png",
+      "size": 423203
+    },
+    {
+      "path": "Fuse Box/K-DA - POP-STARS [Nea7x & Aren Eternal]/notes.chart",
+      "size": 61863
+    },
+    {
+      "path": "Fuse Box/K-DA - POP-STARS [Nea7x & Aren Eternal]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Fuse Box/K-DA - POP-STARS [Nea7x & Aren Eternal]/song.opus",
+      "size": 2280324
+    },
+    {
+      "path": "Fuse Box/KMNZ - R U GAME [Haggis, DaiJyoubs]/album.png",
+      "size": 227477
+    },
+    {
+      "path": "Fuse Box/KMNZ - R U GAME [Haggis, DaiJyoubs]/background.jpg",
+      "size": 206033
+    },
+    {
+      "path": "Fuse Box/KMNZ - R U GAME [Haggis, DaiJyoubs]/notes.chart",
+      "size": 115293
+    },
+    {
+      "path": "Fuse Box/KMNZ - R U GAME [Haggis, DaiJyoubs]/song.ini",
+      "size": 377
+    },
+    {
+      "path": "Fuse Box/KMNZ - R U GAME [Haggis, DaiJyoubs]/song.opus",
+      "size": 2812072
+    },
+    {
+      "path": "Fuse Box/KM_EXP - Reconciliation [MissMoo]/album.png",
+      "size": 232410
+    },
+    {
+      "path": "Fuse Box/KM_EXP - Reconciliation [MissMoo]/background.png",
+      "size": 1184876
+    },
+    {
+      "path": "Fuse Box/KM_EXP - Reconciliation [MissMoo]/notes.chart",
+      "size": 194792
+    },
+    {
+      "path": "Fuse Box/KM_EXP - Reconciliation [MissMoo]/song.ini",
+      "size": 677
+    },
+    {
+      "path": "Fuse Box/KM_EXP - Reconciliation [MissMoo]/song.opus",
+      "size": 5226313
+    },
+    {
+      "path": "Fuse Box/KNOWER - I Must Be Dreaming [Supahfast198]/album.png",
+      "size": 98081
+    },
+    {
+      "path": "Fuse Box/KNOWER - I Must Be Dreaming [Supahfast198]/background.jpg",
+      "size": 754198
+    },
+    {
+      "path": "Fuse Box/KNOWER - I Must Be Dreaming [Supahfast198]/notes.chart",
+      "size": 139886
+    },
+    {
+      "path": "Fuse Box/KNOWER - I Must Be Dreaming [Supahfast198]/song.ini",
+      "size": 889
+    },
+    {
+      "path": "Fuse Box/KNOWER - I Must Be Dreaming [Supahfast198]/song.opus",
+      "size": 3138548
+    },
+    {
+      "path": "Fuse Box/Kai VS Kanon Oguni VS Kenji Mizuno - U&iVERSE -DAWN OF THE GALAXY- [Mintorment]/album.png",
+      "size": 426530
+    },
+    {
+      "path": "Fuse Box/Kai VS Kanon Oguni VS Kenji Mizuno - U&iVERSE -DAWN OF THE GALAXY- [Mintorment]/notes.chart",
+      "size": 84608
+    },
+    {
+      "path": "Fuse Box/Kai VS Kanon Oguni VS Kenji Mizuno - U&iVERSE -DAWN OF THE GALAXY- [Mintorment]/song.ini",
+      "size": 1102
+    },
+    {
+      "path": "Fuse Box/Kai VS Kanon Oguni VS Kenji Mizuno - U&iVERSE -DAWN OF THE GALAXY- [Mintorment]/song.opus",
+      "size": 1968177
+    },
+    {
+      "path": "Fuse Box/Ken Blast - The Top [Aren Eternal]/album.png",
+      "size": 190791
+    },
+    {
+      "path": "Fuse Box/Ken Blast - The Top [Aren Eternal]/notes.chart",
+      "size": 127240
+    },
+    {
+      "path": "Fuse Box/Ken Blast - The Top [Aren Eternal]/song.ini",
+      "size": 439
+    },
+    {
+      "path": "Fuse Box/Ken Blast - The Top [Aren Eternal]/song.opus",
+      "size": 3211117
+    },
+    {
+      "path": "Fuse Box/Kero Kero Bonito - Battle Lines [Chezy]/album.png",
+      "size": 560678
+    },
+    {
+      "path": "Fuse Box/Kero Kero Bonito - Battle Lines [Chezy]/background.jpg",
+      "size": 1637811
+    },
+    {
+      "path": "Fuse Box/Kero Kero Bonito - Battle Lines [Chezy]/notes.chart",
+      "size": 94019
+    },
+    {
+      "path": "Fuse Box/Kero Kero Bonito - Battle Lines [Chezy]/song.ini",
+      "size": 888
+    },
+    {
+      "path": "Fuse Box/Kero Kero Bonito - Battle Lines [Chezy]/song.opus",
+      "size": 3242195
+    },
+    {
+      "path": "Fuse Box/Kim Petras - TRANSylvania [MissMoo]/album.png",
+      "size": 218106
+    },
+    {
+      "path": "Fuse Box/Kim Petras - TRANSylvania [MissMoo]/background.png",
+      "size": 484662
+    },
+    {
+      "path": "Fuse Box/Kim Petras - TRANSylvania [MissMoo]/notes.chart",
+      "size": 63596
+    },
+    {
+      "path": "Fuse Box/Kim Petras - TRANSylvania [MissMoo]/song.ini",
+      "size": 861
+    },
+    {
+      "path": "Fuse Box/Kim Petras - TRANSylvania [MissMoo]/song.opus",
+      "size": 2348893
+    },
+    {
+      "path": "Fuse Box/Klaypex - New Kids [Aren Eternal]/album.png",
+      "size": 294755
+    },
+    {
+      "path": "Fuse Box/Klaypex - New Kids [Aren Eternal]/notes.chart",
+      "size": 79426
+    },
+    {
+      "path": "Fuse Box/Klaypex - New Kids [Aren Eternal]/song.ini",
+      "size": 423
+    },
+    {
+      "path": "Fuse Box/Klaypex - New Kids [Aren Eternal]/song.opus",
+      "size": 2749826
+    },
+    {
+      "path": "Fuse Box/Knife Party - Internet Friends (VIP) [Aren Eternal]/album.png",
+      "size": 273971
+    },
+    {
+      "path": "Fuse Box/Knife Party - Internet Friends (VIP) [Aren Eternal]/notes.chart",
+      "size": 57977
+    },
+    {
+      "path": "Fuse Box/Knife Party - Internet Friends (VIP) [Aren Eternal]/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Fuse Box/Knife Party - Internet Friends (VIP) [Aren Eternal]/song.opus",
+      "size": 3066104
+    },
+    {
+      "path": "Fuse Box/Koji Kondo - Bowser (Yoshi's Island) [JoeyD]/album.png",
+      "size": 401119
+    },
+    {
+      "path": "Fuse Box/Koji Kondo - Bowser (Yoshi's Island) [JoeyD]/notes.chart",
+      "size": 43471
+    },
+    {
+      "path": "Fuse Box/Koji Kondo - Bowser (Yoshi's Island) [JoeyD]/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Fuse Box/Koji Kondo - Bowser (Yoshi's Island) [JoeyD]/song.opus",
+      "size": 1760445
+    },
+    {
+      "path": "Fuse Box/Krewella - Alive (Pegboard Nerds remix) [Aren Eternal]/album.png",
+      "size": 243581
+    },
+    {
+      "path": "Fuse Box/Krewella - Alive (Pegboard Nerds remix) [Aren Eternal]/notes.chart",
+      "size": 150785
+    },
+    {
+      "path": "Fuse Box/Krewella - Alive (Pegboard Nerds remix) [Aren Eternal]/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Fuse Box/Krewella - Alive (Pegboard Nerds remix) [Aren Eternal]/song.opus",
+      "size": 3615195
+    },
+    {
+      "path": "Fuse Box/Krewella - Can't Control Myself (Protohype remix) [Aren Eternal]/album.png",
+      "size": 182669
+    },
+    {
+      "path": "Fuse Box/Krewella - Can't Control Myself (Protohype remix) [Aren Eternal]/notes.chart",
+      "size": 39705
+    },
+    {
+      "path": "Fuse Box/Krewella - Can't Control Myself (Protohype remix) [Aren Eternal]/song.ini",
+      "size": 457
+    },
+    {
+      "path": "Fuse Box/Krewella - Can't Control Myself (Protohype remix) [Aren Eternal]/song.opus",
+      "size": 2996127
+    },
+    {
+      "path": "Fuse Box/Krewella - Play Hard [iZenPenguin]/album.jpg",
+      "size": 200393
+    },
+    {
+      "path": "Fuse Box/Krewella - Play Hard [iZenPenguin]/background.jpg",
+      "size": 830558
+    },
+    {
+      "path": "Fuse Box/Krewella - Play Hard [iZenPenguin]/notes.chart",
+      "size": 101646
+    },
+    {
+      "path": "Fuse Box/Krewella - Play Hard [iZenPenguin]/song.ini",
+      "size": 567
+    },
+    {
+      "path": "Fuse Box/Krewella - Play Hard [iZenPenguin]/song.opus",
+      "size": 3191755
+    },
+    {
+      "path": "Fuse Box/Krewella - Say Goodbye [Monological]/album.png",
+      "size": 22950
+    },
+    {
+      "path": "Fuse Box/Krewella - Say Goodbye [Monological]/background.png",
+      "size": 766067
+    },
+    {
+      "path": "Fuse Box/Krewella - Say Goodbye [Monological]/notes.chart",
+      "size": 100413
+    },
+    {
+      "path": "Fuse Box/Krewella - Say Goodbye [Monological]/song.ini",
+      "size": 713
+    },
+    {
+      "path": "Fuse Box/Krewella - Say Goodbye [Monological]/song.opus",
+      "size": 2760081
+    },
+    {
+      "path": "Fuse Box/LeetStreet Boys - Imaginary Boys [Caret]/album.png",
+      "size": 646214
+    },
+    {
+      "path": "Fuse Box/LeetStreet Boys - Imaginary Boys [Caret]/background.jpg",
+      "size": 346693
+    },
+    {
+      "path": "Fuse Box/LeetStreet Boys - Imaginary Boys [Caret]/notes.chart",
+      "size": 116316
+    },
+    {
+      "path": "Fuse Box/LeetStreet Boys - Imaginary Boys [Caret]/song.ini",
+      "size": 854
+    },
+    {
+      "path": "Fuse Box/LeetStreet Boys - Imaginary Boys [Caret]/song.opus",
+      "size": 2519854
+    },
+    {
+      "path": "Fuse Box/Let's Be Friends - FTW [Aren Eternal]/album.png",
+      "size": 279649
+    },
+    {
+      "path": "Fuse Box/Let's Be Friends - FTW [Aren Eternal]/notes.chart",
+      "size": 64028
+    },
+    {
+      "path": "Fuse Box/Let's Be Friends - FTW [Aren Eternal]/song.ini",
+      "size": 384
+    },
+    {
+      "path": "Fuse Box/Let's Be Friends - FTW [Aren Eternal]/song.opus",
+      "size": 3020282
+    },
+    {
+      "path": "Fuse Box/Lich King - Combat Mosh (8-Bit remix) [Miscellany]/album.png",
+      "size": 61413
+    },
+    {
+      "path": "Fuse Box/Lich King - Combat Mosh (8-Bit remix) [Miscellany]/background.jpg",
+      "size": 398821
+    },
+    {
+      "path": "Fuse Box/Lich King - Combat Mosh (8-Bit remix) [Miscellany]/guitar.opus",
+      "size": 3820957
+    },
+    {
+      "path": "Fuse Box/Lich King - Combat Mosh (8-Bit remix) [Miscellany]/notes.chart",
+      "size": 103296
+    },
+    {
+      "path": "Fuse Box/Lich King - Combat Mosh (8-Bit remix) [Miscellany]/song.ini",
+      "size": 444
+    },
+    {
+      "path": "Fuse Box/Lido - I Love You [Mintorment]/album.png",
+      "size": 279413
+    },
+    {
+      "path": "Fuse Box/Lido - I Love You [Mintorment]/notes.chart",
+      "size": 85965
+    },
+    {
+      "path": "Fuse Box/Lido - I Love You [Mintorment]/song.ini",
+      "size": 991
+    },
+    {
+      "path": "Fuse Box/Lido - I Love You [Mintorment]/song.opus",
+      "size": 3624731
+    },
+    {
+      "path": "Fuse Box/LilDeuceDeuce - Beep Beep I'm a Sheep (TLT remix) [Spachi]/album.png",
+      "size": 158202
+    },
+    {
+      "path": "Fuse Box/LilDeuceDeuce - Beep Beep I'm a Sheep (TLT remix) [Spachi]/notes.chart",
+      "size": 159332
+    },
+    {
+      "path": "Fuse Box/LilDeuceDeuce - Beep Beep I'm a Sheep (TLT remix) [Spachi]/song.ini",
+      "size": 637
+    },
+    {
+      "path": "Fuse Box/LilDeuceDeuce - Beep Beep I'm a Sheep (TLT remix) [Spachi]/song.opus",
+      "size": 2620296
+    },
+    {
+      "path": "Fuse Box/Little Big - Dead Unicorn [JRabes]/album.png",
+      "size": 657328
+    },
+    {
+      "path": "Fuse Box/Little Big - Dead Unicorn [JRabes]/notes.chart",
+      "size": 157080
+    },
+    {
+      "path": "Fuse Box/Little Big - Dead Unicorn [JRabes]/song.ini",
+      "size": 621
+    },
+    {
+      "path": "Fuse Box/Little Big - Dead Unicorn [JRabes]/song.opus",
+      "size": 3233164
+    },
+    {
+      "path": "Fuse Box/London Nebel - Nasty Anthem (Dorincourt remix) [Aren Eternal]/album.png",
+      "size": 152874
+    },
+    {
+      "path": "Fuse Box/London Nebel - Nasty Anthem (Dorincourt remix) [Aren Eternal]/notes.chart",
+      "size": 132665
+    },
+    {
+      "path": "Fuse Box/London Nebel - Nasty Anthem (Dorincourt remix) [Aren Eternal]/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Fuse Box/London Nebel - Nasty Anthem (Dorincourt remix) [Aren Eternal]/song.opus",
+      "size": 3977068
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - DMA 0 DRAM REFRESH [Soup]/album.png",
+      "size": 229872
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - DMA 0 DRAM REFRESH [Soup]/notes.chart",
+      "size": 161683
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - DMA 0 DRAM REFRESH [Soup]/song.ini",
+      "size": 405
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - DMA 0 DRAM REFRESH [Soup]/song.opus",
+      "size": 3701810
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - Optimized User Experience [Aren Eternal]/album.png",
+      "size": 92254
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - Optimized User Experience [Aren Eternal]/notes.chart",
+      "size": 138981
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - Optimized User Experience [Aren Eternal]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Fuse Box/MASTER BOOT RECORD - Optimized User Experience [Aren Eternal]/song.opus",
+      "size": 3119675
+    },
+    {
+      "path": "Fuse Box/MDK & meganeko - Supercharge [Adventium_ & Aren Eternal]/album.png",
+      "size": 573211
+    },
+    {
+      "path": "Fuse Box/MDK & meganeko - Supercharge [Adventium_ & Aren Eternal]/notes.chart",
+      "size": 136290
+    },
+    {
+      "path": "Fuse Box/MDK & meganeko - Supercharge [Adventium_ & Aren Eternal]/song.ini",
+      "size": 446
+    },
+    {
+      "path": "Fuse Box/MDK & meganeko - Supercharge [Adventium_ & Aren Eternal]/song.opus",
+      "size": 3369143
+    },
+    {
+      "path": "Fuse Box/MDK - Firebird (feat. Nick Sadler) [Aren Eternal & Geo]/album.png",
+      "size": 598500
+    },
+    {
+      "path": "Fuse Box/MDK - Firebird (feat. Nick Sadler) [Aren Eternal & Geo]/notes.chart",
+      "size": 102503
+    },
+    {
+      "path": "Fuse Box/MDK - Firebird (feat. Nick Sadler) [Aren Eternal & Geo]/song.ini",
+      "size": 372
+    },
+    {
+      "path": "Fuse Box/MDK - Firebird (feat. Nick Sadler) [Aren Eternal & Geo]/song.opus",
+      "size": 3062927
+    },
+    {
+      "path": "Fuse Box/MDK - Mega [Aren Eternal]/album.png",
+      "size": 606173
+    },
+    {
+      "path": "Fuse Box/MDK - Mega [Aren Eternal]/notes.chart",
+      "size": 86252
+    },
+    {
+      "path": "Fuse Box/MDK - Mega [Aren Eternal]/song.ini",
+      "size": 379
+    },
+    {
+      "path": "Fuse Box/MDK - Mega [Aren Eternal]/song.opus",
+      "size": 2650774
+    },
+    {
+      "path": "Fuse Box/MDK - Super Wubtendo (feat. FamilyJules) [Aren Eternal & Jackie]/album.png",
+      "size": 420274
+    },
+    {
+      "path": "Fuse Box/MDK - Super Wubtendo (feat. FamilyJules) [Aren Eternal & Jackie]/notes.chart",
+      "size": 94903
+    },
+    {
+      "path": "Fuse Box/MDK - Super Wubtendo (feat. FamilyJules) [Aren Eternal & Jackie]/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Fuse Box/MDK - Super Wubtendo (feat. FamilyJules) [Aren Eternal & Jackie]/song.opus",
+      "size": 2751146
+    },
+    {
+      "path": "Fuse Box/MUZZ - Kill the Silence [Aren Eternal]/album.png",
+      "size": 360479
+    },
+    {
+      "path": "Fuse Box/MUZZ - Kill the Silence [Aren Eternal]/notes.chart",
+      "size": 100029
+    },
+    {
+      "path": "Fuse Box/MUZZ - Kill the Silence [Aren Eternal]/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Fuse Box/MUZZ - Kill the Silence [Aren Eternal]/song.opus",
+      "size": 3006545
+    },
+    {
+      "path": "Fuse Box/Macross 82-99 - This Feeling (w-Soul Bell) [Haggis]/album.png",
+      "size": 292878
+    },
+    {
+      "path": "Fuse Box/Macross 82-99 - This Feeling (w-Soul Bell) [Haggis]/background.jpg",
+      "size": 434624
+    },
+    {
+      "path": "Fuse Box/Macross 82-99 - This Feeling (w-Soul Bell) [Haggis]/notes.chart",
+      "size": 104680
+    },
+    {
+      "path": "Fuse Box/Macross 82-99 - This Feeling (w-Soul Bell) [Haggis]/song.ini",
+      "size": 543
+    },
+    {
+      "path": "Fuse Box/Macross 82-99 - This Feeling (w-Soul Bell) [Haggis]/song.opus",
+      "size": 2830814
+    },
+    {
+      "path": "Fuse Box/Manuel - Never Say Never [3-UP]/album.png",
+      "size": 578344
+    },
+    {
+      "path": "Fuse Box/Manuel - Never Say Never [3-UP]/notes.chart",
+      "size": 116316
+    },
+    {
+      "path": "Fuse Box/Manuel - Never Say Never [3-UP]/song.ini",
+      "size": 626
+    },
+    {
+      "path": "Fuse Box/Manuel - Never Say Never [3-UP]/song.opus",
+      "size": 3000721
+    },
+    {
+      "path": "Fuse Box/Massive New Krew - Dharma [Stargazer]/album.png",
+      "size": 117911
+    },
+    {
+      "path": "Fuse Box/Massive New Krew - Dharma [Stargazer]/notes.chart",
+      "size": 88749
+    },
+    {
+      "path": "Fuse Box/Massive New Krew - Dharma [Stargazer]/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Fuse Box/Massive New Krew - Dharma [Stargazer]/song.opus",
+      "size": 2961162
+    },
+    {
+      "path": "Fuse Box/Max Brhon - Humanity [Deltarak]/album.png",
+      "size": 75290
+    },
+    {
+      "path": "Fuse Box/Max Brhon - Humanity [Deltarak]/notes.chart",
+      "size": 44406
+    },
+    {
+      "path": "Fuse Box/Max Brhon - Humanity [Deltarak]/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Fuse Box/Max Brhon - Humanity [Deltarak]/song.opus",
+      "size": 2179790
+    },
+    {
+      "path": "Fuse Box/Mija - time stops (when im with u) [iZenPenguin]/album.png",
+      "size": 123763
+    },
+    {
+      "path": "Fuse Box/Mija - time stops (when im with u) [iZenPenguin]/background.jpg",
+      "size": 1685229
+    },
+    {
+      "path": "Fuse Box/Mija - time stops (when im with u) [iZenPenguin]/notes.chart",
+      "size": 88694
+    },
+    {
+      "path": "Fuse Box/Mija - time stops (when im with u) [iZenPenguin]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Fuse Box/Mija - time stops (when im with u) [iZenPenguin]/song.opus",
+      "size": 2426599
+    },
+    {
+      "path": "Fuse Box/Mike Diva - Kazoo Kid (Trap Remix) [\u03a9HM]/album.png",
+      "size": 561674
+    },
+    {
+      "path": "Fuse Box/Mike Diva - Kazoo Kid (Trap Remix) [\u03a9HM]/notes.chart",
+      "size": 29955
+    },
+    {
+      "path": "Fuse Box/Mike Diva - Kazoo Kid (Trap Remix) [\u03a9HM]/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Fuse Box/Mike Diva - Kazoo Kid (Trap Remix) [\u03a9HM]/song.opus",
+      "size": 855902
+    },
+    {
+      "path": "Fuse Box/Mintorment - Desolaverent [Mintorment]/album.png",
+      "size": 184607
+    },
+    {
+      "path": "Fuse Box/Mintorment - Desolaverent [Mintorment]/notes.chart",
+      "size": 66739
+    },
+    {
+      "path": "Fuse Box/Mintorment - Desolaverent [Mintorment]/song.ini",
+      "size": 832
+    },
+    {
+      "path": "Fuse Box/Mintorment - Desolaverent [Mintorment]/song.opus",
+      "size": 1987389
+    },
+    {
+      "path": "Fuse Box/Mintorment - Eradication of Light [Mintorment]/album.png",
+      "size": 171382
+    },
+    {
+      "path": "Fuse Box/Mintorment - Eradication of Light [Mintorment]/notes.chart",
+      "size": 60914
+    },
+    {
+      "path": "Fuse Box/Mintorment - Eradication of Light [Mintorment]/song.ini",
+      "size": 755
+    },
+    {
+      "path": "Fuse Box/Mintorment - Eradication of Light [Mintorment]/song.opus",
+      "size": 1584851
+    },
+    {
+      "path": "Fuse Box/Mord Fustang - Lick the Rainbow [Stickheadz32]/album.jpg",
+      "size": 29249
+    },
+    {
+      "path": "Fuse Box/Mord Fustang - Lick the Rainbow [Stickheadz32]/notes.chart",
+      "size": 110235
+    },
+    {
+      "path": "Fuse Box/Mord Fustang - Lick the Rainbow [Stickheadz32]/song.ini",
+      "size": 771
+    },
+    {
+      "path": "Fuse Box/Mord Fustang - Lick the Rainbow [Stickheadz32]/song.opus",
+      "size": 3011907
+    },
+    {
+      "path": "Fuse Box/Muse - Uprising (Does It Offend You, Yeah Remix) [Spachi & Deltarak]/album.png",
+      "size": 488469
+    },
+    {
+      "path": "Fuse Box/Muse - Uprising (Does It Offend You, Yeah Remix) [Spachi & Deltarak]/notes.chart",
+      "size": 71684
+    },
+    {
+      "path": "Fuse Box/Muse - Uprising (Does It Offend You, Yeah Remix) [Spachi & Deltarak]/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Fuse Box/Muse - Uprising (Does It Offend You, Yeah Remix) [Spachi & Deltarak]/song.opus",
+      "size": 2470763
+    },
+    {
+      "path": "Fuse Box/Myrone - Exclusive Coup\u00e9 [XEntombmentX]/album.png",
+      "size": 311744
+    },
+    {
+      "path": "Fuse Box/Myrone - Exclusive Coup\u00e9 [XEntombmentX]/notes.chart",
+      "size": 39246
+    },
+    {
+      "path": "Fuse Box/Myrone - Exclusive Coup\u00e9 [XEntombmentX]/song.ini",
+      "size": 640
+    },
+    {
+      "path": "Fuse Box/Myrone - Exclusive Coup\u00e9 [XEntombmentX]/song.opus",
+      "size": 2756931
+    },
+    {
+      "path": "Fuse Box/Nanobii - Mermaid Princess [Geo]/album.png",
+      "size": 340941
+    },
+    {
+      "path": "Fuse Box/Nanobii - Mermaid Princess [Geo]/guitar.opus",
+      "size": 2638208
+    },
+    {
+      "path": "Fuse Box/Nanobii - Mermaid Princess [Geo]/notes.chart",
+      "size": 59912
+    },
+    {
+      "path": "Fuse Box/Nanobii - Mermaid Princess [Geo]/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing (GITADORA ver.) [Stargazer & KhromaticScale]/album.png",
+      "size": 557032
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing (GITADORA ver.) [Stargazer & KhromaticScale]/notes.chart",
+      "size": 28087
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing (GITADORA ver.) [Stargazer & KhromaticScale]/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing (GITADORA ver.) [Stargazer & KhromaticScale]/song.opus",
+      "size": 1280277
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing [Stargazer & KhromaticScale]/album.png",
+      "size": 557032
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing [Stargazer & KhromaticScale]/notes.chart",
+      "size": 35770
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing [Stargazer & KhromaticScale]/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Fuse Box/Neko mata Master+ - nightbird lost wing [Stargazer & KhromaticScale]/song.opus",
+      "size": 1343331
+    },
+    {
+      "path": "Fuse Box/Neon Indian - Change of Coast [XEntombmentX]/album.png",
+      "size": 426390
+    },
+    {
+      "path": "Fuse Box/Neon Indian - Change of Coast [XEntombmentX]/notes.chart",
+      "size": 90730
+    },
+    {
+      "path": "Fuse Box/Neon Indian - Change of Coast [XEntombmentX]/song.ini",
+      "size": 590
+    },
+    {
+      "path": "Fuse Box/Neon Indian - Change of Coast [XEntombmentX]/song.opus",
+      "size": 2350841
+    },
+    {
+      "path": "Fuse Box/Nhato - Ember Lights [Stargazer]/album.png",
+      "size": 588439
+    },
+    {
+      "path": "Fuse Box/Nhato - Ember Lights [Stargazer]/notes.chart",
+      "size": 122461
+    },
+    {
+      "path": "Fuse Box/Nhato - Ember Lights [Stargazer]/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Fuse Box/Nhato - Ember Lights [Stargazer]/song.opus",
+      "size": 3188380
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes VIP [Aren Eternal]/album.png",
+      "size": 406852
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes VIP [Aren Eternal]/notes.chart",
+      "size": 56794
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes VIP [Aren Eternal]/song.ini",
+      "size": 441
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes VIP [Aren Eternal]/song.opus",
+      "size": 2553276
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes [Aren Eternal]/album.png",
+      "size": 341675
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes [Aren Eternal]/notes.chart",
+      "size": 55546
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes [Aren Eternal]/song.ini",
+      "size": 361
+    },
+    {
+      "path": "Fuse Box/Nitro Fun - Cheat Codes [Aren Eternal]/song.opus",
+      "size": 2669067
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - INVERT182 [Pix_]/album.png",
+      "size": 1085715
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - INVERT182 [Pix_]/background.jpg",
+      "size": 253213
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - INVERT182 [Pix_]/notes.chart",
+      "size": 69060
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - INVERT182 [Pix_]/song.ini",
+      "size": 567
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - INVERT182 [Pix_]/song.opus",
+      "size": 1938919
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - WAT O_O [Pix_]/album.png",
+      "size": 1085715
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - WAT O_O [Pix_]/background.png",
+      "size": 14812
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - WAT O_O [Pix_]/notes.chart",
+      "size": 302933
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - WAT O_O [Pix_]/song.ini",
+      "size": 748
+    },
+    {
+      "path": "Fuse Box/OMNIPONY - WAT O_O [Pix_]/song.opus",
+      "size": 1735329
+    },
+    {
+      "path": "Fuse Box/OnenO - Makes Me Feel Better [XEntombmentX]/album.png",
+      "size": 346941
+    },
+    {
+      "path": "Fuse Box/OnenO - Makes Me Feel Better [XEntombmentX]/notes.chart",
+      "size": 103911
+    },
+    {
+      "path": "Fuse Box/OnenO - Makes Me Feel Better [XEntombmentX]/song.ini",
+      "size": 979
+    },
+    {
+      "path": "Fuse Box/OnenO - Makes Me Feel Better [XEntombmentX]/song.opus",
+      "size": 3464982
+    },
+    {
+      "path": "Fuse Box/PHQUASE vs DJ TOTTO - TWO-TORIAL [Stargazer]/album.png",
+      "size": 178832
+    },
+    {
+      "path": "Fuse Box/PHQUASE vs DJ TOTTO - TWO-TORIAL [Stargazer]/notes.chart",
+      "size": 102975
+    },
+    {
+      "path": "Fuse Box/PHQUASE vs DJ TOTTO - TWO-TORIAL [Stargazer]/song.ini",
+      "size": 800
+    },
+    {
+      "path": "Fuse Box/PHQUASE vs DJ TOTTO - TWO-TORIAL [Stargazer]/song.opus",
+      "size": 1503688
+    },
+    {
+      "path": "Fuse Box/Pegboard Nerds - Disconnected [EvaCH]/album.png",
+      "size": 253574
+    },
+    {
+      "path": "Fuse Box/Pegboard Nerds - Disconnected [EvaCH]/notes.chart",
+      "size": 68063
+    },
+    {
+      "path": "Fuse Box/Pegboard Nerds - Disconnected [EvaCH]/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Fuse Box/Pegboard Nerds - Disconnected [EvaCH]/song.opus",
+      "size": 2956612
+    },
+    {
+      "path": "Fuse Box/Pomplamoose - Dont Stop Lovin' Me [Caret]/album.png",
+      "size": 465618
+    },
+    {
+      "path": "Fuse Box/Pomplamoose - Dont Stop Lovin' Me [Caret]/background.jpg",
+      "size": 516702
+    },
+    {
+      "path": "Fuse Box/Pomplamoose - Dont Stop Lovin' Me [Caret]/notes.chart",
+      "size": 71064
+    },
+    {
+      "path": "Fuse Box/Pomplamoose - Dont Stop Lovin' Me [Caret]/song.ini",
+      "size": 394
+    },
+    {
+      "path": "Fuse Box/Pomplamoose - Dont Stop Lovin' Me [Caret]/song.opus",
+      "size": 2230419
+    },
+    {
+      "path": "Fuse Box/Popskyy - Full Auto [Aren Eternal]/album.png",
+      "size": 449989
+    },
+    {
+      "path": "Fuse Box/Popskyy - Full Auto [Aren Eternal]/notes.chart",
+      "size": 70780
+    },
+    {
+      "path": "Fuse Box/Popskyy - Full Auto [Aren Eternal]/song.ini",
+      "size": 414
+    },
+    {
+      "path": "Fuse Box/Popskyy - Full Auto [Aren Eternal]/song.opus",
+      "size": 3313290
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Lionhearted (Virtual Riot Remix) [Geo & Pix_]/album.png",
+      "size": 334862
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Lionhearted (Virtual Riot Remix) [Geo & Pix_]/guitar.opus",
+      "size": 4039328
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Lionhearted (Virtual Riot Remix) [Geo & Pix_]/notes.chart",
+      "size": 169145
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Lionhearted (Virtual Riot Remix) [Geo & Pix_]/song.ini",
+      "size": 932
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Look at the Sky [Mintorment & iZenPenguin]/album.png",
+      "size": 733787
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Look at the Sky [Mintorment & iZenPenguin]/notes.chart",
+      "size": 92849
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Look at the Sky [Mintorment & iZenPenguin]/song.ini",
+      "size": 742
+    },
+    {
+      "path": "Fuse Box/Porter Robinson - Look at the Sky [Mintorment & iZenPenguin]/song.opus",
+      "size": 3719207
+    },
+    {
+      "path": "Fuse Box/Pylit - Venom (Pylit & Jakin VIP) [Geo]/album.png",
+      "size": 259615
+    },
+    {
+      "path": "Fuse Box/Pylit - Venom (Pylit & Jakin VIP) [Geo]/guitar.opus",
+      "size": 2464204
+    },
+    {
+      "path": "Fuse Box/Pylit - Venom (Pylit & Jakin VIP) [Geo]/notes.chart",
+      "size": 78655
+    },
+    {
+      "path": "Fuse Box/Pylit - Venom (Pylit & Jakin VIP) [Geo]/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Fuse Box/Quest Pistols - \u0411\u0435\u043b\u0430\u044f \u0421\u0442\u0440\u0435\u043a\u043e\u0437\u0430 \u041b\u044e\u0431\u0432\u0438 [Vasasasasa]/album.jpg",
+      "size": 120273
+    },
+    {
+      "path": "Fuse Box/Quest Pistols - \u0411\u0435\u043b\u0430\u044f \u0421\u0442\u0440\u0435\u043a\u043e\u0437\u0430 \u041b\u044e\u0431\u0432\u0438 [Vasasasasa]/background.jpg",
+      "size": 241198
+    },
+    {
+      "path": "Fuse Box/Quest Pistols - \u0411\u0435\u043b\u0430\u044f \u0421\u0442\u0440\u0435\u043a\u043e\u0437\u0430 \u041b\u044e\u0431\u0432\u0438 [Vasasasasa]/notes.chart",
+      "size": 68529
+    },
+    {
+      "path": "Fuse Box/Quest Pistols - \u0411\u0435\u043b\u0430\u044f \u0421\u0442\u0440\u0435\u043a\u043e\u0437\u0430 \u041b\u044e\u0431\u0432\u0438 [Vasasasasa]/song.ini",
+      "size": 787
+    },
+    {
+      "path": "Fuse Box/Quest Pistols - \u0411\u0435\u043b\u0430\u044f \u0421\u0442\u0440\u0435\u043a\u043e\u0437\u0430 \u041b\u044e\u0431\u0432\u0438 [Vasasasasa]/song.opus",
+      "size": 2064946
+    },
+    {
+      "path": "Fuse Box/RIOT - Disorder (Rebirth) [Aren Eternal]/album.png",
+      "size": 467152
+    },
+    {
+      "path": "Fuse Box/RIOT - Disorder (Rebirth) [Aren Eternal]/notes.chart",
+      "size": 54904
+    },
+    {
+      "path": "Fuse Box/RIOT - Disorder (Rebirth) [Aren Eternal]/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Fuse Box/RIOT - Disorder (Rebirth) [Aren Eternal]/song.opus",
+      "size": 2220346
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob (VIP) [Aren Eternal]/album.png",
+      "size": 445329
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob (VIP) [Aren Eternal]/notes.chart",
+      "size": 96147
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob (VIP) [Aren Eternal]/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob (VIP) [Aren Eternal]/song.opus",
+      "size": 3223334
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob [Aren Eternal]/album.png",
+      "size": 467152
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob [Aren Eternal]/notes.chart",
+      "size": 107550
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob [Aren Eternal]/song.ini",
+      "size": 360
+    },
+    {
+      "path": "Fuse Box/RIOT - The Mob [Aren Eternal]/song.opus",
+      "size": 3973935
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Civilization In the Sky [Jackie]/album.png",
+      "size": 552324
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Civilization In the Sky [Jackie]/guitar.opus",
+      "size": 1543415
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Civilization In the Sky [Jackie]/notes.mid",
+      "size": 15916
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Civilization In the Sky [Jackie]/song.ini",
+      "size": 920
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Fire & Earth...Water & Wind [Jackie & Aren Eternal]/album.png",
+      "size": 376967
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Fire & Earth...Water & Wind [Jackie & Aren Eternal]/guitar.opus",
+      "size": 2299258
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Fire & Earth...Water & Wind [Jackie & Aren Eternal]/notes.chart",
+      "size": 90722
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - Fire & Earth...Water & Wind [Jackie & Aren Eternal]/song.ini",
+      "size": 869
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - The Bat Matriarch [Jackie & Aren Eternal]/album.png",
+      "size": 515405
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - The Bat Matriarch [Jackie & Aren Eternal]/guitar.opus",
+      "size": 1054977
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - The Bat Matriarch [Jackie & Aren Eternal]/notes.chart",
+      "size": 46755
+    },
+    {
+      "path": "Fuse Box/Rainbowdragoneyes - The Bat Matriarch [Jackie & Aren Eternal]/song.ini",
+      "size": 903
+    },
+    {
+      "path": "Fuse Box/Renard - Terminal [Aren Eternal]/album.png",
+      "size": 450645
+    },
+    {
+      "path": "Fuse Box/Renard - Terminal [Aren Eternal]/notes.chart",
+      "size": 56338
+    },
+    {
+      "path": "Fuse Box/Renard - Terminal [Aren Eternal]/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Fuse Box/Renard - Terminal [Aren Eternal]/song.opus",
+      "size": 1787063
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Empress of Light (Terraria cover) [Miscellany]/album.png",
+      "size": 423761
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Empress of Light (Terraria cover) [Miscellany]/background.png",
+      "size": 2958348
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Empress of Light (Terraria cover) [Miscellany]/guitar.opus",
+      "size": 2323842
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Empress of Light (Terraria cover) [Miscellany]/notes.chart",
+      "size": 109389
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Empress of Light (Terraria cover) [Miscellany]/song.ini",
+      "size": 747
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Plantera (Terraria cover) [Miscellany]/album.png",
+      "size": 438009
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Plantera (Terraria cover) [Miscellany]/background.jpg",
+      "size": 227782
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Plantera (Terraria cover) [Miscellany]/guitar.opus",
+      "size": 1968920
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Plantera (Terraria cover) [Miscellany]/notes.chart",
+      "size": 50382
+    },
+    {
+      "path": "Fuse Box/RichaadEB - Plantera (Terraria cover) [Miscellany]/song.ini",
+      "size": 652
+    },
+    {
+      "path": "Fuse Box/Richard Jacques - Super Sonic Racing (feat. TJ Davis) [\u03a9HM]/album.jpg",
+      "size": 67495
+    },
+    {
+      "path": "Fuse Box/Richard Jacques - Super Sonic Racing (feat. TJ Davis) [\u03a9HM]/notes.chart",
+      "size": 83397
+    },
+    {
+      "path": "Fuse Box/Richard Jacques - Super Sonic Racing (feat. TJ Davis) [\u03a9HM]/song.ini",
+      "size": 516
+    },
+    {
+      "path": "Fuse Box/Richard Jacques - Super Sonic Racing (feat. TJ Davis) [\u03a9HM]/song.opus",
+      "size": 2749250
+    },
+    {
+      "path": "Fuse Box/Rogue - This Is It [Aren Eternal]/album.png",
+      "size": 360482
+    },
+    {
+      "path": "Fuse Box/Rogue - This Is It [Aren Eternal]/notes.chart",
+      "size": 242724
+    },
+    {
+      "path": "Fuse Box/Rogue - This Is It [Aren Eternal]/song.ini",
+      "size": 416
+    },
+    {
+      "path": "Fuse Box/Rogue - This Is It [Aren Eternal]/song.opus",
+      "size": 4027834
+    },
+    {
+      "path": "Fuse Box/RoughSketch - Snow White (Extended Mix) [Xeratek]/album.jpg",
+      "size": 200428
+    },
+    {
+      "path": "Fuse Box/RoughSketch - Snow White (Extended Mix) [Xeratek]/notes.chart",
+      "size": 144114
+    },
+    {
+      "path": "Fuse Box/RoughSketch - Snow White (Extended Mix) [Xeratek]/song.ini",
+      "size": 661
+    },
+    {
+      "path": "Fuse Box/RoughSketch - Snow White (Extended Mix) [Xeratek]/song.opus",
+      "size": 3862968
+    },
+    {
+      "path": "Fuse Box/Saitama Saisyu Heiki - Lightning Strikes Again + Metal Squad [Soup & JRabes]/album.png",
+      "size": 5824
+    },
+    {
+      "path": "Fuse Box/Saitama Saisyu Heiki - Lightning Strikes Again + Metal Squad [Soup & JRabes]/notes.chart",
+      "size": 125935
+    },
+    {
+      "path": "Fuse Box/Saitama Saisyu Heiki - Lightning Strikes Again + Metal Squad [Soup & JRabes]/song.ini",
+      "size": 508
+    },
+    {
+      "path": "Fuse Box/Saitama Saisyu Heiki - Lightning Strikes Again + Metal Squad [Soup & JRabes]/song.opus",
+      "size": 3999363
+    },
+    {
+      "path": "Fuse Box/Sampling Masters MEGA - Avant Raze [Xeratek]/album.png",
+      "size": 499925
+    },
+    {
+      "path": "Fuse Box/Sampling Masters MEGA - Avant Raze [Xeratek]/notes.chart",
+      "size": 51752
+    },
+    {
+      "path": "Fuse Box/Sampling Masters MEGA - Avant Raze [Xeratek]/song.ini",
+      "size": 543
+    },
+    {
+      "path": "Fuse Box/Sampling Masters MEGA - Avant Raze [Xeratek]/song.opus",
+      "size": 1695427
+    },
+    {
+      "path": "Fuse Box/Savant - Fat Cat Shuffle (2022) [Geo]/album.png",
+      "size": 478763
+    },
+    {
+      "path": "Fuse Box/Savant - Fat Cat Shuffle (2022) [Geo]/guitar.opus",
+      "size": 2822655
+    },
+    {
+      "path": "Fuse Box/Savant - Fat Cat Shuffle (2022) [Geo]/notes.chart",
+      "size": 108405
+    },
+    {
+      "path": "Fuse Box/Savant - Fat Cat Shuffle (2022) [Geo]/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Fuse Box/Savant - Living iPod [Geo]/album.png",
+      "size": 478417
+    },
+    {
+      "path": "Fuse Box/Savant - Living iPod [Geo]/notes.chart",
+      "size": 141621
+    },
+    {
+      "path": "Fuse Box/Savant - Living iPod [Geo]/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Fuse Box/Savant - Living iPod [Geo]/song.opus",
+      "size": 3436244
+    },
+    {
+      "path": "Fuse Box/Savant - Megaboy [Geo]/album.png",
+      "size": 471904
+    },
+    {
+      "path": "Fuse Box/Savant - Megaboy [Geo]/notes.chart",
+      "size": 142040
+    },
+    {
+      "path": "Fuse Box/Savant - Megaboy [Geo]/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Fuse Box/Savant - Megaboy [Geo]/song.opus",
+      "size": 2341228
+    },
+    {
+      "path": "Fuse Box/Savant - You Can Play [Geo]/album.png",
+      "size": 193579
+    },
+    {
+      "path": "Fuse Box/Savant - You Can Play [Geo]/guitar.opus",
+      "size": 3170458
+    },
+    {
+      "path": "Fuse Box/Savant - You Can Play [Geo]/notes.chart",
+      "size": 124918
+    },
+    {
+      "path": "Fuse Box/Savant - You Can Play [Geo]/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Fuse Box/Savant Dropmix [Geo]/album.png",
+      "size": 141933
+    },
+    {
+      "path": "Fuse Box/Savant Dropmix [Geo]/guitar.opus",
+      "size": 6909205
+    },
+    {
+      "path": "Fuse Box/Savant Dropmix [Geo]/notes.chart",
+      "size": 287159
+    },
+    {
+      "path": "Fuse Box/Savant Dropmix [Geo]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Fuse Box/Scandroid - Connection Scandroid Remix [Soup]/album.jpg",
+      "size": 35273
+    },
+    {
+      "path": "Fuse Box/Scandroid - Connection Scandroid Remix [Soup]/notes.chart",
+      "size": 88039
+    },
+    {
+      "path": "Fuse Box/Scandroid - Connection Scandroid Remix [Soup]/song.ini",
+      "size": 441
+    },
+    {
+      "path": "Fuse Box/Scandroid - Connection Scandroid Remix [Soup]/song.opus",
+      "size": 3589689
+    },
+    {
+      "path": "Fuse Box/Scandroid - Phoenix [Jackie]/album.png",
+      "size": 566047
+    },
+    {
+      "path": "Fuse Box/Scandroid - Phoenix [Jackie]/guitar.opus",
+      "size": 3091467
+    },
+    {
+      "path": "Fuse Box/Scandroid - Phoenix [Jackie]/notes.mid",
+      "size": 46748
+    },
+    {
+      "path": "Fuse Box/Scandroid - Phoenix [Jackie]/song.ini",
+      "size": 859
+    },
+    {
+      "path": "Fuse Box/Scatman John - Scatman (Cash Cash Remix) [Caret]/album.png",
+      "size": 246927
+    },
+    {
+      "path": "Fuse Box/Scatman John - Scatman (Cash Cash Remix) [Caret]/background.jpg",
+      "size": 318753
+    },
+    {
+      "path": "Fuse Box/Scatman John - Scatman (Cash Cash Remix) [Caret]/notes.chart",
+      "size": 153607
+    },
+    {
+      "path": "Fuse Box/Scatman John - Scatman (Cash Cash Remix) [Caret]/song.ini",
+      "size": 374
+    },
+    {
+      "path": "Fuse Box/Scatman John - Scatman (Cash Cash Remix) [Caret]/song.opus",
+      "size": 3271741
+    },
+    {
+      "path": "Fuse Box/Scooter - Friends [Vasasasasa]/album.jpg",
+      "size": 188425
+    },
+    {
+      "path": "Fuse Box/Scooter - Friends [Vasasasasa]/background.jpg",
+      "size": 400896
+    },
+    {
+      "path": "Fuse Box/Scooter - Friends [Vasasasasa]/notes.chart",
+      "size": 192290
+    },
+    {
+      "path": "Fuse Box/Scooter - Friends [Vasasasasa]/song.ini",
+      "size": 338
+    },
+    {
+      "path": "Fuse Box/Scooter - Friends [Vasasasasa]/song.opus",
+      "size": 3717007
+    },
+    {
+      "path": "Fuse Box/Sentai Express - Nitro Bot [Monological]/album.png",
+      "size": 390632
+    },
+    {
+      "path": "Fuse Box/Sentai Express - Nitro Bot [Monological]/background.png",
+      "size": 1442112
+    },
+    {
+      "path": "Fuse Box/Sentai Express - Nitro Bot [Monological]/notes.chart",
+      "size": 57939
+    },
+    {
+      "path": "Fuse Box/Sentai Express - Nitro Bot [Monological]/song.ini",
+      "size": 764
+    },
+    {
+      "path": "Fuse Box/Sentai Express - Nitro Bot [Monological]/song.opus",
+      "size": 2204555
+    },
+    {
+      "path": "Fuse Box/Silver Forest - Tsurupettan [Sygenysis]/album.png",
+      "size": 69779
+    },
+    {
+      "path": "Fuse Box/Silver Forest - Tsurupettan [Sygenysis]/guitar.opus",
+      "size": 2029477
+    },
+    {
+      "path": "Fuse Box/Silver Forest - Tsurupettan [Sygenysis]/notes.mid",
+      "size": 23320
+    },
+    {
+      "path": "Fuse Box/Silver Forest - Tsurupettan [Sygenysis]/song.ini",
+      "size": 970
+    },
+    {
+      "path": "Fuse Box/Simon Viklund - Proton Storm [Aren Eternal & Jackie]/album.png",
+      "size": 166391
+    },
+    {
+      "path": "Fuse Box/Simon Viklund - Proton Storm [Aren Eternal & Jackie]/notes.chart",
+      "size": 74085
+    },
+    {
+      "path": "Fuse Box/Simon Viklund - Proton Storm [Aren Eternal & Jackie]/song.ini",
+      "size": 494
+    },
+    {
+      "path": "Fuse Box/Simon Viklund - Proton Storm [Aren Eternal & Jackie]/song.opus",
+      "size": 2440679
+    },
+    {
+      "path": "Fuse Box/Skrillex & Alvin Risk - Try It Out (Jack Wall & Trent Reznor remix) [Aren Eternal]/album.png",
+      "size": 239144
+    },
+    {
+      "path": "Fuse Box/Skrillex & Alvin Risk - Try It Out (Jack Wall & Trent Reznor remix) [Aren Eternal]/notes.chart",
+      "size": 81647
+    },
+    {
+      "path": "Fuse Box/Skrillex & Alvin Risk - Try It Out (Jack Wall & Trent Reznor remix) [Aren Eternal]/song.ini",
+      "size": 654
+    },
+    {
+      "path": "Fuse Box/Skrillex & Alvin Risk - Try It Out (Jack Wall & Trent Reznor remix) [Aren Eternal]/song.opus",
+      "size": 2528317
+    },
+    {
+      "path": "Fuse Box/Skrillex - First of the Year (Equinox) [MissMoo]/album.png",
+      "size": 2282321
+    },
+    {
+      "path": "Fuse Box/Skrillex - First of the Year (Equinox) [MissMoo]/background.png",
+      "size": 315090
+    },
+    {
+      "path": "Fuse Box/Skrillex - First of the Year (Equinox) [MissMoo]/notes.chart",
+      "size": 210127
+    },
+    {
+      "path": "Fuse Box/Skrillex - First of the Year (Equinox) [MissMoo]/song.ini",
+      "size": 797
+    },
+    {
+      "path": "Fuse Box/Skrillex - First of the Year (Equinox) [MissMoo]/song.opus",
+      "size": 2997260
+    },
+    {
+      "path": "Fuse Box/Snail's House - Pinky Promise [iZenPenguin]/album.jpg",
+      "size": 226763
+    },
+    {
+      "path": "Fuse Box/Snail's House - Pinky Promise [iZenPenguin]/background.jpg",
+      "size": 388440
+    },
+    {
+      "path": "Fuse Box/Snail's House - Pinky Promise [iZenPenguin]/notes.chart",
+      "size": 150674
+    },
+    {
+      "path": "Fuse Box/Snail's House - Pinky Promise [iZenPenguin]/song.ini",
+      "size": 551
+    },
+    {
+      "path": "Fuse Box/Snail's House - Pinky Promise [iZenPenguin]/song.opus",
+      "size": 3373510
+    },
+    {
+      "path": "Fuse Box/Squarepusher - Terminal Slam [Caret]/album.png",
+      "size": 76176
+    },
+    {
+      "path": "Fuse Box/Squarepusher - Terminal Slam [Caret]/background.jpg",
+      "size": 699678
+    },
+    {
+      "path": "Fuse Box/Squarepusher - Terminal Slam [Caret]/notes.chart",
+      "size": 97773
+    },
+    {
+      "path": "Fuse Box/Squarepusher - Terminal Slam [Caret]/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Fuse Box/Squarepusher - Terminal Slam [Caret]/song.opus",
+      "size": 3275347
+    },
+    {
+      "path": "Fuse Box/St4bility - St4bility Dropmix #1 [Thesnakerox]/album.png",
+      "size": 63928
+    },
+    {
+      "path": "Fuse Box/St4bility - St4bility Dropmix #1 [Thesnakerox]/notes.chart",
+      "size": 187084
+    },
+    {
+      "path": "Fuse Box/St4bility - St4bility Dropmix #1 [Thesnakerox]/song.ini",
+      "size": 653
+    },
+    {
+      "path": "Fuse Box/St4bility - St4bility Dropmix #1 [Thesnakerox]/song.opus",
+      "size": 4478092
+    },
+    {
+      "path": "Fuse Box/Stonebank - Chokehold [Aren Eternal]/album.png",
+      "size": 319778
+    },
+    {
+      "path": "Fuse Box/Stonebank - Chokehold [Aren Eternal]/notes.chart",
+      "size": 82311
+    },
+    {
+      "path": "Fuse Box/Stonebank - Chokehold [Aren Eternal]/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Fuse Box/Stonebank - Chokehold [Aren Eternal]/song.opus",
+      "size": 2902633
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders (Sharks remix) [Aren Eternal]/album.jpg",
+      "size": 70603
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders (Sharks remix) [Aren Eternal]/notes.chart",
+      "size": 79620
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders (Sharks remix) [Aren Eternal]/song.ini",
+      "size": 467
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders (Sharks remix) [Aren Eternal]/song.opus",
+      "size": 3129534
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders [Aren Eternal]/album.png",
+      "size": 556546
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders [Aren Eternal]/notes.chart",
+      "size": 130602
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders [Aren Eternal]/song.ini",
+      "size": 376
+    },
+    {
+      "path": "Fuse Box/Teminite & MDK - Space Invaders [Aren Eternal]/song.opus",
+      "size": 4041260
+    },
+    {
+      "path": "Fuse Box/Teminite & PsoGnar - Surface Tension [Aren Eternal & Geo]/album.png",
+      "size": 615240
+    },
+    {
+      "path": "Fuse Box/Teminite & PsoGnar - Surface Tension [Aren Eternal & Geo]/notes.chart",
+      "size": 139497
+    },
+    {
+      "path": "Fuse Box/Teminite & PsoGnar - Surface Tension [Aren Eternal & Geo]/song.ini",
+      "size": 440
+    },
+    {
+      "path": "Fuse Box/Teminite & PsoGnar - Surface Tension [Aren Eternal & Geo]/song.opus",
+      "size": 3957192
+    },
+    {
+      "path": "Fuse Box/Teminite - Believe [Aren Eternal]/album.jpg",
+      "size": 97935
+    },
+    {
+      "path": "Fuse Box/Teminite - Believe [Aren Eternal]/notes.chart",
+      "size": 135804
+    },
+    {
+      "path": "Fuse Box/Teminite - Believe [Aren Eternal]/song.ini",
+      "size": 439
+    },
+    {
+      "path": "Fuse Box/Teminite - Believe [Aren Eternal]/song.opus",
+      "size": 4299218
+    },
+    {
+      "path": "Fuse Box/Teminite - Fireflies (feat. Starr Chen) [Geo]/album.png",
+      "size": 571400
+    },
+    {
+      "path": "Fuse Box/Teminite - Fireflies (feat. Starr Chen) [Geo]/guitar.opus",
+      "size": 4432794
+    },
+    {
+      "path": "Fuse Box/Teminite - Fireflies (feat. Starr Chen) [Geo]/notes.chart",
+      "size": 139084
+    },
+    {
+      "path": "Fuse Box/Teminite - Fireflies (feat. Starr Chen) [Geo]/song.ini",
+      "size": 419
+    },
+    {
+      "path": "Fuse Box/Teminite - Firepower [Aren Eternal]/album.png",
+      "size": 508102
+    },
+    {
+      "path": "Fuse Box/Teminite - Firepower [Aren Eternal]/notes.chart",
+      "size": 70118
+    },
+    {
+      "path": "Fuse Box/Teminite - Firepower [Aren Eternal]/song.ini",
+      "size": 450
+    },
+    {
+      "path": "Fuse Box/Teminite - Firepower [Aren Eternal]/song.opus",
+      "size": 3210946
+    },
+    {
+      "path": "Fuse Box/Teminite - Rise and Shine [Geo]/album.png",
+      "size": 523952
+    },
+    {
+      "path": "Fuse Box/Teminite - Rise and Shine [Geo]/guitar.opus",
+      "size": 3392441
+    },
+    {
+      "path": "Fuse Box/Teminite - Rise and Shine [Geo]/notes.chart",
+      "size": 117622
+    },
+    {
+      "path": "Fuse Box/Teminite - Rise and Shine [Geo]/song.ini",
+      "size": 337
+    },
+    {
+      "path": "Fuse Box/Teminite - Work [Aren Eternal & Geo]/album.png",
+      "size": 530436
+    },
+    {
+      "path": "Fuse Box/Teminite - Work [Aren Eternal & Geo]/notes.chart",
+      "size": 101298
+    },
+    {
+      "path": "Fuse Box/Teminite - Work [Aren Eternal & Geo]/song.ini",
+      "size": 415
+    },
+    {
+      "path": "Fuse Box/Teminite - Work [Aren Eternal & Geo]/song.opus",
+      "size": 3019264
+    },
+    {
+      "path": "Fuse Box/Teminite Dropmix [Geo]/album.png",
+      "size": 180455
+    },
+    {
+      "path": "Fuse Box/Teminite Dropmix [Geo]/guitar.opus",
+      "size": 6477344
+    },
+    {
+      "path": "Fuse Box/Teminite Dropmix [Geo]/notes.chart",
+      "size": 223000
+    },
+    {
+      "path": "Fuse Box/Teminite Dropmix [Geo]/song.ini",
+      "size": 333
+    },
+    {
+      "path": "Fuse Box/Teminite Solo Medley [Geo & Aren Eternal]/album.png",
+      "size": 362519
+    },
+    {
+      "path": "Fuse Box/Teminite Solo Medley [Geo & Aren Eternal]/guitar.opus",
+      "size": 9821376
+    },
+    {
+      "path": "Fuse Box/Teminite Solo Medley [Geo & Aren Eternal]/notes.chart",
+      "size": 364780
+    },
+    {
+      "path": "Fuse Box/Teminite Solo Medley [Geo & Aren Eternal]/song.ini",
+      "size": 378
+    },
+    {
+      "path": "Fuse Box/Thaehan - Final Boss II [Adventium_]/album.png",
+      "size": 1002235
+    },
+    {
+      "path": "Fuse Box/Thaehan - Final Boss II [Adventium_]/notes.chart",
+      "size": 108892
+    },
+    {
+      "path": "Fuse Box/Thaehan - Final Boss II [Adventium_]/song.ini",
+      "size": 553
+    },
+    {
+      "path": "Fuse Box/Thaehan - Final Boss II [Adventium_]/song.opus",
+      "size": 2520326
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Trojans (Hard Mode) [Vasasasasa]/album.png",
+      "size": 141589
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Trojans (Hard Mode) [Vasasasasa]/background.jpg",
+      "size": 116290
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Trojans (Hard Mode) [Vasasasasa]/notes.chart",
+      "size": 161311
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Trojans (Hard Mode) [Vasasasasa]/song.ini",
+      "size": 754
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Trojans (Hard Mode) [Vasasasasa]/song.opus",
+      "size": 2789015
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Two Plane-Polarized Waves [Vasasasasa]/album.jpg",
+      "size": 69091
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Two Plane-Polarized Waves [Vasasasasa]/background.jpg",
+      "size": 113455
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Two Plane-Polarized Waves [Vasasasasa]/notes.chart",
+      "size": 125552
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Two Plane-Polarized Waves [Vasasasasa]/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Fuse Box/The Algorithm - Two Plane-Polarized Waves [Vasasasasa]/song.opus",
+      "size": 3020813
+    },
+    {
+      "path": "Fuse Box/The Floozies - Love, Sex,  Fancy Things [iZenPenguin]/album.png",
+      "size": 512105
+    },
+    {
+      "path": "Fuse Box/The Floozies - Love, Sex,  Fancy Things [iZenPenguin]/background.jpg",
+      "size": 1084029
+    },
+    {
+      "path": "Fuse Box/The Floozies - Love, Sex,  Fancy Things [iZenPenguin]/notes.chart",
+      "size": 118425
+    },
+    {
+      "path": "Fuse Box/The Floozies - Love, Sex,  Fancy Things [iZenPenguin]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Fuse Box/The Floozies - Love, Sex,  Fancy Things [iZenPenguin]/song.opus",
+      "size": 3900747
+    },
+    {
+      "path": "Fuse Box/The Midnight - Deep Blue [Miscellany]/album.png",
+      "size": 493923
+    },
+    {
+      "path": "Fuse Box/The Midnight - Deep Blue [Miscellany]/background.jpg",
+      "size": 409739
+    },
+    {
+      "path": "Fuse Box/The Midnight - Deep Blue [Miscellany]/guitar.opus",
+      "size": 3044557
+    },
+    {
+      "path": "Fuse Box/The Midnight - Deep Blue [Miscellany]/notes.chart",
+      "size": 95152
+    },
+    {
+      "path": "Fuse Box/The Midnight - Deep Blue [Miscellany]/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Fuse Box/The Qemists - Jungle (feat. Hacktivist) [Zardonic remix] [JRabes]/album.png",
+      "size": 455992
+    },
+    {
+      "path": "Fuse Box/The Qemists - Jungle (feat. Hacktivist) [Zardonic remix] [JRabes]/notes.chart",
+      "size": 91377
+    },
+    {
+      "path": "Fuse Box/The Qemists - Jungle (feat. Hacktivist) [Zardonic remix] [JRabes]/song.ini",
+      "size": 635
+    },
+    {
+      "path": "Fuse Box/The Qemists - Jungle (feat. Hacktivist) [Zardonic remix] [JRabes]/song.opus",
+      "size": 2874004
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Alone Again [MissMoo]/album.png",
+      "size": 229391
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Alone Again [MissMoo]/background.png",
+      "size": 1868121
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Alone Again [MissMoo]/notes.chart",
+      "size": 111425
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Alone Again [MissMoo]/song.ini",
+      "size": 856
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Alone Again [MissMoo]/song.opus",
+      "size": 3205870
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Blinding Lights [JRabes]/album.png",
+      "size": 442279
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Blinding Lights [JRabes]/notes.chart",
+      "size": 69392
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Blinding Lights [JRabes]/song.ini",
+      "size": 566
+    },
+    {
+      "path": "Fuse Box/The Weeknd - Blinding Lights [JRabes]/song.opus",
+      "size": 2467324
+    },
+    {
+      "path": "Fuse Box/Toby Fox - Spider Dance [Deltarak]/album.png",
+      "size": 12639
+    },
+    {
+      "path": "Fuse Box/Toby Fox - Spider Dance [Deltarak]/notes.chart",
+      "size": 44629
+    },
+    {
+      "path": "Fuse Box/Toby Fox - Spider Dance [Deltarak]/song.ini",
+      "size": 420
+    },
+    {
+      "path": "Fuse Box/Toby Fox - Spider Dance [Deltarak]/song.opus",
+      "size": 1331798
+    },
+    {
+      "path": "Fuse Box/Todd Terje - Swing Star (Pt 1) [jdurandTV]/album.jpg",
+      "size": 120749
+    },
+    {
+      "path": "Fuse Box/Todd Terje - Swing Star (Pt 1) [jdurandTV]/background.jpg",
+      "size": 326506
+    },
+    {
+      "path": "Fuse Box/Todd Terje - Swing Star (Pt 1) [jdurandTV]/notes.chart",
+      "size": 205303
+    },
+    {
+      "path": "Fuse Box/Todd Terje - Swing Star (Pt 1) [jdurandTV]/song.ini",
+      "size": 715
+    },
+    {
+      "path": "Fuse Box/Todd Terje - Swing Star (Pt 1) [jdurandTV]/song.opus",
+      "size": 3197098
+    },
+    {
+      "path": "Fuse Box/Tokyo Wanderer - Hurt (feat. Nameless Warning & Joao Miguel) [Pix_]/album.jpg",
+      "size": 217843
+    },
+    {
+      "path": "Fuse Box/Tokyo Wanderer - Hurt (feat. Nameless Warning & Joao Miguel) [Pix_]/background.jpg",
+      "size": 853240
+    },
+    {
+      "path": "Fuse Box/Tokyo Wanderer - Hurt (feat. Nameless Warning & Joao Miguel) [Pix_]/notes.chart",
+      "size": 75425
+    },
+    {
+      "path": "Fuse Box/Tokyo Wanderer - Hurt (feat. Nameless Warning & Joao Miguel) [Pix_]/song.ini",
+      "size": 1206
+    },
+    {
+      "path": "Fuse Box/Tokyo Wanderer - Hurt (feat. Nameless Warning & Joao Miguel) [Pix_]/song.opus",
+      "size": 2907730
+    },
+    {
+      "path": "Fuse Box/Tristam & Braken - Flight [Aren Eternal]/album.png",
+      "size": 324010
+    },
+    {
+      "path": "Fuse Box/Tristam & Braken - Flight [Aren Eternal]/notes.chart",
+      "size": 65855
+    },
+    {
+      "path": "Fuse Box/Tristam & Braken - Flight [Aren Eternal]/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Fuse Box/Tristam & Braken - Flight [Aren Eternal]/song.opus",
+      "size": 2630375
+    },
+    {
+      "path": "Fuse Box/USAO - Boss Rush [Stargazer]/album.png",
+      "size": 586462
+    },
+    {
+      "path": "Fuse Box/USAO - Boss Rush [Stargazer]/notes.chart",
+      "size": 81198
+    },
+    {
+      "path": "Fuse Box/USAO - Boss Rush [Stargazer]/song.ini",
+      "size": 679
+    },
+    {
+      "path": "Fuse Box/USAO - Boss Rush [Stargazer]/song.opus",
+      "size": 2517772
+    },
+    {
+      "path": "Fuse Box/Umeboshi Chazuke - Owari to Hajime no Oto [DaiJyoubs]/album.png",
+      "size": 148910
+    },
+    {
+      "path": "Fuse Box/Umeboshi Chazuke - Owari to Hajime no Oto [DaiJyoubs]/background.jpg",
+      "size": 1172250
+    },
+    {
+      "path": "Fuse Box/Umeboshi Chazuke - Owari to Hajime no Oto [DaiJyoubs]/notes.chart",
+      "size": 136249
+    },
+    {
+      "path": "Fuse Box/Umeboshi Chazuke - Owari to Hajime no Oto [DaiJyoubs]/song.ini",
+      "size": 643
+    },
+    {
+      "path": "Fuse Box/Umeboshi Chazuke - Owari to Hajime no Oto [DaiJyoubs]/song.opus",
+      "size": 3113501
+    },
+    {
+      "path": "Fuse Box/Varien - Lilith [Aren Eternal]/album.png",
+      "size": 343047
+    },
+    {
+      "path": "Fuse Box/Varien - Lilith [Aren Eternal]/notes.chart",
+      "size": 82594
+    },
+    {
+      "path": "Fuse Box/Varien - Lilith [Aren Eternal]/song.ini",
+      "size": 365
+    },
+    {
+      "path": "Fuse Box/Varien - Lilith [Aren Eternal]/song.opus",
+      "size": 3627087
+    },
+    {
+      "path": "Fuse Box/Various Artists - Circuit Breaker Solo Medley [CB Team]/album.png",
+      "size": 547395
+    },
+    {
+      "path": "Fuse Box/Various Artists - Circuit Breaker Solo Medley [CB Team]/notes.chart",
+      "size": 852401
+    },
+    {
+      "path": "Fuse Box/Various Artists - Circuit Breaker Solo Medley [CB Team]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Fuse Box/Various Artists - Circuit Breaker Solo Medley [CB Team]/song.opus",
+      "size": 16323237
+    },
+    {
+      "path": "Fuse Box/Various Artists - Electronic Solo Medley [Fuse Box Team]/album.png",
+      "size": 291879
+    },
+    {
+      "path": "Fuse Box/Various Artists - Electronic Solo Medley [Fuse Box Team]/notes.chart",
+      "size": 485975
+    },
+    {
+      "path": "Fuse Box/Various Artists - Electronic Solo Medley [Fuse Box Team]/song.ini",
+      "size": 463
+    },
+    {
+      "path": "Fuse Box/Various Artists - Electronic Solo Medley [Fuse Box Team]/song.opus",
+      "size": 9049524
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Bossfight Afterparty [Chezy]/album.png",
+      "size": 251507
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Bossfight Afterparty [Chezy]/background.jpg",
+      "size": 1698346
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Bossfight Afterparty [Chezy]/notes.chart",
+      "size": 93719
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Bossfight Afterparty [Chezy]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Bossfight Afterparty [Chezy]/song.opus",
+      "size": 2249000
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Energy Drink [Aren Eternal]/album.png",
+      "size": 106575
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Energy Drink [Aren Eternal]/notes.chart",
+      "size": 117123
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Energy Drink [Aren Eternal]/song.ini",
+      "size": 380
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Energy Drink [Aren Eternal]/song.opus",
+      "size": 3650677
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Pray For Riddim [Mintorment]/album.png",
+      "size": 432317
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Pray For Riddim [Mintorment]/notes.chart",
+      "size": 83225
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Pray For Riddim [Mintorment]/song.ini",
+      "size": 624
+    },
+    {
+      "path": "Fuse Box/Virtual Riot - Pray For Riddim [Mintorment]/song.opus",
+      "size": 2714051
+    },
+    {
+      "path": "Fuse Box/Volkor X - Stratos (feat. Feather) [XEntombmentX]/album.png",
+      "size": 407848
+    },
+    {
+      "path": "Fuse Box/Volkor X - Stratos (feat. Feather) [XEntombmentX]/notes.chart",
+      "size": 114418
+    },
+    {
+      "path": "Fuse Box/Volkor X - Stratos (feat. Feather) [XEntombmentX]/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Fuse Box/Volkor X - Stratos (feat. Feather) [XEntombmentX]/song.opus",
+      "size": 3993309
+    },
+    {
+      "path": "Fuse Box/Wave Racer - Higher [Mintorment]/album.png",
+      "size": 626444
+    },
+    {
+      "path": "Fuse Box/Wave Racer - Higher [Mintorment]/notes.chart",
+      "size": 95518
+    },
+    {
+      "path": "Fuse Box/Wave Racer - Higher [Mintorment]/song.ini",
+      "size": 940
+    },
+    {
+      "path": "Fuse Box/Wave Racer - Higher [Mintorment]/song.opus",
+      "size": 2694467
+    },
+    {
+      "path": "Fuse Box/WillRock - Intergalactic Space Mice [3-UP]/album.png",
+      "size": 635575
+    },
+    {
+      "path": "Fuse Box/WillRock - Intergalactic Space Mice [3-UP]/background.jpg",
+      "size": 1002303
+    },
+    {
+      "path": "Fuse Box/WillRock - Intergalactic Space Mice [3-UP]/notes.chart",
+      "size": 102877
+    },
+    {
+      "path": "Fuse Box/WillRock - Intergalactic Space Mice [3-UP]/song.ini",
+      "size": 481
+    },
+    {
+      "path": "Fuse Box/WillRock - Intergalactic Space Mice [3-UP]/song.opus",
+      "size": 2758064
+    },
+    {
+      "path": "Fuse Box/Wolfgang Gartner - Battlestations (feat. Kill The Noise) [KhromaticScale]/album.png",
+      "size": 523895
+    },
+    {
+      "path": "Fuse Box/Wolfgang Gartner - Battlestations (feat. Kill The Noise) [KhromaticScale]/background.jpg",
+      "size": 204395
+    },
+    {
+      "path": "Fuse Box/Wolfgang Gartner - Battlestations (feat. Kill The Noise) [KhromaticScale]/notes.chart",
+      "size": 189858
+    },
+    {
+      "path": "Fuse Box/Wolfgang Gartner - Battlestations (feat. Kill The Noise) [KhromaticScale]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Fuse Box/Wolfgang Gartner - Battlestations (feat. Kill The Noise) [KhromaticScale]/song.opus",
+      "size": 3314185
+    },
+    {
+      "path": "Fuse Box/Xe vs. cYsmix - Oriental Swing [Aren Eternal]/album.png",
+      "size": 539396
+    },
+    {
+      "path": "Fuse Box/Xe vs. cYsmix - Oriental Swing [Aren Eternal]/notes.chart",
+      "size": 86238
+    },
+    {
+      "path": "Fuse Box/Xe vs. cYsmix - Oriental Swing [Aren Eternal]/song.ini",
+      "size": 505
+    },
+    {
+      "path": "Fuse Box/Xe vs. cYsmix - Oriental Swing [Aren Eternal]/song.opus",
+      "size": 3681564
+    },
+    {
+      "path": "Fuse Box/Yooh - Heracles [Monological]/album.png",
+      "size": 369749
+    },
+    {
+      "path": "Fuse Box/Yooh - Heracles [Monological]/background.png",
+      "size": 1390961
+    },
+    {
+      "path": "Fuse Box/Yooh - Heracles [Monological]/notes.chart",
+      "size": 113808
+    },
+    {
+      "path": "Fuse Box/Yooh - Heracles [Monological]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Fuse Box/Yooh - Heracles [Monological]/song.opus",
+      "size": 2453777
+    },
+    {
+      "path": "Fuse Box/Yuta Imai - Into the Madness [Xeratek]/album.png",
+      "size": 828699
+    },
+    {
+      "path": "Fuse Box/Yuta Imai - Into the Madness [Xeratek]/notes.chart",
+      "size": 59843
+    },
+    {
+      "path": "Fuse Box/Yuta Imai - Into the Madness [Xeratek]/song.ini",
+      "size": 627
+    },
+    {
+      "path": "Fuse Box/Yuta Imai - Into the Madness [Xeratek]/song.opus",
+      "size": 1419640
+    },
+    {
+      "path": "Fuse Box/Zedd - Papercut [\u03a9HM]/album.png",
+      "size": 566273
+    },
+    {
+      "path": "Fuse Box/Zedd - Papercut [\u03a9HM]/notes.chart",
+      "size": 148293
+    },
+    {
+      "path": "Fuse Box/Zedd - Papercut [\u03a9HM]/song.ini",
+      "size": 534
+    },
+    {
+      "path": "Fuse Box/Zedd - Papercut [\u03a9HM]/song.opus",
+      "size": 5474201
+    },
+    {
+      "path": "Fuse Box/Zef - Stronghold [Vasasasasa]/album.jpg",
+      "size": 70477
+    },
+    {
+      "path": "Fuse Box/Zef - Stronghold [Vasasasasa]/background.jpg",
+      "size": 159240
+    },
+    {
+      "path": "Fuse Box/Zef - Stronghold [Vasasasasa]/notes.chart",
+      "size": 189760
+    },
+    {
+      "path": "Fuse Box/Zef - Stronghold [Vasasasasa]/song.ini",
+      "size": 641
+    },
+    {
+      "path": "Fuse Box/Zef - Stronghold [Vasasasasa]/song.opus",
+      "size": 2412375
+    },
+    {
+      "path": "Fuse Box/deadmau5 Medley [\u03a9HM]/album.png",
+      "size": 163578
+    },
+    {
+      "path": "Fuse Box/deadmau5 Medley [\u03a9HM]/notes.chart",
+      "size": 476706
+    },
+    {
+      "path": "Fuse Box/deadmau5 Medley [\u03a9HM]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Fuse Box/deadmau5 Medley [\u03a9HM]/song.opus",
+      "size": 16031855
+    },
+    {
+      "path": "Fuse Box/ev.exi - Sutit (feat. Binary Stars) [Pix_]/album.jpg",
+      "size": 298397
+    },
+    {
+      "path": "Fuse Box/ev.exi - Sutit (feat. Binary Stars) [Pix_]/background.jpg",
+      "size": 1032424
+    },
+    {
+      "path": "Fuse Box/ev.exi - Sutit (feat. Binary Stars) [Pix_]/notes.chart",
+      "size": 117557
+    },
+    {
+      "path": "Fuse Box/ev.exi - Sutit (feat. Binary Stars) [Pix_]/song.ini",
+      "size": 761
+    },
+    {
+      "path": "Fuse Box/ev.exi - Sutit (feat. Binary Stars) [Pix_]/song.opus",
+      "size": 2528984
+    },
+    {
+      "path": "Fuse Box/iteachvader - Objection Funk [JoeyD]/album.png",
+      "size": 145808
+    },
+    {
+      "path": "Fuse Box/iteachvader - Objection Funk [JoeyD]/notes.chart",
+      "size": 101351
+    },
+    {
+      "path": "Fuse Box/iteachvader - Objection Funk [JoeyD]/song.ini",
+      "size": 771
+    },
+    {
+      "path": "Fuse Box/iteachvader - Objection Funk [JoeyD]/song.opus",
+      "size": 1282828
+    },
+    {
+      "path": "Fuse Box/iteachvader - Objection Funk [JoeyD]/video.mp4",
+      "size": 7050870
+    },
+    {
+      "path": "Fuse Box/lapix - Day by day (PSYQUI Remix) [Raspberriel]/album.png",
+      "size": 301725
+    },
+    {
+      "path": "Fuse Box/lapix - Day by day (PSYQUI Remix) [Raspberriel]/background.jpg",
+      "size": 937827
+    },
+    {
+      "path": "Fuse Box/lapix - Day by day (PSYQUI Remix) [Raspberriel]/guitar.opus",
+      "size": 3295826
+    },
+    {
+      "path": "Fuse Box/lapix - Day by day (PSYQUI Remix) [Raspberriel]/notes.mid",
+      "size": 71102
+    },
+    {
+      "path": "Fuse Box/lapix - Day by day (PSYQUI Remix) [Raspberriel]/song.ini",
+      "size": 722
+    },
+    {
+      "path": "Fuse Box/lapix - Debug Dance [Stargazer]/album.png",
+      "size": 841841
+    },
+    {
+      "path": "Fuse Box/lapix - Debug Dance [Stargazer]/notes.chart",
+      "size": 119841
+    },
+    {
+      "path": "Fuse Box/lapix - Debug Dance [Stargazer]/song.ini",
+      "size": 399
+    },
+    {
+      "path": "Fuse Box/lapix - Debug Dance [Stargazer]/song.opus",
+      "size": 2710461
+    },
+    {
+      "path": "Fuse Box/lapix - Flamenco House [KhromaticScale]/album.png",
+      "size": 322580
+    },
+    {
+      "path": "Fuse Box/lapix - Flamenco House [KhromaticScale]/background.jpeg",
+      "size": 254941
+    },
+    {
+      "path": "Fuse Box/lapix - Flamenco House [KhromaticScale]/notes.chart",
+      "size": 55787
+    },
+    {
+      "path": "Fuse Box/lapix - Flamenco House [KhromaticScale]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Fuse Box/lapix - Flamenco House [KhromaticScale]/song.opus",
+      "size": 1793093
+    },
+    {
+      "path": "Fuse Box/meganeko - Lights Camera Action [Aren Eternal & Jackie]/album.png",
+      "size": 434382
+    },
+    {
+      "path": "Fuse Box/meganeko - Lights Camera Action [Aren Eternal & Jackie]/notes.chart",
+      "size": 87170
+    },
+    {
+      "path": "Fuse Box/meganeko - Lights Camera Action [Aren Eternal & Jackie]/song.ini",
+      "size": 409
+    },
+    {
+      "path": "Fuse Box/meganeko - Lights Camera Action [Aren Eternal & Jackie]/song.opus",
+      "size": 2459113
+    },
+    {
+      "path": "Fuse Box/meganeko - The Cyber Grind [Adventium_]/album.png",
+      "size": 64960
+    },
+    {
+      "path": "Fuse Box/meganeko - The Cyber Grind [Adventium_]/notes.chart",
+      "size": 162850
+    },
+    {
+      "path": "Fuse Box/meganeko - The Cyber Grind [Adventium_]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Fuse Box/meganeko - The Cyber Grind [Adventium_]/song.opus",
+      "size": 3553392
+    },
+    {
+      "path": "Fuse Box/meganeko Solo Medley [Adventium_ & 3-UP]/album.png",
+      "size": 168909
+    },
+    {
+      "path": "Fuse Box/meganeko Solo Medley [Adventium_ & 3-UP]/notes.chart",
+      "size": 267963
+    },
+    {
+      "path": "Fuse Box/meganeko Solo Medley [Adventium_ & 3-UP]/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Fuse Box/meganeko Solo Medley [Adventium_ & 3-UP]/song.opus",
+      "size": 5954523
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim VIP [Geo & Aren Eternal]/album.png",
+      "size": 463218
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim VIP [Geo & Aren Eternal]/notes.chart",
+      "size": 53508
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim VIP [Geo & Aren Eternal]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim VIP [Geo & Aren Eternal]/song.opus",
+      "size": 1620052
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim [Geo]/album.png",
+      "size": 451488
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim [Geo]/notes.chart",
+      "size": 86946
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim [Geo]/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Fuse Box/phonon - polyriddim [Geo]/song.opus",
+      "size": 2760239
+    },
+    {
+      "path": "Fuse Box/quagsirus - Sussy Eurobeat [Deltarak]/album.png",
+      "size": 28713
+    },
+    {
+      "path": "Fuse Box/quagsirus - Sussy Eurobeat [Deltarak]/background.jpg",
+      "size": 21913
+    },
+    {
+      "path": "Fuse Box/quagsirus - Sussy Eurobeat [Deltarak]/notes.chart",
+      "size": 58089
+    },
+    {
+      "path": "Fuse Box/quagsirus - Sussy Eurobeat [Deltarak]/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Fuse Box/quagsirus - Sussy Eurobeat [Deltarak]/song.opus",
+      "size": 1637778
+    },
+    {
+      "path": "Fuse Box/rintaro soma - solips [Mintorment]/album.png",
+      "size": 447720
+    },
+    {
+      "path": "Fuse Box/rintaro soma - solips [Mintorment]/notes.chart",
+      "size": 73586
+    },
+    {
+      "path": "Fuse Box/rintaro soma - solips [Mintorment]/song.ini",
+      "size": 915
+    },
+    {
+      "path": "Fuse Box/rintaro soma - solips [Mintorment]/song.opus",
+      "size": 1874271
+    },
+    {
+      "path": "Fuse Box/sasami - WARNING! Do Not Try This At Home [3-UP]/album.png",
+      "size": 131448
+    },
+    {
+      "path": "Fuse Box/sasami - WARNING! Do Not Try This At Home [3-UP]/notes.chart",
+      "size": 114105
+    },
+    {
+      "path": "Fuse Box/sasami - WARNING! Do Not Try This At Home [3-UP]/song.ini",
+      "size": 704
+    },
+    {
+      "path": "Fuse Box/sasami - WARNING! Do Not Try This At Home [3-UP]/song.opus",
+      "size": 1879072
+    },
+    {
+      "path": "Fuse Box/xKore - Full Russian [Aren Eternal]/album.png",
+      "size": 388740
+    },
+    {
+      "path": "Fuse Box/xKore - Full Russian [Aren Eternal]/notes.chart",
+      "size": 95646
+    },
+    {
+      "path": "Fuse Box/xKore - Full Russian [Aren Eternal]/song.ini",
+      "size": 417
+    },
+    {
+      "path": "Fuse Box/xKore - Full Russian [Aren Eternal]/song.opus",
+      "size": 2926061
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Another Medium (Toby Fox cover) [Jackie & Aren Eternal]/album.png",
+      "size": 224757
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Another Medium (Toby Fox cover) [Jackie & Aren Eternal]/guitar.opus",
+      "size": 1916283
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Another Medium (Toby Fox cover) [Jackie & Aren Eternal]/notes.chart",
+      "size": 90118
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Another Medium (Toby Fox cover) [Jackie & Aren Eternal]/song.ini",
+      "size": 890
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Carrion (Kevin Sherwood cover) [Aren Eternal]/album.png",
+      "size": 327936
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Carrion (Kevin Sherwood cover) [Aren Eternal]/notes.chart",
+      "size": 113076
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Carrion (Kevin Sherwood cover) [Aren Eternal]/song.ini",
+      "size": 478
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Carrion (Kevin Sherwood cover) [Aren Eternal]/song.opus",
+      "size": 3057209
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Death Perception [Aren Eternal & Jackie]/album.png",
+      "size": 216159
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Death Perception [Aren Eternal & Jackie]/notes.chart",
+      "size": 109703
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Death Perception [Aren Eternal & Jackie]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Death Perception [Aren Eternal & Jackie]/song.opus",
+      "size": 2587180
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferi (Aeon Bridge cover) [Jackie & Aren Eternal]/album.png",
+      "size": 224757
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferi (Aeon Bridge cover) [Jackie & Aren Eternal]/notes.chart",
+      "size": 113362
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferi (Aeon Bridge cover) [Jackie & Aren Eternal]/song.ini",
+      "size": 379
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferi (Aeon Bridge cover) [Jackie & Aren Eternal]/song.opus",
+      "size": 2478556
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferno (Aeon Bridge cover) [Jackie & Aren Eternal]/album.png",
+      "size": 224757
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferno (Aeon Bridge cover) [Jackie & Aren Eternal]/notes.chart",
+      "size": 187470
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferno (Aeon Bridge cover) [Jackie & Aren Eternal]/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Inferno (Aeon Bridge cover) [Jackie & Aren Eternal]/song.opus",
+      "size": 3416687
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Mistress of the Night (Aeon Bridge cover) [Jackie & Aren Eternal]/album.png",
+      "size": 224757
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Mistress of the Night (Aeon Bridge cover) [Jackie & Aren Eternal]/notes.chart",
+      "size": 168247
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Mistress of the Night (Aeon Bridge cover) [Jackie & Aren Eternal]/song.ini",
+      "size": 505
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Mistress of the Night (Aeon Bridge cover) [Jackie & Aren Eternal]/song.opus",
+      "size": 2897599
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Self-Destruct Sequence (Extended Aeon Bridge cover) [Jacke & Aren Eternal]/album.png",
+      "size": 224757
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Self-Destruct Sequence (Extended Aeon Bridge cover) [Jacke & Aren Eternal]/notes.chart",
+      "size": 184439
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Self-Destruct Sequence (Extended Aeon Bridge cover) [Jacke & Aren Eternal]/song.ini",
+      "size": 526
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Self-Destruct Sequence (Extended Aeon Bridge cover) [Jacke & Aren Eternal]/song.opus",
+      "size": 2843101
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Stadium Rave (Mark Governor cover) [Aren Eternal]/album.png",
+      "size": 218570
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Stadium Rave (Mark Governor cover) [Aren Eternal]/notes.chart",
+      "size": 62848
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Stadium Rave (Mark Governor cover) [Aren Eternal]/song.ini",
+      "size": 581
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Stadium Rave (Mark Governor cover) [Aren Eternal]/song.opus",
+      "size": 1775009
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Steal From the Rich (Simon Viklund cover, feat. Jackie Regz) [Aren Eternal]/album.png",
+      "size": 224757
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Steal From the Rich (Simon Viklund cover, feat. Jackie Regz) [Aren Eternal]/notes.chart",
+      "size": 94637
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Steal From the Rich (Simon Viklund cover, feat. Jackie Regz) [Aren Eternal]/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Fuse Box/\u00c6ternity - Steal From the Rich (Simon Viklund cover, feat. Jackie Regz) [Aren Eternal]/song.opus",
+      "size": 3058559
+    },
+    {
+      "path": "Fuse Box/\u0337 \u0334l\u0334a\u0337t\u0337e\u0336n\u0336t\u0337 \u0334m\u0334y\u0337s\u0334t\u0334e\u0338r\u0336i\u0335e\u0335s\u0337",
+      "size": 25539323
+    },
+    {
+      "path": "Fuse Box/\u03a9HM - Vestibule [\u03a9HM]/album.png",
+      "size": 381316
+    },
+    {
+      "path": "Fuse Box/\u03a9HM - Vestibule [\u03a9HM]/notes.chart",
+      "size": 79256
+    },
+    {
+      "path": "Fuse Box/\u03a9HM - Vestibule [\u03a9HM]/song.ini",
+      "size": 438
+    },
+    {
+      "path": "Fuse Box/\u03a9HM - Vestibule [\u03a9HM]/song.opus",
+      "size": 2792425
+    },
+    {
+      "path": "Fuse Box/README.txt",
+      "size": 4270
+    }
+  ],
+  "extracted_size": 3839094115,
+  "file_count": 1156,
+  "chart_count": 255,
+  "release_date": "2023-03-29"
 }

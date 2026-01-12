@@ -1,20 +1,2053 @@
 {
   "name": "Anti Hero: Beach Episode",
-  "folder_id": "static-anti-hero-beach",
+  "folder_id": "static-anti-hero-beach-episode",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 127,
-  "total_size": 1343752015,
-  "file_count": 508,
+  "downloads": [
+    {
+      "url": "https://customsongscentral.b-cdn.net/Anti%20Hero%20-%20Beach%20Episode.rar?ref=customsongscentral.com",
+      "name": "Anti Hero - Beach Episode.rar",
+      "size": 1343752015,
+      "md5": "d1183d5cf1ddc2322680379d97976ff6"
+    }
+  ],
+  "download_size": 1343752015,
   "files": [
     {
-      "id": "cdn-csc-anti-hero-beach",
-      "path": "Anti Hero: Beach Episode/Anti Hero: Beach Episode.rar",
-      "name": "Anti Hero: Beach Episode.rar",
-      "size": 1343752015,
-      "md5": "d1183d5cf1ddc2322680379d97976ff6",
-      "url": "https://customsongscentral.b-cdn.net/Anti%20Hero%20-%20Beach%20Episode.rar?ref=customsongscentral.com"
+      "path": "Anti Hero: Beach Episode/Tier 01 - Welcome to the Beach/Aeon Bridge & Siavash - Anti Hero Beach Episode - Intro (2DHumanity)/album.png",
+      "size": 437785
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 01 - Welcome to the Beach/Aeon Bridge & Siavash - Anti Hero Beach Episode - Intro (2DHumanity)/guitar.ogg",
+      "size": 1300306
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 01 - Welcome to the Beach/Aeon Bridge & Siavash - Anti Hero Beach Episode - Intro (2DHumanity)/notes.mid",
+      "size": 3609
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 01 - Welcome to the Beach/Aeon Bridge & Siavash - Anti Hero Beach Episode - Intro (2DHumanity)/song.ini",
+      "size": 633
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Caravan Palace - Lone Digger (Chemfinal)/album.png",
+      "size": 119951
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Caravan Palace - Lone Digger (Chemfinal)/notes.chart",
+      "size": 50602
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Caravan Palace - Lone Digger (Chemfinal)/song.ini",
+      "size": 349
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Caravan Palace - Lone Digger (Chemfinal)/song.mp3",
+      "size": 5415640
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Celldweller - Unshakeable (m9)/album.png",
+      "size": 443987
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Celldweller - Unshakeable (m9)/guitar.ogg",
+      "size": 9033511
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Celldweller - Unshakeable (m9)/notes.mid",
+      "size": 29938
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Celldweller - Unshakeable (m9)/song.ini",
+      "size": 353
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/QT - Hey QT (Chezy)/album.png",
+      "size": 474860
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/QT - Hey QT (Chezy)/notes.mid",
+      "size": 20647
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/QT - Hey QT (Chezy)/song.ini",
+      "size": 323
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/QT - Hey QT (Chezy)/song.ogg",
+      "size": 6788364
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Wolf and Raven - On the Run (Siavash)/album.png",
+      "size": 505591
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Wolf and Raven - On the Run (Siavash)/guitar.ogg",
+      "size": 12246918
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Wolf and Raven - On the Run (Siavash)/notes.chart",
+      "size": 35742
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/Wolf and Raven - On the Run (Siavash)/song.ini",
+      "size": 649
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/glue70 - Casin (DigitalSquirrel)/album.png",
+      "size": 298949
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/glue70 - Casin (DigitalSquirrel)/notes.chart",
+      "size": 16323
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/glue70 - Casin (DigitalSquirrel)/song.ini",
+      "size": 344
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 02 - Beginning Blues/glue70 - Casin (DigitalSquirrel)/song.ogg",
+      "size": 3398064
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/AWS - Viszl\u00e1t Ny\u00e1r (gaebpls)/album.png",
+      "size": 56910
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/AWS - Viszl\u00e1t Ny\u00e1r (gaebpls)/guitar.ogg",
+      "size": 6392501
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/AWS - Viszl\u00e1t Ny\u00e1r (gaebpls)/notes.chart",
+      "size": 31345
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/AWS - Viszl\u00e1t Ny\u00e1r (gaebpls)/song.ini",
+      "size": 361
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Alesana - The Thespian (Siavash)/album.png",
+      "size": 725230
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Alesana - The Thespian (Siavash)/guitar.ogg",
+      "size": 5923276
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Alesana - The Thespian (Siavash)/notes.chart",
+      "size": 32155
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Alesana - The Thespian (Siavash)/song.ini",
+      "size": 672
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Fear of Domination - The Bad Touch (Bloodhound Gang cover) (Sygenysis)/album.png",
+      "size": 64890
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Fear of Domination - The Bad Touch (Bloodhound Gang cover) (Sygenysis)/guitar.ogg",
+      "size": 9791020
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Fear of Domination - The Bad Touch (Bloodhound Gang cover) (Sygenysis)/notes.mid",
+      "size": 15942
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Fear of Domination - The Bad Touch (Bloodhound Gang cover) (Sygenysis)/song.ini",
+      "size": 679
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/I Legion - Love Is a Battlefield (Pat Benatar cover feat. Bj\u00f6rn Strid) (Siavash)/album.png",
+      "size": 606585
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/I Legion - Love Is a Battlefield (Pat Benatar cover feat. Bj\u00f6rn Strid) (Siavash)/guitar.ogg",
+      "size": 9104866
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/I Legion - Love Is a Battlefield (Pat Benatar cover feat. Bj\u00f6rn Strid) (Siavash)/notes.chart",
+      "size": 45060
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/I Legion - Love Is a Battlefield (Pat Benatar cover feat. Bj\u00f6rn Strid) (Siavash)/song.ini",
+      "size": 1442
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Maximum the Hormone - Kuso Breakin' N\u014d Breakin' Lily (Chezy)/album.png",
+      "size": 211997
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Maximum the Hormone - Kuso Breakin' N\u014d Breakin' Lily (Chezy)/notes.chart",
+      "size": 37004
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Maximum the Hormone - Kuso Breakin' N\u014d Breakin' Lily (Chezy)/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Maximum the Hormone - Kuso Breakin' N\u014d Breakin' Lily (Chezy)/song.ogg",
+      "size": 6991670
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Red Fang - Prehistoric Dog (GanonMetroid)/album.png",
+      "size": 141680
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Red Fang - Prehistoric Dog (GanonMetroid)/notes.chart",
+      "size": 34943
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Red Fang - Prehistoric Dog (GanonMetroid)/song.ini",
+      "size": 368
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 03 - Back in Black/Red Fang - Prehistoric Dog (GanonMetroid)/song.ogg",
+      "size": 10745633
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Alestorm - Black Sails at Midnight (m9)/album.png",
+      "size": 563209
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Alestorm - Black Sails at Midnight (m9)/guitar.ogg",
+      "size": 5293199
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Alestorm - Black Sails at Midnight (m9)/notes.mid",
+      "size": 21945
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Alestorm - Black Sails at Midnight (m9)/song.ini",
+      "size": 379
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Amon Amarth - Runes to My Memory (Dillski)/album.png",
+      "size": 273005
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Amon Amarth - Runes to My Memory (Dillski)/notes.chart",
+      "size": 43339
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Amon Amarth - Runes to My Memory (Dillski)/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Amon Amarth - Runes to My Memory (Dillski)/song.ogg",
+      "size": 11854590
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Disturbed - Fa\u00e7ade (m9)/album.png",
+      "size": 504685
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Disturbed - Fa\u00e7ade (m9)/guitar.ogg",
+      "size": 6202283
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Disturbed - Fa\u00e7ade (m9)/notes.mid",
+      "size": 24141
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Disturbed - Fa\u00e7ade (m9)/song.ini",
+      "size": 366
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Kero Kero Bonito - Trampoline (Chemfinal)/album.png",
+      "size": 490380
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Kero Kero Bonito - Trampoline (Chemfinal)/notes.chart",
+      "size": 43374
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Kero Kero Bonito - Trampoline (Chemfinal)/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Kero Kero Bonito - Trampoline (Chemfinal)/song.ogg",
+      "size": 6619848
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Thank You Scientist - Blue Automatic (Dillski)/album.png",
+      "size": 647404
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Thank You Scientist - Blue Automatic (Dillski)/notes.chart",
+      "size": 52016
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Thank You Scientist - Blue Automatic (Dillski)/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 04 - To Be Yellow Is to Be a Coward/Thank You Scientist - Blue Automatic (Dillski)/song.ogg",
+      "size": 14444864
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Arch Echo - Bloom (gaebpls)/album.png",
+      "size": 431642
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Arch Echo - Bloom (gaebpls)/guitar.ogg",
+      "size": 11129303
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Arch Echo - Bloom (gaebpls)/notes.chart",
+      "size": 29495
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Arch Echo - Bloom (gaebpls)/song.ini",
+      "size": 351
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Benten-Maru - The Edge of Soul (Sygenysis)/album.png",
+      "size": 167703
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Benten-Maru - The Edge of Soul (Sygenysis)/guitar.ogg",
+      "size": 7700173
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Benten-Maru - The Edge of Soul (Sygenysis)/notes.mid",
+      "size": 15357
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Benten-Maru - The Edge of Soul (Sygenysis)/song.ini",
+      "size": 673
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Busdriver - Imaginary Places (Chemfinal)/album.png",
+      "size": 534213
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Busdriver - Imaginary Places (Chemfinal)/notes.chart",
+      "size": 43779
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Busdriver - Imaginary Places (Chemfinal)/song.ini",
+      "size": 352
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Busdriver - Imaginary Places (Chemfinal)/song.mp3",
+      "size": 4731145
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Orden Ogan - Mystic Symphony (m9)/album.png",
+      "size": 488634
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Orden Ogan - Mystic Symphony (m9)/guitar.ogg",
+      "size": 7234395
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Orden Ogan - Mystic Symphony (m9)/notes.mid",
+      "size": 23620
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Orden Ogan - Mystic Symphony (m9)/song.ini",
+      "size": 338
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Tokyo Machine - ROCK IT (Aren Eternal)/album.png",
+      "size": 529788
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Tokyo Machine - ROCK IT (Aren Eternal)/notes.chart",
+      "size": 29213
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Tokyo Machine - ROCK IT (Aren Eternal)/song.ini",
+      "size": 261
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 05 - Muddled Anomalies/Tokyo Machine - ROCK IT (Aren Eternal)/song.ogg",
+      "size": 6547725
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Closure in Moscow - Sweet#hart (Jaded)/album.png",
+      "size": 488566
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Closure in Moscow - Sweet#hart (Jaded)/notes.chart",
+      "size": 36631
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Closure in Moscow - Sweet#hart (Jaded)/song.ini",
+      "size": 375
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Closure in Moscow - Sweet#hart (Jaded)/song.ogg",
+      "size": 8132173
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Demetori - Higan Servant ~ One Conclusion (Hellrock120)/album.png",
+      "size": 389725
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Demetori - Higan Servant ~ One Conclusion (Hellrock120)/guitar.ogg",
+      "size": 3952362
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Demetori - Higan Servant ~ One Conclusion (Hellrock120)/notes.mid",
+      "size": 14008
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Demetori - Higan Servant ~ One Conclusion (Hellrock120)/song.ini",
+      "size": 1260
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Edguy - Children of Steel (Dillski)/album.png",
+      "size": 744199
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Edguy - Children of Steel (Dillski)/notes.chart",
+      "size": 32144
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Edguy - Children of Steel (Dillski)/song.ini",
+      "size": 344
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Edguy - Children of Steel (Dillski)/song.ogg",
+      "size": 9257093
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Mastodon - Andromeda (DigitalSquirrel)/album.png",
+      "size": 426016
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Mastodon - Andromeda (DigitalSquirrel)/notes.chart",
+      "size": 26557
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Mastodon - Andromeda (DigitalSquirrel)/song.ini",
+      "size": 354
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/Mastodon - Andromeda (DigitalSquirrel)/song.ogg",
+      "size": 7702841
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Black Dahlia Murder - Catacomb Hecatomb (Chezy)/album.png",
+      "size": 542903
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Black Dahlia Murder - Catacomb Hecatomb (Chezy)/notes.chart",
+      "size": 37983
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Black Dahlia Murder - Catacomb Hecatomb (Chezy)/song.ini",
+      "size": 367
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Black Dahlia Murder - Catacomb Hecatomb (Chezy)/song.ogg",
+      "size": 6306316
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Giraffes - Smoke Machine (GanonMetroid)/album.png",
+      "size": 661734
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Giraffes - Smoke Machine (GanonMetroid)/notes.chart",
+      "size": 31017
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Giraffes - Smoke Machine (GanonMetroid)/song.ini",
+      "size": 355
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 06 - Ravishing Reds/The Giraffes - Smoke Machine (GanonMetroid)/song.ogg",
+      "size": 9514053
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Fastway - Rockin' Hardcore (Extended Mix) (m9)/album.png",
+      "size": 223315
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Fastway - Rockin' Hardcore (Extended Mix) (m9)/guitar.ogg",
+      "size": 8282555
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Fastway - Rockin' Hardcore (Extended Mix) (m9)/notes.mid",
+      "size": 34168
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Fastway - Rockin' Hardcore (Extended Mix) (m9)/song.ini",
+      "size": 418
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Joe Jonas - Love Slayer (F-777 ReMiX) (DigitalSquirrel)/album.png",
+      "size": 134131
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Joe Jonas - Love Slayer (F-777 ReMiX) (DigitalSquirrel)/notes.chart",
+      "size": 54892
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Joe Jonas - Love Slayer (F-777 ReMiX) (DigitalSquirrel)/song.ini",
+      "size": 394
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Joe Jonas - Love Slayer (F-777 ReMiX) (DigitalSquirrel)/song.ogg",
+      "size": 8801765
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/KNOWER - BUTTS TITS MONEY (Chezy)/album.png",
+      "size": 308562
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/KNOWER - BUTTS TITS MONEY (Chezy)/notes.mid",
+      "size": 17221
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/KNOWER - BUTTS TITS MONEY (Chezy)/song.ini",
+      "size": 355
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/KNOWER - BUTTS TITS MONEY (Chezy)/song.ogg",
+      "size": 7072870
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nitro - Freight Train (Sygenysis)/album.png",
+      "size": 57703
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nitro - Freight Train (Sygenysis)/guitar.ogg",
+      "size": 8211497
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nitro - Freight Train (Sygenysis)/notes.mid",
+      "size": 20351
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nitro - Freight Train (Sygenysis)/song.ini",
+      "size": 666
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nornsaga - Norns Horns, the Guitar Jingle (2DHumanity, Dustin of Nornsaga)/album.png",
+      "size": 367137
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nornsaga - Norns Horns, the Guitar Jingle (2DHumanity, Dustin of Nornsaga)/guitar.mp3",
+      "size": 11086618
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nornsaga - Norns Horns, the Guitar Jingle (2DHumanity, Dustin of Nornsaga)/notes.mid",
+      "size": 20381
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Nornsaga - Norns Horns, the Guitar Jingle (2DHumanity, Dustin of Nornsaga)/song.ini",
+      "size": 686
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Phinehas - My Horses Are Many (Chezy)/album.png",
+      "size": 453684
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Phinehas - My Horses Are Many (Chezy)/notes.chart",
+      "size": 38354
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Phinehas - My Horses Are Many (Chezy)/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 07 - Blacker than Black/Phinehas - My Horses Are Many (Chezy)/song.ogg",
+      "size": 5740442
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Ace - Rider of the Sky (DigitalSquirrel)/album.png",
+      "size": 733504
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Ace - Rider of the Sky (DigitalSquirrel)/notes.chart",
+      "size": 105029
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Ace - Rider of the Sky (DigitalSquirrel)/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Ace - Rider of the Sky (DigitalSquirrel)/song.ogg",
+      "size": 9345304
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/F777 - Speedbreaker (DigitalSquirrel)/album.png",
+      "size": 133555
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/F777 - Speedbreaker (DigitalSquirrel)/notes.chart",
+      "size": 38291
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/F777 - Speedbreaker (DigitalSquirrel)/song.ini",
+      "size": 341
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/F777 - Speedbreaker (DigitalSquirrel)/song.ogg",
+      "size": 4229474
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Sabaton - Resist and Bite (m9)/album.png",
+      "size": 463553
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Sabaton - Resist and Bite (m9)/guitar.ogg",
+      "size": 5670128
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Sabaton - Resist and Bite (m9)/notes.mid",
+      "size": 29085
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/Sabaton - Resist and Bite (m9)/song.ini",
+      "size": 637
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/ToxicxEternity - Bloody Tears (Castlevania cover) (2DHumanity)/album.png",
+      "size": 369523
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/ToxicxEternity - Bloody Tears (Castlevania cover) (2DHumanity)/guitar.ogg",
+      "size": 5351984
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/ToxicxEternity - Bloody Tears (Castlevania cover) (2DHumanity)/notes.mid",
+      "size": 12477
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 08 - Green with Envy/ToxicxEternity - Bloody Tears (Castlevania cover) (2DHumanity)/song.ini",
+      "size": 702
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Area 11 - The Legendary Sannin (DigitalSquirrel)/album.png",
+      "size": 373859
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Area 11 - The Legendary Sannin (DigitalSquirrel)/notes.chart",
+      "size": 37914
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Area 11 - The Legendary Sannin (DigitalSquirrel)/song.ini",
+      "size": 361
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Area 11 - The Legendary Sannin (DigitalSquirrel)/song.ogg",
+      "size": 10191054
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Lion - The Transformers (Theme) (2DHumanity)/album.png",
+      "size": 558632
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Lion - The Transformers (Theme) (2DHumanity)/guitar.ogg",
+      "size": 7499962
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Lion - The Transformers (Theme) (2DHumanity)/notes.mid",
+      "size": 13250
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Lion - The Transformers (Theme) (2DHumanity)/song.ini",
+      "size": 701
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Myrone - Clear Eyes Clear Skies (Chezy)/album.png",
+      "size": 355453
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Myrone - Clear Eyes Clear Skies (Chezy)/notes.chart",
+      "size": 23794
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Myrone - Clear Eyes Clear Skies (Chezy)/song.ini",
+      "size": 351
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Myrone - Clear Eyes Clear Skies (Chezy)/song.ogg",
+      "size": 5694758
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Strapping Young Lad - Far Beyond Metal (feat. Oderus Urungus) (Dillski)/album.png",
+      "size": 300173
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Strapping Young Lad - Far Beyond Metal (feat. Oderus Urungus) (Dillski)/notes.chart",
+      "size": 44066
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Strapping Young Lad - Far Beyond Metal (feat. Oderus Urungus) (Dillski)/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Strapping Young Lad - Far Beyond Metal (feat. Oderus Urungus) (Dillski)/song.ogg",
+      "size": 12389412
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Teminite - Earthquake (Aren Eternal)/album.png",
+      "size": 525071
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Teminite - Earthquake (Aren Eternal)/notes.chart",
+      "size": 42047
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Teminite - Earthquake (Aren Eternal)/song.ini",
+      "size": 235
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Teminite - Earthquake (Aren Eternal)/song.ogg",
+      "size": 10614645
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Too Close To Touch - Until I Collapse (Jaded)/album.png",
+      "size": 372983
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Too Close To Touch - Until I Collapse (Jaded)/notes.chart",
+      "size": 30113
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Too Close To Touch - Until I Collapse (Jaded)/song.ini",
+      "size": 383
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 09 - White Knighting/Too Close To Touch - Until I Collapse (Jaded)/song.ogg",
+      "size": 8448598
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Haywyre - Smooth Criminal (Chezy)/album.png",
+      "size": 238426
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Haywyre - Smooth Criminal (Chezy)/notes.chart",
+      "size": 36505
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Haywyre - Smooth Criminal (Chezy)/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Haywyre - Smooth Criminal (Chezy)/song.ogg",
+      "size": 8080533
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Megadeth - The Disintegrators (Siavash)/album.png",
+      "size": 118669
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Megadeth - The Disintegrators (Siavash)/guitar.ogg",
+      "size": 3988829
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Megadeth - The Disintegrators (Siavash)/notes.chart",
+      "size": 20318
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Megadeth - The Disintegrators (Siavash)/song.ini",
+      "size": 681
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Symphony X - Serpent's Kiss (Dillski)/album.png",
+      "size": 491144
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Symphony X - Serpent's Kiss (Dillski)/notes.chart",
+      "size": 38207
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Symphony X - Serpent's Kiss (Dillski)/song.ini",
+      "size": 352
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 10 - A Gray Area/Symphony X - Serpent's Kiss (Dillski)/song.ogg",
+      "size": 12621304
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Day of Reckoning - Left to Follow (2DHumanity)/album.png",
+      "size": 526607
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Day of Reckoning - Left to Follow (2DHumanity)/guitar.ogg",
+      "size": 7260345
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Day of Reckoning - Left to Follow (2DHumanity)/notes.mid",
+      "size": 27878
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Day of Reckoning - Left to Follow (2DHumanity)/song.ini",
+      "size": 690
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Holy Grail - My Last Attack (2DHumanity)/album.png",
+      "size": 572371
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Holy Grail - My Last Attack (2DHumanity)/guitar.ogg",
+      "size": 10340735
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Holy Grail - My Last Attack (2DHumanity)/notes.mid",
+      "size": 18132
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Holy Grail - My Last Attack (2DHumanity)/song.ini",
+      "size": 629
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Periphery - Mile Zero (Chezy)/album.png",
+      "size": 180246
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Periphery - Mile Zero (Chezy)/notes.chart",
+      "size": 59009
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Periphery - Mile Zero (Chezy)/song.ini",
+      "size": 367
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Periphery - Mile Zero (Chezy)/song.ogg",
+      "size": 8358124
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Powerglove - Gotta Catch 'Em All (Jason Paige cover feat. Tony Kakko) (Siavash)/album.png",
+      "size": 529477
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Powerglove - Gotta Catch 'Em All (Jason Paige cover feat. Tony Kakko) (Siavash)/guitar.ogg",
+      "size": 5686273
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Powerglove - Gotta Catch 'Em All (Jason Paige cover feat. Tony Kakko) (Siavash)/notes.chart",
+      "size": 36187
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Powerglove - Gotta Catch 'Em All (Jason Paige cover feat. Tony Kakko) (Siavash)/song.ini",
+      "size": 734
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/RichaadEB - At Doom's Gate (E1M1) (Mick Gordon cover) (2DHumanity)/album.png",
+      "size": 499528
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/RichaadEB - At Doom's Gate (E1M1) (Mick Gordon cover) (2DHumanity)/guitar.ogg",
+      "size": 3905240
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/RichaadEB - At Doom's Gate (E1M1) (Mick Gordon cover) (2DHumanity)/notes.mid",
+      "size": 18179
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/RichaadEB - At Doom's Gate (E1M1) (Mick Gordon cover) (2DHumanity)/song.ini",
+      "size": 706
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Various Artists - 2000s Solo Medley (Siavash, 2DHumanity, Chezy, Sygenysis)/album.png",
+      "size": 437785
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Various Artists - 2000s Solo Medley (Siavash, 2DHumanity, Chezy, Sygenysis)/guitar.ogg",
+      "size": 19238803
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Various Artists - 2000s Solo Medley (Siavash, 2DHumanity, Chezy, Sygenysis)/notes.chart",
+      "size": 90447
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 11 - Roll out the Red Carpet/Various Artists - 2000s Solo Medley (Siavash, 2DHumanity, Chezy, Sygenysis)/song.ini",
+      "size": 750
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Angel Dust - Border of Reality (2DHumanity)/album.png",
+      "size": 630679
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Angel Dust - Border of Reality (2DHumanity)/guitar.ogg",
+      "size": 10893383
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Angel Dust - Border of Reality (2DHumanity)/notes.mid",
+      "size": 21396
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Angel Dust - Border of Reality (2DHumanity)/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Blind Guardian - Beyond the Ice (Sygenysis)/album.png",
+      "size": 131245
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Blind Guardian - Beyond the Ice (Sygenysis)/guitar.ogg",
+      "size": 8448379
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Blind Guardian - Beyond the Ice (Sygenysis)/notes.mid",
+      "size": 11543
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Blind Guardian - Beyond the Ice (Sygenysis)/song.ini",
+      "size": 650
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Pocket Size Universe - Blue Sun (gaebpls)/album.png",
+      "size": 48139
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Pocket Size Universe - Blue Sun (gaebpls)/guitar.ogg",
+      "size": 15965330
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Pocket Size Universe - Blue Sun (gaebpls)/notes.chart",
+      "size": 46544
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Pocket Size Universe - Blue Sun (gaebpls)/song.ini",
+      "size": 352
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Rainbowdragoneyes - Starvved (Siavash)/album.png",
+      "size": 571156
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Rainbowdragoneyes - Starvved (Siavash)/guitar.ogg",
+      "size": 8343329
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Rainbowdragoneyes - Starvved (Siavash)/notes.chart",
+      "size": 83738
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Rainbowdragoneyes - Starvved (Siavash)/song.ini",
+      "size": 654
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Sonata Arctica - Silence Solo Medley (Revisited) (Siavash, m9, 2DHumanity)/album.png",
+      "size": 745969
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Sonata Arctica - Silence Solo Medley (Revisited) (Siavash, m9, 2DHumanity)/guitar.ogg",
+      "size": 19057841
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Sonata Arctica - Silence Solo Medley (Revisited) (Siavash, m9, 2DHumanity)/notes.chart",
+      "size": 111502
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 12 - Deviated Departures/Sonata Arctica - Silence Solo Medley (Revisited) (Siavash, m9, 2DHumanity)/song.ini",
+      "size": 709
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Christian Muenzner - Beyond the Wall of Sleep Solo Medley (2DHumanity, Siavash)/album.png",
+      "size": 472227
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Christian Muenzner - Beyond the Wall of Sleep Solo Medley (2DHumanity, Siavash)/guitar.ogg",
+      "size": 39342291
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Christian Muenzner - Beyond the Wall of Sleep Solo Medley (2DHumanity, Siavash)/notes.chart",
+      "size": 290441
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Christian Muenzner - Beyond the Wall of Sleep Solo Medley (2DHumanity, Siavash)/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Jason Richardson & Luke Holland - Tendinitis (Dillski)/album.png",
+      "size": 665935
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Jason Richardson & Luke Holland - Tendinitis (Dillski)/notes.chart",
+      "size": 49274
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Jason Richardson & Luke Holland - Tendinitis (Dillski)/song.ini",
+      "size": 388
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Jason Richardson & Luke Holland - Tendinitis (Dillski)/song.ogg",
+      "size": 14927481
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Miyavi - What's My Name (Sygenysis)/album.png",
+      "size": 102360
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Miyavi - What's My Name (Sygenysis)/guitar.ogg",
+      "size": 6101431
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Miyavi - What's My Name (Sygenysis)/notes.mid",
+      "size": 16778
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Miyavi - What's My Name (Sygenysis)/song.ini",
+      "size": 609
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Sonata Arctica - Cinderblox (Siavash)/album.png",
+      "size": 748162
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Sonata Arctica - Cinderblox (Siavash)/guitar.ogg",
+      "size": 5849256
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Sonata Arctica - Cinderblox (Siavash)/notes.chart",
+      "size": 41791
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/Sonata Arctica - Cinderblox (Siavash)/song.ini",
+      "size": 684
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/beatMARIO - Night of Nights (m9)/album.png",
+      "size": 449421
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/beatMARIO - Night of Nights (m9)/guitar.ogg",
+      "size": 6487821
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/beatMARIO - Night of Nights (m9)/notes.mid",
+      "size": 9255
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 13 - Yellow-Bellied Charter/beatMARIO - Night of Nights (m9)/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Bob Katsionis - Tomorrow Starts Today (Siavash)/album.png",
+      "size": 445144
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Bob Katsionis - Tomorrow Starts Today (Siavash)/guitar.ogg",
+      "size": 6805774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Bob Katsionis - Tomorrow Starts Today (Siavash)/notes.chart",
+      "size": 33774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Bob Katsionis - Tomorrow Starts Today (Siavash)/song.ini",
+      "size": 686
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Galneryus - Angel of Salvation (Chemfinal)/album.png",
+      "size": 666536
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Galneryus - Angel of Salvation (Chemfinal)/notes.chart",
+      "size": 119513
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Galneryus - Angel of Salvation (Chemfinal)/song.ini",
+      "size": 397
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Galneryus - Angel of Salvation (Chemfinal)/song.mp3",
+      "size": 28279953
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/I Am Abomination - To Our Forefathers Solo Medley (Chezy)/album.png",
+      "size": 619363
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/I Am Abomination - To Our Forefathers Solo Medley (Chezy)/notes.chart",
+      "size": 56304
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/I Am Abomination - To Our Forefathers Solo Medley (Chezy)/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/I Am Abomination - To Our Forefathers Solo Medley (Chezy)/song.ogg",
+      "size": 11826563
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Protest the Hero - Skies (Chezy)/album.png",
+      "size": 408138
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Protest the Hero - Skies (Chezy)/notes.chart",
+      "size": 84278
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Protest the Hero - Skies (Chezy)/song.ini",
+      "size": 342
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Protest the Hero - Skies (Chezy)/song.ogg",
+      "size": 10159125
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Tut Tut Child - Maelstrom (Aren Eternal)/album.png",
+      "size": 253574
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Tut Tut Child - Maelstrom (Aren Eternal)/notes.chart",
+      "size": 51284
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Tut Tut Child - Maelstrom (Aren Eternal)/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Tut Tut Child - Maelstrom (Aren Eternal)/song.ogg",
+      "size": 8044442
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Yoshida Brothers - Rising (Sygenysis)/album.png",
+      "size": 117937
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Yoshida Brothers - Rising (Sygenysis)/guitar.ogg",
+      "size": 7413836
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Yoshida Brothers - Rising (Sygenysis)/notes.mid",
+      "size": 8448
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 14 - White Elephant in the Room/Yoshida Brothers - Rising (Sygenysis)/song.ini",
+      "size": 632
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/David Lee Roth - It's Showtime! (Sygenysis)/album.png",
+      "size": 425323
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/David Lee Roth - It's Showtime! (Sygenysis)/guitar.ogg",
+      "size": 7875333
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/David Lee Roth - It's Showtime! (Sygenysis)/notes.mid",
+      "size": 19906
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/David Lee Roth - It's Showtime! (Sygenysis)/song.ini",
+      "size": 654
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Jacky Vincent - Star X Speed Story Solo Medley/album.png",
+      "size": 471296
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Jacky Vincent - Star X Speed Story Solo Medley/guitar.ogg",
+      "size": 45751917
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Jacky Vincent - Star X Speed Story Solo Medley/notes.mid",
+      "size": 97647
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Jacky Vincent - Star X Speed Story Solo Medley/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/John 5 - The Lead Sprinkler (xX760Xx)/album.png",
+      "size": 494374
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/John 5 - The Lead Sprinkler (xX760Xx)/notes.chart",
+      "size": 59740
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/John 5 - The Lead Sprinkler (xX760Xx)/song.ini",
+      "size": 334
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/John 5 - The Lead Sprinkler (xX760Xx)/song.mp3",
+      "size": 8121364
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Masahiro Andoh - Moon Over the Castle (DigitalSquirrel)/album.png",
+      "size": 161794
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Masahiro Andoh - Moon Over the Castle (DigitalSquirrel)/notes.chart",
+      "size": 49939
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Masahiro Andoh - Moon Over the Castle (DigitalSquirrel)/song.ini",
+      "size": 368
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Masahiro Andoh - Moon Over the Castle (DigitalSquirrel)/song.ogg",
+      "size": 10088725
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Mike Orlando - Horizons (Chemfinal)/album.png",
+      "size": 453362
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Mike Orlando - Horizons (Chemfinal)/notes.chart",
+      "size": 35683
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Mike Orlando - Horizons (Chemfinal)/song.ini",
+      "size": 344
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/Mike Orlando - Horizons (Chemfinal)/song.ogg",
+      "size": 7259797
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/RichaadEB - Night of Fire (Niko cover) (Siavash)/album.png",
+      "size": 629936
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/RichaadEB - Night of Fire (Niko cover) (Siavash)/guitar.ogg",
+      "size": 7053907
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/RichaadEB - Night of Fire (Niko cover) (Siavash)/notes.mid",
+      "size": 42393
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 15 - A Black Violet/RichaadEB - Night of Fire (Niko cover) (Siavash)/song.ini",
+      "size": 743
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Children of Bodom - Kissing the Shadows (2DHumanity)/album.png",
+      "size": 575028
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Children of Bodom - Kissing the Shadows (2DHumanity)/guitar.ogg",
+      "size": 9652707
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Children of Bodom - Kissing the Shadows (2DHumanity)/notes.mid",
+      "size": 27070
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Children of Bodom - Kissing the Shadows (2DHumanity)/song.ini",
+      "size": 673
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Hiromi - Desire (Chemfinal)/album.png",
+      "size": 36846
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Hiromi - Desire (Chemfinal)/notes.chart",
+      "size": 127989
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Hiromi - Desire (Chemfinal)/song.ini",
+      "size": 338
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Hiromi - Desire (Chemfinal)/song.ogg",
+      "size": 11188615
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Ne Obliviscaris - Painters of the Tempest (Part II) Triptych Lux (DigitalSquirrel)/album.png",
+      "size": 608054
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Ne Obliviscaris - Painters of the Tempest (Part II) Triptych Lux (DigitalSquirrel)/guitar.ogg",
+      "size": 24448738
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Ne Obliviscaris - Painters of the Tempest (Part II) Triptych Lux (DigitalSquirrel)/notes.chart",
+      "size": 173131
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Ne Obliviscaris - Painters of the Tempest (Part II) Triptych Lux (DigitalSquirrel)/song.ini",
+      "size": 632
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Nogizaka46 - Koumori Yo (Sygenysis)/album.png",
+      "size": 83157
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Nogizaka46 - Koumori Yo (Sygenysis)/guitar.ogg",
+      "size": 8268929
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Nogizaka46 - Koumori Yo (Sygenysis)/notes.mid",
+      "size": 19504
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Nogizaka46 - Koumori Yo (Sygenysis)/song.ini",
+      "size": 636
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/The Fall of Troy - Chapter II - A Strange Conversation (xX760Xx)/album.png",
+      "size": 518342
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/The Fall of Troy - Chapter II - A Strange Conversation (xX760Xx)/notes.chart",
+      "size": 36298
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/The Fall of Troy - Chapter II - A Strange Conversation (xX760Xx)/song.ini",
+      "size": 399
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/The Fall of Troy - Chapter II - A Strange Conversation (xX760Xx)/song.ogg",
+      "size": 8913880
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Various Artists - Finnish Metal Solo Medley (Siavash, Chemfinal, DigitalSquirrel, Sygenysis)/album.png",
+      "size": 437785
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Various Artists - Finnish Metal Solo Medley (Siavash, Chemfinal, DigitalSquirrel, Sygenysis)/guitar.ogg",
+      "size": 16408784
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Various Artists - Finnish Metal Solo Medley (Siavash, Chemfinal, DigitalSquirrel, Sygenysis)/notes.chart",
+      "size": 106509
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 16 - Blue Songs of Death/Various Artists - Finnish Metal Solo Medley (Siavash, Chemfinal, DigitalSquirrel, Sygenysis)/song.ini",
+      "size": 698
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/I Am Abomination - To Rebuild (Chezy)/album.png",
+      "size": 556181
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/I Am Abomination - To Rebuild (Chezy)/notes.chart",
+      "size": 42150
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/I Am Abomination - To Rebuild (Chezy)/song.ini",
+      "size": 359
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/I Am Abomination - To Rebuild (Chezy)/song.ogg",
+      "size": 6785037
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Impellitteri - Lost in the Rain (2DHumanity)/album.png",
+      "size": 60859
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Impellitteri - Lost in the Rain (2DHumanity)/guitar.ogg",
+      "size": 5688657
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Impellitteri - Lost in the Rain (2DHumanity)/notes.mid",
+      "size": 13248
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Impellitteri - Lost in the Rain (2DHumanity)/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Joe Stump - Prelude Speed Metal Messiah (2DHumanity)/album.png",
+      "size": 509585
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Joe Stump - Prelude Speed Metal Messiah (2DHumanity)/guitar.ogg",
+      "size": 5352304
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Joe Stump - Prelude Speed Metal Messiah (2DHumanity)/notes.mid",
+      "size": 22375
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Joe Stump - Prelude Speed Metal Messiah (2DHumanity)/song.ini",
+      "size": 652
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Orden Ogan - Gunmen Solo Medley (m9)/album.png",
+      "size": 508924
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Orden Ogan - Gunmen Solo Medley (m9)/guitar.ogg",
+      "size": 4400225
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Orden Ogan - Gunmen Solo Medley (m9)/notes.mid",
+      "size": 21683
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Orden Ogan - Gunmen Solo Medley (m9)/song.ini",
+      "size": 338
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Push Over - Transitioning Seamlessly (Jaded)/album.png",
+      "size": 67308
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Push Over - Transitioning Seamlessly (Jaded)/notes.chart",
+      "size": 29834
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Push Over - Transitioning Seamlessly (Jaded)/song.ini",
+      "size": 364
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 17 - The Black Sheep/Push Over - Transitioning Seamlessly (Jaded)/song.ogg",
+      "size": 6492255
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Annihilator - Altering the Altar (2DHumanity)/album.png",
+      "size": 613502
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Annihilator - Altering the Altar (2DHumanity)/guitar.ogg",
+      "size": 9644496
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Annihilator - Altering the Altar (2DHumanity)/notes.mid",
+      "size": 27438
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Annihilator - Altering the Altar (2DHumanity)/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Earl Scruggs - Foggy Mountain Breakdown (Sygenysis)/album.png",
+      "size": 85147
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Earl Scruggs - Foggy Mountain Breakdown (Sygenysis)/guitar.ogg",
+      "size": 9850197
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Earl Scruggs - Foggy Mountain Breakdown (Sygenysis)/notes.mid",
+      "size": 15601
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Earl Scruggs - Foggy Mountain Breakdown (Sygenysis)/song.ini",
+      "size": 659
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Guthrie Govan - Fives (Chemfinal)/album.png",
+      "size": 540311
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Guthrie Govan - Fives (Chemfinal)/guitar.mp3",
+      "size": 6875009
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Guthrie Govan - Fives (Chemfinal)/notes.chart",
+      "size": 50205
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Guthrie Govan - Fives (Chemfinal)/song.ini",
+      "size": 352
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Sunless Rise - Recovering the Truth (Siavash)/album.png",
+      "size": 520994
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Sunless Rise - Recovering the Truth (Siavash)/guitar.ogg",
+      "size": 10476002
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Sunless Rise - Recovering the Truth (Siavash)/notes.chart",
+      "size": 46670
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Sunless Rise - Recovering the Truth (Siavash)/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Various Artists - Chezy's Best Of Solo Medley (Chezy)/album.png",
+      "size": 288917
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Various Artists - Chezy's Best Of Solo Medley (Chezy)/notes.chart",
+      "size": 78158
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Various Artists - Chezy's Best Of Solo Medley (Chezy)/song.ini",
+      "size": 347
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 18 - The Whites of Their Eyes/Various Artists - Chezy's Best Of Solo Medley (Chezy)/song.ogg",
+      "size": 17737895
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Angel Vivaldi & Andy James - Wave of Synergy (2DHumanity)/album.png",
+      "size": 1154969
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Angel Vivaldi & Andy James - Wave of Synergy (2DHumanity)/guitar.ogg",
+      "size": 7767941
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Angel Vivaldi & Andy James - Wave of Synergy (2DHumanity)/notes.mid",
+      "size": 19188
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Angel Vivaldi & Andy James - Wave of Synergy (2DHumanity)/song.ini",
+      "size": 633
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Celldweller & Atlas Plug - Enter the Battletoad (Sygenysis)/album.png",
+      "size": 99367
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Celldweller & Atlas Plug - Enter the Battletoad (Sygenysis)/guitar.ogg",
+      "size": 9144061
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Celldweller & Atlas Plug - Enter the Battletoad (Sygenysis)/notes.mid",
+      "size": 11600
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Celldweller & Atlas Plug - Enter the Battletoad (Sygenysis)/song.ini",
+      "size": 717
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/DGM - The Secret (Part 1) (Siavash, 2DHumanity)/album.png",
+      "size": 763671
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/DGM - The Secret (Part 1) (Siavash, 2DHumanity)/guitar.ogg",
+      "size": 16599239
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/DGM - The Secret (Part 1) (Siavash, 2DHumanity)/notes.mid",
+      "size": 33243
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/DGM - The Secret (Part 1) (Siavash, 2DHumanity)/song.ini",
+      "size": 662
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Fraser Edwards - I Am God (feat. PelleK) (Sygenysis)/album.png",
+      "size": 750093
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Fraser Edwards - I Am God (feat. PelleK) (Sygenysis)/guitar.ogg",
+      "size": 13361549
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Fraser Edwards - I Am God (feat. PelleK) (Sygenysis)/notes.mid",
+      "size": 24706
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Fraser Edwards - I Am God (feat. PelleK) (Sygenysis)/song.ini",
+      "size": 631
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Liquid Tension Experiment - Acid Rain (Live) (xX760Xx)/album.png",
+      "size": 404717
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Liquid Tension Experiment - Acid Rain (Live) (xX760Xx)/notes.chart",
+      "size": 123242
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Liquid Tension Experiment - Acid Rain (Live) (xX760Xx)/song.ini",
+      "size": 366
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Liquid Tension Experiment - Acid Rain (Live) (xX760Xx)/song.ogg",
+      "size": 20449702
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Yuhkinen - Yuhkinen Solo Medley (Chemfinal)/album.png",
+      "size": 577026
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Yuhkinen - Yuhkinen Solo Medley (Chemfinal)/guitar.ogg",
+      "size": 20394141
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Yuhkinen - Yuhkinen Solo Medley (Chemfinal)/notes.chart",
+      "size": 187556
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 19 - Once in a Blue Moon/Yuhkinen - Yuhkinen Solo Medley (Chemfinal)/song.ini",
+      "size": 392
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - Siavash's Theme (2DHumanity)/album.png",
+      "size": 464623
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - Siavash's Theme (2DHumanity)/guitar.ogg",
+      "size": 1845291
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - Siavash's Theme (2DHumanity)/notes.mid",
+      "size": 3036
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - Siavash's Theme (2DHumanity)/song.ini",
+      "size": 663
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Reprisal Solo Medley (2DHumanity)/album.png",
+      "size": 407050
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Reprisal Solo Medley (2DHumanity)/guitar.ogg",
+      "size": 14741049
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Reprisal Solo Medley (2DHumanity)/notes.mid",
+      "size": 60709
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Reprisal Solo Medley (2DHumanity)/song.ini",
+      "size": 627
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Return (2DHumanity)/album.png",
+      "size": 603306
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Return (2DHumanity)/guitar.ogg",
+      "size": 12051867
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Return (2DHumanity)/notes.mid",
+      "size": 35065
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Aeon Bridge - The Bard's Return (2DHumanity)/song.ini",
+      "size": 636
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Anti Hero Charters - Anti Hero Summer Jam (2DHumanity)/album.png",
+      "size": 464623
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Anti Hero Charters - Anti Hero Summer Jam (2DHumanity)/guitar.ogg",
+      "size": 6110473
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Anti Hero Charters - Anti Hero Summer Jam (2DHumanity)/notes.mid",
+      "size": 21505
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Anti Hero Charters - Anti Hero Summer Jam (2DHumanity)/song.ini",
+      "size": 677
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Kalmah - The Blind Leader (2DHumanity)/album.png",
+      "size": 605956
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Kalmah - The Blind Leader (2DHumanity)/guitar.ogg",
+      "size": 8357983
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Kalmah - The Blind Leader (2DHumanity)/notes.mid",
+      "size": 16552
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Kalmah - The Blind Leader (2DHumanity)/song.ini",
+      "size": 661
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Knife Party - Centipede (Chezy)/album.png",
+      "size": 436316
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Knife Party - Centipede (Chezy)/notes.chart",
+      "size": 44319
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Knife Party - Centipede (Chezy)/song.ini",
+      "size": 333
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/Knife Party - Centipede (Chezy)/song.ogg",
+      "size": 7405798
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/LORD - Because We Can (2DHumanity, Siavash)/album.png",
+      "size": 427026
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/LORD - Because We Can (2DHumanity, Siavash)/guitar.ogg",
+      "size": 4139263
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/LORD - Because We Can (2DHumanity, Siavash)/notes.mid",
+      "size": 12717
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier 20 - This Is Beach Episode/LORD - Because We Can (2DHumanity, Siavash)/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 01 (AHBE Team)/album.png",
+      "size": 437785
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 01 (AHBE Team)/guitar.ogg",
+      "size": 8333652
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 01 (AHBE Team)/notes.chart",
+      "size": 59329
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 01 (AHBE Team)/song.ini",
+      "size": 635
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 02 (AHBE Team)/album.png",
+      "size": 399832
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 02 (AHBE Team)/guitar.ogg",
+      "size": 11955567
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 02 (AHBE Team)/notes.chart",
+      "size": 78571
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 02 (AHBE Team)/song.ini",
+      "size": 636
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 03 (AHBE Team)/album.png",
+      "size": 418988
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 03 (AHBE Team)/guitar.ogg",
+      "size": 11045706
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 03 (AHBE Team)/notes.chart",
+      "size": 54535
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 03 (AHBE Team)/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 04 (AHBE Team)/album.png",
+      "size": 464623
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 04 (AHBE Team)/guitar.ogg",
+      "size": 11488663
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 04 (AHBE Team)/notes.chart",
+      "size": 64457
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 04 (AHBE Team)/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 05 (AHBE Team)/album.png",
+      "size": 400886
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 05 (AHBE Team)/guitar.ogg",
+      "size": 12318451
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 05 (AHBE Team)/notes.chart",
+      "size": 53363
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 05 (AHBE Team)/song.ini",
+      "size": 684
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 06 (AHBE Team)/album.png",
+      "size": 529858
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 06 (AHBE Team)/guitar.ogg",
+      "size": 21031464
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 06 (AHBE Team)/notes.chart",
+      "size": 86704
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 06 (AHBE Team)/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 07 (AHBE Team)/album.png",
+      "size": 428973
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 07 (AHBE Team)/guitar.ogg",
+      "size": 20986083
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 07 (AHBE Team)/notes.chart",
+      "size": 94293
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 01 - AHBE Megamixes/Various Artists - Anti Hero Beach Episode Megamix 07 (AHBE Team)/song.ini",
+      "size": 648
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adenosine (Dillski)/album.png",
+      "size": 792774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adenosine (Dillski)/notes.chart",
+      "size": 26415
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adenosine (Dillski)/song.ini",
+      "size": 330
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adenosine (Dillski)/song.ogg",
+      "size": 8244993
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adrenaline (feat. Julian Cifuentes) (Dillski)/album.png",
+      "size": 792774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adrenaline (feat. Julian Cifuentes) (Dillski)/notes.chart",
+      "size": 39806
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adrenaline (feat. Julian Cifuentes) (Dillski)/song.ini",
+      "size": 356
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Adrenaline (feat. Julian Cifuentes) (Dillski)/song.ogg",
+      "size": 7712406
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Dopamine (feat. Oli Herbert) (Dillski)/album.png",
+      "size": 792774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Dopamine (feat. Oli Herbert) (Dillski)/notes.chart",
+      "size": 36323
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Dopamine (feat. Oli Herbert) (Dillski)/song.ini",
+      "size": 349
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Dopamine (feat. Oli Herbert) (Dillski)/song.ogg",
+      "size": 7951026
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Endorphin (Dillski)/album.png",
+      "size": 792774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Endorphin (Dillski)/notes.chart",
+      "size": 20419
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Endorphin (Dillski)/song.ini",
+      "size": 330
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Endorphin (Dillski)/song.ogg",
+      "size": 8887137
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - G.A.B.A (Dillski)/album.png",
+      "size": 792774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - G.A.B.A (Dillski)/notes.chart",
+      "size": 20669
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - G.A.B.A (Dillski)/song.ini",
+      "size": 329
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - G.A.B.A (Dillski)/song.ogg",
+      "size": 8202387
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Noradrenaline-Synapse (Dillski)/album.png",
+      "size": 792774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Noradrenaline-Synapse (Dillski)/notes.chart",
+      "size": 42084
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Noradrenaline-Synapse (Dillski)/song.ini",
+      "size": 342
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Noradrenaline-Synapse (Dillski)/song.ogg",
+      "size": 10529986
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Oxytocin (feat. Gus G) (Dillski)/album.png",
+      "size": 792774
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Oxytocin (feat. Gus G) (Dillski)/notes.chart",
+      "size": 48711
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Oxytocin (feat. Gus G) (Dillski)/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Oxytocin (feat. Gus G) (Dillski)/song.ogg",
+      "size": 11915834
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Serotonin (feat. Nita Strauss) (Siavash)/album.png",
+      "size": 811387
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Serotonin (feat. Nita Strauss) (Siavash)/guitar.ogg",
+      "size": 5286267
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Serotonin (feat. Nita Strauss) (Siavash)/notes.chart",
+      "size": 32285
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 02 - Angel Vivaldi - Synapse (Dillski, Siavash)/Angel Vivaldi - Serotonin (feat. Nita Strauss) (Siavash)/song.ini",
+      "size": 697
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - A System to End It All (DigitalSquirrel)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - A System to End It All (DigitalSquirrel)/notes.chart",
+      "size": 48278
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - A System to End It All (DigitalSquirrel)/song.ini",
+      "size": 382
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - A System to End It All (DigitalSquirrel)/song.ogg",
+      "size": 8665865
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Echoes from Time's Passing (DigitalSquirrel)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Echoes from Time's Passing (DigitalSquirrel)/notes.chart",
+      "size": 48626
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Echoes from Time's Passing (DigitalSquirrel)/song.ini",
+      "size": 386
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Echoes from Time's Passing (DigitalSquirrel)/song.ogg",
+      "size": 3474909
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Nova-Helios (DigitalSquirrel)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Nova-Helios (DigitalSquirrel)/notes.chart",
+      "size": 40759
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Nova-Helios (DigitalSquirrel)/song.ini",
+      "size": 371
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Nova-Helios (DigitalSquirrel)/song.ogg",
+      "size": 9734082
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Reclaimers (feat. Aeon Bridge) (DigitalSquirrel)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Reclaimers (feat. Aeon Bridge) (DigitalSquirrel)/notes.mid",
+      "size": 57335
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Reclaimers (feat. Aeon Bridge) (DigitalSquirrel)/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Reclaimers (feat. Aeon Bridge) (DigitalSquirrel)/song.ogg",
+      "size": 16033942
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Sanctuary to Scars (DigitalSquirrel)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Sanctuary to Scars (DigitalSquirrel)/guitar.ogg",
+      "size": 10548063
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Sanctuary to Scars (DigitalSquirrel)/notes.mid",
+      "size": 25404
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - Sanctuary to Scars (DigitalSquirrel)/song.ini",
+      "size": 731
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Condemner (DigitalSquirrel)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Condemner (DigitalSquirrel)/notes.mid",
+      "size": 22855
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Condemner (DigitalSquirrel)/song.ini",
+      "size": 373
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Condemner (DigitalSquirrel)/song.ogg",
+      "size": 7812585
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Edge of Reason (DigitalSquirrel, 2DHumanity)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Edge of Reason (DigitalSquirrel, 2DHumanity)/notes.mid",
+      "size": 42495
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Edge of Reason (DigitalSquirrel, 2DHumanity)/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Edge of Reason (DigitalSquirrel, 2DHumanity)/song.ogg",
+      "size": 5146776
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Universe Creation Forgot (DigitalSquirrel)/album.png",
+      "size": 510520
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Universe Creation Forgot (DigitalSquirrel)/notes.chart",
+      "size": 173137
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Universe Creation Forgot (DigitalSquirrel)/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Anti Hero: Beach Episode/Tier Bonus 03 - Thousand Sun Sky - An Infinitesimal Multiverse (DigitalSquirrel, 2DHumanity)/Thousand Sun Sky - The Universe Creation Forgot (DigitalSquirrel)/song.ogg",
+      "size": 32310275
     }
-  ]
+  ],
+  "extracted_size": 1343654133,
+  "file_count": 508,
+  "chart_count": 127,
+  "release_date": "2018-07-01"
 }

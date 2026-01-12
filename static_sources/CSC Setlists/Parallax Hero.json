@@ -3,17 +3,2735 @@
   "folder_id": "static-parallax-hero",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 135,
-  "total_size": 917916391,
-  "file_count": 681,
-  "files": [
+  "downloads": [
     {
       "id": "1Fm71mLfiRERv-O7mt66MXyG4TajzMio-",
-      "path": "Parallax Hero/Parallax Hero.7z",
-      "name": "Parallax Hero.7z",
+      "name": "Parallax Hero.zip",
       "size": 917916391,
       "md5": "711c4149129af97458cf391dac2d4421"
     }
-  ]
+  ],
+  "download_size": 917916391,
+  "files": [
+    {
+      "path": "Parallax Hero/Parallax Hero FC Breakdown List.rtf",
+      "size": 28540
+    },
+    {
+      "path": "Parallax Hero/README.txt",
+      "size": 4093
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/A Day to Remember - In Florida/album.png",
+      "size": 610233
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/A Day to Remember - In Florida/background.png",
+      "size": 1664769
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/A Day to Remember - In Florida/guitar.ogg",
+      "size": 3898816
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/A Day to Remember - In Florida/notes.chart",
+      "size": 31543
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/A Day to Remember - In Florida/song.ini",
+      "size": 734
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Aerosmith - Jaded/album.png",
+      "size": 405868
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Aerosmith - Jaded/background.png",
+      "size": 1267467
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Aerosmith - Jaded/guitar.ogg",
+      "size": 6035246
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Aerosmith - Jaded/notes.chart",
+      "size": 24995
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Aerosmith - Jaded/song.ini",
+      "size": 861
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Bad Lip Reading - La-Bibbida-Bibba-Dum (On Broadway)/album.png",
+      "size": 151509
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Bad Lip Reading - La-Bibbida-Bibba-Dum (On Broadway)/background.png",
+      "size": 1055760
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Bad Lip Reading - La-Bibbida-Bibba-Dum (On Broadway)/guitar.ogg",
+      "size": 1241258
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Bad Lip Reading - La-Bibbida-Bibba-Dum (On Broadway)/notes.chart",
+      "size": 12550
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Bad Lip Reading - La-Bibbida-Bibba-Dum (On Broadway)/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Blink-182 - Another Girl, Another Planet (The Only Ones Cover)/album.png",
+      "size": 129799
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Blink-182 - Another Girl, Another Planet (The Only Ones Cover)/background.png",
+      "size": 453336
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Blink-182 - Another Girl, Another Planet (The Only Ones Cover)/guitar.ogg",
+      "size": 3233419
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Blink-182 - Another Girl, Another Planet (The Only Ones Cover)/notes.chart",
+      "size": 29687
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Blink-182 - Another Girl, Another Planet (The Only Ones Cover)/song.ini",
+      "size": 914
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Dev - In the Dark/album.png",
+      "size": 401605
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Dev - In the Dark/background.png",
+      "size": 1033986
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Dev - In the Dark/guitar.ogg",
+      "size": 4370508
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Dev - In the Dark/notes.chart",
+      "size": 26836
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Dev - In the Dark/song.ini",
+      "size": 730
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Fall Out Boy - Bang the Doldrums/album.png",
+      "size": 478946
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Fall Out Boy - Bang the Doldrums/background.png",
+      "size": 1399319
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Fall Out Boy - Bang the Doldrums/guitar.ogg",
+      "size": 4196728
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Fall Out Boy - Bang the Doldrums/notes.chart",
+      "size": 43962
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Fall Out Boy - Bang the Doldrums/song.ini",
+      "size": 940
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Falling in Reverse - Bad Girls Club/album.png",
+      "size": 170671
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Falling in Reverse - Bad Girls Club/background.png",
+      "size": 342042
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Falling in Reverse - Bad Girls Club/guitar.ogg",
+      "size": 4685345
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Falling in Reverse - Bad Girls Club/notes.chart",
+      "size": 46004
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Falling in Reverse - Bad Girls Club/song.ini",
+      "size": 727
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Jay-Z - 99 Problems/album.png",
+      "size": 174147
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Jay-Z - 99 Problems/background.png",
+      "size": 497445
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Jay-Z - 99 Problems/guitar.ogg",
+      "size": 6806863
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Jay-Z - 99 Problems/notes.chart",
+      "size": 37404
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Jay-Z - 99 Problems/song.ini",
+      "size": 1104
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Omnium Gatherum - Skyline/album.png",
+      "size": 186671
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Omnium Gatherum - Skyline/background.png",
+      "size": 276781
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Omnium Gatherum - Skyline/guitar.ogg",
+      "size": 5353178
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Omnium Gatherum - Skyline/notes.chart",
+      "size": 26375
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Omnium Gatherum - Skyline/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Roger Waters - In the Flesh (Live)/album.png",
+      "size": 549421
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Roger Waters - In the Flesh (Live)/background.png",
+      "size": 899682
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Roger Waters - In the Flesh (Live)/guitar.ogg",
+      "size": 6564043
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Roger Waters - In the Flesh (Live)/notes.chart",
+      "size": 23728
+    },
+    {
+      "path": "Parallax Hero/Tier 01 - Opening Bands/Roger Waters - In the Flesh (Live)/song.ini",
+      "size": 1476
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Arkells - Come to Light/album.png",
+      "size": 615977
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Arkells - Come to Light/background.png",
+      "size": 1940605
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Arkells - Come to Light/guitar.ogg",
+      "size": 5390352
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Arkells - Come to Light/notes.chart",
+      "size": 31164
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Arkells - Come to Light/song.ini",
+      "size": 784
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Buck 65 - Wicked and Weird/album.png",
+      "size": 518003
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Buck 65 - Wicked and Weird/background.png",
+      "size": 1155746
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Buck 65 - Wicked and Weird/guitar.ogg",
+      "size": 3720574
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Buck 65 - Wicked and Weird/notes.chart",
+      "size": 40439
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Buck 65 - Wicked and Weird/song.ini",
+      "size": 697
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Crush - Live/album.png",
+      "size": 214095
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Crush - Live/background.png",
+      "size": 494138
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Crush - Live/guitar.ogg",
+      "size": 4774875
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Crush - Live/notes.chart",
+      "size": 27874
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Crush - Live/song.ini",
+      "size": 670
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Current Swell - It Ain't Right/album.png",
+      "size": 229148
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Current Swell - It Ain't Right/background.png",
+      "size": 423399
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Current Swell - It Ain't Right/guitar.ogg",
+      "size": 3756304
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Current Swell - It Ain't Right/notes.chart",
+      "size": 22357
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Current Swell - It Ain't Right/song.ini",
+      "size": 616
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Headstones - Tweeter and the Monkey Man (Traveling Wilburys Cover)/album.png",
+      "size": 581288
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Headstones - Tweeter and the Monkey Man (Traveling Wilburys Cover)/background.png",
+      "size": 1641418
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Headstones - Tweeter and the Monkey Man (Traveling Wilburys Cover)/guitar.ogg",
+      "size": 4328169
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Headstones - Tweeter and the Monkey Man (Traveling Wilburys Cover)/notes.chart",
+      "size": 46117
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Headstones - Tweeter and the Monkey Man (Traveling Wilburys Cover)/song.ini",
+      "size": 1094
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Said the Whale - Heavy Ceiling/album.png",
+      "size": 274528
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Said the Whale - Heavy Ceiling/background.png",
+      "size": 860128
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Said the Whale - Heavy Ceiling/guitar.ogg",
+      "size": 3898779
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Said the Whale - Heavy Ceiling/notes.chart",
+      "size": 25045
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Said the Whale - Heavy Ceiling/song.ini",
+      "size": 647
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Tal Bachman - Aeroplane/album.png",
+      "size": 611991
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Tal Bachman - Aeroplane/background.png",
+      "size": 1257774
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Tal Bachman - Aeroplane/guitar.ogg",
+      "size": 4118488
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Tal Bachman - Aeroplane/notes.chart",
+      "size": 32727
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Tal Bachman - Aeroplane/song.ini",
+      "size": 803
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Sheepdogs - The Way It Is/album.png",
+      "size": 427468
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Sheepdogs - The Way It Is/background.png",
+      "size": 1116562
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Sheepdogs - The Way It Is/guitar.ogg",
+      "size": 2775282
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Sheepdogs - The Way It Is/notes.chart",
+      "size": 18678
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Sheepdogs - The Way It Is/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Trews - Hope & Ruin/album.png",
+      "size": 559930
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Trews - Hope & Ruin/background.png",
+      "size": 1396910
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Trews - Hope & Ruin/guitar.ogg",
+      "size": 4356044
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Trews - Hope & Ruin/notes.chart",
+      "size": 30331
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/The Trews - Hope & Ruin/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Three Days Grace - Just Like You/album.png",
+      "size": 511759
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Three Days Grace - Just Like You/background.png",
+      "size": 1258844
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Three Days Grace - Just Like You/guitar.ogg",
+      "size": 3627991
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Three Days Grace - Just Like You/notes.chart",
+      "size": 29709
+    },
+    {
+      "path": "Parallax Hero/Tier 02 - Canada, Eh/Three Days Grace - Just Like You/song.ini",
+      "size": 704
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Baha Men - Rat Race/album.png",
+      "size": 619706
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Baha Men - Rat Race/background.png",
+      "size": 1646018
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Baha Men - Rat Race/guitar.ogg",
+      "size": 3926521
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Baha Men - Rat Race/notes.chart",
+      "size": 46962
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Baha Men - Rat Race/song.ini",
+      "size": 687
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Chumbawamba - Ulrike, Meinhof/album.png",
+      "size": 585840
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Chumbawamba - Ulrike, Meinhof/background.png",
+      "size": 1306895
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Chumbawamba - Ulrike, Meinhof/guitar.ogg",
+      "size": 12814216
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Chumbawamba - Ulrike, Meinhof/notes.chart",
+      "size": 77742
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Chumbawamba - Ulrike, Meinhof/song.ini",
+      "size": 1105
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Dinosaur Pile-Up - Thrash Metal Cassette/album.png",
+      "size": 642704
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Dinosaur Pile-Up - Thrash Metal Cassette/background.png",
+      "size": 596259
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Dinosaur Pile-Up - Thrash Metal Cassette/guitar.ogg",
+      "size": 3715015
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Dinosaur Pile-Up - Thrash Metal Cassette/notes.chart",
+      "size": 47987
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Dinosaur Pile-Up - Thrash Metal Cassette/song.ini",
+      "size": 737
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/GG Allin - Bite It You Scum/album.png",
+      "size": 552899
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/GG Allin - Bite It You Scum/background.png",
+      "size": 1693383
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/GG Allin - Bite It You Scum/guitar.ogg",
+      "size": 4622919
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/GG Allin - Bite It You Scum/notes.chart",
+      "size": 33799
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/GG Allin - Bite It You Scum/song.ini",
+      "size": 1054
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Green Day - Castaway/album.png",
+      "size": 347677
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Green Day - Castaway/background.png",
+      "size": 917793
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Green Day - Castaway/guitar.ogg",
+      "size": 4948122
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Green Day - Castaway/notes.chart",
+      "size": 43025
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Green Day - Castaway/song.ini",
+      "size": 678
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/In Flames - Swim/album.png",
+      "size": 618172
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/In Flames - Swim/background.png",
+      "size": 1900108
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/In Flames - Swim/guitar.ogg",
+      "size": 3823094
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/In Flames - Swim/notes.chart",
+      "size": 27968
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/In Flames - Swim/song.ini",
+      "size": 728
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/La Dispute - Such Small Hands, Nobody, Not Even the Rain/album.png",
+      "size": 666098
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/La Dispute - Such Small Hands, Nobody, Not Even the Rain/background.png",
+      "size": 1389822
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/La Dispute - Such Small Hands, Nobody, Not Even the Rain/guitar.ogg",
+      "size": 2800921
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/La Dispute - Such Small Hands, Nobody, Not Even the Rain/notes.chart",
+      "size": 19231
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/La Dispute - Such Small Hands, Nobody, Not Even the Rain/song.ini",
+      "size": 1082
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/The Interrupters - Gave You Everything/album.png",
+      "size": 187880
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/The Interrupters - Gave You Everything/background.png",
+      "size": 538255
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/The Interrupters - Gave You Everything/guitar.ogg",
+      "size": 3337550
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/The Interrupters - Gave You Everything/notes.chart",
+      "size": 54320
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/The Interrupters - Gave You Everything/song.ini",
+      "size": 772
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vanessa Carlton - Ordinary Day/album.png",
+      "size": 608565
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vanessa Carlton - Ordinary Day/background.png",
+      "size": 1688269
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vanessa Carlton - Ordinary Day/guitar.ogg",
+      "size": 4776160
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vanessa Carlton - Ordinary Day/notes.chart",
+      "size": 26818
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vanessa Carlton - Ordinary Day/song.ini",
+      "size": 723
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vendetta Red - Silhouette Serenade/album.png",
+      "size": 627497
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vendetta Red - Silhouette Serenade/background.png",
+      "size": 1665651
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vendetta Red - Silhouette Serenade/guitar.ogg",
+      "size": 3700300
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vendetta Red - Silhouette Serenade/notes.chart",
+      "size": 36516
+    },
+    {
+      "path": "Parallax Hero/Tier 03 - Warming Up/Vendetta Red - Silhouette Serenade/song.ini",
+      "size": 739
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Billy Talent - When I Was a Little Girl/album.png",
+      "size": 345689
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Billy Talent - When I Was a Little Girl/background.png",
+      "size": 863747
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Billy Talent - When I Was a Little Girl/guitar.ogg",
+      "size": 2638994
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Billy Talent - When I Was a Little Girl/notes.chart",
+      "size": 33889
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Billy Talent - When I Was a Little Girl/song.ini",
+      "size": 887
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Breaking Benjamin - Polyamorous/album.png",
+      "size": 634431
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Breaking Benjamin - Polyamorous/background.png",
+      "size": 1189101
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Breaking Benjamin - Polyamorous/guitar.ogg",
+      "size": 4428375
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Breaking Benjamin - Polyamorous/notes.chart",
+      "size": 30999
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Breaking Benjamin - Polyamorous/song.ini",
+      "size": 964
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Jack Johnson - Taylor/album.png",
+      "size": 262563
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Jack Johnson - Taylor/background.png",
+      "size": 892553
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Jack Johnson - Taylor/guitar.ogg",
+      "size": 4488441
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Jack Johnson - Taylor/notes.chart",
+      "size": 54019
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Jack Johnson - Taylor/song.ini",
+      "size": 822
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Led Zeppelin - D'yer Mak'er/album.png",
+      "size": 656802
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Led Zeppelin - D'yer Mak'er/background.png",
+      "size": 708528
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Led Zeppelin - D'yer Mak'er/guitar.ogg",
+      "size": 6624415
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Led Zeppelin - D'yer Mak'er/notes.chart",
+      "size": 49843
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Led Zeppelin - D'yer Mak'er/song.ini",
+      "size": 1292
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Modern Life Is War - Media Cunt/album.png",
+      "size": 513281
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Modern Life Is War - Media Cunt/background.png",
+      "size": 695296
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Modern Life Is War - Media Cunt/guitar.ogg",
+      "size": 2414243
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Modern Life Is War - Media Cunt/notes.chart",
+      "size": 33886
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Modern Life Is War - Media Cunt/song.ini",
+      "size": 761
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Spacehog - Space Is the Place/album.png",
+      "size": 541498
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Spacehog - Space Is the Place/background.png",
+      "size": 1520325
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Spacehog - Space Is the Place/guitar.ogg",
+      "size": 3541390
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Spacehog - Space Is the Place/notes.chart",
+      "size": 43383
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Spacehog - Space Is the Place/song.ini",
+      "size": 770
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Sum 41 - Makes No Difference/album.png",
+      "size": 600697
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Sum 41 - Makes No Difference/background.png",
+      "size": 1313444
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Sum 41 - Makes No Difference/guitar.ogg",
+      "size": 3630843
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Sum 41 - Makes No Difference/notes.chart",
+      "size": 47699
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Sum 41 - Makes No Difference/song.ini",
+      "size": 641
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/The Real McKenzies - Sailor Man (Turbonegro Cover)/album.png",
+      "size": 309030
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/The Real McKenzies - Sailor Man (Turbonegro Cover)/background.png",
+      "size": 1178503
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/The Real McKenzies - Sailor Man (Turbonegro Cover)/guitar.ogg",
+      "size": 2062361
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/The Real McKenzies - Sailor Man (Turbonegro Cover)/notes.chart",
+      "size": 30287
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/The Real McKenzies - Sailor Man (Turbonegro Cover)/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Wazmo - Shift/album.png",
+      "size": 340378
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Wazmo - Shift/background.png",
+      "size": 1270956
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Wazmo - Shift/guitar.ogg",
+      "size": 3169636
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Wazmo - Shift/notes.chart",
+      "size": 38259
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Wazmo - Shift/song.ini",
+      "size": 635
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Zebrahead - Falling Apart/album.png",
+      "size": 241119
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Zebrahead - Falling Apart/background.png",
+      "size": 849448
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Zebrahead - Falling Apart/guitar.ogg",
+      "size": 3619079
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Zebrahead - Falling Apart/notes.chart",
+      "size": 46756
+    },
+    {
+      "path": "Parallax Hero/Tier 04 - Solid Strums/Zebrahead - Falling Apart/song.ini",
+      "size": 660
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/AFI - This Celluloid Dream/album.png",
+      "size": 476631
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/AFI - This Celluloid Dream/background.png",
+      "size": 673111
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/AFI - This Celluloid Dream/guitar.ogg",
+      "size": 4989963
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/AFI - This Celluloid Dream/notes.chart",
+      "size": 51121
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/AFI - This Celluloid Dream/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Brains - Re-Ignition/album.png",
+      "size": 455548
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Brains - Re-Ignition/background.png",
+      "size": 721349
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Brains - Re-Ignition/guitar.ogg",
+      "size": 6397928
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Brains - Re-Ignition/notes.chart",
+      "size": 45385
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Brains - Re-Ignition/song.ini",
+      "size": 835
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Religion - Sinister Rouge/album.png",
+      "size": 344048
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Religion - Sinister Rouge/background.png",
+      "size": 1101468
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Religion - Sinister Rouge/guitar.ogg",
+      "size": 2288964
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Religion - Sinister Rouge/notes.chart",
+      "size": 24689
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bad Religion - Sinister Rouge/song.ini",
+      "size": 654
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bloc Party - Trojan Horse/album.png",
+      "size": 268199
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bloc Party - Trojan Horse/background.png",
+      "size": 480805
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bloc Party - Trojan Horse/guitar.ogg",
+      "size": 4793006
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bloc Party - Trojan Horse/notes.chart",
+      "size": 42072
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Bloc Party - Trojan Horse/song.ini",
+      "size": 693
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/My Chemical Romance - Party Poison/album.png",
+      "size": 535550
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/My Chemical Romance - Party Poison/background.png",
+      "size": 1142768
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/My Chemical Romance - Party Poison/guitar.ogg",
+      "size": 5773846
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/My Chemical Romance - Party Poison/notes.chart",
+      "size": 52323
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/My Chemical Romance - Party Poison/song.ini",
+      "size": 947
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/NOFX - Stickin' in My Eye/album.png",
+      "size": 537754
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/NOFX - Stickin' in My Eye/background.png",
+      "size": 933524
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/NOFX - Stickin' in My Eye/guitar.ogg",
+      "size": 2366215
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/NOFX - Stickin' in My Eye/notes.chart",
+      "size": 34811
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/NOFX - Stickin' in My Eye/song.ini",
+      "size": 747
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Pearl Jam - Mind Your Manners/album.png",
+      "size": 142002
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Pearl Jam - Mind Your Manners/background.png",
+      "size": 514680
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Pearl Jam - Mind Your Manners/guitar.ogg",
+      "size": 3032749
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Pearl Jam - Mind Your Manners/notes.chart",
+      "size": 32329
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Pearl Jam - Mind Your Manners/song.ini",
+      "size": 752
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Reel Big Fish - Sell Out/album.png",
+      "size": 506812
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Reel Big Fish - Sell Out/background.png",
+      "size": 1741347
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Reel Big Fish - Sell Out/guitar.ogg",
+      "size": 4762913
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Reel Big Fish - Sell Out/notes.chart",
+      "size": 58796
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Reel Big Fish - Sell Out/song.ini",
+      "size": 710
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Rise Against - Paper Wings/album.png",
+      "size": 580631
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Rise Against - Paper Wings/background.png",
+      "size": 1544378
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Rise Against - Paper Wings/guitar.ogg",
+      "size": 4103964
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Rise Against - Paper Wings/notes.chart",
+      "size": 44001
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/Rise Against - Paper Wings/song.ini",
+      "size": 861
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/The Offspring - Smash/album.png",
+      "size": 317333
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/The Offspring - Smash/background.png",
+      "size": 875416
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/The Offspring - Smash/guitar.ogg",
+      "size": 3457102
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/The Offspring - Smash/notes.chart",
+      "size": 41656
+    },
+    {
+      "path": "Parallax Hero/Tier 05 - Mainstream Artists/The Offspring - Smash/song.ini",
+      "size": 794
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Boroda-kun - The Dark Tower (Battletoads in Battlemaniacs)/album.png",
+      "size": 393091
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Boroda-kun - The Dark Tower (Battletoads in Battlemaniacs)/background.png",
+      "size": 1329150
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Boroda-kun - The Dark Tower (Battletoads in Battlemaniacs)/guitar.ogg",
+      "size": 5553502
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Boroda-kun - The Dark Tower (Battletoads in Battlemaniacs)/notes.chart",
+      "size": 28758
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Boroda-kun - The Dark Tower (Battletoads in Battlemaniacs)/song.ini",
+      "size": 849
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Cardiacs - Insect Hoofs on Lassie/album.png",
+      "size": 288572
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Cardiacs - Insect Hoofs on Lassie/background.png",
+      "size": 1022231
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Cardiacs - Insect Hoofs on Lassie/guitar.ogg",
+      "size": 4323079
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Cardiacs - Insect Hoofs on Lassie/notes.chart",
+      "size": 43662
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Cardiacs - Insect Hoofs on Lassie/song.ini",
+      "size": 697
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Disrupted I - Nightstalker/album.png",
+      "size": 297543
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Disrupted I - Nightstalker/background.png",
+      "size": 531635
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Disrupted I - Nightstalker/guitar.ogg",
+      "size": 8441716
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Disrupted I - Nightstalker/notes.chart",
+      "size": 44969
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Disrupted I - Nightstalker/song.ini",
+      "size": 642
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Epilepsy - The Faithless/album.png",
+      "size": 580378
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Epilepsy - The Faithless/background.png",
+      "size": 1178661
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Epilepsy - The Faithless/guitar.ogg",
+      "size": 5452941
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Epilepsy - The Faithless/notes.chart",
+      "size": 25836
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Epilepsy - The Faithless/song.ini",
+      "size": 844
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Forgotten Tomb - Blood and Concrete/album.png",
+      "size": 170381
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Forgotten Tomb - Blood and Concrete/background.png",
+      "size": 505214
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Forgotten Tomb - Blood and Concrete/guitar.ogg",
+      "size": 16698524
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Forgotten Tomb - Blood and Concrete/notes.chart",
+      "size": 127514
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Forgotten Tomb - Blood and Concrete/song.ini",
+      "size": 733
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Harlequin - I Did It for Love/album.png",
+      "size": 454837
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Harlequin - I Did It for Love/background.png",
+      "size": 1114034
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Harlequin - I Did It for Love/guitar.ogg",
+      "size": 5550185
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Harlequin - I Did It for Love/notes.chart",
+      "size": 36337
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Harlequin - I Did It for Love/song.ini",
+      "size": 713
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Korpiklaani - Vaarinpolkka/album.png",
+      "size": 688922
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Korpiklaani - Vaarinpolkka/background.png",
+      "size": 1871513
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Korpiklaani - Vaarinpolkka/guitar.ogg",
+      "size": 2785970
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Korpiklaani - Vaarinpolkka/notes.chart",
+      "size": 18346
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Korpiklaani - Vaarinpolkka/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Stereopony - Sweet Blue/album.png",
+      "size": 419480
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Stereopony - Sweet Blue/background.png",
+      "size": 1129700
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Stereopony - Sweet Blue/guitar.ogg",
+      "size": 4366213
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Stereopony - Sweet Blue/notes.chart",
+      "size": 39159
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Stereopony - Sweet Blue/song.ini",
+      "size": 688
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/The Loved Ones - 100K/album.png",
+      "size": 538399
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/The Loved Ones - 100K/background.png",
+      "size": 916173
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/The Loved Ones - 100K/guitar.ogg",
+      "size": 2656926
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/The Loved Ones - 100K/notes.chart",
+      "size": 37633
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/The Loved Ones - 100K/song.ini",
+      "size": 694
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Vains of Jenna - Enemy in Me/album.png",
+      "size": 624596
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Vains of Jenna - Enemy in Me/background.png",
+      "size": 2898871
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Vains of Jenna - Enemy in Me/guitar.ogg",
+      "size": 4134458
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Vains of Jenna - Enemy in Me/notes.chart",
+      "size": 36378
+    },
+    {
+      "path": "Parallax Hero/Tier 06 - Underground Acts/Vains of Jenna - Enemy in Me/song.ini",
+      "size": 867
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/After the Burial - Neo Seoul/album.png",
+      "size": 310485
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/After the Burial - Neo Seoul/background.png",
+      "size": 1108969
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/After the Burial - Neo Seoul/guitar.ogg",
+      "size": 4654324
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/After the Burial - Neo Seoul/notes.chart",
+      "size": 32654
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/After the Burial - Neo Seoul/song.ini",
+      "size": 784
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/At the Gates - Cold/album.png",
+      "size": 639441
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/At the Gates - Cold/background.png",
+      "size": 1106091
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/At the Gates - Cold/guitar.ogg",
+      "size": 5421345
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/At the Gates - Cold/notes.chart",
+      "size": 29899
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/At the Gates - Cold/song.ini",
+      "size": 801
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Brand New - The Archers' Bows Have Broken/album.png",
+      "size": 540949
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Brand New - The Archers' Bows Have Broken/background.png",
+      "size": 963344
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Brand New - The Archers' Bows Have Broken/guitar.ogg",
+      "size": 4754891
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Brand New - The Archers' Bows Have Broken/notes.chart",
+      "size": 38404
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Brand New - The Archers' Bows Have Broken/song.ini",
+      "size": 916
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Enter Shikari - The Bank of England/album.png",
+      "size": 442706
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Enter Shikari - The Bank of England/background.png",
+      "size": 1911258
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Enter Shikari - The Bank of England/guitar.ogg",
+      "size": 4034362
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Enter Shikari - The Bank of England/notes.chart",
+      "size": 35236
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Enter Shikari - The Bank of England/song.ini",
+      "size": 674
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/John Mellencamp - I Need a Lover/album.png",
+      "size": 274412
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/John Mellencamp - I Need a Lover/background.png",
+      "size": 855877
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/John Mellencamp - I Need a Lover/guitar.ogg",
+      "size": 7487839
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/John Mellencamp - I Need a Lover/notes.chart",
+      "size": 43323
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/John Mellencamp - I Need a Lover/song.ini",
+      "size": 1099
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Leo Moracchioli - Feel Good Inc. (Gorillaz Cover)/album.png",
+      "size": 157518
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Leo Moracchioli - Feel Good Inc. (Gorillaz Cover)/background.png",
+      "size": 722506
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Leo Moracchioli - Feel Good Inc. (Gorillaz Cover)/guitar.ogg",
+      "size": 4777248
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Leo Moracchioli - Feel Good Inc. (Gorillaz Cover)/notes.chart",
+      "size": 41547
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Leo Moracchioli - Feel Good Inc. (Gorillaz Cover)/song.ini",
+      "size": 747
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Oingo Boingo - Home Again/album.png",
+      "size": 519261
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Oingo Boingo - Home Again/background.png",
+      "size": 1650023
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Oingo Boingo - Home Again/guitar.ogg",
+      "size": 7094525
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Oingo Boingo - Home Again/notes.chart",
+      "size": 74317
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Oingo Boingo - Home Again/song.ini",
+      "size": 745
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Sabaton - 82nd All the Way/album.png",
+      "size": 648580
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Sabaton - 82nd All the Way/background.png",
+      "size": 1584490
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Sabaton - 82nd All the Way/guitar.ogg",
+      "size": 4130785
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Sabaton - 82nd All the Way/notes.chart",
+      "size": 30599
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Sabaton - 82nd All the Way/song.ini",
+      "size": 978
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Scandal - Goodbye to You/album.png",
+      "size": 613571
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Scandal - Goodbye to You/background.png",
+      "size": 1534929
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Scandal - Goodbye to You/guitar.ogg",
+      "size": 4320923
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Scandal - Goodbye to You/notes.chart",
+      "size": 41316
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/Scandal - Goodbye to You/song.ini",
+      "size": 742
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/The Wonder Years - Brothers & Cardinals/album.png",
+      "size": 535687
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/The Wonder Years - Brothers & Cardinals/background.png",
+      "size": 1309448
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/The Wonder Years - Brothers & Cardinals/guitar.ogg",
+      "size": 5380078
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/The Wonder Years - Brothers & Cardinals/notes.chart",
+      "size": 59782
+    },
+    {
+      "path": "Parallax Hero/Tier 07 - Moderate Airplay/The Wonder Years - Brothers & Cardinals/song.ini",
+      "size": 818
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Coheed and Cambria - Everything Evil (Live)/album.png",
+      "size": 603664
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Coheed and Cambria - Everything Evil (Live)/background.png",
+      "size": 1416751
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Coheed and Cambria - Everything Evil (Live)/guitar.ogg",
+      "size": 7711501
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Coheed and Cambria - Everything Evil (Live)/notes.chart",
+      "size": 61655
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Coheed and Cambria - Everything Evil (Live)/song.ini",
+      "size": 797
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/David Arnold ft. Propellerheads - Backseat Driver/album.png",
+      "size": 500761
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/David Arnold ft. Propellerheads - Backseat Driver/background.png",
+      "size": 1017634
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/David Arnold ft. Propellerheads - Backseat Driver/guitar.ogg",
+      "size": 7379576
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/David Arnold ft. Propellerheads - Backseat Driver/notes.chart",
+      "size": 26523
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/David Arnold ft. Propellerheads - Backseat Driver/song.ini",
+      "size": 899
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Kings of Leon - Crawl/album.png",
+      "size": 235927
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Kings of Leon - Crawl/background.png",
+      "size": 1148599
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Kings of Leon - Crawl/guitar.ogg",
+      "size": 4420025
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Kings of Leon - Crawl/notes.chart",
+      "size": 31480
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Kings of Leon - Crawl/song.ini",
+      "size": 913
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Lita Ford - Kiss Me Deadly/album.png",
+      "size": 662782
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Lita Ford - Kiss Me Deadly/background.png",
+      "size": 1701354
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Lita Ford - Kiss Me Deadly/guitar.ogg",
+      "size": 5955354
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Lita Ford - Kiss Me Deadly/notes.chart",
+      "size": 33369
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Lita Ford - Kiss Me Deadly/song.ini",
+      "size": 813
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Metallica - Where the Wild Things Are/album.png",
+      "size": 423238
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Metallica - Where the Wild Things Are/background.png",
+      "size": 460770
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Metallica - Where the Wild Things Are/guitar.ogg",
+      "size": 10704057
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Metallica - Where the Wild Things Are/notes.chart",
+      "size": 65519
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Metallica - Where the Wild Things Are/song.ini",
+      "size": 955
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Old 97's - Timebomb/album.png",
+      "size": 356280
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Old 97's - Timebomb/background.png",
+      "size": 1011524
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Old 97's - Timebomb/guitar.ogg",
+      "size": 3293636
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Old 97's - Timebomb/notes.chart",
+      "size": 35402
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Old 97's - Timebomb/song.ini",
+      "size": 939
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Pierce the Veil - Bulls in the Bronx/album.png",
+      "size": 533242
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Pierce the Veil - Bulls in the Bronx/background.png",
+      "size": 1127034
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Pierce the Veil - Bulls in the Bronx/guitar.ogg",
+      "size": 5480749
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Pierce the Veil - Bulls in the Bronx/notes.chart",
+      "size": 43686
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Pierce the Veil - Bulls in the Bronx/song.ini",
+      "size": 891
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Radiohead - Just/album.png",
+      "size": 379619
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Radiohead - Just/background.png",
+      "size": 300607
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Radiohead - Just/guitar.ogg",
+      "size": 7212489
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Radiohead - Just/notes.chart",
+      "size": 50553
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Radiohead - Just/song.ini",
+      "size": 796
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Stance Punks - Mayonaka Shounen Totsugeki Dan/album.png",
+      "size": 169818
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Stance Punks - Mayonaka Shounen Totsugeki Dan/background.png",
+      "size": 1529466
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Stance Punks - Mayonaka Shounen Totsugeki Dan/guitar.ogg",
+      "size": 8261873
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Stance Punks - Mayonaka Shounen Totsugeki Dan/notes.chart",
+      "size": 110261
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Stance Punks - Mayonaka Shounen Totsugeki Dan/song.ini",
+      "size": 677
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Wintersun - Beyond the Dark Sun/album.png",
+      "size": 667113
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Wintersun - Beyond the Dark Sun/background.png",
+      "size": 2140862
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Wintersun - Beyond the Dark Sun/guitar.ogg",
+      "size": 3185350
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Wintersun - Beyond the Dark Sun/notes.chart",
+      "size": 25011
+    },
+    {
+      "path": "Parallax Hero/Tier 08 - Searing Strings/Wintersun - Beyond the Dark Sun/song.ini",
+      "size": 612
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Bloodred Hourglass - Where the Sinners Crawl/album.png",
+      "size": 612356
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Bloodred Hourglass - Where the Sinners Crawl/background.png",
+      "size": 1432983
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Bloodred Hourglass - Where the Sinners Crawl/guitar.ogg",
+      "size": 4772508
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Bloodred Hourglass - Where the Sinners Crawl/notes.chart",
+      "size": 58807
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Bloodred Hourglass - Where the Sinners Crawl/song.ini",
+      "size": 738
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Blues Traveler - Hook/album.png",
+      "size": 245658
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Blues Traveler - Hook/background.png",
+      "size": 533240
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Blues Traveler - Hook/guitar.ogg",
+      "size": 7550064
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Blues Traveler - Hook/notes.chart",
+      "size": 56715
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Blues Traveler - Hook/song.ini",
+      "size": 839
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Cursed Lemon - Lockjaw's Locker (Donkey Kong Country 2)/album.png",
+      "size": 243210
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Cursed Lemon - Lockjaw's Locker (Donkey Kong Country 2)/background.png",
+      "size": 972905
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Cursed Lemon - Lockjaw's Locker (Donkey Kong Country 2)/guitar.ogg",
+      "size": 4271111
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Cursed Lemon - Lockjaw's Locker (Donkey Kong Country 2)/notes.chart",
+      "size": 25637
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Cursed Lemon - Lockjaw's Locker (Donkey Kong Country 2)/song.ini",
+      "size": 804
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Daniel Tidwell - Knee-Deep in the Dead (At Doom's Gate)/album.png",
+      "size": 601214
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Daniel Tidwell - Knee-Deep in the Dead (At Doom's Gate)/background.png",
+      "size": 1277759
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Daniel Tidwell - Knee-Deep in the Dead (At Doom's Gate)/guitar.ogg",
+      "size": 3661990
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Daniel Tidwell - Knee-Deep in the Dead (At Doom's Gate)/notes.chart",
+      "size": 54226
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Daniel Tidwell - Knee-Deep in the Dead (At Doom's Gate)/song.ini",
+      "size": 792
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Jack White - Freedom at 21/album.png",
+      "size": 424823
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Jack White - Freedom at 21/background.png",
+      "size": 840047
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Jack White - Freedom at 21/guitar.ogg",
+      "size": 3123743
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Jack White - Freedom at 21/notes.chart",
+      "size": 20935
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Jack White - Freedom at 21/song.ini",
+      "size": 914
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Lamb of God - 512/album.png",
+      "size": 629165
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Lamb of God - 512/background.png",
+      "size": 1323123
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Lamb of God - 512/guitar.ogg",
+      "size": 4876744
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Lamb of God - 512/notes.chart",
+      "size": 58732
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Lamb of God - 512/song.ini",
+      "size": 947
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Legitimate Business - 80 on 80/album.png",
+      "size": 391773
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Legitimate Business - 80 on 80/background.png",
+      "size": 938942
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Legitimate Business - 80 on 80/guitar.ogg",
+      "size": 3489398
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Legitimate Business - 80 on 80/notes.chart",
+      "size": 43246
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Legitimate Business - 80 on 80/song.ini",
+      "size": 852
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Meridian - The Sun/album.png",
+      "size": 363515
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Meridian - The Sun/background.png",
+      "size": 782959
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Meridian - The Sun/guitar.ogg",
+      "size": 6793508
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Meridian - The Sun/notes.chart",
+      "size": 36710
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Meridian - The Sun/song.ini",
+      "size": 723
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Rikei Hirashima - Rocky Rodent Medley/album.png",
+      "size": 372738
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Rikei Hirashima - Rocky Rodent Medley/background.png",
+      "size": 673455
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Rikei Hirashima - Rocky Rodent Medley/guitar.ogg",
+      "size": 16751454
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Rikei Hirashima - Rocky Rodent Medley/notes.chart",
+      "size": 94810
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Rikei Hirashima - Rocky Rodent Medley/song.ini",
+      "size": 1061
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Striker - Run for Your Life/album.png",
+      "size": 533227
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Striker - Run for Your Life/background.png",
+      "size": 1927467
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Striker - Run for Your Life/guitar.ogg",
+      "size": 3573649
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Striker - Run for Your Life/notes.chart",
+      "size": 27255
+    },
+    {
+      "path": "Parallax Hero/Tier 09 - Legendary Licks/Striker - Run for Your Life/song.ini",
+      "size": 849
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Across the Sun - Ghost of Grandeur/album.png",
+      "size": 616733
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Across the Sun - Ghost of Grandeur/background.png",
+      "size": 1211816
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Across the Sun - Ghost of Grandeur/guitar.ogg",
+      "size": 4858017
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Across the Sun - Ghost of Grandeur/notes.chart",
+      "size": 51436
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Across the Sun - Ghost of Grandeur/song.ini",
+      "size": 699
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Alestorm - Chomp Chomp/album.png",
+      "size": 666287
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Alestorm - Chomp Chomp/background.png",
+      "size": 1801682
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Alestorm - Chomp Chomp/guitar.ogg",
+      "size": 4201847
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Alestorm - Chomp Chomp/notes.chart",
+      "size": 44733
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Alestorm - Chomp Chomp/song.ini",
+      "size": 839
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Amakan - Napalm/album.png",
+      "size": 691620
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Amakan - Napalm/background.png",
+      "size": 1385248
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Amakan - Napalm/guitar.ogg",
+      "size": 4010471
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Amakan - Napalm/notes.chart",
+      "size": 28127
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Amakan - Napalm/song.ini",
+      "size": 756
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/GaMetal - Staff Roll (Super Mario 64)/album.png",
+      "size": 314681
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/GaMetal - Staff Roll (Super Mario 64)/background.png",
+      "size": 1537435
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/GaMetal - Staff Roll (Super Mario 64)/guitar.ogg",
+      "size": 6914024
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/GaMetal - Staff Roll (Super Mario 64)/notes.chart",
+      "size": 23547
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/GaMetal - Staff Roll (Super Mario 64)/song.ini",
+      "size": 649
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Helloween - Where the Rain Grows/album.png",
+      "size": 225063
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Helloween - Where the Rain Grows/background.png",
+      "size": 955699
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Helloween - Where the Rain Grows/guitar.ogg",
+      "size": 7346317
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Helloween - Where the Rain Grows/notes.chart",
+      "size": 43917
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Helloween - Where the Rain Grows/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Mordium - Frigid Ice/album.png",
+      "size": 603979
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Mordium - Frigid Ice/background.png",
+      "size": 1592167
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Mordium - Frigid Ice/guitar.ogg",
+      "size": 7950774
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Mordium - Frigid Ice/notes.chart",
+      "size": 65593
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Mordium - Frigid Ice/song.ini",
+      "size": 639
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Obtenebris - Skyfall/album.png",
+      "size": 589292
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Obtenebris - Skyfall/background.png",
+      "size": 1554451
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Obtenebris - Skyfall/guitar.ogg",
+      "size": 5377350
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Obtenebris - Skyfall/notes.chart",
+      "size": 44860
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Obtenebris - Skyfall/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Sonic Syndicate - Soulstone Splinter/album.png",
+      "size": 491293
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Sonic Syndicate - Soulstone Splinter/background.png",
+      "size": 1310284
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Sonic Syndicate - Soulstone Splinter/guitar.ogg",
+      "size": 5099267
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Sonic Syndicate - Soulstone Splinter/notes.chart",
+      "size": 47305
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/Sonic Syndicate - Soulstone Splinter/song.ini",
+      "size": 764
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/T.A.N.K. (Think of a New Kind) - The Edge of Time/album.png",
+      "size": 418404
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/T.A.N.K. (Think of a New Kind) - The Edge of Time/background.png",
+      "size": 1002074
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/T.A.N.K. (Think of a New Kind) - The Edge of Time/guitar.ogg",
+      "size": 6078854
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/T.A.N.K. (Think of a New Kind) - The Edge of Time/notes.chart",
+      "size": 38438
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/T.A.N.K. (Think of a New Kind) - The Edge of Time/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/This Ending - Garden of Death/album.png",
+      "size": 562046
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/This Ending - Garden of Death/background.png",
+      "size": 1170930
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/This Ending - Garden of Death/guitar.ogg",
+      "size": 5325125
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/This Ending - Garden of Death/notes.chart",
+      "size": 35402
+    },
+    {
+      "path": "Parallax Hero/Tier 10 - Melting Metal/This Ending - Garden of Death/song.ini",
+      "size": 672
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Chribstar ft. Disrupted I - Next Level/album.png",
+      "size": 24804
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Chribstar ft. Disrupted I - Next Level/background.png",
+      "size": 1155372
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Chribstar ft. Disrupted I - Next Level/guitar.ogg",
+      "size": 3299868
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Chribstar ft. Disrupted I - Next Level/notes.chart",
+      "size": 25935
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Chribstar ft. Disrupted I - Next Level/song.ini",
+      "size": 597
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Diamond Head - Sucking My Love (2020 Version)/album.png",
+      "size": 80949
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Diamond Head - Sucking My Love (2020 Version)/background.png",
+      "size": 1339878
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Diamond Head - Sucking My Love (2020 Version)/guitar.ogg",
+      "size": 10545314
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Diamond Head - Sucking My Love (2020 Version)/notes.chart",
+      "size": 57065
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Diamond Head - Sucking My Love (2020 Version)/song.ini",
+      "size": 1223
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Ichika Nito - When Your Girlfriend Say Your Guitar Tone Is Terrible/album.png",
+      "size": 208819
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Ichika Nito - When Your Girlfriend Say Your Guitar Tone Is Terrible/background.png",
+      "size": 1048434
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Ichika Nito - When Your Girlfriend Say Your Guitar Tone Is Terrible/guitar.ogg",
+      "size": 487932
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Ichika Nito - When Your Girlfriend Say Your Guitar Tone Is Terrible/notes.chart",
+      "size": 6706
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Ichika Nito - When Your Girlfriend Say Your Guitar Tone Is Terrible/song.ini",
+      "size": 625
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Krewella - Come & Get It (Razihel Nightcore Remix)/album.png",
+      "size": 376276
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Krewella - Come & Get It (Razihel Nightcore Remix)/background.png",
+      "size": 1267004
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Krewella - Come & Get It (Razihel Nightcore Remix)/guitar.ogg",
+      "size": 3688192
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Krewella - Come & Get It (Razihel Nightcore Remix)/notes.chart",
+      "size": 37761
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Krewella - Come & Get It (Razihel Nightcore Remix)/song.ini",
+      "size": 680
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Light This City - Agents of Fate/album.png",
+      "size": 535243
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Light This City - Agents of Fate/background.png",
+      "size": 1279809
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Light This City - Agents of Fate/guitar.ogg",
+      "size": 6197407
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Light This City - Agents of Fate/notes.chart",
+      "size": 41794
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Light This City - Agents of Fate/song.ini",
+      "size": 769
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Megadeth - Vortex/album.png",
+      "size": 129169
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Megadeth - Vortex/background.png",
+      "size": 649369
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Megadeth - Vortex/guitar.ogg",
+      "size": 4107432
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Megadeth - Vortex/notes.chart",
+      "size": 28441
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Megadeth - Vortex/song.ini",
+      "size": 709
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Queens of the Stone Age - Turnin' on the Screw/album.png",
+      "size": 385040
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Queens of the Stone Age - Turnin' on the Screw/background.png",
+      "size": 1118088
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Queens of the Stone Age - Turnin' on the Screw/guitar.ogg",
+      "size": 6151609
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Queens of the Stone Age - Turnin' on the Screw/notes.chart",
+      "size": 57037
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Queens of the Stone Age - Turnin' on the Screw/song.ini",
+      "size": 696
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Sacrificed Alliance - Across the Murky Marsh/album.png",
+      "size": 628062
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Sacrificed Alliance - Across the Murky Marsh/background.png",
+      "size": 1282506
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Sacrificed Alliance - Across the Murky Marsh/guitar.ogg",
+      "size": 2484862
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Sacrificed Alliance - Across the Murky Marsh/notes.chart",
+      "size": 27738
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Sacrificed Alliance - Across the Murky Marsh/song.ini",
+      "size": 667
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Throne of Chaos - From Clarity to Insanity/album.png",
+      "size": 462433
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Throne of Chaos - From Clarity to Insanity/background.png",
+      "size": 1583389
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Throne of Chaos - From Clarity to Insanity/guitar.ogg",
+      "size": 7565156
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Throne of Chaos - From Clarity to Insanity/notes.chart",
+      "size": 52858
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Throne of Chaos - From Clarity to Insanity/song.ini",
+      "size": 838
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Unearth - The Chosen/album.png",
+      "size": 494985
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Unearth - The Chosen/background.png",
+      "size": 1234193
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Unearth - The Chosen/guitar.ogg",
+      "size": 6301479
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Unearth - The Chosen/notes.chart",
+      "size": 41392
+    },
+    {
+      "path": "Parallax Hero/Tier 11 - Vicious Vibrato/Unearth - The Chosen/song.ini",
+      "size": 894
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Annihilator - Lip Service/album.png",
+      "size": 350062
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Annihilator - Lip Service/background.png",
+      "size": 1017844
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Annihilator - Lip Service/guitar.ogg",
+      "size": 9078474
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Annihilator - Lip Service/notes.chart",
+      "size": 57018
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Annihilator - Lip Service/song.ini",
+      "size": 832
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Austrian Death Machine - Killing Is My Business... And Business Is Good! (Megadeth Cover)/album.png",
+      "size": 642286
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Austrian Death Machine - Killing Is My Business... And Business Is Good! (Megadeth Cover)/background.png",
+      "size": 2015024
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Austrian Death Machine - Killing Is My Business... And Business Is Good! (Megadeth Cover)/guitar.ogg",
+      "size": 4946262
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Austrian Death Machine - Killing Is My Business... And Business Is Good! (Megadeth Cover)/notes.chart",
+      "size": 46701
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Austrian Death Machine - Killing Is My Business... And Business Is Good! (Megadeth Cover)/song.ini",
+      "size": 964
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Babymetal - Da Da Dance/album.png",
+      "size": 535768
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Babymetal - Da Da Dance/background.png",
+      "size": 1377599
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Babymetal - Da Da Dance/guitar.ogg",
+      "size": 4665673
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Babymetal - Da Da Dance/notes.chart",
+      "size": 55681
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Babymetal - Da Da Dance/song.ini",
+      "size": 720
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Battledragon - My Heart Will Go On (Celine Dion Cover)/album.png",
+      "size": 256177
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Battledragon - My Heart Will Go On (Celine Dion Cover)/background.png",
+      "size": 1662435
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Battledragon - My Heart Will Go On (Celine Dion Cover)/guitar.ogg",
+      "size": 5901920
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Battledragon - My Heart Will Go On (Celine Dion Cover)/notes.chart",
+      "size": 37341
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Battledragon - My Heart Will Go On (Celine Dion Cover)/song.ini",
+      "size": 822
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Eternal Tears of Sorrow - The Seventh Eclipse/album.png",
+      "size": 409207
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Eternal Tears of Sorrow - The Seventh Eclipse/background.png",
+      "size": 1027582
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Eternal Tears of Sorrow - The Seventh Eclipse/guitar.ogg",
+      "size": 5104410
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Eternal Tears of Sorrow - The Seventh Eclipse/notes.chart",
+      "size": 61153
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Eternal Tears of Sorrow - The Seventh Eclipse/song.ini",
+      "size": 756
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Lunarsea - Magnitude 9.6/album.png",
+      "size": 618199
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Lunarsea - Magnitude 9.6/background.png",
+      "size": 1154126
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Lunarsea - Magnitude 9.6/guitar.ogg",
+      "size": 4851551
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Lunarsea - Magnitude 9.6/notes.chart",
+      "size": 51564
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Lunarsea - Magnitude 9.6/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Mastodon - Octopus Has No Friends/album.png",
+      "size": 418288
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Mastodon - Octopus Has No Friends/background.png",
+      "size": 1370844
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Mastodon - Octopus Has No Friends/guitar.ogg",
+      "size": 4654884
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Mastodon - Octopus Has No Friends/notes.chart",
+      "size": 36471
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Mastodon - Octopus Has No Friends/song.ini",
+      "size": 1020
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Parkway Drive - Swing/album.png",
+      "size": 44208
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Parkway Drive - Swing/background.png",
+      "size": 126525
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Parkway Drive - Swing/guitar.ogg",
+      "size": 4090282
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Parkway Drive - Swing/notes.chart",
+      "size": 37279
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Parkway Drive - Swing/song.ini",
+      "size": 676
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Van Halen - D.O.A/album.png",
+      "size": 421098
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Van Halen - D.O.A/background.png",
+      "size": 796869
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Van Halen - D.O.A/guitar.ogg",
+      "size": 6907119
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Van Halen - D.O.A/notes.chart",
+      "size": 45511
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Van Halen - D.O.A/song.ini",
+      "size": 714
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Ween - Waving My Dick in the Wind (Live)/album.png",
+      "size": 391863
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Ween - Waving My Dick in the Wind (Live)/background.png",
+      "size": 961005
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Ween - Waving My Dick in the Wind (Live)/guitar.ogg",
+      "size": 2291222
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Ween - Waving My Dick in the Wind (Live)/notes.chart",
+      "size": 33289
+    },
+    {
+      "path": "Parallax Hero/Tier 12 - Ferocious Fretwork/Ween - Waving My Dick in the Wind (Live)/song.ini",
+      "size": 753
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Allegaeon - The Phylogenesis Stretch/album.png",
+      "size": 558922
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Allegaeon - The Phylogenesis Stretch/background.png",
+      "size": 1271414
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Allegaeon - The Phylogenesis Stretch/guitar.ogg",
+      "size": 5261094
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Allegaeon - The Phylogenesis Stretch/notes.chart",
+      "size": 48040
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Allegaeon - The Phylogenesis Stretch/song.ini",
+      "size": 645
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Anthrax - Lone Justice/album.png",
+      "size": 579356
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Anthrax - Lone Justice/background.png",
+      "size": 1777902
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Anthrax - Lone Justice/guitar.ogg",
+      "size": 6263308
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Anthrax - Lone Justice/notes.chart",
+      "size": 50041
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Anthrax - Lone Justice/song.ini",
+      "size": 707
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Arsis - Escape Artist/album.png",
+      "size": 526678
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Arsis - Escape Artist/background.png",
+      "size": 1128569
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Arsis - Escape Artist/guitar.ogg",
+      "size": 7208034
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Arsis - Escape Artist/notes.chart",
+      "size": 55938
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Arsis - Escape Artist/song.ini",
+      "size": 887
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Between the Buried and Me - The Primer/album.png",
+      "size": 177001
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Between the Buried and Me - The Primer/background.png",
+      "size": 154154
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Between the Buried and Me - The Primer/guitar.ogg",
+      "size": 5683211
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Between the Buried and Me - The Primer/notes.chart",
+      "size": 68768
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Between the Buried and Me - The Primer/song.ini",
+      "size": 812
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Gyze - Black Shumari, Perryi Rain Dragon/album.png",
+      "size": 431782
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Gyze - Black Shumari, Perryi Rain Dragon/background.png",
+      "size": 881766
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Gyze - Black Shumari, Perryi Rain Dragon/guitar.ogg",
+      "size": 8988329
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Gyze - Black Shumari, Perryi Rain Dragon/notes.chart",
+      "size": 71303
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Gyze - Black Shumari, Perryi Rain Dragon/song.ini",
+      "size": 756
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Kalmah - Black Marten's Trace/album.png",
+      "size": 272750
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Kalmah - Black Marten's Trace/background.png",
+      "size": 1380612
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Kalmah - Black Marten's Trace/guitar.ogg",
+      "size": 5516532
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Kalmah - Black Marten's Trace/notes.chart",
+      "size": 53362
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Kalmah - Black Marten's Trace/song.ini",
+      "size": 706
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Norther - Released/album.png",
+      "size": 603036
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Norther - Released/background.png",
+      "size": 1066162
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Norther - Released/guitar.ogg",
+      "size": 5171707
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Norther - Released/notes.chart",
+      "size": 65739
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Norther - Released/song.ini",
+      "size": 746
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Sympuls-e - Illusion of the Light/album.png",
+      "size": 649786
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Sympuls-e - Illusion of the Light/background.png",
+      "size": 1643704
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Sympuls-e - Illusion of the Light/guitar.ogg",
+      "size": 5243030
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Sympuls-e - Illusion of the Light/notes.chart",
+      "size": 32297
+    },
+    {
+      "path": "Parallax Hero/Tier 13 - Serious Shredding/Sympuls-e - Illusion of the Light/song.ini",
+      "size": 906
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Buckethead - The Coats of Claude/album.png",
+      "size": 608582
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Buckethead - The Coats of Claude/background.png",
+      "size": 1283009
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Buckethead - The Coats of Claude/guitar.ogg",
+      "size": 15098512
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Buckethead - The Coats of Claude/notes.chart",
+      "size": 132332
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Buckethead - The Coats of Claude/song.ini",
+      "size": 927
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Euge Valovirta - Hellbilly/album.png",
+      "size": 529054
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Euge Valovirta - Hellbilly/background.png",
+      "size": 917842
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Euge Valovirta - Hellbilly/guitar.ogg",
+      "size": 4082549
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Euge Valovirta - Hellbilly/notes.chart",
+      "size": 40760
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Euge Valovirta - Hellbilly/song.ini",
+      "size": 772
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Lightning Bolt - Horsepower/album.png",
+      "size": 626053
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Lightning Bolt - Horsepower/background.png",
+      "size": 1612197
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Lightning Bolt - Horsepower/guitar.ogg",
+      "size": 5160989
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Lightning Bolt - Horsepower/notes.chart",
+      "size": 66315
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Lightning Bolt - Horsepower/song.ini",
+      "size": 815
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Slayer - Tormentor/album.png",
+      "size": 230063
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Slayer - Tormentor/background.png",
+      "size": 1484169
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Slayer - Tormentor/guitar.ogg",
+      "size": 6217137
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Slayer - Tormentor/notes.chart",
+      "size": 45249
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/Slayer - Tormentor/song.ini",
+      "size": 838
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The Black Dahlia Murder - Dawn of Rats/album.png",
+      "size": 608498
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The Black Dahlia Murder - Dawn of Rats/background.png",
+      "size": 1080497
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The Black Dahlia Murder - Dawn of Rats/guitar.ogg",
+      "size": 6835111
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The Black Dahlia Murder - Dawn of Rats/notes.chart",
+      "size": 50702
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The Black Dahlia Murder - Dawn of Rats/song.ini",
+      "size": 850
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The White Stripes - Icky Thump/album.png",
+      "size": 441264
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The White Stripes - Icky Thump/background.png",
+      "size": 1554125
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The White Stripes - Icky Thump/guitar.ogg",
+      "size": 4818651
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The White Stripes - Icky Thump/notes.chart",
+      "size": 41026
+    },
+    {
+      "path": "Parallax Hero/Tier 14 - Gods Amongst Men/The White Stripes - Icky Thump/song.ini",
+      "size": 924
+    },
+    {
+      "path": "Parallax Hero/Tier 15 - Thanks for Playing Parallax Hero!/Shoti 15 - The Mystical Legend of the Sand Myon/album.png",
+      "size": 442841
+    },
+    {
+      "path": "Parallax Hero/Tier 15 - Thanks for Playing Parallax Hero!/Shoti 15 - The Mystical Legend of the Sand Myon/background.png",
+      "size": 673669
+    },
+    {
+      "path": "Parallax Hero/Tier 15 - Thanks for Playing Parallax Hero!/Shoti 15 - The Mystical Legend of the Sand Myon/guitar.ogg",
+      "size": 6091228
+    },
+    {
+      "path": "Parallax Hero/Tier 15 - Thanks for Playing Parallax Hero!/Shoti 15 - The Mystical Legend of the Sand Myon/notes.chart",
+      "size": 25097
+    },
+    {
+      "path": "Parallax Hero/Tier 15 - Thanks for Playing Parallax Hero!/Shoti 15 - The Mystical Legend of the Sand Myon/song.ini",
+      "size": 1375
+    },
+    {
+      "path": "Parallax Hero/ph.png",
+      "size": 7894
+    },
+    {
+      "path": "Parallax Hero/phdlc.png",
+      "size": 7472
+    }
+  ],
+  "extracted_size": 929269122,
+  "file_count": 679,
+  "chart_count": 135,
+  "release_date": "2022-10-21"
 }

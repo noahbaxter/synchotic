@@ -1,19 +1,3949 @@
 {
   "name": "(2008) Guitar Hero World Tour",
-  "folder_id": "static-gh-wt",
+  "folder_id": "static-2008-guitar-hero-world-tour",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 86,
-  "total_size": 3182249655,
-  "file_count": 982,
-  "files": [
+  "downloads": [
     {
       "id": "1DsRIpbvicrGhAkLQ5qxASybNGuEJ_dB6",
-      "path": "(2008) Guitar Hero World Tour/Guitar Hero World Tour.7z",
       "name": "Guitar Hero World Tour.7z",
       "size": 3182249655,
       "md5": "15c50c9c07974068585383718a485ccb"
     }
-  ]
+  ],
+  "download_size": 3182249655,
+  "files": [
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/album.png",
+      "size": 115360
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/crowd.ogg",
+      "size": 2870343
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/drums_1.ogg",
+      "size": 3848121
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/drums_2.ogg",
+      "size": 4533981
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/drums_3.ogg",
+      "size": 5570418
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/drums_4.ogg",
+      "size": 348656
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/guitar.ogg",
+      "size": 5268431
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/notes.mid",
+      "size": 134102
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/rhythm.ogg",
+      "size": 4028876
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/song.ini",
+      "size": 796
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/song.ogg",
+      "size": 2522342
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/30 Seconds to Mars - The Kill/vocals.ogg",
+      "size": 5108208
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/album.png",
+      "size": 315556
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/drums_1.ogg",
+      "size": 4493276
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/drums_2.ogg",
+      "size": 4811206
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/drums_3.ogg",
+      "size": 5666667
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/guitar.ogg",
+      "size": 4362960
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/notes.mid",
+      "size": 137745
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/rhythm.ogg",
+      "size": 3510290
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/song.ini",
+      "size": 899
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/song.ogg",
+      "size": 3643672
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/311 - Beautiful Disaster/vocals.ogg",
+      "size": 3209879
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/album.png",
+      "size": 229027
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/crowd.ogg",
+      "size": 1345852
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/drums_1.ogg",
+      "size": 4347016
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/drums_2.ogg",
+      "size": 4192211
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/drums_3.ogg",
+      "size": 5611086
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/drums_4.ogg",
+      "size": 133480
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/guitar.ogg",
+      "size": 5220915
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/notes.mid",
+      "size": 115928
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/rhythm.ogg",
+      "size": 4416539
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/song.ini",
+      "size": 955
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/song.ogg",
+      "size": 1243788
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Airbourne - Too Much, Too Young, Too Fast/vocals.ogg",
+      "size": 4014655
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/album.png",
+      "size": 310055
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/drums_1.ogg",
+      "size": 2678835
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/drums_2.ogg",
+      "size": 3164738
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/drums_3.ogg",
+      "size": 3049716
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/drums_4.ogg",
+      "size": 28813
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/guitar.ogg",
+      "size": 2892699
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/notes.mid",
+      "size": 98225
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/rhythm.ogg",
+      "size": 2359271
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/song.ini",
+      "size": 807
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/song.ogg",
+      "size": 3431488
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Anouk - Good God/vocals.ogg",
+      "size": 2766292
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/album.png",
+      "size": 419934
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/drums_1.ogg",
+      "size": 4103266
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/drums_2.ogg",
+      "size": 4902117
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/drums_3.ogg",
+      "size": 5233598
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/drums_4.ogg",
+      "size": 1021201
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/guitar.ogg",
+      "size": 5006576
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/notes.mid",
+      "size": 174661
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/rhythm.ogg",
+      "size": 4338023
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/song.ini",
+      "size": 944
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/song.ogg",
+      "size": 1937966
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/At the Drive-In - One Armed Scissor/vocals.ogg",
+      "size": 4554279
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/album.png",
+      "size": 177499
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/crowd.ogg",
+      "size": 2053688
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/drums_1.ogg",
+      "size": 4861621
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/drums_2.ogg",
+      "size": 4979195
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/drums_3.ogg",
+      "size": 7607244
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/drums_4.ogg",
+      "size": 30635
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/guitar.ogg",
+      "size": 5104661
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/notes.mid",
+      "size": 90005
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/rhythm.ogg",
+      "size": 4975532
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/song.ini",
+      "size": 902
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/song.ogg",
+      "size": 1685676
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beastie Boys ft. Kerry King - No Sleep Till Brooklyn/vocals.ogg",
+      "size": 5188445
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/album.png",
+      "size": 211382
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/drums_1.ogg",
+      "size": 3727116
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/drums_2.ogg",
+      "size": 4081692
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/drums_3.ogg",
+      "size": 4461720
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/guitar.ogg",
+      "size": 3038604
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/notes.mid",
+      "size": 116401
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/rhythm.ogg",
+      "size": 2407134
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/song.ini",
+      "size": 968
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/song.ogg",
+      "size": 3452941
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Beatsteaks - Hail to the Freaks/vocals.ogg",
+      "size": 3140872
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/album.png",
+      "size": 237618
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/crowd.ogg",
+      "size": 2867263
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/drums_1.ogg",
+      "size": 6158805
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/drums_2.ogg",
+      "size": 6623731
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/drums_3.ogg",
+      "size": 8169920
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/drums_4.ogg",
+      "size": 6633707
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/guitar.ogg",
+      "size": 6750902
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/notes.mid",
+      "size": 181984
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/rhythm.ogg",
+      "size": 5371571
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/song.ini",
+      "size": 799
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/song.ogg",
+      "size": 6551286
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Billy Idol - Rebel Yell/vocals.ogg",
+      "size": 6739315
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/album.png",
+      "size": 316241
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/drums_1.ogg",
+      "size": 4154661
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/drums_2.ogg",
+      "size": 4848487
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/drums_3.ogg",
+      "size": 4706335
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/guitar.ogg",
+      "size": 4587893
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/notes.mid",
+      "size": 110567
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/rhythm.ogg",
+      "size": 3949534
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/song.ini",
+      "size": 827
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/song.ogg",
+      "size": 1494451
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Label Society - Stillborn/vocals.ogg",
+      "size": 4880619
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/album.png",
+      "size": 302045
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/drums_1.ogg",
+      "size": 2626344
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/drums_2.ogg",
+      "size": 3312946
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/drums_3.ogg",
+      "size": 4046785
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/drums_4.ogg",
+      "size": 3244178
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/guitar.ogg",
+      "size": 3875622
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/notes.mid",
+      "size": 102393
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/rhythm.ogg",
+      "size": 2016446
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/song.ini",
+      "size": 881
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/song.ogg",
+      "size": 4149425
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Black Rebel Motorcycle Club - Weapon of Choice/vocals.ogg",
+      "size": 3430826
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/album.png",
+      "size": 471505
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/crowd.ogg",
+      "size": 2287828
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/drums_1.ogg",
+      "size": 2304475
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/drums_2.ogg",
+      "size": 3079014
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/drums_3.ogg",
+      "size": 3940403
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/drums_4.ogg",
+      "size": 564993
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/guitar.ogg",
+      "size": 3112160
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/notes.mid",
+      "size": 115175
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/rhythm.ogg",
+      "size": 2518131
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/song.ini",
+      "size": 1340
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/song.ogg",
+      "size": 2910154
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blink-182 - Dammit/vocals.ogg",
+      "size": 2313171
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/album.png",
+      "size": 27038
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/crowd.ogg",
+      "size": 2854870
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/drums_1.ogg",
+      "size": 4111821
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/drums_2.ogg",
+      "size": 4342700
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/drums_3.ogg",
+      "size": 5685136
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/drums_4.ogg",
+      "size": 2065104
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/guitar.ogg",
+      "size": 4728843
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/notes.mid",
+      "size": 122243
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/rhythm.ogg",
+      "size": 3818141
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/song.ini",
+      "size": 860
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/song.ogg",
+      "size": 5482989
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Blondie - One Way or Another/vocals.ogg",
+      "size": 4351324
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/album.png",
+      "size": 362366
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/crowd.ogg",
+      "size": 2669476
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/drums_1.ogg",
+      "size": 4832574
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/drums_2.ogg",
+      "size": 6132583
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/drums_3.ogg",
+      "size": 7556286
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/guitar.ogg",
+      "size": 6978601
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/notes.mid",
+      "size": 229458
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/rhythm.ogg",
+      "size": 4801070
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/song.ini",
+      "size": 851
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/song.ogg",
+      "size": 6727024
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bob Seger & the Silver Bullet Band - Hollywood Nights/vocals.ogg",
+      "size": 5579440
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/album.png",
+      "size": 570835
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/crowd.ogg",
+      "size": 2917601
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/drums_1.ogg",
+      "size": 4584686
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/drums_2.ogg",
+      "size": 3510659
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/drums_3.ogg",
+      "size": 8141922
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/drums_4.ogg",
+      "size": 248937
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/guitar.ogg",
+      "size": 5904618
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/notes.mid",
+      "size": 136679
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/rhythm.ogg",
+      "size": 5023925
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/song.ini",
+      "size": 991
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/song.ogg",
+      "size": 7002331
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bon Jovi - Livin' on a Prayer/vocals.ogg",
+      "size": 6382397
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/album.png",
+      "size": 329810
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/crowd.ogg",
+      "size": 3123476
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/drums_1.ogg",
+      "size": 4339597
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/drums_2.ogg",
+      "size": 5960625
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/drums_3.ogg",
+      "size": 7200359
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/drums_4.ogg",
+      "size": 6050926
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/guitar.ogg",
+      "size": 6078395
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/notes.mid",
+      "size": 192238
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/rhythm.ogg",
+      "size": 5074956
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/song.ini",
+      "size": 1046
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/song.ogg",
+      "size": 897624
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Bullet for My Valentine - Scream Aim Fire/vocals.ogg",
+      "size": 5235935
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/album.png",
+      "size": 88346
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/drums_1.ogg",
+      "size": 6992916
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/drums_2.ogg",
+      "size": 6676468
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/drums_3.ogg",
+      "size": 8305701
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/drums_4.ogg",
+      "size": 597260
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/guitar.ogg",
+      "size": 7352280
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/notes.mid",
+      "size": 160498
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/rhythm.ogg",
+      "size": 4852833
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/song.ini",
+      "size": 760
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/song.ogg",
+      "size": 7769105
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Coldplay - Shiver/vocals.ogg",
+      "size": 6148826
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/album.png",
+      "size": 281867
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/crowd.ogg",
+      "size": 1758492
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/drums_1.ogg",
+      "size": 3319887
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/drums_2.ogg",
+      "size": 3617429
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/drums_3.ogg",
+      "size": 3512826
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/drums_4.ogg",
+      "size": 102372
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/guitar.ogg",
+      "size": 4865352
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/notes.mid",
+      "size": 97234
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/rhythm.ogg",
+      "size": 3156972
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/song.ini",
+      "size": 1024
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/song.ogg",
+      "size": 2807046
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Creedence Clearwater Revival - Up Around the Bend/vocals.ogg",
+      "size": 3789786
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/album.png",
+      "size": 449297
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/drums_1.ogg",
+      "size": 3609957
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/drums_2.ogg",
+      "size": 6119824
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/drums_3.ogg",
+      "size": 5807848
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/drums_4.ogg",
+      "size": 5705913
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/guitar.ogg",
+      "size": 4901978
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/notes.mid",
+      "size": 138356
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/rhythm.ogg",
+      "size": 3426279
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/song.ini",
+      "size": 878
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/song.ogg",
+      "size": 1051453
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dinosaur Jr. - Feel the Pain/vocals.ogg",
+      "size": 4056343
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/album.png",
+      "size": 282006
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/drums_1.ogg",
+      "size": 6743933
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/drums_2.ogg",
+      "size": 11384344
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/drums_3.ogg",
+      "size": 13082422
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/drums_4.ogg",
+      "size": 9029084
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/guitar.ogg",
+      "size": 12095951
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/notes.mid",
+      "size": 293043
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/rhythm.ogg",
+      "size": 8118696
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/song.ini",
+      "size": 911
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/song.ogg",
+      "size": 11792185
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Dream Theater - Pull Me Under/vocals.ogg",
+      "size": 9959004
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/album.png",
+      "size": 391935
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/crowd.ogg",
+      "size": 3865715
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/drums_1.ogg",
+      "size": 2767663
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/drums_2.ogg",
+      "size": 5928549
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/drums_3.ogg",
+      "size": 8085877
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/drums_4.ogg",
+      "size": 530550
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/guitar.ogg",
+      "size": 8013900
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/notes.mid",
+      "size": 137174
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/rhythm.ogg",
+      "size": 5521882
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/song.ini",
+      "size": 1025
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/song.ogg",
+      "size": 8395761
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/unedited_notes.mid",
+      "size": 137142
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Eagles - Hotel California/vocals.ogg",
+      "size": 5441202
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/album.png",
+      "size": 408815
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/drums_1.ogg",
+      "size": 3983243
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/drums_2.ogg",
+      "size": 4793974
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/drums_3.ogg",
+      "size": 5588721
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/guitar.ogg",
+      "size": 5623543
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/notes.mid",
+      "size": 175096
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/rhythm.ogg",
+      "size": 4826242
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/song.ini",
+      "size": 1002
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/song.ogg",
+      "size": 4711829
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Filter - Hey Man, Nice Shot/vocals.ogg",
+      "size": 4751434
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/album.png",
+      "size": 174401
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/crowd.ogg",
+      "size": 2471399
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/drums_1.ogg",
+      "size": 3306335
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/drums_2.ogg",
+      "size": 3844778
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/drums_3.ogg",
+      "size": 6170319
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/drums_4.ogg",
+      "size": 5036245
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/guitar.ogg",
+      "size": 4870934
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/notes.mid",
+      "size": 144925
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/rhythm.ogg",
+      "size": 3456996
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/song.ini",
+      "size": 893
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/song.ogg",
+      "size": 5358349
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Fleetwood Mac - Go Your Own Way/vocals.ogg",
+      "size": 4479280
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/album.png",
+      "size": 281369
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/crowd.ogg",
+      "size": 1847300
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/drums_1.ogg",
+      "size": 4067668
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/drums_2.ogg",
+      "size": 4180488
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/drums_3.ogg",
+      "size": 5809443
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/drums_4.ogg",
+      "size": 4418756
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/guitar.ogg",
+      "size": 5007278
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/notes.mid",
+      "size": 173291
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/rhythm.ogg",
+      "size": 3780493
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/song.ini",
+      "size": 1400
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/song.ogg",
+      "size": 905373
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Foo Fighters - Everlong/vocals.ogg",
+      "size": 4101482
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/album.png",
+      "size": 312343
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/crowd.ogg",
+      "size": 1906980
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/drums_1.ogg",
+      "size": 3538278
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/drums_2.ogg",
+      "size": 4825488
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/drums_3.ogg",
+      "size": 4753723
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/drums_4.ogg",
+      "size": 46200
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/guitar.ogg",
+      "size": 3938602
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/notes.mid",
+      "size": 126094
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/rhythm.ogg",
+      "size": 3920842
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/song.ini",
+      "size": 900
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/song.ogg",
+      "size": 4553983
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/HushPuppies - You're Gonna Say Yeah!/vocals.ogg",
+      "size": 4053403
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/album.png",
+      "size": 74590
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/drums_1.ogg",
+      "size": 3753549
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/drums_2.ogg",
+      "size": 4452648
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/drums_3.ogg",
+      "size": 4953027
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/drums_4.ogg",
+      "size": 1277620
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/guitar.ogg",
+      "size": 4441359
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/notes.mid",
+      "size": 133102
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/rhythm.ogg",
+      "size": 3217396
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/song.ini",
+      "size": 992
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/song.ogg",
+      "size": 3665507
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Interpol - Obstacle 1/vocals.ogg",
+      "size": 4231458
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/album.png",
+      "size": 254350
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/drums_1.ogg",
+      "size": 4002974
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/drums_2.ogg",
+      "size": 5717842
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/drums_3.ogg",
+      "size": 6299720
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/drums_4.ogg",
+      "size": 3285705
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/guitar.ogg",
+      "size": 5341566
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/notes.mid",
+      "size": 132224
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/rhythm.ogg",
+      "size": 4082489
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/song.ini",
+      "size": 821
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/song.ogg",
+      "size": 5319044
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jane's Addiction - Mountain Song/vocals.ogg",
+      "size": 3988139
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/album.png",
+      "size": 467849
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/crowd.ogg",
+      "size": 2433680
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/drums_1.ogg",
+      "size": 1718004
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/drums_2.ogg",
+      "size": 3404127
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/drums_3.ogg",
+      "size": 4465764
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/drums_4.ogg",
+      "size": 256194
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/guitar.ogg",
+      "size": 4776666
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/notes.mid",
+      "size": 117299
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/rhythm.ogg",
+      "size": 2817567
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/song.ogg",
+      "size": 3989570
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Jimmy Eat World - The Middle/vocals.ogg",
+      "size": 3854109
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/album.png",
+      "size": 419674
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/drums_1.ogg",
+      "size": 4060276
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/drums_2.ogg",
+      "size": 3995308
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/drums_3.ogg",
+      "size": 5414461
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/drums_4.ogg",
+      "size": 662511
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/guitar.ogg",
+      "size": 3682169
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/notes.mid",
+      "size": 120740
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/rhythm.ogg",
+      "size": 3456345
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/song.ini",
+      "size": 966
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Joe Satriani - Satch Boogie/song.ogg",
+      "size": 1878250
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/album.png",
+      "size": 366722
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/drums_1.ogg",
+      "size": 5604805
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/drums_2.ogg",
+      "size": 5218574
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/drums_3.ogg",
+      "size": 7234815
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/drums_4.ogg",
+      "size": 5141106
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/guitar.ogg",
+      "size": 5692564
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/notes.mid",
+      "size": 148560
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/rhythm.ogg",
+      "size": 5076587
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/song.ini",
+      "size": 858
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/song.ogg",
+      "size": 7205803
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Kent - Vinternoll2/vocals.ogg",
+      "size": 5565791
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/album.png",
+      "size": 272179
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/crowd.ogg",
+      "size": 2227012
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/drums_1.ogg",
+      "size": 4185220
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/drums_2.ogg",
+      "size": 4806961
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/drums_3.ogg",
+      "size": 6231215
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/drums_4.ogg",
+      "size": 2679072
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/guitar.ogg",
+      "size": 5280970
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/notes.mid",
+      "size": 114069
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/rhythm.ogg",
+      "size": 4412693
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/song.ini",
+      "size": 859
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/song.ogg",
+      "size": 1587663
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Korn - Freak on a Leash/vocals.ogg",
+      "size": 4627105
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/album.png",
+      "size": 227509
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/drums.ogg",
+      "size": 6561248
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/drums_1.ogg",
+      "size": 4550474
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/drums_2.ogg",
+      "size": 5534950
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/drums_3.ogg",
+      "size": 5193201
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/drums_4.ogg",
+      "size": 682032
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/guitar.ogg",
+      "size": 5509800
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/notes.mid",
+      "size": 111502
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/rhythm.ogg",
+      "size": 4000815
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/song.ini",
+      "size": 822
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/song.ogg",
+      "size": 6086328
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lacuna Coil - Our Truth/vocals.ogg",
+      "size": 4800060
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/album.png",
+      "size": 426117
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/crowd.ogg",
+      "size": 553773
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/drums_1.ogg",
+      "size": 1757647
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/drums_2.ogg",
+      "size": 2130762
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/drums_3.ogg",
+      "size": 4281768
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/drums_4.ogg",
+      "size": 83771
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/guitar.ogg",
+      "size": 5119921
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/notes.mid",
+      "size": 108435
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/rhythm.ogg",
+      "size": 3232290
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/song.ini",
+      "size": 851
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/song.ogg",
+      "size": 1363748
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lenny Kravitz - Are You Gonna Go My Way/vocals.ogg",
+      "size": 2410723
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/album.png",
+      "size": 35107
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/crowd.ogg",
+      "size": 2086690
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/drums_1.ogg",
+      "size": 3556151
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/drums_2.ogg",
+      "size": 3784784
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/drums_3.ogg",
+      "size": 4386631
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/drums_4.ogg",
+      "size": 3284637
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/guitar.ogg",
+      "size": 3220299
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/notes.mid",
+      "size": 83614
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/rhythm.ogg",
+      "size": 1680989
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/song.ini",
+      "size": 867
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/song.ogg",
+      "size": 4269451
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Linkin Park - What I've Done/vocals.ogg",
+      "size": 3187246
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/album.png",
+      "size": 157488
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/crowd.ogg",
+      "size": 2119805
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/drums_1.ogg",
+      "size": 2429952
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/drums_2.ogg",
+      "size": 2084105
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/drums_3.ogg",
+      "size": 3758398
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/drums_4.ogg",
+      "size": 1183934
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/guitar.ogg",
+      "size": 3193571
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/notes.mid",
+      "size": 88065
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/rhythm.ogg",
+      "size": 3067905
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/song.ini",
+      "size": 1011
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/song.ogg",
+      "size": 3732091
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Los Lobos - La Bamba/vocals.ogg",
+      "size": 3159177
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/crowd.ogg",
+      "size": 1645442
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/drums_1.ogg",
+      "size": 4035719
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/drums_2.ogg",
+      "size": 3959274
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/drums_3.ogg",
+      "size": 5300783
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/drums_4.ogg",
+      "size": 522277
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/guitar.ogg",
+      "size": 5592423
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/notes.mid",
+      "size": 162236
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/rhythm.ogg",
+      "size": 3846833
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/song.ini",
+      "size": 827
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/song.ogg",
+      "size": 5555915
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lostprophets - Rooftops (A Liberation Broadcast)/vocals.ogg",
+      "size": 4293958
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/album.png",
+      "size": 329964
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/crowd.ogg",
+      "size": 2393598
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/drums_1.ogg",
+      "size": 6720416
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/drums_2.ogg",
+      "size": 7354730
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/drums_3.ogg",
+      "size": 7592479
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/drums_4.ogg",
+      "size": 7199418
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/guitar.ogg",
+      "size": 8241635
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/notes.mid",
+      "size": 231653
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/rhythm.ogg",
+      "size": 9063103
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/song.ini",
+      "size": 841
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/song.ogg",
+      "size": 7842434
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Lynyrd Skynyrd - Sweet Home Alabama (Live)/vocals.ogg",
+      "size": 7708703
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/album.png",
+      "size": 366745
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/crowd.ogg",
+      "size": 978581
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/drums_1.ogg",
+      "size": 2885006
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/drums_2.ogg",
+      "size": 3696540
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/drums_3.ogg",
+      "size": 4573423
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/drums_4.ogg",
+      "size": 401302
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/guitar.ogg",
+      "size": 3491482
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/notes.mid",
+      "size": 99051
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/rhythm.ogg",
+      "size": 3162729
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/song.ini",
+      "size": 984
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/song.ogg",
+      "size": 1546992
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/MC5's Wayne Kramer - Kick Out the Jams/vocals.ogg",
+      "size": 3558261
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/album.png",
+      "size": 359895
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/drums_1.ogg",
+      "size": 4296137
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/drums_2.ogg",
+      "size": 4577550
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/drums_3.ogg",
+      "size": 6442438
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/drums_4.ogg",
+      "size": 686160
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/guitar.ogg",
+      "size": 5452692
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/notes.mid",
+      "size": 189598
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/rhythm.ogg",
+      "size": 4677934
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/song.ini",
+      "size": 926
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/song.ogg",
+      "size": 1075064
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Metallica - Trapped Under Ice/vocals.ogg",
+      "size": 5502572
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/album.png",
+      "size": 336771
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/crowd.ogg",
+      "size": 2755737
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/drums_1.ogg",
+      "size": 4504819
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/drums_2.ogg",
+      "size": 6119426
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/drums_3.ogg",
+      "size": 5981094
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/guitar.ogg",
+      "size": 5720386
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/notes.mid",
+      "size": 124074
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/rhythm.ogg",
+      "size": 4040774
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/song.ini",
+      "size": 1330
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/song.ogg",
+      "size": 6011203
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Michael Jackson - Beat It/vocals.ogg",
+      "size": 4421332
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/album.png",
+      "size": 301381
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/crowd.ogg",
+      "size": 2340527
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/drums_1.ogg",
+      "size": 2820817
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/drums_2.ogg",
+      "size": 1440243
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/drums_3.ogg",
+      "size": 4653210
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/guitar.ogg",
+      "size": 3326028
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/notes.mid",
+      "size": 94809
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/rhythm.ogg",
+      "size": 2533622
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/song.ini",
+      "size": 939
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/song.ogg",
+      "size": 3863556
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Modest Mouse - Float On/vocals.ogg",
+      "size": 3239081
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/album.png",
+      "size": 487165
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/crowd.ogg",
+      "size": 1191050
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/drums_1.ogg",
+      "size": 6820393
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/drums_2.ogg",
+      "size": 7166885
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/drums_3.ogg",
+      "size": 8555910
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/drums_4.ogg",
+      "size": 180590
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/guitar.ogg",
+      "size": 6070537
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/notes.mid",
+      "size": 214512
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/rhythm.ogg",
+      "size": 5044248
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/song.ini",
+      "size": 1008
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/song.ogg",
+      "size": 1570712
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Mot\u00f6rhead - Overkill/vocals.ogg",
+      "size": 2201768
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/album.png",
+      "size": 466419
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/drums_1.ogg",
+      "size": 2853941
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/drums_2.ogg",
+      "size": 3594709
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/drums_3.ogg",
+      "size": 4520727
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/drums_4.ogg",
+      "size": 339125
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/guitar.ogg",
+      "size": 4267366
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/notes.mid",
+      "size": 172243
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/rhythm.ogg",
+      "size": 3551242
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/song.ini",
+      "size": 1003
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/song.ogg",
+      "size": 334818
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Muse - Assassin/vocals.ogg",
+      "size": 3675820
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/album.png",
+      "size": 547425
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/crowd.ogg",
+      "size": 724060
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/drums_1.ogg",
+      "size": 2136064
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/drums_2.ogg",
+      "size": 3254234
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/drums_3.ogg",
+      "size": 4040964
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/drums_4.ogg",
+      "size": 533556
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/guitar.ogg",
+      "size": 3702260
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/notes.mid",
+      "size": 140837
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/rhythm.ogg",
+      "size": 4093266
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/song.ini",
+      "size": 977
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/song.ogg",
+      "size": 994314
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/NOFX - Soul Doubt/vocals.ogg",
+      "size": 3789324
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/album.png",
+      "size": 348946
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/drums_1.ogg",
+      "size": 4015403
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/drums_2.ogg",
+      "size": 4235730
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/drums_3.ogg",
+      "size": 4816171
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/drums_4.ogg",
+      "size": 1073628
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/guitar.ogg",
+      "size": 3985565
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/notes.mid",
+      "size": 112206
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/rhythm.ogg",
+      "size": 3061293
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/song.ini",
+      "size": 782
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/song.ogg",
+      "size": 4397071
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Negramaro - Nuvole e Lenzuola/vocals.ogg",
+      "size": 4253024
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/album.png",
+      "size": 450312
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/crowd.ogg",
+      "size": 2539678
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/drums_1.ogg",
+      "size": 2687912
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/drums_2.ogg",
+      "size": 2956183
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/drums_3.ogg",
+      "size": 4419648
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/drums_4.ogg",
+      "size": 92348
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/guitar.ogg",
+      "size": 4384045
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/notes.mid",
+      "size": 92961
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/rhythm.ogg",
+      "size": 3164007
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/song.ini",
+      "size": 1029
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/song.ogg",
+      "size": 411961
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Nirvana - About a Girl (Unplugged)/vocals.ogg",
+      "size": 2898717
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/album.png",
+      "size": 644361
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/crowd.ogg",
+      "size": 2154519
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/drums_1.ogg",
+      "size": 3820265
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/drums_2.ogg",
+      "size": 4145303
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/drums_3.ogg",
+      "size": 10189778
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/drums_4.ogg",
+      "size": 425905
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/guitar.ogg",
+      "size": 7296514
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/notes.mid",
+      "size": 190631
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/rhythm.ogg",
+      "size": 5829244
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/song.ini",
+      "size": 913
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/song.ogg",
+      "size": 6828429
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/No Doubt - Spiderwebs/vocals.ogg",
+      "size": 6845115
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/album.png",
+      "size": 391696
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/drums_1.ogg",
+      "size": 6443231
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/drums_2.ogg",
+      "size": 7067326
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/drums_3.ogg",
+      "size": 9248961
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/drums_4.ogg",
+      "size": 397851
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/guitar.ogg",
+      "size": 6662662
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/notes.mid",
+      "size": 179820
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/rhythm.ogg",
+      "size": 5165966
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/song.ini",
+      "size": 1132
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/song.ogg",
+      "size": 8641229
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Oasis - Some Might Say/vocals.ogg",
+      "size": 6674962
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/album.png",
+      "size": 326211
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/crowd.ogg",
+      "size": 1626191
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/drums_1.ogg",
+      "size": 3869291
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/drums_2.ogg",
+      "size": 4325063
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/drums_3.ogg",
+      "size": 6712338
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/drums_4.ogg",
+      "size": 1440611
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/guitar.ogg",
+      "size": 5928606
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/notes.mid",
+      "size": 177298
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/rhythm.ogg",
+      "size": 4128522
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/song.ini",
+      "size": 969
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/song.ogg",
+      "size": 2018759
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Crazy Train/vocals.ogg",
+      "size": 3771779
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/album.png",
+      "size": 326190
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/drums_1.ogg",
+      "size": 5341068
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/drums_2.ogg",
+      "size": 5717817
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/drums_3.ogg",
+      "size": 7349021
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/drums_4.ogg",
+      "size": 665809
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/guitar.ogg",
+      "size": 7071018
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/notes.mid",
+      "size": 151250
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/rhythm.ogg",
+      "size": 5937164
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/song.ini",
+      "size": 960
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/song.ogg",
+      "size": 7151986
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ozzy Osbourne - Mr. Crowley/vocals.ogg",
+      "size": 2865060
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/album.png",
+      "size": 420331
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/crowd.ogg",
+      "size": 2250075
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/drums_1.ogg",
+      "size": 3842126
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/drums_2.ogg",
+      "size": 4571226
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/drums_3.ogg",
+      "size": 5345950
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/drums_4.ogg",
+      "size": 1729556
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/guitar.ogg",
+      "size": 4695117
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/notes.mid",
+      "size": 128126
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/rhythm.ogg",
+      "size": 3848403
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/song.ini",
+      "size": 911
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/song.ogg",
+      "size": 3194880
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Paramore - Misery Business/vocals.ogg",
+      "size": 4440417
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/album.png",
+      "size": 282499
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/crowd.ogg",
+      "size": 1420294
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/drums_1.ogg",
+      "size": 2532791
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/drums_2.ogg",
+      "size": 3513130
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/drums_3.ogg",
+      "size": 3825430
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/drums_4.ogg",
+      "size": 1122732
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/guitar.ogg",
+      "size": 3773882
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/notes.mid",
+      "size": 118176
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/rhythm.ogg",
+      "size": 2890322
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/song.ini",
+      "size": 1034
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/song.ogg",
+      "size": 1187019
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Pat Benatar - Heartbreaker/vocals.ogg",
+      "size": 2527839
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/album.png",
+      "size": 450449
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/crowd.ogg",
+      "size": 3396255
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/drums_1.ogg",
+      "size": 2163437
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/drums_2.ogg",
+      "size": 4541375
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/drums_3.ogg",
+      "size": 5662534
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/drums_4.ogg",
+      "size": 3739359
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/guitar.ogg",
+      "size": 4301312
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/notes.mid",
+      "size": 80681
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/rhythm.ogg",
+      "size": 3159370
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/song.ini",
+      "size": 887
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/song.ogg",
+      "size": 5310341
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/R.E.M. - The One I Love/vocals.ogg",
+      "size": 3914112
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/album.png",
+      "size": 259365
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/drums_1.ogg",
+      "size": 3768788
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/drums_2.ogg",
+      "size": 4677813
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/drums_3.ogg",
+      "size": 4631192
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/drums_4.ogg",
+      "size": 62273
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/guitar.ogg",
+      "size": 4313047
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/notes.mid",
+      "size": 122882
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/rhythm.ogg",
+      "size": 3352005
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/song.ini",
+      "size": 760
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/song.ogg",
+      "size": 4234017
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Radio Futura - Escuela de Calor/vocals.ogg",
+      "size": 4034529
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/album.png",
+      "size": 458558
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/drums_1.ogg",
+      "size": 4525549
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/drums_2.ogg",
+      "size": 5116024
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/drums_3.ogg",
+      "size": 5660260
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/drums_4.ogg",
+      "size": 2802590
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/guitar.ogg",
+      "size": 5160267
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/notes.mid",
+      "size": 147991
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/rhythm.ogg",
+      "size": 4187388
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/song.ini",
+      "size": 1086
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/song.ogg",
+      "size": 4051988
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Rise Against - Re-Education (Through Labor)/vocals.ogg",
+      "size": 4170790
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/album.png",
+      "size": 556372
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/drums_1.ogg",
+      "size": 6892321
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/drums_2.ogg",
+      "size": 7252382
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/drums_3.ogg",
+      "size": 8573026
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/drums_4.ogg",
+      "size": 58120
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/guitar.ogg",
+      "size": 7821847
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/notes.mid",
+      "size": 242719
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/rhythm.ogg",
+      "size": 6996491
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/song.ini",
+      "size": 955
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/song.ogg",
+      "size": 6149492
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Silversun Pickups - Lazy Eye/vocals.ogg",
+      "size": 6172610
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/album.png",
+      "size": 492221
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/drums_1.ogg",
+      "size": 7796735
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/drums_2.ogg",
+      "size": 7534143
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/drums_3.ogg",
+      "size": 9964711
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/drums_4.ogg",
+      "size": 318062
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/guitar.ogg",
+      "size": 6169293
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/notes.mid",
+      "size": 159042
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/rhythm.ogg",
+      "size": 4819418
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/song.ogg",
+      "size": 7826832
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steely Dan - Do It Again/vocals.ogg",
+      "size": 6252838
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/album.png",
+      "size": 412580
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/crowd.ogg",
+      "size": 3760409
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/drums_1.ogg",
+      "size": 3976561
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/drums_2.ogg",
+      "size": 3911735
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/drums_3.ogg",
+      "size": 5995252
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/drums_4.ogg",
+      "size": 231031
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/guitar.ogg",
+      "size": 4553028
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/notes.mid",
+      "size": 103250
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/rhythm.ogg",
+      "size": 4095321
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/song.ini",
+      "size": 817
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/song.ogg",
+      "size": 3613053
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Steve Miller Band - The Joker/vocals.ogg",
+      "size": 4588950
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/album.png",
+      "size": 221506
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/drums_1.ogg",
+      "size": 5880597
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/drums_2.ogg",
+      "size": 6304752
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/drums_3.ogg",
+      "size": 7476823
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/drums_4.ogg",
+      "size": 196365
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/guitar.ogg",
+      "size": 7144993
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/notes.mid",
+      "size": 194739
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/rhythm.ogg",
+      "size": 4297568
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/song.ini",
+      "size": 936
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/song.ogg",
+      "size": 4108436
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Stuck in the Sound - Toy Boy/vocals.ogg",
+      "size": 5234915
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/album.png",
+      "size": 395142
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/crowd.ogg",
+      "size": 1990092
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/drums_1.ogg",
+      "size": 3002658
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/drums_2.ogg",
+      "size": 3939255
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/drums_3.ogg",
+      "size": 4582410
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/drums_4.ogg",
+      "size": 425502
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/guitar.ogg",
+      "size": 4566891
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/notes.mid",
+      "size": 93682
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/rhythm.ogg",
+      "size": 2958739
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/song.ini",
+      "size": 829
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/song.ogg",
+      "size": 2451219
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Sublime - Santeria/vocals.ogg",
+      "size": 3947226
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/album.png",
+      "size": 382327
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/crowd.ogg",
+      "size": 3214091
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/drums_1.ogg",
+      "size": 3639934
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/drums_2.ogg",
+      "size": 5592123
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/drums_3.ogg",
+      "size": 6311307
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/drums_4.ogg",
+      "size": 72608
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/guitar.ogg",
+      "size": 5888322
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/notes.mid",
+      "size": 117251
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/rhythm.ogg",
+      "size": 3735856
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/song.ini",
+      "size": 825
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/song.ogg",
+      "size": 5263466
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Survivor - Eye of the Tiger/vocals.ogg",
+      "size": 3855262
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/album.png",
+      "size": 199265
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/crowd.ogg",
+      "size": 2639072
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/drums_1.ogg",
+      "size": 3980504
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/drums_2.ogg",
+      "size": 4439888
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/drums_3.ogg",
+      "size": 6067797
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/drums_4.ogg",
+      "size": 253797
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/guitar.ogg",
+      "size": 5099994
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/notes.mid",
+      "size": 209810
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/rhythm.ogg",
+      "size": 4074449
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/song.ini",
+      "size": 938
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/song.ogg",
+      "size": 2752545
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/System of a Down - B.Y.O.B/vocals.ogg",
+      "size": 4218245
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/album.png",
+      "size": 307881
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/drums_1.ogg",
+      "size": 7686021
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/drums_2.ogg",
+      "size": 10730224
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/drums_3.ogg",
+      "size": 12745996
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/drums_4.ogg",
+      "size": 503237
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/guitar.ogg",
+      "size": 11833439
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/notes.mid",
+      "size": 262376
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/rhythm.ogg",
+      "size": 8511326
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/song.ini",
+      "size": 925
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/song.ogg",
+      "size": 7497917
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent - Stranglehold/vocals.ogg",
+      "size": 7955005
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/album.png",
+      "size": 199314
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/drums_1.ogg",
+      "size": 2790767
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/drums_2.ogg",
+      "size": 4481325
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/drums_3.ogg",
+      "size": 3131927
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/drums_4.ogg",
+      "size": 4835972
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/guitar.ogg",
+      "size": 3358979
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/notes.mid",
+      "size": 79415
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/rhythm.ogg",
+      "size": 2155089
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/song.ini",
+      "size": 1278
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Ted Nugent Guitar Battle (Career)/song.ogg",
+      "size": 3121139
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/album.png",
+      "size": 549580
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/crowd.ogg",
+      "size": 3890
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/drums_1.ogg",
+      "size": 7808232
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/drums_2.ogg",
+      "size": 8156914
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/drums_3.ogg",
+      "size": 9733057
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/drums_4.ogg",
+      "size": 60818
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/guitar.ogg",
+      "size": 6791856
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/notes.mid",
+      "size": 179504
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/rhythm.ogg",
+      "size": 6212802
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/song.ini",
+      "size": 922
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/song.ogg",
+      "size": 8075149
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Allman Brothers Band - Ramblin' Man/vocals.ogg",
+      "size": 2787025
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/album.png",
+      "size": 386325
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/crowd.ogg",
+      "size": 1371719
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/drums_1.ogg",
+      "size": 3714118
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/drums_2.ogg",
+      "size": 5010129
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/drums_3.ogg",
+      "size": 5616758
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/drums_4.ogg",
+      "size": 1281032
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/guitar.ogg",
+      "size": 4669536
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/notes.mid",
+      "size": 136900
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/rhythm.ogg",
+      "size": 4098965
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/song.ini",
+      "size": 870
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/song.ogg",
+      "size": 977690
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Answer - Never Too Late/vocals.ogg",
+      "size": 3274276
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/album.png",
+      "size": 475323
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/drums_1.ogg",
+      "size": 4930437
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/drums_2.ogg",
+      "size": 6075138
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/drums_3.ogg",
+      "size": 7045020
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/drums_4.ogg",
+      "size": 222373
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/guitar.ogg",
+      "size": 5328309
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/notes.mid",
+      "size": 135587
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/rhythm.ogg",
+      "size": 4484491
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/song.ini",
+      "size": 787
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/song.ogg",
+      "size": 4471744
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Cult - Love Removal Machine/vocals.ogg",
+      "size": 5196804
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/album.png",
+      "size": 489510
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/crowd.ogg",
+      "size": 1573278
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/drums_1.ogg",
+      "size": 3310161
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/drums_2.ogg",
+      "size": 3636651
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/drums_3.ogg",
+      "size": 2725619
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/drums_4.ogg",
+      "size": 242314
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/guitar.ogg",
+      "size": 5018936
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/notes.mid",
+      "size": 105804
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/rhythm.ogg",
+      "size": 3351303
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/song.ini",
+      "size": 962
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/song.ogg",
+      "size": 4894068
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Doors - Love Me Two Times/vocals.ogg",
+      "size": 3291876
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/album.png",
+      "size": 163877
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/crowd.ogg",
+      "size": 2206761
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/drums_1.ogg",
+      "size": 2658049
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/drums_2.ogg",
+      "size": 3669781
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/drums_3.ogg",
+      "size": 3617950
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/drums_4.ogg",
+      "size": 1645124
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/guitar.ogg",
+      "size": 3734526
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/notes.mid",
+      "size": 108033
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/rhythm.ogg",
+      "size": 2670849
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/song.ini",
+      "size": 1020
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/song.ogg",
+      "size": 3754342
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Enemy - Aggro/vocals.ogg",
+      "size": 2766402
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/album.png",
+      "size": 360368
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/drums_1.ogg",
+      "size": 3734650
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/drums_2.ogg",
+      "size": 3594715
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/drums_3.ogg",
+      "size": 3885145
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/drums_4.ogg",
+      "size": 244656
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/guitar.ogg",
+      "size": 4292878
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/notes.mid",
+      "size": 121193
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/rhythm.ogg",
+      "size": 3547027
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/song.ini",
+      "size": 908
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/song.ogg",
+      "size": 4997767
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Guess Who - American Woman/vocals.ogg",
+      "size": 3034026
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/album.png",
+      "size": 468458
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/crowd.ogg",
+      "size": 1110143
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/drums_1.ogg",
+      "size": 3293394
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/drums_2.ogg",
+      "size": 4421676
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/drums_3.ogg",
+      "size": 5698331
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/drums_4.ogg",
+      "size": 558090
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/guitar.ogg",
+      "size": 4301900
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/notes.mid",
+      "size": 116314
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/rhythm.ogg",
+      "size": 3363804
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/song.ini",
+      "size": 924
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - Purple Haze (Live)/vocals.ogg",
+      "size": 2256935
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/album.png",
+      "size": 247564
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/drums_1.ogg",
+      "size": 1853135
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/drums_2.ogg",
+      "size": 1008023
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/drums_3.ogg",
+      "size": 3356023
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/drums_4.ogg",
+      "size": 210296
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/guitar.ogg",
+      "size": 4169970
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/notes.mid",
+      "size": 85944
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/rhythm.ogg",
+      "size": 3270432
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/song.ini",
+      "size": 1057
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/song.ogg",
+      "size": 1318682
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Jimi Hendrix Experience - The Wind Cries Mary/vocals.ogg",
+      "size": 2566888
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/album.png",
+      "size": 439429
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/crowd.ogg",
+      "size": 1624731
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/drums_1.ogg",
+      "size": 3931997
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/drums_2.ogg",
+      "size": 5584532
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/drums_3.ogg",
+      "size": 6033638
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/drums_4.ogg",
+      "size": 4582298
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/guitar.ogg",
+      "size": 5261339
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/notes.mid",
+      "size": 189027
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/rhythm.ogg",
+      "size": 3889147
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/song.ini",
+      "size": 1092
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/song.ogg",
+      "size": 723772
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Living End - Prisoner of Society/vocals.ogg",
+      "size": 5677187
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/album.png",
+      "size": 286415
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/drums_1.ogg",
+      "size": 3038760
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/drums_2.ogg",
+      "size": 5378306
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/drums_3.ogg",
+      "size": 7539462
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/drums_4.ogg",
+      "size": 1767191
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/guitar.ogg",
+      "size": 6631762
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/notes.mid",
+      "size": 129241
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/rhythm.ogg",
+      "size": 4798395
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/song.ini",
+      "size": 933
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/song.ogg",
+      "size": 8029966
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Mars Volta - L'Via L'Viaquez/vocals.ogg",
+      "size": 5721737
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/album.png",
+      "size": 405188
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/drums_1.ogg",
+      "size": 5011121
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/drums_2.ogg",
+      "size": 5082423
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/drums_3.ogg",
+      "size": 6729714
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/drums_4.ogg",
+      "size": 809374
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/guitar.ogg",
+      "size": 4383574
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/notes.mid",
+      "size": 135587
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/rhythm.ogg",
+      "size": 3650787
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/song.ini",
+      "size": 976
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/song.ogg",
+      "size": 4723883
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Police - Demolition Man (Live)/vocals.ogg",
+      "size": 2861448
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/album.png",
+      "size": 286195
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/crowd.ogg",
+      "size": 2298706
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/drums_1.ogg",
+      "size": 3249631
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/drums_2.ogg",
+      "size": 3286292
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/drums_3.ogg",
+      "size": 4888380
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/drums_4.ogg",
+      "size": 393183
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/guitar.ogg",
+      "size": 3467430
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/notes.mid",
+      "size": 128612
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/rhythm.ogg",
+      "size": 3948674
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/song.ini",
+      "size": 1126
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/song.ogg",
+      "size": 1353201
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Sex Pistols - Pretty Vacant/vocals.ogg",
+      "size": 4443673
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/album.png",
+      "size": 212997
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/drums_1.ogg",
+      "size": 2495323
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/drums_2.ogg",
+      "size": 3444311
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/drums_3.ogg",
+      "size": 4795250
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/drums_4.ogg",
+      "size": 453169
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/guitar.ogg",
+      "size": 4044098
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/notes.mid",
+      "size": 99318
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/rhythm.ogg",
+      "size": 3411670
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/song.ini",
+      "size": 1003
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/song.ogg",
+      "size": 3339194
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Smashing Pumpkins - Today/vocals.ogg",
+      "size": 3220306
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/album.png",
+      "size": 525403
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/drums_1.ogg",
+      "size": 5990190
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/drums_2.ogg",
+      "size": 7847899
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/drums_3.ogg",
+      "size": 9739617
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/drums_4.ogg",
+      "size": 8284788
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/guitar.ogg",
+      "size": 6721720
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/notes.mid",
+      "size": 193656
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/rhythm.ogg",
+      "size": 5772101
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/song.ini",
+      "size": 916
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/song.ogg",
+      "size": 10692320
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/The Stone Roses - Love Spreads/vocals.ogg",
+      "size": 7179019
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/album.png",
+      "size": 362283
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/drums_1.ogg",
+      "size": 3670555
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/drums_2.ogg",
+      "size": 3513366
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/drums_3.ogg",
+      "size": 6245041
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/drums_4.ogg",
+      "size": 73241
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/guitar.ogg",
+      "size": 5423243
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/notes.mid",
+      "size": 136786
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/rhythm.ogg",
+      "size": 4615594
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/song.ini",
+      "size": 1049
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/song.ogg",
+      "size": 6238762
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tokio Hotel - Monsoon/vocals.ogg",
+      "size": 5049548
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/album.png",
+      "size": 190851
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/drums_1.ogg",
+      "size": 8388931
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/drums_2.ogg",
+      "size": 7948602
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/drums_3.ogg",
+      "size": 8777487
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/drums_4.ogg",
+      "size": 8147166
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/guitar.ogg",
+      "size": 8084274
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/notes.mid",
+      "size": 163494
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/rhythm.ogg",
+      "size": 8011927
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/song.ini",
+      "size": 797
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/song.ogg",
+      "size": 8034037
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Parabola/vocals.ogg",
+      "size": 8309063
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/album.png",
+      "size": 190851
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/drums_1.ogg",
+      "size": 9258729
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/drums_2.ogg",
+      "size": 9233029
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/drums_3.ogg",
+      "size": 9881471
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/drums_4.ogg",
+      "size": 9240058
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/guitar.ogg",
+      "size": 10495582
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/notes.mid",
+      "size": 222783
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/rhythm.ogg",
+      "size": 9072337
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/song.ini",
+      "size": 1288
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/song.ogg",
+      "size": 9352882
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Schism/vocals.ogg",
+      "size": 9615083
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/album.png",
+      "size": 251400
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/drums_1.ogg",
+      "size": 9849323
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/drums_2.ogg",
+      "size": 9524827
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/drums_3.ogg",
+      "size": 9983463
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/drums_4.ogg",
+      "size": 9629604
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/guitar.ogg",
+      "size": 10985495
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/notes.mid",
+      "size": 239265
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/rhythm.ogg",
+      "size": 8902574
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/song.ini",
+      "size": 983
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/song.ogg",
+      "size": 9708094
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Tool - Vicarious/vocals.ogg",
+      "size": 9933086
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/album.png",
+      "size": 292917
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/crowd.ogg",
+      "size": 1025378
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/drums_1.ogg",
+      "size": 5157167
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/drums_2.ogg",
+      "size": 3721895
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/drums_3.ogg",
+      "size": 7080073
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/drums_4.ogg",
+      "size": 182167
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/guitar.ogg",
+      "size": 6865793
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/notes.mid",
+      "size": 199131
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/rhythm.ogg",
+      "size": 4579515
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/song.ini",
+      "size": 848
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Trust - Antisocial/vocals.ogg",
+      "size": 3540695
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/album.png",
+      "size": 305109
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/crowd.ogg",
+      "size": 1539417
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/drums_1.ogg",
+      "size": 5964887
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/drums_2.ogg",
+      "size": 3995544
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/drums_3.ogg",
+      "size": 5968841
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/drums_4.ogg",
+      "size": 877255
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/guitar.ogg",
+      "size": 5395700
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/notes.mid",
+      "size": 194075
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/rhythm.ogg",
+      "size": 3981598
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/song.ini",
+      "size": 1019
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/song.ogg",
+      "size": 1065855
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Van Halen - Hot for Teacher/vocals.ogg",
+      "size": 4099256
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/album.png",
+      "size": 409944
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/crowd.ogg",
+      "size": 2248323
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/drums_1.ogg",
+      "size": 2591302
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/drums_2.ogg",
+      "size": 3135034
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/guitar.ogg",
+      "size": 3221572
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/notes.mid",
+      "size": 83111
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/rhythm.ogg",
+      "size": 2226248
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/song.ini",
+      "size": 855
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/song.ogg",
+      "size": 2832697
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Willie Nelson - On the Road Again (Live)/vocals.ogg",
+      "size": 2241263
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/album.png",
+      "size": 175380
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/crowd.ogg",
+      "size": 2320814
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/drums_1.ogg",
+      "size": 1908021
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/drums_2.ogg",
+      "size": 1468647
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/drums_3.ogg",
+      "size": 5840343
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/drums_4.ogg",
+      "size": 448669
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/guitar.ogg",
+      "size": 7040973
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/notes.mid",
+      "size": 128223
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/rhythm.ogg",
+      "size": 5288347
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/song.ini",
+      "size": 1066
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/song.ogg",
+      "size": 6672203
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Wings - Band on the Run/vocals.ogg",
+      "size": 5698932
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/album.png",
+      "size": 203315
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/bass.ogg",
+      "size": 5764
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/drums_1.ogg",
+      "size": 3935962
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/drums_2.ogg",
+      "size": 5081937
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/drums_3.ogg",
+      "size": 4405144
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/drums_4.ogg",
+      "size": 5397711
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/guitar.ogg",
+      "size": 3631123
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/notes.mid",
+      "size": 62004
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/rhythm.ogg",
+      "size": 2429805
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/song.ini",
+      "size": 998
+    },
+    {
+      "path": "(2008) Guitar Hero World Tour/Zakk Wylde Guitar Battle (Career)/song.ogg",
+      "size": 3873924
+    }
+  ],
+  "extracted_size": 3182235724,
+  "file_count": 982,
+  "chart_count": 86,
+  "release_date": "2008-10-26"
 }

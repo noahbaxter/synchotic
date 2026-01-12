@@ -1,0 +1,2130 @@
+{
+  "name": "(2009) Lego Rock Band",
+  "folder_id": "static-2009-lego-rock-band",
+  "group": "Games",
+  "collection": "Rock Band",
+  "downloads": [
+    {
+      "id": "1lN5AODlYIsihGpPHUFKdwLtndHeWozyi",
+      "name": "Lego Rock Band 45.7z",
+      "size": 35782466,
+      "md5": "ec2ba8e505819cbc96b85592ce02dff4",
+      "path": "Lego Rock Band 45.7z"
+    },
+    {
+      "id": "1thCIT0J7RBaUzTb82E0XZAYYEEwym48J",
+      "name": "Lego Rock Band 44.7z",
+      "size": 20797268,
+      "md5": "674d68af475c94d983268710fb49a3d7",
+      "path": "Lego Rock Band 44.7z"
+    },
+    {
+      "id": "1TJyZTT58siFz4nheEsCroM_PYpawXriz",
+      "name": "Lego Rock Band 43.7z",
+      "size": 42293055,
+      "md5": "5e39f3102920a5b2ac7e56b27bef0be0",
+      "path": "Lego Rock Band 43.7z"
+    },
+    {
+      "id": "1swLhkEuHlAS19vTVRooXPnqVNjJTA1vf",
+      "name": "Lego Rock Band 21.7z",
+      "size": 45746755,
+      "md5": "4efa657166e84404a5980b75582ba230",
+      "path": "Lego Rock Band 21.7z"
+    },
+    {
+      "id": "1UhPUSAf2xwAtPsi-oaC5uZMQb2TatxKT",
+      "name": "Lego Rock Band 42.7z",
+      "size": 41732821,
+      "md5": "453be14c43f85882ab9111f49d150f2e",
+      "path": "Lego Rock Band 42.7z"
+    },
+    {
+      "id": "1h6Skh72WJp-VPVnZnvBoult1BzrKCaPD",
+      "name": "Lego Rock Band 41.7z",
+      "size": 28722279,
+      "md5": "2caf3ecb452e5a2b49b108e1ad2c73a4",
+      "path": "Lego Rock Band 41.7z"
+    },
+    {
+      "id": "1sqvk1D7I25KRfOgFRJaWczQIRyQMLDpV",
+      "name": "Lego Rock Band 40.7z",
+      "size": 45395873,
+      "md5": "fa6ccfe3550663442b599b67690f7c3e",
+      "path": "Lego Rock Band 40.7z"
+    },
+    {
+      "id": "1jAvpjJUHx7SzGGL5soPWvH9VCQ7FUHcq",
+      "name": "Lego Rock Band 39.7z",
+      "size": 33656895,
+      "md5": "694e42ea3008518f2eab772595c0e118",
+      "path": "Lego Rock Band 39.7z"
+    },
+    {
+      "id": "14c5VKhkImsuHsHujxbdpdZMaHR-TEiSf",
+      "name": "Lego Rock Band 38.7z",
+      "size": 17147723,
+      "md5": "e261935e1e7f826766533743f4cd9b20",
+      "path": "Lego Rock Band 38.7z"
+    },
+    {
+      "id": "1U8JX-Ozdv1pnZH3rOLQvSOvfiz25e2D6",
+      "name": "Lego Rock Band 37.7z",
+      "size": 28787231,
+      "md5": "9d437c2c8704d8e0d67176cf94f5f6f7",
+      "path": "Lego Rock Band 37.7z"
+    },
+    {
+      "id": "1Ioib7pVHDXBSUCT98V_PEBbejI5Ks0li",
+      "name": "Lego Rock Band 36.7z",
+      "size": 32258584,
+      "md5": "66a335897c48422a5ebc75aee2b103b1",
+      "path": "Lego Rock Band 36.7z"
+    },
+    {
+      "id": "1S0Bv7tqNbqZuzk8CHf0GPgtWZ5oDSGnA",
+      "name": "Lego Rock Band 35.7z",
+      "size": 23350082,
+      "md5": "7c47ed32285c6178855ebe18da8879ac",
+      "path": "Lego Rock Band 35.7z"
+    },
+    {
+      "id": "13R2PHcNyCDoa2q2gCfGGIqvXoU5p8zJo",
+      "name": "Lego Rock Band 34.7z",
+      "size": 39148628,
+      "md5": "b87fe815bfd68b319ece6b3506314fba",
+      "path": "Lego Rock Band 34.7z"
+    },
+    {
+      "id": "1Drw7PhXHz-7oFs4QAtmY3canYCIjiq8N",
+      "name": "Lego Rock Band 33.7z",
+      "size": 38554992,
+      "md5": "9285580da8242661a748eda845e3d2a3",
+      "path": "Lego Rock Band 33.7z"
+    },
+    {
+      "id": "10sbrsCQyiw1NO3eYtevRC2GahP9pdno1",
+      "name": "Lego Rock Band 32.7z",
+      "size": 14966047,
+      "md5": "42c89bca7470f06909abf13e5f0c3b61",
+      "path": "Lego Rock Band 32.7z"
+    },
+    {
+      "id": "14MtRfxAQDPOdr_3miu7L2egx6ZvjWSRr",
+      "name": "Lego Rock Band 31.7z",
+      "size": 23080689,
+      "md5": "f84308676dc49d702f62250db42cdd3e",
+      "path": "Lego Rock Band 31.7z"
+    },
+    {
+      "id": "1kWPjap95ugs-esChp8lfxwh7XqAiK3HA",
+      "name": "Lego Rock Band 30.7z",
+      "size": 35449994,
+      "md5": "68f8271788a2323123dc2dc4d9774562",
+      "path": "Lego Rock Band 30.7z"
+    },
+    {
+      "id": "1xyeRATRcgGpO4QzaMGHTitzFHgwZ45kF",
+      "name": "Lego Rock Band 29.7z",
+      "size": 42200572,
+      "md5": "98f23d157d30ebf5592e395c4633c985",
+      "path": "Lego Rock Band 29.7z"
+    },
+    {
+      "id": "1pMNzvEG6DqoFdkzRA2RUkYe3jzU_TFN3",
+      "name": "Lego Rock Band 28.7z",
+      "size": 61150399,
+      "md5": "3d5de5497e5beec3029c2b3280af5ff0",
+      "path": "Lego Rock Band 28.7z"
+    },
+    {
+      "id": "1V_z0HDVMew8QDNo5-UqIG8k6_YrFK6EH",
+      "name": "Lego Rock Band 27.7z",
+      "size": 50318642,
+      "md5": "87db0989752395030bf3d46b190416d4",
+      "path": "Lego Rock Band 27.7z"
+    },
+    {
+      "id": "1_GIvzJAUO1h_5d-r2qrnh3CvyOm4OLWo",
+      "name": "Lego Rock Band 26.7z",
+      "size": 30211401,
+      "md5": "a0dfc3550f8658e22b5153d56d7c499a",
+      "path": "Lego Rock Band 26.7z"
+    },
+    {
+      "id": "1_4O6dy2W9XmoJU6v8MyIXJN9XduSPE3l",
+      "name": "Lego Rock Band 25.7z",
+      "size": 51774629,
+      "md5": "02207b5cb3993020d9aee929c1bcaf8a",
+      "path": "Lego Rock Band 25.7z"
+    },
+    {
+      "id": "16_vRlq8cHKx3AZ3aZW0NPhZZpA2LGGQ6",
+      "name": "Lego Rock Band 24.7z",
+      "size": 40235523,
+      "md5": "e7cbb51c7ca57724794a19bf41ae3a36",
+      "path": "Lego Rock Band 24.7z"
+    },
+    {
+      "id": "1kOhRGyWDvPc3yn5---_-6U1qDFusPeb6",
+      "name": "Lego Rock Band 23.7z",
+      "size": 16758899,
+      "md5": "754ebcecfda8aebafe8e318e9888e38c",
+      "path": "Lego Rock Band 23.7z"
+    },
+    {
+      "id": "1_h21_OTo5N5KU7iwHYw-vKN4-xBNq66i",
+      "name": "Lego Rock Band 22.7z",
+      "size": 33613903,
+      "md5": "4e17b2d669be4b4e259798012e162a10",
+      "path": "Lego Rock Band 22.7z"
+    },
+    {
+      "id": "1MvseIXTN67rZgd0wnI4VQ5y8IavI8LmX",
+      "name": "Lego Rock Band 20.7z",
+      "size": 39658656,
+      "md5": "0e1d10eb3d6fa66bf6e538201b76d7cb",
+      "path": "Lego Rock Band 20.7z"
+    },
+    {
+      "id": "1CddlzW20L9izdJsI2XsGURmYsXr2YcEz",
+      "name": "Lego Rock Band 19.7z",
+      "size": 26226555,
+      "md5": "518edefcbb0310d90a28c671b26cab3f",
+      "path": "Lego Rock Band 19.7z"
+    },
+    {
+      "id": "1vg7yGXAV6PvHdu9H5QQ9F1cPwR6ZUFvV",
+      "name": "Lego Rock Band 18.7z",
+      "size": 28673495,
+      "md5": "accf7a802f6eb87184a207abfd3374ab",
+      "path": "Lego Rock Band 18.7z"
+    },
+    {
+      "id": "1NyFjaBRsBvo1OxkZVrV_wGPgUOQFo37V",
+      "name": "Lego Rock Band 17.7z",
+      "size": 50405225,
+      "md5": "bbf0b6a2446002114b6499fceb9ea177",
+      "path": "Lego Rock Band 17.7z"
+    },
+    {
+      "id": "1mA1_GdvuV9lYqbc9b4E_5Y2Pls7GHxE6",
+      "name": "Lego Rock Band 16.7z",
+      "size": 40305978,
+      "md5": "10c09f42463f08497e70582b9e3855b7",
+      "path": "Lego Rock Band 16.7z"
+    },
+    {
+      "id": "1Rh02rvG5Y-Y7eLBX-quNSjpPkhsBt_Nd",
+      "name": "Lego Rock Band 15.7z",
+      "size": 46257051,
+      "md5": "e0cf15631f2b673e51946ab2424998f4",
+      "path": "Lego Rock Band 15.7z"
+    },
+    {
+      "id": "1msvup3QfN4q7X-FAhs9ldRMRb4LBU4nU",
+      "name": "Lego Rock Band 14.7z",
+      "size": 49760930,
+      "md5": "ed11fe5acd49de40df04c33af3be8efa",
+      "path": "Lego Rock Band 14.7z"
+    },
+    {
+      "id": "1zlLdQw9MVD-lFQjmOhHSGEl0AN_66xEM",
+      "name": "Lego Rock Band 13.7z",
+      "size": 38258981,
+      "md5": "c1888b5ca663c79cc981a7058d573bbb",
+      "path": "Lego Rock Band 13.7z"
+    },
+    {
+      "id": "1mwQEbPyr4k-Dnk22aawzQT9-hrjbkwJy",
+      "name": "Lego Rock Band 12.7z",
+      "size": 30206365,
+      "md5": "ba0038efbdd93371b2bd26b58c70cef7",
+      "path": "Lego Rock Band 12.7z"
+    },
+    {
+      "id": "1uo3k6oAeDQFn8WZQVtBIE-BOzKOyw97t",
+      "name": "Lego Rock Band 11.7z",
+      "size": 26354558,
+      "md5": "87ea1ff9575395d3864d3361525899fb",
+      "path": "Lego Rock Band 11.7z"
+    },
+    {
+      "id": "1r8PlVFx-K-eYimdW2fC16V23CPawTDvh",
+      "name": "Lego Rock Band 10.7z",
+      "size": 61298399,
+      "md5": "0712c9710de5ccc580c8e74ba2eded87",
+      "path": "Lego Rock Band 10.7z"
+    },
+    {
+      "id": "1SnnCNl1cy6q9Rvo2j6cOQhwrtjCC8cox",
+      "name": "Lego Rock Band 9.7z",
+      "size": 31036307,
+      "md5": "036bfdeaa8b3407f357674b8cd9bcb65",
+      "path": "Lego Rock Band 9.7z"
+    },
+    {
+      "id": "1zWcCFQB9dE4Y48v65_Rjx4M8JiIHKnX0",
+      "name": "Lego Rock Band 8.7z",
+      "size": 54298358,
+      "md5": "df81c5059077533c01897dc94df4ba21",
+      "path": "Lego Rock Band 8.7z"
+    },
+    {
+      "id": "1skY-d4UT8ewC4kc8g5GXmSiJZMxG1mxn",
+      "name": "Lego Rock Band 7.7z",
+      "size": 31087873,
+      "md5": "7590dc0640801a99d4050a459d154ea5",
+      "path": "Lego Rock Band 7.7z"
+    },
+    {
+      "id": "12hkRhnracLjy23mS6b2jihAB8SeTMD5f",
+      "name": "Lego Rock Band 6.7z",
+      "size": 35595235,
+      "md5": "95754665f6dd46a02152833e443dceca",
+      "path": "Lego Rock Band 6.7z"
+    },
+    {
+      "id": "1zHKEBshTJJsJ4D0d8RD2KsLjbC2vftGp",
+      "name": "Lego Rock Band 5.7z",
+      "size": 38909885,
+      "md5": "34d7d9ec5fd3f670392ee928d54305bf",
+      "path": "Lego Rock Band 5.7z"
+    },
+    {
+      "id": "1xyYYbv3W5b2c3UACYftyzMzLGQ8sNYK1",
+      "name": "Lego Rock Band 4.7z",
+      "size": 37964629,
+      "md5": "24487855f7ab96362a14b66505ce7c51",
+      "path": "Lego Rock Band 4.7z"
+    },
+    {
+      "id": "1kZFoIFkxvLLZiE0am2LeQGWva2n33HS6",
+      "name": "Lego Rock Band 3.7z",
+      "size": 43521352,
+      "md5": "803493afb343519f3692112706c47f6a",
+      "path": "Lego Rock Band 3.7z"
+    },
+    {
+      "id": "1kVuf5lhooL6AooVOdsf9TV-kgoALEoxl",
+      "name": "Lego Rock Band 2.7z",
+      "size": 22120711,
+      "md5": "ab482cbd781eaf61fc6c4ec46fcc3383",
+      "path": "Lego Rock Band 2.7z"
+    },
+    {
+      "id": "1eln9TsTb1lQ1In3m1IlvZoJG4xkhCUWY",
+      "name": "Lego Rock Band 1.7z",
+      "size": 34834911,
+      "md5": "1415be98bfabaa1130e06ea5ef9ae74d",
+      "path": "Lego Rock Band 1.7z"
+    }
+  ],
+  "download_size": 1639910804,
+  "files": [
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/album.jpg",
+      "size": 360822
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/drums_1.ogg",
+      "size": 2833058
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/drums_2.ogg",
+      "size": 5640714
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/drums_3.ogg",
+      "size": 6558344
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/guitar.ogg",
+      "size": 6719660
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/notes.mid",
+      "size": 139051
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/rhythm.ogg",
+      "size": 2448053
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/song.ini",
+      "size": 645
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/song.ogg",
+      "size": 5397626
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blink-182 - Aliens Exist/vocals.ogg",
+      "size": 5133131
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/album.jpg",
+      "size": 543944
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/crowd.ogg",
+      "size": 7973901
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 7567165
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 8153248
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 8689621
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 7924327
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/notes.mid",
+      "size": 151601
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/original.mid",
+      "size": 116334
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4412033
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/song.ini",
+      "size": 652
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/song.ogg",
+      "size": 8735678
+    },
+    {
+      "path": "(2009) Lego Rock Band/Europe - The Final Countdown (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 7743731
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/album.jpg",
+      "size": 438410
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/drums.ogg",
+      "size": 5805461
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/guitar.ogg",
+      "size": 5773207
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/notes.mid",
+      "size": 111746
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/rhythm.ogg",
+      "size": 3103696
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/song.ini",
+      "size": 641
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/song.ogg",
+      "size": 5493647
+    },
+    {
+      "path": "(2009) Lego Rock Band/Everlife - Real Wild Child/vocals.ogg",
+      "size": 5880135
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/album.jpg",
+      "size": 382945
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/drums_1.ogg",
+      "size": 2930203
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/drums_2.ogg",
+      "size": 3067908
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/drums_3.ogg",
+      "size": 6268198
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/guitar.ogg",
+      "size": 5179577
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/notes.mid",
+      "size": 127661
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/rhythm.ogg",
+      "size": 2338429
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/song.ini",
+      "size": 662
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/song.ogg",
+      "size": 5047176
+    },
+    {
+      "path": "(2009) Lego Rock Band/Foo Fighters - Breakout/vocals.ogg",
+      "size": 5220148
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/album.jpg",
+      "size": 308088
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/crowd.ogg",
+      "size": 4906555
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/drums_1.ogg",
+      "size": 2671108
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/drums_2.ogg",
+      "size": 4236495
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/drums_3.ogg",
+      "size": 5286168
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/guitar.ogg",
+      "size": 4819166
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/notes.mid",
+      "size": 107900
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/rhythm.ogg",
+      "size": 5948969
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/song.ini",
+      "size": 662
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/song.ogg",
+      "size": 4885324
+    },
+    {
+      "path": "(2009) Lego Rock Band/Good Charlotte - Girls & Boys/vocals.ogg",
+      "size": 5657431
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/album.jpg",
+      "size": 323439
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/drums_1.ogg",
+      "size": 8647595
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/drums_2.ogg",
+      "size": 6847083
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/drums_3.ogg",
+      "size": 8795043
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/guitar.ogg",
+      "size": 7010723
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/notes.mid",
+      "size": 160954
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/rhythm.ogg",
+      "size": 3996544
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/song.ini",
+      "size": 640
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/song.ogg",
+      "size": 7485308
+    },
+    {
+      "path": "(2009) Lego Rock Band/Iggy Pop - The Passenger/vocals.ogg",
+      "size": 7035635
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/album.jpg",
+      "size": 643595
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/drums_1.ogg",
+      "size": 6153075
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/drums_2.ogg",
+      "size": 6618671
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/drums_3.ogg",
+      "size": 8126134
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/guitar.ogg",
+      "size": 7399483
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/notes.mid",
+      "size": 91534
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/rhythm.ogg",
+      "size": 2727246
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/song.ini",
+      "size": 637
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/song.ogg",
+      "size": 8899966
+    },
+    {
+      "path": "(2009) Lego Rock Band/Incubus - Dig/vocals.ogg",
+      "size": 6235184
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/album.jpg",
+      "size": 142522
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/crowd.ogg",
+      "size": 5543342
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/drums_1.ogg",
+      "size": 2772230
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/drums_2.ogg",
+      "size": 5618889
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/drums_3.ogg",
+      "size": 7035540
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/guitar.ogg",
+      "size": 5649973
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/notes.mid",
+      "size": 101957
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/rhythm.ogg",
+      "size": 2346452
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/song.ini",
+      "size": 651
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/song.ogg",
+      "size": 5734966
+    },
+    {
+      "path": "(2009) Lego Rock Band/Kaiser Chiefs - Ruby/vocals.ogg",
+      "size": 5785298
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/album.jpg",
+      "size": 150318
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/album_alt.jpg",
+      "size": 189956
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/crowd.ogg",
+      "size": 6088481
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/drums_1.ogg",
+      "size": 6353872
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/drums_2.ogg",
+      "size": 7206342
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/drums_3.ogg",
+      "size": 7444314
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/guitar.ogg",
+      "size": 6525623
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/notes.mid",
+      "size": 150587
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/rhythm.ogg",
+      "size": 3389199
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/song.ini",
+      "size": 669
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/song.ogg",
+      "size": 6764455
+    },
+    {
+      "path": "(2009) Lego Rock Band/Katrina and the Waves - Walking on Sunshine/vocals.ogg",
+      "size": 6489663
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/album.jpg",
+      "size": 389629
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 2219389
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 3896865
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 5091859
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 4371340
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/notes.mid",
+      "size": 80671
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/original.mid",
+      "size": 62422
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 3218976
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/song.ini",
+      "size": 643
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/song.ogg",
+      "size": 4826629
+    },
+    {
+      "path": "(2009) Lego Rock Band/KoRn - Word Up (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 4768360
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/album.jpg",
+      "size": 326771
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/drums.ogg",
+      "size": 6251691
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/guitar.ogg",
+      "size": 5989205
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/notes.mid",
+      "size": 106134
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/rhythm.ogg",
+      "size": 3368528
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/song.ini",
+      "size": 651
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/song.ogg",
+      "size": 5621375
+    },
+    {
+      "path": "(2009) Lego Rock Band/KT Tunstall - Suddenly I See/vocals.ogg",
+      "size": 4906522
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/album.jpg",
+      "size": 393813
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/crowd.ogg",
+      "size": 3623137
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/drums_1.ogg",
+      "size": 3194882
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/drums_2.ogg",
+      "size": 3183902
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/drums_3.ogg",
+      "size": 3506095
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/guitar.ogg",
+      "size": 3252911
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/notes.mid",
+      "size": 72824
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/rhythm.ogg",
+      "size": 2179768
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/song.ini",
+      "size": 627
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/song.ogg",
+      "size": 115358
+    },
+    {
+      "path": "(2009) Lego Rock Band/Blur - Song 2/vocals.ogg",
+      "size": 2923538
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/album.jpg",
+      "size": 397767
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/drums_1.ogg",
+      "size": 3229506
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/drums_2.ogg",
+      "size": 6264610
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/drums_3.ogg",
+      "size": 7191958
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/guitar.ogg",
+      "size": 6956244
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/notes.mid",
+      "size": 144321
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/rhythm.ogg",
+      "size": 2938968
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/song.ini",
+      "size": 674
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/song.ogg",
+      "size": 6626416
+    },
+    {
+      "path": "(2009) Lego Rock Band/Lostprophets - Rooftops (A Liberation Broadcast)/vocals.ogg",
+      "size": 6430223
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/album.jpg",
+      "size": 422816
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/crowd.ogg",
+      "size": 5527249
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/drums_1.ogg",
+      "size": 5190356
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/drums_2.ogg",
+      "size": 7271499
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/drums_3.ogg",
+      "size": 6398647
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/guitar.ogg",
+      "size": 5958831
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/notes.mid",
+      "size": 89075
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/rhythm.ogg",
+      "size": 2608385
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/song.ini",
+      "size": 629
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/song.ogg",
+      "size": 6679008
+    },
+    {
+      "path": "(2009) Lego Rock Band/P!nk - So What/vocals.ogg",
+      "size": 5867917
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/album.jpg",
+      "size": 567784
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/crowd.ogg",
+      "size": 4908632
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/drums_1.ogg",
+      "size": 2181463
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/drums_2.ogg",
+      "size": 4504956
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/drums_3.ogg",
+      "size": 5268895
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/guitar.ogg",
+      "size": 4549876
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/notes.mid",
+      "size": 55985
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/rhythm.ogg",
+      "size": 2194095
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/song.ini",
+      "size": 656
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/song.ogg",
+      "size": 5028831
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Are the Champions/vocals.ogg",
+      "size": 4679265
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/album.jpg",
+      "size": 567784
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/crowd.ogg",
+      "size": 3297232
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/drums.ogg",
+      "size": 3303877
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/guitar.ogg",
+      "size": 3427778
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/notes.mid",
+      "size": 49971
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/rhythm.ogg",
+      "size": 3921717
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/song.ini",
+      "size": 652
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/song.ogg",
+      "size": 210025
+    },
+    {
+      "path": "(2009) Lego Rock Band/Queen - We Will Rock You/vocals.ogg",
+      "size": 2226247
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/album.jpg",
+      "size": 489444
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/drums_1.ogg",
+      "size": 3397069
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/drums_2.ogg",
+      "size": 3749384
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/drums_3.ogg",
+      "size": 7859964
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/guitar.ogg",
+      "size": 7445322
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/notes.mid",
+      "size": 144104
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/rhythm.ogg",
+      "size": 2948575
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/song.ini",
+      "size": 653
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/song.ogg",
+      "size": 7938895
+    },
+    {
+      "path": "(2009) Lego Rock Band/Rascal Flatts - Life Is a Highway/vocals.ogg",
+      "size": 6604908
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/album.jpg",
+      "size": 110077
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/crowd.ogg",
+      "size": 6230352
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/drums_1.ogg",
+      "size": 6574598
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/drums_2.ogg",
+      "size": 6028962
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/drums_3.ogg",
+      "size": 7810980
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/guitar.ogg",
+      "size": 7011079
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/notes.mid",
+      "size": 99105
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/rhythm.ogg",
+      "size": 3718882
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/song.ini",
+      "size": 669
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/song.ogg",
+      "size": 7622735
+    },
+    {
+      "path": "(2009) Lego Rock Band/Ray Parker Jr. - Ghostbusters/vocals.ogg",
+      "size": 6837921
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/album.jpg",
+      "size": 352300
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/drums_1.ogg",
+      "size": 2633811
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/drums_2.ogg",
+      "size": 5498878
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/drums_3.ogg",
+      "size": 6045321
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/guitar.ogg",
+      "size": 4594433
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/notes.mid",
+      "size": 129509
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/rhythm.ogg",
+      "size": 2122369
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/song.ini",
+      "size": 644
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/song.ogg",
+      "size": 4886970
+    },
+    {
+      "path": "(2009) Lego Rock Band/Razorlight - Stumble and Fall/vocals.ogg",
+      "size": 4426329
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/album.jpg",
+      "size": 370113
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/drums_1.ogg",
+      "size": 7147920
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/drums_2.ogg",
+      "size": 8021627
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/drums_3.ogg",
+      "size": 8736821
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/guitar.ogg",
+      "size": 7856913
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/notes.mid",
+      "size": 153739
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/rhythm.ogg",
+      "size": 3530343
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/song.ini",
+      "size": 661
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/song.ogg",
+      "size": 7504380
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spin Doctors - Two Princes/vocals.ogg",
+      "size": 7390902
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/album.jpg",
+      "size": 553261
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/drums_1.ogg",
+      "size": 5624000
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/drums_2.ogg",
+      "size": 6124601
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/drums_3.ogg",
+      "size": 12848134
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/guitar.ogg",
+      "size": 10155667
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/notes.mid",
+      "size": 212806
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/rhythm.ogg",
+      "size": 4488706
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/song.ogg",
+      "size": 11635199
+    },
+    {
+      "path": "(2009) Lego Rock Band/Spinal Tap - Short & Sweet/vocals.ogg",
+      "size": 10107608
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/album.jpg",
+      "size": 213712
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/drums_1.ogg",
+      "size": 3544241
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/drums_2.ogg",
+      "size": 3814479
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/drums_3.ogg",
+      "size": 7660249
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/guitar.ogg",
+      "size": 8738381
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/notes.mid",
+      "size": 146404
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/rhythm.ogg",
+      "size": 2838783
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/song.ini",
+      "size": 695
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/song.ogg",
+      "size": 7674509
+    },
+    {
+      "path": "(2009) Lego Rock Band/Steve Harley - Make Me Smile (Come Up and See Me)/vocals.ogg",
+      "size": 7896847
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/album.jpg",
+      "size": 749710
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/crowd.ogg",
+      "size": 5955182
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/drums_1.ogg",
+      "size": 5070181
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/drums_2.ogg",
+      "size": 5116846
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/drums_3.ogg",
+      "size": 6379059
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/guitar.ogg",
+      "size": 5841430
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/notes.mid",
+      "size": 99242
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/rhythm.ogg",
+      "size": 2787520
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/song.ogg",
+      "size": 6206303
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bon Jovi - You Give Love a Bad Name/vocals.ogg",
+      "size": 5807283
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/album.jpg",
+      "size": 264420
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/drums_1.ogg",
+      "size": 2632348
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/drums_2.ogg",
+      "size": 5646529
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/drums_3.ogg",
+      "size": 7125855
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/guitar.ogg",
+      "size": 6018118
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/notes.mid",
+      "size": 121525
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/rhythm.ogg",
+      "size": 3141040
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/song.ini",
+      "size": 644
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/song.ogg",
+      "size": 5498876
+    },
+    {
+      "path": "(2009) Lego Rock Band/Sum 41 - In Too Deep/vocals.ogg",
+      "size": 5371904
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/album.jpg",
+      "size": 178941
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/drums_1.ogg",
+      "size": 1941496
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/drums_2.ogg",
+      "size": 1767588
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/drums_3.ogg",
+      "size": 4484341
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/guitar.ogg",
+      "size": 3853059
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/notes.mid",
+      "size": 88074
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/rhythm.ogg",
+      "size": 2361807
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/song.ini",
+      "size": 649
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/song.ogg",
+      "size": 4923134
+    },
+    {
+      "path": "(2009) Lego Rock Band/Supergrass - Grace/vocals.ogg",
+      "size": 3764009
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/album.jpg",
+      "size": 88667
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/drums.ogg",
+      "size": 3936783
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/guitar.ogg",
+      "size": 3947994
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/notes.mid",
+      "size": 65416
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/rhythm.ogg",
+      "size": 1987050
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/song.ini",
+      "size": 641
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/song.ogg",
+      "size": 3056221
+    },
+    {
+      "path": "(2009) Lego Rock Band/T. Rex - Ride a White Swan/vocals.ogg",
+      "size": 2397338
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/album.jpg",
+      "size": 404740
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/drums_1.ogg",
+      "size": 3329852
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/drums_2.ogg",
+      "size": 6262263
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/drums_3.ogg",
+      "size": 7599431
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/guitar.ogg",
+      "size": 6351992
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/notes.mid",
+      "size": 98338
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/rhythm.ogg",
+      "size": 2989557
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/song.ini",
+      "size": 665
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/song.ogg",
+      "size": 6032589
+    },
+    {
+      "path": "(2009) Lego Rock Band/The All-American Rejects - Swing, Swing/vocals.ogg",
+      "size": 6092324
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/album.jpg",
+      "size": 312551
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/drums_1.ogg",
+      "size": 2942164
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/drums_2.ogg",
+      "size": 5884680
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/drums_3.ogg",
+      "size": 7773927
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/guitar.ogg",
+      "size": 6384603
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/notes.mid",
+      "size": 130239
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/rhythm.ogg",
+      "size": 3179549
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/song.ini",
+      "size": 654
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/song.ogg",
+      "size": 6826279
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Automatic - Monster/vocals.ogg",
+      "size": 5982162
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/album.jpg",
+      "size": 587024
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/drums_1.ogg",
+      "size": 1974940
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/drums_2.ogg",
+      "size": 3359408
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/drums_3.ogg",
+      "size": 4145658
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/guitar.ogg",
+      "size": 3556231
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/notes.mid",
+      "size": 71275
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/rhythm.ogg",
+      "size": 2019937
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/song.ini",
+      "size": 646
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/song.ogg",
+      "size": 4421485
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Coral - Dreaming of You/vocals.ogg",
+      "size": 3592534
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/album.jpg",
+      "size": 283008
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/drums_1.ogg",
+      "size": 4323925
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/drums_2.ogg",
+      "size": 4844756
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/drums_3.ogg",
+      "size": 4867371
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/guitar.ogg",
+      "size": 5851709
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/notes.mid",
+      "size": 121309
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/rhythm.ogg",
+      "size": 3545559
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/song.ini",
+      "size": 654
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/song.ogg",
+      "size": 5284336
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Hives - Tick Tick Boom/vocals.ogg",
+      "size": 4116544
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/album.jpg",
+      "size": 410589
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/drums.ogg",
+      "size": 5663359
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/guitar.ogg",
+      "size": 6861622
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/notes.mid",
+      "size": 87666
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/rhythm.ogg",
+      "size": 4296626
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/song.ini",
+      "size": 671
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/song.ogg",
+      "size": 7182288
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jackson 5 - I Want You Back/vocals.ogg",
+      "size": 4727841
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/album.jpg",
+      "size": 347341
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/drums.ogg",
+      "size": 3855568
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/guitar.ogg",
+      "size": 3865825
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/notes.mid",
+      "size": 94299
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/rhythm.ogg",
+      "size": 1832712
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/song.ini",
+      "size": 664
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/song.ogg",
+      "size": 3901562
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Jimi Hendrix Experience - Fire/vocals.ogg",
+      "size": 3783702
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/album.jpg",
+      "size": 422726
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/drums_1.ogg",
+      "size": 2812987
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/drums_2.ogg",
+      "size": 5268947
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/drums_3.ogg",
+      "size": 6042151
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/guitar.ogg",
+      "size": 5780809
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/notes.mid",
+      "size": 101754
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/rhythm.ogg",
+      "size": 2592749
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/song.ini",
+      "size": 646
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/song.ogg",
+      "size": 5627995
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Kooks - Na\u00efve/vocals.ogg",
+      "size": 5371642
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/album.jpg",
+      "size": 123350
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/drums_1.ogg",
+      "size": 3109451
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/drums_2.ogg",
+      "size": 5756075
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/drums_3.ogg",
+      "size": 7116302
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/guitar.ogg",
+      "size": 6308164
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/notes.mid",
+      "size": 83090
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/rhythm.ogg",
+      "size": 2753425
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/song.ogg",
+      "size": 6953160
+    },
+    {
+      "path": "(2009) Lego Rock Band/Boys Like Girls - Thunder/vocals.ogg",
+      "size": 6352166
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/album.jpg",
+      "size": 76448
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/drums_1.ogg",
+      "size": 3840009
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/drums_2.ogg",
+      "size": 7014376
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/drums_3.ogg",
+      "size": 8379250
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/guitar.ogg",
+      "size": 6818676
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/notes.mid",
+      "size": 148953
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/rhythm.ogg",
+      "size": 3512569
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/song.ini",
+      "size": 676
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/song.ogg",
+      "size": 8346048
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Police - Every Little Thing She Does Is Magic/vocals.ogg",
+      "size": 7521145
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/album.jpg",
+      "size": 271640
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/drums_1.ogg",
+      "size": 3484957
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/drums_2.ogg",
+      "size": 4218528
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/drums_3.ogg",
+      "size": 5277998
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/guitar.ogg",
+      "size": 4719949
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/notes.mid",
+      "size": 106040
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/rhythm.ogg",
+      "size": 1947163
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/song.ini",
+      "size": 636
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/song.ogg",
+      "size": 4782027
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Primitives - Crash/vocals.ogg",
+      "size": 4120065
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/album.jpg",
+      "size": 398247
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/drums_1.ogg",
+      "size": 5962446
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/drums_2.ogg",
+      "size": 6359780
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/drums_3.ogg",
+      "size": 7586263
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/guitar.ogg",
+      "size": 6738801
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/notes.mid",
+      "size": 109455
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/rhythm.ogg",
+      "size": 2186079
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/song.ogg",
+      "size": 6600670
+    },
+    {
+      "path": "(2009) Lego Rock Band/The Zutons - Valerie/vocals.ogg",
+      "size": 6097291
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/album.jpg",
+      "size": 213663
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/drums_1.ogg",
+      "size": 3420797
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/drums_2.ogg",
+      "size": 6283560
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/drums_3.ogg",
+      "size": 6422425
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/guitar.ogg",
+      "size": 8939644
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/notes.mid",
+      "size": 100254
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/rhythm.ogg",
+      "size": 3371067
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/song.ogg",
+      "size": 7481077
+    },
+    {
+      "path": "(2009) Lego Rock Band/Tom Petty - Free Fallin'/vocals.ogg",
+      "size": 6736606
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/album.jpg",
+      "size": 290292
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/drums_1.ogg",
+      "size": 1917048
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/drums_2.ogg",
+      "size": 2046971
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/drums_3.ogg",
+      "size": 4507880
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/guitar.ogg",
+      "size": 3570210
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/notes.mid",
+      "size": 97654
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/rhythm.ogg",
+      "size": 1366745
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/song.ogg",
+      "size": 3751586
+    },
+    {
+      "path": "(2009) Lego Rock Band/Vampire Weekend - A-Punk/vocals.ogg",
+      "size": 3594657
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/album.jpg",
+      "size": 350607
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/drums_1.ogg",
+      "size": 2930615
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/drums_2.ogg",
+      "size": 5564312
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/drums_3.ogg",
+      "size": 6923401
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/guitar.ogg",
+      "size": 5668993
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/notes.mid",
+      "size": 145966
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/rhythm.ogg",
+      "size": 2840625
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/song.ini",
+      "size": 645
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/song.ogg",
+      "size": 6505842
+    },
+    {
+      "path": "(2009) Lego Rock Band/We the Kings - Check Yes Juliet/vocals.ogg",
+      "size": 5445353
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/album.jpg",
+      "size": 345911
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/drums_1.ogg",
+      "size": 2989225
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/drums_2.ogg",
+      "size": 5906952
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/drums_3.ogg",
+      "size": 7319569
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/guitar.ogg",
+      "size": 6874097
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/notes.mid",
+      "size": 119803
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/rhythm.ogg",
+      "size": 3053862
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/song.ini",
+      "size": 638
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/song.ogg",
+      "size": 6510394
+    },
+    {
+      "path": "(2009) Lego Rock Band/Bryan Adams - Summer of '69/vocals.ogg",
+      "size": 6103024
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/album.jpg",
+      "size": 351757
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/album_alt.jpg",
+      "size": 351349
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/drums_1.ogg",
+      "size": 2629703
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/drums_2.ogg",
+      "size": 5141677
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/drums_3.ogg",
+      "size": 5745700
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/guitar.ogg",
+      "size": 6150140
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/notes.mid",
+      "size": 112914
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/rhythm.ogg",
+      "size": 4103519
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/song.ogg",
+      "size": 5978391
+    },
+    {
+      "path": "(2009) Lego Rock Band/Carl Douglas - Kung Fu Fighting/vocals.ogg",
+      "size": 5322169
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/album.jpg",
+      "size": 452076
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/drums_1.ogg",
+      "size": 2674259
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/drums_2.ogg",
+      "size": 2796412
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/drums_3.ogg",
+      "size": 6096571
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/guitar.ogg",
+      "size": 5718070
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/notes.mid",
+      "size": 113349
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/rhythm.ogg",
+      "size": 2358043
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/song.ini",
+      "size": 674
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/song.ogg",
+      "size": 6020151
+    },
+    {
+      "path": "(2009) Lego Rock Band/Counting Crows - Accidentally in Love/vocals.ogg",
+      "size": 5128804
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/album.jpg",
+      "size": 403151
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/drums_1.ogg",
+      "size": 7789037
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/drums_2.ogg",
+      "size": 8333816
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/drums_3.ogg",
+      "size": 8629395
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/guitar.ogg",
+      "size": 8307979
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/notes.mid",
+      "size": 103665
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/rhythm.ogg",
+      "size": 3629512
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/song.ini",
+      "size": 639
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/song.ogg",
+      "size": 9250826
+    },
+    {
+      "path": "(2009) Lego Rock Band/David Bowie - Let's Dance/vocals.ogg",
+      "size": 8083180
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/album.jpg",
+      "size": 397288
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/drums.ogg",
+      "size": 7724003
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/guitar.ogg",
+      "size": 6151438
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/notes.mid",
+      "size": 137600
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/rhythm.ogg",
+      "size": 2797004
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/song.ini",
+      "size": 678
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/song.ogg",
+      "size": 7722241
+    },
+    {
+      "path": "(2009) Lego Rock Band/Elton John - Crocodile Rock/vocals.ogg",
+      "size": 6408984
+    }
+  ],
+  "extracted_size": 1658488999,
+  "file_count": 450,
+  "chart_count": 45,
+  "release_date": "2009-11-03"
+}

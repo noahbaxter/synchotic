@@ -1,0 +1,4052 @@
+{
+  "name": "(2010) Rock Band 3",
+  "folder_id": "static-2010-rock-band-3",
+  "group": "Games",
+  "collection": "Rock Band",
+  "downloads": [
+    {
+      "id": "1ZnfipQTtGHl_MdMP5qkdX1ksQvWlArCA",
+      "name": "Rock Band 3 42.zip",
+      "size": 61370088,
+      "md5": "104272a348aa0f8ddf7f618b69b8f85e",
+      "path": "Rock Band 3 42.zip"
+    },
+    {
+      "id": "1lO6qgqGwx171OgMtws4dHZckMrMTQXkm",
+      "name": "Rock Band 3 7.zip",
+      "size": 30924439,
+      "md5": "452bfbe9c7d3b677c4ff1a81e00c7e76",
+      "path": "Rock Band 3 7.zip"
+    },
+    {
+      "id": "1loiJk0c_xT7RULZBO0H85XnRHeZYiFKT",
+      "name": "Rock Band 3 83.7z",
+      "size": 74252118,
+      "md5": "5c281c978d158e469eda6d8443a4e974",
+      "path": "Rock Band 3 83.7z"
+    },
+    {
+      "id": "1sgynX3RGSgZtP75usPmkbdReC4EDgMhe",
+      "name": "Rock Band 3 82.7z",
+      "size": 44735281,
+      "md5": "56094a0f7c10f98875f8aabfb1fbd790",
+      "path": "Rock Band 3 82.7z"
+    },
+    {
+      "id": "1UDPxjlRuLZoQzc7zFeKhhPj0I_IwMg4i",
+      "name": "Rock Band 3 81.7z",
+      "size": 36971879,
+      "md5": "2fdaacca628996c627f061950ecb905c",
+      "path": "Rock Band 3 81.7z"
+    },
+    {
+      "id": "1LI5x8T1I-7TwkHOdixGH96-IWeglAC6u",
+      "name": "Rock Band 3 80.7z",
+      "size": 35835855,
+      "md5": "9e0475443701ab4017ab32e7cad1879e",
+      "path": "Rock Band 3 80.7z"
+    },
+    {
+      "id": "1BdCWIjfCYTXf51cQPGyTKIUjTo1O3BXj",
+      "name": "Rock Band 3 79.7z",
+      "size": 22045766,
+      "md5": "804db63cdfe198863432152aee6ecf4e",
+      "path": "Rock Band 3 79.7z"
+    },
+    {
+      "id": "1hPh_WJCroUpff1NcDvKkbcPBvltccc4n",
+      "name": "Rock Band 3 78.7z",
+      "size": 35579463,
+      "md5": "77857bc701622f3eff2871cb2fd9bc4f",
+      "path": "Rock Band 3 78.7z"
+    },
+    {
+      "id": "11o3fNWJ4x3HjfaP5v4oZ0XQdrXjJ_xdV",
+      "name": "Rock Band 3 77.7z",
+      "size": 34688145,
+      "md5": "e3ccc363345a0860a3ce5229745178f1",
+      "path": "Rock Band 3 77.7z"
+    },
+    {
+      "id": "10rQnXZ-Bw3vP-1S4aeCti_4faerLmP8o",
+      "name": "Rock Band 3 76.7z",
+      "size": 25113044,
+      "md5": "9d748fd525617938d1b850ad43db92a6",
+      "path": "Rock Band 3 76.7z"
+    },
+    {
+      "id": "10YtKXoggchpjZmslUQQsea-B_dTKl-ZM",
+      "name": "Rock Band 3 75.7z",
+      "size": 26752423,
+      "md5": "12055175c9fa47196d05cfbfaf207f41",
+      "path": "Rock Band 3 75.7z"
+    },
+    {
+      "id": "1yC1RcRJ40QoCfzEc22OhYdtH0piqThsj",
+      "name": "Rock Band 3 74.7z",
+      "size": 20624367,
+      "md5": "6e6ab2d2846753b8ee258f2f6a16fc7d",
+      "path": "Rock Band 3 74.7z"
+    },
+    {
+      "id": "1I6B8WnFKcZ0Z9OpqOX1WouWbTHo6p9iZ",
+      "name": "Rock Band 3 73.7z",
+      "size": 45122162,
+      "md5": "385b4b63eb130319af4feeb9e22d5663",
+      "path": "Rock Band 3 73.7z"
+    },
+    {
+      "id": "1r6SxhLjyZ72m1a-NyNV-eyqhbrNe8fvh",
+      "name": "Rock Band 3 72.7z",
+      "size": 40812902,
+      "md5": "adb6bc4c40bb5303ffcfaec1e80a6cc5",
+      "path": "Rock Band 3 72.7z"
+    },
+    {
+      "id": "1l7QsfOiSRHbClRkqHFDSpq98lPixUd0w",
+      "name": "Rock Band 3 71.7z",
+      "size": 31099305,
+      "md5": "da1a2652814a4fb7d85156164a98d5ad",
+      "path": "Rock Band 3 71.7z"
+    },
+    {
+      "id": "1BXT-Z-TrvVrNA_DS_9TG2OMzzqk2iQni",
+      "name": "Rock Band 3 70.7z",
+      "size": 38634501,
+      "md5": "560454d8f7ff5116357c2b0ae2631c8b",
+      "path": "Rock Band 3 70.7z"
+    },
+    {
+      "id": "1vD9mHfYYHcwOYWkPpDGtyqWiiEX1V8D2",
+      "name": "Rock Band 3 69.7z",
+      "size": 25623357,
+      "md5": "a3d600d201dabb13d2f382ea59974338",
+      "path": "Rock Band 3 69.7z"
+    },
+    {
+      "id": "1CJ4mnDOO1oo6R88NAWothQs_DrkhXqqo",
+      "name": "Rock Band 3 68.7z",
+      "size": 19350366,
+      "md5": "a1e8e8040e07feec0a99f5087333d5a6",
+      "path": "Rock Band 3 68.7z"
+    },
+    {
+      "id": "1IGDu148_K03X2rwWM9yK0lFwp6knTWfj",
+      "name": "Rock Band 3 67.7z",
+      "size": 40954984,
+      "md5": "c93e2aa2da4a225336ac4dd78e94cb55",
+      "path": "Rock Band 3 67.7z"
+    },
+    {
+      "id": "1uKvhU82NJMjQifwgLqd0SM0c5dcpBqL9",
+      "name": "Rock Band 3 66.7z",
+      "size": 48123116,
+      "md5": "edf105d6979c82241b33340eb3e1981d",
+      "path": "Rock Band 3 66.7z"
+    },
+    {
+      "id": "1_ljfDcq1Y1u5jR5UYN3KL-Ig2SFajhIN",
+      "name": "Rock Band 3 65.7z",
+      "size": 17973787,
+      "md5": "0b79f95db42825f6c09c9a0a2e19f989",
+      "path": "Rock Band 3 65.7z"
+    },
+    {
+      "id": "1lJwlVQw85gjvoTSuEySHyETdPNuJk3c5",
+      "name": "Rock Band 3 64.7z",
+      "size": 38888101,
+      "md5": "392537cae97bf213afc22471b860ce63",
+      "path": "Rock Band 3 64.7z"
+    },
+    {
+      "id": "1bZKiIbr9pTiyvthW39tmy1lecYUw6egR",
+      "name": "Rock Band 3 63.7z",
+      "size": 39452646,
+      "md5": "002a9dc7ff9ab0239135730f42fc1512",
+      "path": "Rock Band 3 63.7z"
+    },
+    {
+      "id": "1m0T1akF8EXmhNQhWcsYHvXlmJ3GkINNu",
+      "name": "Rock Band 3 62.7z",
+      "size": 17997667,
+      "md5": "cd95020c9266968a3933f38631dbda95",
+      "path": "Rock Band 3 62.7z"
+    },
+    {
+      "id": "15tEcShIW4vzRYyGjP8o1Z4iGSZ3S7gYI",
+      "name": "Rock Band 3 61.7z",
+      "size": 33107336,
+      "md5": "f526a7daf5429ee23fe62f994151a8e3",
+      "path": "Rock Band 3 61.7z"
+    },
+    {
+      "id": "1L_SZRYtApmXqQp1FFLWH1A1GF7g2GgIG",
+      "name": "Rock Band 3 60.7z",
+      "size": 52542437,
+      "md5": "d4195000f22478bd7a71c152c0af9281",
+      "path": "Rock Band 3 60.7z"
+    },
+    {
+      "id": "1BpwVcOr0PSHnBOLwa3_uBnaiWNnCsK-e",
+      "name": "Rock Band 3 59.7z",
+      "size": 35971924,
+      "md5": "4cc00e901e2fc0acf27d750840436ba4",
+      "path": "Rock Band 3 59.7z"
+    },
+    {
+      "id": "1BiSqiDGNOR4KKU7QeXA_kjye-go2h7ST",
+      "name": "Rock Band 3 58.7z",
+      "size": 48340040,
+      "md5": "adaf8def4c291ba103fce3f3c012588d",
+      "path": "Rock Band 3 58.7z"
+    },
+    {
+      "id": "1YaOfvcoFSc82ke9spVXZlcTRe1enDtmN",
+      "name": "Rock Band 3 57.7z",
+      "size": 45162145,
+      "md5": "06dd4d7ed95fe9cfa79074eed5e6e10b",
+      "path": "Rock Band 3 57.7z"
+    },
+    {
+      "id": "12ATdZwMH-PMzgR6eZl5beNsPZ-UKTpwU",
+      "name": "Rock Band 3 56.7z",
+      "size": 33454191,
+      "md5": "136fd66ac0ca22994643ab2d139beac3",
+      "path": "Rock Band 3 56.7z"
+    },
+    {
+      "id": "1KQmNXTKFelhh5IqeEkrLtWIRcGDep3tR",
+      "name": "Rock Band 3 55.7z",
+      "size": 52436661,
+      "md5": "a03db1dc0b81eae3a10955de1f7fc195",
+      "path": "Rock Band 3 55.7z"
+    },
+    {
+      "id": "162H2azjzUaEwNPigpTL1OUUsiA__vFHA",
+      "name": "Rock Band 3 54.7z",
+      "size": 46220728,
+      "md5": "b6ca1f174337487f8eb6da6fc96534e1",
+      "path": "Rock Band 3 54.7z"
+    },
+    {
+      "id": "1MnpGqHUbn-MqhrHr4wQM38OV3BN9Ctnk",
+      "name": "Rock Band 3 53.7z",
+      "size": 55791023,
+      "md5": "512a95c2ae3a454e0e41c0fb35afb07f",
+      "path": "Rock Band 3 53.7z"
+    },
+    {
+      "id": "1ySsZ4OsUf40MstJXj_M5ls0-dGwH0mUI",
+      "name": "Rock Band 3 52.7z",
+      "size": 35236597,
+      "md5": "ec5e4ec40a5bb59a2caea03a07bba4da",
+      "path": "Rock Band 3 52.7z"
+    },
+    {
+      "id": "1SPqH_spAVPUVgnJOU_3wU7iZdJsuJfE5",
+      "name": "Rock Band 3 51.7z",
+      "size": 48086014,
+      "md5": "f210f7a89e8e56bb42010b4b6b3f305b",
+      "path": "Rock Band 3 51.7z"
+    },
+    {
+      "id": "1m6_-0l-sEhnrW9-b8oooMro4MsaUpk2U",
+      "name": "Rock Band 3 50.7z",
+      "size": 43606176,
+      "md5": "6fc5027967665d65f1042d8121d1f4fb",
+      "path": "Rock Band 3 50.7z"
+    },
+    {
+      "id": "1i3jop1t0Kk9vWnjbJRMTpI6bEfQVW0OX",
+      "name": "Rock Band 3 49.7z",
+      "size": 25697998,
+      "md5": "c2f5531162e34d226905c687c5dc194c",
+      "path": "Rock Band 3 49.7z"
+    },
+    {
+      "id": "1FhtutXAsqETuv__JF2lQc1TDrTjDIgm8",
+      "name": "Rock Band 3 48.7z",
+      "size": 55873659,
+      "md5": "f2bfc4332fa50b5668d1e0af8a7f1ac9",
+      "path": "Rock Band 3 48.7z"
+    },
+    {
+      "id": "1rfLM2o8zFPOC_GfJjdHfYPFPM2lYVPBm",
+      "name": "Rock Band 3 47.7z",
+      "size": 27054104,
+      "md5": "ec9d10127f7e809b8406af4ae95e3abc",
+      "path": "Rock Band 3 47.7z"
+    },
+    {
+      "id": "1A0Y0LrleRxCiUmky7DYbRX0ZbLChJJg2",
+      "name": "Rock Band 3 46.7z",
+      "size": 51121573,
+      "md5": "85f5db8fc80e35bd39a698eb4eb78f35",
+      "path": "Rock Band 3 46.7z"
+    },
+    {
+      "id": "1AyemEMgUefCkrLE7OLDIpwHjzbhT3I4D",
+      "name": "Rock Band 3 45.7z",
+      "size": 41482868,
+      "md5": "114bd4bda602bf2a84c28955ed45f632",
+      "path": "Rock Band 3 45.7z"
+    },
+    {
+      "id": "1xG-DwRFN2j1FLK77c6PrsjQEa2NUFdDL",
+      "name": "Rock Band 3 44.7z",
+      "size": 61506031,
+      "md5": "f18dd1edfbbd067e75ca3c9390ba129b",
+      "path": "Rock Band 3 44.7z"
+    },
+    {
+      "id": "12f5SAfAJDqpe7BrkYmVIB4lBe0HYL90P",
+      "name": "Rock Band 3 43.7z",
+      "size": 26505260,
+      "md5": "3c1d012ce2a252fd1b29869fb3d45682",
+      "path": "Rock Band 3 43.7z"
+    },
+    {
+      "id": "1sszhfiItYAecry3ktQraMFEEl_NiStTh",
+      "name": "Rock Band 3 41.7z",
+      "size": 44391575,
+      "md5": "d61a1a453f574a9e3aca39b43e89fb86",
+      "path": "Rock Band 3 41.7z"
+    },
+    {
+      "id": "1O6jI9EqbbF2mL0nPYKXBHP-OMas9850s",
+      "name": "Rock Band 3 40.7z",
+      "size": 26711510,
+      "md5": "866f43e9ea5eeea6728b2bc524c47e3c",
+      "path": "Rock Band 3 40.7z"
+    },
+    {
+      "id": "1jwgqYhfyml1rd5WZNGfHAg7n1F35hCS6",
+      "name": "Rock Band 3 39.7z",
+      "size": 44370463,
+      "md5": "055861c70c195886b2de51f279ce36df",
+      "path": "Rock Band 3 39.7z"
+    },
+    {
+      "id": "1AJzPn4N2rZkPgnOvHQVBpjdHa-u_H0fl",
+      "name": "Rock Band 3 38.7z",
+      "size": 33656755,
+      "md5": "147978dd55dfabc8b852ce1285b3dec3",
+      "path": "Rock Band 3 38.7z"
+    },
+    {
+      "id": "18xtIDeTwA-MlCyLDh8jtzKMNvhJOMQQ4",
+      "name": "Rock Band 3 37.7z",
+      "size": 38751644,
+      "md5": "41ba5af6c49796760ec6e2cc6e914746",
+      "path": "Rock Band 3 37.7z"
+    },
+    {
+      "id": "1p33pSCfk0W7GXvuhcAu3q_-sfeYn3SRq",
+      "name": "Rock Band 3 36.7z",
+      "size": 50107227,
+      "md5": "5201d0a80945e958e5d2484e7b58679e",
+      "path": "Rock Band 3 36.7z"
+    },
+    {
+      "id": "19ZQi9rPmViS4jCWeTfIwuEJy2I4ckU0T",
+      "name": "Rock Band 3 35.7z",
+      "size": 39294132,
+      "md5": "0aa92e1e018e19662c2e43f05ad1ddb6",
+      "path": "Rock Band 3 35.7z"
+    },
+    {
+      "id": "1_yBmVntc0gLx6VyED2QPFEVXlI2sjJl6",
+      "name": "Rock Band 3 34.7z",
+      "size": 43226110,
+      "md5": "6222ecc83bbe27fc4a102317674a6595",
+      "path": "Rock Band 3 34.7z"
+    },
+    {
+      "id": "1sEcJ6awBRuNKXjxcvVxVBi82ld2fQv07",
+      "name": "Rock Band 3 33.7z",
+      "size": 55528306,
+      "md5": "d96891e3eec6b69c595be35345728191",
+      "path": "Rock Band 3 33.7z"
+    },
+    {
+      "id": "1xdezlSLEBKtiApFWpovgS7RtrA_8WGOA",
+      "name": "Rock Band 3 32.7z",
+      "size": 81895271,
+      "md5": "385fcb23360bc5877e6bfcfcc85fcc7f",
+      "path": "Rock Band 3 32.7z"
+    },
+    {
+      "id": "1pY10PcTkYzi3PxFx0BZ7juctWseoGsH9",
+      "name": "Rock Band 3 31.7z",
+      "size": 34156606,
+      "md5": "c45d18ac12cc6f237302c6edcfe2f873",
+      "path": "Rock Band 3 31.7z"
+    },
+    {
+      "id": "1ocyTPwnM-mnpGk-TUj7hhUWIh_xW7ng4",
+      "name": "Rock Band 3 30.7z",
+      "size": 22882743,
+      "md5": "089835796b1bdd5cdfe8f66fb151f87e",
+      "path": "Rock Band 3 30.7z"
+    },
+    {
+      "id": "1rC2iMxafTIiBq1P2rS39vTrsWKVhDN82",
+      "name": "Rock Band 3 29.7z",
+      "size": 33683215,
+      "md5": "20561c243222feb39dff7321b2f455bd",
+      "path": "Rock Band 3 29.7z"
+    },
+    {
+      "id": "1NUdCr9DXWU2qSHG4MluAAid3r1Ktlztd",
+      "name": "Rock Band 3 28.7z",
+      "size": 38682965,
+      "md5": "41a80d22e5f899f62b7fc2fc3d353a11",
+      "path": "Rock Band 3 28.7z"
+    },
+    {
+      "id": "1RQiO1ZBWGjXWmshixxNNwiWF3c0cGTMH",
+      "name": "Rock Band 3 27.7z",
+      "size": 26103307,
+      "md5": "11101529e54e9b948b3705d3e64b6c49",
+      "path": "Rock Band 3 27.7z"
+    },
+    {
+      "id": "1ny0HQNRABNuhIStvcUQ5mtDzoSNeaI4l",
+      "name": "Rock Band 3 26.7z",
+      "size": 38065343,
+      "md5": "d213f4b370759a4daf8e48590579e9e2",
+      "path": "Rock Band 3 26.7z"
+    },
+    {
+      "id": "1MEHd1bHjyBjeBbhFoqfoA-1b_zY26dV7",
+      "name": "Rock Band 3 25.7z",
+      "size": 34534846,
+      "md5": "cf84e55de0ae4dc8cfd9af7ba63f543a",
+      "path": "Rock Band 3 25.7z"
+    },
+    {
+      "id": "1KKgK8AR6CHSgpObLEqlaoqTZ0qr7715J",
+      "name": "Rock Band 3 24.7z",
+      "size": 32685487,
+      "md5": "2c71de23883cadc0fe1bfc0ec5151a2a",
+      "path": "Rock Band 3 24.7z"
+    },
+    {
+      "id": "1C-PhLK-bWn6eFa3HWjGXelAvkuBv6shu",
+      "name": "Rock Band 3 23.7z",
+      "size": 46270426,
+      "md5": "d16698c0cf5cae26262a24e9840752ca",
+      "path": "Rock Band 3 23.7z"
+    },
+    {
+      "id": "1iMuF-sFcNmylyisO432iAGCwWFVSEaO7",
+      "name": "Rock Band 3 22.7z",
+      "size": 46848250,
+      "md5": "c444a0ffac86e4ad6c3060aafe656a98",
+      "path": "Rock Band 3 22.7z"
+    },
+    {
+      "id": "1CrQQarJsbhla0_FdFRdKQdRtN9fwJdcN",
+      "name": "Rock Band 3 21.7z",
+      "size": 51015027,
+      "md5": "7c0cce4e29c8cc0382785ed4d7571f1d",
+      "path": "Rock Band 3 21.7z"
+    },
+    {
+      "id": "1xdzSN2lWbk8aVy6kwdURB1uT1GlOzkJu",
+      "name": "Rock Band 3 20.7z",
+      "size": 40412149,
+      "md5": "f01455daf92a39d9c116ddd0f4525927",
+      "path": "Rock Band 3 20.7z"
+    },
+    {
+      "id": "1HQoZ5d4fDYeW0z1cgwkvjrRAzzu6CfZA",
+      "name": "Rock Band 3 19.7z",
+      "size": 50068480,
+      "md5": "9866b82ca0e35c5eebe94a775b01a07d",
+      "path": "Rock Band 3 19.7z"
+    },
+    {
+      "id": "1sCgwxVqoe6R2STk4DfCbnoBixc6TlfDQ",
+      "name": "Rock Band 3 18.7z",
+      "size": 52166091,
+      "md5": "a53cbccb596c51743ffd7492f1ffbdf8",
+      "path": "Rock Band 3 18.7z"
+    },
+    {
+      "id": "1hWkxUBXNOLXbEdMNmwFdQtYgKlQRQqZY",
+      "name": "Rock Band 3 17.7z",
+      "size": 58182884,
+      "md5": "371dee17186cbde9a092a8991ed92d4b",
+      "path": "Rock Band 3 17.7z"
+    },
+    {
+      "id": "1pINztMYqShB6AyCVkG2_Q5Qxn2PLaIpz",
+      "name": "Rock Band 3 16.7z",
+      "size": 60672953,
+      "md5": "3a7a3cc063466665d1719b65073fe27b",
+      "path": "Rock Band 3 16.7z"
+    },
+    {
+      "id": "1-bTT40P0wDEmPKApwzH4EgTgQS1USDCk",
+      "name": "Rock Band 3 15.7z",
+      "size": 21508545,
+      "md5": "899d491df94b2db94afad4fa34fabf3e",
+      "path": "Rock Band 3 15.7z"
+    },
+    {
+      "id": "1iQgZOfwWP9PSOVdaubynXYR7_ARVqEGw",
+      "name": "Rock Band 3 14.7z",
+      "size": 49866581,
+      "md5": "f87cae3a488ef039accc03ec145fb6be",
+      "path": "Rock Band 3 14.7z"
+    },
+    {
+      "id": "19AO16MRq4HOc4IZn8DoTO-j9DpPE1jnw",
+      "name": "Rock Band 3 13.7z",
+      "size": 46087443,
+      "md5": "d8e1fe0c3a2801cd9f94273fec6d282d",
+      "path": "Rock Band 3 13.7z"
+    },
+    {
+      "id": "1V5Z95jdQb77Jm7IqCfGVN3BySqgmasG6",
+      "name": "Rock Band 3 12.7z",
+      "size": 31431234,
+      "md5": "cae64f9284e8e5c8e165939e5c97aa02",
+      "path": "Rock Band 3 12.7z"
+    },
+    {
+      "id": "1U3bDuUvD0K4w9vsveCxtwJ3PFTgrUNx4",
+      "name": "Rock Band 3 11.7z",
+      "size": 51972053,
+      "md5": "399b2ade57d649cc1363b8c186ed7d99",
+      "path": "Rock Band 3 11.7z"
+    },
+    {
+      "id": "1Xjynd-cdR4yOb7Rmdwi7PK3sEtiCkkbX",
+      "name": "Rock Band 3 10.7z",
+      "size": 46982667,
+      "md5": "c677a85352f2a0b8973711334d7ffba4",
+      "path": "Rock Band 3 10.7z"
+    },
+    {
+      "id": "18DH9j1nrj1jnXscCl0-VZPxxrai1MIql",
+      "name": "Rock Band 3 9.7z",
+      "size": 45421342,
+      "md5": "fa330c9812498da7e2a8744d66442550",
+      "path": "Rock Band 3 9.7z"
+    },
+    {
+      "id": "1b1Nwv1m03cjnfdjz7254HNQBBVsMKv4x",
+      "name": "Rock Band 3 8.7z",
+      "size": 43489926,
+      "md5": "5cc287b5a99fdae5e5d102afa8ff0ff5",
+      "path": "Rock Band 3 8.7z"
+    },
+    {
+      "id": "1tRv4bC0uyA9UvWTuUS2DS69dEd9eCVpa",
+      "name": "Rock Band 3 6.7z",
+      "size": 47466776,
+      "md5": "2923a5a113458b8bf24746476c110f5b",
+      "path": "Rock Band 3 6.7z"
+    },
+    {
+      "id": "15jsxgS98fNpp6YxfjUuwn_sZX7h5Nrc5",
+      "name": "Rock Band 3 5.7z",
+      "size": 50556636,
+      "md5": "555af16dff88505b6e2ef7180fba7ca6",
+      "path": "Rock Band 3 5.7z"
+    },
+    {
+      "id": "1RkyiAbt1cI8NS9kURhE5r_i63amcABhF",
+      "name": "Rock Band 3 4.7z",
+      "size": 54706139,
+      "md5": "942f2ca114257e5fda89d1687e79c935",
+      "path": "Rock Band 3 4.7z"
+    },
+    {
+      "id": "1U9zlphBty0zho8USRN2cnwhGL-u2bXW5",
+      "name": "Rock Band 3 3.7z",
+      "size": 36240055,
+      "md5": "0ad40e5332e3b975c6c9401f147b81b8",
+      "path": "Rock Band 3 3.7z"
+    },
+    {
+      "id": "14eAJ5vLWvk850Amf9mToM82NtBhc3zip",
+      "name": "Rock Band 3 2.7z",
+      "size": 49095874,
+      "md5": "68cff0ceff47eb5fd335df96bb90a462",
+      "path": "Rock Band 3 2.7z"
+    },
+    {
+      "id": "1c51onVMNGnvqaJi6yWZhEEdLvOdt9qOI",
+      "name": "Rock Band 3 1.7z",
+      "size": 31736885,
+      "md5": "94631e90c6a8cf26f3089decb34f1475",
+      "path": "Rock Band 3 1.7z"
+    }
+  ],
+  "download_size": 3403048448,
+  "files": [
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/album.jpg",
+      "size": 161091
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/drums_1.ogg",
+      "size": 2788421
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/drums_2.ogg",
+      "size": 5319625
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/guitar.ogg",
+      "size": 4927517
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/keys.ogg",
+      "size": 5121194
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/notes.mid",
+      "size": 163622
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/rhythm.ogg",
+      "size": 2643481
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/song.ogg",
+      "size": 5763582
+    },
+    {
+      "path": "(2010) Rock Band 3/Amy Winehouse - Rehab/vocals.ogg",
+      "size": 5416147
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/album.jpg",
+      "size": 504585
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/drums_1.ogg",
+      "size": 4361773
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/drums_2.ogg",
+      "size": 7783443
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/drums_3.ogg",
+      "size": 8972711
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/guitar.ogg",
+      "size": 8653202
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/keys.ogg",
+      "size": 8043143
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/notes.mid",
+      "size": 298677
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/rhythm.ogg",
+      "size": 3699995
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/song.ogg",
+      "size": 1430995
+    },
+    {
+      "path": "(2010) Rock Band 3/Deep Purple - Smoke on the Water/vocals.ogg",
+      "size": 3781483
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/album.jpg",
+      "size": 384421
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/drums_1.ogg",
+      "size": 3420990
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/drums_2.ogg",
+      "size": 7041449
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/drums_3.ogg",
+      "size": 7896624
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/guitar.ogg",
+      "size": 8025703
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/keys.ogg",
+      "size": 8439970
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/notes.mid",
+      "size": 209375
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/rhythm.ogg",
+      "size": 2934130
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/song.ini",
+      "size": 629
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/song.ogg",
+      "size": 6968244
+    },
+    {
+      "path": "(2010) Rock Band 3/Def Leppard - Foolin'/vocals.ogg",
+      "size": 7296196
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/album.jpg",
+      "size": 397974
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/album_alt.jpg",
+      "size": 193848
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/drums_1.ogg",
+      "size": 2112617
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/drums_2.ogg",
+      "size": 4189684
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/drums_3.ogg",
+      "size": 5808908
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/guitar.ogg",
+      "size": 5800777
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/keys.ogg",
+      "size": 4568003
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/notes.mid",
+      "size": 136350
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/rhythm.ogg",
+      "size": 4540534
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/song.ini",
+      "size": 633
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/song.ogg",
+      "size": 180044
+    },
+    {
+      "path": "(2010) Rock Band 3/Devo - Whip It/vocals.ogg",
+      "size": 3782006
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/album.jpg",
+      "size": 575189
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/drums_1.ogg",
+      "size": 3751592
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/drums_2.ogg",
+      "size": 7920521
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/guitar.ogg",
+      "size": 12822537
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/keys.ogg",
+      "size": 6032852
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/notes.mid",
+      "size": 229809
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/rhythm.ogg",
+      "size": 3786637
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/song.ini",
+      "size": 633
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/song.ogg",
+      "size": 5272381
+    },
+    {
+      "path": "(2010) Rock Band 3/Dio - Rainbow in the Dark/vocals.ogg",
+      "size": 6369088
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/album.jpg",
+      "size": 264181
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/drums_1.ogg",
+      "size": 3096287
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/drums_2.ogg",
+      "size": 6981012
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/drums_3.ogg",
+      "size": 7856054
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/guitar.ogg",
+      "size": 7175294
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/keys.ogg",
+      "size": 6990447
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/notes.mid",
+      "size": 232834
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/rhythm.ogg",
+      "size": 3044679
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/song.ini",
+      "size": 641
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/song.ogg",
+      "size": 8544518
+    },
+    {
+      "path": "(2010) Rock Band 3/Dire Straits - Walk of Life/vocals.ogg",
+      "size": 6345854
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/album.jpg",
+      "size": 244077
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/drums.ogg",
+      "size": 5273965
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/guitar.ogg",
+      "size": 5065733
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/notes.mid",
+      "size": 155215
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/rhythm.ogg",
+      "size": 2407570
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/song.ini",
+      "size": 663
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/song.ogg",
+      "size": 4300135
+    },
+    {
+      "path": "(2010) Rock Band 3/Dover - King George/vocals.ogg",
+      "size": 4456387
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/album.jpg",
+      "size": 352350
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/drums_1.ogg",
+      "size": 4907828
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/drums_2.ogg",
+      "size": 11183431
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/guitar.ogg",
+      "size": 10380815
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/keys.ogg",
+      "size": 9158199
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/notes.mid",
+      "size": 337346
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/rhythm.ogg",
+      "size": 4878769
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/song.ini",
+      "size": 651
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/song.ogg",
+      "size": 10368159
+    },
+    {
+      "path": "(2010) Rock Band 3/Echo & The Bunnymen - The Killing Moon/vocals.ogg",
+      "size": 9613521
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/album.jpg",
+      "size": 418147
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/drums_1.ogg",
+      "size": 4139447
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/drums_2.ogg",
+      "size": 7910145
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/drums_3.ogg",
+      "size": 9095028
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/guitar.ogg",
+      "size": 7555976
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/keys.ogg",
+      "size": 8367143
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/notes.mid",
+      "size": 430635
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/rhythm.ogg",
+      "size": 4283375
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/song.ini",
+      "size": 682
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/song.ogg",
+      "size": 10024178
+    },
+    {
+      "path": "(2010) Rock Band 3/Elton John - Saturday Night's Alright for Fighting/vocals.ogg",
+      "size": 6611512
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/album.jpg",
+      "size": 288362
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/drums_1.ogg",
+      "size": 6768856
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/drums_2.ogg",
+      "size": 7124278
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/drums_3.ogg",
+      "size": 7841083
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/guitar.ogg",
+      "size": 6982716
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/keys.ogg",
+      "size": 7266269
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/notes.mid",
+      "size": 174086
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/rhythm.ogg",
+      "size": 3521135
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/song.ini",
+      "size": 645
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/song.ogg",
+      "size": 5083051
+    },
+    {
+      "path": "(2010) Rock Band 3/Faith No More - MidLife Crisis/vocals.ogg",
+      "size": 7786641
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/album.jpg",
+      "size": 206608
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/drums_1.ogg",
+      "size": 6823518
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/drums_2.ogg",
+      "size": 7167015
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/drums_3.ogg",
+      "size": 8129755
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/guitar.ogg",
+      "size": 7650158
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/notes.mid",
+      "size": 170083
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/rhythm.ogg",
+      "size": 4548397
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/song.ini",
+      "size": 643
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/song.ogg",
+      "size": 9061374
+    },
+    {
+      "path": "(2010) Rock Band 3/Filter - Hey Man Nice Shot/vocals.ogg",
+      "size": 6880867
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/album.jpg",
+      "size": 307653
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 4422073
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 7285059
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 9980194
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 8383247
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/notes.mid",
+      "size": 308990
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/original.mid",
+      "size": 308531
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4744781
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/song.ogg",
+      "size": 7516134
+    },
+    {
+      "path": "(2010) Rock Band 3/Anthrax - Caught in a Mosh (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 6976013
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/album.jpg",
+      "size": 647868
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/drums_1.ogg",
+      "size": 4942830
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/drums_2.ogg",
+      "size": 4795435
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/drums_3.ogg",
+      "size": 5814243
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/guitar.ogg",
+      "size": 5583158
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/keys.ogg",
+      "size": 5413262
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/notes.mid",
+      "size": 156667
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/rhythm.ogg",
+      "size": 2831702
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/song.ini",
+      "size": 637
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/song.ogg",
+      "size": 5328710
+    },
+    {
+      "path": "(2010) Rock Band 3/Foreigner - Cold as Ice/vocals.ogg",
+      "size": 5510607
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/album.jpg",
+      "size": 289975
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/drums.ogg",
+      "size": 11490608
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/guitar.ogg",
+      "size": 9312245
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/keys.ogg",
+      "size": 9278557
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/notes.mid",
+      "size": 246903
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/rhythm.ogg",
+      "size": 5904467
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/song.ini",
+      "size": 640
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/song.ogg",
+      "size": 6192315
+    },
+    {
+      "path": "(2010) Rock Band 3/Golden Earring - Radar Love/vocals.ogg",
+      "size": 9435427
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/album.jpg",
+      "size": 370697
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/drums_1.ogg",
+      "size": 3544693
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/drums_2.ogg",
+      "size": 5942483
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/drums_3.ogg",
+      "size": 8320977
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/guitar.ogg",
+      "size": 6990662
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/keys.ogg",
+      "size": 6706381
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/notes.mid",
+      "size": 228323
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/rhythm.ogg",
+      "size": 2575965
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/song.ini",
+      "size": 639
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/song.ogg",
+      "size": 6801177
+    },
+    {
+      "path": "(2010) Rock Band 3/HIM - Killing Loneliness/vocals.ogg",
+      "size": 6458237
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/album.jpg",
+      "size": 379083
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/drums_1.ogg",
+      "size": 3170856
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/drums_2.ogg",
+      "size": 6505439
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/drums_3.ogg",
+      "size": 7322853
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/guitar.ogg",
+      "size": 7795449
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/keys.ogg",
+      "size": 6536588
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/notes.mid",
+      "size": 208014
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/rhythm.ogg",
+      "size": 3527112
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/song.ini",
+      "size": 654
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/song.ogg",
+      "size": 5187902
+    },
+    {
+      "path": "(2010) Rock Band 3/Huey Lewis and the News - The Power of Love/vocals.ogg",
+      "size": 6096883
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/album.jpg",
+      "size": 584174
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/drums_1.ogg",
+      "size": 5405773
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/drums_2.ogg",
+      "size": 5054152
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/drums_3.ogg",
+      "size": 5688383
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/guitar.ogg",
+      "size": 4655349
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/notes.mid",
+      "size": 143791
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/rhythm.ogg",
+      "size": 2087059
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/song.ini",
+      "size": 653
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/song.ogg",
+      "size": 4505182
+    },
+    {
+      "path": "(2010) Rock Band 3/Hypernova - Viva la Resistance/vocals.ogg",
+      "size": 4977464
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/album.jpg",
+      "size": 224636
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/drums_1.ogg",
+      "size": 4564322
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/drums_2.ogg",
+      "size": 5250380
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/drums_3.ogg",
+      "size": 5890628
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/guitar.ogg",
+      "size": 6313569
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/keys.ogg",
+      "size": 2255852
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/notes.mid",
+      "size": 225250
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/rhythm.ogg",
+      "size": 2392967
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/song.ogg",
+      "size": 3967060
+    },
+    {
+      "path": "(2010) Rock Band 3/Ida Maria - Oh My God/vocals.ogg",
+      "size": 4391834
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/album.jpg",
+      "size": 324370
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/drums_1.ogg",
+      "size": 4940792
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/drums_2.ogg",
+      "size": 4747749
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/drums_3.ogg",
+      "size": 5198149
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/guitar.ogg",
+      "size": 5312814
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/keys.ogg",
+      "size": 4125507
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/notes.mid",
+      "size": 113301
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/rhythm.ogg",
+      "size": 2557856
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/song.ini",
+      "size": 629
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/song.ogg",
+      "size": 5580369
+    },
+    {
+      "path": "(2010) Rock Band 3/INXS - Need You Tonight/vocals.ogg",
+      "size": 5426768
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/album.jpg",
+      "size": 311766
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/album_alt.jpg",
+      "size": 394394
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/drums_1.ogg",
+      "size": 2308635
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/drums_2.ogg",
+      "size": 2574266
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/drums_3.ogg",
+      "size": 4385446
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/guitar.ogg",
+      "size": 4686396
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/keys.ogg",
+      "size": 4646037
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/notes.mid",
+      "size": 126922
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/rhythm.ogg",
+      "size": 2324664
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/song.ini",
+      "size": 669
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/song.ogg",
+      "size": 169687
+    },
+    {
+      "path": "(2010) Rock Band 3/James Brown - I Got You (I Feel Good)/vocals.ogg",
+      "size": 4543961
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/album.jpg",
+      "size": 116222
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/drums_1.ogg",
+      "size": 3089184
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/drums_2.ogg",
+      "size": 5718379
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/drums_3.ogg",
+      "size": 7231374
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/guitar.ogg",
+      "size": 7095560
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/notes.mid",
+      "size": 204507
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/rhythm.ogg",
+      "size": 3338888
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/song.ini",
+      "size": 666
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/song.ogg",
+      "size": 7507418
+    },
+    {
+      "path": "(2010) Rock Band 3/Jane's Addiction - Been Caught Stealing/vocals.ogg",
+      "size": 4889836
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/album.jpg",
+      "size": 338157
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/drums_1.ogg",
+      "size": 2627818
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/drums_2.ogg",
+      "size": 4357382
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/drums_3.ogg",
+      "size": 5159980
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/guitar.ogg",
+      "size": 5109608
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/keys.ogg",
+      "size": 4658755
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/notes.mid",
+      "size": 130216
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/rhythm.ogg",
+      "size": 2427095
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/song.ini",
+      "size": 666
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/song.ogg",
+      "size": 4539572
+    },
+    {
+      "path": "(2010) Rock Band 3/Joan Jett & The Blackhearts - I Love Rock N' Roll/vocals.ogg",
+      "size": 4629713
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/album.jpg",
+      "size": 463133
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/drums_1.ogg",
+      "size": 3334370
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/drums_2.ogg",
+      "size": 5504200
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/drums_3.ogg",
+      "size": 6948941
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/guitar.ogg",
+      "size": 6573901
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/notes.mid",
+      "size": 220672
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/rhythm.ogg",
+      "size": 3133807
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/song.ini",
+      "size": 665
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/song.ogg",
+      "size": 4983119
+    },
+    {
+      "path": "(2010) Rock Band 3/At the Drive-In - One Armed Scissor/vocals.ogg",
+      "size": 5785210
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/album.jpg",
+      "size": 493530
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/drums.ogg",
+      "size": 4279627
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/keys.ogg",
+      "size": 4904044
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/notes.mid",
+      "size": 78286
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/rhythm.ogg",
+      "size": 4298712
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/song.ini",
+      "size": 637
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/song.ogg",
+      "size": 4822510
+    },
+    {
+      "path": "(2010) Rock Band 3/John Lennon - Imagine/vocals.ogg",
+      "size": 4414126
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/album.jpg",
+      "size": 333973
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/drums_1.ogg",
+      "size": 2502854
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/drums_2.ogg",
+      "size": 2558486
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/drums_3.ogg",
+      "size": 6094969
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/guitar.ogg",
+      "size": 5865230
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/keys.ogg",
+      "size": 5064601
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/notes.mid",
+      "size": 181394
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/rhythm.ogg",
+      "size": 1930086
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/song.ini",
+      "size": 644
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/song.ogg",
+      "size": 4994749
+    },
+    {
+      "path": "(2010) Rock Band 3/Juanes - Me Enamora/vocals.ogg",
+      "size": 4976363
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/album.jpg",
+      "size": 428538
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/drums.ogg",
+      "size": 18231420
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/guitar.ogg",
+      "size": 14990063
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/keys.ogg",
+      "size": 16330777
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/notes.mid",
+      "size": 603408
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/rhythm.ogg",
+      "size": 7778237
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/song.ini",
+      "size": 670
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/song.ogg",
+      "size": 17313002
+    },
+    {
+      "path": "(2010) Rock Band 3/Lynyrd Skynyrd - Free Bird/vocals.ogg",
+      "size": 7410781
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/album.jpg",
+      "size": 413352
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/drums_1.ogg",
+      "size": 6557914
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/drums_2.ogg",
+      "size": 7635673
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/drums_3.ogg",
+      "size": 9188784
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/guitar.ogg",
+      "size": 7642306
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/keys.ogg",
+      "size": 7266187
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/notes.mid",
+      "size": 260592
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/rhythm.ogg",
+      "size": 3545238
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/song.ogg",
+      "size": 6439859
+    },
+    {
+      "path": "(2010) Rock Band 3/Man\u00e1 - Oye Mi Amor/vocals.ogg",
+      "size": 7252732
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/album.jpg",
+      "size": 336555
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/drums_1.ogg",
+      "size": 3100666
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/drums_2.ogg",
+      "size": 6021557
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/drums_3.ogg",
+      "size": 7859626
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/guitar.ogg",
+      "size": 6651305
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/keys.ogg",
+      "size": 5655823
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/notes.mid",
+      "size": 179248
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/rhythm.ogg",
+      "size": 4089057
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/song.ini",
+      "size": 662
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/song.ogg",
+      "size": 2477374
+    },
+    {
+      "path": "(2010) Rock Band 3/Marilyn Manson - The Beautiful People/vocals.ogg",
+      "size": 7202446
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/album.jpg",
+      "size": 157362
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/drums_1.ogg",
+      "size": 2928395
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/drums_2.ogg",
+      "size": 4486561
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/drums_3.ogg",
+      "size": 6070393
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/guitar.ogg",
+      "size": 5310798
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/keys.ogg",
+      "size": 4785425
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/notes.mid",
+      "size": 178200
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/rhythm.ogg",
+      "size": 5167656
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/song.ini",
+      "size": 666
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/song.ogg",
+      "size": 5473240
+    },
+    {
+      "path": "(2010) Rock Band 3/Metric - Combat Baby/vocals.ogg",
+      "size": 5352569
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/album.jpg",
+      "size": 542969
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/drums_1.ogg",
+      "size": 3495802
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/drums_2.ogg",
+      "size": 6717592
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/drums_3.ogg",
+      "size": 7560070
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/guitar.ogg",
+      "size": 7031490
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/keys.ogg",
+      "size": 8408889
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/notes.mid",
+      "size": 180976
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/rhythm.ogg",
+      "size": 3508692
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/song.ini",
+      "size": 644
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/song.ogg",
+      "size": 5878323
+    },
+    {
+      "path": "(2010) Rock Band 3/Night Ranger - Sister Christian/vocals.ogg",
+      "size": 7468750
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/album.jpg",
+      "size": 372388
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/drums_1.ogg",
+      "size": 3880021
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/drums_2.ogg",
+      "size": 8933470
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/guitar.ogg",
+      "size": 7745760
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/notes.mid",
+      "size": 243474
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/rhythm.ogg",
+      "size": 4234175
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/song.ogg",
+      "size": 6933394
+    },
+    {
+      "path": "(2010) Rock Band 3/Ozzy Osbourne - Crazy Train/vocals.ogg",
+      "size": 6864054
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/album.jpg",
+      "size": 786138
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/album_alt.jpg",
+      "size": 529240
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/drums_1.ogg",
+      "size": 2772607
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/drums_2.ogg",
+      "size": 5466444
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/drums_3.ogg",
+      "size": 6342426
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/guitar.ogg",
+      "size": 5652172
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/notes.mid",
+      "size": 184321
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/rhythm.ogg",
+      "size": 2857935
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/song.ini",
+      "size": 635
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/song.ogg",
+      "size": 4209905
+    },
+    {
+      "path": "(2010) Rock Band 3/Paramore - Misery Business/vocals.ogg",
+      "size": 5301095
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/album.jpg",
+      "size": 390272
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/drums_1.ogg",
+      "size": 5524562
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/drums_2.ogg",
+      "size": 5963336
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/drums_3.ogg",
+      "size": 7574966
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/guitar.ogg",
+      "size": 5074376
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/keys.ogg",
+      "size": 5855700
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/notes.mid",
+      "size": 297803
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/rhythm.ogg",
+      "size": 3086536
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/song.ini",
+      "size": 629
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/song.ogg",
+      "size": 5397992
+    },
+    {
+      "path": "(2010) Rock Band 3/Phish - Llama/vocals.ogg",
+      "size": 5752893
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/album.jpg",
+      "size": 293348
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 4937152
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 8113132
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 11184203
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 8687743
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/notes.mid",
+      "size": 344442
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/original.mid",
+      "size": 341594
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 5031486
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/song.ini",
+      "size": 652
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/song.ogg",
+      "size": 9043413
+    },
+    {
+      "path": "(2010) Rock Band 3/Avenged Sevenfold - Beast and the Harlot (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 8185388
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/album.jpg",
+      "size": 127978
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/drums_1.ogg",
+      "size": 2090295
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/drums_2.ogg",
+      "size": 4287563
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/drums_3.ogg",
+      "size": 4871202
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/guitar.ogg",
+      "size": 4663158
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/notes.mid",
+      "size": 141025
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/rhythm.ogg",
+      "size": 2449128
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/song.ini",
+      "size": 647
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/song.ogg",
+      "size": 3978875
+    },
+    {
+      "path": "(2010) Rock Band 3/Phoenix - Lasso/vocals.ogg",
+      "size": 4477001
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/album.jpg",
+      "size": 270041
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/drums.ogg",
+      "size": 9039907
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/guitar.ogg",
+      "size": 7585158
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/keys.ogg",
+      "size": 8216159
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/notes.mid",
+      "size": 334550
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/rhythm.ogg",
+      "size": 5537613
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/song.ini",
+      "size": 641
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/song.ogg",
+      "size": 7534911
+    },
+    {
+      "path": "(2010) Rock Band 3/Poni Hoax - Antibodies/vocals.ogg",
+      "size": 6499386
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/album.jpg",
+      "size": 312273
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/drums_1.ogg",
+      "size": 4469685
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/drums_2.ogg",
+      "size": 7819069
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/drums_3.ogg",
+      "size": 9194787
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/guitar.ogg",
+      "size": 9213581
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/keys.ogg",
+      "size": 10733868
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/notes.mid",
+      "size": 235355
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/rhythm.ogg",
+      "size": 2806080
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/song.ini",
+      "size": 682
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/song.ogg",
+      "size": 9088688
+    },
+    {
+      "path": "(2010) Rock Band 3/Pretty Girls Make Graves - Something Bigger, Something Brighter/vocals.ogg",
+      "size": 8109017
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/album.jpg",
+      "size": 384008
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 2663993
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 5852751
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 4673313
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/notes.mid",
+      "size": 183391
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/original.mid",
+      "size": 183023
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 3082468
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/song.ini",
+      "size": 668
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/song.ogg",
+      "size": 4853795
+    },
+    {
+      "path": "(2010) Rock Band 3/Primus - Jerry Was a Race Car Driver (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 5120837
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/album.jpg",
+      "size": 206422
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/drums_1.ogg",
+      "size": 4516255
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/drums_2.ogg",
+      "size": 8049711
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/drums_3.ogg",
+      "size": 9521219
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/guitar.ogg",
+      "size": 8900600
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/keys.ogg",
+      "size": 9472587
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/notes.mid",
+      "size": 187420
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/rhythm.ogg",
+      "size": 4079997
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/song.ini",
+      "size": 651
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/song.ogg",
+      "size": 8784428
+    },
+    {
+      "path": "(2010) Rock Band 3/Queen - Bohemian Rhapsody/vocals.ogg",
+      "size": 9247685
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/album.jpg",
+      "size": 92445
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/drums_1.ogg",
+      "size": 3819475
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/drums_2.ogg",
+      "size": 6992850
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/drums_3.ogg",
+      "size": 8112045
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/guitar.ogg",
+      "size": 7353846
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/notes.mid",
+      "size": 273927
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/rhythm.ogg",
+      "size": 3583735
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/song.ogg",
+      "size": 5582840
+    },
+    {
+      "path": "(2010) Rock Band 3/Queens of the Stone Age - No One Knows/vocals.ogg",
+      "size": 6216061
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/album.jpg",
+      "size": 331853
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/drums_1.ogg",
+      "size": 3769117
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/drums_2.ogg",
+      "size": 6500734
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/drums_3.ogg",
+      "size": 7532984
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/guitar.ogg",
+      "size": 6999014
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/keys.ogg",
+      "size": 7390320
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/notes.mid",
+      "size": 223371
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/rhythm.ogg",
+      "size": 4782124
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/song.ini",
+      "size": 627
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/song.ogg",
+      "size": 7229652
+    },
+    {
+      "path": "(2010) Rock Band 3/Rammstein - Du Hast/vocals.ogg",
+      "size": 6856685
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/album.jpg",
+      "size": 407444
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/drums_1.ogg",
+      "size": 2139467
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/drums_2.ogg",
+      "size": 4140662
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/drums_3.ogg",
+      "size": 4947725
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/guitar.ogg",
+      "size": 4808636
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/notes.mid",
+      "size": 146100
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/rhythm.ogg",
+      "size": 2828780
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/song.ini",
+      "size": 640
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/song.ogg",
+      "size": 4031028
+    },
+    {
+      "path": "(2010) Rock Band 3/Ramones - I Wanna Be Sedated/vocals.ogg",
+      "size": 3892968
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/album.jpg",
+      "size": 189566
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/drums_1.ogg",
+      "size": 7188347
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/drums_2.ogg",
+      "size": 7156937
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/drums_3.ogg",
+      "size": 8683523
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/guitar.ogg",
+      "size": 8000825
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/keys.ogg",
+      "size": 7155097
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/notes.mid",
+      "size": 305435
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/rhythm.ogg",
+      "size": 2820295
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/song.ogg",
+      "size": 8002358
+    },
+    {
+      "path": "(2010) Rock Band 3/Rilo Kiley - Portions for Foxes/vocals.ogg",
+      "size": 7315623
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/album.jpg",
+      "size": 374112
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/drums_1.ogg",
+      "size": 2198386
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/drums_2.ogg",
+      "size": 4364246
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/drums_3.ogg",
+      "size": 4575065
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/guitar.ogg",
+      "size": 4105903
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/notes.mid",
+      "size": 156776
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/rhythm.ogg",
+      "size": 1963645
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/song.ini",
+      "size": 687
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/song.ogg",
+      "size": 4093093
+    },
+    {
+      "path": "(2010) Rock Band 3/Riverboat Gamblers - Don't Bury Me__ I'm Still Not Dead/vocals.ogg",
+      "size": 4220886
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/album.jpg",
+      "size": 288678
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/drums_1.ogg",
+      "size": 6195777
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/drums_2.ogg",
+      "size": 6481743
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/drums_3.ogg",
+      "size": 8039666
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/guitar.ogg",
+      "size": 6259487
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/keys.ogg",
+      "size": 7440561
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/notes.mid",
+      "size": 250682
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/rhythm.ogg",
+      "size": 3363580
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/song.ini",
+      "size": 643
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/song.ogg",
+      "size": 6212346
+    },
+    {
+      "path": "(2010) Rock Band 3/Big Country - In a Big Country/vocals.ogg",
+      "size": 6711727
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/album.jpg",
+      "size": 348225
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/drums_1.ogg",
+      "size": 3427643
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/drums_2.ogg",
+      "size": 6556861
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/drums_3.ogg",
+      "size": 6789487
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/guitar.ogg",
+      "size": 7644113
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/keys.ogg",
+      "size": 7938345
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/notes.mid",
+      "size": 214346
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/rhythm.ogg",
+      "size": 4174307
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/song.ini",
+      "size": 631
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/song.ogg",
+      "size": 114321
+    },
+    {
+      "path": "(2010) Rock Band 3/Roxette - The Look/vocals.ogg",
+      "size": 6778116
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/album.jpg",
+      "size": 523273
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/drums_1.ogg",
+      "size": 3702661
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/drums_2.ogg",
+      "size": 5918279
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/drums_3.ogg",
+      "size": 8187406
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 7345172
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/keys.ogg",
+      "size": 6283533
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/notes.mid",
+      "size": 242650
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/original.mid",
+      "size": 206321
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 3227475
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/song.ogg",
+      "size": 7120883
+    },
+    {
+      "path": "(2010) Rock Band 3/Slipknot - Before I Forget (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 6543221
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/album.jpg",
+      "size": 317130
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/drums_1.ogg",
+      "size": 1747867
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/drums_2.ogg",
+      "size": 6354374
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/guitar.ogg",
+      "size": 5850421
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/keys.ogg",
+      "size": 4978073
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/notes.mid",
+      "size": 169826
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/rhythm.ogg",
+      "size": 4652854
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/song.ini",
+      "size": 646
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/song.ogg",
+      "size": 5483794
+    },
+    {
+      "path": "(2010) Rock Band 3/Smash Mouth - Walking on the Sun/vocals.ogg",
+      "size": 6083312
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/album.jpg",
+      "size": 583541
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/drums_1.ogg",
+      "size": 7385608
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/drums_2.ogg",
+      "size": 7206900
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/drums_3.ogg",
+      "size": 8972738
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/guitar.ogg",
+      "size": 7705098
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/keys.ogg",
+      "size": 7507829
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/notes.mid",
+      "size": 249068
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/rhythm.ogg",
+      "size": 3787318
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/song.ini",
+      "size": 644
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/song.ogg",
+      "size": 6731770
+    },
+    {
+      "path": "(2010) Rock Band 3/Spacehog - In the Meantime/vocals.ogg",
+      "size": 6405219
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/album.jpg",
+      "size": 220087
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/drums_1.ogg",
+      "size": 3449381
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/drums_2.ogg",
+      "size": 6661761
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/drums_3.ogg",
+      "size": 7842931
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/guitar.ogg",
+      "size": 6112398
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/keys.ogg",
+      "size": 7216858
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/notes.mid",
+      "size": 208803
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/rhythm.ogg",
+      "size": 3096155
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/song.ini",
+      "size": 660
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/song.ogg",
+      "size": 6242128
+    },
+    {
+      "path": "(2010) Rock Band 3/Steve Miller Band - Fly Like an Eagle/vocals.ogg",
+      "size": 5702082
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/album.jpg",
+      "size": 282183
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/drums_1.ogg",
+      "size": 4459307
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/drums_2.ogg",
+      "size": 8496115
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/drums_3.ogg",
+      "size": 10468430
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/guitar.ogg",
+      "size": 9068788
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/notes.mid",
+      "size": 216350
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/rhythm.ogg",
+      "size": 4417256
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/song.ini",
+      "size": 639
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/song.ogg",
+      "size": 7749765
+    },
+    {
+      "path": "(2010) Rock Band 3/Stone Temple Pilots - Plush/vocals.ogg",
+      "size": 7788354
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/album.jpg",
+      "size": 196962
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/drums_1.ogg",
+      "size": 2514975
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/drums_2.ogg",
+      "size": 4774453
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/drums_3.ogg",
+      "size": 6012556
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/guitar.ogg",
+      "size": 5209114
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/keys.ogg",
+      "size": 4722880
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/notes.mid",
+      "size": 229166
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/rhythm.ogg",
+      "size": 2816083
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/song.ogg",
+      "size": 3796971
+    },
+    {
+      "path": "(2010) Rock Band 3/Swingin' Utters - This Bastard's Life/vocals.ogg",
+      "size": 3625805
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/album.jpg",
+      "size": 251622
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/drums_1.ogg",
+      "size": 6216540
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/drums_2.ogg",
+      "size": 6243464
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/drums_3.ogg",
+      "size": 5529355
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/guitar.ogg",
+      "size": 5720606
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/keys.ogg",
+      "size": 5825232
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/notes.mid",
+      "size": 207044
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/rhythm.ogg",
+      "size": 3933036
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/song.ini",
+      "size": 635
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/song.ogg",
+      "size": 6474294
+    },
+    {
+      "path": "(2010) Rock Band 3/T. Rex - 20th Century Boy/vocals.ogg",
+      "size": 5619677
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/album.jpg",
+      "size": 386812
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/drums_1.ogg",
+      "size": 4137758
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/drums_2.ogg",
+      "size": 6453376
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/drums_3.ogg",
+      "size": 7229916
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/guitar.ogg",
+      "size": 6920018
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/keys.ogg",
+      "size": 6623046
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/notes.mid",
+      "size": 200838
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/rhythm.ogg",
+      "size": 3108289
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/song.ini",
+      "size": 677
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/song.ogg",
+      "size": 7859732
+    },
+    {
+      "path": "(2010) Rock Band 3/Tears for Fears - Everybody Wants to Rule the World/vocals.ogg",
+      "size": 5783017
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/album.jpg",
+      "size": 402863
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/drums_1.ogg",
+      "size": 2733692
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/drums_2.ogg",
+      "size": 2962275
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/drums_3.ogg",
+      "size": 6526427
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/guitar.ogg",
+      "size": 8502827
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/keys.ogg",
+      "size": 5984033
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/notes.mid",
+      "size": 204220
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/rhythm.ogg",
+      "size": 1938926
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/song.ini",
+      "size": 635
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/song.ogg",
+      "size": 1900324
+    },
+    {
+      "path": "(2010) Rock Band 3/Tegan and Sara - The Con/vocals.ogg",
+      "size": 5392432
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/album.jpg",
+      "size": 221123
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/drums_1.ogg",
+      "size": 3093767
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/drums_2.ogg",
+      "size": 6154752
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/drums_3.ogg",
+      "size": 8058791
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/guitar.ogg",
+      "size": 6346673
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/keys.ogg",
+      "size": 6203667
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/notes.mid",
+      "size": 154710
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/rhythm.ogg",
+      "size": 5398304
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/song.ini",
+      "size": 640
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/song.ogg",
+      "size": 6722660
+    },
+    {
+      "path": "(2010) Rock Band 3/Blondie - Heart of Glass/vocals.ogg",
+      "size": 5486689
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/album.jpg",
+      "size": 248121
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/drums_1.ogg",
+      "size": 4097365
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/drums_2.ogg",
+      "size": 4418977
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/drums_3.ogg",
+      "size": 9386651
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/guitar.ogg",
+      "size": 9555272
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/keys.ogg",
+      "size": 3943016
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/notes.mid",
+      "size": 249731
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/rhythm.ogg",
+      "size": 3650076
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/song.ini",
+      "size": 637
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/song.ogg",
+      "size": 9373759
+    },
+    {
+      "path": "(2010) Rock Band 3/The B-52's - Rock Lobster/vocals.ogg",
+      "size": 8185397
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/album.jpg",
+      "size": 362270
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/drums_1.ogg",
+      "size": 1950204
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/drums_2.ogg",
+      "size": 5390831
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/guitar.ogg",
+      "size": 5327635
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/keys.ogg",
+      "size": 5095067
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/notes.mid",
+      "size": 151319
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/rhythm.ogg",
+      "size": 4264080
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/song.ini",
+      "size": 651
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/song.ogg",
+      "size": 5335448
+    },
+    {
+      "path": "(2010) Rock Band 3/The Beach Boys - Good Vibrations (Live)/vocals.ogg",
+      "size": 5686055
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/album.jpg",
+      "size": 290877
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/drums_1.ogg",
+      "size": 1799092
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/drums_2.ogg",
+      "size": 2008154
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/drums_3.ogg",
+      "size": 4497898
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/guitar.ogg",
+      "size": 3833448
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/notes.mid",
+      "size": 131457
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/rhythm.ogg",
+      "size": 2054311
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/song.ini",
+      "size": 633
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/song.ogg",
+      "size": 104802
+    },
+    {
+      "path": "(2010) Rock Band 3/The Bronx - False Alarm/vocals.ogg",
+      "size": 3509114
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/album.jpg",
+      "size": 280057
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/drums_1.ogg",
+      "size": 2846622
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/drums_2.ogg",
+      "size": 5949043
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/drums_3.ogg",
+      "size": 6545892
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/guitar.ogg",
+      "size": 5194862
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/keys.ogg",
+      "size": 5308983
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/notes.mid",
+      "size": 195794
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/rhythm.ogg",
+      "size": 2726753
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/song.ini",
+      "size": 654
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/song.ogg",
+      "size": 5642669
+    },
+    {
+      "path": "(2010) Rock Band 3/The Cure - Just Like Heaven/vocals.ogg",
+      "size": 5280947
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/album.jpg",
+      "size": 405925
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/drums_1.ogg",
+      "size": 2664064
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/drums_2.ogg",
+      "size": 5467675
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/drums_3.ogg",
+      "size": 5325634
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/guitar.ogg",
+      "size": 6241123
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/keys.ogg",
+      "size": 5350760
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/notes.mid",
+      "size": 207891
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/rhythm.ogg",
+      "size": 2647490
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/song.ini",
+      "size": 657
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/song.ogg",
+      "size": 5897453
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doobie Brothers - China Grove/vocals.ogg",
+      "size": 5086798
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/album.jpg",
+      "size": 290962
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/drums.ogg",
+      "size": 4061172
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/guitar.ogg",
+      "size": 3906000
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/keys.ogg",
+      "size": 3476627
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/notes.mid",
+      "size": 162813
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/rhythm.ogg",
+      "size": 2591566
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/song.ini",
+      "size": 664
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/song.ogg",
+      "size": 86958
+    },
+    {
+      "path": "(2010) Rock Band 3/The Doors - Break on Through (To the Other Side)/vocals.ogg",
+      "size": 3695708
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/album.jpg",
+      "size": 301228
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/drums.ogg",
+      "size": 10120888
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/guitar.ogg",
+      "size": 10003218
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/keys.ogg",
+      "size": 7032050
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/notes.mid",
+      "size": 276321
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/rhythm.ogg",
+      "size": 4155351
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/song.ini",
+      "size": 692
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/song.ogg",
+      "size": 9130175
+    },
+    {
+      "path": "(2010) Rock Band 3/The Flaming Lips - Yoshimi Battles the Pink Robots Pt. 1/vocals.ogg",
+      "size": 7724072
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/album.jpg",
+      "size": 282552
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/drums_1.ogg",
+      "size": 2962301
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/drums_2.ogg",
+      "size": 5968738
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/drums_3.ogg",
+      "size": 6644163
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/guitar.ogg",
+      "size": 5845565
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/keys.ogg",
+      "size": 5886750
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/notes.mid",
+      "size": 200224
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/rhythm.ogg",
+      "size": 2912114
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/song.ini",
+      "size": 640
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/song.ogg",
+      "size": 5024173
+    },
+    {
+      "path": "(2010) Rock Band 3/The J. Geils Band - Centerfold/vocals.ogg",
+      "size": 5664665
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/album.jpg",
+      "size": 486622
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/drums.ogg",
+      "size": 3555142
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/guitar.ogg",
+      "size": 3640228
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/keys.ogg",
+      "size": 2852198
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/notes.mid",
+      "size": 139011
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/rhythm.ogg",
+      "size": 2066592
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/song.ini",
+      "size": 670
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/song.ogg",
+      "size": 3480500
+    },
+    {
+      "path": "(2010) Rock Band 3/The Jimi Hendrix Experience - Crosstown Traffic/vocals.ogg",
+      "size": 3534231
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/album.jpg",
+      "size": 112761
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/album_alt.jpg",
+      "size": 89676
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/drums_1.ogg",
+      "size": 2408372
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/drums_2.ogg",
+      "size": 2226188
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/drums_3.ogg",
+      "size": 5652332
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/guitar.ogg",
+      "size": 4626174
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/notes.mid",
+      "size": 205899
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/rhythm.ogg",
+      "size": 2158614
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/song.ini",
+      "size": 646
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/song.ogg",
+      "size": 3613075
+    },
+    {
+      "path": "(2010) Rock Band 3/The Muffs - Outer Space/vocals.ogg",
+      "size": 5127270
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/album.jpg",
+      "size": 265341
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/drums_1.ogg",
+      "size": 2442286
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/drums_2.ogg",
+      "size": 4596487
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/guitar.ogg",
+      "size": 5359886
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/keys.ogg",
+      "size": 5044630
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/notes.mid",
+      "size": 166504
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/rhythm.ogg",
+      "size": 2396650
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/song.ini",
+      "size": 651
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/song.ogg",
+      "size": 5884663
+    },
+    {
+      "path": "(2010) Rock Band 3/Bob Marley and the Wailers - Get Up, Stand Up/vocals.ogg",
+      "size": 5114590
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/album.jpg",
+      "size": 291523
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/drums_1.ogg",
+      "size": 2967834
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/drums_2.ogg",
+      "size": 5597751
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/drums_3.ogg",
+      "size": 6484458
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/guitar.ogg",
+      "size": 6219830
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/keys.ogg",
+      "size": 4660491
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/notes.mid",
+      "size": 173639
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/rhythm.ogg",
+      "size": 2650219
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/song.ini",
+      "size": 659
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/song.ogg",
+      "size": 4327525
+    },
+    {
+      "path": "(2010) Rock Band 3/The Police - Don't Stand So Close to Me/vocals.ogg",
+      "size": 5689389
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/album.jpg",
+      "size": 142265
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/drums_1.ogg",
+      "size": 2489169
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/drums_2.ogg",
+      "size": 4594252
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/drums_3.ogg",
+      "size": 5648068
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/guitar.ogg",
+      "size": 6169483
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/keys.ogg",
+      "size": 5060875
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/notes.mid",
+      "size": 212397
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/rhythm.ogg",
+      "size": 2154949
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/song.ini",
+      "size": 653
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/song.ogg",
+      "size": 71450
+    },
+    {
+      "path": "(2010) Rock Band 3/The Raveonettes - Last Dance/vocals.ogg",
+      "size": 5443207
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/album.jpg",
+      "size": 260918
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/drums_1.ogg",
+      "size": 2788575
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/drums_2.ogg",
+      "size": 5807284
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/drums_3.ogg",
+      "size": 6932746
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/guitar.ogg",
+      "size": 6633219
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/keys.ogg",
+      "size": 4155151
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/notes.mid",
+      "size": 180644
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/rhythm.ogg",
+      "size": 3102260
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/song.ini",
+      "size": 694
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/song.ogg",
+      "size": 7027964
+    },
+    {
+      "path": "(2010) Rock Band 3/The Smiths - Stop Me if You Think You've Heard This One Before/vocals.ogg",
+      "size": 4391485
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/album.jpg",
+      "size": 407923
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/drums_1.ogg",
+      "size": 5206219
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/drums_2.ogg",
+      "size": 5801579
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/drums_3.ogg",
+      "size": 6688052
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/guitar.ogg",
+      "size": 5830220
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/keys.ogg",
+      "size": 6721715
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/notes.mid",
+      "size": 205487
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/rhythm.ogg",
+      "size": 3255922
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/song.ini",
+      "size": 649
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/song.ogg",
+      "size": 5685153
+    },
+    {
+      "path": "(2010) Rock Band 3/The Sounds - Living in America/vocals.ogg",
+      "size": 5816552
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/album.jpg",
+      "size": 553192
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/drums_1.ogg",
+      "size": 1729045
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/drums_2.ogg",
+      "size": 1831821
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/drums_3.ogg",
+      "size": 4179597
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/guitar.ogg",
+      "size": 3650056
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/notes.mid",
+      "size": 104353
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/rhythm.ogg",
+      "size": 1555607
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/song.ini",
+      "size": 634
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/song.ogg",
+      "size": 3760647
+    },
+    {
+      "path": "(2010) Rock Band 3/The Vines - Get Free/vocals.ogg",
+      "size": 3460371
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/album.jpg",
+      "size": 240928
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/drums_1.ogg",
+      "size": 2931340
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/drums_2.ogg",
+      "size": 4978548
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/guitar.ogg",
+      "size": 7009360
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/notes.mid",
+      "size": 124342
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/rhythm.ogg",
+      "size": 6028127
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/song.ini",
+      "size": 658
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/song.ogg",
+      "size": 369883
+    },
+    {
+      "path": "(2010) Rock Band 3/The White Stripes - The Hardest Button to Button/vocals.ogg",
+      "size": 5379867
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/album.jpg",
+      "size": 457248
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/drums.ogg",
+      "size": 7798220
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/guitar.ogg",
+      "size": 5716316
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/notes.mid",
+      "size": 233856
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/rhythm.ogg",
+      "size": 4477401
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/song.ini",
+      "size": 653
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/song.ogg",
+      "size": 147301
+    },
+    {
+      "path": "(2010) Rock Band 3/The Who - I Can See for Miles/vocals.ogg",
+      "size": 6765897
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/album.jpg",
+      "size": 310668
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/drums_1.ogg",
+      "size": 2748646
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/drums_2.ogg",
+      "size": 2821289
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/drums_3.ogg",
+      "size": 4794884
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/guitar.ogg",
+      "size": 4762346
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/keys.ogg",
+      "size": 5321038
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/notes.mid",
+      "size": 220410
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/rhythm.ogg",
+      "size": 2799644
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/song.ini",
+      "size": 658
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/song.ogg",
+      "size": 6171735
+    },
+    {
+      "path": "(2010) Rock Band 3/Them Crooked Vultures - Dead End Friends/vocals.ogg",
+      "size": 5117590
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/album.jpg",
+      "size": 233448
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/drums.ogg",
+      "size": 7559857
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/guitar.ogg",
+      "size": 6284024
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/keys.ogg",
+      "size": 6234378
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/notes.mid",
+      "size": 218231
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/rhythm.ogg",
+      "size": 2916599
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/song.ini",
+      "size": 631
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/song.ogg",
+      "size": 6758016
+    },
+    {
+      "path": "(2010) Rock Band 3/Tokio Hotel - Humanoid/vocals.ogg",
+      "size": 5942392
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/album.jpg",
+      "size": 308414
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/drums_1.ogg",
+      "size": 2163611
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/drums_2.ogg",
+      "size": 4620228
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/guitar.ogg",
+      "size": 3940576
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/keys.ogg",
+      "size": 3163591
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/notes.mid",
+      "size": 142306
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/rhythm.ogg",
+      "size": 1812320
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/song.ini",
+      "size": 674
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/song.ogg",
+      "size": 2769154
+    },
+    {
+      "path": "(2010) Rock Band 3/Tom Petty and the Heartbreakers - I Need to Know/vocals.ogg",
+      "size": 3646489
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/album.jpg",
+      "size": 479115
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/drums.ogg",
+      "size": 7934353
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/guitar.ogg",
+      "size": 7788652
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/keys.ogg",
+      "size": 8694321
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/notes.mid",
+      "size": 309101
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/rhythm.ogg",
+      "size": 4058829
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/song.ini",
+      "size": 637
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/song.ogg",
+      "size": 7834863
+    },
+    {
+      "path": "(2010) Rock Band 3/Chicago - 25 or 6 to 4/vocals.ogg",
+      "size": 7137349
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/album.jpg",
+      "size": 131082
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/drums_1.ogg",
+      "size": 2763811
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/drums_2.ogg",
+      "size": 2873069
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/drums_3.ogg",
+      "size": 6122020
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/guitar.ogg",
+      "size": 5386664
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/keys.ogg",
+      "size": 5776372
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/notes.mid",
+      "size": 151731
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/rhythm.ogg",
+      "size": 2138648
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/song.ini",
+      "size": 647
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/song.ogg",
+      "size": 5728205
+    },
+    {
+      "path": "(2010) Rock Band 3/WAR - Low Rider/vocals.ogg",
+      "size": 5084777
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/album.jpg",
+      "size": 250010
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/drums_1.ogg",
+      "size": 3191324
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/drums_2.ogg",
+      "size": 3232500
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/drums_3.ogg",
+      "size": 6939646
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/guitar.ogg",
+      "size": 5603591
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/keys.ogg",
+      "size": 6441215
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/notes.mid",
+      "size": 201564
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/rhythm.ogg",
+      "size": 2907950
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/song.ogg",
+      "size": 2912586
+    },
+    {
+      "path": "(2010) Rock Band 3/Warren Zevon - Werewolves of London/vocals.ogg",
+      "size": 5695440
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/album.jpg",
+      "size": 634249
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/drums_1.ogg",
+      "size": 3612736
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/drums_2.ogg",
+      "size": 7105169
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/drums_3.ogg",
+      "size": 7607209
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/guitar.ogg",
+      "size": 7223133
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/keys.ogg",
+      "size": 7155935
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/notes.mid",
+      "size": 179776
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/rhythm.ogg",
+      "size": 3353486
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/song.ini",
+      "size": 636
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/song.ogg",
+      "size": 1699713
+    },
+    {
+      "path": "(2010) Rock Band 3/Whitesnake - Here I Go Again/vocals.ogg",
+      "size": 6674632
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/album.jpg",
+      "size": 367738
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/drums.ogg",
+      "size": 16046009
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/guitar.ogg",
+      "size": 14225766
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/keys.ogg",
+      "size": 13094125
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/notes.mid",
+      "size": 478130
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/rhythm.ogg",
+      "size": 7419413
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/song.ini",
+      "size": 628
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/song.ogg",
+      "size": 9840750
+    },
+    {
+      "path": "(2010) Rock Band 3/Yes - Roundabout/vocals.ogg",
+      "size": 14062926
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/album.jpg",
+      "size": 509424
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/drums.ogg",
+      "size": 7449749
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/guitar.ogg",
+      "size": 7982730
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/keys.ogg",
+      "size": 8672893
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/notes.mid",
+      "size": 238783
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/rhythm.ogg",
+      "size": 6643502
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/song.ini",
+      "size": 636
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/song.ogg",
+      "size": 7910525
+    },
+    {
+      "path": "(2010) Rock Band 3/David Bowie - Space Oddity/vocals.ogg",
+      "size": 7285335
+    }
+  ],
+  "extracted_size": 3451818905,
+  "file_count": 864,
+  "chart_count": 83,
+  "release_date": "2010-10-26"
+}

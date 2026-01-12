@@ -1,20 +1,5077 @@
 {
   "name": "Carpal Tunnel Hero 2",
-  "folder_id": "static-cth-2",
+  "folder_id": "static-carpal-tunnel-hero-2",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 309,
-  "total_size": 3414270164,
-  "file_count": 1270,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-cth-2",
-      "path": "Carpal Tunnel Hero 2/Carpal Tunnel Hero 2.rar",
+      "url": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%202.rar?v=2&ref=customsongscentral.com",
       "name": "Carpal Tunnel Hero 2.rar",
       "size": 3414270164,
-      "md5": "e46d48016d200ced4a6a384b54aaa8a3",
-      "url": "https://customsongscentral.b-cdn.net/Carpal%20Tunnel%20Hero%202.rar?v=2&ref=customsongscentral.com"
+      "md5": "e46d48016d200ced4a6a384b54aaa8a3"
     }
-  ]
+  ],
+  "download_size": 3414270164,
+  "files": [
+    {
+      "path": "Carpal Tunnel Hero 2/- 00 Introduction/Introduction to Carpal Tunnel Hero 2/album.png",
+      "size": 137698
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 00 Introduction/Introduction to Carpal Tunnel Hero 2/notes.chart",
+      "size": 5398
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 00 Introduction/Introduction to Carpal Tunnel Hero 2/song.ini",
+      "size": 347
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 00 Introduction/Introduction to Carpal Tunnel Hero 2/song.ogg",
+      "size": 522186
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 01 - Napalm Death - You Suffer/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 01 - Napalm Death - You Suffer/album.png",
+      "size": 768494
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 01 - Napalm Death - You Suffer/guitar.ogg",
+      "size": 105209
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 01 - Napalm Death - You Suffer/notes.chart",
+      "size": 638
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 01 - Napalm Death - You Suffer/notes.mid",
+      "size": 204
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 01 - Napalm Death - You Suffer/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 02 - Recode The Subliminal - At The End/album.png",
+      "size": 145317
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 02 - Recode The Subliminal - At The End/notes.chart",
+      "size": 28896
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 02 - Recode The Subliminal - At The End/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 02 - Recode The Subliminal - At The End/song.ogg",
+      "size": 3927948
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 03 - chon_story/album.png",
+      "size": 219370
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 03 - chon_story/guitar.ogg",
+      "size": 13580246
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 03 - chon_story/notes.chart",
+      "size": 24244
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 03 - chon_story/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 04 - Chemfinal - Avenged Sevenfold - Malaguena Salerosa/album.png",
+      "size": 72060
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 04 - Chemfinal - Avenged Sevenfold - Malaguena Salerosa/guitar.ogg",
+      "size": 6434428
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 04 - Chemfinal - Avenged Sevenfold - Malaguena Salerosa/notes.chart",
+      "size": 25148
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 04 - Chemfinal - Avenged Sevenfold - Malaguena Salerosa/song.ini",
+      "size": 225
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 05 - Monuments - Atlas/album.png",
+      "size": 224244
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 05 - Monuments - Atlas/notes.chart",
+      "size": 19628
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 05 - Monuments - Atlas/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 05 - Monuments - Atlas/song.ogg",
+      "size": 4081060
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 06 - aaron/album.png",
+      "size": 138238
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 06 - aaron/notes.chart",
+      "size": 26004
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 06 - aaron/song.ini",
+      "size": 184
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 06 - aaron/song.ogg",
+      "size": 10849140
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 07 - Repentance/album.png",
+      "size": 146925
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 07 - Repentance/notes.chart",
+      "size": 33441
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 07 - Repentance/song.ini",
+      "size": 167
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 07 - Repentance/song.ogg",
+      "size": 7698980
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 08 - fall of pangea/album.png",
+      "size": 94796
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 08 - fall of pangea/guitar.ogg",
+      "size": 17124041
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 08 - fall of pangea/notes.chart",
+      "size": 45741
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 08 - fall of pangea/song.ini",
+      "size": 203
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 08 - fall of pangea/song.ogg",
+      "size": 17117179
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 09 - Sarah Longfield - A New Discovery/album.png",
+      "size": 172759
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 09 - Sarah Longfield - A New Discovery/guitar.mp3",
+      "size": 6193579
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 09 - Sarah Longfield - A New Discovery/notes.chart",
+      "size": 19991
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 09 - Sarah Longfield - A New Discovery/song.ini",
+      "size": 219
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 10 - Larry Carlton - Room 335/album.png",
+      "size": 149838
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 10 - Larry Carlton - Room 335/notes.chart",
+      "size": 49054
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 10 - Larry Carlton - Room 335/song.ini",
+      "size": 205
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 01 Introduction to a new Era/1 - 10 - Larry Carlton - Room 335/song.ogg",
+      "size": 6710984
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 01 - Boston - ForeplayLongTime/album.png",
+      "size": 168803
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 01 - Boston - ForeplayLongTime/notes.chart",
+      "size": 67069
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 01 - Boston - ForeplayLongTime/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 01 - Boston - ForeplayLongTime/song.ogg",
+      "size": 8242484
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 02 - Shit's Fucked/album.png",
+      "size": 179801
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 02 - Shit's Fucked/guitar.ogg",
+      "size": 4202883
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 02 - Shit's Fucked/notes.chart",
+      "size": 31929
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 02 - Shit's Fucked/song.ini",
+      "size": 238
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 03 - beastly/album.png",
+      "size": 59745
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 03 - beastly/notes.chart",
+      "size": 21855
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 03 - beastly/song.ini",
+      "size": 174
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 03 - beastly/song.ogg",
+      "size": 10649850
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 04 - littletybee_abby/album.png",
+      "size": 40942
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 04 - littletybee_abby/guitar.ogg",
+      "size": 9876055
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 04 - littletybee_abby/notes.chart",
+      "size": 17944
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 04 - littletybee_abby/song.ini",
+      "size": 239
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 04 - littletybee_abby/song.ogg",
+      "size": 10298380
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 05 - Experiment/album.png",
+      "size": 203272
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 05 - Experiment/notes.chart",
+      "size": 34487
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 05 - Experiment/song.ini",
+      "size": 196
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 05 - Experiment/song.ogg",
+      "size": 3586056
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 06 - MIMIZU IN THE DANCEFLOOR/album.png",
+      "size": 97064
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 06 - MIMIZU IN THE DANCEFLOOR/guitar.ogg",
+      "size": 5838525
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 06 - MIMIZU IN THE DANCEFLOOR/notes.chart",
+      "size": 43796
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 06 - MIMIZU IN THE DANCEFLOOR/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 07 - Chemfinal - Richaad EB - Another Medium (Guitar Cover)/album.png",
+      "size": 50391
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 07 - Chemfinal - Richaad EB - Another Medium (Guitar Cover)/guitar.ogg",
+      "size": 8468815
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 07 - Chemfinal - Richaad EB - Another Medium (Guitar Cover)/notes.chart",
+      "size": 48011
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 07 - Chemfinal - Richaad EB - Another Medium (Guitar Cover)/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 08 - davidmaximmicic_bilopt1/album.png",
+      "size": 108171
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 08 - davidmaximmicic_bilopt1/guitar.ogg",
+      "size": 24904467
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 08 - davidmaximmicic_bilopt1/notes.chart",
+      "size": 22150
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 08 - davidmaximmicic_bilopt1/song.ini",
+      "size": 255
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 09 - August Burns Red - Vanguard/album.png",
+      "size": 198569
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 09 - August Burns Red - Vanguard/notes.chart",
+      "size": 33340
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 09 - August Burns Red - Vanguard/song.ini",
+      "size": 213
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 09 - August Burns Red - Vanguard/song.ogg",
+      "size": 6655856
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 10 - Delusional Parasitsis - Dysmorphic Transmutation/album.png",
+      "size": 204690
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 10 - Delusional Parasitsis - Dysmorphic Transmutation/guitar.ogg",
+      "size": 8935316
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 10 - Delusional Parasitsis - Dysmorphic Transmutation/notes.chart",
+      "size": 21988
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 10 - Delusional Parasitsis - Dysmorphic Transmutation/song.ini",
+      "size": 260
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 11 - The Funeral Portrait (CH)/album.png",
+      "size": 148782
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 11 - The Funeral Portrait (CH)/notes.chart",
+      "size": 97412
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 11 - The Funeral Portrait (CH)/song.ini",
+      "size": 203
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 02 Training For The Big Day/2 - 11 - The Funeral Portrait (CH)/song.ogg",
+      "size": 10230228
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 01 - Miscellany - Gunther - Ding Ding Song/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 01 - Miscellany - Gunther - Ding Ding Song/album.png",
+      "size": 505541
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 01 - Miscellany - Gunther - Ding Ding Song/guitar.ogg",
+      "size": 8566544
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 01 - Miscellany - Gunther - Ding Ding Song/notes.chart",
+      "size": 42336
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 01 - Miscellany - Gunther - Ding Ding Song/notes.mid",
+      "size": 10745
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 01 - Miscellany - Gunther - Ding Ding Song/song.ini",
+      "size": 204
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 02 - VItalj Kuprij - Waterfall/album.png",
+      "size": 133399
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 02 - VItalj Kuprij - Waterfall/notes.chart",
+      "size": 27843
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 02 - VItalj Kuprij - Waterfall/song.ini",
+      "size": 235
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 02 - VItalj Kuprij - Waterfall/song.mp3",
+      "size": 1844359
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 03 - Inginburei/album.png",
+      "size": 97064
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 03 - Inginburei/guitar.ogg",
+      "size": 1030027
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 03 - Inginburei/notes.chart",
+      "size": 10536
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 03 - Inginburei/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 04 - Modest Mouse - Doin' The Cockroach/album.png",
+      "size": 168335
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 04 - Modest Mouse - Doin' The Cockroach/notes.chart",
+      "size": 40180
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 04 - Modest Mouse - Doin' The Cockroach/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 04 - Modest Mouse - Doin' The Cockroach/song.ogg",
+      "size": 3810093
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 05 - trident tail/album.png",
+      "size": 157914
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 05 - trident tail/notes.chart",
+      "size": 46839
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 05 - trident tail/song.ini",
+      "size": 193
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 05 - trident tail/song.ogg",
+      "size": 20552043
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 06 - Bleeding Skies - Lohengramm/album.png",
+      "size": 172063
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 06 - Bleeding Skies - Lohengramm/guitar.mp3",
+      "size": 5746359
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 06 - Bleeding Skies - Lohengramm/notes.chart",
+      "size": 56894
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 06 - Bleeding Skies - Lohengramm/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 07 - Human Hive (CH)/album.png",
+      "size": 61313
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 07 - Human Hive (CH)/notes.chart",
+      "size": 94747
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 07 - Human Hive (CH)/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 07 - Human Hive (CH)/song.ogg",
+      "size": 6179321
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 08 - The Faded Line (CH)/album.png",
+      "size": 203792
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 08 - The Faded Line (CH)/notes.chart",
+      "size": 102897
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 08 - The Faded Line (CH)/song.ini",
+      "size": 206
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 08 - The Faded Line (CH)/song.ogg",
+      "size": 6201039
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 09 - potato-head in wonderland/album.png",
+      "size": 153046
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 09 - potato-head in wonderland/guitar.ogg",
+      "size": 4230025
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 09 - potato-head in wonderland/notes.chart",
+      "size": 30711
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 09 - potato-head in wonderland/song.ini",
+      "size": 256
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 10 - FROST - Heartstrings/album.png",
+      "size": 43519
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 10 - FROST - Heartstrings/guitar.ogg",
+      "size": 15027388
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 10 - FROST - Heartstrings/notes.chart",
+      "size": 100654
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 10 - FROST - Heartstrings/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 11 - Chemfinal - The User Lives - The Wave That Pulled Us Under/album.png",
+      "size": 175110
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 11 - Chemfinal - The User Lives - The Wave That Pulled Us Under/guitar.ogg",
+      "size": 6551187
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 11 - Chemfinal - The User Lives - The Wave That Pulled Us Under/notes.chart",
+      "size": 30403
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 11 - Chemfinal - The User Lives - The Wave That Pulled Us Under/song.ini",
+      "size": 237
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 12 - The Bright Light Social Hour - Rhubarb Jam/album.png",
+      "size": 166876
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 12 - The Bright Light Social Hour - Rhubarb Jam/notes.chart",
+      "size": 29315
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 12 - The Bright Light Social Hour - Rhubarb Jam/song.ini",
+      "size": 242
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 03 Independence/3 - 12 - The Bright Light Social Hour - Rhubarb Jam/song.ogg",
+      "size": 4017826
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 01 - Play Dead/album.png",
+      "size": 161631
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 01 - Play Dead/guitar.ogg",
+      "size": 7720041
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 01 - Play Dead/notes.chart",
+      "size": 78531
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 01 - Play Dead/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 02 - right to arm bears/album.png",
+      "size": 159030
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 02 - right to arm bears/notes.chart",
+      "size": 45851
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 02 - right to arm bears/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 02 - right to arm bears/song.ogg",
+      "size": 15646337
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 03 - Flesh and the Power it Holds (CH)/album.png",
+      "size": 146320
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 03 - Flesh and the Power it Holds (CH)/notes.chart",
+      "size": 106309
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 03 - Flesh and the Power it Holds (CH)/song.ini",
+      "size": 220
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 03 - Flesh and the Power it Holds (CH)/song.ogg",
+      "size": 9985683
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 04 - kingbaby-biggaloot/album.png",
+      "size": 187664
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 04 - kingbaby-biggaloot/guitar.mp3",
+      "size": 5238417
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 04 - kingbaby-biggaloot/notes.chart",
+      "size": 92140
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 04 - kingbaby-biggaloot/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 05 - Horobi No Uta/album.png",
+      "size": 173607
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 05 - Horobi No Uta/guitar.ogg",
+      "size": 1225063
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 05 - Horobi No Uta/notes.chart",
+      "size": 11660
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 05 - Horobi No Uta/song.ini",
+      "size": 235
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 06 - Gabe The Dog - The Borkening/album.png",
+      "size": 146131
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 06 - Gabe The Dog - The Borkening/guitar.ogg",
+      "size": 9559175
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 06 - Gabe The Dog - The Borkening/notes.chart",
+      "size": 16320
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 06 - Gabe The Dog - The Borkening/song.ini",
+      "size": 198
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 07 - Texas In July - The Void/album.png",
+      "size": 96214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 07 - Texas In July - The Void/notes.chart",
+      "size": 34846
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 07 - Texas In July - The Void/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 07 - Texas In July - The Void/song.mp3",
+      "size": 12308166
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 08 - slicethecake_theexile/album.png",
+      "size": 161741
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 08 - slicethecake_theexile/guitar.ogg",
+      "size": 33763780
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 08 - slicethecake_theexile/notes.chart",
+      "size": 64571
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 08 - slicethecake_theexile/song.ini",
+      "size": 266
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 09 - Sugarcoat of Love/album.png",
+      "size": 172113
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 09 - Sugarcoat of Love/guitar.ogg",
+      "size": 4624881
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 09 - Sugarcoat of Love/notes.chart",
+      "size": 34136
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 09 - Sugarcoat of Love/song.ini",
+      "size": 226
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 10 - Black Kirin - Eagle/album.png",
+      "size": 153796
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 10 - Black Kirin - Eagle/guitar.ogg",
+      "size": 8691146
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 10 - Black Kirin - Eagle/notes.chart",
+      "size": 53377
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 10 - Black Kirin - Eagle/song.ini",
+      "size": 217
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 11 - coheedandcambria-inkeepingsecr/album.png",
+      "size": 80500
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 11 - coheedandcambria-inkeepingsecr/guitar.mp3",
+      "size": 7917400
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 11 - coheedandcambria-inkeepingsecr/notes.chart",
+      "size": 228307
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 11 - coheedandcambria-inkeepingsecr/song.ini",
+      "size": 244
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 12 - Apocalypse 1992/album.png",
+      "size": 178057
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 12 - Apocalypse 1992/notes.chart",
+      "size": 49717
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 12 - Apocalypse 1992/song.ini",
+      "size": 186
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 12 - Apocalypse 1992/song.ogg",
+      "size": 10513882
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 13 - jingle bells/album.png",
+      "size": 203221
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 13 - jingle bells/notes.chart",
+      "size": 9791
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 13 - jingle bells/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 04 Worldly Traveler/4 - 13 - jingle bells/song.ogg",
+      "size": 3495359
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 01 - Shokran - Interlude/album.png",
+      "size": 172605
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 01 - Shokran - Interlude/notes.chart",
+      "size": 20502
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 01 - Shokran - Interlude/song.ini",
+      "size": 192
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 01 - Shokran - Interlude/song.ogg",
+      "size": 2023781
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 02 - zombie harem/album.png",
+      "size": 140102
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 02 - zombie harem/notes.chart",
+      "size": 47857
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 02 - zombie harem/song.ini",
+      "size": 185
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 02 - zombie harem/song.ogg",
+      "size": 12794432
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 03 - The Prince of the World/album.png",
+      "size": 216003
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 03 - The Prince of the World/guitar.ogg",
+      "size": 5675294
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 03 - The Prince of the World/notes.chart",
+      "size": 19567
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 03 - The Prince of the World/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 04 - Walk of Fame/album.png",
+      "size": 168262
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 04 - Walk of Fame/notes.chart",
+      "size": 33109
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 04 - Walk of Fame/song.ini",
+      "size": 219
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 04 - Walk of Fame/song.ogg",
+      "size": 17830287
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 05 - Sarah Longfield - The Salient Voyage/album.png",
+      "size": 172759
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 05 - Sarah Longfield - The Salient Voyage/guitar.mp3",
+      "size": 13333366
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 05 - Sarah Longfield - The Salient Voyage/notes.chart",
+      "size": 38369
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 05 - Sarah Longfield - The Salient Voyage/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 06 - Cheval/album.png",
+      "size": 150806
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 06 - Cheval/guitar.ogg",
+      "size": 3297104
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 06 - Cheval/notes.chart",
+      "size": 41242
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 06 - Cheval/song.ini",
+      "size": 228
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 07 - Allegaeon - The Phylogenesis Stretch/album.png",
+      "size": 195626
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 07 - Allegaeon - The Phylogenesis Stretch/guitar.ogg",
+      "size": 5261094
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 07 - Allegaeon - The Phylogenesis Stretch/notes.chart",
+      "size": 36468
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 07 - Allegaeon - The Phylogenesis Stretch/song.ini",
+      "size": 205
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 08 - Blight of River Systems/album.png",
+      "size": 131442
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 08 - Blight of River Systems/guitar.mp3",
+      "size": 5660838
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 08 - Blight of River Systems/notes.chart",
+      "size": 32264
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 08 - Blight of River Systems/song.ini",
+      "size": 255
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 09 - Paulo Schroeber- Rabbit Soup/album.png",
+      "size": 204741
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 09 - Paulo Schroeber- Rabbit Soup/notes.chart",
+      "size": 15256
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 09 - Paulo Schroeber- Rabbit Soup/song.ini",
+      "size": 200
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 09 - Paulo Schroeber- Rabbit Soup/song.ogg",
+      "size": 1604835
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 10 - Slipknot - Opium Of The People/album.png",
+      "size": 191642
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 10 - Slipknot - Opium Of The People/notes.chart",
+      "size": 27923
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 10 - Slipknot - Opium Of The People/song.ini",
+      "size": 183
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 05 Oriental Inquisition/5 - 10 - Slipknot - Opium Of The People/song.ogg",
+      "size": 8502820
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 01 - rhode island shred/album.png",
+      "size": 189924
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 01 - rhode island shred/guitar.mp3",
+      "size": 2300446
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 01 - rhode island shred/notes.chart",
+      "size": 23896
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 01 - rhode island shred/song.ini",
+      "size": 209
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 02 - Concertino in Blue/album.png",
+      "size": 105061
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 02 - Concertino in Blue/guitar.ogg",
+      "size": 1887156
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 02 - Concertino in Blue/notes.chart",
+      "size": 10846
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 02 - Concertino in Blue/song.ini",
+      "size": 279
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 03 - Erra - Render The Void/album.png",
+      "size": 190334
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 03 - Erra - Render The Void/notes.chart",
+      "size": 41371
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 03 - Erra - Render The Void/song.ini",
+      "size": 203
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 03 - Erra - Render The Void/song.mp3",
+      "size": 14126192
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 04 - Low Feels Blvd/album.png",
+      "size": 114878
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 04 - Low Feels Blvd/guitar.ogg",
+      "size": 4404469
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 04 - Low Feels Blvd/notes.chart",
+      "size": 30014
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 04 - Low Feels Blvd/song.ini",
+      "size": 248
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 05 - Edd Instrument Solo/album.png",
+      "size": 140057
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 05 - Edd Instrument Solo/notes.chart",
+      "size": 6629
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 05 - Edd Instrument Solo/song.ini",
+      "size": 210
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 05 - Edd Instrument Solo/song.ogg",
+      "size": 366502
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 06 - The Dark Memories/album.png",
+      "size": 216003
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 06 - The Dark Memories/guitar.ogg",
+      "size": 5936399
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 06 - The Dark Memories/notes.chart",
+      "size": 34576
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 06 - The Dark Memories/song.ini",
+      "size": 231
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 07 - baboon/album.png",
+      "size": 152301
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 07 - baboon/notes.chart",
+      "size": 26266
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 07 - baboon/song.ini",
+      "size": 174
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 07 - baboon/song.ogg",
+      "size": 8530126
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 08 - Are You Dead Yet/album.png",
+      "size": 129563
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 08 - Are You Dead Yet/notes.chart",
+      "size": 26652
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 08 - Are You Dead Yet/song.ini",
+      "size": 181
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 08 - Are You Dead Yet/song.ogg",
+      "size": 4675085
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 09 - Trivium - The Sin And The Sentence (Open Note Version)/READ ME.txt",
+      "size": 497
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 09 - Trivium - The Sin And The Sentence (Open Note Version)/album.png",
+      "size": 87369
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 09 - Trivium - The Sin And The Sentence (Open Note Version)/guitar.ogg",
+      "size": 17879741
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 09 - Trivium - The Sin And The Sentence (Open Note Version)/notes.chart",
+      "size": 40020
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 09 - Trivium - The Sin And The Sentence (Open Note Version)/song.ini",
+      "size": 270
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 10 - John Zorn - Snagglepuss/album.png",
+      "size": 109901
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 10 - John Zorn - Snagglepuss/notes.chart",
+      "size": 25503
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 10 - John Zorn - Snagglepuss/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 06 Modern Assembly/6 - 10 - John Zorn - Snagglepuss/song.ogg",
+      "size": 6094976
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 01 - betweentheburiedandme_diseaseinjurymadness/album.png",
+      "size": 205189
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 01 - betweentheburiedandme_diseaseinjurymadness/guitar.ogg",
+      "size": 32053868
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 01 - betweentheburiedandme_diseaseinjurymadness/notes.chart",
+      "size": 64735
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 01 - betweentheburiedandme_diseaseinjurymadness/song.ini",
+      "size": 290
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 02 - Misery Signals - Ursa Minor/album.png",
+      "size": 180057
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 02 - Misery Signals - Ursa Minor/notes.chart",
+      "size": 27246
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 02 - Misery Signals - Ursa Minor/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 02 - Misery Signals - Ursa Minor/song.ogg",
+      "size": 4528784
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 03 - mastodon_divinations/album.png",
+      "size": 207234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 03 - mastodon_divinations/guitar.ogg",
+      "size": 10228450
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 03 - mastodon_divinations/notes.chart",
+      "size": 110848
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 03 - mastodon_divinations/song.ini",
+      "size": 238
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 04 - Temporarily Destabilized (CH)/album.png",
+      "size": 103366
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 04 - Temporarily Destabilized (CH)/notes.chart",
+      "size": 40035
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 04 - Temporarily Destabilized (CH)/song.ini",
+      "size": 193
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 04 - Temporarily Destabilized (CH)/song.ogg",
+      "size": 13300512
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 05 - Powerglove - Kirby/album.png",
+      "size": 166980
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 05 - Powerglove - Kirby/notes.chart",
+      "size": 22226
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 05 - Powerglove - Kirby/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 05 - Powerglove - Kirby/song.ogg",
+      "size": 3602244
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 06 - Mercyful Fate - Gypsy/album.png",
+      "size": 166440
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 06 - Mercyful Fate - Gypsy/guitar.ogg",
+      "size": 11200598
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 06 - Mercyful Fate - Gypsy/notes.chart",
+      "size": 17299
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 06 - Mercyful Fate - Gypsy/song.ini",
+      "size": 216
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 07 - Prison Born/album.png",
+      "size": 202967
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 07 - Prison Born/guitar.ogg",
+      "size": 2334043
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 07 - Prison Born/notes.chart",
+      "size": 17819
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 07 - Prison Born/song.ini",
+      "size": 252
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 08 - Joe Satriani - Crazy Joey/album.png",
+      "size": 198481
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 08 - Joe Satriani - Crazy Joey/notes.chart",
+      "size": 21198
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 08 - Joe Satriani - Crazy Joey/song.ini",
+      "size": 203
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 08 - Joe Satriani - Crazy Joey/song.ogg",
+      "size": 3501439
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 10 - deadbolt/album.png",
+      "size": 155312
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 10 - deadbolt/notes.chart",
+      "size": 23084
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 10 - deadbolt/song.ini",
+      "size": 182
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 10 - deadbolt/song.ogg",
+      "size": 5755561
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 11 - persefone_livingwaves/album.png",
+      "size": 194916
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 11 - persefone_livingwaves/guitar.ogg",
+      "size": 20486995
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 11 - persefone_livingwaves/notes.chart",
+      "size": 49588
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 11 - persefone_livingwaves/song.ini",
+      "size": 270
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 12 - Running in the 90's Metal Cover (CH)/album.png",
+      "size": 146331
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 12 - Running in the 90's Metal Cover (CH)/notes.chart",
+      "size": 43770
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 12 - Running in the 90's Metal Cover (CH)/song.ini",
+      "size": 213
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 07 The Antidote of The Modern Ages/7 - 12 - Running in the 90's Metal Cover (CH)/song.ogg",
+      "size": 10740252
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 01 - Infant Annihilator - Neonatalimpalionecrophiliation/album.png",
+      "size": 210675
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 01 - Infant Annihilator - Neonatalimpalionecrophiliation/notes.chart",
+      "size": 3809
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 01 - Infant Annihilator - Neonatalimpalionecrophiliation/song.ini",
+      "size": 250
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 01 - Infant Annihilator - Neonatalimpalionecrophiliation/song.ogg",
+      "size": 319706
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 02 - Painkiller (Death Cover) (CH)/album.png",
+      "size": 145314
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 02 - Painkiller (Death Cover) (CH)/notes.chart",
+      "size": 61774
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 02 - Painkiller (Death Cover) (CH)/song.ini",
+      "size": 217
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 02 - Painkiller (Death Cover) (CH)/song.ogg",
+      "size": 7068762
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 03 - 09. Secret Love/album.png",
+      "size": 201296
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 03 - 09. Secret Love/guitar.mp3",
+      "size": 16803565
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 03 - 09. Secret Love/notes.chart",
+      "size": 48145
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 03 - 09. Secret Love/song.ini",
+      "size": 195
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 04 - bizarro zarro land/album.png",
+      "size": 909522
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 04 - bizarro zarro land/notes.chart",
+      "size": 64366
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 04 - bizarro zarro land/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 04 - bizarro zarro land/song.ogg",
+      "size": 11783717
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 05 - Paralydium Project - Astral Liberation/album.png",
+      "size": 176837
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 05 - Paralydium Project - Astral Liberation/guitar.ogg",
+      "size": 15432221
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 05 - Paralydium Project - Astral Liberation/notes.chart",
+      "size": 63042
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 05 - Paralydium Project - Astral Liberation/song.ini",
+      "size": 238
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 06 - And the Maiden Spoke/album.png",
+      "size": 159574
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 06 - And the Maiden Spoke/guitar.ogg",
+      "size": 5808788
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 06 - And the Maiden Spoke/notes.chart",
+      "size": 32500
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 06 - And the Maiden Spoke/song.ini",
+      "size": 258
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 07 - Periphery - Graveless/album.png",
+      "size": 137968
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 07 - Periphery - Graveless/notes.chart",
+      "size": 31709
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 07 - Periphery - Graveless/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 07 - Periphery - Graveless/song.mp3",
+      "size": 10933628
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 08 - Chemfinal - Paul Gilbert - Bliss/album.png",
+      "size": 190837
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 08 - Chemfinal - Paul Gilbert - Bliss/guitar.ogg",
+      "size": 18748330
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 08 - Chemfinal - Paul Gilbert - Bliss/notes.chart",
+      "size": 41785
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 08 - Chemfinal - Paul Gilbert - Bliss/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 09 - Eric Calderone - Take On Me Meets Metal/album.png",
+      "size": 108435
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 09 - Eric Calderone - Take On Me Meets Metal/notes.chart",
+      "size": 38440
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 09 - Eric Calderone - Take On Me Meets Metal/song.ini",
+      "size": 178
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 09 - Eric Calderone - Take On Me Meets Metal/song.ogg",
+      "size": 11352224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 10 - Wolves (CH)/album.png",
+      "size": 112823
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 10 - Wolves (CH)/notes.chart",
+      "size": 133529
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 10 - Wolves (CH)/song.ini",
+      "size": 184
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 08 Baroque Barrage/8 - 10 - Wolves (CH)/song.ogg",
+      "size": 9633458
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 01 - macrocosm/album.png",
+      "size": 223580
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 01 - macrocosm/guitar.mp3",
+      "size": 6121568
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 01 - macrocosm/notes.chart",
+      "size": 42295
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 01 - macrocosm/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 02 - Animals as Leaders - Physical Education/album.png",
+      "size": 166561
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 02 - Animals as Leaders - Physical Education/guitar.ogg",
+      "size": 5630361
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 02 - Animals as Leaders - Physical Education/notes.chart",
+      "size": 42063
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 02 - Animals as Leaders - Physical Education/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 03 - Chemfinal - Tiluland - Tilu of the Kings/album.png",
+      "size": 187455
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 03 - Chemfinal - Tiluland - Tilu of the Kings/guitar.ogg",
+      "size": 15102490
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 03 - Chemfinal - Tiluland - Tilu of the Kings/notes.chart",
+      "size": 44706
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 03 - Chemfinal - Tiluland - Tilu of the Kings/song.ini",
+      "size": 211
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 04 - Silent Planet - Darkstrand (Hibakusha)/album.png",
+      "size": 152798
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 04 - Silent Planet - Darkstrand (Hibakusha)/notes.chart",
+      "size": 22892
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 04 - Silent Planet - Darkstrand (Hibakusha)/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 04 - Silent Planet - Darkstrand (Hibakusha)/song.ogg",
+      "size": 3838791
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 05 - Sledgehammer (CH)/album.png",
+      "size": 176340
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 05 - Sledgehammer (CH)/notes.chart",
+      "size": 90078
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 05 - Sledgehammer (CH)/song.ini",
+      "size": 209
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 05 - Sledgehammer (CH)/song.ogg",
+      "size": 6834601
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 06 - Thank You Scientist - Rube Goldberg Variations/album.png",
+      "size": 216053
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 06 - Thank You Scientist - Rube Goldberg Variations/notes.chart",
+      "size": 271745
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 06 - Thank You Scientist - Rube Goldberg Variations/song.ini",
+      "size": 239
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 06 - Thank You Scientist - Rube Goldberg Variations/song.ogg",
+      "size": 10015490
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 07 - Chemfinal - 331Erock - Game of Thrones Meets Metal/album.png",
+      "size": 168288
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 07 - Chemfinal - 331Erock - Game of Thrones Meets Metal/guitar.mp3",
+      "size": 3422248
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 07 - Chemfinal - 331Erock - Game of Thrones Meets Metal/notes.chart",
+      "size": 36108
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 07 - Chemfinal - 331Erock - Game of Thrones Meets Metal/song.ini",
+      "size": 206
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 08 - The Termination Proclamation/album.png",
+      "size": 157936
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 08 - The Termination Proclamation/guitar.ogg",
+      "size": 3738114
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 08 - The Termination Proclamation/notes.chart",
+      "size": 29611
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 08 - The Termination Proclamation/song.ini",
+      "size": 266
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 09 - Andromeda - Chameleon Carneval/album.png",
+      "size": 171348
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 09 - Andromeda - Chameleon Carneval/guitar.mp3",
+      "size": 4819487
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 09 - Andromeda - Chameleon Carneval/notes.chart",
+      "size": 174697
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 09 - Andromeda - Chameleon Carneval/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 10 - Lily of the Moon/album.png",
+      "size": 181182
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 10 - Lily of the Moon/guitar.ogg",
+      "size": 4732489
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 10 - Lily of the Moon/notes.chart",
+      "size": 34558
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 10 - Lily of the Moon/song.ini",
+      "size": 245
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 11 - Dokken - Tooth and Nail/album.png",
+      "size": 188522
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 11 - Dokken - Tooth and Nail/guitar.ogg",
+      "size": 9804276
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 11 - Dokken - Tooth and Nail/notes.chart",
+      "size": 37518
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 09 Equanimity of the Mind/9 - 11 - Dokken - Tooth and Nail/song.ini",
+      "size": 213
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 01 - Evile - Time No More/album.png",
+      "size": 193659
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 01 - Evile - Time No More/guitar.ogg",
+      "size": 6475250
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 01 - Evile - Time No More/notes.chart",
+      "size": 43257
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 01 - Evile - Time No More/song.ini",
+      "size": 212
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 02 - Triosphere - Steal Away The Light/album.png",
+      "size": 159021
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 02 - Triosphere - Steal Away The Light/guitar.mp3",
+      "size": 3766780
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 02 - Triosphere - Steal Away The Light/notes.chart",
+      "size": 136343
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 02 - Triosphere - Steal Away The Light/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 03 - Miscellany - Exodus - The Ballad of Leonard and Charles/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 03 - Miscellany - Exodus - The Ballad of Leonard and Charles/album.png",
+      "size": 207841
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 03 - Miscellany - Exodus - The Ballad of Leonard and Charles/guitar.ogg",
+      "size": 24873333
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 03 - Miscellany - Exodus - The Ballad of Leonard and Charles/notes.chart",
+      "size": 63660
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 03 - Miscellany - Exodus - The Ballad of Leonard and Charles/notes.mid",
+      "size": 24690
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 03 - Miscellany - Exodus - The Ballad of Leonard and Charles/song.ini",
+      "size": 245
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 04 - Canon Rock (2013 Remix)/album.png",
+      "size": 135015
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 04 - Canon Rock (2013 Remix)/notes.chart",
+      "size": 35777
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 04 - Canon Rock (2013 Remix)/song.ini",
+      "size": 186
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 04 - Canon Rock (2013 Remix)/song.ogg",
+      "size": 4118126
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 05 - angra_theshadowhunter/album.png",
+      "size": 210905
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 05 - angra_theshadowhunter/guitar.ogg",
+      "size": 26410567
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 05 - angra_theshadowhunter/notes.chart",
+      "size": 43537
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 05 - angra_theshadowhunter/song.ini",
+      "size": 255
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 06 - Meshuggah - Future Breed Machine/album.png",
+      "size": 193575
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 06 - Meshuggah - Future Breed Machine/guitar.ogg",
+      "size": 7196047
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 06 - Meshuggah - Future Breed Machine/notes.chart",
+      "size": 319036
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 06 - Meshuggah - Future Breed Machine/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 07 - A Man. A Plan. A Canal. Panama (CH)/album.png",
+      "size": 176340
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 07 - A Man. A Plan. A Canal. Panama (CH)/notes.chart",
+      "size": 133422
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 07 - A Man. A Plan. A Canal. Panama (CH)/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 07 - A Man. A Plan. A Canal. Panama (CH)/song.ogg",
+      "size": 9351058
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 08 - George Bellas - Violin Solo/album.png",
+      "size": 199128
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 08 - George Bellas - Violin Solo/notes.chart",
+      "size": 8811
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 08 - George Bellas - Violin Solo/song.ini",
+      "size": 210
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 08 - George Bellas - Violin Solo/song.ogg",
+      "size": 695552
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 09 - Haken - Visions/album.png",
+      "size": 171580
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 09 - Haken - Visions/guitar.ogg",
+      "size": 36836461
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 09 - Haken - Visions/notes.chart",
+      "size": 706784
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 09 - Haken - Visions/song.ini",
+      "size": 191
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 10 - gojira_silvera/album.png",
+      "size": 150136
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 10 - gojira_silvera/guitar.ogg",
+      "size": 12627510
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 10 - gojira_silvera/notes.chart",
+      "size": 119634
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 10 Insidious Inquiries/10 - 10 - gojira_silvera/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 01 - dreamtheater_underaglassmoon/album.png",
+      "size": 187163
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 01 - dreamtheater_underaglassmoon/guitar.ogg",
+      "size": 23820482
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 01 - dreamtheater_underaglassmoon/notes.chart",
+      "size": 55571
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 01 - dreamtheater_underaglassmoon/song.ini",
+      "size": 252
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 01 - dreamtheater_underaglassmoon/song.ogg",
+      "size": 24922666
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 02 - Chemfinal - Greg Howe - Jump Start/album.png",
+      "size": 155854
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 02 - Chemfinal - Greg Howe - Jump Start/guitar.ogg",
+      "size": 12602586
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 02 - Chemfinal - Greg Howe - Jump Start/notes.chart",
+      "size": 42216
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 02 - Chemfinal - Greg Howe - Jump Start/song.ini",
+      "size": 198
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 03 - Cruciform Dachshund/album.png",
+      "size": 152952
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 03 - Cruciform Dachshund/guitar.ogg",
+      "size": 4484299
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 03 - Cruciform Dachshund/notes.chart",
+      "size": 34462
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 03 - Cruciform Dachshund/song.ini",
+      "size": 233
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 04 - paranoid android/album.png",
+      "size": 34613
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 04 - paranoid android/notes.chart",
+      "size": 37846
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 04 - paranoid android/song.ini",
+      "size": 210
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 04 - paranoid android/song.ogg",
+      "size": 17775993
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 05 - Clown Parade (CH)/album.png",
+      "size": 211046
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 05 - Clown Parade (CH)/notes.chart",
+      "size": 62077
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 05 - Clown Parade (CH)/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 05 - Clown Parade (CH)/song.ogg",
+      "size": 6150632
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 06 - Chemfinal - Tiluland - Heroes/album.png",
+      "size": 187455
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 06 - Chemfinal - Tiluland - Heroes/guitar.ogg",
+      "size": 8387323
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 06 - Chemfinal - Tiluland - Heroes/notes.chart",
+      "size": 56003
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 06 - Chemfinal - Tiluland - Heroes/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 07 - Shadow of Intent - The Shaping Sickness/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 07 - Shadow of Intent - The Shaping Sickness/album.png",
+      "size": 174303
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 07 - Shadow of Intent - The Shaping Sickness/guitar.ogg",
+      "size": 14036498
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 07 - Shadow of Intent - The Shaping Sickness/notes.chart",
+      "size": 40934
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 07 - Shadow of Intent - The Shaping Sickness/notes.mid",
+      "size": 19387
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 07 - Shadow of Intent - The Shaping Sickness/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 08 - Haken - The Mind's EyePortalsShapeshifter/album.png",
+      "size": 174275
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 08 - Haken - The Mind's EyePortalsShapeshifter/guitar.ogg",
+      "size": 15335808
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 08 - Haken - The Mind's EyePortalsShapeshifter/notes.chart",
+      "size": 113337
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 08 - Haken - The Mind's EyePortalsShapeshifter/song.ini",
+      "size": 233
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 09 - Hemispheres - Gravity/album.png",
+      "size": 168256
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 09 - Hemispheres - Gravity/notes.chart",
+      "size": 74274
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 09 - Hemispheres - Gravity/song.ini",
+      "size": 204
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 09 - Hemispheres - Gravity/song.ogg",
+      "size": 5345415
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 10 - Impellitteri - Stand In Line/album.png",
+      "size": 162473
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 10 - Impellitteri - Stand In Line/notes.chart",
+      "size": 28276
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 10 - Impellitteri - Stand In Line/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 11 A State of Euphoria/11 - 10 - Impellitteri - Stand In Line/song.ogg",
+      "size": 11936018
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 01 - Rhapsody - Holy Thunderforce/album.png",
+      "size": 196741
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 01 - Rhapsody - Holy Thunderforce/guitar.ogg",
+      "size": 8851324
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 01 - Rhapsody - Holy Thunderforce/notes.chart",
+      "size": 54536
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 01 - Rhapsody - Holy Thunderforce/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 02 - Chemfinal - Vektor - Tetrastructural Minds/album.png",
+      "size": 201304
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 02 - Chemfinal - Vektor - Tetrastructural Minds/guitar.ogg",
+      "size": 17907631
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 02 - Chemfinal - Vektor - Tetrastructural Minds/notes.chart",
+      "size": 55968
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 02 - Chemfinal - Vektor - Tetrastructural Minds/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 03 - black pentagram/album.png",
+      "size": 197392
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 03 - black pentagram/notes.chart",
+      "size": 40668
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 03 - black pentagram/song.ini",
+      "size": 205
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 03 - black pentagram/song.ogg",
+      "size": 11474384
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 04 - Dystopia/album.png",
+      "size": 165419
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 04 - Dystopia/notes.chart",
+      "size": 36572
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 04 - Dystopia/song.ini",
+      "size": 146
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 04 - Dystopia/song.ogg",
+      "size": 5546187
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 05 - Mandroid Echostar - The Sleeper/album.png",
+      "size": 212568
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 05 - Mandroid Echostar - The Sleeper/notes.chart",
+      "size": 44052
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 05 - Mandroid Echostar - The Sleeper/song.ini",
+      "size": 205
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 05 - Mandroid Echostar - The Sleeper/song.ogg",
+      "size": 4481515
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 06 - Nautiluz - Leaving All Behind/album.png",
+      "size": 174576
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 06 - Nautiluz - Leaving All Behind/guitar.ogg",
+      "size": 4816792
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 06 - Nautiluz - Leaving All Behind/notes.chart",
+      "size": 136242
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 06 - Nautiluz - Leaving All Behind/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 07 - Sonata Arctica - Destruction Preventer/album.png",
+      "size": 191936
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 07 - Sonata Arctica - Destruction Preventer/guitar.mp3",
+      "size": 6690690
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 07 - Sonata Arctica - Destruction Preventer/notes.chart",
+      "size": 161482
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 07 - Sonata Arctica - Destruction Preventer/song.ini",
+      "size": 186
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 08 - Lamb of God - Beating On Deaths Door/album.png",
+      "size": 164084
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 08 - Lamb of God - Beating On Deaths Door/notes.chart",
+      "size": 122415
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 08 - Lamb of God - Beating On Deaths Door/song.ini",
+      "size": 203
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 08 - Lamb of God - Beating On Deaths Door/song.ogg",
+      "size": 5809986
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 09 - Periphery Habitual Line-Stepper/album.png",
+      "size": 156717
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 09 - Periphery Habitual Line-Stepper/notes.chart",
+      "size": 43299
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 09 - Periphery Habitual Line-Stepper/song.ini",
+      "size": 235
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 09 - Periphery Habitual Line-Stepper/song.mp3",
+      "size": 16676617
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 10 - Scarified (CH)/album.png",
+      "size": 109109
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 10 - Scarified (CH)/notes.chart",
+      "size": 43790
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 10 - Scarified (CH)/song.ini",
+      "size": 178
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 10 - Scarified (CH)/song.ogg",
+      "size": 2938016
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 11 - Cytotoxin - Outearthed/album.png",
+      "size": 233845
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 11 - Cytotoxin - Outearthed/guitar.ogg",
+      "size": 5989412
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 11 - Cytotoxin - Outearthed/notes.chart",
+      "size": 64267
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 12 Riding Along The Paradox/12 - 11 - Cytotoxin - Outearthed/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 01 - Liquid Tension Experiment- Paradigm Shift/album.png",
+      "size": 241437
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 01 - Liquid Tension Experiment- Paradigm Shift/notes.chart",
+      "size": 121605
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 01 - Liquid Tension Experiment- Paradigm Shift/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 01 - Liquid Tension Experiment- Paradigm Shift/song.ogg",
+      "size": 11496776
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 02 - antimetabole/album.png",
+      "size": 38809
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 02 - antimetabole/notes.chart",
+      "size": 42490
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 02 - antimetabole/song.ini",
+      "size": 187
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 02 - antimetabole/song.ogg",
+      "size": 15722384
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 03 - Leprous - Rewind/album.png",
+      "size": 102278
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 03 - Leprous - Rewind/guitar.mp3",
+      "size": 6868323
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 03 - Leprous - Rewind/notes.chart",
+      "size": 219119
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 03 - Leprous - Rewind/song.ini",
+      "size": 171
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 04 - Haken - The Architect/album.png",
+      "size": 91553
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 04 - Haken - The Architect/guitar.mp3",
+      "size": 23215058
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 04 - Haken - The Architect/notes.chart",
+      "size": 420853
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 04 - Haken - The Architect/song.ini",
+      "size": 200
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 05 - Within The Ruins - Ronin/album.png",
+      "size": 228899
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 05 - Within The Ruins - Ronin/notes.chart",
+      "size": 32757
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 05 - Within The Ruins - Ronin/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 05 - Within The Ruins - Ronin/song.mp3",
+      "size": 10351321
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 06 - The Last Hero/album.png",
+      "size": 148420
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 06 - The Last Hero/notes.chart",
+      "size": 60767
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 06 - The Last Hero/song.ini",
+      "size": 160
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 06 - The Last Hero/song.ogg",
+      "size": 8290885
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 07 - Chemfinal - Sunless Rise - Lost Path/album.png",
+      "size": 168588
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 07 - Chemfinal - Sunless Rise - Lost Path/guitar.ogg",
+      "size": 16489411
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 07 - Chemfinal - Sunless Rise - Lost Path/notes.chart",
+      "size": 57642
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 07 - Chemfinal - Sunless Rise - Lost Path/song.ini",
+      "size": 205
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 08 - The Blister Exists/album.png",
+      "size": 165503
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 08 - The Blister Exists/notes.chart",
+      "size": 46262
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 08 - The Blister Exists/song.ini",
+      "size": 179
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 08 - The Blister Exists/song.ogg",
+      "size": 6938243
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 09 - Pagan's Mind - Follow Your Way/album.png",
+      "size": 202232
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 09 - Pagan's Mind - Follow Your Way/notes.chart",
+      "size": 61091
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 09 - Pagan's Mind - Follow Your Way/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 09 - Pagan's Mind - Follow Your Way/song.mp3",
+      "size": 5145627
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 10 - firewind-maniac/album.png",
+      "size": 144361
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 10 - firewind-maniac/guitar.mp3",
+      "size": 7113384
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 10 - firewind-maniac/notes.chart",
+      "size": 259031
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 10 - firewind-maniac/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 11 - Chemfinal - Bason Jecker - Perpetual Burn/album.png",
+      "size": 210571
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 11 - Chemfinal - Bason Jecker - Perpetual Burn/guitar.ogg",
+      "size": 5106376
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 11 - Chemfinal - Bason Jecker - Perpetual Burn/notes.chart",
+      "size": 40862
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 13 Progression of Wonders/13 - 11 - Chemfinal - Bason Jecker - Perpetual Burn/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 01 - Orianthi ft. Steve Vai - Highly Strung/album.png",
+      "size": 189231
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 01 - Orianthi ft. Steve Vai - Highly Strung/guitar.mp3",
+      "size": 3962671
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 01 - Orianthi ft. Steve Vai - Highly Strung/notes.chart",
+      "size": 293147
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 01 - Orianthi ft. Steve Vai - Highly Strung/song.ini",
+      "size": 188
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 02 - John 5 - Sugar Foot Rag/album.png",
+      "size": 198441
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 02 - John 5 - Sugar Foot Rag/guitar.ogg",
+      "size": 3320818
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 02 - John 5 - Sugar Foot Rag/notes.chart",
+      "size": 138680
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 02 - John 5 - Sugar Foot Rag/song.ini",
+      "size": 189
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 03 - Public Enemy No. 1/album.png",
+      "size": 149404
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 03 - Public Enemy No. 1/notes.chart",
+      "size": 34835
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 03 - Public Enemy No. 1/song.ini",
+      "size": 156
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 03 - Public Enemy No. 1/song.ogg",
+      "size": 5130914
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 04 - Myrath - Under Siege/album.png",
+      "size": 139999
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 04 - Myrath - Under Siege/guitar.ogg",
+      "size": 13605400
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 04 - Myrath - Under Siege/notes.chart",
+      "size": 30146
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 04 - Myrath - Under Siege/song.ini",
+      "size": 205
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 05 - Envy Cat Walk/album.png",
+      "size": 69860
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 05 - Envy Cat Walk/guitar.ogg",
+      "size": 3965326
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 05 - Envy Cat Walk/notes.chart",
+      "size": 37029
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 05 - Envy Cat Walk/song.ini",
+      "size": 225
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 06 - Versailles - Aristocrat's Symphony/album.png",
+      "size": 172326
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 06 - Versailles - Aristocrat's Symphony/guitar.ogg",
+      "size": 6760879
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 06 - Versailles - Aristocrat's Symphony/notes.chart",
+      "size": 46141
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 06 - Versailles - Aristocrat's Symphony/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 07 - Vitalism - Pagan/album.png",
+      "size": 198068
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 07 - Vitalism - Pagan/guitar.mp3",
+      "size": 4323369
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 07 - Vitalism - Pagan/notes.chart",
+      "size": 140505
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 07 - Vitalism - Pagan/song.ini",
+      "size": 172
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 08 - Being - Arcane Acedemic/album.png",
+      "size": 182960
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 08 - Being - Arcane Acedemic/guitar.mp3",
+      "size": 7432986
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 08 - Being - Arcane Acedemic/notes.chart",
+      "size": 233152
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 08 - Being - Arcane Acedemic/song.ini",
+      "size": 190
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 09 - Zyglrox/album.png",
+      "size": 198025
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 09 - Zyglrox/guitar.ogg",
+      "size": 5465434
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 09 - Zyglrox/notes.chart",
+      "size": 39399
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 09 - Zyglrox/song.ini",
+      "size": 231
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 10 - persefone_aathma/album.png",
+      "size": 194916
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 10 - persefone_aathma/guitar.ogg",
+      "size": 67426340
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 10 - persefone_aathma/notes.chart",
+      "size": 140056
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 14 Enigmatic Rhapsody/14 - 10 - persefone_aathma/song.ini",
+      "size": 245
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 01 - megadeth_headcrusher/album.png",
+      "size": 197356
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 01 - megadeth_headcrusher/guitar.ogg",
+      "size": 12332452
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 01 - megadeth_headcrusher/notes.chart",
+      "size": 27885
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 01 - megadeth_headcrusher/song.ini",
+      "size": 227
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 02 - Rover Trip/album.png",
+      "size": 200278
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 02 - Rover Trip/guitar.mp3",
+      "size": 4513122
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 02 - Rover Trip/notes.chart",
+      "size": 57246
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 02 - Rover Trip/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 03 - Taking Back My Soul/album.png",
+      "size": 158746
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 03 - Taking Back My Soul/guitar.ogg",
+      "size": 5733952
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 03 - Taking Back My Soul/notes.chart",
+      "size": 27132
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 03 - Taking Back My Soul/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 04 - exformation/album.png",
+      "size": 38719
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 04 - exformation/notes.chart",
+      "size": 52424
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 04 - exformation/song.ini",
+      "size": 183
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 04 - exformation/song.ogg",
+      "size": 13141516
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 05 - Being - The Singularity 1/album.png",
+      "size": 182960
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 05 - Being - The Singularity 1/guitar.mp3",
+      "size": 5737325
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 05 - Being - The Singularity 1/notes.chart",
+      "size": 255149
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 05 - Being - The Singularity 1/song.ini",
+      "size": 187
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 06 - Paul Gilbert - Fuzz Universe/album.png",
+      "size": 212011
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 06 - Paul Gilbert - Fuzz Universe/notes.chart",
+      "size": 83361
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 06 - Paul Gilbert - Fuzz Universe/song.ini",
+      "size": 200
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 06 - Paul Gilbert - Fuzz Universe/song.ogg",
+      "size": 7250607
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 07 - Damage Inc/album.png",
+      "size": 170003
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 07 - Damage Inc/notes.chart",
+      "size": 46038
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 07 - Damage Inc/song.ini",
+      "size": 173
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 07 - Damage Inc/song.ogg",
+      "size": 11462645
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 08 - The Word Alive - Battle Royale/album.png",
+      "size": 121496
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 08 - The Word Alive - Battle Royale/notes.chart",
+      "size": 40165
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 08 - The Word Alive - Battle Royale/song.ini",
+      "size": 176
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 08 - The Word Alive - Battle Royale/song.ogg",
+      "size": 4560903
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 09 - Rainbowdragoneyes - The Blade Chose Me/album.png",
+      "size": 179477
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 09 - Rainbowdragoneyes - The Blade Chose Me/notes.chart",
+      "size": 28625
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 09 - Rainbowdragoneyes - The Blade Chose Me/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 09 - Rainbowdragoneyes - The Blade Chose Me/song.ogg",
+      "size": 5768109
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 10 - Old School Rechart Solo Suite/album.png",
+      "size": 191647
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 10 - Old School Rechart Solo Suite/notes.chart",
+      "size": 66359
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 10 - Old School Rechart Solo Suite/song.ini",
+      "size": 193
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 15 The Soul In You/15 - 10 - Old School Rechart Solo Suite/song.ogg",
+      "size": 6463465
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 01 - shinsekai/album.png",
+      "size": 118499
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 01 - shinsekai/guitar.mp3",
+      "size": 1526543
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 01 - shinsekai/notes.chart",
+      "size": 95418
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 01 - shinsekai/song.ini",
+      "size": 886
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 02 - Mirage Garden/album.png",
+      "size": 167390
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 02 - Mirage Garden/guitar.ogg",
+      "size": 4187186
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 02 - Mirage Garden/notes.chart",
+      "size": 40180
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 02 - Mirage Garden/song.ini",
+      "size": 216
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 03 - The Rivalry Between Good and Evil/album.png",
+      "size": 181182
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 03 - The Rivalry Between Good and Evil/guitar.ogg",
+      "size": 4535246
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 03 - The Rivalry Between Good and Evil/notes.chart",
+      "size": 41076
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 03 - The Rivalry Between Good and Evil/song.ini",
+      "size": 262
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 04 - Chemfinal - Paul Wardingham - Beyond Human/album.png",
+      "size": 94085
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 04 - Chemfinal - Paul Wardingham - Beyond Human/guitar.ogg",
+      "size": 15218604
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 04 - Chemfinal - Paul Wardingham - Beyond Human/notes.chart",
+      "size": 45378
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 04 - Chemfinal - Paul Wardingham - Beyond Human/song.ini",
+      "size": 219
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 05 - FROST - Milliontown/album.png",
+      "size": 123071
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 05 - FROST - Milliontown/guitar.mp3",
+      "size": 63822392
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 05 - FROST - Milliontown/notes.chart",
+      "size": 210460
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 05 - FROST - Milliontown/song.ini",
+      "size": 199
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 06 - Chemfinal - Andromeda - Morphing Into Nothing/album.png",
+      "size": 169272
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 06 - Chemfinal - Andromeda - Morphing Into Nothing/guitar.ogg",
+      "size": 22053405
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 06 - Chemfinal - Andromeda - Morphing Into Nothing/notes.chart",
+      "size": 93762
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 06 - Chemfinal - Andromeda - Morphing Into Nothing/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 07 - slipknot_gematria/album.png",
+      "size": 185314
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 07 - slipknot_gematria/guitar.ogg",
+      "size": 21391469
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 07 - slipknot_gematria/notes.chart",
+      "size": 54881
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 07 - slipknot_gematria/song.ini",
+      "size": 244
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 08 - Dying Fetus - Subjected to a Beating/album.png",
+      "size": 159248
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 08 - Dying Fetus - Subjected to a Beating/guitar.ogg",
+      "size": 18307274
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 08 - Dying Fetus - Subjected to a Beating/notes.chart",
+      "size": 64873
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 08 - Dying Fetus - Subjected to a Beating/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 09 - Black Label Society - Godspeed Hell Bound/album.png",
+      "size": 92094
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 09 - Black Label Society - Godspeed Hell Bound/notes.chart",
+      "size": 45745
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 09 - Black Label Society - Godspeed Hell Bound/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 09 - Black Label Society - Godspeed Hell Bound/song.mp3",
+      "size": 4625312
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 10 - Mike Orlando - Old School Boogie/album.png",
+      "size": 150739
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 10 - Mike Orlando - Old School Boogie/notes.chart",
+      "size": 33646
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 10 - Mike Orlando - Old School Boogie/song.ini",
+      "size": 182
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 16 Intense Therapy/16 - 10 - Mike Orlando - Old School Boogie/song.ogg",
+      "size": 2719915
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 01 - lingus/album.png",
+      "size": 81665
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 01 - lingus/notes.chart",
+      "size": 405081
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 01 - lingus/song.ini",
+      "size": 192
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 01 - lingus/song.ogg",
+      "size": 24623087
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 02 - Todd Duane - The Rain/album.png",
+      "size": 180720
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 02 - Todd Duane - The Rain/guitar.ogg",
+      "size": 4298645
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 02 - Todd Duane - The Rain/notes.chart",
+      "size": 18065
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 02 - Todd Duane - The Rain/song.ini",
+      "size": 193
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 03 - Glorious Aggressor + Whisper in the Red Sky/album.png",
+      "size": 219805
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 03 - Glorious Aggressor + Whisper in the Red Sky/guitar.mp3",
+      "size": 7937136
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 03 - Glorious Aggressor + Whisper in the Red Sky/notes.chart",
+      "size": 82672
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 03 - Glorious Aggressor + Whisper in the Red Sky/song.ini",
+      "size": 237
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 04 - Houmous/album.png",
+      "size": 144081
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 04 - Houmous/guitar.ogg",
+      "size": 4188326
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 04 - Houmous/notes.chart",
+      "size": 72773
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 04 - Houmous/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 05 - Miscellany - Archspire - Spontaneous Generation/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 05 - Miscellany - Archspire - Spontaneous Generation/album.png",
+      "size": 180703
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 05 - Miscellany - Archspire - Spontaneous Generation/guitar.ogg",
+      "size": 14318307
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 05 - Miscellany - Archspire - Spontaneous Generation/notes.chart",
+      "size": 54284
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 05 - Miscellany - Archspire - Spontaneous Generation/notes.mid",
+      "size": 17689
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 05 - Miscellany - Archspire - Spontaneous Generation/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 06 - Expulsion - Promise Never Made/album.png",
+      "size": 166917
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 06 - Expulsion - Promise Never Made/guitar.ogg",
+      "size": 13570751
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 06 - Expulsion - Promise Never Made/notes.chart",
+      "size": 43970
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 06 - Expulsion - Promise Never Made/song.ini",
+      "size": 227
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 07 - James LaBrie - Mislead/album.png",
+      "size": 199663
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 07 - James LaBrie - Mislead/notes.chart",
+      "size": 48559
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 07 - James LaBrie - Mislead/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 07 - James LaBrie - Mislead/song.ogg",
+      "size": 4697272
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 08 - Damage Control/album.png",
+      "size": 171731
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 08 - Damage Control/notes.chart",
+      "size": 62485
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 08 - Damage Control/song.ini",
+      "size": 174
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 08 - Damage Control/song.ogg",
+      "size": 9989259
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 09 - Infant Annihilator - Paedophilic Supremecy/album.png",
+      "size": 168357
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 09 - Infant Annihilator - Paedophilic Supremecy/guitar.mp3",
+      "size": 911569
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 09 - Infant Annihilator - Paedophilic Supremecy/notes.chart",
+      "size": 39320
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 09 - Infant Annihilator - Paedophilic Supremecy/song.ini",
+      "size": 231
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 10 - Nevermore - This Godless Endeavor/album.png",
+      "size": 145582
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 10 - Nevermore - This Godless Endeavor/guitar.ogg",
+      "size": 10499536
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 10 - Nevermore - This Godless Endeavor/notes.chart",
+      "size": 68472
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 10 - Nevermore - This Godless Endeavor/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 11 - Guitar Hero On Tour Modern Hits Theme/album.png",
+      "size": 193111
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 11 - Guitar Hero On Tour Modern Hits Theme/guitar.ogg",
+      "size": 3681489
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 11 - Guitar Hero On Tour Modern Hits Theme/notes.chart",
+      "size": 33839
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 11 - Guitar Hero On Tour Modern Hits Theme/song.ini",
+      "size": 303
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 17 Experimental Rendezvous/17 - 11 - Guitar Hero On Tour Modern Hits Theme/song.ogg",
+      "size": 4551520
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 01 - Chaos/album.png",
+      "size": 190481
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 01 - Chaos/guitar.ogg",
+      "size": 6204523
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 01 - Chaos/notes.chart",
+      "size": 57746
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 01 - Chaos/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 02 - Venturia - Swearing Lies/album.png",
+      "size": 125105
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 02 - Venturia - Swearing Lies/guitar.ogg",
+      "size": 6992890
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 02 - Venturia - Swearing Lies/notes.chart",
+      "size": 49826
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 02 - Venturia - Swearing Lies/song.ini",
+      "size": 213
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 03 - Bravery in the Field/album.png",
+      "size": 216003
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 03 - Bravery in the Field/guitar.ogg",
+      "size": 6652128
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 03 - Bravery in the Field/notes.chart",
+      "size": 45863
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 03 - Bravery in the Field/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 04 - Sergey Golovin - Headbreaker/album.png",
+      "size": 146888
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 04 - Sergey Golovin - Headbreaker/guitar.ogg",
+      "size": 5404493
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 04 - Sergey Golovin - Headbreaker/notes.chart",
+      "size": 33847
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 04 - Sergey Golovin - Headbreaker/song.ini",
+      "size": 193
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 05 - The Black Dahlia Murder - Great Burning Nullifier/album.png",
+      "size": 218535
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 05 - The Black Dahlia Murder - Great Burning Nullifier/notes.chart",
+      "size": 35836
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 05 - The Black Dahlia Murder - Great Burning Nullifier/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 05 - The Black Dahlia Murder - Great Burning Nullifier/song.mp3",
+      "size": 8323568
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 06 - Superheroes/album.png",
+      "size": 174074
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 06 - Superheroes/guitar.ogg",
+      "size": 5330957
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 06 - Superheroes/notes.chart",
+      "size": 45618
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 06 - Superheroes/song.ini",
+      "size": 223
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 07 - Headspace - Semaphore/album.png",
+      "size": 87800
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 07 - Headspace - Semaphore/notes.chart",
+      "size": 59875
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 07 - Headspace - Semaphore/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 07 - Headspace - Semaphore/song.ogg",
+      "size": 6220322
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 08 - dead leaves rising/album.png",
+      "size": 198354
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 08 - dead leaves rising/notes.chart",
+      "size": 27627
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 08 - dead leaves rising/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 08 - dead leaves rising/song.ogg",
+      "size": 9259664
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 09 - Borislav Mitic - The Absolute/album.png",
+      "size": 97084
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 09 - Borislav Mitic - The Absolute/notes.chart",
+      "size": 53402
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 09 - Borislav Mitic - The Absolute/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 09 - Borislav Mitic - The Absolute/song.ogg",
+      "size": 6546219
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 10 - silentforce_heartattack/album.png",
+      "size": 156863
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 10 - silentforce_heartattack/guitar.ogg",
+      "size": 19269355
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 10 - silentforce_heartattack/notes.chart",
+      "size": 47308
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 18 The Great Attractor/18 - 10 - silentforce_heartattack/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 01 - Building the Church/album.png",
+      "size": 177888
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 01 - Building the Church/notes.chart",
+      "size": 44036
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 01 - Building the Church/song.ini",
+      "size": 183
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 01 - Building the Church/song.ogg",
+      "size": 5052127
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 02 - Cattle Decapitation - Regret and the Grave/album.png",
+      "size": 150985
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 02 - Cattle Decapitation - Regret and the Grave/guitar.ogg",
+      "size": 5623023
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 02 - Cattle Decapitation - Regret and the Grave/notes.chart",
+      "size": 43406
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 02 - Cattle Decapitation - Regret and the Grave/song.ini",
+      "size": 244
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 03 - Stratovarius - Stratofortress/album.png",
+      "size": 217561
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 03 - Stratovarius - Stratofortress/notes.chart",
+      "size": 35870
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 03 - Stratovarius - Stratofortress/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 03 - Stratovarius - Stratofortress/song.ogg",
+      "size": 3041891
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 04 - jasonbecker_altitudes/album.png",
+      "size": 210571
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 04 - jasonbecker_altitudes/guitar.ogg",
+      "size": 15969713
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 04 - jasonbecker_altitudes/notes.chart",
+      "size": 86192
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 04 - jasonbecker_altitudes/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 05 - The Aristocrats - Bad Asteroid (Live)/album.png",
+      "size": 175540
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 05 - The Aristocrats - Bad Asteroid (Live)/notes.chart",
+      "size": 52502
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 05 - The Aristocrats - Bad Asteroid (Live)/song.ini",
+      "size": 228
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 05 - The Aristocrats - Bad Asteroid (Live)/song.ogg",
+      "size": 8149166
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 06 - X Japan - Silent Jealousy/album.png",
+      "size": 116023
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 06 - X Japan - Silent Jealousy/guitar.ogg",
+      "size": 8100687
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 06 - X Japan - Silent Jealousy/notes.chart",
+      "size": 108306
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 06 - X Japan - Silent Jealousy/song.ini",
+      "size": 210
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 07 - A Slight Amplification/album.png",
+      "size": 154880
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 07 - A Slight Amplification/guitar.ogg",
+      "size": 6232874
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 07 - A Slight Amplification/notes.chart",
+      "size": 44527
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 07 - A Slight Amplification/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 08 - Liquid Tension Experiment - Rhapsody in Blue (Prog Metal Version)/album.png",
+      "size": 246932
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 08 - Liquid Tension Experiment - Rhapsody in Blue (Prog Metal Version)/notes.chart",
+      "size": 92616
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 08 - Liquid Tension Experiment - Rhapsody in Blue (Prog Metal Version)/song.ini",
+      "size": 265
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 08 - Liquid Tension Experiment - Rhapsody in Blue (Prog Metal Version)/song.ogg",
+      "size": 18526531
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 09 - The Werewolf of Westeria/album.png",
+      "size": 146684
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 09 - The Werewolf of Westeria/notes.chart",
+      "size": 53795
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 09 - The Werewolf of Westeria/song.ini",
+      "size": 182
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 09 - The Werewolf of Westeria/song.ogg",
+      "size": 7616699
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 10 - If You Want Peace...Prepare For War/album.png",
+      "size": 128568
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 10 - If You Want Peace...Prepare For War/notes.chart",
+      "size": 36459
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 10 - If You Want Peace...Prepare For War/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 10 - If You Want Peace...Prepare For War/song.ogg",
+      "size": 4299463
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 11 - Miscellany - Alustrium - The Illusion of Choice/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 11 - Miscellany - Alustrium - The Illusion of Choice/album.png",
+      "size": 1988782
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 11 - Miscellany - Alustrium - The Illusion of Choice/guitar.ogg",
+      "size": 110652814
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 11 - Miscellany - Alustrium - The Illusion of Choice/notes.chart",
+      "size": 274594
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 11 - Miscellany - Alustrium - The Illusion of Choice/notes.mid",
+      "size": 104458
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 19 Spacial Extremes/19 - 11 - Miscellany - Alustrium - The Illusion of Choice/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 01 - Pathfinder - Beyond the space, Beyond the time/album.png",
+      "size": 181632
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 01 - Pathfinder - Beyond the space, Beyond the time/guitar.mp3",
+      "size": 10171036
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 01 - Pathfinder - Beyond the space, Beyond the time/notes.chart",
+      "size": 414357
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 01 - Pathfinder - Beyond the space, Beyond the time/song.ini",
+      "size": 225
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 02 - Seven/album.png",
+      "size": 151153
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 02 - Seven/notes.chart",
+      "size": 64477
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 02 - Seven/song.ini",
+      "size": 154
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 02 - Seven/song.ogg",
+      "size": 7288390
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 03 - Miscellany - Scar Symmetry - The Kaleidoscopic God/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 03 - Miscellany - Scar Symmetry - The Kaleidoscopic God/album.png",
+      "size": 1951359
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 03 - Miscellany - Scar Symmetry - The Kaleidoscopic God/guitar.ogg",
+      "size": 24762238
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 03 - Miscellany - Scar Symmetry - The Kaleidoscopic God/notes.chart",
+      "size": 54753
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 03 - Miscellany - Scar Symmetry - The Kaleidoscopic God/notes.mid",
+      "size": 20504
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 03 - Miscellany - Scar Symmetry - The Kaleidoscopic God/song.ini",
+      "size": 237
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 04 - Sergey Golovin - Chaos Machine/album.png",
+      "size": 146888
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 04 - Sergey Golovin - Chaos Machine/guitar.ogg",
+      "size": 5128602
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 04 - Sergey Golovin - Chaos Machine/notes.chart",
+      "size": 57340
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 04 - Sergey Golovin - Chaos Machine/song.ini",
+      "size": 195
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 05 - Fleshgod Apocalypse - A Million Deaths/album.png",
+      "size": 163811
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 05 - Fleshgod Apocalypse - A Million Deaths/guitar.ogg",
+      "size": 6491447
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 05 - Fleshgod Apocalypse - A Million Deaths/notes.chart",
+      "size": 69967
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 05 - Fleshgod Apocalypse - A Million Deaths/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 06 - Miscellany - Cryptopsy - Halothane Glow/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 06 - Miscellany - Cryptopsy - Halothane Glow/album.png",
+      "size": 3317541
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 06 - Miscellany - Cryptopsy - Halothane Glow/guitar.ogg",
+      "size": 11621879
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 06 - Miscellany - Cryptopsy - Halothane Glow/notes.chart",
+      "size": 53646
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 06 - Miscellany - Cryptopsy - Halothane Glow/notes.mid",
+      "size": 23856
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 06 - Miscellany - Cryptopsy - Halothane Glow/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 07 - St\u00e9phan Fort\u00e9 - Enigma Opera Black/album.png",
+      "size": 194002
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 07 - St\u00e9phan Fort\u00e9 - Enigma Opera Black/guitar.ogg",
+      "size": 6241659
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 07 - St\u00e9phan Fort\u00e9 - Enigma Opera Black/notes.chart",
+      "size": 41045
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 07 - St\u00e9phan Fort\u00e9 - Enigma Opera Black/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 08 - Annihilator - Haunted/album.png",
+      "size": 228829
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 08 - Annihilator - Haunted/notes.chart",
+      "size": 102517
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 08 - Annihilator - Haunted/song.ini",
+      "size": 198
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 08 - Annihilator - Haunted/song.ogg",
+      "size": 8362428
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 09 - Rings of Saturn - Shards of Scorched Flesh/album.png",
+      "size": 224709
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 09 - Rings of Saturn - Shards of Scorched Flesh/guitar.ogg",
+      "size": 7828658
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 09 - Rings of Saturn - Shards of Scorched Flesh/notes.chart",
+      "size": 47900
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 09 - Rings of Saturn - Shards of Scorched Flesh/song.ini",
+      "size": 233
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 10 - Andromeda Solo Medley 2/album.png",
+      "size": 192830
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 10 - Andromeda Solo Medley 2/guitar.ogg",
+      "size": 12288137
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 10 - Andromeda Solo Medley 2/notes.chart",
+      "size": 122797
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 20 Beyond the Space and Time/20 - 10 - Andromeda Solo Medley 2/song.ini",
+      "size": 254
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 01 - Sunless Rise- Nothing To Save/album.png",
+      "size": 159094
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 01 - Sunless Rise- Nothing To Save/guitar.mp3",
+      "size": 3054445
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 01 - Sunless Rise- Nothing To Save/notes.chart",
+      "size": 136632
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 01 - Sunless Rise- Nothing To Save/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 02 - Inferi - The Ancients of Shattered Thrones/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 02 - Inferi - The Ancients of Shattered Thrones/album.png",
+      "size": 204153
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 02 - Inferi - The Ancients of Shattered Thrones/guitar.ogg",
+      "size": 18599849
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 02 - Inferi - The Ancients of Shattered Thrones/notes.chart",
+      "size": 51994
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 02 - Inferi - The Ancients of Shattered Thrones/notes.mid",
+      "size": 24556
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 02 - Inferi - The Ancients of Shattered Thrones/song.ini",
+      "size": 254
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 03 - Thrillseeker/album.png",
+      "size": 46332
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 03 - Thrillseeker/guitar.ogg",
+      "size": 9106672
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 03 - Thrillseeker/notes.chart",
+      "size": 84639
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 03 - Thrillseeker/song.ini",
+      "size": 242
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 04 - blast off/album.png",
+      "size": 130669
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 04 - blast off/notes.chart",
+      "size": 57013
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 04 - blast off/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 04 - blast off/song.ogg",
+      "size": 13421653
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 05 - First Fragment - Le Serment De Tsion/album.png",
+      "size": 179683
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 05 - First Fragment - Le Serment De Tsion/guitar.ogg",
+      "size": 4675948
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 05 - First Fragment - Le Serment De Tsion/notes.chart",
+      "size": 51130
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 05 - First Fragment - Le Serment De Tsion/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 06 - Chemfinal - Vektor - Black Future/album.png",
+      "size": 203401
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 06 - Chemfinal - Vektor - Black Future/guitar.mp3",
+      "size": 12138803
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 06 - Chemfinal - Vektor - Black Future/notes.chart",
+      "size": 51652
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 06 - Chemfinal - Vektor - Black Future/song.ini",
+      "size": 209
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 07 - Into the pit/album.png",
+      "size": 146272
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 07 - Into the pit/notes.chart",
+      "size": 30333
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 07 - Into the pit/song.ini",
+      "size": 157
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 07 - Into the pit/song.ogg",
+      "size": 3351399
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 08 - caverns/album.png",
+      "size": 194416
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 08 - caverns/notes.chart",
+      "size": 66127
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 08 - caverns/song.ini",
+      "size": 203
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 08 - caverns/song.ogg",
+      "size": 17417286
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 09 - Scar Symmetry - Holographic Universe/album.png",
+      "size": 152499
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 09 - Scar Symmetry - Holographic Universe/guitar.ogg",
+      "size": 11329018
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 09 - Scar Symmetry - Holographic Universe/notes.chart",
+      "size": 374234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 09 - Scar Symmetry - Holographic Universe/song.ini",
+      "size": 245
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 10 - Steve Vai - Pink and Blows Over (pt. 1-3 )/album.png",
+      "size": 199670
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 10 - Steve Vai - Pink and Blows Over (pt. 1-3 )/notes.chart",
+      "size": 200669
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 10 - Steve Vai - Pink and Blows Over (pt. 1-3 )/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 21 Escaping The Hypernova/21 - 10 - Steve Vai - Pink and Blows Over (pt. 1-3 )/song.ogg",
+      "size": 21070212
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 01 - Amberian Dawn - Dreamchaser/album.png",
+      "size": 185968
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 01 - Amberian Dawn - Dreamchaser/guitar.ogg",
+      "size": 3986338
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 01 - Amberian Dawn - Dreamchaser/notes.chart",
+      "size": 44205
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 01 - Amberian Dawn - Dreamchaser/song.ini",
+      "size": 216
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 02 - Cryptic Shift - Cosmic Dreams/album.png",
+      "size": 198945
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 02 - Cryptic Shift - Cosmic Dreams/guitar.ogg",
+      "size": 7005537
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 02 - Cryptic Shift - Cosmic Dreams/notes.chart",
+      "size": 83902
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 02 - Cryptic Shift - Cosmic Dreams/song.ini",
+      "size": 227
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 03 - Dig It (Live in Studio) (CH)/album.png",
+      "size": 128786
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 03 - Dig It (Live in Studio) (CH)/notes.chart",
+      "size": 58704
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 03 - Dig It (Live in Studio) (CH)/song.ini",
+      "size": 217
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 03 - Dig It (Live in Studio) (CH)/song.ogg",
+      "size": 6196808
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 04 - Benighted - Christraping Black Metal (Marduk Cover)/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 04 - Benighted - Christraping Black Metal (Marduk Cover)/album.png",
+      "size": 233319
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 04 - Benighted - Christraping Black Metal (Marduk Cover)/guitar.ogg",
+      "size": 10587425
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 04 - Benighted - Christraping Black Metal (Marduk Cover)/notes.chart",
+      "size": 52233
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 04 - Benighted - Christraping Black Metal (Marduk Cover)/notes.mid",
+      "size": 19375
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 04 - Benighted - Christraping Black Metal (Marduk Cover)/song.ini",
+      "size": 246
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 05 - Arch Echo - Spark/album.png",
+      "size": 150751
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 05 - Arch Echo - Spark/guitar.ogg",
+      "size": 19867685
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 05 - Arch Echo - Spark/notes.chart",
+      "size": 47114
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 05 - Arch Echo - Spark/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 06 - Stream of Consciousness/album.png",
+      "size": 117296
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 06 - Stream of Consciousness/notes.chart",
+      "size": 69845
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 06 - Stream of Consciousness/song.ini",
+      "size": 180
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 06 - Stream of Consciousness/song.ogg",
+      "size": 13344757
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 07 - Chemfinal - Liquid World/album.png",
+      "size": 142256
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 07 - Chemfinal - Liquid World/notes.chart",
+      "size": 99746
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 07 - Chemfinal - Liquid World/song.ini",
+      "size": 195
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 07 - Chemfinal - Liquid World/song.ogg",
+      "size": 20111356
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 08 - George Bellas - Ripped to Shreds/album.png",
+      "size": 177310
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 08 - George Bellas - Ripped to Shreds/guitar.ogg",
+      "size": 11443862
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 08 - George Bellas - Ripped to Shreds/notes.chart",
+      "size": 42357
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 08 - George Bellas - Ripped to Shreds/song.ini",
+      "size": 235
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 09 - Origin - Cascading Failures, Diminishing Returns/album.png",
+      "size": 202879
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 09 - Origin - Cascading Failures, Diminishing Returns/guitar.ogg",
+      "size": 5116650
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 09 - Origin - Cascading Failures, Diminishing Returns/notes.chart",
+      "size": 79766
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 09 - Origin - Cascading Failures, Diminishing Returns/song.ini",
+      "size": 256
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 10 - Thin Lizzy - Thunder and Lightning/album.png",
+      "size": 176528
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 10 - Thin Lizzy - Thunder and Lightning/guitar.mp3",
+      "size": 7108995
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 10 - Thin Lizzy - Thunder and Lightning/notes.chart",
+      "size": 233845
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 22 A Classic Case of Transference/22 - 10 - Thin Lizzy - Thunder and Lightning/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 01 - Burn/album.png",
+      "size": 142413
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 01 - Burn/guitar.ogg",
+      "size": 5018290
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 01 - Burn/notes.chart",
+      "size": 50093
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 01 - Burn/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 02 - Sergey Golovin - Cynical Tesla Fury/album.png",
+      "size": 146888
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 02 - Sergey Golovin - Cynical Tesla Fury/guitar.ogg",
+      "size": 4953369
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 02 - Sergey Golovin - Cynical Tesla Fury/notes.chart",
+      "size": 38373
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 02 - Sergey Golovin - Cynical Tesla Fury/song.ini",
+      "size": 184
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 03 - sherman is connector/album.png",
+      "size": 103977
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 03 - sherman is connector/notes.chart",
+      "size": 54967
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 03 - sherman is connector/song.ini",
+      "size": 189
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 03 - sherman is connector/song.ogg",
+      "size": 10381595
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 04 - CrimzonAE - Annihilator- Hunter Killer/album.png",
+      "size": 230683
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 04 - CrimzonAE - Annihilator- Hunter Killer/notes.chart",
+      "size": 676966
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 04 - CrimzonAE - Annihilator- Hunter Killer/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 04 - CrimzonAE - Annihilator- Hunter Killer/song.mp3",
+      "size": 5813812
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 05 - Chemfinal - Galneryus - United Flag/album.png",
+      "size": 179094
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 05 - Chemfinal - Galneryus - United Flag/guitar.mp3",
+      "size": 5757804
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 05 - Chemfinal - Galneryus - United Flag/notes.chart",
+      "size": 69440
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 05 - Chemfinal - Galneryus - United Flag/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 06 - tell-tale heart/album.png",
+      "size": 205819
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 06 - tell-tale heart/notes.chart",
+      "size": 69119
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 06 - tell-tale heart/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 06 - tell-tale heart/song.ogg",
+      "size": 14321122
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 07 - Marc Rizzo - Colossal Myopia/album.png",
+      "size": 147872
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 07 - Marc Rizzo - Colossal Myopia/notes.chart",
+      "size": 74448
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 07 - Marc Rizzo - Colossal Myopia/song.ini",
+      "size": 212
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 07 - Marc Rizzo - Colossal Myopia/song.ogg",
+      "size": 4754270
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 08 - Absu - A Song for Ea/album.png",
+      "size": 179767
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 08 - Absu - A Song for Ea/guitar.ogg",
+      "size": 37841797
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 08 - Absu - A Song for Ea/notes.chart",
+      "size": 180444
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 08 - Absu - A Song for Ea/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 09 - Caprici di Diablo/album.png",
+      "size": 177739
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 09 - Caprici di Diablo/guitar.ogg",
+      "size": 4649105
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 09 - Caprici di Diablo/notes.chart",
+      "size": 49509
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 09 - Caprici di Diablo/song.ini",
+      "size": 271
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 09 - Caprici di Diablo/song.ogg",
+      "size": 5221408
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 10 - Megadeth Solo Medly/album.png",
+      "size": 57348
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 10 - Megadeth Solo Medly/notes.chart",
+      "size": 83588
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 10 - Megadeth Solo Medly/song.ini",
+      "size": 186
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 23 Gravity Used Against Us/23 - 10 - Megadeth Solo Medly/song.ogg",
+      "size": 21341405
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 01 - Riot Act (CH)/album.png",
+      "size": 186331
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 01 - Riot Act (CH)/notes.chart",
+      "size": 167655
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 01 - Riot Act (CH)/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 01 - Riot Act (CH)/song.ogg",
+      "size": 10643527
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 02 - The Algorithm - Trojans/album.png",
+      "size": 224961
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 02 - The Algorithm - Trojans/notes.chart",
+      "size": 48106
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 02 - The Algorithm - Trojans/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 02 - The Algorithm - Trojans/song.mp3",
+      "size": 11235657
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 03 - Jason Richardson - Breaking Damnation/album.png",
+      "size": 140567
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 03 - Jason Richardson - Breaking Damnation/guitar.ogg",
+      "size": 7600971
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 03 - Jason Richardson - Breaking Damnation/notes.chart",
+      "size": 60054
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 03 - Jason Richardson - Breaking Damnation/song.ini",
+      "size": 196
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 04 - Origin - Antithesis/album.png",
+      "size": 164739
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 04 - Origin - Antithesis/guitar.ogg",
+      "size": 23304800
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 04 - Origin - Antithesis/notes.chart",
+      "size": 132587
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 04 - Origin - Antithesis/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 05 - Spawn of Possession - The Evangelist/album.png",
+      "size": 168812
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 05 - Spawn of Possession - The Evangelist/guitar.ogg",
+      "size": 12468799
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 05 - Spawn of Possession - The Evangelist/notes.chart",
+      "size": 81052
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 05 - Spawn of Possession - The Evangelist/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 06 - Speed/album.png",
+      "size": 193870
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 06 - Speed/notes.chart",
+      "size": 39190
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 06 - Speed/song.ini",
+      "size": 175
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 06 - Speed/song.ogg",
+      "size": 4783271
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 07 - Outworld - Riders/album.png",
+      "size": 181519
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 07 - Outworld - Riders/guitar.ogg",
+      "size": 6698181
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 07 - Outworld - Riders/notes.chart",
+      "size": 96330
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 07 - Outworld - Riders/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 08 - jdurand11143 - Glowman 4/album.png",
+      "size": 152033
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 08 - jdurand11143 - Glowman 4/guitar.mp3",
+      "size": 4529226
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 08 - jdurand11143 - Glowman 4/notes.chart",
+      "size": 244968
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 08 - jdurand11143 - Glowman 4/song.ini",
+      "size": 191
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 09 - Vitalj Kuprij - Revenge/album.png",
+      "size": 108583
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 09 - Vitalj Kuprij - Revenge/notes.chart",
+      "size": 61161
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 09 - Vitalj Kuprij - Revenge/song.ini",
+      "size": 221
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 09 - Vitalj Kuprij - Revenge/song.ogg",
+      "size": 5037030
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 10 - Chemfinal - Buckethead - Worms for the Garden/album.png",
+      "size": 204473
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 10 - Chemfinal - Buckethead - Worms for the Garden/guitar.mp3",
+      "size": 17862738
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 10 - Chemfinal - Buckethead - Worms for the Garden/notes.chart",
+      "size": 171011
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 10 - Chemfinal - Buckethead - Worms for the Garden/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 11 - Miscellany - Dimebag Darrell - Solo Medley/READ ME.txt",
+      "size": 702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 11 - Miscellany - Dimebag Darrell - Solo Medley/album.png",
+      "size": 336593
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 11 - Miscellany - Dimebag Darrell - Solo Medley/guitar.ogg",
+      "size": 38183271
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 11 - Miscellany - Dimebag Darrell - Solo Medley/notes.mid",
+      "size": 42057
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 24 Arms Quenched In Flames/24 - 11 - Miscellany - Dimebag Darrell - Solo Medley/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 01 - Devin Townsend - Nerd Alert/album.png",
+      "size": 206667
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 01 - Devin Townsend - Nerd Alert/guitar.mp3",
+      "size": 4195892
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 01 - Devin Townsend - Nerd Alert/notes.chart",
+      "size": 170215
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 01 - Devin Townsend - Nerd Alert/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 02 - yuhki/album.png",
+      "size": 176224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 02 - yuhki/guitar.mp3",
+      "size": 14752067
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 02 - yuhki/notes.chart",
+      "size": 80660
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 02 - yuhki/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 03 - scarsymmetry_deviatefromtheform/album.png",
+      "size": 147357
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 03 - scarsymmetry_deviatefromtheform/guitar.ogg",
+      "size": 17853471
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 03 - scarsymmetry_deviatefromtheform/notes.chart",
+      "size": 84609
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 03 - scarsymmetry_deviatefromtheform/song.ini",
+      "size": 259
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 04 - Stephan Forte - De Praestigiis Daemonum/album.png",
+      "size": 191440
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 04 - Stephan Forte - De Praestigiis Daemonum/notes.chart",
+      "size": 41455
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 04 - Stephan Forte - De Praestigiis Daemonum/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 04 - Stephan Forte - De Praestigiis Daemonum/song.ogg",
+      "size": 5753744
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 05 - Chemfinal - Origin - The Beyond Within/album.png",
+      "size": 173199
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 05 - Chemfinal - Origin - The Beyond Within/guitar.ogg",
+      "size": 10442212
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 05 - Chemfinal - Origin - The Beyond Within/notes.chart",
+      "size": 49004
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 05 - Chemfinal - Origin - The Beyond Within/song.ini",
+      "size": 209
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 06 - Chemfinal - Mike Orlando - Throwdown/album.png",
+      "size": 146647
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 06 - Chemfinal - Mike Orlando - Throwdown/guitar.ogg",
+      "size": 16062440
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 06 - Chemfinal - Mike Orlando - Throwdown/notes.chart",
+      "size": 55702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 06 - Chemfinal - Mike Orlando - Throwdown/song.ini",
+      "size": 199
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 07 - electrocution250-gee-wiz/album.png",
+      "size": 158409
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 07 - electrocution250-gee-wiz/guitar.mp3",
+      "size": 1142700
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 07 - electrocution250-gee-wiz/notes.chart",
+      "size": 60884
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 07 - electrocution250-gee-wiz/song.ini",
+      "size": 231
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 08 - Judas Priest Solo Medley (CH)/album.png",
+      "size": 101480
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 08 - Judas Priest Solo Medley (CH)/notes.chart",
+      "size": 254685
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 08 - Judas Priest Solo Medley (CH)/song.ini",
+      "size": 195
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 25 (Greetings Fellow Guitar Nerds!)/25 - 08 - Judas Priest Solo Medley (CH)/song.ogg",
+      "size": 31760570
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 01 - Coyote Kisses - Acid Wolfpack/album.png",
+      "size": 156755
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 01 - Coyote Kisses - Acid Wolfpack/notes.chart",
+      "size": 80269
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 01 - Coyote Kisses - Acid Wolfpack/song.ini",
+      "size": 193
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 01 - Coyote Kisses - Acid Wolfpack/song.ogg",
+      "size": 5996141
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 02 - Shane Gibson - Artichoke Samurai/album.png",
+      "size": 206667
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 02 - Shane Gibson - Artichoke Samurai/guitar.mp3",
+      "size": 5728966
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 02 - Shane Gibson - Artichoke Samurai/notes.chart",
+      "size": 187418
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 02 - Shane Gibson - Artichoke Samurai/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 03 - Ultimate Youtube Guitarist Shred Song/album.png",
+      "size": 103757
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 03 - Ultimate Youtube Guitarist Shred Song/notes.chart",
+      "size": 46236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 03 - Ultimate Youtube Guitarist Shred Song/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 03 - Ultimate Youtube Guitarist Shred Song/song.ogg",
+      "size": 12784711
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 04 - Symphony X - Underworld Solo Medley/album.png",
+      "size": 96481
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 04 - Symphony X - Underworld Solo Medley/guitar.mp3",
+      "size": 8737018
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 04 - Symphony X - Underworld Solo Medley/notes.chart",
+      "size": 434501
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 04 - Symphony X - Underworld Solo Medley/song.ini",
+      "size": 196
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 05 - electrocution250-dr_fluffels/album.png",
+      "size": 158409
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 05 - electrocution250-dr_fluffels/guitar.mp3",
+      "size": 6996218
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 05 - electrocution250-dr_fluffels/notes.chart",
+      "size": 352389
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 05 - electrocution250-dr_fluffels/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 06 - Warmen Solo Medley/album.png",
+      "size": 119083
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 06 - Warmen Solo Medley/guitar.mp3",
+      "size": 7891904
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 06 - Warmen Solo Medley/notes.chart",
+      "size": 127474
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 06 - Warmen Solo Medley/song.ini",
+      "size": 211
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 07 - The Who - Baba O'Riley/album.png",
+      "size": 186093
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 07 - The Who - Baba O'Riley/notes.chart",
+      "size": 74251
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 07 - The Who - Baba O'Riley/song.ini",
+      "size": 211
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 07 - The Who - Baba O'Riley/song.mp3",
+      "size": 4984064
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 08 - G3 - Voodoo Child (Live)/album.png",
+      "size": 130760
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 08 - G3 - Voodoo Child (Live)/guitar.ogg",
+      "size": 11334522
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 08 - G3 - Voodoo Child (Live)/notes.chart",
+      "size": 96990
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 26 The Continuous Strain On Ya Fingers/26 - 08 - G3 - Voodoo Child (Live)/song.ini",
+      "size": 213
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 01 - ringsofsaturn_hyperforms/album.png",
+      "size": 260542
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 01 - ringsofsaturn_hyperforms/guitar.ogg",
+      "size": 14770243
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 01 - ringsofsaturn_hyperforms/notes.chart",
+      "size": 53500
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 01 - ringsofsaturn_hyperforms/song.ini",
+      "size": 245
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 02 - Time Requiem Solo Medley/album.png",
+      "size": 195447
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 02 - Time Requiem Solo Medley/guitar.ogg",
+      "size": 42344513
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 02 - Time Requiem Solo Medley/notes.chart",
+      "size": 285225
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 02 - Time Requiem Solo Medley/song.ini",
+      "size": 221
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 03 - Beyond the Space, Beyond the Time Solo Medley/album.png",
+      "size": 184035
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 03 - Beyond the Space, Beyond the Time Solo Medley/guitar.mp3",
+      "size": 11275702
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 03 - Beyond the Space, Beyond the Time Solo Medley/notes.chart",
+      "size": 591962
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 03 - Beyond the Space, Beyond the Time Solo Medley/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 04 - Jim VanCleve - Train 45/album.png",
+      "size": 201997
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 04 - Jim VanCleve - Train 45/notes.chart",
+      "size": 39111
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 04 - Jim VanCleve - Train 45/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 04 - Jim VanCleve - Train 45/song.mp3",
+      "size": 3038695
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 05 - Not another Dragonforce Medley/album.png",
+      "size": 131814
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 05 - Not another Dragonforce Medley/notes.chart",
+      "size": 209664
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 05 - Not another Dragonforce Medley/song.ini",
+      "size": 249
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 05 - Not another Dragonforce Medley/song.ogg",
+      "size": 17637659
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 06 - The Algorithm -  Bouncing dot/album.png",
+      "size": 224961
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 06 - The Algorithm -  Bouncing dot/notes.chart",
+      "size": 92410
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 06 - The Algorithm -  Bouncing dot/song.ini",
+      "size": 199
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 06 - The Algorithm -  Bouncing dot/song.mp3",
+      "size": 8249966
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 07 - Steve Ouimette - Lous Revenge/album.png",
+      "size": 163213
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 07 - Steve Ouimette - Lous Revenge/notes.chart",
+      "size": 45298
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 07 - Steve Ouimette - Lous Revenge/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 07 - Steve Ouimette - Lous Revenge/song.ogg",
+      "size": 4594106
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 08 - Canon Rock (Keyboard Remix)/album.png",
+      "size": 159428
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 08 - Canon Rock (Keyboard Remix)/notes.chart",
+      "size": 74124
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 08 - Canon Rock (Keyboard Remix)/song.ini",
+      "size": 212
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 08 - Canon Rock (Keyboard Remix)/song.ogg",
+      "size": 5306425
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 09 - Chemfinal - X Japan - Art of Life/album.png",
+      "size": 174624
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 09 - Chemfinal - X Japan - Art of Life/guitar.mp3",
+      "size": 27871414
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 09 - Chemfinal - X Japan - Art of Life/notes.chart",
+      "size": 238971
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 27 Your Body Hurting Yet/27 - 09 - Chemfinal - X Japan - Art of Life/song.ini",
+      "size": 217
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 01 - Brain Drill - Quantum Catastrophe/album.png",
+      "size": 205007
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 01 - Brain Drill - Quantum Catastrophe/guitar.ogg",
+      "size": 11100374
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 01 - Brain Drill - Quantum Catastrophe/notes.chart",
+      "size": 183325
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 01 - Brain Drill - Quantum Catastrophe/song.ini",
+      "size": 237
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 02 - New Game/album.png",
+      "size": 59207
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 02 - New Game/guitar.ogg",
+      "size": 5956358
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 02 - New Game/notes.chart",
+      "size": 54540
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 02 - New Game/song.ini",
+      "size": 221
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 03 - Fleshgod Apocalypse - The Betrayal/album.png",
+      "size": 183442
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 03 - Fleshgod Apocalypse - The Betrayal/guitar.ogg",
+      "size": 6663703
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 03 - Fleshgod Apocalypse - The Betrayal/notes.chart",
+      "size": 81752
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 03 - Fleshgod Apocalypse - The Betrayal/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 04 - The Algorithm - Logic Bomb/album.png",
+      "size": 224961
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 04 - The Algorithm - Logic Bomb/notes.chart",
+      "size": 66990
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 04 - The Algorithm - Logic Bomb/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 04 - The Algorithm - Logic Bomb/song.mp3",
+      "size": 11264920
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 05 - Steve Vai - Solo Medley/album.png",
+      "size": 154399
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 05 - Steve Vai - Solo Medley/guitar.ogg",
+      "size": 12384876
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 05 - Steve Vai - Solo Medley/notes.chart",
+      "size": 162126
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 05 - Steve Vai - Solo Medley/song.ini",
+      "size": 219
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 06 - Speed of Link/album.png",
+      "size": 116468
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 06 - Speed of Link/guitar.ogg",
+      "size": 4040597
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 06 - Speed of Link/notes.chart",
+      "size": 87133
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 06 - Speed of Link/song.ini",
+      "size": 232
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 07 ringsofsaturn_relicthe/album.png",
+      "size": 233415
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 07 ringsofsaturn_relicthe/guitar.ogg",
+      "size": 16096986
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 07 ringsofsaturn_relicthe/notes.chart",
+      "size": 91730
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 07 ringsofsaturn_relicthe/song.ini",
+      "size": 217
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 08 - Chemfinal - Fearofdark - Penguins of the Apocalypse/album.png",
+      "size": 47705
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 08 - Chemfinal - Fearofdark - Penguins of the Apocalypse/guitar.ogg",
+      "size": 4180315
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 08 - Chemfinal - Fearofdark - Penguins of the Apocalypse/notes.chart",
+      "size": 52671
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 08 - Chemfinal - Fearofdark - Penguins of the Apocalypse/song.ini",
+      "size": 215
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 09 - Infant Annihilator - Behold The Kingdom of the Wretched Undying/album.png",
+      "size": 197684
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 09 - Infant Annihilator - Behold The Kingdom of the Wretched Undying/guitar.ogg",
+      "size": 20862835
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 09 - Infant Annihilator - Behold The Kingdom of the Wretched Undying/notes.chart",
+      "size": 181103
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 09 - Infant Annihilator - Behold The Kingdom of the Wretched Undying/song.ini",
+      "size": 280
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 10 - Joe Satriani - Joe Satriani Solo Medley/album.png",
+      "size": 152463
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 10 - Joe Satriani - Joe Satriani Solo Medley/notes.chart",
+      "size": 211461
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 10 - Joe Satriani - Joe Satriani Solo Medley/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 10 - Joe Satriani - Joe Satriani Solo Medley/song.ogg",
+      "size": 13149741
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 11 - Liquid Tension Experiment - Acid Rain (Live)/album.png",
+      "size": 172344
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 11 - Liquid Tension Experiment - Acid Rain (Live)/guitar.ogg",
+      "size": 23438233
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 11 - Liquid Tension Experiment - Acid Rain (Live)/notes.chart",
+      "size": 122926
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 11 - Liquid Tension Experiment - Acid Rain (Live)/song.ini",
+      "size": 238
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 12 - Rings of Saturn Solos Suite/album.png",
+      "size": 238878
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 12 - Rings of Saturn Solos Suite/notes.chart",
+      "size": 138659
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 12 - Rings of Saturn Solos Suite/song.ini",
+      "size": 238
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 12 - Rings of Saturn Solos Suite/song.ogg",
+      "size": 40005018
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 13 - Guitars That Ate My Brain Solo Medley/album.png",
+      "size": 206955
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 13 - Guitars That Ate My Brain Solo Medley/guitar.mp3",
+      "size": 9279111
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 13 - Guitars That Ate My Brain Solo Medley/notes.chart",
+      "size": 525945
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 28 Masochrists Only Beyond This Point/28 - 13 - Guitars That Ate My Brain Solo Medley/song.ini",
+      "size": 227
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 01 - Skrillex - The Devils Den/album.png",
+      "size": 203950
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 01 - Skrillex - The Devils Den/guitar.ogg",
+      "size": 5626459
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 01 - Skrillex - The Devils Den/notes.chart",
+      "size": 237487
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 01 - Skrillex - The Devils Den/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 02 - Heavenly Spores/album.png",
+      "size": 107673
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 02 - Heavenly Spores/guitar.ogg",
+      "size": 2577781
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 02 - Heavenly Spores/notes.chart",
+      "size": 96855
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 02 - Heavenly Spores/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 03 - chronos/album.png",
+      "size": 141147
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 03 - chronos/notes.chart",
+      "size": 63996
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 03 - chronos/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 03 - chronos/song.ogg",
+      "size": 11072452
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 04 - Kendrick Lamar - Tammy's Song (Gamo)/album.png",
+      "size": 165941
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 04 - Kendrick Lamar - Tammy's Song (Gamo)/guitar.ogg",
+      "size": 5054197
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 04 - Kendrick Lamar - Tammy's Song (Gamo)/notes.chart",
+      "size": 146906
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 04 - Kendrick Lamar - Tammy's Song (Gamo)/song.ini",
+      "size": 193
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 05 - Blitz Lunar - The Labyrinth of Skadi/album.png",
+      "size": 146567
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 05 - Blitz Lunar - The Labyrinth of Skadi/guitar.ogg",
+      "size": 4939936
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 05 - Blitz Lunar - The Labyrinth of Skadi/notes.chart",
+      "size": 93613
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 05 - Blitz Lunar - The Labyrinth of Skadi/song.ini",
+      "size": 220
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 06 - Fearofdark - Rain Dance/album.png",
+      "size": 56789
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 06 - Fearofdark - Rain Dance/guitar.ogg",
+      "size": 3616088
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 06 - Fearofdark - Rain Dance/notes.chart",
+      "size": 85883
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 06 - Fearofdark - Rain Dance/song.ini",
+      "size": 210
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 07 - Chemfinal - Blitz Lunar - You Time You Show You Universe/album.png",
+      "size": 161560
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 07 - Chemfinal - Blitz Lunar - You Time You Show You Universe/guitar.mp3",
+      "size": 6170545
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 07 - Chemfinal - Blitz Lunar - You Time You Show You Universe/notes.chart",
+      "size": 261786
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 07 - Chemfinal - Blitz Lunar - You Time You Show You Universe/song.ini",
+      "size": 213
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 08 - MECHAMOZART - ACTION CLASSICAL INC/album.png",
+      "size": 108885
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 08 - MECHAMOZART - ACTION CLASSICAL INC/notes.chart",
+      "size": 105676
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 08 - MECHAMOZART - ACTION CLASSICAL INC/song.ini",
+      "size": 199
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- 29 Seriously, Don't Even Attempt these! (FU10!)/29 - 08 - MECHAMOZART - ACTION CLASSICAL INC/song.ogg",
+      "size": 6992208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 01 - Vektor - Charging the Void/album.png",
+      "size": 156606
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 01 - Vektor - Charging the Void/notes.chart",
+      "size": 131386
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 01 - Vektor - Charging the Void/song.ini",
+      "size": 219
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 01 - Vektor - Charging the Void/song.mp3",
+      "size": 8860866
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 02 - Chemfinal - Vektor - Cygnus Terminal/album.png",
+      "size": 173215
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 02 - Chemfinal - Vektor - Cygnus Terminal/guitar.mp3",
+      "size": 19891978
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 02 - Chemfinal - Vektor - Cygnus Terminal/notes.chart",
+      "size": 93329
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 02 - Chemfinal - Vektor - Cygnus Terminal/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 03 - Vektor - LCD (Liquid Crystal Display)/album.png",
+      "size": 156606
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 03 - Vektor - LCD (Liquid Crystal Display)/notes.chart",
+      "size": 438697
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 03 - Vektor - LCD (Liquid Crystal Display)/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 03 - Vektor - LCD (Liquid Crystal Display)/song.mp3",
+      "size": 7279595
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 04 - Vektor - Mountains Above the Sun & Ultimate Artificer/album.png",
+      "size": 162713
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 04 - Vektor - Mountains Above the Sun & Ultimate Artificer/guitar.ogg",
+      "size": 19627809
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 04 - Vektor - Mountains Above the Sun & Ultimate Artificer/notes.chart",
+      "size": 66003
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 04 - Vektor - Mountains Above the Sun & Ultimate Artificer/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 05 - Miscellany - Chemfinal - Vektor - Pteropticon/album.png",
+      "size": 161461
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 05 - Miscellany - Chemfinal - Vektor - Pteropticon/guitar.ogg",
+      "size": 22008118
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 05 - Miscellany - Chemfinal - Vektor - Pteropticon/notes.chart",
+      "size": 74700
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 05 - Miscellany - Chemfinal - Vektor - Pteropticon/song.ini",
+      "size": 249
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 06 - Vektor - Psychotropia (Open Note Version)/READ ME.txt",
+      "size": 497
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 06 - Vektor - Psychotropia (Open Note Version)/album.png",
+      "size": 2985035
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 06 - Vektor - Psychotropia (Open Note Version)/guitar.ogg",
+      "size": 28356920
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 06 - Vektor - Psychotropia (Open Note Version)/notes.chart",
+      "size": 100214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 06 - Vektor - Psychotropia (Open Note Version)/song.ini",
+      "size": 216
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 07 - Chemfinal - Vektor - Pillars of Sand/album.png",
+      "size": 173215
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 07 - Chemfinal - Vektor - Pillars of Sand/guitar.ogg",
+      "size": 16294336
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 07 - Chemfinal - Vektor - Pillars of Sand/notes.chart",
+      "size": 61759
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 07 - Chemfinal - Vektor - Pillars of Sand/song.ini",
+      "size": 214
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 08 - Chemfinal - Vektor - Collapse/album.png",
+      "size": 173215
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 08 - Chemfinal - Vektor - Collapse/guitar.ogg",
+      "size": 26927582
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 08 - Chemfinal - Vektor - Collapse/notes.chart",
+      "size": 56899
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 08 - Chemfinal - Vektor - Collapse/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 09 - Chemfinal - Vektor - Recharging the Void/album.png",
+      "size": 173215
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 09 - Chemfinal - Vektor - Recharging the Void/guitar.ogg",
+      "size": 40587487
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 09 - Chemfinal - Vektor - Recharging the Void/notes.chart",
+      "size": 139640
+    },
+    {
+      "path": "Carpal Tunnel Hero 2/- Bonus Terimal Redux Full Album (Vektor)/30 - 09 - Chemfinal - Vektor - Recharging the Void/song.ini",
+      "size": 219
+    }
+  ],
+  "extracted_size": 3467714254,
+  "file_count": 1264,
+  "chart_count": 309,
+  "release_date": "2017-09-29"
 }

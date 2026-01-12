@@ -3,18 +3,1519 @@
   "folder_id": "static-bitcrusher",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 74,
-  "total_size": 573098473,
-  "file_count": 375,
+  "downloads": [
+    {
+      "url": "https://customsongscentral.b-cdn.net/BITCRUSHER.rar?ref=customsongscentral.com",
+      "name": "BITCRUSHER.rar",
+      "size": 573098473,
+      "md5": "0d9f809a3eda1b227d7410d0278f2ffc"
+    }
+  ],
+  "download_size": 573098473,
   "files": [
     {
-      "id": "cdn-csc-bitcrusher",
-      "path": "Bitcrusher/Bitcrusher.rar",
-      "name": "Bitcrusher.rar",
-      "size": 573098473,
-      "md5": "0d9f809a3eda1b227d7410d0278f2ffc",
-      "url": "https://customsongscentral.b-cdn.net/BITCRUSHER.rar?ref=customsongscentral.com"
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Anamanaguchi - Helix Nebula [3-UP]/album.png",
+      "size": 195202
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Anamanaguchi - Helix Nebula [3-UP]/background.png",
+      "size": 93672
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Anamanaguchi - Helix Nebula [3-UP]/notes.chart",
+      "size": 51364
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Anamanaguchi - Helix Nebula [3-UP]/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Anamanaguchi - Helix Nebula [3-UP]/song.ogg",
+      "size": 4906846
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Blitz Lunar - Hidden Heaven [3-UP]/album.png",
+      "size": 56682
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Blitz Lunar - Hidden Heaven [3-UP]/background.jpg",
+      "size": 1377004
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Blitz Lunar - Hidden Heaven [3-UP]/notes.chart",
+      "size": 110329
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Blitz Lunar - Hidden Heaven [3-UP]/song.ini",
+      "size": 621
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Blitz Lunar - Hidden Heaven [3-UP]/song.ogg",
+      "size": 7451622
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Danimal Cannon - Danimal Across America [3-UP]/album.png",
+      "size": 574341
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Danimal Cannon - Danimal Across America [3-UP]/background.jpg",
+      "size": 365753
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Danimal Cannon - Danimal Across America [3-UP]/notes.chart",
+      "size": 59426
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Danimal Cannon - Danimal Across America [3-UP]/song.ini",
+      "size": 589
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Danimal Cannon - Danimal Across America [3-UP]/song.ogg",
+      "size": 5961639
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Fearofdark - Handsome Guy [3-UP]/album.jpg",
+      "size": 79988
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Fearofdark - Handsome Guy [3-UP]/background.jpg",
+      "size": 315876
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Fearofdark - Handsome Guy [3-UP]/notes.chart",
+      "size": 54963
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Fearofdark - Handsome Guy [3-UP]/song.ini",
+      "size": 566
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/Fearofdark - Handsome Guy [3-UP]/song.ogg",
+      "size": 7698396
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/PROTODOME - Orange Juice Overload [3-UP]/album.png",
+      "size": 131060
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/PROTODOME - Orange Juice Overload [3-UP]/background.jpg",
+      "size": 98104
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/PROTODOME - Orange Juice Overload [3-UP]/notes.chart",
+      "size": 84773
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/PROTODOME - Orange Juice Overload [3-UP]/song.ini",
+      "size": 605
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/PROTODOME - Orange Juice Overload [3-UP]/song.ogg",
+      "size": 6299770
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/zabutom - Final Blast [3-UP]/album.png",
+      "size": 506114
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/zabutom - Final Blast [3-UP]/background.jpg",
+      "size": 962127
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/zabutom - Final Blast [3-UP]/notes.chart",
+      "size": 56064
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/zabutom - Final Blast [3-UP]/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Bitcrusher/TIER_01__BITCLASSICS/zabutom - Final Blast [3-UP]/song.ogg",
+      "size": 6365208
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Big Giant Circles - Fight the Current [3-UP]/album.png",
+      "size": 574823
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Big Giant Circles - Fight the Current [3-UP]/background.jpg",
+      "size": 559933
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Big Giant Circles - Fight the Current [3-UP]/notes.chart",
+      "size": 97179
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Big Giant Circles - Fight the Current [3-UP]/song.ini",
+      "size": 621
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Big Giant Circles - Fight the Current [3-UP]/song.ogg",
+      "size": 7010280
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Fearofdark - Fearofdark Solo Medley [3-UP]/album.png",
+      "size": 3069
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Fearofdark - Fearofdark Solo Medley [3-UP]/background.jpg",
+      "size": 128066
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Fearofdark - Fearofdark Solo Medley [3-UP]/notes.chart",
+      "size": 401596
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Fearofdark - Fearofdark Solo Medley [3-UP]/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Fearofdark - Fearofdark Solo Medley [3-UP]/song.ogg",
+      "size": 16313353
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/I Shot the Duck Hunt Dog - BGM 2 [MissMoo]/album.png",
+      "size": 405143
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/I Shot the Duck Hunt Dog - BGM 2 [MissMoo]/background.jpg",
+      "size": 532455
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/I Shot the Duck Hunt Dog - BGM 2 [MissMoo]/notes.chart",
+      "size": 110304
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/I Shot the Duck Hunt Dog - BGM 2 [MissMoo]/song.ini",
+      "size": 682
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/I Shot the Duck Hunt Dog - BGM 2 [MissMoo]/song.ogg",
+      "size": 6002370
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Rainbowdragoneyes - Time Paradox (feat. Magic Hammer) [3-UP]/album.png",
+      "size": 465385
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Rainbowdragoneyes - Time Paradox (feat. Magic Hammer) [3-UP]/background.jpg",
+      "size": 100315
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Rainbowdragoneyes - Time Paradox (feat. Magic Hammer) [3-UP]/notes.chart",
+      "size": 90020
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Rainbowdragoneyes - Time Paradox (feat. Magic Hammer) [3-UP]/song.ini",
+      "size": 446
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Rainbowdragoneyes - Time Paradox (feat. Magic Hammer) [3-UP]/song.ogg",
+      "size": 6312471
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Shnabubula - Wood Man (Megaman 2) [3-UP]/album.png",
+      "size": 230941
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Shnabubula - Wood Man (Megaman 2) [3-UP]/background.jpg",
+      "size": 86733
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Shnabubula - Wood Man (Megaman 2) [3-UP]/notes.chart",
+      "size": 136271
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Shnabubula - Wood Man (Megaman 2) [3-UP]/song.ini",
+      "size": 884
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/Shnabubula - Wood Man (Megaman 2) [3-UP]/song.ogg",
+      "size": 7162290
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/aivi & surasshu - Lonely Rolling Star (Missing You) (Yoshihito Yano cover) [3-UP]/album.png",
+      "size": 286338
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/aivi & surasshu - Lonely Rolling Star (Missing You) (Yoshihito Yano cover) [3-UP]/background.jpg",
+      "size": 121899
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/aivi & surasshu - Lonely Rolling Star (Missing You) (Yoshihito Yano cover) [3-UP]/notes.chart",
+      "size": 120358
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/aivi & surasshu - Lonely Rolling Star (Missing You) (Yoshihito Yano cover) [3-UP]/song.ini",
+      "size": 470
+    },
+    {
+      "path": "Bitcrusher/TIER_02__SOUND_EXPANDER/aivi & surasshu - Lonely Rolling Star (Missing You) (Yoshihito Yano cover) [3-UP]/song.ogg",
+      "size": 10049676
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Barry Blum - Toxic Caves [Aren Eternal]/album.png",
+      "size": 465357
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Barry Blum - Toxic Caves [Aren Eternal]/background.png",
+      "size": 47067
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Barry Blum - Toxic Caves [Aren Eternal]/notes.chart",
+      "size": 63773
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Barry Blum - Toxic Caves [Aren Eternal]/song.ini",
+      "size": 363
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Barry Blum - Toxic Caves [Aren Eternal]/song.ogg",
+      "size": 4070122
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Hiroshi Kawaguchi - Magical Sound Shower (Short Version) [3-UP]/album.png",
+      "size": 589695
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Hiroshi Kawaguchi - Magical Sound Shower (Short Version) [3-UP]/background.jpg",
+      "size": 102253
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Hiroshi Kawaguchi - Magical Sound Shower (Short Version) [3-UP]/notes.chart",
+      "size": 70489
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Hiroshi Kawaguchi - Magical Sound Shower (Short Version) [3-UP]/song.ini",
+      "size": 745
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Hiroshi Kawaguchi - Magical Sound Shower (Short Version) [3-UP]/song.ogg",
+      "size": 5953735
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/MovieMovies1 - The Hero of Legend [3-UP]/album.png",
+      "size": 143795
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/MovieMovies1 - The Hero of Legend [3-UP]/background.jpg",
+      "size": 387650
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/MovieMovies1 - The Hero of Legend [3-UP]/notes.chart",
+      "size": 44026
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/MovieMovies1 - The Hero of Legend [3-UP]/song.ini",
+      "size": 455
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/MovieMovies1 - The Hero of Legend [3-UP]/song.ogg",
+      "size": 7080532
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Toshiharu Yamanishi - Metal Squad [3-UP]/album.png",
+      "size": 621990
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Toshiharu Yamanishi - Metal Squad [3-UP]/background.jpg",
+      "size": 278086
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Toshiharu Yamanishi - Metal Squad [3-UP]/notes.chart",
+      "size": 35801
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Toshiharu Yamanishi - Metal Squad [3-UP]/song.ini",
+      "size": 486
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/Toshiharu Yamanishi - Metal Squad [3-UP]/song.ogg",
+      "size": 4625581
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/kulor - Ellis Island Disco [3-UP]/album.png",
+      "size": 428474
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/kulor - Ellis Island Disco [3-UP]/background.jpg",
+      "size": 1387565
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/kulor - Ellis Island Disco [3-UP]/notes.chart",
+      "size": 80620
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/kulor - Ellis Island Disco [3-UP]/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Bitcrusher/TIER_03__DOING_WHAT_NINTENDIDN'T/kulor - Ellis Island Disco [3-UP]/song.ogg",
+      "size": 5638110
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Jayster - Sunrise to Sunset [3-UP]/album.png",
+      "size": 141035
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Jayster - Sunrise to Sunset [3-UP]/background.jpg",
+      "size": 103797
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Jayster - Sunrise to Sunset [3-UP]/notes.chart",
+      "size": 78103
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Jayster - Sunrise to Sunset [3-UP]/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Jayster - Sunrise to Sunset [3-UP]/song.ogg",
+      "size": 6488079
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Sinc-X - Bowser's Castle [3-UP]/album.png",
+      "size": 309942
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Sinc-X - Bowser's Castle [3-UP]/background.png",
+      "size": 15312
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Sinc-X - Bowser's Castle [3-UP]/notes.chart",
+      "size": 226476
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Sinc-X - Bowser's Castle [3-UP]/song.ini",
+      "size": 587
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Sinc-X - Bowser's Castle [3-UP]/song.ogg",
+      "size": 10108955
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Supper - Troublemaker [3-UP]/album.png",
+      "size": 156454
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Supper - Troublemaker [3-UP]/background.jpg",
+      "size": 130108
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Supper - Troublemaker [3-UP]/notes.chart",
+      "size": 80321
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Supper - Troublemaker [3-UP]/song.ini",
+      "size": 594
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/Supper - Troublemaker [3-UP]/song.ogg",
+      "size": 4342951
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/naruto - Artificial Intelligence Bomb [3-UP]/album.png",
+      "size": 71453
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/naruto - Artificial Intelligence Bomb [3-UP]/background.jpg",
+      "size": 231701
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/naruto - Artificial Intelligence Bomb [3-UP]/notes.chart",
+      "size": 51019
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/naruto - Artificial Intelligence Bomb [3-UP]/song.ini",
+      "size": 665
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/naruto - Artificial Intelligence Bomb [3-UP]/song.ogg",
+      "size": 4107608
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/petet - Burnie's Groove [3-UP]/album.png",
+      "size": 125292
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/petet - Burnie's Groove [3-UP]/background.png",
+      "size": 87209
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/petet - Burnie's Groove [3-UP]/notes.chart",
+      "size": 54553
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/petet - Burnie's Groove [3-UP]/song.ini",
+      "size": 317
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/petet - Burnie's Groove [3-UP]/song.ogg",
+      "size": 5025861
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/potato-tan - Lunar Highway [3-UP]/album.png",
+      "size": 236533
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/potato-tan - Lunar Highway [3-UP]/background.jpg",
+      "size": 172961
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/potato-tan - Lunar Highway [3-UP]/notes.chart",
+      "size": 51143
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/potato-tan - Lunar Highway [3-UP]/song.ini",
+      "size": 513
+    },
+    {
+      "path": "Bitcrusher/TIER_04__BATTLE_OF_THE_BITS/potato-tan - Lunar Highway [3-UP]/song.ogg",
+      "size": 3229435
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Kent Hansen - Ripe Seeds, Praying Hands [3-UP]/album.png",
+      "size": 69073
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Kent Hansen - Ripe Seeds, Praying Hands [3-UP]/background.jpg",
+      "size": 391108
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Kent Hansen - Ripe Seeds, Praying Hands [3-UP]/notes.chart",
+      "size": 87054
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Kent Hansen - Ripe Seeds, Praying Hands [3-UP]/song.ini",
+      "size": 751
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Kent Hansen - Ripe Seeds, Praying Hands [3-UP]/song.ogg",
+      "size": 3776066
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RRThiel - The Electric Dancefloor [3-UP]/album.png",
+      "size": 392127
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RRThiel - The Electric Dancefloor [3-UP]/background.png",
+      "size": 1696264
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RRThiel - The Electric Dancefloor [3-UP]/notes.chart",
+      "size": 66846
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RRThiel - The Electric Dancefloor [3-UP]/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RRThiel - The Electric Dancefloor [3-UP]/song.ogg",
+      "size": 2877556
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RushJet1 - Prelude and Fugue in C Minor (Bach cover) [3-UP]/album.png",
+      "size": 104972
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RushJet1 - Prelude and Fugue in C Minor (Bach cover) [3-UP]/background.jpg",
+      "size": 57786
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RushJet1 - Prelude and Fugue in C Minor (Bach cover) [3-UP]/notes.chart",
+      "size": 61398
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RushJet1 - Prelude and Fugue in C Minor (Bach cover) [3-UP]/song.ini",
+      "size": 554
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/RushJet1 - Prelude and Fugue in C Minor (Bach cover) [3-UP]/song.ogg",
+      "size": 4708883
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Supper - Rising Tide [3-UP]/album.png",
+      "size": 6607
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Supper - Rising Tide [3-UP]/background.jpg",
+      "size": 277111
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Supper - Rising Tide [3-UP]/notes.chart",
+      "size": 140896
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Supper - Rising Tide [3-UP]/song.ini",
+      "size": 712
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/Supper - Rising Tide [3-UP]/song.ogg",
+      "size": 5558629
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/bradsmith - underderderground [3-UP]/album.png",
+      "size": 50299
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/bradsmith - underderderground [3-UP]/background.jpg",
+      "size": 63317
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/bradsmith - underderderground [3-UP]/notes.chart",
+      "size": 121374
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/bradsmith - underderderground [3-UP]/song.ini",
+      "size": 704
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/bradsmith - underderderground [3-UP]/song.ogg",
+      "size": 4429649
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/sparkyrogers - Garden of Wind (Super Mario Galaxy cover) [3-UP]/album.png",
+      "size": 563835
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/sparkyrogers - Garden of Wind (Super Mario Galaxy cover) [3-UP]/background.jpg",
+      "size": 210380
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/sparkyrogers - Garden of Wind (Super Mario Galaxy cover) [3-UP]/notes.chart",
+      "size": 54050
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/sparkyrogers - Garden of Wind (Super Mario Galaxy cover) [3-UP]/song.ini",
+      "size": 557
+    },
+    {
+      "path": "Bitcrusher/TIER_05__HOMEMADE_BREW/sparkyrogers - Garden of Wind (Super Mario Galaxy cover) [3-UP]/song.ogg",
+      "size": 5380998
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Alexander Brandon - Suspension [Stickheadz32]/album.jpg",
+      "size": 153029
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Alexander Brandon - Suspension [Stickheadz32]/background.jpg",
+      "size": 231278
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Alexander Brandon - Suspension [Stickheadz32]/notes.chart",
+      "size": 31262
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Alexander Brandon - Suspension [Stickheadz32]/song.ini",
+      "size": 606
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Alexander Brandon - Suspension [Stickheadz32]/song.ogg",
+      "size": 7603749
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/album.png",
+      "size": 256651
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/background.jpg",
+      "size": 118321
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/channel-01.ogg",
+      "size": 6577056
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/channel-02.ogg",
+      "size": 6875276
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/channel-03.ogg",
+      "size": 5549304
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/channel-04.ogg",
+      "size": 5979516
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/notes.chart",
+      "size": 73541
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Jogeir Liljedahl - Guitar Slinger [3-UP]/song.ogg",
+      "size": 9053526
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Kenet & Rez - Unreal Superhero 3 [3-UP]/album.png",
+      "size": 284193
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Kenet & Rez - Unreal Superhero 3 [3-UP]/background.jpg",
+      "size": 490576
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Kenet & Rez - Unreal Superhero 3 [3-UP]/notes.chart",
+      "size": 80029
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Kenet & Rez - Unreal Superhero 3 [3-UP]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Kenet & Rez - Unreal Superhero 3 [3-UP]/song.ogg",
+      "size": 3782431
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Linus - 64 Forever [3-UP]/album.png",
+      "size": 5270
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Linus - 64 Forever [3-UP]/background.jpg",
+      "size": 91540
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Linus - 64 Forever [3-UP]/notes.chart",
+      "size": 55818
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Linus - 64 Forever [3-UP]/song.ini",
+      "size": 566
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Linus - 64 Forever [3-UP]/song.ogg",
+      "size": 6041494
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Rob Hubbard - Commando (Main Theme) [Stickheadz32]/album.png",
+      "size": 36224
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Rob Hubbard - Commando (Main Theme) [Stickheadz32]/background.png",
+      "size": 20420
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Rob Hubbard - Commando (Main Theme) [Stickheadz32]/notes.chart",
+      "size": 190040
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Rob Hubbard - Commando (Main Theme) [Stickheadz32]/song.ini",
+      "size": 514
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Rob Hubbard - Commando (Main Theme) [Stickheadz32]/song.ogg",
+      "size": 4445905
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Tempest - Acidjazzed Evening [3-UP]/album.png",
+      "size": 167656
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Tempest - Acidjazzed Evening [3-UP]/background.jpg",
+      "size": 153675
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Tempest - Acidjazzed Evening [3-UP]/notes.chart",
+      "size": 45457
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Tempest - Acidjazzed Evening [3-UP]/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Bitcrusher/TIER_06__COMMODORE_CONNOISSEURS/Tempest - Acidjazzed Evening [3-UP]/song.ogg",
+      "size": 8326146
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Kitsune\u00b2 - Rainbow Tylenol [3-UP]/album.png",
+      "size": 344322
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Kitsune\u00b2 - Rainbow Tylenol [3-UP]/background.jpg",
+      "size": 200167
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Kitsune\u00b2 - Rainbow Tylenol [3-UP]/notes.chart",
+      "size": 41139
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Kitsune\u00b2 - Rainbow Tylenol [3-UP]/song.ini",
+      "size": 518
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Kitsune\u00b2 - Rainbow Tylenol [3-UP]/song.ogg",
+      "size": 3309121
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Neil D. Voss - Magic Fluter [Supradyke]/album.png",
+      "size": 204414
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Neil D. Voss - Magic Fluter [Supradyke]/background.jpg",
+      "size": 246509
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Neil D. Voss - Magic Fluter [Supradyke]/notes.chart",
+      "size": 70226
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Neil D. Voss - Magic Fluter [Supradyke]/song.ini",
+      "size": 683
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Neil D. Voss - Magic Fluter [Supradyke]/song.ogg",
+      "size": 3256120
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Rush Coil - O Come, O Come, Emmanuel [Supradyke]/album.png",
+      "size": 87942
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Rush Coil - O Come, O Come, Emmanuel [Supradyke]/background.jpg",
+      "size": 369536
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Rush Coil - O Come, O Come, Emmanuel [Supradyke]/notes.chart",
+      "size": 76485
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Rush Coil - O Come, O Come, Emmanuel [Supradyke]/song.ini",
+      "size": 342
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Rush Coil - O Come, O Come, Emmanuel [Supradyke]/song.ogg",
+      "size": 7647027
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Scott Lloyd Shelly - Alternate Underground [Aren Eternal]/album.png",
+      "size": 416891
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Scott Lloyd Shelly - Alternate Underground [Aren Eternal]/background.png",
+      "size": 435861
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Scott Lloyd Shelly - Alternate Underground [Aren Eternal]/notes.chart",
+      "size": 43846
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Scott Lloyd Shelly - Alternate Underground [Aren Eternal]/song.ini",
+      "size": 384
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Scott Lloyd Shelly - Alternate Underground [Aren Eternal]/song.ogg",
+      "size": 2556047
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Vince Kaichan - Rollerdisco Rumble [MissMoo]/album.png",
+      "size": 84919
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Vince Kaichan - Rollerdisco Rumble [MissMoo]/background.png",
+      "size": 363736
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Vince Kaichan - Rollerdisco Rumble [MissMoo]/notes.chart",
+      "size": 100283
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Vince Kaichan - Rollerdisco Rumble [MissMoo]/song.ini",
+      "size": 621
+    },
+    {
+      "path": "Bitcrusher/TIER_07__BEDROOM_MUSICIANS/Vince Kaichan - Rollerdisco Rumble [MissMoo]/song.ogg",
+      "size": 3844947
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Dimeback - The Running Man [3-UP]/album.png",
+      "size": 491078
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Dimeback - The Running Man [3-UP]/background.jpg",
+      "size": 110948
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Dimeback - The Running Man [3-UP]/notes.chart",
+      "size": 259382
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Dimeback - The Running Man [3-UP]/song.ini",
+      "size": 638
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Dimeback - The Running Man [3-UP]/song.ogg",
+      "size": 6026896
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Zef - Symbolus [3-UP]/album.png",
+      "size": 187698
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Zef - Symbolus [3-UP]/background.jpg",
+      "size": 196985
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Zef - Symbolus [3-UP]/notes.chart",
+      "size": 212945
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Zef - Symbolus [3-UP]/song.ini",
+      "size": 506
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/Zef - Symbolus [3-UP]/song.ogg",
+      "size": 7996619
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/chibi-tech - Love is Insecurable [3-UP]/album.png",
+      "size": 603703
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/chibi-tech - Love is Insecurable [3-UP]/background.jpg",
+      "size": 179666
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/chibi-tech - Love is Insecurable [3-UP]/notes.chart",
+      "size": 110792
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/chibi-tech - Love is Insecurable [3-UP]/song.ini",
+      "size": 651
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/chibi-tech - Love is Insecurable [3-UP]/song.ogg",
+      "size": 8881913
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/coda - Dorito Dust [3-UP]/album.png",
+      "size": 325595
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/coda - Dorito Dust [3-UP]/background.jpg",
+      "size": 140013
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/coda - Dorito Dust [3-UP]/notes.chart",
+      "size": 104338
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/coda - Dorito Dust [3-UP]/song.ini",
+      "size": 440
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/coda - Dorito Dust [3-UP]/song.ogg",
+      "size": 9723850
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/nu11 - Running Out of Time [3-UP]/album.png",
+      "size": 451820
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/nu11 - Running Out of Time [3-UP]/background.jpg",
+      "size": 96051
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/nu11 - Running Out of Time [3-UP]/notes.chart",
+      "size": 139655
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/nu11 - Running Out of Time [3-UP]/song.ini",
+      "size": 557
+    },
+    {
+      "path": "Bitcrusher/TIER_08__WATCH_YOUR_STEP/nu11 - Running Out of Time [3-UP]/song.ogg",
+      "size": 9402891
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Blitz Lunar - The Labyrinth of Skadi [3-UP]/album.png",
+      "size": 389362
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Blitz Lunar - The Labyrinth of Skadi [3-UP]/background.jpg",
+      "size": 86454
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Blitz Lunar - The Labyrinth of Skadi [3-UP]/notes.chart",
+      "size": 207342
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Blitz Lunar - The Labyrinth of Skadi [3-UP]/song.ini",
+      "size": 721
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Blitz Lunar - The Labyrinth of Skadi [3-UP]/song.ogg",
+      "size": 8906519
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Diad - Dimension-Reversing Dualities [3-UP]/album.png",
+      "size": 488618
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Diad - Dimension-Reversing Dualities [3-UP]/background.jpg",
+      "size": 342341
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Diad - Dimension-Reversing Dualities [3-UP]/notes.chart",
+      "size": 105996
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Diad - Dimension-Reversing Dualities [3-UP]/song.ini",
+      "size": 452
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Diad - Dimension-Reversing Dualities [3-UP]/song.ogg",
+      "size": 8684153
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Flaminglog - Opus I - We Were Younger [3-UP]/album.png",
+      "size": 50299
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Flaminglog - Opus I - We Were Younger [3-UP]/background.jpg",
+      "size": 52050
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Flaminglog - Opus I - We Were Younger [3-UP]/notes.chart",
+      "size": 84015
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Flaminglog - Opus I - We Were Younger [3-UP]/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Flaminglog - Opus I - We Were Younger [3-UP]/song.ogg",
+      "size": 8976828
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Instant Reality - A New World [Supradyke]/album.png",
+      "size": 71859
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Instant Reality - A New World [Supradyke]/background.png",
+      "size": 100957
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Instant Reality - A New World [Supradyke]/notes.chart",
+      "size": 633115
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Instant Reality - A New World [Supradyke]/song.ini",
+      "size": 727
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Instant Reality - A New World [Supradyke]/song.ogg",
+      "size": 16065696
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon) [3-UP]/album.png",
+      "size": 587345
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon) [3-UP]/background.jpg",
+      "size": 197251
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon) [3-UP]/notes.chart",
+      "size": 277682
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon) [3-UP]/song.ini",
+      "size": 589
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/Seajeff - Preschtale, Pt. 2 (feat. Danimal Cannon) [3-UP]/song.ogg",
+      "size": 20111547
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/petet - Requiem for the Nineteen Fallen [3-UP]/album.png",
+      "size": 166522
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/petet - Requiem for the Nineteen Fallen [3-UP]/background.jpg",
+      "size": 39923
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/petet - Requiem for the Nineteen Fallen [3-UP]/notes.chart",
+      "size": 105387
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/petet - Requiem for the Nineteen Fallen [3-UP]/song.ini",
+      "size": 567
+    },
+    {
+      "path": "Bitcrusher/TIER_09__LIMITLESS_LIMITATIONS/petet - Requiem for the Nineteen Fallen [3-UP]/song.ogg",
+      "size": 4862013
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Alexander Brandon - Alexander Brandon VGM Medley [Stickheadz32]/album.jpg",
+      "size": 119370
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Alexander Brandon - Alexander Brandon VGM Medley [Stickheadz32]/background.png",
+      "size": 305497
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Alexander Brandon - Alexander Brandon VGM Medley [Stickheadz32]/notes.chart",
+      "size": 426904
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Alexander Brandon - Alexander Brandon VGM Medley [Stickheadz32]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Alexander Brandon - Alexander Brandon VGM Medley [Stickheadz32]/song.ogg",
+      "size": 28827416
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Jeroen Tel - Hot Rod (Introduction) [3-UP]/album.png",
+      "size": 654303
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Jeroen Tel - Hot Rod (Introduction) [3-UP]/background.jpg",
+      "size": 149215
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Jeroen Tel - Hot Rod (Introduction) [3-UP]/notes.chart",
+      "size": 205287
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Jeroen Tel - Hot Rod (Introduction) [3-UP]/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Jeroen Tel - Hot Rod (Introduction) [3-UP]/song.ogg",
+      "size": 5920703
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Peter Langston - Song of the Grid [3-UP]/album.png",
+      "size": 496911
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Peter Langston - Song of the Grid [3-UP]/background.jpg",
+      "size": 61786
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Peter Langston - Song of the Grid [3-UP]/notes.chart",
+      "size": 121196
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Peter Langston - Song of the Grid [3-UP]/song.ini",
+      "size": 785
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Peter Langston - Song of the Grid [3-UP]/song.ogg",
+      "size": 4747342
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Rob Hubbard - Monty on the Run [3-UP]/album.png",
+      "size": 625601
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Rob Hubbard - Monty on the Run [3-UP]/background.jpg",
+      "size": 52662
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Rob Hubbard - Monty on the Run [3-UP]/notes.chart",
+      "size": 285020
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Rob Hubbard - Monty on the Run [3-UP]/song.ini",
+      "size": 832
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Rob Hubbard - Monty on the Run [3-UP]/song.ogg",
+      "size": 6611037
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Tim Follin - Tim Follin Solo Medley [3-UP]/album.png",
+      "size": 656533
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Tim Follin - Tim Follin Solo Medley [3-UP]/background.jpg",
+      "size": 193976
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Tim Follin - Tim Follin Solo Medley [3-UP]/notes.chart",
+      "size": 296450
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Tim Follin - Tim Follin Solo Medley [3-UP]/song.ini",
+      "size": 717
+    },
+    {
+      "path": "Bitcrusher/TIER_10__RESPECT_YOUR_ELDERS/Tim Follin - Tim Follin Solo Medley [3-UP]/song.ogg",
+      "size": 11386523
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Dubmood - The Scene is Dead [Stickheadz32]/album.jpg",
+      "size": 126514
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Dubmood - The Scene is Dead [Stickheadz32]/background.jpg",
+      "size": 334731
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Dubmood - The Scene is Dead [Stickheadz32]/notes.chart",
+      "size": 216029
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Dubmood - The Scene is Dead [Stickheadz32]/song.ini",
+      "size": 745
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Dubmood - The Scene is Dead [Stickheadz32]/song.ogg",
+      "size": 8358971
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Instant Reality - Drizzle [Supradyke]/album.png",
+      "size": 387880
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Instant Reality - Drizzle [Supradyke]/background.png",
+      "size": 73127
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Instant Reality - Drizzle [Supradyke]/notes.chart",
+      "size": 372346
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Instant Reality - Drizzle [Supradyke]/song.ini",
+      "size": 384
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Instant Reality - Drizzle [Supradyke]/song.ogg",
+      "size": 9920172
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Yozfitz - Super Chipy Tito [Stickheadz32]/album.jpg",
+      "size": 46362
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Yozfitz - Super Chipy Tito [Stickheadz32]/background.jpg",
+      "size": 156529
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Yozfitz - Super Chipy Tito [Stickheadz32]/notes.chart",
+      "size": 228275
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Yozfitz - Super Chipy Tito [Stickheadz32]/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/Yozfitz - Super Chipy Tito [Stickheadz32]/song.ogg",
+      "size": 8976741
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/kfaraday - Sayonara [3-UP]/album.png",
+      "size": 242431
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/kfaraday - Sayonara [3-UP]/background.jpg",
+      "size": 268748
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/kfaraday - Sayonara [3-UP]/notes.chart",
+      "size": 107622
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/kfaraday - Sayonara [3-UP]/song.ini",
+      "size": 398
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/kfaraday - Sayonara [3-UP]/song.ogg",
+      "size": 7345815
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/meganeko - Cloudscape Architect [Peddy]/album.png",
+      "size": 566500
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/meganeko - Cloudscape Architect [Peddy]/background.jpg",
+      "size": 1033915
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/meganeko - Cloudscape Architect [Peddy]/notes.chart",
+      "size": 217571
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/meganeko - Cloudscape Architect [Peddy]/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Bitcrusher/TIER_11__HANDCRUSHER/meganeko - Cloudscape Architect [Peddy]/song.ogg",
+      "size": 10044657
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/1. Jake 'virt' Kaufman - Incident 01 [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/1. Jake 'virt' Kaufman - Incident 01 [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/1. Jake 'virt' Kaufman - Incident 01 [3-UP]/notes.chart",
+      "size": 104242
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/1. Jake 'virt' Kaufman - Incident 01 [3-UP]/song.ini",
+      "size": 625
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/1. Jake 'virt' Kaufman - Incident 01 [3-UP]/song.ogg",
+      "size": 7194905
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/10. Jake 'virt' Kaufman - Try [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/10. Jake 'virt' Kaufman - Try [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/10. Jake 'virt' Kaufman - Try [3-UP]/notes.chart",
+      "size": 73651
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/10. Jake 'virt' Kaufman - Try [3-UP]/song.ini",
+      "size": 334
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/10. Jake 'virt' Kaufman - Try [3-UP]/song.ogg",
+      "size": 7238514
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/2. Jake 'virt' Kaufman - Survivors [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/2. Jake 'virt' Kaufman - Survivors [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/2. Jake 'virt' Kaufman - Survivors [3-UP]/notes.chart",
+      "size": 138619
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/2. Jake 'virt' Kaufman - Survivors [3-UP]/song.ini",
+      "size": 557
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/2. Jake 'virt' Kaufman - Survivors [3-UP]/song.ogg",
+      "size": 9725810
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/3. Jake 'virt' Kaufman - Bedtime Story [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/3. Jake 'virt' Kaufman - Bedtime Story [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/3. Jake 'virt' Kaufman - Bedtime Story [3-UP]/notes.chart",
+      "size": 85711
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/3. Jake 'virt' Kaufman - Bedtime Story [3-UP]/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/3. Jake 'virt' Kaufman - Bedtime Story [3-UP]/song.ogg",
+      "size": 5593572
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/4. Jake 'virt' Kaufman - Night and Day [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/4. Jake 'virt' Kaufman - Night and Day [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/4. Jake 'virt' Kaufman - Night and Day [3-UP]/notes.chart",
+      "size": 91452
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/4. Jake 'virt' Kaufman - Night and Day [3-UP]/song.ini",
+      "size": 442
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/4. Jake 'virt' Kaufman - Night and Day [3-UP]/song.ogg",
+      "size": 6160484
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/5. Jake 'virt' Kaufman - Choppastyle [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/5. Jake 'virt' Kaufman - Choppastyle [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/5. Jake 'virt' Kaufman - Choppastyle [3-UP]/notes.chart",
+      "size": 166131
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/5. Jake 'virt' Kaufman - Choppastyle [3-UP]/song.ini",
+      "size": 689
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/5. Jake 'virt' Kaufman - Choppastyle [3-UP]/song.ogg",
+      "size": 7775310
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/6. Jake 'virt' Kaufman - Thrash [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/6. Jake 'virt' Kaufman - Thrash [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/6. Jake 'virt' Kaufman - Thrash [3-UP]/notes.chart",
+      "size": 180581
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/6. Jake 'virt' Kaufman - Thrash [3-UP]/song.ini",
+      "size": 547
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/6. Jake 'virt' Kaufman - Thrash [3-UP]/song.ogg",
+      "size": 6394517
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/7. Jake 'virt' Kaufman - Across Rooftops [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/7. Jake 'virt' Kaufman - Across Rooftops [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/7. Jake 'virt' Kaufman - Across Rooftops [3-UP]/notes.chart",
+      "size": 89249
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/7. Jake 'virt' Kaufman - Across Rooftops [3-UP]/song.ini",
+      "size": 423
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/7. Jake 'virt' Kaufman - Across Rooftops [3-UP]/song.ogg",
+      "size": 6889748
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/8. Jake 'virt' Kaufman - Scorched Sands [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/8. Jake 'virt' Kaufman - Scorched Sands [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/8. Jake 'virt' Kaufman - Scorched Sands [3-UP]/notes.chart",
+      "size": 103621
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/8. Jake 'virt' Kaufman - Scorched Sands [3-UP]/song.ini",
+      "size": 350
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/8. Jake 'virt' Kaufman - Scorched Sands [3-UP]/song.ogg",
+      "size": 7848753
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/9. Jake 'virt' Kaufman - Visitor [3-UP]/album.png",
+      "size": 165939
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/9. Jake 'virt' Kaufman - Visitor [3-UP]/background.png",
+      "size": 68897
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/9. Jake 'virt' Kaufman - Visitor [3-UP]/notes.chart",
+      "size": 92838
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/9. Jake 'virt' Kaufman - Visitor [3-UP]/song.ini",
+      "size": 431
+    },
+    {
+      "path": "Bitcrusher/TIER_B1__FX3_FULL_ALBUM/9. Jake 'virt' Kaufman - Visitor [3-UP]/song.ogg",
+      "size": 6759318
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/3-UP - Perpetual Motion (Sound Struggle cover) [3-UP]/album.png",
+      "size": 65345
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/3-UP - Perpetual Motion (Sound Struggle cover) [3-UP]/background.png",
+      "size": 44920
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/3-UP - Perpetual Motion (Sound Struggle cover) [3-UP]/notes.chart",
+      "size": 165342
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/3-UP - Perpetual Motion (Sound Struggle cover) [3-UP]/song.ini",
+      "size": 709
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/3-UP - Perpetual Motion (Sound Struggle cover) [3-UP]/song.ogg",
+      "size": 6012225
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Hirokazu Tanaka - Duck Release [Stickheadz32]/album.png",
+      "size": 1020
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Hirokazu Tanaka - Duck Release [Stickheadz32]/background.png",
+      "size": 8886
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Hirokazu Tanaka - Duck Release [Stickheadz32]/notes.chart",
+      "size": 2527
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Hirokazu Tanaka - Duck Release [Stickheadz32]/song.ini",
+      "size": 419
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Hirokazu Tanaka - Duck Release [Stickheadz32]/song.ogg",
+      "size": 34225
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Rishimazza - Porky's Porkies (Unused Mix) [3-UP]/album.png",
+      "size": 93052
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Rishimazza - Porky's Porkies (Unused Mix) [3-UP]/background.png",
+      "size": 165471
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Rishimazza - Porky's Porkies (Unused Mix) [3-UP]/notes.chart",
+      "size": 245517
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Rishimazza - Porky's Porkies (Unused Mix) [3-UP]/preview.ogg",
+      "size": 828628
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Rishimazza - Porky's Porkies (Unused Mix) [3-UP]/song.ini",
+      "size": 680
+    },
+    {
+      "path": "Bitcrusher/TIER_B2__BONUS_CONTENT/Rishimazza - Porky's Porkies (Unused Mix) [3-UP]/song.ogg",
+      "size": 19644966
     }
-  ]
+  ],
+  "extracted_size": 621277932,
+  "file_count": 375,
+  "chart_count": 74,
+  "release_date": "2021-09-10"
 }

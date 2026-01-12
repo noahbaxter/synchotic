@@ -1,19 +1,769 @@
 {
   "name": "(2008) Guitar Hero On Tour",
-  "folder_id": "static-gh-ot1",
+  "folder_id": "static-2008-guitar-hero-on-tour",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 31,
-  "total_size": 106239127,
-  "file_count": 188,
-  "files": [
+  "downloads": [
     {
       "id": "1SQbyclFNQOFCAAqzjnyNRqt306lznW2W",
-      "path": "(2008-2009) Guitar Hero - On Tour Complete/Guitar Hero On Tour.rar",
       "name": "Guitar Hero On Tour.rar",
       "size": 106239127,
       "md5": "4d1587f38465639a7328378c2d8d2bc0"
     }
-  ]
+  ],
+  "download_size": 106239127,
+  "files": [
+    {
+      "path": "(2008) Guitar Hero On Tour/GHOT Rips v2.1.txt",
+      "size": 315
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Beatsteaks - Monster/album.png",
+      "size": 40209
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Beatsteaks - Monster/guitar.ogg",
+      "size": 395074
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Beatsteaks - Monster/notes.mid",
+      "size": 26467
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Beatsteaks - Monster/rhythm.ogg",
+      "size": 401372
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Beatsteaks - Monster/song.ini",
+      "size": 444
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Beatsteaks - Monster/song.ogg",
+      "size": 1050578
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Blink 182 - All The Small Things/album.png",
+      "size": 49377
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Blink 182 - All The Small Things/guitar.ogg",
+      "size": 570649
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Blink 182 - All The Small Things/notes.mid",
+      "size": 33650
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Blink 182 - All The Small Things/rhythm.ogg",
+      "size": 510676
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Blink 182 - All The Small Things/song.ini",
+      "size": 461
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Blink 182 - All The Small Things/song.ogg",
+      "size": 1502263
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Bloc Party - Helicopter/album.png",
+      "size": 11341
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Bloc Party - Helicopter/guitar.ogg",
+      "size": 741132
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Bloc Party - Helicopter/notes.mid",
+      "size": 51499
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Bloc Party - Helicopter/rhythm.ogg",
+      "size": 719815
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Bloc Party - Helicopter/song.ini",
+      "size": 449
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Bloc Party - Helicopter/song.ogg",
+      "size": 1953491
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Daughtry featuring Slash - What I Want/album.png",
+      "size": 10441
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Daughtry featuring Slash - What I Want/guitar.ogg",
+      "size": 576802
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Daughtry featuring Slash - What I Want/notes.mid",
+      "size": 29947
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Daughtry featuring Slash - What I Want/rhythm.ogg",
+      "size": 539190
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Daughtry featuring Slash - What I Want/song.ini",
+      "size": 461
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Daughtry featuring Slash - What I Want/song.ogg",
+      "size": 1488288
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Europe - Rock The Night/album.png",
+      "size": 129352
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Europe - Rock The Night/guitar.ogg",
+      "size": 838105
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Europe - Rock The Night/notes.mid",
+      "size": 31505
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Europe - Rock The Night/rhythm.ogg",
+      "size": 748953
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Europe - Rock The Night/song.ini",
+      "size": 451
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Europe - Rock The Night/song.ogg",
+      "size": 2163469
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Freezepop - I Am Not Your Gameboy/album.png",
+      "size": 170768
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Freezepop - I Am Not Your Gameboy/guitar.ogg",
+      "size": 626156
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Freezepop - I Am Not Your Gameboy/notes.mid",
+      "size": 27985
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Freezepop - I Am Not Your Gameboy/rhythm.ogg",
+      "size": 584076
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Freezepop - I Am Not Your Gameboy/song.ini",
+      "size": 464
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Freezepop - I Am Not Your Gameboy/song.ogg",
+      "size": 1881261
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/H\u00e9roes Del Silencio - Avalancha/album.png",
+      "size": 92450
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/H\u00e9roes Del Silencio - Avalancha/guitar.ogg",
+      "size": 1220184
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/H\u00e9roes Del Silencio - Avalancha/notes.mid",
+      "size": 56352
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/H\u00e9roes Del Silencio - Avalancha/rhythm.ogg",
+      "size": 1192678
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/H\u00e9roes Del Silencio - Avalancha/song.ini",
+      "size": 454
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/H\u00e9roes Del Silencio - Avalancha/song.ogg",
+      "size": 3164716
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Incubus - Anna Molly/album.png",
+      "size": 43872
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Incubus - Anna Molly/guitar.ogg",
+      "size": 764583
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Incubus - Anna Molly/notes.mid",
+      "size": 45603
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Incubus - Anna Molly/rhythm.ogg",
+      "size": 654040
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Incubus - Anna Molly/song.ini",
+      "size": 454
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Incubus - Anna Molly/song.ogg",
+      "size": 2008900
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Jet - Are You Gonna Be My Girl/album.png",
+      "size": 29940
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Jet - Are You Gonna Be My Girl/guitar.ogg",
+      "size": 662742
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Jet - Are You Gonna Be My Girl/notes.mid",
+      "size": 34906
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Jet - Are You Gonna Be My Girl/rhythm.ogg",
+      "size": 620225
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Jet - Are You Gonna Be My Girl/song.ini",
+      "size": 460
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Jet - Are You Gonna Be My Girl/song.ogg",
+      "size": 1937267
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/KISS - Rock & Roll All Nite/album.png",
+      "size": 27537
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/KISS - Rock & Roll All Nite/guitar.ogg",
+      "size": 705595
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/KISS - Rock & Roll All Nite/notes.mid",
+      "size": 25395
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/KISS - Rock & Roll All Nite/rhythm.ogg",
+      "size": 605977
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/KISS - Rock & Roll All Nite/song.ini",
+      "size": 467
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/KISS - Rock & Roll All Nite/song.ogg",
+      "size": 1895738
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Los Lonely Boys - Heaven/album.png",
+      "size": 237725
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Los Lonely Boys - Heaven/guitar.ogg",
+      "size": 744045
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Los Lonely Boys - Heaven/notes.mid",
+      "size": 31980
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Los Lonely Boys - Heaven/rhythm.ogg",
+      "size": 736173
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Los Lonely Boys - Heaven/song.ini",
+      "size": 451
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Los Lonely Boys - Heaven/song.ogg",
+      "size": 2203041
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Lynyrd Skynyrd - I Know A Little/album.png",
+      "size": 27241
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Lynyrd Skynyrd - I Know A Little/guitar.ogg",
+      "size": 663093
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Lynyrd Skynyrd - I Know A Little/notes.mid",
+      "size": 46512
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Lynyrd Skynyrd - I Know A Little/rhythm.ogg",
+      "size": 674012
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Lynyrd Skynyrd - I Know A Little/song.ini",
+      "size": 477
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Lynyrd Skynyrd - I Know A Little/song.ogg",
+      "size": 1863654
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Mademoiselle K - \u00c7a Me Vexe/album.png",
+      "size": 254718
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Mademoiselle K - \u00c7a Me Vexe/guitar.ogg",
+      "size": 684109
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Mademoiselle K - \u00c7a Me Vexe/notes.mid",
+      "size": 25090
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Mademoiselle K - \u00c7a Me Vexe/rhythm.ogg",
+      "size": 662712
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Mademoiselle K - \u00c7a Me Vexe/song.ini",
+      "size": 453
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Mademoiselle K - \u00c7a Me Vexe/song.ogg",
+      "size": 1894343
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Maroon 5 - This Love/album.png",
+      "size": 206331
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Maroon 5 - This Love/guitar.ogg",
+      "size": 695398
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Maroon 5 - This Love/notes.mid",
+      "size": 24595
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Maroon 5 - This Love/rhythm.ogg",
+      "size": 561808
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Maroon 5 - This Love/song.ini",
+      "size": 448
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Maroon 5 - This Love/song.ogg",
+      "size": 1961993
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Nirvana - Breed/album.png",
+      "size": 1281277
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Nirvana - Breed/guitar.ogg",
+      "size": 644566
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Nirvana - Breed/notes.mid",
+      "size": 38246
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Nirvana - Breed/rhythm.ogg",
+      "size": 609285
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Nirvana - Breed/song.ini",
+      "size": 433
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Nirvana - Breed/song.ogg",
+      "size": 1587568
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/No Doubt - Spiderwebs/album.png",
+      "size": 196409
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/No Doubt - Spiderwebs/guitar.ogg",
+      "size": 1035979
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/No Doubt - Spiderwebs/notes.mid",
+      "size": 47975
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/No Doubt - Spiderwebs/rhythm.ogg",
+      "size": 964520
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/No Doubt - Spiderwebs/song.ini",
+      "size": 454
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/No Doubt - Spiderwebs/song.ogg",
+      "size": 2854799
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/OK Go - Do What You Want/album.png",
+      "size": 14777
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/OK Go - Do What You Want/guitar.ogg",
+      "size": 607008
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/OK Go - Do What You Want/notes.mid",
+      "size": 24431
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/OK Go - Do What You Want/rhythm.ogg",
+      "size": 570188
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/OK Go - Do What You Want/song.ini",
+      "size": 662
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/OK Go - Do What You Want/song.ogg",
+      "size": 1637272
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Ozzy Osbourne - I Don't Wanna Stop/album.png",
+      "size": 20893
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Ozzy Osbourne - I Don't Wanna Stop/guitar.ogg",
+      "size": 815920
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Ozzy Osbourne - I Don't Wanna Stop/notes.mid",
+      "size": 43937
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Ozzy Osbourne - I Don't Wanna Stop/rhythm.ogg",
+      "size": 745734
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Ozzy Osbourne - I Don't Wanna Stop/song.ini",
+      "size": 459
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Ozzy Osbourne - I Don't Wanna Stop/song.ogg",
+      "size": 2033958
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Pat Benatar - Hit Me With Your Best Shot/album.png",
+      "size": 38787
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Pat Benatar - Hit Me With Your Best Shot/guitar.ogg",
+      "size": 585498
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Pat Benatar - Hit Me With Your Best Shot/notes.mid",
+      "size": 23497
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Pat Benatar - Hit Me With Your Best Shot/rhythm.ogg",
+      "size": 525817
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Pat Benatar - Hit Me With Your Best Shot/song.ini",
+      "size": 468
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Pat Benatar - Hit Me With Your Best Shot/song.ogg",
+      "size": 1552528
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Red Hot Chili Peppers - Knock Me Down/album.png",
+      "size": 14956
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Red Hot Chili Peppers - Knock Me Down/guitar.ogg",
+      "size": 779378
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Red Hot Chili Peppers - Knock Me Down/notes.mid",
+      "size": 49415
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Red Hot Chili Peppers - Knock Me Down/rhythm.ogg",
+      "size": 708765
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Red Hot Chili Peppers - Knock Me Down/song.ini",
+      "size": 463
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Red Hot Chili Peppers - Knock Me Down/song.ogg",
+      "size": 2006962
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Rick Springfield - Jessie's Girl/album.png",
+      "size": 34132
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Rick Springfield - Jessie's Girl/guitar.ogg",
+      "size": 654413
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Rick Springfield - Jessie's Girl/notes.mid",
+      "size": 24965
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Rick Springfield - Jessie's Girl/rhythm.ogg",
+      "size": 467492
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Rick Springfield - Jessie's Girl/song.ini",
+      "size": 461
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Rick Springfield - Jessie's Girl/song.ogg",
+      "size": 1726254
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Santana - Black Magic Woman/album.png",
+      "size": 114714
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Santana - Black Magic Woman/guitar.ogg",
+      "size": 920785
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Santana - Black Magic Woman/notes.mid",
+      "size": 39216
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Santana - Black Magic Woman/rhythm.ogg",
+      "size": 909301
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Santana - Black Magic Woman/song.ini",
+      "size": 460
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Santana - Black Magic Woman/song.ogg",
+      "size": 2949222
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Skid Row - Youth Gone Wild/album.png",
+      "size": 27880
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Skid Row - Youth Gone Wild/guitar.ogg",
+      "size": 692521
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Skid Row - Youth Gone Wild/notes.mid",
+      "size": 30037
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Skid Row - Youth Gone Wild/rhythm.ogg",
+      "size": 617529
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Skid Row - Youth Gone Wild/song.ini",
+      "size": 461
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Skid Row - Youth Gone Wild/song.ogg",
+      "size": 1784658
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Smash Mouth - All Star/album.png",
+      "size": 148485
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Smash Mouth - All Star/guitar.ogg",
+      "size": 639183
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Smash Mouth - All Star/notes.mid",
+      "size": 24929
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Smash Mouth - All Star/rhythm.ogg",
+      "size": 645922
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Smash Mouth - All Star/song.ini",
+      "size": 453
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Smash Mouth - All Star/song.ogg",
+      "size": 1768455
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Steve Miller Band - Jet Airliner/album.png",
+      "size": 24239
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Steve Miller Band - Jet Airliner/guitar.ogg",
+      "size": 719294
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Steve Miller Band - Jet Airliner/notes.mid",
+      "size": 44613
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Steve Miller Band - Jet Airliner/rhythm.ogg",
+      "size": 640715
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Steve Miller Band - Jet Airliner/song.ini",
+      "size": 470
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Steve Miller Band - Jet Airliner/song.ogg",
+      "size": 1929706
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stevie Ray Vaughan - Pride & Joy/album.png",
+      "size": 18458
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stevie Ray Vaughan - Pride & Joy/guitar.ogg",
+      "size": 707382
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stevie Ray Vaughan - Pride & Joy/notes.mid",
+      "size": 48608
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stevie Ray Vaughan - Pride & Joy/rhythm.ogg",
+      "size": 672109
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stevie Ray Vaughan - Pride & Joy/song.ini",
+      "size": 457
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stevie Ray Vaughan - Pride & Joy/song.ogg",
+      "size": 1892143
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stray Cats - Stray Cat Strut/album.png",
+      "size": 22015
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stray Cats - Stray Cat Strut/guitar.ogg",
+      "size": 612115
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stray Cats - Stray Cat Strut/notes.mid",
+      "size": 27659
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stray Cats - Stray Cat Strut/rhythm.ogg",
+      "size": 604981
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stray Cats - Stray Cat Strut/song.ini",
+      "size": 457
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Stray Cats - Stray Cat Strut/song.ogg",
+      "size": 1792470
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/The Doobie Brothers - China Grove/album.png",
+      "size": 151682
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/The Doobie Brothers - China Grove/guitar.ogg",
+      "size": 644031
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/The Doobie Brothers - China Grove/notes.mid",
+      "size": 28681
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/The Doobie Brothers - China Grove/rhythm.ogg",
+      "size": 587364
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/The Doobie Brothers - China Grove/song.ini",
+      "size": 466
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/The Doobie Brothers - China Grove/song.ogg",
+      "size": 1750647
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Tokio Hotel - Monsoon/album.png",
+      "size": 138561
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Tokio Hotel - Monsoon/guitar.ogg",
+      "size": 721560
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Tokio Hotel - Monsoon/notes.mid",
+      "size": 35751
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Tokio Hotel - Monsoon/rhythm.ogg",
+      "size": 715711
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Tokio Hotel - Monsoon/song.ini",
+      "size": 439
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Tokio Hotel - Monsoon/song.ogg",
+      "size": 2071602
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Twisted Sister - We're Not Gonna Take It/album.png",
+      "size": 30231
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Twisted Sister - We're Not Gonna Take It/guitar.ogg",
+      "size": 881547
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Twisted Sister - We're Not Gonna Take It/notes.mid",
+      "size": 38808
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Twisted Sister - We're Not Gonna Take It/rhythm.ogg",
+      "size": 812095
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Twisted Sister - We're Not Gonna Take It/song.ini",
+      "size": 465
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/Twisted Sister - We're Not Gonna Take It/song.ogg",
+      "size": 2360028
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/ZZ Top - La Grange/album.png",
+      "size": 10273
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/ZZ Top - La Grange/guitar.ogg",
+      "size": 711172
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/ZZ Top - La Grange/notes.mid",
+      "size": 39082
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/ZZ Top - La Grange/rhythm.ogg",
+      "size": 600321
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/ZZ Top - La Grange/song.ini",
+      "size": 450
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour/ZZ Top - La Grange/song.ogg",
+      "size": 2010777
+    }
+  ],
+  "extracted_size": 108282720,
+  "file_count": 187,
+  "chart_count": 31,
+  "release_date": "2008-06-22"
 }

@@ -3,17 +3,2327 @@
   "folder_id": "static-guitar-zero-2",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 134,
-  "total_size": 1353822846,
-  "file_count": 577,
-  "files": [
+  "downloads": [
     {
       "id": "1wyIJ8xpKygp_v8H6qc8-YrlGdHLNm3vg",
-      "path": "Guitar Zero 2/Guitar Zero 2.7z",
-      "name": "Guitar Zero 2.7z",
+      "name": "Guitar Zero 2.rar",
       "size": 1353822846,
       "md5": "271d2c2dcbb594e979efdfa177a19545"
     }
-  ]
+  ],
+  "download_size": 1353822846,
+  "files": [
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/1. Coheed and Cambria - Blood Red Summer [GuitarZero132]/album.png",
+      "size": 167713
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/1. Coheed and Cambria - Blood Red Summer [GuitarZero132]/notes.chart",
+      "size": 53780
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/1. Coheed and Cambria - Blood Red Summer [GuitarZero132]/song.ini",
+      "size": 557
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/1. Coheed and Cambria - Blood Red Summer [GuitarZero132]/song.ogg",
+      "size": 8119913
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/2. Keith Urban - The Fighter (feat. Carrie Underwood) [GuitarZero132]/AlbumArtSmall.jpg",
+      "size": 5765
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/2. Keith Urban - The Fighter (feat. Carrie Underwood) [GuitarZero132]/Folder.jpg",
+      "size": 26218
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/2. Keith Urban - The Fighter (feat. Carrie Underwood) [GuitarZero132]/album.png",
+      "size": 331055
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/2. Keith Urban - The Fighter (feat. Carrie Underwood) [GuitarZero132]/notes.chart",
+      "size": 32463
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/2. Keith Urban - The Fighter (feat. Carrie Underwood) [GuitarZero132]/song.ini",
+      "size": 565
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/2. Keith Urban - The Fighter (feat. Carrie Underwood) [GuitarZero132]/song.ogg",
+      "size": 5648953
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/3. Foo Fighters - A Matter of Time [GuitarZero132]/album.png",
+      "size": 270446
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/3. Foo Fighters - A Matter of Time [GuitarZero132]/notes.chart",
+      "size": 101990
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/3. Foo Fighters - A Matter of Time [GuitarZero132]/song.ini",
+      "size": 487
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/3. Foo Fighters - A Matter of Time [GuitarZero132]/song.ogg",
+      "size": 9011719
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/4. Def Leppard - Paper Sun [GuitarZero132]/album.png",
+      "size": 316087
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/4. Def Leppard - Paper Sun [GuitarZero132]/notes.chart",
+      "size": 54281
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/4. Def Leppard - Paper Sun [GuitarZero132]/song.ini",
+      "size": 535
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/4. Def Leppard - Paper Sun [GuitarZero132]/song.ogg",
+      "size": 10383867
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/5. Guns N' Roses - Knockin' On Heaven's Door (Bob Dylan Cover) [GuitarZero132]/album.png",
+      "size": 379052
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/5. Guns N' Roses - Knockin' On Heaven's Door (Bob Dylan Cover) [GuitarZero132]/notes.chart",
+      "size": 47790
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/5. Guns N' Roses - Knockin' On Heaven's Door (Bob Dylan Cover) [GuitarZero132]/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/01. Tier 1/5. Guns N' Roses - Knockin' On Heaven's Door (Bob Dylan Cover) [GuitarZero132]/song.ogg",
+      "size": 10336694
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/1. Bumblefoot - Simple Days (Acoustic) [GuitarZero132]/album.png",
+      "size": 551849
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/1. Bumblefoot - Simple Days (Acoustic) [GuitarZero132]/notes.chart",
+      "size": 53544
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/1. Bumblefoot - Simple Days (Acoustic) [GuitarZero132]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/1. Bumblefoot - Simple Days (Acoustic) [GuitarZero132]/song.ogg",
+      "size": 8201518
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/2. Ozzy Osbourne - Let It Die [GuitarZero132]/album.png",
+      "size": 430129
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/2. Ozzy Osbourne - Let It Die [GuitarZero132]/notes.chart",
+      "size": 88015
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/2. Ozzy Osbourne - Let It Die [GuitarZero132]/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/2. Ozzy Osbourne - Let It Die [GuitarZero132]/song.ogg",
+      "size": 11737116
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/3. Modest Mouse - Dramamine [GuitarZero132]/album.png",
+      "size": 469392
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/3. Modest Mouse - Dramamine [GuitarZero132]/notes.chart",
+      "size": 58511
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/3. Modest Mouse - Dramamine [GuitarZero132]/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/3. Modest Mouse - Dramamine [GuitarZero132]/song.ogg",
+      "size": 12093722
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/4. Head East - Never Been Any Reason [GuitarZero132]/album.png",
+      "size": 443696
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/4. Head East - Never Been Any Reason [GuitarZero132]/notes.chart",
+      "size": 81660
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/4. Head East - Never Been Any Reason [GuitarZero132]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/4. Head East - Never Been Any Reason [GuitarZero132]/song.ogg",
+      "size": 9248952
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/5. Cream - White Room [GuitarZero132]/album.png",
+      "size": 504166
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/5. Cream - White Room [GuitarZero132]/notes.chart",
+      "size": 49412
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/5. Cream - White Room [GuitarZero132]/song.ini",
+      "size": 609
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/02. Tier 2/5. Cream - White Room [GuitarZero132]/song.ogg",
+      "size": 9519259
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/1. Audio Adrenaline - Big House [GuitarZero132]/album.png",
+      "size": 464781
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/1. Audio Adrenaline - Big House [GuitarZero132]/notes.chart",
+      "size": 54198
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/1. Audio Adrenaline - Big House [GuitarZero132]/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/1. Audio Adrenaline - Big House [GuitarZero132]/song.ogg",
+      "size": 6785526
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/2. Shakey Graves - Tomorrow [GuitarZero132]/album.png",
+      "size": 318421
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/2. Shakey Graves - Tomorrow [GuitarZero132]/notes.chart",
+      "size": 51155
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/2. Shakey Graves - Tomorrow [GuitarZero132]/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/2. Shakey Graves - Tomorrow [GuitarZero132]/song.ogg",
+      "size": 6305999
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/3. Drake Bell - Bitchcraft (Live) [GuitarZero132]/album.png",
+      "size": 541163
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/3. Drake Bell - Bitchcraft (Live) [GuitarZero132]/notes.chart",
+      "size": 53154
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/3. Drake Bell - Bitchcraft (Live) [GuitarZero132]/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/3. Drake Bell - Bitchcraft (Live) [GuitarZero132]/song.ogg",
+      "size": 6976678
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/4. Stevie Wonder - Contusion [GuitarZero132]/album.png",
+      "size": 452737
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/4. Stevie Wonder - Contusion [GuitarZero132]/notes.chart",
+      "size": 50202
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/4. Stevie Wonder - Contusion [GuitarZero132]/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/4. Stevie Wonder - Contusion [GuitarZero132]/song.ogg",
+      "size": 7509928
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/5. Joe Satriani - Always with Me, Always with You [GuitarZero132]/album.png",
+      "size": 532179
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/5. Joe Satriani - Always with Me, Always with You [GuitarZero132]/notes.chart",
+      "size": 39290
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/5. Joe Satriani - Always with Me, Always with You [GuitarZero132]/song.ini",
+      "size": 577
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/03. Tier 3/5. Joe Satriani - Always with Me, Always with You [GuitarZero132]/song.ogg",
+      "size": 7285564
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/AlbumArtSmall.jpg",
+      "size": 65821
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/AlbumArt_{B5020207-474E-4720-923B-AD24FACDAE00}_Large.jpg",
+      "size": 65821
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/AlbumArt_{B5020207-474E-4720-923B-AD24FACDAE00}_Small.jpg",
+      "size": 65821
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/Folder.jpg",
+      "size": 65821
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/album.png",
+      "size": 92620
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/notes.chart",
+      "size": 66789
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/song.ini",
+      "size": 563
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/1. Boney M - Rasputin [GuitarZero132]/song.ogg",
+      "size": 9412868
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/2. Dinosaur Jr. - Watch the Corners [GuitarZero132]/album.png",
+      "size": 620639
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/2. Dinosaur Jr. - Watch the Corners [GuitarZero132]/notes.chart",
+      "size": 72019
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/2. Dinosaur Jr. - Watch the Corners [GuitarZero132]/song.ini",
+      "size": 524
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/2. Dinosaur Jr. - Watch the Corners [GuitarZero132]/song.ogg",
+      "size": 8857836
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/3. Pat Travers Band - Snortin' Whiskey [GuitarZero132]/album.png",
+      "size": 533314
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/3. Pat Travers Band - Snortin' Whiskey [GuitarZero132]/notes.chart",
+      "size": 42407
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/3. Pat Travers Band - Snortin' Whiskey [GuitarZero132]/song.ini",
+      "size": 576
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/3. Pat Travers Band - Snortin' Whiskey [GuitarZero132]/song.ogg",
+      "size": 6389183
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/4. Emerson, Lake, and Palmer - Karn Evil 9, First Impression, Part 2 [GuitarZero132]/album.png",
+      "size": 496102
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/4. Emerson, Lake, and Palmer - Karn Evil 9, First Impression, Part 2 [GuitarZero132]/notes.chart",
+      "size": 122604
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/4. Emerson, Lake, and Palmer - Karn Evil 9, First Impression, Part 2 [GuitarZero132]/song.ini",
+      "size": 551
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/4. Emerson, Lake, and Palmer - Karn Evil 9, First Impression, Part 2 [GuitarZero132]/song.ogg",
+      "size": 9317778
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/5. Night Ranger - This Boy Needs to Rock [GuitarZero132]/album.png",
+      "size": 495984
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/5. Night Ranger - This Boy Needs to Rock [GuitarZero132]/notes.chart",
+      "size": 60536
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/5. Night Ranger - This Boy Needs to Rock [GuitarZero132]/song.ini",
+      "size": 456
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/04. Tier 4/5. Night Ranger - This Boy Needs to Rock [GuitarZero132]/song.ogg",
+      "size": 7601184
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/1. Casiopea - Space Road [GuitarZero132]/album.png",
+      "size": 432949
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/1. Casiopea - Space Road [GuitarZero132]/notes.chart",
+      "size": 75929
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/1. Casiopea - Space Road [GuitarZero132]/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/1. Casiopea - Space Road [GuitarZero132]/song.ogg",
+      "size": 11106846
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/2. Les Paul and Mary Ford - The World is Waiting for the Sunrise [GuitarZero132]/album.png",
+      "size": 489133
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/2. Les Paul and Mary Ford - The World is Waiting for the Sunrise [GuitarZero132]/notes.chart",
+      "size": 36015
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/2. Les Paul and Mary Ford - The World is Waiting for the Sunrise [GuitarZero132]/song.ini",
+      "size": 563
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/2. Les Paul and Mary Ford - The World is Waiting for the Sunrise [GuitarZero132]/song.ogg",
+      "size": 2963750
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/2. Les Paul and Mary Ford - The World is Waiting for the Sunrise [GuitarZero132]/ssong.ini",
+      "size": 426
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/3. Steve Vai - Boston Rain Melody [GuitarZero132]/album.png",
+      "size": 543618
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/3. Steve Vai - Boston Rain Melody [GuitarZero132]/notes.chart",
+      "size": 70571
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/3. Steve Vai - Boston Rain Melody [GuitarZero132]/song.ini",
+      "size": 724
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/3. Steve Vai - Boston Rain Melody [GuitarZero132]/song.ogg",
+      "size": 8725877
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/4. Phish - Poor Heart [GuitarZero132]/album.png",
+      "size": 511960
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/4. Phish - Poor Heart [GuitarZero132]/notes.chart",
+      "size": 58467
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/4. Phish - Poor Heart [GuitarZero132]/song.ini",
+      "size": 548
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/4. Phish - Poor Heart [GuitarZero132]/song.ogg",
+      "size": 5862328
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/5. Joe Bonamassa - As the Crow Flies [GuitarZero132]/album.png",
+      "size": 631202
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/5. Joe Bonamassa - As the Crow Flies [GuitarZero132]/notes.chart",
+      "size": 57307
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/5. Joe Bonamassa - As the Crow Flies [GuitarZero132]/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/05. Tier 5/5. Joe Bonamassa - As the Crow Flies [GuitarZero132]/song.ogg",
+      "size": 7690885
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/1. Stevie Ray Vaughan and Double Trouble - Scuttle Buttin' [GuitarZero132]/album.png",
+      "size": 471255
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/1. Stevie Ray Vaughan and Double Trouble - Scuttle Buttin' [GuitarZero132]/notes.chart",
+      "size": 44375
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/1. Stevie Ray Vaughan and Double Trouble - Scuttle Buttin' [GuitarZero132]/song.ini",
+      "size": 588
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/1. Stevie Ray Vaughan and Double Trouble - Scuttle Buttin' [GuitarZero132]/song.ogg",
+      "size": 3140183
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/2. Judas Priest - Metal Meltdown [GuitarZero132]/album.png",
+      "size": 497808
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/2. Judas Priest - Metal Meltdown [GuitarZero132]/notes.chart",
+      "size": 93899
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/2. Judas Priest - Metal Meltdown [GuitarZero132]/song.ini",
+      "size": 815
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/2. Judas Priest - Metal Meltdown [GuitarZero132]/song.ogg",
+      "size": 9204246
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/3. Mr. Bungle - Squeeze Me Macaroni [GuitarZero132]/album.png",
+      "size": 527203
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/3. Mr. Bungle - Squeeze Me Macaroni [GuitarZero132]/notes.chart",
+      "size": 84987
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/3. Mr. Bungle - Squeeze Me Macaroni [GuitarZero132]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/3. Mr. Bungle - Squeeze Me Macaroni [GuitarZero132]/song.ogg",
+      "size": 9676229
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/4. Frank Zappa - Muffin Man [GuitarZero132]/album.png",
+      "size": 407972
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/4. Frank Zappa - Muffin Man [GuitarZero132]/notes.chart",
+      "size": 92413
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/4. Frank Zappa - Muffin Man [GuitarZero132]/song.ini",
+      "size": 588
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/4. Frank Zappa - Muffin Man [GuitarZero132]/song.ogg",
+      "size": 10240415
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/5. Rodrigo y Gabriela - Stairway to Heaven (Led Zeppelin Cover) [GuitarZero132]/album.png",
+      "size": 542663
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/5. Rodrigo y Gabriela - Stairway to Heaven (Led Zeppelin Cover) [GuitarZero132]/notes.chart",
+      "size": 71258
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/5. Rodrigo y Gabriela - Stairway to Heaven (Led Zeppelin Cover) [GuitarZero132]/song.ini",
+      "size": 563
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/06. Tier 6/5. Rodrigo y Gabriela - Stairway to Heaven (Led Zeppelin Cover) [GuitarZero132]/song.ogg",
+      "size": 10389841
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/1. Wretched - The Stellar Sunset of Evolution [GuitarZero132]/album.png",
+      "size": 412371
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/1. Wretched - The Stellar Sunset of Evolution [GuitarZero132]/notes.chart",
+      "size": 138701
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/1. Wretched - The Stellar Sunset of Evolution [GuitarZero132]/song.ini",
+      "size": 560
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/1. Wretched - The Stellar Sunset of Evolution [GuitarZero132]/song.ogg",
+      "size": 16777980
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/2. I Met A Yeti - Honey Bee [GuitarZero132]/album.png",
+      "size": 596518
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/2. I Met A Yeti - Honey Bee [GuitarZero132]/notes.chart",
+      "size": 60538
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/2. I Met A Yeti - Honey Bee [GuitarZero132]/song.ini",
+      "size": 508
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/2. I Met A Yeti - Honey Bee [GuitarZero132]/song.ogg",
+      "size": 6066411
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/3. Dio - Overlove [GuitarZero132]/album.png",
+      "size": 458091
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/3. Dio - Overlove [GuitarZero132]/notes.chart",
+      "size": 74904
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/3. Dio - Overlove [GuitarZero132]/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/3. Dio - Overlove [GuitarZero132]/song.ogg",
+      "size": 6428369
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/4. Erik Correll - Song of Storms (Waltz Fantasy) [GuitarZero132]/album.png",
+      "size": 245241
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/4. Erik Correll - Song of Storms (Waltz Fantasy) [GuitarZero132]/notes.chart",
+      "size": 105147
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/4. Erik Correll - Song of Storms (Waltz Fantasy) [GuitarZero132]/song.ini",
+      "size": 644
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/4. Erik Correll - Song of Storms (Waltz Fantasy) [GuitarZero132]/song.ogg",
+      "size": 6487556
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/5. Ten Years After - I'm Going Home (Live at Woodstock) [GuitarZero132]/album.png",
+      "size": 257905
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/5. Ten Years After - I'm Going Home (Live at Woodstock) [GuitarZero132]/notes.chart",
+      "size": 160824
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/5. Ten Years After - I'm Going Home (Live at Woodstock) [GuitarZero132]/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/07. Tier 7/5. Ten Years After - I'm Going Home (Live at Woodstock) [GuitarZero132]/song.ogg",
+      "size": 11593321
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/1. Suicidal Tendencies - You Can't Bring Me Down [GuitarZero132]/album.png",
+      "size": 530341
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/1. Suicidal Tendencies - You Can't Bring Me Down [GuitarZero132]/notes.chart",
+      "size": 87376
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/1. Suicidal Tendencies - You Can't Bring Me Down [GuitarZero132]/song.ini",
+      "size": 674
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/1. Suicidal Tendencies - You Can't Bring Me Down [GuitarZero132]/song.ogg",
+      "size": 10445591
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/2. Paul Gilbert - Norwegian Cowbell [GuitarZero132]/album.png",
+      "size": 461045
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/2. Paul Gilbert - Norwegian Cowbell [GuitarZero132]/notes.chart",
+      "size": 62840
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/2. Paul Gilbert - Norwegian Cowbell [GuitarZero132]/song.ini",
+      "size": 580
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/2. Paul Gilbert - Norwegian Cowbell [GuitarZero132]/song.ogg",
+      "size": 7036955
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/3. Marbin - African Shabtay [GuitarZero132]/album.png",
+      "size": 472311
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/3. Marbin - African Shabtay [GuitarZero132]/notes.chart",
+      "size": 127966
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/3. Marbin - African Shabtay [GuitarZero132]/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/3. Marbin - African Shabtay [GuitarZero132]/song.ogg",
+      "size": 11467858
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/4. Focus - Hocus Pocus (Live) [GuitarZero132]/album.png",
+      "size": 354064
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/4. Focus - Hocus Pocus (Live) [GuitarZero132]/notes.chart",
+      "size": 86770
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/4. Focus - Hocus Pocus (Live) [GuitarZero132]/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/4. Focus - Hocus Pocus (Live) [GuitarZero132]/song.ogg",
+      "size": 6371509
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/5. Jimi Hendrix - Spanish Castle Magic (Live At Woodstock) [GuitarZero132/album.png",
+      "size": 481445
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/5. Jimi Hendrix - Spanish Castle Magic (Live At Woodstock) [GuitarZero132/notes.chart",
+      "size": 134403
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/5. Jimi Hendrix - Spanish Castle Magic (Live At Woodstock) [GuitarZero132/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/08. Tier 8/5. Jimi Hendrix - Spanish Castle Magic (Live At Woodstock) [GuitarZero132/song.ogg",
+      "size": 11155440
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/1. Megadeth - Head Crusher [GuitarZero132]/album.png",
+      "size": 581458
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/1. Megadeth - Head Crusher [GuitarZero132]/notes.chart",
+      "size": 64295
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/1. Megadeth - Head Crusher [GuitarZero132]/song.ini",
+      "size": 474
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/1. Megadeth - Head Crusher [GuitarZero132]/song.ogg",
+      "size": 6792902
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/2. Lai Youttitham - iRoc [GuitarZero132]/album.png",
+      "size": 140993
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/2. Lai Youttitham - iRoc [GuitarZero132]/notes.chart",
+      "size": 80521
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/2. Lai Youttitham - iRoc [GuitarZero132]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/2. Lai Youttitham - iRoc [GuitarZero132]/song.ogg",
+      "size": 6002358
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/3. Yngwie J. Malmsteen's Rising Force - Blue [GuitarZero132]/album.png",
+      "size": 505605
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/3. Yngwie J. Malmsteen's Rising Force - Blue [GuitarZero132]/notes.chart",
+      "size": 61320
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/3. Yngwie J. Malmsteen's Rising Force - Blue [GuitarZero132]/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/3. Yngwie J. Malmsteen's Rising Force - Blue [GuitarZero132]/song.ogg",
+      "size": 7370169
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/4. Warmen - Beyond Abilities [GuitarZero132]/album.png",
+      "size": 52038
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/4. Warmen - Beyond Abilities [GuitarZero132]/notes.chart",
+      "size": 87874
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/4. Warmen - Beyond Abilities [GuitarZero132]/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/4. Warmen - Beyond Abilities [GuitarZero132]/song.ogg",
+      "size": 6399337
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/5. Darren Korb - The Unseen Ones [GuitarZero132]/album.png",
+      "size": 338651
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/5. Darren Korb - The Unseen Ones [GuitarZero132]/notes.chart",
+      "size": 80581
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/5. Darren Korb - The Unseen Ones [GuitarZero132]/song.ini",
+      "size": 544
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/09. Tier 9/5. Darren Korb - The Unseen Ones [GuitarZero132]/song.ogg",
+      "size": 7954046
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/1. Slash (feat. Myles Kennedy and the Conspirators) - Anastasia (Live) [GuitarZero132]/album.png",
+      "size": 508596
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/1. Slash (feat. Myles Kennedy and the Conspirators) - Anastasia (Live) [GuitarZero132]/notes.chart",
+      "size": 174504
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/1. Slash (feat. Myles Kennedy and the Conspirators) - Anastasia (Live) [GuitarZero132]/song.ini",
+      "size": 624
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/1. Slash (feat. Myles Kennedy and the Conspirators) - Anastasia (Live) [GuitarZero132]/song.ogg",
+      "size": 14786016
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/2. Buckethead - Runaway Carriage [GuitarZero132]/album.png",
+      "size": 490853
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/2. Buckethead - Runaway Carriage [GuitarZero132]/notes.chart",
+      "size": 149592
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/2. Buckethead - Runaway Carriage [GuitarZero132]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/2. Buckethead - Runaway Carriage [GuitarZero132]/song.ogg",
+      "size": 11222223
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/AlbumArtSmall.jpg",
+      "size": 8084
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/AlbumArt_{B5020207-474E-4720-5EC2-6D2E388B5900}_Large.jpg",
+      "size": 34502
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/AlbumArt_{B5020207-474E-4720-5EC2-6D2E388B5900}_Small.jpg",
+      "size": 8084
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/Folder.jpg",
+      "size": 34502
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/album.png",
+      "size": 218625
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/notes.chart",
+      "size": 102460
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/3. Blues Traveler - Crash Burn [GuitarZero132]/song.ogg",
+      "size": 5516593
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/4. John McLaughlin - The Dark Prince [GuitarZero132]/album.png",
+      "size": 396876
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/4. John McLaughlin - The Dark Prince [GuitarZero132]/notes.chart",
+      "size": 172643
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/4. John McLaughlin - The Dark Prince [GuitarZero132]/song.ini",
+      "size": 553
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/4. John McLaughlin - The Dark Prince [GuitarZero132]/song.ogg",
+      "size": 10489112
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/5. Van Halen - Eruption Cathedral (Live) [GuitarZero132]/album.png",
+      "size": 385745
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/5. Van Halen - Eruption Cathedral (Live) [GuitarZero132]/notes.chart",
+      "size": 241377
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/5. Van Halen - Eruption Cathedral (Live) [GuitarZero132]/song.ini",
+      "size": 716
+    },
+    {
+      "path": "Guitar Zero 2/1. Main Setlist/10. Tier 10/5. Van Halen - Eruption Cathedral (Live) [GuitarZero132]/song.ogg",
+      "size": 13824259
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/1inamillion - Take Me to the Bahamas Fest [GuitarZero132]/album.png",
+      "size": 181857
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/1inamillion - Take Me to the Bahamas Fest [GuitarZero132]/notes.chart",
+      "size": 102188
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/1inamillion - Take Me to the Bahamas Fest [GuitarZero132]/song.ini",
+      "size": 516
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/1inamillion - Take Me to the Bahamas Fest [GuitarZero132]/song.ogg",
+      "size": 7518374
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Alabama Thunderpussy - None Shall Return [GuitarZero132]/album.png",
+      "size": 438126
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Alabama Thunderpussy - None Shall Return [GuitarZero132]/notes.chart",
+      "size": 77637
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Alabama Thunderpussy - None Shall Return [GuitarZero132]/song.ini",
+      "size": 560
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Alabama Thunderpussy - None Shall Return [GuitarZero132]/song.ogg",
+      "size": 6349620
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Andy James - Victory [GuitarZero132]/album.png",
+      "size": 383612
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Andy James - Victory [GuitarZero132]/notes.chart",
+      "size": 83317
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Andy James - Victory [GuitarZero132]/song.ini",
+      "size": 483
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Andy James - Victory [GuitarZero132]/song.ogg",
+      "size": 8890383
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Aura - Hope is a Prison [GuitarZero132]/album.png",
+      "size": 306091
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Aura - Hope is a Prison [GuitarZero132]/notes.chart",
+      "size": 66422
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Aura - Hope is a Prison [GuitarZero132]/song.ini",
+      "size": 819
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Aura - Hope is a Prison [GuitarZero132]/song.ogg",
+      "size": 7382809
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Beat Crusaders - Follow Me [GuitarZero132]/album.png",
+      "size": 504826
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Beat Crusaders - Follow Me [GuitarZero132]/notes.chart",
+      "size": 36613
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Beat Crusaders - Follow Me [GuitarZero132]/song.ini",
+      "size": 594
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Beat Crusaders - Follow Me [GuitarZero132]/song.ogg",
+      "size": 6431133
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/ChakiP - Gabriel DropKick [GuitarZero132]/album.png",
+      "size": 322435
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/ChakiP - Gabriel DropKick [GuitarZero132]/notes.chart",
+      "size": 62226
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/ChakiP - Gabriel DropKick [GuitarZero132]/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/ChakiP - Gabriel DropKick [GuitarZero132]/song.ogg",
+      "size": 6931459
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/DGM - The Secret [GuitarZero132]/album.png",
+      "size": 643467
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/DGM - The Secret [GuitarZero132]/notes.chart",
+      "size": 294285
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/DGM - The Secret [GuitarZero132]/song.ini",
+      "size": 577
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/DGM - The Secret [GuitarZero132]/song.ogg",
+      "size": 31132437
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Dan Mumm - The Point of No Return [GuitarZero132]/album.png",
+      "size": 505051
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Dan Mumm - The Point of No Return [GuitarZero132]/notes.chart",
+      "size": 115525
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Dan Mumm - The Point of No Return [GuitarZero132]/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Dan Mumm - The Point of No Return [GuitarZero132]/song.ogg",
+      "size": 7062481
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/EDGE of LIFE - Believe in Myself [GuitarZero132]/album.png",
+      "size": 113827
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/EDGE of LIFE - Believe in Myself [GuitarZero132]/notes.chart",
+      "size": 57101
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/EDGE of LIFE - Believe in Myself [GuitarZero132]/song.ini",
+      "size": 576
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/EDGE of LIFE - Believe in Myself [GuitarZero132]/song.ogg",
+      "size": 6341329
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Eric Weissberg - Dueling Banjos [GuitarZero132]/album.png",
+      "size": 462482
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Eric Weissberg - Dueling Banjos [GuitarZero132]/notes.chart",
+      "size": 47426
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Eric Weissberg - Dueling Banjos [GuitarZero132]/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Eric Weissberg - Dueling Banjos [GuitarZero132]/song.ogg",
+      "size": 5310299
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ewan Dobson - Time 2 [GuitarZero132]/album.png",
+      "size": 269282
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ewan Dobson - Time 2 [GuitarZero132]/notes.chart",
+      "size": 62457
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ewan Dobson - Time 2 [GuitarZero132]/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ewan Dobson - Time 2 [GuitarZero132]/song.ogg",
+      "size": 6276100
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Florian Cristea - Caprice No. 24 [GuitarZero132]/album.png",
+      "size": 511540
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Florian Cristea - Caprice No. 24 [GuitarZero132]/notes.chart",
+      "size": 188744
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Florian Cristea - Caprice No. 24 [GuitarZero132]/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Florian Cristea - Caprice No. 24 [GuitarZero132]/song.ogg",
+      "size": 11946106
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Flying Lotus - Never Catch Me (feat. Kendrick Lamar) [GuitarZero132]/album.png",
+      "size": 628931
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Flying Lotus - Never Catch Me (feat. Kendrick Lamar) [GuitarZero132]/notes.chart",
+      "size": 44477
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Flying Lotus - Never Catch Me (feat. Kendrick Lamar) [GuitarZero132]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Flying Lotus - Never Catch Me (feat. Kendrick Lamar) [GuitarZero132]/song.ogg",
+      "size": 9261764
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Gloryhammer - The Unicorn Invasion of Dundee [GuitarZero132]/album.png",
+      "size": 465358
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Gloryhammer - The Unicorn Invasion of Dundee [GuitarZero132]/background(don'tdeleteit'saneasteregg).jpg",
+      "size": 637370
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Gloryhammer - The Unicorn Invasion of Dundee [GuitarZero132]/notes.chart",
+      "size": 63073
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Gloryhammer - The Unicorn Invasion of Dundee [GuitarZero132]/song.ini",
+      "size": 616
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Gloryhammer - The Unicorn Invasion of Dundee [GuitarZero132]/song.ogg",
+      "size": 8407766
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Hizaki - Lunar Eclipse [GuitarZero132]/album.png",
+      "size": 588917
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Hizaki - Lunar Eclipse [GuitarZero132]/notes.chart",
+      "size": 78973
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Hizaki - Lunar Eclipse [GuitarZero132]/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Hizaki - Lunar Eclipse [GuitarZero132]/song.ogg",
+      "size": 9430936
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/LSO String Ensemble - Moto Perpetuo [GuitarZero132]/album.png",
+      "size": 374841
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/LSO String Ensemble - Moto Perpetuo [GuitarZero132]/notes.chart",
+      "size": 36016
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/LSO String Ensemble - Moto Perpetuo [GuitarZero132]/song.ini",
+      "size": 759
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/LSO String Ensemble - Moto Perpetuo [GuitarZero132]/song.ogg",
+      "size": 1589340
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Like A Storm - Gangsters Paradise (Coolio Cover) [GuitarZero132]/album.png",
+      "size": 413674
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Like A Storm - Gangsters Paradise (Coolio Cover) [GuitarZero132]/notes.chart",
+      "size": 64403
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Like A Storm - Gangsters Paradise (Coolio Cover) [GuitarZero132]/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Like A Storm - Gangsters Paradise (Coolio Cover) [GuitarZero132]/song.ogg",
+      "size": 6849701
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Like A Storm - Gangsters Paradise (Coolio Cover) [GuitarZero132]/ssong.ogg",
+      "size": 289371
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mickey Baker - Guitarambo [GuitarZero132]/album.png",
+      "size": 215958
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mickey Baker - Guitarambo [GuitarZero132]/notes.chart",
+      "size": 54190
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mickey Baker - Guitarambo [GuitarZero132]/song.ini",
+      "size": 534
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mickey Baker - Guitarambo [GuitarZero132]/song.ogg",
+      "size": 3873773
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/AlbumArtSmall.jpg",
+      "size": 10085
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/AlbumArt_{B5020207-474E-4720-FB09-912406673800}_Large.jpg",
+      "size": 58274
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/AlbumArt_{B5020207-474E-4720-FB09-912406673800}_Small.jpg",
+      "size": 10085
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/Folder.jpg",
+      "size": 58274
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/album.png",
+      "size": 606016
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/notes.chart",
+      "size": 81135
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/song.ini",
+      "size": 598
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Mr. Fastfinger - Tapping Boogie [GuitarZero132]/song.ogg",
+      "size": 5994109
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Pink Guy - Help [GuitarZero132]/album.png",
+      "size": 415306
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Pink Guy - Help [GuitarZero132]/notes.chart",
+      "size": 50584
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Pink Guy - Help [GuitarZero132]/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Pink Guy - Help [GuitarZero132]/song.ogg",
+      "size": 4836010
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/PoopPoopFart - The Legendary Theme (Gitaroo Man) [GuitarZero132]/album.png",
+      "size": 429612
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/PoopPoopFart - The Legendary Theme (Gitaroo Man) [GuitarZero132]/notes.chart",
+      "size": 15541
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/PoopPoopFart - The Legendary Theme (Gitaroo Man) [GuitarZero132]/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/PoopPoopFart - The Legendary Theme (Gitaroo Man) [GuitarZero132]/song.ogg",
+      "size": 4439776
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Prefab Sprout - When Love Breaks Down [GuitarZero132]/album.png",
+      "size": 446697
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Prefab Sprout - When Love Breaks Down [GuitarZero132]/notes.chart",
+      "size": 28219
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Prefab Sprout - When Love Breaks Down [GuitarZero132]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Prefab Sprout - When Love Breaks Down [GuitarZero132]/song.ogg",
+      "size": 7835669
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ron Jackson - The Best Thing For You Is Me [GuitarZero132]/album.png",
+      "size": 403159
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ron Jackson - The Best Thing For You Is Me [GuitarZero132]/notes.chart",
+      "size": 56233
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ron Jackson - The Best Thing For You Is Me [GuitarZero132]/song.ini",
+      "size": 521
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Ron Jackson - The Best Thing For You Is Me [GuitarZero132]/song.ogg",
+      "size": 6387721
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sergey Golovin - Bouncing Ball [GuitarZero132]/album.png",
+      "size": 644454
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sergey Golovin - Bouncing Ball [GuitarZero132]/notes.chart",
+      "size": 98073
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sergey Golovin - Bouncing Ball [GuitarZero132]/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sergey Golovin - Bouncing Ball [GuitarZero132]/song.ogg",
+      "size": 8101669
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sunrise Skater Kids - First World Tragedy [GuitarZero132]/album.png",
+      "size": 415705
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sunrise Skater Kids - First World Tragedy [GuitarZero132]/notes.chart",
+      "size": 100164
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sunrise Skater Kids - First World Tragedy [GuitarZero132]/song.ini",
+      "size": 535
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Sunrise Skater Kids - First World Tragedy [GuitarZero132]/song.ogg",
+      "size": 10333370
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/The Midnight - River of Darkness (feat. Timecop1983) [GuitarZero132]/album.png",
+      "size": 545598
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/The Midnight - River of Darkness (feat. Timecop1983) [GuitarZero132]/notes.chart",
+      "size": 87496
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/The Midnight - River of Darkness (feat. Timecop1983) [GuitarZero132]/song.ini",
+      "size": 610
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/The Midnight - River of Darkness (feat. Timecop1983) [GuitarZero132]/song.ogg",
+      "size": 11054072
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Turtle Island String Quartet - Skylife (Live) [GuitarZero132]/album.png",
+      "size": 443866
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Turtle Island String Quartet - Skylife (Live) [GuitarZero132]/notes.chart",
+      "size": 67175
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Turtle Island String Quartet - Skylife (Live) [GuitarZero132]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Turtle Island String Quartet - Skylife (Live) [GuitarZero132]/song.ogg",
+      "size": 7705086
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Victor & Penny - More In Store [GuitarZero132]/album.png",
+      "size": 372708
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Victor & Penny - More In Store [GuitarZero132]/notes.chart",
+      "size": 67736
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Victor & Penny - More In Store [GuitarZero132]/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Victor & Penny - More In Store [GuitarZero132]/song.ogg",
+      "size": 6842881
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/With Confidence - Without Me (P\u00e2querette) (Acoustic) [GuitarZero132]/album.png",
+      "size": 191524
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/With Confidence - Without Me (P\u00e2querette) (Acoustic) [GuitarZero132]/notes.chart",
+      "size": 54024
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/With Confidence - Without Me (P\u00e2querette) (Acoustic) [GuitarZero132]/song.ini",
+      "size": 620
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/With Confidence - Without Me (P\u00e2querette) (Acoustic) [GuitarZero132]/song.ogg",
+      "size": 6606744
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Xyperus - Final Round [GuitarZero132]/album.png",
+      "size": 529692
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Xyperus - Final Round [GuitarZero132]/notes.chart",
+      "size": 147242
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Xyperus - Final Round [GuitarZero132]/song.ini",
+      "size": 613
+    },
+    {
+      "path": "Guitar Zero 2/2. Bonus Songs/Xyperus - Final Round [GuitarZero132]/song.ogg",
+      "size": 7514879
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/1. Peach Pit - Being So Normal [GuitarZero132]/album.png",
+      "size": 99953
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/1. Peach Pit - Being So Normal [GuitarZero132]/notes.mid",
+      "size": 66171
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/1. Peach Pit - Being So Normal [GuitarZero132]/noteschartbackup.chart",
+      "size": 126789
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/1. Peach Pit - Being So Normal [GuitarZero132]/song.ini",
+      "size": 844
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/1. Peach Pit - Being So Normal [GuitarZero132]/song.ogg",
+      "size": 7279721
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/10. Racer X - Scarified [GuitarZero132]/album.png",
+      "size": 86621
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/10. Racer X - Scarified [GuitarZero132]/notes.mid",
+      "size": 101165
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/10. Racer X - Scarified [GuitarZero132]/noteschartbackup.chart",
+      "size": 184283
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/10. Racer X - Scarified [GuitarZero132]/song.ini",
+      "size": 823
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/10. Racer X - Scarified [GuitarZero132]/song.ogg",
+      "size": 5085242
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/2. Journey - Separate Ways (Worlds Apart) [GuitarZero132]/album.png",
+      "size": 461924
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/2. Journey - Separate Ways (Worlds Apart) [GuitarZero132]/notes.mid",
+      "size": 115086
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/2. Journey - Separate Ways (Worlds Apart) [GuitarZero132]/noteschartbackup.chart",
+      "size": 197523
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/2. Journey - Separate Ways (Worlds Apart) [GuitarZero132]/song.ini",
+      "size": 945
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/2. Journey - Separate Ways (Worlds Apart) [GuitarZero132]/song.ogg",
+      "size": 9691564
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/3. The Winstons - Amen Brother [GuitarZero132]/album.png",
+      "size": 314016
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/3. The Winstons - Amen Brother [GuitarZero132]/notes.mid",
+      "size": 57580
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/3. The Winstons - Amen Brother [GuitarZero132]/noteschartbackup.chart",
+      "size": 126129
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/3. The Winstons - Amen Brother [GuitarZero132]/song.ini",
+      "size": 989
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/3. The Winstons - Amen Brother [GuitarZero132]/song.ogg",
+      "size": 4521827
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/4. Living Colour - Freedom of Expression (F.O.X.) [GuitarZero132]/album.png",
+      "size": 348246
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/4. Living Colour - Freedom of Expression (F.O.X.) [GuitarZero132]/notes.mid",
+      "size": 69676
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/4. Living Colour - Freedom of Expression (F.O.X.) [GuitarZero132]/noteschartbackup.chart",
+      "size": 141796
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/4. Living Colour - Freedom of Expression (F.O.X.) [GuitarZero132]/song.ini",
+      "size": 944
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/4. Living Colour - Freedom of Expression (F.O.X.) [GuitarZero132]/song.ogg",
+      "size": 5798261
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/5. The Who - The Real Me [GuitarZero132]/album.png",
+      "size": 262733
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/5. The Who - The Real Me [GuitarZero132]/notes.mid",
+      "size": 87538
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/5. The Who - The Real Me [GuitarZero132]/noteschartbackup.chart",
+      "size": 177464
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/5. The Who - The Real Me [GuitarZero132]/song.ini",
+      "size": 906
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/5. The Who - The Real Me [GuitarZero132]/song.ogg",
+      "size": 6535633
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/6. Trivium - This World Can't Tear Us Apart [GuitarZero132]/album.png",
+      "size": 455400
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/6. Trivium - This World Can't Tear Us Apart [GuitarZero132]/notes.mid",
+      "size": 126017
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/6. Trivium - This World Can't Tear Us Apart [GuitarZero132]/noteschartbackup.chart",
+      "size": 216829
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/6. Trivium - This World Can't Tear Us Apart [GuitarZero132]/song.ini",
+      "size": 826
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/6. Trivium - This World Can't Tear Us Apart [GuitarZero132]/song.ogg",
+      "size": 6436490
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/7. Primus - Wynona's Big Brown Beaver [GuitarZero132]/album.png",
+      "size": 449234
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/7. Primus - Wynona's Big Brown Beaver [GuitarZero132]/notes.mid",
+      "size": 126291
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/7. Primus - Wynona's Big Brown Beaver [GuitarZero132]/noteschartbackup.chart",
+      "size": 233998
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/7. Primus - Wynona's Big Brown Beaver [GuitarZero132]/song.ini",
+      "size": 982
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/7. Primus - Wynona's Big Brown Beaver [GuitarZero132]/song.ogg",
+      "size": 7419451
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/8. Rush - Anthem [GuitarZero132]/album.png",
+      "size": 560326
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/8. Rush - Anthem [GuitarZero132]/notes.mid",
+      "size": 125108
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/8. Rush - Anthem [GuitarZero132]/noteschartbackup.chart",
+      "size": 224785
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/8. Rush - Anthem [GuitarZero132]/song.ini",
+      "size": 987
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/8. Rush - Anthem [GuitarZero132]/song.ogg",
+      "size": 7938375
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/9. Pantera - Domination [GuitarZero132]/album.png",
+      "size": 547301
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/9. Pantera - Domination [GuitarZero132]/notes.mid",
+      "size": 180150
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/9. Pantera - Domination [GuitarZero132]/noteschartbackup.chart",
+      "size": 280259
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/9. Pantera - Domination [GuitarZero132]/song.ini",
+      "size": 812
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/1. Old Songs/9. Pantera - Domination [GuitarZero132]/song.ogg",
+      "size": 10038535
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/1. Three Days Grace - Infra-Red [GuitarZero132]/album.png",
+      "size": 443281
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/1. Three Days Grace - Infra-Red [GuitarZero132]/notes.mid",
+      "size": 64202
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/1. Three Days Grace - Infra-Red [GuitarZero132]/noteschartbackup.chart",
+      "size": 127530
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/1. Three Days Grace - Infra-Red [GuitarZero132]/song.ini",
+      "size": 836
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/1. Three Days Grace - Infra-Red [GuitarZero132]/song.ogg",
+      "size": 7235859
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/album.png",
+      "size": 508579
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/guitar.ogg",
+      "size": 9830242
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/notes.eof",
+      "size": 216010
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/notes.mid",
+      "size": 114799
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/notes.mid.backup",
+      "size": 114798
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/noteschartold.chart",
+      "size": 236655
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/song.ini",
+      "size": 936
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/song.ini.backup",
+      "size": 936
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/10. Owane - Rock Is Too Heavy [GuitarZero132]/song.ogg",
+      "size": 9830242
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/2. 3 Doors Down - Duck and Run [GuitarZero132]/album.png",
+      "size": 448943
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/2. 3 Doors Down - Duck and Run [GuitarZero132]/notes.mid",
+      "size": 118798
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/2. 3 Doors Down - Duck and Run [GuitarZero132]/noteschartbackup.chart",
+      "size": 225862
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/2. 3 Doors Down - Duck and Run [GuitarZero132]/song.ini",
+      "size": 919
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/2. 3 Doors Down - Duck and Run [GuitarZero132]/song.ogg",
+      "size": 7987043
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/3. Tenacious D - Beelzeboss (The Final Showdown) [GuitarZero132]/album.png",
+      "size": 448729
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/3. Tenacious D - Beelzeboss (The Final Showdown) [GuitarZero132]/notes.mid",
+      "size": 117056
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/3. Tenacious D - Beelzeboss (The Final Showdown) [GuitarZero132]/noteschartbackup.chart",
+      "size": 227882
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/3. Tenacious D - Beelzeboss (The Final Showdown) [GuitarZero132]/song.ini",
+      "size": 962
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/3. Tenacious D - Beelzeboss (The Final Showdown) [GuitarZero132]/song.ogg",
+      "size": 10390166
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/4. Foghat - I Just Want to Make Love to You [GuitarZero132]/album.png",
+      "size": 615630
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/4. Foghat - I Just Want to Make Love to You [GuitarZero132]/notes.mid",
+      "size": 114322
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/4. Foghat - I Just Want to Make Love to You [GuitarZero132]/noteschartbackup.chart",
+      "size": 231040
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/4. Foghat - I Just Want to Make Love to You [GuitarZero132]/song.ini",
+      "size": 975
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/4. Foghat - I Just Want to Make Love to You [GuitarZero132]/song.ogg",
+      "size": 8506872
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/5. Amber Pacific - Summer (In B) [GuitarZero132]/album.png",
+      "size": 25385
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/5. Amber Pacific - Summer (In B) [GuitarZero132]/notes.mid",
+      "size": 136695
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/5. Amber Pacific - Summer (In B) [GuitarZero132]/song.ini",
+      "size": 830
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/5. Amber Pacific - Summer (In B) [GuitarZero132]/song.ogg",
+      "size": 7379481
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/6. Incubus - Absolution Calling [GuitarZero132]/album.png",
+      "size": 142688
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/6. Incubus - Absolution Calling [GuitarZero132]/notes.mid",
+      "size": 109680
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/6. Incubus - Absolution Calling [GuitarZero132]/noteschartbackup.chart",
+      "size": 218221
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/6. Incubus - Absolution Calling [GuitarZero132]/song.ini",
+      "size": 925
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/6. Incubus - Absolution Calling [GuitarZero132]/song.ogg",
+      "size": 8145999
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/7. Led Zeppelin - The Song Remains the Same [GuitarZero132]/album.png",
+      "size": 593902
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/7. Led Zeppelin - The Song Remains the Same [GuitarZero132]/notes.mid",
+      "size": 128087
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/7. Led Zeppelin - The Song Remains the Same [GuitarZero132]/noteschartbackup.chart",
+      "size": 242034
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/7. Led Zeppelin - The Song Remains the Same [GuitarZero132]/song.ini",
+      "size": 856
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/7. Led Zeppelin - The Song Remains the Same [GuitarZero132]/song.ogg",
+      "size": 10899441
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/8. Strawberry Girls - Honeydew [GuitarZero132]/album.png",
+      "size": 444635
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/8. Strawberry Girls - Honeydew [GuitarZero132]/notes.mid",
+      "size": 89046
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/8. Strawberry Girls - Honeydew [GuitarZero132]/noteschartbackup.chart",
+      "size": 157052
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/8. Strawberry Girls - Honeydew [GuitarZero132]/song.ini",
+      "size": 868
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/8. Strawberry Girls - Honeydew [GuitarZero132]/song.ogg",
+      "size": 5956512
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/9. Thin Lizzy - Bad Reputation [GuitarZero132]/album.png",
+      "size": 139890
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/9. Thin Lizzy - Bad Reputation [GuitarZero132]/notes.mid",
+      "size": 98083
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/9. Thin Lizzy - Bad Reputation [GuitarZero132]/noteschartbackup.chart",
+      "size": 177188
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/9. Thin Lizzy - Bad Reputation [GuitarZero132]/song.ini",
+      "size": 850
+    },
+    {
+      "path": "Guitar Zero 2/3. Full Band/2. New Songs/9. Thin Lizzy - Bad Reputation [GuitarZero132]/song.ogg",
+      "size": 6101343
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/01. Tregua - Como un Gato en un Tejado [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/01. Tregua - Como un Gato en un Tejado [GuitarZero132]/notes.chart",
+      "size": 53374
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/01. Tregua - Como un Gato en un Tejado [GuitarZero132]/song.ini",
+      "size": 489
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/01. Tregua - Como un Gato en un Tejado [GuitarZero132]/song.ogg",
+      "size": 7174988
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/02. Tregua - Contracorriente [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/02. Tregua - Contracorriente [GuitarZero132]/notes.chart",
+      "size": 30548
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/02. Tregua - Contracorriente [GuitarZero132]/song.ini",
+      "size": 487
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/02. Tregua - Contracorriente [GuitarZero132]/song.ogg",
+      "size": 5319355
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/03. Tregua - A Oscuras [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/03. Tregua - A Oscuras [GuitarZero132]/notes.chart",
+      "size": 40219
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/03. Tregua - A Oscuras [GuitarZero132]/song.ini",
+      "size": 474
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/03. Tregua - A Oscuras [GuitarZero132]/song.ogg",
+      "size": 5869683
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/04. Tregua - Volver a Sonre\u00edr [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/04. Tregua - Volver a Sonre\u00edr [GuitarZero132]/notes.chart",
+      "size": 58177
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/04. Tregua - Volver a Sonre\u00edr [GuitarZero132]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/04. Tregua - Volver a Sonre\u00edr [GuitarZero132]/song.ogg",
+      "size": 8146660
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/05. Tregua - El Cuento Que Te Cuenta [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/05. Tregua - El Cuento Que Te Cuenta [GuitarZero132]/notes.chart",
+      "size": 38433
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/05. Tregua - El Cuento Que Te Cuenta [GuitarZero132]/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/05. Tregua - El Cuento Que Te Cuenta [GuitarZero132]/song.ogg",
+      "size": 8846013
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/06. Tregua - Malos Tragos [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/06. Tregua - Malos Tragos [GuitarZero132]/notes.chart",
+      "size": 62202
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/06. Tregua - Malos Tragos [GuitarZero132]/song.ini",
+      "size": 610
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/06. Tregua - Malos Tragos [GuitarZero132]/song.ogg",
+      "size": 8081284
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/07. Tregua - La \u00daltima P\u00e1gina [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/07. Tregua - La \u00daltima P\u00e1gina [GuitarZero132]/notes.chart",
+      "size": 51071
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/07. Tregua - La \u00daltima P\u00e1gina [GuitarZero132]/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/07. Tregua - La \u00daltima P\u00e1gina [GuitarZero132]/song.ogg",
+      "size": 8245546
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/08. Tregua - No Muy Lejos [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/08. Tregua - No Muy Lejos [GuitarZero132]/notes.chart",
+      "size": 53882
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/08. Tregua - No Muy Lejos [GuitarZero132]/song.ini",
+      "size": 529
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/08. Tregua - No Muy Lejos [GuitarZero132]/song.ogg",
+      "size": 7890538
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/09. Tregua - Andar del Rev\u00e9s [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/09. Tregua - Andar del Rev\u00e9s [GuitarZero132]/notes.chart",
+      "size": 46178
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/09. Tregua - Andar del Rev\u00e9s [GuitarZero132]/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/09. Tregua - Andar del Rev\u00e9s [GuitarZero132]/song.ogg",
+      "size": 6649387
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/10. Tregua - Asuntos Pendientes [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/10. Tregua - Asuntos Pendientes [GuitarZero132]/notes.chart",
+      "size": 42432
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/10. Tregua - Asuntos Pendientes [GuitarZero132]/song.ini",
+      "size": 503
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/10. Tregua - Asuntos Pendientes [GuitarZero132]/song.ogg",
+      "size": 6872006
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/11. Tregua - Para Volar [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/11. Tregua - Para Volar [GuitarZero132]/notes.chart",
+      "size": 44187
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/11. Tregua - Para Volar [GuitarZero132]/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Guitar Zero 2/4. Luces y Sombras (Full Album)/11. Tregua - Para Volar [GuitarZero132]/song.ogg",
+      "size": 6722757
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/01. Boston - Don't Look Back [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/01. Boston - Don't Look Back [GuitarZero132]/notes.chart",
+      "size": 74391
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/01. Boston - Don't Look Back [GuitarZero132]/song.ini",
+      "size": 493
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/01. Boston - Don't Look Back [GuitarZero132]/song.ogg",
+      "size": 11914014
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/02. Boston - The Journey [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/02. Boston - The Journey [GuitarZero132]/notes.chart",
+      "size": 12805
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/02. Boston - The Journey [GuitarZero132]/song.ini",
+      "size": 532
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/02. Boston - The Journey [GuitarZero132]/song.ogg",
+      "size": 2713353
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/03. Boston - It's Easy [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/03. Boston - It's Easy [GuitarZero132]/notes.chart",
+      "size": 62749
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/03. Boston - It's Easy [GuitarZero132]/song.ini",
+      "size": 648
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/03. Boston - It's Easy [GuitarZero132]/song.ogg",
+      "size": 8741710
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/04. Boston - A Man I'll Never Be [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/04. Boston - A Man I'll Never Be [GuitarZero132]/notes.chart",
+      "size": 75516
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/04. Boston - A Man I'll Never Be [GuitarZero132]/song.ini",
+      "size": 555
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/04. Boston - A Man I'll Never Be [GuitarZero132]/song.ogg",
+      "size": 12671010
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/05. Boston - Feelin' Satisfied [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/05. Boston - Feelin' Satisfied [GuitarZero132]/notes.chart",
+      "size": 58504
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/05. Boston - Feelin' Satisfied [GuitarZero132]/song.ini",
+      "size": 494
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/05. Boston - Feelin' Satisfied [GuitarZero132]/song.ogg",
+      "size": 8245098
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/06. Boston - Party [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/06. Boston - Party [GuitarZero132]/notes.chart",
+      "size": 66292
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/06. Boston - Party [GuitarZero132]/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/06. Boston - Party [GuitarZero132]/song.ogg",
+      "size": 7695003
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/07. Boston - Used to Bad News [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/07. Boston - Used to Bad News [GuitarZero132]/notes.chart",
+      "size": 48054
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/07. Boston - Used to Bad News [GuitarZero132]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/07. Boston - Used to Bad News [GuitarZero132]/song.ogg",
+      "size": 6060006
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/08. Boston - Don't Be Afraid [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/08. Boston - Don't Be Afraid [GuitarZero132]/notes.chart",
+      "size": 48096
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/08. Boston - Don't Be Afraid [GuitarZero132]/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Guitar Zero 2/5. Don't Look Back (Full Album)/08. Boston - Don't Be Afraid [GuitarZero132]/song.ogg",
+      "size": 7257789
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/01. Ryuichi Katsumata - The Long Distance of Murder [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/01. Ryuichi Katsumata - The Long Distance of Murder [GuitarZero132]/notes.chart",
+      "size": 47582
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/01. Ryuichi Katsumata - The Long Distance of Murder [GuitarZero132]/song.ini",
+      "size": 581
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/01. Ryuichi Katsumata - The Long Distance of Murder [GuitarZero132]/song.ogg",
+      "size": 5035192
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/02. Ryuichi Katsumata - Drivin' Through On Max [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/02. Ryuichi Katsumata - Drivin' Through On Max [GuitarZero132]/notes.chart",
+      "size": 47029
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/02. Ryuichi Katsumata - Drivin' Through On Max [GuitarZero132]/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/02. Ryuichi Katsumata - Drivin' Through On Max [GuitarZero132]/song.ogg",
+      "size": 5913019
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/03. Ryuichi Katsumata - Crazy Call At Cry [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/03. Ryuichi Katsumata - Crazy Call At Cry [GuitarZero132]/notes.chart",
+      "size": 53602
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/03. Ryuichi Katsumata - Crazy Call At Cry [GuitarZero132]/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/03. Ryuichi Katsumata - Crazy Call At Cry [GuitarZero132]/song.ogg",
+      "size": 6020237
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/04. Ryuichi Katsumata - Title BGM [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/04. Ryuichi Katsumata - Title BGM [GuitarZero132]/notes.chart",
+      "size": 46037
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/04. Ryuichi Katsumata - Title BGM [GuitarZero132]/song.ini",
+      "size": 598
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/04. Ryuichi Katsumata - Title BGM [GuitarZero132]/song.ogg",
+      "size": 5545451
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/05. Ryuichi Katsumata - Decide in the Eyes [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/05. Ryuichi Katsumata - Decide in the Eyes [GuitarZero132]/notes.chart",
+      "size": 67554
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/05. Ryuichi Katsumata - Decide in the Eyes [GuitarZero132]/song.ini",
+      "size": 640
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/05. Ryuichi Katsumata - Decide in the Eyes [GuitarZero132]/song.ogg",
+      "size": 7583769
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/06. Ryuichi Katsumata - Climb Up! And Get the Last Chance! [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/06. Ryuichi Katsumata - Climb Up! And Get the Last Chance! [GuitarZero132]/notes.chart",
+      "size": 84115
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/06. Ryuichi Katsumata - Climb Up! And Get the Last Chance! [GuitarZero132]/song.ini",
+      "size": 600
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/06. Ryuichi Katsumata - Climb Up! And Get the Last Chance! [GuitarZero132]/song.ogg",
+      "size": 8370656
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/07. Ryuichi Katsumata - Endless Challenge [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/07. Ryuichi Katsumata - Endless Challenge [GuitarZero132]/notes.chart",
+      "size": 40135
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/07. Ryuichi Katsumata - Endless Challenge [GuitarZero132]/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/07. Ryuichi Katsumata - Endless Challenge [GuitarZero132]/song.ogg",
+      "size": 6297723
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/08. Ryuichi Katsumata - Dream Chaser [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/08. Ryuichi Katsumata - Dream Chaser [GuitarZero132]/notes.chart",
+      "size": 49179
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/08. Ryuichi Katsumata - Dream Chaser [GuitarZero132]/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/08. Ryuichi Katsumata - Dream Chaser [GuitarZero132]/song.ogg",
+      "size": 7035287
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/09. Ryuichi Katsumata - Grand Prix Ending [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/09. Ryuichi Katsumata - Grand Prix Ending [GuitarZero132]/notes.chart",
+      "size": 69138
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/09. Ryuichi Katsumata - Grand Prix Ending [GuitarZero132]/song.ini",
+      "size": 605
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/09. Ryuichi Katsumata - Grand Prix Ending [GuitarZero132]/song.ogg",
+      "size": 5978021
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/10. Ryuichi Katsumata - Staff Roll [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/10. Ryuichi Katsumata - Staff Roll [GuitarZero132]/notes.chart",
+      "size": 88798
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/10. Ryuichi Katsumata - Staff Roll [GuitarZero132]/song.ini",
+      "size": 615
+    },
+    {
+      "path": "Guitar Zero 2/6. F-Zero X Guitar Arrange (Full Album)/10. Ryuichi Katsumata - Staff Roll [GuitarZero132]/song.ogg",
+      "size": 10543400
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/1. DGM - The Secret (Part 1) [GuitarZero132]/album.png",
+      "size": 643467
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/1. DGM - The Secret (Part 1) [GuitarZero132]/notes.chart",
+      "size": 201573
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/1. DGM - The Secret (Part 1) [GuitarZero132]/song.ini",
+      "size": 594
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/1. DGM - The Secret (Part 1) [GuitarZero132]/song.ogg",
+      "size": 16655574
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/2. DGM - The Secret (Part 2) [GuitarZero132]/album.png",
+      "size": 643467
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/2. DGM - The Secret (Part 2) [GuitarZero132]/notes.chart",
+      "size": 106830
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/2. DGM - The Secret (Part 2) [GuitarZero132]/song.ini",
+      "size": 855
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/2. DGM - The Secret (Part 2) [GuitarZero132]/song.ogg",
+      "size": 14461480
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/3. Tregua - Luces y Sombras (Full Album) [GuitarZero132]/album.png",
+      "size": 476363
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/3. Tregua - Luces y Sombras (Full Album) [GuitarZero132]/nnotes.chart",
+      "size": 2655
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/3. Tregua - Luces y Sombras (Full Album) [GuitarZero132]/notes.chart",
+      "size": 546283
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/3. Tregua - Luces y Sombras (Full Album) [GuitarZero132]/song.ini",
+      "size": 514
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/3. Tregua - Luces y Sombras (Full Album) [GuitarZero132]/song.ogg",
+      "size": 80362009
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/4. Boston - Don't Look Back (Full Album) [GuitarZero132]/album.png",
+      "size": 402299
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/4. Boston - Don't Look Back (Full Album) [GuitarZero132]/notes.chart",
+      "size": 465005
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/4. Boston - Don't Look Back (Full Album) [GuitarZero132]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/4. Boston - Don't Look Back (Full Album) [GuitarZero132]/song.ogg",
+      "size": 64823693
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/5. Ryuichi Katsumata - F-Zero X Guitar Arrange (Full Album) [GuitarZero132]/album.png",
+      "size": 590203
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/5. Ryuichi Katsumata - F-Zero X Guitar Arrange (Full Album) [GuitarZero132]/notes.chart",
+      "size": 620487
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/5. Ryuichi Katsumata - F-Zero X Guitar Arrange (Full Album) [GuitarZero132]/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Guitar Zero 2/7. Meta/5. Ryuichi Katsumata - F-Zero X Guitar Arrange (Full Album) [GuitarZero132]/song.ogg",
+      "size": 68567169
+    }
+  ],
+  "extracted_size": 1370355096,
+  "file_count": 577,
+  "chart_count": 134,
+  "release_date": "2021-06-22"
 }

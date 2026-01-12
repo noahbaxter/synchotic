@@ -3,18 +3,1635 @@
   "folder_id": "static-redemption-arc",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 100,
-  "total_size": 1000042322,
-  "file_count": 404,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-redemption-arc",
-      "path": "Redemption Arc/Redemption Arc.rar",
+      "url": "https://customsongscentral.b-cdn.net/Redemption%20Arc.rar?ref=customsongscentral.com",
       "name": "Redemption Arc.rar",
       "size": 1000042322,
-      "md5": "9560e0fdb18c0d3618ff5da67263270a",
-      "url": "https://customsongscentral.b-cdn.net/Redemption%20Arc.rar?ref=customsongscentral.com"
+      "md5": "9560e0fdb18c0d3618ff5da67263270a"
     }
-  ]
+  ],
+  "download_size": 1000042322,
+  "files": [
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Arctic Monkeys - When the Sun Goes Down (Sygenysis)/album.png",
+      "size": 472329
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Arctic Monkeys - When the Sun Goes Down (Sygenysis)/guitar.ogg",
+      "size": 5786376
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Arctic Monkeys - When the Sun Goes Down (Sygenysis)/notes.mid",
+      "size": 25313
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Arctic Monkeys - When the Sun Goes Down (Sygenysis)/song.ini",
+      "size": 960
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Creeper - Black Rain (Jaded)/album.png",
+      "size": 580420
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Creeper - Black Rain (Jaded)/notes.mid",
+      "size": 40954
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Creeper - Black Rain (Jaded)/song.ini",
+      "size": 799
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Creeper - Black Rain (Jaded)/song.ogg",
+      "size": 6471245
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Hachi - Matryoshka (feat. Hatsune Miku & GUMI) (CyclopsDragon)/album.png",
+      "size": 626183
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Hachi - Matryoshka (feat. Hatsune Miku & GUMI) (CyclopsDragon)/guitar.ogg",
+      "size": 6886084
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Hachi - Matryoshka (feat. Hatsune Miku & GUMI) (CyclopsDragon)/notes.chart",
+      "size": 84426
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Hachi - Matryoshka (feat. Hatsune Miku & GUMI) (CyclopsDragon)/song.ini",
+      "size": 694
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Me First and the Gimme Gimmes - Crazy (Seal cover) (Sygenysis)/album.png",
+      "size": 657752
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Me First and the Gimme Gimmes - Crazy (Seal cover) (Sygenysis)/guitar.ogg",
+      "size": 7276254
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Me First and the Gimme Gimmes - Crazy (Seal cover) (Sygenysis)/notes.mid",
+      "size": 34313
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Me First and the Gimme Gimmes - Crazy (Seal cover) (Sygenysis)/song.ini",
+      "size": 975
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Paramore - Stop This Song (Lovesick Melody) (Siavash)/album.png",
+      "size": 497855
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Paramore - Stop This Song (Lovesick Melody) (Siavash)/guitar.ogg",
+      "size": 6473372
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Paramore - Stop This Song (Lovesick Melody) (Siavash)/notes.mid",
+      "size": 19253
+    },
+    {
+      "path": "Redemption Arc/Tier 01 - A Walk in the Parc/Paramore - Stop This Song (Lovesick Melody) (Siavash)/song.ini",
+      "size": 778
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Chrysalis - Instant Silence (Jaded)/album.png",
+      "size": 190814
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Chrysalis - Instant Silence (Jaded)/notes.mid",
+      "size": 40983
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Chrysalis - Instant Silence (Jaded)/song.ini",
+      "size": 809
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Chrysalis - Instant Silence (Jaded)/song.ogg",
+      "size": 6961195
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Kevin Sherwood - 115 (feat. Elena Siegman) (Jaded)/album.png",
+      "size": 404887
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Kevin Sherwood - 115 (feat. Elena Siegman) (Jaded)/notes.mid",
+      "size": 53047
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Kevin Sherwood - 115 (feat. Elena Siegman) (Jaded)/song.ini",
+      "size": 810
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Kevin Sherwood - 115 (feat. Elena Siegman) (Jaded)/song.ogg",
+      "size": 7590771
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Nothing More - Bullets and Blue Eyes (CyclopsDragon)/album.png",
+      "size": 327192
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Nothing More - Bullets and Blue Eyes (CyclopsDragon)/guitar.ogg",
+      "size": 7102938
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Nothing More - Bullets and Blue Eyes (CyclopsDragon)/notes.chart",
+      "size": 97085
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Nothing More - Bullets and Blue Eyes (CyclopsDragon)/song.ini",
+      "size": 590
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Pendulum - Witchcraft (Siavash)/album.png",
+      "size": 558381
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Pendulum - Witchcraft (Siavash)/guitar.ogg",
+      "size": 7808612
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Pendulum - Witchcraft (Siavash)/notes.mid",
+      "size": 18186
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Pendulum - Witchcraft (Siavash)/song.ini",
+      "size": 732
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Say Anything - Belt (Jaded)/album.png",
+      "size": 274262
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Say Anything - Belt (Jaded)/notes.mid",
+      "size": 54702
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Say Anything - Belt (Jaded)/song.ini",
+      "size": 874
+    },
+    {
+      "path": "Redemption Arc/Tier 02 - Getting the Band Back Together/Say Anything - Belt (Jaded)/song.ogg",
+      "size": 8378278
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Blank Banshee - Teen Pregnancy (Siavash)/album.png",
+      "size": 254260
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Blank Banshee - Teen Pregnancy (Siavash)/guitar.ogg",
+      "size": 6955136
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Blank Banshee - Teen Pregnancy (Siavash)/notes.mid",
+      "size": 10550
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Blank Banshee - Teen Pregnancy (Siavash)/song.ini",
+      "size": 855
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Cloudkicker - Avalanche (Big Whoop Magazine)/album.png",
+      "size": 590899
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Cloudkicker - Avalanche (Big Whoop Magazine)/notes.chart",
+      "size": 66558
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Cloudkicker - Avalanche (Big Whoop Magazine)/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Cloudkicker - Avalanche (Big Whoop Magazine)/song.ogg",
+      "size": 5966475
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Kevin Sherwood - Abracadavre (feat. Elena Siegman) (Jaded)/album.png",
+      "size": 404887
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Kevin Sherwood - Abracadavre (feat. Elena Siegman) (Jaded)/notes.mid",
+      "size": 76402
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Kevin Sherwood - Abracadavre (feat. Elena Siegman) (Jaded)/song.ini",
+      "size": 846
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Kevin Sherwood - Abracadavre (feat. Elena Siegman) (Jaded)/song.ogg",
+      "size": 12208650
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Our Last Night - Tongue Tied (Jaded)/album.png",
+      "size": 150275
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Our Last Night - Tongue Tied (Jaded)/notes.mid",
+      "size": 41348
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Our Last Night - Tongue Tied (Jaded)/song.ini",
+      "size": 833
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Our Last Night - Tongue Tied (Jaded)/song.ogg",
+      "size": 7861700
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Say Anything - Alive with the Glory of Love (Jaded)/album.png",
+      "size": 262221
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Say Anything - Alive with the Glory of Love (Jaded)/notes.mid",
+      "size": 57050
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Say Anything - Alive with the Glory of Love (Jaded)/song.ini",
+      "size": 869
+    },
+    {
+      "path": "Redemption Arc/Tier 03 - The Reunion Tour/Say Anything - Alive with the Glory of Love (Jaded)/song.ogg",
+      "size": 7855438
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/DVSR - Six Figures Deep (XEntombmentX)/album.png",
+      "size": 31963
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/DVSR - Six Figures Deep (XEntombmentX)/notes.chart",
+      "size": 74371
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/DVSR - Six Figures Deep (XEntombmentX)/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/DVSR - Six Figures Deep (XEntombmentX)/song.ogg",
+      "size": 6174269
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Feint - Reprise (Siavash)/album.png",
+      "size": 604464
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Feint - Reprise (Siavash)/guitar.ogg",
+      "size": 7788487
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Feint - Reprise (Siavash)/notes.mid",
+      "size": 21129
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Feint - Reprise (Siavash)/song.ini",
+      "size": 750
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Grant Kirkhope - Treasure Trove Cove (JoeyD)/album.png",
+      "size": 709455
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Grant Kirkhope - Treasure Trove Cove (JoeyD)/notes.chart",
+      "size": 49794
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Grant Kirkhope - Treasure Trove Cove (JoeyD)/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Grant Kirkhope - Treasure Trove Cove (JoeyD)/song.ogg",
+      "size": 2972949
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Issues - King of Amarillo (Jaded)/album.png",
+      "size": 119927
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Issues - King of Amarillo (Jaded)/notes.mid",
+      "size": 47620
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Issues - King of Amarillo (Jaded)/song.ini",
+      "size": 936
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Issues - King of Amarillo (Jaded)/song.ogg",
+      "size": 7121582
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Marmozets - Hit the Wave (Jaded)/album.png",
+      "size": 296811
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Marmozets - Hit the Wave (Jaded)/notes.mid",
+      "size": 40807
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Marmozets - Hit the Wave (Jaded)/song.ini",
+      "size": 757
+    },
+    {
+      "path": "Redemption Arc/Tier 04 - The Hour of Reprisal/Marmozets - Hit the Wave (Jaded)/song.ogg",
+      "size": 6524945
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Grant Kirkhope - Main Title (Banjo-Kazooie) (JoeyD)/album.png",
+      "size": 709455
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Grant Kirkhope - Main Title (Banjo-Kazooie) (JoeyD)/notes.chart",
+      "size": 32406
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Grant Kirkhope - Main Title (Banjo-Kazooie) (JoeyD)/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Grant Kirkhope - Main Title (Banjo-Kazooie) (JoeyD)/song.ogg",
+      "size": 1615903
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Hail the Sun - Black Serotonin (Jaded)/album.png",
+      "size": 204983
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Hail the Sun - Black Serotonin (Jaded)/notes.mid",
+      "size": 58772
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Hail the Sun - Black Serotonin (Jaded)/song.ini",
+      "size": 811
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Hail the Sun - Black Serotonin (Jaded)/song.ogg",
+      "size": 9784829
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Meat Puppets - Backwater (Sygenysis)/album.png",
+      "size": 757637
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Meat Puppets - Backwater (Sygenysis)/guitar.ogg",
+      "size": 7237699
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Meat Puppets - Backwater (Sygenysis)/notes.mid",
+      "size": 21021
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Meat Puppets - Backwater (Sygenysis)/song.ini",
+      "size": 914
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Tesseract - Hollow (Big Whoop Magazine)/album.png",
+      "size": 39959
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Tesseract - Hollow (Big Whoop Magazine)/notes.chart",
+      "size": 41291
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Tesseract - Hollow (Big Whoop Magazine)/song.ini",
+      "size": 692
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/Tesseract - Hollow (Big Whoop Magazine)/song.ogg",
+      "size": 3901940
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/The Strokes - Vision of Division (torqqes)/album.png",
+      "size": 108180
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/The Strokes - Vision of Division (torqqes)/notes.chart",
+      "size": 103845
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/The Strokes - Vision of Division (torqqes)/song.ini",
+      "size": 575
+    },
+    {
+      "path": "Redemption Arc/Tier 05 - Retreading Old Ground/The Strokes - Vision of Division (torqqes)/song.ogg",
+      "size": 8323887
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/David Maxim Micic - Living Room (feat. Aaron Marshall) (Dillski)/album.png",
+      "size": 331611
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/David Maxim Micic - Living Room (feat. Aaron Marshall) (Dillski)/notes.chart",
+      "size": 79824
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/David Maxim Micic - Living Room (feat. Aaron Marshall) (Dillski)/song.ini",
+      "size": 626
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/David Maxim Micic - Living Room (feat. Aaron Marshall) (Dillski)/song.ogg",
+      "size": 9754081
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/HORSE the Band - The Black Hole (Chezy)/album.png",
+      "size": 756823
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/HORSE the Band - The Black Hole (Chezy)/notes.chart",
+      "size": 149595
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/HORSE the Band - The Black Hole (Chezy)/song.ini",
+      "size": 610
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/HORSE the Band - The Black Hole (Chezy)/song.ogg",
+      "size": 8859734
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Incubus - Follow (1st Movement of the Odyssey) (Jaded)/album.png",
+      "size": 89013
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Incubus - Follow (1st Movement of the Odyssey) (Jaded)/notes.mid",
+      "size": 62538
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Incubus - Follow (1st Movement of the Odyssey) (Jaded)/song.ini",
+      "size": 848
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Incubus - Follow (1st Movement of the Odyssey) (Jaded)/song.ogg",
+      "size": 7239799
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Metallica - To Live Is to Die (Riddo)/album.png",
+      "size": 461995
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Metallica - To Live Is to Die (Riddo)/notes.chart",
+      "size": 135213
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Metallica - To Live Is to Die (Riddo)/song.ini",
+      "size": 843
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/Metallica - To Live Is to Die (Riddo)/song.ogg",
+      "size": 16826358
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/The Brothers Johnson - Mista' Cool (JoeyD)/album.png",
+      "size": 750078
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/The Brothers Johnson - Mista' Cool (JoeyD)/notes.chart",
+      "size": 61736
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/The Brothers Johnson - Mista' Cool (JoeyD)/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Redemption Arc/Tier 06 - Leaving It in the Past/The Brothers Johnson - Mista' Cool (JoeyD)/song.ogg",
+      "size": 6608692
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Andromeda - Preemptive Strike (CyclopsDragon)/album.png",
+      "size": 497333
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Andromeda - Preemptive Strike (CyclopsDragon)/guitar.ogg",
+      "size": 4923255
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Andromeda - Preemptive Strike (CyclopsDragon)/notes.chart",
+      "size": 60009
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Andromeda - Preemptive Strike (CyclopsDragon)/song.ini",
+      "size": 373
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Glass Cloud - Everybody Wants to Rule the World (Tears for Fears cover) (XEntombmentX)/album.png",
+      "size": 513003
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Glass Cloud - Everybody Wants to Rule the World (Tears for Fears cover) (XEntombmentX)/notes.chart",
+      "size": 106505
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Glass Cloud - Everybody Wants to Rule the World (Tears for Fears cover) (XEntombmentX)/song.ini",
+      "size": 587
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Glass Cloud - Everybody Wants to Rule the World (Tears for Fears cover) (XEntombmentX)/song.ogg",
+      "size": 7934880
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Maximum the Hormone - What's Up, People!! (Chezy)/album.png",
+      "size": 211997
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Maximum the Hormone - What's Up, People!! (Chezy)/notes.chart",
+      "size": 119704
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Maximum the Hormone - What's Up, People!! (Chezy)/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Maximum the Hormone - What's Up, People!! (Chezy)/song.ogg",
+      "size": 6805970
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Mother's Cake - Creation's Finest (Jaded)/album.png",
+      "size": 644711
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Mother's Cake - Creation's Finest (Jaded)/notes.mid",
+      "size": 68909
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Mother's Cake - Creation's Finest (Jaded)/song.ini",
+      "size": 759
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Mother's Cake - Creation's Finest (Jaded)/song.ogg",
+      "size": 10133501
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Muse - New Born (Jaded)/album.png",
+      "size": 51696
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Muse - New Born (Jaded)/notes.mid",
+      "size": 80135
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Muse - New Born (Jaded)/song.ini",
+      "size": 912
+    },
+    {
+      "path": "Redemption Arc/Tier 07 - XAtonementX/Muse - New Born (Jaded)/song.ogg",
+      "size": 10023141
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Cut Down All the Trees and Name the Streets After Them (xX760Xx)/album.png",
+      "size": 471946
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Cut Down All the Trees and Name the Streets After Them (xX760Xx)/notes.chart",
+      "size": 82246
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Cut Down All the Trees and Name the Streets After Them (xX760Xx)/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Cut Down All the Trees and Name the Streets After Them (xX760Xx)/song.ogg",
+      "size": 5139126
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Laces Out, Dan! (xX760Xx)/album.png",
+      "size": 380497
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Laces Out, Dan! (xX760Xx)/notes.chart",
+      "size": 71656
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Laces Out, Dan! (xX760Xx)/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Laces Out, Dan! (xX760Xx)/song.ogg",
+      "size": 4799778
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Whacko Jacko Steals the Elephant Man's Bones (xX760Xx)/album.png",
+      "size": 380497
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Whacko Jacko Steals the Elephant Man's Bones (xX760Xx)/notes.chart",
+      "size": 135875
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Whacko Jacko Steals the Elephant Man's Bones (xX760Xx)/song.ini",
+      "size": 679
+    },
+    {
+      "path": "Redemption Arc/Tier 08 - The Ascent of Troy/The Fall of Troy - Whacko Jacko Steals the Elephant Man's Bones (xX760Xx)/song.ogg",
+      "size": 9023250
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Airbourne - Blonde, Bad and Beautiful (Sygenysis)/album.png",
+      "size": 738502
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Airbourne - Blonde, Bad and Beautiful (Sygenysis)/guitar.ogg",
+      "size": 7570237
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Airbourne - Blonde, Bad and Beautiful (Sygenysis)/notes.mid",
+      "size": 27501
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Airbourne - Blonde, Bad and Beautiful (Sygenysis)/song.ini",
+      "size": 896
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/All That Remains - Whispers (I Hear You) (Chezy)/album.png",
+      "size": 505816
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/All That Remains - Whispers (I Hear You) (Chezy)/notes.chart",
+      "size": 98308
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/All That Remains - Whispers (I Hear You) (Chezy)/song.ini",
+      "size": 515
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/All That Remains - Whispers (I Hear You) (Chezy)/song.ogg",
+      "size": 6643421
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Metallica - Dream No More (Miscellany)/album.png",
+      "size": 47747
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Metallica - Dream No More (Miscellany)/guitar.ogg",
+      "size": 12504511
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Metallica - Dream No More (Miscellany)/notes.mid",
+      "size": 42791
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Metallica - Dream No More (Miscellany)/song.ini",
+      "size": 402
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Muse - Dead Star (Jaded)/album.png",
+      "size": 98865
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Muse - Dead Star (Jaded)/notes.mid",
+      "size": 55982
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Muse - Dead Star (Jaded)/song.ini",
+      "size": 805
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Muse - Dead Star (Jaded)/song.ogg",
+      "size": 6705089
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Welle Erdball - Lass uns ein Computer Sein (m9)/album.png",
+      "size": 518887
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Welle Erdball - Lass uns ein Computer Sein (m9)/guitar.ogg",
+      "size": 8016845
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Welle Erdball - Lass uns ein Computer Sein (m9)/notes.mid",
+      "size": 26337
+    },
+    {
+      "path": "Redemption Arc/Tier 09 - Clearing Our Names/Welle Erdball - Lass uns ein Computer Sein (m9)/song.ini",
+      "size": 954
+    },
+    {
+      "path": "Redemption Arc/Tier 10 - Let's Take a Break/Blur - Intermission (Jaded)/album.png",
+      "size": 602574
+    },
+    {
+      "path": "Redemption Arc/Tier 10 - Let's Take a Break/Blur - Intermission (Jaded)/notes.mid",
+      "size": 27053
+    },
+    {
+      "path": "Redemption Arc/Tier 10 - Let's Take a Break/Blur - Intermission (Jaded)/song.ini",
+      "size": 832
+    },
+    {
+      "path": "Redemption Arc/Tier 10 - Let's Take a Break/Blur - Intermission (Jaded)/song.ogg",
+      "size": 4596790
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Avenged Sevenfold - God Damn (Miscellany)/album.png",
+      "size": 511674
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Avenged Sevenfold - God Damn (Miscellany)/guitar.ogg",
+      "size": 7001878
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Avenged Sevenfold - God Damn (Miscellany)/notes.mid",
+      "size": 36615
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Avenged Sevenfold - God Damn (Miscellany)/song.ini",
+      "size": 437
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Intervals - I'm Awake (XEntombmentX)/album.png",
+      "size": 330357
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Intervals - I'm Awake (XEntombmentX)/notes.chart",
+      "size": 82670
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Intervals - I'm Awake (XEntombmentX)/song.ini",
+      "size": 595
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Intervals - I'm Awake (XEntombmentX)/song.ogg",
+      "size": 7947341
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Lizzy Borden - Red Rum (Sygenysis)/album.png",
+      "size": 701815
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Lizzy Borden - Red Rum (Sygenysis)/guitar.ogg",
+      "size": 8196029
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Lizzy Borden - Red Rum (Sygenysis)/notes.mid",
+      "size": 27680
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Lizzy Borden - Red Rum (Sygenysis)/song.ini",
+      "size": 947
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Meshiaak - Chronicles of the Dead (Miscellany)/album.png",
+      "size": 607343
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Meshiaak - Chronicles of the Dead (Miscellany)/guitar.ogg",
+      "size": 12385899
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Meshiaak - Chronicles of the Dead (Miscellany)/notes.mid",
+      "size": 67138
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Meshiaak - Chronicles of the Dead (Miscellany)/song.ini",
+      "size": 449
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Red Handed Denial - Manipulator (Jaded)/album.png",
+      "size": 537983
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Red Handed Denial - Manipulator (Jaded)/notes.mid",
+      "size": 42982
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Red Handed Denial - Manipulator (Jaded)/song.ini",
+      "size": 828
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Red Handed Denial - Manipulator (Jaded)/song.ogg",
+      "size": 6441062
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Tytan - The Watcher (ThundahK)/album.png",
+      "size": 788333
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Tytan - The Watcher (ThundahK)/notes.chart",
+      "size": 109267
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Tytan - The Watcher (ThundahK)/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Redemption Arc/Tier 11 - The Errors of the Past/Tytan - The Watcher (ThundahK)/song.ogg",
+      "size": 7158497
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Aygan - Back at the Moon Street (Paturages)/album.png",
+      "size": 643048
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Aygan - Back at the Moon Street (Paturages)/notes.chart",
+      "size": 88130
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Aygan - Back at the Moon Street (Paturages)/song.ini",
+      "size": 544
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Aygan - Back at the Moon Street (Paturages)/song.ogg",
+      "size": 11654800
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Kix - Blow My Fuse (Sygenysis)/album.png",
+      "size": 628282
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Kix - Blow My Fuse (Sygenysis)/guitar.ogg",
+      "size": 7122792
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Kix - Blow My Fuse (Sygenysis)/notes.mid",
+      "size": 29952
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Kix - Blow My Fuse (Sygenysis)/song.ini",
+      "size": 921
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Larry Graham and Graham Central Station - Pow (Sygenysis)/album.png",
+      "size": 639073
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Larry Graham and Graham Central Station - Pow (Sygenysis)/guitar.ogg",
+      "size": 10087398
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Larry Graham and Graham Central Station - Pow (Sygenysis)/notes.mid",
+      "size": 32734
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Larry Graham and Graham Central Station - Pow (Sygenysis)/song.ini",
+      "size": 930
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sabaton - Metalizer (m9)/album.png",
+      "size": 397181
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sabaton - Metalizer (m9)/guitar.ogg",
+      "size": 7685003
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sabaton - Metalizer (m9)/notes.mid",
+      "size": 48309
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sabaton - Metalizer (m9)/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sodom - City of God (m9)/album.png",
+      "size": 94247
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sodom - City of God (m9)/guitar.ogg",
+      "size": 7639899
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sodom - City of God (m9)/notes.mid",
+      "size": 55426
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sodom - City of God (m9)/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sybreed - Permafrost (CyclopsDragon)/album.png",
+      "size": 588110
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sybreed - Permafrost (CyclopsDragon)/guitar.ogg",
+      "size": 10779084
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sybreed - Permafrost (CyclopsDragon)/notes.chart",
+      "size": 130435
+    },
+    {
+      "path": "Redemption Arc/Tier 12 - The Comeback Kids/Sybreed - Permafrost (CyclopsDragon)/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Anthrax - Gridlock (ThundahK)/album.png",
+      "size": 49007
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Anthrax - Gridlock (ThundahK)/notes.chart",
+      "size": 176372
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Anthrax - Gridlock (ThundahK)/song.ini",
+      "size": 599
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Anthrax - Gridlock (ThundahK)/song.ogg",
+      "size": 10803975
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Nuclear Assault - Game Over (Sygenysis)/album.png",
+      "size": 731311
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Nuclear Assault - Game Over (Sygenysis)/guitar.ogg",
+      "size": 4962634
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Nuclear Assault - Game Over (Sygenysis)/notes.mid",
+      "size": 30277
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Nuclear Assault - Game Over (Sygenysis)/song.ini",
+      "size": 912
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Reflections - My Cancer (DigitalSquirrel)/album.png",
+      "size": 396786
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Reflections - My Cancer (DigitalSquirrel)/notes.chart",
+      "size": 89828
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Reflections - My Cancer (DigitalSquirrel)/song.ini",
+      "size": 690
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Reflections - My Cancer (DigitalSquirrel)/song.ogg",
+      "size": 5918730
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Cadaver (torqqes)/album.png",
+      "size": 559347
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Cadaver (torqqes)/notes.chart",
+      "size": 78794
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Cadaver (torqqes)/song.ini",
+      "size": 538
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Cadaver (torqqes)/song.ogg",
+      "size": 9234573
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Revadac (torqqes)/album.png",
+      "size": 559347
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Revadac (torqqes)/notes.chart",
+      "size": 81266
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Revadac (torqqes)/song.ini",
+      "size": 718
+    },
+    {
+      "path": "Redemption Arc/Tier 13 - Reversing the Past/Unlucky Morpheus - Revadac (torqqes)/song.ogg",
+      "size": 9037655
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/As Blood Runs Black - Hester Prynne (Chezy)/album.png",
+      "size": 426247
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/As Blood Runs Black - Hester Prynne (Chezy)/notes.chart",
+      "size": 103990
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/As Blood Runs Black - Hester Prynne (Chezy)/song.ini",
+      "size": 508
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/As Blood Runs Black - Hester Prynne (Chezy)/song.ogg",
+      "size": 6837668
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Blue \u00d6yster Cult - 7 Screaming Diz-Busters (Sygenysis)/album.png",
+      "size": 422826
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Blue \u00d6yster Cult - 7 Screaming Diz-Busters (Sygenysis)/guitar.ogg",
+      "size": 12956844
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Blue \u00d6yster Cult - 7 Screaming Diz-Busters (Sygenysis)/notes.mid",
+      "size": 46921
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Blue \u00d6yster Cult - 7 Screaming Diz-Busters (Sygenysis)/song.ini",
+      "size": 1870
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Firewind - Till the End of Time (Siavash)/album.png",
+      "size": 685895
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Firewind - Till the End of Time (Siavash)/guitar.ogg",
+      "size": 8808186
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Firewind - Till the End of Time (Siavash)/notes.mid",
+      "size": 43416
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Firewind - Till the End of Time (Siavash)/song.ini",
+      "size": 855
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Nightwish - Wanderlust (Siavash)/album.png",
+      "size": 628828
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Nightwish - Wanderlust (Siavash)/guitar.ogg",
+      "size": 8481172
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Nightwish - Wanderlust (Siavash)/notes.mid",
+      "size": 29192
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Nightwish - Wanderlust (Siavash)/song.ini",
+      "size": 778
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Scar Symmetry - Technocalyptic Cybergeddon (Miscellany)/album.png",
+      "size": 486047
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Scar Symmetry - Technocalyptic Cybergeddon (Miscellany)/guitar.ogg",
+      "size": 20102438
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Scar Symmetry - Technocalyptic Cybergeddon (Miscellany)/notes.mid",
+      "size": 79361
+    },
+    {
+      "path": "Redemption Arc/Tier 14 - Jumping the Sharc/Scar Symmetry - Technocalyptic Cybergeddon (Miscellany)/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Living Colour - Which Way to America (Sygenysis)/album.png",
+      "size": 594587
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Living Colour - Which Way to America (Sygenysis)/guitar.ogg",
+      "size": 6867312
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Living Colour - Which Way to America (Sygenysis)/notes.mid",
+      "size": 30307
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Living Colour - Which Way to America (Sygenysis)/song.ini",
+      "size": 953
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Mekong Delta - Nightmare Patrol (Sygenysis)/album.png",
+      "size": 645265
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Mekong Delta - Nightmare Patrol (Sygenysis)/guitar.ogg",
+      "size": 6720227
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Mekong Delta - Nightmare Patrol (Sygenysis)/notes.mid",
+      "size": 39742
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Mekong Delta - Nightmare Patrol (Sygenysis)/song.ini",
+      "size": 924
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/MilkCan - We Are MilkCan!! (CyclopsDragon)/album.png",
+      "size": 692980
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/MilkCan - We Are MilkCan!! (CyclopsDragon)/guitar.ogg",
+      "size": 7962989
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/MilkCan - We Are MilkCan!! (CyclopsDragon)/notes.chart",
+      "size": 111096
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/MilkCan - We Are MilkCan!! (CyclopsDragon)/song.ini",
+      "size": 656
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Sonata Arctica - 8th Commandment (Siavash)/album.png",
+      "size": 729205
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Sonata Arctica - 8th Commandment (Siavash)/guitar.ogg",
+      "size": 7738028
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Sonata Arctica - 8th Commandment (Siavash)/notes.mid",
+      "size": 31820
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/Sonata Arctica - 8th Commandment (Siavash)/song.ini",
+      "size": 805
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/The Holy Guile - The Celebration (Chezy)/album.png",
+      "size": 541745
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/The Holy Guile - The Celebration (Chezy)/notes.chart",
+      "size": 93219
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/The Holy Guile - The Celebration (Chezy)/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Redemption Arc/Tier 15 - A Renewed Hope/The Holy Guile - The Celebration (Chezy)/song.ogg",
+      "size": 5227109
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Allegaeon - Of Mind and Matrix (Miscellany)/album.png",
+      "size": 102766
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Allegaeon - Of Mind and Matrix (Miscellany)/guitar.ogg",
+      "size": 11744298
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Allegaeon - Of Mind and Matrix (Miscellany)/notes.mid",
+      "size": 64209
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Allegaeon - Of Mind and Matrix (Miscellany)/song.ini",
+      "size": 802
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Body Count - Institutionalized 2014 (Suicidal Tendencies cover) (Sygenysis)/album.png",
+      "size": 150434
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Body Count - Institutionalized 2014 (Suicidal Tendencies cover) (Sygenysis)/guitar.ogg",
+      "size": 7468505
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Body Count - Institutionalized 2014 (Suicidal Tendencies cover) (Sygenysis)/notes.mid",
+      "size": 40675
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Body Count - Institutionalized 2014 (Suicidal Tendencies cover) (Sygenysis)/song.ini",
+      "size": 935
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Brocas Helm - Cry of the Banshee (Sygenysis)/album.png",
+      "size": 641833
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Brocas Helm - Cry of the Banshee (Sygenysis)/guitar.ogg",
+      "size": 8043483
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Brocas Helm - Cry of the Banshee (Sygenysis)/notes.mid",
+      "size": 25648
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Brocas Helm - Cry of the Banshee (Sygenysis)/song.ini",
+      "size": 1854
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Symphony X - Domination (CyclopsDragon)/album.png",
+      "size": 71916
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Symphony X - Domination (CyclopsDragon)/guitar.ogg",
+      "size": 13161937
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Symphony X - Domination (CyclopsDragon)/notes.chart",
+      "size": 160574
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Symphony X - Domination (CyclopsDragon)/song.ini",
+      "size": 572
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Triosphere - Driven (Siavash)/album.png",
+      "size": 730672
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Triosphere - Driven (Siavash)/guitar.ogg",
+      "size": 9138566
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Triosphere - Driven (Siavash)/notes.mid",
+      "size": 51431
+    },
+    {
+      "path": "Redemption Arc/Tier 16 - Joining the Darc Side/Triosphere - Driven (Siavash)/song.ini",
+      "size": 772
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Angra - Scream Your Heart Out (Paturages)/album.png",
+      "size": 547910
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Angra - Scream Your Heart Out (Paturages)/notes.chart",
+      "size": 85708
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Angra - Scream Your Heart Out (Paturages)/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Angra - Scream Your Heart Out (Paturages)/song.ogg",
+      "size": 9405659
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Arch Echo - Color Wheel (gaebpls)/album.png",
+      "size": 110341
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Arch Echo - Color Wheel (gaebpls)/guitar.ogg",
+      "size": 12954337
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Arch Echo - Color Wheel (gaebpls)/notes.chart",
+      "size": 155974
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Arch Echo - Color Wheel (gaebpls)/song.ini",
+      "size": 579
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Manilla Road - Flaming Metal Systems (Sygenysis)/album.png",
+      "size": 772558
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Manilla Road - Flaming Metal Systems (Sygenysis)/guitar.ogg",
+      "size": 9424041
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Manilla Road - Flaming Metal Systems (Sygenysis)/notes.mid",
+      "size": 41537
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Manilla Road - Flaming Metal Systems (Sygenysis)/song.ini",
+      "size": 998
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Metallica - Phantom Lord (xX760Xx)/album.png",
+      "size": 283567
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Metallica - Phantom Lord (xX760Xx)/notes.chart",
+      "size": 126882
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Metallica - Phantom Lord (xX760Xx)/song.ini",
+      "size": 534
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Metallica - Phantom Lord (xX760Xx)/song.ogg",
+      "size": 10058484
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Parkway Drive - Breaking Point (Riddo)/album.png",
+      "size": 634002
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Parkway Drive - Breaking Point (Riddo)/notes.chart",
+      "size": 106848
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Parkway Drive - Breaking Point (Riddo)/song.ini",
+      "size": 591
+    },
+    {
+      "path": "Redemption Arc/Tier 17 - UnWreck-It Ralph/Parkway Drive - Breaking Point (Riddo)/song.ogg",
+      "size": 7581033
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Ascend (2018) (Miscellany)/album.png",
+      "size": 92976
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Ascend (2018) (Miscellany)/guitar.ogg",
+      "size": 5734786
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Ascend (2018) (Miscellany)/notes.mid",
+      "size": 17819
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Ascend (2018) (Miscellany)/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Ascend (2018) (Miscellany)/song.ogg",
+      "size": 7496189
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Eclipse (2018) (Miscellany)/album.png",
+      "size": 92976
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Eclipse (2018) (Miscellany)/guitar.ogg",
+      "size": 4799536
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Eclipse (2018) (Miscellany)/notes.mid",
+      "size": 14920
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Eclipse (2018) (Miscellany)/song.ini",
+      "size": 522
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Eclipse (2018) (Miscellany)/song.ogg",
+      "size": 6439148
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Horizons (2018) (Miscellany)/album.png",
+      "size": 92976
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Horizons (2018) (Miscellany)/guitar.ogg",
+      "size": 3210282
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Horizons (2018) (Miscellany)/notes.mid",
+      "size": 11187
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Horizons (2018) (Miscellany)/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Redemption Arc/Tier 18 - Just ReDooo It/TheDooo - Horizons (2018) (Miscellany)/song.ogg",
+      "size": 4036876
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/All Shall Perish - Awaken the Dreamers (CyclopsDragon)/album.png",
+      "size": 637930
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/All Shall Perish - Awaken the Dreamers (CyclopsDragon)/guitar.ogg",
+      "size": 9761497
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/All Shall Perish - Awaken the Dreamers (CyclopsDragon)/notes.chart",
+      "size": 89947
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/All Shall Perish - Awaken the Dreamers (CyclopsDragon)/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Black Tide - Warriors of Time (xX760Xx)/album.png",
+      "size": 632937
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Black Tide - Warriors of Time (xX760Xx)/notes.chart",
+      "size": 115700
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Black Tide - Warriors of Time (xX760Xx)/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Black Tide - Warriors of Time (xX760Xx)/song.ogg",
+      "size": 11643098
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/John Petrucci - Jaws of Life (Arctan)/album.png",
+      "size": 68212
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/John Petrucci - Jaws of Life (Arctan)/notes.chart",
+      "size": 181690
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/John Petrucci - Jaws of Life (Arctan)/song.ini",
+      "size": 370
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/John Petrucci - Jaws of Life (Arctan)/song.ogg",
+      "size": 12578890
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Orden Ogan - To the End (m9)/album.png",
+      "size": 488634
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Orden Ogan - To the End (m9)/guitar.ogg",
+      "size": 10059817
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Orden Ogan - To the End (m9)/notes.mid",
+      "size": 51552
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Orden Ogan - To the End (m9)/song.ini",
+      "size": 799
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Polyphia - Persevere (feat. Aaron Marshall) (Riddo)/album.png",
+      "size": 567830
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Polyphia - Persevere (feat. Aaron Marshall) (Riddo)/notes.chart",
+      "size": 54307
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Polyphia - Persevere (feat. Aaron Marshall) (Riddo)/song.ini",
+      "size": 654
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/Polyphia - Persevere (feat. Aaron Marshall) (Riddo)/song.ogg",
+      "size": 7346518
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/UNDEAD CORPORATION - Evil but Innocent (m9)/album.png",
+      "size": 712971
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/UNDEAD CORPORATION - Evil but Innocent (m9)/guitar.ogg",
+      "size": 7678117
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/UNDEAD CORPORATION - Evil but Innocent (m9)/notes.mid",
+      "size": 36122
+    },
+    {
+      "path": "Redemption Arc/Tier 19 - Redeem Team/UNDEAD CORPORATION - Evil but Innocent (m9)/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Annihilator - The Trend (Sygenysis)/album.png",
+      "size": 93473
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Annihilator - The Trend (Sygenysis)/guitar.ogg",
+      "size": 13585166
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Annihilator - The Trend (Sygenysis)/notes.mid",
+      "size": 75312
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Annihilator - The Trend (Sygenysis)/song.ini",
+      "size": 896
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/English Dogs - Brainstorm (Sygenysis)/album.png",
+      "size": 2172120
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/English Dogs - Brainstorm (Sygenysis)/guitar.ogg",
+      "size": 12115802
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/English Dogs - Brainstorm (Sygenysis)/notes.mid",
+      "size": 41754
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/English Dogs - Brainstorm (Sygenysis)/song.ini",
+      "size": 975
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Sunburst - Beyond the Darkest Sun (feat. Bob Katsionis) (Siavash)/album.png",
+      "size": 660655
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Sunburst - Beyond the Darkest Sun (feat. Bob Katsionis) (Siavash)/guitar.ogg",
+      "size": 11282573
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Sunburst - Beyond the Darkest Sun (feat. Bob Katsionis) (Siavash)/notes.mid",
+      "size": 52146
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Sunburst - Beyond the Darkest Sun (feat. Bob Katsionis) (Siavash)/song.ini",
+      "size": 883
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Tiluland - Arctic Twilight (Siavash)/album.png",
+      "size": 621976
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Tiluland - Arctic Twilight (Siavash)/guitar.ogg",
+      "size": 5433392
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Tiluland - Arctic Twilight (Siavash)/notes.mid",
+      "size": 21609
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Tiluland - Arctic Twilight (Siavash)/song.ini",
+      "size": 821
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Vektor - Pteropticon (Miscellany)/album.png",
+      "size": 599970
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Vektor - Pteropticon (Miscellany)/guitar.ogg",
+      "size": 13419140
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Vektor - Pteropticon (Miscellany)/notes.mid",
+      "size": 74663
+    },
+    {
+      "path": "Redemption Arc/Tier 20 - The Arc of Lies/Vektor - Pteropticon (Miscellany)/song.ini",
+      "size": 673
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/album.png",
+      "size": 557225
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/guitar.ogg",
+      "size": 10886913
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/notes.mid",
+      "size": 41425
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/BABYMETAL - Road of Resistance (feat. Herman Li & Sam Totman) (Siavash)/song.ini",
+      "size": 857
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Cry for Eternity (CyclopsDragon)/album.png",
+      "size": 563354
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Cry for Eternity (CyclopsDragon)/guitar.ogg",
+      "size": 16655951
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Cry for Eternity (CyclopsDragon)/notes.chart",
+      "size": 295082
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Cry for Eternity (CyclopsDragon)/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Through the Fire and Flames (m9)/album.png",
+      "size": 523362
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Through the Fire and Flames (m9)/guitar.ogg",
+      "size": 11990393
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Through the Fire and Flames (m9)/notes.mid",
+      "size": 89266
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Through the Fire and Flames (m9)/song.ini",
+      "size": 803
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/DragonForce - Through the Fire and Flames (m9)/video.mp4",
+      "size": 49911529
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Judas Priest - Judas Priest Solo Medley Deluxe (xX760Xx)/album.png",
+      "size": 120066
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Judas Priest - Judas Priest Solo Medley Deluxe (xX760Xx)/notes.chart",
+      "size": 366439
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Judas Priest - Judas Priest Solo Medley Deluxe (xX760Xx)/song.ini",
+      "size": 646
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Judas Priest - Judas Priest Solo Medley Deluxe (xX760Xx)/song.ogg",
+      "size": 30616458
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Various Artists - Sygenysis's Best-Of Solo Medley (Sygenysis)/album.png",
+      "size": 524969
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Various Artists - Sygenysis's Best-Of Solo Medley (Sygenysis)/guitar.ogg",
+      "size": 26611655
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Various Artists - Sygenysis's Best-Of Solo Medley (Sygenysis)/notes.mid",
+      "size": 99390
+    },
+    {
+      "path": "Redemption Arc/Tier 21 - Redeemer of Souls/Various Artists - Sygenysis's Best-Of Solo Medley (Sygenysis)/song.ini",
+      "size": 902
+    }
+  ],
+  "extracted_size": 1008729562,
+  "file_count": 404,
+  "chart_count": 100,
+  "release_date": "2019-01-07"
 }

@@ -3,18 +3,3579 @@
   "folder_id": "static-vortex-hero",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 222,
-  "total_size": 2654219028,
-  "file_count": 893,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-vortex-hero",
-      "path": "Vortex Hero/Vortex Hero.rar",
+      "url": "https://customsongscentral.b-cdn.net/Vortex%20Hero.rar?v=2&ref=customsongscentral.com",
       "name": "Vortex Hero.rar",
       "size": 2654219028,
-      "md5": "5a686f9324b5e3ddcad458e8cdca5aaf",
-      "url": "https://customsongscentral.b-cdn.net/Vortex%20Hero.rar?v=2&ref=customsongscentral.com"
+      "md5": "5a686f9324b5e3ddcad458e8cdca5aaf"
     }
-  ]
+  ],
+  "download_size": 2654219028,
+  "files": [
+    {
+      "path": "Vortex Hero/Tier 00 - Introduction/VH Intro/album.png",
+      "size": 270274
+    },
+    {
+      "path": "Vortex Hero/Tier 00 - Introduction/VH Intro/notes.chart",
+      "size": 6733
+    },
+    {
+      "path": "Vortex Hero/Tier 00 - Introduction/VH Intro/song.ini",
+      "size": 250
+    },
+    {
+      "path": "Vortex Hero/Tier 00 - Introduction/VH Intro/song.ogg",
+      "size": 2544362
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Anti-Flag - American Attraction/album.png",
+      "size": 511940
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Anti-Flag - American Attraction/guitar.ogg",
+      "size": 4785611
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Anti-Flag - American Attraction/notes.chart",
+      "size": 17030
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Anti-Flag - American Attraction/song.ini",
+      "size": 239
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Buckethead - Hills of Eternity/album.png",
+      "size": 111648
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Buckethead - Hills of Eternity/guitar.mp3",
+      "size": 4938605
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Buckethead - Hills of Eternity/notes.chart",
+      "size": 53164
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Buckethead - Hills of Eternity/song.ini",
+      "size": 199
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Childhood - Californian Light/album.png",
+      "size": 180745
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Childhood - Californian Light/notes.chart",
+      "size": 20973
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Childhood - Californian Light/song.ini",
+      "size": 259
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Childhood - Californian Light/song.ogg",
+      "size": 6692974
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Eden - Crash/album.png",
+      "size": 334630
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Eden - Crash/notes.chart",
+      "size": 13167
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Eden - Crash/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Eden - Crash/song.ogg",
+      "size": 5080481
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Future of the Left - Stand By Your Manatee/album.png",
+      "size": 356695
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Future of the Left - Stand By Your Manatee/notes.chart",
+      "size": 17649
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Future of the Left - Stand By Your Manatee/song.ini",
+      "size": 235
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Future of the Left - Stand By Your Manatee/song.ogg",
+      "size": 5343938
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Homega - Shitpost/album.png",
+      "size": 1817327
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Homega - Shitpost/guitar.ogg",
+      "size": 3831457
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Homega - Shitpost/notes.chart",
+      "size": 5726
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Homega - Shitpost/song.ini",
+      "size": 221
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Royal Blood - Out of the Black/album.png",
+      "size": 1479981
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Royal Blood - Out of the Black/notes.chart",
+      "size": 22380
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Royal Blood - Out of the Black/song.ini",
+      "size": 258
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/Royal Blood - Out of the Black/song.ogg",
+      "size": 12847943
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/roger roger - Duetto/album.png",
+      "size": 120150
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/roger roger - Duetto/notes.chart",
+      "size": 13697
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/roger roger - Duetto/song.ini",
+      "size": 202
+    },
+    {
+      "path": "Vortex Hero/Tier 01 - Another Journey Starts/roger roger - Duetto/song.ogg",
+      "size": 1924641
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Alestorm - Sunset On The Golden Age/album.png",
+      "size": 252930
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Alestorm - Sunset On The Golden Age/guitar.ogg",
+      "size": 38480252
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Alestorm - Sunset On The Golden Age/notes.chart",
+      "size": 52483
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Alestorm - Sunset On The Golden Age/song.ini",
+      "size": 255
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Birds of Tokyo - Broken Bones + Uno/album.png",
+      "size": 2890556
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Birds of Tokyo - Broken Bones + Uno/notes.chart",
+      "size": 52244
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Birds of Tokyo - Broken Bones + Uno/song.ini",
+      "size": 262
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Birds of Tokyo - Broken Bones + Uno/song.ogg",
+      "size": 13761983
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/End - Necessary Death/album.png",
+      "size": 383869
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/End - Necessary Death/notes.chart",
+      "size": 16814
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/End - Necessary Death/song.ini",
+      "size": 267
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/End - Necessary Death/song.ogg",
+      "size": 4436615
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Hands Like Houses - Colourblind/album.png",
+      "size": 3933850
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Hands Like Houses - Colourblind/notes.chart",
+      "size": 26061
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Hands Like Houses - Colourblind/song.ini",
+      "size": 242
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Hands Like Houses - Colourblind/song.ogg",
+      "size": 11852229
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Mutoid Man - Kiss of Death/album.png",
+      "size": 3073981
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Mutoid Man - Kiss of Death/notes.chart",
+      "size": 21172
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Mutoid Man - Kiss of Death/song.ini",
+      "size": 198
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Mutoid Man - Kiss of Death/song.ogg",
+      "size": 9019391
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Nothing but Thieves - I_m Not Made By Design/album.png",
+      "size": 1473161
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Nothing but Thieves - I_m Not Made By Design/notes.chart",
+      "size": 19811
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Nothing but Thieves - I_m Not Made By Design/song.ini",
+      "size": 275
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Nothing but Thieves - I_m Not Made By Design/song.ogg",
+      "size": 12149279
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Touche Amore - Eight Seconds/album.png",
+      "size": 218606
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Touche Amore - Eight Seconds/notes.chart",
+      "size": 13209
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Touche Amore - Eight Seconds/song.ini",
+      "size": 261
+    },
+    {
+      "path": "Vortex Hero/Tier 02 - Into The Void/Touche Amore - Eight Seconds/song.ogg",
+      "size": 2476192
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Limp Bizkit - 9 Teen 90 Nine/album.png",
+      "size": 532682
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Limp Bizkit - 9 Teen 90 Nine/guitar.ogg",
+      "size": 6731939
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Limp Bizkit - 9 Teen 90 Nine/notes.chart",
+      "size": 23922
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Limp Bizkit - 9 Teen 90 Nine/song.ini",
+      "size": 200
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Machine Head - Sail Into The Black/album.png",
+      "size": 2867357
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Machine Head - Sail Into The Black/guitar.ogg",
+      "size": 26411754
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Machine Head - Sail Into The Black/notes.chart",
+      "size": 65275
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Machine Head - Sail Into The Black/song.ini",
+      "size": 252
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Nightwish - Yours Is An Empty Hope/album.png",
+      "size": 283251
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Nightwish - Yours Is An Empty Hope/notes.chart",
+      "size": 34977
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Nightwish - Yours Is An Empty Hope/song.ini",
+      "size": 283
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Nightwish - Yours Is An Empty Hope/song.ogg",
+      "size": 9075464
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Scar The Martyr - Blood Host/album.png",
+      "size": 278059
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Scar The Martyr - Blood Host/notes.chart",
+      "size": 47865
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Scar The Martyr - Blood Host/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Scar The Martyr - Blood Host/song.ogg",
+      "size": 11416222
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Sophie - Ponyboy/album.png",
+      "size": 488127
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Sophie - Ponyboy/notes.chart",
+      "size": 19165
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Sophie - Ponyboy/song.ini",
+      "size": 243
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/Sophie - Ponyboy/song.ogg",
+      "size": 8691291
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The Kooks - Sweet Emotion/album.png",
+      "size": 1094243
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The Kooks - Sweet Emotion/notes.chart",
+      "size": 29413
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The Kooks - Sweet Emotion/song.ini",
+      "size": 223
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The Kooks - Sweet Emotion/song.ogg",
+      "size": 16914023
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The White Noise - The Best Songs Are Dead/album.png",
+      "size": 216862
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The White Noise - The Best Songs Are Dead/notes.chart",
+      "size": 22761
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The White Noise - The Best Songs Are Dead/song.ini",
+      "size": 265
+    },
+    {
+      "path": "Vortex Hero/Tier 03 - The Void Stares Back/The White Noise - The Best Songs Are Dead/song.ogg",
+      "size": 4695890
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 01 Not My Love 2/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 01 Not My Love 2/notes.chart",
+      "size": 68175
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 01 Not My Love 2/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 01 Not My Love 2/song.ogg",
+      "size": 14322039
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 02 Statues/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 02 Statues/notes.chart",
+      "size": 69663
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 02 Statues/song.ini",
+      "size": 232
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 02 Statues/song.ogg",
+      "size": 12870694
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 03 Home/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 03 Home/notes.chart",
+      "size": 65328
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 03 Home/song.ini",
+      "size": 231
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 03 Home/song.ogg",
+      "size": 9439660
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 04 Sunshine/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 04 Sunshine/notes.chart",
+      "size": 58469
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 04 Sunshine/song.ini",
+      "size": 260
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 04 Sunshine/song.ogg",
+      "size": 11576914
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 05 Dreamhouse/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 05 Dreamhouse/notes.chart",
+      "size": 41035
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 05 Dreamhouse/song.ini",
+      "size": 263
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 05 Dreamhouse/song.ogg",
+      "size": 10912443
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 06 Salamanders and Worms/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 06 Salamanders and Worms/notes.chart",
+      "size": 69638
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 06 Salamanders and Worms/song.ini",
+      "size": 273
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 06 Salamanders and Worms/song.ogg",
+      "size": 12883571
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 07 Chemical Fires/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 07 Chemical Fires/notes.chart",
+      "size": 58074
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 07 Chemical Fires/song.ini",
+      "size": 269
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 07 Chemical Fires/song.ogg",
+      "size": 13926226
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 08 Echoes/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 08 Echoes/notes.chart",
+      "size": 67927
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 08 Echoes/song.ini",
+      "size": 260
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 08 Echoes/song.ogg",
+      "size": 11650322
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 09 A Faint Illusion/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 09 A Faint Illusion/notes.chart",
+      "size": 63343
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 09 A Faint Illusion/song.ini",
+      "size": 271
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 09 A Faint Illusion/song.ogg",
+      "size": 16854698
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 10 Only Human/album.png",
+      "size": 208896
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 10 Only Human/notes.chart",
+      "size": 64480
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 10 Only Human/song.ini",
+      "size": 267
+    },
+    {
+      "path": "Vortex Hero/Tier 04 - Tides of Man - Dreamhouse/Tides of Man - 10 Only Human/song.ogg",
+      "size": 15243258
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/CrazyEightyEight - Quid Pro Quo/album.png",
+      "size": 2165637
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/CrazyEightyEight - Quid Pro Quo/notes.chart",
+      "size": 21231
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/CrazyEightyEight - Quid Pro Quo/song.ini",
+      "size": 276
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/CrazyEightyEight - Quid Pro Quo/song.ogg",
+      "size": 9109916
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Jarrod Alonge - Misogyneric/album.png",
+      "size": 120771
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Jarrod Alonge - Misogyneric/notes.chart",
+      "size": 15885
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Jarrod Alonge - Misogyneric/song.ini",
+      "size": 261
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Jarrod Alonge - Misogyneric/song.ogg",
+      "size": 6121346
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Luca Lush & Dirty Chocolate - Cadillac/album.png",
+      "size": 180067
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Luca Lush & Dirty Chocolate - Cadillac/notes.chart",
+      "size": 27767
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Luca Lush & Dirty Chocolate - Cadillac/song.ini",
+      "size": 263
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Luca Lush & Dirty Chocolate - Cadillac/song.ogg",
+      "size": 6776715
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Marmozets - Particle/album.png",
+      "size": 1594573
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Marmozets - Particle/notes.chart",
+      "size": 30126
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Marmozets - Particle/song.ini",
+      "size": 248
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Marmozets - Particle/song.ogg",
+      "size": 11048463
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Muse - You Fucking Motherfucker/album.png",
+      "size": 71191
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Muse - You Fucking Motherfucker/notes.chart",
+      "size": 4889
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Muse - You Fucking Motherfucker/song.ini",
+      "size": 271
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Muse - You Fucking Motherfucker/song.ogg",
+      "size": 1020364
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Nothing More - This is the Time (Ballast) + Ocean Floor/album.png",
+      "size": 2152031
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Nothing More - This is the Time (Ballast) + Ocean Floor/notes.chart",
+      "size": 44410
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Nothing More - This is the Time (Ballast) + Ocean Floor/song.ini",
+      "size": 293
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Nothing More - This is the Time (Ballast) + Ocean Floor/song.ogg",
+      "size": 15714812
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Yellowcard - Way Away/album.png",
+      "size": 361638
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Yellowcard - Way Away/notes.chart",
+      "size": 33880
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Yellowcard - Way Away/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Vortex Hero/Tier 05 - Galactic Feedback/Yellowcard - Way Away/song.ogg",
+      "size": 5409554
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/A Plea For Purging - The Life/album.png",
+      "size": 310963
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/A Plea For Purging - The Life/notes.chart",
+      "size": 27593
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/A Plea For Purging - The Life/song.ini",
+      "size": 264
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/A Plea For Purging - The Life/song.ogg",
+      "size": 7993235
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Astral Doors - Slaves to Ourselves/album.png",
+      "size": 238236
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Astral Doors - Slaves to Ourselves/guitar.ogg",
+      "size": 4173049
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Astral Doors - Slaves to Ourselves/notes.chart",
+      "size": 32178
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Astral Doors - Slaves to Ourselves/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Great American Ghost - Ann Arbor (Be Safe)/album.png",
+      "size": 281948
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Great American Ghost - Ann Arbor (Be Safe)/notes.chart",
+      "size": 25635
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Great American Ghost - Ann Arbor (Be Safe)/song.ini",
+      "size": 283
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Great American Ghost - Ann Arbor (Be Safe)/song.ogg",
+      "size": 5837746
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Lich King - Black Metal Sucks/album.png",
+      "size": 216950
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Lich King - Black Metal Sucks/guitar.ogg",
+      "size": 7537129
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Lich King - Black Metal Sucks/notes.chart",
+      "size": 24378
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Lich King - Black Metal Sucks/song.ini",
+      "size": 243
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Like Moths to Flames - What_s Done Is Done/album.png",
+      "size": 145289
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Like Moths to Flames - What_s Done Is Done/notes.chart",
+      "size": 27222
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Like Moths to Flames - What_s Done Is Done/song.ini",
+      "size": 293
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Like Moths to Flames - What_s Done Is Done/song.ogg",
+      "size": 14170682
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Mario Kart 8 - Dolphin Shoals/album.png",
+      "size": 2248602
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Mario Kart 8 - Dolphin Shoals/notes.chart",
+      "size": 41928
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Mario Kart 8 - Dolphin Shoals/song.ini",
+      "size": 242
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Mario Kart 8 - Dolphin Shoals/song.ogg",
+      "size": 8739733
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Scale The Summit - The Levitated/album.png",
+      "size": 205145
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Scale The Summit - The Levitated/notes.chart",
+      "size": 45987
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Scale The Summit - The Levitated/song.ini",
+      "size": 251
+    },
+    {
+      "path": "Vortex Hero/Tier 06 - Scraping The Moon/Scale The Summit - The Levitated/song.ogg",
+      "size": 10909389
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Chimaira - Nothing Remains/album.png",
+      "size": 80892
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Chimaira - Nothing Remains/guitar.ogg",
+      "size": 13792390
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Chimaira - Nothing Remains/notes.chart",
+      "size": 43303
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Chimaira - Nothing Remains/song.ini",
+      "size": 231
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Emmure - Russian Hotel Aftermath/album.png",
+      "size": 25527
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Emmure - Russian Hotel Aftermath/notes.chart",
+      "size": 23815
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Emmure - Russian Hotel Aftermath/song.ini",
+      "size": 246
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Emmure - Russian Hotel Aftermath/song.ogg",
+      "size": 10840282
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Jinjer - Cloud Factory/album.png",
+      "size": 394287
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Jinjer - Cloud Factory/guitar.ogg",
+      "size": 16754141
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Jinjer - Cloud Factory/notes.chart",
+      "size": 33280
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Jinjer - Cloud Factory/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Judas Priest - Firepower/album.png",
+      "size": 243174
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Judas Priest - Firepower/guitar.ogg",
+      "size": 11887376
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Judas Priest - Firepower/notes.chart",
+      "size": 33721
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Judas Priest - Firepower/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Mudvayne - Death Blooms/album.png",
+      "size": 337722
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Mudvayne - Death Blooms/notes.chart",
+      "size": 69413
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Mudvayne - Death Blooms/song.ini",
+      "size": 244
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Mudvayne - Death Blooms/song.ogg",
+      "size": 9876392
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Nekrogoblikon - Powercore/album.png",
+      "size": 251602
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Nekrogoblikon - Powercore/guitar.ogg",
+      "size": 12654408
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Nekrogoblikon - Powercore/notes.chart",
+      "size": 25206
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/Nekrogoblikon - Powercore/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/You Slut! - Cut & Shut/album.png",
+      "size": 252225
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/You Slut! - Cut & Shut/notes.chart",
+      "size": 28395
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/You Slut! - Cut & Shut/song.ini",
+      "size": 209
+    },
+    {
+      "path": "Vortex Hero/Tier 07 - Engine On Fire/You Slut! - Cut & Shut/song.ogg",
+      "size": 8881315
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Blot (Gold Distance)/album.png",
+      "size": 125009
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Blot (Gold Distance)/notes.chart",
+      "size": 68556
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Blot (Gold Distance)/song.ini",
+      "size": 264
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Blot (Gold Distance)/song.ogg",
+      "size": 39822897
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - House Organ/album.png",
+      "size": 125009
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - House Organ/notes.chart",
+      "size": 23942
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - House Organ/song.ini",
+      "size": 242
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - House Organ/song.ogg",
+      "size": 13202880
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Millions/album.png",
+      "size": 125009
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Millions/guitar.ogg",
+      "size": 16098639
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Millions/notes.chart",
+      "size": 19486
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Millions/song.ini",
+      "size": 252
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Yellow Eyes/album.png",
+      "size": 125009
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Yellow Eyes/guitar.ogg",
+      "size": 22014673
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Yellow Eyes/notes.chart",
+      "size": 49422
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between The Buried And Me - Yellow Eyes/song.ini",
+      "size": 275
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between the Buried and Me - Condemned to the Gallows (Open Note Chart)/album.png",
+      "size": 125009
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between the Buried and Me - Condemned to the Gallows (Open Note Chart)/notes.chart",
+      "size": 50212
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between the Buried and Me - Condemned to the Gallows (Open Note Chart)/song.ini",
+      "size": 288
+    },
+    {
+      "path": "Vortex Hero/Tier 08 - Between The Buried And Me - Automata I/Between the Buried and Me - Condemned to the Gallows (Open Note Chart)/song.ogg",
+      "size": 22467753
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Blind Witness - Baby One More Notch/album.png",
+      "size": 412908
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Blind Witness - Baby One More Notch/notes.chart",
+      "size": 27620
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Blind Witness - Baby One More Notch/song.ini",
+      "size": 280
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Blind Witness - Baby One More Notch/song.ogg",
+      "size": 6879148
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Demetori - Bridge of the Lotus/album.png",
+      "size": 229500
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Demetori - Bridge of the Lotus/guitar.mp3",
+      "size": 4671946
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Demetori - Bridge of the Lotus/notes.chart",
+      "size": 23175
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Demetori - Bridge of the Lotus/song.ini",
+      "size": 231
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Hostin x Steele - Awmane/album.png",
+      "size": 346256
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Hostin x Steele - Awmane/notes.chart",
+      "size": 37390
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Hostin x Steele - Awmane/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Hostin x Steele - Awmane/song.ogg",
+      "size": 9772376
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Intervals - Fable/album.png",
+      "size": 314303
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Intervals - Fable/notes.chart",
+      "size": 32331
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Intervals - Fable/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Intervals - Fable/song.ogg",
+      "size": 11959516
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/It's Awake - My Dreams Are Killing Me!/album.png",
+      "size": 401414
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/It's Awake - My Dreams Are Killing Me!/guitar.ogg",
+      "size": 10929135
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/It's Awake - My Dreams Are Killing Me!/notes.chart",
+      "size": 31082
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/It's Awake - My Dreams Are Killing Me!/song.ini",
+      "size": 241
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Orden Ogan - Evil Lies in Every Man/album.png",
+      "size": 492899
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Orden Ogan - Evil Lies in Every Man/guitar.ogg",
+      "size": 10224975
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Orden Ogan - Evil Lies in Every Man/notes.chart",
+      "size": 41468
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Orden Ogan - Evil Lies in Every Man/song.ini",
+      "size": 211
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Shokran - The Storm And The Ruler/album.png",
+      "size": 295155
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Shokran - The Storm And The Ruler/guitar.ogg",
+      "size": 10368321
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Shokran - The Storm And The Ruler/notes.chart",
+      "size": 18809
+    },
+    {
+      "path": "Vortex Hero/Tier 09 - Trouble in Quadrant 9/Shokran - The Storm And The Ruler/song.ini",
+      "size": 239
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Let's Talk Daggers - I love You Dad, But I'm Mental/album.png",
+      "size": 643846
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Let's Talk Daggers - I love You Dad, But I'm Mental/notes.chart",
+      "size": 25650
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Let's Talk Daggers - I love You Dad, But I'm Mental/song.ini",
+      "size": 228
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Let's Talk Daggers - I love You Dad, But I'm Mental/song.ogg",
+      "size": 7877751
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Olly Steele - Untitled/album.png",
+      "size": 106908
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Olly Steele - Untitled/notes.chart",
+      "size": 58260
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Olly Steele - Untitled/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Olly Steele - Untitled/song.ogg",
+      "size": 8627097
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Parkway Drive - Dying To Believe/album.png",
+      "size": 302822
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Parkway Drive - Dying To Believe/guitar.ogg",
+      "size": 8212112
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Parkway Drive - Dying To Believe/notes.chart",
+      "size": 27959
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Parkway Drive - Dying To Believe/song.ini",
+      "size": 227
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slice the Cake - The Siren's Song/album.png",
+      "size": 246949
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slice the Cake - The Siren's Song/notes.chart",
+      "size": 72266
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slice the Cake - The Siren's Song/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slice the Cake - The Siren's Song/song.ogg",
+      "size": 24714186
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slipknot - Get This/album.png",
+      "size": 163316
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slipknot - Get This/guitar.ogg",
+      "size": 5725966
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slipknot - Get This/notes.chart",
+      "size": 19447
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/Slipknot - Get This/song.ini",
+      "size": 219
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/The Air I Breathe - For What It's Worth/album.png",
+      "size": 99008
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/The Air I Breathe - For What It's Worth/guitar.ogg",
+      "size": 9453240
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/The Air I Breathe - For What It's Worth/notes.chart",
+      "size": 23108
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/The Air I Breathe - For What It's Worth/song.ini",
+      "size": 251
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/White Denim - Had 2 Know/album.png",
+      "size": 4546638
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/White Denim - Had 2 Know/notes.chart",
+      "size": 25651
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/White Denim - Had 2 Know/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Vortex Hero/Tier 10 - Schrodinger's Shredders/White Denim - Had 2 Know/song.ogg",
+      "size": 9994196
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Coming Home (ft. Elena Siegman)/album.png",
+      "size": 539424
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Coming Home (ft. Elena Siegman)/notes.chart",
+      "size": 33456
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Coming Home (ft. Elena Siegman)/song.ini",
+      "size": 288
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Coming Home (ft. Elena Siegman)/song.ogg",
+      "size": 10141343
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Pareidolia (ft. Elena Siegman)/album.png",
+      "size": 539424
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Pareidolia (ft. Elena Siegman)/notes.chart",
+      "size": 39003
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Pareidolia (ft. Elena Siegman)/song.ini",
+      "size": 285
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Kevin Sherwood - Pareidolia (ft. Elena Siegman)/song.ogg",
+      "size": 18203041
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Muse - Stockholm Syndrome/album.PNG",
+      "size": 896989
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Muse - Stockholm Syndrome/notes.chart",
+      "size": 103440
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Muse - Stockholm Syndrome/song.ini",
+      "size": 268
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Muse - Stockholm Syndrome/song.ogg",
+      "size": 15474929
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/No End In Sight - Question Everything/album.png",
+      "size": 353109
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/No End In Sight - Question Everything/notes.chart",
+      "size": 28930
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/No End In Sight - Question Everything/song.ini",
+      "size": 274
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/No End In Sight - Question Everything/song.ogg",
+      "size": 4554618
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Nothing More - Take a Bullet/album.png",
+      "size": 2732850
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Nothing More - Take a Bullet/guitar.ogg",
+      "size": 3840092
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Nothing More - Take a Bullet/notes.chart",
+      "size": 29110
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Nothing More - Take a Bullet/song.ini",
+      "size": 239
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Omnium Gatherum - Nail/album.png",
+      "size": 411433
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Omnium Gatherum - Nail/guitar.ogg",
+      "size": 5816322
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Omnium Gatherum - Nail/notes.chart",
+      "size": 42660
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/Omnium Gatherum - Nail/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/The Ohayogozaimas - Owaranai Goraku/album.png",
+      "size": 376653
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/The Ohayogozaimas - Owaranai Goraku/guitar.ogg",
+      "size": 4229284
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/The Ohayogozaimas - Owaranai Goraku/notes.chart",
+      "size": 30807
+    },
+    {
+      "path": "Vortex Hero/Tier 11 - Zombie Outbreak In Space/The Ohayogozaimas - Owaranai Goraku/song.ini",
+      "size": 246
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Down From the Sky/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Down From the Sky/guitar.ogg",
+      "size": 18678020
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Down From the Sky/notes.chart",
+      "size": 34183
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Down From the Sky/song.ini",
+      "size": 241
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - He Who Spawned The Furies/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - He Who Spawned The Furies/guitar.ogg",
+      "size": 10564526
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - He Who Spawned The Furies/notes.chart",
+      "size": 31894
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - He Who Spawned The Furies/song.ini",
+      "size": 249
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Insurrection/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Insurrection/guitar.ogg",
+      "size": 12493820
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Insurrection/notes.chart",
+      "size": 44329
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Insurrection/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Into the Mouth of Hell We March/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Into the Mouth of Hell We March/guitar.ogg",
+      "size": 20732045
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Into the Mouth of Hell We March/notes.chart",
+      "size": 45115
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Into the Mouth of Hell We March/song.ini",
+      "size": 255
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Iron Maiden (Iron Maiden Cover)/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Iron Maiden (Iron Maiden Cover)/guitar.ogg",
+      "size": 9700404
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Iron Maiden (Iron Maiden Cover)/notes.chart",
+      "size": 28995
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Iron Maiden (Iron Maiden Cover)/song.ini",
+      "size": 257
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Kirisute Gomen/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Kirisute Gomen/guitar.ogg",
+      "size": 22840654
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Kirisute Gomen/notes.chart",
+      "size": 66496
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Kirisute Gomen/song.ini",
+      "size": 238
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Like Callisto To a Star In Heaven/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Like Callisto To a Star In Heaven/guitar.ogg",
+      "size": 14307826
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Like Callisto To a Star In Heaven/notes.chart",
+      "size": 43884
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Like Callisto To a Star In Heaven/song.ini",
+      "size": 259
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Of Prometheus And The Crucifix/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Of Prometheus And The Crucifix/guitar.ogg",
+      "size": 11699910
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Of Prometheus And The Crucifix/notes.chart",
+      "size": 38655
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Of Prometheus And The Crucifix/song.ini",
+      "size": 254
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Poison, The Knife or The Noose/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Poison, The Knife or The Noose/guitar.ogg",
+      "size": 10778271
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Poison, The Knife or The Noose/notes.chart",
+      "size": 35622
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Poison, The Knife or The Noose/song.ini",
+      "size": 256
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Shogun/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Shogun/guitar.ogg",
+      "size": 27759104
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Shogun/notes.chart",
+      "size": 76979
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Shogun/song.ini",
+      "size": 232
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - The Calamity/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - The Calamity/guitar.ogg",
+      "size": 12644752
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - The Calamity/notes.chart",
+      "size": 51462
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - The Calamity/song.ini",
+      "size": 234
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Throes of Perdition/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Throes of Perdition/guitar.ogg",
+      "size": 19526584
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Throes of Perdition/notes.chart",
+      "size": 51211
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Throes of Perdition/song.ini",
+      "size": 243
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Torn Between Scylla and Charybdis/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Torn Between Scylla and Charybdis/guitar.ogg",
+      "size": 23423426
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Torn Between Scylla and Charybdis/notes.chart",
+      "size": 79997
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Torn Between Scylla and Charybdis/song.ini",
+      "size": 257
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Upon The Shores/album.png",
+      "size": 834509
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Upon The Shores/guitar.ogg",
+      "size": 14129669
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Upon The Shores/notes.chart",
+      "size": 36341
+    },
+    {
+      "path": "Vortex Hero/Tier 12 - Trivium - Shogun/Trivium - Upon The Shores/song.ini",
+      "size": 241
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Avenged Sevenfold - Carry On/album.png",
+      "size": 86212
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Avenged Sevenfold - Carry On/guitar.ogg",
+      "size": 4313081
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Avenged Sevenfold - Carry On/notes.chart",
+      "size": 23910
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Avenged Sevenfold - Carry On/song.ini",
+      "size": 286
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Blind Guardian - Precious Jerusalem/album.png",
+      "size": 4907078
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Blind Guardian - Precious Jerusalem/guitar.ogg",
+      "size": 7670711
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Blind Guardian - Precious Jerusalem/notes.chart",
+      "size": 70714
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Blind Guardian - Precious Jerusalem/song.ini",
+      "size": 260
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/In Other Climes - This Is Your Time/album.png",
+      "size": 410899
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/In Other Climes - This Is Your Time/notes.chart",
+      "size": 32047
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/In Other Climes - This Is Your Time/song.ini",
+      "size": 279
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/In Other Climes - This Is Your Time/song.ogg",
+      "size": 7610058
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/King Baby - Check The Hand/album.png",
+      "size": 451773
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/King Baby - Check The Hand/notes.chart",
+      "size": 30712
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/King Baby - Check The Hand/song.ini",
+      "size": 236
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/King Baby - Check The Hand/song.mp3",
+      "size": 5923665
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Orbs - A Man of Science/album.png",
+      "size": 4708536
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Orbs - A Man of Science/notes.chart",
+      "size": 55510
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Orbs - A Man of Science/song.ini",
+      "size": 266
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Orbs - A Man of Science/song.ogg",
+      "size": 17936627
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Periphery - Beta/album.png",
+      "size": 68148
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Periphery - Beta/notes.chart",
+      "size": 40857
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Periphery - Beta/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Periphery - Beta/song.ogg",
+      "size": 17471598
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Rush - Working Man/album.png",
+      "size": 30506
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Rush - Working Man/notes.chart",
+      "size": 44367
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Rush - Working Man/song.ini",
+      "size": 217
+    },
+    {
+      "path": "Vortex Hero/Tier 13 - The Martians Attack!/Rush - Working Man/song.ogg",
+      "size": 20490393
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/100 Onces - Oh Me Gee/album.png",
+      "size": 1031992
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/100 Onces - Oh Me Gee/notes.chart",
+      "size": 43706
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/100 Onces - Oh Me Gee/song.ini",
+      "size": 194
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/100 Onces - Oh Me Gee/song.ogg",
+      "size": 10811891
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Between The Buried And Me - Melting City/album.png",
+      "size": 567979
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Between The Buried And Me - Melting City/guitar.ogg",
+      "size": 35813933
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Between The Buried And Me - Melting City/notes.chart",
+      "size": 66594
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Between The Buried And Me - Melting City/song.ini",
+      "size": 275
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Buttons and Mindy - Orange Mocha Frappuccino/album.png",
+      "size": 3342876
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Buttons and Mindy - Orange Mocha Frappuccino/notes.chart",
+      "size": 33777
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Buttons and Mindy - Orange Mocha Frappuccino/song.ini",
+      "size": 217
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Buttons and Mindy - Orange Mocha Frappuccino/song.ogg",
+      "size": 8287078
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Metal Church - (My Favorite) Nightmare/album.png",
+      "size": 86471
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Metal Church - (My Favorite) Nightmare/guitar.ogg",
+      "size": 5848298
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Metal Church - (My Favorite) Nightmare/notes.chart",
+      "size": 30102
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Metal Church - (My Favorite) Nightmare/song.ini",
+      "size": 246
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Revocation - The Grip Tightens/album.png",
+      "size": 789366
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Revocation - The Grip Tightens/guitar.ogg",
+      "size": 14855400
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Revocation - The Grip Tightens/notes.chart",
+      "size": 45429
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Revocation - The Grip Tightens/song.ini",
+      "size": 250
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Scar Symmetry - Calculate The Apocalypse/album.png",
+      "size": 185406
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Scar Symmetry - Calculate The Apocalypse/guitar.ogg",
+      "size": 14045088
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Scar Symmetry - Calculate The Apocalypse/notes.chart",
+      "size": 44107
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Scar Symmetry - Calculate The Apocalypse/song.ini",
+      "size": 264
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Sianvar - Virtual Vain/album.png",
+      "size": 2537734
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Sianvar - Virtual Vain/notes.chart",
+      "size": 31698
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Sianvar - Virtual Vain/song.ini",
+      "size": 197
+    },
+    {
+      "path": "Vortex Hero/Tier 14 - Rocket Science/Sianvar - Virtual Vain/song.ogg",
+      "size": 11437905
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Carrion Vael - The Bear And The Lady Fair/album.png",
+      "size": 437942
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Carrion Vael - The Bear And The Lady Fair/guitar.ogg",
+      "size": 14879444
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Carrion Vael - The Bear And The Lady Fair/notes.chart",
+      "size": 38357
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Carrion Vael - The Bear And The Lady Fair/song.ini",
+      "size": 271
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Devil You Know - Consume The Damned/album.png",
+      "size": 74410
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Devil You Know - Consume The Damned/notes.chart",
+      "size": 34021
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Devil You Know - Consume The Damned/song.ini",
+      "size": 232
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Devil You Know - Consume The Damned/song.ogg",
+      "size": 9628316
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Periphery - The Walk/album.png",
+      "size": 336337
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Periphery - The Walk/notes.chart",
+      "size": 35148
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Periphery - The Walk/song.ini",
+      "size": 232
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Periphery - The Walk/song.ogg",
+      "size": 8156065
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Resist The Thought - Pledge of Aversion/album.png",
+      "size": 672566
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Resist The Thought - Pledge of Aversion/guitar.ogg",
+      "size": 11841711
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Resist The Thought - Pledge of Aversion/notes.chart",
+      "size": 30451
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Resist The Thought - Pledge of Aversion/song.ini",
+      "size": 242
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Tera Melos - Warpless Run/album.png",
+      "size": 1925699
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Tera Melos - Warpless Run/notes.chart",
+      "size": 22375
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Tera Melos - Warpless Run/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Tera Melos - Warpless Run/song.ogg",
+      "size": 6394373
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/The Crimson Armada - The Serpents Tongue/album.png",
+      "size": 145941
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/The Crimson Armada - The Serpents Tongue/guitar.ogg",
+      "size": 8651145
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/The Crimson Armada - The Serpents Tongue/notes.chart",
+      "size": 44225
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/The Crimson Armada - The Serpents Tongue/song.ini",
+      "size": 233
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Vale of Pnath - Legacy of Loss/album.png",
+      "size": 182887
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Vale of Pnath - Legacy of Loss/guitar.ogg",
+      "size": 20993866
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Vale of Pnath - Legacy of Loss/notes.chart",
+      "size": 56743
+    },
+    {
+      "path": "Vortex Hero/Tier 15 - Battle at Two Moons/Vale of Pnath - Legacy of Loss/song.ini",
+      "size": 255
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/01 - Departure/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/01 - Departure/notes.chart",
+      "size": 44585
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/01 - Departure/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/01 - Departure/song.ogg",
+      "size": 18901455
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/02 - Magic Machine/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/02 - Magic Machine/notes.chart",
+      "size": 51531
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/02 - Magic Machine/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/02 - Magic Machine/song.ogg",
+      "size": 16629156
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/03 - Galactic Tactic/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/03 - Galactic Tactic/notes.chart",
+      "size": 79225
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/03 - Galactic Tactic/song.ini",
+      "size": 230
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/03 - Galactic Tactic/song.ogg",
+      "size": 10132135
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/04 - Finding The Falls/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/04 - Finding The Falls/notes.chart",
+      "size": 56417
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/04 - Finding The Falls/song.ini",
+      "size": 232
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/04 - Finding The Falls/song.ogg",
+      "size": 18275531
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/05 - The Assembly/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/05 - The Assembly/notes.chart",
+      "size": 44371
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/05 - The Assembly/song.ini",
+      "size": 227
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/05 - The Assembly/song.ogg",
+      "size": 16160052
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/06 - Agile Descent/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/06 - Agile Descent/notes.chart",
+      "size": 26359
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/06 - Agile Descent/song.ini",
+      "size": 227
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/06 - Agile Descent/song.ogg",
+      "size": 13293774
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/07 - Sky Run/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/07 - Sky Run/notes.chart",
+      "size": 79894
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/07 - Sky Run/song.ini",
+      "size": 243
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/07 - Sky Run/song.ogg",
+      "size": 28323870
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/08 - Through The Fog/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/08 - Through The Fog/notes.chart",
+      "size": 29498
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/08 - Through The Fog/song.ini",
+      "size": 229
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/08 - Through The Fog/song.ogg",
+      "size": 13490352
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/09 - Sea Voyage/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/09 - Sea Voyage/notes.chart",
+      "size": 22172
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/09 - Sea Voyage/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/09 - Sea Voyage/song.ogg",
+      "size": 8896189
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/10 - Impulse II/album.png",
+      "size": 121162
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/10 - Impulse II/notes.chart",
+      "size": 39123
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/10 - Impulse II/song.ini",
+      "size": 226
+    },
+    {
+      "path": "Vortex Hero/Tier 16 - An Endless Sporadic - Magic Machine/10 - Impulse II/song.ogg",
+      "size": 14882497
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Daughters - Recorded Inside a Pyramid/album.png",
+      "size": 765905
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Daughters - Recorded Inside a Pyramid/notes.chart",
+      "size": 21461
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Daughters - Recorded Inside a Pyramid/song.ini",
+      "size": 208
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Daughters - Recorded Inside a Pyramid/song.ogg",
+      "size": 8443661
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Nick Az - Chase Lights/album.png",
+      "size": 532204
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Nick Az - Chase Lights/notes.chart",
+      "size": 45248
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Nick Az - Chase Lights/song.ini",
+      "size": 257
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Nick Az - Chase Lights/song.ogg",
+      "size": 8428688
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Pestilence - Suspended Animation/album.png",
+      "size": 935007
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Pestilence - Suspended Animation/guitar.ogg",
+      "size": 12714615
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Pestilence - Suspended Animation/notes.chart",
+      "size": 37698
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Pestilence - Suspended Animation/song.ini",
+      "size": 245
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Slaughter to Prevail - Chronic Slaughter/album.png",
+      "size": 204891
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Slaughter to Prevail - Chronic Slaughter/guitar.ogg",
+      "size": 13134581
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Slaughter to Prevail - Chronic Slaughter/notes.chart",
+      "size": 61280
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Slaughter to Prevail - Chronic Slaughter/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Testament - The Formation of Damnation/album.png",
+      "size": 103138
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Testament - The Formation of Damnation/notes.chart",
+      "size": 56869
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Testament - The Formation of Damnation/song.ini",
+      "size": 260
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Testament - The Formation of Damnation/song.ogg",
+      "size": 10854480
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/The Crimson Armada - The Sound, The Flood, The Hour/album.png",
+      "size": 629826
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/The Crimson Armada - The Sound, The Flood, The Hour/guitar.ogg",
+      "size": 14812976
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/The Crimson Armada - The Sound, The Flood, The Hour/notes.chart",
+      "size": 62875
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/The Crimson Armada - The Sound, The Flood, The Hour/song.ini",
+      "size": 254
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Ween - Waving My Dick In The Wind/album.png",
+      "size": 3107614
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Ween - Waving My Dick In The Wind/notes.chart",
+      "size": 26348
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Ween - Waving My Dick In The Wind/song.ini",
+      "size": 201
+    },
+    {
+      "path": "Vortex Hero/Tier 17 - An Horrific Prophecy/Ween - Waving My Dick In The Wind/song.ogg",
+      "size": 5446570
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Arch Enemy - Hybrids of Steel/album.png",
+      "size": 427255
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Arch Enemy - Hybrids of Steel/guitar.ogg",
+      "size": 4447242
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Arch Enemy - Hybrids of Steel/notes.chart",
+      "size": 32106
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Arch Enemy - Hybrids of Steel/song.ini",
+      "size": 258
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Blood Command - (The World Covered In) Purple Shrouds/album.png",
+      "size": 301407
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Blood Command - (The World Covered In) Purple Shrouds/notes.chart",
+      "size": 81847
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Blood Command - (The World Covered In) Purple Shrouds/song.ini",
+      "size": 283
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Blood Command - (The World Covered In) Purple Shrouds/song.ogg",
+      "size": 6512996
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Dirty Projectors - Temecula Sunrise/album.png",
+      "size": 1728142
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Dirty Projectors - Temecula Sunrise/notes.chart",
+      "size": 39249
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Dirty Projectors - Temecula Sunrise/song.ini",
+      "size": 207
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Dirty Projectors - Temecula Sunrise/song.ogg",
+      "size": 12591434
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/HORSE The Band - New York City/album.png",
+      "size": 401318
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/HORSE The Band - New York City/notes.chart",
+      "size": 92760
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/HORSE The Band - New York City/song.ini",
+      "size": 263
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/HORSE The Band - New York City/song.ogg",
+      "size": 7778625
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Orphane Land - All is One/album.png",
+      "size": 651854
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Orphane Land - All is One/guitar.ogg",
+      "size": 13653111
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Orphane Land - All is One/notes.chart",
+      "size": 36804
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Orphane Land - All is One/song.ini",
+      "size": 235
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Snarky Puppy - What About Me/album.png",
+      "size": 388069
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Snarky Puppy - What About Me/notes.chart",
+      "size": 39512
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Snarky Puppy - What About Me/song.ini",
+      "size": 207
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/Snarky Puppy - What About Me/song.ogg",
+      "size": 16002851
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/i built the sky - Intortus/album.png",
+      "size": 4056233
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/i built the sky - Intortus/notes.chart",
+      "size": 49170
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/i built the sky - Intortus/song.ini",
+      "size": 269
+    },
+    {
+      "path": "Vortex Hero/Tier 18 - A Vision of Horror/i built the sky - Intortus/song.ogg",
+      "size": 12446926
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/7for4 - Junk Funk/album.png",
+      "size": 87799
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/7for4 - Junk Funk/notes.chart",
+      "size": 39343
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/7for4 - Junk Funk/song.ini",
+      "size": 183
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/7for4 - Junk Funk/song.ogg",
+      "size": 12573401
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Andromeda - No Guidelines/album.png",
+      "size": 240403
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Andromeda - No Guidelines/guitar.ogg",
+      "size": 6427583
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Andromeda - No Guidelines/notes.chart",
+      "size": 44760
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Andromeda - No Guidelines/song.ini",
+      "size": 243
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/CHON - Elliptical Illuminations/album.png",
+      "size": 167352
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/CHON - Elliptical Illuminations/notes.chart",
+      "size": 20428
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/CHON - Elliptical Illuminations/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/CHON - Elliptical Illuminations/song.ogg",
+      "size": 6612240
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Laaz Rockit - Bad Blood/album.png",
+      "size": 50979
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Laaz Rockit - Bad Blood/guitar.ogg",
+      "size": 8313663
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Laaz Rockit - Bad Blood/notes.chart",
+      "size": 54385
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Laaz Rockit - Bad Blood/song.ini",
+      "size": 250
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Nevermore - She Comes in Colors/album.png",
+      "size": 509026
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Nevermore - She Comes in Colors/guitar.ogg",
+      "size": 6671124
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Nevermore - She Comes in Colors/notes.chart",
+      "size": 31776
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Nevermore - She Comes in Colors/song.ini",
+      "size": 266
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Plini (Kendrick Lamar) - Away (Poetic Justice)/album.png",
+      "size": 129716
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Plini (Kendrick Lamar) - Away (Poetic Justice)/notes.chart",
+      "size": 23541
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Plini (Kendrick Lamar) - Away (Poetic Justice)/song.ini",
+      "size": 256
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Plini (Kendrick Lamar) - Away (Poetic Justice)/song.ogg",
+      "size": 2947908
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Utsu-P - EAT/album.png",
+      "size": 549784
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Utsu-P - EAT/guitar.ogg",
+      "size": 4448855
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Utsu-P - EAT/notes.chart",
+      "size": 28292
+    },
+    {
+      "path": "Vortex Hero/Tier 19 - Illusional Paradise/Utsu-P - EAT/song.ini",
+      "size": 220
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bloodmeat/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bloodmeat/notes.chart",
+      "size": 49066
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bloodmeat/song.ini",
+      "size": 260
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bloodmeat/song.ogg",
+      "size": 7895980
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bone Marrow/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bone Marrow/notes.chart",
+      "size": 48900
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bone Marrow/song.ini",
+      "size": 262
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Bone Marrow/song.ogg",
+      "size": 10078640
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Bound/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Bound/notes.chart",
+      "size": 44632
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Bound/song.ini",
+      "size": 263
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Bound/song.ogg",
+      "size": 6082133
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Gagged/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Gagged/notes.chart",
+      "size": 31567
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Gagged/song.ini",
+      "size": 246
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Goddess Gagged/song.ogg",
+      "size": 5576495
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Limb From Limb/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Limb From Limb/notes.chart",
+      "size": 40699
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Limb From Limb/song.ini",
+      "size": 286
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Limb From Limb/song.ogg",
+      "size": 7827441
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Palms Read/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Palms Read/notes.chart",
+      "size": 54620
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Palms Read/song.ini",
+      "size": 260
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Palms Read/song.ogg",
+      "size": 9344858
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Sequoia Throne/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Sequoia Throne/notes.chart",
+      "size": 36530
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Sequoia Throne/song.ini",
+      "size": 264
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Sequoia Throne/song.ogg",
+      "size": 5687927
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Spoils/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Spoils/notes.chart",
+      "size": 35263
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Spoils/song.ini",
+      "size": 256
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Spoils/song.ogg",
+      "size": 6385622
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - The Dissentience/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - The Dissentience/notes.chart",
+      "size": 38928
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - The Dissentience/song.ini",
+      "size": 266
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - The Dissentience/song.ogg",
+      "size": 7433677
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Wretch/album.png",
+      "size": 520723
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Wretch/notes.chart",
+      "size": 37756
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Wretch/song.ini",
+      "size": 256
+    },
+    {
+      "path": "Vortex Hero/Tier 20 - Protest The Hero - Fortress/Protest The Hero - Wretch/song.ogg",
+      "size": 7653444
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Helstar - Rhapsody in Black - Baptized in Blood/album.png",
+      "size": 46786
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Helstar - Rhapsody in Black - Baptized in Blood/guitar.ogg",
+      "size": 10399816
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Helstar - Rhapsody in Black - Baptized in Blood/notes.chart",
+      "size": 57448
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Helstar - Rhapsody in Black - Baptized in Blood/song.ini",
+      "size": 270
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Igorrr - Opus Brain/album.png",
+      "size": 123700
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Igorrr - Opus Brain/guitar.ogg",
+      "size": 5287267
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Igorrr - Opus Brain/notes.chart",
+      "size": 41731
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Igorrr - Opus Brain/song.ini",
+      "size": 241
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Luca Turilli - Black Dragon/album.png",
+      "size": 1580041
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Luca Turilli - Black Dragon/guitar.ogg",
+      "size": 6450151
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Luca Turilli - Black Dragon/notes.chart",
+      "size": 88762
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Luca Turilli - Black Dragon/song.ini",
+      "size": 269
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Muse - Reapers/album.png",
+      "size": 391283
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Muse - Reapers/notes.chart",
+      "size": 71488
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Muse - Reapers/song.ini",
+      "size": 254
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Muse - Reapers/song.ogg",
+      "size": 18956031
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Obscura - Vortex Omnivium/album.png",
+      "size": 504101
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Obscura - Vortex Omnivium/guitar.mp3",
+      "size": 6132941
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Obscura - Vortex Omnivium/notes.chart",
+      "size": 55876
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Obscura - Vortex Omnivium/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Stratovarius - Stratosphere/album.png",
+      "size": 40880
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Stratovarius - Stratosphere/guitar.ogg",
+      "size": 5917454
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Stratovarius - Stratosphere/notes.chart",
+      "size": 65084
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/Stratovarius - Stratosphere/song.ini",
+      "size": 252
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/The Dillinger Escape Plan - The Threat Posed By Nuclear Weapons/album.png",
+      "size": 2725706
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/The Dillinger Escape Plan - The Threat Posed By Nuclear Weapons/guitar.ogg",
+      "size": 4468782
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/The Dillinger Escape Plan - The Threat Posed By Nuclear Weapons/notes.chart",
+      "size": 87485
+    },
+    {
+      "path": "Vortex Hero/Tier 21 - Shields at 21%!/The Dillinger Escape Plan - The Threat Posed By Nuclear Weapons/song.ini",
+      "size": 289
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Gunz For Hire - Bolivia/album.png",
+      "size": 436051
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Gunz For Hire - Bolivia/notes.chart",
+      "size": 46374
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Gunz For Hire - Bolivia/song.ini",
+      "size": 248
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Gunz For Hire - Bolivia/song.ogg",
+      "size": 6436827
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Kreator - Gods of Violence/album.png",
+      "size": 228370
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Kreator - Gods of Violence/guitar.ogg",
+      "size": 14831722
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Kreator - Gods of Violence/notes.chart",
+      "size": 45493
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Kreator - Gods of Violence/song.ini",
+      "size": 239
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Periphery - Totla Mad/album.png",
+      "size": 336337
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Periphery - Totla Mad/guitar.ogg",
+      "size": 3505137
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Periphery - Totla Mad/notes.chart",
+      "size": 23930
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Periphery - Totla Mad/song.ini",
+      "size": 241
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Protest The Hero - Yellow Teeth/album.png",
+      "size": 309524
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Protest The Hero - Yellow Teeth/notes.chart",
+      "size": 34474
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Protest The Hero - Yellow Teeth/song.ini",
+      "size": 244
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Protest The Hero - Yellow Teeth/song.ogg",
+      "size": 14989113
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Sodom - What Hell Can Create/album.png",
+      "size": 50025
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Sodom - What Hell Can Create/guitar.ogg",
+      "size": 7343964
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Sodom - What Hell Can Create/notes.chart",
+      "size": 45453
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/Sodom - What Hell Can Create/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Fall of Troy -  Inside Out/album.png",
+      "size": 1656297
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Fall of Troy -  Inside Out/notes.chart",
+      "size": 52494
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Fall of Troy -  Inside Out/song.ini",
+      "size": 237
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Fall of Troy -  Inside Out/song.ogg",
+      "size": 13577811
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Hirsch Effekt - Lifnej/album.png",
+      "size": 252304
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Hirsch Effekt - Lifnej/notes.chart",
+      "size": 72109
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Hirsch Effekt - Lifnej/song.ini",
+      "size": 249
+    },
+    {
+      "path": "Vortex Hero/Tier 22 - Intergalactic Turbulence/The Hirsch Effekt - Lifnej/song.ogg",
+      "size": 11202319
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Big Walnuts Yonder - Raise the Drawbridges/album.png",
+      "size": 949531
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Big Walnuts Yonder - Raise the Drawbridges/notes.chart",
+      "size": 18487
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Big Walnuts Yonder - Raise the Drawbridges/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Big Walnuts Yonder - Raise the Drawbridges/song.ogg",
+      "size": 5734897
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Mendel - Opus/album.png",
+      "size": 319593
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Mendel - Opus/guitar.ogg",
+      "size": 14022374
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Mendel - Opus/notes.chart",
+      "size": 41552
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Mendel - Opus/song.ini",
+      "size": 233
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Persefone - Mind As Universe/album.png",
+      "size": 3491390
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Persefone - Mind As Universe/notes.chart",
+      "size": 54502
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Persefone - Mind As Universe/song.ini",
+      "size": 252
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Persefone - Mind As Universe/song.ogg",
+      "size": 16316420
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Razor - The Marshall Arts/album.png",
+      "size": 130839
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Razor - The Marshall Arts/guitar.ogg",
+      "size": 5469583
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Razor - The Marshall Arts/notes.chart",
+      "size": 30163
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Razor - The Marshall Arts/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Sybreed - Posthuman Manifesto/album.png",
+      "size": 777242
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Sybreed - Posthuman Manifesto/guitar.ogg",
+      "size": 4692712
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Sybreed - Posthuman Manifesto/notes.chart",
+      "size": 66430
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Sybreed - Posthuman Manifesto/song.ini",
+      "size": 253
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Forests of Legend/album.png",
+      "size": 460931
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Forests of Legend/guitar.ogg",
+      "size": 35366644
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Forests of Legend/notes.chart",
+      "size": 105997
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Forests of Legend/song.ini",
+      "size": 242
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Venus Project/album.png",
+      "size": 231363
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Venus Project/notes.chart",
+      "size": 71435
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Venus Project/song.ini",
+      "size": 210
+    },
+    {
+      "path": "Vortex Hero/Tier 23 - We Are Legion/Vektor - Venus Project/song.ogg",
+      "size": 20561320
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Abstract Art/album.png",
+      "size": 379288
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Abstract Art/notes.chart",
+      "size": 20612
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Abstract Art/song.ini",
+      "size": 243
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Abstract Art/song.ogg",
+      "size": 5366225
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Bow Down/album.png",
+      "size": 379288
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Bow Down/notes.chart",
+      "size": 14863
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Bow Down/song.ini",
+      "size": 237
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Bow Down/song.ogg",
+      "size": 2404153
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Brace Legs/album.png",
+      "size": 2851306
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Brace Legs/guitar.ogg",
+      "size": 5060481
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Brace Legs/notes.chart",
+      "size": 24566
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Brace Legs/song.ini",
+      "size": 220
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Empires Erased/album.png",
+      "size": 2851306
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Empires Erased/guitar.ogg",
+      "size": 6889933
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Empires Erased/notes.chart",
+      "size": 26110
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Empires Erased/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Open Arms To Damnation/album.png",
+      "size": 2851306
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Open Arms To Damnation/guitar.ogg",
+      "size": 3174941
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Open Arms To Damnation/notes.chart",
+      "size": 31009
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Open Arms To Damnation/song.ini",
+      "size": 254
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Rosecrance/album.png",
+      "size": 2851306
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Rosecrance/guitar.ogg",
+      "size": 4339547
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Rosecrance/notes.chart",
+      "size": 24011
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - Rosecrance/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - The New Reign/album.png",
+      "size": 379288
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - The New Reign/notes.chart",
+      "size": 15259
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - The New Reign/song.ini",
+      "size": 233
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born Of Osiris - The New Reign/song.ogg",
+      "size": 3941691
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - Glorious Day/album.png",
+      "size": 224211
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - Glorious Day/guitar.ogg",
+      "size": 7470498
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - Glorious Day/notes.chart",
+      "size": 14414
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - Glorious Day/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - The Takeover/album.png",
+      "size": 224211
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - The Takeover/guitar.ogg",
+      "size": 7347902
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - The Takeover/notes.mid",
+      "size": 16778
+    },
+    {
+      "path": "Vortex Hero/Tier 24 - Born of Osiris - The Eternal Reign/Born of Osiris - The Takeover/song.ini",
+      "size": 240
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Cytotoxin - Heirs of Downfall/album.png",
+      "size": 173388
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Cytotoxin - Heirs of Downfall/guitar.ogg",
+      "size": 16235330
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Cytotoxin - Heirs of Downfall/notes.chart",
+      "size": 53028
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Cytotoxin - Heirs of Downfall/song.ini",
+      "size": 244
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Dr. Mastermind - Better Late Than Never/album.png",
+      "size": 761045
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Dr. Mastermind - Better Late Than Never/guitar.ogg",
+      "size": 4797614
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Dr. Mastermind - Better Late Than Never/notes.chart",
+      "size": 30973
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Dr. Mastermind - Better Late Than Never/song.ini",
+      "size": 246
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Here Comes The Kraken - From The Deepest Darkness/album.png",
+      "size": 261384
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Here Comes The Kraken - From The Deepest Darkness/guitar.ogg",
+      "size": 13985370
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Here Comes The Kraken - From The Deepest Darkness/notes.chart",
+      "size": 50227
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Here Comes The Kraken - From The Deepest Darkness/song.ini",
+      "size": 275
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Skeletal Remains - Seismic Abyss/album.png",
+      "size": 316678
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Skeletal Remains - Seismic Abyss/guitar.ogg",
+      "size": 13275572
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Skeletal Remains - Seismic Abyss/notes.chart",
+      "size": 57622
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Skeletal Remains - Seismic Abyss/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Tengger Cavalry - Galloping Steeds/album.png",
+      "size": 303632
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Tengger Cavalry - Galloping Steeds/notes.chart",
+      "size": 22203
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Tengger Cavalry - Galloping Steeds/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Tengger Cavalry - Galloping Steeds/song.ogg",
+      "size": 4172443
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vektor - Cosmic Cortex/album.png",
+      "size": 151568
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vektor - Cosmic Cortex/guitar.mp3",
+      "size": 24905396
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vektor - Cosmic Cortex/notes.chart",
+      "size": 96245
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vektor - Cosmic Cortex/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vitalism - Clairvoyance/album.png",
+      "size": 267660
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vitalism - Clairvoyance/notes.chart",
+      "size": 28222
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vitalism - Clairvoyance/song.ini",
+      "size": 241
+    },
+    {
+      "path": "Vortex Hero/Tier 25 - Chaotic Return/Vitalism - Clairvoyance/song.ogg",
+      "size": 12190642
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Agent Steel - Agents of Steel/album.png",
+      "size": 79791
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Agent Steel - Agents of Steel/guitar.ogg",
+      "size": 5333853
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Agent Steel - Agents of Steel/notes.mid",
+      "size": 24579
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Agent Steel - Agents of Steel/song.ini",
+      "size": 241
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Conducting From The Grave - Her Poisoned Tongues/album.png",
+      "size": 450882
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Conducting From The Grave - Her Poisoned Tongues/guitar.ogg",
+      "size": 10919615
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Conducting From The Grave - Her Poisoned Tongues/notes.chart",
+      "size": 48122
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Conducting From The Grave - Her Poisoned Tongues/song.ini",
+      "size": 259
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Dzyen - Digital Senseless/album.png",
+      "size": 76305
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Dzyen - Digital Senseless/guitar.ogg",
+      "size": 15182539
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Dzyen - Digital Senseless/notes.chart",
+      "size": 46511
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Dzyen - Digital Senseless/song.ini",
+      "size": 198
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Forbidden - Alpha Century - Forsaken at the Gates/album.png",
+      "size": 54354
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Forbidden - Alpha Century - Forsaken at the Gates/guitar.ogg",
+      "size": 13157215
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Forbidden - Alpha Century - Forsaken at the Gates/notes.chart",
+      "size": 66269
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Forbidden - Alpha Century - Forsaken at the Gates/song.ini",
+      "size": 272
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Megadeth - Holy Wars... the Punishment Due/album.png",
+      "size": 1793960
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Megadeth - Holy Wars... the Punishment Due/guitar.ogg",
+      "size": 4699527
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Megadeth - Holy Wars... the Punishment Due/notes.chart",
+      "size": 153677
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Megadeth - Holy Wars... the Punishment Due/rhythm.ogg",
+      "size": 3640565
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Megadeth - Holy Wars... the Punishment Due/song.ini",
+      "size": 264
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Megadeth - Holy Wars... the Punishment Due/song.ogg",
+      "size": 17851553
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Ministry - No W Redux/album.png",
+      "size": 557220
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Ministry - No W Redux/notes.chart",
+      "size": 34306
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Ministry - No W Redux/song.ini",
+      "size": 212
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Ministry - No W Redux/song.ogg",
+      "size": 10476447
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Symphony X - Set The World on Fire (The Lie of Lies)/album.png",
+      "size": 67798
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Symphony X - Set The World on Fire (The Lie of Lies)/guitar.mp3",
+      "size": 5684244
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Symphony X - Set The World on Fire (The Lie of Lies)/notes.chart",
+      "size": 233246
+    },
+    {
+      "path": "Vortex Hero/Tier 26 - Black Hole Escape/Symphony X - Set The World on Fire (The Lie of Lies)/song.ini",
+      "size": 233
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Death - Left To Die/album.png",
+      "size": 409907
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Death - Left To Die/notes.chart",
+      "size": 64989
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Death - Left To Die/song.ini",
+      "size": 224
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Death - Left To Die/song.ogg",
+      "size": 5673149
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Falling in Reverse - Goodbye Graceful/album.png",
+      "size": 408470
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Falling in Reverse - Goodbye Graceful/guitar.ogg",
+      "size": 9122191
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Falling in Reverse - Goodbye Graceful/notes.chart",
+      "size": 54553
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Falling in Reverse - Goodbye Graceful/song.ini",
+      "size": 255
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Fleshgod Apocalypse - Thru Our Scars/album.png",
+      "size": 32288
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Fleshgod Apocalypse - Thru Our Scars/guitar.mp3",
+      "size": 13325937
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Fleshgod Apocalypse - Thru Our Scars/notes.chart",
+      "size": 53468
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Fleshgod Apocalypse - Thru Our Scars/song.ini",
+      "size": 220
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Gojira - The Art of Dying/album.png",
+      "size": 130955
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Gojira - The Art of Dying/guitar.ogg",
+      "size": 33417871
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Gojira - The Art of Dying/notes.chart",
+      "size": 123725
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Gojira - The Art of Dying/song.ini",
+      "size": 251
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Invalids - Diastole/album.png",
+      "size": 476742
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Invalids - Diastole/notes.chart",
+      "size": 42375
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Invalids - Diastole/song.ini",
+      "size": 188
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Invalids - Diastole/song.ogg",
+      "size": 11088112
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Takayoshi Ohmura - The Cataclysm/album.png",
+      "size": 166286
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Takayoshi Ohmura - The Cataclysm/notes.chart",
+      "size": 29966
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Takayoshi Ohmura - The Cataclysm/song.ini",
+      "size": 206
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/Takayoshi Ohmura - The Cataclysm/song.ogg",
+      "size": 3394023
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/The Berzerker - No One Wins/album.png",
+      "size": 57501
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/The Berzerker - No One Wins/guitar.ogg",
+      "size": 2053489
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/The Berzerker - No One Wins/notes.chart",
+      "size": 27578
+    },
+    {
+      "path": "Vortex Hero/Tier 27 - The Cosmos is Doomed/The Berzerker - No One Wins/song.ini",
+      "size": 243
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Disclosure/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Disclosure/notes.chart",
+      "size": 22240
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Disclosure/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Disclosure/song.mp3",
+      "size": 8419420
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Esoteric Agenda/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Esoteric Agenda/notes.chart",
+      "size": 34413
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Esoteric Agenda/song.ini",
+      "size": 250
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Esoteric Agenda/song.ogg",
+      "size": 13492000
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Extension To One/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Extension To One/notes.chart",
+      "size": 29532
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Extension To One/song.ini",
+      "size": 251
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Extension To One/song.ogg",
+      "size": 13753918
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_From Vanity to Utility/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_From Vanity to Utility/notes.chart",
+      "size": 30263
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_From Vanity to Utility/song.ini",
+      "size": 259
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_From Vanity to Utility/song.ogg",
+      "size": 16542548
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Lower the Populance/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Lower the Populance/notes.chart",
+      "size": 31650
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Lower the Populance/song.ini",
+      "size": 276
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Lower the Populance/song.ogg",
+      "size": 10457741
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Machine Over/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Machine Over/notes.chart",
+      "size": 60192
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Machine Over/song.ini",
+      "size": 249
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Machine Over/song.ogg",
+      "size": 21333476
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Pleiadian Keys/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Pleiadian Keys/notes.chart",
+      "size": 54119
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Pleiadian Keys/song.ini",
+      "size": 249
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_Pleiadian Keys/song.mp3",
+      "size": 11875950
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_The Escapist Notion/Album.png",
+      "size": 89961
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_The Escapist Notion/notes.chart",
+      "size": 36547
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_The Escapist Notion/song.ini",
+      "size": 254
+    },
+    {
+      "path": "Vortex Hero/Tier 28 - The HAARP Machine - Disclosure/The HAARP Machine_The Escapist Notion/song.mp3",
+      "size": 8632597
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Death Angel - The Ultra-Violence/album.png",
+      "size": 211020
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Death Angel - The Ultra-Violence/guitar.ogg",
+      "size": 23451842
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Death Angel - The Ultra-Violence/notes.chart",
+      "size": 129894
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Death Angel - The Ultra-Violence/song.ini",
+      "size": 257
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/First Fragment - Gula/album.png",
+      "size": 2005695
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/First Fragment - Gula/guitar.mp3",
+      "size": 8944158
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/First Fragment - Gula/notes.chart",
+      "size": 88712
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/First Fragment - Gula/song.ini",
+      "size": 199
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Jeff Loomis - Devil Theory/album.png",
+      "size": 20230
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Jeff Loomis - Devil Theory/notes.chart",
+      "size": 56642
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Jeff Loomis - Devil Theory/song.ini",
+      "size": 274
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Jeff Loomis - Devil Theory/song.ogg",
+      "size": 21109999
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Meshuggah - War/album.png",
+      "size": 233193
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Meshuggah - War/guitar.ogg",
+      "size": 10181856
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Meshuggah - War/notes.chart",
+      "size": 40733
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Meshuggah - War/song.ini",
+      "size": 218
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Mike Orlando - My Black Cat Moaned/album.png",
+      "size": 28850
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Mike Orlando - My Black Cat Moaned/guitar.ogg",
+      "size": 8563708
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Mike Orlando - My Black Cat Moaned/notes.chart",
+      "size": 108831
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Mike Orlando - My Black Cat Moaned/song.ini",
+      "size": 247
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Strapping Young Lad - Oh My Fucking God/album.png",
+      "size": 174098
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Strapping Young Lad - Oh My Fucking God/guitar.ogg",
+      "size": 10036904
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Strapping Young Lad - Oh My Fucking God/notes.chart",
+      "size": 45205
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Strapping Young Lad - Oh My Fucking God/song.ini",
+      "size": 249
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Vektor - Destroying the Cosmos/album.png",
+      "size": 236728
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Vektor - Destroying the Cosmos/notes.chart",
+      "size": 85798
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Vektor - Destroying the Cosmos/song.ini",
+      "size": 222
+    },
+    {
+      "path": "Vortex Hero/Tier 29 - Annihilation of the Universe/Vektor - Destroying the Cosmos/song.ogg",
+      "size": 6536844
+    }
+  ],
+  "extracted_size": 2672200642,
+  "file_count": 890,
+  "chart_count": 222,
+  "release_date": "2018-04-15"
 }

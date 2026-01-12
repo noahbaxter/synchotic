@@ -1,19 +1,2609 @@
 {
   "name": "(2009) Guitar Hero - Metallica",
-  "folder_id": "static-gh-metallica",
+  "folder_id": "static-2009-guitar-hero---metallica",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 49,
-  "total_size": 2379447620,
-  "file_count": 697,
-  "files": [
+  "downloads": [
     {
       "id": "1tmQYWZnn70HdN_dYAQzUo7EyPdFHmswp",
-      "path": "(2009) Guitar Hero - Metallica/Guitar Hero - Metallica.zip",
       "name": "Guitar Hero - Metallica.zip",
       "size": 2379447620,
       "md5": "b28fa248605eeb2cfe55a1ca6e50dd0a"
     }
-  ]
+  ],
+  "download_size": 2379447620,
+  "files": [
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/album.png",
+      "size": 275684
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/bass.ogg",
+      "size": 4661800
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/crowd.ogg",
+      "size": 29982
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/drums_1.ogg",
+      "size": 5815837
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/drums_2.ogg",
+      "size": 5426746
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/drums_3.ogg",
+      "size": 3594302
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/drums_4.ogg",
+      "size": 8217658
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/guitar.ogg",
+      "size": 6600142
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/notes.mid",
+      "size": 99334
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/preview.ogg",
+      "size": 845575
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/song.ini",
+      "size": 989
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/song.ogg",
+      "size": 2261798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Alice In Chains - No Excuses/vocals.ogg",
+      "size": 4273038
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/album.jpg",
+      "size": 105080
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/album.png",
+      "size": 330452
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/bass.ogg",
+      "size": 5806945
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/crowd.ogg",
+      "size": 33632
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/drums_1.ogg",
+      "size": 2333862
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/drums_2.ogg",
+      "size": 2850843
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/drums_3.ogg",
+      "size": 200450
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/drums_4.ogg",
+      "size": 7780456
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/guitar.ogg",
+      "size": 7395561
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/notes.mid",
+      "size": 84740
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/old album.png",
+      "size": 330452
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/preview.ogg",
+      "size": 658755
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/song.ini",
+      "size": 1031
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/song.ogg",
+      "size": 7312539
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Bob Seger and the Silver Bullet Band - Turn the Page (Live)/vocals.ogg",
+      "size": 6778938
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/album.png",
+      "size": 518712
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/bass.ogg",
+      "size": 5584190
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/crowd.ogg",
+      "size": 36074
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/drums_1.ogg",
+      "size": 5827948
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/drums_2.ogg",
+      "size": 2541041
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/drums_3.ogg",
+      "size": 223111
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/drums_4.ogg",
+      "size": 7160823
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/guitar.ogg",
+      "size": 6786624
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/notes.mid",
+      "size": 124308
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/preview.ogg",
+      "size": 664171
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/song.ini",
+      "size": 1030
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/song.ogg",
+      "size": 2849759
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Corrosion of Conformity - Albatross/vocals.ogg",
+      "size": 6251552
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/album.png",
+      "size": 399449
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/bass.ogg",
+      "size": 8307379
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/crowd.ogg",
+      "size": 48896
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/drums_1.ogg",
+      "size": 7014906
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/drums_2.ogg",
+      "size": 10969037
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/drums_3.ogg",
+      "size": 3498769
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/drums_4.ogg",
+      "size": 11019250
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/guitar.ogg",
+      "size": 11990468
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/notes.mid",
+      "size": 242937
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/preview.ogg",
+      "size": 611584
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/song.ini",
+      "size": 1036
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/song.ogg",
+      "size": 9816250
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Diamond Head - Am I Evil/vocals.ogg",
+      "size": 9080881
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/album.png",
+      "size": 208961
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/bass.ogg",
+      "size": 6139346
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/crowd.ogg",
+      "size": 29770
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/drums_1.ogg",
+      "size": 5460045
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/drums_2.ogg",
+      "size": 5827805
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/drums_3.ogg",
+      "size": 616944
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/drums_4.ogg",
+      "size": 7928493
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/guitar.ogg",
+      "size": 7032109
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/notes.mid",
+      "size": 110304
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/preview.ogg",
+      "size": 865490
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/song.ini",
+      "size": 1069
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/song.ogg",
+      "size": 8460219
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Foo Fighters - Stacked Actors/vocals.ogg",
+      "size": 6426042
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/album.png",
+      "size": 185180
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/bass.ogg",
+      "size": 3170495
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/crowd.ogg",
+      "size": 20299
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/drums_1.ogg",
+      "size": 2596446
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/drums_2.ogg",
+      "size": 2060205
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/drums_3.ogg",
+      "size": 281200
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/drums_4.ogg",
+      "size": 4786962
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/guitar.ogg",
+      "size": 4745903
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/notes.mid",
+      "size": 83302
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/preview.ogg",
+      "size": 649074
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/song.ini",
+      "size": 1012
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/song.ogg",
+      "size": 1848973
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Judas Priest - Hell Bent for Leather/vocals.ogg",
+      "size": 2585776
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/album.jpg",
+      "size": 201052
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/album.png",
+      "size": 332941
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/bass.ogg",
+      "size": 6056581
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/crowd.ogg",
+      "size": 36218
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/drums_1.ogg",
+      "size": 3059694
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/drums_2.ogg",
+      "size": 2514942
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/drums_3.ogg",
+      "size": 4538994
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/drums_4.ogg",
+      "size": 8952596
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/guitar.ogg",
+      "size": 7058315
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/notes.mid",
+      "size": 138872
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/old album.png",
+      "size": 332941
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/preview.ogg",
+      "size": 669931
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/small album.png",
+      "size": 149244
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/song.ini",
+      "size": 1032
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/song.ogg",
+      "size": 8403213
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Kyuss - Demon Cleaner/vocals.ogg",
+      "size": 7198308
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/album.png",
+      "size": 426103
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/bass.ogg",
+      "size": 10763504
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/crowd.ogg",
+      "size": 51252
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/drums_1.ogg",
+      "size": 7432424
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/drums_2.ogg",
+      "size": 6137810
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/drums_3.ogg",
+      "size": 1256343
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/drums_4.ogg",
+      "size": 14506001
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/guitar.ogg",
+      "size": 15110893
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/notes.mid",
+      "size": 170835
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/preview.ogg",
+      "size": 962053
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/song.ini",
+      "size": 1058
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/song.ogg",
+      "size": 13635510
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Lynyrd Skynyrd - Tuesday's Gone/vocals.ogg",
+      "size": 8460824
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/album.png",
+      "size": 496990
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/bass.ogg",
+      "size": 5601136
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/crowd.ogg",
+      "size": 33353
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/drums_1.ogg",
+      "size": 5598265
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/drums_2.ogg",
+      "size": 3135085
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/drums_3.ogg",
+      "size": 1551313
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/drums_4.ogg",
+      "size": 7818858
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/guitar.ogg",
+      "size": 7234803
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/notes.mid",
+      "size": 152787
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/preview.ogg",
+      "size": 646822
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/song.ini",
+      "size": 1042
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/song.ogg",
+      "size": 2453474
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Machine Head - Beautiful Mourning/vocals.ogg",
+      "size": 5334072
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/album.png",
+      "size": 524811
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/bass.ogg",
+      "size": 5834701
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/crowd.ogg",
+      "size": 26959
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/drums_1.ogg",
+      "size": 3279295
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/drums_2.ogg",
+      "size": 5000458
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/drums_3.ogg",
+      "size": 530114
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/drums_4.ogg",
+      "size": 6188067
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/guitar.ogg",
+      "size": 5881464
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/notes.mid",
+      "size": 128684
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/preview.ogg",
+      "size": 600727
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/song.ini",
+      "size": 976
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/song.ogg",
+      "size": 366243
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mastodon - Blood and Thunder/vocals.ogg",
+      "size": 3838781
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/album.png",
+      "size": 257054
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/bass.ogg",
+      "size": 5464256
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/crowd.ogg",
+      "size": 32371
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/drums_1.ogg",
+      "size": 7024991
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/drums_2.ogg",
+      "size": 6983107
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/drums_3.ogg",
+      "size": 661042
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/drums_4.ogg",
+      "size": 9262951
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/guitar.ogg",
+      "size": 6872163
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/notes.mid",
+      "size": 146318
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/preview.ogg",
+      "size": 864659
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/song (1).ini",
+      "size": 1044
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/song.ini",
+      "size": 1066
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/song.ogg",
+      "size": 3126347
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mercyful Fate - Evil/vocals.ogg",
+      "size": 3745234
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/album.png",
+      "size": 1199961
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/bass.ogg",
+      "size": 12336665
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/crowd.ogg",
+      "size": 51721
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/drums_1.ogg",
+      "size": 12442477
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/drums_2.ogg",
+      "size": 11799058
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/drums_3.ogg",
+      "size": 12077174
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/drums_4.ogg",
+      "size": 14270458
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/guitar.ogg",
+      "size": 12908032
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/notes.mid",
+      "size": 335916
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/preview.ogg",
+      "size": 678498
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/song.ini",
+      "size": 923
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/song.ogg",
+      "size": 12528232
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - All Nightmare Long/vocals.ogg",
+      "size": 12072951
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/album.png",
+      "size": 401798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/bass.ogg",
+      "size": 4912862
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/crowd.ogg",
+      "size": 697609
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/drums_1.ogg",
+      "size": 3977552
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/drums_2.ogg",
+      "size": 5378175
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/drums_3.ogg",
+      "size": 843080
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/drums_4.ogg",
+      "size": 8516469
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/guitar.ogg",
+      "size": 8161306
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/notes.mid",
+      "size": 202596
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/preview.ogg",
+      "size": 736750
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/song.ini",
+      "size": 1000
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/song.ogg",
+      "size": 2617319
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Battery/vocals.ogg",
+      "size": 3171367
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/album.png",
+      "size": 362336
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/bass.ogg",
+      "size": 7786010
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/crowd.ogg",
+      "size": 1160350
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/drums_1.ogg",
+      "size": 3922685
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/drums_2.ogg",
+      "size": 7271444
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/drums_3.ogg",
+      "size": 1982055
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/drums_4.ogg",
+      "size": 10718156
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/guitar.ogg",
+      "size": 10227228
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/notes.mid",
+      "size": 264507
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/preview.ogg",
+      "size": 627076
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/song.ini",
+      "size": 984
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/song.ogg",
+      "size": 2571837
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Creeping Death/vocals.ogg",
+      "size": 8243521
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/album.png",
+      "size": 401798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/bass.ogg",
+      "size": 9053937
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/crowd.ogg",
+      "size": 1281214
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/drums_1.ogg",
+      "size": 6623686
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/drums_2.ogg",
+      "size": 8553182
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/drums_3.ogg",
+      "size": 1682423
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/drums_4.ogg",
+      "size": 14992093
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/guitar.ogg",
+      "size": 12119840
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/notes.mid",
+      "size": 413700
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/preview.ogg",
+      "size": 632515
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/song.ini",
+      "size": 1067
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/song.ogg",
+      "size": 3619725
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Disposable Heroes/vocals.ogg",
+      "size": 6578269
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/album.png",
+      "size": 7941032
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/bass.ogg",
+      "size": 7365986
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/crowd.ogg",
+      "size": 35279
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/drums_1.ogg",
+      "size": 6812384
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/drums_2.ogg",
+      "size": 6656158
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/drums_3.ogg",
+      "size": 1006416
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/drums_4.ogg",
+      "size": 11001328
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/guitar.ogg",
+      "size": 8125421
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/notes.mid",
+      "size": 258296
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/preview.ogg",
+      "size": 824562
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/song.ini",
+      "size": 1033
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/song.ogg",
+      "size": 1157962
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Dyer's Eve/vocals.ogg",
+      "size": 4353258
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/album.png",
+      "size": 52201
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/bass.ogg",
+      "size": 6853037
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/crowd.ogg",
+      "size": 38188
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/drums_1.ogg",
+      "size": 4131265
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/drums_2.ogg",
+      "size": 5803261
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/drums_3.ogg",
+      "size": 3230633
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/drums_4.ogg",
+      "size": 7619679
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/guitar.ogg",
+      "size": 8292630
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/notes.mid",
+      "size": 229454
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/preview.ogg",
+      "size": 638625
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/song.ini",
+      "size": 888
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/song.ogg",
+      "size": 7483363
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Enter Sandman/vocals.ogg",
+      "size": 5661316
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/album.png",
+      "size": 362336
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/bass.ogg",
+      "size": 7437525
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/crowd.ogg",
+      "size": 45864
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/drums_1.ogg",
+      "size": 6547032
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/drums_2.ogg",
+      "size": 4240712
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/drums_3.ogg",
+      "size": 1356534
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/drums_4.ogg",
+      "size": 10522680
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/guitar.ogg",
+      "size": 10888961
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/notes.mid",
+      "size": 190471
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/preview.ogg",
+      "size": 712292
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/song.ini",
+      "size": 1122
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/song.ogg",
+      "size": 7101129
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fade to Black/vocals.ogg",
+      "size": 3365071
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/album.png",
+      "size": 362336
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/bass.ogg",
+      "size": 5395857
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/crowd.ogg",
+      "size": 33925
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/drums_1.ogg",
+      "size": 5010506
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/drums_2.ogg",
+      "size": 4984765
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/drums_3.ogg",
+      "size": 137394
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/drums_4.ogg",
+      "size": 9598855
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/guitar.ogg",
+      "size": 6909541
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/notes.mid",
+      "size": 243390
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/preview.ogg",
+      "size": 676870
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/song.ini",
+      "size": 1504
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/song.ogg",
+      "size": 2388131
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fight Fire with Fire/vocals.ogg",
+      "size": 3300368
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/album.png",
+      "size": 362336
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/bass.ogg",
+      "size": 6958538
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/crowd.ogg",
+      "size": 697025
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/drums_1.ogg",
+      "size": 2739682
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/drums_2.ogg",
+      "size": 5355791
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/drums_3.ogg",
+      "size": 1434234
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/drums_4.ogg",
+      "size": 8062531
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/guitar.ogg",
+      "size": 7907309
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/notes.mid",
+      "size": 110289
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/preview.ogg",
+      "size": 609684
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/song.ini",
+      "size": 766
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/song.ogg",
+      "size": 3972294
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - For Whom the Bell Tolls/vocals.ogg",
+      "size": 2615114
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/album.png",
+      "size": 2188017
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/bass.ogg",
+      "size": 6281630
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/crowd.ogg",
+      "size": 39028
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/drums_1.ogg",
+      "size": 4146716
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/drums_2.ogg",
+      "size": 5977121
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/drums_3.ogg",
+      "size": 882981
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/drums_4.ogg",
+      "size": 8644139
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/guitar.ogg",
+      "size": 9020574
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/notes.mid",
+      "size": 212861
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/preview.ogg",
+      "size": 582842
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/song.ini",
+      "size": 1045
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/song.ogg",
+      "size": 1813798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Frantic/vocals.ogg",
+      "size": 5695143
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/album.png",
+      "size": 2054826
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/bass.ogg",
+      "size": 5731556
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/crowd.ogg",
+      "size": 30678
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/drums_1.ogg",
+      "size": 4232307
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/drums_2.ogg",
+      "size": 5735079
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/drums_3.ogg",
+      "size": 1602868
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/drums_4.ogg",
+      "size": 6039373
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/guitar.ogg",
+      "size": 6048263
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/notes.mid",
+      "size": 176493
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/preview.ogg",
+      "size": 591118
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/song.ini",
+      "size": 955
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/song.ogg",
+      "size": 2882778
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Fuel/vocals.ogg",
+      "size": 5322128
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/album.png",
+      "size": 155901
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/bass.ogg",
+      "size": 4238362
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/crowd.ogg",
+      "size": 568931
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/drums_1.ogg",
+      "size": 5076570
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/drums_2.ogg",
+      "size": 6553073
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/drums_3.ogg",
+      "size": 760677
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/drums_4.ogg",
+      "size": 7588439
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/guitar.ogg",
+      "size": 6564087
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/notes.mid",
+      "size": 152171
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/preview.ogg",
+      "size": 807139
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/song.ini",
+      "size": 933
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/song.ogg",
+      "size": 2404337
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Hit the Lights/vocals.ogg",
+      "size": 3244421
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/album.png",
+      "size": 3095353
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/bass.ogg",
+      "size": 6010640
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/crowd.ogg",
+      "size": 36968
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/drums_1.ogg",
+      "size": 3751920
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/drums_2.ogg",
+      "size": 2500919
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/drums_3.ogg",
+      "size": 460057
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/drums_4.ogg",
+      "size": 7987939
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/guitar.ogg",
+      "size": 8069664
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/notes.mid",
+      "size": 140129
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/preview.ogg",
+      "size": 819165
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/song.ini",
+      "size": 974
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/song.ogg",
+      "size": 6511705
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - King Nothing/vocals.ogg",
+      "size": 5802563
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/album.png",
+      "size": 401798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/bass.ogg",
+      "size": 9227493
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/crowd.ogg",
+      "size": 890988
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/drums_1.ogg",
+      "size": 7692734
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/drums_2.ogg",
+      "size": 5640558
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/drums_3.ogg",
+      "size": 2108013
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/drums_4.ogg",
+      "size": 14543147
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/guitar.ogg",
+      "size": 13970106
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/notes.mid",
+      "size": 351680
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/preview.ogg",
+      "size": 769463
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/song.ini",
+      "size": 1443
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/song.ogg",
+      "size": 4051364
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Master of Puppets/vocals.ogg",
+      "size": 11866331
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/album.png",
+      "size": 4105338
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/bass.ogg",
+      "size": 13487703
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/crowd.ogg",
+      "size": 70542
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/drums_1.ogg",
+      "size": 9677724
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/drums_2.ogg",
+      "size": 10082726
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/drums_3.ogg",
+      "size": 558584
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/drums_4.ogg",
+      "size": 19067290
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/guitar.ogg",
+      "size": 17644425
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/notes.mid",
+      "size": 371067
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/preview.ogg",
+      "size": 689160
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/song.ini",
+      "size": 946
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/song.ogg",
+      "size": 5375112
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Mercyful Fate/vocals.ogg",
+      "size": 9254065
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/album.png",
+      "size": 1535886
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/bass.ogg",
+      "size": 6360756
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/crowd.ogg",
+      "size": 38324
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/drums_1.ogg",
+      "size": 4726163
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/drums_2.ogg",
+      "size": 7566858
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/drums_3.ogg",
+      "size": 2252679
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/drums_4.ogg",
+      "size": 7209093
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/guitar.ogg",
+      "size": 8813708
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/notes.mid",
+      "size": 120006
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/preview.ogg",
+      "size": 639640
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/song.ogg",
+      "size": 8431065
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - No Leaf Clover/vocals.ogg",
+      "size": 4327097
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/album.png",
+      "size": 52201
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/bass.ogg",
+      "size": 5048378
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/crowd.ogg",
+      "size": 5350189
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/drums_1.ogg",
+      "size": 3359474
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/drums_2.ogg",
+      "size": 3089193
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/drums_3.ogg",
+      "size": 684785
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/drums_4.ogg",
+      "size": 7071267
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/guitar.ogg",
+      "size": 10230346
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/notes.mid",
+      "size": 94745
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/preview.ogg",
+      "size": 549923
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/song.ini",
+      "size": 790
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/song.ogg",
+      "size": 8383118
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Nothing Else Matters/vocals.ogg",
+      "size": 5886500
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/album.png",
+      "size": 7941032
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/bass.ogg",
+      "size": 8815790
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/crowd.ogg",
+      "size": 2279790
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/drums_1.ogg",
+      "size": 8007829
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/drums_2.ogg",
+      "size": 4701152
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/drums_3.ogg",
+      "size": 331136
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/drums_4.ogg",
+      "size": 11948252
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/guitar.ogg",
+      "size": 12154420
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/notes.mid",
+      "size": 284719
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/preview.ogg",
+      "size": 704254
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/song.ini",
+      "size": 1035
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/song.ogg",
+      "size": 4622046
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - One/vocals.ogg",
+      "size": 3748904
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/album.png",
+      "size": 401798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/bass.ogg",
+      "size": 10568979
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/crowd.ogg",
+      "size": 54180
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/drums_1.ogg",
+      "size": 6801574
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/drums_2.ogg",
+      "size": 5574328
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/drums_3.ogg",
+      "size": 751061
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/drums_4.ogg",
+      "size": 14235447
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/guitar.ogg",
+      "size": 11486577
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/notes.mid",
+      "size": 222813
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/preview.ogg",
+      "size": 687035
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/song.ini",
+      "size": 806
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/song.ogg",
+      "size": 4922254
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Orion/vocals.ogg",
+      "size": 54180
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/album.png",
+      "size": 41749
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/bass.ogg",
+      "size": 6304243
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/crowd.ogg",
+      "size": 1403740
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/drums_1.ogg",
+      "size": 3215292
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/drums_2.ogg",
+      "size": 7096343
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/drums_3.ogg",
+      "size": 542757
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/drums_4.ogg",
+      "size": 8913429
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/guitar.ogg",
+      "size": 7420493
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/notes.chart",
+      "size": 197661
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/notes.mid",
+      "size": 141585
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/preview.ogg",
+      "size": 655479
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/song.ini",
+      "size": 980
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/song.ogg",
+      "size": 8627549
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Sad But True/vocals.ogg",
+      "size": 6108943
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/album.png",
+      "size": 155901
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/bass.ogg",
+      "size": 6988114
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/crowd.ogg",
+      "size": 1168436
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/drums_1.ogg",
+      "size": 7107775
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/drums_2.ogg",
+      "size": 8324944
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/drums_3.ogg",
+      "size": 1148709
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/drums_4.ogg",
+      "size": 12074240
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/guitar.ogg",
+      "size": 12770798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/notes.mid",
+      "size": 250927
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/preview.ogg",
+      "size": 814065
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/song.ini",
+      "size": 1025
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/song.ogg",
+      "size": 1017187
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Seek and Destroy/vocals.ogg",
+      "size": 5087184
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/album.png",
+      "size": 2054826
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/bass.ogg",
+      "size": 4673178
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/crowd.ogg",
+      "size": 5007474
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/drums_1.ogg",
+      "size": 3228977
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/drums_2.ogg",
+      "size": 5600553
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/drums_3.ogg",
+      "size": 470655
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/drums_4.ogg",
+      "size": 6512127
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/guitar.ogg",
+      "size": 6270868
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/notes.mid",
+      "size": 118539
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/preview.ogg",
+      "size": 688368
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/song.ini",
+      "size": 823
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/song.ogg",
+      "size": 2988762
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Memory Remains/vocals.ogg",
+      "size": 7607424
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/album.png",
+      "size": 7941032
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/bass.ogg",
+      "size": 9448848
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/crowd.ogg",
+      "size": 43584
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/drums_1.ogg",
+      "size": 6525098
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/drums_2.ogg",
+      "size": 6544837
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/drums_3.ogg",
+      "size": 812955
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/drums_4.ogg",
+      "size": 12790762
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/guitar.ogg",
+      "size": 10957739
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/notes.mid",
+      "size": 283103
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/preview.ogg",
+      "size": 676650
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/song.ini",
+      "size": 1010
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/song.ogg",
+      "size": 2119102
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Shortest Straw/vocals.ogg",
+      "size": 7878895
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/album.png",
+      "size": 401798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/bass.ogg",
+      "size": 7792981
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/crowd.ogg",
+      "size": 42550
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/drums_1.ogg",
+      "size": 4284535
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/drums_2.ogg",
+      "size": 5761880
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/drums_3.ogg",
+      "size": 2532528
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/drums_4.ogg",
+      "size": 10273164
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/guitar.ogg",
+      "size": 10579384
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/notes.mid",
+      "size": 161444
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/preview.ogg",
+      "size": 565348
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/song.ini",
+      "size": 810
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/song.ogg",
+      "size": 2876549
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Thing That Should Not Be/vocals.ogg",
+      "size": 5066939
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/album.png",
+      "size": 52201
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/bass.ogg",
+      "size": 6252662
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/crowd.ogg",
+      "size": 3964582
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/drums_1.ogg",
+      "size": 7060249
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/drums_2.ogg",
+      "size": 8938546
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/drums_3.ogg",
+      "size": 795411
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/drums_4.ogg",
+      "size": 10422493
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/guitar.ogg",
+      "size": 9745196
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/notes.mid",
+      "size": 118975
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/preview.ogg",
+      "size": 658542
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/song.ini",
+      "size": 1040
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/song.ogg",
+      "size": 10096984
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - The Unforgiven/vocals.ogg",
+      "size": 9057618
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/album.png",
+      "size": 401798
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/bass.ogg",
+      "size": 7556256
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/crowd.ogg",
+      "size": 43033
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/drums_1.ogg",
+      "size": 5362274
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/drums_2.ogg",
+      "size": 8191269
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/drums_3.ogg",
+      "size": 1131924
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/drums_4.ogg",
+      "size": 11405997
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/guitar.ogg",
+      "size": 10545546
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/notes.mid",
+      "size": 190374
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/preview.ogg",
+      "size": 645796
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/song.ini",
+      "size": 1031
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/song.ogg",
+      "size": 6924428
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Welcome Home (Sanitarium)/vocals.ogg",
+      "size": 4419255
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/album.png",
+      "size": 52201
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/bass.ogg",
+      "size": 8058039
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/crowd.ogg",
+      "size": 42947
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/drums_1.ogg",
+      "size": 5303656
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/drums_2.ogg",
+      "size": 9928102
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/drums_3.ogg",
+      "size": 3145016
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/drums_4.ogg",
+      "size": 9141393
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/guitar.ogg",
+      "size": 9213797
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/notes.mid",
+      "size": 183919
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/preview.ogg",
+      "size": 608823
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/song.ini",
+      "size": 1000
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/song.ogg",
+      "size": 6345440
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Wherever I May Roam/vocals.ogg",
+      "size": 7971863
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/album.png",
+      "size": 155901
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/backup.mid",
+      "size": 221938
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/bass.ogg",
+      "size": 4308568
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/crowd.ogg",
+      "size": 834559
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/drums_1.ogg",
+      "size": 5096669
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/drums_2.ogg",
+      "size": 6527353
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/drums_3.ogg",
+      "size": 1156763
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/drums_4.ogg",
+      "size": 6806681
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/guitar.ogg",
+      "size": 7116840
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/notes.mid",
+      "size": 221997
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/preview.ogg",
+      "size": 969438
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/song.ini",
+      "size": 1036
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/song.ogg",
+      "size": 1210140
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Metallica - Whiplash/vocals.ogg",
+      "size": 3384478
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/album.png",
+      "size": 201817
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/bass.ogg",
+      "size": 5010997
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/crowd.ogg",
+      "size": 30015
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/drums_1.ogg",
+      "size": 4152547
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/drums_2.ogg",
+      "size": 2554682
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/drums_3.ogg",
+      "size": 1272903
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/drums_4.ogg",
+      "size": 7858668
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/guitar.ogg",
+      "size": 6299969
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/notes.mid",
+      "size": 135018
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/preview.ogg",
+      "size": 618972
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/song.ini",
+      "size": 1346
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/song.ogg",
+      "size": 6180321
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Michael Schenker Group - Armed and Ready/vocals.ogg",
+      "size": 6447105
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/album.png",
+      "size": 415272
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/bass.ogg",
+      "size": 3660192
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/crowd.ogg",
+      "size": 346944
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/drums_1.ogg",
+      "size": 2741767
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/drums_2.ogg",
+      "size": 2932846
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/drums_3.ogg",
+      "size": 51741
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/drums_4.ogg",
+      "size": 4928057
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/guitar.ogg",
+      "size": 3846850
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/notes.mid",
+      "size": 106986
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/preview.ogg",
+      "size": 640003
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/song.ini",
+      "size": 1027
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/song.ogg",
+      "size": 3354348
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Mot\u00f6rhead - Ace of Spades/vocals.ogg",
+      "size": 3760204
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/album.png",
+      "size": 379309
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/bass.ogg",
+      "size": 1741916
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/crowd.ogg",
+      "size": 17946
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/drums_1.ogg",
+      "size": 1786418
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/drums_2.ogg",
+      "size": 1406582
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/drums_3.ogg",
+      "size": 129387
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/drums_4.ogg",
+      "size": 3918607
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/guitar.ogg",
+      "size": 2697509
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/notes.mid",
+      "size": 60747
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/preview.ogg",
+      "size": 681171
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/song.ini",
+      "size": 1048
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/song.ogg",
+      "size": 1743058
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Queen - Stone Cold Crazy/vocals.ogg",
+      "size": 1758064
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/album.png",
+      "size": 322416
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/bass.ogg",
+      "size": 3566368
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/crowd.ogg",
+      "size": 23286
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/drums_1.ogg",
+      "size": 4707771
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/drums_2.ogg",
+      "size": 5076833
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/drums_3.ogg",
+      "size": 1747660
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/drums_4.ogg",
+      "size": 3965546
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/guitar.ogg",
+      "size": 4597676
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/notes.mid",
+      "size": 92802
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/preview.ogg",
+      "size": 665371
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/song.ini",
+      "size": 822
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/song.ogg",
+      "size": 93319
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Samhain - Mother of Mercy/vocals.ogg",
+      "size": 4483111
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/album.png",
+      "size": 372137
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/bass.ogg",
+      "size": 6151019
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/crowd.ogg",
+      "size": 33736
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/drums_1.ogg",
+      "size": 6293783
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/drums_2.ogg",
+      "size": 7487241
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/drums_3.ogg",
+      "size": 863810
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/drums_4.ogg",
+      "size": 8142069
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/guitar.ogg",
+      "size": 7720112
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/notes.mid",
+      "size": 234092
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/preview.ogg",
+      "size": 704056
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/song.ini",
+      "size": 1087
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/song.ogg",
+      "size": 6554887
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Slayer - War Ensemble/vocals.ogg",
+      "size": 6460653
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/album.jpg",
+      "size": 69558
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/bass.ogg",
+      "size": 4851667
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/crowd.ogg",
+      "size": 28318
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/drums_1.ogg",
+      "size": 3449176
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/drums_2.ogg",
+      "size": 2236764
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/drums_3.ogg",
+      "size": 409783
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/drums_4.ogg",
+      "size": 6308324
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/guitar.ogg",
+      "size": 7115411
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/notes.mid",
+      "size": 134482
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/old album.png",
+      "size": 296547
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/preview.ogg",
+      "size": 568247
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/song.ini",
+      "size": 1041
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/song.ogg",
+      "size": 6238445
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Social Distortion - Mommy's Little Monster (Live)/vocals.ogg",
+      "size": 2967738
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/album.png",
+      "size": 448143
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/bass.ogg",
+      "size": 4354249
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/crowd.ogg",
+      "size": 25454
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/drums_1.ogg",
+      "size": 4935690
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/drums_2.ogg",
+      "size": 4301188
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/drums_3.ogg",
+      "size": 355264
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/drums_4.ogg",
+      "size": 6446169
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/guitar.ogg",
+      "size": 5084595
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/notes.mid",
+      "size": 134167
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/preview.ogg",
+      "size": 922160
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/song.ini",
+      "size": 1043
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/song.ogg",
+      "size": 1757958
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Suicidal Tendencies - War Inside My Head/vocals.ogg",
+      "size": 4133638
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/album.png",
+      "size": 479424
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/bass.ogg",
+      "size": 4149945
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/crowd.ogg",
+      "size": 2070095
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/drums_1.ogg",
+      "size": 3490558
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/drums_2.ogg",
+      "size": 2651538
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/drums_3.ogg",
+      "size": 621427
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/drums_4.ogg",
+      "size": 6128462
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/guitar.ogg",
+      "size": 5926604
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/notes.mid",
+      "size": 111366
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/preview.ogg",
+      "size": 666697
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/song.ini",
+      "size": 1015
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/song.ogg",
+      "size": 3975117
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/System of a Down - Toxicity/vocals.ogg",
+      "size": 4082493
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/album.png",
+      "size": 456039
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/bass.ogg",
+      "size": 6475295
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/crowd.ogg",
+      "size": 39458
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/drums_1.ogg",
+      "size": 6529554
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/drums_2.ogg",
+      "size": 9131542
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/drums_3.ogg",
+      "size": 3252947
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/drums_4.ogg",
+      "size": 10368935
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/guitar.ogg",
+      "size": 7571034
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/notes.mid",
+      "size": 157525
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/preview.ogg",
+      "size": 652496
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/song.ini",
+      "size": 1024
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/song.ogg",
+      "size": 6985212
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/The Sword - The Black River/vocals.ogg",
+      "size": 3896242
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/album.png",
+      "size": 551977
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/bass.ogg",
+      "size": 6459937
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/crowd.ogg",
+      "size": 1233337
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/drums_1.ogg",
+      "size": 6238420
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/drums_2.ogg",
+      "size": 7244786
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/drums_3.ogg",
+      "size": 240081
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/drums_4.ogg",
+      "size": 8948964
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/guitar.ogg",
+      "size": 7939901
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/notes.mid",
+      "size": 131450
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/preview.ogg",
+      "size": 948219
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/song.ini",
+      "size": 1063
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/song.ogg",
+      "size": 302592
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/Thin Lizzy - The Boys Are Back In Town/vocals.ogg",
+      "size": 5242468
+    },
+    {
+      "path": "(2009) Guitar Hero - Metallica/changelog.txt",
+      "size": 1477
+    }
+  ],
+  "extracted_size": 2427270703,
+  "file_count": 647,
+  "chart_count": 49,
+  "release_date": "2009-03-29"
 }

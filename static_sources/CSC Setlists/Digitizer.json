@@ -3,18 +3,1359 @@
   "folder_id": "static-digitizer",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 82,
-  "total_size": 973550079,
-  "file_count": 335,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-digitizer",
-      "path": "Digitizer/Digitizer.rar",
+      "url": "https://customsongscentral.b-cdn.net/Digitizer.rar?ref=customsongscentral.com",
       "name": "Digitizer.rar",
       "size": 973550079,
-      "md5": "8c8b9f111d3cdecb3d0a427a3181248e",
-      "url": "https://customsongscentral.b-cdn.net/Digitizer.rar?ref=customsongscentral.com"
+      "md5": "8c8b9f111d3cdecb3d0a427a3181248e"
     }
-  ]
+  ],
+  "download_size": 973550079,
+  "files": [
+    {
+      "path": "Digitizer/01. Turning your computer on/1. Tristam - Once Again/album.jpg",
+      "size": 151973
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/1. Tristam - Once Again/notes.chart",
+      "size": 24217
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/1. Tristam - Once Again/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/1. Tristam - Once Again/song.ogg",
+      "size": 8643315
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/2. Glue70 - Coral Fumes/album.png",
+      "size": 84440
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/2. Glue70 - Coral Fumes/notes.chart",
+      "size": 27295
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/2. Glue70 - Coral Fumes/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/2. Glue70 - Coral Fumes/song.ogg",
+      "size": 9259699
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/3. Unknown Brain - Saviour/album.jpg",
+      "size": 41420
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/3. Unknown Brain - Saviour/notes.chart",
+      "size": 14180
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/3. Unknown Brain - Saviour/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/3. Unknown Brain - Saviour/song.ogg",
+      "size": 6585221
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/4. Coldplay - Adventure of a Lifetime (Matoma Remix)/album.png",
+      "size": 476398
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/4. Coldplay - Adventure of a Lifetime (Matoma Remix)/notes.chart",
+      "size": 34525
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/4. Coldplay - Adventure of a Lifetime (Matoma Remix)/song.ini",
+      "size": 683
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/4. Coldplay - Adventure of a Lifetime (Matoma Remix)/song.ogg",
+      "size": 8287936
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/5. Fakear - La lune rousse/album.jpg",
+      "size": 116735
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/5. Fakear - La lune rousse/notes.chart",
+      "size": 15027
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/5. Fakear - La lune rousse/song.ini",
+      "size": 614
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/5. Fakear - La lune rousse/song.mp3",
+      "size": 9151215
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/6. Outrun - Do It/album.jpg",
+      "size": 164049
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/6. Outrun - Do It/notes.chart",
+      "size": 21564
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/6. Outrun - Do It/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Digitizer/01. Turning your computer on/6. Outrun - Do It/song.mp3",
+      "size": 10770807
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/1. Sunset Neon - Got You/album.png",
+      "size": 454360
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/1. Sunset Neon - Got You/notes.chart",
+      "size": 35820
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/1. Sunset Neon - Got You/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/1. Sunset Neon - Got You/song.ogg",
+      "size": 7756889
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/2. The M Machine - Faces/album.jpg",
+      "size": 111659
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/2. The M Machine - Faces/notes.chart",
+      "size": 15607
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/2. The M Machine - Faces/song.ini",
+      "size": 444
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/2. The M Machine - Faces/song.ogg",
+      "size": 7698133
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/3. ak+q - over the crimson skies/album.jpg",
+      "size": 64654
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/3. ak+q - over the crimson skies/notes.chart",
+      "size": 16576
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/3. ak+q - over the crimson skies/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/3. ak+q - over the crimson skies/song.ogg",
+      "size": 8423220
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/4. Klaypex - MLG/album.png",
+      "size": 620567
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/4. Klaypex - MLG/notes.chart",
+      "size": 14263
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/4. Klaypex - MLG/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/4. Klaypex - MLG/song.mp3",
+      "size": 4985207
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/5. ODDEEO - _This_feeling_is_a_clich\u00e9/album.jpg",
+      "size": 45559
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/5. ODDEEO - _This_feeling_is_a_clich\u00e9/notes.chart",
+      "size": 22696
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/5. ODDEEO - _This_feeling_is_a_clich\u00e9/song.ini",
+      "size": 460
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/5. ODDEEO - _This_feeling_is_a_clich\u00e9/song.ogg",
+      "size": 9668796
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/6. Timmy Trumpet & SCNDL - Bleed/album.jpg",
+      "size": 17860
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/6. Timmy Trumpet & SCNDL - Bleed/notes.chart",
+      "size": 18437
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/6. Timmy Trumpet & SCNDL - Bleed/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Digitizer/02. Trying to produce with Audacity/6. Timmy Trumpet & SCNDL - Bleed/song.ogg",
+      "size": 13028888
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/1. Calvin Harris - School/album.jpg",
+      "size": 92458
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/1. Calvin Harris - School/notes.chart",
+      "size": 11001
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/1. Calvin Harris - School/song.ini",
+      "size": 441
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/1. Calvin Harris - School/song.ogg",
+      "size": 4479955
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/2. Klaypex - 1941/album.jpg",
+      "size": 170106
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/2. Klaypex - 1941/notes.chart",
+      "size": 28556
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/2. Klaypex - 1941/song.ini",
+      "size": 475
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/2. Klaypex - 1941/song.mp3",
+      "size": 7275623
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/3. Retrovision - Flash/album.jpg",
+      "size": 1908217
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/3. Retrovision - Flash/notes.chart",
+      "size": 36816
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/3. Retrovision - Flash/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/3. Retrovision - Flash/song.ogg",
+      "size": 9713907
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/4. Darren Styles & Gammer - You & I (Rythmic's Riff Edit)/album.png",
+      "size": 12740
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/4. Darren Styles & Gammer - You & I (Rythmic's Riff Edit)/notes.chart",
+      "size": 60562
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/4. Darren Styles & Gammer - You & I (Rythmic's Riff Edit)/song.ini",
+      "size": 524
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/4. Darren Styles & Gammer - You & I (Rythmic's Riff Edit)/song.ogg",
+      "size": 15107056
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/5. Nero - New Life/album.jpg",
+      "size": 68858
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/5. Nero - New Life/notes.chart",
+      "size": 72973
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/5. Nero - New Life/song.ini",
+      "size": 489
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/5. Nero - New Life/song.ogg",
+      "size": 11014651
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/6. Porter Robinson - Goodbye To A World/album.png",
+      "size": 185418
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/6. Porter Robinson - Goodbye To A World/notes.chart",
+      "size": 32369
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/6. Porter Robinson - Goodbye To A World/song.ini",
+      "size": 585
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/6. Porter Robinson - Goodbye To A World/song.ogg",
+      "size": 17964270
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/7. I Am Legion - Powerplay/album.png",
+      "size": 195451
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/7. I Am Legion - Powerplay/background.jpg",
+      "size": 442506
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/7. I Am Legion - Powerplay/notes.chart",
+      "size": 87544
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/7. I Am Legion - Powerplay/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Digitizer/03. Actually you need more than Audacity/7. I Am Legion - Powerplay/song.ogg",
+      "size": 7127235
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/1. Mark Governor - Stadium Rave (SpongeBob Squarepants Edit)/album.png",
+      "size": 334181
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/1. Mark Governor - Stadium Rave (SpongeBob Squarepants Edit)/notes.chart",
+      "size": 18947
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/1. Mark Governor - Stadium Rave (SpongeBob Squarepants Edit)/song.ini",
+      "size": 494
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/1. Mark Governor - Stadium Rave (SpongeBob Squarepants Edit)/song.ogg",
+      "size": 5109090
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/2. Rusko - Woo Boost/album.jpg",
+      "size": 63807
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/2. Rusko - Woo Boost/notes.chart",
+      "size": 33908
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/2. Rusko - Woo Boost/song.ini",
+      "size": 424
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/2. Rusko - Woo Boost/song.ogg",
+      "size": 11946623
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/3. Boom Kitty - Saguaro/album.png",
+      "size": 290881
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/3. Boom Kitty - Saguaro/notes.chart",
+      "size": 17842
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/3. Boom Kitty - Saguaro/song.ini",
+      "size": 616
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/3. Boom Kitty - Saguaro/song.ogg",
+      "size": 8773609
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/4. Haywyre - Dichotomy (Soft Mix)/album.jpg",
+      "size": 155537
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/4. Haywyre - Dichotomy (Soft Mix)/notes.chart",
+      "size": 33055
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/4. Haywyre - Dichotomy (Soft Mix)/song.ini",
+      "size": 461
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/4. Haywyre - Dichotomy (Soft Mix)/song.ogg",
+      "size": 13706339
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/5. Carbon Airways - Black Sun/album.jpg",
+      "size": 36774
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/5. Carbon Airways - Black Sun/notes.chart",
+      "size": 36212
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/5. Carbon Airways - Black Sun/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/5. Carbon Airways - Black Sun/song.ogg",
+      "size": 8411281
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/6. Toby Fox - Dummy!/album.png",
+      "size": 1724
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/6. Toby Fox - Dummy!/notes.chart",
+      "size": 19282
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/6. Toby Fox - Dummy!/song.ini",
+      "size": 452
+    },
+    {
+      "path": "Digitizer/04. Messing around with a free trial/6. Toby Fox - Dummy!/song.ogg",
+      "size": 5640021
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/1. Savant - Heart/album.PNG",
+      "size": 382674
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/1. Savant - Heart/notes.chart",
+      "size": 49260
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/1. Savant - Heart/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/1. Savant - Heart/song.ogg",
+      "size": 20503768
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/2. Savant - Melody Circus/album.png",
+      "size": 1142970
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/2. Savant - Melody Circus/notes.chart",
+      "size": 23241
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/2. Savant - Melody Circus/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/2. Savant - Melody Circus/song.ogg",
+      "size": 9019401
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/3. Savant - Change/album.jpg",
+      "size": 84722
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/3. Savant - Change/notes.chart",
+      "size": 71229
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/3. Savant - Change/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Digitizer/05. 'OMG I'm a musical Savant now!'/3. Savant - Change/song.ogg",
+      "size": 10457718
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/1. Seven Lions - Creation/album.jpg",
+      "size": 28153
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/1. Seven Lions - Creation/notes.chart",
+      "size": 42886
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/1. Seven Lions - Creation/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/1. Seven Lions - Creation/song.ogg",
+      "size": 12702483
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/2. Hairitage - Rock This/album.jpg",
+      "size": 58023
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/2. Hairitage - Rock This/notes.chart",
+      "size": 39021
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/2. Hairitage - Rock This/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/2. Hairitage - Rock This/song.ogg",
+      "size": 10554768
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/3. Major Lazer & Flux Pavillion - Jah No Partial/album.png",
+      "size": 808491
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/3. Major Lazer & Flux Pavillion - Jah No Partial/notes.chart",
+      "size": 57630
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/3. Major Lazer & Flux Pavillion - Jah No Partial/song.ini",
+      "size": 480
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/3. Major Lazer & Flux Pavillion - Jah No Partial/song.mp3",
+      "size": 10180440
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/4. deadmau5 - No Problem/album.jpg",
+      "size": 23269
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/4. deadmau5 - No Problem/notes.chart",
+      "size": 39146
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/4. deadmau5 - No Problem/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/4. deadmau5 - No Problem/song.mp3",
+      "size": 16861517
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/5. Televisor - Pinup/album.PNG",
+      "size": 227223
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/5. Televisor - Pinup/notes.chart",
+      "size": 30019
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/5. Televisor - Pinup/song.ini",
+      "size": 475
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/5. Televisor - Pinup/song.ogg",
+      "size": 8411367
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/6. Zomboy - Vancouver Beatdown/album.png",
+      "size": 421651
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/6. Zomboy - Vancouver Beatdown/notes.chart",
+      "size": 47140
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/6. Zomboy - Vancouver Beatdown/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Digitizer/06. Realizing you're not quite there/6. Zomboy - Vancouver Beatdown/song.ogg",
+      "size": 13397985
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/1. Varien - Cloak and Dagger/album.png",
+      "size": 285462
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/1. Varien - Cloak and Dagger/notes.chart",
+      "size": 42966
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/1. Varien - Cloak and Dagger/song.ini",
+      "size": 490
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/1. Varien - Cloak and Dagger/song.ogg",
+      "size": 7726508
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/2. The Bloody Beetroots - Volevo Un Gatto Nero (You Promised Me)/album.jpg",
+      "size": 72023
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/2. The Bloody Beetroots - Volevo Un Gatto Nero (You Promised Me)/notes.chart",
+      "size": 48417
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/2. The Bloody Beetroots - Volevo Un Gatto Nero (You Promised Me)/song.ini",
+      "size": 468
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/2. The Bloody Beetroots - Volevo Un Gatto Nero (You Promised Me)/song.ogg",
+      "size": 10040929
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/3. Haywyre - Insight/album.png",
+      "size": 1827633
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/3. Haywyre - Insight/notes.chart",
+      "size": 36457
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/3. Haywyre - Insight/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/3. Haywyre - Insight/song.ogg",
+      "size": 9608123
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/4. Skrillex - Reptile's Theme/album.jpg",
+      "size": 88397
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/4. Skrillex - Reptile's Theme/notes.chart",
+      "size": 71780
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/4. Skrillex - Reptile's Theme/song.ini",
+      "size": 533
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/4. Skrillex - Reptile's Theme/song.ogg",
+      "size": 9387101
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/5. Doctor P - Tetris/album.jpg",
+      "size": 44323
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/5. Doctor P - Tetris/notes.chart",
+      "size": 16483
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/5. Doctor P - Tetris/song.ini",
+      "size": 410
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/5. Doctor P - Tetris/song.ogg",
+      "size": 5375922
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/6. Nero's Day At Disneyland - Child Protective Service Theme Song/album.jpg",
+      "size": 75053
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/6. Nero's Day At Disneyland - Child Protective Service Theme Song/notes.chart",
+      "size": 18450
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/6. Nero's Day At Disneyland - Child Protective Service Theme Song/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Digitizer/07. Watching tutorials/6. Nero's Day At Disneyland - Child Protective Service Theme Song/song.ogg",
+      "size": 4560784
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/1. deadmau5 - deadmau5 Radio/album.jpg",
+      "size": 54730
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/1. deadmau5 - deadmau5 Radio/notes.chart",
+      "size": 149628
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/1. deadmau5 - deadmau5 Radio/song.ini",
+      "size": 915
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/1. deadmau5 - deadmau5 Radio/song.ogg",
+      "size": 23572775
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/2. Anenon - Two for C/album.png",
+      "size": 33191
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/2. Anenon - Two for C/notes.chart",
+      "size": 44004
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/2. Anenon - Two for C/song.ini",
+      "size": 492
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/2. Anenon - Two for C/song.ogg",
+      "size": 8259408
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/3. Zection - Control/album.PNG",
+      "size": 192978
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/3. Zection - Control/notes.chart",
+      "size": 56377
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/3. Zection - Control/song.ini",
+      "size": 453
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/3. Zection - Control/song.ogg",
+      "size": 11490579
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/4. Justice - Heavy Metal/album.jpg",
+      "size": 56598
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/4. Justice - Heavy Metal/notes.chart",
+      "size": 37298
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/4. Justice - Heavy Metal/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/4. Justice - Heavy Metal/song.ogg",
+      "size": 10504124
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/5. Noisia - Lilith's Club/album.jpg",
+      "size": 30894
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/5. Noisia - Lilith's Club/notes.chart",
+      "size": 39588
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/5. Noisia - Lilith's Club/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/5. Noisia - Lilith's Club/song.ogg",
+      "size": 10645375
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/6. Toby Fox - Your Best Nightmare/album.png",
+      "size": 1724
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/6. Toby Fox - Your Best Nightmare/notes.chart",
+      "size": 25870
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/6. Toby Fox - Your Best Nightmare/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Digitizer/08. Trying to recreate some sounds/6. Toby Fox - Your Best Nightmare/song.ogg",
+      "size": 9123833
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/1. Petit Biscuit - Creation Comes Alive (feat. Sonia)/album.jpg",
+      "size": 37750
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/1. Petit Biscuit - Creation Comes Alive (feat. Sonia)/notes.chart",
+      "size": 22319
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/1. Petit Biscuit - Creation Comes Alive (feat. Sonia)/song.ini",
+      "size": 527
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/1. Petit Biscuit - Creation Comes Alive (feat. Sonia)/song.mp3",
+      "size": 7998693
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/2. Korn & Skrillex - Narcissistic Cannibal/album.jpg",
+      "size": 57257
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/2. Korn & Skrillex - Narcissistic Cannibal/notes.chart",
+      "size": 46026
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/2. Korn & Skrillex - Narcissistic Cannibal/song.ini",
+      "size": 607
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/2. Korn & Skrillex - Narcissistic Cannibal/song.mp3",
+      "size": 7704031
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/3. Com!ng Soon!!! - Wait For It/album.jpg",
+      "size": 3336706
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/3. Com!ng Soon!!! - Wait For It/notes.chart",
+      "size": 76665
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/3. Com!ng Soon!!! - Wait For It/song.ini",
+      "size": 471
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/3. Com!ng Soon!!! - Wait For It/song.mp3",
+      "size": 16922121
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/4. Laszlo & WRLD - You & Me/album.PNG",
+      "size": 372268
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/4. Laszlo & WRLD - You & Me/notes.chart",
+      "size": 27507
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/4. Laszlo & WRLD - You & Me/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/4. Laszlo & WRLD - You & Me/song.ogg",
+      "size": 11989418
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/5. 3ASiC - Jelly/album.jpg",
+      "size": 18362
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/5. 3ASiC - Jelly/notes.chart",
+      "size": 25575
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/5. 3ASiC - Jelly/song.ini",
+      "size": 408
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/5. 3ASiC - Jelly/song.mp3",
+      "size": 8486660
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/6. Infected Mushroom - Becoming Insane/album.jpg",
+      "size": 43398
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/6. Infected Mushroom - Becoming Insane/notes.chart",
+      "size": 64937
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/6. Infected Mushroom - Becoming Insane/song.ini",
+      "size": 558
+    },
+    {
+      "path": "Digitizer/09. 'Fuck it, presets are the easy solution'/6. Infected Mushroom - Becoming Insane/song.ogg",
+      "size": 20415913
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/1. The Chemical Brothers - The Salmon Dance/album.jpg",
+      "size": 93530
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/1. The Chemical Brothers - The Salmon Dance/notes.chart",
+      "size": 55175
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/1. The Chemical Brothers - The Salmon Dance/song.ini",
+      "size": 422
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/1. The Chemical Brothers - The Salmon Dance/song.ogg",
+      "size": 8622219
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/2. Daft Punk - Digital Love/album.png",
+      "size": 203787
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/2. Daft Punk - Digital Love/notes.chart",
+      "size": 51730
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/2. Daft Punk - Digital Love/song.ini",
+      "size": 411
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/2. Daft Punk - Digital Love/song.ogg",
+      "size": 13680423
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/3. Noisia - Machine Gun/album.jpg",
+      "size": 30150
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/3. Noisia - Machine Gun/notes.chart",
+      "size": 32581
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/3. Noisia - Machine Gun/song.ini",
+      "size": 517
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/3. Noisia - Machine Gun/song.ogg",
+      "size": 11499895
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/4. Mandragora - Get Away/album.png",
+      "size": 969479
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/4. Mandragora - Get Away/notes.chart",
+      "size": 111487
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/4. Mandragora - Get Away/song.ini",
+      "size": 627
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/4. Mandragora - Get Away/song.ogg",
+      "size": 9592836
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/5. Exclusion - Void Sector Tau/album.png",
+      "size": 210052
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/5. Exclusion - Void Sector Tau/notes.chart",
+      "size": 37247
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/5. Exclusion - Void Sector Tau/song.ini",
+      "size": 437
+    },
+    {
+      "path": "Digitizer/10. Not finding the right preset/5. Exclusion - Void Sector Tau/song.ogg",
+      "size": 6909067
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/1. Kill The Noise - Without A Trace (ft. Stalking Gia)/album.png",
+      "size": 995699
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/1. Kill The Noise - Without A Trace (ft. Stalking Gia)/notes.chart",
+      "size": 40095
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/1. Kill The Noise - Without A Trace (ft. Stalking Gia)/song.ini",
+      "size": 457
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/1. Kill The Noise - Without A Trace (ft. Stalking Gia)/song.ogg",
+      "size": 9670106
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/2. Mewnlight Rose - Meteorite/album.jpg",
+      "size": 119979
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/2. Mewnlight Rose - Meteorite/guitar.ogg",
+      "size": 13467015
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/2. Mewnlight Rose - Meteorite/notes.chart",
+      "size": 34312
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/2. Mewnlight Rose - Meteorite/song.ini",
+      "size": 561
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/2. Mewnlight Rose - Meteorite/song.ogg",
+      "size": 13362024
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/3. Excision - Fight Through The Pain/album.jpg",
+      "size": 58709
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/3. Excision - Fight Through The Pain/notes.chart",
+      "size": 43034
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/3. Excision - Fight Through The Pain/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/3. Excision - Fight Through The Pain/song.mp3",
+      "size": 10140430
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/4. Danny Baranowsky - The Battle of Lil' Slugger/album.jpg",
+      "size": 38928
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/4. Danny Baranowsky - The Battle of Lil' Slugger/notes.chart",
+      "size": 21303
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/4. Danny Baranowsky - The Battle of Lil' Slugger/song.ini",
+      "size": 479
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/4. Danny Baranowsky - The Battle of Lil' Slugger/song.ogg",
+      "size": 5424827
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/5. Zedd - Addicted To A Memory/album.jpg",
+      "size": 69779
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/5. Zedd - Addicted To A Memory/notes.chart",
+      "size": 55837
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/5. Zedd - Addicted To A Memory/song.ini",
+      "size": 592
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/5. Zedd - Addicted To A Memory/song.ogg",
+      "size": 12924786
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/6. F-777 - Vortex/album.jpg",
+      "size": 81252
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/6. F-777 - Vortex/notes.chart",
+      "size": 30408
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/6. F-777 - Vortex/song.ini",
+      "size": 371
+    },
+    {
+      "path": "Digitizer/11. Getting angry at your computer for not cooperating/6. F-777 - Vortex/song.ogg",
+      "size": 5794063
+    },
+    {
+      "path": "Digitizer/12. Cursing at the world/1. Justice - Planisph\u00e8re/album.png",
+      "size": 316927
+    },
+    {
+      "path": "Digitizer/12. Cursing at the world/1. Justice - Planisph\u00e8re/notes.chart",
+      "size": 93749
+    },
+    {
+      "path": "Digitizer/12. Cursing at the world/1. Justice - Planisph\u00e8re/song.ini",
+      "size": 430
+    },
+    {
+      "path": "Digitizer/12. Cursing at the world/1. Justice - Planisph\u00e8re/song.mp3",
+      "size": 42425991
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/1. aran - Ripples (DJ Noriken Remix)/album.jpg",
+      "size": 291741
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/1. aran - Ripples (DJ Noriken Remix)/notes.chart",
+      "size": 22868
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/1. aran - Ripples (DJ Noriken Remix)/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/1. aran - Ripples (DJ Noriken Remix)/song.ogg",
+      "size": 7495732
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/2. onionn. - Onionnized/album.jpg",
+      "size": 193909
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/2. onionn. - Onionnized/notes.chart",
+      "size": 48039
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/2. onionn. - Onionnized/song.ini",
+      "size": 409
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/2. onionn. - Onionnized/song.ogg",
+      "size": 10553471
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/3. C2C - Arcades/album.jpg",
+      "size": 161920
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/3. C2C - Arcades/notes.chart",
+      "size": 51835
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/3. C2C - Arcades/song.ini",
+      "size": 395
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/3. C2C - Arcades/song.ogg",
+      "size": 11557173
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/4. Zeds Dead - In The Beginning/album.jpg",
+      "size": 103900
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/4. Zeds Dead - In The Beginning/notes.chart",
+      "size": 50890
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/4. Zeds Dead - In The Beginning/song.ini",
+      "size": 468
+    },
+    {
+      "path": "Digitizer/13. 'Wait, I turned that knob and it made a wub!'/4. Zeds Dead - In The Beginning/song.ogg",
+      "size": 9983032
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/1. xi - Solar Storm/album.png",
+      "size": 260184
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/1. xi - Solar Storm/notes.chart",
+      "size": 26209
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/1. xi - Solar Storm/song.ini",
+      "size": 621
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/1. xi - Solar Storm/song.ogg",
+      "size": 4494715
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/2. Tokyo Machine - Blast/album.jpg",
+      "size": 29019
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/2. Tokyo Machine - Blast/notes.chart",
+      "size": 43722
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/2. Tokyo Machine - Blast/song.ini",
+      "size": 482
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/2. Tokyo Machine - Blast/song.ogg",
+      "size": 11566319
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/3. Au5 & Fractal - Smoke/album.png",
+      "size": 717928
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/3. Au5 & Fractal - Smoke/notes.chart",
+      "size": 68714
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/3. Au5 & Fractal - Smoke/song.ini",
+      "size": 543
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/3. Au5 & Fractal - Smoke/song.ogg",
+      "size": 12515894
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/4. Culprate - Nightmares VIP/album.jpg",
+      "size": 92634
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/4. Culprate - Nightmares VIP/notes.chart",
+      "size": 53433
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/4. Culprate - Nightmares VIP/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/4. Culprate - Nightmares VIP/song.mp3",
+      "size": 7683133
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/5. Herobust - Heavy Meddle/album.jpg",
+      "size": 44070
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/5. Herobust - Heavy Meddle/notes.chart",
+      "size": 39892
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/5. Herobust - Heavy Meddle/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Digitizer/14. Being satisfied by your sounds for the first time/5. Herobust - Heavy Meddle/song.mp3",
+      "size": 9008849
+    },
+    {
+      "path": "Digitizer/15. Needing emotional support/1. Dusty Kid - That Hug/album.jpg",
+      "size": 45987
+    },
+    {
+      "path": "Digitizer/15. Needing emotional support/1. Dusty Kid - That Hug/notes.chart",
+      "size": 141955
+    },
+    {
+      "path": "Digitizer/15. Needing emotional support/1. Dusty Kid - That Hug/song.ini",
+      "size": 427
+    },
+    {
+      "path": "Digitizer/15. Needing emotional support/1. Dusty Kid - That Hug/song.mp3",
+      "size": 50675460
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/1. Marc Rebillet - Funk Emergency/album.png",
+      "size": 632531
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/1. Marc Rebillet - Funk Emergency/notes.chart",
+      "size": 28592
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/1. Marc Rebillet - Funk Emergency/song.ini",
+      "size": 407
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/1. Marc Rebillet - Funk Emergency/song.ogg",
+      "size": 4865282
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/1. Marc Rebillet - Funk Emergency/video.mp4",
+      "size": 15164457
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/2. Dejo & Bon - Wheelpower & Go! (Siavash)/album.png",
+      "size": 232928
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/2. Dejo & Bon - Wheelpower & Go! (Siavash)/background.jpg",
+      "size": 271740
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/2. Dejo & Bon - Wheelpower & Go! (Siavash)/guitar.ogg",
+      "size": 10862276
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/2. Dejo & Bon - Wheelpower & Go! (Siavash)/notes.mid",
+      "size": 48275
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/2. Dejo & Bon - Wheelpower & Go! (Siavash)/song.ini",
+      "size": 886
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/3. Bassnectar - Infinite/album.jpg",
+      "size": 84173
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/3. Bassnectar - Infinite/notes.chart",
+      "size": 149122
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/3. Bassnectar - Infinite/song.ini",
+      "size": 407
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/3. Bassnectar - Infinite/song.ogg",
+      "size": 16477623
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/4. Datsik & Excision - Vindicate/album.jpg",
+      "size": 165150
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/4. Datsik & Excision - Vindicate/notes.chart",
+      "size": 62190
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/4. Datsik & Excision - Vindicate/song.ini",
+      "size": 500
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/4. Datsik & Excision - Vindicate/song.mp3",
+      "size": 11105174
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/5. Knife Party - Destroy Them With Lazers (BUSTED by Herobust)/album.png",
+      "size": 3029130
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/5. Knife Party - Destroy Them With Lazers (BUSTED by Herobust)/notes.chart",
+      "size": 163378
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/5. Knife Party - Destroy Them With Lazers (BUSTED by Herobust)/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Digitizer/16. Finally understand how compression works/5. Knife Party - Destroy Them With Lazers (BUSTED by Herobust)/song.ogg",
+      "size": 13211773
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/1. M.O.O.N - Hydrogen/album.jpg",
+      "size": 78795
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/1. M.O.O.N - Hydrogen/notes.chart",
+      "size": 71557
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/1. M.O.O.N - Hydrogen/song.ini",
+      "size": 485
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/1. M.O.O.N - Hydrogen/song.ogg",
+      "size": 12214434
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/2. OHM - Earthbeat/album.png",
+      "size": 2662774
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/2. OHM - Earthbeat/bass.ogg",
+      "size": 2418861
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/2. OHM - Earthbeat/drums.ogg",
+      "size": 2761312
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/2. OHM - Earthbeat/guitar.ogg",
+      "size": 2413291
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/2. OHM - Earthbeat/notes.mid",
+      "size": 15575
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/2. OHM - Earthbeat/song.ini",
+      "size": 583
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/2. OHM - Earthbeat/song.ogg",
+      "size": 2521408
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/3. Eric Prydz - Opus/album.jpg",
+      "size": 1008500
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/3. Eric Prydz - Opus/notes.chart",
+      "size": 117621
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/3. Eric Prydz - Opus/song.ini",
+      "size": 446
+    },
+    {
+      "path": "Digitizer/17. Producing some shit songs (bonus shitpost tier, don't play those)/3. Eric Prydz - Opus/song.mp3",
+      "size": 21203068
+    }
+  ],
+  "extracted_size": 983958405,
+  "file_count": 335,
+  "chart_count": 82,
+  "release_date": "2019-11-15"
 }

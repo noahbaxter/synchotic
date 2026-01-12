@@ -1,19 +1,4009 @@
 {
   "name": "(2009) Guitar Hero 5",
-  "folder_id": "static-gh-5",
+  "folder_id": "static-2009-guitar-hero-5",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 90,
-  "total_size": 2771735799,
-  "file_count": 997,
-  "files": [
+  "downloads": [
     {
       "id": "1zYYtwtj-wYdgkYbVSRlGtx-StHxowIU8",
-      "path": "(2009) Guitar Hero 5/Guitar Hero 5.7z",
       "name": "Guitar Hero 5.7z",
       "size": 2771735799,
       "md5": "bb3afe6a4f2a2c874c9ef18325960cc3"
     }
-  ]
+  ],
+  "download_size": 2771735799,
+  "files": [
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Dredg - Bug Eyes/album.jpg",
+      "size": 26522
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Dredg - Bug Eyes/notes.mid",
+      "size": 116485
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Dredg - Bug Eyes/song.ini",
+      "size": 1160
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Dredg - Bug Eyes/song.ogg",
+      "size": 8437647
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/album.png",
+      "size": 787899
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/drums_1.ogg",
+      "size": 5150138
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/drums_2.ogg",
+      "size": 6564299
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/drums_3.ogg",
+      "size": 2949349
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/drums_4.ogg",
+      "size": 8761701
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/guitar.ogg",
+      "size": 7401417
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/notes.mid",
+      "size": 149806
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/rhythm.ogg",
+      "size": 5423664
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/song.ini",
+      "size": 554
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/song.ogg",
+      "size": 3606221
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/GHWT Medley/vocals.ogg",
+      "size": 4727578
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Led Zeppelin - Black Dog (Live)/album.jpg",
+      "size": 36560
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Led Zeppelin - Black Dog (Live)/notes.mid",
+      "size": 42783
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Led Zeppelin - Black Dog (Live)/song.ini",
+      "size": 1424
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Led Zeppelin - Black Dog (Live)/song.ogg",
+      "size": 9305737
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/album.png",
+      "size": 289148
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/drums_1.ogg",
+      "size": 2823051
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/drums_2.ogg",
+      "size": 6428579
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/guitar.ogg",
+      "size": 5776298
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/notes.mid",
+      "size": 31479
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/rhythm.ogg",
+      "size": 3017317
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/song.ini",
+      "size": 1143
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/song.ogg",
+      "size": 117581
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Live - I Alone/vocals.ogg",
+      "size": 5845229
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/album.png",
+      "size": 11003
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/drums.ogg",
+      "size": 6279765
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/guitar.ogg",
+      "size": 4883292
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/notes.mid",
+      "size": 80592
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/rhythm.ogg",
+      "size": 6522126
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/song.ini",
+      "size": 1172
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/song.ogg",
+      "size": 4735538
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Guitar Hero 5 Hidden Songs/Nine Inch Nails - March Of The Pigs/vocals.ogg",
+      "size": 4445642
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/album.png",
+      "size": 359407
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/drums_1.ogg",
+      "size": 2967525
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/drums_2.ogg",
+      "size": 4368968
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/drums_3.ogg",
+      "size": 4163371
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/drums_4.ogg",
+      "size": 200963
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/guitar.ogg",
+      "size": 5319358
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/notes.mid",
+      "size": 110377
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/rhythm.ogg",
+      "size": 3963900
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/song.ini",
+      "size": 1171
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/song.ogg",
+      "size": 3951520
+    },
+    {
+      "path": "(2009) Guitar Hero 5/3 Doors Down - Kryptonite/vocals.ogg",
+      "size": 4646205
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/album.png",
+      "size": 41230
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/drums_1.ogg",
+      "size": 3144927
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/drums_2.ogg",
+      "size": 2868462
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/drums_3.ogg",
+      "size": 4728572
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/drums_4.ogg",
+      "size": 616896
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/guitar.ogg",
+      "size": 4545879
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/notes.mid",
+      "size": 149701
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/rhythm.ogg",
+      "size": 3470095
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/song.ini",
+      "size": 1094
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/song.ogg",
+      "size": 2272181
+    },
+    {
+      "path": "(2009) Guitar Hero 5/A Perfect Circle - Judith/vocals.ogg",
+      "size": 3340037
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/album.png",
+      "size": 70574
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/drums_1.ogg",
+      "size": 2897454
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/drums_2.ogg",
+      "size": 4987983
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/drums_3.ogg",
+      "size": 5357863
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/drums_4.ogg",
+      "size": 726279
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/guitar.ogg",
+      "size": 4797978
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/notes.mid",
+      "size": 169324
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/rhythm.ogg",
+      "size": 4152843
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/song.ini",
+      "size": 1077
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/song.ogg",
+      "size": 5219655
+    },
+    {
+      "path": "(2009) Guitar Hero 5/AFI - Medicate/vocals.ogg",
+      "size": 4915937
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/album.png",
+      "size": 34135
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/drums_1.ogg",
+      "size": 2128227
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/drums_2.ogg",
+      "size": 3164577
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/drums_3.ogg",
+      "size": 4111599
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/drums_4.ogg",
+      "size": 1604101
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/guitar.ogg",
+      "size": 2872839
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/notes.mid",
+      "size": 119466
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/rhythm.ogg",
+      "size": 2847688
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/song.ini",
+      "size": 1093
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/song.ogg",
+      "size": 3305264
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Arctic Monkeys - Brianstorm/vocals.ogg",
+      "size": 2825866
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/album.png",
+      "size": 23384
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/drums_1.ogg",
+      "size": 3654195
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/drums_2.ogg",
+      "size": 4013189
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/drums_3.ogg",
+      "size": 5883781
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/drums_4.ogg",
+      "size": 687703
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/guitar.ogg",
+      "size": 4458460
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/notes.mid",
+      "size": 122042
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/preview.ogg",
+      "size": 477299
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/rhythm.ogg",
+      "size": 3169728
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/song.ini",
+      "size": 1143
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/song.ogg",
+      "size": 2464175
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Attack! Attack! - You and Me/vocals.ogg",
+      "size": 3165167
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/album.png",
+      "size": 74889
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/crowd.ogg",
+      "size": 2541210
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/drums_1.ogg",
+      "size": 5640845
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/drums_2.ogg",
+      "size": 5623409
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/drums_3.ogg",
+      "size": 6660656
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/drums_4.ogg",
+      "size": 284243
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/guitar.ogg",
+      "size": 6258980
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/notes.mid",
+      "size": 118556
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/rhythm.ogg",
+      "size": 4657651
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/song.ini",
+      "size": 1133
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/song.ogg",
+      "size": 5038783
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Band of Horses - Cigarettes, Wedding Bands/vocals.ogg",
+      "size": 3328515
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/album.png",
+      "size": 228126
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/drums_1.ogg",
+      "size": 2450810
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/drums_2.ogg",
+      "size": 2657658
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/drums_3.ogg",
+      "size": 3877181
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/drums_4.ogg",
+      "size": 100029
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/guitar.ogg",
+      "size": 2615135
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/notes.mid",
+      "size": 61536
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/rhythm.ogg",
+      "size": 4568989
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/song.ini",
+      "size": 1100
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/song.ogg",
+      "size": 3813833
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beastie Boys - Gratitude/vocals.ogg",
+      "size": 1325032
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/album.png",
+      "size": 142711
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/drums_1.ogg",
+      "size": 2999210
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/drums_2.ogg",
+      "size": 2788525
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/drums_3.ogg",
+      "size": 4049086
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/guitar.ogg",
+      "size": 4682984
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/notes.mid",
+      "size": 115951
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/rhythm.ogg",
+      "size": 3799611
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/song.ini",
+      "size": 1163
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/song.ogg",
+      "size": 3804951
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Beck - Gamma Ray/vocals.ogg",
+      "size": 3035311
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/album.png",
+      "size": 416077
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/drums_1.ogg",
+      "size": 4193842
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/drums_2.ogg",
+      "size": 4006033
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/drums_3.ogg",
+      "size": 6092737
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/drums_4.ogg",
+      "size": 78760
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/guitar.ogg",
+      "size": 3962230
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/notes.mid",
+      "size": 172117
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/rhythm.ogg",
+      "size": 3208239
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/song.ini",
+      "size": 1111
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/song.ogg",
+      "size": 4311756
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Idol - Dancing With Myself/vocals.ogg",
+      "size": 4387042
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/album.png",
+      "size": 470404
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/drums_1.ogg",
+      "size": 2530576
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/drums_2.ogg",
+      "size": 1783327
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/drums_3.ogg",
+      "size": 5973161
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/drums_4.ogg",
+      "size": 100683
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/guitar.ogg",
+      "size": 5835917
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/notes.mid",
+      "size": 130149
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/rhythm.ogg",
+      "size": 4395296
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/song.ini",
+      "size": 1180
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/song.ogg",
+      "size": 2312760
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Billy Squier - Lonely Is the Night/vocals.ogg",
+      "size": 4567493
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/album.png",
+      "size": 85484
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/drums_1.ogg",
+      "size": 2878903
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/drums_2.ogg",
+      "size": 3501846
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/drums_3.ogg",
+      "size": 3847180
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/drums_4.ogg",
+      "size": 217612
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/guitar.ogg",
+      "size": 3605513
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/notes.mid",
+      "size": 142232
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/rhythm.ogg",
+      "size": 2939383
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/song.ini",
+      "size": 1115
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/song.ogg",
+      "size": 2443310
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blink-182 - The Rock Show/vocals.ogg",
+      "size": 3070439
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/album.png",
+      "size": 226405
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/crowd.ogg",
+      "size": 1258215
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/drums_1.ogg",
+      "size": 1866388
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/drums_2.ogg",
+      "size": 1242329
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/drums_3.ogg",
+      "size": 2716985
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/drums_4.ogg",
+      "size": 474286
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/guitar.ogg",
+      "size": 2752026
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/notes.mid",
+      "size": 79250
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/rhythm.ogg",
+      "size": 3481264
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/song.ini",
+      "size": 1227
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/song.ogg",
+      "size": 2377371
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Blur - Song 2/vocals.ogg",
+      "size": 2306635
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/album.png",
+      "size": 171525
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/drums_1.ogg",
+      "size": 1371205
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/drums_2.ogg",
+      "size": 1780766
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/drums_3.ogg",
+      "size": 30522
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/drums_4.ogg",
+      "size": 3487965
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/guitar.ogg",
+      "size": 3466015
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/notes.mid",
+      "size": 88092
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/rhythm.ogg",
+      "size": 2760947
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/song.ini",
+      "size": 987
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/song.ogg",
+      "size": 1239625
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bob Dylan - All Along the Watchtower/vocals.ogg",
+      "size": 1778849
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/album.png",
+      "size": 387398
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/crowd.ogg",
+      "size": 2861895
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/drums_1.ogg",
+      "size": 2337552
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/drums_2.ogg",
+      "size": 2022831
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/drums_3.ogg",
+      "size": 4817630
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/drums_4.ogg",
+      "size": 635147
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/guitar.ogg",
+      "size": 4585755
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/notes.mid",
+      "size": 106846
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/rhythm.ogg",
+      "size": 4119720
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/song.ini",
+      "size": 1223
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/song.ogg",
+      "size": 5248907
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bon Jovi - You Give Love a Bad Name/vocals.ogg",
+      "size": 5257277
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/album.png",
+      "size": 431732
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/drums_1.ogg",
+      "size": 3911016
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/drums_2.ogg",
+      "size": 4088129
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/drums_3.ogg",
+      "size": 3858583
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/drums_4.ogg",
+      "size": 303029
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/guitar.ogg",
+      "size": 5109093
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/notes.mid",
+      "size": 98973
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/rhythm.ogg",
+      "size": 6194439
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/song.ini",
+      "size": 1122
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/song.ogg",
+      "size": 4203330
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Brand New - Sowing Season (Yeah)/vocals.ogg",
+      "size": 4925691
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/album.png",
+      "size": 432437
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/crowd.ogg",
+      "size": 2935795
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/drums_1.ogg",
+      "size": 5104683
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/drums_2.ogg",
+      "size": 7345474
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/drums_3.ogg",
+      "size": 9064742
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/drums_4.ogg",
+      "size": 605552
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/guitar.ogg",
+      "size": 5880778
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/notes.mid",
+      "size": 145992
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/rhythm.ogg",
+      "size": 5756222
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/song.ini",
+      "size": 1096
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/song.ogg",
+      "size": 4036915
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Bush - Comedown/vocals.ogg",
+      "size": 4651402
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/album.png",
+      "size": 69512
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/drums_1.ogg",
+      "size": 3844706
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/drums_2.ogg",
+      "size": 2890142
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/drums_3.ogg",
+      "size": 4396414
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/drums_4.ogg",
+      "size": 583621
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/guitar.ogg",
+      "size": 4318479
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/notes.mid",
+      "size": 167453
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/rhythm.ogg",
+      "size": 3269678
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/song.ini",
+      "size": 1133
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/song.ogg",
+      "size": 4249994
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Children of Bodom - Done With Everything, Die for Nothing/vocals.ogg",
+      "size": 3857313
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/album.png",
+      "size": 64061
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/drums_1.ogg",
+      "size": 3687086
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/drums_2.ogg",
+      "size": 4556884
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/drums_3.ogg",
+      "size": 5653712
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/drums_4.ogg",
+      "size": 57455
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/guitar.ogg",
+      "size": 4552703
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/notes.mid",
+      "size": 72692
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/rhythm.ogg",
+      "size": 3068276
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/song.ini",
+      "size": 1123
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/song.ogg",
+      "size": 5137093
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Coldplay - In My Place/vocals.ogg",
+      "size": 3911504
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/album.png",
+      "size": 283983
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/drums_1.ogg",
+      "size": 4312334
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/drums_2.ogg",
+      "size": 5992035
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/drums_3.ogg",
+      "size": 6711330
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/drums_4.ogg",
+      "size": 4701273
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/guitar.ogg",
+      "size": 6184448
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/notes.mid",
+      "size": 172061
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/rhythm.ogg",
+      "size": 4469666
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/song.ini",
+      "size": 1096
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/song.ogg",
+      "size": 6735700
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darker My Love - Blue Day/vocals.ogg",
+      "size": 4108827
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/album.png",
+      "size": 125640
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/drums_1.ogg",
+      "size": 4080280
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/drums_2.ogg",
+      "size": 1601021
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/drums_3.ogg",
+      "size": 4847382
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/drums_4.ogg",
+      "size": 710283
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/guitar.ogg",
+      "size": 4635510
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/notes.mid",
+      "size": 194178
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/rhythm.ogg",
+      "size": 3445959
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/song.ini",
+      "size": 1129
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/song.ogg",
+      "size": 3128452
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Darkest Hour - Demon(s)/vocals.ogg",
+      "size": 3501654
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/album.png",
+      "size": 184036
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/drums_1.ogg",
+      "size": 2302088
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/drums_2.ogg",
+      "size": 1356366
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/drums_3.ogg",
+      "size": 5107407
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/drums_4.ogg",
+      "size": 267396
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/guitar.ogg",
+      "size": 5772599
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/notes.mid",
+      "size": 92120
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/rhythm.ogg",
+      "size": 4681807
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/song.ini",
+      "size": 1086
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/song.ogg",
+      "size": 5036348
+    },
+    {
+      "path": "(2009) Guitar Hero 5/David Bowie - Fame/vocals.ogg",
+      "size": 4792704
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/album.png",
+      "size": 350672
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/drums_1.ogg",
+      "size": 5374356
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/drums_2.ogg",
+      "size": 3788154
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/drums_3.ogg",
+      "size": 9188426
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/drums_4.ogg",
+      "size": 297961
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/guitar.ogg",
+      "size": 7804802
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/notes.mid",
+      "size": 196127
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/rhythm.ogg",
+      "size": 5685986
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/song.ini",
+      "size": 1251
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/song.ogg",
+      "size": 6327351
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Deep Purple - Woman From Tokyo ('99 Remix)/vocals.ogg",
+      "size": 5112652
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/album.png",
+      "size": 179752
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/crowd.ogg",
+      "size": 1303312
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/drums_1.ogg",
+      "size": 5670024
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/drums_2.ogg",
+      "size": 6572728
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/drums_3.ogg",
+      "size": 8902087
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/drums_4.ogg",
+      "size": 208660
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/guitar.ogg",
+      "size": 7278176
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/notes.mid",
+      "size": 221854
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/rhythm.ogg",
+      "size": 6158240
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/song.ini",
+      "size": 1120
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/song.ogg",
+      "size": 4496690
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Dire Straits - Sultans of Swing/vocals.ogg",
+      "size": 5834589
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/album.png",
+      "size": 147558
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/drums_1.ogg",
+      "size": 3383957
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/drums_2.ogg",
+      "size": 4421910
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/drums_3.ogg",
+      "size": 4789458
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/drums_4.ogg",
+      "size": 4090014
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/guitar.ogg",
+      "size": 5075898
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/notes.mid",
+      "size": 124255
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/rhythm.ogg",
+      "size": 3884281
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/song.ini",
+      "size": 1067
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/song.ogg",
+      "size": 5352527
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Duran Duran - Hungry Like the Wolf/vocals.ogg",
+      "size": 4518334
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/album.png",
+      "size": 220711
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/drums_1.ogg",
+      "size": 698248
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/drums_2.ogg",
+      "size": 701726
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/drums_3.ogg",
+      "size": 1896374
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/drums_4.ogg",
+      "size": 302884
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/guitar.ogg",
+      "size": 2740957
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/notes.mid",
+      "size": 82699
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/preview.ogg",
+      "size": 434960
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/rhythm.ogg",
+      "size": 2624521
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/song.ini",
+      "size": 1172
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/song.ogg",
+      "size": 1807765
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Eagles of Death Metal - Wannabe In LA/vocals.ogg",
+      "size": 2208410
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/album.png",
+      "size": 304084
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/drums_1.ogg",
+      "size": 1983714
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/drums_2.ogg",
+      "size": 1828522
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/drums_3.ogg",
+      "size": 3978465
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/drums_4.ogg",
+      "size": 79124
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/guitar.ogg",
+      "size": 4584379
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/notes.mid",
+      "size": 83352
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/rhythm.ogg",
+      "size": 2972072
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/song.ini",
+      "size": 1179
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/song.ogg",
+      "size": 1609966
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elliott Smith - L.A/vocals.ogg",
+      "size": 4437532
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/album.png",
+      "size": 80766
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/crowd.ogg",
+      "size": 2656418
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/drums_1.ogg",
+      "size": 5401752
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/drums_2.ogg",
+      "size": 5793248
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/drums_3.ogg",
+      "size": 7107919
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/guitar.ogg",
+      "size": 5410894
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/notes.mid",
+      "size": 234027
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/rhythm.ogg",
+      "size": 4636436
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/song.ini",
+      "size": 1234
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/song.ogg",
+      "size": 5747259
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Elton John - Saturday Night's Alright (For Fighting)/vocals.ogg",
+      "size": 3722726
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/album.png",
+      "size": 222509
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/crowd.ogg",
+      "size": 1368143
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/drums_1.ogg",
+      "size": 2678014
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/drums_2.ogg",
+      "size": 3545293
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/drums_3.ogg",
+      "size": 4439743
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/drums_4.ogg",
+      "size": 205535
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/guitar.ogg",
+      "size": 3665322
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/notes.mid",
+      "size": 173767
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/rhythm.ogg",
+      "size": 2927733
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/song.ini",
+      "size": 1137
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/song.ogg",
+      "size": 156079
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Face to Face - Disconnected/vocals.ogg",
+      "size": 2328239
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/album.png",
+      "size": 191497
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/crowd.ogg",
+      "size": 2725280
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/drums_1.ogg",
+      "size": 1671086
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/drums_2.ogg",
+      "size": 1478509
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/drums_3.ogg",
+      "size": 4376243
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/guitar.ogg",
+      "size": 4818051
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/notes.mid",
+      "size": 97580
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/rhythm.ogg",
+      "size": 3688943
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/song.ini",
+      "size": 1154
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/song.ogg",
+      "size": 6580635
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Garbage - Only Happy When It Rains/vocals.ogg",
+      "size": 4344813
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/album.png",
+      "size": 141561
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/drums_1.ogg",
+      "size": 3612057
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/drums_2.ogg",
+      "size": 3053847
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/drums_3.ogg",
+      "size": 4242104
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/guitar.ogg",
+      "size": 4734176
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/notes.mid",
+      "size": 84202
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/rhythm.ogg",
+      "size": 3684037
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/song.ini",
+      "size": 999
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/song.ogg",
+      "size": 4877842
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gorillaz - Feel Good Inc/vocals.ogg",
+      "size": 4664815
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/album.png",
+      "size": 64977
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/crowd.ogg",
+      "size": 1373458
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/drums_1.ogg",
+      "size": 2983999
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/drums_2.ogg",
+      "size": 2750433
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/drums_3.ogg",
+      "size": 4303317
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/drums_4.ogg",
+      "size": 111370
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/guitar.ogg",
+      "size": 4911223
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/notes.mid",
+      "size": 129546
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/rhythm.ogg",
+      "size": 6043465
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/song.ini",
+      "size": 1201
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/song.ogg",
+      "size": 4807902
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Gov't Mule - Streamline Woman/vocals.ogg",
+      "size": 4397461
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/album.png",
+      "size": 175123
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/drums_1.ogg",
+      "size": 3991085
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/drums_2.ogg",
+      "size": 3895622
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/drums_3.ogg",
+      "size": 4583781
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/drums_4.ogg",
+      "size": 329533
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/guitar.ogg",
+      "size": 4036729
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/notes.mid",
+      "size": 120306
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/rhythm.ogg",
+      "size": 3139414
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/song.ini",
+      "size": 1247
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/song.ogg",
+      "size": 4347075
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Grand Funk Railroad - We're An American Band/vocals.ogg",
+      "size": 3667102
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/album.png",
+      "size": 44857
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/crowd.ogg",
+      "size": 1434309
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/drums_1.ogg",
+      "size": 5083454
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/drums_2.ogg",
+      "size": 6315150
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/drums_3.ogg",
+      "size": 7403897
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/drums_4.ogg",
+      "size": 908202
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/guitar.ogg",
+      "size": 5949426
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/notes.mid",
+      "size": 271721
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/rhythm.ogg",
+      "size": 4955705
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/song.ini",
+      "size": 1137
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/song.ogg",
+      "size": 565182
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iggy Pop - Lust for Life (Live)/vocals.ogg",
+      "size": 5493307
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/album.png",
+      "size": 69768
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/crowd.ogg",
+      "size": 2953667
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/drums_1.ogg",
+      "size": 6295162
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/drums_2.ogg",
+      "size": 6124014
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/drums_3.ogg",
+      "size": 7633895
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/drums_4.ogg",
+      "size": 949656
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/guitar.ogg",
+      "size": 7170229
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/notes.mid",
+      "size": 261759
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/preview.ogg",
+      "size": 620164
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/rhythm.ogg",
+      "size": 5683222
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/song.ini",
+      "size": 1230
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/song.ogg",
+      "size": 1353584
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Iron Maiden - 2 Minutes to Midnight/vocals.ogg",
+      "size": 4191363
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/album.png",
+      "size": 43279
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/drums.ogg",
+      "size": 6723712
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/drums_1.ogg",
+      "size": 4321329
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/drums_2.ogg",
+      "size": 2684431
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/drums_3.ogg",
+      "size": 5502269
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/drums_4.ogg",
+      "size": 869871
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/guitar.ogg",
+      "size": 4602028
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/notes.mid",
+      "size": 158877
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/rhythm.ogg",
+      "size": 4077478
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/song.ini",
+      "size": 1170
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/song.ogg",
+      "size": 3466497
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jeff Beck - Scatterbrain (Live)/vocals.ogg",
+      "size": 31076
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/album.png",
+      "size": 235110
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/crowd.ogg",
+      "size": 1747998
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/drums_1.ogg",
+      "size": 2891355
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/drums_2.ogg",
+      "size": 4472232
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/drums_3.ogg",
+      "size": 4993550
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/drums_4.ogg",
+      "size": 711621
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/guitar.ogg",
+      "size": 4070096
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/notes.mid",
+      "size": 140209
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/rhythm.ogg",
+      "size": 2986661
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/song.ini",
+      "size": 1113
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/song.ogg",
+      "size": 4046867
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Jimmy Eat World - Bleed American/vocals.ogg",
+      "size": 4156883
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/album.png",
+      "size": 370674
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/crowd.ogg",
+      "size": 1821443
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/drums_1.ogg",
+      "size": 4058642
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/drums_2.ogg",
+      "size": 5335376
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/drums_3.ogg",
+      "size": 6062572
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/drums_4.ogg",
+      "size": 389125
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/guitar.ogg",
+      "size": 4808469
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/notes.mid",
+      "size": 105127
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/rhythm.ogg",
+      "size": 3490934
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/song.ini",
+      "size": 1136
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/song.ogg",
+      "size": 4687554
+    },
+    {
+      "path": "(2009) Guitar Hero 5/John Mellencamp - Hurts So Good/vocals.ogg",
+      "size": 4569482
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/album.png",
+      "size": 439320
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/crowd.ogg",
+      "size": 1777693
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/drums_1.ogg",
+      "size": 2383666
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/drums_2.ogg",
+      "size": 3058112
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/drums_3.ogg",
+      "size": 3950697
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/drums_4.ogg",
+      "size": 20442
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/guitar.ogg",
+      "size": 3608077
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/notes.mid",
+      "size": 90164
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/rhythm.ogg",
+      "size": 2249853
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/song.ini",
+      "size": 1191
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/song.ogg",
+      "size": 3366023
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Johnny Cash - Ring of Fire/vocals.ogg",
+      "size": 2855188
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/album.png",
+      "size": 356115
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/drums_1.ogg",
+      "size": 3449362
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/drums_2.ogg",
+      "size": 3114552
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/drums_3.ogg",
+      "size": 3670173
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/drums_4.ogg",
+      "size": 3092787
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/guitar.ogg",
+      "size": 3483524
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/notes.mid",
+      "size": 127633
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/rhythm.ogg",
+      "size": 3013951
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/song.ini",
+      "size": 1157
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/song.ogg",
+      "size": 6154603
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kaiser Chiefs - Never Miss a Beat/vocals.ogg",
+      "size": 3528077
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/album.png",
+      "size": 49510
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/drums_1.ogg",
+      "size": 5099179
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/drums_2.ogg",
+      "size": 5198308
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/drums_3.ogg",
+      "size": 8375669
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/drums_4.ogg",
+      "size": 678498
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/guitar.ogg",
+      "size": 7919915
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/notes.mid",
+      "size": 230308
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/rhythm.ogg",
+      "size": 6303279
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/song.ini",
+      "size": 1112
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/song.ogg",
+      "size": 5159902
+    },
+    {
+      "path": "(2009) Guitar Hero 5/King Crimson - 21st Century Schizoid Man/vocals.ogg",
+      "size": 1428239
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/album.png",
+      "size": 118555
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/crowd.ogg",
+      "size": 2129750
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/drums_1.ogg",
+      "size": 3326029
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/drums_2.ogg",
+      "size": 3365080
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/drums_3.ogg",
+      "size": 3650339
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/drums_4.ogg",
+      "size": 247497
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/guitar.ogg",
+      "size": 4112400
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/notes.mid",
+      "size": 122107
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/rhythm.ogg",
+      "size": 3442510
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/song.ini",
+      "size": 1124
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/song.ogg",
+      "size": 3965392
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kings of Leon - Sex On Fire/vocals.ogg",
+      "size": 3393278
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/album.png",
+      "size": 510966
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/crowd.ogg",
+      "size": 1449805
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/drums_1.ogg",
+      "size": 1190274
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/drums_2.ogg",
+      "size": 2563426
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/drums_3.ogg",
+      "size": 4671900
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/guitar.ogg",
+      "size": 3652939
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/notes.mid",
+      "size": 79307
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/rhythm.ogg",
+      "size": 2919552
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/song.ini",
+      "size": 1142
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/song.ogg",
+      "size": 5085787
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Kiss - Shout It Out Loud/vocals.ogg",
+      "size": 3412688
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/album.png",
+      "size": 211138
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/drums_1.ogg",
+      "size": 1980472
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/drums_2.ogg",
+      "size": 3234537
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/drums_3.ogg",
+      "size": 312605
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/drums_4.ogg",
+      "size": 4644082
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/guitar.ogg",
+      "size": 4827737
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/notes.mid",
+      "size": 148436
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/rhythm.ogg",
+      "size": 3943018
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/song.ini",
+      "size": 1135
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/song.ogg",
+      "size": 4305168
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Love and Rockets - Mirror People/vocals.ogg",
+      "size": 4424959
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/album.png",
+      "size": 60911
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/drums_1.ogg",
+      "size": 5579557
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/drums_2.ogg",
+      "size": 5347881
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/drums_3.ogg",
+      "size": 6149376
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/drums_4.ogg",
+      "size": 352115
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/guitar.ogg",
+      "size": 6641083
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/notes.mid",
+      "size": 164340
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/rhythm.ogg",
+      "size": 4935685
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/song.ini",
+      "size": 1155
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/song.ogg",
+      "size": 3081128
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Megadeth - Sweating Bullets/vocals.ogg",
+      "size": 3801811
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/album.png",
+      "size": 298688
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/drums_1.ogg",
+      "size": 3017920
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/drums_2.ogg",
+      "size": 3048819
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/drums_3.ogg",
+      "size": 4488829
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/drums_4.ogg",
+      "size": 130834
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/guitar.ogg",
+      "size": 4461306
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/notes.mid",
+      "size": 125425
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/rhythm.ogg",
+      "size": 4909073
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/song.ini",
+      "size": 1151
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/song.ogg",
+      "size": 1754340
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Muse - Plug In Baby/vocals.ogg",
+      "size": 3928865
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/album.png",
+      "size": 570495
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/drums_1.ogg",
+      "size": 3635047
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/drums_2.ogg",
+      "size": 1693277
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/drums_3.ogg",
+      "size": 7650267
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/drums_4.ogg",
+      "size": 487313
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/guitar.ogg",
+      "size": 6215776
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/notes.mid",
+      "size": 192141
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/rhythm.ogg",
+      "size": 5173546
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/song.ini",
+      "size": 1163
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/song.ogg",
+      "size": 5216448
+    },
+    {
+      "path": "(2009) Guitar Hero 5/My Morning Jacket - One Big Holiday/vocals.ogg",
+      "size": 4348794
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/album.png",
+      "size": 28478
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/crowd.ogg",
+      "size": 1974352
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/drums_1.ogg",
+      "size": 4731066
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/drums_2.ogg",
+      "size": 5147878
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/drums_3.ogg",
+      "size": 5782605
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/drums_4.ogg",
+      "size": 1177943
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/guitar.ogg",
+      "size": 4861723
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/notes.mid",
+      "size": 146949
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/rhythm.ogg",
+      "size": 3692527
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/song.ini",
+      "size": 1118
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/song.ogg",
+      "size": 3295988
+    },
+    {
+      "path": "(2009) Guitar Hero 5/M\u00f6tley Cr\u00fce - Looks That Kill/vocals.ogg",
+      "size": 4499971
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/album.png",
+      "size": 250894
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/crowd.ogg",
+      "size": 5127293
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/drums_1.ogg",
+      "size": 2072828
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/drums_2.ogg",
+      "size": 3591271
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/drums_3.ogg",
+      "size": 6541191
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/drums_4.ogg",
+      "size": 67243
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/guitar.ogg",
+      "size": 5818207
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/notes.mid",
+      "size": 135696
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/preview.ogg",
+      "size": 544215
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/rhythm.ogg",
+      "size": 4304688
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/song.ini",
+      "size": 1230
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/song.ogg",
+      "size": 722772
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Lithium (Live)/vocals.ogg",
+      "size": 4559669
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/album.png",
+      "size": 250894
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/crowd.ogg",
+      "size": 2833271
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/drums_1.ogg",
+      "size": 5016779
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/drums_2.ogg",
+      "size": 6352046
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/drums_3.ogg",
+      "size": 7016330
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/drums_4.ogg",
+      "size": 173380
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/guitar.ogg",
+      "size": 6511707
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/notes.mid",
+      "size": 164506
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/rhythm.ogg",
+      "size": 5143252
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/song.ini",
+      "size": 1250
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/song.ogg",
+      "size": 799264
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Nirvana - Smells Like Teen Spirit/vocals.ogg",
+      "size": 5460834
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/album.png",
+      "size": 524849
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/drums_1.ogg",
+      "size": 2144955
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/drums_2.ogg",
+      "size": 1926884
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/drums_3.ogg",
+      "size": 4797080
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/drums_4.ogg",
+      "size": 45696
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/guitar.ogg",
+      "size": 4020218
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/notes.mid",
+      "size": 115204
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/rhythm.ogg",
+      "size": 3375474
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/song.ini",
+      "size": 1095
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/song.ogg",
+      "size": 3411139
+    },
+    {
+      "path": "(2009) Guitar Hero 5/No Doubt - Ex-Girlfriend/vocals.ogg",
+      "size": 4155561
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/album.png",
+      "size": 46211
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/drums_1.ogg",
+      "size": 10988071
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/drums_2.ogg",
+      "size": 6508110
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/drums_3.ogg",
+      "size": 18665824
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/drums_4.ogg",
+      "size": 1336462
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/guitar.ogg",
+      "size": 15278912
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/notes.mid",
+      "size": 311780
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/rhythm.ogg",
+      "size": 12036298
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/song.ini",
+      "size": 1152
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/song.ogg",
+      "size": 14517218
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Peter Frampton - Do You Feel Like We Do (Live)/vocals.ogg",
+      "size": 2851753
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/album.png",
+      "size": 161990
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/drums_1.ogg",
+      "size": 2593363
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/drums_2.ogg",
+      "size": 3584827
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/drums_3.ogg",
+      "size": 3057451
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/drums_4.ogg",
+      "size": 922888
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/guitar.ogg",
+      "size": 4441172
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/notes.mid",
+      "size": 106117
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/rhythm.ogg",
+      "size": 3795144
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/song.ini",
+      "size": 1159
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/song.ogg",
+      "size": 1170757
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Public Enemy Featuring Zakk Wylde - Bring the Noise 20XX/vocals.ogg",
+      "size": 3843079
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/album.png",
+      "size": 255015
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/crowd.ogg",
+      "size": 3264808
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/drums_1.ogg",
+      "size": 2585710
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/drums_2.ogg",
+      "size": 3135585
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/drums_3.ogg",
+      "size": 5399934
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/drums_4.ogg",
+      "size": 364964
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/guitar.ogg",
+      "size": 4382597
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/notes.mid",
+      "size": 98267
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/rhythm.ogg",
+      "size": 3259326
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/song.ini",
+      "size": 1093
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/song.ogg",
+      "size": 4438593
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queen & David Bowie - Under Pressure/vocals.ogg",
+      "size": 4401942
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/album.png",
+      "size": 407538
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/drums_1.ogg",
+      "size": 3738728
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/drums_2.ogg",
+      "size": 4500470
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/drums_3.ogg",
+      "size": 7212412
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/drums_4.ogg",
+      "size": 164491
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/guitar.ogg",
+      "size": 5819784
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/notes.mid",
+      "size": 140280
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/rhythm.ogg",
+      "size": 4281616
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/song.ini",
+      "size": 1134
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/song.ogg",
+      "size": 6828321
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Queens of the Stone Age - Make It Wit Chu/vocals.ogg",
+      "size": 4174549
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/album.png",
+      "size": 340469
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/drums_1.ogg",
+      "size": 5677002
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/drums_2.ogg",
+      "size": 5733628
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/drums_3.ogg",
+      "size": 6417176
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/drums_4.ogg",
+      "size": 4498887
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/guitar.ogg",
+      "size": 5747966
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/notes.mid",
+      "size": 143099
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/rhythm.ogg",
+      "size": 7006652
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/song.ini",
+      "size": 1146
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/song.ogg",
+      "size": 6166386
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rammstein - Du Hast/vocals.ogg",
+      "size": 5683040
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/album.png",
+      "size": 110870
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/drums_1.ogg",
+      "size": 3765211
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/drums_2.ogg",
+      "size": 3157880
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/drums_3.ogg",
+      "size": 3815235
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/drums_4.ogg",
+      "size": 999688
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/guitar.ogg",
+      "size": 3901574
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/notes.mid",
+      "size": 105627
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/rhythm.ogg",
+      "size": 2822010
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/song.ini",
+      "size": 1214
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/song.ogg",
+      "size": 1117190
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rose Hill Drive - Sneak Out/vocals.ogg",
+      "size": 2005604
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/album.png",
+      "size": 51707
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/crowd.ogg",
+      "size": 1390431
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/drums_1.ogg",
+      "size": 4398224
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/drums_2.ogg",
+      "size": 2124097
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/drums_3.ogg",
+      "size": 6078715
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/drums_4.ogg",
+      "size": 606190
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/guitar.ogg",
+      "size": 5785180
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/notes.mid",
+      "size": 207272
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/rhythm.ogg",
+      "size": 4582826
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/song.ini",
+      "size": 1152
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/song.ogg",
+      "size": 5101471
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Rush - The Spirit of Radio (Live)/vocals.ogg",
+      "size": 5498781
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/album.png",
+      "size": 478813
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/drums_1.ogg",
+      "size": 2951438
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/drums_2.ogg",
+      "size": 3704523
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/drums_3.ogg",
+      "size": 6419439
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/drums_4.ogg",
+      "size": 788908
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/guitar.ogg",
+      "size": 4811410
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/notes.mid",
+      "size": 151252
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/rhythm.ogg",
+      "size": 4226148
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/song.ini",
+      "size": 1198
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/song.ogg",
+      "size": 5553062
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Santana - No One to Depend On (Live)/vocals.ogg",
+      "size": 3406755
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/album.png",
+      "size": 360652
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/drums_1.ogg",
+      "size": 2941632
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/drums_2.ogg",
+      "size": 3193105
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/drums_3.ogg",
+      "size": 4948715
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/guitar.ogg",
+      "size": 3385423
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/notes.mid",
+      "size": 108970
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/rhythm.ogg",
+      "size": 2703649
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/song.ini",
+      "size": 1088
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/song.ogg",
+      "size": 3722437
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Scars on Broadway - They Say/vocals.ogg",
+      "size": 2738147
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/album.png",
+      "size": 540368
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/drums_2.ogg",
+      "size": 5728521
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/drums_3.ogg",
+      "size": 7526108
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/drums_4.ogg",
+      "size": 638990
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/guitar.ogg",
+      "size": 5697986
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/notes.mid",
+      "size": 140627
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/rhythm.ogg",
+      "size": 3935890
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/song.ini",
+      "size": 1223
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/song.ogg",
+      "size": 4186556
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Screaming Trees - Nearly Lost You/vocals.ogg",
+      "size": 6686193
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/album.png",
+      "size": 442503
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/drums_1.ogg",
+      "size": 6014832
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/drums_2.ogg",
+      "size": 5426514
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/drums_3.ogg",
+      "size": 5959737
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/drums_4.ogg",
+      "size": 1844137
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/guitar.ogg",
+      "size": 6942045
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/notes.mid",
+      "size": 175638
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/rhythm.ogg",
+      "size": 4455181
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/song.ini",
+      "size": 1176
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/song.ogg",
+      "size": 1388244
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sonic Youth - Incinerate/vocals.ogg",
+      "size": 2626261
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/album.png",
+      "size": 351867
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/drums_1.ogg",
+      "size": 4345361
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/drums_2.ogg",
+      "size": 4779415
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/drums_3.ogg",
+      "size": 6033406
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/drums_4.ogg",
+      "size": 4127253
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/guitar.ogg",
+      "size": 5446727
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/notes.mid",
+      "size": 132958
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/preview.ogg",
+      "size": 621479
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/rhythm.ogg",
+      "size": 3835989
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/song.ini",
+      "size": 1139
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/song.ogg",
+      "size": 5294432
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Spacehog - In the Meantime/vocals.ogg",
+      "size": 3559966
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/album.png",
+      "size": 536145
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/drums_1.ogg",
+      "size": 4992171
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/drums_2.ogg",
+      "size": 3853807
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/drums_3.ogg",
+      "size": 5978766
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/drums_4.ogg",
+      "size": 172330
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/guitar.ogg",
+      "size": 6612407
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/notes.mid",
+      "size": 152665
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/rhythm.ogg",
+      "size": 5023892
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/song.ini",
+      "size": 1102
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/song.ogg",
+      "size": 6516143
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Stevie Wonder - Superstition/vocals.ogg",
+      "size": 4858026
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/album.png",
+      "size": 508851
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/crowd.ogg",
+      "size": 1388674
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/drums_1.ogg",
+      "size": 2457429
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/drums_2.ogg",
+      "size": 1348601
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/drums_3.ogg",
+      "size": 3086351
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/guitar.ogg",
+      "size": 3263791
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/notes.mid",
+      "size": 92142
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/rhythm.ogg",
+      "size": 2465936
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/song.ini",
+      "size": 1121
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/song.ogg",
+      "size": 2895598
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sublime - What I Got/vocals.ogg",
+      "size": 3003789
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/album.png",
+      "size": 311407
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/crowd.ogg",
+      "size": 2014135
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/drums_1.ogg",
+      "size": 3761098
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/drums_2.ogg",
+      "size": 3136961
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/drums_3.ogg",
+      "size": 5968962
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/drums_4.ogg",
+      "size": 464914
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/guitar.ogg",
+      "size": 4868240
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/notes.mid",
+      "size": 181597
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/rhythm.ogg",
+      "size": 3729898
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/song.ini",
+      "size": 1162
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/song.ogg",
+      "size": 1191376
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Sunny Day Real Estate - Seven/vocals.ogg",
+      "size": 5348854
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/album.png",
+      "size": 206677
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/drums_1.ogg",
+      "size": 2814822
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/drums_2.ogg",
+      "size": 2869000
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/drums_3.ogg",
+      "size": 5038948
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/drums_4.ogg",
+      "size": 27079
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/guitar.ogg",
+      "size": 5012049
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/notes.mid",
+      "size": 134561
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/rhythm.ogg",
+      "size": 4677232
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/song.ini",
+      "size": 1164
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/song.ogg",
+      "size": 5701247
+    },
+    {
+      "path": "(2009) Guitar Hero 5/T. Rex - 20th Century Boy/vocals.ogg",
+      "size": 4670442
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/album.png",
+      "size": 505031
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/drums_1.ogg",
+      "size": 3487998
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/drums_2.ogg",
+      "size": 3787101
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/drums_3.ogg",
+      "size": 6345680
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/drums_4.ogg",
+      "size": 5544915
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/guitar.ogg",
+      "size": 4605118
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/notes.mid",
+      "size": 193240
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/rhythm.ogg",
+      "size": 4143040
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/song.ini",
+      "size": 1108
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/song.ogg",
+      "size": 4957819
+    },
+    {
+      "path": "(2009) Guitar Hero 5/TV on the Radio - Wolf Like Me/vocals.ogg",
+      "size": 4782476
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/album.png",
+      "size": 53024
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/drums_1.ogg",
+      "size": 2859947
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/drums_2.ogg",
+      "size": 3312668
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/drums_3.ogg",
+      "size": 3235198
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/drums_4.ogg",
+      "size": 1638030
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/guitar.ogg",
+      "size": 3278661
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/notes.mid",
+      "size": 143167
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/rhythm.ogg",
+      "size": 2641557
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/song.ini",
+      "size": 1163
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/song.ogg",
+      "size": 1440809
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Bronx - Six Days a Week/vocals.ogg",
+      "size": 2751599
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/album.png",
+      "size": 51743
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/drums_1.ogg",
+      "size": 3042831
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/drums_2.ogg",
+      "size": 3440799
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/drums_3.ogg",
+      "size": 6219083
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/drums_4.ogg",
+      "size": 529776
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/guitar.ogg",
+      "size": 5350523
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/notes.mid",
+      "size": 142182
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/rhythm.ogg",
+      "size": 4992346
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/song.ini",
+      "size": 1117
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/song.ogg",
+      "size": 5924109
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Derek Trucks Band - Younk Funk/vocals.ogg",
+      "size": 32768
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/album.png",
+      "size": 132183
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/drums_1.ogg",
+      "size": 1466598
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/drums_2.ogg",
+      "size": 1392411
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/drums_3.ogg",
+      "size": 2261165
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/drums_4.ogg",
+      "size": 249562
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/guitar.ogg",
+      "size": 2682304
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/notes.mid",
+      "size": 109419
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/rhythm.ogg",
+      "size": 2313315
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/song.ini",
+      "size": 1127
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/song.ogg",
+      "size": 3233504
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Duke Spirit - Send a Little Love Token/vocals.ogg",
+      "size": 2530720
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/album.png",
+      "size": 429708
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/drums_1.ogg",
+      "size": 4199047
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/drums_2.ogg",
+      "size": 1895524
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/drums_3.ogg",
+      "size": 5319271
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/drums_4.ogg",
+      "size": 1223622
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/guitar.ogg",
+      "size": 5625753
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/notes.mid",
+      "size": 171207
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/rhythm.ogg",
+      "size": 3843470
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/song.ini",
+      "size": 1147
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/song.ogg",
+      "size": 4742503
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Killers - All the Pretty Faces/vocals.ogg",
+      "size": 5079798
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/album.png",
+      "size": 386448
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/crowd.ogg",
+      "size": 2211355
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/drums_1.ogg",
+      "size": 4746163
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/drums_2.ogg",
+      "size": 4955506
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/drums_3.ogg",
+      "size": 5272630
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/drums_4.ogg",
+      "size": 135044
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/guitar.ogg",
+      "size": 6581105
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/notes.mid",
+      "size": 163449
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/rhythm.ogg",
+      "size": 4302071
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/song.ini",
+      "size": 1187
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/song.ogg",
+      "size": 4743043
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Police - So Lonely/vocals.ogg",
+      "size": 4727757
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/album.png",
+      "size": 516663
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/drums_1.ogg",
+      "size": 2784937
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/drums_2.ogg",
+      "size": 1609634
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/drums_3.ogg",
+      "size": 4412786
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/guitar.ogg",
+      "size": 4283715
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/notes.mid",
+      "size": 102701
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/rhythm.ogg",
+      "size": 3672417
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/song.ini",
+      "size": 1130
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/song.ogg",
+      "size": 3588356
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Raconteurs - Steady, As She Goes/vocals.ogg",
+      "size": 4664205
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/album.png",
+      "size": 335076
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/crowd.ogg",
+      "size": 6393434
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/drums_1.ogg",
+      "size": 7921636
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/drums_2.ogg",
+      "size": 8349623
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/drums_3.ogg",
+      "size": 9959458
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/drums_4.ogg",
+      "size": 4044888
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/guitar.ogg",
+      "size": 8359271
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/notes.mid",
+      "size": 178213
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/rhythm.ogg",
+      "size": 7567049
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/song.ini",
+      "size": 1199
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/song.ogg",
+      "size": 2853881
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Rolling Stones - Sympathy for the Devil/vocals.ogg",
+      "size": 7304938
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/album.png",
+      "size": 485733
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/crowd.ogg",
+      "size": 3187868
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/drums_1.ogg",
+      "size": 5281558
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/drums_2.ogg",
+      "size": 3405609
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/drums_3.ogg",
+      "size": 2744231
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/drums_4.ogg",
+      "size": 2570192
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/guitar.ogg",
+      "size": 5053926
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/notes.mid",
+      "size": 167247
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/rhythm.ogg",
+      "size": 3724517
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/song.ini",
+      "size": 1160
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/song.ogg",
+      "size": 707190
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Smashing Pumpkins - Bullet With Butterfly Wings/vocals.ogg",
+      "size": 3983846
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/album.png",
+      "size": 452178
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/drums_1.ogg",
+      "size": 2809076
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/drums_2.ogg",
+      "size": 1580798
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/drums_3.ogg",
+      "size": 4749701
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/drums_4.ogg",
+      "size": 229995
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/guitar.ogg",
+      "size": 4388484
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/notes.mid",
+      "size": 113816
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/rhythm.ogg",
+      "size": 3368996
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/song.ini",
+      "size": 1147
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/song.ogg",
+      "size": 645239
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The Sword - Maiden, Mother & Crone/vocals.ogg",
+      "size": 1712793
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/album.png",
+      "size": 260373
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/drums_1.ogg",
+      "size": 2575037
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/drums_2.ogg",
+      "size": 1107688
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/drums_3.ogg",
+      "size": 2159405
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/drums_4.ogg",
+      "size": 498560
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/guitar.ogg",
+      "size": 3912396
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/notes.mid",
+      "size": 71631
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/song.ini",
+      "size": 1096
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/song.ogg",
+      "size": 3408411
+    },
+    {
+      "path": "(2009) Guitar Hero 5/The White Stripes - Blue Orchid/vocals.ogg",
+      "size": 3558185
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/album.png",
+      "size": 384198
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/drums_1.ogg",
+      "size": 3950821
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/drums_2.ogg",
+      "size": 3743397
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/drums_3.ogg",
+      "size": 4337916
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/drums_4.ogg",
+      "size": 923694
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/guitar.ogg",
+      "size": 5677835
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/notes.mid",
+      "size": 131974
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/rhythm.ogg",
+      "size": 3639594
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/song.ini",
+      "size": 1142
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/song.ogg",
+      "size": 2582954
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thin Lizzy - Jailbreak/vocals.ogg",
+      "size": 4977110
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/album.png",
+      "size": 33396
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/crowd.ogg",
+      "size": 1373775
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/drums_1.ogg",
+      "size": 1328281
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/drums_2.ogg",
+      "size": 2244115
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/drums_3.ogg",
+      "size": 2926693
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/drums_4.ogg",
+      "size": 182822
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/guitar.ogg",
+      "size": 2385743
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/notes.mid",
+      "size": 123879
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/rhythm.ogg",
+      "size": 2126576
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/song.ini",
+      "size": 1098
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/song.ogg",
+      "size": 1733738
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Thrice - Deadbolt/vocals.ogg",
+      "size": 2257967
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/album.png",
+      "size": 41501
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/crowd.ogg",
+      "size": 1036613
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/drums_1.ogg",
+      "size": 4021138
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/drums_2.ogg",
+      "size": 3081325
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/drums_3.ogg",
+      "size": 5558355
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/drums_4.ogg",
+      "size": 1313174
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/guitar.ogg",
+      "size": 4629157
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/notes.mid",
+      "size": 147027
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/rhythm.ogg",
+      "size": 3181348
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/song.ini",
+      "size": 1128
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/song.ogg",
+      "size": 3947389
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty & The Heartbreakers - American Girl/vocals.ogg",
+      "size": 3907518
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/album.png",
+      "size": 26655
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/crowd.ogg",
+      "size": 3677786
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/drums_1.ogg",
+      "size": 3847210
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/drums_2.ogg",
+      "size": 5758616
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/drums_3.ogg",
+      "size": 5269732
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/drums_4.ogg",
+      "size": 195075
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/guitar.ogg",
+      "size": 5560717
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/notes.mid",
+      "size": 196544
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/rhythm.ogg",
+      "size": 4212057
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/song.ini",
+      "size": 1133
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/song.ogg",
+      "size": 4994773
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Tom Petty - Runnin' Down a Dream/vocals.ogg",
+      "size": 4803527
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/album.png",
+      "size": 411801
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/drums_1.ogg",
+      "size": 2365922
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/drums_2.ogg",
+      "size": 3200442
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/drums_3.ogg",
+      "size": 2603721
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/drums_4.ogg",
+      "size": 1461762
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/guitar.ogg",
+      "size": 2642572
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/notes.mid",
+      "size": 103532
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/rhythm.ogg",
+      "size": 2037949
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/song.ini",
+      "size": 1164
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/song.ogg",
+      "size": 204351
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Vampire Weekend - A-Punk/vocals.ogg",
+      "size": 2134619
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/album.png",
+      "size": 515106
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/drums_1.ogg",
+      "size": 1934068
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/drums_2.ogg",
+      "size": 1705488
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/drums_3.ogg",
+      "size": 3396984
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/drums_4.ogg",
+      "size": 176579
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/guitar.ogg",
+      "size": 2465626
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/notes.mid",
+      "size": 82577
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/rhythm.ogg",
+      "size": 2250701
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/song.ini",
+      "size": 1163
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/song.ogg",
+      "size": 2105551
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Weezer - Why Bother/vocals.ogg",
+      "size": 2441791
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/album.png",
+      "size": 190006
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/drums_1.ogg",
+      "size": 4567479
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/drums_2.ogg",
+      "size": 3686255
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/drums_3.ogg",
+      "size": 6428995
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/drums_4.ogg",
+      "size": 58415
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/guitar.ogg",
+      "size": 7213010
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/notes.mid",
+      "size": 173938
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/preview.ogg",
+      "size": 631800
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/rhythm.ogg",
+      "size": 3603135
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/song.ini",
+      "size": 1101
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/song.ogg",
+      "size": 4656360
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wild Cherry - Play That Funky Music/vocals.ogg",
+      "size": 5825070
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/album.png",
+      "size": 62097
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/drums_1.ogg",
+      "size": 3288495
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/drums_2.ogg",
+      "size": 2346909
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/drums_3.ogg",
+      "size": 3865374
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/drums_4.ogg",
+      "size": 2154170
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/guitar.ogg",
+      "size": 4511668
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/notes.mid",
+      "size": 149929
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/rhythm.ogg",
+      "size": 3717217
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/song.ini",
+      "size": 1049
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/song.ogg",
+      "size": 958603
+    },
+    {
+      "path": "(2009) Guitar Hero 5/Wolfmother - Back Round/vocals.ogg",
+      "size": 2838401
+    }
+  ],
+  "extracted_size": 2771721569,
+  "file_count": 997,
+  "chart_count": 90,
+  "release_date": "2009-09-01"
 }

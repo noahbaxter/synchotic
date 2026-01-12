@@ -1,19 +1,1069 @@
 {
   "name": "(2009) Guitar Hero On Tour - Modern Hits",
-  "folder_id": "static-gh-ot-modern",
+  "folder_id": "static-2009-guitar-hero-on-tour---modern-hits",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 44,
-  "total_size": 182033832,
-  "file_count": 262,
-  "files": [
+  "downloads": [
     {
       "id": "1agEboWOACQi9sZVVOPuScExqp_j8pTbQ",
-      "path": "(2008-2009) Guitar Hero - On Tour Complete/Guitar Hero On Tour - Modern Hits.rar",
       "name": "Guitar Hero On Tour - Modern Hits.rar",
       "size": 182033832,
       "md5": "89d21ef453fdf32670fb97579417483a"
     }
-  ]
+  ],
+  "download_size": 182033832,
+  "files": [
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/GHOTMH Rips v1.2.txt",
+      "size": 224
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/12 Stones - Adrenaline/album.png",
+      "size": 474734
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/12 Stones - Adrenaline/guitar.ogg",
+      "size": 678189
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/12 Stones - Adrenaline/notes.mid",
+      "size": 39238
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/12 Stones - Adrenaline/rhythm.ogg",
+      "size": 594624
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/12 Stones - Adrenaline/song.ini",
+      "size": 460
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/12 Stones - Adrenaline/song.ogg",
+      "size": 1808333
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/AFI - Miss Murder/album.png",
+      "size": 370024
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/AFI - Miss Murder/guitar.ogg",
+      "size": 673250
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/AFI - Miss Murder/notes.mid",
+      "size": 37025
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/AFI - Miss Murder/rhythm.ogg",
+      "size": 626832
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/AFI - Miss Murder/song.ini",
+      "size": 448
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/AFI - Miss Murder/song.ogg",
+      "size": 1822006
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Angels & Airwaves - Call to Arms/album.png",
+      "size": 450564
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Angels & Airwaves - Call to Arms/guitar.ogg",
+      "size": 938901
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Angels & Airwaves - Call to Arms/notes.mid",
+      "size": 48820
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Angels & Airwaves - Call to Arms/rhythm.ogg",
+      "size": 827082
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Angels & Airwaves - Call to Arms/song.ini",
+      "size": 460
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Angels & Airwaves - Call to Arms/song.ogg",
+      "size": 2735998
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Atreyu - Falling Down/album.png",
+      "size": 217774
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Atreyu - Falling Down/guitar.ogg",
+      "size": 588622
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Atreyu - Falling Down/notes.mid",
+      "size": 35821
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Atreyu - Falling Down/rhythm.ogg",
+      "size": 559612
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Atreyu - Falling Down/song.ini",
+      "size": 465
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Atreyu - Falling Down/song.ogg",
+      "size": 1594954
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Avril Lavigne - When You're Gone/album.png",
+      "size": 524644
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Avril Lavigne - When You're Gone/guitar.ogg",
+      "size": 718705
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Avril Lavigne - When You're Gone/notes.mid",
+      "size": 25425
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Avril Lavigne - When You're Gone/rhythm.ogg",
+      "size": 638952
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Avril Lavigne - When You're Gone/song.ini",
+      "size": 463
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Avril Lavigne - When You're Gone/song.ogg",
+      "size": 2032554
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Black Tide - Shockwave/album.png",
+      "size": 343580
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Black Tide - Shockwave/guitar.ogg",
+      "size": 741826
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Black Tide - Shockwave/notes.mid",
+      "size": 49566
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Black Tide - Shockwave/rhythm.ogg",
+      "size": 667834
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Black Tide - Shockwave/song.ini",
+      "size": 453
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Black Tide - Shockwave/song.ogg",
+      "size": 1797866
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Bullet For My Valentine - Scream Aim Fire/album.png",
+      "size": 478724
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Bullet For My Valentine - Scream Aim Fire/guitar.ogg",
+      "size": 849985
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Bullet For My Valentine - Scream Aim Fire/notes.mid",
+      "size": 61009
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Bullet For My Valentine - Scream Aim Fire/rhythm.ogg",
+      "size": 844640
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Bullet For My Valentine - Scream Aim Fire/song.ini",
+      "size": 640
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Bullet For My Valentine - Scream Aim Fire/song.ogg",
+      "size": 2438239
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Bullet For My Valentine - Scream Aim Fire/song_uncensored.ogg",
+      "size": 1373845
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Coldplay - Violet Hill/album.png",
+      "size": 526199
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Coldplay - Violet Hill/guitar.ogg",
+      "size": 622380
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Coldplay - Violet Hill/notes.mid",
+      "size": 17555
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Coldplay - Violet Hill/rhythm.ogg",
+      "size": 543045
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Coldplay - Violet Hill/song.ini",
+      "size": 482
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Coldplay - Violet Hill/song.ogg",
+      "size": 1643841
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Deluxe - Que No/album.png",
+      "size": 488648
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Deluxe - Que No/guitar.ogg",
+      "size": 756710
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Deluxe - Que No/notes.mid",
+      "size": 35394
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Deluxe - Que No/rhythm.ogg",
+      "size": 612766
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Deluxe - Que No/song.ini",
+      "size": 452
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Deluxe - Que No/song.ogg",
+      "size": 2072786
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Electric Touch - Give Me A Sign/album.png",
+      "size": 295467
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Electric Touch - Give Me A Sign/notes.mid",
+      "size": 33677
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Electric Touch - Give Me A Sign/song.ini",
+      "size": 693
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Electric Touch - Give Me A Sign/song.ogg",
+      "size": 4752790
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Endeverafter - I Wanna Be Your Man/album.png",
+      "size": 258675
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Endeverafter - I Wanna Be Your Man/guitar.ogg",
+      "size": 610758
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Endeverafter - I Wanna Be Your Man/notes.mid",
+      "size": 57034
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Endeverafter - I Wanna Be Your Man/rhythm.ogg",
+      "size": 617399
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Endeverafter - I Wanna Be Your Man/song.ini",
+      "size": 459
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Endeverafter - I Wanna Be Your Man/song.ogg",
+      "size": 1716151
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Evanescence - Sweet Sacrifice/album.png",
+      "size": 459177
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Evanescence - Sweet Sacrifice/guitar.ogg",
+      "size": 573384
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Evanescence - Sweet Sacrifice/notes.mid",
+      "size": 33031
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Evanescence - Sweet Sacrifice/rhythm.ogg",
+      "size": 522965
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Evanescence - Sweet Sacrifice/song.ini",
+      "size": 461
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Evanescence - Sweet Sacrifice/song.ogg",
+      "size": 1618574
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Fall Out Boy - This Ain't a Scene, It's an Arms Race/album.png",
+      "size": 436316
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Fall Out Boy - This Ain't a Scene, It's an Arms Race/guitar.ogg",
+      "size": 683856
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Fall Out Boy - This Ain't a Scene, It's an Arms Race/notes.mid",
+      "size": 46196
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Fall Out Boy - This Ain't a Scene, It's an Arms Race/rhythm.ogg",
+      "size": 588853
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Fall Out Boy - This Ain't a Scene, It's an Arms Race/song.ini",
+      "size": 480
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Fall Out Boy - This Ain't a Scene, It's an Arms Race/song.ogg",
+      "size": 1855414
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Finger Eleven - Paralyzer/album.png",
+      "size": 295857
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Finger Eleven - Paralyzer/guitar.ogg",
+      "size": 651584
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Finger Eleven - Paralyzer/notes.mid",
+      "size": 30117
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Finger Eleven - Paralyzer/rhythm.ogg",
+      "size": 526447
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Finger Eleven - Paralyzer/song.ini",
+      "size": 464
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Finger Eleven - Paralyzer/song.ogg",
+      "size": 1771239
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Foo Fighters - All My Life/album.png",
+      "size": 127875
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Foo Fighters - All My Life/guitar.ogg",
+      "size": 882412
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Foo Fighters - All My Life/notes.mid",
+      "size": 58350
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Foo Fighters - All My Life/rhythm.ogg",
+      "size": 691695
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Foo Fighters - All My Life/song.ini",
+      "size": 451
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Foo Fighters - All My Life/song.ogg",
+      "size": 2150180
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Franz Ferdinand - The Fallen/album.png",
+      "size": 207217
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Franz Ferdinand - The Fallen/guitar.ogg",
+      "size": 761066
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Franz Ferdinand - The Fallen/notes.mid",
+      "size": 39392
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Franz Ferdinand - The Fallen/rhythm.ogg",
+      "size": 718509
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Franz Ferdinand - The Fallen/song.ini",
+      "size": 481
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Franz Ferdinand - The Fallen/song.ogg",
+      "size": 1930403
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Godsmack - I Stand Alone/album.png",
+      "size": 453238
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Godsmack - I Stand Alone/guitar.ogg",
+      "size": 4255580
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Godsmack - I Stand Alone/notes.mid",
+      "size": 32263
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Godsmack - I Stand Alone/rhythm.ogg",
+      "size": 3841207
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Godsmack - I Stand Alone/song.ini",
+      "size": 747
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Godsmack - I Stand Alone/song.ogg",
+      "size": 7395603
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kaiser Chiefs - Ruby/album.png",
+      "size": 187646
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kaiser Chiefs - Ruby/guitar.ogg",
+      "size": 684225
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kaiser Chiefs - Ruby/notes.mid",
+      "size": 23758
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kaiser Chiefs - Ruby/rhythm.ogg",
+      "size": 654466
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kaiser Chiefs - Ruby/song.ini",
+      "size": 456
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kaiser Chiefs - Ruby/song.ogg",
+      "size": 1876512
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kings of Leon - On Call/album.png",
+      "size": 280077
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kings of Leon - On Call/guitar.ogg",
+      "size": 662996
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kings of Leon - On Call/notes.mid",
+      "size": 34870
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kings of Leon - On Call/rhythm.ogg",
+      "size": 582873
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kings of Leon - On Call/song.ini",
+      "size": 462
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Kings of Leon - On Call/song.ogg",
+      "size": 1645860
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Klaxons - Golden Skans/album.png",
+      "size": 460613
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Klaxons - Golden Skans/guitar.ogg",
+      "size": 539225
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Klaxons - Golden Skans/notes.mid",
+      "size": 22496
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Klaxons - Golden Skans/rhythm.ogg",
+      "size": 511497
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Klaxons - Golden Skans/song.ini",
+      "size": 458
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Klaxons - Golden Skans/song.ogg",
+      "size": 1454801
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Lenny Kravitz - Where Are We Runnin'/album.png",
+      "size": 436258
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Lenny Kravitz - Where Are We Runnin'/guitar.ogg",
+      "size": 575500
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Lenny Kravitz - Where Are We Runnin'/notes.mid",
+      "size": 26994
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Lenny Kravitz - Where Are We Runnin'/rhythm.ogg",
+      "size": 524662
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Lenny Kravitz - Where Are We Runnin'/song.ini",
+      "size": 456
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Lenny Kravitz - Where Are We Runnin'/song.ogg",
+      "size": 1543774
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Max\u00efmo Park - Our Velocity/album.png",
+      "size": 320345
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Max\u00efmo Park - Our Velocity/guitar.ogg",
+      "size": 658497
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Max\u00efmo Park - Our Velocity/notes.mid",
+      "size": 53279
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Max\u00efmo Park - Our Velocity/rhythm.ogg",
+      "size": 664302
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Max\u00efmo Park - Our Velocity/song.ini",
+      "size": 462
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Max\u00efmo Park - Our Velocity/song.ogg",
+      "size": 1747854
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Modest Mouse - Dashboard/album.png",
+      "size": 511538
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Modest Mouse - Dashboard/guitar.ogg",
+      "size": 759542
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Modest Mouse - Dashboard/notes.mid",
+      "size": 39408
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Modest Mouse - Dashboard/rhythm.ogg",
+      "size": 607673
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Modest Mouse - Dashboard/song.ini",
+      "size": 476
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Modest Mouse - Dashboard/song.ogg",
+      "size": 2158841
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Negramaro - Via Le Mani Dagli Occhi/album.png",
+      "size": 410487
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Negramaro - Via Le Mani Dagli Occhi/guitar.ogg",
+      "size": 737790
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Negramaro - Via Le Mani Dagli Occhi/notes.mid",
+      "size": 31671
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Negramaro - Via Le Mani Dagli Occhi/rhythm.ogg",
+      "size": 678720
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Negramaro - Via Le Mani Dagli Occhi/song.ini",
+      "size": 458
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Negramaro - Via Le Mani Dagli Occhi/song.ogg",
+      "size": 1982084
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phantom Planet - Do the Panic/album.png",
+      "size": 496644
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phantom Planet - Do the Panic/guitar.ogg",
+      "size": 680399
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phantom Planet - Do the Panic/notes.mid",
+      "size": 29865
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phantom Planet - Do the Panic/rhythm.ogg",
+      "size": 654939
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phantom Planet - Do the Panic/song.ini",
+      "size": 456
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phantom Planet - Do the Panic/song.ogg",
+      "size": 1834895
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phoenix - Napoleon Says/album.png",
+      "size": 228960
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phoenix - Napoleon Says/guitar.ogg",
+      "size": 595687
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phoenix - Napoleon Says/notes.mid",
+      "size": 27150
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phoenix - Napoleon Says/rhythm.ogg",
+      "size": 580736
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phoenix - Napoleon Says/song.ini",
+      "size": 461
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Phoenix - Napoleon Says/song.ogg",
+      "size": 1735382
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Placebo - The Bitter End/album.png",
+      "size": 432577
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Placebo - The Bitter End/guitar.ogg",
+      "size": 631390
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Placebo - The Bitter End/notes.mid",
+      "size": 44016
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Placebo - The Bitter End/rhythm.ogg",
+      "size": 598999
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Placebo - The Bitter End/song.ini",
+      "size": 464
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Placebo - The Bitter End/song.ogg",
+      "size": 1653527
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sportfreunde Stiller - '54, '74, '90, 2010/album.png",
+      "size": 192761
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sportfreunde Stiller - '54, '74, '90, 2010/guitar.ogg",
+      "size": 508681
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sportfreunde Stiller - '54, '74, '90, 2010/notes.mid",
+      "size": 19723
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sportfreunde Stiller - '54, '74, '90, 2010/rhythm.ogg",
+      "size": 481749
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sportfreunde Stiller - '54, '74, '90, 2010/song.ini",
+      "size": 479
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sportfreunde Stiller - '54, '74, '90, 2010/song.ogg",
+      "size": 1369937
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sum 41 - Still Waiting/album.png",
+      "size": 436839
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sum 41 - Still Waiting/guitar.ogg",
+      "size": 537773
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sum 41 - Still Waiting/notes.mid",
+      "size": 38093
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sum 41 - Still Waiting/rhythm.ogg",
+      "size": 467152
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sum 41 - Still Waiting/song.ini",
+      "size": 458
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Sum 41 - Still Waiting/song.ogg",
+      "size": 1410603
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Tenacious D - The Metal/album.png",
+      "size": 459073
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Tenacious D - The Metal/guitar.ogg",
+      "size": 554354
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Tenacious D - The Metal/notes.mid",
+      "size": 32236
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Tenacious D - The Metal/rhythm.ogg",
+      "size": 492288
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Tenacious D - The Metal/song.ini",
+      "size": 457
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Tenacious D - The Metal/song.ogg",
+      "size": 1446301
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Bravery - Unconditional/album.png",
+      "size": 315857
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Bravery - Unconditional/guitar.ogg",
+      "size": 604710
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Bravery - Unconditional/notes.mid",
+      "size": 38657
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Bravery - Unconditional/rhythm.ogg",
+      "size": 633461
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Bravery - Unconditional/song.ini",
+      "size": 458
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Bravery - Unconditional/song.ogg",
+      "size": 1718773
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Dandy Warhols - Bohemian Like You/album.png",
+      "size": 645567
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Dandy Warhols - Bohemian Like You/guitar.ogg",
+      "size": 697202
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Dandy Warhols - Bohemian Like You/notes.mid",
+      "size": 47152
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Dandy Warhols - Bohemian Like You/rhythm.ogg",
+      "size": 605135
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Dandy Warhols - Bohemian Like You/song.ini",
+      "size": 484
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Dandy Warhols - Bohemian Like You/song.ogg",
+      "size": 1866751
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Donnas - What Do I Have to Do/album.png",
+      "size": 456497
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Donnas - What Do I Have to Do/guitar.ogg",
+      "size": 623137
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Donnas - What Do I Have to Do/notes.mid",
+      "size": 33855
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Donnas - What Do I Have to Do/rhythm.ogg",
+      "size": 603526
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Donnas - What Do I Have to Do/song.ini",
+      "size": 454
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Donnas - What Do I Have to Do/song.ogg",
+      "size": 1650346
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Duke Spirit - Lassoo/album.png",
+      "size": 156487
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Duke Spirit - Lassoo/guitar.ogg",
+      "size": 587522
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Duke Spirit - Lassoo/notes.mid",
+      "size": 32355
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Duke Spirit - Lassoo/rhythm.ogg",
+      "size": 540258
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Duke Spirit - Lassoo/song.ini",
+      "size": 445
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Duke Spirit - Lassoo/song.ogg",
+      "size": 1493703
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Fratellis - Chelsea Dagger/album.png",
+      "size": 384030
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Fratellis - Chelsea Dagger/guitar.ogg",
+      "size": 722021
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Fratellis - Chelsea Dagger/notes.mid",
+      "size": 42935
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Fratellis - Chelsea Dagger/rhythm.ogg",
+      "size": 690282
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Fratellis - Chelsea Dagger/song.ini",
+      "size": 467
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Fratellis - Chelsea Dagger/song.ogg",
+      "size": 1908113
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Holloways - Generator/album.png",
+      "size": 452207
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Holloways - Generator/guitar.ogg",
+      "size": 4261482
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Holloways - Generator/notes.mid",
+      "size": 28715
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Holloways - Generator/song.ini",
+      "size": 704
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Kooks - Always Where I Need to Be/album.png",
+      "size": 323831
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Kooks - Always Where I Need to Be/guitar.ogg",
+      "size": 541268
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Kooks - Always Where I Need to Be/notes.mid",
+      "size": 27120
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Kooks - Always Where I Need to Be/rhythm.ogg",
+      "size": 505527
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Kooks - Always Where I Need to Be/song.ini",
+      "size": 455
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Kooks - Always Where I Need to Be/song.ogg",
+      "size": 1405246
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Offspring - Half-Truism/album.png",
+      "size": 139489
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Offspring - Half-Truism/guitar.ogg",
+      "size": 667583
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Offspring - Half-Truism/notes.mid",
+      "size": 37758
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Offspring - Half-Truism/rhythm.ogg",
+      "size": 601820
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Offspring - Half-Truism/song.ini",
+      "size": 468
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Offspring - Half-Truism/song.ogg",
+      "size": 1822738
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Rasmus - In the Shadows/album.png",
+      "size": 402365
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Rasmus - In the Shadows/guitar.ogg",
+      "size": 769828
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Rasmus - In the Shadows/notes.mid",
+      "size": 28947
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Rasmus - In the Shadows/rhythm.ogg",
+      "size": 751083
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Rasmus - In the Shadows/song.ini",
+      "size": 459
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Rasmus - In the Shadows/song.ogg",
+      "size": 2119961
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Strokes - Reptilia/album.png",
+      "size": 374437
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Strokes - Reptilia/guitar.ogg",
+      "size": 683161
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Strokes - Reptilia/notes.mid",
+      "size": 37455
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Strokes - Reptilia/rhythm.ogg",
+      "size": 664973
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Strokes - Reptilia/song.ini",
+      "size": 456
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/The Strokes - Reptilia/song.ogg",
+      "size": 1888985
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Velvet Revolver - Slither/album.png",
+      "size": 368209
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Velvet Revolver - Slither/guitar.ogg",
+      "size": 5596906
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Velvet Revolver - Slither/notes.mid",
+      "size": 46472
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Velvet Revolver - Slither/rhythm.ogg",
+      "size": 4722262
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Velvet Revolver - Slither/song.ini",
+      "size": 698
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Velvet Revolver - Slither/song.ogg",
+      "size": 6739062
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Weezer - Everybody Get Dangerous/album.png",
+      "size": 268243
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Weezer - Everybody Get Dangerous/guitar.ogg",
+      "size": 681625
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Weezer - Everybody Get Dangerous/notes.mid",
+      "size": 39432
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Weezer - Everybody Get Dangerous/rhythm.ogg",
+      "size": 523429
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Weezer - Everybody Get Dangerous/song.ini",
+      "size": 463
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Weezer - Everybody Get Dangerous/song.ogg",
+      "size": 1867854
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Wolfmother - Dimension/album.png",
+      "size": 420529
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Wolfmother - Dimension/guitar.ogg",
+      "size": 868420
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Wolfmother - Dimension/notes.mid",
+      "size": 27953
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Wolfmother - Dimension/rhythm.ogg",
+      "size": 799235
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Wolfmother - Dimension/song.ini",
+      "size": 444
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Wolfmother - Dimension/song.ogg",
+      "size": 2305087
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Yellowcard - Lights and Sounds/album.png",
+      "size": 410521
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Yellowcard - Lights and Sounds/guitar.ogg",
+      "size": 696980
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Yellowcard - Lights and Sounds/notes.mid",
+      "size": 47573
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Yellowcard - Lights and Sounds/rhythm.ogg",
+      "size": 631681
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Yellowcard - Lights and Sounds/song.ini",
+      "size": 459
+    },
+    {
+      "path": "(2009) Guitar Hero On Tour - Modern Hits/Yellowcard - Lights and Sounds/song.ogg",
+      "size": 1815544
+    }
+  ],
+  "extracted_size": 185305963,
+  "file_count": 262,
+  "chart_count": 44,
+  "release_date": "2009-06-09"
 }

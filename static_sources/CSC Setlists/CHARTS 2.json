@@ -3,18 +3,2851 @@
   "folder_id": "static-charts-2",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 139,
-  "total_size": 3140123290,
-  "file_count": 708,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-charts-2",
-      "path": "CHARTS 2/CHARTS 2.rar",
+      "url": "https://customsongscentral.b-cdn.net/CHARTS%202.rar?ref=customsongscentral.com",
       "name": "CHARTS 2.rar",
       "size": 3140123290,
-      "md5": "9f19d5066cfeaf03c72c939af55f9bab",
-      "url": "https://customsongscentral.b-cdn.net/CHARTS%202.rar?ref=customsongscentral.com"
+      "md5": "9f19d5066cfeaf03c72c939af55f9bab"
     }
-  ]
+  ],
+  "download_size": 3140123290,
+  "files": [
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/BLVTH - The Void/album.png",
+      "size": 504907
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/BLVTH - The Void/background.jpg",
+      "size": 1011115
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/BLVTH - The Void/notes.chart",
+      "size": 27391
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/BLVTH - The Void/song.ini",
+      "size": 611
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/BLVTH - The Void/song.ogg",
+      "size": 5373993
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Billie Eilish - bad guy/album.png",
+      "size": 162119
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Billie Eilish - bad guy/background.jpg",
+      "size": 359889
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Billie Eilish - bad guy/notes.chart",
+      "size": 39449
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Billie Eilish - bad guy/song.ini",
+      "size": 549
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Billie Eilish - bad guy/song.ogg",
+      "size": 7141646
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Ingo ohne Flamingo - Hartz 4 und der Tag geh\u00f6rt dir/album.png",
+      "size": 322491
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Ingo ohne Flamingo - Hartz 4 und der Tag geh\u00f6rt dir/background.jpg",
+      "size": 1126009
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Ingo ohne Flamingo - Hartz 4 und der Tag geh\u00f6rt dir/notes.chart",
+      "size": 37303
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Ingo ohne Flamingo - Hartz 4 und der Tag geh\u00f6rt dir/song.ini",
+      "size": 1632
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Ingo ohne Flamingo - Hartz 4 und der Tag geh\u00f6rt dir/song.ogg",
+      "size": 6460150
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Knocked Loose - Guided by the Moon/album.png",
+      "size": 528428
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Knocked Loose - Guided by the Moon/background.jpg",
+      "size": 217301
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Knocked Loose - Guided by the Moon/notes.chart",
+      "size": 44071
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Knocked Loose - Guided by the Moon/song.ini",
+      "size": 492
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Knocked Loose - Guided by the Moon/song.ogg",
+      "size": 7252541
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Sable - One and Only/album.png",
+      "size": 230607
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Sable - One and Only/background.jpg",
+      "size": 451633
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Sable - One and Only/notes.chart",
+      "size": 55511
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Sable - One and Only/song.ini",
+      "size": 429
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/Sable - One and Only/song.ogg",
+      "size": 8828397
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/blink-182 - Generational Divide/album.png",
+      "size": 500974
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/blink-182 - Generational Divide/background.jpg",
+      "size": 271602
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/blink-182 - Generational Divide/notes.chart",
+      "size": 21635
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/blink-182 - Generational Divide/song.ini",
+      "size": 510
+    },
+    {
+      "path": "CHARTS 2/! TIER 01 - Back on that Bullfish/blink-182 - Generational Divide/song.ogg",
+      "size": 1655912
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Dealer - Crooked/album.png",
+      "size": 456430
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Dealer - Crooked/background.jpg",
+      "size": 506164
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Dealer - Crooked/notes.chart",
+      "size": 44893
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Dealer - Crooked/song.ini",
+      "size": 548
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Dealer - Crooked/song.ogg",
+      "size": 4716213
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Grayscale Season - Glitter/album.png",
+      "size": 500422
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Grayscale Season - Glitter/background.jpg",
+      "size": 719380
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Grayscale Season - Glitter/notes.chart",
+      "size": 71501
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Grayscale Season - Glitter/song.ini",
+      "size": 463
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Grayscale Season - Glitter/song.ogg",
+      "size": 6404012
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Knocked Loose - Mistakes Like Fractures/album.png",
+      "size": 528428
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Knocked Loose - Mistakes Like Fractures/background.jpg",
+      "size": 217301
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Knocked Loose - Mistakes Like Fractures/notes.chart",
+      "size": 48578
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Knocked Loose - Mistakes Like Fractures/song.ini",
+      "size": 558
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/Knocked Loose - Mistakes Like Fractures/song.ogg",
+      "size": 6875800
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Devil Wears Prada - The Thread/album.png",
+      "size": 412507
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Devil Wears Prada - The Thread/background.jpg",
+      "size": 1843320
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Devil Wears Prada - The Thread/notes.chart",
+      "size": 75919
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Devil Wears Prada - The Thread/song.ini",
+      "size": 476
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Devil Wears Prada - The Thread/song.ogg",
+      "size": 8861204
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Ghost Inside - Mercy/album.png",
+      "size": 394692
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Ghost Inside - Mercy/background.jpg",
+      "size": 1057610
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Ghost Inside - Mercy/notes.chart",
+      "size": 101085
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Ghost Inside - Mercy/song.ini",
+      "size": 467
+    },
+    {
+      "path": "CHARTS 2/! TIER 02 - System of a Breakdown/The Ghost Inside - Mercy/song.ogg",
+      "size": 7975311
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Andrew Jackson Jihad - Distance/album.png",
+      "size": 521103
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Andrew Jackson Jihad - Distance/background.jpg",
+      "size": 1015536
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Andrew Jackson Jihad - Distance/notes.chart",
+      "size": 66944
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Andrew Jackson Jihad - Distance/song.ini",
+      "size": 692
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Andrew Jackson Jihad - Distance/song.ogg",
+      "size": 4823485
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Architects - A Wasted Hymn/album.png",
+      "size": 342673
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Architects - A Wasted Hymn/background.jpg",
+      "size": 310150
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Architects - A Wasted Hymn/notes.chart",
+      "size": 84310
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Architects - A Wasted Hymn/song.ini",
+      "size": 604
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Architects - A Wasted Hymn/song.ogg",
+      "size": 8282972
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Balance and Composure - Parachutes/album.png",
+      "size": 529883
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Balance and Composure - Parachutes/background.jpg",
+      "size": 1303726
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Balance and Composure - Parachutes/notes.chart",
+      "size": 63448
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Balance and Composure - Parachutes/song.ini",
+      "size": 524
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Balance and Composure - Parachutes/song.ogg",
+      "size": 6766131
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Bilmuri - lifeisgood/album.png",
+      "size": 68802
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Bilmuri - lifeisgood/background.jpg",
+      "size": 343823
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Bilmuri - lifeisgood/notes.chart",
+      "size": 49952
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Bilmuri - lifeisgood/song.ini",
+      "size": 483
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/Bilmuri - lifeisgood/song.ogg",
+      "size": 5406570
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/FIDLAR - Why Generation/album.png",
+      "size": 727263
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/FIDLAR - Why Generation/background.jpg",
+      "size": 797643
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/FIDLAR - Why Generation/notes.chart",
+      "size": 72285
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/FIDLAR - Why Generation/song.ini",
+      "size": 587
+    },
+    {
+      "path": "CHARTS 2/! TIER 03 - Out of Alternatives/FIDLAR - Why Generation/song.ogg",
+      "size": 7857662
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Chris Allen - Globetrotter/album.png",
+      "size": 191874
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Chris Allen - Globetrotter/background.jpg",
+      "size": 68489
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Chris Allen - Globetrotter/notes.chart",
+      "size": 81321
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Chris Allen - Globetrotter/song.ini",
+      "size": 454
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Chris Allen - Globetrotter/song.ogg",
+      "size": 8233328
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Chris Allen - Globetrotter/video.mp4",
+      "size": 48207276
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Herve Pagez & Diplo - Spicy (feat. Charli XCX)/album.png",
+      "size": 464809
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Herve Pagez & Diplo - Spicy (feat. Charli XCX)/background.jpg",
+      "size": 442788
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Herve Pagez & Diplo - Spicy (feat. Charli XCX)/notes.chart",
+      "size": 56594
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Herve Pagez & Diplo - Spicy (feat. Charli XCX)/song.ini",
+      "size": 613
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Herve Pagez & Diplo - Spicy (feat. Charli XCX)/song.ogg",
+      "size": 5368379
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Kim Petras - In the Next Life/album.png",
+      "size": 154459
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Kim Petras - In the Next Life/background.jpg",
+      "size": 1339841
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Kim Petras - In the Next Life/notes.chart",
+      "size": 56290
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Kim Petras - In the Next Life/song.ini",
+      "size": 906
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Kim Petras - In the Next Life/song.ogg",
+      "size": 7195282
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Lil Nas X and Cardi B - Rodeo/album.png",
+      "size": 370563
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Lil Nas X and Cardi B - Rodeo/background.jpg",
+      "size": 708094
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Lil Nas X and Cardi B - Rodeo/notes.chart",
+      "size": 43509
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Lil Nas X and Cardi B - Rodeo/song.ini",
+      "size": 682
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/Lil Nas X and Cardi B - Rodeo/song.ogg",
+      "size": 4694638
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/O-Zone - Dragostea Din Tei/album.png",
+      "size": 644859
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/O-Zone - Dragostea Din Tei/background.jpg",
+      "size": 866873
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/O-Zone - Dragostea Din Tei/notes.chart",
+      "size": 65803
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/O-Zone - Dragostea Din Tei/song.ini",
+      "size": 422
+    },
+    {
+      "path": "CHARTS 2/! TIER 04 - Poppin' Bottles/O-Zone - Dragostea Din Tei/song.ogg",
+      "size": 6643451
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/CHONK! - Unz\u00f6l/album.png",
+      "size": 97367
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/CHONK! - Unz\u00f6l/background.jpg",
+      "size": 738784
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/CHONK! - Unz\u00f6l/notes.chart",
+      "size": 19922
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/CHONK! - Unz\u00f6l/song.ini",
+      "size": 813
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/CHONK! - Unz\u00f6l/song.ogg",
+      "size": 1377043
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/High Mud Leader - Deutschland ist sch\u00f6n/album.png",
+      "size": 514239
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/High Mud Leader - Deutschland ist sch\u00f6n/background.jpg",
+      "size": 803938
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/High Mud Leader - Deutschland ist sch\u00f6n/notes.chart",
+      "size": 50163
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/High Mud Leader - Deutschland ist sch\u00f6n/song.ini",
+      "size": 738
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/High Mud Leader - Deutschland ist sch\u00f6n/song.ogg",
+      "size": 5036015
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Madsen - Sirenen/album.png",
+      "size": 523650
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Madsen - Sirenen/background.jpg",
+      "size": 1161362
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Madsen - Sirenen/notes.chart",
+      "size": 85000
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Madsen - Sirenen/song.ini",
+      "size": 666
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Madsen - Sirenen/song.ogg",
+      "size": 8304052
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Otoboke Beaver - Don't Light My Fire/album.png",
+      "size": 569357
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Otoboke Beaver - Don't Light My Fire/background.jpg",
+      "size": 1810663
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Otoboke Beaver - Don't Light My Fire/notes.chart",
+      "size": 71173
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Otoboke Beaver - Don't Light My Fire/song.ini",
+      "size": 577
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/Otoboke Beaver - Don't Light My Fire/song.ogg",
+      "size": 3988699
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/XS Project - Bochka Bass Kolbaser/album.png",
+      "size": 514366
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/XS Project - Bochka Bass Kolbaser/background.jpg",
+      "size": 438700
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/XS Project - Bochka Bass Kolbaser/notes.chart",
+      "size": 71567
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/XS Project - Bochka Bass Kolbaser/song.ini",
+      "size": 403
+    },
+    {
+      "path": "CHARTS 2/! TIER 05 - Mr. Worldwide/XS Project - Bochka Bass Kolbaser/song.ogg",
+      "size": 6201289
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/AFI - Get Dark/album.png",
+      "size": 382730
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/AFI - Get Dark/background.jpg",
+      "size": 462103
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/AFI - Get Dark/notes.chart",
+      "size": 59112
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/AFI - Get Dark/song.ini",
+      "size": 474
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/AFI - Get Dark/song.ogg",
+      "size": 5065160
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/HORSE the band - The Black Hole/album.png",
+      "size": 702479
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/HORSE the band - The Black Hole/background.jpg",
+      "size": 256390
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/HORSE the band - The Black Hole/notes.chart",
+      "size": 149625
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/HORSE the band - The Black Hole/song.ini",
+      "size": 777
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/HORSE the band - The Black Hole/song.ogg",
+      "size": 8859734
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Madtown - True Colors/album.png",
+      "size": 334547
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Madtown - True Colors/background.jpg",
+      "size": 1606958
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Madtown - True Colors/notes.chart",
+      "size": 63757
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Madtown - True Colors/song.ini",
+      "size": 458
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Madtown - True Colors/song.ogg",
+      "size": 5901714
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Spiritbox - Bleach Bath/album.png",
+      "size": 9506
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Spiritbox - Bleach Bath/background.jpg",
+      "size": 1142929
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Spiritbox - Bleach Bath/notes.chart",
+      "size": 86055
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Spiritbox - Bleach Bath/song.ini",
+      "size": 614
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Spiritbox - Bleach Bath/song.ogg",
+      "size": 10024806
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Upon a Burning Body - King of Diamonds/album.png",
+      "size": 654634
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Upon a Burning Body - King of Diamonds/background.jpg",
+      "size": 210787
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Upon a Burning Body - King of Diamonds/notes.chart",
+      "size": 67191
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Upon a Burning Body - King of Diamonds/song.ini",
+      "size": 495
+    },
+    {
+      "path": "CHARTS 2/! TIER 06 - Under Pressure/Upon a Burning Body - King of Diamonds/song.ogg",
+      "size": 6784858
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Architects - Dying to Heal/album.png",
+      "size": 342673
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Architects - Dying to Heal/background.jpg",
+      "size": 310150
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Architects - Dying to Heal/notes.chart",
+      "size": 69358
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Architects - Dying to Heal/song.ini",
+      "size": 633
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Architects - Dying to Heal/song.ogg",
+      "size": 7192716
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Astronoid - I Dream in Lines/album.png",
+      "size": 242884
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Astronoid - I Dream in Lines/background.jpg",
+      "size": 570433
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Astronoid - I Dream in Lines/notes.chart",
+      "size": 126970
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Astronoid - I Dream in Lines/song.ini",
+      "size": 590
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Astronoid - I Dream in Lines/song.ogg",
+      "size": 9217430
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Cellar Darling - Pain/album.png",
+      "size": 582047
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Cellar Darling - Pain/background.jpg",
+      "size": 729225
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Cellar Darling - Pain/notes.chart",
+      "size": 101688
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Cellar Darling - Pain/song.ini",
+      "size": 589
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Cellar Darling - Pain/song.ogg",
+      "size": 7617222
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Crumb - Locket/album.png",
+      "size": 256810
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Crumb - Locket/background.jpg",
+      "size": 293939
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Crumb - Locket/notes.chart",
+      "size": 79838
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Crumb - Locket/song.ini",
+      "size": 952
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Crumb - Locket/song.ogg",
+      "size": 7751159
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Kero Kero Bonito - If I'd Known/album.png",
+      "size": 746078
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Kero Kero Bonito - If I'd Known/background.jpg",
+      "size": 237905
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Kero Kero Bonito - If I'd Known/notes.chart",
+      "size": 47100
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Kero Kero Bonito - If I'd Known/song.ini",
+      "size": 689
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/Kero Kero Bonito - If I'd Known/song.ogg",
+      "size": 4760217
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/The Beatles - All My Loving/album.jpg",
+      "size": 32384
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/The Beatles - All My Loving/background.jpg",
+      "size": 315633
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/The Beatles - All My Loving/notes.chart",
+      "size": 51104
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/The Beatles - All My Loving/song.ini",
+      "size": 522
+    },
+    {
+      "path": "CHARTS 2/! TIER 07 - In Your Wildest Dreams/The Beatles - All My Loving/song.ogg",
+      "size": 5282840
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Audioslave - Drown Me Slowly/album.png",
+      "size": 264538
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Audioslave - Drown Me Slowly/background.jpg",
+      "size": 1082656
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Audioslave - Drown Me Slowly/notes.chart",
+      "size": 82538
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Audioslave - Drown Me Slowly/song.ini",
+      "size": 759
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Audioslave - Drown Me Slowly/song.ogg",
+      "size": 7149414
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Bring Me the Horizon - Ludens/album.png",
+      "size": 39521
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Bring Me the Horizon - Ludens/background.jpg",
+      "size": 699496
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Bring Me the Horizon - Ludens/notes.chart",
+      "size": 127401
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Bring Me the Horizon - Ludens/song.ini",
+      "size": 896
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Bring Me the Horizon - Ludens/song.ogg",
+      "size": 9212586
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Dealer - Grotesque/album.png",
+      "size": 456430
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Dealer - Grotesque/background.jpg",
+      "size": 506164
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Dealer - Grotesque/notes.chart",
+      "size": 57640
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Dealer - Grotesque/song.ini",
+      "size": 558
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Dealer - Grotesque/song.ogg",
+      "size": 5327982
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Guerrilla Warfare - Haze (HVN)/album.png",
+      "size": 449320
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Guerrilla Warfare - Haze (HVN)/background.jpg",
+      "size": 509455
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Guerrilla Warfare - Haze (HVN)/notes.chart",
+      "size": 59746
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Guerrilla Warfare - Haze (HVN)/song.ini",
+      "size": 550
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Guerrilla Warfare - Haze (HVN)/song.ogg",
+      "size": 5354685
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Real Friends - Duality (Slipknot cover)/album.png",
+      "size": 16032
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Real Friends - Duality (Slipknot cover)/background.jpg",
+      "size": 849475
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Real Friends - Duality (Slipknot cover)/notes.chart",
+      "size": 89709
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Real Friends - Duality (Slipknot cover)/song.ini",
+      "size": 530
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Real Friends - Duality (Slipknot cover)/song.ogg",
+      "size": 8462165
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Suicide Silence - Unanswered (feat. Phil Bozeman)/album.png",
+      "size": 342124
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Suicide Silence - Unanswered (feat. Phil Bozeman)/background.jpg",
+      "size": 1379016
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Suicide Silence - Unanswered (feat. Phil Bozeman)/notes.chart",
+      "size": 60928
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Suicide Silence - Unanswered (feat. Phil Bozeman)/song.ini",
+      "size": 827
+    },
+    {
+      "path": "CHARTS 2/! TIER 08 - New Weight/Suicide Silence - Unanswered (feat. Phil Bozeman)/song.ogg",
+      "size": 5428585
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Anomalie - Velours/album.png",
+      "size": 298452
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Anomalie - Velours/background.jpg",
+      "size": 593016
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Anomalie - Velours/notes.chart",
+      "size": 94276
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Anomalie - Velours/song.ini",
+      "size": 434
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Anomalie - Velours/song.ogg",
+      "size": 8352506
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Dr. Dre - The Next Episode (feat. Snoop Dogg) (San Holo Remix)/album.png",
+      "size": 609870
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Dr. Dre - The Next Episode (feat. Snoop Dogg) (San Holo Remix)/background.jpg",
+      "size": 1417709
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Dr. Dre - The Next Episode (feat. Snoop Dogg) (San Holo Remix)/notes.chart",
+      "size": 65585
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Dr. Dre - The Next Episode (feat. Snoop Dogg) (San Holo Remix)/song.ini",
+      "size": 688
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Dr. Dre - The Next Episode (feat. Snoop Dogg) (San Holo Remix)/song.ogg",
+      "size": 7917236
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix)/album.png",
+      "size": 539953
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix)/background.jpg",
+      "size": 793636
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix)/notes.chart",
+      "size": 82732
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix)/song.ini",
+      "size": 707
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Duck Sauce - NRG (Skrillex, Kill The Noise, Milo & Otis Remix)/song.ogg",
+      "size": 6502327
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/I Am Legion - Powerplay/album.png",
+      "size": 195451
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/I Am Legion - Powerplay/background.jpg",
+      "size": 442506
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/I Am Legion - Powerplay/notes.chart",
+      "size": 87544
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/I Am Legion - Powerplay/song.ini",
+      "size": 514
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/I Am Legion - Powerplay/song.ogg",
+      "size": 7127235
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Scooter - State of Mind/album.png",
+      "size": 258185
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Scooter - State of Mind/background.jpg",
+      "size": 1286406
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Scooter - State of Mind/notes.chart",
+      "size": 93133
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Scooter - State of Mind/song.ini",
+      "size": 618
+    },
+    {
+      "path": "CHARTS 2/! TIER 09 - Rave Review/Scooter - State of Mind/song.ogg",
+      "size": 5391371
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Angel Du$t - Bang My Drum/album.png",
+      "size": 293914
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Angel Du$t - Bang My Drum/background.jpg",
+      "size": 1226749
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Angel Du$t - Bang My Drum/notes.chart",
+      "size": 68682
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Angel Du$t - Bang My Drum/song.ini",
+      "size": 545
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Angel Du$t - Bang My Drum/song.ogg",
+      "size": 5201520
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Bayside - Rumspringa (Heartbreak Road)/album.png",
+      "size": 401545
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Bayside - Rumspringa (Heartbreak Road)/background.jpg",
+      "size": 667156
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Bayside - Rumspringa (Heartbreak Road)/notes.chart",
+      "size": 60885
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Bayside - Rumspringa (Heartbreak Road)/song.ini",
+      "size": 832
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Bayside - Rumspringa (Heartbreak Road)/song.ogg",
+      "size": 6246530
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Beartooth - Used and Abused/album.png",
+      "size": 532694
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Beartooth - Used and Abused/background.jpg",
+      "size": 1181483
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Beartooth - Used and Abused/notes.chart",
+      "size": 116376
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Beartooth - Used and Abused/song.ini",
+      "size": 575
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Beartooth - Used and Abused/song.ogg",
+      "size": 7191812
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Capstan - We'll Always Have Paris/album.png",
+      "size": 538420
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Capstan - We'll Always Have Paris/background.jpg",
+      "size": 1120275
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Capstan - We'll Always Have Paris/notes.chart",
+      "size": 81416
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Capstan - We'll Always Have Paris/song.ini",
+      "size": 489
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Capstan - We'll Always Have Paris/song.ogg",
+      "size": 7491640
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Ghost Train Suplex - Sharp Knives Sharper Teeth/album.png",
+      "size": 117532
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Ghost Train Suplex - Sharp Knives Sharper Teeth/background.jpg",
+      "size": 2051871
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Ghost Train Suplex - Sharp Knives Sharper Teeth/notes.chart",
+      "size": 41776
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Ghost Train Suplex - Sharp Knives Sharper Teeth/song.ini",
+      "size": 777
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Ghost Train Suplex - Sharp Knives Sharper Teeth/song.ogg",
+      "size": 3683980
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Spiritbox - Blessed Be/album.png",
+      "size": 412268
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Spiritbox - Blessed Be/background.jpg",
+      "size": 1142929
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Spiritbox - Blessed Be/notes.chart",
+      "size": 56531
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Spiritbox - Blessed Be/song.ini",
+      "size": 616
+    },
+    {
+      "path": "CHARTS 2/! TIER 10 - Interconnected/Spiritbox - Blessed Be/song.ogg",
+      "size": 8258108
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Blood Eagle/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Blood Eagle/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Blood Eagle/notes.chart",
+      "size": 144016
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Blood Eagle/song.ini",
+      "size": 630
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Blood Eagle/song.ogg",
+      "size": 11784197
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - CHVRCH BVRNER/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - CHVRCH BVRNER/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - CHVRCH BVRNER/notes.chart",
+      "size": 75576
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - CHVRCH BVRNER/song.ini",
+      "size": 603
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - CHVRCH BVRNER/song.ogg",
+      "size": 6155917
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Crush/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Crush/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Crush/notes.chart",
+      "size": 161195
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Crush/song.ini",
+      "size": 736
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Crush/song.ogg",
+      "size": 12555851
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Follow Your Ghost/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Follow Your Ghost/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Follow Your Ghost/notes.chart",
+      "size": 107974
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Follow Your Ghost/song.ini",
+      "size": 617
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Follow Your Ghost/song.ogg",
+      "size": 10114777
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Garden in the Bones/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Garden in the Bones/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Garden in the Bones/notes.chart",
+      "size": 136431
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Garden in the Bones/song.ini",
+      "size": 662
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Garden in the Bones/song.ogg",
+      "size": 12076868
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - It's Only Smiles/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - It's Only Smiles/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - It's Only Smiles/notes.chart",
+      "size": 128148
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - It's Only Smiles/song.ini",
+      "size": 659
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - It's Only Smiles/song.ogg",
+      "size": 10024044
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Periphery IV Hail Stan (Full Album)/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Periphery IV Hail Stan (Full Album)/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Periphery IV Hail Stan (Full Album)/notes.chart",
+      "size": 1403472
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Periphery IV Hail Stan (Full Album)/song.ini",
+      "size": 779
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Periphery IV Hail Stan (Full Album)/song.ogg",
+      "size": 118704441
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Reptile/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Reptile/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Reptile/notes.chart",
+      "size": 343622
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Reptile/song.ini",
+      "size": 700
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Reptile/song.ogg",
+      "size": 30776316
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Satellites/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Satellites/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Satellites/notes.chart",
+      "size": 125947
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Satellites/song.ini",
+      "size": 527
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Satellites/song.ogg",
+      "size": 17149545
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Sentient Glow/album.png",
+      "size": 408720
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Sentient Glow/background.jpg",
+      "size": 1938890
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Sentient Glow/notes.chart",
+      "size": 120713
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Sentient Glow/song.ini",
+      "size": 839
+    },
+    {
+      "path": "CHARTS 2/! TIER 11 - Hail Stan/Periphery - Sentient Glow/song.ogg",
+      "size": 8277083
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Lenno - Fever/album.png",
+      "size": 379800
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Lenno - Fever/background.jpg",
+      "size": 411040
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Lenno - Fever/notes.chart",
+      "size": 98556
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Lenno - Fever/song.ini",
+      "size": 419
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Lenno - Fever/song.ogg",
+      "size": 5251027
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Maximum the Hormone - What's up, People!!/album.png",
+      "size": 211997
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Maximum the Hormone - What's up, People!!/background.jpg",
+      "size": 937624
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Maximum the Hormone - What's up, People!!/notes.chart",
+      "size": 119707
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Maximum the Hormone - What's up, People!!/song.ini",
+      "size": 465
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Maximum the Hormone - What's up, People!!/song.ogg",
+      "size": 6805970
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Muse - Sunburn/album.jpg",
+      "size": 54738
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Muse - Sunburn/background.jpg",
+      "size": 586134
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Muse - Sunburn/notes.chart",
+      "size": 123645
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Muse - Sunburn/song.ini",
+      "size": 393
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Muse - Sunburn/song.mp3",
+      "size": 9514358
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Mutoid Man - 1000 Mile Stare/album.png",
+      "size": 783149
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Mutoid Man - 1000 Mile Stare/background.jpg",
+      "size": 1750562
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Mutoid Man - 1000 Mile Stare/notes.chart",
+      "size": 58162
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Mutoid Man - 1000 Mile Stare/song.ini",
+      "size": 559
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Mutoid Man - 1000 Mile Stare/song.ogg",
+      "size": 4795441
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Protest the Hero - Cold Water/album.png",
+      "size": 643257
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Protest the Hero - Cold Water/background.jpg",
+      "size": 1960330
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Protest the Hero - Cold Water/notes.chart",
+      "size": 150995
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Protest the Hero - Cold Water/song.ini",
+      "size": 711
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Protest the Hero - Cold Water/song.ogg",
+      "size": 11568080
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Steel Panther - Community Property/album.png",
+      "size": 554012
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Steel Panther - Community Property/background.jpg",
+      "size": 1931794
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Steel Panther - Community Property/notes.chart",
+      "size": 56331
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Steel Panther - Community Property/song.ini",
+      "size": 588
+    },
+    {
+      "path": "CHARTS 2/! TIER 12 - CSC FTW/Steel Panther - Community Property/song.ogg",
+      "size": 6966450
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Azusa - Interstellar Islands/album.png",
+      "size": 326916
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Azusa - Interstellar Islands/background.jpg",
+      "size": 1328205
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Azusa - Interstellar Islands/notes.chart",
+      "size": 75481
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Azusa - Interstellar Islands/song.ini",
+      "size": 478
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Azusa - Interstellar Islands/song.ogg",
+      "size": 6139210
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Bayside - Bury Me/album.png",
+      "size": 508679
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Bayside - Bury Me/background.jpg",
+      "size": 1280815
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Bayside - Bury Me/notes.chart",
+      "size": 81206
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Bayside - Bury Me/song.ini",
+      "size": 480
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Bayside - Bury Me/song.ogg",
+      "size": 7897264
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Code Orange - Swallowing the Rabbit Whole/album.png",
+      "size": 363788
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Code Orange - Swallowing the Rabbit Whole/background.jpg",
+      "size": 1140598
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Code Orange - Swallowing the Rabbit Whole/notes.chart",
+      "size": 78921
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Code Orange - Swallowing the Rabbit Whole/song.ini",
+      "size": 520
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Code Orange - Swallowing the Rabbit Whole/song.ogg",
+      "size": 7730056
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Johnny Booth - Thief/album.png",
+      "size": 215912
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Johnny Booth - Thief/background.jpg",
+      "size": 254994
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Johnny Booth - Thief/notes.chart",
+      "size": 82972
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Johnny Booth - Thief/song.ini",
+      "size": 468
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Johnny Booth - Thief/song.ogg",
+      "size": 6919898
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Poppy - Scary Mask (feat. FEVER 333)/album.png",
+      "size": 104895
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Poppy - Scary Mask (feat. FEVER 333)/background.jpg",
+      "size": 415520
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Poppy - Scary Mask (feat. FEVER 333)/notes.chart",
+      "size": 63202
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Poppy - Scary Mask (feat. FEVER 333)/song.ini",
+      "size": 680
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Poppy - Scary Mask (feat. FEVER 333)/song.ogg",
+      "size": 5996588
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Poppy - Scary Mask (feat. FEVER 333)/video.webm",
+      "size": 33013842
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Protest the Hero - C'est la Vie/album.png",
+      "size": 743789
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Protest the Hero - C'est la Vie/background.jpg",
+      "size": 382810
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Protest the Hero - C'est la Vie/notes.chart",
+      "size": 88538
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Protest the Hero - C'est la Vie/song.ini",
+      "size": 594
+    },
+    {
+      "path": "CHARTS 2/! TIER 13 - In the Dark/Protest the Hero - C'est la Vie/song.ogg",
+      "size": 6684541
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Arcane Roots - Matter/album.png",
+      "size": 355625
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Arcane Roots - Matter/background.jpg",
+      "size": 1502745
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Arcane Roots - Matter/notes.chart",
+      "size": 74080
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Arcane Roots - Matter/song.ini",
+      "size": 672
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Arcane Roots - Matter/song.ogg",
+      "size": 9579228
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Big Wreck - Locomotive/album.png",
+      "size": 533784
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Big Wreck - Locomotive/background.jpg",
+      "size": 525318
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Big Wreck - Locomotive/notes.chart",
+      "size": 95012
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Big Wreck - Locomotive/song.ini",
+      "size": 506
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Big Wreck - Locomotive/song.ogg",
+      "size": 9238476
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Dance Gavin Dance - Spooks/album.png",
+      "size": 518532
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Dance Gavin Dance - Spooks/background.jpg",
+      "size": 1496703
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Dance Gavin Dance - Spooks/notes.chart",
+      "size": 115243
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Dance Gavin Dance - Spooks/song.ini",
+      "size": 511
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Dance Gavin Dance - Spooks/song.ogg",
+      "size": 7061339
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Moon Hooch - Low 5/album.png",
+      "size": 278266
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Moon Hooch - Low 5/background.png",
+      "size": 4475916
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Moon Hooch - Low 5/notes.chart",
+      "size": 133043
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Moon Hooch - Low 5/song.ini",
+      "size": 497
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Moon Hooch - Low 5/song.ogg",
+      "size": 7403924
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Pom Poko - My Blood/album.png",
+      "size": 548343
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Pom Poko - My Blood/background.jpg",
+      "size": 1264164
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Pom Poko - My Blood/notes.chart",
+      "size": 75931
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Pom Poko - My Blood/song.ini",
+      "size": 405
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Pom Poko - My Blood/song.ogg",
+      "size": 5254182
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Umpfel - Tree/album.png",
+      "size": 319381
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Umpfel - Tree/background.jpg",
+      "size": 908223
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Umpfel - Tree/notes.chart",
+      "size": 190657
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Umpfel - Tree/song.ini",
+      "size": 699
+    },
+    {
+      "path": "CHARTS 2/! TIER 14 - Making Progress/Umpfel - Tree/song.ogg",
+      "size": 12965949
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Aethere - Ash of Existence/album.png",
+      "size": 382106
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Aethere - Ash of Existence/background.jpg",
+      "size": 366817
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Aethere - Ash of Existence/notes.chart",
+      "size": 76849
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Aethere - Ash of Existence/song.ini",
+      "size": 470
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Aethere - Ash of Existence/song.ogg",
+      "size": 6080106
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Born of Osiris - Analogs in a Cell/album.png",
+      "size": 391639
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Born of Osiris - Analogs in a Cell/background.jpg",
+      "size": 1397616
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Born of Osiris - Analogs in a Cell/notes.chart",
+      "size": 71013
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Born of Osiris - Analogs in a Cell/song.ini",
+      "size": 520
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Born of Osiris - Analogs in a Cell/song.ogg",
+      "size": 6282862
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Brand of Sacrifice - Eclipse/album.png",
+      "size": 623663
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Brand of Sacrifice - Eclipse/background.jpg",
+      "size": 901315
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Brand of Sacrifice - Eclipse/notes.chart",
+      "size": 37137
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Brand of Sacrifice - Eclipse/song.ini",
+      "size": 678
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Brand of Sacrifice - Eclipse/song.ogg",
+      "size": 5069282
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/The Tony Danza Tapdance Extravaganza - Rudy X 3/album.png",
+      "size": 437993
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/The Tony Danza Tapdance Extravaganza - Rudy X 3/background.jpg",
+      "size": 384716
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/The Tony Danza Tapdance Extravaganza - Rudy X 3/notes.chart",
+      "size": 72392
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/The Tony Danza Tapdance Extravaganza - Rudy X 3/song.ini",
+      "size": 521
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/The Tony Danza Tapdance Extravaganza - Rudy X 3/song.ogg",
+      "size": 7213409
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Thy Art Is Murder - Death Perception/album.png",
+      "size": 484442
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Thy Art Is Murder - Death Perception/background.jpg",
+      "size": 597365
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Thy Art Is Murder - Death Perception/notes.chart",
+      "size": 64499
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Thy Art Is Murder - Death Perception/song.ini",
+      "size": 460
+    },
+    {
+      "path": "CHARTS 2/! TIER 15 - Brutality Will Prevail/Thy Art Is Murder - Death Perception/song.ogg",
+      "size": 5123922
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/All That Remains - Whispers (I Hear You)/album.png",
+      "size": 649870
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/All That Remains - Whispers (I Hear You)/background.jpg",
+      "size": 1326729
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/All That Remains - Whispers (I Hear You)/notes.chart",
+      "size": 98373
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/All That Remains - Whispers (I Hear You)/song.ini",
+      "size": 492
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/All That Remains - Whispers (I Hear You)/song.ogg",
+      "size": 6643421
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Sylosis - Oath of Silence/album.png",
+      "size": 368902
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Sylosis - Oath of Silence/background.jpg",
+      "size": 1665525
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Sylosis - Oath of Silence/notes.chart",
+      "size": 120249
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Sylosis - Oath of Silence/song.ini",
+      "size": 486
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Sylosis - Oath of Silence/song.ogg",
+      "size": 9683291
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix)/album.png",
+      "size": 431207
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix)/background.jpg",
+      "size": 518759
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix)/notes.chart",
+      "size": 113510
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix)/song.ini",
+      "size": 551
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/The Freestylers - Cracks (feat. Belle Humble) (Flux Pavillion Remix)/song.ogg",
+      "size": 7635785
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Utata-P - Shinrei Taiken wo Shita Aitsu/album.png",
+      "size": 478143
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Utata-P - Shinrei Taiken wo Shita Aitsu/background.jpg",
+      "size": 525105
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Utata-P - Shinrei Taiken wo Shita Aitsu/guitar.ogg",
+      "size": 5601407
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Utata-P - Shinrei Taiken wo Shita Aitsu/notes.chart",
+      "size": 91535
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Utata-P - Shinrei Taiken wo Shita Aitsu/song.ini",
+      "size": 778
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Virtual Riot - PN35/album.png",
+      "size": 678012
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Virtual Riot - PN35/background.jpg",
+      "size": 1698346
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Virtual Riot - PN35/notes.chart",
+      "size": 53240
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Virtual Riot - PN35/song.ini",
+      "size": 835
+    },
+    {
+      "path": "CHARTS 2/! TIER 16 - Raid Sunlight Mediocre Person/Virtual Riot - PN35/song.ogg",
+      "size": 4865291
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Black Tongue - The Cathedral/album.png",
+      "size": 357606
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Black Tongue - The Cathedral/background.jpg",
+      "size": 972642
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Black Tongue - The Cathedral/notes.chart",
+      "size": 119682
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Black Tongue - The Cathedral/song.ini",
+      "size": 572
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Black Tongue - The Cathedral/song.ogg",
+      "size": 7927250
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Demons and Wizards - The Gunslinger/album.png",
+      "size": 640250
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Demons and Wizards - The Gunslinger/background.jpg",
+      "size": 842974
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Demons and Wizards - The Gunslinger/notes.chart",
+      "size": 108517
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Demons and Wizards - The Gunslinger/song.ini",
+      "size": 584
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Demons and Wizards - The Gunslinger/song.ogg",
+      "size": 10714323
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Fit For an Autopsy - The Travelers/album.png",
+      "size": 574458
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Fit For an Autopsy - The Travelers/background.jpg",
+      "size": 1645838
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Fit For an Autopsy - The Travelers/notes.chart",
+      "size": 101967
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Fit For an Autopsy - The Travelers/song.ini",
+      "size": 482
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/Fit For an Autopsy - The Travelers/song.ogg",
+      "size": 9455394
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Holy Guile - The Celebration/album.png",
+      "size": 541745
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Holy Guile - The Celebration/background.jpg",
+      "size": 1024843
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Holy Guile - The Celebration/notes.chart",
+      "size": 93222
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Holy Guile - The Celebration/song.ini",
+      "size": 466
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Holy Guile - The Celebration/song.ogg",
+      "size": 5227109
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Safety Fire - The Ghosts That Wait For Spring/album.png",
+      "size": 202736
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Safety Fire - The Ghosts That Wait For Spring/background.jpg",
+      "size": 293888
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Safety Fire - The Ghosts That Wait For Spring/notes.chart",
+      "size": 128733
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Safety Fire - The Ghosts That Wait For Spring/song.ini",
+      "size": 613
+    },
+    {
+      "path": "CHARTS 2/! TIER 17 - The Return/The Safety Fire - The Ghosts That Wait For Spring/song.ogg",
+      "size": 9917208
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Century of the Narcissist/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Century of the Narcissist/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Century of the Narcissist/notes.chart",
+      "size": 118394
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Century of the Narcissist/song.ini",
+      "size": 710
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Century of the Narcissist/song.ogg",
+      "size": 8284781
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Cracks of Light (feat. Spencer Sotelo)/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Cracks of Light (feat. Spencer Sotelo)/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Cracks of Light (feat. Spencer Sotelo)/notes.chart",
+      "size": 119564
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Cracks of Light (feat. Spencer Sotelo)/song.ini",
+      "size": 925
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Cracks of Light (feat. Spencer Sotelo)/song.ogg",
+      "size": 8558121
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Golden Cufflinks/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Golden Cufflinks/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Golden Cufflinks/notes.chart",
+      "size": 57404
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Golden Cufflinks/song.ini",
+      "size": 921
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Golden Cufflinks/song.ogg",
+      "size": 7769157
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - No Wishbones/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - No Wishbones/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - No Wishbones/notes.chart",
+      "size": 133125
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - No Wishbones/song.ini",
+      "size": 907
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - No Wishbones/song.ogg",
+      "size": 8992071
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Riddles of Humanity/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Riddles of Humanity/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Riddles of Humanity/notes.chart",
+      "size": 126717
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Riddles of Humanity/song.ini",
+      "size": 764
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Riddles of Humanity/song.ogg",
+      "size": 7519003
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Ride the Illusion/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Ride the Illusion/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Ride the Illusion/notes.chart",
+      "size": 111386
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Ride the Illusion/song.ini",
+      "size": 730
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Ride the Illusion/song.ogg",
+      "size": 9221235
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Aura/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Aura/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Aura/notes.chart",
+      "size": 104494
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Aura/song.ini",
+      "size": 713
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Aura/song.ogg",
+      "size": 7656344
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Future in Whose Eyes (Full Album)/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Future in Whose Eyes (Full Album)/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Future in Whose Eyes (Full Album)/notes.chart",
+      "size": 1084246
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Future in Whose Eyes (Full Album)/song.ini",
+      "size": 681
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Future in Whose Eyes (Full Album)/song.ogg",
+      "size": 89212092
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Medley in Whose Eyes/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Medley in Whose Eyes/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Medley in Whose Eyes/notes.chart",
+      "size": 129593
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Medley in Whose Eyes/song.ini",
+      "size": 530
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - The Medley in Whose Eyes/song.ogg",
+      "size": 8044997
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Vivid/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Vivid/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Vivid/notes.chart",
+      "size": 113502
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Vivid/song.ini",
+      "size": 834
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Vivid/song.ogg",
+      "size": 9092098
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Weavers of Woe/album.png",
+      "size": 465076
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Weavers of Woe/background.jpg",
+      "size": 388653
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Weavers of Woe/notes.chart",
+      "size": 120569
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Weavers of Woe/song.ini",
+      "size": 692
+    },
+    {
+      "path": "CHARTS 2/! TIER 18 - The Future in Whose Eyes/SikTh - Weavers of Woe/song.ogg",
+      "size": 10862951
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Aenimus - Eternal/album.png",
+      "size": 440077
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Aenimus - Eternal/background.jpg",
+      "size": 797136
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Aenimus - Eternal/notes.chart",
+      "size": 106283
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Aenimus - Eternal/song.ini",
+      "size": 535
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Aenimus - Eternal/song.ogg",
+      "size": 10105031
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Car Bomb - Spirit of Poison/album.jpg",
+      "size": 163677
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Car Bomb - Spirit of Poison/background.jpg",
+      "size": 448289
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Car Bomb - Spirit of Poison/notes.chart",
+      "size": 123522
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Car Bomb - Spirit of Poison/song.ini",
+      "size": 508
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Car Bomb - Spirit of Poison/song.ogg",
+      "size": 12114575
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/HORSE the band - A Million Exploding Suns/album.png",
+      "size": 756823
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/HORSE the band - A Million Exploding Suns/background.jpg",
+      "size": 256390
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/HORSE the band - A Million Exploding Suns/notes.chart",
+      "size": 107421
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/HORSE the band - A Million Exploding Suns/song.ini",
+      "size": 809
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/HORSE the band - A Million Exploding Suns/song.ogg",
+      "size": 8303843
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Misericordiam - Insomnia/album.png",
+      "size": 285240
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Misericordiam - Insomnia/background.jpg",
+      "size": 215405
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Misericordiam - Insomnia/notes.chart",
+      "size": 64496
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Misericordiam - Insomnia/song.ini",
+      "size": 645
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Misericordiam - Insomnia/song.ogg",
+      "size": 5214156
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Rhapsody of Fire - Ghosts of Forgotten Worlds/album.png",
+      "size": 528284
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Rhapsody of Fire - Ghosts of Forgotten Worlds/background.jpg",
+      "size": 702081
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Rhapsody of Fire - Ghosts of Forgotten Worlds/notes.chart",
+      "size": 154730
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Rhapsody of Fire - Ghosts of Forgotten Worlds/song.ini",
+      "size": 718
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Rhapsody of Fire - Ghosts of Forgotten Worlds/song.ogg",
+      "size": 9426389
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Virtual Riot - Beyond/album.png",
+      "size": 463733
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Virtual Riot - Beyond/background.jpg",
+      "size": 1698346
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Virtual Riot - Beyond/notes.chart",
+      "size": 92680
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Virtual Riot - Beyond/song.ini",
+      "size": 476
+    },
+    {
+      "path": "CHARTS 2/! TIER 19 - Dimensional Space/Virtual Riot - Beyond/song.ogg",
+      "size": 6143762
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/After the Burial - Behold the Crown/album.png",
+      "size": 282464
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/After the Burial - Behold the Crown/background.jpg",
+      "size": 973861
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/After the Burial - Behold the Crown/notes.chart",
+      "size": 92555
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/After the Burial - Behold the Crown/song.ini",
+      "size": 481
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/After the Burial - Behold the Crown/song.ogg",
+      "size": 9044746
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Dead Kiwis - Rock/album.png",
+      "size": 550409
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Dead Kiwis - Rock/background.jpg",
+      "size": 612587
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Dead Kiwis - Rock/notes.chart",
+      "size": 75427
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Dead Kiwis - Rock/song.ini",
+      "size": 442
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Dead Kiwis - Rock/song.ogg",
+      "size": 5863585
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/FamilyJules - Banjo Kazooie Final Battle (feat. Grant Kirkhope)/album.png",
+      "size": 267518
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/FamilyJules - Banjo Kazooie Final Battle (feat. Grant Kirkhope)/background.jpg",
+      "size": 766944
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/FamilyJules - Banjo Kazooie Final Battle (feat. Grant Kirkhope)/notes.chart",
+      "size": 67415
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/FamilyJules - Banjo Kazooie Final Battle (feat. Grant Kirkhope)/song.ini",
+      "size": 480
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/FamilyJules - Banjo Kazooie Final Battle (feat. Grant Kirkhope)/song.ogg",
+      "size": 5976096
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/MUST DIE! - Neo Tokyo/album.png",
+      "size": 73441
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/MUST DIE! - Neo Tokyo/background.jpg",
+      "size": 1321590
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/MUST DIE! - Neo Tokyo/notes.chart",
+      "size": 86451
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/MUST DIE! - Neo Tokyo/song.ini",
+      "size": 1072
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/MUST DIE! - Neo Tokyo/song.ogg",
+      "size": 6766013
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Oathbreaker - Second Son Of R. (Audiotree Live)/album.png",
+      "size": 383377
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Oathbreaker - Second Son Of R. (Audiotree Live)/background.jpg",
+      "size": 433268
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Oathbreaker - Second Son Of R. (Audiotree Live)/notes.chart",
+      "size": 157730
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Oathbreaker - Second Son Of R. (Audiotree Live)/song.ini",
+      "size": 589
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/Oathbreaker - Second Son Of R. (Audiotree Live)/song.ogg",
+      "size": 13782190
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/The Boy Will Drown - The Art of Partying (Municipal Waste cover)/album.png",
+      "size": 523485
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/The Boy Will Drown - The Art of Partying (Municipal Waste cover)/background.jpg",
+      "size": 1339469
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/The Boy Will Drown - The Art of Partying (Municipal Waste cover)/notes.chart",
+      "size": 66205
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/The Boy Will Drown - The Art of Partying (Municipal Waste cover)/song.ini",
+      "size": 489
+    },
+    {
+      "path": "CHARTS 2/! TIER 20 - Torn to Shreds/The Boy Will Drown - The Art of Partying (Municipal Waste cover)/song.ogg",
+      "size": 4180689
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/As Blood Runs Black - Hester Prynne/album.png",
+      "size": 426247
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/As Blood Runs Black - Hester Prynne/background.jpg",
+      "size": 420674
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/As Blood Runs Black - Hester Prynne/notes.chart",
+      "size": 103993
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/As Blood Runs Black - Hester Prynne/song.ini",
+      "size": 452
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/As Blood Runs Black - Hester Prynne/song.ogg",
+      "size": 6837668
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Between the Buried and Me - Obfuscation/album.png",
+      "size": 773692
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Between the Buried and Me - Obfuscation/background.jpg",
+      "size": 907520
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Between the Buried and Me - Obfuscation/notes.chart",
+      "size": 204177
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Between the Buried and Me - Obfuscation/song.ini",
+      "size": 600
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Between the Buried and Me - Obfuscation/song.ogg",
+      "size": 19290342
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Chime - Here We Go/album.png",
+      "size": 218392
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Chime - Here We Go/background.jpg",
+      "size": 984003
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Chime - Here We Go/notes.chart",
+      "size": 77125
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Chime - Here We Go/song.ini",
+      "size": 491
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Chime - Here We Go/song.ogg",
+      "size": 7527018
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Strangefruit - Kiwi/album.png",
+      "size": 321858
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Strangefruit - Kiwi/background.jpg",
+      "size": 2076600
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Strangefruit - Kiwi/notes.chart",
+      "size": 160270
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Strangefruit - Kiwi/song.ini",
+      "size": 428
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/Strangefruit - Kiwi/song.ogg",
+      "size": 8433684
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/The Piano Guys - Kung Fu Piano- Cello Ascends/album.png",
+      "size": 1153541
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/The Piano Guys - Kung Fu Piano- Cello Ascends/background.jpg",
+      "size": 1329641
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/The Piano Guys - Kung Fu Piano- Cello Ascends/notes.chart",
+      "size": 71542
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/The Piano Guys - Kung Fu Piano- Cello Ascends/song.ini",
+      "size": 821
+    },
+    {
+      "path": "CHARTS 2/! TIER 21 - Tiergarten/The Piano Guys - Kung Fu Piano- Cello Ascends/song.ogg",
+      "size": 6449973
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Beneath the Massacre - Treacherous/album.png",
+      "size": 545647
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Beneath the Massacre - Treacherous/background.jpg",
+      "size": 445924
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Beneath the Massacre - Treacherous/notes.chart",
+      "size": 93352
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Beneath the Massacre - Treacherous/song.ini",
+      "size": 480
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Beneath the Massacre - Treacherous/song.ogg",
+      "size": 5148041
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/JYOCHO - Sugoi Kawaii JYOCHO/album.png",
+      "size": 734857
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/JYOCHO - Sugoi Kawaii JYOCHO/background.jpg",
+      "size": 597978
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/JYOCHO - Sugoi Kawaii JYOCHO/notes.chart",
+      "size": 84235
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/JYOCHO - Sugoi Kawaii JYOCHO/song.ini",
+      "size": 493
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/JYOCHO - Sugoi Kawaii JYOCHO/song.ogg",
+      "size": 3138394
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Knife Party - Centipede (TYNAN & KRILLA Flip)/album.png",
+      "size": 215889
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Knife Party - Centipede (TYNAN & KRILLA Flip)/background.jpg",
+      "size": 507728
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Knife Party - Centipede (TYNAN & KRILLA Flip)/notes.chart",
+      "size": 91264
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Knife Party - Centipede (TYNAN & KRILLA Flip)/song.ini",
+      "size": 657
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Knife Party - Centipede (TYNAN & KRILLA Flip)/song.ogg",
+      "size": 7556991
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Point Point - doubleOreo (San Holo Remix)/album.png",
+      "size": 457796
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Point Point - doubleOreo (San Holo Remix)/background.jpg",
+      "size": 445669
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Point Point - doubleOreo (San Holo Remix)/notes.chart",
+      "size": 152557
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Point Point - doubleOreo (San Holo Remix)/song.ini",
+      "size": 548
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Point Point - doubleOreo (San Holo Remix)/song.ogg",
+      "size": 9322562
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Zomboy - End Game (TYNAN Remix)/album.png",
+      "size": 259157
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Zomboy - End Game (TYNAN Remix)/background.jpg",
+      "size": 311930
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Zomboy - End Game (TYNAN Remix)/notes.chart",
+      "size": 99328
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Zomboy - End Game (TYNAN Remix)/song.ini",
+      "size": 480
+    },
+    {
+      "path": "CHARTS 2/! TIER 22 - To Be Continued/Zomboy - End Game (TYNAN Remix)/song.ogg",
+      "size": 9397117
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Bring Me the Vitas - Can You Feel My 7th Element/album.png",
+      "size": 656442
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Bring Me the Vitas - Can You Feel My 7th Element/background.jpg",
+      "size": 538131
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Bring Me the Vitas - Can You Feel My 7th Element/notes.chart",
+      "size": 63254
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Bring Me the Vitas - Can You Feel My 7th Element/song.ini",
+      "size": 473
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Bring Me the Vitas - Can You Feel My 7th Element/song.ogg",
+      "size": 7819863
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Bring Me the Vitas - Can You Feel My 7th Element/video.webm",
+      "size": 295646522
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/CHARTS 2 Endless Setlist/album.png",
+      "size": 126062
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/CHARTS 2 Endless Setlist/background.jpg",
+      "size": 1900285
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/CHARTS 2 Endless Setlist/notes.chart",
+      "size": 12795779
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/CHARTS 2 Endless Setlist/song.ini",
+      "size": 431
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/CHARTS 2 Endless Setlist/song.ogg",
+      "size": 994289577
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Chezy's Ultimate Solo Experience/album.png",
+      "size": 126062
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Chezy's Ultimate Solo Experience/background.jpg",
+      "size": 558134
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Chezy's Ultimate Solo Experience/notes.chart",
+      "size": 1066805
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Chezy's Ultimate Solo Experience/song.ini",
+      "size": 727
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Chezy's Ultimate Solo Experience/song.ogg",
+      "size": 239117168
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/DF - TTFAF/album.png",
+      "size": 523362
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/DF - TTFAF/background.jpg",
+      "size": 434305
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/DF - TTFAF/notes.chart",
+      "size": 7543
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/DF - TTFAF/preview.ogg",
+      "size": 2062013
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/DF - TTFAF/song.ini",
+      "size": 383
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/DF - TTFAF/song.ogg",
+      "size": 965465
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Danker Beef - soft urination/album.png",
+      "size": 48871
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Danker Beef - soft urination/background.jpg",
+      "size": 22962
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Danker Beef - soft urination/notes.chart",
+      "size": 2710
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Danker Beef - soft urination/preview.ogg",
+      "size": 25064
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Danker Beef - soft urination/song.ini",
+      "size": 430
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Danker Beef - soft urination/song.ogg",
+      "size": 737599
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Danker Beef - soft urination/video.mp4",
+      "size": 2937573
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Demon Possessed Singing Trout - Do Wah Diddy Diddy/album.png",
+      "size": 217534
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Demon Possessed Singing Trout - Do Wah Diddy Diddy/background.jpg",
+      "size": 269981
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Demon Possessed Singing Trout - Do Wah Diddy Diddy/notes.chart",
+      "size": 5652
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Demon Possessed Singing Trout - Do Wah Diddy Diddy/preview.ogg",
+      "size": 25064
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Demon Possessed Singing Trout - Do Wah Diddy Diddy/song.ini",
+      "size": 467
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Demon Possessed Singing Trout - Do Wah Diddy Diddy/song.ogg",
+      "size": 671286
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Demon Possessed Singing Trout - Do Wah Diddy Diddy/video.mp4",
+      "size": 44910268
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Drago Drago Forcito - Through the Fire and Flamingos/album.png",
+      "size": 49498
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Drago Drago Forcito - Through the Fire and Flamingos/background.jpg",
+      "size": 638962
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Drago Drago Forcito - Through the Fire and Flamingos/notes.chart",
+      "size": 80530
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Drago Drago Forcito - Through the Fire and Flamingos/preview.ogg",
+      "size": 25064
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Drago Drago Forcito - Through the Fire and Flamingos/song.ini",
+      "size": 502
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Drago Drago Forcito - Through the Fire and Flamingos/song.ogg",
+      "size": 7865052
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Puddle of Mud - About a Girl but every high note is at half speed/album.png",
+      "size": 220426
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Puddle of Mud - About a Girl but every high note is at half speed/background.jpg",
+      "size": 106539
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Puddle of Mud - About a Girl but every high note is at half speed/notes.chart",
+      "size": 16274
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Puddle of Mud - About a Girl but every high note is at half speed/preview.ogg",
+      "size": 25064
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Puddle of Mud - About a Girl but every high note is at half speed/song.ini",
+      "size": 463
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Puddle of Mud - About a Girl but every high note is at half speed/song.ogg",
+      "size": 3997568
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Puddle of Mud - About a Girl but every high note is at half speed/video.mp4",
+      "size": 104155596
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Trapt - Headstrong/album.png",
+      "size": 486057
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Trapt - Headstrong/background.jpg",
+      "size": 395725
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Trapt - Headstrong/notes.chart",
+      "size": 2176
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Trapt - Headstrong/preview.ogg",
+      "size": 389723
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Trapt - Headstrong/song.ini",
+      "size": 410
+    },
+    {
+      "path": "CHARTS 2/! TIER B1 - Medleys & Memes/Trapt - Headstrong/song.ogg",
+      "size": 499010
+    },
+    {
+      "path": "CHARTS 2/charts2_wp.png",
+      "size": 3975299
+    }
+  ],
+  "extracted_size": 3195037024,
+  "file_count": 708,
+  "chart_count": 139,
+  "release_date": "2020-08-02"
 }

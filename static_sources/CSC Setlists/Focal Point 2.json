@@ -3,18 +3,3007 @@
   "folder_id": "static-focal-point-2",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 186,
-  "total_size": 2169640406,
-  "file_count": 748,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-focal-point-2",
-      "path": "Focal Point 2/Focal Point 2.zip",
+      "url": "https://customsongscentral.b-cdn.net/Focal%20Point%202.zip?ref=customsongscentral.com",
       "name": "Focal Point 2.zip",
       "size": 2169640406,
-      "md5": "d3a6d2574d6b066cb46f17bdd13a2b1f",
-      "url": "https://customsongscentral.b-cdn.net/Focal%20Point%202.zip?ref=customsongscentral.com"
+      "md5": "d3a6d2574d6b066cb46f17bdd13a2b1f"
     }
-  ]
+  ],
+  "download_size": 2169640406,
+  "files": [
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Art vs Science - Enter Sandman [JRabes]/album.jpg",
+      "size": 41158
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Art vs Science - Enter Sandman [JRabes]/notes.chart",
+      "size": 49225
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Art vs Science - Enter Sandman [JRabes]/song.ini",
+      "size": 424
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Art vs Science - Enter Sandman [JRabes]/song.ogg",
+      "size": 7509296
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Dragonforce - Trail of Broken Hearts [Aren Eternal & Jackie]/album.png",
+      "size": 523362
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Dragonforce - Trail of Broken Hearts [Aren Eternal & Jackie]/guitar.ogg",
+      "size": 10099150
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Dragonforce - Trail of Broken Hearts [Aren Eternal & Jackie]/notes.mid",
+      "size": 18224
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Dragonforce - Trail of Broken Hearts [Aren Eternal & Jackie]/song.ini",
+      "size": 991
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Firewind - Tyranny (Live 2012) [Jackie]/album.png",
+      "size": 672337
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Firewind - Tyranny (Live 2012) [Jackie]/guitar.ogg",
+      "size": 8183194
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Firewind - Tyranny (Live 2012) [Jackie]/notes.mid",
+      "size": 19139
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Firewind - Tyranny (Live 2012) [Jackie]/song.ini",
+      "size": 792
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Kill the Lights - The Faceless [Jackie]/album.png",
+      "size": 478650
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Kill the Lights - The Faceless [Jackie]/guitar.ogg",
+      "size": 9226808
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Kill the Lights - The Faceless [Jackie]/notes.mid",
+      "size": 36207
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Kill the Lights - The Faceless [Jackie]/song.ini",
+      "size": 854
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Propagandhi - Homophobes Are Just Pissed 'Cause They Can't Get Laid [FrOoGle]/album.png",
+      "size": 397944
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Propagandhi - Homophobes Are Just Pissed 'Cause They Can't Get Laid [FrOoGle]/guitar.ogg",
+      "size": 2429416
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Propagandhi - Homophobes Are Just Pissed 'Cause They Can't Get Laid [FrOoGle]/notes.mid",
+      "size": 12813
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Propagandhi - Homophobes Are Just Pissed 'Cause They Can't Get Laid [FrOoGle]/song.ini",
+      "size": 737
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Riot - Riot [Jackie]/album.png",
+      "size": 705986
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Riot - Riot [Jackie]/guitar.ogg",
+      "size": 10300605
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Riot - Riot [Jackie]/notes.mid",
+      "size": 33953
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Riot - Riot [Jackie]/song.ini",
+      "size": 961
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skratch'N Snyf - S.O.M.P. [Jackie]/album.png",
+      "size": 369591
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skratch'N Snyf - S.O.M.P. [Jackie]/guitar.ogg",
+      "size": 9335985
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skratch'N Snyf - S.O.M.P. [Jackie]/notes.mid",
+      "size": 17910
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skratch'N Snyf - S.O.M.P. [Jackie]/song.ini",
+      "size": 927
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skrillex - Bangarang (feat. Sirah) [Aren Eternal]/album.png",
+      "size": 518448
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skrillex - Bangarang (feat. Sirah) [Aren Eternal]/notes.chart",
+      "size": 60010
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skrillex - Bangarang (feat. Sirah) [Aren Eternal]/song.ini",
+      "size": 402
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Skrillex - Bangarang (feat. Sirah) [Aren Eternal]/song.ogg",
+      "size": 7811045
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/The Dwarves - Doing the Sponge [JRabes]/album.png",
+      "size": 205329
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/The Dwarves - Doing the Sponge [JRabes]/notes.chart",
+      "size": 22441
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/The Dwarves - Doing the Sponge [JRabes]/song.ini",
+      "size": 468
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/The Dwarves - Doing the Sponge [JRabes]/song.ogg",
+      "size": 2914002
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Warlock - Three Minute Warning [Jackie]/album.png",
+      "size": 713405
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Warlock - Three Minute Warning [Jackie]/guitar.ogg",
+      "size": 5021113
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Warlock - Three Minute Warning [Jackie]/notes.mid",
+      "size": 13268
+    },
+    {
+      "path": "Focal Point 2/FP2-01 - Hello LGBT Community/Warlock - Three Minute Warning [Jackie]/song.ini",
+      "size": 843
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Aeon Bridge - Demon Lover [MissMoo]/album.jpg",
+      "size": 289673
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Aeon Bridge - Demon Lover [MissMoo]/notes.chart",
+      "size": 54681
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Aeon Bridge - Demon Lover [MissMoo]/song.ini",
+      "size": 504
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Aeon Bridge - Demon Lover [MissMoo]/song.ogg",
+      "size": 9219236
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/BlastZone - Corruption Highway (ft. Jacob Rabin) [Aren Eternal]/album.png",
+      "size": 282302
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/BlastZone - Corruption Highway (ft. Jacob Rabin) [Aren Eternal]/background.jpg",
+      "size": 123730
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/BlastZone - Corruption Highway (ft. Jacob Rabin) [Aren Eternal]/notes.chart",
+      "size": 29251
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/BlastZone - Corruption Highway (ft. Jacob Rabin) [Aren Eternal]/song.ini",
+      "size": 352
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/BlastZone - Corruption Highway (ft. Jacob Rabin) [Aren Eternal]/song.ogg",
+      "size": 6850368
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Danimal Cannon & Zef - Legacy [Aren Eternal]/album.png",
+      "size": 331803
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Danimal Cannon & Zef - Legacy [Aren Eternal]/notes.chart",
+      "size": 58719
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Danimal Cannon & Zef - Legacy [Aren Eternal]/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Danimal Cannon & Zef - Legacy [Aren Eternal]/song.ogg",
+      "size": 11535054
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Dethklok - Starved [FrOoGle]/album.png",
+      "size": 40873
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Dethklok - Starved [FrOoGle]/guitar.ogg",
+      "size": 7636834
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Dethklok - Starved [FrOoGle]/notes.mid",
+      "size": 28978
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Dethklok - Starved [FrOoGle]/song.ini",
+      "size": 930
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/In Flames - Drenched in Fear [FrOoGle]/album.png",
+      "size": 59414
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/In Flames - Drenched in Fear [FrOoGle]/guitar.ogg",
+      "size": 5231713
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/In Flames - Drenched in Fear [FrOoGle]/notes.mid",
+      "size": 20619
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/In Flames - Drenched in Fear [FrOoGle]/song.ini",
+      "size": 806
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Le Castle Vania - Infinite Ammo [Aren Eternal]/album.png",
+      "size": 582343
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Le Castle Vania - Infinite Ammo [Aren Eternal]/notes.chart",
+      "size": 37232
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Le Castle Vania - Infinite Ammo [Aren Eternal]/song.ini",
+      "size": 328
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Le Castle Vania - Infinite Ammo [Aren Eternal]/song.ogg",
+      "size": 8612634
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/MASTER BOOT RECORD - Irq 5 Sound Blaster [Miscellany]/album.png",
+      "size": 235258
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/MASTER BOOT RECORD - Irq 5 Sound Blaster [Miscellany]/guitar.ogg",
+      "size": 9710086
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/MASTER BOOT RECORD - Irq 5 Sound Blaster [Miscellany]/notes.chart",
+      "size": 61476
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/MASTER BOOT RECORD - Irq 5 Sound Blaster [Miscellany]/song.ini",
+      "size": 466
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Nevermore - Born [Jackie]/album.png",
+      "size": 732426
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Nevermore - Born [Jackie]/guitar.ogg",
+      "size": 18882375
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Nevermore - Born [Jackie]/notes.mid",
+      "size": 31822
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Nevermore - Born [Jackie]/song.ini",
+      "size": 802
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Queens of the Stone Age - Tension Head [FrOoGle]/album.png",
+      "size": 5742
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Queens of the Stone Age - Tension Head [FrOoGle]/guitar.ogg",
+      "size": 4294354
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Queens of the Stone Age - Tension Head [FrOoGle]/notes.mid",
+      "size": 15526
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Queens of the Stone Age - Tension Head [FrOoGle]/song.ini",
+      "size": 789
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Testament - Throne of Thorns [JRabes]/album.jpg",
+      "size": 61712
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Testament - Throne of Thorns [JRabes]/notes.chart",
+      "size": 73781
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Testament - Throne of Thorns [JRabes]/song.ini",
+      "size": 488
+    },
+    {
+      "path": "Focal Point 2/FP2-02 - Rawrrrrr X3/Testament - Throne of Thorns [JRabes]/song.ogg",
+      "size": 27331569
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Anomalie - Velours [MissMoo]/album.png",
+      "size": 210774
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Anomalie - Velours [MissMoo]/notes.chart",
+      "size": 34969
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Anomalie - Velours [MissMoo]/song.ini",
+      "size": 536
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Anomalie - Velours [MissMoo]/song.ogg",
+      "size": 7436074
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Art vs Science - Hollywood [JRabes]/album.jpg",
+      "size": 104057
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Art vs Science - Hollywood [JRabes]/notes.chart",
+      "size": 55897
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Art vs Science - Hollywood [JRabes]/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Art vs Science - Hollywood [JRabes]/song.ogg",
+      "size": 16885325
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Avatar - Let It Burn (Live) [JRabes]/album.jpg",
+      "size": 80382
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Avatar - Let It Burn (Live) [JRabes]/notes.chart",
+      "size": 30306
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Avatar - Let It Burn (Live) [JRabes]/song.ini",
+      "size": 406
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Avatar - Let It Burn (Live) [JRabes]/song.ogg",
+      "size": 10273975
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Black Sabbath - The Law Maker [XEntombmentX]/album.png",
+      "size": 498197
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Black Sabbath - The Law Maker [XEntombmentX]/notes.chart",
+      "size": 34024
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Black Sabbath - The Law Maker [XEntombmentX]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Black Sabbath - The Law Maker [XEntombmentX]/song.ogg",
+      "size": 7774128
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Daisuke Ishiwatari - Catus Carnival II [MissMoo]/album.png",
+      "size": 467292
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Daisuke Ishiwatari - Catus Carnival II [MissMoo]/notes.chart",
+      "size": 19005
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Daisuke Ishiwatari - Catus Carnival II [MissMoo]/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Daisuke Ishiwatari - Catus Carnival II [MissMoo]/song.ogg",
+      "size": 5109746
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Holy Grail - Kill the King [Jackie]/album.png",
+      "size": 751091
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Holy Grail - Kill the King [Jackie]/guitar.ogg",
+      "size": 9252836
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Holy Grail - Kill the King [Jackie]/notes.mid",
+      "size": 20320
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Holy Grail - Kill the King [Jackie]/song.ini",
+      "size": 783
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Kubbi - Cascade [MissMoo]/album.png",
+      "size": 227083
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Kubbi - Cascade [MissMoo]/notes.chart",
+      "size": 41795
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Kubbi - Cascade [MissMoo]/song.ini",
+      "size": 590
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Kubbi - Cascade [MissMoo]/song.ogg",
+      "size": 7697923
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Rich Kids on LSD - Come to Pass [FrOoGle]/album.png",
+      "size": 808674
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Rich Kids on LSD - Come to Pass [FrOoGle]/guitar.ogg",
+      "size": 6551158
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Rich Kids on LSD - Come to Pass [FrOoGle]/notes.mid",
+      "size": 21315
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Rich Kids on LSD - Come to Pass [FrOoGle]/song.ini",
+      "size": 1003
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Supercommuter - Chameleon [JRabes]/album.jpg",
+      "size": 81643
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Supercommuter - Chameleon [JRabes]/notes.chart",
+      "size": 62204
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Supercommuter - Chameleon [JRabes]/song.ini",
+      "size": 409
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/Supercommuter - Chameleon [JRabes]/song.ogg",
+      "size": 16281880
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/The Fearless Flyers - Daddy, He Got a Cessna [Raspberriel]/album.png",
+      "size": 239446
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/The Fearless Flyers - Daddy, He Got a Cessna [Raspberriel]/guitar.ogg",
+      "size": 5468966
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/The Fearless Flyers - Daddy, He Got a Cessna [Raspberriel]/notes.mid",
+      "size": 16661
+    },
+    {
+      "path": "Focal Point 2/FP2-03 - Yo Hand Me the Aux/The Fearless Flyers - Daddy, He Got a Cessna [Raspberriel]/song.ini",
+      "size": 691
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/3 Inches of Blood - Wykydtron [FrOoGle]/album.png",
+      "size": 100312
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/3 Inches of Blood - Wykydtron [FrOoGle]/guitar.ogg",
+      "size": 5577898
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/3 Inches of Blood - Wykydtron [FrOoGle]/notes.mid",
+      "size": 28870
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/3 Inches of Blood - Wykydtron [FrOoGle]/song.ini",
+      "size": 1069
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blaakyum - Freedom Denied [MissMoo]/album.png",
+      "size": 441288
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blaakyum - Freedom Denied [MissMoo]/notes.chart",
+      "size": 34131
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blaakyum - Freedom Denied [MissMoo]/song.ini",
+      "size": 679
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blaakyum - Freedom Denied [MissMoo]/song.ogg",
+      "size": 8021139
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blind Guardian - Ride Into Obsession (Re-Recorded) [Jackie]/album.png",
+      "size": 658478
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blind Guardian - Ride Into Obsession (Re-Recorded) [Jackie]/guitar.ogg",
+      "size": 9216510
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blind Guardian - Ride Into Obsession (Re-Recorded) [Jackie]/notes.mid",
+      "size": 30508
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Blind Guardian - Ride Into Obsession (Re-Recorded) [Jackie]/song.ini",
+      "size": 964
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Megadeth - Sleepwalker [xX760Xx]/album.png",
+      "size": 703032
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Megadeth - Sleepwalker [xX760Xx]/notes.chart",
+      "size": 72072
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Megadeth - Sleepwalker [xX760Xx]/song.ini",
+      "size": 505
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Megadeth - Sleepwalker [xX760Xx]/song.ogg",
+      "size": 12318012
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Muris Varajic - Final Dance [Jackie]/album.jpg",
+      "size": 31521
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Muris Varajic - Final Dance [Jackie]/guitar.ogg",
+      "size": 8045220
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Muris Varajic - Final Dance [Jackie]/notes.mid",
+      "size": 21595
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Muris Varajic - Final Dance [Jackie]/song.ini",
+      "size": 870
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Overdrive - Trapped Under Ice [Sygenysis]/album.png",
+      "size": 653002
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Overdrive - Trapped Under Ice [Sygenysis]/guitar.ogg",
+      "size": 8057344
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Overdrive - Trapped Under Ice [Sygenysis]/notes.mid",
+      "size": 16024
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Overdrive - Trapped Under Ice [Sygenysis]/song.ini",
+      "size": 968
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Protest the Hero - The Canary [XEntombmentX]/album.png",
+      "size": 443547
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Protest the Hero - The Canary [XEntombmentX]/notes.chart",
+      "size": 61239
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Protest the Hero - The Canary [XEntombmentX]/song.ini",
+      "size": 681
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Protest the Hero - The Canary [XEntombmentX]/song.ogg",
+      "size": 8754246
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Strung Out - Orchid [FrOoGle]/album.png",
+      "size": 232919
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Strung Out - Orchid [FrOoGle]/guitar.ogg",
+      "size": 4565065
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Strung Out - Orchid [FrOoGle]/notes.mid",
+      "size": 19407
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Strung Out - Orchid [FrOoGle]/song.ini",
+      "size": 674
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Tokyo Blade - Night of the Blade [iZenPenguin]/album.jpg",
+      "size": 138350
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Tokyo Blade - Night of the Blade [iZenPenguin]/guitar.ogg",
+      "size": 6238433
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Tokyo Blade - Night of the Blade [iZenPenguin]/notes.mid",
+      "size": 22254
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Tokyo Blade - Night of the Blade [iZenPenguin]/song.ini",
+      "size": 529
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Vandenberg - Lost In a City [Jackie]/album.png",
+      "size": 119730
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Vandenberg - Lost In a City [Jackie]/guitar.ogg",
+      "size": 7778340
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Vandenberg - Lost In a City [Jackie]/notes.mid",
+      "size": 14785
+    },
+    {
+      "path": "Focal Point 2/FP2-04 - Story to Tell/Vandenberg - Lost In a City [Jackie]/song.ini",
+      "size": 847
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Anvil - Mothra [torqqes]/album.png",
+      "size": 492919
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Anvil - Mothra [torqqes]/notes.chart",
+      "size": 46152
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Anvil - Mothra [torqqes]/song.ini",
+      "size": 376
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Anvil - Mothra [torqqes]/song.ogg",
+      "size": 10104942
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Black Sabbath - Evil Eye [XEntombmentX]/album.png",
+      "size": 318202
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Black Sabbath - Evil Eye [XEntombmentX]/notes.chart",
+      "size": 45341
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Black Sabbath - Evil Eye [XEntombmentX]/song.ini",
+      "size": 531
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Black Sabbath - Evil Eye [XEntombmentX]/song.ogg",
+      "size": 11085631
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/BlackY - GODHEART [Rek3dge]/album.png",
+      "size": 60157
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/BlackY - GODHEART [Rek3dge]/notes.chart",
+      "size": 47692
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/BlackY - GODHEART [Rek3dge]/song.ini",
+      "size": 511
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/BlackY - GODHEART [Rek3dge]/song.ogg",
+      "size": 15354413
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Danimal Cannon & Zef - Corrupted [Aren Eternal]/album.png",
+      "size": 331803
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Danimal Cannon & Zef - Corrupted [Aren Eternal]/notes.chart",
+      "size": 76719
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Danimal Cannon & Zef - Corrupted [Aren Eternal]/song.ini",
+      "size": 359
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Danimal Cannon & Zef - Corrupted [Aren Eternal]/song.ogg",
+      "size": 13743574
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dragonforce - Disciples of Babylon [Jackie]/album.png",
+      "size": 779612
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dragonforce - Disciples of Babylon [Jackie]/guitar.ogg",
+      "size": 16405075
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dragonforce - Disciples of Babylon [Jackie]/notes.chart",
+      "size": 93154
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dragonforce - Disciples of Babylon [Jackie]/song.ini",
+      "size": 888
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dream Theater - The Dark Eternal Night [iZenPenguin]/album.jpg",
+      "size": 143626
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dream Theater - The Dark Eternal Night [iZenPenguin]/notes.chart",
+      "size": 108235
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dream Theater - The Dark Eternal Night [iZenPenguin]/song.ini",
+      "size": 729
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Dream Theater - The Dark Eternal Night [iZenPenguin]/song.ogg",
+      "size": 10626762
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Iron Maiden - El Dorado [iZenPenguin]/album.jpg",
+      "size": 210572
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Iron Maiden - El Dorado [iZenPenguin]/notes.chart",
+      "size": 63929
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Iron Maiden - El Dorado [iZenPenguin]/song.ini",
+      "size": 542
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Iron Maiden - El Dorado [iZenPenguin]/song.ogg",
+      "size": 7890815
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Nightwish - The Pharaoh Sails to Orion [iZenPenguin]/album.jpg",
+      "size": 97902
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Nightwish - The Pharaoh Sails to Orion [iZenPenguin]/notes.chart",
+      "size": 79328
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Nightwish - The Pharaoh Sails to Orion [iZenPenguin]/song.ini",
+      "size": 643
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Nightwish - The Pharaoh Sails to Orion [iZenPenguin]/song.ogg",
+      "size": 7531781
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Sianvar - Foxholes and Deities [MissMoo]/album.png",
+      "size": 402484
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Sianvar - Foxholes and Deities [MissMoo]/notes.chart",
+      "size": 39593
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Sianvar - Foxholes and Deities [MissMoo]/song.ini",
+      "size": 688
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/Sianvar - Foxholes and Deities [MissMoo]/song.ogg",
+      "size": 6258043
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/The Midnight - Vampires [XEntombmentX]/album.png",
+      "size": 360529
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/The Midnight - Vampires [XEntombmentX]/notes.chart",
+      "size": 52179
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/The Midnight - Vampires [XEntombmentX]/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Focal Point 2/FP2-05 - Supernatural/The Midnight - Vampires [XEntombmentX]/song.ogg",
+      "size": 18318393
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/A Wilhelm Scream - The Horse [FrOoGle]/album.png",
+      "size": 77429
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/A Wilhelm Scream - The Horse [FrOoGle]/guitar.ogg",
+      "size": 7403925
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/A Wilhelm Scream - The Horse [FrOoGle]/notes.mid",
+      "size": 32642
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/A Wilhelm Scream - The Horse [FrOoGle]/song.ini",
+      "size": 765
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Christian Muenzner - Path of the Hero [Jackie]/album.png",
+      "size": 631985
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Christian Muenzner - Path of the Hero [Jackie]/guitar.ogg",
+      "size": 9073444
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Christian Muenzner - Path of the Hero [Jackie]/notes.mid",
+      "size": 20624
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Christian Muenzner - Path of the Hero [Jackie]/song.ini",
+      "size": 943
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Hold Your Own - Nevermind [JRabes]/album.jpg",
+      "size": 77978
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Hold Your Own - Nevermind [JRabes]/notes.chart",
+      "size": 94739
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Hold Your Own - Nevermind [JRabes]/song.ini",
+      "size": 415
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Hold Your Own - Nevermind [JRabes]/song.ogg",
+      "size": 14582401
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Holy Grail - Exciter [Jackie]/album.png",
+      "size": 751091
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Holy Grail - Exciter [Jackie]/guitar.ogg",
+      "size": 8811066
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Holy Grail - Exciter [Jackie]/notes.mid",
+      "size": 22968
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Holy Grail - Exciter [Jackie]/song.ini",
+      "size": 833
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Mordred - Numb [FrOoGle]/album.png",
+      "size": 60190
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Mordred - Numb [FrOoGle]/guitar.ogg",
+      "size": 9059892
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Mordred - Numb [FrOoGle]/notes.mid",
+      "size": 30410
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Mordred - Numb [FrOoGle]/song.ini",
+      "size": 761
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Stallion - No Mercy [Sygenysis]/album.png",
+      "size": 302075
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Stallion - No Mercy [Sygenysis]/guitar.ogg",
+      "size": 9311652
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Stallion - No Mercy [Sygenysis]/notes.mid",
+      "size": 27377
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Stallion - No Mercy [Sygenysis]/song.ini",
+      "size": 913
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Supreme Majesty - Danger [Jackie]/album.png",
+      "size": 545342
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Supreme Majesty - Danger [Jackie]/guitar.ogg",
+      "size": 8604146
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Supreme Majesty - Danger [Jackie]/notes.mid",
+      "size": 18848
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Supreme Majesty - Danger [Jackie]/song.ini",
+      "size": 893
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/The Toy Dolls - Me 'n' John Williams [Sygenysis]/album.png",
+      "size": 574055
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/The Toy Dolls - Me 'n' John Williams [Sygenysis]/guitar.ogg",
+      "size": 8254685
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/The Toy Dolls - Me 'n' John Williams [Sygenysis]/notes.mid",
+      "size": 14012
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/The Toy Dolls - Me 'n' John Williams [Sygenysis]/song.ini",
+      "size": 913
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Whitesnake - Give Me All Your Love [Raspberriel]/album.png",
+      "size": 501175
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Whitesnake - Give Me All Your Love [Raspberriel]/guitar.ogg",
+      "size": 6566193
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Whitesnake - Give Me All Your Love [Raspberriel]/notes.mid",
+      "size": 19101
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Whitesnake - Give Me All Your Love [Raspberriel]/song.ini",
+      "size": 659
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Wolfrik - Nails [FrOoGle]/album.png",
+      "size": 380433
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Wolfrik - Nails [FrOoGle]/guitar.ogg",
+      "size": 5251174
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Wolfrik - Nails [FrOoGle]/notes.mid",
+      "size": 20842
+    },
+    {
+      "path": "Focal Point 2/FP2-06 - Throwbacks & Callbacks/Wolfrik - Nails [FrOoGle]/song.ini",
+      "size": 1067
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Blood Stain Child - Forever Free (feat. Ettore Rigotti & Claudio Ravinale) [iZenPenguin]/album.jpg",
+      "size": 138929
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Blood Stain Child - Forever Free (feat. Ettore Rigotti & Claudio Ravinale) [iZenPenguin]/notes.chart",
+      "size": 58077
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Blood Stain Child - Forever Free (feat. Ettore Rigotti & Claudio Ravinale) [iZenPenguin]/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Blood Stain Child - Forever Free (feat. Ettore Rigotti & Claudio Ravinale) [iZenPenguin]/song.ogg",
+      "size": 4871492
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fear, and Loathing in Las Vegas - Don't Suffer Alone [torqqes]/album.png",
+      "size": 615688
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fear, and Loathing in Las Vegas - Don't Suffer Alone [torqqes]/notes.chart",
+      "size": 57564
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fear, and Loathing in Las Vegas - Don't Suffer Alone [torqqes]/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fear, and Loathing in Las Vegas - Don't Suffer Alone [torqqes]/song.ogg",
+      "size": 6548589
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fractal Dreamers - Fragments of You [XEntombmentX]/album.png",
+      "size": 401134
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fractal Dreamers - Fragments of You [XEntombmentX]/notes.chart",
+      "size": 33427
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fractal Dreamers - Fragments of You [XEntombmentX]/song.ini",
+      "size": 658
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Fractal Dreamers - Fragments of You [XEntombmentX]/song.ogg",
+      "size": 4618562
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Le Castle Vania - Confirmed Thrills [Aren Eternal]/album.png",
+      "size": 219182
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Le Castle Vania - Confirmed Thrills [Aren Eternal]/notes.chart",
+      "size": 22884
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Le Castle Vania - Confirmed Thrills [Aren Eternal]/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Le Castle Vania - Confirmed Thrills [Aren Eternal]/song.ogg",
+      "size": 5580490
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Lich King - Agents of Steel (Agent Steel cover) [Miscellany]/album.png",
+      "size": 96616
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Lich King - Agents of Steel (Agent Steel cover) [Miscellany]/guitar.ogg",
+      "size": 7946645
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Lich King - Agents of Steel (Agent Steel cover) [Miscellany]/notes.chart",
+      "size": 40194
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Lich King - Agents of Steel (Agent Steel cover) [Miscellany]/song.ini",
+      "size": 607
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Razihel & Virtual Riot - One For All, All For One [Aren Eternal]/album.png",
+      "size": 366938
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Razihel & Virtual Riot - One For All, All For One [Aren Eternal]/notes.chart",
+      "size": 39593
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Razihel & Virtual Riot - One For All, All For One [Aren Eternal]/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Razihel & Virtual Riot - One For All, All For One [Aren Eternal]/song.ogg",
+      "size": 7899157
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Symphony X - Nevermore [Jackie]/album.png",
+      "size": 191539
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Symphony X - Nevermore [Jackie]/guitar.ogg",
+      "size": 11825442
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Symphony X - Nevermore [Jackie]/notes.mid",
+      "size": 33090
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Symphony X - Nevermore [Jackie]/song.ini",
+      "size": 783
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unearth - Sanctity of Brothers [torqqes]/album.png",
+      "size": 269868
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unearth - Sanctity of Brothers [torqqes]/notes.chart",
+      "size": 42335
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unearth - Sanctity of Brothers [torqqes]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unearth - Sanctity of Brothers [torqqes]/song.ogg",
+      "size": 7202391
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unleash the Archers - Test Your Metal [Jackie]/album.png",
+      "size": 631970
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unleash the Archers - Test Your Metal [Jackie]/guitar.ogg",
+      "size": 6521707
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unleash the Archers - Test Your Metal [Jackie]/notes.mid",
+      "size": 16248
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/Unleash the Archers - Test Your Metal [Jackie]/song.ini",
+      "size": 834
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/sky_delta - Grenade [Rek3dge]/album.png",
+      "size": 1708006
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/sky_delta - Grenade [Rek3dge]/notes.chart",
+      "size": 33759
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/sky_delta - Grenade [Rek3dge]/song.ini",
+      "size": 487
+    },
+    {
+      "path": "Focal Point 2/FP2-07 - LET'S FUCKING GOOOOO/sky_delta - Grenade [Rek3dge]/song.ogg",
+      "size": 14391120
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Asaki - Anathema [Rek3dge]/album.png",
+      "size": 283539
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Asaki - Anathema [Rek3dge]/notes.chart",
+      "size": 17097
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Asaki - Anathema [Rek3dge]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Asaki - Anathema [Rek3dge]/song.ogg",
+      "size": 6580852
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Chimaira - Empire [FrOoGle]/album.png",
+      "size": 36329
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Chimaira - Empire [FrOoGle]/guitar.ogg",
+      "size": 11552731
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Chimaira - Empire [FrOoGle]/notes.mid",
+      "size": 29248
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Chimaira - Empire [FrOoGle]/song.ini",
+      "size": 733
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Exodus - Salt the Wound [JRabes]/album.jpg",
+      "size": 68741
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Exodus - Salt the Wound [JRabes]/notes.chart",
+      "size": 48410
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Exodus - Salt the Wound [JRabes]/song.ini",
+      "size": 403
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Exodus - Salt the Wound [JRabes]/song.ogg",
+      "size": 16274597
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Hatchet - Signals of Infection [torqqes]/album.png",
+      "size": 485619
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Hatchet - Signals of Infection [torqqes]/notes.chart",
+      "size": 49050
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Hatchet - Signals of Infection [torqqes]/song.ini",
+      "size": 434
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Hatchet - Signals of Infection [torqqes]/song.ogg",
+      "size": 9144505
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Havok - Post-Truth Era [Miscellany]/album.png",
+      "size": 687097
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Havok - Post-Truth Era [Miscellany]/guitar.ogg",
+      "size": 9551551
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Havok - Post-Truth Era [Miscellany]/notes.chart",
+      "size": 39857
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Havok - Post-Truth Era [Miscellany]/song.ini",
+      "size": 324
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Kobaryo - Vicious Heroism [Raspberriel]/album.png",
+      "size": 546242
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Kobaryo - Vicious Heroism [Raspberriel]/guitar.ogg",
+      "size": 4621353
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Kobaryo - Vicious Heroism [Raspberriel]/notes.mid",
+      "size": 14289
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Kobaryo - Vicious Heroism [Raspberriel]/song.ini",
+      "size": 565
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Lapix - Carry Me Away [Rek3dge]/album.png",
+      "size": 409495
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Lapix - Carry Me Away [Rek3dge]/notes.chart",
+      "size": 61848
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Lapix - Carry Me Away [Rek3dge]/song.ini",
+      "size": 485
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Lapix - Carry Me Away [Rek3dge]/song.ogg",
+      "size": 13570408
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Revocation - Exhumed Identity [FrOoGle]/album.png",
+      "size": 119328
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Revocation - Exhumed Identity [FrOoGle]/guitar.ogg",
+      "size": 11285711
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Revocation - Exhumed Identity [FrOoGle]/notes.mid",
+      "size": 48347
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Revocation - Exhumed Identity [FrOoGle]/song.ini",
+      "size": 786
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Roselia - Ringing Bloom [Raspberriel]/album.png",
+      "size": 697054
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Roselia - Ringing Bloom [Raspberriel]/guitar.ogg",
+      "size": 11207758
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Roselia - Ringing Bloom [Raspberriel]/notes.mid",
+      "size": 36358
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/Roselia - Ringing Bloom [Raspberriel]/song.ini",
+      "size": 652
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/t+pazolite - You are the miserable [Rek3dge]/album.png",
+      "size": 190921
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/t+pazolite - You are the miserable [Rek3dge]/notes.chart",
+      "size": 31953
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/t+pazolite - You are the miserable [Rek3dge]/song.ini",
+      "size": 628
+    },
+    {
+      "path": "Focal Point 2/FP2-08 - Go Hard Or Go Home/t+pazolite - You are the miserable [Rek3dge]/song.ogg",
+      "size": 14981240
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/All That Remains - I Die In Degrees [FrOoGle]/album.png",
+      "size": 81256
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/All That Remains - I Die In Degrees [FrOoGle]/guitar.ogg",
+      "size": 5581024
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/All That Remains - I Die In Degrees [FrOoGle]/notes.mid",
+      "size": 19538
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/All That Remains - I Die In Degrees [FrOoGle]/song.ini",
+      "size": 809
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/DGM - Reason [Jackie]/album.png",
+      "size": 227499
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/DGM - Reason [Jackie]/guitar.ogg",
+      "size": 10063298
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/DGM - Reason [Jackie]/notes.mid",
+      "size": 33591
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/DGM - Reason [Jackie]/song.ini",
+      "size": 829
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Dance Gavin Dance - NASA [MissMoo]/album.png",
+      "size": 635503
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Dance Gavin Dance - NASA [MissMoo]/notes.chart",
+      "size": 47687
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Dance Gavin Dance - NASA [MissMoo]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Dance Gavin Dance - NASA [MissMoo]/song.ogg",
+      "size": 7649333
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Danimal Cannon & Zef - Glitch [Aren Eternal]/album.png",
+      "size": 331803
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Danimal Cannon & Zef - Glitch [Aren Eternal]/notes.chart",
+      "size": 87511
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Danimal Cannon & Zef - Glitch [Aren Eternal]/song.ini",
+      "size": 357
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Danimal Cannon & Zef - Glitch [Aren Eternal]/song.ogg",
+      "size": 12559317
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Day of Reckoning - Entertained by Pain [Jackie]/album.png",
+      "size": 483679
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Day of Reckoning - Entertained by Pain [Jackie]/guitar.ogg",
+      "size": 9914270
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Day of Reckoning - Entertained by Pain [Jackie]/notes.mid",
+      "size": 30748
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Day of Reckoning - Entertained by Pain [Jackie]/song.ini",
+      "size": 981
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Jakub Zytecki - Good I Bad Me [iZenPenguin]/album.jpg",
+      "size": 139650
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Jakub Zytecki - Good I Bad Me [iZenPenguin]/notes.chart",
+      "size": 29713
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Jakub Zytecki - Good I Bad Me [iZenPenguin]/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Jakub Zytecki - Good I Bad Me [iZenPenguin]/song.ogg",
+      "size": 4296366
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Nuclear Assault - Another Violent End [FrOoGle]/album.png",
+      "size": 95029
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Nuclear Assault - Another Violent End [FrOoGle]/guitar.ogg",
+      "size": 7767983
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Nuclear Assault - Another Violent End [FrOoGle]/notes.mid",
+      "size": 38197
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Nuclear Assault - Another Violent End [FrOoGle]/song.ini",
+      "size": 764
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Pagan's Mind - The Master's Voice [jdurandTV]/album.png",
+      "size": 156058
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Pagan's Mind - The Master's Voice [jdurandTV]/notes.chart",
+      "size": 49131
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Pagan's Mind - The Master's Voice [jdurandTV]/song.ini",
+      "size": 586
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Pagan's Mind - The Master's Voice [jdurandTV]/song.ogg",
+      "size": 10127095
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Persefone - The Majestic of Gaia [LilithTheFox & Jackie]/album.jpg",
+      "size": 117471
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Persefone - The Majestic of Gaia [LilithTheFox & Jackie]/guitar.ogg",
+      "size": 25848016
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Persefone - The Majestic of Gaia [LilithTheFox & Jackie]/notes.mid",
+      "size": 62741
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/Persefone - The Majestic of Gaia [LilithTheFox & Jackie]/song.ini",
+      "size": 915
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/This Town Needs Guns - Panda [MissMoo]/album.png",
+      "size": 120800
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/This Town Needs Guns - Panda [MissMoo]/notes.chart",
+      "size": 34946
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/This Town Needs Guns - Panda [MissMoo]/song.ini",
+      "size": 613
+    },
+    {
+      "path": "Focal Point 2/FP2-09 - Progress to Pain/This Town Needs Guns - Panda [MissMoo]/song.ogg",
+      "size": 7146059
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Beethoven - Moonlight Sonata 3rd Movement (meganeko remix) [Aren Eternal]/album.png",
+      "size": 156965
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Beethoven - Moonlight Sonata 3rd Movement (meganeko remix) [Aren Eternal]/notes.chart",
+      "size": 55810
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Beethoven - Moonlight Sonata 3rd Movement (meganeko remix) [Aren Eternal]/song.ini",
+      "size": 398
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Beethoven - Moonlight Sonata 3rd Movement (meganeko remix) [Aren Eternal]/song.ogg",
+      "size": 7960146
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Chopin -  \u00c9tude Op. 25, No. 12 (meganeko remix) [Aren Eternal]/album.png",
+      "size": 156965
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Chopin -  \u00c9tude Op. 25, No. 12 (meganeko remix) [Aren Eternal]/notes.chart",
+      "size": 42387
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Chopin -  \u00c9tude Op. 25, No. 12 (meganeko remix) [Aren Eternal]/song.ini",
+      "size": 370
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Chopin -  \u00c9tude Op. 25, No. 12 (meganeko remix) [Aren Eternal]/song.ogg",
+      "size": 5869199
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - The Pit and the Pendulum [Jackie]/album.png",
+      "size": 472227
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - The Pit and the Pendulum [Jackie]/guitar.ogg",
+      "size": 7770210
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - The Pit and the Pendulum [Jackie]/notes.mid",
+      "size": 15218
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - The Pit and the Pendulum [Jackie]/song.ini",
+      "size": 908
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - Wing Commander [Jackie]/album.png",
+      "size": 631985
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - Wing Commander [Jackie]/guitar.ogg",
+      "size": 8000723
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - Wing Commander [Jackie]/notes.mid",
+      "size": 15838
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Christian Muenzner - Wing Commander [Jackie]/song.ini",
+      "size": 858
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Dark Moor - Somewhere In Dreams [Jackie]/album.png",
+      "size": 716776
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Dark Moor - Somewhere In Dreams [Jackie]/guitar.ogg",
+      "size": 9955954
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Dark Moor - Somewhere In Dreams [Jackie]/notes.mid",
+      "size": 19779
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Dark Moor - Somewhere In Dreams [Jackie]/song.ini",
+      "size": 897
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Nobuo Uematsu - Nail of the Heavens [EvaCH]/album.png",
+      "size": 190266
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Nobuo Uematsu - Nail of the Heavens [EvaCH]/notes.chart",
+      "size": 21935
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Nobuo Uematsu - Nail of the Heavens [EvaCH]/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Nobuo Uematsu - Nail of the Heavens [EvaCH]/song.ogg",
+      "size": 5966804
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Rhapsody of Fire - Holy Thunderforce (Re-Recorded) [Jackie]/album.png",
+      "size": 464245
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Rhapsody of Fire - Holy Thunderforce (Re-Recorded) [Jackie]/guitar.ogg",
+      "size": 8934179
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Rhapsody of Fire - Holy Thunderforce (Re-Recorded) [Jackie]/notes.chart",
+      "size": 52038
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Rhapsody of Fire - Holy Thunderforce (Re-Recorded) [Jackie]/song.ini",
+      "size": 1004
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Symphony X - Sea of Lies [Jackie]/album.png",
+      "size": 689002
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Symphony X - Sea of Lies [Jackie]/guitar.ogg",
+      "size": 12814591
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Symphony X - Sea of Lies [Jackie]/notes.mid",
+      "size": 20447
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Symphony X - Sea of Lies [Jackie]/song.ini",
+      "size": 876
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Theodore Ziras - Dash [Jackie]/album.png",
+      "size": 498740
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Theodore Ziras - Dash [Jackie]/guitar.ogg",
+      "size": 6220748
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Theodore Ziras - Dash [Jackie]/notes.mid",
+      "size": 10119
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Theodore Ziras - Dash [Jackie]/song.ini",
+      "size": 910
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Weaponlord - Dagon [Jackie]/album.png",
+      "size": 455792
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Weaponlord - Dagon [Jackie]/guitar.ogg",
+      "size": 9185102
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Weaponlord - Dagon [Jackie]/notes.mid",
+      "size": 29881
+    },
+    {
+      "path": "Focal Point 2/FP2-10 - Neoclassically Trained/Weaponlord - Dagon [Jackie]/song.ini",
+      "size": 830
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ascension - Orb of the Moons [Jackie]/album.png",
+      "size": 581712
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ascension - Orb of the Moons [Jackie]/guitar.ogg",
+      "size": 9463887
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ascension - Orb of the Moons [Jackie]/notes.mid",
+      "size": 28432
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ascension - Orb of the Moons [Jackie]/song.ini",
+      "size": 1002
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/CHON - Perfect Pillow [xX760Xx]/album.png",
+      "size": 773742
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/CHON - Perfect Pillow [xX760Xx]/notes.chart",
+      "size": 27610
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/CHON - Perfect Pillow [xX760Xx]/song.ini",
+      "size": 549
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/CHON - Perfect Pillow [xX760Xx]/song.ogg",
+      "size": 6971934
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/DJ JOSHITAKA meets DJ TAKA - Triple Counter [Rek3dge]/album.png",
+      "size": 595080
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/DJ JOSHITAKA meets DJ TAKA - Triple Counter [Rek3dge]/notes.chart",
+      "size": 19816
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/DJ JOSHITAKA meets DJ TAKA - Triple Counter [Rek3dge]/song.ini",
+      "size": 462
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/DJ JOSHITAKA meets DJ TAKA - Triple Counter [Rek3dge]/song.ogg",
+      "size": 7449482
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Danimal Cannon & Zef - Logic Gatekeeper [Aren Eternal]/album.png",
+      "size": 331803
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Danimal Cannon & Zef - Logic Gatekeeper [Aren Eternal]/notes.chart",
+      "size": 56583
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Danimal Cannon & Zef - Logic Gatekeeper [Aren Eternal]/song.ini",
+      "size": 364
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Danimal Cannon & Zef - Logic Gatekeeper [Aren Eternal]/song.ogg",
+      "size": 10429993
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/I Shot the Duck Hunt Dog - BGM 6 [MissMoo]/album.png",
+      "size": 405143
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/I Shot the Duck Hunt Dog - BGM 6 [MissMoo]/notes.chart",
+      "size": 82191
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/I Shot the Duck Hunt Dog - BGM 6 [MissMoo]/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/I Shot the Duck Hunt Dog - BGM 6 [MissMoo]/song.ogg",
+      "size": 7645239
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Nili Brosh - Retractable Intent [iZenPenguin]/album.jpg",
+      "size": 128539
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Nili Brosh - Retractable Intent [iZenPenguin]/notes.chart",
+      "size": 33872
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Nili Brosh - Retractable Intent [iZenPenguin]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Nili Brosh - Retractable Intent [iZenPenguin]/song.ogg",
+      "size": 5305742
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Robert Rodrigo - In A Dream [jdurandTV]/album.png",
+      "size": 495703
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Robert Rodrigo - In A Dream [jdurandTV]/notes.chart",
+      "size": 39951
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Robert Rodrigo - In A Dream [jdurandTV]/song.ini",
+      "size": 601
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Robert Rodrigo - In A Dream [jdurandTV]/song.ogg",
+      "size": 7895588
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Santana - Toussaint L'Overture [Raspberriel]/album.png",
+      "size": 499341
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Santana - Toussaint L'Overture [Raspberriel]/guitar.ogg",
+      "size": 14086789
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Santana - Toussaint L'Overture [Raspberriel]/notes.mid",
+      "size": 26888
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Santana - Toussaint L'Overture [Raspberriel]/song.ini",
+      "size": 636
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Steve Vai - Erotic Nightmares [LilithTheFox]/album.jpg",
+      "size": 118433
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Steve Vai - Erotic Nightmares [LilithTheFox]/notes.chart",
+      "size": 38389
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Steve Vai - Erotic Nightmares [LilithTheFox]/song.ini",
+      "size": 554
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Steve Vai - Erotic Nightmares [LilithTheFox]/song.ogg",
+      "size": 9158607
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ultimate Steel - Tropical Summer Song [jdurandTV]/album.png",
+      "size": 52314
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ultimate Steel - Tropical Summer Song [jdurandTV]/notes.chart",
+      "size": 38520
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ultimate Steel - Tropical Summer Song [jdurandTV]/song.ini",
+      "size": 552
+    },
+    {
+      "path": "Focal Point 2/FP2-11 - Instrumadness/Ultimate Steel - Tropical Summer Song [jdurandTV]/song.ogg",
+      "size": 6265835
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Christian Muenzner - Knight Rider [Jackie]/album.png",
+      "size": 631985
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Christian Muenzner - Knight Rider [Jackie]/guitar.ogg",
+      "size": 6618526
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Christian Muenzner - Knight Rider [Jackie]/notes.mid",
+      "size": 12384
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Christian Muenzner - Knight Rider [Jackie]/song.ini",
+      "size": 967
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dio - I Speed At Night [Jackie]/album.png",
+      "size": 479138
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dio - I Speed At Night [Jackie]/guitar.ogg",
+      "size": 6592153
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dio - I Speed At Night [Jackie]/notes.mid",
+      "size": 20092
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dio - I Speed At Night [Jackie]/song.ini",
+      "size": 882
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dragonforce - The Game [Jackie & Aren Eternal]/album.png",
+      "size": 744106
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dragonforce - The Game [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 11178890
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dragonforce - The Game [Jackie & Aren Eternal]/notes.chart",
+      "size": 77334
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Dragonforce - The Game [Jackie & Aren Eternal]/song.ini",
+      "size": 947
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Enforcer - Destroyer [Jackie]/album.png",
+      "size": 465486
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Enforcer - Destroyer [Jackie]/guitar.ogg",
+      "size": 7652581
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Enforcer - Destroyer [Jackie]/notes.mid",
+      "size": 24256
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Enforcer - Destroyer [Jackie]/song.ini",
+      "size": 839
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Holy Grail - Fast As A Shark [Jackie]/album.png",
+      "size": 751091
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Holy Grail - Fast As A Shark [Jackie]/guitar.ogg",
+      "size": 6715020
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Holy Grail - Fast As A Shark [Jackie]/notes.mid",
+      "size": 19438
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Holy Grail - Fast As A Shark [Jackie]/song.ini",
+      "size": 791
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Kobaryo - Invisible Frenzy [Rek3dge]/album.png",
+      "size": 205024
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Kobaryo - Invisible Frenzy [Rek3dge]/notes.chart",
+      "size": 22713
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Kobaryo - Invisible Frenzy [Rek3dge]/song.ini",
+      "size": 387
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Kobaryo - Invisible Frenzy [Rek3dge]/song.ogg",
+      "size": 7743848
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Megadeth - High Speed Dirt [FrOoGle]/album.png",
+      "size": 201492
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Megadeth - High Speed Dirt [FrOoGle]/guitar.ogg",
+      "size": 6507584
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Megadeth - High Speed Dirt [FrOoGle]/notes.mid",
+      "size": 27375
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Megadeth - High Speed Dirt [FrOoGle]/song.ini",
+      "size": 760
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Pantera - Down Below '88 [Miscellany]/album.png",
+      "size": 69612
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Pantera - Down Below '88 [Miscellany]/guitar.ogg",
+      "size": 6958238
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Pantera - Down Below '88 [Miscellany]/notes.chart",
+      "size": 36184
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Pantera - Down Below '88 [Miscellany]/song.ini",
+      "size": 539
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Riot City - Burn the Night [Jackie]/album.png",
+      "size": 620567
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Riot City - Burn the Night [Jackie]/guitar.ogg",
+      "size": 6222125
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Riot City - Burn the Night [Jackie]/notes.mid",
+      "size": 23735
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Riot City - Burn the Night [Jackie]/song.ini",
+      "size": 869
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Umphrey's McGee - Ace of Long Nights [Sygenysis]/album.png",
+      "size": 440422
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Umphrey's McGee - Ace of Long Nights [Sygenysis]/guitar.ogg",
+      "size": 9152298
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Umphrey's McGee - Ace of Long Nights [Sygenysis]/notes.mid",
+      "size": 23505
+    },
+    {
+      "path": "Focal Point 2/FP2-12 - XLR8/Umphrey's McGee - Ace of Long Nights [Sygenysis]/song.ini",
+      "size": 908
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Allegaeon - Proponent for Sentience [Miscellany]/album.png",
+      "size": 588288
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Allegaeon - Proponent for Sentience [Miscellany]/guitar.ogg",
+      "size": 56562083
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Allegaeon - Proponent for Sentience [Miscellany]/notes.chart",
+      "size": 263312
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Allegaeon - Proponent for Sentience [Miscellany]/song.ini",
+      "size": 564
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Between The Buried And Me - Extremophile Elite [Miscellany]/album.png",
+      "size": 523565
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Between The Buried And Me - Extremophile Elite [Miscellany]/guitar.ogg",
+      "size": 24874530
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Between The Buried And Me - Extremophile Elite [Miscellany]/notes.chart",
+      "size": 112264
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Between The Buried And Me - Extremophile Elite [Miscellany]/song.ini",
+      "size": 484
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Blind Guardian - Time What Is Time [Jackie & Sygenysis]/album.png",
+      "size": 776678
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Blind Guardian - Time What Is Time [Jackie & Sygenysis]/guitar.ogg",
+      "size": 12236271
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Blind Guardian - Time What Is Time [Jackie & Sygenysis]/notes.mid",
+      "size": 26483
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Blind Guardian - Time What Is Time [Jackie & Sygenysis]/song.ini",
+      "size": 881
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Danimal Cannon & Zef - Parallel Processing [Aren Eternal]/album.png",
+      "size": 331803
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Danimal Cannon & Zef - Parallel Processing [Aren Eternal]/notes.chart",
+      "size": 117649
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Danimal Cannon & Zef - Parallel Processing [Aren Eternal]/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Danimal Cannon & Zef - Parallel Processing [Aren Eternal]/song.ogg",
+      "size": 18409273
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Dream Theater - Take the Time (Live) [Jackie]/album.png",
+      "size": 429100
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Dream Theater - Take the Time (Live) [Jackie]/guitar.ogg",
+      "size": 25943963
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Dream Theater - Take the Time (Live) [Jackie]/notes.mid",
+      "size": 55044
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Dream Theater - Take the Time (Live) [Jackie]/song.ini",
+      "size": 791
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Haken - Haken Solo Medley [LilithTheFox]/album.png",
+      "size": 376354
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Haken - Haken Solo Medley [LilithTheFox]/notes.chart",
+      "size": 80500
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Haken - Haken Solo Medley [LilithTheFox]/song.ini",
+      "size": 629
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Haken - Haken Solo Medley [LilithTheFox]/song.ogg",
+      "size": 16091836
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Hibria - Wings of Wax [Jackie]/album.png",
+      "size": 726860
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Hibria - Wings of Wax [Jackie]/guitar.ogg",
+      "size": 17677020
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Hibria - Wings of Wax [Jackie]/notes.mid",
+      "size": 40124
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Hibria - Wings of Wax [Jackie]/song.ini",
+      "size": 797
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Infected Mushroom & BLiSS - Bliss on Mushrooms (feat. Miyavi) [torqqes]/album.png",
+      "size": 563573
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Infected Mushroom & BLiSS - Bliss on Mushrooms (feat. Miyavi) [torqqes]/notes.chart",
+      "size": 101583
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Infected Mushroom & BLiSS - Bliss on Mushrooms (feat. Miyavi) [torqqes]/song.ini",
+      "size": 448
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Infected Mushroom & BLiSS - Bliss on Mushrooms (feat. Miyavi) [torqqes]/song.ogg",
+      "size": 19646229
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Thank You Scientist - Blood on the Radio [iZenPenguin]/album.jpg",
+      "size": 219638
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Thank You Scientist - Blood on the Radio [iZenPenguin]/notes.chart",
+      "size": 116509
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Thank You Scientist - Blood on the Radio [iZenPenguin]/song.ini",
+      "size": 618
+    },
+    {
+      "path": "Focal Point 2/FP2-13 - The Long Con/Thank You Scientist - Blood on the Radio [iZenPenguin]/song.ogg",
+      "size": 11668986
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Ascension - Somewhere Back in Time [Miscellany]/album.png",
+      "size": 515340
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Ascension - Somewhere Back in Time [Miscellany]/guitar.ogg",
+      "size": 14739369
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Ascension - Somewhere Back in Time [Miscellany]/notes.chart",
+      "size": 68895
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Ascension - Somewhere Back in Time [Miscellany]/song.ini",
+      "size": 559
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Cry Venom - Wolfsbane [Jackie & Aren Eternal]/album.png",
+      "size": 696588
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Cry Venom - Wolfsbane [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 10089396
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Cry Venom - Wolfsbane [Jackie & Aren Eternal]/notes.chart",
+      "size": 55400
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Cry Venom - Wolfsbane [Jackie & Aren Eternal]/song.ini",
+      "size": 920
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/DGM - Universe [Jackie]/album.png",
+      "size": 227499
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/DGM - Universe [Jackie]/guitar.ogg",
+      "size": 8926142
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/DGM - Universe [Jackie]/notes.mid",
+      "size": 29413
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/DGM - Universe [Jackie]/song.ini",
+      "size": 840
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Double Dealer - The Long Way Road [Sygenysis]/album.png",
+      "size": 152652
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Double Dealer - The Long Way Road [Sygenysis]/guitar.ogg",
+      "size": 9649644
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Double Dealer - The Long Way Road [Sygenysis]/notes.mid",
+      "size": 33217
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Double Dealer - The Long Way Road [Sygenysis]/song.ini",
+      "size": 916
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonforce - My Spirit Will Go On [Jackie & Aren Eternal]/album.png",
+      "size": 586322
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonforce - My Spirit Will Go On [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 16962111
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonforce - My Spirit Will Go On [Jackie & Aren Eternal]/notes.chart",
+      "size": 91939
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonforce - My Spirit Will Go On [Jackie & Aren Eternal]/song.ini",
+      "size": 1021
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonland - Storming Across Heaven [Jackie]/album.png",
+      "size": 567206
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonland - Storming Across Heaven [Jackie]/guitar.ogg",
+      "size": 8935460
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonland - Storming Across Heaven [Jackie]/notes.mid",
+      "size": 26609
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Dragonland - Storming Across Heaven [Jackie]/song.ini",
+      "size": 920
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Immortal Guardian - Aeolian [Jackie]/album.png",
+      "size": 616220
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Immortal Guardian - Aeolian [Jackie]/guitar.ogg",
+      "size": 7581348
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Immortal Guardian - Aeolian [Jackie]/notes.mid",
+      "size": 16871
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Immortal Guardian - Aeolian [Jackie]/song.ini",
+      "size": 941
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Pharaoh - Slaves [Jackie]/album.png",
+      "size": 611352
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Pharaoh - Slaves [Jackie]/guitar.ogg",
+      "size": 10169181
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Pharaoh - Slaves [Jackie]/notes.mid",
+      "size": 23208
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Pharaoh - Slaves [Jackie]/song.ini",
+      "size": 824
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Rhapsody of Fire - Emerald Sword [iZenPenguin]/album.jpg",
+      "size": 119961
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Rhapsody of Fire - Emerald Sword [iZenPenguin]/notes.chart",
+      "size": 43964
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Rhapsody of Fire - Emerald Sword [iZenPenguin]/song.ini",
+      "size": 549
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Rhapsody of Fire - Emerald Sword [iZenPenguin]/song.ogg",
+      "size": 5228943
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Twilightning - Delirium Veil [Jackie]/album.png",
+      "size": 692950
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Twilightning - Delirium Veil [Jackie]/guitar.ogg",
+      "size": 8453209
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Twilightning - Delirium Veil [Jackie]/notes.mid",
+      "size": 18107
+    },
+    {
+      "path": "Focal Point 2/FP2-14 - HA! They Really Thought We Forgot the Power Metal!/Twilightning - Delirium Veil [Jackie]/song.ini",
+      "size": 922
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Aeon Bridge - Formula Neon 2 [Jackie & Aren Eternal]/album.png",
+      "size": 4113284
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Aeon Bridge - Formula Neon 2 [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 11037556
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Aeon Bridge - Formula Neon 2 [Jackie & Aren Eternal]/notes.chart",
+      "size": 91899
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Aeon Bridge - Formula Neon 2 [Jackie & Aren Eternal]/song.ini",
+      "size": 840
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Matthew Mills - The Fury of Speed [Jackie]/album.png",
+      "size": 741445
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Matthew Mills - The Fury of Speed [Jackie]/guitar.ogg",
+      "size": 8782477
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Matthew Mills - The Fury of Speed [Jackie]/notes.mid",
+      "size": 10509
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Matthew Mills - The Fury of Speed [Jackie]/song.ini",
+      "size": 834
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Megadeth - Mechanix [Miscellany]/album.png",
+      "size": 497896
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Megadeth - Mechanix [Miscellany]/guitar.ogg",
+      "size": 11378804
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Megadeth - Mechanix [Miscellany]/notes.chart",
+      "size": 61277
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Megadeth - Mechanix [Miscellany]/song.ini",
+      "size": 650
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Changes (Live) [Jackie]/album.png",
+      "size": 905121
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Changes (Live) [Jackie]/guitar.ogg",
+      "size": 9112544
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Changes (Live) [Jackie]/notes.mid",
+      "size": 28063
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Changes (Live) [Jackie]/song.ini",
+      "size": 831
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Wheels In Motion (Live) [Jackie]/album.png",
+      "size": 905121
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Wheels In Motion (Live) [Jackie]/guitar.ogg",
+      "size": 10047459
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Wheels In Motion (Live) [Jackie]/notes.mid",
+      "size": 24642
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Mike Orlando - Wheels In Motion (Live) [Jackie]/song.ini",
+      "size": 837
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Silent Knight - The Strike of the Sword [Jackie & Aren Eternal]/album.png",
+      "size": 730768
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Silent Knight - The Strike of the Sword [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 11094827
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Silent Knight - The Strike of the Sword [Jackie & Aren Eternal]/notes.chart",
+      "size": 56806
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Silent Knight - The Strike of the Sword [Jackie & Aren Eternal]/song.ini",
+      "size": 912
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Todd Duane - Barnyard Scuttle [xX760Xx]/album.png",
+      "size": 749684
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Todd Duane - Barnyard Scuttle [xX760Xx]/notes.chart",
+      "size": 31268
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Todd Duane - Barnyard Scuttle [xX760Xx]/song.ini",
+      "size": 640
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Todd Duane - Barnyard Scuttle [xX760Xx]/song.ogg",
+      "size": 6635089
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Tommy Emmanuel - Tall Fiddler (Live) [Jackie]/album.png",
+      "size": 232805
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Tommy Emmanuel - Tall Fiddler (Live) [Jackie]/guitar.ogg",
+      "size": 4989499
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Tommy Emmanuel - Tall Fiddler (Live) [Jackie]/notes.mid",
+      "size": 18447
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Tommy Emmanuel - Tall Fiddler (Live) [Jackie]/song.ini",
+      "size": 907
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vektor - Hunger for Violence [Miscellany]/album.png",
+      "size": 415994
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vektor - Hunger for Violence [Miscellany]/guitar.ogg",
+      "size": 14421423
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vektor - Hunger for Violence [Miscellany]/notes.chart",
+      "size": 100957
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vektor - Hunger for Violence [Miscellany]/song.ini",
+      "size": 642
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vindicitiv - Far Beyond the Sun (Yngwie Malmsteen cover) [Jackie]/album.png",
+      "size": 531534
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vindicitiv - Far Beyond the Sun (Yngwie Malmsteen cover) [Jackie]/guitar.ogg",
+      "size": 11130974
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vindicitiv - Far Beyond the Sun (Yngwie Malmsteen cover) [Jackie]/notes.mid",
+      "size": 23630
+    },
+    {
+      "path": "Focal Point 2/FP2-15 - Consult Your Doctor/Vindicitiv - Far Beyond the Sun (Yngwie Malmsteen cover) [Jackie]/song.ini",
+      "size": 940
+    },
+    {
+      "path": "Focal Point 2/FP2-16 - The Great Escape/Seventh Wonder - The Great Escape [Jackie]/album.png",
+      "size": 153531
+    },
+    {
+      "path": "Focal Point 2/FP2-16 - The Great Escape/Seventh Wonder - The Great Escape [Jackie]/guitar.ogg",
+      "size": 53754561
+    },
+    {
+      "path": "Focal Point 2/FP2-16 - The Great Escape/Seventh Wonder - The Great Escape [Jackie]/notes.mid",
+      "size": 112942
+    },
+    {
+      "path": "Focal Point 2/FP2-16 - The Great Escape/Seventh Wonder - The Great Escape [Jackie]/song.ini",
+      "size": 895
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Aeon Bridge - Event Horizon II Solo Medley [Jackie & Aren Eternal]/album.png",
+      "size": 3817356
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Aeon Bridge - Event Horizon II Solo Medley [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 52598783
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Aeon Bridge - Event Horizon II Solo Medley [Jackie & Aren Eternal]/notes.mid",
+      "size": 202871
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Aeon Bridge - Event Horizon II Solo Medley [Jackie & Aren Eternal]/song.ini",
+      "size": 929
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/BlastZone - Laser Grid [Aren Eternal]/album.png",
+      "size": 444734
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/BlastZone - Laser Grid [Aren Eternal]/background.jpg",
+      "size": 285506
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/BlastZone - Laser Grid [Aren Eternal]/notes.chart",
+      "size": 27871
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/BlastZone - Laser Grid [Aren Eternal]/song.ini",
+      "size": 390
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/BlastZone - Laser Grid [Aren Eternal]/song.ogg",
+      "size": 6437731
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Brian Chard - Tee K.O. Theme [Jackie]/album.png",
+      "size": 666279
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Brian Chard - Tee K.O. Theme [Jackie]/guitar.ogg",
+      "size": 6496062
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Brian Chard - Tee K.O. Theme [Jackie]/notes.mid",
+      "size": 13007
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Brian Chard - Tee K.O. Theme [Jackie]/song.ini",
+      "size": 831
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Bulldozer - Dance Got Sick! (Part 1) (Thrash Rappcore Version 1) (feat. Dr. D.O.P.E.) [Sygenysis]/album.png",
+      "size": 549341
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Bulldozer - Dance Got Sick! (Part 1) (Thrash Rappcore Version 1) (feat. Dr. D.O.P.E.) [Sygenysis]/guitar.ogg",
+      "size": 8169366
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Bulldozer - Dance Got Sick! (Part 1) (Thrash Rappcore Version 1) (feat. Dr. D.O.P.E.) [Sygenysis]/notes.mid",
+      "size": 25952
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Bulldozer - Dance Got Sick! (Part 1) (Thrash Rappcore Version 1) (feat. Dr. D.O.P.E.) [Sygenysis]/song.ini",
+      "size": 986
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Nocturne [Jackie]/album.png",
+      "size": 631985
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Nocturne [Jackie]/guitar.ogg",
+      "size": 1531489
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Nocturne [Jackie]/notes.mid",
+      "size": 2868
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Nocturne [Jackie]/song.ini",
+      "size": 841
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Timewarp [Jackie & 2DHumanity]/album.png",
+      "size": 4024926
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Timewarp [Jackie & 2DHumanity]/guitar.ogg",
+      "size": 5002571
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Timewarp [Jackie & 2DHumanity]/notes.mid",
+      "size": 6081
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Christian Muenzner - Timewarp [Jackie & 2DHumanity]/song.ini",
+      "size": 789
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Daverwob - Spin Cycle [Aren Eternal]/album.png",
+      "size": 490787
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Daverwob - Spin Cycle [Aren Eternal]/notes.chart",
+      "size": 22194
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Daverwob - Spin Cycle [Aren Eternal]/song.ini",
+      "size": 372
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Daverwob - Spin Cycle [Aren Eternal]/song.ogg",
+      "size": 4949067
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Flesh and the Power It Holds [Miscellany]/album.png",
+      "size": 536634
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Flesh and the Power It Holds [Miscellany]/guitar.ogg",
+      "size": 21651870
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Flesh and the Power It Holds [Miscellany]/notes.chart",
+      "size": 66071
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Flesh and the Power It Holds [Miscellany]/song.ini",
+      "size": 630
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Scavenger of Human Sorrow [Miscellany]/album.png",
+      "size": 536634
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Scavenger of Human Sorrow [Miscellany]/guitar.ogg",
+      "size": 18555447
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Scavenger of Human Sorrow [Miscellany]/notes.chart",
+      "size": 71199
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Scavenger of Human Sorrow [Miscellany]/song.ini",
+      "size": 391
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Story to Tell [XEntombmentX]/album.png",
+      "size": 363508
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Story to Tell [XEntombmentX]/notes.chart",
+      "size": 61427
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Story to Tell [XEntombmentX]/song.ini",
+      "size": 758
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - Story to Tell [XEntombmentX]/song.ogg",
+      "size": 13305568
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - To Forgive Is to Suffer [Miscellany]/album.png",
+      "size": 536634
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - To Forgive Is to Suffer [Miscellany]/guitar.ogg",
+      "size": 15724965
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - To Forgive Is to Suffer [Miscellany]/notes.chart",
+      "size": 49060
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Death - To Forgive Is to Suffer [Miscellany]/song.ini",
+      "size": 528
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dragonforce - Fury of the Storm [Jackie & Aren Eternal]/album.png",
+      "size": 586322
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dragonforce - Fury of the Storm [Jackie & Aren Eternal]/guitar.ogg",
+      "size": 14404644
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dragonforce - Fury of the Storm [Jackie & Aren Eternal]/notes.chart",
+      "size": 101775
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dragonforce - Fury of the Storm [Jackie & Aren Eternal]/song.ini",
+      "size": 839
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dream Evil - Save Us [Jackie]/album.png",
+      "size": 533202
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dream Evil - Save Us [Jackie]/guitar.ogg",
+      "size": 7411129
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dream Evil - Save Us [Jackie]/notes.mid",
+      "size": 16179
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Dream Evil - Save Us [Jackie]/song.ini",
+      "size": 796
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Exhorder - The Law [Miscellany]/album.png",
+      "size": 615372
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Exhorder - The Law [Miscellany]/guitar.ogg",
+      "size": 12276208
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Exhorder - The Law [Miscellany]/notes.chart",
+      "size": 75097
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Exhorder - The Law [Miscellany]/song.ini",
+      "size": 443
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Falling In Reverse - Born To Lead [XRoseCH]/album.png",
+      "size": 245425
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Falling In Reverse - Born To Lead [XRoseCH]/guitar.ogg",
+      "size": 10119840
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Falling In Reverse - Born To Lead [XRoseCH]/notes.mid",
+      "size": 28021
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Falling In Reverse - Born To Lead [XRoseCH]/song.ini",
+      "size": 758
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Henry & Kathleen Salvia - Brick by Brick [MissMoo]/album.png",
+      "size": 1010714
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Henry & Kathleen Salvia - Brick by Brick [MissMoo]/notes.chart",
+      "size": 39646
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Henry & Kathleen Salvia - Brick by Brick [MissMoo]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Henry & Kathleen Salvia - Brick by Brick [MissMoo]/song.ogg",
+      "size": 5059189
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Holy Grail - No Presents For Christmas [Jackie]/album.png",
+      "size": 751091
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Holy Grail - No Presents For Christmas [Jackie]/guitar.ogg",
+      "size": 7899276
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Holy Grail - No Presents For Christmas [Jackie]/notes.mid",
+      "size": 21729
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Holy Grail - No Presents For Christmas [Jackie]/song.ini",
+      "size": 787
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Ka Ola - Bounty Beach [JRabes]/album.png",
+      "size": 204995
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Ka Ola - Bounty Beach [JRabes]/notes.chart",
+      "size": 31697
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Ka Ola - Bounty Beach [JRabes]/song.ini",
+      "size": 343
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Ka Ola - Bounty Beach [JRabes]/song.ogg",
+      "size": 14707859
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Kekal - Isolated I (feat. Didi Priyadi) [Sygenysis]/album.png",
+      "size": 172670
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Kekal - Isolated I (feat. Didi Priyadi) [Sygenysis]/guitar.ogg",
+      "size": 12224845
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Kekal - Isolated I (feat. Didi Priyadi) [Sygenysis]/notes.mid",
+      "size": 18948
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Kekal - Isolated I (feat. Didi Priyadi) [Sygenysis]/song.ini",
+      "size": 953
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/L-Train - A Symphonic Metal Tribute to SU [Aren Eternal]/album.png",
+      "size": 418789
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/L-Train - A Symphonic Metal Tribute to SU [Aren Eternal]/notes.chart",
+      "size": 58415
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/L-Train - A Symphonic Metal Tribute to SU [Aren Eternal]/song.ini",
+      "size": 369
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/L-Train - A Symphonic Metal Tribute to SU [Aren Eternal]/song.ogg",
+      "size": 22516524
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/LOUDNESS - Clockwork Toy [Jackie]/album.png",
+      "size": 212626
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/LOUDNESS - Clockwork Toy [Jackie]/guitar.ogg",
+      "size": 6880099
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/LOUDNESS - Clockwork Toy [Jackie]/notes.mid",
+      "size": 17096
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/LOUDNESS - Clockwork Toy [Jackie]/song.ini",
+      "size": 740
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Matduke - Completely [torqqes]/album.png",
+      "size": 399527
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Matduke - Completely [torqqes]/notes.chart",
+      "size": 60601
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Matduke - Completely [torqqes]/song.ini",
+      "size": 421
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Matduke - Completely [torqqes]/song.ogg",
+      "size": 7647425
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Mike Orlando - Full Speed X (Live) [Jackie]/album.png",
+      "size": 905121
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Mike Orlando - Full Speed X (Live) [Jackie]/guitar.ogg",
+      "size": 11108316
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Mike Orlando - Full Speed X (Live) [Jackie]/notes.mid",
+      "size": 24646
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Mike Orlando - Full Speed X (Live) [Jackie]/song.ini",
+      "size": 890
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Muris Varajic - Drive Safe [Jackie]/album.jpg",
+      "size": 31521
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Muris Varajic - Drive Safe [Jackie]/guitar.ogg",
+      "size": 9006278
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Muris Varajic - Drive Safe [Jackie]/notes.mid",
+      "size": 17217
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Muris Varajic - Drive Safe [Jackie]/song.ini",
+      "size": 878
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Native Construct - Your Familiar Face [LilithTheFox]/album.jpg",
+      "size": 80075
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Native Construct - Your Familiar Face [LilithTheFox]/guitar.ogg",
+      "size": 8294805
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Native Construct - Your Familiar Face [LilithTheFox]/notes.mid",
+      "size": 15419
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Native Construct - Your Familiar Face [LilithTheFox]/song.ini",
+      "size": 805
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Overdrive - Trapped Under Ice (Demo) [Sygenysis]/album.png",
+      "size": 108525
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Overdrive - Trapped Under Ice (Demo) [Sygenysis]/guitar.ogg",
+      "size": 10433638
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Overdrive - Trapped Under Ice (Demo) [Sygenysis]/notes.mid",
+      "size": 12095
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Overdrive - Trapped Under Ice (Demo) [Sygenysis]/song.ini",
+      "size": 988
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Pegboard Nerds - Swamp Thing [jdurandTV & Aren Eternal]/album.png",
+      "size": 1475349
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Pegboard Nerds - Swamp Thing [jdurandTV & Aren Eternal]/notes.chart",
+      "size": 36449
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Pegboard Nerds - Swamp Thing [jdurandTV & Aren Eternal]/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Pegboard Nerds - Swamp Thing [jdurandTV & Aren Eternal]/song.ogg",
+      "size": 9027037
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Pegboard Nerds - Swamp Thing [jdurandTV & Aren Eternal]/video.webm",
+      "size": 65600247
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Plasma Cutter - Hyperdimensional [Jackie]/album.png",
+      "size": 614113
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Plasma Cutter - Hyperdimensional [Jackie]/guitar.ogg",
+      "size": 11125655
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Plasma Cutter - Hyperdimensional [Jackie]/notes.mid",
+      "size": 11481
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Plasma Cutter - Hyperdimensional [Jackie]/song.ini",
+      "size": 778
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Powerglove - Mario Minor [Miscellany]/album.png",
+      "size": 639182
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Powerglove - Mario Minor [Miscellany]/guitar.ogg",
+      "size": 9487079
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Powerglove - Mario Minor [Miscellany]/notes.chart",
+      "size": 36629
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Powerglove - Mario Minor [Miscellany]/song.ini",
+      "size": 360
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/RichaadEB - Night of Nights [LilithTheFox]/album.jpg",
+      "size": 61703
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/RichaadEB - Night of Nights [LilithTheFox]/notes.chart",
+      "size": 23356
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/RichaadEB - Night of Nights [LilithTheFox]/song.ini",
+      "size": 565
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/RichaadEB - Night of Nights [LilithTheFox]/song.ogg",
+      "size": 7377293
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Stone Gods - Burn the Witch [Sygenysis]/album.png",
+      "size": 32702
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Stone Gods - Burn the Witch [Sygenysis]/guitar.ogg",
+      "size": 9377924
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Stone Gods - Burn the Witch [Sygenysis]/notes.mid",
+      "size": 18408
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Stone Gods - Burn the Witch [Sygenysis]/song.ini",
+      "size": 951
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Symphony X - Serpent's Kiss [Miscellany]/album.png",
+      "size": 507134
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Symphony X - Serpent's Kiss [Miscellany]/guitar.ogg",
+      "size": 12710417
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Symphony X - Serpent's Kiss [Miscellany]/notes.chart",
+      "size": 52562
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Symphony X - Serpent's Kiss [Miscellany]/song.ini",
+      "size": 368
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Trivium - Falling to Grey [Miscellany]/album.png",
+      "size": 655450
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Trivium - Falling to Grey [Miscellany]/guitar.ogg",
+      "size": 14702197
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Trivium - Falling to Grey [Miscellany]/notes.chart",
+      "size": 68825
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Trivium - Falling to Grey [Miscellany]/song.ini",
+      "size": 487
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Various Artists - Eternal Dropmix 03 [Aren Eternal & Friends]/album.png",
+      "size": 465040
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Various Artists - Eternal Dropmix 03 [Aren Eternal & Friends]/notes.chart",
+      "size": 362396
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Various Artists - Eternal Dropmix 03 [Aren Eternal & Friends]/song.ini",
+      "size": 496
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/Various Artists - Eternal Dropmix 03 [Aren Eternal & Friends]/song.ogg",
+      "size": 66955870
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/omniboi - Sugar Glider [Raspberriel]/album.png",
+      "size": 429736
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/omniboi - Sugar Glider [Raspberriel]/guitar.ogg",
+      "size": 7221351
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/omniboi - Sugar Glider [Raspberriel]/notes.mid",
+      "size": 11969
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/omniboi - Sugar Glider [Raspberriel]/song.ini",
+      "size": 523
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/\u00c6ternity - 1000 [Aren Eternal]/album.png",
+      "size": 155370
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/\u00c6ternity - 1000 [Aren Eternal]/notes.chart",
+      "size": 117425
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/\u00c6ternity - 1000 [Aren Eternal]/song.ini",
+      "size": 458
+    },
+    {
+      "path": "Focal Point 2/FP2-17 - The Bonus Tier/\u00c6ternity - 1000 [Aren Eternal]/song.ogg",
+      "size": 15821189
+    }
+  ],
+  "extracted_size": 2184373116,
+  "file_count": 747,
+  "chart_count": 186,
+  "release_date": "2020-10-02"
 }

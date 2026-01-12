@@ -3,18 +3,2459 @@
   "folder_id": "static-guitar-grief",
   "group": "Community",
   "collection": "CSC Setlists",
-  "description": "",
-  "chart_count": 122,
-  "total_size": 1250007169,
-  "file_count": 610,
-  "files": [
+  "downloads": [
     {
-      "id": "cdn-csc-guitar-grief",
-      "path": "Guitar Grief/Guitar Grief.7z",
+      "url": "https://customsongscentral.b-cdn.net/Guitar%20Grief.7z?ref=customsongscentral.com",
       "name": "Guitar Grief.7z",
       "size": 1250007169,
-      "md5": "2bf150fb40d11cba722ec8388c8c3ac4",
-      "url": "https://customsongscentral.b-cdn.net/Guitar%20Grief.7z?ref=customsongscentral.com"
+      "md5": "2bf150fb40d11cba722ec8388c8c3ac4"
     }
-  ]
+  ],
+  "download_size": 1250007169,
+  "files": [
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/1. Crash and the Boys - I_m So Sad, So Very, Very Sad [Spachi]/album.png",
+      "size": 377686
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/1. Crash and the Boys - I_m So Sad, So Very, Very Sad [Spachi]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/1. Crash and the Boys - I_m So Sad, So Very, Very Sad [Spachi]/notes.chart",
+      "size": 1661
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/1. Crash and the Boys - I_m So Sad, So Very, Very Sad [Spachi]/song.ini",
+      "size": 594
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/1. Crash and the Boys - I_m So Sad, So Very, Very Sad [Spachi]/song.ogg",
+      "size": 364293
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/2. Simple Plan - Untitled (How Could This Happen to Me) [7777villain]/album.png",
+      "size": 631189
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/2. Simple Plan - Untitled (How Could This Happen to Me) [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/2. Simple Plan - Untitled (How Could This Happen to Me) [7777villain]/notes.chart",
+      "size": 30173
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/2. Simple Plan - Untitled (How Could This Happen to Me) [7777villain]/song.ini",
+      "size": 382
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/2. Simple Plan - Untitled (How Could This Happen to Me) [7777villain]/song.ogg",
+      "size": 5806347
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/3. Hoobastank - The Reason [7777villain]/album.png",
+      "size": 258250
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/3. Hoobastank - The Reason [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/3. Hoobastank - The Reason [7777villain]/notes.chart",
+      "size": 31984
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/3. Hoobastank - The Reason [7777villain]/song.ini",
+      "size": 442
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/3. Hoobastank - The Reason [7777villain]/song.ogg",
+      "size": 7829682
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/4. Limp Bizkit - Behind Blue Eyes (The Who Cover) [7777villain]/album.png",
+      "size": 665832
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/4. Limp Bizkit - Behind Blue Eyes (The Who Cover) [7777villain]/background.png",
+      "size": 247273
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/4. Limp Bizkit - Behind Blue Eyes (The Who Cover) [7777villain]/notes.chart",
+      "size": 33401
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/4. Limp Bizkit - Behind Blue Eyes (The Who Cover) [7777villain]/song.ini",
+      "size": 409
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/4. Limp Bizkit - Behind Blue Eyes (The Who Cover) [7777villain]/song.ogg",
+      "size": 12982032
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/5. Nanowar of Steel - And Then I Noticed That She Was a Gargoyle [Spachi]/album.png",
+      "size": 749440
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/5. Nanowar of Steel - And Then I Noticed That She Was a Gargoyle [Spachi]/background.jpg",
+      "size": 252062
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/5. Nanowar of Steel - And Then I Noticed That She Was a Gargoyle [Spachi]/notes.chart",
+      "size": 33963
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/5. Nanowar of Steel - And Then I Noticed That She Was a Gargoyle [Spachi]/song.ini",
+      "size": 636
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/5. Nanowar of Steel - And Then I Noticed That She Was a Gargoyle [Spachi]/song.ogg",
+      "size": 9579731
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/6. CaptainSparkles - Fallen Kingdom (feat. TryHardNinja) [doll]/album.png",
+      "size": 460433
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/6. CaptainSparkles - Fallen Kingdom (feat. TryHardNinja) [doll]/background.jpg",
+      "size": 411211
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/6. CaptainSparkles - Fallen Kingdom (feat. TryHardNinja) [doll]/notes.chart",
+      "size": 50939
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/6. CaptainSparkles - Fallen Kingdom (feat. TryHardNinja) [doll]/song.ini",
+      "size": 568
+    },
+    {
+      "path": "Guitar Grief/Tier 01 - Try Not to Cry Challenge (IMPOSSIBLE)/6. CaptainSparkles - Fallen Kingdom (feat. TryHardNinja) [doll]/song.ogg",
+      "size": 7632060
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/1. Simon and Garfunkel - The Sound of Silence [7777villain]/album.png",
+      "size": 487871
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/1. Simon and Garfunkel - The Sound of Silence [7777villain]/background.jpg",
+      "size": 172880
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/1. Simon and Garfunkel - The Sound of Silence [7777villain]/notes.chart",
+      "size": 22637
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/1. Simon and Garfunkel - The Sound of Silence [7777villain]/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/1. Simon and Garfunkel - The Sound of Silence [7777villain]/song.ogg",
+      "size": 5913650
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/2. Pink Floyd - Wish You Were Here [7777villain]/album.png",
+      "size": 161288
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/2. Pink Floyd - Wish You Were Here [7777villain]/background.jpg",
+      "size": 38370
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/2. Pink Floyd - Wish You Were Here [7777villain]/notes.chart",
+      "size": 32591
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/2. Pink Floyd - Wish You Were Here [7777villain]/song.ini",
+      "size": 768
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/2. Pink Floyd - Wish You Were Here [7777villain]/song.ogg",
+      "size": 10765433
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/3. Nine Inch Nails - Hurt [Tris255]/album.jpg",
+      "size": 70754
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/3. Nine Inch Nails - Hurt [Tris255]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/3. Nine Inch Nails - Hurt [Tris255]/notes.chart",
+      "size": 17824
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/3. Nine Inch Nails - Hurt [Tris255]/song.ini",
+      "size": 451
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/3. Nine Inch Nails - Hurt [Tris255]/song.ogg",
+      "size": 10978397
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/4. Agalloch - ...And the Great Cold Death of the Earth [7777villain]/album.png",
+      "size": 189342
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/4. Agalloch - ...And the Great Cold Death of the Earth [7777villain]/background.jpg",
+      "size": 451771
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/4. Agalloch - ...And the Great Cold Death of the Earth [7777villain]/notes.chart",
+      "size": 54385
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/4. Agalloch - ...And the Great Cold Death of the Earth [7777villain]/song.ini",
+      "size": 388
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/4. Agalloch - ...And the Great Cold Death of the Earth [7777villain]/song.ogg",
+      "size": 16510787
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/5. Three Days Grace - Never Too Late [Deltarak]/album.png",
+      "size": 19102
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/5. Three Days Grace - Never Too Late [Deltarak]/background.jpg",
+      "size": 533445
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/5. Three Days Grace - Never Too Late [Deltarak]/notes.chart",
+      "size": 25500
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/5. Three Days Grace - Never Too Late [Deltarak]/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/5. Three Days Grace - Never Too Late [Deltarak]/song.ogg",
+      "size": 6895689
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/6. System of a Down - Aerials [Miscellany]/album.png",
+      "size": 674613
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/6. System of a Down - Aerials [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/6. System of a Down - Aerials [Miscellany]/guitar.ogg",
+      "size": 7774586
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/6. System of a Down - Aerials [Miscellany]/notes.chart",
+      "size": 33378
+    },
+    {
+      "path": "Guitar Grief/Tier 02 - Let the Crying Commence/6. System of a Down - Aerials [Miscellany]/song.ini",
+      "size": 843
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/1. Foo Fighters - Rest [highfine]/album.png",
+      "size": 30175
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/1. Foo Fighters - Rest [highfine]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/1. Foo Fighters - Rest [highfine]/notes.chart",
+      "size": 25225
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/1. Foo Fighters - Rest [highfine]/song.ini",
+      "size": 578
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/1. Foo Fighters - Rest [highfine]/song.ogg",
+      "size": 8814471
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/2. Slowdive - When the Sun Hits [highfine]/album.png",
+      "size": 341607
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/2. Slowdive - When the Sun Hits [highfine]/background.jpg",
+      "size": 1222015
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/2. Slowdive - When the Sun Hits [highfine]/notes.chart",
+      "size": 31226
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/2. Slowdive - When the Sun Hits [highfine]/song.ini",
+      "size": 538
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/2. Slowdive - When the Sun Hits [highfine]/song.ogg",
+      "size": 8545304
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/3. The Sleepover Disaster - Dark Star [highfine]/album.png",
+      "size": 506833
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/3. The Sleepover Disaster - Dark Star [highfine]/background.jpg",
+      "size": 1285967
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/3. The Sleepover Disaster - Dark Star [highfine]/notes.chart",
+      "size": 42702
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/3. The Sleepover Disaster - Dark Star [highfine]/song.ini",
+      "size": 375
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/3. The Sleepover Disaster - Dark Star [highfine]/song.ogg",
+      "size": 9518716
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/4. Deftones - Rosemary [Stickheadz32]/album.jpg",
+      "size": 39747
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/4. Deftones - Rosemary [Stickheadz32]/background.jpg",
+      "size": 328993
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/4. Deftones - Rosemary [Stickheadz32]/notes.chart",
+      "size": 33514
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/4. Deftones - Rosemary [Stickheadz32]/song.ini",
+      "size": 459
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/4. Deftones - Rosemary [Stickheadz32]/song.ogg",
+      "size": 12058458
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/5. Have a Nice Life - Deep, Deep [Vasasasasa]/album.jpg",
+      "size": 96158
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/5. Have a Nice Life - Deep, Deep [Vasasasasa]/background.jpg",
+      "size": 103982
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/5. Have a Nice Life - Deep, Deep [Vasasasasa]/notes.chart",
+      "size": 61945
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/5. Have a Nice Life - Deep, Deep [Vasasasasa]/song.ini",
+      "size": 506
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/5. Have a Nice Life - Deep, Deep [Vasasasasa]/song.ogg",
+      "size": 9511331
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/6. Alcest - Les voyages de l_\u00e2me [doll]/album.png",
+      "size": 324326
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/6. Alcest - Les voyages de l_\u00e2me [doll]/background.jpg",
+      "size": 350810
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/6. Alcest - Les voyages de l_\u00e2me [doll]/notes.chart",
+      "size": 94564
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/6. Alcest - Les voyages de l_\u00e2me [doll]/song.ini",
+      "size": 509
+    },
+    {
+      "path": "Guitar Grief/Tier 03 - Static Sorrow/6. Alcest - Les voyages de l_\u00e2me [doll]/song.ogg",
+      "size": 12412084
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/1. Modest Mouse - Sleepwalking (Couples Only Dance Prom Night) [7777villain]/album.png",
+      "size": 740481
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/1. Modest Mouse - Sleepwalking (Couples Only Dance Prom Night) [7777villain]/background.jpg",
+      "size": 355378
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/1. Modest Mouse - Sleepwalking (Couples Only Dance Prom Night) [7777villain]/notes.chart",
+      "size": 16341
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/1. Modest Mouse - Sleepwalking (Couples Only Dance Prom Night) [7777villain]/song.ini",
+      "size": 425
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/1. Modest Mouse - Sleepwalking (Couples Only Dance Prom Night) [7777villain]/song.ogg",
+      "size": 7668486
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/2. Blue Rodeo - Bad Timing [7777villain]/album.png",
+      "size": 464183
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/2. Blue Rodeo - Bad Timing [7777villain]/background.jpg",
+      "size": 437796
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/2. Blue Rodeo - Bad Timing [7777villain]/notes.chart",
+      "size": 41910
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/2. Blue Rodeo - Bad Timing [7777villain]/song.ini",
+      "size": 363
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/2. Blue Rodeo - Bad Timing [7777villain]/song.ogg",
+      "size": 9964437
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/3. Post Malone - Stay [doll]/album.png",
+      "size": 302836
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/3. Post Malone - Stay [doll]/background.jpg",
+      "size": 444696
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/3. Post Malone - Stay [doll]/notes.chart",
+      "size": 47099
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/3. Post Malone - Stay [doll]/song.ini",
+      "size": 459
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/3. Post Malone - Stay [doll]/song.ogg",
+      "size": 7207956
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/4. Lynyrd Skynyrd - Tuesday_s Gone [7777villain]/album.png",
+      "size": 708418
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/4. Lynyrd Skynyrd - Tuesday_s Gone [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/4. Lynyrd Skynyrd - Tuesday_s Gone [7777villain]/notes.chart",
+      "size": 58641
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/4. Lynyrd Skynyrd - Tuesday_s Gone [7777villain]/song.ini",
+      "size": 433
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/4. Lynyrd Skynyrd - Tuesday_s Gone [7777villain]/song.ogg",
+      "size": 15324287
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/5. Pescado Rabioso - Como El Viento Voy A Ver [highfine]/album.png",
+      "size": 240436
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/5. Pescado Rabioso - Como El Viento Voy A Ver [highfine]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/5. Pescado Rabioso - Como El Viento Voy A Ver [highfine]/notes.chart",
+      "size": 44975
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/5. Pescado Rabioso - Como El Viento Voy A Ver [highfine]/song.ini",
+      "size": 497
+    },
+    {
+      "path": "Guitar Grief/Tier 04 - Southern Blues/5. Pescado Rabioso - Como El Viento Voy A Ver [highfine]/song.ogg",
+      "size": 8998171
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/1. Phoebe Bridgers - Chinese Satellite [7777villain]/album.png",
+      "size": 3158066
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/1. Phoebe Bridgers - Chinese Satellite [7777villain]/background.png",
+      "size": 871014
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/1. Phoebe Bridgers - Chinese Satellite [7777villain]/notes.chart",
+      "size": 27440
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/1. Phoebe Bridgers - Chinese Satellite [7777villain]/song.ini",
+      "size": 401
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/1. Phoebe Bridgers - Chinese Satellite [7777villain]/song.ogg",
+      "size": 5937625
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/2. Band of Horses - The Funeral [7777villain]/album.png",
+      "size": 709630
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/2. Band of Horses - The Funeral [7777villain]/background.jpg",
+      "size": 456341
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/2. Band of Horses - The Funeral [7777villain]/notes.chart",
+      "size": 59750
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/2. Band of Horses - The Funeral [7777villain]/song.ini",
+      "size": 493
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/2. Band of Horses - The Funeral [7777villain]/song.ogg",
+      "size": 9721620
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/3. Nothing But Thieves - Take This Lonely Heart [Spachi]/album.png",
+      "size": 473524
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/3. Nothing But Thieves - Take This Lonely Heart [Spachi]/background.jpg",
+      "size": 612496
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/3. Nothing But Thieves - Take This Lonely Heart [Spachi]/notes.chart",
+      "size": 45246
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/3. Nothing But Thieves - Take This Lonely Heart [Spachi]/song.ini",
+      "size": 622
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/3. Nothing But Thieves - Take This Lonely Heart [Spachi]/song.ogg",
+      "size": 7258026
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/4. Arctic Monkeys - Do Me a Favour [Spachi]/album.png",
+      "size": 344716
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/4. Arctic Monkeys - Do Me a Favour [Spachi]/background.jpg",
+      "size": 168802
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/4. Arctic Monkeys - Do Me a Favour [Spachi]/notes.chart",
+      "size": 28279
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/4. Arctic Monkeys - Do Me a Favour [Spachi]/song.ini",
+      "size": 491
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/4. Arctic Monkeys - Do Me a Favour [Spachi]/song.ogg",
+      "size": 6592809
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/5. fanclubwallet - Fell Through [stripes]/album.png",
+      "size": 378905
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/5. fanclubwallet - Fell Through [stripes]/background.jpg",
+      "size": 170746
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/5. fanclubwallet - Fell Through [stripes]/notes.chart",
+      "size": 24413
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/5. fanclubwallet - Fell Through [stripes]/song.ini",
+      "size": 553
+    },
+    {
+      "path": "Guitar Grief/Tier 05 - In-Deep Despair/5. fanclubwallet - Fell Through [stripes]/song.ogg",
+      "size": 5397580
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/1. Paramore - Emergency [Peddy]/album.png",
+      "size": 523002
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/1. Paramore - Emergency [Peddy]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/1. Paramore - Emergency [Peddy]/notes.chart",
+      "size": 40952
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/1. Paramore - Emergency [Peddy]/song.ini",
+      "size": 326
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/1. Paramore - Emergency [Peddy]/song.ogg",
+      "size": 8020295
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/2. Palisades - Fade Away [gibby]/album.png",
+      "size": 302877
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/2. Palisades - Fade Away [gibby]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/2. Palisades - Fade Away [gibby]/notes.chart",
+      "size": 24817
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/2. Palisades - Fade Away [gibby]/song.ini",
+      "size": 464
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/2. Palisades - Fade Away [gibby]/song.ogg",
+      "size": 6142899
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/3. The Hotelier - Your Deep Rest [iZenPenguin]/album.png",
+      "size": 430934
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/3. The Hotelier - Your Deep Rest [iZenPenguin]/background.jpg",
+      "size": 664288
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/3. The Hotelier - Your Deep Rest [iZenPenguin]/notes.chart",
+      "size": 38680
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/3. The Hotelier - Your Deep Rest [iZenPenguin]/song.ini",
+      "size": 307
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/3. The Hotelier - Your Deep Rest [iZenPenguin]/song.ogg",
+      "size": 6052866
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/4. Slint - Washer [7777villain]/album.png",
+      "size": 305748
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/4. Slint - Washer [7777villain]/background.jpg",
+      "size": 319223
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/4. Slint - Washer [7777villain]/notes.chart",
+      "size": 50532
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/4. Slint - Washer [7777villain]/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/4. Slint - Washer [7777villain]/song.ogg",
+      "size": 14783153
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/5. The Gentle Men - 2004 Breakup [Unanswered Prayer]/album.png",
+      "size": 671017
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/5. The Gentle Men - 2004 Breakup [Unanswered Prayer]/background.jpg",
+      "size": 1863656
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/5. The Gentle Men - 2004 Breakup [Unanswered Prayer]/notes.chart",
+      "size": 37251
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/5. The Gentle Men - 2004 Breakup [Unanswered Prayer]/song.ini",
+      "size": 367
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/5. The Gentle Men - 2004 Breakup [Unanswered Prayer]/song.ogg",
+      "size": 11500847
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/6. ONE OK ROCK - Save Yourself (Japanese Version) [Unanswered Prayer]/album.png",
+      "size": 584215
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/6. ONE OK ROCK - Save Yourself (Japanese Version) [Unanswered Prayer]/background.jpg",
+      "size": 1402679
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/6. ONE OK ROCK - Save Yourself (Japanese Version) [Unanswered Prayer]/notes.chart",
+      "size": 38843
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/6. ONE OK ROCK - Save Yourself (Japanese Version) [Unanswered Prayer]/song.ini",
+      "size": 359
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/6. ONE OK ROCK - Save Yourself (Japanese Version) [Unanswered Prayer]/song.ogg",
+      "size": 6338158
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/7. Origami Angel - Self-Destruct [Raspberriel]/album.png",
+      "size": 47718
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/7. Origami Angel - Self-Destruct [Raspberriel]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/7. Origami Angel - Self-Destruct [Raspberriel]/guitar.ogg",
+      "size": 5903769
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/7. Origami Angel - Self-Destruct [Raspberriel]/notes.mid",
+      "size": 21895
+    },
+    {
+      "path": "Guitar Grief/Tier 06 - Emo-tional Damage/7. Origami Angel - Self-Destruct [Raspberriel]/song.ini",
+      "size": 464
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/1. Al Bowlly - Heartaches [7777villain]/album.png",
+      "size": 400881
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/1. Al Bowlly - Heartaches [7777villain]/background.png",
+      "size": 4529756
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/1. Al Bowlly - Heartaches [7777villain]/notes.chart",
+      "size": 17250
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/1. Al Bowlly - Heartaches [7777villain]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/1. Al Bowlly - Heartaches [7777villain]/song.ogg",
+      "size": 3492970
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/2. Mili - Nine Point Eight [Raspberriel]/album.png",
+      "size": 436293
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/2. Mili - Nine Point Eight [Raspberriel]/background.jpg",
+      "size": 255731
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/2. Mili - Nine Point Eight [Raspberriel]/guitar.ogg",
+      "size": 5972173
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/2. Mili - Nine Point Eight [Raspberriel]/notes.mid",
+      "size": 19469
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/2. Mili - Nine Point Eight [Raspberriel]/song.ini",
+      "size": 624
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/3. Sponge - Molly (Sixteen Candles) [highfine]/album.png",
+      "size": 447078
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/3. Sponge - Molly (Sixteen Candles) [highfine]/background.jpg",
+      "size": 359805
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/3. Sponge - Molly (Sixteen Candles) [highfine]/notes.chart",
+      "size": 45897
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/3. Sponge - Molly (Sixteen Candles) [highfine]/song.ini",
+      "size": 566
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/3. Sponge - Molly (Sixteen Candles) [highfine]/song.ogg",
+      "size": 7564108
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/4. Nick Cardone - Sad Girl [doll]/album.png",
+      "size": 248344
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/4. Nick Cardone - Sad Girl [doll]/background.jpg",
+      "size": 543669
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/4. Nick Cardone - Sad Girl [doll]/notes.chart",
+      "size": 36557
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/4. Nick Cardone - Sad Girl [doll]/song.ini",
+      "size": 501
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/4. Nick Cardone - Sad Girl [doll]/song.ogg",
+      "size": 8603643
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/5. Natalie Imbruglia - Torn [Spachi]/album.png",
+      "size": 511287
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/5. Natalie Imbruglia - Torn [Spachi]/background.jpg",
+      "size": 133082
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/5. Natalie Imbruglia - Torn [Spachi]/notes.chart",
+      "size": 40865
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/5. Natalie Imbruglia - Torn [Spachi]/song.ini",
+      "size": 604
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/5. Natalie Imbruglia - Torn [Spachi]/song.ogg",
+      "size": 8923463
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/6. The Cure - Boys Don_t Cry [highfine]/album.png",
+      "size": 315547
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/6. The Cure - Boys Don_t Cry [highfine]/background.jpg",
+      "size": 1116924
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/6. The Cure - Boys Don_t Cry [highfine]/notes.chart",
+      "size": 25691
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/6. The Cure - Boys Don_t Cry [highfine]/song.ini",
+      "size": 590
+    },
+    {
+      "path": "Guitar Grief/Tier 07 - Smile the Pain Away/6. The Cure - Boys Don_t Cry [highfine]/song.ogg",
+      "size": 5591101
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/1. Suzanne Vega - Luka [7777villain]/album.png",
+      "size": 652139
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/1. Suzanne Vega - Luka [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/1. Suzanne Vega - Luka [7777villain]/notes.chart",
+      "size": 27048
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/1. Suzanne Vega - Luka [7777villain]/song.ini",
+      "size": 507
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/1. Suzanne Vega - Luka [7777villain]/song.ogg",
+      "size": 7349650
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/2. Glup! - Caleidoscopio [highfine]/album.png",
+      "size": 154291
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/2. Glup! - Caleidoscopio [highfine]/background.jpg",
+      "size": 1199815
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/2. Glup! - Caleidoscopio [highfine]/notes.chart",
+      "size": 56596
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/2. Glup! - Caleidoscopio [highfine]/song.ini",
+      "size": 314
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/2. Glup! - Caleidoscopio [highfine]/song.ogg",
+      "size": 8351631
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/3. Sufjan Stevens - Death With Dignity [7777villain]/album.png",
+      "size": 533709
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/3. Sufjan Stevens - Death With Dignity [7777villain]/background.jpg",
+      "size": 325609
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/3. Sufjan Stevens - Death With Dignity [7777villain]/notes.chart",
+      "size": 42831
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/3. Sufjan Stevens - Death With Dignity [7777villain]/song.ini",
+      "size": 537
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/3. Sufjan Stevens - Death With Dignity [7777villain]/song.ogg",
+      "size": 7136928
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/4. Fleet Foxes - Tiger Mountain Peasant Song [Raspberriel]/album.png",
+      "size": 634902
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/4. Fleet Foxes - Tiger Mountain Peasant Song [Raspberriel]/background.jpg",
+      "size": 975314
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/4. Fleet Foxes - Tiger Mountain Peasant Song [Raspberriel]/guitar.ogg",
+      "size": 6072166
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/4. Fleet Foxes - Tiger Mountain Peasant Song [Raspberriel]/notes.mid",
+      "size": 14636
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/4. Fleet Foxes - Tiger Mountain Peasant Song [Raspberriel]/song.ini",
+      "size": 519
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/5. Elliott Smith - Going Nowhere [7777villain]/album.png",
+      "size": 486990
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/5. Elliott Smith - Going Nowhere [7777villain]/background.png",
+      "size": 8299529
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/5. Elliott Smith - Going Nowhere [7777villain]/notes.chart",
+      "size": 34474
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/5. Elliott Smith - Going Nowhere [7777villain]/song.ini",
+      "size": 544
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/5. Elliott Smith - Going Nowhere [7777villain]/song.ogg",
+      "size": 6649989
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/6. Jeff Buckley - Hallelujah [7777villain]/album.png",
+      "size": 525251
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/6. Jeff Buckley - Hallelujah [7777villain]/background.jpg",
+      "size": 2161390
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/6. Jeff Buckley - Hallelujah [7777villain]/notes.chart",
+      "size": 45619
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/6. Jeff Buckley - Hallelujah [7777villain]/song.ini",
+      "size": 520
+    },
+    {
+      "path": "Guitar Grief/Tier 08 - WGWAG Tears-Core/6. Jeff Buckley - Hallelujah [7777villain]/song.ogg",
+      "size": 11237159
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/1. Def Leppard - Hysteria [7777villain]/album.jpg",
+      "size": 101841
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/1. Def Leppard - Hysteria [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/1. Def Leppard - Hysteria [7777villain]/notes.chart",
+      "size": 33101
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/1. Def Leppard - Hysteria [7777villain]/song.ini",
+      "size": 502
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/1. Def Leppard - Hysteria [7777villain]/song.ogg",
+      "size": 11268467
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/2. Pearl Jam - Black [7777villain]/album.png",
+      "size": 676614
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/2. Pearl Jam - Black [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/2. Pearl Jam - Black [7777villain]/notes.chart",
+      "size": 42257
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/2. Pearl Jam - Black [7777villain]/song.ini",
+      "size": 392
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/2. Pearl Jam - Black [7777villain]/song.ogg",
+      "size": 10231766
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/3. Aldious - I Wish for You [Spachi]/album.png",
+      "size": 555853
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/3. Aldious - I Wish for You [Spachi]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/3. Aldious - I Wish for You [Spachi]/notes.chart",
+      "size": 33451
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/3. Aldious - I Wish for You [Spachi]/song.ini",
+      "size": 420
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/3. Aldious - I Wish for You [Spachi]/song.ogg",
+      "size": 11567827
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/4. Scorpions - Wind of Change [7777villain]/album.png",
+      "size": 534996
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/4. Scorpions - Wind of Change [7777villain]/background.jpg",
+      "size": 317534
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/4. Scorpions - Wind of Change [7777villain]/notes.chart",
+      "size": 38196
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/4. Scorpions - Wind of Change [7777villain]/song.ini",
+      "size": 434
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/4. Scorpions - Wind of Change [7777villain]/song.ogg",
+      "size": 9851129
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/5. Dream Theater - Wither [iZenPenguin]/album.png",
+      "size": 459430
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/5. Dream Theater - Wither [iZenPenguin]/background.jpg",
+      "size": 452677
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/5. Dream Theater - Wither [iZenPenguin]/notes.chart",
+      "size": 27717
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/5. Dream Theater - Wither [iZenPenguin]/song.ini",
+      "size": 429
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/5. Dream Theater - Wither [iZenPenguin]/song.ogg",
+      "size": 9303522
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/6. LOVEBITES - Epilogue (Live) [Spachi]/album.png",
+      "size": 636573
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/6. LOVEBITES - Epilogue (Live) [Spachi]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/6. LOVEBITES - Epilogue (Live) [Spachi]/notes.chart",
+      "size": 48062
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/6. LOVEBITES - Epilogue (Live) [Spachi]/song.ini",
+      "size": 605
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/6. LOVEBITES - Epilogue (Live) [Spachi]/song.ogg",
+      "size": 15414639
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/7. Stratovarius - Winter Skies [Peddy]/album.png",
+      "size": 589387
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/7. Stratovarius - Winter Skies [Peddy]/background.jpg",
+      "size": 765766
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/7. Stratovarius - Winter Skies [Peddy]/notes.chart",
+      "size": 36579
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/7. Stratovarius - Winter Skies [Peddy]/song.ini",
+      "size": 359
+    },
+    {
+      "path": "Guitar Grief/Tier 09 - Powerful Ballads/7. Stratovarius - Winter Skies [Peddy]/song.ogg",
+      "size": 10619288
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/1. Red Hot Chili Peppers - I Could Have Lied [7777villain]/album.png",
+      "size": 423019
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/1. Red Hot Chili Peppers - I Could Have Lied [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/1. Red Hot Chili Peppers - I Could Have Lied [7777villain]/notes.chart",
+      "size": 30598
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/1. Red Hot Chili Peppers - I Could Have Lied [7777villain]/song.ini",
+      "size": 467
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/1. Red Hot Chili Peppers - I Could Have Lied [7777villain]/song.ogg",
+      "size": 8132384
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/2. Radiohead - Street Spirit (Fade Out) [7777villain]/album.png",
+      "size": 465395
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/2. Radiohead - Street Spirit (Fade Out) [7777villain]/background.png",
+      "size": 461987
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/2. Radiohead - Street Spirit (Fade Out) [7777villain]/notes.chart",
+      "size": 28220
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/2. Radiohead - Street Spirit (Fade Out) [7777villain]/song.ini",
+      "size": 477
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/2. Radiohead - Street Spirit (Fade Out) [7777villain]/song.ogg",
+      "size": 8375006
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/3. Alice in Chains - Nutshell [7777villain]/album.png",
+      "size": 424475
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/3. Alice in Chains - Nutshell [7777villain]/background.jpeg",
+      "size": 585532
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/3. Alice in Chains - Nutshell [7777villain]/notes.chart",
+      "size": 32712
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/3. Alice in Chains - Nutshell [7777villain]/song.ini",
+      "size": 379
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/3. Alice in Chains - Nutshell [7777villain]/song.ogg",
+      "size": 7936125
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/4. Queens of the Stone Age - Tangled Up In Plaid [NCV]/album.png",
+      "size": 353494
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/4. Queens of the Stone Age - Tangled Up In Plaid [NCV]/background.jpg",
+      "size": 171695
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/4. Queens of the Stone Age - Tangled Up In Plaid [NCV]/notes.chart",
+      "size": 36844
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/4. Queens of the Stone Age - Tangled Up In Plaid [NCV]/song.ini",
+      "size": 411
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/4. Queens of the Stone Age - Tangled Up In Plaid [NCV]/song.ogg",
+      "size": 8386792
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/5. Jets to Brazil - Chinatown [7777villain]/album.png",
+      "size": 209610
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/5. Jets to Brazil - Chinatown [7777villain]/background.jpg",
+      "size": 1247423
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/5. Jets to Brazil - Chinatown [7777villain]/notes.chart",
+      "size": 34079
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/5. Jets to Brazil - Chinatown [7777villain]/song.ini",
+      "size": 478
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/5. Jets to Brazil - Chinatown [7777villain]/song.ogg",
+      "size": 9448314
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/6. Pavement - In the Mouth a Desert [highfine]/album.png",
+      "size": 724116
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/6. Pavement - In the Mouth a Desert [highfine]/background.jpg",
+      "size": 351732
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/6. Pavement - In the Mouth a Desert [highfine]/notes.chart",
+      "size": 39948
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/6. Pavement - In the Mouth a Desert [highfine]/song.ini",
+      "size": 469
+    },
+    {
+      "path": "Guitar Grief/Tier 10 - Alternative Ways to Cry/6. Pavement - In the Mouth a Desert [highfine]/song.ogg",
+      "size": 6908208
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/1. Bullet For My Valentine - Tears Don_t Fall [7777villain]/album.png",
+      "size": 420815
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/1. Bullet For My Valentine - Tears Don_t Fall [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/1. Bullet For My Valentine - Tears Don_t Fall [7777villain]/notes.chart",
+      "size": 63364
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/1. Bullet For My Valentine - Tears Don_t Fall [7777villain]/song.ini",
+      "size": 454
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/1. Bullet For My Valentine - Tears Don_t Fall [7777villain]/song.ogg",
+      "size": 11590514
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/2. Bullet for my Valentine - Tears Don_t Fall (Part 2) [Miscellany]/album.png",
+      "size": 502114
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/2. Bullet for my Valentine - Tears Don_t Fall (Part 2) [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/2. Bullet for my Valentine - Tears Don_t Fall (Part 2) [Miscellany]/guitar.ogg",
+      "size": 11484547
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/2. Bullet for my Valentine - Tears Don_t Fall (Part 2) [Miscellany]/notes.chart",
+      "size": 56054
+    },
+    {
+      "path": "Guitar Grief/Tier 10.5 - Suck it Up!/2. Bullet for my Valentine - Tears Don_t Fall (Part 2) [Miscellany]/song.ini",
+      "size": 546
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/1. Joy Division - Disorder [highfine]/album.png",
+      "size": 103903
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/1. Joy Division - Disorder [highfine]/background.jpg",
+      "size": 989356
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/1. Joy Division - Disorder [highfine]/notes.chart",
+      "size": 47950
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/1. Joy Division - Disorder [highfine]/song.ini",
+      "size": 655
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/1. Joy Division - Disorder [highfine]/song.ogg",
+      "size": 7113967
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/2. The Replacements - Johnny_s Gonna Die [highfine]/album.png",
+      "size": 306343
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/2. The Replacements - Johnny_s Gonna Die [highfine]/background.jpg",
+      "size": 781179
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/2. The Replacements - Johnny_s Gonna Die [highfine]/notes.chart",
+      "size": 23753
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/2. The Replacements - Johnny_s Gonna Die [highfine]/song.ini",
+      "size": 604
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/2. The Replacements - Johnny_s Gonna Die [highfine]/song.ogg",
+      "size": 6634234
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/3. Crowded House - Don_t Dream It_s Over [7777villain]/album.png",
+      "size": 715155
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/3. Crowded House - Don_t Dream It_s Over [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/3. Crowded House - Don_t Dream It_s Over [7777villain]/notes.chart",
+      "size": 41666
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/3. Crowded House - Don_t Dream It_s Over [7777villain]/song.ini",
+      "size": 381
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/3. Crowded House - Don_t Dream It_s Over [7777villain]/song.ogg",
+      "size": 6884292
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/4. Arcane Toaster - Dusty Steeple [3-UP]/album.png",
+      "size": 12596
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/4. Arcane Toaster - Dusty Steeple [3-UP]/background.jpg",
+      "size": 239275
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/4. Arcane Toaster - Dusty Steeple [3-UP]/notes.chart",
+      "size": 50671
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/4. Arcane Toaster - Dusty Steeple [3-UP]/song.ini",
+      "size": 428
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/4. Arcane Toaster - Dusty Steeple [3-UP]/song.ogg",
+      "size": 12823380
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/5. XTC - Dear God [Caret]/album.png",
+      "size": 383865
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/5. XTC - Dear God [Caret]/background.jpg",
+      "size": 344416
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/5. XTC - Dear God [Caret]/notes.chart",
+      "size": 35067
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/5. XTC - Dear God [Caret]/song.ini",
+      "size": 743
+    },
+    {
+      "path": "Guitar Grief/Tier 11 - New Wave of Tears/5. XTC - Dear God [Caret]/song.ogg",
+      "size": 6704465
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/1. Deli Creeps - Time [Tris255]/album.jpg",
+      "size": 48683
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/1. Deli Creeps - Time [Tris255]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/1. Deli Creeps - Time [Tris255]/notes.chart",
+      "size": 26718
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/1. Deli Creeps - Time [Tris255]/song.ini",
+      "size": 640
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/1. Deli Creeps - Time [Tris255]/song.ogg",
+      "size": 9937780
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/2. Type O Negative - Everyone I Love is Dead [7777villain]/album.jpg",
+      "size": 43509
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/2. Type O Negative - Everyone I Love is Dead [7777villain]/background.jpg",
+      "size": 461010
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/2. Type O Negative - Everyone I Love is Dead [7777villain]/notes.chart",
+      "size": 49070
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/2. Type O Negative - Everyone I Love is Dead [7777villain]/song.ini",
+      "size": 426
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/2. Type O Negative - Everyone I Love is Dead [7777villain]/song.ogg",
+      "size": 11515465
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/3. Drugstore Fanatics - Pace Protection [7777villain]/album.png",
+      "size": 500851
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/3. Drugstore Fanatics - Pace Protection [7777villain]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/3. Drugstore Fanatics - Pace Protection [7777villain]/notes.chart",
+      "size": 56375
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/3. Drugstore Fanatics - Pace Protection [7777villain]/song.ini",
+      "size": 393
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/3. Drugstore Fanatics - Pace Protection [7777villain]/song.ogg",
+      "size": 12518086
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/4. Yousei Teikoku - Phantom Terror [Spachi]/album.png",
+      "size": 500455
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/4. Yousei Teikoku - Phantom Terror [Spachi]/background.jpg",
+      "size": 315863
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/4. Yousei Teikoku - Phantom Terror [Spachi]/notes.chart",
+      "size": 48456
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/4. Yousei Teikoku - Phantom Terror [Spachi]/song.ini",
+      "size": 452
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/4. Yousei Teikoku - Phantom Terror [Spachi]/song.ogg",
+      "size": 7574606
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/5. Slipknot - Vermilion [Raspberriel]/album.png",
+      "size": 519369
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/5. Slipknot - Vermilion [Raspberriel]/background.jpg",
+      "size": 421759
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/5. Slipknot - Vermilion [Raspberriel]/guitar.ogg",
+      "size": 10628721
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/5. Slipknot - Vermilion [Raspberriel]/notes.mid",
+      "size": 36309
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/5. Slipknot - Vermilion [Raspberriel]/song.ini",
+      "size": 475
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/6. Muse - Hyper Chondriac Music [3-UP]/album.png",
+      "size": 299140
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/6. Muse - Hyper Chondriac Music [3-UP]/background.jpg",
+      "size": 37590
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/6. Muse - Hyper Chondriac Music [3-UP]/notes.chart",
+      "size": 46879
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/6. Muse - Hyper Chondriac Music [3-UP]/song.ini",
+      "size": 574
+    },
+    {
+      "path": "Guitar Grief/Tier 12 - Approaching Oblivion/6. Muse - Hyper Chondriac Music [3-UP]/song.ogg",
+      "size": 8575674
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/1. Seventh Wonder - Long Way Home [Peddy]/album.png",
+      "size": 221153
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/1. Seventh Wonder - Long Way Home [Peddy]/background.jpg",
+      "size": 231691
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/1. Seventh Wonder - Long Way Home [Peddy]/notes.chart",
+      "size": 37987
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/1. Seventh Wonder - Long Way Home [Peddy]/song.ini",
+      "size": 437
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/1. Seventh Wonder - Long Way Home [Peddy]/song.ogg",
+      "size": 8401157
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/2. Epica - Never Enough [Spachi]/album.png",
+      "size": 824429
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/2. Epica - Never Enough [Spachi]/background.jpg",
+      "size": 161002
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/2. Epica - Never Enough [Spachi]/notes.chart",
+      "size": 36271
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/2. Epica - Never Enough [Spachi]/song.ini",
+      "size": 601
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/2. Epica - Never Enough [Spachi]/song.ogg",
+      "size": 9504061
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/3. Scardust - Mist [Peddy]/album.png",
+      "size": 362666
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/3. Scardust - Mist [Peddy]/background.jpg",
+      "size": 554522
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/3. Scardust - Mist [Peddy]/notes.chart",
+      "size": 28658
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/3. Scardust - Mist [Peddy]/song.ini",
+      "size": 286
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/3. Scardust - Mist [Peddy]/song.ogg",
+      "size": 6206987
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/4. Pain of Salvation - Undertow [7777villain]/album.png",
+      "size": 731702
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/4. Pain of Salvation - Undertow [7777villain]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/4. Pain of Salvation - Undertow [7777villain]/notes.chart",
+      "size": 29824
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/4. Pain of Salvation - Undertow [7777villain]/song.ini",
+      "size": 420
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/4. Pain of Salvation - Undertow [7777villain]/song.ogg",
+      "size": 8834492
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/5. Seven Spires - Bury You [Deltarak]/album.png",
+      "size": 50276
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/5. Seven Spires - Bury You [Deltarak]/background.jpg",
+      "size": 398842
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/5. Seven Spires - Bury You [Deltarak]/notes.chart",
+      "size": 27331
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/5. Seven Spires - Bury You [Deltarak]/song.ini",
+      "size": 512
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/5. Seven Spires - Bury You [Deltarak]/song.ogg",
+      "size": 7534183
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/6. DGM - Repay [Peddy]/album.png",
+      "size": 174094
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/6. DGM - Repay [Peddy]/background.jpg",
+      "size": 124649
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/6. DGM - Repay [Peddy]/notes.chart",
+      "size": 30938
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/6. DGM - Repay [Peddy]/song.ini",
+      "size": 345
+    },
+    {
+      "path": "Guitar Grief/Tier 13 - Progressively Getting Worse/6. DGM - Repay [Peddy]/song.ogg",
+      "size": 8507621
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/1. TUYU - Faithful dog _Hachi_ [John Titor]/album.png",
+      "size": 588718
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/1. TUYU - Faithful dog _Hachi_ [John Titor]/background.jpg",
+      "size": 997881
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/1. TUYU - Faithful dog _Hachi_ [John Titor]/notes.chart",
+      "size": 31910
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/1. TUYU - Faithful dog _Hachi_ [John Titor]/song.ini",
+      "size": 540
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/1. TUYU - Faithful dog _Hachi_ [John Titor]/song.ogg",
+      "size": 5257116
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/2. Aldious - Fragile [Spachi]/album.png",
+      "size": 494704
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/2. Aldious - Fragile [Spachi]/background.jpg",
+      "size": 184948
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/2. Aldious - Fragile [Spachi]/notes.chart",
+      "size": 31445
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/2. Aldious - Fragile [Spachi]/song.ini",
+      "size": 357
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/2. Aldious - Fragile [Spachi]/song.ogg",
+      "size": 10221737
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/3. Suilen - song6 [NCV]/album.png",
+      "size": 422731
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/3. Suilen - song6 [NCV]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/3. Suilen - song6 [NCV]/notes.chart",
+      "size": 28135
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/3. Suilen - song6 [NCV]/song.ini",
+      "size": 315
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/3. Suilen - song6 [NCV]/song.ogg",
+      "size": 7193340
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/4. Futakuchi Mana - Dissociation [Spachi]/album.png",
+      "size": 428571
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/4. Futakuchi Mana - Dissociation [Spachi]/background.jpg",
+      "size": 79535
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/4. Futakuchi Mana - Dissociation [Spachi]/notes.chart",
+      "size": 29546
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/4. Futakuchi Mana - Dissociation [Spachi]/song.ini",
+      "size": 573
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/4. Futakuchi Mana - Dissociation [Spachi]/song.ogg",
+      "size": 6069426
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/5. POLKADOT STINGRAY - Rhythmy [John Titor]/album.png",
+      "size": 364675
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/5. POLKADOT STINGRAY - Rhythmy [John Titor]/background.jpg",
+      "size": 1722768
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/5. POLKADOT STINGRAY - Rhythmy [John Titor]/notes.chart",
+      "size": 49527
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/5. POLKADOT STINGRAY - Rhythmy [John Titor]/song.ini",
+      "size": 584
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/5. POLKADOT STINGRAY - Rhythmy [John Titor]/song.ogg",
+      "size": 10981990
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/6. BAND-MAID - Puzzle [Spachi]/album.png",
+      "size": 375173
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/6. BAND-MAID - Puzzle [Spachi]/background.jpg",
+      "size": 108205
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/6. BAND-MAID - Puzzle [Spachi]/notes.chart",
+      "size": 61777
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/6. BAND-MAID - Puzzle [Spachi]/song.ini",
+      "size": 566
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/6. BAND-MAID - Puzzle [Spachi]/song.ogg",
+      "size": 8410057
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/7. Unlucky Morpheus - Violet [Spachi]/album.png",
+      "size": 599228
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/7. Unlucky Morpheus - Violet [Spachi]/background.jpg",
+      "size": 1021447
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/7. Unlucky Morpheus - Violet [Spachi]/notes.chart",
+      "size": 37502
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/7. Unlucky Morpheus - Violet [Spachi]/song.ini",
+      "size": 474
+    },
+    {
+      "path": "Guitar Grief/Tier 14 - Gita no Kanashimi/7. Unlucky Morpheus - Violet [Spachi]/song.ogg",
+      "size": 8302697
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/1. Kelly Bailey - Triage at Dawn [Stickheadz32]/album.jpg",
+      "size": 25077
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/1. Kelly Bailey - Triage at Dawn [Stickheadz32]/background.jpg",
+      "size": 469974
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/1. Kelly Bailey - Triage at Dawn [Stickheadz32]/notes.chart",
+      "size": 4023
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/1. Kelly Bailey - Triage at Dawn [Stickheadz32]/song.ini",
+      "size": 314
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/1. Kelly Bailey - Triage at Dawn [Stickheadz32]/song.ogg",
+      "size": 980049
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/2. Ayasa - The Reason Why [Caret]/album.png",
+      "size": 478465
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/2. Ayasa - The Reason Why [Caret]/background.jpg",
+      "size": 676743
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/2. Ayasa - The Reason Why [Caret]/notes.chart",
+      "size": 15379
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/2. Ayasa - The Reason Why [Caret]/song.ini",
+      "size": 684
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/2. Ayasa - The Reason Why [Caret]/song.ogg",
+      "size": 8699051
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/3. Acid-Notation - Forfeiture & Closure [Aren Eternal]/album.png",
+      "size": 206899
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/3. Acid-Notation - Forfeiture & Closure [Aren Eternal]/background.jpg",
+      "size": 73994
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/3. Acid-Notation - Forfeiture & Closure [Aren Eternal]/notes.chart",
+      "size": 20227
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/3. Acid-Notation - Forfeiture & Closure [Aren Eternal]/song.ini",
+      "size": 637
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/3. Acid-Notation - Forfeiture & Closure [Aren Eternal]/song.opus",
+      "size": 3826820
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/4. RushJet1 - Unlikely [3-UP]/album.png",
+      "size": 348956
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/4. RushJet1 - Unlikely [3-UP]/background.png",
+      "size": 26664
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/4. RushJet1 - Unlikely [3-UP]/notes.chart",
+      "size": 23746
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/4. RushJet1 - Unlikely [3-UP]/song.ini",
+      "size": 434
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/4. RushJet1 - Unlikely [3-UP]/song.ogg",
+      "size": 2448636
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/5. Quadratum - For the Love of God [Spachi]/album.png",
+      "size": 557828
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/5. Quadratum - For the Love of God [Spachi]/background.jpg",
+      "size": 255233
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/5. Quadratum - For the Love of God [Spachi]/notes.chart",
+      "size": 30002
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/5. Quadratum - For the Love of God [Spachi]/song.ini",
+      "size": 571
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/5. Quadratum - For the Love of God [Spachi]/song.ogg",
+      "size": 11505928
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/6. Steve Vai - Weeping China Doll [iZenPenguin]/album.png",
+      "size": 541632
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/6. Steve Vai - Weeping China Doll [iZenPenguin]/background.jpg",
+      "size": 1830817
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/6. Steve Vai - Weeping China Doll [iZenPenguin]/notes.chart",
+      "size": 33642
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/6. Steve Vai - Weeping China Doll [iZenPenguin]/song.ini",
+      "size": 389
+    },
+    {
+      "path": "Guitar Grief/Tier 15 - I Have No Mouth and I Must Cry/6. Steve Vai - Weeping China Doll [iZenPenguin]/song.ogg",
+      "size": 10420457
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/1. Hellyeah - Hush [Miscellany]/album.png",
+      "size": 429918
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/1. Hellyeah - Hush [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/1. Hellyeah - Hush [Miscellany]/guitar.ogg",
+      "size": 8095546
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/1. Hellyeah - Hush [Miscellany]/notes.chart",
+      "size": 33946
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/1. Hellyeah - Hush [Miscellany]/song.ini",
+      "size": 747
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/2. The Amity Affliction - Like Love [gibby]/album.png",
+      "size": 223453
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/2. The Amity Affliction - Like Love [gibby]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/2. The Amity Affliction - Like Love [gibby]/notes.chart",
+      "size": 40690
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/2. The Amity Affliction - Like Love [gibby]/song.ini",
+      "size": 266
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/2. The Amity Affliction - Like Love [gibby]/song.ogg",
+      "size": 7208824
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/3. Until I Wake - Foundations [gibby]/album.png",
+      "size": 398385
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/3. Until I Wake - Foundations [gibby]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/3. Until I Wake - Foundations [gibby]/notes.chart",
+      "size": 31505
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/3. Until I Wake - Foundations [gibby]/song.ini",
+      "size": 272
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/3. Until I Wake - Foundations [gibby]/song.ogg",
+      "size": 6544369
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/4. Katatonia - Lethean [iZenPenguin]/album.png",
+      "size": 440628
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/4. Katatonia - Lethean [iZenPenguin]/background.jpg",
+      "size": 403535
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/4. Katatonia - Lethean [iZenPenguin]/notes.chart",
+      "size": 30707
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/4. Katatonia - Lethean [iZenPenguin]/song.ini",
+      "size": 373
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/4. Katatonia - Lethean [iZenPenguin]/song.ogg",
+      "size": 8011145
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/5. Royal Coda - Cut Me Under [Caret]/album.png",
+      "size": 236778
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/5. Royal Coda - Cut Me Under [Caret]/background.jpg",
+      "size": 26327
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/5. Royal Coda - Cut Me Under [Caret]/notes.chart",
+      "size": 32337
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/5. Royal Coda - Cut Me Under [Caret]/song.ini",
+      "size": 602
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/5. Royal Coda - Cut Me Under [Caret]/song.ogg",
+      "size": 12873293
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/6. Sarah and the Safe Word - Sky On Fire [Deltarak]/album.png",
+      "size": 85344
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/6. Sarah and the Safe Word - Sky On Fire [Deltarak]/background.jpg",
+      "size": 273991
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/6. Sarah and the Safe Word - Sky On Fire [Deltarak]/notes.chart",
+      "size": 31682
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/6. Sarah and the Safe Word - Sky On Fire [Deltarak]/song.ini",
+      "size": 362
+    },
+    {
+      "path": "Guitar Grief/Tier 16 - Broken Hearts and Shattered Families/6. Sarah and the Safe Word - Sky On Fire [Deltarak]/song.ogg",
+      "size": 6427114
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/1. Megadeth - \u00c0 Tout Le Monde (Set me Free) [Miscellany]/album.png",
+      "size": 616498
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/1. Megadeth - \u00c0 Tout Le Monde (Set me Free) [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/1. Megadeth - \u00c0 Tout Le Monde (Set me Free) [Miscellany]/guitar.ogg",
+      "size": 7988339
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/1. Megadeth - \u00c0 Tout Le Monde (Set me Free) [Miscellany]/notes.chart",
+      "size": 29054
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/1. Megadeth - \u00c0 Tout Le Monde (Set me Free) [Miscellany]/song.ini",
+      "size": 710
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/2. Trivium - And Sadness Will Sear [Miscellany]/album.jpg",
+      "size": 142339
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/2. Trivium - And Sadness Will Sear [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/2. Trivium - And Sadness Will Sear [Miscellany]/guitar.ogg",
+      "size": 8637258
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/2. Trivium - And Sadness Will Sear [Miscellany]/notes.chart",
+      "size": 38921
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/2. Trivium - And Sadness Will Sear [Miscellany]/song.ini",
+      "size": 754
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/3. Stratovarius - Season of Change [Peddy]/album.png",
+      "size": 534587
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/3. Stratovarius - Season of Change [Peddy]/background.jpg",
+      "size": 738581
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/3. Stratovarius - Season of Change [Peddy]/notes.chart",
+      "size": 49723
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/3. Stratovarius - Season of Change [Peddy]/song.ini",
+      "size": 385
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/3. Stratovarius - Season of Change [Peddy]/song.ogg",
+      "size": 14085556
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/4. Pantera - Cemetery Gates [Miscellany]/album.png",
+      "size": 614081
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/4. Pantera - Cemetery Gates [Miscellany]/background.png",
+      "size": 1611217
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/4. Pantera - Cemetery Gates [Miscellany]/guitar.ogg",
+      "size": 14035788
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/4. Pantera - Cemetery Gates [Miscellany]/notes.chart",
+      "size": 51352
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/4. Pantera - Cemetery Gates [Miscellany]/song.ini",
+      "size": 710
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/5. Megadeth - In My Darkest Hour [Miscellany]/album.png",
+      "size": 643818
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/5. Megadeth - In My Darkest Hour [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/5. Megadeth - In My Darkest Hour [Miscellany]/guitar.ogg",
+      "size": 12669889
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/5. Megadeth - In My Darkest Hour [Miscellany]/notes.chart",
+      "size": 60062
+    },
+    {
+      "path": "Guitar Grief/Tier 17 - Dying to Get Through/5. Megadeth - In My Darkest Hour [Miscellany]/song.ini",
+      "size": 967
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/1. RichaadEB - Bad Apple!! [Spachi]/album.png",
+      "size": 558678
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/1. RichaadEB - Bad Apple!! [Spachi]/background.jpg",
+      "size": 91696
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/1. RichaadEB - Bad Apple!! [Spachi]/notes.chart",
+      "size": 55060
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/1. RichaadEB - Bad Apple!! [Spachi]/song.ini",
+      "size": 678
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/1. RichaadEB - Bad Apple!! [Spachi]/song.ogg",
+      "size": 10419741
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/2. Architects - Animals [Miscellany]/album.png",
+      "size": 450906
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/2. Architects - Animals [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/2. Architects - Animals [Miscellany]/guitar.ogg",
+      "size": 8240712
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/2. Architects - Animals [Miscellany]/notes.chart",
+      "size": 45008
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/2. Architects - Animals [Miscellany]/song.ini",
+      "size": 611
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/3. Kekal - Broken [Sygenysis]/album.png",
+      "size": 21869
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/3. Kekal - Broken [Sygenysis]/background.jpg",
+      "size": 1965684
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/3. Kekal - Broken [Sygenysis]/guitar.ogg",
+      "size": 8742989
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/3. Kekal - Broken [Sygenysis]/notes.mid",
+      "size": 21358
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/3. Kekal - Broken [Sygenysis]/song.ini",
+      "size": 651
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/4. Solution .45 - Lethean Tears [Stickheadz32]/album.jpg",
+      "size": 55600
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/4. Solution .45 - Lethean Tears [Stickheadz32]/background.jpg",
+      "size": 412959
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/4. Solution .45 - Lethean Tears [Stickheadz32]/notes.chart",
+      "size": 66551
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/4. Solution .45 - Lethean Tears [Stickheadz32]/song.ini",
+      "size": 483
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/4. Solution .45 - Lethean Tears [Stickheadz32]/song.ogg",
+      "size": 12142735
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/5. Suicide Silence - Thinking in Tongues [Miscellany]/album.png",
+      "size": 291990
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/5. Suicide Silence - Thinking in Tongues [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/5. Suicide Silence - Thinking in Tongues [Miscellany]/guitar.ogg",
+      "size": 7138256
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/5. Suicide Silence - Thinking in Tongues [Miscellany]/notes.chart",
+      "size": 43583
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/5. Suicide Silence - Thinking in Tongues [Miscellany]/song.ini",
+      "size": 599
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/6. Dream Theater - Misunderstood [Peddy]/album.png",
+      "size": 484224
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/6. Dream Theater - Misunderstood [Peddy]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/6. Dream Theater - Misunderstood [Peddy]/notes.chart",
+      "size": 91543
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/6. Dream Theater - Misunderstood [Peddy]/song.ini",
+      "size": 312
+    },
+    {
+      "path": "Guitar Grief/Tier 18 - Feeling the Despair/6. Dream Theater - Misunderstood [Peddy]/song.ogg",
+      "size": 19207443
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/1. Fallujah - Wind for Wings [Miscellany]/album.jpg",
+      "size": 24777
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/1. Fallujah - Wind for Wings [Miscellany]/background.jpg",
+      "size": 225153
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/1. Fallujah - Wind for Wings [Miscellany]/guitar.ogg",
+      "size": 12493375
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/1. Fallujah - Wind for Wings [Miscellany]/notes.chart",
+      "size": 60332
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/1. Fallujah - Wind for Wings [Miscellany]/song.ini",
+      "size": 762
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/2. 4Arm - Survivalist [Miscellany]/album.png",
+      "size": 355311
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/2. 4Arm - Survivalist [Miscellany]/background.jpg",
+      "size": 490709
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/2. 4Arm - Survivalist [Miscellany]/guitar.ogg",
+      "size": 16279588
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/2. 4Arm - Survivalist [Miscellany]/notes.chart",
+      "size": 54604
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/2. 4Arm - Survivalist [Miscellany]/song.ini",
+      "size": 661
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/3. Phil Fasulo - Tragedious (feat. Angel Vivaldi, Berried Alive & Make Me Disappear) [Stickheadz32]/album.jpg",
+      "size": 29420
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/3. Phil Fasulo - Tragedious (feat. Angel Vivaldi, Berried Alive & Make Me Disappear) [Stickheadz32]/background.jpg",
+      "size": 100721
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/3. Phil Fasulo - Tragedious (feat. Angel Vivaldi, Berried Alive & Make Me Disappear) [Stickheadz32]/notes.chart",
+      "size": 25071
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/3. Phil Fasulo - Tragedious (feat. Angel Vivaldi, Berried Alive & Make Me Disappear) [Stickheadz32]/song.ini",
+      "size": 384
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/3. Phil Fasulo - Tragedious (feat. Angel Vivaldi, Berried Alive & Make Me Disappear) [Stickheadz32]/song.ogg",
+      "size": 6832251
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/4. Archspire - A.U.M. [Miscellany]/album.jpg",
+      "size": 83898
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/4. Archspire - A.U.M. [Miscellany]/background.png",
+      "size": 3002660
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/4. Archspire - A.U.M. [Miscellany]/guitar.ogg",
+      "size": 7760425
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/4. Archspire - A.U.M. [Miscellany]/notes.chart",
+      "size": 117269
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/4. Archspire - A.U.M. [Miscellany]/song.ini",
+      "size": 976
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/5. Mardelas - Spider Thread [Spachi]/album.png",
+      "size": 720678
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/5. Mardelas - Spider Thread [Spachi]/background.jpg",
+      "size": 327545
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/5. Mardelas - Spider Thread [Spachi]/notes.chart",
+      "size": 55171
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/5. Mardelas - Spider Thread [Spachi]/song.ini",
+      "size": 553
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/5. Mardelas - Spider Thread [Spachi]/song.ogg",
+      "size": 12060494
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/6. void (Mournfinale) - Testify (feat. Hoshikuma Minami) [Raspberriel]/album.png",
+      "size": 490990
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/6. void (Mournfinale) - Testify (feat. Hoshikuma Minami) [Raspberriel]/background.jpg",
+      "size": 236945
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/6. void (Mournfinale) - Testify (feat. Hoshikuma Minami) [Raspberriel]/guitar.ogg",
+      "size": 6880178
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/6. void (Mournfinale) - Testify (feat. Hoshikuma Minami) [Raspberriel]/notes.mid",
+      "size": 23140
+    },
+    {
+      "path": "Guitar Grief/Tier 19 - On the Edge of the Abyss/6. void (Mournfinale) - Testify (feat. Hoshikuma Minami) [Raspberriel]/song.ini",
+      "size": 689
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/1. \u00c6ternity - That Funny Feeling (Bo Burnham cover) [Aren Eternal]/album.png",
+      "size": 269595
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/1. \u00c6ternity - That Funny Feeling (Bo Burnham cover) [Aren Eternal]/background.jpg",
+      "size": 643282
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/1. \u00c6ternity - That Funny Feeling (Bo Burnham cover) [Aren Eternal]/notes.chart",
+      "size": 107507
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/1. \u00c6ternity - That Funny Feeling (Bo Burnham cover) [Aren Eternal]/song.ini",
+      "size": 593
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/1. \u00c6ternity - That Funny Feeling (Bo Burnham cover) [Aren Eternal]/song.opus",
+      "size": 5151288
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/2. Dragonforce - Trail of Broken Hearts [Tris255]/album.png",
+      "size": 518062
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/2. Dragonforce - Trail of Broken Hearts [Tris255]/background.jpg",
+      "size": 318332
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/2. Dragonforce - Trail of Broken Hearts [Tris255]/notes.chart",
+      "size": 40753
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/2. Dragonforce - Trail of Broken Hearts [Tris255]/song.ini",
+      "size": 569
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/2. Dragonforce - Trail of Broken Hearts [Tris255]/song.ogg",
+      "size": 10798745
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/3. Sonic Youth - Superstar [highfine]/album.png",
+      "size": 584389
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/3. Sonic Youth - Superstar [highfine]/background.jpg",
+      "size": 1014994
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/3. Sonic Youth - Superstar [highfine]/notes.chart",
+      "size": 56578
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/3. Sonic Youth - Superstar [highfine]/song.ini",
+      "size": 754
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/3. Sonic Youth - Superstar [highfine]/song.ogg",
+      "size": 7037727
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/4. Lorna Shore - Obsession [Miscellany]/album.png",
+      "size": 586851
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/4. Lorna Shore - Obsession [Miscellany]/background.png",
+      "size": 849325
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/4. Lorna Shore - Obsession [Miscellany]/guitar.ogg",
+      "size": 8437784
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/4. Lorna Shore - Obsession [Miscellany]/notes.chart",
+      "size": 65097
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/4. Lorna Shore - Obsession [Miscellany]/song.ini",
+      "size": 661
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/5. Snafu - why as soon as we become so close we have to say goodbye [Stickheadz32]/album.jpg",
+      "size": 43298
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/5. Snafu - why as soon as we become so close we have to say goodbye [Stickheadz32]/background.jpg",
+      "size": 628875
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/5. Snafu - why as soon as we become so close we have to say goodbye [Stickheadz32]/notes.chart",
+      "size": 52032
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/5. Snafu - why as soon as we become so close we have to say goodbye [Stickheadz32]/song.ini",
+      "size": 413
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/5. Snafu - why as soon as we become so close we have to say goodbye [Stickheadz32]/song.ogg",
+      "size": 7018214
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/6. Ghost Bath - Burial [doll]/album.png",
+      "size": 533977
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/6. Ghost Bath - Burial [doll]/background.jpg",
+      "size": 928631
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/6. Ghost Bath - Burial [doll]/notes.chart",
+      "size": 90367
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/6. Ghost Bath - Burial [doll]/song.ini",
+      "size": 755
+    },
+    {
+      "path": "Guitar Grief/Tier 20 - Ending it All/6. Ghost Bath - Burial [doll]/song.ogg",
+      "size": 14246496
+    },
+    {
+      "path": "Guitar Grief/Tier 20.5 - The Emptiness That Follows/1. Pigu - Empty-Hearted [3-UP]/album.png",
+      "size": 318757
+    },
+    {
+      "path": "Guitar Grief/Tier 20.5 - The Emptiness That Follows/1. Pigu - Empty-Hearted [3-UP]/background.jpg",
+      "size": 189052
+    },
+    {
+      "path": "Guitar Grief/Tier 20.5 - The Emptiness That Follows/1. Pigu - Empty-Hearted [3-UP]/notes.chart",
+      "size": 204036
+    },
+    {
+      "path": "Guitar Grief/Tier 20.5 - The Emptiness That Follows/1. Pigu - Empty-Hearted [3-UP]/song.ini",
+      "size": 617
+    },
+    {
+      "path": "Guitar Grief/Tier 20.5 - The Emptiness That Follows/1. Pigu - Empty-Hearted [3-UP]/song.ogg",
+      "size": 9779576
+    }
+  ],
+  "extracted_size": 1283922022,
+  "file_count": 610,
+  "chart_count": 122,
+  "release_date": "2025-11-09"
 }

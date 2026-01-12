@@ -1,0 +1,2670 @@
+{
+  "name": "(2015) Rock Band 4",
+  "folder_id": "static-2015-rock-band-4",
+  "group": "Games",
+  "collection": "Rock Band",
+  "downloads": [
+    {
+      "id": "18pSQvL9WGJJuHELW250G6eaAKvcTMeVU",
+      "name": "Rock Band 4 65.7z",
+      "size": 32946297,
+      "md5": "80a8dda73775707c9de126ce2253500a",
+      "path": "Rock Band 4 65.7z"
+    },
+    {
+      "id": "1pPmNmPREdT83TWzUQjwOcMQbb8DNYJr1",
+      "name": "Rock Band 4 64.7z",
+      "size": 25659384,
+      "md5": "34b7b4236399efefbcf2d1a834df36ea",
+      "path": "Rock Band 4 64.7z"
+    },
+    {
+      "id": "1Fegu-xrFPvkWcG9ksuEP1_9mNV2B7dYo",
+      "name": "Rock Band 4 63.7z",
+      "size": 30615120,
+      "md5": "64c6dc2713546ad45dbc62fb8c522708",
+      "path": "Rock Band 4 63.7z"
+    },
+    {
+      "id": "1AFYrBI7URn-zlVOPckjjnSvXKwiPA60V",
+      "name": "Rock Band 4 62.7z",
+      "size": 23460967,
+      "md5": "617d2dd91f487e8352bb5c6b2560789e",
+      "path": "Rock Band 4 62.7z"
+    },
+    {
+      "id": "19XGNclhIu_8R77SLSZ1GArakh9t8IZ_R",
+      "name": "Rock Band 4 61.7z",
+      "size": 34108099,
+      "md5": "e808ebe5012c336e65d0e32ab7c320c0",
+      "path": "Rock Band 4 61.7z"
+    },
+    {
+      "id": "1vknhNTY4l_nruI7qp9q-hE9-oejlUn1T",
+      "name": "Rock Band 4 60.7z",
+      "size": 17680647,
+      "md5": "2289482f7c66621f280bbd781403b7c3",
+      "path": "Rock Band 4 60.7z"
+    },
+    {
+      "id": "1rdO0pqrJhe2nns_IyF86GMv0Gylf8l-M",
+      "name": "Rock Band 4 59.7z",
+      "size": 29374551,
+      "md5": "77e655673e9ac7bcf171aef4e5566e01",
+      "path": "Rock Band 4 59.7z"
+    },
+    {
+      "id": "1EDzJW_D6xCeaEu4ktkopIfEK7CeTpmIo",
+      "name": "Rock Band 4 58.7z",
+      "size": 29071466,
+      "md5": "1f6889b0e2c0d092a2c200c634e50b06",
+      "path": "Rock Band 4 58.7z"
+    },
+    {
+      "id": "1PqbmYSGebPX_uDQl0N-zDUaY9r6UmjI8",
+      "name": "Rock Band 4 57.7z",
+      "size": 36933103,
+      "md5": "4678918a5041e12e718e386548745cbb",
+      "path": "Rock Band 4 57.7z"
+    },
+    {
+      "id": "1mOIVKJ6Gwyrgdad8ccCSTzrNfQI8IkAz",
+      "name": "Rock Band 4 56.7z",
+      "size": 33794466,
+      "md5": "a34d47135a8d59ffc9753bb92fc091f2",
+      "path": "Rock Band 4 56.7z"
+    },
+    {
+      "id": "1hCoYp2x6bXv92z6xE_QxkyfkLvYGaZPu",
+      "name": "Rock Band 4 55.7z",
+      "size": 28190429,
+      "md5": "d2b10442795c478b6bf8e217f36aa4de",
+      "path": "Rock Band 4 55.7z"
+    },
+    {
+      "id": "10lpaQBdAUyRgUKjTS-G40Ds5Yt0crXfY",
+      "name": "Rock Band 4 54.7z",
+      "size": 31525684,
+      "md5": "3e6edf435ef74d047c4b7eabd47978c8",
+      "path": "Rock Band 4 54.7z"
+    },
+    {
+      "id": "1Rq0xQNRgbrwgc1p-IhDRyhe8ZbI21bzm",
+      "name": "Rock Band 4 53.7z",
+      "size": 38211319,
+      "md5": "8345a2ac3397d00cd4e34ce9fe13a8d4",
+      "path": "Rock Band 4 53.7z"
+    },
+    {
+      "id": "1sYKPDjnt5UY0ZCKSNzCkOtKkSie-vJ6L",
+      "name": "Rock Band 4 52.7z",
+      "size": 27017583,
+      "md5": "226322e26dcc5bf465e5d67db27bf201",
+      "path": "Rock Band 4 52.7z"
+    },
+    {
+      "id": "1T6zqyYp-f8MBY275lNbkEnA2FmgcSKvm",
+      "name": "Rock Band 4 51.7z",
+      "size": 36575159,
+      "md5": "9f303231a722c458103431829e7c5431",
+      "path": "Rock Band 4 51.7z"
+    },
+    {
+      "id": "1547IGcINyq3AxlJWwFNrj0ZfIsrbkw-z",
+      "name": "Rock Band 4 50.7z",
+      "size": 26824152,
+      "md5": "7e6e4464ee56065a0af020ee5e664820",
+      "path": "Rock Band 4 50.7z"
+    },
+    {
+      "id": "18ODYjI7nICDeUTGNnWD9jr3gypTzpu4F",
+      "name": "Rock Band 4 49.7z",
+      "size": 23962685,
+      "md5": "8492885b9799e469e69f027cc90bf054",
+      "path": "Rock Band 4 49.7z"
+    },
+    {
+      "id": "1HQwnJGmxINgrzex5O2PJDoIsR3ghDKNF",
+      "name": "Rock Band 4 48.7z",
+      "size": 37712560,
+      "md5": "4ad8adf46c2c53d03a934f11979491ea",
+      "path": "Rock Band 4 48.7z"
+    },
+    {
+      "id": "1_w_SfiCoCOnPNAkQ_IcbGIcG3kFuoFGQ",
+      "name": "Rock Band 4 47.7z",
+      "size": 36425908,
+      "md5": "a1fcaa5da19aaf6d2c16b56e09a5c978",
+      "path": "Rock Band 4 47.7z"
+    },
+    {
+      "id": "1PuOca6xpwhImOKrnxg0N7S6_apwS8Ode",
+      "name": "Rock Band 4 46.7z",
+      "size": 58303031,
+      "md5": "7471026b2fa100026fb872b65287e574",
+      "path": "Rock Band 4 46.7z"
+    },
+    {
+      "id": "1Msv2pwCoYdbeO4qTRx3yVAMwYMC_VaCT",
+      "name": "Rock Band 4 45.7z",
+      "size": 28969216,
+      "md5": "e7fe10e874ca1da35e13ee18d4a21624",
+      "path": "Rock Band 4 45.7z"
+    },
+    {
+      "id": "1R85gJpnhrPY0Xp3cQHW3xpR_A37vbxmd",
+      "name": "Rock Band 4 44.7z",
+      "size": 32517427,
+      "md5": "4c53a93cc9c35f8822a2dd54eb68ba64",
+      "path": "Rock Band 4 44.7z"
+    },
+    {
+      "id": "1ahGu45WuS8zcRK9iUdWiRaKpQeMx_i99",
+      "name": "Rock Band 4 43.7z",
+      "size": 38966787,
+      "md5": "e94bfc25cb0d87875996f91536d3705e",
+      "path": "Rock Band 4 43.7z"
+    },
+    {
+      "id": "1D1W86DZDcdBRi172bzN61k_knJW_moXv",
+      "name": "Rock Band 4 42.7z",
+      "size": 28649226,
+      "md5": "55f4d3a36b7276824a3cccc8446aad7b",
+      "path": "Rock Band 4 42.7z"
+    },
+    {
+      "id": "1yVJ8B7d6FH5DxSYHT8p6A5vDDxy7EtGi",
+      "name": "Rock Band 4 41.7z",
+      "size": 29531701,
+      "md5": "9c9e1caea0184fe06816f29a1bc241bf",
+      "path": "Rock Band 4 41.7z"
+    },
+    {
+      "id": "1W6a2HcBfAm6Stcjjq0x3R3uZb2WmOMvh",
+      "name": "Rock Band 4 40.7z",
+      "size": 25556439,
+      "md5": "ba8545d2bc6123f1964acda2f99de4cf",
+      "path": "Rock Band 4 40.7z"
+    },
+    {
+      "id": "1MtigRAyjMmZq4j4Yl7ddojJs2uoC7ybI",
+      "name": "Rock Band 4 39.7z",
+      "size": 28565987,
+      "md5": "05873c93c0fee29ee67489b94fb552c8",
+      "path": "Rock Band 4 39.7z"
+    },
+    {
+      "id": "1wZ_PgFiuvOB4gUbhWtJLWWRDF9UWfFT3",
+      "name": "Rock Band 4 38.7z",
+      "size": 33301535,
+      "md5": "c2d8f3ac165846c8b3aba51ad7453641",
+      "path": "Rock Band 4 38.7z"
+    },
+    {
+      "id": "1m4ONcqveEN3oBEwCgddgkSngh5rEkq1w",
+      "name": "Rock Band 4 37.7z",
+      "size": 29615686,
+      "md5": "5aec80b29a707bc999ca6a46056b1926",
+      "path": "Rock Band 4 37.7z"
+    },
+    {
+      "id": "1WN4uk1V4Z5mzfperoULeZpwU2IN3EhPD",
+      "name": "Rock Band 4 36.7z",
+      "size": 34485110,
+      "md5": "0afd6f471c607421c5a2ffe27dd0384e",
+      "path": "Rock Band 4 36.7z"
+    },
+    {
+      "id": "1jmPq8_RtgFYvrdWDZ4rGnJ3-vFgC4CwQ",
+      "name": "Rock Band 4 35.7z",
+      "size": 43232647,
+      "md5": "712e7031b93ea7e092f20a3da6cacfea",
+      "path": "Rock Band 4 35.7z"
+    },
+    {
+      "id": "17svAlXK-QO6yO44b8OQX4rjAFgo1Rwhx",
+      "name": "Rock Band 4 34.7z",
+      "size": 46710277,
+      "md5": "878dab0e96b31269ce4c0e4816c062e6",
+      "path": "Rock Band 4 34.7z"
+    },
+    {
+      "id": "1Ec2T6Eu2wnziH0kF2TDAvcEDY-4zS2wQ",
+      "name": "Rock Band 4 33.7z",
+      "size": 37464370,
+      "md5": "b2a5b59466f170ff8dcd2baa48c319f8",
+      "path": "Rock Band 4 33.7z"
+    },
+    {
+      "id": "1GFmsJuBaEV0gFj4tGmck1K5OYYw4Qo3i",
+      "name": "Rock Band 4 32.7z",
+      "size": 26317569,
+      "md5": "ef84aeb8ded97af2ef3e510610a6d732",
+      "path": "Rock Band 4 32.7z"
+    },
+    {
+      "id": "1SSBvmL8HNn4JO7CXUNI42a8l6oFpbYtJ",
+      "name": "Rock Band 4 31.7z",
+      "size": 27647675,
+      "md5": "fc5893ca1cd0e8e907245d4823ca2a66",
+      "path": "Rock Band 4 31.7z"
+    },
+    {
+      "id": "1UKtfUV_FTlgD78Yo1CH31B-KuZlhNvjv",
+      "name": "Rock Band 4 30.7z",
+      "size": 42007949,
+      "md5": "2e92dfbaaa3d29297a446e34a8ce5d15",
+      "path": "Rock Band 4 30.7z"
+    },
+    {
+      "id": "1_oZmuWB1eri50T8f_25vPmvmcb4-9bFB",
+      "name": "Rock Band 4 29.7z",
+      "size": 43408870,
+      "md5": "a4e81bf26ca0d5f05fcf085afe238683",
+      "path": "Rock Band 4 29.7z"
+    },
+    {
+      "id": "1f6cBEK5AbLzF1XDQbGXBWZdQL8DKSfnS",
+      "name": "Rock Band 4 28.7z",
+      "size": 33997353,
+      "md5": "f060181bd0109088f6b7e86ab1a771d2",
+      "path": "Rock Band 4 28.7z"
+    },
+    {
+      "id": "1motyYOm3YkgEWqoCsQevGk1P2BshzhP-",
+      "name": "Rock Band 4 27.7z",
+      "size": 36423055,
+      "md5": "267fc8d29bc724d1bc929c9d595fa64a",
+      "path": "Rock Band 4 27.7z"
+    },
+    {
+      "id": "1Xj4aCNjIMiXack3ZfTvaGBbrgNmUwN9n",
+      "name": "Rock Band 4 26.7z",
+      "size": 30566684,
+      "md5": "d437f2598d524487170d7a45c6d058e7",
+      "path": "Rock Band 4 26.7z"
+    },
+    {
+      "id": "1xaaLi6-w95DLh87b3QsfCI7I6sEQ82x6",
+      "name": "Rock Band 4 25.7z",
+      "size": 33983151,
+      "md5": "257af78180f447531f0b5765bed6e218",
+      "path": "Rock Band 4 25.7z"
+    },
+    {
+      "id": "1yYOxXLsC4W02dKbIZdoEk7rzNizbEDlX",
+      "name": "Rock Band 4 24.7z",
+      "size": 20082419,
+      "md5": "3a4a22f60d6f9e9d55b3e7e9abd975d9",
+      "path": "Rock Band 4 24.7z"
+    },
+    {
+      "id": "1sFVW0ae77RSG5ao-mVPY7ZKAcfRBXwjD",
+      "name": "Rock Band 4 23.7z",
+      "size": 21082542,
+      "md5": "d5f45a2ce8308fd4af3a8ae211efc084",
+      "path": "Rock Band 4 23.7z"
+    },
+    {
+      "id": "17VQSoGdeE_tXYnucb_vQbEIXqZQETs5B",
+      "name": "Rock Band 4 22.7z",
+      "size": 28581774,
+      "md5": "055b85d94f62149f77c13cba87fe0617",
+      "path": "Rock Band 4 22.7z"
+    },
+    {
+      "id": "1J4AKnC7DpzgO01ZE9o9qBuQ6MSql-lXZ",
+      "name": "Rock Band 4 21.7z",
+      "size": 31885590,
+      "md5": "2fa76c0e0a4ef3bf8eaabfa8c360eb59",
+      "path": "Rock Band 4 21.7z"
+    },
+    {
+      "id": "1q2gifGj9ifLOo8Drior-ZO3cjepA4N8D",
+      "name": "Rock Band 4 20.7z",
+      "size": 40679774,
+      "md5": "e47e248ea17805358a65fab8442a93c8",
+      "path": "Rock Band 4 20.7z"
+    },
+    {
+      "id": "1RaHgEoxtsQ_40YTB8Omp8okD5pvXnuLi",
+      "name": "Rock Band 4 19.7z",
+      "size": 31770057,
+      "md5": "f04a901fa4a7dfdbc6cacb2d1a685c2b",
+      "path": "Rock Band 4 19.7z"
+    },
+    {
+      "id": "1upI7aHoVlaKCLUklJAAfx08RC-uYNA7I",
+      "name": "Rock Band 4 18.7z",
+      "size": 34950524,
+      "md5": "46a8393686d4a771f54b67b228ed95eb",
+      "path": "Rock Band 4 18.7z"
+    },
+    {
+      "id": "1Rz4zsNxbhnYYX4gnEnxKs_vwLQXnvUyY",
+      "name": "Rock Band 4 17.7z",
+      "size": 34165886,
+      "md5": "037594d1f45e3707b7fd2c9f6af2f24a",
+      "path": "Rock Band 4 17.7z"
+    },
+    {
+      "id": "1_d7dnk4yCmmRVkPnvXgIp9it-HOSFmc8",
+      "name": "Rock Band 4 16.7z",
+      "size": 35353766,
+      "md5": "68edd14dd368c6713b2366068ea208ca",
+      "path": "Rock Band 4 16.7z"
+    },
+    {
+      "id": "1fPXCTV-lXx3gKaZMnxrO6b14enQoFuvB",
+      "name": "Rock Band 4 15.7z",
+      "size": 37427228,
+      "md5": "0ea030fd240b01b01d4ecabf3470bfd7",
+      "path": "Rock Band 4 15.7z"
+    },
+    {
+      "id": "1iBwteSHCWoOFaHfEsS8VZy7MEZ1ZrGGC",
+      "name": "Rock Band 4 14.7z",
+      "size": 31798991,
+      "md5": "f66f2e8f96af674e01b82df9e9fdba96",
+      "path": "Rock Band 4 14.7z"
+    },
+    {
+      "id": "17qPoc7nVZJvZtbtdqO8PItO5j_taASPj",
+      "name": "Rock Band 4 13.7z",
+      "size": 19620048,
+      "md5": "c7b5ce570dcb4b22fceb6fbeee5ba53a",
+      "path": "Rock Band 4 13.7z"
+    },
+    {
+      "id": "1sIB4ALC0v07ZMhauQL5kXUAaGdysV4AW",
+      "name": "Rock Band 4 12.7z",
+      "size": 74348907,
+      "md5": "677dcb58cba1751677687db9c773a809",
+      "path": "Rock Band 4 12.7z"
+    },
+    {
+      "id": "1wCMHbJ0gA9fE2mvAXki2je70cU2-hbVj",
+      "name": "Rock Band 4 11.7z",
+      "size": 30574372,
+      "md5": "9d73570f237f63ba4db7b9c7ab3398ec",
+      "path": "Rock Band 4 11.7z"
+    },
+    {
+      "id": "1dpLJG_fBogsq3kSLhU6b5PthPAyDX4Ew",
+      "name": "Rock Band 4 10.7z",
+      "size": 34487495,
+      "md5": "1767d6a093c8b160c16c91d05fc441b4",
+      "path": "Rock Band 4 10.7z"
+    },
+    {
+      "id": "1osTdwL0NiuVzhb8OFcZLu4BORJmD91xz",
+      "name": "Rock Band 4 9.7z",
+      "size": 32856707,
+      "md5": "480390ca64ceea389a1c9fa57af1da77",
+      "path": "Rock Band 4 9.7z"
+    },
+    {
+      "id": "1kxSsXxzGgX6-jb2SdGHKA6b1Q1OqbUQy",
+      "name": "Rock Band 4 8.7z",
+      "size": 33423372,
+      "md5": "09d3474f80afd130ced1590859c14f1b",
+      "path": "Rock Band 4 8.7z"
+    },
+    {
+      "id": "1i-xXH69deFw2av27P3-X_d9bup9UrB8i",
+      "name": "Rock Band 4 7.7z",
+      "size": 39929966,
+      "md5": "ba0599d0472c060e23caed481a7b5ac7",
+      "path": "Rock Band 4 7.7z"
+    },
+    {
+      "id": "1TBjdZZbd81wm7JYaN4jRNSeDliliZNdr",
+      "name": "Rock Band 4 6.7z",
+      "size": 19470118,
+      "md5": "b0c1be93ccb348c72a00226eef8413a5",
+      "path": "Rock Band 4 6.7z"
+    },
+    {
+      "id": "1ZiSVM9lVVqGPUDbRWnPVo6Gnu_5zPwSp",
+      "name": "Rock Band 4 5.7z",
+      "size": 44742030,
+      "md5": "fa9b13da2b23e54a911d6d3b779b7c0f",
+      "path": "Rock Band 4 5.7z"
+    },
+    {
+      "id": "14vLWOoWn_hmrBLBettzk-UqLZO0CwAnC",
+      "name": "Rock Band 4 4.7z",
+      "size": 20977643,
+      "md5": "d21ceb51a104e54911d35c65acfd9762",
+      "path": "Rock Band 4 4.7z"
+    },
+    {
+      "id": "1YTzo0tkoO-Xjfsa09xqIIAEoxo8G0Pvs",
+      "name": "Rock Band 4 3.7z",
+      "size": 23961348,
+      "md5": "8f489efcc79ffcc05694bfc72b20d7af",
+      "path": "Rock Band 4 3.7z"
+    },
+    {
+      "id": "10--xhYuwr2ApuFX2MH3zrrWXGdD3ZdMw",
+      "name": "Rock Band 4 2.7z",
+      "size": 46256735,
+      "md5": "56dd2cffde145bc42286adbfc7caf968",
+      "path": "Rock Band 4 2.7z"
+    },
+    {
+      "id": "1lS98Q7S4Ef57QqbaG05dxgnhnNVigVVb",
+      "name": "Rock Band 4 1.7z",
+      "size": 36705312,
+      "md5": "3ea545b0312b625e31c0066bdbbeffe2",
+      "path": "Rock Band 4 1.7z"
+    }
+  ],
+  "download_size": 2155443928,
+  "files": [
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/album.jpg",
+      "size": 511939
+    },
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/drums.ogg",
+      "size": 8711814
+    },
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/guitar.ogg",
+      "size": 7645777
+    },
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/notes.mid",
+      "size": 166564
+    },
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/rhythm.ogg",
+      "size": 4979242
+    },
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/song.ini",
+      "size": 737
+    },
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/song.ogg",
+      "size": 8054616
+    },
+    {
+      "path": "(2015) Rock Band 4/.38 Special - Caught Up in You/vocals.ogg",
+      "size": 7546274
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/album.jpg",
+      "size": 319886
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/drums.ogg",
+      "size": 8504151
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/guitar.ogg",
+      "size": 7280443
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/notes.mid",
+      "size": 151120
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/rhythm.ogg",
+      "size": 4362719
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/song.ini",
+      "size": 714
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/song.ogg",
+      "size": 7176156
+    },
+    {
+      "path": "(2015) Rock Band 4/Dark Wheels - V-Bomb/vocals.ogg",
+      "size": 7440432
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/album.jpg",
+      "size": 817737
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/drums.ogg",
+      "size": 6820441
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/guitar.ogg",
+      "size": 6476529
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/notes.mid",
+      "size": 126080
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/rhythm.ogg",
+      "size": 5596808
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/song.ini",
+      "size": 713
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/song.ogg",
+      "size": 5463082
+    },
+    {
+      "path": "(2015) Rock Band 4/Disturbed - Prayer/vocals.ogg",
+      "size": 5613202
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/album.jpg",
+      "size": 633696
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/drums.ogg",
+      "size": 18137224
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 16430947
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/notes.mid",
+      "size": 311372
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/original.mid",
+      "size": 309022
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 9780046
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/song.ini",
+      "size": 767
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/song.ogg",
+      "size": 16253064
+    },
+    {
+      "path": "(2015) Rock Band 4/Dream Theater - Metropolis\u2014Part I 'The Miracle and the Sleeper' (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 14832194
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/album.jpg",
+      "size": 494741
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/drums.ogg",
+      "size": 4493925
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/guitar.ogg",
+      "size": 4207617
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/notes.mid",
+      "size": 90256
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/rhythm.ogg",
+      "size": 2847265
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/song.ini",
+      "size": 724
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/song.ogg",
+      "size": 3920715
+    },
+    {
+      "path": "(2015) Rock Band 4/Duck & Cover - Knock Em Down/vocals.ogg",
+      "size": 3973586
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/album.jpg",
+      "size": 457835
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/drums.ogg",
+      "size": 7714620
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/guitar.ogg",
+      "size": 7177378
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/notes.mid",
+      "size": 156627
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/rhythm.ogg",
+      "size": 2692521
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/song.ogg",
+      "size": 7540157
+    },
+    {
+      "path": "(2015) Rock Band 4/Eddie Japan - Albert/vocals.ogg",
+      "size": 6782005
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/album.jpg",
+      "size": 370422
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/crowd.ogg",
+      "size": 6939275
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/drums.ogg",
+      "size": 6069014
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/guitar.ogg",
+      "size": 7513184
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/notes.mid",
+      "size": 152755
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/rhythm.ogg",
+      "size": 3530719
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/song.ini",
+      "size": 762
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/song.ogg",
+      "size": 7353464
+    },
+    {
+      "path": "(2015) Rock Band 4/Elvis Presley - Suspicious Minds/vocals.ogg",
+      "size": 6459494
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/album.jpg",
+      "size": 479100
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/crowd.ogg",
+      "size": 5733169
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/drums.ogg",
+      "size": 6866016
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/guitar.ogg",
+      "size": 6873598
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/notes.mid",
+      "size": 102269
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/rhythm.ogg",
+      "size": 3049445
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/song.ini",
+      "size": 743
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/song.ogg",
+      "size": 6346945
+    },
+    {
+      "path": "(2015) Rock Band 4/Fall Out Boy - Centuries/vocals.ogg",
+      "size": 6526731
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/album.jpg",
+      "size": 171771
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/crowd.ogg",
+      "size": 5546077
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/drums.ogg",
+      "size": 6797059
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/guitar.ogg",
+      "size": 6269793
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/notes.mid",
+      "size": 112758
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/rhythm.ogg",
+      "size": 3633342
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/song.ini",
+      "size": 734
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/song.ogg",
+      "size": 6673147
+    },
+    {
+      "path": "(2015) Rock Band 4/Fleetwood Mac - You Make Loving Fun/vocals.ogg",
+      "size": 5731628
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/album.jpg",
+      "size": 461701
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/crowd.ogg",
+      "size": 5924448
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/drums.ogg",
+      "size": 6868494
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/guitar.ogg",
+      "size": 6124863
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/notes.mid",
+      "size": 166243
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/rhythm.ogg",
+      "size": 4173755
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/song.ini",
+      "size": 744
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/song.ogg",
+      "size": 6057405
+    },
+    {
+      "path": "(2015) Rock Band 4/Foo Fighters - The Feast and the Famine/vocals.ogg",
+      "size": 5962099
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/album.jpg",
+      "size": 480044
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/drums.ogg",
+      "size": 7087679
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/guitar.ogg",
+      "size": 6527044
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/notes.mid",
+      "size": 145136
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/rhythm.ogg",
+      "size": 4739036
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/song.ini",
+      "size": 732
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/song.ogg",
+      "size": 7202700
+    },
+    {
+      "path": "(2015) Rock Band 4/Gary Clark Jr. - Ain't Messin 'Round/vocals.ogg",
+      "size": 5962076
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/album.jpg",
+      "size": 458868
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/crowd.ogg",
+      "size": 7588324
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/drums.ogg",
+      "size": 9127454
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/guitar.ogg",
+      "size": 8826294
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/notes.mid",
+      "size": 123693
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/rhythm.ogg",
+      "size": 5485117
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/song.ini",
+      "size": 746
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/song.ogg",
+      "size": 7987339
+    },
+    {
+      "path": "(2015) Rock Band 4/4 Non Blondes - What's Up/vocals.ogg",
+      "size": 7663776
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/album.jpg",
+      "size": 510054
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/crowd.ogg",
+      "size": 6834778
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/drums.ogg",
+      "size": 8704150
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/guitar.ogg",
+      "size": 7172596
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/notes.mid",
+      "size": 166467
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/rhythm.ogg",
+      "size": 5397987
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/song.ini",
+      "size": 746
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/song.ogg",
+      "size": 7120017
+    },
+    {
+      "path": "(2015) Rock Band 4/Gin Blossoms - Follow You Down/vocals.ogg",
+      "size": 5992693
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/album.jpg",
+      "size": 412918
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/drums.ogg",
+      "size": 6658908
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/guitar.ogg",
+      "size": 7283749
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/notes.mid",
+      "size": 118321
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/rhythm.ogg",
+      "size": 4936193
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/song.ini",
+      "size": 737
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/song.ogg",
+      "size": 6809098
+    },
+    {
+      "path": "(2015) Rock Band 4/Grouplove - Tongue Tied/vocals.ogg",
+      "size": 5943359
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/album.jpg",
+      "size": 459856
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/crowd.ogg",
+      "size": 4859372
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/drums.ogg",
+      "size": 5165036
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/guitar.ogg",
+      "size": 5446983
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/notes.mid",
+      "size": 110322
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/rhythm.ogg",
+      "size": 2939659
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/song.ini",
+      "size": 735
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/song.ogg",
+      "size": 5271342
+    },
+    {
+      "path": "(2015) Rock Band 4/Halestorm - I Miss the Misery/vocals.ogg",
+      "size": 4936123
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/album.jpg",
+      "size": 284981
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/drums.ogg",
+      "size": 4900686
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/guitar.ogg",
+      "size": 4757971
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/notes.mid",
+      "size": 91383
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/rhythm.ogg",
+      "size": 3172897
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/song.ini",
+      "size": 723
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/song.ogg",
+      "size": 4200986
+    },
+    {
+      "path": "(2015) Rock Band 4/Heart - Kick It Out/vocals.ogg",
+      "size": 4234081
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/album.jpg",
+      "size": 241938
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/drums.ogg",
+      "size": 5584787
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/guitar.ogg",
+      "size": 5729235
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/notes.mid",
+      "size": 123955
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/rhythm.ogg",
+      "size": 2677397
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/song.ogg",
+      "size": 936145
+    },
+    {
+      "path": "(2015) Rock Band 4/Heaven's Basement - I Am Electric/vocals.ogg",
+      "size": 5283564
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/album.jpg",
+      "size": 454265
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/crowd.ogg",
+      "size": 5178086
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/drums.ogg",
+      "size": 5723111
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/guitar.ogg",
+      "size": 5667569
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/notes.mid",
+      "size": 75510
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/rhythm.ogg",
+      "size": 5764835
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/song.ini",
+      "size": 737
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/song.ogg",
+      "size": 5754414
+    },
+    {
+      "path": "(2015) Rock Band 4/Imagine Dragons - I Bet My Life/vocals.ogg",
+      "size": 5724548
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/album.jpg",
+      "size": 473334
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/drums.ogg",
+      "size": 5413512
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/guitar.ogg",
+      "size": 5401196
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/notes.mid",
+      "size": 86210
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/rhythm.ogg",
+      "size": 8033657
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/song.ini",
+      "size": 715
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/song.ogg",
+      "size": 6002556
+    },
+    {
+      "path": "(2015) Rock Band 4/Jack White - Lazaretto/vocals.ogg",
+      "size": 5590673
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/album.png",
+      "size": 2414098
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/drums.ogg",
+      "size": 6782295
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/guitar.ogg",
+      "size": 6674154
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/notes.mid",
+      "size": 119533
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/rhythm.ogg",
+      "size": 7827221
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/song.ogg",
+      "size": 6963138
+    },
+    {
+      "path": "(2015) Rock Band 4/Jeff Allen ft. Noelle LeBlanc and Naoko Takamoto - Recession/vocals.ogg",
+      "size": 5969690
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/album.jpg",
+      "size": 59528
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/drums.ogg",
+      "size": 7764031
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/guitar.ogg",
+      "size": 7303277
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/notes.mid",
+      "size": 165402
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/rhythm.ogg",
+      "size": 3640618
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/song.ini",
+      "size": 760
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/song.ogg",
+      "size": 7913648
+    },
+    {
+      "path": "(2015) Rock Band 4/Johnny Blazes and The Pretty Boys - Cold Clear Light/vocals.ogg",
+      "size": 7741884
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/album.jpg",
+      "size": 754790
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/drums.ogg",
+      "size": 10362138
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 9887911
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/notes.mid",
+      "size": 223698
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/original.mid",
+      "size": 220759
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 4870401
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/song.ini",
+      "size": 735
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/song.ogg",
+      "size": 9047965
+    },
+    {
+      "path": "(2015) Rock Band 4/Judas Priest - Halls of Valhalla (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 9310795
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/album.jpg",
+      "size": 444556
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/drums.ogg",
+      "size": 5717372
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/guitar.ogg",
+      "size": 5807614
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/notes.mid",
+      "size": 131865
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/rhythm.ogg",
+      "size": 3395336
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/song.ogg",
+      "size": 4541313
+    },
+    {
+      "path": "(2015) Rock Band 4/Aerosmith - Toys in the Attic/vocals.ogg",
+      "size": 4648680
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/album.jpg",
+      "size": 789250
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/drums.ogg",
+      "size": 12484294
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/guitar.ogg",
+      "size": 9466006
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/notes.mid",
+      "size": 289699
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/rhythm.ogg",
+      "size": 10030106
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/song.ini",
+      "size": 726
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/song.ogg",
+      "size": 139026
+    },
+    {
+      "path": "(2015) Rock Band 4/Lightning Bolt - Dream Genie/vocals.ogg",
+      "size": 9305835
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/album.jpg",
+      "size": 432008
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/crowd.ogg",
+      "size": 4840693
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/drums.ogg",
+      "size": 5461962
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/guitar.ogg",
+      "size": 4392855
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/notes.mid",
+      "size": 94269
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/rhythm.ogg",
+      "size": 2947566
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/song.ini",
+      "size": 738
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/song.ogg",
+      "size": 5465501
+    },
+    {
+      "path": "(2015) Rock Band 4/Little Big Town - Little White Church/vocals.ogg",
+      "size": 4671029
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/album.jpg",
+      "size": 367501
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/drums.ogg",
+      "size": 6803768
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/guitar.ogg",
+      "size": 7348419
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/notes.mid",
+      "size": 136749
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/rhythm.ogg",
+      "size": 5779943
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/song.ogg",
+      "size": 328119
+    },
+    {
+      "path": "(2015) Rock Band 4/Live - All Over You/vocals.ogg",
+      "size": 6113858
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/album.jpg",
+      "size": 418527
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/crowd.ogg",
+      "size": 5261121
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/drums.ogg",
+      "size": 6183498
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/guitar.ogg",
+      "size": 7342208
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/notes.mid",
+      "size": 110175
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/rhythm.ogg",
+      "size": 6513945
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/song.ini",
+      "size": 723
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/song.ogg",
+      "size": 5767968
+    },
+    {
+      "path": "(2015) Rock Band 4/Lucius - Turn it Around/vocals.ogg",
+      "size": 6138771
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/album.jpg",
+      "size": 339869
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/drums.ogg",
+      "size": 10231735
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/guitar.ogg",
+      "size": 10566563
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/notes.mid",
+      "size": 185313
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/rhythm.ogg",
+      "size": 6628398
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/song.ini",
+      "size": 736
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/song.ogg",
+      "size": 10831137
+    },
+    {
+      "path": "(2015) Rock Band 4/Lynyrd Skynyrd - That Smell/vocals.ogg",
+      "size": 8958405
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/album.jpg",
+      "size": 287895
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/crowd.ogg",
+      "size": 7082546
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/drums.ogg",
+      "size": 7917011
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/guitar.ogg",
+      "size": 7256075
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/notes.mid",
+      "size": 153431
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/rhythm.ogg",
+      "size": 5704727
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/song.ini",
+      "size": 751
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/song.ogg",
+      "size": 7284641
+    },
+    {
+      "path": "(2015) Rock Band 4/Mark Ronson ft. Bruno Mars - Uptown Funk/vocals.ogg",
+      "size": 8370927
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/album.jpg",
+      "size": 470355
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/crowd.ogg",
+      "size": 5611673
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/drums.ogg",
+      "size": 6625702
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/guitar.ogg",
+      "size": 5696492
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/notes.mid",
+      "size": 155705
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/rhythm.ogg",
+      "size": 5044535
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/song.ini",
+      "size": 720
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/song.ogg",
+      "size": 5983556
+    },
+    {
+      "path": "(2015) Rock Band 4/Mumford & Sons - The Wolf/vocals.ogg",
+      "size": 5679460
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/album.jpg",
+      "size": 648344
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/drums.ogg",
+      "size": 7191086
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 6741192
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/notes.mid",
+      "size": 149908
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/original.mid",
+      "size": 149146
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 3606087
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/song.ini",
+      "size": 734
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/song.ogg",
+      "size": 5753733
+    },
+    {
+      "path": "(2015) Rock Band 4/Ozzy Osbourne - Miracle Man (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 6239507
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/album.jpg",
+      "size": 497649
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/crowd.ogg",
+      "size": 5454512
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/drums.ogg",
+      "size": 6585750
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/guitar.ogg",
+      "size": 5882258
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/notes.mid",
+      "size": 125740
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/rhythm.ogg",
+      "size": 3243801
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/song.ini",
+      "size": 721
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/song.ogg",
+      "size": 6590606
+    },
+    {
+      "path": "(2015) Rock Band 4/Paramore - Still Into You/vocals.ogg",
+      "size": 5515059
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/album.jpg",
+      "size": 346874
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/drums.ogg",
+      "size": 7095636
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/guitar.ogg",
+      "size": 5988960
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/notes.mid",
+      "size": 139619
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/rhythm.ogg",
+      "size": 4499389
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/song.ini",
+      "size": 751
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/song.ogg",
+      "size": 5898297
+    },
+    {
+      "path": "(2015) Rock Band 4/Queens of the Stone Age - My God Is the Sun/vocals.ogg",
+      "size": 5333296
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/album.jpg",
+      "size": 289173
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/drums.ogg",
+      "size": 5855410
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/guitar.ogg",
+      "size": 5848364
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/notes.mid",
+      "size": 94335
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/rhythm.ogg",
+      "size": 3669577
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/song.ini",
+      "size": 711
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/song.ogg",
+      "size": 397828
+    },
+    {
+      "path": "(2015) Rock Band 4/Arctic Monkeys - Arabella/vocals.ogg",
+      "size": 5440692
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/album.jpg",
+      "size": 240037
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/drums.ogg",
+      "size": 6434804
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/guitar.ogg",
+      "size": 5478622
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/notes.mid",
+      "size": 106177
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/rhythm.ogg",
+      "size": 3375218
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/song.ini",
+      "size": 722
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/song.ogg",
+      "size": 5455481
+    },
+    {
+      "path": "(2015) Rock Band 4/R.E.M. - The One I Love/vocals.ogg",
+      "size": 5244226
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/album.jpg",
+      "size": 445330
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/drums.ogg",
+      "size": 6857976
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/guitar.ogg",
+      "size": 6573813
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/notes.mid",
+      "size": 146558
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/rhythm.ogg",
+      "size": 3424143
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/song.ini",
+      "size": 751
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/song.ogg",
+      "size": 7031130
+    },
+    {
+      "path": "(2015) Rock Band 4/Rick Derringer - Rock and Roll, Hoochie Koo/vocals.ogg",
+      "size": 5593037
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/album.jpg",
+      "size": 239686
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/drums.ogg",
+      "size": 5896316
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/guitar.ogg",
+      "size": 6111351
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/notes.mid",
+      "size": 88677
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/rhythm.ogg",
+      "size": 5476200
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/song.ini",
+      "size": 715
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/song.ogg",
+      "size": 5441114
+    },
+    {
+      "path": "(2015) Rock Band 4/Rush - A Passage to Bangkok/vocals.ogg",
+      "size": 5716853
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/album.jpg",
+      "size": 420592
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/crowd.ogg",
+      "size": 6137919
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/drums.ogg",
+      "size": 7326083
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/guitar.ogg",
+      "size": 7383859
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/notes.mid",
+      "size": 148934
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/rhythm.ogg",
+      "size": 4563596
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/song.ini",
+      "size": 712
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/song.ogg",
+      "size": 7264934
+    },
+    {
+      "path": "(2015) Rock Band 4/Scandal - The Warrior/vocals.ogg",
+      "size": 6599701
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/album.jpg",
+      "size": 432856
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/drums.ogg",
+      "size": 7292467
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/guitar.ogg",
+      "size": 6320663
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/notes.mid",
+      "size": 109736
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/rhythm.ogg",
+      "size": 5780813
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/song.ini",
+      "size": 722
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/song.ogg",
+      "size": 6286847
+    },
+    {
+      "path": "(2015) Rock Band 4/Scorpions - No One Like You/vocals.ogg",
+      "size": 6659360
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/album.jpg",
+      "size": 195769
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/drums.ogg",
+      "size": 7344388
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/guitar.ogg",
+      "size": 6013505
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/notes.mid",
+      "size": 128383
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/rhythm.ogg",
+      "size": 4110195
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/song.ini",
+      "size": 731
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/song.ogg",
+      "size": 5992778
+    },
+    {
+      "path": "(2015) Rock Band 4/Slydigs - Light the Fuse/vocals.ogg",
+      "size": 6022101
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/album.jpg",
+      "size": 597458
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/drums.ogg",
+      "size": 14525177
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/guitar.ogg",
+      "size": 12372046
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/notes.mid",
+      "size": 241999
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/original.mid",
+      "size": 239900
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/rhythm.ogg",
+      "size": 7647171
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/song.ini",
+      "size": 740
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/song.ogg",
+      "size": 12744535
+    },
+    {
+      "path": "(2015) Rock Band 4/Soul Remnants - Dead Black (Heart of Ice) (2x Bass Pedal Expert+)/vocals.ogg",
+      "size": 11735433
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/album.jpg",
+      "size": 178472
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/drums.ogg",
+      "size": 7412760
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/guitar.ogg",
+      "size": 7951784
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/notes.mid",
+      "size": 153912
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/rhythm.ogg",
+      "size": 6407509
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/song.ini",
+      "size": 724
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/song.ogg",
+      "size": 7592356
+    },
+    {
+      "path": "(2015) Rock Band 4/Soundgarden - Superunknown/vocals.ogg",
+      "size": 7919617
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/album.jpg",
+      "size": 370113
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/crowd.ogg",
+      "size": 6050843
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/drums.ogg",
+      "size": 7244332
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/guitar.ogg",
+      "size": 6250754
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/notes.mid",
+      "size": 149336
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/rhythm.ogg",
+      "size": 5266518
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/song.ini",
+      "size": 757
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/song.ogg",
+      "size": 6688506
+    },
+    {
+      "path": "(2015) Rock Band 4/Spin Doctors - Little Miss Can't Be Wrong/vocals.ogg",
+      "size": 6501737
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/album.jpg",
+      "size": 620364
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/drums.ogg",
+      "size": 5491359
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/guitar.ogg",
+      "size": 6724506
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/notes.mid",
+      "size": 120409
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/rhythm.ogg",
+      "size": 6868121
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/song.ini",
+      "size": 731
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/song.ogg",
+      "size": 291804
+    },
+    {
+      "path": "(2015) Rock Band 4/St. Vincent - Birth in Reverse/vocals.ogg",
+      "size": 4678946
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/album.jpg",
+      "size": 321246
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/crowd.ogg",
+      "size": 7757114
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/drums.ogg",
+      "size": 8716950
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/guitar.ogg",
+      "size": 8143443
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/notes.mid",
+      "size": 139197
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/rhythm.ogg",
+      "size": 5061182
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/song.ini",
+      "size": 737
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/song.ogg",
+      "size": 8066167
+    },
+    {
+      "path": "(2015) Rock Band 4/Avenged Sevenfold - Hail to the King/vocals.ogg",
+      "size": 7593109
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/album.jpg",
+      "size": 412785
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/drums.ogg",
+      "size": 6283029
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/guitar.ogg",
+      "size": 6102161
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/notes.mid",
+      "size": 97030
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/rhythm.ogg",
+      "size": 4564852
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/song.ini",
+      "size": 730
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/song.ogg",
+      "size": 5031511
+    },
+    {
+      "path": "(2015) Rock Band 4/System of a Down - Spiders/vocals.ogg",
+      "size": 4916337
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/album.jpg",
+      "size": 457495
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/crowd.ogg",
+      "size": 5779344
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/drums.ogg",
+      "size": 6328325
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/guitar.ogg",
+      "size": 6822804
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/notes.mid",
+      "size": 129692
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/rhythm.ogg",
+      "size": 4977208
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/song.ini",
+      "size": 715
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/song.ogg",
+      "size": 6511916
+    },
+    {
+      "path": "(2015) Rock Band 4/The Black Keys - Fever/vocals.ogg",
+      "size": 6198186
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/album.jpg",
+      "size": 478474
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/drums.ogg",
+      "size": 7054350
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/guitar.ogg",
+      "size": 5834482
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/notes.mid",
+      "size": 139900
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/rhythm.ogg",
+      "size": 4780184
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/song.ini",
+      "size": 716
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/song.ogg",
+      "size": 4536697
+    },
+    {
+      "path": "(2015) Rock Band 4/The Both - Milwaukee/vocals.ogg",
+      "size": 5160839
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/album.jpg",
+      "size": 484498
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/crowd.ogg",
+      "size": 5404970
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/drums.ogg",
+      "size": 7313120
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/guitar.ogg",
+      "size": 6296207
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/notes.mid",
+      "size": 132914
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/rhythm.ogg",
+      "size": 5854787
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/song.ini",
+      "size": 721
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/song.ogg",
+      "size": 7050933
+    },
+    {
+      "path": "(2015) Rock Band 4/The Cure - Friday I'm in Love/vocals.ogg",
+      "size": 5965717
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/album.jpg",
+      "size": 274150
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/crowd.ogg",
+      "size": 5355884
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/drums.ogg",
+      "size": 5714258
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/guitar.ogg",
+      "size": 5393906
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/notes.mid",
+      "size": 129921
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/rhythm.ogg",
+      "size": 4288297
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/song.ini",
+      "size": 729
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/song.ogg",
+      "size": 5654149
+    },
+    {
+      "path": "(2015) Rock Band 4/The Killers - Somebody Told Me/vocals.ogg",
+      "size": 5333609
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/album.jpg",
+      "size": 446173
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/crowd.ogg",
+      "size": 4736105
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/drums.ogg",
+      "size": 5967992
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/guitar.ogg",
+      "size": 4848608
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/notes.mid",
+      "size": 145747
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/rhythm.ogg",
+      "size": 2729560
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/song.ini",
+      "size": 758
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/song.ogg",
+      "size": 4966361
+    },
+    {
+      "path": "(2015) Rock Band 4/The Mighty Mighty Bosstones - The Impression That I Get/vocals.ogg",
+      "size": 4982660
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/album.jpg",
+      "size": 464165
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/crowd.ogg",
+      "size": 5247299
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/drums.ogg",
+      "size": 6517749
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/guitar.ogg",
+      "size": 6644520
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/notes.mid",
+      "size": 121810
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/rhythm.ogg",
+      "size": 3813105
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/song.ini",
+      "size": 722
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/song.ogg",
+      "size": 5860526
+    },
+    {
+      "path": "(2015) Rock Band 4/The Outfield - Your Love/vocals.ogg",
+      "size": 5988432
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/album.jpg",
+      "size": 508370
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/drums.ogg",
+      "size": 7287622
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/guitar.ogg",
+      "size": 7261325
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/notes.mid",
+      "size": 159108
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/rhythm.ogg",
+      "size": 8145933
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/song.ini",
+      "size": 746
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/song.ogg",
+      "size": 6623600
+    },
+    {
+      "path": "(2015) Rock Band 4/The Protomen - Light Up the Night/vocals.ogg",
+      "size": 7298716
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/album.jpg",
+      "size": 514311
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/drums.ogg",
+      "size": 6745977
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/guitar.ogg",
+      "size": 5972753
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/notes.mid",
+      "size": 109930
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/rhythm.ogg",
+      "size": 4485559
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/song.ogg",
+      "size": 5658875
+    },
+    {
+      "path": "(2015) Rock Band 4/The Warning - Free Falling/vocals.ogg",
+      "size": 6083662
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/album.jpg",
+      "size": 485480
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/crowd.ogg",
+      "size": 4660745
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/drums.ogg",
+      "size": 4702781
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/guitar.ogg",
+      "size": 5920824
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/notes.mid",
+      "size": 98412
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/rhythm.ogg",
+      "size": 3786166
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/song.ini",
+      "size": 738
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/song.ogg",
+      "size": 5268005
+    },
+    {
+      "path": "(2015) Rock Band 4/The Who - The Seeker/vocals.ogg",
+      "size": 5171475
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/album.jpg",
+      "size": 429722
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/drums.ogg",
+      "size": 4670922
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/guitar.ogg",
+      "size": 4537872
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/notes.mid",
+      "size": 111788
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/rhythm.ogg",
+      "size": 2108366
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/song.ini",
+      "size": 731
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/song.ogg",
+      "size": 4074935
+    },
+    {
+      "path": "(2015) Rock Band 4/Benjamin Booker - Violent Shiver/vocals.ogg",
+      "size": 4023744
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/album.jpg",
+      "size": 435670
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/drums.ogg",
+      "size": 4235402
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/guitar.ogg",
+      "size": 3888629
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/notes.mid",
+      "size": 97379
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/rhythm.ogg",
+      "size": 1883988
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/song.ini",
+      "size": 732
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/song.ogg",
+      "size": 3769127
+    },
+    {
+      "path": "(2015) Rock Band 4/Tijuana Sweetheart - Pistol Whipped/vocals.ogg",
+      "size": 3767182
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/album.jpg",
+      "size": 386269
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/drums.ogg",
+      "size": 7070210
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/guitar.ogg",
+      "size": 7227969
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/notes.mid",
+      "size": 121202
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/rhythm.ogg",
+      "size": 6228009
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/song.ini",
+      "size": 721
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/song.ogg",
+      "size": 6983537
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - Cedarwood Road/vocals.ogg",
+      "size": 6541796
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/album.jpg",
+      "size": 474545
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/crowd.ogg",
+      "size": 5569515
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/drums.ogg",
+      "size": 5507609
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/guitar.ogg",
+      "size": 5907416
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/notes.mid",
+      "size": 159409
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/rhythm.ogg",
+      "size": 2150431
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/song.ini",
+      "size": 705
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/song.ogg",
+      "size": 290181
+    },
+    {
+      "path": "(2015) Rock Band 4/U2 - I Will Follow/vocals.ogg",
+      "size": 4191696
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/album.jpg",
+      "size": 479702
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/crowd.ogg",
+      "size": 5517797
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/drums.ogg",
+      "size": 5387388
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/guitar.ogg",
+      "size": 6045596
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/notes.mid",
+      "size": 130924
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/rhythm.ogg",
+      "size": 3674155
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/song.ini",
+      "size": 706
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/song.ogg",
+      "size": 4797342
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Halen - Panama/vocals.ogg",
+      "size": 5423023
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/album.jpg",
+      "size": 447109
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/crowd.ogg",
+      "size": 4787163
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/drums.ogg",
+      "size": 6313428
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/guitar.ogg",
+      "size": 5756994
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/notes.mid",
+      "size": 112347
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/rhythm.ogg",
+      "size": 2448298
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/song.ini",
+      "size": 741
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/song.ogg",
+      "size": 1076571
+    },
+    {
+      "path": "(2015) Rock Band 4/Van Morrison - Brown Eyed Girl/vocals.ogg",
+      "size": 5038221
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/album.jpg",
+      "size": 74626
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/drums.ogg",
+      "size": 7798122
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/guitar.ogg",
+      "size": 10477141
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/notes.mid",
+      "size": 160099
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/rhythm.ogg",
+      "size": 5480442
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/song.ini",
+      "size": 740
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/song.ogg",
+      "size": 5224096
+    },
+    {
+      "path": "(2015) Rock Band 4/White Denim - At Night in Dreams/vocals.ogg",
+      "size": 4610231
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/album.jpg",
+      "size": 446480
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/drums.ogg",
+      "size": 9658185
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/guitar.ogg",
+      "size": 7347657
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/notes.mid",
+      "size": 172464
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/rhythm.ogg",
+      "size": 5807188
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/song.ini",
+      "size": 757
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/song.ogg",
+      "size": 9508979
+    },
+    {
+      "path": "(2015) Rock Band 4/Brad Paisley ft. Keith Urban - Start a Band/vocals.ogg",
+      "size": 7851522
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/album.jpg",
+      "size": 466786
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/drums.ogg",
+      "size": 7386294
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/guitar.ogg",
+      "size": 8140408
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/notes.mid",
+      "size": 131585
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/rhythm.ogg",
+      "size": 4604754
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/song.ini",
+      "size": 742
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/song.ogg",
+      "size": 6775476
+    },
+    {
+      "path": "(2015) Rock Band 4/Brandi Carlile - Mainstream Kid/vocals.ogg",
+      "size": 6561706
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/album.jpg",
+      "size": 445681
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/crowd.ogg",
+      "size": 5173230
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/drums.ogg",
+      "size": 6154147
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/guitar.ogg",
+      "size": 5773502
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/notes.mid",
+      "size": 107728
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/rhythm.ogg",
+      "size": 4317682
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/song.ini",
+      "size": 734
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/song.ogg",
+      "size": 5842556
+    },
+    {
+      "path": "(2015) Rock Band 4/Cake - Short Skirt-Long Jacket/vocals.ogg",
+      "size": 5726193
+    }
+  ],
+  "extracted_size": 2201703393,
+  "file_count": 550,
+  "chart_count": 65,
+  "release_date": "2015-10-06"
+}

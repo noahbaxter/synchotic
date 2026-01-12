@@ -1,19 +1,885 @@
 {
   "name": "(2008) Guitar Hero On Tour - Decades",
-  "folder_id": "static-gh-ot-decades",
+  "folder_id": "static-2008-guitar-hero-on-tour---decades",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 36,
-  "total_size": 121595434,
-  "file_count": 216,
-  "files": [
+  "downloads": [
     {
       "id": "1ooe0A0nNnFg92qQOpZRF2SRel5SlVE_8",
-      "path": "(2008-2009) Guitar Hero - On Tour Complete/Guitar Hero On Tour - Decades.rar",
       "name": "Guitar Hero On Tour - Decades.rar",
       "size": 121595434,
       "md5": "31996dfc5aed0238728686e6f87dc008"
     }
-  ]
+  ],
+  "download_size": 121595434,
+  "files": [
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/GHOTD Rips v2.1.txt",
+      "size": 374
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Alien Ant Farm - Smooth Criminal/album.png",
+      "size": 24179
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Alien Ant Farm - Smooth Criminal/guitar.ogg",
+      "size": 654785
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Alien Ant Farm - Smooth Criminal/notes.mid",
+      "size": 43652
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Alien Ant Farm - Smooth Criminal/rhythm.ogg",
+      "size": 649958
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Alien Ant Farm - Smooth Criminal/song.ini",
+      "size": 462
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Alien Ant Farm - Smooth Criminal/song.ogg",
+      "size": 1846010
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blind Melon - No Rain/album.png",
+      "size": 28505
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blind Melon - No Rain/guitar.ogg",
+      "size": 609475
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blind Melon - No Rain/notes.mid",
+      "size": 26269
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blind Melon - No Rain/rhythm.ogg",
+      "size": 634668
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blind Melon - No Rain/song.ini",
+      "size": 453
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blind Melon - No Rain/song.ogg",
+      "size": 1932152
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blondie - One Way Or Another/album.png",
+      "size": 42652
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blondie - One Way Or Another/guitar.ogg",
+      "size": 774003
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blondie - One Way Or Another/notes.mid",
+      "size": 35204
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blondie - One Way Or Another/rhythm.ogg",
+      "size": 689925
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blondie - One Way Or Another/song.ini",
+      "size": 455
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Blondie - One Way Or Another/song.ogg",
+      "size": 2023180
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Bon Jovi - You Give Love A Bad Name/album.png",
+      "size": 92386
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Bon Jovi - You Give Love A Bad Name/guitar.ogg",
+      "size": 748572
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Bon Jovi - You Give Love A Bad Name/notes.mid",
+      "size": 27196
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Bon Jovi - You Give Love A Bad Name/rhythm.ogg",
+      "size": 767651
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Bon Jovi - You Give Love A Bad Name/song.ini",
+      "size": 466
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Bon Jovi - You Give Love A Bad Name/song.ogg",
+      "size": 2054713
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Boston - Rock and Roll Band/album.png",
+      "size": 96789
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Boston - Rock and Roll Band/guitar.ogg",
+      "size": 601024
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Boston - Rock and Roll Band/notes.mid",
+      "size": 28337
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Boston - Rock and Roll Band/rhythm.ogg",
+      "size": 541929
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Boston - Rock and Roll Band/song.ini",
+      "size": 441
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Boston - Rock and Roll Band/song.ogg",
+      "size": 1582617
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Die Happy - Wanna Be Your Girl/album.jpg",
+      "size": 43319
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Die Happy - Wanna Be Your Girl/notes.mid",
+      "size": 33063
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Die Happy - Wanna Be Your Girl/song.ini",
+      "size": 703
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Die Happy - Wanna Be Your Girl/song.ogg",
+      "size": 4945172
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Edgar Winter Group - Free Ride/album.png",
+      "size": 100424
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Edgar Winter Group - Free Ride/guitar.ogg",
+      "size": 584030
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Edgar Winter Group - Free Ride/notes.mid",
+      "size": 30064
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Edgar Winter Group - Free Ride/rhythm.ogg",
+      "size": 609168
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Edgar Winter Group - Free Ride/song.ini",
+      "size": 474
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Edgar Winter Group - Free Ride/song.ogg",
+      "size": 1808051
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Fall Out Boy - Take Over, The Break's Over/album.png",
+      "size": 22357
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Fall Out Boy - Take Over, The Break's Over/guitar.ogg",
+      "size": 709328
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Fall Out Boy - Take Over, The Break's Over/notes.mid",
+      "size": 30690
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Fall Out Boy - Take Over, The Break's Over/rhythm.ogg",
+      "size": 586340
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Fall Out Boy - Take Over, The Break's Over/song.ini",
+      "size": 474
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Fall Out Boy - Take Over, The Break's Over/song.ogg",
+      "size": 1886211
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Finley - Diventerai Una Star/album.png",
+      "size": 718733
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Finley - Diventerai Una Star/guitar.ogg",
+      "size": 591294
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Finley - Diventerai Una Star/notes.mid",
+      "size": 33160
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Finley - Diventerai Una Star/rhythm.ogg",
+      "size": 592393
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Finley - Diventerai Una Star/song.ini",
+      "size": 458
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Finley - Diventerai Una Star/song.ogg",
+      "size": 1649524
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Foo Fighters - The Pretender/album.png",
+      "size": 377678
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Foo Fighters - The Pretender/guitar.ogg",
+      "size": 891079
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Foo Fighters - The Pretender/notes.mid",
+      "size": 60038
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Foo Fighters - The Pretender/rhythm.ogg",
+      "size": 764733
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Foo Fighters - The Pretender/song.ini",
+      "size": 481
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Foo Fighters - The Pretender/song.ogg",
+      "size": 2306211
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Free - All Right Now/album.png",
+      "size": 71044
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Free - All Right Now/guitar.ogg",
+      "size": 866416
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Free - All Right Now/notes.mid",
+      "size": 33325
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Free - All Right Now/rhythm.ogg",
+      "size": 904269
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Free - All Right Now/song.ini",
+      "size": 448
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Free - All Right Now/song.ogg",
+      "size": 2576556
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Guano Apes - You Can't Stop Me/album.png",
+      "size": 62038
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Guano Apes - You Can't Stop Me/guitar.ogg",
+      "size": 629558
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Guano Apes - You Can't Stop Me/notes.mid",
+      "size": 38649
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Guano Apes - You Can't Stop Me/rhythm.ogg",
+      "size": 640273
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Guano Apes - You Can't Stop Me/song.ini",
+      "size": 465
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Guano Apes - You Can't Stop Me/song.ogg",
+      "size": 1673072
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Jimmy Eat World - The Middle/album.png",
+      "size": 115928
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Jimmy Eat World - The Middle/guitar.ogg",
+      "size": 557064
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Jimmy Eat World - The Middle/notes.mid",
+      "size": 37251
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Jimmy Eat World - The Middle/rhythm.ogg",
+      "size": 462802
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Jimmy Eat World - The Middle/song.ini",
+      "size": 453
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Jimmy Eat World - The Middle/song.ogg",
+      "size": 1456958
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Joe Satriani - Satch Boogie/FIGS.mid",
+      "size": 37056
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Joe Satriani - Satch Boogie/album.png",
+      "size": 125774
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Joe Satriani - Satch Boogie/guitar.ogg",
+      "size": 631231
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Joe Satriani - Satch Boogie/notes.mid",
+      "size": 38698
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Joe Satriani - Satch Boogie/rhythm.ogg",
+      "size": 564164
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Joe Satriani - Satch Boogie/song.ini",
+      "size": 672
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Joe Satriani - Satch Boogie/song.ogg",
+      "size": 1765860
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Journey - Any Way You Want It/album.png",
+      "size": 80001
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Journey - Any Way You Want It/guitar.ogg",
+      "size": 711135
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Journey - Any Way You Want It/notes.mid",
+      "size": 30637
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Journey - Any Way You Want It/rhythm.ogg",
+      "size": 669687
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Journey - Any Way You Want It/song.ini",
+      "size": 445
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Journey - Any Way You Want It/song.ogg",
+      "size": 1834256
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lenny Kravitz - Are You Gonna Go My Way/album.png",
+      "size": 77590
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lenny Kravitz - Are You Gonna Go My Way/guitar.ogg",
+      "size": 707197
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lenny Kravitz - Are You Gonna Go My Way/notes.mid",
+      "size": 34011
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lenny Kravitz - Are You Gonna Go My Way/rhythm.ogg",
+      "size": 667624
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lenny Kravitz - Are You Gonna Go My Way/song.ini",
+      "size": 476
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lenny Kravitz - Are You Gonna Go My Way/song.ogg",
+      "size": 1866138
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Linkin Park - One Step Closer/album.png",
+      "size": 176430
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Linkin Park - One Step Closer/guitar.ogg",
+      "size": 519397
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Linkin Park - One Step Closer/notes.mid",
+      "size": 24222
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Linkin Park - One Step Closer/rhythm.ogg",
+      "size": 379271
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Linkin Park - One Step Closer/song.ini",
+      "size": 455
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Linkin Park - One Step Closer/song.ogg",
+      "size": 1370164
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Los Lobos - La Bamba/album.png",
+      "size": 54801
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Los Lobos - La Bamba/guitar.ogg",
+      "size": 464693
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Los Lobos - La Bamba/notes.mid",
+      "size": 26090
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Los Lobos - La Bamba/rhythm.ogg",
+      "size": 438555
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Los Lobos - La Bamba/song.ini",
+      "size": 447
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Los Lobos - La Bamba/song.ogg",
+      "size": 1218728
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lynyrd Skynyrd - Sweet Home Alabama (Live)/album.png",
+      "size": 123033
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lynyrd Skynyrd - Sweet Home Alabama (Live)/guitar.ogg",
+      "size": 1264139
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lynyrd Skynyrd - Sweet Home Alabama (Live)/notes.mid",
+      "size": 91737
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lynyrd Skynyrd - Sweet Home Alabama (Live)/rhythm.ogg",
+      "size": 1247218
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lynyrd Skynyrd - Sweet Home Alabama (Live)/song.ini",
+      "size": 474
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Lynyrd Skynyrd - Sweet Home Alabama (Live)/song.ogg",
+      "size": 3424916
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Oasis - Some Might Say/album.png",
+      "size": 101444
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Oasis - Some Might Say/guitar.ogg",
+      "size": 1016810
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Oasis - Some Might Say/notes.mid",
+      "size": 44057
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Oasis - Some Might Say/rhythm.ogg",
+      "size": 927624
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Oasis - Some Might Say/song.ini",
+      "size": 467
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Oasis - Some Might Say/song.ogg",
+      "size": 2572135
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Paramore - Crushcrushcrush/album.png",
+      "size": 208532
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Paramore - Crushcrushcrush/guitar.ogg",
+      "size": 599635
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Paramore - Crushcrushcrush/notes.mid",
+      "size": 21079
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Paramore - Crushcrushcrush/rhythm.ogg",
+      "size": 589861
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Paramore - Crushcrushcrush/song.ini",
+      "size": 443
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Paramore - Crushcrushcrush/song.ogg",
+      "size": 1650513
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Pereza - Estrella Polar/album.png",
+      "size": 80190
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Pereza - Estrella Polar/guitar.ogg",
+      "size": 651697
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Pereza - Estrella Polar/notes.mid",
+      "size": 27639
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Pereza - Estrella Polar/rhythm.ogg",
+      "size": 563428
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Pereza - Estrella Polar/song.ini",
+      "size": 449
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Pereza - Estrella Polar/song.ogg",
+      "size": 1744427
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Phoenix - Everything Is Everything/album.png",
+      "size": 26053
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Phoenix - Everything Is Everything/guitar.ogg",
+      "size": 493296
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Phoenix - Everything Is Everything/notes.mid",
+      "size": 22322
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Phoenix - Everything Is Everything/rhythm.ogg",
+      "size": 519779
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Phoenix - Everything Is Everything/song.ini",
+      "size": 460
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Phoenix - Everything Is Everything/song.ogg",
+      "size": 1639458
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Queen - We Are The Champions/album.png",
+      "size": 128727
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Queen - We Are The Champions/guitar.ogg",
+      "size": 553517
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Queen - We Are The Champions/notes.mid",
+      "size": 15070
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Queen - We Are The Champions/rhythm.ogg",
+      "size": 538965
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Queen - We Are The Champions/song.ini",
+      "size": 459
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Queen - We Are The Champions/song.ogg",
+      "size": 1568614
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/R.E.M. - The One I Love/album.png",
+      "size": 23302
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/R.E.M. - The One I Love/guitar.ogg",
+      "size": 655677
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/R.E.M. - The One I Love/notes.mid",
+      "size": 22886
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/R.E.M. - The One I Love/rhythm.ogg",
+      "size": 589667
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/R.E.M. - The One I Love/song.ini",
+      "size": 452
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/R.E.M. - The One I Love/song.ogg",
+      "size": 1755161
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Red Hot Chili Peppers - Can't Stop/album.png",
+      "size": 139633
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Red Hot Chili Peppers - Can't Stop/guitar.ogg",
+      "size": 866348
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Red Hot Chili Peppers - Can't Stop/notes.mid",
+      "size": 43085
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Red Hot Chili Peppers - Can't Stop/rhythm.ogg",
+      "size": 770381
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Red Hot Chili Peppers - Can't Stop/song.ini",
+      "size": 458
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Red Hot Chili Peppers - Can't Stop/song.ogg",
+      "size": 2429801
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Sammy Hagar - I Can't Drive 55/album.png",
+      "size": 91387
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Sammy Hagar - I Can't Drive 55/guitar.ogg",
+      "size": 875223
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Sammy Hagar - I Can't Drive 55/notes.mid",
+      "size": 43735
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Sammy Hagar - I Can't Drive 55/rhythm.ogg",
+      "size": 869326
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Sammy Hagar - I Can't Drive 55/song.ini",
+      "size": 447
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Sammy Hagar - I Can't Drive 55/song.ogg",
+      "size": 2341399
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Seether - Remedy/album.png",
+      "size": 53585
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Seether - Remedy/guitar.ogg",
+      "size": 705389
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Seether - Remedy/notes.mid",
+      "size": 34440
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Seether - Remedy/rhythm.ogg",
+      "size": 633518
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Seether - Remedy/song.ini",
+      "size": 444
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Seether - Remedy/song.ogg",
+      "size": 1817725
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Stone Temple Pilots - Down/album.png",
+      "size": 6146
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Stone Temple Pilots - Down/guitar.ogg",
+      "size": 767558
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Stone Temple Pilots - Down/notes.mid",
+      "size": 35564
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Stone Temple Pilots - Down/rhythm.ogg",
+      "size": 726044
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Stone Temple Pilots - Down/song.ini",
+      "size": 442
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Stone Temple Pilots - Down/song.ogg",
+      "size": 1980002
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Survivor - Eye Of The Tiger/album.png",
+      "size": 79013
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Survivor - Eye Of The Tiger/guitar.ogg",
+      "size": 817657
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Survivor - Eye Of The Tiger/notes.mid",
+      "size": 33008
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Survivor - Eye Of The Tiger/rhythm.ogg",
+      "size": 767991
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Survivor - Eye Of The Tiger/song.ini",
+      "size": 451
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Survivor - Eye Of The Tiger/song.ogg",
+      "size": 2188803
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The All-American Rejects - Dirty Little Secret/album.png",
+      "size": 11940
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The All-American Rejects - Dirty Little Secret/guitar.ogg",
+      "size": 643654
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The All-American Rejects - Dirty Little Secret/notes.mid",
+      "size": 32859
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The All-American Rejects - Dirty Little Secret/rhythm.ogg",
+      "size": 591919
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The All-American Rejects - Dirty Little Secret/song.ini",
+      "size": 468
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The All-American Rejects - Dirty Little Secret/song.ogg",
+      "size": 1679127
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Darkness - I Believe In A Thing Called Love/album.png",
+      "size": 86069
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Darkness - I Believe In A Thing Called Love/guitar.ogg",
+      "size": 670093
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Darkness - I Believe In A Thing Called Love/notes.mid",
+      "size": 30044
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Darkness - I Believe In A Thing Called Love/rhythm.ogg",
+      "size": 665446
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Darkness - I Believe In A Thing Called Love/song.ini",
+      "size": 479
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Darkness - I Believe In A Thing Called Love/song.ogg",
+      "size": 1814563
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Smashing Pumpkins - Tarantula/album.png",
+      "size": 47026
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Smashing Pumpkins - Tarantula/guitar.ogg",
+      "size": 700790
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Smashing Pumpkins - Tarantula/notes.mid",
+      "size": 52325
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Smashing Pumpkins - Tarantula/rhythm.ogg",
+      "size": 773149
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Smashing Pumpkins - Tarantula/song.ini",
+      "size": 462
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/The Smashing Pumpkins - Tarantula/song.ogg",
+      "size": 2009999
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Tokio Hotel - Ready, Set, Go!/album.png",
+      "size": 58521
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Tokio Hotel - Ready, Set, Go!/guitar.ogg",
+      "size": 720017
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Tokio Hotel - Ready, Set, Go!/notes.mid",
+      "size": 41562
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Tokio Hotel - Ready, Set, Go!/rhythm.ogg",
+      "size": 636543
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Tokio Hotel - Ready, Set, Go!/song.ini",
+      "size": 451
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Tokio Hotel - Ready, Set, Go!/song.ogg",
+      "size": 1881225
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Veruca Salt - Volcano Girls/album.png",
+      "size": 87378
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Veruca Salt - Volcano Girls/guitar.ogg",
+      "size": 672927
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Veruca Salt - Volcano Girls/notes.mid",
+      "size": 30293
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Veruca Salt - Volcano Girls/rhythm.ogg",
+      "size": 602507
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Veruca Salt - Volcano Girls/song.ini",
+      "size": 470
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Veruca Salt - Volcano Girls/song.ogg",
+      "size": 1739027
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Weezer - Buddy Holly/album.png",
+      "size": 57382
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Weezer - Buddy Holly/guitar.ogg",
+      "size": 544386
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Weezer - Buddy Holly/notes.mid",
+      "size": 31156
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Weezer - Buddy Holly/rhythm.ogg",
+      "size": 522243
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Weezer - Buddy Holly/song.ini",
+      "size": 440
+    },
+    {
+      "path": "(2008) Guitar Hero On Tour - Decades/Weezer - Buddy Holly/song.ogg",
+      "size": 1423941
+    }
+  ],
+  "extracted_size": 124062302,
+  "file_count": 216,
+  "chart_count": 36,
+  "release_date": "2008-11-16"
 }

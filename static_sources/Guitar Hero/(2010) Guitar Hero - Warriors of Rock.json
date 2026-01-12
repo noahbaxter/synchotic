@@ -1,19 +1,4697 @@
 {
   "name": "(2010) Guitar Hero - Warriors of Rock",
-  "folder_id": "static-gh-wor",
+  "folder_id": "static-2010-guitar-hero---warriors-of-rock",
   "group": "Games",
   "collection": "Guitar Hero",
-  "description": "",
-  "chart_count": 94,
-  "total_size": 3627781816,
-  "file_count": 1264,
-  "files": [
+  "downloads": [
     {
       "id": "1ekGknfrdAS0MGP-7X0wdGJQGYUNk_5W1",
-      "path": "(2010) Guitar Hero - Warriors of Rock/Guitar Hero - Warriors of Rock.zip",
       "name": "Guitar Hero - Warriors of Rock.zip",
       "size": 3627781816,
       "md5": "a5e480e1e7da5631150e7db096df23c9"
     }
-  ]
+  ],
+  "download_size": 3627781816,
+  "files": [
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/album.png",
+      "size": 255596
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/bass.ogg",
+      "size": 5108110
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/drums_1.ogg",
+      "size": 3721157
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/drums_2.ogg",
+      "size": 5111430
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/drums_3.ogg",
+      "size": 500842
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/drums_4.ogg",
+      "size": 7570179
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/guitar.ogg",
+      "size": 5987117
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/notes.mid",
+      "size": 101746
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/preview.ogg",
+      "size": 942577
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/song.ini",
+      "size": 635
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/song.ogg",
+      "size": 2699033
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/A Perfect Circle - The Outsider/vocals.ogg",
+      "size": 5726762
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/album.png",
+      "size": 412431
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/bass.ogg",
+      "size": 2882389
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/drums_1.ogg",
+      "size": 3097320
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/drums_2.ogg",
+      "size": 3200840
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/drums_3.ogg",
+      "size": 586905
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/drums_4.ogg",
+      "size": 4421784
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/guitar.ogg",
+      "size": 3397602
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/notes.mid",
+      "size": 99818
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/preview.ogg",
+      "size": 903931
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/song.ini",
+      "size": 612
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/song.ogg",
+      "size": 870390
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/AFI - Dancing Through Sunday/vocals.ogg",
+      "size": 3163915
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/album.png",
+      "size": 482655
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/bass.ogg",
+      "size": 6231524
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/drums_1.ogg",
+      "size": 6350932
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/drums_2.ogg",
+      "size": 3508548
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/drums_3.ogg",
+      "size": 991615
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/drums_4.ogg",
+      "size": 8597872
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/guitar.ogg",
+      "size": 7701699
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/notes.mid",
+      "size": 127206
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/preview.ogg",
+      "size": 648659
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/song.ini",
+      "size": 560
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/song.ogg",
+      "size": 8535649
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Aerosmith - Cryin'/vocals.ogg",
+      "size": 6546261
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/album.png",
+      "size": 537913
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/bass.ogg",
+      "size": 3012014
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/drums_1.ogg",
+      "size": 3580892
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/drums_2.ogg",
+      "size": 4060557
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/drums_3.ogg",
+      "size": 1467041
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/drums_4.ogg",
+      "size": 3972719
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/guitar.ogg",
+      "size": 4618864
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/notes.mid",
+      "size": 71073
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/preview.ogg",
+      "size": 584351
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/song.ini",
+      "size": 725
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/song.ogg",
+      "size": 2063491
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alice Cooper - No More Mr. Nice Guy/vocals.ogg",
+      "size": 4386473
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/album.png",
+      "size": 522547
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/bass.ogg",
+      "size": 3426277
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/drums_1.ogg",
+      "size": 3295538
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/drums_2.ogg",
+      "size": 4265926
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/drums_3.ogg",
+      "size": 1756803
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/drums_4.ogg",
+      "size": 5207123
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/guitar.ogg",
+      "size": 4784470
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/notes.mid",
+      "size": 120418
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/preview.ogg",
+      "size": 835459
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/song.ini",
+      "size": 490
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/song.ogg",
+      "size": 1832059
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Alter Bridge - Ties That Bind/vocals.ogg",
+      "size": 3407900
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/album.png",
+      "size": 516478
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/bass.ogg",
+      "size": 3056415
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/drums_1.ogg",
+      "size": 3484932
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/drums_2.ogg",
+      "size": 2211152
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/drums_3.ogg",
+      "size": 733484
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/drums_4.ogg",
+      "size": 5455650
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/guitar.ogg",
+      "size": 4727443
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/notes.mid",
+      "size": 85448
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/preview.ogg",
+      "size": 614949
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/song.ini",
+      "size": 813
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/song.ogg",
+      "size": 4463150
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anberlin - The Feel Good Drag/vocals.ogg",
+      "size": 3453383
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/album.png",
+      "size": 337197
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/bass.ogg",
+      "size": 7319177
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/drums_1.ogg",
+      "size": 8752066
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/drums_2.ogg",
+      "size": 9381645
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/drums_3.ogg",
+      "size": 2755897
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/drums_4.ogg",
+      "size": 11476120
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/guitar.ogg",
+      "size": 8703659
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/notes.mid",
+      "size": 230043
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/preview.ogg",
+      "size": 887514
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/song.ini",
+      "size": 764
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/song.ogg",
+      "size": 885149
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Anthrax - Indians/vocals.ogg",
+      "size": 7223756
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/album.png",
+      "size": 307148
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/bass.ogg",
+      "size": 4673143
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/drums_1.ogg",
+      "size": 6116528
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/drums_2.ogg",
+      "size": 6223096
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/drums_3.ogg",
+      "size": 3597444
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/drums_4.ogg",
+      "size": 7179045
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/guitar.ogg",
+      "size": 5503581
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/notes.mid",
+      "size": 156746
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/preview.ogg",
+      "size": 812335
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/song.ini",
+      "size": 600
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/song.ogg",
+      "size": 5657296
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Arch Enemy - Nemesis/vocals.ogg",
+      "size": 4435134
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/album.png",
+      "size": 570396
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/bass.ogg",
+      "size": 3760494
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/drums_1.ogg",
+      "size": 4479797
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/drums_2.ogg",
+      "size": 5250601
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/drums_3.ogg",
+      "size": 3774924
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/drums_4.ogg",
+      "size": 5465498
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/guitar.ogg",
+      "size": 5068248
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/notes.mid",
+      "size": 128095
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/preview.ogg",
+      "size": 514326
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/song.ini",
+      "size": 674
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/song.ogg",
+      "size": 4437642
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Atreyu - Ravenous/vocals.ogg",
+      "size": 3444366
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/album.png",
+      "size": 503038
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/bass.ogg",
+      "size": 6049026
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/drums_1.ogg",
+      "size": 6185033
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/drums_2.ogg",
+      "size": 6602925
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/drums_3.ogg",
+      "size": 1883240
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/drums_4.ogg",
+      "size": 7480346
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/guitar.ogg",
+      "size": 7627335
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/notes.mid",
+      "size": 169230
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/preview.ogg",
+      "size": 549500
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/song.ini",
+      "size": 586
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/song.ogg",
+      "size": 3899378
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Avenged Sevenfold - Bat Country/vocals.ogg",
+      "size": 5688929
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/album.png",
+      "size": 327776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/bass.ogg",
+      "size": 5784443
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/drums_1.ogg",
+      "size": 5952321
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/drums_2.ogg",
+      "size": 6793360
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/drums_3.ogg",
+      "size": 235903
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/drums_4.ogg",
+      "size": 8283721
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/guitar.ogg",
+      "size": 5296552
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/notes.mid",
+      "size": 122267
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/preview.ogg",
+      "size": 688283
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/song.ini",
+      "size": 606
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/song.ogg",
+      "size": 31017
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bad Brains - Re-Ignition (Live)/vocals.ogg",
+      "size": 5629170
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/album.png",
+      "size": 480464
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/bass.ogg",
+      "size": 3457845
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/drums_1.ogg",
+      "size": 3223758
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/drums_2.ogg",
+      "size": 353687
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/drums_3.ogg",
+      "size": 1241303
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/drums_4.ogg",
+      "size": 4614326
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/guitar.ogg",
+      "size": 5343242
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/notes.mid",
+      "size": 65300
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/preview.ogg",
+      "size": 826686
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/song.ini",
+      "size": 590
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/song.ogg",
+      "size": 4079223
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Band Of Skulls - I Know What I Am/vocals.ogg",
+      "size": 4642955
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/album.png",
+      "size": 149823
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/bass.ogg",
+      "size": 5054956
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/drums_1.ogg",
+      "size": 5846270
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/drums_2.ogg",
+      "size": 5053634
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/drums_3.ogg",
+      "size": 1962569
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/drums_4.ogg",
+      "size": 7677146
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/guitar.ogg",
+      "size": 9025823
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/notes.mid",
+      "size": 143521
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/preview.ogg",
+      "size": 619903
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/song.ini",
+      "size": 631
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/song.ogg",
+      "size": 4482806
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Black Sabbath - Children of the Grave/vocals.ogg",
+      "size": 2275120
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/album.png",
+      "size": 199321
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/bass.ogg",
+      "size": 5598592
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/drums_1.ogg",
+      "size": 4681620
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/drums_2.ogg",
+      "size": 5831947
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/drums_3.ogg",
+      "size": 405759
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/drums_4.ogg",
+      "size": 8455113
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/guitar.ogg",
+      "size": 7347613
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/notes.mid",
+      "size": 122421
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/preview.ogg",
+      "size": 921927
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/song.ini",
+      "size": 589
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/song.ogg",
+      "size": 3810160
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blind Melon - Tones of Home/vocals.ogg",
+      "size": 5967982
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/album.png",
+      "size": 588895
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/bass.ogg",
+      "size": 4867488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/drums_1.ogg",
+      "size": 4922820
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/drums_2.ogg",
+      "size": 6767618
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/drums_3.ogg",
+      "size": 825027
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/drums_4.ogg",
+      "size": 7581419
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/guitar.ogg",
+      "size": 7269452
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/notes.mid",
+      "size": 104856
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/preview.ogg",
+      "size": 727256
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/song.ini",
+      "size": 557
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/song.ogg",
+      "size": 4617697
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Blue \u00d6yster Cult - Burnin' for You/vocals.ogg",
+      "size": 5798768
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/album.png",
+      "size": 477542
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/bass.ogg",
+      "size": 5714924
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/drums_1.ogg",
+      "size": 5521534
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/drums_2.ogg",
+      "size": 6672565
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/drums_3.ogg",
+      "size": 367126
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/drums_4.ogg",
+      "size": 7995696
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/guitar.ogg",
+      "size": 6152615
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/notes (1).mid",
+      "size": 136772
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/notes.mid",
+      "size": 106005
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/preview.ogg",
+      "size": 605213
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/song.ini",
+      "size": 589
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/song.ogg",
+      "size": 3784164
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Bush - Machinehead/vocals.ogg",
+      "size": 5099984
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/album.png",
+      "size": 148618
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/bass.ogg",
+      "size": 3917646
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/drums_1.ogg",
+      "size": 3728296
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/drums_2.ogg",
+      "size": 2137528
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/drums_3.ogg",
+      "size": 68925
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/drums_4.ogg",
+      "size": 5300833
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/guitar.ogg",
+      "size": 4184746
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/notes.mid",
+      "size": 105276
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/notess.mid",
+      "size": 119883
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/preview.ogg",
+      "size": 728323
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/song.ini",
+      "size": 646
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/song.ogg",
+      "size": 527658
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Buzzcocks - What Do I Get/vocals.ogg",
+      "size": 5007259
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/album.png",
+      "size": 391982
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/bass.ogg",
+      "size": 5438773
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/drums_1.ogg",
+      "size": 5684558
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/drums_2.ogg",
+      "size": 5113606
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/drums_3.ogg",
+      "size": 1347619
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/drums_4.ogg",
+      "size": 6332130
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/guitar.ogg",
+      "size": 6405722
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/notes.mid",
+      "size": 182167
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/preview.ogg",
+      "size": 639403
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/song.ini",
+      "size": 1055
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/song.ogg",
+      "size": 5417264
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Children Of Bodom - If You Want Peace... Prepare for War/vocals.ogg",
+      "size": 4980546
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/album.png",
+      "size": 374173
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/bass.ogg",
+      "size": 3126516
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/drums_1.ogg",
+      "size": 1437435
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/drums_2.ogg",
+      "size": 1615453
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/drums_3.ogg",
+      "size": 100027
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/drums_4.ogg",
+      "size": 3894152
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/guitar.ogg",
+      "size": 3998160
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/notes.mid",
+      "size": 71871
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/preview.ogg",
+      "size": 554781
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/song.ini",
+      "size": 603
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/song.ogg",
+      "size": 3280021
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Creedence Clearwater Revival - Fortunate Son/vocals.ogg",
+      "size": 3942796
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/album.png",
+      "size": 234977
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/bass.ogg",
+      "size": 8452427
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/drums_1.ogg",
+      "size": 7385721
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/drums_2.ogg",
+      "size": 7471287
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/drums_3.ogg",
+      "size": 565604
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/drums_4.ogg",
+      "size": 9652257
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/guitar.ogg",
+      "size": 8353194
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/notes.mid",
+      "size": 171611
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/preview.ogg",
+      "size": 613733
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/song.ini",
+      "size": 766
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/song.ogg",
+      "size": 8586307
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Deep Purple - Burn/vocals.ogg",
+      "size": 4005711
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/album.png",
+      "size": 445742
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/bass.ogg",
+      "size": 5543306
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/drums_1.ogg",
+      "size": 5534963
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/drums_2.ogg",
+      "size": 7130600
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/drums_3.ogg",
+      "size": 6163159
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/drums_4.ogg",
+      "size": 8566155
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/guitar.ogg",
+      "size": 6782445
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/notes.mid",
+      "size": 89360
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/preview.ogg",
+      "size": 569402
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/song.ini",
+      "size": 723
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/song.ogg",
+      "size": 6835877
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Def Leppard - Pour Some Sugar on Me (Live)/vocals.ogg",
+      "size": 7259570
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/album (1).png",
+      "size": 350367
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/album.png",
+      "size": 350367
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/bass.ogg",
+      "size": 4135593
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/drums_1.ogg",
+      "size": 3880314
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/drums_2.ogg",
+      "size": 2248088
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/drums_3 (1).ogg",
+      "size": 4686517
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/drums_3.ogg",
+      "size": 3394148
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/drums_4.ogg",
+      "size": 4984579
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/guitar.ogg",
+      "size": 5385627
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/notes.mid",
+      "size": 95474
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/preview.ogg",
+      "size": 618913
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/song (1).ini",
+      "size": 1105
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/song.ini",
+      "size": 647
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/song.ogg",
+      "size": 3062365
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dethklok - Bloodlines/vocals.ogg",
+      "size": 4885615
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/album.png",
+      "size": 355439
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/bass.ogg",
+      "size": 5908714
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/drums_1.ogg",
+      "size": 4186043
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/drums_2.ogg",
+      "size": 8045845
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/drums_3.ogg",
+      "size": 1079963
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/drums_4.ogg",
+      "size": 8659836
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/guitar.ogg",
+      "size": 8958963
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/notes.mid",
+      "size": 131994
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/preview.ogg",
+      "size": 868587
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/song.ini",
+      "size": 657
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/song.ogg",
+      "size": 7887969
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Dire Straits - Money for Nothing/vocals.ogg",
+      "size": 6082923
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/album.png",
+      "size": 442129
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/bass.ogg",
+      "size": 7190851
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/drums_1.ogg",
+      "size": 4929471
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/drums_2.ogg",
+      "size": 9906269
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/drums_3.ogg",
+      "size": 1929896
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/drums_4.ogg",
+      "size": 12625333
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/guitar.ogg",
+      "size": 9393531
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/notes.mid",
+      "size": 316873
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/preview.ogg",
+      "size": 819884
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/song.ini",
+      "size": 546
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/song.ogg",
+      "size": 11187499
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/DragonForce - Fury of the Storm/vocals.ogg",
+      "size": 4666418
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/album.png",
+      "size": 361171
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/bass.ogg",
+      "size": 3766901
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/drums_1.ogg",
+      "size": 3897826
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/drums_2.ogg",
+      "size": 4892952
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/drums_3.ogg",
+      "size": 429737
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/drums_4.ogg",
+      "size": 6800101
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/guitar.ogg",
+      "size": 5393240
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/notes.mid",
+      "size": 101627
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/preview.ogg",
+      "size": 929727
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/song.ini",
+      "size": 638
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/song.ogg",
+      "size": 2352991
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Drowning Pool - Bodies/vocals.ogg",
+      "size": 4798551
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/album.png",
+      "size": 313903
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/bass.ogg",
+      "size": 4000102
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/drums_1.ogg",
+      "size": 4048312
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/drums_2.ogg",
+      "size": 1727624
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/drums_3.ogg",
+      "size": 256236
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/drums_4.ogg",
+      "size": 5092278
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/guitar.ogg",
+      "size": 4959171
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/notes.mid",
+      "size": 87592
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/preview.ogg",
+      "size": 650601
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/song.ini",
+      "size": 510
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/song.ogg",
+      "size": 5626250
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Edgar Winter - Free Ride/vocals.ogg",
+      "size": 4514175
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/album.png",
+      "size": 387370
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/bass.ogg",
+      "size": 3358310
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/drums_1.ogg",
+      "size": 3853158
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/drums_2.ogg",
+      "size": 4305430
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/drums_3.ogg",
+      "size": 281328
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/drums_4.ogg",
+      "size": 4100069
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/guitar.ogg",
+      "size": 4037068
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/notes.mid",
+      "size": 100740
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/preview.ogg",
+      "size": 607979
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/song.ini",
+      "size": 556
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/song.ogg",
+      "size": 3749533
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Fall Out Boy - Dance, Dance/vocals.ogg",
+      "size": 3626677
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/album.png",
+      "size": 589778
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/bass.ogg",
+      "size": 5197920
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/drums_1.ogg",
+      "size": 4814768
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/drums_2.ogg",
+      "size": 4464920
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/drums_3.ogg",
+      "size": 4594333
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/drums_4.ogg",
+      "size": 6082737
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/guitar.ogg",
+      "size": 5012971
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/notes.mid",
+      "size": 118248
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/preview.ogg",
+      "size": 597960
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/song.ini",
+      "size": 531
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/song.ogg",
+      "size": 3932872
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Five Finger Death Punch - Hard to See/vocals.ogg",
+      "size": 4010756
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/album.png",
+      "size": 349061
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/bass.ogg",
+      "size": 3321261
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/drums_1.ogg",
+      "size": 4164031
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/drums_2.ogg",
+      "size": 4417805
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/drums_3.ogg",
+      "size": 3122161
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/drums_4.ogg",
+      "size": 5345582
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/guitar.ogg",
+      "size": 5065431
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/notes.mid",
+      "size": 96031
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/preview.ogg",
+      "size": 809156
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/song.ini",
+      "size": 586
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/song.ogg",
+      "size": 4653836
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Flyleaf - Again/vocals.ogg",
+      "size": 4646353
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/album.png",
+      "size": 457888
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/bass.ogg",
+      "size": 4088278
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/drums_1.ogg",
+      "size": 4325478
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/drums_2.ogg",
+      "size": 4357342
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/drums_3.ogg",
+      "size": 660154
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/drums_4.ogg",
+      "size": 6100108
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/guitar.ogg",
+      "size": 4506813
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/notes.mid",
+      "size": 131220
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/preview.ogg",
+      "size": 762311
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/song.ini",
+      "size": 554
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/song.ogg",
+      "size": 292858
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foo Fighters - No Way Back/vocals.ogg",
+      "size": 3975316
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/album.png",
+      "size": 446361
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/bass.ogg",
+      "size": 5228970
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/drums_1.ogg",
+      "size": 4212061
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/drums_2.ogg",
+      "size": 5183721
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/drums_3.ogg",
+      "size": 3800020
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/drums_4.ogg",
+      "size": 6984037
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/guitar.ogg",
+      "size": 7343495
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/notes (1).mid",
+      "size": 115033
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/notes.mid",
+      "size": 90400
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/preview.ogg",
+      "size": 641665
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/song.ini",
+      "size": 964
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/song.ogg",
+      "size": 6634628
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Foreigner - Feels Like the First Time/vocals.ogg",
+      "size": 6230247
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/album.png",
+      "size": 375889
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/bass.ogg",
+      "size": 6063748
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/drums_1.ogg",
+      "size": 5050819
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/drums_2.ogg",
+      "size": 6942084
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/drums_3.ogg",
+      "size": 372575
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/drums_4.ogg",
+      "size": 9828161
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/guitar.ogg",
+      "size": 6620031
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/notes.mid",
+      "size": 183107
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/preview.ogg",
+      "size": 648044
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/song.ini",
+      "size": 612
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/song.ogg",
+      "size": 6339587
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/George Thorogood & The Destroyers - Move It On Over (Live)/vocals.ogg",
+      "size": 2414761
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/album.png",
+      "size": 80295
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/bass.ogg",
+      "size": 4081516
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/drums_1.ogg",
+      "size": 3257017
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/drums_2.ogg",
+      "size": 2357778
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/drums_3.ogg",
+      "size": 2124886
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/drums_4.ogg",
+      "size": 4602064
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/guitar.ogg",
+      "size": 4404753
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/notes.mid",
+      "size": 102504
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/preview.ogg",
+      "size": 579322
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/song.ini",
+      "size": 485
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/song.ogg",
+      "size": 3767264
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Interpol - Slow Hands/vocals.ogg",
+      "size": 4498474
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/album.png",
+      "size": 489400
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/bass.ogg",
+      "size": 4572254
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/drums_1.ogg",
+      "size": 3791126
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/drums_2.ogg",
+      "size": 5024506
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/drums_3.ogg",
+      "size": 110006
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/drums_4.ogg",
+      "size": 6804114
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/guitar.ogg",
+      "size": 6646179
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/notes.mid",
+      "size": 99614
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/preview.ogg",
+      "size": 1462930
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/song.ini",
+      "size": 633
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/song.ogg",
+      "size": 6780955
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jane's Addiction - Been Caught Stealing/vocals.ogg",
+      "size": 4210723
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/album.png",
+      "size": 453035
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/bass.ogg",
+      "size": 8718065
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/drums_1.ogg",
+      "size": 9647957
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/drums_2.ogg",
+      "size": 2132246
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/drums_3.ogg",
+      "size": 1104985
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/drums_4.ogg",
+      "size": 10590638
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/guitar (1).ogg",
+      "size": 11485129
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/guitar.ogg",
+      "size": 11800514
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/notes.mid",
+      "size": 150097
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/preview.ogg",
+      "size": 949016
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/song.ini",
+      "size": 732
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/song.ogg",
+      "size": 9916052
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Jethro Tull - Aqualung/vocals.ogg",
+      "size": 10019377
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/album.png",
+      "size": 381749
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/bass.ogg",
+      "size": 9688305
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/drums_1.ogg",
+      "size": 8820829
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/drums_2.ogg",
+      "size": 10671576
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/drums_3.ogg",
+      "size": 5589941
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/drums_4.ogg",
+      "size": 11021563
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/guitar.ogg",
+      "size": 10677931
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/notes.mid",
+      "size": 255142
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/preview.ogg",
+      "size": 796763
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/song.ini",
+      "size": 526
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/song.ogg",
+      "size": 12206531
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/John 5 Featuring Jim Root - Black Widow of La Porte/vocals.ogg",
+      "size": 649484
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/album.png",
+      "size": 355591
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/bass.ogg",
+      "size": 3809332
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/drums_1.ogg",
+      "size": 3668910
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/drums_2.ogg",
+      "size": 4954741
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/drums_3.ogg",
+      "size": 3748073
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/drums_4.ogg",
+      "size": 4997770
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/guitar.ogg",
+      "size": 4658159
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/notes.mid",
+      "size": 80850
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/preview.ogg",
+      "size": 594612
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/song.ini",
+      "size": 558
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/song.ogg",
+      "size": 3708573
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/KISS - Love Gun/vocals.ogg",
+      "size": 4453199
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/album.png",
+      "size": 119117
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/bass.ogg",
+      "size": 2261209
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/drums_1.ogg",
+      "size": 1970046
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/drums_2.ogg",
+      "size": 2939061
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/drums_3.ogg",
+      "size": 20802
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/drums_4.ogg",
+      "size": 779455
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/guitar.ogg",
+      "size": 3956204
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/notes.mid",
+      "size": 65973
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/preview.ogg",
+      "size": 847264
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/song.ini",
+      "size": 652
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/song.ogg",
+      "size": 5093602
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Linkin Park - Bleed It Out/vocals.ogg",
+      "size": 3654217
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/album.png",
+      "size": 604352
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/bass.ogg",
+      "size": 7377059
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/drums_1.ogg",
+      "size": 7205786
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/drums_2.ogg",
+      "size": 7579861
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/drums_3.ogg",
+      "size": 1381887
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/drums_4.ogg",
+      "size": 8896377
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/guitar.ogg",
+      "size": 8949535
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/notes.mid",
+      "size": 159474
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/preview.ogg",
+      "size": 569784
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/song.ini",
+      "size": 544
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/song.ogg",
+      "size": 8053038
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Lynyrd Skynyrd - Call Me the Breeze (Live)/vocals.ogg",
+      "size": 3643749
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/album.png",
+      "size": 478080
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/bass.ogg",
+      "size": 9195149
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/bass.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_1.ogg",
+      "size": 9971449
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_1.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_2.ogg",
+      "size": 10316580
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_2.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_3.ogg",
+      "size": 4634071
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_3.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_4.ogg",
+      "size": 11762418
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/drums_4.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/guitar.ogg",
+      "size": 9648502
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/guitar.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/notes.mid",
+      "size": 262570
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/notes.mid.backup",
+      "size": 262511
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/preview.ogg",
+      "size": 872266
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/song.ini",
+      "size": 630
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/song.ini.backup",
+      "size": 630
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/song.ogg",
+      "size": 3794797
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/song.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/vocals.ogg",
+      "size": 6064109
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Holy Wars... The Punishment Due/vocals.ogg.sfk",
+      "size": 599488
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/album.png",
+      "size": 486282
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/bass.ogg",
+      "size": 5682059
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/drums_1.ogg",
+      "size": 7833819
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/drums_2.ogg",
+      "size": 6857699
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/drums_3.ogg",
+      "size": 4550737
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/drums_4.ogg",
+      "size": 9078469
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/guitar.ogg",
+      "size": 7312421
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/notes.mid",
+      "size": 222393
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/preview.ogg",
+      "size": 617348
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/song.ini",
+      "size": 493
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/song.ogg",
+      "size": 7239905
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death (Career Version)/vocals.ogg",
+      "size": 6302854
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/album.png",
+      "size": 486282
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/bass.ogg",
+      "size": 5682059
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/drums_1.ogg",
+      "size": 7833819
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/drums_2.ogg",
+      "size": 6857699
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/drums_3.ogg",
+      "size": 4550737
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/drums_4.ogg",
+      "size": 9078469
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/guitar.ogg",
+      "size": 7312421
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/notes.mid",
+      "size": 222361
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/preview.ogg",
+      "size": 617348
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/song.ini",
+      "size": 524
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/song.ogg",
+      "size": 7239905
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - Sudden Death/vocals.ogg",
+      "size": 6302854
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/album.png",
+      "size": 521190
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/bass.ogg",
+      "size": 4007088
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/bass.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_1.ogg",
+      "size": 5796855
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_1.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_2.ogg",
+      "size": 5568228
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_2.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_3.ogg",
+      "size": 1644036
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_3.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_4.ogg",
+      "size": 6580504
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/drums_4.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/guitar.ogg",
+      "size": 4864685
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/guitar.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/notes.mid",
+      "size": 168236
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/preview.ogg",
+      "size": 900521
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/song.ini",
+      "size": 892
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/song.ogg",
+      "size": 1934169
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/song.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/vocals.ogg",
+      "size": 5225045
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Megadeth - This Day We Fight!/vocals.ogg.sfk",
+      "size": 320776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/album.png",
+      "size": 384017
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/bass.ogg",
+      "size": 3689317
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/drums_1.ogg",
+      "size": 3189146
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/drums_2.ogg",
+      "size": 3008936
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/drums_3.ogg",
+      "size": 320146
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/drums_4.ogg",
+      "size": 4726577
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/guitar.ogg",
+      "size": 4259443
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/notes.mid",
+      "size": 97531
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/preview.ogg",
+      "size": 661936
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/song.ini",
+      "size": 826
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/song.ogg",
+      "size": 526460
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Metallica & Ozzy Osbourne - Paranoid (Live)/vocals.ogg",
+      "size": 2888558
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/album.png",
+      "size": 496964
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/bass.ogg",
+      "size": 8693960
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/drums_1.ogg",
+      "size": 6700441
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/drums_2.ogg",
+      "size": 5579102
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/drums_3.ogg",
+      "size": 7054812
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/drums_4.ogg",
+      "size": 1690877
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/guitar.ogg",
+      "size": 6869395
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/notes.mid",
+      "size": 130891
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/preview.ogg",
+      "size": 758553
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/song.ini",
+      "size": 566
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/song.ogg",
+      "size": 7450255
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Muse - Uprising/vocals.ogg",
+      "size": 5318905
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/album.png",
+      "size": 455206
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/bass.ogg",
+      "size": 3091405
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/drums_1.ogg",
+      "size": 3651045
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/drums_2.ogg",
+      "size": 4441724
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/drums_3.ogg",
+      "size": 4102069
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/drums_4.ogg",
+      "size": 4829024
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/guitar.ogg",
+      "size": 4954181
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/notes.mid",
+      "size": 119407
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/preview.ogg",
+      "size": 790042
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/song.ini",
+      "size": 655
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/song.ogg",
+      "size": 4500325
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/My Chemical Romance - I'm Not Okay (I Promise)/vocals.ogg",
+      "size": 4524360
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/album.png",
+      "size": 471414
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/bass.ogg",
+      "size": 6326519
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/drums_1.ogg",
+      "size": 6437337
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/drums_2.ogg",
+      "size": 5536014
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/drums_3.ogg",
+      "size": 34744
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/drums_4.ogg",
+      "size": 8310609
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/guitar (1).ogg",
+      "size": 8571674
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/guitar.ogg",
+      "size": 6443471
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/notes.mid",
+      "size": 159494
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/preview.ogg",
+      "size": 728069
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/song.ini",
+      "size": 657
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/song.ogg",
+      "size": 2768699
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Neil Young - Rockin' in the Free World/vocals.ogg",
+      "size": 7537897
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/album.png",
+      "size": 349594
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/bass.ogg",
+      "size": 3588758
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/drums_1.ogg",
+      "size": 2058002
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/drums_2.ogg",
+      "size": 2931357
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/drums_3.ogg",
+      "size": 240098
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/drums_4.ogg",
+      "size": 5438174
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/guitar.ogg",
+      "size": 5518635
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/idk.chart",
+      "size": 120153
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/notes.mid",
+      "size": 70186
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/preview.ogg",
+      "size": 782904
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/song.ini",
+      "size": 581
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/song.ogg",
+      "size": 3906311
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nickelback - How You Remind Me/vocals.ogg",
+      "size": 5310038
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/album.png",
+      "size": 516661
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/bass.ogg",
+      "size": 4986127
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/drums_1.ogg",
+      "size": 5177921
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/drums_2.ogg",
+      "size": 5906714
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/drums_3.ogg",
+      "size": 2399823
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/drums_4.ogg",
+      "size": 5825352
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/guitar.ogg",
+      "size": 6602751
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/notes.mid",
+      "size": 128324
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/preview.ogg",
+      "size": 586548
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/song.ini",
+      "size": 613
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/song.ogg",
+      "size": 6010006
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Night Ranger - (You Can Still) Rock in America/vocals.ogg",
+      "size": 4005745
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/album.png",
+      "size": 301381
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/bass.ogg",
+      "size": 4923256
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/drums_1.ogg",
+      "size": 3377930
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/drums_2.ogg",
+      "size": 4464468
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/drums_3.ogg",
+      "size": 2178006
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/drums_4.ogg",
+      "size": 3408750
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/guitar.ogg",
+      "size": 6367618
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/notes.mid",
+      "size": 73685
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/preview.ogg",
+      "size": 658495
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/song.ini",
+      "size": 530
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/song.ogg",
+      "size": 5343676
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Nine Inch Nails - Wish/vocals.ogg",
+      "size": 3297192
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/album.png",
+      "size": 428013
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/bass.ogg",
+      "size": 3269092
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/drums_1.ogg",
+      "size": 4120812
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/drums_2.ogg",
+      "size": 2026952
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/drums_3.ogg",
+      "size": 3485496
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/drums_4.ogg",
+      "size": 5021821
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/guitar.ogg",
+      "size": 4803399
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/notes.mid",
+      "size": 84197
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/preview.ogg",
+      "size": 608321
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/song (1).ogg",
+      "size": 6317554
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/song.ini",
+      "size": 499
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/song.ogg",
+      "size": 3953298
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Orianthi - Suffocated/vocals.ogg",
+      "size": 5009204
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/album.png",
+      "size": 454761
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/bass.ogg",
+      "size": 5148215
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/drums_1.ogg",
+      "size": 2603771
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/drums_2.ogg",
+      "size": 1894008
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/drums_3 (1).ogg",
+      "size": 7927117
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/drums_3.ogg",
+      "size": 444203
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/drums_4.ogg",
+      "size": 7742370
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/guitar.ogg",
+      "size": 6737969
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/notes.mid",
+      "size": 127058
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/preview.ogg",
+      "size": 815355
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/song (1).ogg",
+      "size": 5482366
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/song.ini",
+      "size": 795
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/song.ogg",
+      "size": 849904
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Pantera - I'm Broken/vocals.ogg",
+      "size": 4922257
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/album.png",
+      "size": 132758
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/bass.ogg",
+      "size": 4160215
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/drums_1.ogg",
+      "size": 3319961
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/drums_2.ogg",
+      "size": 2747931
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/drums_3.ogg",
+      "size": 2542703
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/drums_4.ogg",
+      "size": 3136883
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/guitar.ogg",
+      "size": 3919345
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/notes.mid",
+      "size": 79975
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/preview.ogg",
+      "size": 798130
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/song.ini",
+      "size": 524
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/song.ogg",
+      "size": 3013493
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Phoenix - Lasso/vocals.ogg",
+      "size": 4045962
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/album.png",
+      "size": 395883
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/bass.ogg",
+      "size": 6042874
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/drums_1.ogg",
+      "size": 5006450
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/drums_2.ogg",
+      "size": 6153454
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/drums_3.ogg",
+      "size": 1221877
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/drums_4.ogg",
+      "size": 7071406
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/guitar.ogg",
+      "size": 6028347
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/notes.mid",
+      "size": 97578
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/preview.ogg",
+      "size": 688612
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/song.ini",
+      "size": 794
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/song.ogg",
+      "size": 5708351
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Poison - Unskinny Bop/vocals.ogg",
+      "size": 6120186
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/album.png",
+      "size": 247472
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/bass.ogg",
+      "size": 3911549
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/drums_1.ogg",
+      "size": 2093262
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/drums_2.ogg",
+      "size": 829120
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/drums_3.ogg",
+      "size": 871945
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/drums_4.ogg",
+      "size": 8048445
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/guitar.ogg",
+      "size": 9076919
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/notes.mid",
+      "size": 83336
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/preview.ogg",
+      "size": 730317
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/song.ini",
+      "size": 617
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/song.ogg",
+      "size": 3125199
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queen - Bohemian Rhapsody/vocals.ogg",
+      "size": 6955955
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/album.png",
+      "size": 114737
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/bass.ogg",
+      "size": 8056469
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/drums_1.ogg",
+      "size": 7557078
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/drums_2.ogg",
+      "size": 8864630
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/drums_3.ogg",
+      "size": 802168
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/drums_4.ogg",
+      "size": 10893862
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/guitar.ogg",
+      "size": 8371719
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/notes.mid",
+      "size": 142382
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/preview.ogg",
+      "size": 716677
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/song.ini",
+      "size": 721
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/song.ogg",
+      "size": 3431141
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Queensryche - Jet City Woman/vocals.ogg",
+      "size": 6554611
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/album.png",
+      "size": 347444
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/bass.ogg",
+      "size": 4967218
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/drums_1.ogg",
+      "size": 5649882
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/drums_2.ogg",
+      "size": 6427318
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/drums_3.ogg",
+      "size": 4624145
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/drums_4.ogg",
+      "size": 8389954
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/guitar.ogg",
+      "size": 9983183
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/notes.mid",
+      "size": 98841
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/preview.ogg",
+      "size": 961106
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/song.ini",
+      "size": 650
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/song.ogg",
+      "size": 5234987
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/R.E.M. - Losing My Religion/vocals.ogg",
+      "size": 6567391
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/album.png",
+      "size": 214111
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/bass.ogg",
+      "size": 4664376
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/drums_1.ogg",
+      "size": 5325928
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/drums_2.ogg",
+      "size": 5441886
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/drums_3.ogg",
+      "size": 100308
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/drums_4.ogg",
+      "size": 6053397
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/guitar.ogg",
+      "size": 5633235
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/notes (1).mid",
+      "size": 166152
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/notes.mid",
+      "size": 143113
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/preview.ogg",
+      "size": 670236
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/song.ini",
+      "size": 680
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/song.ogg",
+      "size": 5261931
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rammstein - Waidmanns Heil/vocals.ogg",
+      "size": 5914890
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/album.png",
+      "size": 238638
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/bass.ogg",
+      "size": 3959806
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/drums_1.ogg",
+      "size": 4527478
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/drums_2.ogg",
+      "size": 5232682
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/drums_3.ogg",
+      "size": 816675
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/drums_4.ogg",
+      "size": 6809031
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/guitar.ogg",
+      "size": 5607301
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/notes.mid",
+      "size": 65833
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/preview.ogg",
+      "size": 865482
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/song.ini",
+      "size": 648
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/song.ogg",
+      "size": 6151319
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Red Rider - Lunatic Fringe/vocals.ogg",
+      "size": 4208058
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/album.png",
+      "size": 462574
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/bass.ogg",
+      "size": 4319017
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/drums_1.ogg",
+      "size": 5449088
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/drums_2.ogg",
+      "size": 5755327
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/drums_3.ogg",
+      "size": 585800
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/drums_4.ogg",
+      "size": 6264645
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/guitar.ogg",
+      "size": 6105800
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/notes.mid",
+      "size": 125800
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/preview.ogg",
+      "size": 793397
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/song (1).ogg",
+      "size": 7080442
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/song.ogg",
+      "size": 1362452
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rise Against - Savior/vocals.ogg",
+      "size": 5480651
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/album.png",
+      "size": 483950
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/bass.ogg",
+      "size": 5532862
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/drums_1.ogg",
+      "size": 1631884
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/drums_2.ogg",
+      "size": 2043105
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/drums_3.ogg",
+      "size": 1160754
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/drums_4.ogg",
+      "size": 4343132
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/guitar.ogg",
+      "size": 5936679
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/notes.mid",
+      "size": 86817
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/preview.ogg",
+      "size": 631192
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/song.ini",
+      "size": 619
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/song.ogg",
+      "size": 26566
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 1 Overture/vocals.ogg",
+      "size": 5605740
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/album.png",
+      "size": 483950
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/bass.ogg",
+      "size": 3029084
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/drums_1.ogg",
+      "size": 1083911
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/drums_2.ogg",
+      "size": 939293
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/drums_3.ogg",
+      "size": 583813
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/drums_4.ogg",
+      "size": 2910550
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/guitar.ogg",
+      "size": 3428195
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/notes.mid",
+      "size": 61375
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/preview.ogg",
+      "size": 623226
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/song.ini",
+      "size": 607
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/song.ogg",
+      "size": 17081
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 2 The Temples of Syrinx/vocals.ogg",
+      "size": 3047242
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/album.png",
+      "size": 483950
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/bass.ogg",
+      "size": 25362
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/drums_1.ogg",
+      "size": 25362
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/drums_2.ogg",
+      "size": 25362
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/drums_3.ogg",
+      "size": 25362
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/drums_4.ogg",
+      "size": 25362
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/guitar.ogg",
+      "size": 5387988
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/notes.mid",
+      "size": 27244
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/preview.ogg",
+      "size": 583097
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/song.ini",
+      "size": 544
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/song.ogg",
+      "size": 5906175
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 3 Discovery/vocals.ogg",
+      "size": 5296443
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/album.png",
+      "size": 483950
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/bass.ogg",
+      "size": 5264906
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/drums_1.ogg",
+      "size": 2197165
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/drums_2.ogg",
+      "size": 2064440
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/drums_3.ogg",
+      "size": 514830
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/drums_4.ogg",
+      "size": 5874819
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/guitar.ogg",
+      "size": 5896983
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/notes.mid",
+      "size": 97310
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/preview.ogg",
+      "size": 614453
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/song.ini",
+      "size": 579
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/song.ogg",
+      "size": 5526780
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 4 Presentation/vocals.ogg",
+      "size": 3724856
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/album.png",
+      "size": 483950
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/bass.ogg",
+      "size": 2738926
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/drums_1.ogg",
+      "size": 420381
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/drums_2.ogg",
+      "size": 218128
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/drums_3.ogg",
+      "size": 394198
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/drums_4.ogg",
+      "size": 2842372
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/guitar.ogg",
+      "size": 3171164
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/notes.mid",
+      "size": 28928
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/preview.ogg",
+      "size": 638367
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/song.ini",
+      "size": 600
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/song.ogg",
+      "size": 2755054
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 5 Oracle - The Dream/vocals.ogg",
+      "size": 2401732
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/album.png",
+      "size": 483950
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/bass.ogg",
+      "size": 2700188
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/drums_1.ogg",
+      "size": 804171
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/drums_2.ogg",
+      "size": 244158
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/drums_3.ogg",
+      "size": 135216
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/drums_4.ogg",
+      "size": 2045058
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/guitar (1).ogg",
+      "size": 4651826
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/guitar.ogg",
+      "size": 3281744
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/notes.mid",
+      "size": 31691
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/preview.ogg",
+      "size": 573555
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/song.ini",
+      "size": 550
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/song.ogg",
+      "size": 3497574
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 6 Soliloquy/vocals.ogg",
+      "size": 2942242
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/album.png",
+      "size": 483950
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/bass.ogg",
+      "size": 3264365
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/drums_1.ogg",
+      "size": 862099
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/drums_2.ogg",
+      "size": 1129380
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/drums_3.ogg",
+      "size": 290237
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/drums_4.ogg",
+      "size": 3365247
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/guitar.ogg",
+      "size": 3536877
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/notes.mid",
+      "size": 75737
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/preview.ogg",
+      "size": 618371
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/song.ini",
+      "size": 517
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/song.ogg",
+      "size": 3066315
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rush - 2112 Pt. 7 Grand Finale/vocals.ogg",
+      "size": 806513
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/album.png",
+      "size": 420119
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/bass.ogg",
+      "size": 4357036
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/drums_1.ogg",
+      "size": 3789395
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/drums_2.ogg",
+      "size": 4452336
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/drums_3.ogg",
+      "size": 596838
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/drums_4.ogg",
+      "size": 5285854
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/guitar.ogg",
+      "size": 4660918
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/notes.mid",
+      "size": 103692
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/preview.ogg",
+      "size": 857981
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/song (1).ogg",
+      "size": 4880967
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/song.ini",
+      "size": 589
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/song.ogg",
+      "size": 2350921
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Rx Bandits - It's Only Another Parsec/vocals.ogg",
+      "size": 3849611
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/album.png",
+      "size": 367806
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/bass.ogg",
+      "size": 6309350
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/drums_1.ogg",
+      "size": 3956794
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/drums_2.ogg",
+      "size": 6966707
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/drums_3.ogg",
+      "size": 836941
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/drums_4.ogg",
+      "size": 8427095
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/guitar.ogg",
+      "size": 7835567
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/notes.mid",
+      "size": 149082
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/preview.ogg",
+      "size": 949597
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/song.ini",
+      "size": 573
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/song.ogg",
+      "size": 6664414
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Silversun Pickups - There's No Secrets This Year/vocals.ogg",
+      "size": 5445070
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/album.png",
+      "size": 508582
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/bass.ogg",
+      "size": 3561493
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/drums_1.ogg",
+      "size": 4104086
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/drums_2 (1).ogg",
+      "size": 4154369
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/drums_2.ogg",
+      "size": 4469437
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/drums_3 (1).ogg",
+      "size": 6444923
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/drums_3.ogg",
+      "size": 520090
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/drums_4.ogg",
+      "size": 6230429
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/guitar.ogg",
+      "size": 5291114
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/notes.mid",
+      "size": 87181
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/preview.ogg",
+      "size": 834160
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/song.ini",
+      "size": 782
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/song.ogg",
+      "size": 6058633
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slash featuring Ian Astbury - Ghost/vocals.ogg",
+      "size": 3776384
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/album.png",
+      "size": 335028
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/bass.ogg",
+      "size": 8023155
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/drums_1.ogg",
+      "size": 7154984
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/drums_2.ogg",
+      "size": 8549026
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/drums_3.ogg",
+      "size": 3171877
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/drums_4.ogg",
+      "size": 10431916
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/guitar.ogg",
+      "size": 8878659
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/notes.mid",
+      "size": 256178
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/preview.ogg",
+      "size": 694028
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/song.ini",
+      "size": 554
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/song.ogg",
+      "size": 1235774
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slayer - Chemical Warfare/vocals.ogg",
+      "size": 5033871
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/album.png",
+      "size": 443039
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/bass.ogg",
+      "size": 6274355
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/drums_1.ogg",
+      "size": 6554940
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/drums_2.ogg",
+      "size": 6663879
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/drums_3.ogg",
+      "size": 3274282
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/drums_4.ogg",
+      "size": 6494193
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/guitar.ogg",
+      "size": 6978645
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/notes.mid",
+      "size": 165670
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/preview.ogg",
+      "size": 900753
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/song.ini",
+      "size": 611
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/song.ogg",
+      "size": 5853696
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Slipknot - Psychosocial/vocals.ogg",
+      "size": 5091544
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/album.png",
+      "size": 497569
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/bass.ogg",
+      "size": 2506172
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/drums_1.ogg",
+      "size": 2798245
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/drums_2.ogg",
+      "size": 3342313
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/drums_3.ogg",
+      "size": 721053
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/drums_4.ogg",
+      "size": 3800091
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/guitar.ogg",
+      "size": 3581270
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/notes.mid",
+      "size": 93699
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/preview.ogg",
+      "size": 714169
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/song.ini",
+      "size": 550
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/song.ogg",
+      "size": 577977
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Snot - Deadfall/vocals.ogg",
+      "size": 3041461
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/album.png",
+      "size": 436503
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/bass.ogg",
+      "size": 5326726
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/drums_1.ogg",
+      "size": 5473925
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/drums_2.ogg",
+      "size": 5395101
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/drums_3.ogg",
+      "size": 1223007
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/drums_4.ogg",
+      "size": 6943243
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/guitar.ogg",
+      "size": 6719910
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/notes.mid",
+      "size": 95716
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/preview.ogg",
+      "size": 630615
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/song.ini",
+      "size": 676
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/song.ogg",
+      "size": 571517
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Soundgarden - Black Rain/vocals.ogg",
+      "size": 6293714
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/album.png",
+      "size": 458766
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/bass.ogg",
+      "size": 5099951
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/drums_1.ogg",
+      "size": 6113640
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/drums_2.ogg",
+      "size": 6769061
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/drums_3.ogg",
+      "size": 1192018
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/drums_4.ogg",
+      "size": 8151437
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/guitar.ogg",
+      "size": 6232628
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/notes.mid",
+      "size": 147313
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/preview.ogg",
+      "size": 836763
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/song.ini",
+      "size": 631
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/song.ogg",
+      "size": 1283316
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Steve Vai - Speeding (Vault Version)/vocals.ogg",
+      "size": 28181
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/album.png",
+      "size": 411745
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/bass.ogg",
+      "size": 4012197
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/drums_1.ogg",
+      "size": 4359138
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/drums_2.ogg",
+      "size": 4341543
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/drums_3.ogg",
+      "size": 77264
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/drums_4.ogg",
+      "size": 5992192
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/guitar.ogg",
+      "size": 4777836
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/notes.mid",
+      "size": 77729
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/preview.ogg",
+      "size": 952175
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/song.ini",
+      "size": 586
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/song.ogg",
+      "size": 2094982
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Stone Temple Pilots - Interstate Love Song/vocals.ogg",
+      "size": 3790793
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/album.png",
+      "size": 289564
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/bass.ogg",
+      "size": 5135052
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/drums_1.ogg",
+      "size": 4931025
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/drums_2.ogg",
+      "size": 4929302
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/drums_3.ogg",
+      "size": 4469334
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/drums_4.ogg",
+      "size": 6100882
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/guitar.ogg",
+      "size": 6133282
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/notes.mid",
+      "size": 158289
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/preview.ogg",
+      "size": 720383
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/song.ini",
+      "size": 617
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/song.ogg",
+      "size": 1505523
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Strung Out - Calling/vocals.ogg",
+      "size": 5373473
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/album.png",
+      "size": 430888
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/bass.ogg",
+      "size": 4140760
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/drums_1 (1).ogg",
+      "size": 5789105
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/drums_1.ogg",
+      "size": 5689704
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/drums_2.ogg",
+      "size": 5518217
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/drums_3 (1).ogg",
+      "size": 7745990
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/drums_3.ogg",
+      "size": 625249
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/drums_4.ogg",
+      "size": 6231790
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/guitar.ogg",
+      "size": 5698359
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/notes.mid",
+      "size": 92051
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/preview.ogg",
+      "size": 817194
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/song.ini",
+      "size": 610
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/song.ogg",
+      "size": 5955227
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Styx - Renegade/vocals.ogg",
+      "size": 5406795
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/album.png",
+      "size": 333569
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/bass.ogg",
+      "size": 3255585
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/drums_1.ogg",
+      "size": 4244417
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/drums_2.ogg",
+      "size": 4311130
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/drums_3.ogg",
+      "size": 789738
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/drums_4.ogg",
+      "size": 5217906
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/guitar.ogg",
+      "size": 4151974
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/notes.mid",
+      "size": 101948
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/preview.ogg",
+      "size": 873563
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/song.ini",
+      "size": 604
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/song.ogg",
+      "size": 734651
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Sum 41 - Motivation/vocals.ogg",
+      "size": 3249002
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/album.png",
+      "size": 546454
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/bass.ogg",
+      "size": 5698430
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/drums_1.ogg",
+      "size": 5923265
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/drums_2.ogg",
+      "size": 2119724
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/drums_3.ogg",
+      "size": 751542
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/drums_4.ogg",
+      "size": 8842434
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/guitar (1).ogg",
+      "size": 10434126
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/guitar.ogg",
+      "size": 7921358
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/notes.mid",
+      "size": 128974
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/preview.ogg",
+      "size": 538210
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/song.ini",
+      "size": 610
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/song.ogg",
+      "size": 2020036
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tesla - Modern Day Cowboy/vocals.ogg",
+      "size": 5618172
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/album.png",
+      "size": 337928
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/bass.ogg",
+      "size": 9013006
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/drums_1.ogg",
+      "size": 6911127
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/drums_2.ogg",
+      "size": 7079517
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/drums_3.ogg",
+      "size": 35060
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/drums_4.ogg",
+      "size": 8996343
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/guitar.ogg",
+      "size": 6887946
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/notes.mid",
+      "size": 133104
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/preview.ogg",
+      "size": 569791
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/song.ini",
+      "size": 532
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/song.ogg",
+      "size": 7295444
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Cure - Fascination Street/vocals.ogg",
+      "size": 2805963
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/album.png",
+      "size": 360675
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/bass.ogg",
+      "size": 4621961
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/drums_1.ogg",
+      "size": 4552863
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/drums_2.ogg",
+      "size": 4600021
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/drums_3.ogg",
+      "size": 2100009
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/drums_4.ogg",
+      "size": 5394576
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/guitar.ogg",
+      "size": 5466485
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/notes.mid",
+      "size": 124242
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/preview.ogg",
+      "size": 643407
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/song.ini",
+      "size": 722
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/song.ogg",
+      "size": 5275079
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Dillinger Escape Plan - Setting Fire to Sleeping Giants/vocals.ogg",
+      "size": 5993385
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/album.png",
+      "size": 269636
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/bass.ogg",
+      "size": 5659474
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/drums_1.ogg",
+      "size": 2932284
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/drums_2.ogg",
+      "size": 4231906
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/drums_3.ogg",
+      "size": 851055
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/drums_4.ogg",
+      "size": 4175450
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/guitar.ogg",
+      "size": 5698164
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/notes.mid",
+      "size": 101878
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/preview.ogg",
+      "size": 635663
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/song.ini",
+      "size": 536
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/song.ogg",
+      "size": 4234378
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Hives - Tick Tick Boom/vocals.ogg",
+      "size": 4495503
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/album.png",
+      "size": 335791
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/bass.ogg",
+      "size": 5211300
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/drums_1.ogg",
+      "size": 5313795
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/drums_2.ogg",
+      "size": 4517664
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/drums_3.ogg",
+      "size": 2083363
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/drums_4.ogg",
+      "size": 7595984
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/guitar.ogg",
+      "size": 6064685
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/notes.mid",
+      "size": 126031
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/preview.ogg",
+      "size": 662065
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/song.ini",
+      "size": 531
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/song.ogg",
+      "size": 29911
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Offspring - Self Esteem/vocals.ogg",
+      "size": 6600637
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/album.png",
+      "size": 391285
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/bass.ogg",
+      "size": 2474635
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/drums_1.ogg",
+      "size": 2846276
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/drums_2.ogg",
+      "size": 3073875
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/drums_3.ogg",
+      "size": 84392
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/drums_4.ogg",
+      "size": 4290084
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/guitar.ogg",
+      "size": 2517710
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/notes.mid",
+      "size": 97393
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/preview.ogg",
+      "size": 807084
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/song.ini",
+      "size": 640
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/song.ogg",
+      "size": 352012
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Ramones - Theme from Spiderman/vocals.ogg",
+      "size": 2618788
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/album.png",
+      "size": 532902
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/bass.ogg",
+      "size": 5195355
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/drums_1.ogg",
+      "size": 4550826
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/drums_2.ogg",
+      "size": 1918722
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/drums_3.ogg",
+      "size": 217196
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/drums_4.ogg",
+      "size": 6727749
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/guitar.ogg",
+      "size": 7106189
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/notes.mid",
+      "size": 118101
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/preview.ogg",
+      "size": 787911
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/song.ini",
+      "size": 583
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/song.ogg",
+      "size": 6586550
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Rolling Stones - Stray Cat Blues/vocals.ogg",
+      "size": 4513571
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/album.png",
+      "size": 239006
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/bass.ogg",
+      "size": 3576620
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/drums_1.ogg",
+      "size": 3255499
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/drums_2.ogg",
+      "size": 3782284
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/drums_3.ogg",
+      "size": 3705426
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/drums_4.ogg",
+      "size": 4583922
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/guitar.ogg",
+      "size": 3642243
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/notes.mid",
+      "size": 74556
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/preview.ogg",
+      "size": 554634
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/song.ini",
+      "size": 605
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/song.ogg",
+      "size": 4690227
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Runaways - Cherry Bomb/vocals.ogg",
+      "size": 4275812
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/album.png",
+      "size": 438892
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/bass.ogg",
+      "size": 2740471
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/drums_1 (1).ogg",
+      "size": 2503160
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/drums_1.ogg",
+      "size": 2559871
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/drums_2.ogg",
+      "size": 2923734
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/drums_3.ogg",
+      "size": 360460
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/drums_4.ogg",
+      "size": 4038383
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/guitar.ogg",
+      "size": 3556266
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/notes.mid",
+      "size": 63422
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/preview.ogg",
+      "size": 708815
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/song.ini",
+      "size": 490
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/song.ogg",
+      "size": 3553998
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The Vines - Get Free/vocals.ogg",
+      "size": 3370956
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/album.png",
+      "size": 221094
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/bass.ogg",
+      "size": 5110519
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/drums_1.ogg",
+      "size": 3777175
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/drums_2.ogg",
+      "size": 1184995
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/drums_3.ogg",
+      "size": 2457987
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/drums_4.ogg",
+      "size": 4592870
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/guitar.ogg",
+      "size": 6523992
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/notes.mid",
+      "size": 69579
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/preview.ogg",
+      "size": 497166
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/song.ini",
+      "size": 573
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/song.ogg",
+      "size": 1285603
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/The White Stripes - Seven Nation Army/vocals.ogg",
+      "size": 4835493
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/album.png",
+      "size": 295509
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/bass.ogg",
+      "size": 5580776
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/drums_1.ogg",
+      "size": 6048202
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/drums_2.ogg",
+      "size": 7122465
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/drums_3.ogg",
+      "size": 105335
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/drums_4.ogg",
+      "size": 9691914
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/guitar.ogg",
+      "size": 7695883
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/notes.mid",
+      "size": 124805
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/preview.ogg",
+      "size": 928294
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/song.ini",
+      "size": 594
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/song.ogg",
+      "size": 5029765
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Them Crooked Vultures - Scumbag Blues/vocals.ogg",
+      "size": 6058456
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/album.png",
+      "size": 257709
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/bass.ogg",
+      "size": 5506530
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/drums_1.ogg",
+      "size": 3811668
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/drums_2.ogg",
+      "size": 4358372
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/drums_3.ogg",
+      "size": 3896190
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/drums_4.ogg",
+      "size": 5730131
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/guitar.ogg",
+      "size": 4452148
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/notes.mid",
+      "size": 85480
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/preview.ogg",
+      "size": 929569
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/song.ini",
+      "size": 642
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/song.ogg",
+      "size": 1972015
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Third Eye Blind - Graduate/vocals.ogg",
+      "size": 3149608
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/album.png",
+      "size": 324911
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/bass.ogg",
+      "size": 3341728
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/drums_1.ogg",
+      "size": 3410511
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/drums_2.ogg",
+      "size": 2323295
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/drums_3.ogg",
+      "size": 520381
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/drums_4.ogg",
+      "size": 4729905
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/guitar.ogg",
+      "size": 4967890
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/notes.mid",
+      "size": 63509
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/preview.ogg",
+      "size": 747090
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/song.ini",
+      "size": 544
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/song.ogg",
+      "size": 4117117
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Tom Petty & The Heartbreakers - Listen to Her Heart/vocals.ogg",
+      "size": 3787156
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/album.png",
+      "size": 410553
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/bass.ogg",
+      "size": 4068940
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/drums_1.ogg",
+      "size": 5658893
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/drums_2.ogg",
+      "size": 5990326
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/drums_3.ogg",
+      "size": 2149566
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/drums_4.ogg",
+      "size": 6961331
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/guitar.ogg",
+      "size": 5666802
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/notes.mid",
+      "size": 123962
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/preview.ogg",
+      "size": 699888
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/song.ini",
+      "size": 694
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/song.ogg",
+      "size": 1528813
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/Twisted Sister - We're Not Gonna Take It/vocals.ogg",
+      "size": 5231932
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/album.png",
+      "size": 404221
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/bass.ogg",
+      "size": 5499472
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/drums_1.ogg",
+      "size": 3426764
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/drums_2.ogg",
+      "size": 7091842
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/drums_3.ogg",
+      "size": 627197
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/drums_4.ogg",
+      "size": 7346525
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/guitar.ogg",
+      "size": 5619563
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/notes.mid",
+      "size": 108618
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/preview.ogg",
+      "size": 669389
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/song.ini",
+      "size": 729
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/song.ogg",
+      "size": 6720182
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/ZZ Top - Sharp Dressed Man (Live)/vocals.ogg",
+      "size": 6122877
+    },
+    {
+      "path": "(2010) Guitar Hero - Warriors of Rock/changelog.txt",
+      "size": 787
+    }
+  ],
+  "extracted_size": 3696398598,
+  "file_count": 1169,
+  "chart_count": 94,
+  "release_date": "2010-09-24"
 }
