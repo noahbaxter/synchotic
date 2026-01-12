@@ -388,7 +388,10 @@ class FileDownloader:
             if len(extracted_items) == 1 and extracted_items[0].is_dir():
                 folder_name = normalize_fs_name(extracted_items[0].name)
                 # Case-insensitive comparison to handle "Carol of" vs "Carol Of"
-                if folder_name.lower() == archive_stem.lower():
+                # Also flatten if archive root matches target folder (e.g., archive contains
+                # "(2005) Guitar Hero/" and we're extracting to ".../Guitar Hero/(2005) Guitar Hero/")
+                chart_folder_name = normalize_fs_name(chart_folder.name)
+                if folder_name.lower() == archive_stem.lower() or folder_name.lower() == chart_folder_name.lower():
                     should_flatten = True
                     flatten_folder = extracted_items[0]
 

@@ -14,7 +14,7 @@ from ..core.formatting import sanitize_path, dedupe_files_by_newest, normalize_f
 from ..stats import get_best_stats
 from .cache import scan_local_files, scan_actual_charts
 from .state import SyncState
-from .utils import get_sync_folder_name
+from .utils import get_sync_folder_name, is_static_source
 
 
 @dataclass
@@ -56,6 +56,28 @@ def _has_chart_markers(folder: Path) -> bool:
                 return True
     except OSError:
         pass
+    return False
+
+
+def _has_charts_recursive(folder: Path, max_depth: int = 3) -> bool:
+    """Check if a folder or its subfolders contain chart markers (up to max_depth)."""
+    if not folder.exists() or not folder.is_dir():
+        return False
+
+    # Check this folder directly
+    if _has_chart_markers(folder):
+        return True
+
+    # Check subfolders recursively
+    if max_depth > 0:
+        try:
+            for entry in folder.iterdir():
+                if entry.is_dir() and not entry.name.startswith('.'):
+                    if _has_charts_recursive(entry, max_depth - 1):
+                        return True
+        except OSError:
+            pass
+
     return False
 
 
@@ -348,6 +370,112 @@ def _adjust_for_nested_archives(
             status.synced_charts += best_total_charts
 
 
+def _get_folder_size(folder_path: Path) -> int:
+    """Get total size of all files in a folder recursively."""
+    if not folder_path.exists():
+        return 0
+    total = 0
+    try:
+        for item in folder_path.rglob("*"):
+            if item.is_file():
+                try:
+                    total += item.stat().st_size
+                except OSError:
+                    pass
+    except OSError:
+        pass
+    return total
+
+
+def _get_static_source_status(
+    folder: dict,
+    folder_name: str,
+    folder_path: Path,
+    sync_state: SyncState,
+    user_settings,
+) -> SyncStatus:
+    """
+    Calculate sync status for a static source (archive-based).
+
+    Static sources have archives in subfolders[].downloads instead of individual files.
+    Check if each archive is synced via sync_state, with disk fallback.
+    """
+    status = SyncStatus()
+    folder_id = folder.get("folder_id", "")
+    subfolders = folder.get("subfolders", [])
+
+    if not subfolders:
+        return status
+
+    # Get disabled subfolders
+    disabled_setlists = set()
+    if user_settings:
+        disabled_setlists = user_settings.get_disabled_subfolders(folder_id)
+
+    for sf in subfolders:
+        sf_name = sf.get("name", "")
+
+        # Skip disabled subfolders
+        if sf_name in disabled_setlists:
+            continue
+
+        sf_charts = sf.get("charts", {}).get("total", 0)
+        sf_manifest_size = sf.get("total_size", 0)  # Download size from manifest
+        downloads = sf.get("downloads", [])
+
+        # Check actual disk size if folder exists
+        subfolder_path = folder_path / sf_name
+        disk_size = _get_folder_size(subfolder_path) if subfolder_path.exists() else 0
+
+        # Use disk size if content exists, otherwise manifest size
+        sf_size = disk_size if disk_size > 0 else sf_manifest_size
+
+        status.total_charts += sf_charts
+        status.total_size += sf_size
+
+        # Check if synced via sync_state first
+        all_synced_via_state = True
+        for dl in downloads:
+            archive_name = dl.get("name", "")
+            archive_md5 = dl.get("md5", "")
+            archive_stem = Path(archive_name).stem
+
+            # Check if this is a flat archive (file paths contain setlist/archive_stem/...)
+            all_file_paths = [f.get("path", "") for f in folder.get("files", [])]
+            prefix = f"{sf_name}/{archive_stem}/"
+            is_flat = any(p.startswith(prefix) for p in all_file_paths[:100])
+
+            # Build rel_path to match download planner
+            if is_flat:
+                rel_path = f"{folder_name}/{sf_name}/{archive_stem}/{archive_name}"
+            else:
+                rel_path = f"{folder_name}/{sf_name}/{archive_name}"
+
+            if sync_state and sync_state.is_archive_synced(rel_path, archive_md5):
+                # Verify extracted files still exist
+                archive_files = sync_state.get_archive_files(rel_path)
+                missing = sync_state.check_files_exist(archive_files)
+                if len(missing) > 0:
+                    all_synced_via_state = False
+                    break
+            else:
+                all_synced_via_state = False
+                break
+
+        if all_synced_via_state and downloads:
+            status.synced_charts += sf_charts
+            status.synced_size += disk_size if disk_size > 0 else sf_manifest_size
+            continue
+
+        # Disk fallback: check if subfolder exists with chart markers (recursive)
+        # This handles sync_state loss/corruption or manual downloads
+        if _has_charts_recursive(subfolder_path):
+            status.synced_charts += sf_charts
+            status.synced_size += disk_size  # Use actual disk size
+
+    return status
+
+
 def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_state: SyncState = None) -> SyncStatus:
     """
     Calculate sync status for enabled folders (counts charts, not files).
@@ -371,6 +499,15 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
 
         # Skip disabled drives
         if user_settings and not user_settings.is_drive_enabled(folder_id):
+            continue
+
+        # Static sources: check archive sync status from subfolders[].downloads
+        if is_static_source(folder):
+            static_status = _get_static_source_status(folder, folder_name, folder_path, sync_state, user_settings)
+            status.total_charts += static_status.total_charts
+            status.synced_charts += static_status.synced_charts
+            status.total_size += static_status.total_size
+            status.synced_size += static_status.synced_size
             continue
 
         manifest_files = folder.get("files", [])
@@ -489,6 +626,67 @@ def get_setlist_sync_status(
 
     folder_name = get_sync_folder_name(folder)
     folder_path = base_path / folder_name
+
+    # Static sources: check archive sync status from subfolders[].downloads
+    if is_static_source(folder):
+        subfolders = folder.get("subfolders", [])
+        for sf in subfolders:
+            if sf.get("name", "") != setlist_name:
+                continue
+
+            sf_charts = sf.get("charts", {}).get("total", 0)
+            sf_manifest_size = sf.get("total_size", 0)  # Download size from manifest
+            downloads = sf.get("downloads", [])
+
+            # Check actual disk size if folder exists
+            subfolder_path = folder_path / setlist_name
+            disk_size = _get_folder_size(subfolder_path) if subfolder_path.exists() else 0
+
+            # Use disk size if content exists, otherwise manifest size
+            sf_size = disk_size if disk_size > 0 else sf_manifest_size
+
+            status.total_charts = sf_charts
+            status.total_size = sf_size
+
+            # Check if all archives for this setlist are synced via sync_state
+            all_synced = True
+            for dl in downloads:
+                archive_name = dl.get("name", "")
+                archive_md5 = dl.get("md5", "")
+                archive_stem = Path(archive_name).stem
+
+                # Check if this is a flat archive
+                all_file_paths = [f.get("path", "") for f in folder.get("files", [])]
+                prefix = f"{setlist_name}/{archive_stem}/"
+                is_flat = any(p.startswith(prefix) for p in all_file_paths[:100])
+
+                # Build rel_path to match download planner
+                if is_flat:
+                    rel_path = f"{folder_name}/{setlist_name}/{archive_stem}/{archive_name}"
+                else:
+                    rel_path = f"{folder_name}/{setlist_name}/{archive_name}"
+
+                if sync_state and sync_state.is_archive_synced(rel_path, archive_md5):
+                    archive_files = sync_state.get_archive_files(rel_path)
+                    missing = sync_state.check_files_exist(archive_files)
+                    if len(missing) > 0:
+                        all_synced = False
+                        break
+                else:
+                    all_synced = False
+                    break
+
+            if all_synced and downloads:
+                status.synced_charts = sf_charts
+                status.synced_size = disk_size if disk_size > 0 else sf_manifest_size
+            else:
+                # Disk fallback: check if subfolder exists with chart markers (recursive)
+                if _has_charts_recursive(subfolder_path):
+                    status.synced_charts = sf_charts
+                    status.synced_size = disk_size  # Use actual disk size
+
+            break
+        return status
 
     manifest_files = folder.get("files", [])
     if not manifest_files:

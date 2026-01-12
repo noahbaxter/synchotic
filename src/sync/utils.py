@@ -3,6 +3,12 @@ Sync utility functions.
 """
 
 
+def is_static_source(folder: dict) -> bool:
+    """Check if folder is a static source (archive-based, not individual files)."""
+    folder_id = folder.get("folder_id", "")
+    return folder_id.startswith("collection:")
+
+
 def get_sync_folder_name(folder: dict) -> str:
     """
     Get the folder name to use for sync_state paths and local folder creation.

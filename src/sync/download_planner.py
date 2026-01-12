@@ -86,6 +86,14 @@ def plan_downloads(
     long_paths = []
 
     for f in files:
+        # Skip files without ID or URL - these are extracted file listings from static sources
+        # (not directly downloadable, they come from extracting archives)
+        file_id = f.get("id", "")
+        file_url = f.get("url", "")
+        if not file_id and not file_url:
+            skipped += 1
+            continue
+
         # Sanitize path for Windows-illegal characters (*, ?, ", <, >, |, :)
         file_path = sanitize_path(f["path"])
         file_name = file_path.split("/")[-1] if "/" in file_path else file_path
@@ -150,13 +158,82 @@ def plan_downloads(
             skipped += 1
         else:
             to_download.append(DownloadTask(
-                file_id=f["id"],
+                file_id=file_id,
                 local_path=download_path,
                 size=file_size,
                 md5=file_md5,
                 is_archive=is_archive,
                 rel_path=rel_path,
-                url=f.get("url", ""),  # CDN URL for static sources
+                url=file_url,
             ))
 
     return to_download, skipped, long_paths
+
+
+def plan_static_downloads(
+    folder: dict,
+    local_base: Path,
+    sync_state: Optional[SyncState] = None,
+    disabled_subfolders: Optional[List[str]] = None,
+    folder_name: str = "",
+) -> Tuple[List[DownloadTask], int]:
+    """
+    Plan downloads for static sources (archive-based).
+
+    Static sources have archives in subfolders[].downloads instead of individual files.
+    Each subfolder represents a game/setlist that can be toggled independently.
+
+    Args:
+        folder: Folder dict from manifest with subfolders containing downloads
+        local_base: Base path for local files
+        sync_state: SyncState instance for checking sync status
+        disabled_subfolders: List of subfolder names to skip
+        folder_name: Name of the folder (for building rel_path)
+
+    Returns:
+        Tuple of (tasks_to_download, skipped_count)
+    """
+    disabled = set(disabled_subfolders or [])
+    tasks = []
+    skipped = 0
+
+    for subfolder in folder.get("subfolders", []):
+        name = subfolder.get("name", "")
+
+        # Skip disabled subfolders
+        if name in disabled:
+            skipped += len(subfolder.get("downloads", []))
+            continue
+
+        for dl in subfolder.get("downloads", []):
+            archive_name = dl.get("name", "")
+            archive_md5 = dl.get("md5", "")
+            archive_size = dl.get("size", 0)
+            archive_id = dl.get("id", "")
+
+            # Build rel_path for sync state tracking
+            # e.g., Guitar Hero/(2005) Guitar Hero/Guitar Hero.7z
+            rel_path = f"{folder_name}/{name}/{archive_name}" if folder_name else f"{name}/{archive_name}"
+
+            # Check if already synced via archive MD5
+            if sync_state and sync_state.is_archive_synced(rel_path, archive_md5):
+                # Verify extracted files still exist
+                archive_files = sync_state.get_archive_files(rel_path)
+                missing = sync_state.check_files_exist(archive_files)
+                if len(missing) == 0:
+                    skipped += 1
+                    continue
+
+            # Build download path
+            download_path = local_base / name / f"_download_{archive_name}"
+
+            tasks.append(DownloadTask(
+                file_id=archive_id,
+                local_path=download_path,
+                size=archive_size,
+                md5=archive_md5,
+                is_archive=True,
+                rel_path=rel_path,
+            ))
+
+    return tasks, skipped

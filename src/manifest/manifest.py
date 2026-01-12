@@ -112,7 +112,7 @@ class Manifest:
     - shortcut_folders: Dict tracking external shortcuts for incremental updates
     """
 
-    VERSION = "2.0.0"
+    VERSION = "3.0.0"
 
     def __init__(self, path: Optional[Path] = None):
         """

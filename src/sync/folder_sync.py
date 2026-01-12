@@ -13,12 +13,12 @@ from ..core.formatting import dedupe_files_by_newest
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
 from .cache import clear_cache, clear_folder_cache
-from .download_planner import plan_downloads
+from .download_planner import plan_downloads, plan_static_downloads
 from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
 from .state import SyncState
 from .extractor import find_extra_files, delete_extra_files
-from .utils import get_sync_folder_name
+from .utils import get_sync_folder_name, is_static_source
 
 
 class FolderSync:
@@ -63,11 +63,22 @@ class FolderSync:
         scan_start = time.time()
         disabled_prefixes = disabled_prefixes or []
         filtered_count = 0
+        long_paths = []
 
-        # Use manifest files if available (official folders)
-        manifest_files = folder.get("files")
+        # Static sources: download archives from subfolders[].downloads
+        if is_static_source(folder):
+            tasks, skipped = plan_static_downloads(
+                folder, folder_path,
+                sync_state=self.sync_state,
+                disabled_subfolders=disabled_prefixes,
+                folder_name=folder_name
+            )
+            # Count filtered subfolders
+            if disabled_prefixes:
+                filtered_count = len(disabled_prefixes)
 
-        if manifest_files:
+        # Dynamic sources: download individual files from manifest
+        elif (manifest_files := folder.get("files")):
             # Filter out files in disabled subfolders
             if disabled_prefixes:
                 original_count = len(manifest_files)
@@ -146,19 +157,17 @@ class FolderSync:
 
     def _handle_extra_files(self, folder: dict, folder_path: Path):
         """Check for and handle extra files not part of the setlist."""
-        folder_name = get_sync_folder_name(folder)
-
-        # Get tracked files for this folder from sync_state
-        tracked_files = set()
-        for path in self.sync_state.get_all_files():
-            # Only include files under this folder
-            if path.startswith(folder_name + "/"):
-                # Convert to path relative to folder_path
-                rel_path = path[len(folder_name) + 1:]
-                tracked_files.add(rel_path)
-
-        if not tracked_files:
+        # Use manifest files as source of truth (not sync_state)
+        manifest_files = folder.get("files", [])
+        if not manifest_files:
             return
+
+        # Build set of expected relative paths from manifest
+        tracked_files = set()
+        for f in manifest_files:
+            path = f.get("path", "") if isinstance(f, dict) else f
+            if path:
+                tracked_files.add(path)
 
         # Find extra files
         extra_files, _ = find_extra_files(folder_path, tracked_files, folder_path)

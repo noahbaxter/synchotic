@@ -7,14 +7,13 @@ Handles file downloading, sync logic, and progress tracking.
 from ..core.progress import ProgressTracker  # Re-export from core for backwards compat
 from .cache import clear_cache, clear_folder_cache, FolderStats, FolderStatsCache
 from .status import SyncStatus, get_sync_status, get_setlist_sync_status
-from .download_planner import DownloadTask, plan_downloads
+from .download_planner import DownloadTask, plan_downloads, plan_static_downloads
 from .purge_planner import PurgeStats, count_purgeable_files, count_purgeable_detailed
 from .purger import delete_files
 from .folder_sync import FolderSync, purge_all_folders
-from .utils import get_sync_folder_name
+from .utils import get_sync_folder_name, is_static_source
 from .downloader import FileDownloader, DownloadResult
 from .state import SyncState
-from .existing_scanner import scan_existing_archives, collect_archives_from_sources
 from .extractor import is_system_junk, scan_extracted_files, find_extra_files, delete_extra_files
 
 # Backwards compatibility aliases
@@ -36,6 +35,7 @@ __all__ = [
     # Download planning
     "DownloadTask",
     "plan_downloads",
+    "plan_static_downloads",
     # Purge planning
     "PurgeStats",
     "count_purgeable_files",
@@ -46,14 +46,13 @@ __all__ = [
     "FolderSync",
     "purge_all_folders",
     "get_sync_folder_name",
+    "is_static_source",
     # Downloader
     "FileDownloader",
     "DownloadResult",
     # Sync state
     "SyncState",
-    # Existing content scanner
-    "scan_existing_archives",
-    "collect_archives_from_sources",
+    # Extractor
     "is_system_junk",
     "scan_extracted_files",
     "find_extra_files",

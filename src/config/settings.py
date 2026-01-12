@@ -31,6 +31,8 @@ class UserSettings:
         self.subfolder_toggles: dict[str, dict[str, bool]] = {}
         # Group expanded state: { group_name: expanded_bool }
         self.group_expanded: dict[str, bool] = {}
+        # Collection expanded state: { "group:collection": expanded_bool }
+        self.collection_expanded: dict[str, bool] = {}
         # Whether to delete video files from extracted archive charts
         self.delete_videos: bool = True
         # Whether to keep static sources clean (delete extra files) or allow dirty (warn only)
@@ -55,6 +57,7 @@ class UserSettings:
                 settings.drive_toggles = data.get("drive_toggles", {})
                 settings.subfolder_toggles = data.get("subfolder_toggles", {})
                 settings.group_expanded = data.get("group_expanded", {})
+                settings.collection_expanded = data.get("collection_expanded", {})
                 settings.delete_videos = data.get("delete_videos", True)
                 settings.clean_sync = data.get("clean_sync", True)
                 settings.oauth_prompted = data.get("oauth_prompted", False)
@@ -73,6 +76,7 @@ class UserSettings:
             "drive_toggles": self.drive_toggles,
             "subfolder_toggles": self.subfolder_toggles,
             "group_expanded": self.group_expanded,
+            "collection_expanded": self.collection_expanded,
             "delete_videos": self.delete_videos,
             "clean_sync": self.clean_sync,
             "oauth_prompted": self.oauth_prompted,
@@ -163,4 +167,16 @@ class UserSettings:
         """Toggle a group's expanded state. Returns the new state."""
         current = self.is_group_expanded(group_name)
         self.group_expanded[group_name] = not current
+        return not current
+
+    def is_collection_expanded(self, group_name: str, collection_name: str) -> bool:
+        """Check if a collection is expanded (defaults to expanded)."""
+        key = f"{group_name}:{collection_name}"
+        return self.collection_expanded.get(key, True)
+
+    def toggle_collection_expanded(self, group_name: str, collection_name: str) -> bool:
+        """Toggle a collection's expanded state. Returns the new state."""
+        key = f"{group_name}:{collection_name}"
+        current = self.is_collection_expanded(group_name, collection_name)
+        self.collection_expanded[key] = not current
         return not current

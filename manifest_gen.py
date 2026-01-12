@@ -43,13 +43,17 @@ STATIC_SOURCES_DIR = Path(__file__).parent / "static_sources"
 def load_static_sources() -> list[FolderEntry]:
     """Load pre-computed static sources from static_sources/ directory.
 
-    Each JSON file is a complete FolderEntry with group/collection metadata.
+    Groups static sources by collection (like dynamic folders have subfolders).
     Directory structure: static_sources/{collection}/{setlist}.json
+
+    Returns one FolderEntry per collection with sources as subfolders.
     """
     if not STATIC_SOURCES_DIR.exists():
         return []
 
-    folder_entries = []
+    # Group sources by collection
+    # Key: (group, collection), Value: list of source data dicts
+    collections: dict[tuple[str, str], list[dict]] = {}
 
     for json_file in sorted(STATIC_SOURCES_DIR.rglob("*.json")):
         try:
@@ -59,22 +63,61 @@ def load_static_sources() -> list[FolderEntry]:
             # Use explicit group/collection, fallback to parent folder name
             collection = data.get("collection", json_file.parent.name)
             group = data.get("group", "")
+            key = (group, collection)
 
-            folder = FolderEntry(
-                name=data["name"],
-                folder_id=data.get("folder_id", f"static-{json_file.stem}"),
-                description=data.get("description", ""),
-                group=group,
-                collection=collection,
-                chart_count=data.get("chart_count", 0),
-                total_size=data.get("total_size", 0),
-                file_count=data.get("file_count", len(data.get("files", []))),
-                files=data.get("files", []),
-                complete=True,
-            )
-            folder_entries.append(folder)
+            if key not in collections:
+                collections[key] = []
+            collections[key].append(data)
         except Exception as e:
             print(f"Warning: Failed to load {json_file}: {e}")
+
+    # Create one FolderEntry per collection
+    folder_entries = []
+
+    for (group, collection), sources in collections.items():
+        all_files = []
+        subfolders = []
+        total_size = 0
+        total_charts = 0
+
+        for source in sources:
+            source_name = source.get("name", "")
+            source_files = source.get("files", [])
+            source_charts = source.get("chart_count", 0)
+
+            # Sum download sizes (archives to download, not extracted size)
+            source_download_size = sum(d.get("size", 0) for d in source.get("downloads", []))
+
+            # Add files (paths already include source name as first component)
+            all_files.extend(source_files)
+            total_size += source_download_size
+            total_charts += source_charts
+
+            # Create subfolder stats for this source (like setlists in dynamic folders)
+            subfolder_stats = {
+                "name": source_name,
+                "total_size": source_download_size,
+                "charts": {"total": source_charts},
+            }
+            # Include downloads info for the downloader
+            if "downloads" in source:
+                subfolder_stats["downloads"] = source["downloads"]
+            subfolders.append(subfolder_stats)
+
+        folder = FolderEntry(
+            name=collection,
+            folder_id=f"collection:{group}:{collection}",
+            description=f"Static sources for {collection}",
+            group=group,
+            collection=collection,
+            chart_count=total_charts,
+            total_size=total_size,
+            file_count=len(all_files),
+            files=all_files,
+            subfolders=subfolders,
+            complete=True,
+        )
+        folder_entries.append(folder)
 
     return folder_entries
 
@@ -114,6 +157,10 @@ def generate_full(force_rescan: bool = False):
 
     expected_ids = {f["folder_id"] for f in root_folders}
 
+    # Include static source IDs (they're not in sources.json but shouldn't be removed)
+    static_sources = load_static_sources()
+    expected_ids |= {s.folder_id for s in static_sources}
+
     # Initialize
     client_config = DriveClientConfig(api_key=API_KEY)
     client = DriveClient(client_config)
@@ -126,13 +173,13 @@ def generate_full(force_rescan: bool = False):
     else:
         manifest = Manifest.load(MANIFEST_PATH)
 
-        # Remove drives that are no longer in sources.json
+        # Remove drives that are no longer in sources.json or static_sources
         orphaned_ids = manifest.get_folder_ids() - expected_ids
         if orphaned_ids:
             for orphan_id in orphaned_ids:
                 folder = manifest.get_folder(orphan_id)
                 if folder:
-                    print(f"Removing '{folder.name}' (no longer in sources.json)")
+                    print(f"Removing '{folder.name}' (no longer in sources)")
                 manifest.remove_folder(orphan_id)
             manifest.save()
             print()
@@ -611,17 +658,21 @@ def generate_incremental():
     manifest = Manifest.load(MANIFEST_PATH)
 
     # Load drives config and root folders
-    drives_config = DrivesConfig.load(DRIVES_PATH) if DRIVES_PATH.exists() else None
+    drives_config = DrivesConfig.load(SOURCES_PATH) if SOURCES_PATH.exists() else None
     root_folders = load_root_folders()
     expected_ids = {f["folder_id"] for f in root_folders}
 
-    # Remove drives that are no longer in sources.json
+    # Include static source IDs (they're not in sources.json but shouldn't be removed)
+    static_sources = load_static_sources()
+    expected_ids |= {s.folder_id for s in static_sources}
+
+    # Remove drives that are no longer in sources.json or static_sources
     orphaned_ids = manifest.get_folder_ids() - expected_ids
     if orphaned_ids:
         for orphan_id in orphaned_ids:
             folder = manifest.get_folder(orphan_id)
             if folder:
-                print(f"Removing '{folder.name}' (no longer in sources.json)")
+                print(f"Removing '{folder.name}' (no longer in sources)")
             manifest.remove_folder(orphan_id)
         manifest.save()
         print()
@@ -709,8 +760,22 @@ def generate_incremental():
     total_api = client.api_calls
 
     if total_added == 0 and total_modified == 0 and total_removed == 0:
-        print("No changes detected!")
-        manifest.save()
+        print("No changes detected in dynamic sources.")
+
+    # Always add/update static sources (even if no dynamic changes)
+    static_sources = load_static_sources()
+    if static_sources:
+        # Remove old static sources (both old individual format and new collection format)
+        manifest.folders = [f for f in manifest.folders
+                          if not f.folder_id.startswith("static-")
+                          and not f.folder_id.startswith("collection:")]
+        for static_folder in static_sources:
+            manifest.add_folder(static_folder)
+        print(f"Updated {len(static_sources)} static source collection(s)")
+
+    manifest.save()
+
+    if total_added == 0 and total_modified == 0 and total_removed == 0:
         print(f"  Token updated. Total API calls: {total_api}")
         return
 

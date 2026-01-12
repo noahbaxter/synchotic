@@ -102,6 +102,22 @@ class MenuGroupHeader:
 
 
 @dataclass
+class MenuCollectionHeader:
+    """A collapsible collection header (nested under group)."""
+    label: str
+    group_name: str
+    collection_name: str
+    expanded: bool = False
+    value: Any = None
+    drive_count: int = 0
+    enabled_count: int = 0
+
+    def __post_init__(self):
+        if self.value is None:
+            self.value = ("collection", self.group_name, self.collection_name)
+
+
+@dataclass
 class MenuAction(MenuItem):
     """A menu action item (alias for MenuItem)."""
     pass
@@ -204,7 +220,7 @@ class Menu:
         self._scroll_offset = max(0, min(self._scroll_offset, max_scroll))
 
     def _selectable(self) -> list[int]:
-        return [i for i, item in enumerate(self.items) if isinstance(item, (MenuItem, MenuAction, MenuGroupHeader))]
+        return [i for i, item in enumerate(self.items) if isinstance(item, (MenuItem, MenuAction, MenuGroupHeader, MenuCollectionHeader))]
 
     def _width(self) -> int:
         """Return menu width based on terminal size."""
@@ -225,6 +241,19 @@ class Menu:
                 content = f"{Colors.PINK}▸{Colors.RESET} {Colors.MUTED}{indicator}{Colors.RESET} {Colors.HOTKEY}[{label_upper}]{Colors.RESET}{count_str}"
             else:
                 content = f"  {Colors.MUTED}{indicator}{Colors.RESET} {Colors.HOTKEY}[{label_upper}]{Colors.RESET}{count_str}"
+            visible = len(strip_ansi(content))
+            pad = w - 4 - visible
+            print(f"{c}{BOX_V}{Colors.RESET} {content}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
+        elif isinstance(item, MenuCollectionHeader):
+            selected = (orig_idx == self._selected)
+            indicator = "▼" if item.expanded else "▶"
+            count_str = ""
+            if not item.expanded and item.drive_count > 0:
+                count_str = f" {Colors.MUTED}({item.enabled_count}/{item.drive_count}){Colors.RESET}"
+            if selected:
+                content = f"{Colors.PINK}▸{Colors.RESET}   {Colors.MUTED}{indicator}{Colors.RESET} {item.label}{count_str}"
+            else:
+                content = f"    {Colors.MUTED}{indicator}{Colors.RESET} {item.label}{count_str}"
             visible = len(strip_ansi(content))
             pad = w - 4 - visible
             print(f"{c}{BOX_V}{Colors.RESET} {content}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
@@ -427,7 +456,7 @@ class Menu:
 
                 elif key == KEY_LEFT or key == KEY_RIGHT:
                     current_item = self.items[self._selected]
-                    if isinstance(current_item, MenuGroupHeader):
+                    if isinstance(current_item, (MenuGroupHeader, MenuCollectionHeader)):
                         return MenuResult(current_item, "enter")
 
                 elif isinstance(key, str) and len(key) == 1:

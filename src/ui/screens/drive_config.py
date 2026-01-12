@@ -266,16 +266,15 @@ def show_subfolder_settings(
             missing_charts = 0
 
             if drive_enabled:
-                if not setlist_enabled and synced_size > 0:
-                    setlist_purgeable_size = synced_size
-                    # Rough estimate: count files in the folder
-                    if local_folder_path:
-                        setlist_path = local_folder_path / setlist_name
-                        if setlist_path.exists():
-                            try:
-                                setlist_purgeable_files = sum(1 for _ in setlist_path.rglob("*") if _.is_file())
-                            except OSError:
-                                pass
+                if not setlist_enabled and local_folder_path:
+                    # Calculate actual purgeable from disk, not manifest size
+                    setlist_path = local_folder_path / setlist_name
+                    if setlist_path.exists():
+                        setlist_purgeable_size = _get_folder_size(setlist_path)
+                        try:
+                            setlist_purgeable_files = sum(1 for _ in setlist_path.rglob("*") if _.is_file())
+                        except OSError:
+                            pass
 
                 # Calculate missing charts (only if enabled and not fully synced)
                 if setlist_enabled and not is_fully_synced:

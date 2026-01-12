@@ -26,6 +26,7 @@ class MainMenuCache:
     sync_action_desc: str = ""
     folder_stats: dict = field(default_factory=dict)
     group_enabled_counts: dict = field(default_factory=dict)
+    collection_enabled_counts: dict = field(default_factory=dict)  # "group:collection" -> count
 
 
 def _compute_folder_stats(
@@ -201,6 +202,10 @@ def compute_main_menu_cache(
         empty_text="Everything in sync",
     )
 
+    # Build folder lookups
+    folder_by_name = {f.get("name", ""): f for f in folders}
+    folder_by_id = {f.get("folder_id", ""): f for f in folders}
+
     if drives_config:
         for group_name in drives_config.get_groups():
             group_drives = drives_config.get_drives_in_group(group_name)
@@ -209,6 +214,135 @@ def compute_main_menu_cache(
                 if (user_settings.is_drive_enabled(d.folder_id) if user_settings else True)
             )
             cache.group_enabled_counts[group_name] = enabled_count
+
+            # Calculate collection-level stats
+            for collection_name in drives_config.get_collections_in_group(group_name):
+                collection_drives = drives_config.get_drives_in_collection(group_name, collection_name)
+
+                # Check if this collection exists as a grouped folder in manifest
+                # (static sources are now grouped by collection)
+                collection_folder_id = f"collection:{group_name}:{collection_name}"
+                collection_folder = folder_by_id.get(collection_folder_id)
+
+                if collection_folder:
+                    # Collection is a single folder with subfolders (new static source format)
+                    folder_id = collection_folder_id
+                    drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
+
+                    # Get stats from cache or compute
+                    cached_stats = folder_stats_cache.get(folder_id) if folder_stats_cache else None
+                    if cached_stats:
+                        status = cached_stats.sync_status
+                        purge_count = cached_stats.purge_count
+                        purge_charts = cached_stats.purge_charts
+                        purge_size = cached_stats.purge_size
+                    else:
+                        stats = _compute_folder_stats(collection_folder, download_path, user_settings, sync_state)
+                        status = stats.sync_status
+                        purge_count = stats.purge_count
+                        purge_charts = stats.purge_charts
+                        purge_size = stats.purge_size
+                        if folder_stats_cache:
+                            folder_stats_cache.set(folder_id, stats)
+
+                    # Subfolders are the individual sources
+                    setlists = extract_subfolders_from_manifest(collection_folder)
+                    coll_total_setlists = len(setlists) if setlists else 0
+                    coll_enabled_setlists = 0
+                    if setlists and user_settings:
+                        coll_enabled_setlists = sum(
+                            1 for c in setlists
+                            if user_settings.is_subfolder_enabled(folder_id, c)
+                        )
+
+                    collection_display = format_home_item(
+                        enabled_setlists=coll_enabled_setlists,
+                        total_setlists=coll_total_setlists,
+                        total_size=status.total_size if drive_enabled else 0,
+                        synced_size=status.synced_size if drive_enabled else 0,
+                        purgeable_files=purge_count,
+                        purgeable_charts=purge_charts,
+                        purgeable_size=purge_size,
+                        missing_charts=status.missing_charts if drive_enabled else 0,
+                        disabled=not drive_enabled,
+                        delta_mode=delta_mode,
+                    )
+                else:
+                    # Legacy: individual folder per source (dynamic sources)
+                    coll_total_setlists = 0
+                    coll_enabled_setlists = 0
+                    coll_total_size = 0
+                    coll_synced_size = 0
+                    coll_missing_charts = 0
+                    coll_purge_files = 0
+                    coll_purge_charts = 0
+                    coll_purge_size = 0
+                    coll_any_enabled = False
+
+                    for drive in collection_drives:
+                        folder = folder_by_id.get(drive.folder_id) if drive.folder_id else None
+                        if not folder:
+                            folder = folder_by_name.get(drive.name)
+                        if not folder:
+                            continue
+
+                        folder_id = folder.get("folder_id", "")
+                        drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
+                        if drive_enabled:
+                            coll_any_enabled = True
+
+                        cached_stats = folder_stats_cache.get(folder_id) if folder_stats_cache else None
+                        if cached_stats:
+                            status = cached_stats.sync_status
+                            purge_count = cached_stats.purge_count
+                            purge_charts = cached_stats.purge_charts
+                            purge_size = cached_stats.purge_size
+                        else:
+                            stats = _compute_folder_stats(folder, download_path, user_settings, sync_state)
+                            status = stats.sync_status
+                            purge_count = stats.purge_count
+                            purge_charts = stats.purge_charts
+                            purge_size = stats.purge_size
+
+                        # For multi-source collections (single folder each), each is 1 setlist
+                        # For single-source collections, use subfolders as setlists
+                        if len(collection_drives) > 1:
+                            coll_total_setlists += 1
+                            if drive_enabled:
+                                coll_enabled_setlists += 1
+                        else:
+                            setlists = extract_subfolders_from_manifest(folder)
+                            coll_total_setlists += len(setlists) if setlists else 0
+                            if setlists and user_settings:
+                                coll_enabled_setlists += sum(
+                                    1 for c in setlists
+                                    if user_settings.is_subfolder_enabled(folder_id, c)
+                                )
+
+                        if drive_enabled:
+                            coll_total_size += status.total_size
+                            coll_synced_size += status.synced_size
+                            coll_missing_charts += status.missing_charts
+                        coll_purge_files += purge_count
+                        coll_purge_charts += purge_charts
+                        coll_purge_size += purge_size
+
+                    collection_display = format_home_item(
+                        enabled_setlists=coll_enabled_setlists,
+                        total_setlists=coll_total_setlists,
+                        total_size=coll_total_size,
+                        synced_size=coll_synced_size,
+                        purgeable_files=coll_purge_files,
+                        purgeable_charts=coll_purge_charts,
+                        purgeable_size=coll_purge_size,
+                        missing_charts=coll_missing_charts,
+                        disabled=not coll_any_enabled,
+                        delta_mode=delta_mode,
+                    )
+
+                key = f"{group_name}:{collection_name}"
+                cache.folder_stats[key] = collection_display
+                cache.collection_enabled_counts[key] = coll_enabled_setlists
 
     return cache
 
@@ -272,6 +406,8 @@ def show_main_menu(
     menu = Menu(title="Available chart packs:", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit")
 
     folder_lookup = {f.get("folder_id", ""): f for f in folders}
+    # Also index by name for static sources (url/file types don't have folder_id)
+    folder_by_name = {f.get("name", ""): f for f in folders}
 
     grouped_folder_ids = set()
     groups = []
@@ -284,18 +420,19 @@ def show_main_menu(
     added_folders = set()
     hotkey_num = 1
 
-    def add_folder_item(folder: dict, indent: bool = False):
+    def add_folder_item(folder: dict, indent: int = 0):
         nonlocal hotkey_num
         folder_id = folder.get("folder_id", "")
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
         stats = cache.folder_stats.get(folder_id)
 
         hotkey = None
-        if not indent and hotkey_num <= 9:
+        if indent == 0 and hotkey_num <= 9:
             hotkey = str(hotkey_num)
             hotkey_num += 1
 
-        label = f"  {folder['name']}" if indent else folder['name']
+        indent_str = "  " * indent
+        label = f"{indent_str}{folder['name']}"
         menu.add_item(MenuItem(
             label,
             hotkey=hotkey,
@@ -307,12 +444,14 @@ def show_main_menu(
 
     if drives_config:
         for drive in drives_config.get_ungrouped_drives():
-            folder = folder_lookup.get(drive.folder_id)
+            folder = folder_lookup.get(drive.folder_id) if drive.folder_id else None
+            if not folder:
+                folder = folder_by_name.get(drive.name)
             if folder:
                 add_folder_item(folder)
 
     for group_name in groups:
-        expanded = user_settings.is_group_expanded(group_name) if user_settings else False
+        group_expanded = user_settings.is_group_expanded(group_name) if user_settings else False
 
         group_drives = drives_config.get_drives_in_group(group_name) if drives_config else []
         drive_count = len(group_drives)
@@ -321,17 +460,66 @@ def show_main_menu(
         menu.add_item(MenuGroupHeader(
             label=group_name,
             group_name=group_name,
-            expanded=expanded,
+            expanded=group_expanded,
             drive_count=drive_count,
             enabled_count=enabled_count
         ))
 
-        for drive in group_drives:
-            added_folders.add(drive.folder_id)
-            if expanded:
-                folder = folder_lookup.get(drive.folder_id)
-                if folder:
-                    add_folder_item(folder, indent=True)
+        if group_expanded and drives_config:
+            collections = drives_config.get_collections_in_group(group_name)
+            for collection_name in collections:
+                collection_key = f"{group_name}:{collection_name}"
+                stats = cache.folder_stats.get(collection_key, "")
+
+                # Check if this collection has a grouped folder in manifest
+                collection_folder_id = f"collection:{group_name}:{collection_name}"
+                collection_folder = folder_lookup.get(collection_folder_id)
+
+                if collection_folder:
+                    # New format: single folder per collection
+                    collection_enabled = user_settings.is_drive_enabled(collection_folder_id) if user_settings else True
+                    added_folders.add(collection_folder_id)
+                else:
+                    # Legacy: check individual sources
+                    collection_drives = drives_config.get_drives_in_collection(group_name, collection_name)
+
+                    def get_folder_id(d):
+                        if d.folder_id:
+                            return d.folder_id
+                        f = folder_by_name.get(d.name)
+                        return f.get("folder_id", "") if f else ""
+
+                    collection_enabled = any(
+                        user_settings.is_drive_enabled(get_folder_id(d))
+                        for d in collection_drives
+                    ) if user_settings else True
+
+                    for drive in collection_drives:
+                        folder = folder_lookup.get(drive.folder_id) if drive.folder_id else None
+                        if not folder:
+                            folder = folder_by_name.get(drive.name)
+                        if folder:
+                            added_folders.add(folder.get("folder_id", ""))
+
+                menu.add_item(MenuItem(
+                    f"  {collection_name}",
+                    value=("collection", group_name, collection_name),
+                    description=stats,
+                    disabled=not collection_enabled,
+                ))
+        else:
+            # Mark all folders in group as added even when collapsed
+            for collection_name in drives_config.get_collections_in_group(group_name) if drives_config else []:
+                collection_folder_id = f"collection:{group_name}:{collection_name}"
+                if collection_folder_id in folder_lookup:
+                    added_folders.add(collection_folder_id)
+                else:
+                    for drive in drives_config.get_drives_in_collection(group_name, collection_name):
+                        folder = folder_lookup.get(drive.folder_id) if drive.folder_id else None
+                        if not folder:
+                            folder = folder_by_name.get(drive.name)
+                        if folder:
+                            added_folders.add(folder.get("folder_id", ""))
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
@@ -366,6 +554,13 @@ def show_main_menu(
 
     if isinstance(result.value, tuple) and len(result.value) == 2 and result.value[0] == "group":
         return ("toggle_group", result.value[1], menu._selected)
+
+    if isinstance(result.value, tuple) and len(result.value) == 3 and result.value[0] == "collection":
+        group_name, collection_name = result.value[1], result.value[2]
+        if result.action == "space":
+            return ("toggle_collection", (group_name, collection_name), menu._selected)
+        else:
+            return ("configure_collection", (group_name, collection_name), menu._selected)
 
     if isinstance(result.value, str) and not result.value.startswith(("download", "purge", "quit")):
         if result.action == "space":

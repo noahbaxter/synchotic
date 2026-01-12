@@ -383,6 +383,74 @@ class SyncApp:
         self.user_settings.toggle_group_expanded(group_name)
         self.user_settings.save()
 
+    def handle_toggle_collection(self, group_name: str, collection_name: str):
+        """Toggle a collection on/off."""
+        # Check if collection has a single folder in manifest (new static source format)
+        collection_folder_id = f"collection:{group_name}:{collection_name}"
+        folder_lookup = {f.get("folder_id", ""): f for f in self.folders}
+
+        if collection_folder_id in folder_lookup:
+            # New format: single folder per collection
+            current = self.user_settings.is_drive_enabled(collection_folder_id)
+            self.user_settings.set_drive_enabled(collection_folder_id, not current)
+            self.folder_stats_cache.invalidate(collection_folder_id)
+            self.user_settings.save()
+            return
+
+        # Legacy: toggle individual sources in collection
+        if not self.drives_config:
+            return
+
+        collection_drives = self.drives_config.get_drives_in_collection(group_name, collection_name)
+        if not collection_drives:
+            return
+
+        folder_by_name = {f.get("name", ""): f for f in self.folders}
+
+        folder_ids = []
+        for drive in collection_drives:
+            if drive.folder_id:
+                folder_ids.append(drive.folder_id)
+            else:
+                folder = folder_by_name.get(drive.name)
+                if folder:
+                    folder_ids.append(folder.get("folder_id", ""))
+
+        if not folder_ids:
+            return
+
+        any_enabled = any(self.user_settings.is_drive_enabled(fid) for fid in folder_ids)
+        new_state = not any_enabled
+        for fid in folder_ids:
+            self.user_settings.set_drive_enabled(fid, new_state)
+            self.folder_stats_cache.invalidate(fid)
+
+        self.user_settings.save()
+
+    def handle_configure_collection(self, group_name: str, collection_name: str):
+        """Show the setlist configuration screen for a collection."""
+        # Try new static source format first: "collection:{group}:{collection}"
+        collection_folder_id = f"collection:{group_name}:{collection_name}"
+        if self._get_folder_by_id(collection_folder_id):
+            self.handle_configure_drive(collection_folder_id)
+            return
+
+        # Fall back to finding the actual drive folder for dynamic sources
+        if self.drives_config:
+            collection_drives = self.drives_config.get_drives_in_collection(group_name, collection_name)
+            if collection_drives:
+                # Single-source collection: use its folder_id
+                drive = collection_drives[0]
+                folder_id = drive.folder_id
+                if not folder_id:
+                    # Try lookup by name
+                    folder_by_name = {f.get("name", ""): f for f in self.folders}
+                    folder = folder_by_name.get(drive.name)
+                    if folder:
+                        folder_id = folder.get("folder_id", "")
+                if folder_id:
+                    self.handle_configure_drive(folder_id)
+
     def handle_signin(self):
         """Handle Google sign-in."""
         display.auth_opening_browser()
@@ -669,6 +737,19 @@ class SyncApp:
                 # Enter/Space on a group - expand/collapse (NO cache invalidation!)
                 self.handle_toggle_group(value)
                 # Keep using the same cache - just showing/hiding items
+
+            elif action == "toggle_collection":
+                # Space on a collection - toggle all sources on/off
+                group_name, collection_name = value
+                self.handle_toggle_collection(group_name, collection_name)
+                menu_cache = None  # Invalidate cache after toggle
+
+            elif action == "configure_collection":
+                # Enter on a collection - show setlist configuration screen
+                group_name, collection_name = value
+                self.handle_configure_collection(group_name, collection_name)
+                # May need to invalidate cache if settings changed
+                menu_cache = None
 
             elif action == "cycle_delta_mode":
                 # Tab - cycle between size/files display mode

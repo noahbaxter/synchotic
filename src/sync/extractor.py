@@ -15,7 +15,7 @@ from ..core.constants import (
     SYSTEM_JUNK_FILES,
     SYSTEM_JUNK_PREFIXES,
 )
-from ..core.formatting import relative_posix
+from ..core.formatting import relative_posix, normalize_fs_name
 
 
 def is_system_junk(filename: str) -> bool:
@@ -268,9 +268,12 @@ def find_extra_files(
             continue
 
         # Check if it's tracked
+        # Normalize to NFC to match sync_state paths (macOS uses NFD, manifest uses NFC)
         try:
             rel_path = relative_posix(f, base_path)
-            if rel_path not in tracked_files:
+            # Normalize each path component to NFC
+            normalized_path = "/".join(normalize_fs_name(part) for part in rel_path.split("/"))
+            if normalized_path not in tracked_files:
                 extra_files.append(f)
         except (ValueError, OSError):
             pass

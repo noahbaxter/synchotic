@@ -2,9 +2,23 @@
 Remote manifest fetching for DM Chart Sync.
 """
 
+import sys
+from pathlib import Path
+
 import requests
 
 from ..core.paths import get_manifest_path
+
+
+def _get_dev_manifest_path() -> Path | None:
+    """Get project root manifest.json for local dev testing."""
+    if getattr(sys, "frozen", False):
+        return None  # Not in dev mode
+    # In dev: check project root (where sync.py lives)
+    dev_path = Path(__file__).parent.parent.parent / "manifest.json"
+    return dev_path if dev_path.exists() else None
+
+
 from ..core.formatting import sanitize_path
 from ..ui.widgets import display
 from .manifest import Manifest
@@ -71,6 +85,13 @@ def fetch_manifest(use_local: bool = False) -> dict:
         raise SystemExit(1)
 
     # Explicitly requested local manifest
+    # In dev mode, prefer project root manifest.json (from manifest_gen.py)
+    dev_path = _get_dev_manifest_path()
+    if dev_path:
+        manifest = Manifest.load(dev_path)
+        return _sanitize_manifest_paths(manifest.to_dict())
+
+    # Fall back to .dm-sync/manifest.json
     if local_path.exists():
         manifest = Manifest.load(local_path)
         return _sanitize_manifest_paths(manifest.to_dict())
