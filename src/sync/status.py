@@ -14,6 +14,7 @@ from ..core.formatting import sanitize_path, dedupe_files_by_newest, normalize_f
 from ..stats import get_best_stats
 from .cache import scan_local_files, scan_actual_charts
 from .state import SyncState
+from .utils import get_sync_folder_name
 
 
 @dataclass
@@ -364,7 +365,7 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
-        folder_name = folder.get("name", "")
+        folder_name = get_sync_folder_name(folder)
         folder_path = base_path / folder_name
         is_custom = folder.get("is_custom", False)
 
@@ -486,7 +487,7 @@ def get_setlist_sync_status(
     """
     status = SyncStatus()
 
-    folder_name = folder.get("name", "")
+    folder_name = get_sync_folder_name(folder)
     folder_path = base_path / folder_name
 
     manifest_files = folder.get("files", [])

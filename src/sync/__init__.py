@@ -11,6 +11,7 @@ from .download_planner import DownloadTask, plan_downloads
 from .purge_planner import PurgeStats, count_purgeable_files, count_purgeable_detailed
 from .purger import delete_files
 from .folder_sync import FolderSync, purge_all_folders
+from .utils import get_sync_folder_name
 from .downloader import FileDownloader, DownloadResult
 from .state import SyncState
 from .existing_scanner import scan_existing_archives, collect_archives_from_sources
@@ -44,6 +45,7 @@ __all__ = [
     # Folder sync
     "FolderSync",
     "purge_all_folders",
+    "get_sync_folder_name",
     # Downloader
     "FileDownloader",
     "DownloadResult",

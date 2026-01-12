@@ -12,6 +12,7 @@ from ..core.constants import VIDEO_EXTENSIONS, CHART_ARCHIVE_EXTENSIONS
 from ..core.formatting import relative_posix, parent_posix, sanitize_path
 from .cache import scan_local_files
 from .state import SyncState
+from .utils import get_sync_folder_name
 
 
 def _is_archive(path: str) -> bool:
@@ -163,7 +164,7 @@ def plan_purge(
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
-        folder_name = folder.get("name", "")
+        folder_name = get_sync_folder_name(folder)
         folder_path = base_path / folder_name
 
         if not folder_path.exists():

@@ -18,6 +18,7 @@ from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
 from .state import SyncState
 from .extractor import find_extra_files, delete_extra_files
+from .utils import get_sync_folder_name
 
 
 class FolderSync:
@@ -57,7 +58,8 @@ class FolderSync:
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
         """
-        folder_path = base_path / folder["name"]
+        folder_name = get_sync_folder_name(folder)
+        folder_path = base_path / folder_name
         scan_start = time.time()
         disabled_prefixes = disabled_prefixes or []
         filtered_count = 0
@@ -81,7 +83,7 @@ class FolderSync:
 
             tasks, skipped, long_paths = plan_downloads(
                 manifest_files, folder_path, self.delete_videos,
-                sync_state=self.sync_state, folder_name=folder["name"]
+                sync_state=self.sync_state, folder_name=folder_name
             )
 
             # Warn about long paths on Windows
@@ -144,7 +146,7 @@ class FolderSync:
 
     def _handle_extra_files(self, folder: dict, folder_path: Path):
         """Check for and handle extra files not part of the setlist."""
-        folder_name = folder.get("name", "")
+        folder_name = get_sync_folder_name(folder)
 
         # Get tracked files for this folder from sync_state
         tracked_files = set()
@@ -279,7 +281,8 @@ def purge_all_folders(
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
-        folder_name = folder.get("name", "")
+        display_name = folder.get("name", "")  # For UI display
+        folder_name = get_sync_folder_name(folder)  # For paths
         folder_path = base_path / folder_name
 
         if not folder_path.exists():
@@ -294,7 +297,7 @@ def purge_all_folders(
                           for f in folder_path.rglob("*") if f.is_file()]
             if local_files:
                 folder_size = sum(size for _, size in local_files)
-                display.purge_drive_disabled(folder_name, len(local_files), folder_size)
+                display.purge_drive_disabled(display_name, len(local_files), folder_size)
 
                 deleted, failed = delete_files(local_files, base_path)
                 total_deleted += deleted
@@ -310,7 +313,7 @@ def purge_all_folders(
             continue
 
         folder_size = sum(size for _, size in files_to_purge)
-        display.purge_folder(folder_name, len(files_to_purge), folder_size)
+        display.purge_folder(display_name, len(files_to_purge), folder_size)
 
         # Show tree structure (abbreviated)
         tree_lines = format_purge_tree(files_to_purge, base_path)
