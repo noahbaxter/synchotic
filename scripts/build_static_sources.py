@@ -282,8 +282,8 @@ def process_source(
 
                 extracted = extract_and_scan(actual_path, sub_extract)
                 for path, size in extracted.items():
-                    full_path = f"{archive_stem}/{path}"
-                    all_extracted[full_path] = size
+                    # Don't add archive_stem prefix - matches old downloader behavior
+                    all_extracted[path] = size
 
                 print(f" -> {len(extracted)} files")
                 actual_path.unlink()
@@ -312,8 +312,10 @@ def process_source(
     else:
         raise ValueError(f"Unknown source type: {source_type}")
 
-    # Build output
-    files_list = [{"path": p, "size": s} for p, s in sorted(all_extracted.items())]
+    # Build output - prefix paths with source name for old sync_state compatibility
+    # Old approach: Rock Band/(2007) Rock Band 1/Song/file.ogg
+    # New approach needs: source name in path so collection + path matches old structure
+    files_list = [{"path": f"{name}/{p}", "size": s} for p, s in sorted(all_extracted.items())]
     stats = count_charts_in_files(files_list)
 
     name_slug = name.lower().replace(" ", "-").replace("(", "").replace(")", "").replace(":", "")
