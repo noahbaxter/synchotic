@@ -202,16 +202,16 @@ class TestGetSyncStatusWithSyncState:
         assert status.synced_charts == 1
         assert status.total_charts == 1
 
-    def test_archive_synced_via_disk_fallback(self, temp_dir):
-        """Archive with chart markers on disk shows synced even without sync_state.
+    def test_archive_not_synced_without_sync_state_partial(self, temp_dir):
+        """Archive NOT tracked in sync_state shows as not synced with incomplete folder.
 
-        This tests the disk fallback: if chart files exist on disk, we don't
-        re-download even if sync_state is missing/corrupted.
+        Smart fallback only considers a folder synced if it has 3+ files including
+        a chart marker. A single file is NOT enough.
         """
         folder_path = temp_dir / "TestDrive" / "Setlist"
         folder_path.mkdir(parents=True)
 
-        # Chart markers exist on disk
+        # Only 1 file on disk - smart fallback requires 3+
         (folder_path / "song.ini").write_text("[song]")
 
         folder = {
@@ -226,10 +226,43 @@ class TestGetSyncStatusWithSyncState:
             ]
         }
 
-        # No sync_state, but files exist on disk
+        # No sync_state - with only 1 file, smart fallback should NOT mark as synced
         status = get_sync_status([folder], temp_dir, None, None)
 
-        # Should show as synced due to disk fallback
+        # Partial folder (< 3 files) is NOT synced
+        assert status.synced_charts == 0
+        assert status.total_charts == 1
+
+    def test_archive_synced_via_smart_fallback(self, temp_dir):
+        """Archive marked as synced via smart fallback when folder is complete.
+
+        If sync_state is lost but the folder has 3+ files including a chart marker,
+        smart fallback considers it synced to avoid unnecessary re-downloads.
+        """
+        folder_path = temp_dir / "TestDrive" / "Setlist"
+        folder_path.mkdir(parents=True)
+
+        # 3+ files with a chart marker = complete extraction
+        (folder_path / "song.ini").write_text("[song]")
+        (folder_path / "notes.mid").write_bytes(b"midi data")
+        (folder_path / "album.png").write_bytes(b"png data")
+
+        folder = {
+            "folder_id": "test123",
+            "name": "TestDrive",
+            "files": [
+                {
+                    "path": "Setlist/pack.7z",
+                    "md5": "test_md5_hash",
+                    "size": 5000
+                }
+            ]
+        }
+
+        # No sync_state - but folder is complete, smart fallback should mark as synced
+        status = get_sync_status([folder], temp_dir, None, None)
+
+        # Complete folder (3+ files with marker) IS synced via fallback
         assert status.synced_charts == 1
         assert status.total_charts == 1
 

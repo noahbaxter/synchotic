@@ -45,17 +45,15 @@ def is_archive_file(filename: str) -> bool:
     return any(filename.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
 
 
-def _has_chart_markers(folder: Path) -> bool:
-    """Check if a folder contains chart marker files (song.ini, notes.mid, etc)."""
-    if not folder.exists() or not folder.is_dir():
+def _check_chart_folder_complete(folder: Path) -> bool:
+    """Check if folder looks like a complete chart extraction."""
+    if not folder.is_dir():
         return False
-    try:
-        for entry in folder.iterdir():
-            if entry.name.lower() in CHART_MARKERS:
-                return True
-    except OSError:
-        pass
-    return False
+    files = list(folder.iterdir())
+    if len(files) < 3:  # marker + audio + notes minimum
+        return False
+    file_names = {f.name.lower() for f in files if f.is_file()}
+    return bool(file_names & CHART_MARKERS)
 
 
 def _check_archive_synced(
@@ -67,11 +65,15 @@ def _check_archive_synced(
     folder_path: Path = None,
 ) -> tuple[bool, int]:
     """
-    Check if an archive is synced using sync_state, with disk fallback.
+    Check if an archive is synced using sync_state, with smart disk fallback.
 
-    First checks sync_state (fast O(1) lookup). If not found there, falls back
-    to checking if the chart folder exists on disk with chart markers. This
-    makes sync resilient to sync_state loss/corruption.
+    Only considers an archive synced if:
+    1. sync_state has the archive with matching MD5 AND extracted files exist, OR
+    2. Fallback: folder looks like a complete chart extraction (3+ files with marker)
+
+    The smart fallback prevents unnecessary re-downloads when sync_state is lost
+    but files actually exist on disk. It requires 3+ files including a chart marker
+    to avoid marking incomplete extractions as synced.
 
     Args:
         sync_state: SyncState instance (can be None)
@@ -79,7 +81,7 @@ def _check_archive_synced(
         checksum_path: Parent path within folder
         archive_name: Archive filename
         manifest_md5: Expected MD5 from manifest
-        folder_path: Base path for disk fallback (optional)
+        folder_path: Base folder path for disk fallback check
 
     Returns:
         Tuple of (is_synced, extracted_size)
@@ -90,7 +92,7 @@ def _check_archive_synced(
     else:
         archive_path = f"{folder_name}/{archive_name}"
 
-    # First check sync_state (fast)
+    # Check sync_state first - this is the authoritative source
     if sync_state and sync_state.is_archive_synced(archive_path, manifest_md5):
         # Verify extracted files still exist on disk
         archive_files = sync_state.get_archive_files(archive_path)
@@ -101,16 +103,14 @@ def _check_archive_synced(
             extracted_size = archive.get("archive_size", 0) if archive else 0
             return True, extracted_size
 
-    # Disk fallback: check if chart folder exists with chart markers
-    # ONLY use fallback if sync_state doesn't track this archive at all.
-    # If sync_state HAS the archive but MD5 doesn't match, that means there's
-    # an UPDATE available - we should NOT skip that download.
-    archive_in_sync_state = sync_state and sync_state.get_archive(archive_path)
-    if not archive_in_sync_state and folder_path:
-        chart_folder = folder_path / checksum_path if checksum_path else folder_path
-        if _has_chart_markers(chart_folder):
-            # Chart exists on disk but not tracked in sync_state
-            # This handles sync_state loss/corruption
+    # Fallback: check if folder looks like a complete extraction
+    if folder_path:
+        # Archives extract to checksum_path folder (parent of archive file)
+        if checksum_path:
+            chart_folder = folder_path / checksum_path
+        else:
+            chart_folder = folder_path
+        if _check_chart_folder_complete(chart_folder):
             return True, 0
 
     return False, 0
@@ -143,12 +143,12 @@ def _is_chart_synced(
         sync_state: SyncState for O(1) lookups
         local_files: Dict of {rel_path: size} from disk scan
         delete_videos: Whether to exclude video files from sync check
-        folder_path: Base path for disk fallback (optional)
+        folder_path: Base folder path for disk fallback check
 
     Returns:
         True if chart is synced, False otherwise
     """
-    # Archive chart - check via sync_state with disk fallback
+    # Archive chart - check via sync_state (with disk fallback)
     if data["archive_name"]:
         is_synced, _ = _check_archive_synced(
             sync_state, folder_name, data["checksum_path"],
@@ -245,7 +245,7 @@ def _count_synced_charts(
     total_size = 0
     synced_size = 0
 
-    for parent, data in chart_folders.items():
+    for _, data in chart_folders.items():
         if not data["is_chart"]:
             continue
 
@@ -254,7 +254,7 @@ def _count_synced_charts(
         if skip_custom:
             continue
 
-        # Archive chart - check sync_state with disk fallback
+        # Archive chart - check sync_state (with disk fallback)
         if data["archive_name"]:
             is_synced, extracted_size = _check_archive_synced(
                 sync_state, folder_name, data["checksum_path"],

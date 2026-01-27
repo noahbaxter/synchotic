@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Optional
 
-from ..core.constants import CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS
+from ..core.constants import CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS, CHART_MARKERS
 from ..core.files import file_exists_with_size
 from ..core.formatting import sanitize_path
 from .state import SyncState
@@ -54,6 +54,17 @@ class DownloadTask:
 def is_archive_file(filename: str) -> bool:
     """Check if a filename is an archive type we handle."""
     return any(filename.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
+
+
+def _check_chart_folder_complete(folder: Path) -> bool:
+    """Check if folder looks like a complete chart extraction."""
+    if not folder.is_dir():
+        return False
+    files = list(folder.iterdir())
+    if len(files) < 3:  # marker + audio + notes minimum
+        return False
+    file_names = {f.name.lower() for f in files if f.is_file()}
+    return bool(file_names & CHART_MARKERS)
 
 
 def plan_downloads(
@@ -126,6 +137,11 @@ def plan_downloads(
                 archive_files = sync_state.get_archive_files(rel_path)
                 missing = sync_state.check_files_exist(archive_files)
                 is_synced = len(missing) == 0
+            if not is_synced:
+                # Fallback: check if extracted folder looks complete
+                chart_folder = local_path.parent  # Archives extract to parent folder
+                if _check_chart_folder_complete(chart_folder):
+                    is_synced = True
         else:
             # For regular files: check sync_state first (tracks actual downloaded size),
             # then fall back to manifest size check
