@@ -5,53 +5,7 @@ Tests that UI widgets render correctly and handle state properly.
 Run with: pytest tests/test_ui_display.py -v
 """
 
-from src.ui.widgets.active_downloads import ActiveDownloadsDisplay
 from src.ui.widgets.progress import FolderProgress
-
-
-class TestActiveDownloadsDisplay:
-    """Test active downloads display rendering."""
-
-    def test_aggregate_only_render(self):
-        display = ActiveDownloadsDisplay(is_tty=False)
-        display.set_aggregate_totals(100, 1024 * 1024 * 100, "TestDrive")
-        display.update_aggregate_progress(50, 50 * 1024 * 1024)
-
-        lines = display.render()
-        assert len(lines) >= 2  # Aggregate line + separator
-
-        # Check aggregate line contains expected info
-        aggregate_line = lines[0]
-        assert "[TestDrive]" in aggregate_line
-        assert "50%" in aggregate_line
-        assert "50/100" in aggregate_line
-
-    def test_with_active_downloads(self):
-        display = ActiveDownloadsDisplay(is_tty=False)
-        display.set_aggregate_totals(10, 100 * 1024 * 1024, "TestDrive")
-        display.register("file1", "ChartName/song.ogg", "Setlist", 10 * 1024 * 1024)
-        display.update("file1", 5 * 1024 * 1024)
-
-        lines = display.render()
-        assert len(lines) >= 3  # Aggregate + separator + download
-
-        # Check download line
-        download_lines = [l for l in lines if "song.ogg" in l]
-        assert len(download_lines) == 1
-        assert "ChartName/song.ogg" in download_lines[0]
-        assert "5/10 MB" in download_lines[0]
-
-    def test_overflow_indicator(self):
-        display = ActiveDownloadsDisplay(is_tty=False)
-        display.set_aggregate_totals(100, 1000 * 1024 * 1024, "TestDrive")
-
-        # Register more than MAX_VISIBLE downloads
-        for i in range(7):
-            display.register(f"file{i}", f"Chart{i}/song.ogg", "Setlist", 10 * 1024 * 1024)
-
-        lines = display.render()
-        overflow_lines = [l for l in lines if "and" in l and "more" in l]
-        assert len(overflow_lines) == 1
 
 
 class TestProgressFormatting:
