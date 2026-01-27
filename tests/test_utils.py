@@ -7,6 +7,7 @@ import pytest
 from src.core.formatting import (
     sanitize_filename,
     sanitize_path,
+    escape_name_slashes,
     normalize_fs_name,
     dedupe_files_by_newest,
     normalize_manifest_files,
@@ -152,6 +153,48 @@ class TestNormalizeFsName:
         assert normalize_fs_name("Pokémon") == "Pokémon"
 
 
+class TestEscapeNameSlashes:
+    """Tests for escape_name_slashes() - escaping literal slashes in Drive names."""
+
+    def test_single_slash_escaped(self):
+        """Single slash becomes double slash."""
+        assert escape_name_slashes("Heart / Mind") == "Heart // Mind"
+
+    def test_multiple_slashes_escaped(self):
+        """Multiple slashes each become double."""
+        assert escape_name_slashes("A/B/C") == "A//B//C"
+
+    def test_no_slash_unchanged(self):
+        """Names without slashes pass through unchanged."""
+        assert escape_name_slashes("Normal Name") == "Normal Name"
+
+    def test_empty_string(self):
+        """Empty string returns empty."""
+        assert escape_name_slashes("") == ""
+
+    def test_consecutive_slashes_escaped(self):
+        """Consecutive slashes each become double (quadruple total)."""
+        assert escape_name_slashes("A//B") == "A////B"
+        assert escape_name_slashes("A///B") == "A//////B"
+
+    def test_consecutive_slashes_become_dashes_after_sanitize(self):
+        """Consecutive slashes in name become consecutive dashes after full flow."""
+        # Folder named "A//B" (two slashes) -> escaped to "A////B" -> sanitized to "A----B"
+        folder_name = "A//B"
+        escaped = escape_name_slashes(folder_name)
+        path = f"Setlist/{escaped}/song.ini"
+        result = sanitize_path(path)
+        assert result == "Setlist/A----B/song.ini"
+
+    def test_integration_with_sanitize_path(self):
+        """Escaped names work correctly when path is built and sanitized."""
+        folder_name = "Heart / Mind"
+        escaped = escape_name_slashes(folder_name)
+        path = f"Setlist/{escaped}/song.ini"
+        result = sanitize_path(path)
+        assert result == "Setlist/Heart -- Mind/song.ini"
+
+
 class TestSanitizePath:
     """Tests for sanitize_path() - sanitizes each path component."""
 
@@ -181,9 +224,9 @@ class TestSanitizePath:
         """
         Folder names with forward slashes (escaped as //) should NOT split.
 
-        Google Drive allows "/" in folder names. When building paths, "//" means
-        a literal "/" in the folder name (like "Heart // Mind"), not two path separators.
-        Current behavior creates nested folders - this test documents the bug.
+        Google Drive allows "/" in folder names. The path builder (scanner.py,
+        changes.py) escapes these as "//" so sanitize_path can distinguish them
+        from path separators and convert them to dashes.
         """
         # "Heart // Mind" is ONE folder name containing slashes
         # Expected: "Setlist/Heart -- Mind/song.ini" (slashes become dashes)

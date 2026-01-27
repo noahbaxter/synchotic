@@ -9,6 +9,7 @@ from dataclasses import dataclass
 
 from .client import DriveClient
 from ..manifest import Manifest, FolderEntry
+from ..core.formatting import escape_name_slashes
 
 
 @dataclass
@@ -205,7 +206,8 @@ class ChangeTracker:
             if not data:
                 return None
 
-            path_parts.insert(0, data.get("name", ""))
+            name = escape_name_slashes(data.get("name", ""))
+            path_parts.insert(0, name)
             parents = data.get("parents", [])
             if not parents:
                 return None

@@ -49,6 +49,19 @@ WINDOWS_RESERVED_NAMES = {
 }
 
 
+def escape_name_slashes(name: str) -> str:
+    """
+    Escape literal "/" in a folder/file name for path building.
+
+    Google Drive allows "/" in names, but we use "/" as path separator.
+    This escapes "/" as "//" so sanitize_path() can distinguish them
+    from real path separators and convert them to dashes.
+
+    Use this when building paths from Drive API item names.
+    """
+    return name.replace("/", "//")
+
+
 def sanitize_filename(filename: str) -> str:
     """
     Sanitize a filename for cross-platform compatibility.
