@@ -194,6 +194,34 @@ class TestSettingsPersistence:
         assert not settings.is_drive_enabled("random_drive")
 
 
+class TestSettingsRegressions:
+    """Regression tests for real bugs."""
+
+    @pytest.fixture
+    def temp_dir(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            yield Path(tmpdir)
+
+    def test_disabled_drive_stays_disabled_after_reload(self, temp_dir):
+        """
+        Regression test: disabled drives must stay disabled after app restart.
+
+        Bug: Users reported Guitar Hero setlists auto-re-enabling on launch.
+        """
+        settings_path = temp_dir / "settings.json"
+
+        # Simulate first session - user disables a drive
+        settings1 = UserSettings.load(settings_path)
+        settings1.set_drive_enabled("guitar_hero_drive_id", False)
+        settings1.save()
+
+        # Simulate app restart - fresh load
+        settings2 = UserSettings.load(settings_path)
+
+        # Drive should still be disabled
+        assert not settings2.is_drive_enabled("guitar_hero_drive_id")
+
+
 class TestGroupExpanded:
     """Tests for group expanded state."""
 
