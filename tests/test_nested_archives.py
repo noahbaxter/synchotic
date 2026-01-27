@@ -17,7 +17,7 @@ from unittest.mock import Mock
 
 import pytest
 
-from src.sync.status import get_sync_status
+from src.sync.status import get_sync_status, get_setlist_sync_status
 from src.sync.state import SyncState
 from src.stats import ManifestOverrides, SetlistOverride, FolderOverride
 from src.stats.local import LocalStatsScanner
@@ -476,6 +476,187 @@ class TestLocalScanPriority:
 
             # Local scan found 3, not override's 50
             assert status.total_charts == 3
+        finally:
+            stats_module.get_overrides = original_get_overrides
+
+
+class TestGetSetlistSyncStatus:
+    """Tests for get_setlist_sync_status guard conditions and edge cases."""
+
+    @pytest.fixture
+    def temp_dir(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            yield Path(tmpdir)
+
+    def test_partial_sync_doesnt_inflate_synced_charts(self, temp_dir):
+        """Partial sync should NOT inflate synced_charts to match total."""
+        # 2 archives in manifest, only 1 synced
+        (temp_dir / "GameRips" / "PackA").mkdir(parents=True)
+        (temp_dir / "GameRips" / "PackA" / "dummy.txt").write_text("x")
+
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        # Only sync ONE of the two archives
+        sync_state.add_archive(
+            "GameRips/PackA/pack1.7z",
+            md5="abc123",
+            archive_size=500000,
+            files={"dummy.txt": 1}
+        )
+
+        folder = {
+            "folder_id": "test_folder",
+            "name": "GameRips",
+            "files": [
+                {"path": "PackA/pack1.7z", "md5": "abc123", "size": 500000},
+                {"path": "PackA/pack2.7z", "md5": "def456", "size": 500000},  # NOT synced
+            ],
+            "subfolders": [
+                {
+                    "name": "PackA",
+                    "charts": {"total": 100},
+                    "total_size": 1000000
+                }
+            ]
+        }
+
+        mock_overrides = ManifestOverrides()
+        mock_overrides.overrides["GameRips"] = FolderOverride(
+            setlists={"PackA": SetlistOverride(chart_count=100)}
+        )
+        mock_overrides._loaded = True
+
+        import src.stats as stats_module
+        original_get_overrides = stats_module.get_overrides
+
+        from src.stats.local import clear_local_stats_cache
+        clear_local_stats_cache()
+
+        try:
+            stats_module.get_overrides = lambda _path=None: mock_overrides
+
+            status = get_setlist_sync_status(
+                folder=folder,
+                setlist_name="PackA",
+                base_path=temp_dir,
+                sync_state=sync_state,
+            )
+
+            # Total should be adjusted to 100 (from override)
+            assert status.total_charts == 100
+            # But synced should stay at 1 (only 1 archive synced, not inflated)
+            assert status.synced_charts == 1
+        finally:
+            stats_module.get_overrides = original_get_overrides
+
+    def test_custom_folder_skips_adjustment(self, temp_dir):
+        """Custom folders should use manifest count, ignoring override."""
+        (temp_dir / "CustomDrive" / "MySetlist").mkdir(parents=True)
+        (temp_dir / "CustomDrive" / "MySetlist" / "dummy.txt").write_text("x")
+
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_archive(
+            "CustomDrive/MySetlist/pack.7z",
+            md5="abc123",
+            archive_size=1000000,
+            files={"dummy.txt": 1}
+        )
+
+        folder = {
+            "folder_id": "test_folder",
+            "name": "CustomDrive",
+            "is_custom": True,  # Custom folder flag
+            "files": [
+                {"path": "MySetlist/pack.7z", "md5": "abc123", "size": 1000000}
+            ],
+            "subfolders": [
+                {
+                    "name": "MySetlist",
+                    "charts": {"total": 50},
+                    "total_size": 1000000
+                }
+            ]
+        }
+
+        mock_overrides = ManifestOverrides()
+        mock_overrides.overrides["CustomDrive"] = FolderOverride(
+            setlists={"MySetlist": SetlistOverride(chart_count=50)}
+        )
+        mock_overrides._loaded = True
+
+        import src.stats as stats_module
+        original_get_overrides = stats_module.get_overrides
+
+        from src.stats.local import clear_local_stats_cache
+        clear_local_stats_cache()
+
+        try:
+            stats_module.get_overrides = lambda _path=None: mock_overrides
+
+            status = get_setlist_sync_status(
+                folder=folder,
+                setlist_name="MySetlist",
+                base_path=temp_dir,
+                sync_state=sync_state,
+            )
+
+            # Should use manifest file count (1), NOT override (50)
+            # because is_custom=True skips the adjustment
+            assert status.total_charts == 1
+            assert status.synced_charts == 1
+        finally:
+            stats_module.get_overrides = original_get_overrides
+
+    def test_no_subfolders_returns_manifest_count(self, temp_dir):
+        """Folder with no subfolders key should use manifest count only."""
+        (temp_dir / "SimpleDrive" / "Setlist").mkdir(parents=True)
+        (temp_dir / "SimpleDrive" / "Setlist" / "dummy.txt").write_text("x")
+
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_archive(
+            "SimpleDrive/Setlist/pack.7z",
+            md5="abc123",
+            archive_size=1000000,
+            files={"dummy.txt": 1}
+        )
+
+        folder = {
+            "folder_id": "test_folder",
+            "name": "SimpleDrive",
+            "files": [
+                {"path": "Setlist/pack.7z", "md5": "abc123", "size": 1000000}
+            ],
+            # No "subfolders" key at all
+        }
+
+        mock_overrides = ManifestOverrides()
+        mock_overrides.overrides["SimpleDrive"] = FolderOverride(
+            setlists={"Setlist": SetlistOverride(chart_count=100)}
+        )
+        mock_overrides._loaded = True
+
+        import src.stats as stats_module
+        original_get_overrides = stats_module.get_overrides
+
+        from src.stats.local import clear_local_stats_cache
+        clear_local_stats_cache()
+
+        try:
+            stats_module.get_overrides = lambda _path=None: mock_overrides
+
+            status = get_setlist_sync_status(
+                folder=folder,
+                setlist_name="Setlist",
+                base_path=temp_dir,
+                sync_state=sync_state,
+            )
+
+            # Should use manifest file count (1), NOT override (100)
+            # because no subfolders means the adjustment guard returns early
+            assert status.total_charts == 1
+            assert status.synced_charts == 1
         finally:
             stats_module.get_overrides = original_get_overrides
 

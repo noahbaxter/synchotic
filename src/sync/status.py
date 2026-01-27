@@ -523,4 +523,27 @@ def get_setlist_sync_status(
     status.total_size = total_size
     status.synced_size = synced_size
 
+    # Adjust for nested archives (1 archive = many charts)
+    # Only adjusts when local scan or override shows more charts than manifest file count
+    subfolders = folder.get("subfolders", [])
+    if subfolders and not folder.get("is_custom", False):
+        sf = next((s for s in subfolders if s.get("name") == setlist_name), None)
+        if sf:
+            sf_manifest_size = sf.get("total_size", 0)
+            # Use manifest file count as fallback, not subfolder metadata
+            # This prevents inflation when local scan fails
+            best_charts, _ = get_best_stats(
+                folder_name=folder_name,
+                setlist_name=setlist_name,
+                manifest_charts=status.total_charts,
+                manifest_size=sf_manifest_size,
+                local_path=folder_path if folder_path.exists() else None,
+            )
+            # If best stats shows more charts, we have nested archives
+            if best_charts > status.total_charts:
+                if status.synced_charts == status.total_charts and status.total_charts > 0:
+                    # All archives synced → all nested charts synced
+                    status.synced_charts = best_charts
+                status.total_charts = best_charts
+
     return status
