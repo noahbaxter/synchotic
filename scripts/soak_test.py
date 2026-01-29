@@ -39,6 +39,7 @@ from src.sync.status import get_setlist_sync_status
 from src.sync.download_planner import plan_downloads
 from src.drive import DriveClient, AuthManager
 from src.drive.client import DriveClientConfig
+from src.core.constants import CHART_MARKERS
 from src.core.formatting import dedupe_files_by_newest
 from src.core.paths import get_token_path
 
@@ -572,8 +573,8 @@ def interactive_select(manifest: dict) -> tuple[str, str]:
     setlists = get_setlists_from_manifest(selected_folder, include_size=True)
 
     print(f"\nSelect setlist in {drive_name}:\n")
-    # Sort by size (smallest first) for easier testing
-    setlists_sorted = sorted(setlists, key=lambda x: x[2])
+    # Sort by name (chronological for year-prefixed names)
+    setlists_sorted = sorted(setlists, key=lambda x: x[0])
     for i, (name, charts, size) in enumerate(setlists_sorted, 1):
         size_mb = size / 1024 / 1024
         print(f"  [{i}] {name} ({charts} charts, {size_mb:.1f} MB)")
@@ -631,7 +632,7 @@ def main():
             sys.exit(1)
         setlists = get_setlists_from_manifest(folder, include_size=True)
         print(f"\nSelect setlist in {args.drive}:\n")
-        setlists_sorted = sorted(setlists, key=lambda x: x[2])
+        setlists_sorted = sorted(setlists, key=lambda x: x[0])
         for i, (name, charts, size) in enumerate(setlists_sorted, 1):
             size_mb = size / 1024 / 1024
             print(f"  [{i}] {name} ({charts} charts, {size_mb:.1f} MB)")

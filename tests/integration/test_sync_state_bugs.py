@@ -148,6 +148,105 @@ class TestDiskFallbackBug:
             "2 files should NOT be considered complete (threshold is 3)"
         )
 
+    def test_chart_in_subfolder_detected_via_fallback(self, temp_dir):
+        """
+        When archive extracts to a subfolder (not directly to parent), fallback
+        should still detect it.
+
+        This is a regression test for the bug where _check_archive_synced only
+        checked the parent folder, not subfolders. Archives like "Song.7z"
+        containing "SomeOtherName/" would extract to Setlist/SomeOtherName/
+        but fallback only checked Setlist/ for markers.
+        """
+        # Archive extracts to a SUBFOLDER (not matching archive name)
+        # Structure: TestDrive/Setlist/ExtractedChart/song.ini
+        chart_folder = temp_dir / "TestDrive" / "Setlist" / "ExtractedChart"
+        chart_folder.mkdir(parents=True)
+        (chart_folder / "song.ini").write_text("[song]\nname = Test")
+        (chart_folder / "notes.mid").write_bytes(b"midi data")
+        (chart_folder / "album.png").write_bytes(b"png data")
+
+        # Empty sync_state (simulating loss/corruption)
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+
+        # Check archive sync status
+        is_synced, _ = _check_archive_synced(
+            sync_state,
+            folder_name="TestDrive",
+            checksum_path="Setlist",
+            archive_name="Song.7z",  # Different from extracted folder name
+            manifest_md5="any_md5",
+            folder_path=temp_dir / "TestDrive",
+        )
+
+        assert is_synced, (
+            "Archive should be detected as synced when chart is in a subfolder"
+        )
+
+    def test_nested_archive_multiple_charts_detected(self, temp_dir):
+        """
+        Nested archives (one archive containing multiple charts) should be
+        detected via subfolder fallback.
+        """
+        # Create multiple chart subfolders (simulating nested archive extraction)
+        setlist_folder = temp_dir / "TestDrive" / "Setlist"
+        setlist_folder.mkdir(parents=True)
+
+        for i in range(3):
+            chart_folder = setlist_folder / f"Chart{i}"
+            chart_folder.mkdir()
+            (chart_folder / "song.ini").write_text(f"[song]\nname = Chart {i}")
+            (chart_folder / "notes.mid").write_bytes(b"midi data")
+            (chart_folder / "album.png").write_bytes(b"png data")
+
+        # Empty sync_state
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+
+        # Check archive sync status
+        is_synced, _ = _check_archive_synced(
+            sync_state,
+            folder_name="TestDrive",
+            checksum_path="Setlist",
+            archive_name="NestedArchive.7z",
+            manifest_md5="any_md5",
+            folder_path=temp_dir / "TestDrive",
+        )
+
+        assert is_synced, (
+            "Nested archive should be detected as synced when charts are in subfolders"
+        )
+
+    def test_deeply_nested_archive_detected(self, temp_dir):
+        """
+        Archives with deep folder structure should be detected at any depth.
+        """
+        # Create deeply nested chart (3+ levels)
+        chart_folder = temp_dir / "TestDrive" / "Setlist" / "Category" / "Subcategory" / "SongName"
+        chart_folder.mkdir(parents=True)
+        (chart_folder / "song.ini").write_text("[song]\nname = Deep Chart")
+        (chart_folder / "notes.mid").write_bytes(b"midi data")
+        (chart_folder / "album.png").write_bytes(b"png data")
+
+        # Empty sync_state
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+
+        # Check archive sync status
+        is_synced, _ = _check_archive_synced(
+            sync_state,
+            folder_name="TestDrive",
+            checksum_path="Setlist",
+            archive_name="GameRip.7z",
+            manifest_md5="any_md5",
+            folder_path=temp_dir / "TestDrive",
+        )
+
+        assert is_synced, (
+            "Deeply nested archive (3+ levels) should be detected as synced"
+        )
+
     def test_status_and_planner_agree_without_sync_state_partial(self, temp_dir):
         """
         Status and planner must agree when sync_state is empty and folder is partial.

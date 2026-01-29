@@ -140,8 +140,21 @@ def plan_downloads(
             if not is_synced:
                 # Fallback: check if extracted folder looks complete
                 chart_folder = local_path.parent  # Archives extract to parent folder
+
+                # First check if folder itself is a chart
                 if _check_chart_folder_complete(chart_folder):
                     is_synced = True
+                # Search recursively for any chart folder (handles nested archives at any depth)
+                elif chart_folder.is_dir():
+                    try:
+                        markers_lower = {m.lower() for m in CHART_MARKERS}
+                        for item in chart_folder.rglob("*"):
+                            if item.is_file() and item.name.lower() in markers_lower:
+                                if _check_chart_folder_complete(item.parent):
+                                    is_synced = True
+                                    break
+                    except OSError:
+                        pass
         else:
             # For regular files: check sync_state first (tracks actual downloaded size),
             # then fall back to manifest size check

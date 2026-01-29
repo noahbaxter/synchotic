@@ -110,8 +110,22 @@ def _check_archive_synced(
             chart_folder = folder_path / checksum_path
         else:
             chart_folder = folder_path
+
+        # First check if folder itself is a chart
         if _check_chart_folder_complete(chart_folder):
             return True, 0
+
+        # Search recursively for any chart folder (handles nested archives at any depth)
+        if chart_folder.is_dir():
+            try:
+                markers_lower = {m.lower() for m in CHART_MARKERS}
+                for item in chart_folder.rglob("*"):
+                    if item.is_file() and item.name.lower() in markers_lower:
+                        # Found a chart marker - check if parent folder is complete
+                        if _check_chart_folder_complete(item.parent):
+                            return True, 0
+            except OSError:
+                pass
 
     return False, 0
 
