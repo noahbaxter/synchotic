@@ -164,8 +164,8 @@ def plan_downloads(
             # then fall back to manifest size check
             is_synced = False
             if sync_state and sync_state.is_file_synced(rel_path, file_size):
-                # Sync state matches manifest - verify file still exists
-                is_synced = local_path.exists()
+                # Sync state matches manifest - verify file still exists with correct size
+                is_synced = file_exists_with_size(local_path, file_size)
             elif sync_state:
                 # Check if file is tracked with different size (manifest may be stale)
                 tracked = sync_state._files.get(rel_path)
