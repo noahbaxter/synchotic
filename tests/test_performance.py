@@ -12,11 +12,6 @@ from src.sync import count_purgeable_files, clear_cache
 from src.sync.cache import scan_local_files
 from src.sync.state import SyncState
 
-# Backwards compat
-_scan_local_files = scan_local_files
-clear_scan_cache = clear_cache
-
-
 class TestScanPerformance:
     """Tests that scanning operations are fast enough."""
 
@@ -42,29 +37,29 @@ class TestScanPerformance:
 
             yield base, folder_path
 
-    def test_scan_local_files_is_cached(self, large_folder):
+    def testscan_local_files_is_cached(self, large_folder):
         """Second scan should be instant due to caching."""
         _, folder_path = large_folder
-        clear_scan_cache()
+        clear_cache()
 
         # First scan - populates cache
-        result1 = _scan_local_files(folder_path)
+        result1 = scan_local_files(folder_path)
 
         # Second scan - should hit cache
         start = time.time()
-        result2 = _scan_local_files(folder_path)
+        result2 = scan_local_files(folder_path)
         second_time = time.time() - start
 
         assert result1 == result2
         assert second_time < 0.01, f"Cached scan took {second_time:.3f}s, should be <0.01s"
 
-    def test_scan_local_files_reasonable_time(self, large_folder):
+    def testscan_local_files_reasonable_time(self, large_folder):
         """Initial scan of 2500 files should complete in <2 seconds."""
         _, folder_path = large_folder
-        clear_scan_cache()
+        clear_cache()
 
         start = time.time()
-        result = _scan_local_files(folder_path)
+        result = scan_local_files(folder_path)
         elapsed = time.time() - start
 
         assert len(result) == 2500, f"Expected 2500 files, got {len(result)}"
@@ -84,23 +79,23 @@ class TestCacheInvalidation:
             yield folder_path
 
     def test_clear_cache_forces_rescan(self, temp_folder):
-        """After clear_scan_cache(), next scan should see new files."""
-        clear_scan_cache()
+        """After clear_cache(), next scan should see new files."""
+        clear_cache()
 
         # Initial scan
-        result1 = _scan_local_files(temp_folder)
+        result1 = scan_local_files(temp_folder)
         assert len(result1) == 1
 
         # Add a file
         (temp_folder / "file2.txt").write_text("more content")
 
         # Without clearing, cache returns stale data
-        result2 = _scan_local_files(temp_folder)
+        result2 = scan_local_files(temp_folder)
         assert len(result2) == 1, "Cache should return stale data"
 
         # After clearing, should see new file
-        clear_scan_cache()
-        result3 = _scan_local_files(temp_folder)
+        clear_cache()
+        result3 = scan_local_files(temp_folder)
         assert len(result3) == 2, "After clear, should see new file"
 
 
@@ -128,13 +123,13 @@ class TestCountPurgeableUsesCache:
             yield base, folder
 
     def test_count_purgeable_reuses_cache(self, folder_with_manifest):
-        """count_purgeable_files should reuse _scan_local_files cache."""
+        """count_purgeable_files should reuse scan_local_files cache."""
         base, folder = folder_with_manifest
         folder_path = base / "TestDrive"
-        clear_scan_cache()
+        clear_cache()
 
         # Pre-populate cache
-        cached_files = _scan_local_files(folder_path)
+        cached_files = scan_local_files(folder_path)
         assert len(cached_files) == 2, "Should have scanned 2 files"
 
         # Set up sync_state tracking expected.txt
@@ -155,7 +150,7 @@ class TestCountPurgeableUsesCache:
     def test_count_purgeable_correct_without_cache(self, folder_with_manifest):
         """count_purgeable_files should produce correct results even without pre-populated cache."""
         base, folder = folder_with_manifest
-        clear_scan_cache()
+        clear_cache()
 
         # Set up sync_state tracking expected.txt
         sync_state = SyncState(base)
@@ -187,7 +182,7 @@ class TestSetlistFiltering:
         settings = UserSettings.load(tmp_path / "settings.json")
         settings.set_drive_enabled("test", False)
 
-        clear_scan_cache()
+        clear_cache()
         status = get_sync_status([manifest], tmp_path, settings, None)
         assert status.total_charts == 0
 
@@ -214,7 +209,7 @@ class TestSetlistFiltering:
         settings.set_drive_enabled("test", True)
         settings.set_subfolder_enabled("test", "Setlist_B", False)
 
-        clear_scan_cache()
+        clear_cache()
         status = get_sync_status([manifest], tmp_path, settings, None)
         assert status.total_charts == 2  # Only Setlist_A
 

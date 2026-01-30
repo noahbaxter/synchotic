@@ -15,7 +15,6 @@ from src.sync.markers import (
     save_marker,
     verify_marker,
     delete_marker,
-    find_markers_for_archive,
     is_migration_done,
     mark_migration_done,
     migrate_sync_state_to_markers,
@@ -208,35 +207,6 @@ class TestMarkerDeletion:
         """delete_marker returns False for non-existent marker."""
         result = delete_marker("DoesNotExist/pack.7z", "xyz")
         assert result is False
-
-
-class TestFindMarkers:
-    """Tests for find_markers_for_archive()."""
-
-    @pytest.fixture
-    def temp_dir(self, monkeypatch):
-        with tempfile.TemporaryDirectory() as tmpdir:
-            markers_dir = Path(tmpdir) / ".dm-sync" / "markers"
-            markers_dir.mkdir(parents=True)
-            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
-            yield Path(tmpdir)
-
-    def test_finds_markers_for_archive(self, temp_dir):
-        """find_markers_for_archive finds all markers for an archive path."""
-        # Create markers with different MD5s (simulates archive updates)
-        save_marker("TestDrive/pack.7z", "version1", {"file.txt": 10})
-        save_marker("TestDrive/pack.7z", "version2", {"file.txt": 20})
-
-        markers = find_markers_for_archive("TestDrive/pack.7z")
-        assert len(markers) == 2
-
-    def test_does_not_find_other_archives(self, temp_dir):
-        """find_markers_for_archive doesn't return markers for other archives."""
-        save_marker("TestDrive/pack.7z", "abc", {"file.txt": 10})
-        save_marker("TestDrive/other.7z", "xyz", {"file.txt": 10})
-
-        markers = find_markers_for_archive("TestDrive/pack.7z")
-        assert len(markers) == 1
 
 
 class TestMigration:

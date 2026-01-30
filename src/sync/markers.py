@@ -153,25 +153,6 @@ def delete_marker(archive_path: str, md5: str) -> bool:
     return False
 
 
-def find_markers_for_archive(archive_path: str) -> list[Path]:
-    """
-    Find all marker files for an archive path (any MD5 version).
-
-    Useful for cleaning up old markers when archive is updated.
-
-    Returns:
-        List of marker file paths
-    """
-    markers_dir = get_markers_dir()
-    if not markers_dir.exists():
-        return []
-
-    safe_name = archive_path.replace("/", "_").replace("\\", "_")
-    prefix = f"{safe_name}_"
-
-    return [p for p in markers_dir.glob(f"{prefix}*.json")]
-
-
 def is_migration_done() -> bool:
     """Check if sync_state → marker migration has been completed."""
     return (get_markers_dir() / ".migrated").exists()
@@ -269,31 +250,3 @@ def migrate_sync_state_to_markers(
     mark_migration_done()
     return migrated, skipped
 
-
-def cleanup_orphaned_markers(valid_archive_paths: set) -> int:
-    """
-    Delete marker files for archives no longer in manifest.
-
-    Args:
-        valid_archive_paths: Set of archive paths that should have markers
-
-    Returns:
-        Number of markers deleted
-    """
-    markers_dir = get_markers_dir()
-    if not markers_dir.exists():
-        return 0
-
-    deleted = 0
-    for marker_file in markers_dir.glob("*.json"):
-        try:
-            with open(marker_file) as f:
-                marker = json.load(f)
-            archive_path = marker.get("archive_path", "")
-            if archive_path and archive_path not in valid_archive_paths:
-                marker_file.unlink()
-                deleted += 1
-        except (json.JSONDecodeError, IOError, OSError):
-            pass
-
-    return deleted

@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Optional
 
-from ..core.constants import CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS
+from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path
 from .state import SyncState
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
