@@ -229,6 +229,12 @@ class SyncApp:
 
         This ensures local state matches the manifest exactly.
         """
+        # Clean up stale sync_state entries (case mismatches, outdated MD5s)
+        manifest_archives = self._build_manifest_archives()
+        stale = self.sync_state.cleanup_stale_archives(manifest_archives)
+        if stale > 0:
+            self.sync_state.save()
+
         indices = list(range(len(self.folders)))
 
         # Filter out disabled drives
@@ -263,6 +269,11 @@ class SyncApp:
             purge_all_folders(self.folders, get_download_path(), self.user_settings, self.sync_state)
             clear_scan_cache()  # Invalidate filesystem cache after purge
             self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
+        else:
+            # Purge didn't run, but still clean orphaned sync_state entries
+            orphaned = self.sync_state.cleanup_orphaned_entries()
+            if orphaned > 0:
+                self.sync_state.save()
 
         # Always wait before returning to menu
         from src.ui.primitives import wait_with_skip
@@ -623,6 +634,25 @@ class SyncApp:
                 result[folder_id] = list(disabled)
 
         return result
+
+    def _build_manifest_archives(self) -> dict[str, str]:
+        """
+        Build dict of {archive_path: md5} from all manifest folders.
+
+        Used for cleaning up stale sync_state entries.
+        """
+        from src.sync.sync_checker import is_archive_file
+
+        archives = {}
+        for folder in self.folders:
+            folder_name = folder.get("name", "")
+            for f in folder.get("files", []):
+                file_path = f.get("path", "")
+                file_name = file_path.split("/")[-1] if "/" in file_path else file_path
+                if is_archive_file(file_name):
+                    full_path = f"{folder_name}/{file_path}"
+                    archives[full_path] = f.get("md5", "")
+        return archives
 
     def run(self):
         """Main application loop."""

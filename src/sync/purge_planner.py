@@ -107,21 +107,23 @@ def find_extra_files(
     if not local_files:
         return []
 
-    # Get all tracked files from sync_state
+    # Get all tracked files from sync_state (lowercase for case-insensitive matching)
     tracked_files = sync_state.get_all_files() if sync_state else set()
+    tracked_lower = {p.lower() for p in tracked_files}
+    manifest_lower = {p.lower() for p in manifest_paths}
 
     # Find extras - files on disk not in sync_state AND not in manifest
     extras = []
     for rel_path, size in local_files.items():
         # Build the full path (folder_name/rel_path)
-        full_path = f"{folder_name}/{rel_path}"
+        full_path = f"{folder_name}/{rel_path}".lower()
 
         # Check sync_state first
-        if full_path in tracked_files:
+        if full_path in tracked_lower:
             continue
 
         # Check manifest (disk path should match sanitized manifest path)
-        if full_path in manifest_paths:
+        if full_path in manifest_lower:
             continue
 
         extras.append((folder_path / rel_path, size))

@@ -366,3 +366,51 @@ class SyncState:
         if removed > 0:
             self._rebuild_cache()
         return removed
+
+    def cleanup_stale_archives(self, manifest_archives: dict) -> int:
+        """
+        Remove sync_state archive entries that don't match the manifest.
+
+        This catches:
+        - Case mismatches (e.g., "And" vs "and" on case-insensitive filesystems)
+        - Outdated MD5s from updated files on Drive
+
+        Args:
+            manifest_archives: Dict of {archive_path: md5} from manifest
+                               Paths should include folder name (e.g., "Misc/Setlist/file.rar")
+
+        Returns:
+            Number of stale archives removed
+        """
+        if not self._archives:
+            return 0
+
+        # Build case-insensitive lookup of valid manifest paths
+        manifest_lower = {path.lower(): (path, md5) for path, md5 in manifest_archives.items()}
+
+        # Find archives to remove
+        stale = []
+        for archive_path, archive_data in self._archives.items():
+            archive_md5 = archive_data.get("md5", "")
+            path_lower = archive_path.lower()
+
+            # Check if path exists in manifest (case-insensitive)
+            if path_lower in manifest_lower:
+                manifest_path, manifest_md5 = manifest_lower[path_lower]
+                # Case mismatch - path differs only by case
+                if archive_path != manifest_path:
+                    stale.append(archive_path)
+                # MD5 mismatch - archive was updated on Drive
+                elif archive_md5 != manifest_md5:
+                    stale.append(archive_path)
+            # Path not in manifest at all (maybe folder was removed)
+            # Don't remove these - might be from custom folders or disabled drives
+
+        # Remove stale archives
+        for path in stale:
+            self._remove_path(path)
+
+        if stale:
+            self._rebuild_cache()
+
+        return len(stale)

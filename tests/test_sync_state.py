@@ -729,5 +729,113 @@ class TestCleanupOrphanedEntries:
         assert removed == 0  # Can't remove archive children individually
 
 
+class TestCleanupStaleArchives:
+    """Tests for SyncState.cleanup_stale_archives."""
+
+    @pytest.fixture
+    def temp_sync_root(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            yield Path(tmpdir)
+
+    def test_removes_case_mismatch_entries(self, temp_sync_root):
+        """
+        Archives with case mismatches should be removed.
+
+        e.g., sync_state has "Love, Lust, and Liars" but manifest has "Love, Lust, And Liars"
+        """
+        sync_state = SyncState(temp_sync_root)
+        sync_state.load()
+
+        # Add archive with lowercase "and"
+        sync_state.add_archive(
+            "TestDrive/I Prevail - Love, Lust, and Liars/archive.rar",
+            md5="abc123",
+            archive_size=1000,
+            files={"song.ini": 100}
+        )
+
+        # Manifest has uppercase "And"
+        manifest_archives = {
+            "TestDrive/I Prevail - Love, Lust, And Liars/archive.rar": "abc123"
+        }
+
+        removed = sync_state.cleanup_stale_archives(manifest_archives)
+
+        assert removed == 1
+        assert len(sync_state._archives) == 0
+
+    def test_removes_md5_mismatch_entries(self, temp_sync_root):
+        """
+        Archives with outdated MD5s should be removed.
+        """
+        sync_state = SyncState(temp_sync_root)
+        sync_state.load()
+
+        # Add archive with old MD5
+        sync_state.add_archive(
+            "TestDrive/Setlist/archive.rar",
+            md5="old_md5_hash",
+            archive_size=1000,
+            files={"song.ini": 100}
+        )
+
+        # Manifest has new MD5 (file was updated on Drive)
+        manifest_archives = {
+            "TestDrive/Setlist/archive.rar": "new_md5_hash"
+        }
+
+        removed = sync_state.cleanup_stale_archives(manifest_archives)
+
+        assert removed == 1
+        assert len(sync_state._archives) == 0
+
+    def test_keeps_matching_entries(self, temp_sync_root):
+        """
+        Archives that match manifest exactly should be kept.
+        """
+        sync_state = SyncState(temp_sync_root)
+        sync_state.load()
+
+        sync_state.add_archive(
+            "TestDrive/Setlist/archive.rar",
+            md5="correct_md5",
+            archive_size=1000,
+            files={"song.ini": 100}
+        )
+
+        manifest_archives = {
+            "TestDrive/Setlist/archive.rar": "correct_md5"
+        }
+
+        removed = sync_state.cleanup_stale_archives(manifest_archives)
+
+        assert removed == 0
+        assert len(sync_state._archives) == 1
+
+    def test_keeps_entries_not_in_manifest(self, temp_sync_root):
+        """
+        Archives not in manifest should be kept (might be custom folders).
+        """
+        sync_state = SyncState(temp_sync_root)
+        sync_state.load()
+
+        sync_state.add_archive(
+            "CustomFolder/archive.rar",
+            md5="custom_md5",
+            archive_size=1000,
+            files={"song.ini": 100}
+        )
+
+        # Manifest doesn't have this archive at all
+        manifest_archives = {
+            "OtherDrive/other.rar": "other_md5"
+        }
+
+        removed = sync_state.cleanup_stale_archives(manifest_archives)
+
+        assert removed == 0
+        assert len(sync_state._archives) == 1
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
