@@ -11,6 +11,7 @@ Usage:
     python scripts/soak_test.py --drive X          # Specific drive
     python scripts/soak_test.py --drive X --setlist Y  # Specific setlist
     python scripts/soak_test.py --keep             # Don't cleanup temp folder after
+    python scripts/soak_test.py --thorough         # Run extended robustness tests
 """
 
 import argparse
@@ -39,7 +40,7 @@ from src.sync.status import get_setlist_sync_status
 from src.sync.download_planner import plan_downloads
 from src.drive import DriveClient, AuthManager
 from src.drive.client import DriveClientConfig
-from src.core.constants import CHART_MARKERS
+from src.core.constants import CHART_MARKERS, CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS
 from src.core.formatting import dedupe_files_by_newest
 from src.core.paths import get_token_path
 
@@ -81,11 +82,13 @@ class ScenarioResult:
 class SoakTest:
     """Integration test runner."""
 
-    def __init__(self, manifest: dict, drive_name: str, setlist_name: str, keep_files: bool = False):
+    def __init__(self, manifest: dict, drive_name: str, setlist_name: str,
+                 keep_files: bool = False, thorough: bool = False):
         self.manifest = manifest
         self.drive_name = drive_name
         self.setlist_name = setlist_name
         self.keep_files = keep_files
+        self.thorough = thorough
 
         # Find the folder
         self.folder = next(
@@ -108,11 +111,60 @@ class SoakTest:
         # Results
         self.results: list[ScenarioResult] = []
 
+        # Analyze setlist characteristics for conditional tests
+        self._has_loose_files = self._check_has_loose_files()
+        self._has_multiple_archives = self._check_has_multiple_archives()
+        self._has_unicode = self._check_has_unicode()
+        self._has_videos = self._check_has_videos()
+
     def _get_setlist_files(self) -> list[dict]:
         """Get files for the selected setlist."""
         all_files = self.folder.get("files", [])
         prefix = self.setlist_name + "/"
         return [f for f in all_files if f.get("path", "").startswith(prefix)]
+
+    def _check_has_loose_files(self) -> bool:
+        """Check if setlist has loose chart files (not in archives)."""
+        markers_lower = {m.lower() for m in CHART_MARKERS}
+        for f in self.files:
+            name = f.get("name", "").lower()
+            if name in markers_lower:
+                return True
+        return False
+
+    def _check_has_multiple_archives(self) -> bool:
+        """Check if setlist has multiple archives."""
+        archive_count = 0
+        for f in self.files:
+            ext = Path(f.get("name", "")).suffix.lower()
+            if ext in CHART_ARCHIVE_EXTENSIONS:
+                archive_count += 1
+                if archive_count > 1:
+                    return True
+        return False
+
+    def _check_has_unicode(self) -> bool:
+        """Check if any file paths contain non-ASCII characters."""
+        for f in self.files:
+            path = f.get("path", "")
+            if not path.isascii():
+                return True
+        return False
+
+    def _check_has_videos(self) -> bool:
+        """Check if setlist has video files (or archives that might contain them)."""
+        # Check if any file is a video
+        for f in self.files:
+            ext = Path(f.get("name", "")).suffix.lower()
+            if ext in VIDEO_EXTENSIONS:
+                return True
+        # For archives, we can't know without extracting, but most setlists have videos
+        # Return True if there are archives (conservative assumption)
+        for f in self.files:
+            ext = Path(f.get("name", "")).suffix.lower()
+            if ext in CHART_ARCHIVE_EXTENSIONS:
+                return True
+        return False
 
     def _create_test_folder(self) -> dict:
         """Create a folder dict with just the selected setlist's files."""
@@ -472,6 +524,208 @@ class SoakTest:
 
         return results
 
+    # --- Extended scenarios (--thorough only) ---
+
+    def scenario_delete_file_redownload(self) -> list[ValidationResult]:
+        """Extended: Delete a chart folder and verify re-download."""
+        print("Deleting a chart folder to test re-download...")
+
+        folder_path = self.base_path / self.drive_name / self.setlist_name
+        results = []
+
+        # Find a chart folder to delete (one with a marker file)
+        chart_folder = None
+        markers_lower = {m.lower() for m in CHART_MARKERS}
+        for item in folder_path.rglob("*"):
+            if item.is_file() and item.name.lower() in markers_lower:
+                chart_folder = item.parent
+                break
+
+        if not chart_folder:
+            return [ValidationResult(
+                name="delete_redownload",
+                passed=False,
+                message="Could not find a chart folder to delete",
+            )]
+
+        deleted_name = chart_folder.name
+        print(f"Deleting chart folder: {deleted_name}")
+        shutil.rmtree(chart_folder)
+
+        # Keep state intact - state-based check should detect missing files
+        sync_state = self._create_sync_state()
+        sync_state.load()
+
+        client_config = DriveClientConfig(api_key=API_KEY)
+        client = DriveClient(client_config)
+        sync = FolderSync(
+            client,
+            auth_token=get_auth_manager().get_token_getter() if get_auth_manager() else None,
+            delete_videos=True,
+            sync_state=sync_state,
+        )
+
+        folder = self._create_test_folder()
+        downloaded, skipped, errors, rate_limited, cancelled, bytes_down = sync.sync_folder(
+            folder, self.base_path, disabled_prefixes=[]
+        )
+
+        print(f"Downloaded: {downloaded}, Skipped: {skipped}")
+
+        # Should have re-downloaded exactly 1 archive (containing the deleted chart)
+        if downloaded >= 1:
+            results.append(ValidationResult(
+                name="delete_redownload",
+                passed=True,
+                message=f"Re-downloaded {downloaded} file(s) after deleting '{deleted_name}'",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="delete_redownload",
+                passed=False,
+                message=f"Expected re-download after deleting '{deleted_name}', got {downloaded}",
+            ))
+
+        # Verify the chart folder is restored
+        if chart_folder.exists():
+            results.append(ValidationResult(
+                name="folder_restored",
+                passed=True,
+                message=f"Chart folder '{deleted_name}' restored",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="folder_restored",
+                passed=False,
+                message=f"Chart folder '{deleted_name}' not restored",
+            ))
+
+        sync_state.save()
+        return results
+
+    def scenario_file_corruption(self) -> list[ValidationResult]:
+        """Extended: Corrupt a file (truncate) and verify re-download."""
+        print("Corrupting a file to test size-based re-download...")
+
+        folder_path = self.base_path / self.drive_name / self.setlist_name
+        results = []
+
+        # Find a chart file to corrupt (a notes file is good - small but important)
+        target_file = None
+        for item in folder_path.rglob("*"):
+            if item.is_file() and item.name.lower() in ("notes.mid", "notes.chart"):
+                target_file = item
+                break
+
+        if not target_file:
+            # Fall back to any file
+            for item in folder_path.rglob("*"):
+                if item.is_file() and item.stat().st_size > 100:
+                    target_file = item
+                    break
+
+        if not target_file:
+            return [ValidationResult(
+                name="corruption_detection",
+                passed=False,
+                message="Could not find a file to corrupt",
+            )]
+
+        original_size = target_file.stat().st_size
+        print(f"Corrupting file: {target_file.name} (original size: {original_size})")
+
+        # Truncate the file
+        with open(target_file, "wb") as f:
+            f.write(b"corrupted")
+
+        # Keep state intact - state-based check should detect wrong file size
+        sync_state = self._create_sync_state()
+        sync_state.load()
+
+        client_config = DriveClientConfig(api_key=API_KEY)
+        client = DriveClient(client_config)
+        sync = FolderSync(
+            client,
+            auth_token=get_auth_manager().get_token_getter() if get_auth_manager() else None,
+            delete_videos=True,
+            sync_state=sync_state,
+        )
+
+        folder = self._create_test_folder()
+        downloaded, skipped, errors, rate_limited, cancelled, bytes_down = sync.sync_folder(
+            folder, self.base_path, disabled_prefixes=[]
+        )
+
+        print(f"Downloaded: {downloaded}, Skipped: {skipped}")
+
+        # Should have re-downloaded at least 1 file
+        if downloaded >= 1:
+            results.append(ValidationResult(
+                name="corruption_detection",
+                passed=True,
+                message=f"Re-downloaded {downloaded} file(s) after corruption",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="corruption_detection",
+                passed=False,
+                message=f"Expected re-download after corruption, got {downloaded}",
+            ))
+
+        # Verify file is restored to proper size
+        new_size = target_file.stat().st_size if target_file.exists() else 0
+        if new_size == original_size:
+            results.append(ValidationResult(
+                name="file_restored",
+                passed=True,
+                message=f"File restored to original size ({original_size} bytes)",
+            ))
+        elif new_size > 9:  # More than "corrupted"
+            results.append(ValidationResult(
+                name="file_restored",
+                passed=True,
+                message=f"File restored (size: {new_size}, original: {original_size})",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="file_restored",
+                passed=False,
+                message=f"File not restored (size: {new_size}, expected: {original_size})",
+            ))
+
+        sync_state.save()
+        return results
+
+    def scenario_video_skipping(self) -> list[ValidationResult]:
+        """Extended: Verify video files are properly skipped/deleted."""
+        print("Checking video file handling...")
+
+        folder_path = self.base_path / self.drive_name / self.setlist_name
+        results = []
+
+        # Count video files on disk
+        video_count = 0
+        video_extensions_lower = {ext.lower() for ext in VIDEO_EXTENSIONS}
+        for item in folder_path.rglob("*"):
+            if item.is_file() and item.suffix.lower() in video_extensions_lower:
+                video_count += 1
+                print(f"  Found video: {item.name}")
+
+        if video_count == 0:
+            results.append(ValidationResult(
+                name="video_skipping",
+                passed=True,
+                message="No video files found on disk (properly deleted/skipped)",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="video_skipping",
+                passed=False,
+                message=f"Found {video_count} video files (should be 0 with delete_videos=True)",
+            ))
+
+        return results
+
     def run_all(self):
         """Run all scenarios."""
         print(f"\nSOAK TEST: {self.drive_name} / {self.setlist_name}")
@@ -482,13 +736,37 @@ class SoakTest:
         # Calculate total size
         total_size = sum(f.get("size", 0) for f in self.files)
         print(f"Total download size: {total_size / 1024 / 1024:.1f} MB")
+
+        if self.thorough:
+            print(f"\nSetlist characteristics:")
+            print(f"  Has loose files: {self._has_loose_files}")
+            print(f"  Has multiple archives: {self._has_multiple_archives}")
+            print(f"  Has unicode paths: {self._has_unicode}")
+            print(f"  Has videos: {self._has_videos}")
         print()
 
         input("Press Enter to start (or Ctrl+C to cancel)...")
 
-        # Run scenarios in order
+        # Run basic scenarios
         self.results.append(self.run_scenario("Fresh Sync", self.scenario_fresh_sync))
         self.results.append(self.run_scenario("Re-sync Idempotent", self.scenario_resync_idempotent))
+
+        # Extended scenarios run here (before state corruption) so state is intact
+        if self.thorough:
+            print(f"\n{'='*60}")
+            print("  EXTENDED TESTS (--thorough)")
+            print(f"{'='*60}")
+
+            self.results.append(self.run_scenario(
+                "Delete File Recovery", self.scenario_delete_file_redownload))
+            self.results.append(self.run_scenario(
+                "Corruption Detection", self.scenario_file_corruption))
+
+            if self._has_videos:
+                self.results.append(self.run_scenario(
+                    "Video Skipping", self.scenario_video_skipping))
+
+        # State corruption tests (these delete state, so run last)
         self.results.append(self.run_scenario("State Corruption Recovery", self.scenario_state_corruption_recovery))
         self.results.append(self.run_scenario("Re-sync After Recovery", self.scenario_resync_after_recovery))
 
@@ -606,6 +884,8 @@ def main():
     parser.add_argument("--drive", help="Drive name to test")
     parser.add_argument("--setlist", help="Setlist name within drive")
     parser.add_argument("--keep", action="store_true", help="Keep temp files after test")
+    parser.add_argument("--thorough", action="store_true",
+                        help="Run extended robustness tests (delete recovery, corruption detection)")
     args = parser.parse_args()
 
     # Fetch manifest
@@ -653,7 +933,8 @@ def main():
 
     # Run test
     try:
-        test = SoakTest(manifest, drive_name, setlist_name, keep_files=args.keep)
+        test = SoakTest(manifest, drive_name, setlist_name,
+                        keep_files=args.keep, thorough=args.thorough)
         test.run_all()
     except KeyboardInterrupt:
         print("\n\nTest interrupted.")
