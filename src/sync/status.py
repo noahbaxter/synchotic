@@ -93,21 +93,27 @@ def _check_archive_synced(
         archive_path = f"{folder_name}/{archive_name}"
 
     # Check sync_state first - this is the authoritative source
-    if sync_state and sync_state.is_archive_synced(archive_path, manifest_md5):
-        # Verify extracted files still exist on disk
-        archive_files = sync_state.get_archive_files(archive_path)
-        missing = sync_state.check_files_exist(archive_files)
-        if len(missing) == 0:
-            # Get size from archive node
-            archive = sync_state.get_archive(archive_path)
-            extracted_size = archive.get("archive_size", 0) if archive else 0
-            return True, extracted_size
+    if sync_state:
+        if sync_state.is_archive_synced(archive_path, manifest_md5):
+            # Verify extracted files still exist on disk
+            archive_files = sync_state.get_archive_files(archive_path)
+            if archive_files:
+                missing = sync_state.check_files_exist(archive_files)
+                if len(missing) == 0:
+                    # Get size from archive node
+                    archive = sync_state.get_archive(archive_path)
+                    extracted_size = archive.get("archive_size", 0) if archive else 0
+                    return True, extracted_size
+                else:
+                    # sync_state has archive but files are missing - stale state
+                    return False, 0
+            # Archive tracked but no files - fall through to disk check
         else:
-            # sync_state has archive but files are missing - this is stale state
-            # Don't trust disk fallback, report as not synced
+            # sync_state exists but archive not tracked - not synced
+            # Don't use disk fallback (it would find OTHER archives' files)
             return False, 0
 
-    # Fallback: only used when sync_state has NO entry (state loss recovery)
+    # Fallback: only used when sync_state is None (true state loss recovery)
     if folder_path:
         # Archives extract to checksum_path folder (parent of archive file)
         if checksum_path:
