@@ -609,6 +609,125 @@ class TestProcessArchiveIntegration:
         assert "song.ini" in local_files, f"Missing song.ini: {list(local_files.keys())}"
         assert "notes.mid" in local_files, f"Missing notes.mid: {list(local_files.keys())}"
 
+    def test_process_archive_creates_album_folder(self, temp_dir):
+        """
+        Archive at artist level should CREATE album folder, not flatten into artist.
+
+        This is the GitHub #16 bug: Archive "Album.zip" at "Artist/Album.zip" containing
+        "Album/[chart files]" should extract to "Artist/Album/[files]", NOT "Artist/[files]".
+
+        The archive is meant to CREATE the album folder structure, not be redundant
+        with an existing album folder.
+        """
+        from src.sync.downloader import FileDownloader, DownloadTask
+        from src.sync.state import SyncState
+        from src.sync.cache import scan_local_files
+
+        # Structure: TestDrive/Artist/ (archive goes here, NOT in album subfolder)
+        artist_path = temp_dir / "TestDrive" / "The Dillinger Escape Plan"
+        artist_path.mkdir(parents=True)
+
+        # Archive "One of Us Is the Killer.zip" containing "One of Us Is the Killer/[charts]"
+        # This should CREATE the album folder, not flatten
+        archive_path = artist_path / "_download_One of Us Is the Killer.zip"
+        self._create_test_archive(archive_path, {
+            "One of Us Is the Killer/Song One/song.ini": "[song]\nname=Song One",
+            "One of Us Is the Killer/Song One/notes.mid": b"MThd",
+            "One of Us Is the Killer/Song Two/song.ini": "[song]\nname=Song Two",
+            "One of Us Is the Killer/Song Two/notes.mid": b"MThd",
+        })
+
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+
+        downloader = FileDownloader(delete_videos=False)
+        task = DownloadTask(
+            file_id="album",
+            local_path=archive_path,
+            size=archive_path.stat().st_size,
+            md5="album123",
+            is_archive=True,
+            rel_path="TestDrive/The Dillinger Escape Plan/One of Us Is the Killer.zip"
+        )
+
+        success, error, _ = downloader.process_archive(
+            task, sync_state, archive_rel_path="TestDrive/The Dillinger Escape Plan/One of Us Is the Killer.zip"
+        )
+
+        assert success, f"Extraction failed: {error}"
+
+        # Files should be in ALBUM subfolder, NOT directly in artist folder
+        local_files = scan_local_files(artist_path)
+
+        # The album folder should exist with chart subfolders
+        assert "One of Us Is the Killer/Song One/song.ini" in local_files, (
+            f"Expected album folder structure, got: {sorted(local_files.keys())}\n"
+            f"Archive should CREATE 'One of Us Is the Killer/' folder, not flatten into artist folder"
+        )
+        assert "One of Us Is the Killer/Song Two/song.ini" in local_files, (
+            f"Missing Song Two in album folder: {sorted(local_files.keys())}"
+        )
+
+        # Make sure files are NOT directly in artist folder (wrong flattening)
+        assert "Song One/song.ini" not in local_files, (
+            f"Files incorrectly flattened into artist folder: {sorted(local_files.keys())}"
+        )
+
+    def test_process_archive_flattens_redundant_nesting(self, temp_dir):
+        """
+        Archive inside album folder with matching name SHOULD flatten to avoid double nesting.
+
+        When archive is at "Artist/Album/Album.zip" and contains "Album/[files]",
+        the "Album/" wrapper is redundant - we're already IN the album folder.
+        Flatten to avoid: Artist/Album/Album/[files]
+        """
+        from src.sync.downloader import FileDownloader, DownloadTask
+        from src.sync.state import SyncState
+        from src.sync.cache import scan_local_files
+
+        # Structure: TestDrive/Artist/Album/ (archive goes here, IN the album folder)
+        album_path = temp_dir / "TestDrive" / "Artist" / "Album"
+        album_path.mkdir(parents=True)
+
+        # Archive "Album.zip" at "Album/Album.zip" containing "Album/[files]"
+        # The wrapper folder is REDUNDANT, should flatten
+        archive_path = album_path / "_download_Album.zip"
+        self._create_test_archive(archive_path, {
+            "Album/song.ini": "[song]\nname=Test",
+            "Album/notes.mid": b"MThd",
+        })
+
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+
+        downloader = FileDownloader(delete_videos=False)
+        task = DownloadTask(
+            file_id="redundant",
+            local_path=archive_path,
+            size=archive_path.stat().st_size,
+            md5="redundant123",
+            is_archive=True,
+            rel_path="TestDrive/Artist/Album/Album.zip"
+        )
+
+        success, error, _ = downloader.process_archive(
+            task, sync_state, archive_rel_path="TestDrive/Artist/Album/Album.zip"
+        )
+
+        assert success, f"Extraction failed: {error}"
+
+        local_files = scan_local_files(album_path)
+
+        # Files should be directly in album folder (flattened)
+        assert "song.ini" in local_files, (
+            f"Expected flattened files in album folder, got: {sorted(local_files.keys())}"
+        )
+
+        # Should NOT have double nesting
+        assert "Album/song.ini" not in local_files, (
+            f"Double nesting not prevented: {sorted(local_files.keys())}"
+        )
+
 
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

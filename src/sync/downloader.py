@@ -309,17 +309,52 @@ class FileDownloader:
             extracted_files = scan_extracted_files(extract_tmp, extract_tmp)
 
             # Step 4: Move extracted contents to chart_folder
-            # Each top-level item (file or folder) gets moved as-is
-            # Archives like "Song.zip" containing "Song/" will result in "chart_folder/Song/"
+            # Check if we should flatten to avoid double nesting.
+            # Flatten ONLY when:
+            #   - Archive contains exactly one folder
+            #   - That folder matches the archive name (case-insensitive)
+            #   - AND the destination folder (chart_folder) also matches
+            # This prevents: Artist/Album/Album.zip → Artist/Album/Album/[files]
+            # But allows: Artist/Album.zip → Artist/Album/[files] (creates folder)
             extracted_items = list(extract_tmp.iterdir())
-            for item in extracted_items:
-                dest = chart_folder / normalize_fs_name(item.name)
-                if dest.exists():
-                    if dest.is_dir():
-                        shutil.rmtree(dest)
-                    else:
-                        dest.unlink()
-                shutil.move(str(item), str(dest))
+            should_flatten = False
+            flatten_folder = None
+
+            if len(extracted_items) == 1 and extracted_items[0].is_dir():
+                folder_name = normalize_fs_name(extracted_items[0].name)
+                chart_folder_name = normalize_fs_name(chart_folder.name)
+                # Only flatten if BOTH extracted folder AND destination match archive name
+                if (folder_name.lower() == archive_stem.lower() and
+                        chart_folder_name.lower() == archive_stem.lower()):
+                    should_flatten = True
+                    flatten_folder = extracted_items[0]
+
+            if should_flatten and flatten_folder:
+                # Flatten: move folder CONTENTS directly to chart_folder
+                # Also fix extracted_files paths to match actual locations
+                folder_prefix = normalize_fs_name(flatten_folder.name) + "/"
+                extracted_files = {
+                    (path[len(folder_prefix):] if path.startswith(folder_prefix) else path): size
+                    for path, size in extracted_files.items()
+                }
+                for item in flatten_folder.iterdir():
+                    dest = chart_folder / normalize_fs_name(item.name)
+                    if dest.exists():
+                        if dest.is_dir():
+                            shutil.rmtree(dest)
+                        else:
+                            dest.unlink()
+                    shutil.move(str(item), str(dest))
+            else:
+                # Normal: move each top-level item to chart_folder
+                for item in extracted_items:
+                    dest = chart_folder / normalize_fs_name(item.name)
+                    if dest.exists():
+                        if dest.is_dir():
+                            shutil.rmtree(dest)
+                        else:
+                            dest.unlink()
+                    shutil.move(str(item), str(dest))
 
             # Clean up empty temp folder
             shutil.rmtree(extract_tmp, ignore_errors=True)
