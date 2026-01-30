@@ -233,16 +233,17 @@ class TestGetSyncStatusWithSyncState:
         assert status.synced_charts == 0
         assert status.total_charts == 1
 
-    def test_archive_synced_via_smart_fallback(self, temp_dir):
-        """Archive marked as synced via smart fallback when folder is complete.
+    def test_archive_not_synced_without_marker_even_with_files(self, temp_dir):
+        """Archive NOT synced without marker/sync_state even if files exist on disk.
 
-        If sync_state is lost but the folder has 3+ files including a chart marker,
-        smart fallback considers it synced to avoid unnecessary re-downloads.
+        The new marker-based architecture removes disk heuristics entirely.
+        Without a marker or sync_state entry, we can't know what MD5 those
+        files came from, so they're NOT considered synced.
         """
         folder_path = temp_dir / "TestDrive" / "Setlist"
         folder_path.mkdir(parents=True)
 
-        # 3+ files with a chart marker = complete extraction
+        # Files exist on disk (simulating manual copy or state loss)
         (folder_path / "song.ini").write_text("[song]")
         (folder_path / "notes.mid").write_bytes(b"midi data")
         (folder_path / "album.png").write_bytes(b"png data")
@@ -259,11 +260,11 @@ class TestGetSyncStatusWithSyncState:
             ]
         }
 
-        # No sync_state - but folder is complete, smart fallback should mark as synced
+        # No sync_state, no marker - files on disk are NOT enough
         status = get_sync_status([folder], temp_dir, None, None)
 
-        # Complete folder (3+ files with marker) IS synced via fallback
-        assert status.synced_charts == 1
+        # Without marker/state, archive is NOT synced (no disk heuristics)
+        assert status.synced_charts == 0
         assert status.total_charts == 1
 
     def test_archive_not_synced_without_files(self, temp_dir):
@@ -468,24 +469,23 @@ class TestStatusMatchesDownloadPlanner:
 
     def test_status_and_download_agree_when_sync_state_matches_manifest(self, temp_dir):
         """
-        When sync_state matches manifest, files are trusted as synced.
+        When sync_state matches manifest AND disk files match, files are synced.
 
-        Note: sync_state is trusted when it matches manifest. This prevents
-        re-downloads when manifest has stale sizes (common with shortcuts).
-        We only verify file EXISTS, not that disk size matches manifest.
+        Correctness requires verifying disk state matches sync_state. If a file
+        was modified after download, it needs to be re-downloaded.
         """
         from src.sync.download_planner import plan_downloads
 
         folder_path = temp_dir / "TestDrive" / "Setlist" / "ChartFolder"
         folder_path.mkdir(parents=True)
 
-        # Create files on disk with DIFFERENT sizes than manifest
+        # Create files on disk with CORRECT sizes matching manifest
         (folder_path / "song.ini").write_text("[song]")  # 6 bytes
-        (folder_path / "notes.mid").write_bytes(b"midi_modified_content")  # 21 bytes, manifest says 4
+        (folder_path / "notes.mid").write_bytes(b"midi")  # 4 bytes
 
         manifest_files = [
             {"id": "1", "path": "Setlist/ChartFolder/song.ini", "size": 6, "md5": "a"},
-            {"id": "2", "path": "Setlist/ChartFolder/notes.mid", "size": 4, "md5": "b"},  # Disk has 21!
+            {"id": "2", "path": "Setlist/ChartFolder/notes.mid", "size": 4, "md5": "b"},
         ]
 
         folder = {
@@ -498,7 +498,7 @@ class TestStatusMatchesDownloadPlanner:
         sync_state = SyncState(temp_dir)
         sync_state.load()
         sync_state.add_file("TestDrive/Setlist/ChartFolder/song.ini", size=6)
-        sync_state.add_file("TestDrive/Setlist/ChartFolder/notes.mid", size=4)  # Matches manifest, not disk
+        sync_state.add_file("TestDrive/Setlist/ChartFolder/notes.mid", size=4)
 
         class MockSettings:
             delete_videos = True
@@ -516,9 +516,9 @@ class TestStatusMatchesDownloadPlanner:
             folder_name="TestDrive",
         )
 
-        # sync_state matches manifest AND files exist - trust it, don't re-download
-        assert len(tasks) == 0, "sync_state matches manifest, should trust it"
-        assert skipped == 2  # Both files trusted via sync_state
+        # sync_state matches manifest AND disk matches - skip both
+        assert len(tasks) == 0, "sync_state matches manifest and disk, should skip"
+        assert skipped == 2
 
     def test_status_and_download_agree_when_file_not_in_sync_state(self, temp_dir):
         """

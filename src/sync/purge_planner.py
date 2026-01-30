@@ -8,42 +8,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Optional, Set
 
-from ..core.constants import VIDEO_EXTENSIONS, CHART_ARCHIVE_EXTENSIONS, CHART_MARKERS
+from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import relative_posix, parent_posix, sanitize_path
 from .cache import scan_local_files
 from .state import SyncState
-
-
-def _is_archive(path: str) -> bool:
-    """Check if a path is an archive file."""
-    return any(path.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
-
-
-def _is_in_valid_chart_folder(file_path: Path) -> bool:
-    """
-    Check if a file is inside a valid chart folder (disk fallback).
-
-    A valid chart folder has 3+ files including at least one chart marker
-    (song.ini, notes.mid, notes.chart). This prevents deleting files from
-    extracted archives that aren't tracked in sync_state.
-
-    This mirrors the disk fallback logic in status.py's _check_chart_folder_complete().
-    """
-    parent = file_path.parent
-    if not parent.is_dir():
-        return False
-
-    try:
-        files = list(parent.iterdir())
-    except OSError:
-        return False
-
-    if len(files) < 3:
-        return False
-
-    file_names = {f.name.lower() for f in files if f.is_file()}
-    markers_lower = {m.lower() for m in CHART_MARKERS}
-    return bool(file_names & markers_lower)
+from .sync_checker import is_archive_file
 
 
 @dataclass
@@ -120,11 +89,8 @@ def find_extra_files(
     Find local files not tracked in sync_state AND not in manifest.
 
     A file is considered "extra" only if it's not in sync_state AND doesn't
-    match any manifest path AND isn't inside a valid chart folder.
-
-    The disk fallback (valid chart folder check) prevents deleting files from
-    extracted archives when sync_state is incomplete or corrupted. This mirrors
-    the fallback behavior in status.py.
+    match any manifest path. No disk heuristics - we rely on markers/sync_state
+    to know what files were extracted from archives.
 
     Args:
         folder_name: Name of the folder (for building paths)
@@ -158,13 +124,7 @@ def find_extra_files(
         if full_path in manifest_paths:
             continue
 
-        # Disk fallback: don't flag files inside valid chart folders
-        # This prevents deleting extracted archives when sync_state is incomplete
-        abs_path = folder_path / rel_path
-        if _is_in_valid_chart_folder(abs_path):
-            continue
-
-        extras.append((abs_path, size))
+        extras.append((folder_path / rel_path, size))
 
     return extras
 
@@ -220,7 +180,7 @@ def plan_purge(
                 stats.chart_size += size
                 all_files.append((folder_path / rel_path, size))
                 # Estimate charts: archives are 1 chart, else group by parent folder
-                if _is_archive(rel_path):
+                if is_archive_file(rel_path):
                     stats.estimated_charts += 1
                 else:
                     chart_parents.add(parent_posix(rel_path))
@@ -253,7 +213,7 @@ def plan_purge(
                 stats.chart_size += size
                 all_files.append((folder_path / rel_path, size))
                 # Estimate charts for disabled setlist files
-                if _is_archive(rel_path):
+                if is_archive_file(rel_path):
                     stats.estimated_charts += 1
                 else:
                     disabled_chart_parents.add(parent_posix(rel_path))
@@ -290,7 +250,7 @@ def plan_purge(
                 stats.extra_file_size += size
                 all_files.append((f, size))
                 # Only count archive extras as charts
-                if _is_archive(rel_path):
+                if is_archive_file(rel_path):
                     stats.estimated_charts += 1
 
         # Count video files when delete_videos is enabled

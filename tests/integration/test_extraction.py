@@ -205,9 +205,9 @@ class TestArchiveExtractionTracking:
 
         assert len(tasks) == 0, "Nested archive should be skipped after extraction"
 
-    def test_flatten_match_archive_extraction(self, temp_dir, downloader):
+    def test_archive_preserves_internal_folder_structure(self, temp_dir, downloader):
         """
-        Archive with folder matching archive name should flatten.
+        Archive with internal folder preserves structure during extraction.
 
         Archive: test_flatten_match.zip
         Contents:
@@ -216,10 +216,10 @@ class TestArchiveExtractionTracking:
                 notes.chart
                 song.ogg
 
-        Expected extraction:
-            song.ini (directly in chart_folder, not in subfolder)
-            notes.chart
-            song.ogg
+        Expected extraction (no flattening):
+            test_flatten_match/song.ini
+            test_flatten_match/notes.chart
+            test_flatten_match/song.ogg
         """
         archive_src = FIXTURES_DIR / "test_flatten_match.zip"
         if not archive_src.exists():
@@ -251,18 +251,16 @@ class TestArchiveExtractionTracking:
 
         assert success, f"Extraction failed: {error}"
 
-        # Should be flattened - files directly in chart_folder, NOT in test_flatten_match/
-        assert (chart_folder / "song.ini").exists(), "song.ini should be at root (flattened)"
-        assert not (chart_folder / "test_flatten_match" / "song.ini").exists(), (
-            "song.ini should NOT be in subfolder when flattening"
+        # Internal folder structure preserved (no flattening)
+        assert (chart_folder / "test_flatten_match" / "song.ini").exists(), (
+            "song.ini should be in test_flatten_match/ subfolder"
         )
 
-        # Tracked files should also reflect flattened paths
+        # Tracked files should reflect nested paths
         all_tracked = sync_state.get_all_files()
-        # The tracked paths should NOT have the "test_flatten_match/" prefix
-        song_ini_path = "TestDrive/Setlist/song.ini"
+        song_ini_path = "TestDrive/Setlist/test_flatten_match/song.ini"
         assert song_ini_path in all_tracked, (
-            f"Flattened path {song_ini_path} not in tracked files: {all_tracked}"
+            f"Nested path {song_ini_path} not in tracked files: {all_tracked}"
         )
 
     def test_video_deleted_during_extraction(self, temp_dir, downloader):

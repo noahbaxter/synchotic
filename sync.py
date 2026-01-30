@@ -16,6 +16,7 @@ from src.drive import DriveClient, AuthManager
 from src.manifest import Manifest, fetch_manifest
 from src.sync import FolderSync, purge_all_folders
 from src.sync.state import SyncState
+from src.sync.markers import migrate_sync_state_to_markers, is_migration_done
 from src.config import UserSettings, DrivesConfig, CustomFolders, extract_subfolders_from_manifest
 from src.core.formatting import format_size
 from src.core.paths import (
@@ -96,6 +97,9 @@ class SyncApp:
         else:
             print(f"    [init] check_txt: already migrated")
 
+        # Note: sync_state → marker migration runs lazily when manifest is loaded
+        # (we need manifest MD5s for proper migration validation)
+
         self.sync = FolderSync(
             self.client,
             auth_token=self.auth.get_token_getter(),
@@ -105,6 +109,34 @@ class SyncApp:
         self.folders = []
         self.use_local_manifest = use_local_manifest
         self.folder_stats_cache = FolderStatsCache()
+
+    def _migrate_to_markers(self):
+        """One-time migration from sync_state.json to marker files."""
+        import time as _t
+
+        print("\n  Migrating sync state to marker files...")
+        _t0 = _t.time()
+
+        # Build manifest MD5s dict for migration validation
+        manifest_md5s = {}
+        for folder in self.folders:
+            folder_name = folder.get("name", "")
+            for f in folder.get("files", []):
+                file_path = f.get("path", "")
+                file_md5 = f.get("md5", "")
+                if file_md5:
+                    # Build full path: FolderName/file_path
+                    full_path = f"{folder_name}/{file_path}"
+                    manifest_md5s[full_path] = file_md5
+
+        migrated, skipped = migrate_sync_state_to_markers(
+            self.sync_state,
+            get_download_path(),
+            manifest_md5s,
+        )
+
+        elapsed = (_t.time() - _t0) * 1000
+        print(f"    [init] marker migration: {elapsed:.0f}ms ({migrated} migrated, {skipped} skipped)")
 
     def _prompt_legacy_migration(self):
         """Prompt user about legacy check.txt file migration."""
@@ -171,6 +203,10 @@ class SyncApp:
             f for f in manifest_data.get("folders", [])
             if f.get("folder_id") not in hidden_ids
         ]
+
+        # Run sync_state → marker migration if needed (one-time)
+        if not is_migration_done() and self.sync_state._archives:
+            self._migrate_to_markers()
 
         # Add custom folders to the folders list
         for custom in self.custom_folders.folders:

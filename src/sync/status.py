@@ -2,6 +2,7 @@
 Sync status calculation for DM Chart Sync.
 
 Determines what's synced by comparing local files against manifest.
+Progress is based on manifest entries (archives/files), not chart counts.
 """
 
 import os
@@ -9,11 +10,11 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-from ..core.constants import CHART_MARKERS, CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS
+from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path, dedupe_files_by_newest, normalize_fs_name
-from ..stats import get_best_stats
 from .cache import scan_local_files, scan_actual_charts
 from .state import SyncState
+from .sync_checker import is_archive_synced, is_archive_file
 
 
 @dataclass
@@ -40,108 +41,6 @@ class SyncStatus:
         return self.synced_charts == self.total_charts
 
 
-def is_archive_file(filename: str) -> bool:
-    """Check if a filename is an archive type we handle."""
-    return any(filename.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
-
-
-def _check_chart_folder_complete(folder: Path) -> bool:
-    """Check if folder looks like a complete chart extraction."""
-    if not folder.is_dir():
-        return False
-    files = list(folder.iterdir())
-    if len(files) < 3:  # marker + audio + notes minimum
-        return False
-    file_names = {f.name.lower() for f in files if f.is_file()}
-    return bool(file_names & CHART_MARKERS)
-
-
-def _check_archive_synced(
-    sync_state: SyncState,
-    folder_name: str,
-    checksum_path: str,
-    archive_name: str,
-    manifest_md5: str,
-    folder_path: Path = None,
-) -> tuple[bool, int]:
-    """
-    Check if an archive is synced using sync_state, with smart disk fallback.
-
-    Only considers an archive synced if:
-    1. sync_state has the archive with matching MD5 AND extracted files exist, OR
-    2. Fallback: folder looks like a complete chart extraction (3+ files with marker)
-
-    The smart fallback prevents unnecessary re-downloads when sync_state is lost
-    but files actually exist on disk. It requires 3+ files including a chart marker
-    to avoid marking incomplete extractions as synced.
-
-    Args:
-        sync_state: SyncState instance (can be None)
-        folder_name: Folder name
-        checksum_path: Parent path within folder
-        archive_name: Archive filename
-        manifest_md5: Expected MD5 from manifest
-        folder_path: Base folder path for disk fallback check
-
-    Returns:
-        Tuple of (is_synced, extracted_size)
-    """
-    # Build full archive path: folder_name/checksum_path/archive_name
-    if checksum_path:
-        archive_path = f"{folder_name}/{checksum_path}/{archive_name}"
-    else:
-        archive_path = f"{folder_name}/{archive_name}"
-
-    # Check sync_state first - this is the authoritative source
-    if sync_state:
-        if sync_state.is_archive_synced(archive_path, manifest_md5):
-            # Verify extracted files still exist on disk
-            archive_files = sync_state.get_archive_files(archive_path)
-            if archive_files:
-                missing = sync_state.check_files_exist(archive_files)
-                if len(missing) == 0:
-                    # Get size from archive node
-                    archive = sync_state.get_archive(archive_path)
-                    extracted_size = archive.get("archive_size", 0) if archive else 0
-                    return True, extracted_size
-                # Files missing or wrong size - fall through to disk check
-            # Archive tracked but no files - fall through to disk check
-        # If sync_state exists but archive not tracked, fall through to disk check
-        # (consistent with download_planner which uses disk fallback to avoid re-downloading)
-
-    # Disk fallback: check if chart folder exists on disk
-    if folder_path:
-        # Archives extract to checksum_path folder (parent of archive file)
-        if checksum_path:
-            chart_folder = folder_path / checksum_path
-        else:
-            chart_folder = folder_path
-
-        # Get expected folder name from archive (without extension)
-        archive_stem = None
-        if archive_name:
-            for ext in CHART_ARCHIVE_EXTENSIONS:
-                if archive_name.lower().endswith(ext):
-                    archive_stem = archive_name[:-len(ext)]
-                    break
-
-        # First try: expected extraction subfolder (archive name without extension)
-        # This handles archives like setlist/archive.rar extracting to setlist/archive/
-        if archive_stem:
-            expected_path = chart_folder / archive_stem
-            if _check_chart_folder_complete(expected_path):
-                return True, 0
-
-        # Second try: check if chart_folder itself is a complete chart
-        # Only for nested archives like setlist/chartfolder/chartfolder.rar
-        # where checksum_path ends with the archive stem (chart folder name matches archive name)
-        if archive_stem and checksum_path and checksum_path.lower().endswith(archive_stem.lower()):
-            if _check_chart_folder_complete(chart_folder):
-                return True, 0
-
-    return False, 0
-
-
 def _file_in_disabled_setlist(file_path: str, disabled_setlists: set) -> bool:
     """Check if a file path belongs to a disabled setlist."""
     first_slash = file_path.find("/")
@@ -149,50 +48,9 @@ def _file_in_disabled_setlist(file_path: str, disabled_setlists: set) -> bool:
     return setlist in disabled_setlists
 
 
-def _is_chart_synced(
-    data: dict,
-    folder_name: str,
-    sync_state: SyncState,
-    local_files: dict,
-    delete_videos: bool = True,
-    folder_path: Path = None,
-) -> bool:
-    """
-    Check if a single chart (archive or folder) is synced.
-
-    Single source of truth for sync status - used by both _count_synced_charts
-    and _adjust_for_nested_archives to ensure consistent behavior.
-
-    Args:
-        data: Chart data dict with files, archive_name, etc.
-        folder_name: Parent folder name for building paths
-        sync_state: SyncState for O(1) lookups
-        local_files: Dict of {rel_path: size} from disk scan
-        delete_videos: Whether to exclude video files from sync check
-        folder_path: Base folder path for disk fallback check
-
-    Returns:
-        True if chart is synced, False otherwise
-    """
-    # Archive chart - check via sync_state (with disk fallback)
-    if data["archive_name"]:
-        is_synced, _ = _check_archive_synced(
-            sync_state, folder_name, data["checksum_path"],
-            data["archive_name"], data["archive_md5"], folder_path
-        )
-        return is_synced
-
-    # Folder chart - check if all (non-video) files are synced
-    files_to_check = data["files"]
-    if delete_videos:
-        files_to_check = [(fp, fs) for fp, fs in files_to_check if not _is_video_file(fp)]
-
-    def is_file_synced(file_path: str, expected_size: int) -> bool:
-        # Always verify file exists on disk - don't trust stale sync_state
-        # local_files comes from scan_local_files() which is the disk scan
-        return local_files.get(file_path) == expected_size
-
-    return all(is_file_synced(fp, fs) for fp, fs in files_to_check)
+def _is_video_file(path: str) -> bool:
+    """Check if a path is a video file."""
+    return Path(path).suffix.lower() in VIDEO_EXTENSIONS
 
 
 def _build_chart_folders(manifest_files: list) -> dict:
@@ -246,11 +104,6 @@ def _build_chart_folders(manifest_files: list) -> dict:
     return chart_folders
 
 
-def _is_video_file(path: str) -> bool:
-    """Check if a path is a video file."""
-    return Path(path).suffix.lower() in VIDEO_EXTENSIONS
-
-
 def _count_synced_charts(
     chart_folders: dict,
     local_files: dict,
@@ -279,13 +132,17 @@ def _count_synced_charts(
         if skip_custom:
             continue
 
-        # Archive chart - check sync_state (with disk fallback)
+        # Archive chart - use unified sync_checker
         if data["archive_name"]:
-            is_synced, extracted_size = _check_archive_synced(
-                sync_state, folder_name, data["checksum_path"],
-                data["archive_name"], data["archive_md5"], folder_path
+            synced, extracted_size = is_archive_synced(
+                folder_name=folder_name,
+                checksum_path=data["checksum_path"],
+                archive_name=data["archive_name"],
+                manifest_md5=data["archive_md5"],
+                sync_state=sync_state,
+                local_base=folder_path,
             )
-            if is_synced:
+            if synced:
                 synced_charts += 1
                 size_to_use = extracted_size if extracted_size else data["total_size"]
                 synced_size += size_to_use
@@ -294,8 +151,12 @@ def _count_synced_charts(
                 total_size += data["total_size"]
             continue
 
-        # Folder chart - use shared helper for sync check
-        is_synced = _is_chart_synced(data, folder_name, sync_state, local_files, delete_videos, folder_path)
+        # Folder chart - check if all (non-video) files are synced on disk
+        files_to_check = data["files"]
+        if delete_videos:
+            files_to_check = [(fp, fs) for fp, fs in files_to_check if not _is_video_file(fp)]
+
+        is_synced = all(local_files.get(fp) == fs for fp, fs in files_to_check)
 
         # Calculate size excluding videos if delete_videos is enabled
         if delete_videos:
@@ -311,79 +172,21 @@ def _count_synced_charts(
     return total_charts, synced_charts, total_size, synced_size
 
 
-def _adjust_for_nested_archives(
-    status: "SyncStatus",
-    chart_folders: dict,
-    local_files: dict,
-    sync_state: SyncState,
-    folder: dict,
-    folder_name: str,
-    folder_path: Path,
-    user_settings,
-    delete_videos: bool = True,
-) -> None:
-    """
-    Adjust chart counts for nested archives (1 archive = many charts).
-
-    Uses get_best_stats() to check local scan > overrides > manifest.
-    Modifies status in place.
-    """
-    subfolders = folder.get("subfolders", [])
-    folder_id = folder.get("folder_id", "")
-    is_custom = folder.get("is_custom", False)
-
-    if not subfolders or is_custom:
-        return
-
-    # Sum up chart counts for ENABLED setlists using get_best_stats
-    best_total_charts = 0
-    for sf in subfolders:
-        sf_name = sf.get("name", "")
-        if user_settings and not user_settings.is_subfolder_enabled(folder_id, sf_name):
-            continue
-        sf_manifest_charts = sf.get("charts", {}).get("total", 0)
-        sf_manifest_size = sf.get("total_size", 0)
-
-        sf_best_charts, _ = get_best_stats(
-            folder_name=folder_name,
-            setlist_name=sf_name,
-            manifest_charts=sf_manifest_charts,
-            manifest_size=sf_manifest_size,
-            local_path=folder_path if folder_path.exists() else None,
-        )
-        best_total_charts += sf_best_charts
-
-    # Count charts we computed (1 per archive/folder)
-    folder_computed_charts = sum(1 for d in chart_folders.values() if d["is_chart"])
-
-    # Count how many are synced using shared helper
-    folder_synced_charts = sum(
-        1 for data in chart_folders.values()
-        if data["is_chart"] and _is_chart_synced(data, folder_name, sync_state, local_files, delete_videos, folder_path)
-    )
-
-    # If best stats has more charts, we have nested archives
-    if best_total_charts > folder_computed_charts:
-        status.total_charts -= folder_computed_charts
-        status.total_charts += best_total_charts
-
-        if folder_synced_charts == folder_computed_charts and folder_computed_charts > 0:
-            status.synced_charts -= folder_synced_charts
-            status.synced_charts += best_total_charts
-
-
 def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_state: SyncState = None) -> SyncStatus:
     """
-    Calculate sync status for enabled folders (counts charts, not files).
+    Calculate sync status for enabled folders.
+
+    Progress is based on manifest entries (1 archive = 1 entry).
+    This gives accurate sync progress without needing to know chart contents.
 
     Args:
         folders: List of folder dicts from manifest
         base_path: Base download path
         user_settings: UserSettings for checking enabled states
-        sync_state: SyncState for checking synced archives (optional, falls back to check.txt)
+        sync_state: SyncState for checking synced archives (optional)
 
     Returns:
-        SyncStatus with chart totals and synced counts
+        SyncStatus with totals and synced counts
     """
     status = SyncStatus()
 
@@ -477,13 +280,6 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
                 else:
                     status.total_size += manifest_size
 
-        # Adjust for nested archives (1 archive = many charts)
-        _adjust_for_nested_archives(
-            status, chart_folders, local_files, sync_state,
-            folder, folder_name, folder_path, user_settings,
-            delete_videos=delete_videos
-        )
-
     return status
 
 
@@ -497,8 +293,6 @@ def get_setlist_sync_status(
     """
     Calculate sync status for a single setlist within a folder.
 
-    Uses the same strict per-file check as get_sync_status() to ensure consistency.
-
     Args:
         folder: Folder dict from manifest
         setlist_name: Name of the setlist to check
@@ -507,7 +301,7 @@ def get_setlist_sync_status(
         delete_videos: Whether to exclude video files from size calculations
 
     Returns:
-        SyncStatus with chart totals and synced counts for just this setlist
+        SyncStatus with totals and synced counts for just this setlist
     """
     status = SyncStatus()
 
@@ -547,28 +341,5 @@ def get_setlist_sync_status(
     status.synced_charts = synced
     status.total_size = total_size
     status.synced_size = synced_size
-
-    # Adjust for nested archives (1 archive = many charts)
-    # Only adjusts when local scan or override shows more charts than manifest file count
-    subfolders = folder.get("subfolders", [])
-    if subfolders and not folder.get("is_custom", False):
-        sf = next((s for s in subfolders if s.get("name") == setlist_name), None)
-        if sf:
-            sf_manifest_size = sf.get("total_size", 0)
-            # Use manifest file count as fallback, not subfolder metadata
-            # This prevents inflation when local scan fails
-            best_charts, _ = get_best_stats(
-                folder_name=folder_name,
-                setlist_name=setlist_name,
-                manifest_charts=status.total_charts,
-                manifest_size=sf_manifest_size,
-                local_path=folder_path if folder_path.exists() else None,
-            )
-            # If best stats shows more charts, we have nested archives
-            if best_charts > status.total_charts:
-                if status.synced_charts == status.total_charts and status.total_charts > 0:
-                    # All archives synced → all nested charts synced
-                    status.synced_charts = best_charts
-                status.total_charts = best_charts
 
     return status

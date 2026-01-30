@@ -1,14 +1,15 @@
 """
-Tests for nested archive handling in sync status.
+Tests for nested archive handling and chart counting.
 
 Some drives have archives that contain many charts inside (game rips, packs).
-Manifest sees: 1 archive file (1 chart)
+Manifest sees: 1 archive file
 Reality: 1 archive extracts to N chart folders
 
-The sync status logic must adjust counts using:
-1. Local disk scan (if extracted)
-2. Admin overrides (if configured)
-3. Manifest data (fallback)
+In the simplified marker-based architecture:
+- Chart count is a display metric, NOT used for sync logic
+- Manifest file count determines sync progress (1 archive = 1 entry to sync)
+- Local scan and overrides provide chart counts for display only
+- No "inflation" of synced_charts - we report what's in manifest
 """
 
 import tempfile
@@ -53,8 +54,12 @@ class TestNestedArchiveCounts:
         status = get_sync_status([folder], temp_dir, None, None)
         assert status.total_charts == 1  # Manifest: 1 archive = 1 chart
 
-    def test_override_adjusts_chart_count(self, temp_dir):
-        """Override tells us 1 archive actually contains many charts."""
+    def test_chart_count_reflects_manifest_files_not_overrides(self, temp_dir):
+        """Chart count reflects manifest file count, not overrides.
+
+        In simplified architecture, overrides are for display hints only.
+        Sync status reports manifest entries, not inflated chart counts.
+        """
         sync_state = SyncState(temp_dir)
         sync_state.load()
         sync_state.add_archive(
@@ -96,13 +101,18 @@ class TestNestedArchiveCounts:
 
             status = get_sync_status([folder], temp_dir, None, sync_state)
 
-            assert status.total_charts == 50
-            assert status.synced_charts == 50
+            # Now we report manifest file count, not override
+            assert status.total_charts == 1
+            assert status.synced_charts == 1
         finally:
             stats_module.get_overrides = original_get_overrides
 
-    def test_local_scan_overrides_manifest_count(self, temp_dir):
-        """If charts are extracted locally, scan gives accurate count."""
+    def test_local_scan_does_not_inflate_chart_count(self, temp_dir):
+        """Sync status reports manifest entry count, not local scan results.
+
+        Local scan is still available via LocalStatsScanner for display,
+        but sync progress is based on manifest entries.
+        """
         folder_path = temp_dir / "GameRips" / "PackA"
 
         for i in range(5):
@@ -142,8 +152,9 @@ class TestNestedArchiveCounts:
 
         status = get_sync_status([folder], temp_dir, None, sync_state)
 
-        assert status.total_charts == 5
-        assert status.synced_charts == 5
+        # Now we report manifest file count (1 archive), not local chart count (5)
+        assert status.total_charts == 1
+        assert status.synced_charts == 1
 
     def test_disabled_setlist_excluded_from_adjustment(self, temp_dir):
         """Disabled setlists shouldn't be counted even with override."""
@@ -184,13 +195,13 @@ class TestNestedArchiveCounts:
         assert status.total_charts == 0
         assert status.synced_charts == 0
 
-    def test_multiple_setlists_with_mixed_archives(self, temp_dir):
-        """Multiple setlists: some with nested archives, some without."""
-        # Setlist 1: nested archive (1 file -> 10 charts via override)
+    def test_multiple_setlists_counts_manifest_entries(self, temp_dir):
+        """Multiple setlists: chart count = manifest file count."""
+        # Setlist 1: one archive
         (temp_dir / "TestDrive" / "NestedSetlist").mkdir(parents=True)
         (temp_dir / "TestDrive" / "NestedSetlist" / "dummy.txt").write_text("x")
 
-        # Setlist 2: regular archives (3 files = 3 charts)
+        # Setlist 2: three archives
         (temp_dir / "TestDrive" / "RegularSetlist").mkdir(parents=True)
         for i in range(3):
             (temp_dir / "TestDrive" / "RegularSetlist" / f"song{i}.txt").write_text("x")
@@ -226,7 +237,7 @@ class TestNestedArchiveCounts:
             ]
         }
 
-        # Mock override for nested setlist
+        # Mock override for nested setlist (ignored in new architecture)
         mock_overrides = ManifestOverrides()
         mock_overrides.overrides["TestDrive"] = FolderOverride(
             setlists={"NestedSetlist": SetlistOverride(chart_count=10)}
@@ -241,9 +252,9 @@ class TestNestedArchiveCounts:
 
             status = get_sync_status([folder], temp_dir, None, sync_state)
 
-            # Total: 10 (nested) + 3 (regular) = 13
-            assert status.total_charts == 13
-            assert status.synced_charts == 13
+            # Total: 1 + 3 = 4 manifest entries (not inflated by overrides)
+            assert status.total_charts == 4
+            assert status.synced_charts == 4
         finally:
             stats_module.get_overrides = original_get_overrides
 
@@ -426,15 +437,15 @@ class TestLocalScanPriority:
         (path / "song.ini").write_bytes(b"[song]\nname=Test")
         (path / "notes.mid").write_bytes(b"MThd")
 
-    def test_local_scan_beats_override(self, temp_dir):
-        """Local scan is more accurate than override - use it when available."""
+    def test_manifest_count_used_not_local_scan_or_override(self, temp_dir):
+        """Sync status uses manifest count, not local scan or override."""
         folder_path = temp_dir / "GameRips" / "PackA"
 
-        # Actually extract 3 charts
+        # Actually extract 3 charts (but this doesn't affect sync count)
         for i in range(3):
             self._create_chart_folder(folder_path / f"Song {i}")
 
-        # Override says 50, manifest says 1
+        # Override says 50, manifest has 1 file
         folder = {
             "folder_id": "test_folder",
             "name": "GameRips",
@@ -474,8 +485,8 @@ class TestLocalScanPriority:
 
             status = get_sync_status([folder], temp_dir, None, sync_state)
 
-            # Local scan found 3, not override's 50
-            assert status.total_charts == 3
+            # Manifest has 1 file, so total_charts = 1 (not 3 from local, not 50 from override)
+            assert status.total_charts == 1
         finally:
             stats_module.get_overrides = original_get_overrides
 
@@ -488,8 +499,8 @@ class TestGetSetlistSyncStatus:
         with tempfile.TemporaryDirectory() as tmpdir:
             yield Path(tmpdir)
 
-    def test_partial_sync_doesnt_inflate_synced_charts(self, temp_dir):
-        """Partial sync should NOT inflate synced_charts to match total."""
+    def test_partial_sync_reports_manifest_counts(self, temp_dir):
+        """Partial sync reports manifest entry counts, not inflated counts."""
         # 2 archives in manifest, only 1 synced
         (temp_dir / "GameRips" / "PackA").mkdir(parents=True)
         (temp_dir / "GameRips" / "PackA" / "dummy.txt").write_text("x")
@@ -542,9 +553,9 @@ class TestGetSetlistSyncStatus:
                 sync_state=sync_state,
             )
 
-            # Total should be adjusted to 100 (from override)
-            assert status.total_charts == 100
-            # But synced should stay at 1 (only 1 archive synced, not inflated)
+            # Total = 2 manifest entries (not 100 from override)
+            assert status.total_charts == 2
+            # Synced = 1 (only 1 archive synced)
             assert status.synced_charts == 1
         finally:
             stats_module.get_overrides = original_get_overrides

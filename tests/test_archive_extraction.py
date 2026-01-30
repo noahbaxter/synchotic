@@ -427,15 +427,14 @@ class TestProcessArchiveIntegration:
             )
 
 
-    def test_process_archive_flattens_case_mismatched_folder(self, temp_dir):
+    def test_process_archive_preserves_internal_folder_structure(self, temp_dir):
         """
-        Archive with internal folder differing by case from archive name gets flattened.
+        Archive with internal folder extracts preserving structure.
 
-        This is the "Carol of the Bells" bug: archive "Carol of the Bells.zip" contains
-        folder "Carol Of The Bells/". Without flattening, we'd get nested:
-            Carol of the Bells/Carol Of The Bells/song.ini
-        With flattening, we get:
-            Carol of the Bells/song.ini
+        Archives like "Carol of the Bells.zip" containing "Carol Of The Bells/"
+        extract to: chart_folder/Carol Of The Bells/song.ini
+
+        No flattening is performed - internal structure is preserved.
         """
         from src.sync.downloader import FileDownloader, DownloadTask
         from src.sync.state import SyncState
@@ -444,9 +443,7 @@ class TestProcessArchiveIntegration:
         drive_path = temp_dir / "TestDrive" / "Misc"
         drive_path.mkdir(parents=True)
 
-        # Create archive with case-mismatched internal folder
-        # Archive stem: "Carol of the Bells"
-        # Internal folder: "Carol Of The Bells" (different case!)
+        # Create archive with internal folder
         archive_path = drive_path / "_download_Carol of the Bells.zip"
         self._create_test_archive(archive_path, {
             "Carol Of The Bells/song.ini": "[song]\nname=Carol Test",
@@ -470,32 +467,22 @@ class TestProcessArchiveIntegration:
             task, sync_state, archive_rel_path="TestDrive/Misc/Carol of the Bells.zip"
         )
 
-        assert success, f"Case mismatch extraction failed: {error}"
+        assert success, f"Extraction failed: {error}"
 
-        # Files should be FLAT, not nested
+        # Files should preserve internal folder structure
         local_files = scan_local_files(drive_path)
 
-        # Should have files directly, not in nested subfolder
-        assert "song.ini" in local_files, (
-            f"Expected flattened 'song.ini', got: {list(local_files.keys())}"
+        # Should have files in internal folder
+        assert "Carol Of The Bells/song.ini" in local_files, (
+            f"Expected nested 'Carol Of The Bells/song.ini', got: {list(local_files.keys())}"
         )
-        assert "notes.mid" in local_files, (
-            f"Expected flattened 'notes.mid', got: {list(local_files.keys())}"
-        )
-
-        # Should NOT have nested folder structure
-        nested_path = "Carol Of The Bells/song.ini"
-        assert nested_path not in local_files, (
-            f"Files should be flattened, but found nested: {nested_path}"
+        assert "Carol Of The Bells/notes.mid" in local_files, (
+            f"Expected nested 'Carol Of The Bells/notes.mid', got: {list(local_files.keys())}"
         )
 
-        # CRITICAL: extracted_files dict must also have flattened paths
-        # This dict is passed to sync_state.add_archive() for tracking
-        assert "song.ini" in extracted, (
-            f"extracted_files should have flattened paths, got: {list(extracted.keys())}"
-        )
-        assert nested_path not in extracted, (
-            f"extracted_files should NOT have nested paths, got: {list(extracted.keys())}"
+        # extracted_files should also have nested paths
+        assert "Carol Of The Bells/song.ini" in extracted, (
+            f"extracted_files should have nested paths, got: {list(extracted.keys())}"
         )
 
     def test_process_archive_no_flatten_different_name(self, temp_dir):

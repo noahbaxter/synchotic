@@ -275,13 +275,12 @@ class TestPlanDownloadsRegularFiles:
         assert len(tasks) == 0
         assert skipped == 1
 
-    def test_sync_state_trusted_over_disk_size(self, temp_dir):
+    def test_sync_state_not_trusted_when_disk_size_wrong(self, temp_dir):
         """
-        sync_state is trusted for regular files when it matches manifest.
+        Even when sync_state matches manifest, file is re-downloaded if disk size is wrong.
 
-        This prevents re-downloads when manifest has stale sizes (common with
-        Google Drive shortcuts where manifest may lag behind actual file changes).
-        We only verify file EXISTS, not that disk size matches manifest.
+        Correctness requires verifying actual disk state. If file was modified or
+        corrupted after download, we need to re-download it.
         """
         # Create file on disk with DIFFERENT size than manifest
         local_file = temp_dir / "folder" / "song.ini"
@@ -299,9 +298,9 @@ class TestPlanDownloadsRegularFiles:
             files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
         )
 
-        # sync_state matches manifest AND file exists - trust it, don't re-download
-        assert len(tasks) == 0, "sync_state should be trusted when it matches manifest"
-        assert skipped == 1
+        # Disk file has wrong size (21 vs 100) - must re-download for correctness
+        assert len(tasks) == 1, "should re-download when disk size differs from sync_state"
+        assert skipped == 0
 
     def test_file_missing_from_disk_triggers_download(self, temp_dir):
         """

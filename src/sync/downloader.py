@@ -24,6 +24,7 @@ from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
 from .extractor import extract_archive, get_folder_size, delete_video_files, scan_extracted_files
 from .download_planner import DownloadTask
 from .state import SyncState
+from .markers import save_marker
 from ..ui.primitives.esc_monitor import EscMonitor
 from ..ui.widgets import FolderProgress, display
 
@@ -323,7 +324,36 @@ class FileDownloader:
             # Clean up empty temp folder
             shutil.rmtree(extract_tmp, ignore_errors=True)
 
-            # Step 5: Update sync state if provided
+            # Step 5: Create marker file for this extraction
+            # Markers track extracted files independently of sync_state
+            if archive_rel_path:
+                # Convert extracted_files paths to include parent folder context
+                # extracted_files has paths like "ChartFolder/song.ini"
+                # archive_rel_path is like "DriveName/Setlist/pack.7z"
+                # We want files relative to drive: "Setlist/ChartFolder/song.ini"
+                archive_parent = archive_rel_path.rsplit("/", 1)[0] if "/" in archive_rel_path else ""
+                if archive_parent:
+                    # Strip drive name to get setlist path
+                    parts = archive_parent.split("/", 1)
+                    setlist_path = parts[1] if len(parts) > 1 else ""
+                else:
+                    setlist_path = ""
+
+                # Build marker file paths relative to drive folder
+                marker_files = {}
+                for rel_path, size in extracted_files.items():
+                    if setlist_path:
+                        marker_files[f"{setlist_path}/{rel_path}"] = size
+                    else:
+                        marker_files[rel_path] = size
+
+                save_marker(
+                    archive_path=archive_rel_path,
+                    md5=task.md5,
+                    extracted_files=marker_files,
+                )
+
+            # Also update sync_state for backward compatibility during transition
             if sync_state and archive_rel_path:
                 sync_state.add_archive(
                     path=archive_rel_path,

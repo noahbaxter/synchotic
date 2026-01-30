@@ -9,10 +9,10 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Optional
 
-from ..core.constants import CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS, CHART_MARKERS
-from ..core.files import file_exists_with_size
+from ..core.constants import CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path
 from .state import SyncState
+from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 # Windows MAX_PATH limit (260 chars including null terminator)
 WINDOWS_MAX_PATH = 260
@@ -49,22 +49,6 @@ class DownloadTask:
     md5: str = ""
     is_archive: bool = False  # If True, needs extraction after download
     rel_path: str = ""  # Relative path in manifest (for sync state tracking)
-
-
-def is_archive_file(filename: str) -> bool:
-    """Check if a filename is an archive type we handle."""
-    return any(filename.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
-
-
-def _check_chart_folder_complete(folder: Path) -> bool:
-    """Check if folder looks like a complete chart extraction."""
-    if not folder.is_dir():
-        return False
-    files = list(folder.iterdir())
-    if len(files) < 3:  # marker + audio + notes minimum
-        return False
-    file_names = {f.name.lower() for f in files if f.is_file()}
-    return bool(file_names & CHART_MARKERS)
 
 
 def plan_downloads(
@@ -129,53 +113,32 @@ def plan_downloads(
             long_paths.append(file_path)
             continue
 
-        # Check if already synced
+        # Check if already synced using unified sync_checker
         if is_archive:
-            is_synced = False
-            has_state_entry = sync_state and sync_state.is_archive_synced(rel_path, file_md5)
-
-            if has_state_entry:
-                # State says archive was synced - verify extracted files still exist
-                archive_files = sync_state.get_archive_files(rel_path)
-                missing = sync_state.check_files_exist(archive_files)
-                is_synced = len(missing) == 0
-                # Trust state: if files are missing, don't fallback to disk check
+            # Extract checksum_path (parent folder) and archive_name from file_path
+            if "/" in file_path:
+                checksum_path = file_path.rsplit("/", 1)[0]
             else:
-                # No state entry - use disk fallback to avoid re-downloading
-                # when state was lost but files exist
-                chart_folder = local_path.parent  # Archives extract to parent folder
+                checksum_path = ""
 
-                # First check if folder itself is a chart
-                if _check_chart_folder_complete(chart_folder):
-                    is_synced = True
-                # Search recursively for any chart folder (handles nested archives at any depth)
-                elif chart_folder.is_dir():
-                    try:
-                        markers_lower = {m.lower() for m in CHART_MARKERS}
-                        for item in chart_folder.rglob("*"):
-                            if item.is_file() and item.name.lower() in markers_lower:
-                                if _check_chart_folder_complete(item.parent):
-                                    is_synced = True
-                                    break
-                    except OSError:
-                        pass
+            synced, _ = is_archive_synced(
+                folder_name=folder_name,
+                checksum_path=checksum_path,
+                archive_name=file_name,
+                manifest_md5=file_md5,
+                sync_state=sync_state,
+                local_base=local_base,
+            )
+            is_synced = synced
         else:
-            # For regular files: check sync_state first (tracks actual downloaded size),
-            # then fall back to manifest size check
-            is_synced = False
-            if sync_state and sync_state.is_file_synced(rel_path, file_size):
-                # Sync state matches manifest - verify file still exists with correct size
-                is_synced = file_exists_with_size(local_path, file_size)
-            elif sync_state:
-                # Check if file is tracked with different size (manifest may be stale)
-                tracked = sync_state._files.get(rel_path)
-                if tracked and tracked.get("md5") == file_md5:
-                    # Same MD5, just different size - trust sync_state
-                    tracked_size = tracked.get("size", 0)
-                    is_synced = file_exists_with_size(local_path, tracked_size)
-            if not is_synced:
-                # Final fallback: check manifest size
-                is_synced = file_exists_with_size(local_path, file_size)
+            is_synced = is_file_synced(
+                rel_path=file_path,
+                manifest_size=file_size,
+                manifest_md5=file_md5,
+                sync_state=sync_state,
+                local_path=local_path,
+                folder_name=folder_name,
+            )
 
         # Add to download list or skip
         if is_synced:
