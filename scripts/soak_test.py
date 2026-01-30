@@ -85,12 +85,13 @@ class SoakTest:
     """Integration test runner."""
 
     def __init__(self, manifest: dict, drive_name: str, setlist_name: str,
-                 keep_files: bool = False, thorough: bool = False):
+                 keep_files: bool = False, thorough: bool = False, auto_start: bool = False):
         self.manifest = manifest
         self.drive_name = drive_name
         self.setlist_name = setlist_name
         self.keep_files = keep_files
         self.thorough = thorough
+        self.auto_start = auto_start
 
         # Find the folder
         self.folder = next(
@@ -982,7 +983,8 @@ class SoakTest:
             print(f"  Has videos: {self._has_videos}")
         print()
 
-        input("Press Enter to start (or Ctrl+C to cancel)...")
+        if not self.auto_start:
+            input("Press Enter to start (or Ctrl+C to cancel)...")
 
         # Run basic scenarios
         self.results.append(self.run_scenario("Fresh Sync", self.scenario_fresh_sync))
@@ -1174,9 +1176,11 @@ def main():
         drive_name, setlist_name = interactive_select(manifest)
 
     # Run test
+    # Auto-start (skip confirmation) when both drive and setlist were provided via args
+    auto_start = bool(args.drive and args.setlist)
     try:
         test = SoakTest(manifest, drive_name, setlist_name,
-                        keep_files=args.keep, thorough=args.thorough)
+                        keep_files=args.keep, thorough=args.thorough, auto_start=auto_start)
         test.run_all()
     except KeyboardInterrupt:
         print("\n\nTest interrupted.")
