@@ -170,6 +170,56 @@ class TestPlanDownloadsArchives:
         # Should re-download because extracted file size is wrong
         assert len(tasks) == 1, "Should re-download when extracted file size differs"
 
+    def test_missing_file_not_masked_by_disk_fallback(self, temp_dir):
+        """
+        Regression test: disk fallback must not override state-based missing file detection.
+
+        Scenario: Archive extracted to folder with multiple charts. One chart folder
+        is deleted. State correctly detects missing files, but disk fallback could
+        find OTHER chart folders and incorrectly say "synced".
+
+        The fix: disk fallback only runs when NO state entry exists. If state tracks
+        the archive, trust the state's file list.
+        """
+        # Create chart folder structure - simulating extracted archive with 2 charts
+        chart1 = temp_dir / "TestDrive" / "setlist" / "Chart1"
+        chart2 = temp_dir / "TestDrive" / "setlist" / "Chart2"
+        chart1.mkdir(parents=True)
+        chart2.mkdir(parents=True)
+
+        # Chart1 has all its files (with chart marker so fallback would find it)
+        (chart1 / "song.ini").write_text("[song]")
+        (chart1 / "notes.mid").write_bytes(b"midi data")
+
+        # Chart2 is MISSING (deleted) - no files created
+
+        # State tracks BOTH charts as extracted from the archive
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_archive(
+            "TestDrive/setlist/charts.7z",
+            md5="abc123",
+            archive_size=5000,
+            files={
+                "Chart1/song.ini": 6,
+                "Chart1/notes.mid": 9,
+                "Chart2/song.ini": 6,  # These don't exist on disk
+                "Chart2/notes.mid": 9,
+            }
+        )
+
+        files = [{"id": "1", "path": "setlist/charts.7z", "size": 5000, "md5": "abc123"}]
+        tasks, skipped, _ = plan_downloads(
+            files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
+        )
+
+        # Should re-download: state says Chart2 files are missing
+        # Disk fallback finding Chart1 must NOT override this
+        assert len(tasks) == 1, (
+            "Missing files from state should trigger re-download, "
+            "even if disk fallback would find other chart folders"
+        )
+
 
 class TestPlanDownloadsRegularFiles:
     """Tests for regular (non-archive) file handling."""
