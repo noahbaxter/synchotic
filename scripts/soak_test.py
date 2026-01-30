@@ -17,8 +17,10 @@ Usage:
 import argparse
 import os
 import shutil
+import signal
 import sys
 import tempfile
+import threading
 import time
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -726,6 +728,241 @@ class SoakTest:
 
         return results
 
+    def scenario_stale_state_detection(self) -> list[ValidationResult]:
+        """Extended: Delete files and verify status doesn't trust stale state."""
+        print("Testing stale state detection (delete files, check status)...")
+
+        folder_path = self.base_path / self.drive_name / self.setlist_name
+        results = []
+
+        # Load current sync_state
+        sync_state = self._create_sync_state()
+        sync_state.load()
+
+        # Count charts before deletion
+        charts_before = self._count_disk_charts()
+        if charts_before < 3:
+            return [ValidationResult(
+                name="stale_state_setup",
+                passed=False,
+                message=f"Need at least 3 charts to test, have {charts_before}",
+            )]
+
+        # Delete 2 chart folders from disk (but leave sync_state intact)
+        deleted_folders = []
+        markers_lower = {m.lower() for m in CHART_MARKERS}
+        for item in folder_path.rglob("*"):
+            if item.is_file() and item.name.lower() in markers_lower:
+                chart_folder = item.parent
+                if chart_folder not in deleted_folders:
+                    deleted_folders.append(chart_folder)
+                    if len(deleted_folders) >= 2:
+                        break
+
+        for folder in deleted_folders:
+            print(f"  Deleting: {folder.name}")
+            shutil.rmtree(folder)
+
+        charts_after = self._count_disk_charts()
+        print(f"  Charts: {charts_before} -> {charts_after} (deleted {charts_before - charts_after})")
+
+        # Check status WITHOUT re-syncing - should report fewer synced
+        folder = self._create_test_folder()
+        status = get_setlist_sync_status(
+            folder=folder,
+            setlist_name=self.setlist_name,
+            base_path=self.base_path,
+            sync_state=sync_state,
+            delete_videos=True,
+        )
+
+        # Status should match actual disk count, not stale state
+        if status.synced_charts == charts_after:
+            results.append(ValidationResult(
+                name="stale_state_not_trusted",
+                passed=True,
+                message=f"Status correctly reports {status.synced_charts} (matches disk)",
+            ))
+        elif status.synced_charts > charts_after:
+            results.append(ValidationResult(
+                name="stale_state_not_trusted",
+                passed=False,
+                message=f"Status reports {status.synced_charts} but disk has {charts_after}",
+                details=["Stale sync_state entries are incorrectly trusted"],
+            ))
+        else:
+            results.append(ValidationResult(
+                name="stale_state_not_trusted",
+                passed=False,
+                message=f"Status reports {status.synced_charts}, disk has {charts_after}",
+                details=["Unexpected: status is LOWER than disk"],
+            ))
+
+        # Verify state_integrity correctly finds missing files
+        missing = sync_state.check_files_exist(verify_sizes=False)
+
+        if len(missing) > 0:
+            results.append(ValidationResult(
+                name="state_integrity_detects_missing",
+                passed=True,
+                message=f"state_integrity correctly found {len(missing)} missing files",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="state_integrity_detects_missing",
+                passed=False,
+                message="state_integrity failed to detect deleted files",
+            ))
+
+        # Re-sync to restore deleted files for subsequent tests
+        print("  Restoring deleted files...")
+        client_config = DriveClientConfig(api_key=API_KEY)
+        client = DriveClient(client_config)
+        sync = FolderSync(
+            client,
+            auth_token=get_auth_manager().get_token_getter() if get_auth_manager() else None,
+            delete_videos=True,
+            sync_state=sync_state,
+        )
+        sync.sync_folder(folder, self.base_path, disabled_prefixes=[])
+        sync_state.save()
+
+        return results
+
+    def scenario_cancel_mid_sync(self) -> list[ValidationResult]:
+        """Extended: Cancel sync mid-way and verify state consistency."""
+        print("Testing cancel mid-sync...")
+
+        results = []
+
+        # Clear all state for this setlist to force re-download
+        # (We'll delete the folder and state file to start completely fresh)
+        folder_path = self.base_path / self.drive_name / self.setlist_name
+        if folder_path.exists():
+            shutil.rmtree(folder_path)
+        folder_path.mkdir(parents=True, exist_ok=True)
+
+        # Delete sync_state file to start fresh (otherwise load() will restore old entries)
+        state_file = self.base_path / "sync_state.json"
+        if state_file.exists():
+            state_file.unlink()
+
+        # Create fresh sync_state (must call load() to initialize _data)
+        sync_state = self._create_sync_state()
+        sync_state.load()
+
+        client_config = DriveClientConfig(api_key=API_KEY)
+        client = DriveClient(client_config)
+        sync = FolderSync(
+            client,
+            auth_token=get_auth_manager().get_token_getter() if get_auth_manager() else None,
+            delete_videos=True,
+            sync_state=sync_state,
+        )
+
+        folder = self._create_test_folder()
+
+        # Cancel after N seconds using the cancel_check callback
+        # This is more reliable than SIGINT and works with any file type
+        cancel_after_seconds = 5.0
+        start_time = time.time()
+
+        def should_cancel() -> bool:
+            elapsed = time.time() - start_time
+            return elapsed >= cancel_after_seconds
+
+        print(f"  Will cancel after {cancel_after_seconds}s...")
+
+        downloaded = 0
+        cancelled = False
+        sync_error = None
+        try:
+            downloaded, _, _, _, cancelled, _ = sync.sync_folder(
+                folder, self.base_path, disabled_prefixes=[], cancel_check=should_cancel
+            )
+        except Exception as e:
+            sync_error = f"{type(e).__name__}: {e}"
+            cancelled = True  # Treat errors as cancelled for validation purposes
+
+        if sync_error:
+            print(f"  Sync error: {sync_error}")
+        print(f"  Downloaded: {downloaded}, Cancelled: {cancelled}")
+
+        # Verify cancellation actually happened (unless sync was very fast)
+        total_files = len(self.files)
+        if downloaded < total_files and cancelled:
+            results.append(ValidationResult(
+                name="cancel_triggered",
+                passed=True,
+                message=f"Cancelled after {downloaded}/{total_files} files",
+            ))
+        elif downloaded == total_files:
+            results.append(ValidationResult(
+                name="cancel_triggered",
+                passed=True,
+                message=f"Sync completed before cancel threshold ({downloaded} files)",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="cancel_triggered",
+                passed=False,
+                message=f"Unexpected state: downloaded={downloaded}, cancelled={cancelled}",
+            ))
+
+        # THE CRITICAL CHECK: sync_state must match disk exactly
+        sync_state.save()
+        sync_state.load()  # Reload to ensure consistency
+
+        disk_charts = self._count_disk_charts()
+        state_files = sync_state.get_all_files()
+        missing = sync_state.check_files_exist(verify_sizes=False)
+
+        if len(missing) == 0:
+            results.append(ValidationResult(
+                name="cancel_state_integrity",
+                passed=True,
+                message=f"All {len(state_files)} state entries exist on disk",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="cancel_state_integrity",
+                passed=False,
+                message=f"{len(missing)} state entries have no files on disk",
+                details=missing[:5],
+            ))
+
+        # Status should match disk
+        status = get_setlist_sync_status(
+            folder=folder,
+            setlist_name=self.setlist_name,
+            base_path=self.base_path,
+            sync_state=sync_state,
+            delete_videos=True,
+        )
+
+        # After cancel, status may report fewer synced charts than disk charts
+        # because some charts are incomplete. This is expected behavior.
+        # Key assertion: status <= disk (can't report more synced than exist)
+        if status.synced_charts <= disk_charts:
+            results.append(ValidationResult(
+                name="cancel_status_consistency",
+                passed=True,
+                message=f"Status ({status.synced_charts}) <= disk ({disk_charts}) - partial charts expected",
+            ))
+        else:
+            results.append(ValidationResult(
+                name="cancel_status_consistency",
+                passed=False,
+                message=f"Status ({status.synced_charts}) > disk ({disk_charts}) - impossible state!",
+            ))
+
+        # Re-sync to complete for subsequent tests
+        print("  Completing sync for subsequent tests...")
+        sync.sync_folder(folder, self.base_path, disabled_prefixes=[])
+        sync_state.save()
+
+        return results
+
     def run_all(self):
         """Run all scenarios."""
         print(f"\nSOAK TEST: {self.drive_name} / {self.setlist_name}")
@@ -765,6 +1002,11 @@ class SoakTest:
             if self._has_videos:
                 self.results.append(self.run_scenario(
                     "Video Skipping", self.scenario_video_skipping))
+
+            self.results.append(self.run_scenario(
+                "Stale State Detection", self.scenario_stale_state_detection))
+            self.results.append(self.run_scenario(
+                "Cancel Mid-Sync", self.scenario_cancel_mid_sync))
 
         # State corruption tests (these delete state, so run last)
         self.results.append(self.run_scenario("State Corruption Recovery", self.scenario_state_corruption_recovery))

@@ -102,8 +102,12 @@ def _check_archive_synced(
             archive = sync_state.get_archive(archive_path)
             extracted_size = archive.get("archive_size", 0) if archive else 0
             return True, extracted_size
+        else:
+            # sync_state has archive but files are missing - this is stale state
+            # Don't trust disk fallback, report as not synced
+            return False, 0
 
-    # Fallback: check if folder looks like a complete extraction
+    # Fallback: only used when sync_state has NO entry (state loss recovery)
     if folder_path:
         # Archives extract to checksum_path folder (parent of archive file)
         if checksum_path:
@@ -176,9 +180,8 @@ def _is_chart_synced(
         files_to_check = [(fp, fs) for fp, fs in files_to_check if not _is_video_file(fp)]
 
     def is_file_synced(file_path: str, expected_size: int) -> bool:
-        rel_path = f"{folder_name}/{file_path}"
-        if sync_state and sync_state.is_file_synced(rel_path, expected_size):
-            return True
+        # Always verify file exists on disk - don't trust stale sync_state
+        # local_files comes from scan_local_files() which is the disk scan
         return local_files.get(file_path) == expected_size
 
     return all(is_file_synced(fp, fs) for fp, fs in files_to_check)

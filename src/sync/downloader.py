@@ -398,6 +398,7 @@ class FileDownloader:
         progress: Optional[FolderProgress],
         progress_callback: Optional[Callable[[DownloadResult], None]],
         sync_state: Optional[SyncState] = None,
+        cancel_check: Optional[Callable[[], bool]] = None,
     ) -> Tuple[int, int, List[DownloadTask], int, bool]:
         """Internal async implementation of download_many."""
         downloaded = 0
@@ -442,7 +443,15 @@ class FileDownloader:
 
             try:
                 while pending:
+                    # Check for cancellation (ESC key, SIGINT, or programmatic cancel)
                     if progress and progress.cancelled:
+                        cancelled = True
+                        for t in pending:
+                            t.cancel()
+                        break
+                    if cancel_check and cancel_check():
+                        if progress:
+                            progress.cancel()
                         cancelled = True
                         for t in pending:
                             t.cancel()
@@ -532,8 +541,14 @@ class FileDownloader:
         show_progress: bool = True,
         sync_state: Optional[SyncState] = None,
         drive_name: str = "",
+        cancel_check: Optional[Callable[[], bool]] = None,
     ) -> Tuple[int, int, int, List[str], bool, int]:
         """Download multiple files concurrently using asyncio.
+
+        Args:
+            cancel_check: Optional callback that returns True to trigger cancellation.
+                         Called periodically during download. Useful for programmatic
+                         cancellation (e.g., GUI cancel button, testing).
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -569,9 +584,12 @@ class FileDownloader:
 
         auth_failures = 0
         rate_limited_ids: List[str] = []
+        downloaded = 0
+        permanent_errors = 0
+        cancelled = False
         try:
             downloaded, errors, retryable, auth_failures, cancelled = asyncio.run(
-                self._download_many_async(tasks, progress, progress_callback, sync_state)
+                self._download_many_async(tasks, progress, progress_callback, sync_state, cancel_check)
             )
             rate_limited_ids = [t.file_id for t in retryable]
             permanent_errors = errors - len(retryable)
