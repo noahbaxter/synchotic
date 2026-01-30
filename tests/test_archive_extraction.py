@@ -418,6 +418,14 @@ class TestProcessArchiveIntegration:
                 f"Expected NFC folder '{nfc_folder}', got '{folder_part}' (NFD={nfd_folder})"
             )
 
+        # Verify sync_state also stores NFC paths (not NFD)
+        # This is the critical assertion - scan_extracted_files must normalize to NFC
+        archive_files = sync_state.get_archive_files("TestDrive/Misc/boa.zip")
+        for path in archive_files:
+            assert unicodedata.is_normalized("NFC", path), (
+                f"sync_state has non-NFC path: {path!r}"
+            )
+
 
     def test_process_archive_flattens_case_mismatched_folder(self, temp_dir):
         """
