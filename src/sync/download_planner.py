@@ -132,13 +132,17 @@ def plan_downloads(
         # Check if already synced
         if is_archive:
             is_synced = False
-            if sync_state and sync_state.is_archive_synced(rel_path, file_md5):
-                # Also verify extracted files still exist
+            has_state_entry = sync_state and sync_state.is_archive_synced(rel_path, file_md5)
+
+            if has_state_entry:
+                # State says archive was synced - verify extracted files still exist
                 archive_files = sync_state.get_archive_files(rel_path)
                 missing = sync_state.check_files_exist(archive_files)
                 is_synced = len(missing) == 0
-            if not is_synced:
-                # Fallback: check if extracted folder looks complete
+                # Trust state: if files are missing, don't fallback to disk check
+            else:
+                # No state entry - use disk fallback to avoid re-downloading
+                # when state was lost but files exist
                 chart_folder = local_path.parent  # Archives extract to parent folder
 
                 # First check if folder itself is a chart
