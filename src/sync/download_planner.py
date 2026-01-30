@@ -17,6 +17,9 @@ from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 # Windows MAX_PATH limit (260 chars including null terminator)
 WINDOWS_MAX_PATH = 260
 
+# Maximum filename length (applies to both macOS and Windows)
+MAX_FILENAME_LENGTH = 255
+
 
 def is_long_paths_enabled() -> bool:
     """Check if Windows long paths are enabled in registry."""
@@ -38,6 +41,16 @@ def is_long_paths_enabled() -> bool:
 def exceeds_windows_path_limit(path: Path) -> bool:
     """Check if path exceeds Windows MAX_PATH and long paths aren't enabled."""
     return os.name == 'nt' and not is_long_paths_enabled() and len(str(path)) >= WINDOWS_MAX_PATH
+
+
+def has_long_filename(file_path: str) -> bool:
+    """Check if any path component exceeds the 255 char filename limit.
+
+    This applies to both macOS (HFS+/APFS) and Windows (NTFS).
+    A path like "folder/very_long_name.../file.txt" fails if any component > 255.
+    """
+    parts = file_path.replace("\\", "/").split("/")
+    return any(len(part) > MAX_FILENAME_LENGTH for part in parts)
 
 
 @dataclass
@@ -108,7 +121,12 @@ def plan_downloads(
                 skipped += 1
                 continue
 
-        # Check for long path on Windows (only if long paths not enabled)
+        # Check for filesystem limits
+        # 1. Any filename > 255 chars (both macOS and Windows)
+        # 2. Total path > 260 chars on Windows without long paths enabled
+        if has_long_filename(file_path):
+            long_paths.append(file_path)
+            continue
         if exceeds_windows_path_limit(download_path):
             long_paths.append(file_path)
             continue

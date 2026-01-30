@@ -47,6 +47,31 @@ class TestMarkerPaths:
         # No slashes in filename part
         assert "/" not in path.name
 
+    def test_marker_path_truncates_long_names(self, temp_dir):
+        """Very long archive paths are truncated to fit filesystem limits."""
+        # Create a path that would exceed 255 char filename limit
+        long_path = "Misc/Joshwantsmaccas/" + "A" * 200 + "/" + "B" * 200 + ".rar"
+        path = get_marker_path(long_path, "abc123def456")
+
+        # Filename should be under 255 chars
+        assert len(path.name) < 255
+
+        # Should still end with .json and have MD5 prefix
+        assert path.suffix == ".json"
+        assert "abc123de" in path.name
+
+    def test_long_paths_still_unique(self, temp_dir):
+        """Different long paths produce different marker filenames."""
+        base = "A" * 200
+        path1 = f"Drive/{base}/archive1.rar"
+        path2 = f"Drive/{base}/archive2.rar"
+
+        marker1 = get_marker_path(path1, "same_md5")
+        marker2 = get_marker_path(path2, "same_md5")
+
+        # Should produce different filenames (via path hash)
+        assert marker1.name != marker2.name
+
 
 class TestMarkerSaveLoad:
     """Tests for saving and loading markers."""

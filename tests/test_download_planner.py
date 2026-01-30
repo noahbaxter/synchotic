@@ -564,12 +564,17 @@ class TestPlanDownloadsPathSanitization:
 
 
 class TestPlanDownloadsLongPaths:
-    """Tests for Windows long path handling."""
+    """Tests for filesystem path/filename limit handling."""
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
-            yield Path(tmpdir)
+            tmp_path = Path(tmpdir)
+            # Set up markers directory to avoid Path issues when monkeypatching os.name
+            markers_dir = tmp_path / ".dm-sync" / "markers"
+            markers_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
+            yield tmp_path
 
     def test_long_path_skipped_when_not_enabled(self, temp_dir, monkeypatch):
         """Paths exceeding 260 chars on Windows are skipped when long paths not enabled."""
@@ -578,12 +583,11 @@ class TestPlanDownloadsLongPaths:
         import src.sync.download_planner as dp
         monkeypatch.setattr(dp, "is_long_paths_enabled", lambda: False)
 
-        # Create a path that will exceed 260 chars
-        long_folder = "A" * 200
-        files = [{"id": "1", "path": f"{long_folder}/chart.7z", "size": 1000, "md5": "abc"}]
+        # Create a path that will exceed 260 chars (but no single component > 255)
+        files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir)
 
-        # Should be skipped due to long path
+        # Should be skipped due to long total path
         assert len(tasks) == 0
         assert len(long_paths) == 1
 
@@ -594,9 +598,8 @@ class TestPlanDownloadsLongPaths:
         import src.sync.download_planner as dp
         monkeypatch.setattr(dp, "is_long_paths_enabled", lambda: True)
 
-        # Create a path that will exceed 260 chars
-        long_folder = "A" * 200
-        files = [{"id": "1", "path": f"{long_folder}/chart.7z", "size": 1000, "md5": "abc"}]
+        # Create a path that will exceed 260 chars (but no single component > 255)
+        files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir)
 
         # Should NOT be skipped - long paths are enabled
@@ -604,14 +607,44 @@ class TestPlanDownloadsLongPaths:
         assert len(long_paths) == 0
 
     def test_long_path_not_checked_on_unix(self, temp_dir, monkeypatch):
-        """Long paths are not checked on non-Windows systems."""
+        """Total path length is not checked on non-Windows systems."""
         monkeypatch.setattr("os.name", "posix")
 
-        long_folder = "A" * 200
+        # Long total path but no single component > 255
+        files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir)
+
+        # Should not be skipped on Unix (path length OK)
+        assert len(tasks) == 1
+        assert len(long_paths) == 0
+
+    def test_long_filename_skipped_on_all_platforms(self, temp_dir):
+        """Files with names > 255 chars are skipped on all platforms."""
+        # Create a file with name > 255 chars
+        long_name = "A" * 260 + ".7z"
+        files = [{"id": "1", "path": f"folder/{long_name}", "size": 1000, "md5": "abc"}]
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir)
+
+        # Should be skipped due to filename > 255
+        assert len(tasks) == 0
+        assert len(long_paths) == 1
+
+    def test_long_folder_name_skipped(self, temp_dir):
+        """Folders with names > 255 chars are skipped on all platforms."""
+        # Create a folder with name > 255 chars
+        long_folder = "A" * 260
         files = [{"id": "1", "path": f"{long_folder}/chart.7z", "size": 1000, "md5": "abc"}]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir)
 
-        # Should not be skipped on Unix
+        # Should be skipped due to folder name > 255
+        assert len(tasks) == 0
+        assert len(long_paths) == 1
+
+    def test_normal_length_paths_allowed(self, temp_dir):
+        """Normal length paths work fine."""
+        files = [{"id": "1", "path": "folder/subfolder/chart.7z", "size": 1000, "md5": "abc"}]
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir)
+
         assert len(tasks) == 1
         assert len(long_paths) == 0
 

@@ -36,7 +36,20 @@ def get_marker_path(archive_path: str, md5: str) -> Path:
     Returns:
         Path to marker file
     """
+    import hashlib
+
     safe_name = archive_path.replace("/", "_").replace("\\", "_")
+
+    # Filename: {safe_name}_{md5[:8]}.json
+    # Max filename on most filesystems: 255 chars
+    # Reserve: .json (5) + _md5prefix (9) + safety margin for .tmp (10) = 24 chars
+    max_base_len = 230
+
+    if len(safe_name) > max_base_len:
+        # Truncate and add path hash for uniqueness
+        path_hash = hashlib.md5(archive_path.encode()).hexdigest()[:8]
+        safe_name = safe_name[:max_base_len - 9] + "_" + path_hash
+
     return get_markers_dir() / f"{safe_name}_{md5[:8]}.json"
 
 
