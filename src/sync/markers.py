@@ -204,7 +204,7 @@ def migrate_sync_state_to_markers(
         extracted_files = {}
         archive_files = sync_state.get_archive_files(archive_path)
         for file_path in archive_files:
-            file_data = sync_state._files.get(file_path, {})
+            file_data = sync_state.get_file(file_path) or {}
             if file_data:
                 extracted_files[file_path] = file_data.get("size", 0)
 

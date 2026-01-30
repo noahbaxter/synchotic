@@ -152,6 +152,10 @@ class SyncState:
         f = self._files.get(path)
         return f is not None and f.get("size") == expected_size
 
+    def get_file(self, path: str) -> dict:
+        """Get file node by path, or None if not found."""
+        return self._files.get(path)
+
     def get_all_files(self) -> set:
         """Get all tracked file paths (for purge planning)."""
         return set(self._files.keys())
