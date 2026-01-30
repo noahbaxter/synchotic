@@ -17,6 +17,13 @@ Usage:
 import argparse
 import sys
 from pathlib import Path
+
+# ANSI color codes
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+RED = "\033[91m"
+RESET = "\033[0m"
+
 from _helpers import (
     REPO_ROOT,
     count_disk_charts,
@@ -201,6 +208,16 @@ def validate_drive(folder: dict, base_path: Path, sync_state: SyncState,
     return results
 
 
+def get_color(pct: float) -> str:
+    """Get color code based on sync percentage."""
+    if pct == 100:
+        return GREEN
+    elif pct >= 99:
+        return YELLOW
+    else:
+        return RED
+
+
 def print_results(results: dict):
     """Print validation results for a drive/setlist."""
     name = results["name"]
@@ -215,10 +232,11 @@ def print_results(results: dict):
 
     if results["passed"]:
         # Compact format for passing - mirrors sync.py UI
+        color = get_color(pct)
         if pct == 100:
-            line = f"  {name}: {pct:.0f}% ({synced}/{total}) ✓"
+            line = f"  {color}{name}: {pct:.0f}% ({synced}/{total}) ✓{RESET}"
         else:
-            line = f"  {name}: {pct:.1f}% ({synced}/{total}) ✓"
+            line = f"  {color}{name}: {pct:.1f}% ({synced}/{total}) ✓{RESET}"
         # Add warning note if there's untracked content
         if warnings:
             line += f" (+{disk - synced} untracked)"
@@ -226,12 +244,12 @@ def print_results(results: dict):
     else:
         # Expanded format for failures (over-reporting)
         print(f"\n{'=' * 60}")
-        print(f"  {name}: OVER-REPORTING")
+        print(f"  {RED}{name}: OVER-REPORTING{RESET}")
         print(f"{'=' * 60}")
         print(f"  Status reports: {synced}/{total} ({pct:.1f}%)")
         print(f"  Disk reality:   {disk} charts")
         for issue in results["issues"]:
-            print(f"  [!] {issue}")
+            print(f"  {RED}[!] {issue}{RESET}")
 
 
 def print_drive_summary(drive_name: str, results: list[dict]):
@@ -248,11 +266,12 @@ def print_drive_summary(drive_name: str, results: list[dict]):
         for r in failed:
             print_results(r)
     else:
-        # All passed - show compact summary
+        # All passed - show compact summary with color
+        color = get_color(pct)
         if pct == 100:
-            print(f"  {drive_name}: {pct:.0f}% ({total_synced}/{total_expected}) - {len(passed)} setlists ✓")
+            print(f"  {color}{drive_name}: {pct:.0f}% ({total_synced}/{total_expected}) - {len(passed)} setlists ✓{RESET}")
         else:
-            print(f"  {drive_name}: {pct:.1f}% ({total_synced}/{total_expected}) - {len(passed)} setlists ✓")
+            print(f"  {color}{drive_name}: {pct:.1f}% ({total_synced}/{total_expected}) - {len(passed)} setlists ✓{RESET}")
 
 
 def main():
@@ -405,10 +424,10 @@ def main():
     failed = len(all_results) - passed
 
     if failed == 0:
-        print(f"All {passed} check(s) passed. Status reports match reality.")
+        print(f"{GREEN}All {passed} check(s) passed. Status reports match reality.{RESET}")
         return 0
     else:
-        print(f"{failed} check(s) failed, {passed} passed.")
+        print(f"{RED}{failed} check(s) failed, {passed} passed.{RESET}")
         print("The app is reporting incorrect sync status.")
         return 1
 
