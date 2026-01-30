@@ -104,16 +104,12 @@ def _check_archive_synced(
                     archive = sync_state.get_archive(archive_path)
                     extracted_size = archive.get("archive_size", 0) if archive else 0
                     return True, extracted_size
-                else:
-                    # sync_state has archive but files are missing - stale state
-                    return False, 0
+                # Files missing or wrong size - fall through to disk check
             # Archive tracked but no files - fall through to disk check
-        else:
-            # sync_state exists but archive not tracked - not synced
-            # Don't use disk fallback (it would find OTHER archives' files)
-            return False, 0
+        # If sync_state exists but archive not tracked, fall through to disk check
+        # (consistent with download_planner which uses disk fallback to avoid re-downloading)
 
-    # Fallback: only used when sync_state is None (true state loss recovery)
+    # Disk fallback: check if chart folder exists on disk
     if folder_path:
         # Archives extract to checksum_path folder (parent of archive file)
         if checksum_path:
@@ -121,11 +117,24 @@ def _check_archive_synced(
         else:
             chart_folder = folder_path
 
-        # First check if folder itself is a chart
+        # First try: expected extraction folder (archive name without extension)
+        # e.g., "Song.zip" extracts to "Song/" folder
+        if archive_name:
+            # Strip archive extension to get expected folder name
+            for ext in CHART_ARCHIVE_EXTENSIONS:
+                if archive_name.lower().endswith(ext):
+                    expected_folder = archive_name[:-len(ext)]
+                    expected_path = chart_folder / expected_folder
+                    if _check_chart_folder_complete(expected_path):
+                        return True, 0
+                    break
+
+        # Second try: check if chart_folder itself is a chart (nested archive case)
         if _check_chart_folder_complete(chart_folder):
             return True, 0
 
-        # Search recursively for any chart folder (handles nested archives at any depth)
+        # Last resort: search recursively (handles deeply nested archives)
+        # Only used when specific folder check failed
         if chart_folder.is_dir():
             try:
                 markers_lower = {m.lower() for m in CHART_MARKERS}
