@@ -1,8 +1,5 @@
 """
-Performance tests for menu cache computation.
-
-These tests create realistic folder structures and verify that
-scanning operations complete within acceptable time limits.
+Tests for caching and setlist filtering behavior.
 """
 
 import tempfile
@@ -171,6 +168,55 @@ class TestCountPurgeableUsesCache:
         # Should still find the extra file correctly
         assert count == 1, "Should find 1 extra file"
         assert size == 5, "Extra file 'extra' is 5 bytes"
+
+
+class TestSetlistFiltering:
+    """Tests that disabled folders/setlists are properly excluded."""
+
+    def test_disabled_drive_returns_zero_charts(self, tmp_path):
+        """Disabled drive should report 0 charts regardless of manifest size."""
+        from src.sync.status import get_sync_status
+        from src.config.settings import UserSettings
+
+        manifest = {
+            "folder_id": "test",
+            "name": "TestDrive",
+            "files": [{"path": f"Song{i}.zip", "size": 1000, "md5": f"md5_{i}"} for i in range(100)],
+            "subfolders": [],
+        }
+        settings = UserSettings.load(tmp_path / "settings.json")
+        settings.set_drive_enabled("test", False)
+
+        clear_scan_cache()
+        status = get_sync_status([manifest], tmp_path, settings, None)
+        assert status.total_charts == 0
+
+    def test_disabled_setlists_excluded_from_count(self, tmp_path):
+        """Only enabled setlists should be counted."""
+        from src.sync.status import get_sync_status
+        from src.config.settings import UserSettings
+
+        manifest = {
+            "folder_id": "test",
+            "name": "TestDrive",
+            "files": [
+                {"path": "Setlist_A/song1.zip", "size": 1000, "md5": "a1"},
+                {"path": "Setlist_A/song2.zip", "size": 1000, "md5": "a2"},
+                {"path": "Setlist_B/song1.zip", "size": 1000, "md5": "b1"},
+                {"path": "Setlist_B/song2.zip", "size": 1000, "md5": "b2"},
+            ],
+            "subfolders": [
+                {"name": "Setlist_A", "charts": {"total": 2}},
+                {"name": "Setlist_B", "charts": {"total": 2}},
+            ],
+        }
+        settings = UserSettings.load(tmp_path / "settings.json")
+        settings.set_drive_enabled("test", True)
+        settings.set_subfolder_enabled("test", "Setlist_B", False)
+
+        clear_scan_cache()
+        status = get_sync_status([manifest], tmp_path, settings, None)
+        assert status.total_charts == 2  # Only Setlist_A
 
 
 if __name__ == "__main__":
