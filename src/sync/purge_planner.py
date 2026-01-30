@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Optional, Set
 
-from ..core.constants import VIDEO_EXTENSIONS, CHART_ARCHIVE_EXTENSIONS
+from ..core.constants import VIDEO_EXTENSIONS, CHART_ARCHIVE_EXTENSIONS, CHART_MARKERS
 from ..core.formatting import relative_posix, parent_posix, sanitize_path
 from .cache import scan_local_files
 from .state import SyncState
@@ -17,6 +17,33 @@ from .state import SyncState
 def _is_archive(path: str) -> bool:
     """Check if a path is an archive file."""
     return any(path.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
+
+
+def _is_in_valid_chart_folder(file_path: Path) -> bool:
+    """
+    Check if a file is inside a valid chart folder (disk fallback).
+
+    A valid chart folder has 3+ files including at least one chart marker
+    (song.ini, notes.mid, notes.chart). This prevents deleting files from
+    extracted archives that aren't tracked in sync_state.
+
+    This mirrors the disk fallback logic in status.py's _check_chart_folder_complete().
+    """
+    parent = file_path.parent
+    if not parent.is_dir():
+        return False
+
+    try:
+        files = list(parent.iterdir())
+    except OSError:
+        return False
+
+    if len(files) < 3:
+        return False
+
+    file_names = {f.name.lower() for f in files if f.is_file()}
+    markers_lower = {m.lower() for m in CHART_MARKERS}
+    return bool(file_names & markers_lower)
 
 
 @dataclass
@@ -93,8 +120,11 @@ def find_extra_files(
     Find local files not tracked in sync_state AND not in manifest.
 
     A file is considered "extra" only if it's not in sync_state AND doesn't
-    match any manifest path. This allows files downloaded by other tools
-    (like rclone) to be recognized as valid if they match the manifest.
+    match any manifest path AND isn't inside a valid chart folder.
+
+    The disk fallback (valid chart folder check) prevents deleting files from
+    extracted archives when sync_state is incomplete or corrupted. This mirrors
+    the fallback behavior in status.py.
 
     Args:
         folder_name: Name of the folder (for building paths)
@@ -128,7 +158,13 @@ def find_extra_files(
         if full_path in manifest_paths:
             continue
 
-        extras.append((folder_path / rel_path, size))
+        # Disk fallback: don't flag files inside valid chart folders
+        # This prevents deleting extracted archives when sync_state is incomplete
+        abs_path = folder_path / rel_path
+        if _is_in_valid_chart_folder(abs_path):
+            continue
+
+        extras.append((abs_path, size))
 
     return extras
 

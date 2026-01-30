@@ -117,34 +117,27 @@ def _check_archive_synced(
         else:
             chart_folder = folder_path
 
-        # First try: expected extraction folder (archive name without extension)
-        # e.g., "Song.zip" extracts to "Song/" folder
+        # Get expected folder name from archive (without extension)
+        archive_stem = None
         if archive_name:
-            # Strip archive extension to get expected folder name
             for ext in CHART_ARCHIVE_EXTENSIONS:
                 if archive_name.lower().endswith(ext):
-                    expected_folder = archive_name[:-len(ext)]
-                    expected_path = chart_folder / expected_folder
-                    if _check_chart_folder_complete(expected_path):
-                        return True, 0
+                    archive_stem = archive_name[:-len(ext)]
                     break
 
-        # Second try: check if chart_folder itself is a chart (nested archive case)
-        if _check_chart_folder_complete(chart_folder):
-            return True, 0
+        # First try: expected extraction subfolder (archive name without extension)
+        # This handles archives like setlist/archive.rar extracting to setlist/archive/
+        if archive_stem:
+            expected_path = chart_folder / archive_stem
+            if _check_chart_folder_complete(expected_path):
+                return True, 0
 
-        # Last resort: search recursively (handles deeply nested archives)
-        # Only used when specific folder check failed
-        if chart_folder.is_dir():
-            try:
-                markers_lower = {m.lower() for m in CHART_MARKERS}
-                for item in chart_folder.rglob("*"):
-                    if item.is_file() and item.name.lower() in markers_lower:
-                        # Found a chart marker - check if parent folder is complete
-                        if _check_chart_folder_complete(item.parent):
-                            return True, 0
-            except OSError:
-                pass
+        # Second try: check if chart_folder itself is a complete chart
+        # Only for nested archives like setlist/chartfolder/chartfolder.rar
+        # where checksum_path ends with the archive stem (chart folder name matches archive name)
+        if archive_stem and checksum_path and checksum_path.lower().endswith(archive_stem.lower()):
+            if _check_chart_folder_complete(chart_folder):
+                return True, 0
 
     return False, 0
 
