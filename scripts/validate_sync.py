@@ -41,7 +41,7 @@ def interactive_select(manifest: dict, settings: UserSettings) -> tuple[dict | N
         print("No folders in manifest.")
         return None, None, False, False
 
-    failfast = True
+    failfast = False
     deep = True
 
     def print_drive_menu():
@@ -177,21 +177,25 @@ def validate_drive(folder: dict, base_path: Path, sync_state: SyncState,
     else:
         results["disk_charts"] = count_disk_charts(folder_path, disabled_setlists)
 
-    # Compare: Status synced should match disk reality
+    # Compare: Status synced should not exceed disk reality
+    # Over-reporting (synced > disk) = BUG - claiming charts exist that don't
+    # Under-reporting (synced < disk) = OK - untracked content on disk is fine
     issues = []
+    warnings = []
 
-    if results["status_synced"] != results["disk_charts"]:
+    if results["status_synced"] > results["disk_charts"]:
+        diff = results["status_synced"] - results["disk_charts"]
+        issues.append(
+            f"Status says {results['status_synced']} synced but disk only has {results['disk_charts']} ({diff} over-reported)"
+        )
+    elif results["status_synced"] < results["disk_charts"]:
         diff = results["disk_charts"] - results["status_synced"]
-        if diff > 0:
-            issues.append(
-                f"Status says {results['status_synced']} synced but disk has {results['disk_charts']} (+{diff} untracked)"
-            )
-        else:
-            issues.append(
-                f"Status says {results['status_synced']} synced but disk has {results['disk_charts']} ({diff} missing)"
-            )
+        warnings.append(
+            f"Disk has {diff} untracked charts (not in manifest)"
+        )
 
     results["issues"] = issues
+    results["warnings"] = warnings
     results["passed"] = len(issues) == 0
 
     return results
@@ -207,17 +211,22 @@ def print_results(results: dict):
     synced = results["status_synced"]
     total = results["status_total"]
     disk = results["disk_charts"]
+    warnings = results.get("warnings", [])
 
     if results["passed"]:
         # Compact format for passing - mirrors sync.py UI
         if pct == 100:
-            print(f"  {name}: {pct:.0f}% ({synced}/{total}) ✓")
+            line = f"  {name}: {pct:.0f}% ({synced}/{total}) ✓"
         else:
-            print(f"  {name}: {pct:.1f}% ({synced}/{total}) ✓")
+            line = f"  {name}: {pct:.1f}% ({synced}/{total}) ✓"
+        # Add warning note if there's untracked content
+        if warnings:
+            line += f" (+{disk - synced} untracked)"
+        print(line)
     else:
-        # Expanded format for failures
+        # Expanded format for failures (over-reporting)
         print(f"\n{'=' * 60}")
-        print(f"  {name}: MISMATCH")
+        print(f"  {name}: OVER-REPORTING")
         print(f"{'=' * 60}")
         print(f"  Status reports: {synced}/{total} ({pct:.1f}%)")
         print(f"  Disk reality:   {disk} charts")
