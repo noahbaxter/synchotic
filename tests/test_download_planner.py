@@ -372,6 +372,59 @@ class TestPlanDownloadsRegularFiles:
         assert len(tasks) == 1, "changed MD5 should trigger re-download"
         assert skipped == 0
 
+    def test_ini_file_with_local_modifications_not_redownloaded(self, temp_dir):
+        """
+        INI files modified locally (game appends lines) should not trigger re-download.
+
+        Clone Hero appends leaderboard data to song.ini files, making local size
+        larger than original. If MD5 matches (file unchanged on host), skip it.
+        """
+        # Local file is LARGER than original (game appended lines)
+        local_file = temp_dir / "folder" / "song.ini"
+        local_file.parent.mkdir(parents=True)
+        local_file.write_text("original content\n[leaderboard]\nscores=...")  # 45 bytes
+
+        # sync_state recorded original size (16 bytes) when we downloaded
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_file("TestDrive/folder/song.ini", size=16, md5="abc123")
+
+        # Manifest still has original size and MD5 (unchanged on host)
+        files = [{"id": "1", "path": "folder/song.ini", "size": 16, "md5": "abc123"}]
+        tasks, skipped, _ = plan_downloads(
+            files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
+        )
+
+        # Same MD5 + .ini file + exists locally = don't re-download
+        assert len(tasks) == 0, "locally modified .ini should not trigger re-download"
+        assert skipped == 1
+
+    def test_non_ini_file_with_local_modifications_redownloaded(self, temp_dir):
+        """
+        Non-INI files with size mismatch should still trigger re-download.
+
+        The .ini exception only applies to .ini files.
+        """
+        # Local file is larger than original
+        local_file = temp_dir / "folder" / "notes.mid"
+        local_file.parent.mkdir(parents=True)
+        local_file.write_bytes(b"original content plus extra")  # 27 bytes
+
+        # sync_state recorded original size
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_file("TestDrive/folder/notes.mid", size=16, md5="abc123")
+
+        # Manifest unchanged
+        files = [{"id": "1", "path": "folder/notes.mid", "size": 16, "md5": "abc123"}]
+        tasks, skipped, _ = plan_downloads(
+            files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
+        )
+
+        # Non-INI file with wrong size = re-download
+        assert len(tasks) == 1, "non-ini with size mismatch should re-download"
+        assert skipped == 0
+
 
 class TestPlanDownloadsMigration:
     """Tests for migration from rclone and sync_state recovery."""

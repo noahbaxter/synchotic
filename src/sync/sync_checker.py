@@ -129,6 +129,10 @@ def is_file_synced(
         full_path = f"{folder_name}/{rel_path}" if folder_name else rel_path
         tracked = sync_state.get_file(full_path)
         if tracked and tracked.get("md5") == manifest_md5:
+            # For .ini files: trust MD5 alone if file exists (game may append lines)
+            if local_path.suffix.lower() == ".ini" and local_path.exists():
+                return True
+            # For other files: require size match
             tracked_size = tracked.get("size", 0)
             if file_exists_with_size(local_path, tracked_size):
                 return True
