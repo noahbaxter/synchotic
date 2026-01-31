@@ -24,7 +24,6 @@ from ..primitives import (
     KEY_ESC,
     KEY_SPACE,
     KEY_TAB,
-    truncate_text,
 )
 from ..components import (
     box_row,
@@ -242,29 +241,37 @@ class Menu:
                 toggle_len = 0
 
             hotkey_len = len(item.hotkey) + 3 if item.hotkey else 0
-            desc_len = len(item.description) + 3 if item.description else 0
             prefix_len = 2
 
-            max_label_len = w - 4 - prefix_len - toggle_len - hotkey_len - desc_len - 1
-            label_text = truncate_text(item.label, max_label_len)
+            # Label is never truncated - calculate description space from what remains
+            label_text = item.label
+            label_len = len(label_text)
+            fixed_width = 4 + prefix_len + toggle_len + hotkey_len + label_len + 1
+            available_for_desc = w - fixed_width
+
+            # Only show description if there's room (use visible length, not raw with ANSI)
+            show_desc = False
+            if item.description and available_for_desc > 3:
+                visible_desc_len = len(strip_ansi(item.description))
+                show_desc = visible_desc_len + 3 <= available_for_desc
 
             if is_disabled:
                 if selected:
                     hotkey = f"{Colors.DIM_HOVER}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
                     label = f"{Colors.DIM_HOVER}{label_text}{Colors.RESET}"
-                    if item.description:
+                    if show_desc:
                         label += f" {Colors.MUTED_DIM}{item.description}{Colors.RESET}"
                     content = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{label}"
                 else:
                     hotkey = f"{Colors.DIM}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
                     label = f"{Colors.DIM}{label_text}{Colors.RESET}"
-                    if item.description:
+                    if show_desc:
                         label += f" {Colors.MUTED_DIM}{item.description}{Colors.RESET}"
                     content = f"  {toggle_prefix}{hotkey}{label}"
             else:
                 hotkey = f"{Colors.HOTKEY}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
                 label = label_text
-                if item.description:
+                if show_desc:
                     label += f" {Colors.MUTED}{item.description}{Colors.RESET}"
                 if selected:
                     content = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{Colors.BOLD}{label}{Colors.RESET}"

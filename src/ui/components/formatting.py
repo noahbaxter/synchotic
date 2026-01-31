@@ -5,17 +5,11 @@ Functions for formatting sync status, counts, sizes with colors.
 """
 
 import math
-import re
 from collections import defaultdict
 from pathlib import Path
 
 from src.core.formatting import format_size
-from ..primitives import Colors
-
-
-def strip_ansi(text: str) -> str:
-    """Remove ANSI escape codes from text."""
-    return re.sub(r'\x1b\[[0-9;]*m', '', text)
+from ..primitives import Colors, strip_ansi
 
 
 def calc_percent(synced: int, total: int) -> int:

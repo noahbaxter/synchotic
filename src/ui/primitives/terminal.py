@@ -5,6 +5,14 @@ Handles terminal size, clearing, and progress display.
 """
 
 import os
+import re
+
+ANSI_PATTERN = re.compile(r'\x1b\[[0-9;]*m')
+
+
+def strip_ansi(text: str) -> str:
+    """Remove ANSI escape codes from text."""
+    return ANSI_PATTERN.sub('', text)
 
 
 def set_terminal_size(cols: int = 90, rows: int = 40):
@@ -46,7 +54,8 @@ def get_terminal_width() -> int:
 
 
 def truncate_text(text: str, max_len: int, suffix: str = "...") -> str:
-    """Truncate text to max_len, adding suffix if truncated."""
+    """Truncate text to max_len, adding suffix if truncated. Returns plain text (no ANSI)."""
+    text = strip_ansi(text)  # Strip first - colors should be added after truncation, not before
     if len(text) <= max_len:
         return text
     if max_len <= len(suffix):
@@ -68,9 +77,10 @@ def print_progress(message: str, prefix: str = "  "):
     width = get_terminal_width()
     full_msg = f"{prefix}{message}"
 
-    # Truncate if too long (leave room for cursor)
-    if len(full_msg) >= width:
-        full_msg = full_msg[:width - 4] + "..."
+    # Truncate if too long (use visible length for check, strip for output)
+    visible_len = len(strip_ansi(full_msg))
+    if visible_len >= width:
+        full_msg = strip_ansi(full_msg)[:width - 4] + "..."
 
     # Clear line and print (\033[2K clears entire line)
     print(f"\033[2K\r{full_msg}", end="", flush=True)
