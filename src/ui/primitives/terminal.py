@@ -45,6 +45,20 @@ def get_terminal_width() -> int:
         return 80
 
 
+def truncate_text(text: str, max_len: int, suffix: str = "...") -> str:
+    """Truncate text to max_len, adding suffix if truncated."""
+    if len(text) <= max_len:
+        return text
+    if max_len <= len(suffix):
+        return text[:max_len]
+    return text[:max_len - len(suffix)] + suffix
+
+
+def get_available_width(reserved: int = 0, min_width: int = 20) -> int:
+    """Get available terminal width minus reserved chars."""
+    return max(min_width, get_terminal_width() - reserved)
+
+
 def print_progress(message: str, prefix: str = "  "):
     """
     Print a progress message that overwrites the previous line.

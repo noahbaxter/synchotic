@@ -24,6 +24,7 @@ from ..primitives import (
     KEY_ESC,
     KEY_SPACE,
     KEY_TAB,
+    truncate_text,
 )
 from ..components import (
     box_row,
@@ -245,9 +246,7 @@ class Menu:
             prefix_len = 2
 
             max_label_len = w - 4 - prefix_len - toggle_len - hotkey_len - desc_len - 1
-            label_text = item.label
-            if len(label_text) > max_label_len and max_label_len > 3:
-                label_text = label_text[:max_label_len - 3] + "..."
+            label_text = truncate_text(item.label, max_label_len)
 
             if is_disabled:
                 if selected:

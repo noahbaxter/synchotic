@@ -5,14 +5,13 @@ Renders a list of in-progress large file downloads with ANSI cursor
 manipulation to update in place without scrolling.
 """
 
-import shutil
 import sys
 import time
 from dataclasses import dataclass, field
 
 from ...core.formatting import format_duration, format_speed
 from ..primitives.colors import Colors
-from ..primitives.terminal import SECTION_WIDTH, make_separator
+from ..primitives.terminal import SECTION_WIDTH, make_separator, get_terminal_width, truncate_text
 
 
 @dataclass
@@ -94,7 +93,7 @@ class ActiveDownloadsDisplay:
 
         c = Colors
         lines = []
-        term_width = shutil.get_terminal_size().columns
+        term_width = get_terminal_width()
         separator = make_separator("─", min(term_width - 2, SECTION_WIDTH))
 
         # Aggregate progress line ABOVE separator (bold, distinct from per-file)
@@ -108,7 +107,10 @@ class ActiveDownloadsDisplay:
 
             parts = []
             if self._drive_name:
-                parts.append(f"[{self._drive_name}]")
+                # Truncate long drive names to prevent line wrapping
+                max_drive_len = max(10, term_width - 40)
+                drive_name = truncate_text(self._drive_name, max_drive_len)
+                parts.append(f"[{drive_name}]")
             parts.append(f"{pct:.0f}%")
             parts.append(f"{self._completed_files}/{self._total_files}")
 
@@ -139,14 +141,29 @@ class ActiveDownloadsDisplay:
             dl_mb = dl.downloaded_bytes / (1024 * 1024)
             total_mb = dl.total_bytes / (1024 * 1024)
 
-            ctx = f"[{dl.path_context}]" if dl.path_context else ""
-            arrow = f"{c.CYAN}↓{c.RESET}"
-
-            # Truncate name if needed (guard against narrow terminals)
-            max_name_len = max(10, term_width - 50)
+            # Calculate available space for path context + name
+            # Fixed overhead: "  ↓ []  0/0 MB (0%)" ≈ 25 chars with ANSI codes
+            fixed_overhead = 35  # Conservative estimate including all formatting
+            available_space = max(20, term_width - fixed_overhead)
+            
+            # Split available space between context and name
+            ctx = dl.path_context if dl.path_context else ""
             name = dl.display_name
-            if len(name) > max_name_len:
-                name = name[:max_name_len - 3] + "..."
+            
+            # Reserve 60% for name, 40% for context (but give name priority if context is short)
+            ctx_max = min(len(ctx), max(8, int(available_space * 0.4))) if ctx else 0
+            name_max = min(len(name), max(10, available_space - ctx_max))
+            
+            # Adjust if context is shorter than allocated
+            if len(ctx) < ctx_max:
+                name_max = min(len(name), max(10, available_space - len(ctx)))
+            
+            if ctx:
+                ctx = truncate_text(ctx, ctx_max)
+            name = truncate_text(name, name_max)
+            
+            ctx = f"[{ctx}]" if ctx else ""
+            arrow = f"{c.CYAN}↓{c.RESET}"
 
             line = f"  {arrow} {c.DIM}{ctx}{c.RESET} {name}  {dl_mb:.0f}/{total_mb:.0f} MB ({pct:.0f}%)"
             lines.append(line)

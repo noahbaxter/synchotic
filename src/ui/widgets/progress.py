@@ -4,7 +4,6 @@ Download progress display for DM Chart Sync.
 Tracks folder/chart completion and coordinates display output.
 """
 
-import shutil
 import sys
 import time
 from dataclasses import dataclass
@@ -15,6 +14,7 @@ from ...core.constants import CHART_MARKERS
 from ...core.formatting import extract_path_context
 from ...core.progress import ProgressTracker
 from ..primitives.colors import Colors
+from ..primitives.terminal import get_terminal_width, truncate_text
 from .active_downloads import ActiveDownloadsDisplay
 from . import sync_display as display
 
@@ -127,11 +127,10 @@ class FolderProgress(ProgressTracker):
         count_str = f"({self.completed_charts:>{count_width}}/{self.total_charts})"
         ctx_part = f"{c.DIM}[{path_context}]{c.RESET}" if path_context else ""
 
-        term_width = shutil.get_terminal_size().columns
+        term_width = get_terminal_width()
         prefix_len = 8 + len(count_str) + 2
         remaining = max(10, term_width - prefix_len - len(path_context) - 4)
-        if len(item_name) > remaining:
-            item_name = item_name[:remaining - 3] + "..."
+        item_name = truncate_text(item_name, remaining)
 
         return f"  {c.GREEN}{pct:5.1f}%{c.RESET} {count_str} {ctx_part} {item_name}"
 
