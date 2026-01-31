@@ -16,6 +16,7 @@ from src.drive import DriveClient, AuthManager
 from src.manifest import Manifest, fetch_manifest
 from src.sync import FolderSync, purge_all_folders
 from src.sync.state import SyncState
+from src.sync.markers import migrate_sync_state_to_markers, is_migration_done
 from src.config import UserSettings, DrivesConfig, CustomFolders, extract_subfolders_from_manifest
 from src.core.formatting import format_size
 from src.core.paths import (
@@ -96,6 +97,9 @@ class SyncApp:
         else:
             print(f"    [init] check_txt: already migrated")
 
+        # Note: sync_state → marker migration runs lazily when manifest is loaded
+        # (we need manifest MD5s for proper migration validation)
+
         self.sync = FolderSync(
             self.client,
             auth_token=self.auth.get_token_getter(),
@@ -105,6 +109,34 @@ class SyncApp:
         self.folders = []
         self.use_local_manifest = use_local_manifest
         self.folder_stats_cache = FolderStatsCache()
+
+    def _migrate_to_markers(self):
+        """One-time migration from sync_state.json to marker files."""
+        import time as _t
+
+        print("\n  Migrating sync state to marker files...")
+        _t0 = _t.time()
+
+        # Build manifest MD5s dict for migration validation
+        manifest_md5s = {}
+        for folder in self.folders:
+            folder_name = folder.get("name", "")
+            for f in folder.get("files", []):
+                file_path = f.get("path", "")
+                file_md5 = f.get("md5", "")
+                if file_md5:
+                    # Build full path: FolderName/file_path
+                    full_path = f"{folder_name}/{file_path}"
+                    manifest_md5s[full_path] = file_md5
+
+        migrated, skipped = migrate_sync_state_to_markers(
+            self.sync_state,
+            get_download_path(),
+            manifest_md5s,
+        )
+
+        elapsed = (_t.time() - _t0) * 1000
+        print(f"    [init] marker migration: {elapsed:.0f}ms ({migrated} migrated, {skipped} skipped)")
 
     def _prompt_legacy_migration(self):
         """Prompt user about legacy check.txt file migration."""
@@ -172,6 +204,10 @@ class SyncApp:
             if f.get("folder_id") not in hidden_ids
         ]
 
+        # Run sync_state → marker migration if needed (one-time)
+        if not is_migration_done() and self.sync_state._archives:
+            self._migrate_to_markers()
+
         # Add custom folders to the folders list
         for custom in self.custom_folders.folders:
             # Create folder dict in same format as manifest folders
@@ -193,6 +229,12 @@ class SyncApp:
 
         This ensures local state matches the manifest exactly.
         """
+        # Clean up stale sync_state entries (case mismatches, outdated MD5s)
+        manifest_archives = self._build_manifest_archives()
+        stale = self.sync_state.cleanup_stale_archives(manifest_archives)
+        if stale > 0:
+            self.sync_state.save()
+
         indices = list(range(len(self.folders)))
 
         # Filter out disabled drives
@@ -227,6 +269,11 @@ class SyncApp:
             purge_all_folders(self.folders, get_download_path(), self.user_settings, self.sync_state)
             clear_scan_cache()  # Invalidate filesystem cache after purge
             self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
+        else:
+            # Purge didn't run, but still clean orphaned sync_state entries
+            orphaned = self.sync_state.cleanup_orphaned_entries()
+            if orphaned > 0:
+                self.sync_state.save()
 
         # Always wait before returning to menu
         from src.ui.primitives import wait_with_skip
@@ -587,6 +634,25 @@ class SyncApp:
                 result[folder_id] = list(disabled)
 
         return result
+
+    def _build_manifest_archives(self) -> dict[str, str]:
+        """
+        Build dict of {archive_path: md5} from all manifest folders.
+
+        Used for cleaning up stale sync_state entries.
+        """
+        from src.sync.sync_checker import is_archive_file
+
+        archives = {}
+        for folder in self.folders:
+            folder_name = folder.get("name", "")
+            for f in folder.get("files", []):
+                file_path = f.get("path", "")
+                file_name = file_path.split("/")[-1] if "/" in file_path else file_path
+                if is_archive_file(file_name):
+                    full_path = f"{folder_name}/{file_path}"
+                    archives[full_path] = f.get("md5", "")
+        return archives
 
     def run(self):
         """Main application loop."""

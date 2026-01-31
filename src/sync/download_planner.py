@@ -9,13 +9,16 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Optional
 
-from ..core.constants import CHART_ARCHIVE_EXTENSIONS, VIDEO_EXTENSIONS
-from ..core.files import file_exists_with_size
+from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path
 from .state import SyncState
+from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 # Windows MAX_PATH limit (260 chars including null terminator)
 WINDOWS_MAX_PATH = 260
+
+# Maximum filename length (applies to both macOS and Windows)
+MAX_FILENAME_LENGTH = 255
 
 
 def is_long_paths_enabled() -> bool:
@@ -40,6 +43,16 @@ def exceeds_windows_path_limit(path: Path) -> bool:
     return os.name == 'nt' and not is_long_paths_enabled() and len(str(path)) >= WINDOWS_MAX_PATH
 
 
+def has_long_filename(file_path: str) -> bool:
+    """Check if any path component exceeds the 255 char filename limit.
+
+    This applies to both macOS (HFS+/APFS) and Windows (NTFS).
+    A path like "folder/very_long_name.../file.txt" fails if any component > 255.
+    """
+    parts = file_path.replace("\\", "/").split("/")
+    return any(len(part) > MAX_FILENAME_LENGTH for part in parts)
+
+
 @dataclass
 class DownloadTask:
     """A file to be downloaded."""
@@ -49,11 +62,6 @@ class DownloadTask:
     md5: str = ""
     is_archive: bool = False  # If True, needs extraction after download
     rel_path: str = ""  # Relative path in manifest (for sync state tracking)
-
-
-def is_archive_file(filename: str) -> bool:
-    """Check if a filename is an archive type we handle."""
-    return any(filename.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
 
 
 def plan_downloads(
@@ -113,36 +121,42 @@ def plan_downloads(
                 skipped += 1
                 continue
 
-        # Check for long path on Windows (only if long paths not enabled)
+        # Check for filesystem limits
+        # 1. Any filename > 255 chars (both macOS and Windows)
+        # 2. Total path > 260 chars on Windows without long paths enabled
+        if has_long_filename(file_path):
+            long_paths.append(file_path)
+            continue
         if exceeds_windows_path_limit(download_path):
             long_paths.append(file_path)
             continue
 
-        # Check if already synced
+        # Check if already synced using unified sync_checker
         if is_archive:
-            is_synced = False
-            if sync_state and sync_state.is_archive_synced(rel_path, file_md5):
-                # Also verify extracted files still exist
-                archive_files = sync_state.get_archive_files(rel_path)
-                missing = sync_state.check_files_exist(archive_files)
-                is_synced = len(missing) == 0
+            # Extract checksum_path (parent folder) and archive_name from file_path
+            if "/" in file_path:
+                checksum_path = file_path.rsplit("/", 1)[0]
+            else:
+                checksum_path = ""
+
+            synced, _ = is_archive_synced(
+                folder_name=folder_name,
+                checksum_path=checksum_path,
+                archive_name=file_name,
+                manifest_md5=file_md5,
+                sync_state=sync_state,
+                local_base=local_base,
+            )
+            is_synced = synced
         else:
-            # For regular files: check sync_state first (tracks actual downloaded size),
-            # then fall back to manifest size check
-            is_synced = False
-            if sync_state and sync_state.is_file_synced(rel_path, file_size):
-                # Sync state matches manifest - verify file still exists
-                is_synced = local_path.exists()
-            elif sync_state:
-                # Check if file is tracked with different size (manifest may be stale)
-                tracked = sync_state._files.get(rel_path)
-                if tracked and tracked.get("md5") == file_md5:
-                    # Same MD5, just different size - trust sync_state
-                    tracked_size = tracked.get("size", 0)
-                    is_synced = file_exists_with_size(local_path, tracked_size)
-            if not is_synced:
-                # Final fallback: check manifest size
-                is_synced = file_exists_with_size(local_path, file_size)
+            is_synced = is_file_synced(
+                rel_path=file_path,
+                manifest_size=file_size,
+                manifest_md5=file_md5,
+                sync_state=sync_state,
+                local_path=local_path,
+                folder_name=folder_name,
+            )
 
         # Add to download list or skip
         if is_synced:

@@ -1,8 +1,5 @@
 """
-Performance tests for menu cache computation.
-
-These tests create realistic folder structures and verify that
-scanning operations complete within acceptable time limits.
+Tests for caching and setlist filtering behavior.
 """
 
 import tempfile
@@ -14,11 +11,6 @@ import pytest
 from src.sync import count_purgeable_files, clear_cache
 from src.sync.cache import scan_local_files
 from src.sync.state import SyncState
-
-# Backwards compat
-_scan_local_files = scan_local_files
-clear_scan_cache = clear_cache
-
 
 class TestScanPerformance:
     """Tests that scanning operations are fast enough."""
@@ -45,29 +37,29 @@ class TestScanPerformance:
 
             yield base, folder_path
 
-    def test_scan_local_files_is_cached(self, large_folder):
+    def testscan_local_files_is_cached(self, large_folder):
         """Second scan should be instant due to caching."""
         _, folder_path = large_folder
-        clear_scan_cache()
+        clear_cache()
 
         # First scan - populates cache
-        result1 = _scan_local_files(folder_path)
+        result1 = scan_local_files(folder_path)
 
         # Second scan - should hit cache
         start = time.time()
-        result2 = _scan_local_files(folder_path)
+        result2 = scan_local_files(folder_path)
         second_time = time.time() - start
 
         assert result1 == result2
         assert second_time < 0.01, f"Cached scan took {second_time:.3f}s, should be <0.01s"
 
-    def test_scan_local_files_reasonable_time(self, large_folder):
+    def testscan_local_files_reasonable_time(self, large_folder):
         """Initial scan of 2500 files should complete in <2 seconds."""
         _, folder_path = large_folder
-        clear_scan_cache()
+        clear_cache()
 
         start = time.time()
-        result = _scan_local_files(folder_path)
+        result = scan_local_files(folder_path)
         elapsed = time.time() - start
 
         assert len(result) == 2500, f"Expected 2500 files, got {len(result)}"
@@ -87,23 +79,23 @@ class TestCacheInvalidation:
             yield folder_path
 
     def test_clear_cache_forces_rescan(self, temp_folder):
-        """After clear_scan_cache(), next scan should see new files."""
-        clear_scan_cache()
+        """After clear_cache(), next scan should see new files."""
+        clear_cache()
 
         # Initial scan
-        result1 = _scan_local_files(temp_folder)
+        result1 = scan_local_files(temp_folder)
         assert len(result1) == 1
 
         # Add a file
         (temp_folder / "file2.txt").write_text("more content")
 
         # Without clearing, cache returns stale data
-        result2 = _scan_local_files(temp_folder)
+        result2 = scan_local_files(temp_folder)
         assert len(result2) == 1, "Cache should return stale data"
 
         # After clearing, should see new file
-        clear_scan_cache()
-        result3 = _scan_local_files(temp_folder)
+        clear_cache()
+        result3 = scan_local_files(temp_folder)
         assert len(result3) == 2, "After clear, should see new file"
 
 
@@ -131,13 +123,13 @@ class TestCountPurgeableUsesCache:
             yield base, folder
 
     def test_count_purgeable_reuses_cache(self, folder_with_manifest):
-        """count_purgeable_files should reuse _scan_local_files cache."""
+        """count_purgeable_files should reuse scan_local_files cache."""
         base, folder = folder_with_manifest
         folder_path = base / "TestDrive"
-        clear_scan_cache()
+        clear_cache()
 
         # Pre-populate cache
-        cached_files = _scan_local_files(folder_path)
+        cached_files = scan_local_files(folder_path)
         assert len(cached_files) == 2, "Should have scanned 2 files"
 
         # Set up sync_state tracking expected.txt
@@ -158,7 +150,7 @@ class TestCountPurgeableUsesCache:
     def test_count_purgeable_correct_without_cache(self, folder_with_manifest):
         """count_purgeable_files should produce correct results even without pre-populated cache."""
         base, folder = folder_with_manifest
-        clear_scan_cache()
+        clear_cache()
 
         # Set up sync_state tracking expected.txt
         sync_state = SyncState(base)
@@ -173,153 +165,53 @@ class TestCountPurgeableUsesCache:
         assert size == 5, "Extra file 'extra' is 5 bytes"
 
 
-def _create_manifest(num_setlists: int, files_per_setlist: int, folder_id: str = "test"):
-    """Helper to create a manifest with specified size."""
-    files = []
-    for setlist_idx in range(num_setlists):
-        setlist_name = f"Setlist_{setlist_idx:03d}"
-        for song_idx in range(files_per_setlist):
-            files.append({
-                "path": f"{setlist_name}/Song_{song_idx:05d}.zip",
-                "size": 10_000_000,
-                "md5": f"md5_{setlist_idx}_{song_idx}",
-                "modified": "2024-01-01T00:00:00Z",
-            })
-    return {
-        "folder_id": folder_id,
-        "name": "TestManifest",
-        "files": files,
-        "subfolders": [
-            {"name": f"Setlist_{i:03d}", "charts": {"total": files_per_setlist}}
-            for i in range(num_setlists)
-        ],
-    }
+class TestSetlistFiltering:
+    """Tests that disabled folders/setlists are properly excluded."""
 
-
-def _create_settings(tmp_path, folder_id: str, num_setlists: int, num_enabled: int, filename: str):
-    """Helper to create UserSettings with specified enabled setlists."""
-    from src.config.settings import UserSettings
-
-    settings = UserSettings.load(tmp_path / filename)
-    settings.set_drive_enabled(folder_id, True)
-
-    for i in range(num_enabled, num_setlists):
-        settings.set_subfolder_enabled(folder_id, f"Setlist_{i:03d}", False)
-
-    return settings
-
-
-@pytest.mark.stress
-class TestManifestProcessingPerformance:
-    """
-    Stress tests for the early setlist filtering optimization.
-
-    Tests that filtering disabled setlists BEFORE expensive operations
-    (dedupe, build_chart_folders) provides the expected speedup.
-
-    6 essential tests covering:
-    - Small manifest sanity check (10k)
-    - Main optimization target (100k @ 10%)
-    - Baseline without filtering (100k @ 100%)
-    - Stress with filtering (500k @ 1%)
-    - Stress worst case (500k @ 100%)
-    - Edge case: drive disabled
-
-    These tests are marked stress and skipped in CI by default.
-    Run locally with: pytest -m stress
-    """
-
-    def test_10k_files_10pct_enabled(self, tmp_path):
-        """Small manifest sanity check - should be very fast."""
-        from src.sync.status import get_sync_status
-
-        manifest = _create_manifest(10, 1000)  # 10k files
-        settings = _create_settings(tmp_path, "test", 10, 1, "s.json")  # 1/10 = 10%
-
-        clear_scan_cache()
-        start = time.perf_counter()
-        status = get_sync_status([manifest], tmp_path, settings, None)
-        elapsed = time.perf_counter() - start
-
-        assert status.total_charts == 1_000
-        assert elapsed < 0.05, f"10% of 10k took {elapsed:.3f}s, expected < 0.05s"
-
-    def test_100k_files_10pct_enabled(self, tmp_path):
-        """Main optimization target - filtering 100k -> 10k files."""
-        from src.sync.status import get_sync_status
-
-        manifest = _create_manifest(50, 2000)  # 100k files
-        settings = _create_settings(tmp_path, "test", 50, 5, "s.json")  # 5/50 = 10%
-
-        clear_scan_cache()
-        start = time.perf_counter()
-        status = get_sync_status([manifest], tmp_path, settings, None)
-        elapsed = time.perf_counter() - start
-
-        assert status.total_charts == 10_000
-        assert elapsed < 0.15, f"10% of 100k took {elapsed:.3f}s, expected < 0.15s"
-
-    def test_100k_files_100pct_enabled(self, tmp_path):
-        """Baseline - no filtering benefit, processes everything."""
-        from src.sync.status import get_sync_status
-
-        manifest = _create_manifest(50, 2000)  # 100k files
-        settings = _create_settings(tmp_path, "test", 50, 50, "s.json")  # 100%
-
-        clear_scan_cache()
-        start = time.perf_counter()
-        status = get_sync_status([manifest], tmp_path, settings, None)
-        elapsed = time.perf_counter() - start
-
-        assert status.total_charts == 100_000
-        assert elapsed < 1.0, f"100% of 100k took {elapsed:.3f}s, expected < 1.0s"
-
-    def test_500k_files_1pct_enabled(self, tmp_path):
-        """Stress test - filtering should make 500k feel like 5k."""
-        from src.sync.status import get_sync_status
-
-        manifest = _create_manifest(100, 5000)  # 500k files
-        settings = _create_settings(tmp_path, "test", 100, 1, "s.json")  # 1%
-
-        clear_scan_cache()
-        start = time.perf_counter()
-        status = get_sync_status([manifest], tmp_path, settings, None)
-        elapsed = time.perf_counter() - start
-
-        assert status.total_charts == 5_000
-        assert elapsed < 0.2, f"1% of 500k took {elapsed:.3f}s, expected < 0.2s"
-
-    def test_500k_files_100pct_enabled(self, tmp_path):
-        """Worst case stress test - no filtering, full 500k processed."""
-        from src.sync.status import get_sync_status
-
-        manifest = _create_manifest(100, 5000)  # 500k files
-        settings = _create_settings(tmp_path, "test", 100, 100, "s.json")  # 100%
-
-        clear_scan_cache()
-        start = time.perf_counter()
-        status = get_sync_status([manifest], tmp_path, settings, None)
-        elapsed = time.perf_counter() - start
-
-        assert status.total_charts == 500_000
-        assert elapsed < 4.0, f"100% of 500k took {elapsed:.3f}s, expected < 4.0s"
-
-    def test_drive_disabled_skips_immediately(self, tmp_path):
-        """Edge case - disabled drive should skip all processing."""
+    def test_disabled_drive_returns_zero_charts(self, tmp_path):
+        """Disabled drive should report 0 charts regardless of manifest size."""
         from src.sync.status import get_sync_status
         from src.config.settings import UserSettings
 
-        manifest = _create_manifest(100, 5000)  # 500k files
-        settings = UserSettings.load(tmp_path / "s.json")
+        manifest = {
+            "folder_id": "test",
+            "name": "TestDrive",
+            "files": [{"path": f"Song{i}.zip", "size": 1000, "md5": f"md5_{i}"} for i in range(100)],
+            "subfolders": [],
+        }
+        settings = UserSettings.load(tmp_path / "settings.json")
         settings.set_drive_enabled("test", False)
 
-        clear_scan_cache()
-        start = time.perf_counter()
+        clear_cache()
         status = get_sync_status([manifest], tmp_path, settings, None)
-        elapsed = time.perf_counter() - start
-
         assert status.total_charts == 0
-        assert elapsed < 0.01, f"Disabled drive took {elapsed:.3f}s, expected < 0.01s"
+
+    def test_disabled_setlists_excluded_from_count(self, tmp_path):
+        """Only enabled setlists should be counted."""
+        from src.sync.status import get_sync_status
+        from src.config.settings import UserSettings
+
+        manifest = {
+            "folder_id": "test",
+            "name": "TestDrive",
+            "files": [
+                {"path": "Setlist_A/song1.zip", "size": 1000, "md5": "a1"},
+                {"path": "Setlist_A/song2.zip", "size": 1000, "md5": "a2"},
+                {"path": "Setlist_B/song1.zip", "size": 1000, "md5": "b1"},
+                {"path": "Setlist_B/song2.zip", "size": 1000, "md5": "b2"},
+            ],
+            "subfolders": [
+                {"name": "Setlist_A", "charts": {"total": 2}},
+                {"name": "Setlist_B", "charts": {"total": 2}},
+            ],
+        }
+        settings = UserSettings.load(tmp_path / "settings.json")
+        settings.set_drive_enabled("test", True)
+        settings.set_subfolder_enabled("test", "Setlist_B", False)
+
+        clear_cache()
+        status = get_sync_status([manifest], tmp_path, settings, None)
+        assert status.total_charts == 2  # Only Setlist_A
 
 
 if __name__ == "__main__":

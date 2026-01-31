@@ -8,15 +8,11 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Optional, Set
 
-from ..core.constants import VIDEO_EXTENSIONS, CHART_ARCHIVE_EXTENSIONS
+from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import relative_posix, parent_posix, sanitize_path
 from .cache import scan_local_files
 from .state import SyncState
-
-
-def _is_archive(path: str) -> bool:
-    """Check if a path is an archive file."""
-    return any(path.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
+from .sync_checker import is_archive_file
 
 
 @dataclass
@@ -93,8 +89,8 @@ def find_extra_files(
     Find local files not tracked in sync_state AND not in manifest.
 
     A file is considered "extra" only if it's not in sync_state AND doesn't
-    match any manifest path. This allows files downloaded by other tools
-    (like rclone) to be recognized as valid if they match the manifest.
+    match any manifest path. No disk heuristics - we rely on markers/sync_state
+    to know what files were extracted from archives.
 
     Args:
         folder_name: Name of the folder (for building paths)
@@ -111,21 +107,23 @@ def find_extra_files(
     if not local_files:
         return []
 
-    # Get all tracked files from sync_state
+    # Get all tracked files from sync_state (lowercase for case-insensitive matching)
     tracked_files = sync_state.get_all_files() if sync_state else set()
+    tracked_lower = {p.lower() for p in tracked_files}
+    manifest_lower = {p.lower() for p in manifest_paths}
 
     # Find extras - files on disk not in sync_state AND not in manifest
     extras = []
     for rel_path, size in local_files.items():
         # Build the full path (folder_name/rel_path)
-        full_path = f"{folder_name}/{rel_path}"
+        full_path = f"{folder_name}/{rel_path}".lower()
 
         # Check sync_state first
-        if full_path in tracked_files:
+        if full_path in tracked_lower:
             continue
 
         # Check manifest (disk path should match sanitized manifest path)
-        if full_path in manifest_paths:
+        if full_path in manifest_lower:
             continue
 
         extras.append((folder_path / rel_path, size))
@@ -184,7 +182,7 @@ def plan_purge(
                 stats.chart_size += size
                 all_files.append((folder_path / rel_path, size))
                 # Estimate charts: archives are 1 chart, else group by parent folder
-                if _is_archive(rel_path):
+                if is_archive_file(rel_path):
                     stats.estimated_charts += 1
                 else:
                     chart_parents.add(parent_posix(rel_path))
@@ -217,7 +215,7 @@ def plan_purge(
                 stats.chart_size += size
                 all_files.append((folder_path / rel_path, size))
                 # Estimate charts for disabled setlist files
-                if _is_archive(rel_path):
+                if is_archive_file(rel_path):
                     stats.estimated_charts += 1
                 else:
                     disabled_chart_parents.add(parent_posix(rel_path))
@@ -254,7 +252,7 @@ def plan_purge(
                 stats.extra_file_size += size
                 all_files.append((f, size))
                 # Only count archive extras as charts
-                if _is_archive(rel_path):
+                if is_archive_file(rel_path):
                     stats.estimated_charts += 1
 
         # Count video files when delete_videos is enabled

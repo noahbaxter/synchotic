@@ -143,6 +143,56 @@ class TestSyncStateExtraFiles:
         assert len(extras) == 1
         assert "extra.txt" in extra_names
 
+    def test_case_insensitive_sync_state_matching(self, temp_dir):
+        """
+        Files should match sync_state entries regardless of case.
+
+        This prevents case mismatches (e.g., "And" vs "and") from causing
+        files to be incorrectly flagged as extra on case-insensitive filesystems.
+        """
+        folder_name = "TestDrive"
+        folder_path = temp_dir / folder_name
+        chart_folder = folder_path / "Setlist" / "Song Name"
+        chart_folder.mkdir(parents=True)
+
+        # Create file on disk with one casing
+        (chart_folder / "song.ini").write_text("[song]\nname=Test")
+
+        # Track in sync_state with DIFFERENT casing in path
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_archive(
+            f"{folder_name}/Setlist/SONG NAME/archive.7z",  # Uppercase "SONG NAME"
+            md5="abc123",
+            archive_size=1000,
+            files={"song.ini": 18}
+        )
+
+        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+
+        # File should NOT be flagged as extra despite case mismatch
+        extra_names = [f.name for f, _ in extras]
+        assert "song.ini" not in extra_names, "Case mismatch should not flag file as extra"
+
+    def test_case_insensitive_manifest_matching(self, temp_dir):
+        """
+        Files should match manifest paths regardless of case.
+        """
+        folder_name = "TestDrive"
+        folder_path = temp_dir / folder_name
+        folder_path.mkdir(parents=True)
+
+        # Create file on disk with lowercase
+        (folder_path / "myfile.txt").write_text("content")
+
+        # Manifest has UPPERCASE
+        manifest_paths = {f"{folder_name}/MYFILE.TXT"}
+
+        extras = find_extra_files(folder_name, folder_path, None, manifest_paths)
+
+        # File should NOT be flagged as extra
+        assert len(extras) == 0, "Case mismatch should not flag file as extra"
+
 
 class TestFindExtraFilesWithCache:
     """Tests for find_extra_files when passed pre-scanned local_files."""

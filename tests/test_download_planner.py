@@ -170,6 +170,56 @@ class TestPlanDownloadsArchives:
         # Should re-download because extracted file size is wrong
         assert len(tasks) == 1, "Should re-download when extracted file size differs"
 
+    def test_missing_file_not_masked_by_disk_fallback(self, temp_dir):
+        """
+        Regression test: disk fallback must not override state-based missing file detection.
+
+        Scenario: Archive extracted to folder with multiple charts. One chart folder
+        is deleted. State correctly detects missing files, but disk fallback could
+        find OTHER chart folders and incorrectly say "synced".
+
+        The fix: disk fallback only runs when NO state entry exists. If state tracks
+        the archive, trust the state's file list.
+        """
+        # Create chart folder structure - simulating extracted archive with 2 charts
+        chart1 = temp_dir / "TestDrive" / "setlist" / "Chart1"
+        chart2 = temp_dir / "TestDrive" / "setlist" / "Chart2"
+        chart1.mkdir(parents=True)
+        chart2.mkdir(parents=True)
+
+        # Chart1 has all its files (with chart marker so fallback would find it)
+        (chart1 / "song.ini").write_text("[song]")
+        (chart1 / "notes.mid").write_bytes(b"midi data")
+
+        # Chart2 is MISSING (deleted) - no files created
+
+        # State tracks BOTH charts as extracted from the archive
+        sync_state = SyncState(temp_dir)
+        sync_state.load()
+        sync_state.add_archive(
+            "TestDrive/setlist/charts.7z",
+            md5="abc123",
+            archive_size=5000,
+            files={
+                "Chart1/song.ini": 6,
+                "Chart1/notes.mid": 9,
+                "Chart2/song.ini": 6,  # These don't exist on disk
+                "Chart2/notes.mid": 9,
+            }
+        )
+
+        files = [{"id": "1", "path": "setlist/charts.7z", "size": 5000, "md5": "abc123"}]
+        tasks, skipped, _ = plan_downloads(
+            files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
+        )
+
+        # Should re-download: state says Chart2 files are missing
+        # Disk fallback finding Chart1 must NOT override this
+        assert len(tasks) == 1, (
+            "Missing files from state should trigger re-download, "
+            "even if disk fallback would find other chart folders"
+        )
+
 
 class TestPlanDownloadsRegularFiles:
     """Tests for regular (non-archive) file handling."""
@@ -225,13 +275,12 @@ class TestPlanDownloadsRegularFiles:
         assert len(tasks) == 0
         assert skipped == 1
 
-    def test_sync_state_trusted_over_disk_size(self, temp_dir):
+    def test_sync_state_not_trusted_when_disk_size_wrong(self, temp_dir):
         """
-        sync_state is trusted for regular files when it matches manifest.
+        Even when sync_state matches manifest, file is re-downloaded if disk size is wrong.
 
-        This prevents re-downloads when manifest has stale sizes (common with
-        Google Drive shortcuts where manifest may lag behind actual file changes).
-        We only verify file EXISTS, not that disk size matches manifest.
+        Correctness requires verifying actual disk state. If file was modified or
+        corrupted after download, we need to re-download it.
         """
         # Create file on disk with DIFFERENT size than manifest
         local_file = temp_dir / "folder" / "song.ini"
@@ -249,9 +298,9 @@ class TestPlanDownloadsRegularFiles:
             files, temp_dir, sync_state=sync_state, folder_name="TestDrive"
         )
 
-        # sync_state matches manifest AND file exists - trust it, don't re-download
-        assert len(tasks) == 0, "sync_state should be trusted when it matches manifest"
-        assert skipped == 1
+        # Disk file has wrong size (21 vs 100) - must re-download for correctness
+        assert len(tasks) == 1, "should re-download when disk size differs from sync_state"
+        assert skipped == 0
 
     def test_file_missing_from_disk_triggers_download(self, temp_dir):
         """
@@ -515,12 +564,17 @@ class TestPlanDownloadsPathSanitization:
 
 
 class TestPlanDownloadsLongPaths:
-    """Tests for Windows long path handling."""
+    """Tests for filesystem path/filename limit handling."""
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
-            yield Path(tmpdir)
+            tmp_path = Path(tmpdir)
+            # Set up markers directory to avoid Path issues when monkeypatching os.name
+            markers_dir = tmp_path / ".dm-sync" / "markers"
+            markers_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
+            yield tmp_path
 
     def test_long_path_skipped_when_not_enabled(self, temp_dir, monkeypatch):
         """Paths exceeding 260 chars on Windows are skipped when long paths not enabled."""
@@ -529,12 +583,11 @@ class TestPlanDownloadsLongPaths:
         import src.sync.download_planner as dp
         monkeypatch.setattr(dp, "is_long_paths_enabled", lambda: False)
 
-        # Create a path that will exceed 260 chars
-        long_folder = "A" * 200
-        files = [{"id": "1", "path": f"{long_folder}/chart.7z", "size": 1000, "md5": "abc"}]
+        # Create a path that will exceed 260 chars (but no single component > 255)
+        files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir)
 
-        # Should be skipped due to long path
+        # Should be skipped due to long total path
         assert len(tasks) == 0
         assert len(long_paths) == 1
 
@@ -545,9 +598,8 @@ class TestPlanDownloadsLongPaths:
         import src.sync.download_planner as dp
         monkeypatch.setattr(dp, "is_long_paths_enabled", lambda: True)
 
-        # Create a path that will exceed 260 chars
-        long_folder = "A" * 200
-        files = [{"id": "1", "path": f"{long_folder}/chart.7z", "size": 1000, "md5": "abc"}]
+        # Create a path that will exceed 260 chars (but no single component > 255)
+        files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir)
 
         # Should NOT be skipped - long paths are enabled
@@ -555,14 +607,44 @@ class TestPlanDownloadsLongPaths:
         assert len(long_paths) == 0
 
     def test_long_path_not_checked_on_unix(self, temp_dir, monkeypatch):
-        """Long paths are not checked on non-Windows systems."""
+        """Total path length is not checked on non-Windows systems."""
         monkeypatch.setattr("os.name", "posix")
 
-        long_folder = "A" * 200
+        # Long total path but no single component > 255
+        files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir)
+
+        # Should not be skipped on Unix (path length OK)
+        assert len(tasks) == 1
+        assert len(long_paths) == 0
+
+    def test_long_filename_skipped_on_all_platforms(self, temp_dir):
+        """Files with names > 255 chars are skipped on all platforms."""
+        # Create a file with name > 255 chars
+        long_name = "A" * 260 + ".7z"
+        files = [{"id": "1", "path": f"folder/{long_name}", "size": 1000, "md5": "abc"}]
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir)
+
+        # Should be skipped due to filename > 255
+        assert len(tasks) == 0
+        assert len(long_paths) == 1
+
+    def test_long_folder_name_skipped(self, temp_dir):
+        """Folders with names > 255 chars are skipped on all platforms."""
+        # Create a folder with name > 255 chars
+        long_folder = "A" * 260
         files = [{"id": "1", "path": f"{long_folder}/chart.7z", "size": 1000, "md5": "abc"}]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir)
 
-        # Should not be skipped on Unix
+        # Should be skipped due to folder name > 255
+        assert len(tasks) == 0
+        assert len(long_paths) == 1
+
+    def test_normal_length_paths_allowed(self, temp_dir):
+        """Normal length paths work fine."""
+        files = [{"id": "1", "path": "folder/subfolder/chart.7z", "size": 1000, "md5": "abc"}]
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir)
+
         assert len(tasks) == 1
         assert len(long_paths) == 0
 

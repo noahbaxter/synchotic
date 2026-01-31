@@ -42,6 +42,7 @@ class FolderSync:
         folder: dict,
         base_path: Path,
         disabled_prefixes: list[str] = None,
+        cancel_check: Optional[Callable[[], bool]] = None,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
@@ -50,6 +51,8 @@ class FolderSync:
             folder: Folder dict from manifest
             base_path: Base download path
             disabled_prefixes: List of path prefixes to exclude (disabled subfolders)
+            cancel_check: Optional callback that returns True to trigger cancellation.
+                         Called periodically during download.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -123,7 +126,7 @@ class FolderSync:
         # Download
         download_start = time.time()
         downloaded, _, errors, rate_limited, cancelled, bytes_downloaded = self.downloader.download_many(
-            tasks, sync_state=self.sync_state, drive_name=folder["name"]
+            tasks, sync_state=self.sync_state, drive_name=folder["name"], cancel_check=cancel_check
         )
         download_time = time.time() - download_start
 

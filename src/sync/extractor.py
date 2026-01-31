@@ -6,6 +6,7 @@ Handles extracting ZIP, 7z, and RAR archives with bundled tool support.
 
 import os
 import sys
+import unicodedata
 import zipfile
 from pathlib import Path
 from typing import Tuple, Set
@@ -203,6 +204,9 @@ def scan_extracted_files(folder_path: Path, base_path: Path = None) -> dict[str,
         if f.is_file() and f.name != CHECKSUM_FILE:
             try:
                 rel_path = relative_posix(f, base_path)
+                # Normalize to NFC for cross-platform consistency
+                # macOS returns NFD from filesystem APIs, but manifest uses NFC
+                rel_path = unicodedata.normalize("NFC", rel_path)
                 files[rel_path] = f.stat().st_size
             except (ValueError, OSError):
                 pass
