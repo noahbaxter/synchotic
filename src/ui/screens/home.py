@@ -10,7 +10,7 @@ from typing import TYPE_CHECKING
 
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_manifest
 from src.core.logging import debug_log
-from src.sync import get_sync_status, count_purgeable_files, SyncStatus, FolderStats, FolderStatsCache
+from src.sync import get_sync_status, get_lazy_sync_status, count_purgeable_files, SyncStatus, FolderStats, FolderStatsCache
 from src.sync.state import SyncState
 from ..primitives import Colors
 from ..components import format_status_line, format_home_item, format_delta
@@ -37,9 +37,16 @@ def _compute_folder_stats(
 ) -> FolderStats:
     """Compute stats for a single folder (sync status, purge counts, display string)."""
     folder_id = folder.get("folder_id", "")
+    has_files = folder.get("files") is not None
 
-    status = get_sync_status([folder], download_path, user_settings, sync_state)
-    purge_files, purge_size, purge_charts = count_purgeable_files([folder], download_path, user_settings, sync_state)
+    # Use lazy status if files aren't loaded yet
+    if has_files:
+        status = get_sync_status([folder], download_path, user_settings, sync_state)
+        purge_files, purge_size, purge_charts = count_purgeable_files([folder], download_path, user_settings, sync_state)
+    else:
+        status = get_lazy_sync_status(folder, download_path, sync_state)
+        # Can't calculate purge without file list
+        purge_files, purge_size, purge_charts = 0, 0, 0
 
     # Get setlist counts
     setlists = extract_subfolders_from_manifest(folder)
@@ -67,6 +74,7 @@ def _compute_folder_stats(
         missing_charts=status.missing_charts,
         disabled=not drive_enabled,
         delta_mode=delta_mode,
+        is_estimate=status.is_estimate,
     )
 
     # Strip ANSI codes from display_string for logging
@@ -161,6 +169,7 @@ def compute_main_menu_cache(
             missing_charts=status.missing_charts,
             disabled=not drive_enabled,
             delta_mode=delta_mode,
+            is_estimate=status.is_estimate,
         )
 
         # Only aggregate enabled drives into global stats for add/sync

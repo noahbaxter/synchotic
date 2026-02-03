@@ -28,6 +28,8 @@ class SyncStatus:
     # True if counts are from actual folder scan (real charts)
     # False if counts are from manifest (archives, not yet extracted)
     is_actual_charts: bool = False
+    # True if this is an estimate (files not loaded yet)
+    is_estimate: bool = False
 
     @property
     def missing_charts(self) -> int:
@@ -298,6 +300,44 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
                     status.total_size += manifest_size
 
             debug_log(f"CUSTOM_FINAL | folder={folder_name} | total_charts={status.total_charts} | synced_charts={status.synced_charts} | total_size={status.total_size} | synced_size={status.synced_size}")
+
+    return status
+
+
+def get_lazy_sync_status(
+    folder: dict,
+    base_path: Path,
+    sync_state: SyncState = None,
+) -> SyncStatus:
+    """
+    Get estimated sync status for a folder without loading its file list.
+
+    Uses folder metadata (chart_count, total_size) combined with disk scan
+    to estimate sync progress. Returns is_estimate=True to indicate uncertainty.
+
+    Args:
+        folder: Folder dict with metadata (but files may be None)
+        base_path: Base download path
+        sync_state: SyncState for checking synced archives
+
+    Returns:
+        SyncStatus with estimated values and is_estimate=True
+    """
+    status = SyncStatus(is_estimate=True)
+
+    folder_name = folder.get("name", "")
+    folder_path = base_path / folder_name
+
+    # Use metadata from manifest (pre-computed totals)
+    status.total_charts = folder.get("chart_count", 0)
+    status.total_size = folder.get("total_size", 0)
+
+    # Scan disk to estimate synced state
+    if folder_path.exists():
+        actual_charts, actual_size = scan_actual_charts(folder_path, set())
+        status.synced_charts = actual_charts
+        status.synced_size = actual_size
+        status.is_actual_charts = True
 
     return status
 

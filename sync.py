@@ -107,6 +107,7 @@ class SyncApp:
             sync_state=self.sync_state,
         )
         self.folders = []
+        self._manifest_raw = {}  # Raw manifest data for lazy file loading
         self.use_local_manifest = use_local_manifest
         self.folder_stats_cache = FolderStatsCache()
 
@@ -189,7 +190,12 @@ class SyncApp:
         print()
 
     def load_manifest(self, quiet: bool = False):
-        """Load manifest folders (includes custom folders)."""
+        """Load manifest folders (includes custom folders).
+
+        LAZY LOADING: File lists are NOT loaded at startup. Only folder metadata
+        (name, folder_id, chart_count, total_size) is loaded initially.
+        Files are loaded on-demand when needed for sync or setlist configuration.
+        """
         if not quiet:
             if self.use_local_manifest:
                 print("Loading local manifest...")
@@ -197,15 +203,37 @@ class SyncApp:
                 print("Fetching folder list...")
         manifest_data = fetch_manifest(use_local=self.use_local_manifest)
 
-        # Filter out hidden drives
+        # Store raw manifest for lazy file loading
+        self._manifest_raw = manifest_data
+
+        # Filter out hidden drives and build folder list with metadata only
         hidden_ids = {d.folder_id for d in self.drives_config.drives if d.hidden}
-        self.folders = [
-            f for f in manifest_data.get("folders", [])
-            if f.get("folder_id") not in hidden_ids
-        ]
+        self.folders = []
+
+        for f in manifest_data.get("folders", []):
+            if f.get("folder_id") in hidden_ids:
+                continue
+
+            # Build folder with metadata only - files loaded on demand
+            folder = {
+                "name": f.get("name"),
+                "folder_id": f.get("folder_id"),
+                "description": f.get("description", ""),
+                "file_count": f.get("file_count", 0),
+                "total_size": f.get("total_size", 0),
+                "chart_count": f.get("chart_count", 0),
+                "setlists": f.get("setlists", []),
+                "subfolders": f.get("subfolders", []),
+                "files": None,  # LAZY: loaded on demand via _load_folder_files()
+            }
+            self.folders.append(folder)
 
         # Run sync_state → marker migration if needed (one-time)
+        # Note: migration needs files loaded, so we defer if needed
         if not is_migration_done() and self.sync_state._archives:
+            # Load all files for migration
+            for folder in self.folders:
+                self._load_folder_files(folder)
             self._migrate_to_markers()
 
         # Add custom folders to the folders list
@@ -224,17 +252,25 @@ class SyncApp:
             }
             self.folders.append(folder_dict)
 
+    def _load_folder_files(self, folder: dict) -> list:
+        """Load file list for a folder from raw manifest (lazy loading)."""
+        if folder.get("files") is not None:
+            return folder["files"]
+
+        folder_id = folder["folder_id"]
+        for f in self._manifest_raw.get("folders", []):
+            if f.get("folder_id") == folder_id:
+                folder["files"] = f.get("files", [])
+                return folder["files"]
+
+        folder["files"] = []
+        return []
+
     def handle_sync(self):
         """Sync all enabled folders: download missing files, then purge extras.
 
         This ensures local state matches the manifest exactly.
         """
-        # Clean up stale sync_state entries (case mismatches, outdated MD5s)
-        manifest_archives = self._build_manifest_archives()
-        stale = self.sync_state.cleanup_stale_archives(manifest_archives)
-        if stale > 0:
-            self.sync_state.save()
-
         indices = list(range(len(self.folders)))
 
         # Filter out disabled drives
@@ -242,6 +278,23 @@ class SyncApp:
             i for i in indices
             if self.user_settings.is_drive_enabled(self.folders[i].get("folder_id", ""))
         ]
+
+        # Pre-load file lists for enabled folders (lazy loading)
+        folders_to_load = [
+            self.folders[i] for i in enabled_indices
+            if self.folders[i].get("files") is None
+            and not self.folders[i].get("is_custom")  # Custom folders scan via API
+        ]
+        if folders_to_load:
+            print("  Loading file lists...")
+            for folder in folders_to_load:
+                self._load_folder_files(folder)
+
+        # Clean up stale sync_state entries (case mismatches, outdated MD5s)
+        manifest_archives = self._build_manifest_archives()
+        stale = self.sync_state.cleanup_stale_archives(manifest_archives)
+        if stale > 0:
+            self.sync_state.save()
 
         # Download enabled drives (skip if none enabled)
         if enabled_indices:
@@ -284,6 +337,11 @@ class SyncApp:
         folder = self._get_folder_by_id(folder_id)
         if not folder:
             return
+
+        # Load files if not yet loaded (needed for setlist menu)
+        if folder.get("files") is None and not folder.get("is_custom"):
+            print(f"  Loading {folder['name']}...")
+            self._load_folder_files(folder)
 
         # Show subfolder settings (works for both regular and custom folders)
         result = show_subfolder_settings(folder, self.user_settings, get_download_path(), self.sync_state)

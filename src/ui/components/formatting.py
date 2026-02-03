@@ -140,6 +140,7 @@ def format_home_item(
     missing_charts: int = 0,
     disabled: bool = False,
     delta_mode: str = "size",
+    is_estimate: bool = False,
 ) -> str:
     """
     Format home screen item line.
@@ -148,12 +149,16 @@ def format_home_item(
     Enabled partial: 35% | 5/30 setlists, [+2.3 GB] or [+50 files]
     Disabled: 5/30 setlists, 4.0 GB (greyed by caller)
     With purgeable: ... [+2.3 GB / -317 MB] or [+50 files / -80 files]
+    Estimate (lazy): ~35% | 4.0 GB (no setlist count, files not loaded)
     """
-    # Setlists part
-    if total_setlists > 0:
+    # Setlists part (skip if estimate - we don't have file paths to compute setlists)
+    if total_setlists > 0 and not is_estimate:
         setlists_str = f"{enabled_setlists}/{total_setlists} setlists"
     else:
         setlists_str = ""
+
+    # Prefix for estimates
+    pct_prefix = "~" if is_estimate else ""
 
     missing_size = max(0, total_size - synced_size)
 
@@ -188,7 +193,7 @@ def format_home_item(
             if total_size > 0:
                 parts.append(format_size(total_size))
             info = ", ".join(parts) if parts else ""
-            result = f"{pct}% | {info}" if info else f"{pct}%"
+            result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
             # Synced but has purgeable
             if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
                 delta = format_delta(
@@ -213,11 +218,11 @@ def format_home_item(
             )
             if delta:
                 if info:
-                    result = f"{pct}% | {info} {delta}"
+                    result = f"{pct_prefix}{pct}% | {info} {delta}"
                 else:
-                    result = f"{pct}% | {delta}"
+                    result = f"{pct_prefix}{pct}% | {delta}"
             else:
-                result = f"{pct}% | {info}" if info else f"{pct}%"
+                result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
 
     return result
 

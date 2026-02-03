@@ -10,6 +10,7 @@ from typing import List, Tuple, Optional, Set
 
 from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import relative_posix, parent_posix, sanitize_path
+from ..core.logging import debug_log
 from .cache import scan_local_files
 from .state import SyncState
 from .sync_checker import is_archive_file
@@ -224,7 +225,12 @@ def plan_purge(
 
         # Build set of valid manifest paths for this folder (enabled setlists only)
         manifest_paths: Set[str] = set()
-        manifest_files = folder.get("files", [])
+        manifest_files = folder.get("files")
+
+        # Warn if files not loaded (lazy loading) - can't properly detect extras
+        if manifest_files is None:
+            debug_log(f"PURGE_WARN | folder={folder_name} | files not loaded - skipping extra file detection")
+            manifest_files = []
         for f in manifest_files:
             file_path = f.get("path", "")
             # Skip files in disabled setlists
