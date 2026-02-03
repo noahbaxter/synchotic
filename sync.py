@@ -245,8 +245,8 @@ class SyncApp:
 
         # Download enabled drives (skip if none enabled)
         if enabled_indices:
-            # Scan custom folders that need scanning (no files yet)
-            self._scan_custom_folders_if_needed(enabled_indices)
+            # Always re-scan custom folders to catch new/changed files
+            self._scan_custom_folders(enabled_indices)
 
             # Get disabled subfolders for filtering
             disabled_map = self._get_disabled_subfolders_for_folders(enabled_indices)
@@ -527,20 +527,20 @@ class SyncApp:
                 return folder
         return None
 
-    def _scan_custom_folders_if_needed(self, enabled_indices: list):
+    def _scan_custom_folders(self, enabled_indices: list):
         """
-        Scan any custom folders that haven't been scanned yet.
+        Scan all enabled custom folders to get current file lists.
 
-        Custom folders need to be scanned using the user's OAuth token
-        before they can be downloaded.
+        Custom folders are live Google Drive folders that can change at any time,
+        so we always re-scan before syncing to catch new/removed files.
         """
         from src.drive import FolderScanner
 
-        # Find custom folders that need scanning
+        # Find all enabled custom folders
         folders_to_scan = []
         for idx in enabled_indices:
             folder = self.folders[idx]
-            if folder.get("is_custom") and not folder.get("files"):
+            if folder.get("is_custom"):
                 folders_to_scan.append((idx, folder))
 
         if not folders_to_scan:
