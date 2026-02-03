@@ -28,6 +28,8 @@ class FolderStats:
     purge_count: int  # File count
     purge_charts: int  # Estimated chart count
     purge_size: int
+    enabled_setlists: int
+    total_setlists: int
     display_string: str | None
 
 
@@ -64,6 +66,8 @@ class CachedFolderStats:
     purge_count: int
     purge_charts: int
     purge_size: int
+    enabled_setlists: int
+    total_setlists: int
     settings_hash: str  # Hash of enabled setlists to detect settings changes
 
 
@@ -98,6 +102,8 @@ class PersistentStatsCache:
                     purge_count=entry.get("purge_count", 0),
                     purge_charts=entry.get("purge_charts", 0),
                     purge_size=entry.get("purge_size", 0),
+                    enabled_setlists=entry.get("enabled_setlists", 0),
+                    total_setlists=entry.get("total_setlists", 0),
                     settings_hash=entry.get("settings_hash", ""),
                 )
         except (json.JSONDecodeError, OSError):
@@ -117,6 +123,8 @@ class PersistentStatsCache:
                 "purge_count": stats.purge_count,
                 "purge_charts": stats.purge_charts,
                 "purge_size": stats.purge_size,
+                "enabled_setlists": stats.enabled_setlists,
+                "total_setlists": stats.total_setlists,
                 "settings_hash": stats.settings_hash,
             }
         try:

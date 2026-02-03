@@ -52,6 +52,16 @@ def _compute_folder_stats(
         status = get_sync_status([folder], download_path, user_settings, sync_state)
         purge_files, purge_size, purge_charts = count_purgeable_files([folder], download_path, user_settings, sync_state)
 
+        # Compute setlist counts (requires files to be loaded)
+        setlists = extract_subfolders_from_manifest(folder)
+        total_setlists = len(setlists) if setlists else 0
+        enabled_setlists = 0
+        if setlists and user_settings:
+            enabled_setlists = sum(
+                1 for c in setlists
+                if user_settings.is_subfolder_enabled(folder_id, c)
+            )
+
         # Save to persistent cache for next startup
         if persistent_cache:
             persistent_cache.set(folder_id, CachedFolderStats(
@@ -62,6 +72,8 @@ def _compute_folder_stats(
                 purge_count=purge_files,
                 purge_charts=purge_charts,
                 purge_size=purge_size,
+                enabled_setlists=enabled_setlists,
+                total_setlists=total_setlists,
                 settings_hash=settings_hash,
             ))
     else:
@@ -79,19 +91,11 @@ def _compute_folder_stats(
             purge_files = cached.purge_count
             purge_size = cached.purge_size
             purge_charts = cached.purge_charts
+            enabled_setlists = cached.enabled_setlists
+            total_setlists = cached.total_setlists
         else:
             # No cache - return None to indicate "not scanned"
             return None
-
-    # Get setlist counts
-    setlists = extract_subfolders_from_manifest(folder)
-    total_setlists = len(setlists) if setlists else 0
-    enabled_setlists = 0
-    if setlists and user_settings:
-        enabled_setlists = sum(
-            1 for c in setlists
-            if user_settings.is_subfolder_enabled(folder_id, c)
-        )
 
     # Check if drive is enabled
     drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
@@ -123,6 +127,8 @@ def _compute_folder_stats(
         purge_count=purge_files,
         purge_charts=purge_charts,
         purge_size=purge_size,
+        enabled_setlists=enabled_setlists,
+        total_setlists=total_setlists,
         display_string=display_string,
     )
 
@@ -186,20 +192,12 @@ def compute_main_menu_cache(
         folder_purge_count = stats.purge_count
         folder_purge_charts = stats.purge_charts
         folder_purge_size = stats.purge_size
+        enabled_setlists = stats.enabled_setlists
+        total_setlists = stats.total_setlists
 
         # Check if drive is enabled (for display string and aggregation)
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
         delta_mode = user_settings.delta_mode if user_settings else "size"
-
-        # Get setlist counts for this folder
-        setlists = extract_subfolders_from_manifest(folder)
-        total_setlists = len(setlists) if setlists else 0
-        enabled_setlists = 0
-        if setlists and user_settings:
-            enabled_setlists = sum(
-                1 for c in setlists
-                if user_settings.is_subfolder_enabled(folder_id, c)
-            )
 
         # Always regenerate display string with current enabled state
         display_string = format_home_item(
