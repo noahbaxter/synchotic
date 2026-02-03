@@ -37,16 +37,18 @@ class FolderScanner:
     FOLDER_MIME = "application/vnd.google-apps.folder"
     SHORTCUT_MIME = "application/vnd.google-apps.shortcut"
 
-    def __init__(self, client: DriveClient, max_workers: int = 8):
+    def __init__(self, client: DriveClient, max_workers: int = 24, use_batch: bool = True):
         """
         Initialize the scanner.
 
         Args:
             client: DriveClient instance for API calls
-            max_workers: Number of parallel scanning threads
+            max_workers: Number of parallel scanning threads (for non-batch mode)
+            use_batch: If True, use batch API for faster scanning
         """
         self.client = client
         self.max_workers = max_workers
+        self.use_batch = use_batch
 
     def scan(
         self,
@@ -65,6 +67,103 @@ class FolderScanner:
         Returns:
             ScanResult with files list and stats (cancelled=True if interrupted)
         """
+        if self.use_batch:
+            return self._scan_batch(folder_id, base_path, progress_callback)
+        else:
+            return self._scan_parallel(folder_id, base_path, progress_callback)
+
+    def _scan_batch(
+        self,
+        folder_id: str,
+        base_path: str = "",
+        progress_callback: Optional[Callable[[int, int, int], None]] = None,
+    ) -> ScanResult:
+        """Scan using batch API - fewer HTTP requests, faster for large folders."""
+        all_files = []
+        # Map folder_id -> path for building file paths
+        folders_to_scan = {folder_id: base_path}
+        folder_count = 0
+        shortcut_count = 0
+        start_api_calls = self.client.api_calls
+        cancelled = False
+
+        try:
+            while folders_to_scan:
+                # Batch list all pending folders
+                folder_ids = list(folders_to_scan.keys())
+                results = self.client.list_folders_batch(folder_ids)
+
+                next_folders = {}
+
+                for fid, items in results.items():
+                    folder_path = folders_to_scan[fid]
+                    folder_count += 1
+
+                    for item in items:
+                        item_name = item["name"]
+                        escaped_name = escape_name_slashes(item_name)
+                        item_path = f"{folder_path}/{escaped_name}" if folder_path else escaped_name
+                        mime_type = item["mimeType"]
+
+                        if mime_type == self.FOLDER_MIME:
+                            next_folders[item["id"]] = item_path
+
+                        elif mime_type == self.SHORTCUT_MIME:
+                            shortcut_details = item.get("shortcutDetails", {})
+                            target_id = shortcut_details.get("targetId")
+                            target_mime = shortcut_details.get("targetMimeType", "")
+
+                            if target_id and target_mime == self.FOLDER_MIME:
+                                shortcut_count += 1
+                                next_folders[target_id] = item_path
+                            elif target_id:
+                                target_meta = self.client.get_file_metadata(
+                                    target_id,
+                                    fields="id,name,size,md5Checksum,modifiedTime"
+                                )
+                                if target_meta:
+                                    all_files.append({
+                                        "id": target_id,
+                                        "path": item_path,
+                                        "name": item_name,
+                                        "size": int(target_meta.get("size", 0)),
+                                        "md5": target_meta.get("md5Checksum", ""),
+                                        "modified": target_meta.get("modifiedTime", ""),
+                                    })
+                        else:
+                            all_files.append({
+                                "id": item["id"],
+                                "path": item_path,
+                                "name": item_name,
+                                "size": int(item.get("size", 0)),
+                                "md5": item.get("md5Checksum", ""),
+                                "modified": item.get("modifiedTime", ""),
+                            })
+
+                    if progress_callback:
+                        progress_callback(folder_count, len(all_files), shortcut_count, all_files)
+
+                folders_to_scan = next_folders
+
+        except KeyboardInterrupt:
+            cancelled = True
+            print("\n  Scan interrupted by user (Ctrl+C)")
+
+        return ScanResult(
+            files=all_files,
+            folder_count=folder_count,
+            shortcut_count=shortcut_count,
+            api_calls=self.client.api_calls - start_api_calls,
+            cancelled=cancelled,
+        )
+
+    def _scan_parallel(
+        self,
+        folder_id: str,
+        base_path: str = "",
+        progress_callback: Optional[Callable[[int, int, int], None]] = None,
+    ) -> ScanResult:
+        """Scan using parallel individual requests - fallback mode."""
         all_files = []
         folders_to_scan = [(folder_id, base_path)]
         folder_count = 0

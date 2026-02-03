@@ -5,9 +5,12 @@ Handles all HTTP interactions with the Google Drive API.
 """
 
 import time
+import re
+import json
 import requests
 from typing import Optional
 from dataclasses import dataclass
+from urllib.parse import urlencode
 
 
 @dataclass
@@ -223,6 +226,133 @@ class DriveClient:
                 break
 
         return all_changes, current_token
+
+    def list_folders_batch(self, folder_ids: list[str], batch_size: int = 100) -> dict[str, list]:
+        """
+        List contents of multiple folders in batched API calls.
+
+        Uses Google's batch API to combine up to 100 requests per HTTP call,
+        dramatically reducing network overhead for large folder scans.
+
+        Args:
+            folder_ids: List of Google Drive folder IDs to list
+            batch_size: Max requests per batch (Google limit is 100)
+
+        Returns:
+            Dict mapping folder_id -> list of file/folder metadata
+        """
+        BATCH_URL = "https://www.googleapis.com/batch/drive/v3"
+        results = {fid: [] for fid in folder_ids}
+
+        # Process in batches of batch_size
+        for i in range(0, len(folder_ids), batch_size):
+            batch_ids = folder_ids[i:i + batch_size]
+            boundary = f"batch_{int(time.time() * 1000)}_{i}"
+
+            # Build multipart batch request body
+            parts = []
+            for folder_id in batch_ids:
+                query_params = urlencode({
+                    "q": f"'{folder_id}' in parents and trashed = false",
+                    "fields": "nextPageToken, files(id, name, mimeType, size, md5Checksum, modifiedTime, shortcutDetails)",
+                    "pageSize": 1000,
+                    "supportsAllDrives": "true",
+                    "includeItemsFromAllDrives": "true",
+                    "key": self.config.api_key,
+                })
+
+                part = (
+                    f"--{boundary}\r\n"
+                    f"Content-Type: application/http\r\n"
+                    f"Content-ID: <{folder_id}>\r\n"
+                    f"\r\n"
+                    f"GET /drive/v3/files?{query_params}\r\n"
+                )
+                parts.append(part)
+
+            body = "".join(parts) + f"--{boundary}--\r\n"
+
+            headers = {
+                "Content-Type": f"multipart/mixed; boundary={boundary}",
+            }
+            if self.auth_token:
+                headers["Authorization"] = f"Bearer {self.auth_token}"
+
+            try:
+                response = requests.post(
+                    BATCH_URL,
+                    headers=headers,
+                    data=body,
+                    timeout=self.config.timeout
+                )
+                self._api_calls += len(batch_ids)  # Count each batched call
+                response.raise_for_status()
+
+                # Parse multipart response, track folders needing pagination
+                needs_pagination = []
+                self._parse_batch_response(response, results, needs_pagination)
+
+                # Handle pagination for folders with >1000 items
+                for folder_id, page_token in needs_pagination:
+                    # Fall back to individual list_folder which handles pagination
+                    results[folder_id] = self.list_folder(folder_id)
+
+            except requests.exceptions.HTTPError:
+                # On batch failure, fall back to individual calls for this batch
+                for folder_id in batch_ids:
+                    results[folder_id] = self.list_folder(folder_id)
+
+        return results
+
+    def _parse_batch_response(self, response: requests.Response, results: dict, needs_pagination: list = None):
+        """Parse a multipart/mixed batch response and populate results dict."""
+        content_type = response.headers.get("Content-Type", "")
+        boundary_match = re.search(r'boundary=([^\s;]+)', content_type)
+        if not boundary_match:
+            return
+
+        boundary = boundary_match.group(1)
+        parts = response.text.split(f"--{boundary}")
+
+        for part in parts:
+            if not part.strip() or part.strip() == "--":
+                continue
+
+            # Extract Content-ID (folder_id)
+            id_match = re.search(r'Content-ID:\s*<?\s*response-([^>\s]+)', part)
+            if not id_match:
+                continue
+
+            folder_id = id_match.group(1)
+            if folder_id not in results:
+                continue
+
+            # Check HTTP status in this part
+            status_match = re.search(r'HTTP/[\d.]+ (\d+)', part)
+            if status_match:
+                status = int(status_match.group(1))
+                if status == 403 or status == 404:
+                    # Access denied or not found - leave as empty list
+                    continue
+                if status >= 400:
+                    # Other error - leave as empty list
+                    continue
+
+            # Find JSON body (after blank line following headers)
+            json_match = re.search(r'\r?\n\r?\n({.*})', part, re.DOTALL)
+            if not json_match:
+                continue
+
+            try:
+                data = json.loads(json_match.group(1))
+                files = data.get("files", [])
+                results[folder_id] = files
+
+                # Track folders that need pagination follow-up
+                if data.get("nextPageToken") and needs_pagination is not None:
+                    needs_pagination.append((folder_id, data["nextPageToken"]))
+            except json.JSONDecodeError:
+                pass
 
     def validate_folder(self, folder_id: str) -> tuple[bool, Optional[str]]:
         """
