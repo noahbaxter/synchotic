@@ -291,16 +291,10 @@ class SyncApp:
             if self.user_settings.is_drive_enabled(self.folders[i].get("folder_id", ""))
         ]
 
-        # Pre-load file lists for enabled folders (lazy loading)
-        folders_to_load = [
-            self.folders[i] for i in enabled_indices
-            if self.folders[i].get("files") is None
-            and not self.folders[i].get("is_custom")  # Custom folders scan via API
-        ]
-        if folders_to_load:
-            print("  Loading file lists...")
-            for folder in folders_to_load:
-                self._load_folder_files(folder)
+        # Download enabled drives (skip if none enabled)
+        if enabled_indices:
+            # Scan ALL enabled folders via API for fresh file lists
+            self._scan_enabled_folders(enabled_indices)
 
         # Clean up stale sync_state entries (case mismatches, outdated MD5s)
         manifest_archives = self._build_manifest_archives()
@@ -308,10 +302,7 @@ class SyncApp:
         if stale > 0:
             self.sync_state.save()
 
-        # Download enabled drives (skip if none enabled)
         if enabled_indices:
-            # Always re-scan custom folders to catch new/changed files
-            self._scan_custom_folders(enabled_indices)
 
             # Get disabled subfolders for filtering
             disabled_map = self._get_disabled_subfolders_for_folders(enabled_indices)
@@ -597,21 +588,17 @@ class SyncApp:
                 return folder
         return None
 
-    def _scan_custom_folders(self, enabled_indices: list):
+    def _scan_enabled_folders(self, enabled_indices: list):
         """
-        Scan all enabled custom folders to get current file lists.
+        Scan all enabled folders via API to get fresh file lists.
 
-        Custom folders are live Google Drive folders that can change at any time,
-        so we always re-scan before syncing to catch new/removed files.
+        This ensures downloads are always based on current Drive state,
+        not potentially stale manifest data.
         """
         from src.drive import FolderScanner
 
-        # Find all enabled custom folders
-        folders_to_scan = []
-        for idx in enabled_indices:
-            folder = self.folders[idx]
-            if folder.get("is_custom"):
-                folders_to_scan.append((idx, folder))
+        # Collect all enabled folders
+        folders_to_scan = [(idx, self.folders[idx]) for idx in enabled_indices]
 
         if not folders_to_scan:
             return
@@ -623,7 +610,9 @@ class SyncApp:
             return
 
         # Show scanning header
-        display.scan_custom_folders_header()
+        print("\n" + "=" * 50)
+        print("Scanning folders...")
+        print("=" * 50 + "\n")
 
         # Create scanner with user's OAuth
         auth_token = self.auth.get_token()
@@ -634,6 +623,7 @@ class SyncApp:
         for idx, folder in folders_to_scan:
             folder_id = folder.get("folder_id")
             folder_name = folder.get("name")
+            is_custom = folder.get("is_custom", False)
 
             display.scan_folder_header(folder_name)
 
@@ -662,9 +652,10 @@ class SyncApp:
             folder["file_count"] = len(result.files)
             folder["total_size"] = sum(f.get("size", 0) for f in result.files)
 
-            # Save to custom folders storage
-            self.custom_folders.set_files(folder_id, folder["files"])
-            self.custom_folders.save()
+            # Save to custom folders storage (only for custom folders)
+            if is_custom:
+                self.custom_folders.set_files(folder_id, folder["files"])
+                self.custom_folders.save()
 
             print(f"  Done! Found {len(result.files)} files ({format_size(folder['total_size'])})")
 
