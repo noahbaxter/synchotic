@@ -11,7 +11,7 @@ from typing import TYPE_CHECKING
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_manifest
 from src.core.logging import debug_log
 from src.sync import (
-    get_sync_status, get_lazy_sync_status, count_purgeable_files, SyncStatus,
+    get_sync_status, count_purgeable_files, SyncStatus,
     FolderStats, FolderStatsCache, CachedFolderStats, get_persistent_stats_cache,
     PersistentStatsCache,
 )
@@ -39,7 +39,7 @@ def _compute_folder_stats(
     user_settings: UserSettings,
     sync_state: SyncState,
     persistent_cache: PersistentStatsCache = None,
-) -> FolderStats:
+) -> FolderStats | None:
     """Compute stats for a single folder (sync status, purge counts, display string)."""
     folder_id = folder.get("folder_id", "")
     has_files = folder.get("files") is not None
@@ -75,15 +75,13 @@ def _compute_folder_stats(
                 synced_charts=cached.synced_charts,
                 total_size=cached.total_size,
                 synced_size=cached.synced_size,
-                is_estimate=False,  # Cached stats are accurate
             )
             purge_files = cached.purge_count
             purge_size = cached.purge_size
             purge_charts = cached.purge_charts
         else:
-            # No cache - fall back to lazy estimate
-            status = get_lazy_sync_status(folder, download_path, sync_state)
-            purge_files, purge_size, purge_charts = 0, 0, 0
+            # No cache - return None to indicate "not scanned"
+            return None
 
     # Get setlist counts
     setlists = extract_subfolders_from_manifest(folder)
@@ -175,6 +173,11 @@ def compute_main_menu_cache(
             debug_log(f"CACHE | {folder.get('name', '?')[:20]} | HIT")
         else:
             stats = _compute_folder_stats(folder, download_path, user_settings, sync_state, persistent_cache)
+            if stats is None:
+                # No cache, no files - show "not scanned"
+                cache.folder_stats[folder_id] = "not scanned"
+                debug_log(f"CACHE | {folder.get('name', '?')[:20]} | NOT_SCANNED")
+                continue
             if folder_stats_cache:
                 folder_stats_cache.set(folder_id, stats)
             debug_log(f"CACHE | {folder.get('name', '?')[:20]} | MISS")
