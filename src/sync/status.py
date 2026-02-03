@@ -12,6 +12,7 @@ from pathlib import Path
 
 from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path, dedupe_files_by_newest, normalize_fs_name
+from ..core.logging import debug_log
 from .cache import scan_actual_charts
 from .state import SyncState
 from .sync_checker import is_archive_synced, is_archive_file, is_file_synced
@@ -238,6 +239,7 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
         downloaded_setlist_sizes = {}
         if is_custom and folder_path.exists():
             actual_charts, actual_size = scan_actual_charts(folder_path, disabled_setlists)
+            debug_log(f"CUSTOM_SCAN | folder={folder_name} | disk_charts={actual_charts} | disk_size={actual_size}")
             if actual_charts > 0:
                 synced_from_scan = (actual_charts, actual_size)
                 status.is_actual_charts = True
@@ -271,6 +273,8 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
         status.total_size += total_size
         status.synced_size += synced_size
 
+        debug_log(f"STATUS | folder={folder_name} | total={total} | synced={synced} | missing_size={total_size - synced_size}")
+
         # For custom folders, use scan results and calculate sizes per-setlist
         if synced_from_scan is not None:
             actual_charts, actual_size = synced_from_scan
@@ -292,6 +296,8 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
                     status.total_size += downloaded_setlist_sizes[setlist_name]
                 else:
                     status.total_size += manifest_size
+
+            debug_log(f"CUSTOM_FINAL | folder={folder_name} | total_charts={status.total_charts} | synced_charts={status.synced_charts} | total_size={status.total_size} | synced_size={status.synced_size}")
 
     return status
 

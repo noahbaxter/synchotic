@@ -779,7 +779,12 @@ def main():
     logs_dir = get_data_dir() / "logs"
     logs_dir.mkdir(exist_ok=True)
     log_path = logs_dir / f"{datetime.now().strftime('%Y-%m-%d')}.log"
-    tee = TeeOutput(log_path)
+    # Read version for log header
+    version = None
+    version_file = Path(__file__).parent / "VERSION"
+    if version_file.exists():
+        version = version_file.read_text().strip()
+    tee = TeeOutput(log_path, version=version)
     sys.stdout = tee
 
     print(f"  [timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")

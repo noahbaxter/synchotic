@@ -9,6 +9,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_manifest
+from src.core.logging import debug_log
 from src.sync import get_sync_status, count_purgeable_files, SyncStatus, FolderStats, FolderStatsCache
 from src.sync.state import SyncState
 from ..primitives import Colors
@@ -68,6 +69,11 @@ def _compute_folder_stats(
         delta_mode=delta_mode,
     )
 
+    # Strip ANSI codes from display_string for logging
+    import re
+    display_clean = re.sub(r'\x1b\[[0-9;]*m', '', display_string)
+    debug_log(f"HOME_STATS | {folder_id[:8]} | +{status.missing_size} -{purge_size} | charts: +{status.missing_charts} -{purge_charts} | display: {display_clean}")
+
     return FolderStats(
         folder_id=folder_id,
         sync_status=status,
@@ -109,6 +115,7 @@ def compute_main_menu_cache(
 
         if is_custom and not has_files:
             cache.folder_stats[folder_id] = "not yet scanned"
+            debug_log(f"CUSTOM | {folder.get('name', '?')} | not_scanned")
             continue
 
         # Try to use cached stats for this folder
@@ -116,10 +123,12 @@ def compute_main_menu_cache(
 
         if cached:
             stats = cached
+            debug_log(f"CACHE | {folder.get('name', '?')[:20]} | HIT")
         else:
             stats = _compute_folder_stats(folder, download_path, user_settings, sync_state)
             if folder_stats_cache:
                 folder_stats_cache.set(folder_id, stats)
+            debug_log(f"CACHE | {folder.get('name', '?')[:20]} | MISS")
 
         status = stats.sync_status
         folder_purge_count = stats.purge_count
@@ -209,6 +218,22 @@ def compute_main_menu_cache(
                 if (user_settings.is_drive_enabled(d.folder_id) if user_settings else True)
             )
             cache.group_enabled_counts[group_name] = enabled_count
+
+    # Log full home page state
+    import re
+    debug_log("HOME_PAGE | === Full State ===")
+    for folder in folders:
+        fid = folder.get("folder_id", "")
+        fname = folder.get("name", "?")
+        enabled = user_settings.is_drive_enabled(fid) if user_settings else True
+        display = cache.folder_stats.get(fid, "")
+        display_clean = re.sub(r'\x1b\[[0-9;]*m', '', str(display)) if display else ""
+        debug_log(f"HOME_PAGE | [{'+' if enabled else '-'}] {fname}: {display_clean}")
+    subtitle_clean = re.sub(r'\x1b\[[0-9;]*m', '', cache.subtitle)
+    sync_desc_clean = re.sub(r'\x1b\[[0-9;]*m', '', cache.sync_action_desc)
+    debug_log(f"HOME_PAGE | subtitle: {subtitle_clean}")
+    debug_log(f"HOME_PAGE | sync_btn: {sync_desc_clean}")
+    debug_log("HOME_PAGE | === End State ===")
 
     return cache
 

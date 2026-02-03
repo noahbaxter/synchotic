@@ -10,6 +10,7 @@ from typing import Callable, Optional, Union
 
 from ..drive import DriveClient, FolderScanner
 from ..core.formatting import dedupe_files_by_newest
+from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
 from .cache import clear_cache, clear_folder_cache
@@ -83,6 +84,8 @@ class FolderSync:
                 manifest_files, folder_path, self.delete_videos,
                 sync_state=self.sync_state, folder_name=folder["name"]
             )
+
+            debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
 
             # Warn about long paths on Windows
             if long_paths:
@@ -189,6 +192,9 @@ class FolderSync:
         elapsed = time.time() - start_time
         print()
         print_separator()
+
+        # Log sync summary for diagnostics
+        debug_log(f"SYNC_SUMMARY | downloaded={total_downloaded} | skipped={total_skipped} | errors={total_errors} | bytes={total_bytes}")
 
         if was_cancelled:
             display.sync_cancelled(total_downloaded)

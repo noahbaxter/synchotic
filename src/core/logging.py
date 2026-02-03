@@ -22,14 +22,15 @@ class TeeOutput:
         r'^\s*↓.*MB\s*\(\d+%\)', # Download progress lines (↓ File: X/Y MB (N%))
     ]
 
-    def __init__(self, log_path: Path):
+    def __init__(self, log_path: Path, version: str = None):
         self.terminal = sys.stdout
         self.log_file = open(log_path, "a", encoding="utf-8")
         self._skip_regex = re.compile('|'.join(self._SKIP_PATTERNS))
         self._line_buffer = ""
-        # Write session header
+        # Write session header with version
         self.log_file.write(f"\n{'='*60}\n")
-        self.log_file.write(f"Session started: {datetime.now().isoformat()}\n")
+        version_str = f" v{version}" if version else ""
+        self.log_file.write(f"Session started: {datetime.now().isoformat()}{version_str}\n")
         self.log_file.write(f"{'='*60}\n\n")
         self.log_file.flush()
 
@@ -69,3 +70,17 @@ class TeeOutput:
             timestamp = datetime.now().strftime("[%H:%M:%S]")
             self.log_file.write(f"{timestamp} {self._line_buffer.rstrip()}\n")
         self.log_file.close()
+
+    def log_only(self, message: str):
+        """Write a message only to the log file, not to terminal."""
+        timestamp = datetime.now().strftime("[%H:%M:%S]")
+        self.log_file.write(f"{timestamp} {message}\n")
+        self.log_file.flush()
+
+
+def debug_log(message: str):
+    """Log a debug message to file only (not shown to user)."""
+    import sys
+    if hasattr(sys.stdout, 'log_only'):
+        sys.stdout.log_only(message)
+    # If not using TeeOutput (e.g., tests), silently ignore

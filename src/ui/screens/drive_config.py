@@ -5,8 +5,10 @@ Allows enabling/disabling individual setlists within a chart pack.
 """
 
 from pathlib import Path
+import re
 
 from src.core.formatting import format_size, dedupe_files_by_newest
+from src.core.logging import debug_log
 from src.core.constants import CHART_MARKERS
 from src.config import UserSettings, extract_subfolders_from_manifest
 from src.sync import get_sync_status, get_setlist_sync_status, count_purgeable_files, SyncStatus
@@ -195,6 +197,10 @@ def show_subfolder_settings(
                     )
             changed = False
 
+            # Log full setlist page state
+            debug_log(f"SETLIST_PAGE | === {folder_name} ===")
+            debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{status.missing_size} -{excess_size}")
+
         if status is None:
             status = SyncStatus()
 
@@ -296,6 +302,10 @@ def show_subfolder_settings(
                 delta_mode=delta_mode,
             )
 
+            # Log each setlist's state
+            desc_clean = re.sub(r'\x1b\[[0-9;]*m', '', description) if description else ""
+            debug_log(f"SETLIST_PAGE | [{'+' if setlist_enabled else '-'}] {setlist_name}: {desc_clean}")
+
             item_disabled = not setlist_enabled or not drive_enabled
             show_toggle_colored = setlist_enabled and drive_enabled
 
@@ -316,6 +326,11 @@ def show_subfolder_settings(
 
         menu.add_item(MenuDivider(pinned=True))
         menu.add_item(MenuItem("Back", value=("back", None, None), pinned=True))
+
+        # Log subtitle after all setlists
+        subtitle_clean = re.sub(r'\x1b\[[0-9;]*m', '', subtitle)
+        debug_log(f"SETLIST_PAGE | subtitle: {subtitle_clean}")
+        debug_log(f"SETLIST_PAGE | === End {folder_name} ===")
 
         result = menu.run(initial_index=selected_index)
 
