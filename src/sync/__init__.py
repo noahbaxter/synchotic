@@ -5,7 +5,10 @@ Handles file downloading, sync logic, and progress tracking.
 """
 
 from ..core.progress import ProgressTracker  # Re-export from core for backwards compat
-from .cache import clear_cache, clear_folder_cache, FolderStats, FolderStatsCache
+from .cache import (
+    clear_cache, clear_folder_cache, FolderStats, FolderStatsCache,
+    CachedFolderStats, PersistentStatsCache, get_persistent_stats_cache,
+)
 from .status import SyncStatus, get_sync_status, get_setlist_sync_status, get_lazy_sync_status
 from .download_planner import DownloadTask, plan_downloads
 from .purge_planner import PurgeStats, count_purgeable_files, count_purgeable_detailed
@@ -26,6 +29,9 @@ __all__ = [
     "clear_scan_cache",  # Backwards compat
     "FolderStats",
     "FolderStatsCache",
+    "CachedFolderStats",
+    "PersistentStatsCache",
+    "get_persistent_stats_cache",
     # Sync status
     "SyncStatus",
     "get_sync_status",

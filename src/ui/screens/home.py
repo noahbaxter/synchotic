@@ -10,7 +10,11 @@ from typing import TYPE_CHECKING
 
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_manifest
 from src.core.logging import debug_log
-from src.sync import get_sync_status, get_lazy_sync_status, count_purgeable_files, SyncStatus, FolderStats, FolderStatsCache
+from src.sync import (
+    get_sync_status, get_lazy_sync_status, count_purgeable_files, SyncStatus,
+    FolderStats, FolderStatsCache, CachedFolderStats, get_persistent_stats_cache,
+    PersistentStatsCache,
+)
 from src.sync.state import SyncState
 from ..primitives import Colors
 from ..components import format_status_line, format_home_item, format_delta
@@ -34,19 +38,52 @@ def _compute_folder_stats(
     download_path: Path,
     user_settings: UserSettings,
     sync_state: SyncState,
+    persistent_cache: PersistentStatsCache = None,
 ) -> FolderStats:
     """Compute stats for a single folder (sync status, purge counts, display string)."""
     folder_id = folder.get("folder_id", "")
     has_files = folder.get("files") is not None
 
-    # Use lazy status if files aren't loaded yet
+    # Compute settings hash for cache validation
+    settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
+
     if has_files:
+        # Files loaded - compute real stats
         status = get_sync_status([folder], download_path, user_settings, sync_state)
         purge_files, purge_size, purge_charts = count_purgeable_files([folder], download_path, user_settings, sync_state)
+
+        # Save to persistent cache for next startup
+        if persistent_cache:
+            persistent_cache.set(folder_id, CachedFolderStats(
+                total_charts=status.total_charts,
+                synced_charts=status.synced_charts,
+                total_size=status.total_size,
+                synced_size=status.synced_size,
+                purge_count=purge_files,
+                purge_charts=purge_charts,
+                purge_size=purge_size,
+                settings_hash=settings_hash,
+            ))
     else:
-        status = get_lazy_sync_status(folder, download_path, sync_state)
-        # Can't calculate purge without file list
-        purge_files, purge_size, purge_charts = 0, 0, 0
+        # Files not loaded - check persistent cache first
+        cached = persistent_cache.get(folder_id, settings_hash) if persistent_cache else None
+
+        if cached:
+            # Use cached stats (accurate from previous session)
+            status = SyncStatus(
+                total_charts=cached.total_charts,
+                synced_charts=cached.synced_charts,
+                total_size=cached.total_size,
+                synced_size=cached.synced_size,
+                is_estimate=False,  # Cached stats are accurate
+            )
+            purge_files = cached.purge_count
+            purge_size = cached.purge_size
+            purge_charts = cached.purge_charts
+        else:
+            # No cache - fall back to lazy estimate
+            status = get_lazy_sync_status(folder, download_path, sync_state)
+            purge_files, purge_size, purge_charts = 0, 0, 0
 
     # Get setlist counts
     setlists = extract_subfolders_from_manifest(folder)
@@ -102,12 +139,16 @@ def compute_main_menu_cache(
 ) -> MainMenuCache:
     """Compute all expensive stats for the main menu.
 
-    Uses folder_stats_cache if provided to avoid recalculating unchanged folders.
+    Uses folder_stats_cache (in-memory) and persistent_stats_cache (disk) to
+    avoid recalculating unchanged folders. Persistent cache survives restarts.
     """
     cache = MainMenuCache()
 
     if not download_path or not folders:
         return cache
+
+    # Get persistent cache for cross-session stats
+    persistent_cache = get_persistent_stats_cache()
 
     global_status = SyncStatus()
     global_purge_count = 0
@@ -126,14 +167,14 @@ def compute_main_menu_cache(
             debug_log(f"CUSTOM | {folder.get('name', '?')} | not_scanned")
             continue
 
-        # Try to use cached stats for this folder
+        # Try to use in-memory cached stats for this folder
         cached = folder_stats_cache.get(folder_id) if folder_stats_cache else None
 
         if cached:
             stats = cached
             debug_log(f"CACHE | {folder.get('name', '?')[:20]} | HIT")
         else:
-            stats = _compute_folder_stats(folder, download_path, user_settings, sync_state)
+            stats = _compute_folder_stats(folder, download_path, user_settings, sync_state, persistent_cache)
             if folder_stats_cache:
                 folder_stats_cache.set(folder_id, stats)
             debug_log(f"CACHE | {folder.get('name', '?')[:20]} | MISS")
@@ -243,6 +284,9 @@ def compute_main_menu_cache(
     debug_log(f"HOME_PAGE | subtitle: {subtitle_clean}")
     debug_log(f"HOME_PAGE | sync_btn: {sync_desc_clean}")
     debug_log("HOME_PAGE | === End State ===")
+
+    # Save persistent cache to disk (only writes if dirty)
+    persistent_cache.save()
 
     return cache
 

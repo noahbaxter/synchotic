@@ -5,6 +5,8 @@ Provides cached scanning of local files and chart folders.
 Cache is invalidated after downloads/purges.
 """
 
+import hashlib
+import json
 import os
 from dataclasses import dataclass
 from pathlib import Path
@@ -12,6 +14,7 @@ from typing import TYPE_CHECKING
 
 from ..stats import clear_local_stats_cache
 from ..core.formatting import normalize_fs_name
+from ..core.paths import get_data_dir
 
 if TYPE_CHECKING:
     from .status import SyncStatus
@@ -29,7 +32,7 @@ class FolderStats:
 
 
 class FolderStatsCache:
-    """Per-folder stats cache with selective invalidation."""
+    """Per-folder stats cache with selective invalidation (in-memory)."""
 
     def __init__(self):
         self._cache: dict[str, FolderStats] = {}
@@ -49,6 +52,133 @@ class FolderStatsCache:
     def set(self, folder_id: str, stats: FolderStats):
         """Store stats for a folder."""
         self._cache[folder_id] = stats
+
+
+@dataclass
+class CachedFolderStats:
+    """Persistent stats for a folder, saved to disk."""
+    total_charts: int
+    synced_charts: int
+    total_size: int
+    synced_size: int
+    purge_count: int
+    purge_charts: int
+    purge_size: int
+    settings_hash: str  # Hash of enabled setlists to detect settings changes
+
+
+class PersistentStatsCache:
+    """
+    Persistent folder stats cache stored in .dm-sync/folder_stats.json.
+
+    Caches accurate sync stats after files are loaded, so subsequent startups
+    show real values instead of lazy estimates.
+    """
+    CACHE_FILE = "folder_stats.json"
+
+    def __init__(self):
+        self._cache: dict[str, CachedFolderStats] = {}
+        self._dirty = False
+        self._path = get_data_dir() / self.CACHE_FILE
+        self._load()
+
+    def _load(self):
+        """Load cache from disk."""
+        if not self._path.exists():
+            return
+        try:
+            with open(self._path) as f:
+                data = json.load(f)
+            for folder_id, entry in data.items():
+                self._cache[folder_id] = CachedFolderStats(
+                    total_charts=entry.get("total_charts", 0),
+                    synced_charts=entry.get("synced_charts", 0),
+                    total_size=entry.get("total_size", 0),
+                    synced_size=entry.get("synced_size", 0),
+                    purge_count=entry.get("purge_count", 0),
+                    purge_charts=entry.get("purge_charts", 0),
+                    purge_size=entry.get("purge_size", 0),
+                    settings_hash=entry.get("settings_hash", ""),
+                )
+        except (json.JSONDecodeError, OSError):
+            self._cache = {}
+
+    def save(self):
+        """Save cache to disk (only if dirty)."""
+        if not self._dirty:
+            return
+        data = {}
+        for folder_id, stats in self._cache.items():
+            data[folder_id] = {
+                "total_charts": stats.total_charts,
+                "synced_charts": stats.synced_charts,
+                "total_size": stats.total_size,
+                "synced_size": stats.synced_size,
+                "purge_count": stats.purge_count,
+                "purge_charts": stats.purge_charts,
+                "purge_size": stats.purge_size,
+                "settings_hash": stats.settings_hash,
+            }
+        try:
+            with open(self._path, "w") as f:
+                json.dump(data, f)
+            self._dirty = False
+        except OSError:
+            pass
+
+    def get(self, folder_id: str, settings_hash: str) -> CachedFolderStats | None:
+        """
+        Get cached stats for a folder if settings hash matches.
+
+        Returns None if no cache exists or settings have changed.
+        """
+        cached = self._cache.get(folder_id)
+        if cached and cached.settings_hash == settings_hash:
+            return cached
+        return None
+
+    def set(self, folder_id: str, stats: CachedFolderStats):
+        """Store stats for a folder."""
+        self._cache[folder_id] = stats
+        self._dirty = True
+
+    def invalidate(self, folder_id: str):
+        """Remove cached stats for a folder."""
+        if folder_id in self._cache:
+            del self._cache[folder_id]
+            self._dirty = True
+
+    def invalidate_all(self):
+        """Clear all cached stats."""
+        if self._cache:
+            self._cache.clear()
+            self._dirty = True
+
+    @staticmethod
+    def compute_settings_hash(folder_id: str, user_settings) -> str:
+        """
+        Compute a hash of the settings that affect stats calculation.
+
+        Includes: drive enabled state, disabled setlists
+        """
+        if not user_settings:
+            return ""
+        enabled = user_settings.is_drive_enabled(folder_id)
+        disabled_setlists = sorted(user_settings.get_disabled_subfolders(folder_id))
+        key = f"{enabled}:{','.join(disabled_setlists)}"
+        return hashlib.md5(key.encode()).hexdigest()[:8]
+
+
+# Global persistent cache instance
+_persistent_stats_cache: PersistentStatsCache | None = None
+
+
+def get_persistent_stats_cache() -> PersistentStatsCache:
+    """Get the global persistent stats cache instance."""
+    global _persistent_stats_cache
+    if _persistent_stats_cache is None:
+        _persistent_stats_cache = PersistentStatsCache()
+    return _persistent_stats_cache
 
 
 class SyncCache:
