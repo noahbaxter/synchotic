@@ -163,13 +163,6 @@ def compute_main_menu_cache(
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
-        is_custom = folder.get("is_custom", False)
-        has_files = bool(folder.get("files"))
-
-        if is_custom and not has_files:
-            cache.folder_stats[folder_id] = "not yet scanned"
-            debug_log(f"CUSTOM | {folder.get('name', '?')} | not_scanned")
-            continue
 
         # Try to use in-memory cached stats for this folder
         cached = folder_stats_cache.get(folder_id) if folder_stats_cache else None

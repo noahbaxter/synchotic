@@ -236,28 +236,40 @@ class SyncApp:
                 self._load_folder_files(folder)
             self._migrate_to_markers()
 
-        # Add custom folders to the folders list
+        # Add custom folders to the folders list (lazy - files loaded on demand)
         for custom in self.custom_folders.folders:
-            # Create folder dict in same format as manifest folders
-            files = self.custom_folders.get_files(custom.folder_id)
+            # Get cached file count/size without loading full file list
+            cached_files = self.custom_folders.get_files(custom.folder_id)
             folder_dict = {
                 "name": custom.name,
                 "folder_id": custom.folder_id,
                 "description": "Custom folder",
-                "file_count": len(files),
-                "total_size": sum(f.get("size", 0) for f in files),
-                "files": files,
+                "file_count": len(cached_files),
+                "total_size": sum(f.get("size", 0) for f in cached_files),
+                "chart_count": len(cached_files),  # Rough estimate
+                "files": None,  # LAZY: loaded on demand via _load_folder_files()
                 "complete": True,
                 "is_custom": True,  # Mark as custom for special handling
             }
             self.folders.append(folder_dict)
 
     def _load_folder_files(self, folder: dict) -> list:
-        """Load file list for a folder from raw manifest (lazy loading)."""
+        """Load file list for a folder (lazy loading).
+
+        For manifest folders: loads from raw manifest data.
+        For custom folders: loads from custom_folders storage.
+        """
         if folder.get("files") is not None:
             return folder["files"]
 
         folder_id = folder["folder_id"]
+
+        # Custom folders: load from custom_folders storage
+        if folder.get("is_custom"):
+            folder["files"] = self.custom_folders.get_files(folder_id)
+            return folder["files"]
+
+        # Manifest folders: load from raw manifest
         for f in self._manifest_raw.get("folders", []):
             if f.get("folder_id") == folder_id:
                 folder["files"] = f.get("files", [])
