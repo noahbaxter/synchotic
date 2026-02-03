@@ -19,6 +19,7 @@ class DriveClientConfig:
     api_key: str
     timeout: int = 60
     max_retries: int = 3
+    max_qps: float = 100  # queries per second limit (0 = unlimited)
 
 
 class DriveClient:
@@ -44,6 +45,8 @@ class DriveClient:
         self.config = config
         self.auth_token = auth_token
         self._api_calls = 0
+        self._last_request_time = 0.0
+        self._min_request_interval = 1.0 / config.max_qps if config.max_qps > 0 else 0
 
     @property
     def api_calls(self) -> int:
@@ -65,12 +68,22 @@ class DriveClient:
         params = {"key": self.config.api_key, **kwargs}
         return params
 
+    def _wait_for_rate_limit(self):
+        """Wait if necessary to respect rate limit."""
+        if self._min_request_interval <= 0:
+            return
+        elapsed = time.time() - self._last_request_time
+        if elapsed < self._min_request_interval:
+            time.sleep(self._min_request_interval - elapsed)
+        self._last_request_time = time.time()
+
     def _request_with_retry(self, method: str, url: str, **kwargs) -> requests.Response:
         """Make a request with retry logic."""
         timeout = kwargs.pop("timeout", self.config.timeout)
 
         for attempt in range(self.config.max_retries):
             try:
+                self._wait_for_rate_limit()
                 response = requests.request(method, url, timeout=timeout, **kwargs)
                 self._api_calls += 1
                 response.raise_for_status()
@@ -247,6 +260,12 @@ class DriveClient:
         # Process in batches of batch_size
         for i in range(0, len(folder_ids), batch_size):
             batch_ids = folder_ids[i:i + batch_size]
+
+            # Rate limit: wait for enough "tokens" for this batch
+            # Each request in the batch counts toward quota
+            for _ in range(len(batch_ids)):
+                self._wait_for_rate_limit()
+
             boundary = f"batch_{int(time.time() * 1000)}_{i}"
 
             # Build multipart batch request body
