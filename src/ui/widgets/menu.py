@@ -13,7 +13,6 @@ from ..primitives import (
     getch,
     getch_with_timeout,
     cbreak_noecho,
-    clear_screen,
     Colors,
     KEY_UP,
     KEY_DOWN,
@@ -295,86 +294,102 @@ class Menu:
             print(f"{c}{BOX_V}{Colors.RESET} {content}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
 
     def _render(self):
-        """Clear screen and render the full menu."""
-        clear_screen()
-        print_header()
+        """Render the full menu using buffered output to prevent flicker."""
+        import sys
+        from io import StringIO
 
-        w = self._width()
-        c = Colors.INDIGO
+        # Capture all print output to a buffer
+        buf = StringIO()
+        old_stdout = sys.stdout
+        sys.stdout = buf
+        try:
+            print_header()
 
-        scrollable, pinned = self._split_items()
-        self._adjust_scroll()
-        total = len(scrollable)
-        max_visible = self._visible_items_for_scroll(total, self._scroll_offset)
-        visible_start = self._scroll_offset
-        visible_end = min(total, visible_start + max_visible)
-        has_more_above = visible_start > 0
-        has_more_below = visible_end < total
+            w = self._width()
+            c = Colors.INDIGO
 
-        # Box top
-        print(box_row(BOX_TL, BOX_H, BOX_TR, w, c))
+            scrollable, pinned = self._split_items()
+            self._adjust_scroll()
+            total = len(scrollable)
+            max_visible = self._visible_items_for_scroll(total, self._scroll_offset)
+            visible_start = self._scroll_offset
+            visible_end = min(total, visible_start + max_visible)
+            has_more_above = visible_start > 0
+            has_more_below = visible_end < total
 
-        # Title
-        if self.title:
-            pad = w - 4 - len(self.title)
-            left = pad // 2
-            print(f"{c}{BOX_V}{Colors.RESET} {' ' * left}{Colors.BOLD}{self.title}{Colors.RESET}{' ' * (pad - left)} {c}{BOX_V}{Colors.RESET}")
-            if self.subtitle:
-                sub_pad = w - 4 - len(strip_ansi(self.subtitle))
-                sub_left = sub_pad // 2
-                print(f"{c}{BOX_V}{Colors.RESET} {' ' * sub_left}{Colors.MUTED}{self.subtitle}{Colors.RESET}{' ' * (sub_pad - sub_left)} {c}{BOX_V}{Colors.RESET}")
-            print(box_row(BOX_TL_DIV, BOX_H, BOX_TR_DIV, w, c))
+            # Box top
+            print(box_row(BOX_TL, BOX_H, BOX_TR, w, c))
 
-        # Scroll indicator (more above)
-        if has_more_above:
-            indicator = f"{Colors.MUTED}  ▲ {visible_start} more above{Colors.RESET}"
-            vis_len = len(strip_ansi(indicator))
-            pad = w - 4 - vis_len
-            print(f"{c}{BOX_V}{Colors.RESET} {indicator}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
+            # Title
+            if self.title:
+                pad = w - 4 - len(self.title)
+                left = pad // 2
+                print(f"{c}{BOX_V}{Colors.RESET} {' ' * left}{Colors.BOLD}{self.title}{Colors.RESET}{' ' * (pad - left)} {c}{BOX_V}{Colors.RESET}")
+                if self.subtitle:
+                    sub_pad = w - 4 - len(strip_ansi(self.subtitle))
+                    sub_left = sub_pad // 2
+                    print(f"{c}{BOX_V}{Colors.RESET} {' ' * sub_left}{Colors.MUTED}{self.subtitle}{Colors.RESET}{' ' * (sub_pad - sub_left)} {c}{BOX_V}{Colors.RESET}")
+                print(box_row(BOX_TL_DIV, BOX_H, BOX_TR_DIV, w, c))
 
-        # Render visible scrollable items
-        for scroll_idx in range(visible_start, visible_end):
-            orig_idx, item = scrollable[scroll_idx]
-            self._render_item(orig_idx, item, w, c)
+            # Scroll indicator (more above)
+            if has_more_above:
+                indicator = f"{Colors.MUTED}  ▲ {visible_start} more above{Colors.RESET}"
+                vis_len = len(strip_ansi(indicator))
+                pad = w - 4 - vis_len
+                print(f"{c}{BOX_V}{Colors.RESET} {indicator}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
 
-        # Scroll indicator (more below)
-        if has_more_below:
-            remaining = len(scrollable) - visible_end
-            indicator = f"{Colors.MUTED}  ▼ {remaining} more below{Colors.RESET}"
-            vis_len = len(strip_ansi(indicator))
-            pad = w - 4 - vis_len
-            print(f"{c}{BOX_V}{Colors.RESET} {indicator}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
+            # Render visible scrollable items
+            for scroll_idx in range(visible_start, visible_end):
+                orig_idx, item = scrollable[scroll_idx]
+                self._render_item(orig_idx, item, w, c)
 
-        # Render pinned items
-        for orig_idx, item in pinned:
-            self._render_item(orig_idx, item, w, c)
+            # Scroll indicator (more below)
+            if has_more_below:
+                remaining = len(scrollable) - visible_end
+                indicator = f"{Colors.MUTED}  ▼ {remaining} more below{Colors.RESET}"
+                vis_len = len(strip_ansi(indicator))
+                pad = w - 4 - vis_len
+                print(f"{c}{BOX_V}{Colors.RESET} {indicator}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
 
-        # Footer
-        if self.footer:
-            print(box_row(BOX_TL_DIV, BOX_H, BOX_TR_DIV, w, c))
-            footer_len = len(strip_ansi(self.footer))
-            pad = w - 4 - footer_len
-            left = pad // 2
-            print(f"{c}{BOX_V}{Colors.RESET} {' ' * left}{self.footer}{' ' * (pad - left)} {c}{BOX_V}{Colors.RESET}")
+            # Render pinned items
+            for orig_idx, item in pinned:
+                self._render_item(orig_idx, item, w, c)
 
-        # Box bottom
-        print(box_row(BOX_BL, BOX_H, BOX_BR, w, c))
+            # Footer
+            if self.footer:
+                print(box_row(BOX_TL_DIV, BOX_H, BOX_TR_DIV, w, c))
+                footer_len = len(strip_ansi(self.footer))
+                pad = w - 4 - footer_len
+                left = pad // 2
+                print(f"{c}{BOX_V}{Colors.RESET} {' ' * left}{self.footer}{' ' * (pad - left)} {c}{BOX_V}{Colors.RESET}")
 
-        # Hint
-        hint = f"  {Colors.MUTED}↑/↓ Navigate  {Colors.HOTKEY}Enter{Colors.MUTED} Select"
-        if self.space_hint:
-            hint += f"  {Colors.HOTKEY}Space{Colors.MUTED} {self.space_hint}"
-        hint += f"  {Colors.HOTKEY}Esc{Colors.MUTED} {self.esc_label}{Colors.RESET}"
-        print(hint)
+            # Box bottom
+            print(box_row(BOX_BL, BOX_H, BOX_BR, w, c))
 
-        # Status line (scan progress, etc.)
-        if self.status_line:
-            status = self.status_line
-            term_width = shutil.get_terminal_size().columns
-            max_len = term_width - 4
-            if len(status) > max_len:
-                status = status[:max_len - 3] + "..."
-            print(f"  {Colors.MUTED}{status}{Colors.RESET}")
+            # Hint
+            hint = f"  {Colors.MUTED}↑/↓ Navigate  {Colors.HOTKEY}Enter{Colors.MUTED} Select"
+            if self.space_hint:
+                hint += f"  {Colors.HOTKEY}Space{Colors.MUTED} {self.space_hint}"
+            hint += f"  {Colors.HOTKEY}Esc{Colors.MUTED} {self.esc_label}{Colors.RESET}"
+            print(hint)
+
+            # Status line (scan progress, etc.)
+            if self.status_line:
+                status = self.status_line
+                term_width = shutil.get_terminal_size().columns
+                max_len = term_width - 4
+                if len(status) > max_len:
+                    status = status[:max_len - 3] + "..."
+                print(f"  {Colors.MUTED}{status}{Colors.RESET}")
+        finally:
+            sys.stdout = old_stdout
+
+        # Write cursor-home + content + clear-rest + clear-scrollback as one atomic write
+        # \033[K on each line clears trailing old content that the new line doesn't cover
+        out = sys.__stdout__ if sys.__stdout__ else sys.stdout
+        content = buf.getvalue().replace('\n', '\033[K\n')
+        out.write(f"\033[H{content}\033[J\033[3J")
+        out.flush()
 
     def update_status_line_in_place(self, new_status: str):
         """Update just the status line without full re-render.
