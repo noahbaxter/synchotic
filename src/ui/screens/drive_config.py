@@ -149,6 +149,16 @@ def show_subfolder_settings(
             setlist_enabled = user_settings.is_subfolder_enabled(folder_id, setlist_name)
             cached = persistent_cache.get_setlist(folder_id, setlist_name)
 
+            # Determine state: scanned this session, cached from previous, or currently scanning
+            if scanner and scanner.is_setlist_scanned(folder_id, setlist_name):
+                setlist_state = "current"  # Scanned this session
+            elif scanner and scanner.is_scanning(folder_id):
+                setlist_state = "scanning"  # Drive has unscanned setlists, this one not done yet
+            elif cached:
+                setlist_state = "cached"  # Has persistent cache but not scanned this session
+            else:
+                setlist_state = "current"  # No scanner, no cache - show as-is
+
             if cached:
                 setlist_total_charts = cached.total_charts
                 setlist_total_size = cached.total_size
@@ -197,6 +207,7 @@ def show_subfolder_settings(
                 disabled=not setlist_enabled or not drive_enabled,
                 unit=unit,
                 delta_mode=delta_mode,
+                state=setlist_state,
             )
 
             desc_clean = re.sub(r'\x1b\[[0-9;]*m', '', description) if description else ""

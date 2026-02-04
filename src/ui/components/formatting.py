@@ -159,9 +159,10 @@ def format_home_item(
     Estimate (lazy): ~35% | 4.0 GB (no setlist count, files not loaded)
     Scanning: ... SCANNING 5/30 (progress shown)
     """
-    # Only show deltas for "current" state (scanned this session)
-    # Cached values have unreliable deltas - manifest may have changed
-    show_delta = (state == "current")
+    # Only show ADD deltas for "current" state (scanned this session)
+    # Cached values have unreliable add deltas - manifest may have changed
+    # But PURGEABLE is always reliable - it's based on actual disk content
+    show_add_delta = (state == "current")
 
     # Build the values string first
     values = _format_home_values(
@@ -169,14 +170,14 @@ def format_home_item(
         total_setlists=total_setlists,
         total_size=total_size,
         synced_size=synced_size,
-        purgeable_files=purgeable_files if show_delta else 0,
-        purgeable_charts=purgeable_charts if show_delta else 0,
-        purgeable_size=purgeable_size if show_delta else 0,
-        missing_charts=missing_charts if show_delta else 0,
+        purgeable_files=purgeable_files,  # Always show - based on disk, not manifest
+        purgeable_charts=purgeable_charts,
+        purgeable_size=purgeable_size,
+        missing_charts=missing_charts if show_add_delta else 0,
         disabled=disabled,
         delta_mode=delta_mode,
         is_estimate=is_estimate,
-        show_delta=show_delta,
+        show_delta=show_add_delta,
     )
 
     # Apply state styling
@@ -243,8 +244,8 @@ def _format_home_values(
         if total_size > 0:
             parts.append(format_size(total_size))
         result = ", ".join(parts) if parts else ""
-        # Disabled items only show purgeable (no add delta)
-        if show_delta and (purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0):
+        # Disabled items ALWAYS show purgeable (based on disk content, always reliable)
+        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
             delta = format_delta(
                 remove_size=purgeable_size,
                 remove_files=purgeable_files,
@@ -316,9 +317,15 @@ def format_setlist_item(
     disabled: bool = False,
     unit: str = "charts",
     delta_mode: str = "size",
+    state: str = "current",
 ) -> str:
     """
     Format setlist item line.
+
+    States:
+        "current" - scanned this session, show normal values
+        "cached" - using cached values, show dimmed
+        "scanning" - currently scanning, show SCANNING indicator
 
     Enabled synced: 100% | 427 charts, 3.8 GB
     Enabled partial: 80% | 427 charts, [+500 MB] or [+50 files]
@@ -391,6 +398,16 @@ def format_setlist_item(
             else:
                 result = f"{pct}% | {info}" if info else f"{pct}%"
 
+    # Apply state styling
+    if state == "current":
+        return result
+    elif state == "cached":
+        return f"{Colors.STALE}{result}{Colors.RESET}" if result else ""
+    elif state == "scanning":
+        scanning_indicator = f"{Colors.CYAN}SCANNING{Colors.RESET}"
+        if result:
+            return f"{Colors.STALE}{result}{Colors.RESET} {scanning_indicator}"
+        return scanning_indicator
     return result
 
 

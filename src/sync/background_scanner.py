@@ -227,6 +227,14 @@ class BackgroundScanner:
         with self._lock:
             return list(self._drive_setlist_names.get(drive_id, []))
 
+    def is_setlist_scanned(self, drive_id: str, setlist_name: str) -> bool:
+        """Check if a specific setlist was scanned this session."""
+        with self._lock:
+            for setlist_id, info in self._all_setlists.items():
+                if info.drive_id == drive_id and info.name == setlist_name:
+                    return setlist_id in self._scanned_setlist_ids
+            return False
+
     def notify_setlist_toggled(self, drive_id: str, setlist_name: str, enabled: bool):
         """
         Called when user toggles a setlist. Updates enabled set.

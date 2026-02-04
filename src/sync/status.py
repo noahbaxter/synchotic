@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
-from ..core.formatting import sanitize_path, dedupe_files_by_newest, normalize_fs_name
+from ..core.formatting import sanitize_path, sanitize_filename, dedupe_files_by_newest, normalize_fs_name
 from ..core.logging import debug_log
 from .cache import scan_actual_charts, CachedSetlistStats
 from .sync_checker import is_archive_synced, is_archive_file, is_file_synced
@@ -354,17 +354,20 @@ def get_setlist_sync_status(
 
     folder_name = folder.get("name", "")
     folder_path = base_path / folder_name
+    is_custom = folder.get("is_custom", False)
 
     manifest_files = (folder.get("files") or [])
     if not manifest_files:
         return status
 
-    # Filter to only files in this setlist
-    setlist_prefix = f"{setlist_name}/"
-    manifest_files = [
-        f for f in manifest_files
-        if f.get("path", "").startswith(setlist_prefix) or f.get("path", "") == setlist_name
-    ]
+    # For custom folders, the folder IS the setlist - use all files
+    # For regular folders, filter to files with the setlist prefix
+    if not is_custom:
+        setlist_prefix = f"{setlist_name}/"
+        manifest_files = [
+            f for f in manifest_files
+            if f.get("path", "").startswith(setlist_prefix) or f.get("path", "") == setlist_name
+        ]
 
     if not manifest_files:
         return status
@@ -410,7 +413,11 @@ def compute_setlist_stats(
     """
     folder_name = folder.get("name", "")
     folder_path = base_path / folder_name
-    setlist_path = folder_path / setlist_name
+    is_custom = folder.get("is_custom", False)
+    # Sanitize setlist_name for disk path (colons etc. get replaced on disk)
+    sanitized_setlist = sanitize_filename(setlist_name)
+    # For custom folders, the folder itself IS the setlist (no subdirectory)
+    setlist_path = folder_path if is_custom else folder_path / sanitized_setlist
     delete_videos = user_settings.delete_videos if user_settings else True
 
     # Get sync status from manifest comparison
