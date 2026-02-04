@@ -5,7 +5,25 @@ Manages .dm-sync/settings.json - user preferences that persist across runs.
 """
 
 import json
+import re
 from pathlib import Path
+
+
+def normalize_setlist_name(name: str) -> str:
+    """
+    Normalize a setlist name for fuzzy matching.
+
+    Handles common variations like:
+    - "Guitar Hero III: Legends of Rock" vs "Guitar Hero III - Legends of Rock"
+    - Different whitespace/punctuation around separators
+    """
+    # Replace common separator variations with a canonical form
+    # ": " or " - " or " – " (en-dash) or " — " (em-dash) → single space
+    normalized = re.sub(r'\s*[:\-–—]\s*', ' ', name)
+    # Collapse multiple spaces
+    normalized = re.sub(r'\s+', ' ', normalized)
+    # Lowercase for comparison
+    return normalized.lower().strip()
 
 
 class UserSettings:
@@ -133,6 +151,60 @@ class UserSettings:
         """Get set of disabled subfolder names for a drive."""
         toggles = self.subfolder_toggles.get(drive_id, {})
         return {name for name, enabled in toggles.items() if not enabled}
+
+    def sync_subfolder_names(self, drive_id: str, discovered_names: list[str]) -> bool:
+        """
+        Sync stored subfolder settings with discovered names from Google Drive.
+
+        Google Drive folder names are the source of truth. This method:
+        1. Migrates settings from old names to new names (using normalized matching)
+        2. Removes orphaned entries that no longer exist in Drive
+        3. Preserves enabled/disabled state during migration
+
+        Returns True if any changes were made.
+        """
+        if drive_id not in self.subfolder_toggles:
+            return False
+
+        old_toggles = self.subfolder_toggles[drive_id]
+        new_toggles: dict[str, bool] = {}
+        changed = False
+
+        # Build normalized lookup for old settings
+        # If multiple entries normalize to the same thing, prefer enabled=True
+        # (user was probably trying to enable it when the duplicate was created)
+        normalized_old: dict[str, tuple[str, bool]] = {}
+        for old_name, enabled in old_toggles.items():
+            norm = normalize_setlist_name(old_name)
+            if norm in normalized_old:
+                _, existing_enabled = normalized_old[norm]
+                # Keep whichever is enabled (prefer True over False)
+                if enabled or existing_enabled:
+                    normalized_old[norm] = (old_name, enabled or existing_enabled)
+            else:
+                normalized_old[norm] = (old_name, enabled)
+
+        # For each discovered name, find matching old setting
+        for discovered_name in discovered_names:
+            norm = normalize_setlist_name(discovered_name)
+
+            if norm in normalized_old:
+                old_name, enabled = normalized_old[norm]
+                new_toggles[discovered_name] = enabled
+
+                # Track if name changed
+                if old_name != discovered_name:
+                    changed = True
+            # If no old setting exists, don't add one (default is enabled)
+
+        # Check if we removed any orphaned entries
+        if set(new_toggles.keys()) != set(old_toggles.keys()):
+            changed = True
+
+        if changed:
+            self.subfolder_toggles[drive_id] = new_toggles
+
+        return changed
 
     def enable_all(self, drive_id: str, subfolder_names: list[str]):
         """Enable all subfolders for a drive."""

@@ -13,17 +13,17 @@ from .custom import CustomFolder, CustomFolders
 from ..core.formatting import sort_by_name
 
 
-def extract_subfolders_from_manifest(folder: dict) -> list[str]:
+def extract_subfolders_from_files(folder: dict) -> list[str]:
     """
-    Extract unique top-level subfolder names from a manifest folder's files.
+    Extract unique top-level subfolder names from a folder's files list.
 
     Args:
-        folder: A folder dict from the manifest with a "files" list
+        folder: A folder dict with a "files" list (from scanner or manifest)
 
     Returns:
         Sorted list of unique top-level subfolder names
     """
-    files = folder.get("files", [])
+    files = (folder.get("files") or [])
     if not files:
         return []
 
@@ -44,5 +44,5 @@ __all__ = [
     "UserSettings",
     "CustomFolder",
     "CustomFolders",
-    "extract_subfolders_from_manifest",
+    "extract_subfolders_from_files",
 ]
