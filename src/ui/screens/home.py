@@ -34,6 +34,124 @@ class MainMenuCache:
     group_enabled_counts: dict = field(default_factory=dict)
 
 
+def update_menu_cache_on_toggle(
+    menu_cache: MainMenuCache,
+    folder_id: str,
+    folders: list,
+    user_settings: UserSettings,
+    folder_stats_cache: FolderStatsCache,
+    drives_config: DrivesConfig = None,
+    background_scanner: "BackgroundScanner" = None,
+) -> None:
+    """
+    Quickly update menu cache after a drive toggle.
+
+    Instead of full recalculation, just:
+    1. Update the toggled folder's display string
+    2. Reaggregate global totals from cached folder stats
+    """
+    drive_enabled = user_settings.is_drive_enabled(folder_id)
+    delta_mode = user_settings.delta_mode
+
+    # Reaggregate from all cached folder stats
+    global_status = SyncStatus()
+    global_purge_count = 0
+    global_purge_charts = 0
+    global_purge_size = 0
+    global_enabled_setlists = 0
+    global_total_setlists = 0
+
+    for folder in folders:
+        fid = folder.get("folder_id", "")
+        cached = folder_stats_cache.get(fid)
+        if not cached:
+            continue
+
+        is_enabled = user_settings.is_drive_enabled(fid)
+
+        # Regenerate display string for toggled folder
+        if fid == folder_id:
+            has_files = folder.get("files") is not None
+            persistent_cache = get_persistent_stats_cache()
+            settings_hash = PersistentStatsCache.compute_settings_hash(fid, user_settings)
+            has_cache = persistent_cache.get(fid, settings_hash) is not None if persistent_cache else False
+            state = _get_display_state(fid, has_files, has_cache, background_scanner)
+            scan_progress = background_scanner.get_scan_progress(fid) if background_scanner and state == "scanning" else None
+
+            display_string = format_home_item(
+                enabled_setlists=cached.enabled_setlists,
+                total_setlists=cached.total_setlists,
+                total_size=cached.sync_status.total_size,
+                synced_size=cached.sync_status.synced_size,
+                purgeable_files=cached.purge_count if is_enabled else 0,
+                purgeable_charts=cached.purge_charts if is_enabled else 0,
+                purgeable_size=cached.purge_size if is_enabled else 0,
+                missing_charts=cached.sync_status.missing_charts,
+                disabled=not is_enabled,
+                delta_mode=delta_mode,
+                is_estimate=cached.sync_status.is_estimate,
+                state=state,
+                scan_progress=scan_progress,
+            )
+            menu_cache.folder_stats[fid] = display_string
+
+        # Aggregate into global totals
+        if is_enabled:
+            global_status.total_charts += cached.sync_status.total_charts
+            global_status.synced_charts += cached.sync_status.synced_charts
+            global_status.total_size += cached.sync_status.total_size
+            global_status.synced_size += cached.sync_status.synced_size
+            global_total_setlists += cached.total_setlists
+            global_enabled_setlists += cached.enabled_setlists
+        # Always aggregate purgeable (disabled drives may have content to remove)
+        global_purge_count += cached.purge_count
+        global_purge_charts += cached.purge_charts
+        global_purge_size += cached.purge_size
+
+    # Check if scanning is complete
+    scan_complete = not background_scanner or background_scanner.is_done()
+
+    # Update subtitle
+    menu_cache.subtitle = format_status_line(
+        synced_charts=global_status.synced_charts,
+        total_charts=global_status.total_charts,
+        enabled_setlists=global_enabled_setlists,
+        total_setlists=global_total_setlists,
+        total_size=global_status.total_size,
+        synced_size=global_status.synced_size if scan_complete else 0,
+        missing_charts=global_status.missing_charts if scan_complete else 0,
+        purgeable_files=global_purge_count if scan_complete else 0,
+        purgeable_charts=global_purge_charts if scan_complete else 0,
+        purgeable_size=global_purge_size if scan_complete else 0,
+        delta_mode=delta_mode,
+    )
+
+    # Update sync action description
+    if scan_complete:
+        menu_cache.sync_action_desc = format_delta(
+            add_size=global_status.missing_size,
+            add_files=global_status.missing_charts,
+            add_charts=global_status.missing_charts,
+            remove_size=global_purge_size,
+            remove_files=global_purge_count,
+            remove_charts=global_purge_charts,
+            mode=delta_mode,
+            empty_text="Everything in sync",
+        )
+    else:
+        menu_cache.sync_action_desc = "Scanning..."
+
+    # Update group enabled counts
+    if drives_config:
+        for group_name in drives_config.get_groups():
+            group_drives = drives_config.get_drives_in_group(group_name)
+            enabled_count = sum(
+                1 for d in group_drives
+                if user_settings.is_drive_enabled(d.folder_id)
+            )
+            menu_cache.group_enabled_counts[group_name] = enabled_count
+
+
 def _get_display_state(
     folder_id: str,
     has_files: bool,

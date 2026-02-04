@@ -11,28 +11,11 @@ from src.core.formatting import dedupe_files_by_newest, sort_by_name
 from src.core.logging import debug_log
 from src.core.constants import CHART_MARKERS
 from src.config import UserSettings, extract_subfolders_from_files
-from src.sync import get_sync_status, get_setlist_sync_status, count_purgeable_files, SyncStatus
+from src.sync import get_setlist_sync_status, SyncStatus
 from src.sync.download_planner import is_archive_file
 from ..primitives import Colors
 from ..components import format_drive_status, format_setlist_item
 from ..widgets import Menu, MenuItem, MenuDivider
-
-
-def _get_folder_size(folder_path: Path) -> int:
-    """Get total size of all files in a folder recursively."""
-    if not folder_path.exists():
-        return 0
-    total = 0
-    try:
-        for item in folder_path.rglob("*"):
-            if item.is_file():
-                try:
-                    total += item.stat().st_size
-                except OSError:
-                    pass
-    except OSError:
-        pass
-    return total
 
 
 def _compute_setlist_stats_from_files(folder: dict, dedupe: bool = True) -> dict:
@@ -154,34 +137,77 @@ def show_subfolder_settings(
         }
 
     selected_index = 0
-    changed = True  # Start true to calculate on first iteration
+    needs_scan = True  # First iteration does full scan
 
-    # Cache for setlist statuses (doesn't change on toggle - shows what's on disk)
-    cached_setlist_statuses = {}
+    # Cache for setlist data (doesn't change on toggle - shows what's on disk)
+    # {setlist_name: {"sync": SyncStatus, "disk_files": int, "disk_size": int}}
+    cached_setlist_data = {}
 
     while True:
         drive_enabled = user_settings.is_drive_enabled(folder_id)
 
-        # Recalculate all stats when settings change (fast - filesystem scans are cached)
-        if changed:
-            status = get_sync_status([folder], download_path, user_settings) if download_path else None
-            excess_files, excess_size, excess_charts = count_purgeable_files([folder], download_path, user_settings) if download_path else (0, 0, 0)
-            # Cache setlist statuses once (shows what's on disk, not affected by toggle)
-            if not cached_setlist_statuses and not is_custom and download_path:
-                delete_videos = user_settings.delete_videos if user_settings else True
-                for setlist_name in setlists:
-                    cached_setlist_statuses[setlist_name] = get_setlist_sync_status(
+        # Full scan only on first iteration - expensive disk operations
+        if needs_scan and download_path:
+            delete_videos = user_settings.delete_videos if user_settings else True
+            for setlist_name in setlists:
+                # Get sync status from manifest comparison
+                if not is_custom:
+                    sync_status = get_setlist_sync_status(
                         folder, setlist_name, download_path,
                         delete_videos=delete_videos,
                     )
-            changed = False
+                else:
+                    sync_status = SyncStatus()
 
-            # Log full setlist page state
-            debug_log(f"SETLIST_PAGE | === {folder_name} ===")
-            debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{status.missing_size} -{excess_size}")
+                # Get actual disk content (includes orphaned files)
+                disk_files = 0
+                disk_size = 0
+                if local_folder_path:
+                    setlist_path = local_folder_path / setlist_name
+                    if setlist_path.exists():
+                        try:
+                            for f in setlist_path.rglob("*"):
+                                if f.is_file():
+                                    disk_files += 1
+                                    disk_size += f.stat().st_size
+                        except OSError:
+                            pass
 
-        if status is None:
-            status = SyncStatus()
+                cached_setlist_data[setlist_name] = {
+                    "sync": sync_status,
+                    "disk_files": disk_files,
+                    "disk_size": disk_size,
+                }
+            needs_scan = False
+
+        # Aggregate stats from cache based on current enabled/disabled state (fast!)
+        status = SyncStatus()
+        excess_files = 0
+        excess_size = 0
+        excess_charts = 0
+
+        for setlist_name in setlists:
+            data = cached_setlist_data.get(setlist_name, {})
+            sync = data.get("sync", SyncStatus())
+            disk_files = data.get("disk_files", 0)
+            disk_size = data.get("disk_size", 0)
+            setlist_enabled = user_settings.is_subfolder_enabled(folder_id, setlist_name)
+
+            if drive_enabled and setlist_enabled:
+                # Enabled: contributes to sync totals
+                status.total_charts += sync.total_charts
+                status.synced_charts += sync.synced_charts
+                status.total_size += sync.total_size
+                status.synced_size += sync.synced_size
+            elif drive_enabled and not setlist_enabled and disk_files > 0:
+                # Disabled with content: contributes to purgeable
+                excess_files += disk_files
+                excess_size += disk_size
+                excess_charts += setlist_stats.get(setlist_name, {}).get("charts", {}).get("total", 0)
+
+        # Log full setlist page state
+        debug_log(f"SETLIST_PAGE | === {folder_name} ===")
+        debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{status.missing_size} -{excess_size}")
 
         # Count enabled setlists
         enabled_setlist_count = sum(
@@ -193,13 +219,13 @@ def show_subfolder_settings(
 
         # Build subtitle using format_drive_status
         subtitle = format_drive_status(
-            synced_charts=status.synced_charts if status else 0,
-            total_charts=status.total_charts if status else 0,
+            synced_charts=status.synced_charts,
+            total_charts=status.total_charts,
             enabled_setlists=enabled_setlist_count,
             total_setlists=len(setlists),
-            total_size=status.total_size if status else 0,
-            synced_size=status.synced_size if status else 0,
-            missing_charts=status.missing_charts if status else 0,
+            total_size=status.total_size,
+            synced_size=status.synced_size,
+            missing_charts=status.missing_charts,
             purgeable_files=excess_files,
             purgeable_charts=excess_charts,
             purgeable_size=excess_size,
@@ -223,44 +249,36 @@ def show_subfolder_settings(
                 item_count = stats.get("charts", {}).get("total", 0)
             unit = "files" if item_count != 1 else "file"
 
-            # Get strict sync status for this setlist (same check as drive-level)
-            # This ensures setlist and drive percentages are consistent
-            if not is_custom and download_path and setlist_name in cached_setlist_statuses:
-                setlist_status = cached_setlist_statuses[setlist_name]
+            # Get sync status and disk stats from cache (fast!)
+            cached_data = cached_setlist_data.get(setlist_name, {})
+            setlist_status = cached_data.get("sync", SyncStatus())
+            setlist_disk_files = cached_data.get("disk_files", 0)
+            setlist_disk_size = cached_data.get("disk_size", 0)
+
+            if not is_custom and download_path:
                 synced_charts = setlist_status.synced_charts
                 synced_size = setlist_status.synced_size
                 setlist_total_charts = setlist_status.total_charts
                 setlist_total_size = setlist_status.total_size
                 is_fully_synced = synced_charts == setlist_total_charts and setlist_total_charts > 0
             else:
-                # Custom folders: fall back to size-based check
-                synced_size = 0
-                if local_folder_path:
-                    setlist_path = local_folder_path / setlist_name
-                    if setlist_path.exists():
-                        synced_size = _get_folder_size(setlist_path)
+                # Custom folders: use disk size for synced check
+                synced_size = setlist_disk_size
                 synced_charts = item_count if synced_size >= total_size and total_size > 0 else 0
                 setlist_total_charts = item_count
                 setlist_total_size = total_size
                 is_fully_synced = synced_charts == setlist_total_charts and setlist_total_charts > 0
 
-            # Calculate purgeable for this setlist (if disabled but has content)
-            # Only show deltas when drive is enabled
+            # Calculate purgeable for this setlist (from cache - fast!)
             setlist_purgeable_files = 0
             setlist_purgeable_size = 0
             missing_charts = 0
 
             if drive_enabled:
-                if not setlist_enabled and synced_size > 0:
-                    setlist_purgeable_size = synced_size
-                    # Rough estimate: count files in the folder
-                    if local_folder_path:
-                        setlist_path = local_folder_path / setlist_name
-                        if setlist_path.exists():
-                            try:
-                                setlist_purgeable_files = sum(1 for _ in setlist_path.rglob("*") if _.is_file())
-                            except OSError:
-                                pass
+                if not setlist_enabled and setlist_disk_files > 0:
+                    # Disabled setlist with content: all content is purgeable
+                    setlist_purgeable_files = setlist_disk_files
+                    setlist_purgeable_size = setlist_disk_size
 
                 # Calculate missing charts (only if enabled and not fully synced)
                 if setlist_enabled and not is_fully_synced:
@@ -359,8 +377,8 @@ def show_subfolder_settings(
         # Handle rebuild signal from scanner completing setlists
         if result.action == "rebuild":
             selected_index = menu._selected
-            cached_setlist_statuses.clear()  # Clear cache to recalculate with new data
-            changed = True  # Trigger stat recalculation
+            cached_setlist_data.clear()  # Clear cache to recalculate with new data
+            needs_scan = True  # Trigger full rescan
             continue
 
         # Handle Tab to cycle delta mode
@@ -382,7 +400,7 @@ def show_subfolder_settings(
                 for name in setlists:
                     scanner.notify_setlist_toggled(folder_id, name, True)
             user_settings.save()
-            changed = True
+            # No rescan needed - aggregation uses current enabled state
 
         elif action == "disable_all":
             selected_index = menu._selected_before_hotkey
@@ -392,7 +410,7 @@ def show_subfolder_settings(
                 for name in setlists:
                     scanner.notify_setlist_toggled(folder_id, name, False)
             user_settings.save()
-            changed = True
+            # No rescan needed - aggregation uses current enabled state
 
         elif action == "toggle":
             selected_index = menu._selected
@@ -406,7 +424,7 @@ def show_subfolder_settings(
                 if scanner:
                     scanner.notify_setlist_toggled(folder_id, setlist_name, new_state)
             user_settings.save()
-            changed = True
+            # No rescan needed - aggregation uses current enabled state
 
         elif action == "scan":
             return "scan"
@@ -414,4 +432,4 @@ def show_subfolder_settings(
         elif action == "remove":
             return "remove"
 
-    return changed
+    return True  # Settings may have changed

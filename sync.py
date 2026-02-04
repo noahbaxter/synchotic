@@ -52,6 +52,7 @@ from src.ui import (
     show_oauth_prompt,
     show_add_custom_folder,
     compute_main_menu_cache,
+    update_menu_cache_on_toggle,
 )
 from src.sync import FolderStatsCache, count_purgeable_detailed, clear_scan_cache, BackgroundScanner
 from src.ui.primitives import clear_screen, wait_with_skip
@@ -375,8 +376,9 @@ class SyncApp:
         """Toggle a drive on/off at the top level (preserves setlist settings)."""
         self.user_settings.toggle_drive(folder_id)
         self.user_settings.save()
-        # Invalidate this folder's stats to recalculate purge counts
-        self.folder_stats_cache.invalidate(folder_id)
+        # Don't invalidate cache - makes toggle instant
+        # Display strings are regenerated with new enabled state anyway
+        # Purge numbers will be updated on next scan completion
 
     def handle_toggle_group(self, group_name: str):
         """Toggle a group expanded/collapsed."""
@@ -854,7 +856,12 @@ class SyncApp:
             elif action == "toggle":
                 # Space on a drive - toggle drive on/off
                 self.handle_toggle_drive(value)
-                menu_cache = None  # Invalidate cache after toggle
+                # Fast update: just regenerate toggled folder + global totals
+                if menu_cache:
+                    update_menu_cache_on_toggle(
+                        menu_cache, value, self.folders, self.user_settings,
+                        self.folder_stats_cache, combined_drives, self._background_scanner
+                    )
 
             elif action == "toggle_group":
                 # Enter/Space on a group - expand/collapse (NO cache invalidation!)
