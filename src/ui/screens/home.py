@@ -12,9 +12,8 @@ from typing import TYPE_CHECKING
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_files
 from src.core.logging import debug_log
 from src.sync import (
-    get_sync_status, count_purgeable_files, SyncStatus,
-    FolderStats, FolderStatsCache, CachedFolderStats, get_persistent_stats_cache,
-    PersistentStatsCache,
+    SyncStatus, FolderStats, FolderStatsCache, get_persistent_stats_cache,
+    PersistentStatsCache, aggregate_folder_stats, compute_setlist_stats,
 )
 from ..primitives import Colors
 from ..components import format_status_line, format_home_item, format_delta
@@ -44,64 +43,70 @@ def update_menu_cache_on_toggle(
     background_scanner: "BackgroundScanner" = None,
 ) -> None:
     """
-    Quickly update menu cache after a drive toggle.
+    Quickly update menu cache after a drive toggle using setlist-centric aggregation.
 
-    Updates only:
-    1. The toggled folder's display string (if it has cached stats)
-    2. Group enabled counts
-    3. Global totals ONLY if all folders are scanned (otherwise keeps existing)
+    Uses aggregate_folder_stats for instant re-aggregation without disk I/O.
     """
     drive_enabled = user_settings.is_drive_enabled(folder_id)
     delta_mode = user_settings.delta_mode
     scan_complete = not background_scanner or background_scanner.is_done()
-
-    # Update toggled folder's display string
-    cached = folder_stats_cache.get(folder_id)
     persistent_cache = get_persistent_stats_cache()
-    settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
-    persistent_cached = persistent_cache.get(folder_id, settings_hash) if persistent_cache else None
 
+    # Update toggled folder's display string using aggregation
     for folder in folders:
         if folder.get("folder_id") == folder_id:
+            # Get setlist names
+            setlist_names = background_scanner.get_discovered_setlist_names(folder_id) if background_scanner else None
+            if not setlist_names:
+                setlists = extract_subfolders_from_files(folder)
+                setlist_names = list(setlists) if setlists else []
+            is_custom = folder.get("is_custom", False)
+            if is_custom and not setlist_names:
+                setlist_names = [folder.get("name", "")]
+
             has_files = folder.get("files") is not None
-            has_cache = persistent_cached is not None
+            has_cache = persistent_cache.has_setlist_stats(folder_id) if persistent_cache else False
             state = _get_display_state(folder_id, has_files, has_cache, background_scanner)
             scan_progress = background_scanner.get_scan_progress(folder_id) if background_scanner and state == "scanning" else None
 
-            if cached:
-                # Has in-memory stats - show full details
+            if has_cache and setlist_names:
+                # Re-aggregate from setlist stats (instant!)
+                agg = aggregate_folder_stats(folder_id, setlist_names, user_settings, persistent_cache)
                 display_string = format_home_item(
-                    enabled_setlists=cached.enabled_setlists,
-                    total_setlists=cached.total_setlists,
-                    total_size=cached.sync_status.total_size,
-                    synced_size=cached.sync_status.synced_size,
-                    purgeable_files=cached.purge_count if drive_enabled else 0,
-                    purgeable_charts=cached.purge_charts if drive_enabled else 0,
-                    purgeable_size=cached.purge_size if drive_enabled else 0,
-                    missing_charts=cached.sync_status.missing_charts,
-                    disabled=not drive_enabled,
-                    delta_mode=delta_mode,
-                    is_estimate=cached.sync_status.is_estimate,
-                    state=state,
-                    scan_progress=scan_progress,
-                )
-            elif persistent_cached:
-                # No in-memory cache but have persistent cache - use it
-                display_string = format_home_item(
-                    enabled_setlists=persistent_cached.enabled_setlists,
-                    total_setlists=persistent_cached.total_setlists,
-                    total_size=persistent_cached.total_size,
-                    synced_size=persistent_cached.synced_size,
+                    enabled_setlists=agg.enabled_setlists,
+                    total_setlists=agg.total_setlists,
+                    total_size=agg.total_size,
+                    synced_size=agg.synced_size,
+                    purgeable_files=agg.purgeable_files,
+                    purgeable_charts=agg.purgeable_charts,
+                    purgeable_size=agg.purgeable_size,
+                    missing_charts=agg.total_charts - agg.synced_charts,
                     disabled=not drive_enabled,
                     delta_mode=delta_mode,
                     state=state,
                     scan_progress=scan_progress,
                 )
+                # Update in-memory cache as well
+                folder_stats_cache.set(folder_id, FolderStats(
+                    folder_id=folder_id,
+                    sync_status=SyncStatus(
+                        total_charts=agg.total_charts,
+                        synced_charts=agg.synced_charts,
+                        total_size=agg.total_size,
+                        synced_size=agg.synced_size,
+                    ),
+                    purge_count=agg.purgeable_files,
+                    purge_charts=agg.purgeable_charts,
+                    purge_size=agg.purgeable_size,
+                    enabled_setlists=agg.enabled_setlists,
+                    total_setlists=agg.total_setlists,
+                    display_string=display_string,
+                ))
             else:
-                # No cache at all - show minimal info
+                # No cache - show minimal info
                 display_string = format_home_item(
                     enabled_setlists=0,
-                    total_setlists=0,
+                    total_setlists=len(setlist_names) if setlist_names else 0,
                     total_size=0,
                     synced_size=0,
                     disabled=not drive_enabled,
@@ -123,11 +128,10 @@ def update_menu_cache_on_toggle(
             menu_cache.group_enabled_counts[group_name] = enabled_count
 
     # Only update global totals if ALL folders are scanned
-    # Otherwise keep existing subtitle/sync_action to avoid showing partial data
     if not scan_complete:
         return
 
-    # Reaggregate from all cached folder stats
+    # Reaggregate global stats from all cached folder stats
     global_status = SyncStatus()
     global_purge_count = 0
     global_purge_charts = 0
@@ -216,98 +220,61 @@ def _compute_folder_stats(
     persistent_cache: PersistentStatsCache = None,
     scanner: BackgroundScanner = None,
 ) -> FolderStats | None:
-    """Compute stats for a single folder (sync status, purge counts, display string)."""
+    """Compute stats for a single folder using setlist-centric aggregation."""
+    import re
     folder_id = folder.get("folder_id", "")
     has_files = folder.get("files") is not None
+    is_custom = folder.get("is_custom", False)
 
-    # Compute settings hash for cache validation
-    settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
+    # Get setlist names from scanner (preferred) or extract from file paths
+    setlist_names = scanner.get_discovered_setlist_names(folder_id) if scanner else None
+    if not setlist_names:
+        setlists = extract_subfolders_from_files(folder)
+        setlist_names = list(setlists) if setlists else []
 
-    # Check for cached stats first
-    cached = persistent_cache.get(folder_id, settings_hash) if persistent_cache else None
-    has_cache = cached is not None
+    # For custom folders, the folder itself is the setlist
+    if is_custom and not setlist_names:
+        setlist_names = [folder.get("name", "")]
+
+    # Check if we have cached setlist stats
+    has_setlist_cache = persistent_cache.has_setlist_stats(folder_id) if persistent_cache else False
 
     # Determine display state
-    state = _get_display_state(folder_id, has_files, has_cache, scanner)
+    state = _get_display_state(folder_id, has_files, has_setlist_cache, scanner)
 
     if state == "none":
-        # No cache and not scanning - return None to indicate "not scanned"
         return None
 
-    if has_files:
-        # Files loaded - compute real stats
-        status = get_sync_status([folder], download_path, user_settings)
-        purge_files, purge_size, purge_charts = count_purgeable_files([folder], download_path, user_settings)
+    # If files are loaded, ensure all setlist stats are cached (compute if missing)
+    if has_files and persistent_cache and download_path:
+        for setlist_name in setlist_names:
+            if not persistent_cache.get_setlist(folder_id, setlist_name):
+                stats = compute_setlist_stats(folder, setlist_name, download_path, user_settings)
+                persistent_cache.set_setlist(folder_id, setlist_name, stats)
 
-        # Compute setlist counts
-        # Custom folders are a single setlist (the whole folder)
-        is_custom = folder.get("is_custom", False)
-        if is_custom:
-            total_setlists = 1
-            enabled_setlists = 1 if (user_settings.is_drive_enabled(folder_id) if user_settings else True) else 0
-        else:
-            # Prefer discovered counts from scanner (includes shortcuts)
-            discovered = scanner.get_discovered_setlist_count(folder_id) if scanner else None
-            if discovered:
-                enabled_setlists, total_setlists = discovered
-            else:
-                # Fallback: extract setlists from file paths (doesn't know about shortcuts)
-                setlists = extract_subfolders_from_files(folder)
-                total_setlists = len(setlists) if setlists else 0
-                enabled_setlists = 0
-                if setlists and user_settings:
-                    enabled_setlists = sum(
-                        1 for c in setlists
-                        if user_settings.is_subfolder_enabled(folder_id, c)
-                    )
-
-        # Save to persistent cache for next startup
-        if persistent_cache:
-            persistent_cache.set(folder_id, CachedFolderStats(
-                total_charts=status.total_charts,
-                synced_charts=status.synced_charts,
-                total_size=status.total_size,
-                synced_size=status.synced_size,
-                purge_count=purge_files,
-                purge_charts=purge_charts,
-                purge_size=purge_size,
-                enabled_setlists=enabled_setlists,
-                total_setlists=total_setlists,
-                settings_hash=settings_hash,
-            ))
-    elif cached:
-        # Use cached stats (accurate from previous session)
+    # Use aggregation for stats (fast - no disk I/O!)
+    if persistent_cache and setlist_names:
+        agg = aggregate_folder_stats(folder_id, setlist_names, user_settings, persistent_cache)
         status = SyncStatus(
-            total_charts=cached.total_charts,
-            synced_charts=cached.synced_charts,
-            total_size=cached.total_size,
-            synced_size=cached.synced_size,
+            total_charts=agg.total_charts,
+            synced_charts=agg.synced_charts,
+            total_size=agg.total_size,
+            synced_size=agg.synced_size,
         )
-        purge_files = cached.purge_count
-        purge_size = cached.purge_size
-        purge_charts = cached.purge_charts
-        # Custom folders are a single setlist
-        is_custom = folder.get("is_custom", False)
-        if is_custom:
-            total_setlists = 1
-            enabled_setlists = 1 if (user_settings.is_drive_enabled(folder_id) if user_settings else True) else 0
-        else:
-            # Prefer discovered counts from scanner (includes shortcuts)
-            discovered = scanner.get_discovered_setlist_count(folder_id) if scanner else None
-            if discovered:
-                enabled_setlists, total_setlists = discovered
-            else:
-                enabled_setlists = cached.enabled_setlists
-                total_setlists = cached.total_setlists
+        purge_files = agg.purgeable_files
+        purge_size = agg.purgeable_size
+        purge_charts = agg.purgeable_charts
+        enabled_setlists = agg.enabled_setlists
+        total_setlists = agg.total_setlists
     else:
-        # State is "scanning" without cache - show minimal stats with SCANNING indicator
+        # No cache available - show scanning state
         scan_progress = scanner.get_scan_progress(folder_id) if scanner else None
         display_string = format_home_item(
             enabled_setlists=0,
-            total_setlists=0,
+            total_setlists=len(setlist_names) if setlist_names else 0,
             total_size=0,
             synced_size=0,
-            state="scanning",
+            state="scanning" if scanner and scanner.is_scanning(folder_id) else "none",
             scan_progress=scan_progress,
         )
         return FolderStats(
@@ -317,7 +284,7 @@ def _compute_folder_stats(
             purge_charts=0,
             purge_size=0,
             enabled_setlists=0,
-            total_setlists=0,
+            total_setlists=len(setlist_names) if setlist_names else 0,
             display_string=display_string,
         )
 
@@ -343,8 +310,6 @@ def _compute_folder_stats(
         scan_progress=scan_progress,
     )
 
-    # Strip ANSI codes from display_string for logging
-    import re
     display_clean = re.sub(r'\x1b\[[0-9;]*m', '', display_string)
     debug_log(f"HOME_STATS | {folder_id[:8]} | +{status.missing_size} -{purge_size} | charts: +{status.missing_charts} -{purge_charts} | display: {display_clean}")
 
@@ -436,8 +401,7 @@ def compute_main_menu_cache(
 
         # Determine display state
         has_files = folder.get("files") is not None
-        settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
-        has_cache = persistent_cache.get(folder_id, settings_hash) is not None if persistent_cache else False
+        has_cache = persistent_cache.has_setlist_stats(folder_id) if persistent_cache else False
         state = _get_display_state(folder_id, has_files, has_cache, background_scanner)
 
         # Always regenerate display string with current enabled state

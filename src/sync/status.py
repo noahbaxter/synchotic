@@ -13,7 +13,7 @@ from pathlib import Path
 from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path, dedupe_files_by_newest, normalize_fs_name
 from ..core.logging import debug_log
-from .cache import scan_actual_charts
+from .cache import scan_actual_charts, CachedSetlistStats
 from .sync_checker import is_archive_synced, is_archive_file, is_file_synced
 
 
@@ -389,3 +389,74 @@ def get_setlist_sync_status(
     status.synced_size = synced_size
 
     return status
+
+
+def compute_setlist_stats(
+    folder: dict,
+    setlist_name: str,
+    base_path: Path,
+    user_settings=None,
+) -> CachedSetlistStats:
+    """
+    Compute all stats for a single setlist. This is the expensive operation - results should be cached.
+
+    Combines: sync status from manifest, disk scan for actual files, chart count calculation.
+
+    Args:
+        folder: Folder dict from manifest
+        setlist_name: Name of the setlist to compute stats for
+        base_path: Base download path
+        user_settings: UserSettings for delete_videos preference
+    """
+    folder_name = folder.get("name", "")
+    folder_path = base_path / folder_name
+    setlist_path = folder_path / setlist_name
+    delete_videos = user_settings.delete_videos if user_settings else True
+
+    # Get sync status from manifest comparison
+    has_files = folder.get("files") is not None
+    if has_files:
+        sync_status = get_setlist_sync_status(folder, setlist_name, base_path, delete_videos=delete_videos)
+        total_charts = sync_status.total_charts
+        total_size = sync_status.total_size
+        synced_charts = sync_status.synced_charts
+        synced_size = sync_status.synced_size
+    else:
+        total_charts = 0
+        total_size = 0
+        synced_charts = 0
+        synced_size = 0
+
+    # Scan actual disk content
+    disk_files = 0
+    disk_size = 0
+    disk_charts = 0
+    if setlist_path.exists():
+        disk_charts, _ = scan_actual_charts(setlist_path, set())
+        try:
+            for f in setlist_path.rglob("*"):
+                if f.is_file():
+                    disk_files += 1
+                    disk_size += f.stat().st_size
+        except OSError:
+            pass
+
+    # Purgeable is the disk content when setlist has files but is disabled or has orphans
+    # The actual purgeable calculation depends on enabled state, which is handled in aggregation
+    # Here we store the disk content as potential purgeable
+    purgeable_files = disk_files
+    purgeable_size = disk_size
+    purgeable_charts = disk_charts
+
+    return CachedSetlistStats(
+        total_charts=total_charts,
+        total_size=total_size,
+        synced_charts=synced_charts,
+        synced_size=synced_size,
+        disk_files=disk_files,
+        disk_size=disk_size,
+        disk_charts=disk_charts,
+        purgeable_files=purgeable_files,
+        purgeable_size=purgeable_size,
+        purgeable_charts=purgeable_charts,
+    )

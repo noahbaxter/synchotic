@@ -71,62 +71,110 @@ class CachedFolderStats:
     settings_hash: str  # Hash of enabled setlists to detect settings changes
 
 
+@dataclass
+class CachedSetlistStats:
+    """Persistent stats for a single setlist within a folder."""
+    # Manifest data (what should exist)
+    total_charts: int
+    total_size: int
+
+    # Sync data (what matches manifest)
+    synced_charts: int
+    synced_size: int
+
+    # Disk data (actual files on disk)
+    disk_files: int
+    disk_size: int
+    disk_charts: int = 0  # Actual chart folders on disk
+
+    # Purgeable data (computed when setlist is disabled or has orphans)
+    purgeable_files: int = 0
+    purgeable_size: int = 0
+    purgeable_charts: int = 0
+
+
+@dataclass
+class AggregatedFolderStats:
+    """Aggregated stats for folder display (computed from setlist stats)."""
+    total_charts: int = 0
+    synced_charts: int = 0
+    total_size: int = 0
+    synced_size: int = 0
+    purgeable_files: int = 0
+    purgeable_size: int = 0
+    purgeable_charts: int = 0
+    enabled_setlists: int = 0
+    total_setlists: int = 0
+
+
 class PersistentStatsCache:
     """
-    Persistent folder stats cache stored in .dm-sync/folder_stats.json.
+    Persistent setlist stats cache stored in .dm-sync/folder_stats.json.
 
-    Caches accurate sync stats after files are loaded, so subsequent startups
-    show real values instead of lazy estimates.
+    Stores per-setlist stats. Folder stats are computed on-the-fly via aggregation.
+    Old folder-level cache entries are ignored on load (migration).
     """
     CACHE_FILE = "folder_stats.json"
 
     def __init__(self):
-        self._cache: dict[str, CachedFolderStats] = {}
+        self._cache: dict[str, CachedFolderStats] = {}  # Legacy: kept for backwards compat with get()
+        self._setlist_cache: dict[str, dict[str, CachedSetlistStats]] = {}  # folder_id -> setlist_name -> stats
         self._dirty = False
         self._path = get_data_dir() / self.CACHE_FILE
         self._load()
 
     def _load(self):
-        """Load cache from disk."""
+        """Load cache from disk. Only loads setlist stats (folder stats are computed via aggregation)."""
         if not self._path.exists():
             return
         try:
             with open(self._path) as f:
                 data = json.load(f)
-            for folder_id, entry in data.items():
-                self._cache[folder_id] = CachedFolderStats(
-                    total_charts=entry.get("total_charts", 0),
-                    synced_charts=entry.get("synced_charts", 0),
-                    total_size=entry.get("total_size", 0),
-                    synced_size=entry.get("synced_size", 0),
-                    purge_count=entry.get("purge_count", 0),
-                    purge_charts=entry.get("purge_charts", 0),
-                    purge_size=entry.get("purge_size", 0),
-                    enabled_setlists=entry.get("enabled_setlists", 0),
-                    total_setlists=entry.get("total_setlists", 0),
-                    settings_hash=entry.get("settings_hash", ""),
-                )
+
+            # Only load setlist stats - folder stats are computed via aggregation now
+            # Old folder-level entries are ignored (migration)
+            setlists_data = data.get("_setlists", {})
+            for folder_id, setlists in setlists_data.items():
+                self._setlist_cache[folder_id] = {}
+                for setlist_name, entry in setlists.items():
+                    self._setlist_cache[folder_id][setlist_name] = CachedSetlistStats(
+                        total_charts=entry.get("total_charts", 0),
+                        total_size=entry.get("total_size", 0),
+                        synced_charts=entry.get("synced_charts", 0),
+                        synced_size=entry.get("synced_size", 0),
+                        disk_files=entry.get("disk_files", 0),
+                        disk_size=entry.get("disk_size", 0),
+                        disk_charts=entry.get("disk_charts", 0),
+                        purgeable_files=entry.get("purgeable_files", 0),
+                        purgeable_size=entry.get("purgeable_size", 0),
+                        purgeable_charts=entry.get("purgeable_charts", 0),
+                    )
         except (json.JSONDecodeError, OSError):
-            self._cache = {}
+            self._setlist_cache = {}
 
     def save(self):
-        """Save cache to disk (only if dirty)."""
+        """Save cache to disk (only if dirty). Only saves setlist stats (not folder stats)."""
         if not self._dirty:
             return
-        data = {}
-        for folder_id, stats in self._cache.items():
-            data[folder_id] = {
-                "total_charts": stats.total_charts,
-                "synced_charts": stats.synced_charts,
-                "total_size": stats.total_size,
-                "synced_size": stats.synced_size,
-                "purge_count": stats.purge_count,
-                "purge_charts": stats.purge_charts,
-                "purge_size": stats.purge_size,
-                "enabled_setlists": stats.enabled_setlists,
-                "total_setlists": stats.total_setlists,
-                "settings_hash": stats.settings_hash,
-            }
+
+        # Save setlist stats only (folder stats are computed on-the-fly via aggregation)
+        data = {"_setlists": {}}
+        for folder_id, setlists in self._setlist_cache.items():
+            data["_setlists"][folder_id] = {}
+            for setlist_name, stats in setlists.items():
+                data["_setlists"][folder_id][setlist_name] = {
+                    "total_charts": stats.total_charts,
+                    "total_size": stats.total_size,
+                    "synced_charts": stats.synced_charts,
+                    "synced_size": stats.synced_size,
+                    "disk_files": stats.disk_files,
+                    "disk_size": stats.disk_size,
+                    "disk_charts": stats.disk_charts,
+                    "purgeable_files": stats.purgeable_files,
+                    "purgeable_size": stats.purgeable_size,
+                    "purgeable_charts": stats.purgeable_charts,
+                }
+
         try:
             with open(self._path, "w") as f:
                 json.dump(data, f)
@@ -150,17 +198,41 @@ class PersistentStatsCache:
         self._cache[folder_id] = stats
         self._dirty = True
 
+    def get_setlist(self, folder_id: str, setlist_name: str) -> CachedSetlistStats | None:
+        """Get cached stats for a setlist."""
+        folder_setlists = self._setlist_cache.get(folder_id, {})
+        return folder_setlists.get(setlist_name)
+
+    def set_setlist(self, folder_id: str, setlist_name: str, stats: CachedSetlistStats):
+        """Store stats for a setlist."""
+        if folder_id not in self._setlist_cache:
+            self._setlist_cache[folder_id] = {}
+        self._setlist_cache[folder_id][setlist_name] = stats
+        self._dirty = True
+
+    def get_all_setlists(self, folder_id: str) -> dict[str, CachedSetlistStats]:
+        """Get all cached setlist stats for a folder."""
+        return self._setlist_cache.get(folder_id, {})
+
     def invalidate(self, folder_id: str):
-        """Remove cached stats for a folder."""
+        """Remove cached stats for a folder (including setlists)."""
         if folder_id in self._cache:
             del self._cache[folder_id]
+            self._dirty = True
+        if folder_id in self._setlist_cache:
+            del self._setlist_cache[folder_id]
             self._dirty = True
 
     def invalidate_all(self):
         """Clear all cached stats."""
-        if self._cache:
+        if self._cache or self._setlist_cache:
             self._cache.clear()
+            self._setlist_cache.clear()
             self._dirty = True
+
+    def has_setlist_stats(self, folder_id: str) -> bool:
+        """Check if any setlist stats are cached for a folder."""
+        return bool(self._setlist_cache.get(folder_id))
 
     @staticmethod
     def compute_settings_hash(folder_id: str, user_settings) -> str:
@@ -175,6 +247,55 @@ class PersistentStatsCache:
         disabled_setlists = sorted(user_settings.get_disabled_subfolders(folder_id))
         key = f"{enabled}:{','.join(disabled_setlists)}"
         return hashlib.md5(key.encode()).hexdigest()[:8]
+
+
+def aggregate_folder_stats(
+    folder_id: str,
+    setlist_names: list[str],
+    user_settings,
+    persistent_cache: "PersistentStatsCache",
+) -> AggregatedFolderStats:
+    """
+    Aggregate setlist stats into folder-level stats. Fast - no disk I/O.
+
+    For enabled setlists: sum sync stats
+    For disabled setlists with disk content: sum purgeable stats
+
+    Args:
+        folder_id: Drive/folder ID
+        setlist_names: List of setlist names to aggregate
+        user_settings: UserSettings for checking enabled states
+        persistent_cache: PersistentStatsCache with setlist stats
+    """
+    result = AggregatedFolderStats(total_setlists=len(setlist_names))
+    drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
+
+    for setlist_name in setlist_names:
+        cached = persistent_cache.get_setlist(folder_id, setlist_name)
+        if not cached:
+            continue
+
+        setlist_enabled = user_settings.is_subfolder_enabled(folder_id, setlist_name) if user_settings else True
+
+        if drive_enabled and setlist_enabled:
+            # Enabled: contributes to sync totals
+            result.total_charts += cached.total_charts
+            result.synced_charts += cached.synced_charts
+            result.total_size += cached.total_size
+            result.synced_size += cached.synced_size
+            result.enabled_setlists += 1
+        elif drive_enabled and not setlist_enabled and cached.disk_files > 0:
+            # Disabled with disk content: contributes to purgeable
+            result.purgeable_files += cached.disk_files
+            result.purgeable_size += cached.disk_size
+            result.purgeable_charts += cached.disk_charts
+        elif not drive_enabled and cached.disk_files > 0:
+            # Drive disabled with content: all content is purgeable
+            result.purgeable_files += cached.disk_files
+            result.purgeable_size += cached.disk_size
+            result.purgeable_charts += cached.disk_charts
+
+    return result
 
 
 # Global persistent cache instance

@@ -529,6 +529,7 @@ class SyncApp:
             API_KEY,
             user_settings=self.user_settings,
             on_folder_complete=on_folder_complete,
+            download_path=get_download_path(),
         )
         # Discovery first (synchronous) - gives accurate setlist counts immediately
         print("  Discovering setlists...")

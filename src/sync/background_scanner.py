@@ -10,6 +10,8 @@ import time
 from dataclasses import dataclass, field
 from typing import Callable, TYPE_CHECKING
 
+from pathlib import Path
+
 from ..drive import DriveClient, FolderScanner
 from ..drive.client import DriveClientConfig
 
@@ -75,12 +77,14 @@ class BackgroundScanner:
         api_key: str,
         user_settings: "UserSettings" = None,
         on_folder_complete: Callable[[dict], None] = None,
+        download_path: Path = None,
     ):
         self._folders = folders
         self._auth = auth
         self._api_key = api_key
         self._user_settings = user_settings
         self._on_folder_complete = on_folder_complete
+        self._download_path = download_path
 
         self._lock = threading.Lock()
         self._stop_event = threading.Event()
@@ -418,6 +422,9 @@ class BackgroundScanner:
 
     def _scan_setlist(self, setlist: SetlistInfo, scanner: FolderScanner):
         """Scan a single setlist and accumulate files into its drive."""
+        from .status import compute_setlist_stats
+        from .cache import get_persistent_stats_cache
+
         drive = setlist.drive
         display_name = f"{setlist.drive_name}/{setlist.name}" if setlist.name != setlist.drive_name else setlist.drive_name
 
@@ -465,10 +472,32 @@ class BackgroundScanner:
             self._stats.folders_done += 1
             self._stats.current_folder_start = 0
 
+        # Compute and cache stats for this setlist
+        if self._download_path:
+            try:
+                stats = compute_setlist_stats(
+                    folder=drive,
+                    setlist_name=setlist.name,
+                    base_path=self._download_path,
+                    user_settings=self._user_settings,
+                )
+                persistent_cache = get_persistent_stats_cache()
+                persistent_cache.set_setlist(setlist.drive_id, setlist.name, stats)
+            except Exception:
+                pass  # Don't fail scan on stats computation error
+
         # Check if drive is now fully scanned
         if self.is_scanned(setlist.drive_id):
             drive["scan_duration"] = time.time() - self._stats.start_time
             drive["scan_api_calls"] = self._client.api_calls
+
+            # Save persistent cache after drive completes
+            if self._download_path:
+                try:
+                    persistent_cache = get_persistent_stats_cache()
+                    persistent_cache.save()
+                except Exception:
+                    pass
 
             if self._on_folder_complete:
                 try:
