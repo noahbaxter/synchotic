@@ -11,6 +11,7 @@ from typing import Any
 
 from ..primitives import (
     getch,
+    getch_with_timeout,
     cbreak_noecho,
     clear_screen,
     Colors,
@@ -128,12 +129,23 @@ class Menu:
     space_hint: str = ""
     esc_label: str = "Back"
     items: list = field(default_factory=list)
+    status_line: str = ""  # Rendered below menu box (for scan progress, etc.)
     _selected: int = 0
     _selected_before_hotkey: int = 0
     _scroll_offset: int = 0
+    update_callback: callable = None  # Called periodically; return True to re-render
+    refresh_interval_ms: int = 200  # How often to check for updates
 
     def add_item(self, item):
         self.items.append(item)
+
+    def update_item_description(self, value: Any, new_description: str) -> bool:
+        """Update the description of an item by its value. Returns True if found."""
+        for item in self.items:
+            if isinstance(item, (MenuItem, MenuAction)) and item.value == value:
+                item.description = new_description
+                return True
+        return False
 
     def _split_items(self) -> tuple[list[tuple[int, Any]], list[tuple[int, Any]]]:
         """Split items into scrollable and pinned lists, preserving original indices."""
@@ -355,6 +367,50 @@ class Menu:
         hint += f"  {Colors.HOTKEY}Esc{Colors.MUTED} {self.esc_label}{Colors.RESET}"
         print(hint)
 
+        # Status line (scan progress, etc.)
+        if self.status_line:
+            status = self.status_line
+            term_width = shutil.get_terminal_size().columns
+            max_len = term_width - 4
+            if len(status) > max_len:
+                status = status[:max_len - 3] + "..."
+            print(f"  {Colors.MUTED}{status}{Colors.RESET}")
+
+    def update_status_line_in_place(self, new_status: str):
+        """Update just the status line without full re-render.
+
+        Uses ANSI codes to move cursor to last line and overwrite.
+        Only works in TTY mode.
+        """
+        import sys
+        if not sys.__stdout__ or not sys.__stdout__.isatty():
+            self.status_line = new_status
+            return
+
+        old_had_status = bool(self.status_line)
+        self.status_line = new_status
+
+        # If status line state changed (had vs didn't have), need full re-render
+        if old_had_status != bool(new_status):
+            return  # Caller should trigger full re-render
+
+        if not new_status:
+            return
+
+        try:
+            # Truncate to terminal width to prevent wrapping
+            term_width = shutil.get_terminal_size().columns
+            max_len = term_width - 4  # Account for "  " prefix and safety margin
+            if len(new_status) > max_len:
+                new_status = new_status[:max_len - 3] + "..."
+
+            # Move cursor up one line, clear it, print new status
+            sys.stdout.write("\033[A\033[2K")  # Up + clear
+            sys.stdout.write(f"  {Colors.MUTED}{new_status}{Colors.RESET}\n")
+            sys.stdout.flush()
+        except OSError:
+            pass  # Terminal closed
+
     def run(self, initial_index: int = 0) -> MenuResult | None:
         """Run menu, returns MenuResult or None if cancelled."""
         selectable = self._selectable()
@@ -372,6 +428,9 @@ class Menu:
         hotkeys = {item.hotkey.upper(): i for i, item in enumerate(self.items)
                    if isinstance(item, (MenuItem, MenuAction)) and item.hotkey}
 
+        # Use timeout-based input if we have an update callback
+        use_timeout = self.update_callback is not None
+
         with cbreak_noecho():
             check_resize()
             self._render()
@@ -381,7 +440,21 @@ class Menu:
                     self._render()
                     continue
 
-                key = getch(return_special_keys=True)
+                # Get input (with timeout if we have update callback)
+                if use_timeout:
+                    key = getch_with_timeout(self.refresh_interval_ms, return_special_keys=True)
+                    if key is None:
+                        # Timeout - check for updates
+                        if self.update_callback:
+                            result = self.update_callback(self)
+                            if result == "rebuild":
+                                # Signal caller to rebuild menu items and re-run
+                                return MenuResult(self.items[self._selected], "rebuild")
+                            elif result:
+                                self._render()
+                        continue
+                else:
+                    key = getch(return_special_keys=True)
 
                 if check_resize():
                     self._render()
