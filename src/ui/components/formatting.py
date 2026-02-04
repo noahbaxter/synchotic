@@ -187,14 +187,25 @@ def format_home_item(
         return f"{Colors.STALE}{values}{Colors.RESET}" if values else ""
     elif state == "scanning":
         # Show progress as "SCANNING 5/30"
-        if scan_progress:
-            scanned, total = scan_progress
-            progress_str = f"{Colors.CYAN}SCANNING {scanned}/{total}{Colors.RESET}"
+        # Use muted colors if drive is disabled
+        if disabled:
+            if scan_progress:
+                scanned, total = scan_progress
+                progress_str = f"{Colors.MUTED}SCANNING {scanned}/{total}{Colors.RESET}"
+            else:
+                progress_str = f"{Colors.MUTED}SCANNING{Colors.RESET}"
+            if values:
+                return f"{Colors.MUTED}{values} {progress_str}{Colors.RESET}"
+            return progress_str
         else:
-            progress_str = f"{Colors.CYAN}SCANNING{Colors.RESET}"
-        if values:
-            return f"{Colors.STALE}{values}{Colors.RESET} {progress_str}"
-        return progress_str
+            if scan_progress:
+                scanned, total = scan_progress
+                progress_str = f"{Colors.CYAN}SCANNING {scanned}/{total}{Colors.RESET}"
+            else:
+                progress_str = f"{Colors.CYAN}SCANNING{Colors.RESET}"
+            if values:
+                return f"{Colors.STALE}{values}{Colors.RESET} {progress_str}"
+            return progress_str
     return values
 
 

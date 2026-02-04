@@ -851,7 +851,12 @@ class SyncApp:
             elif action == "configure":
                 # Enter on a drive - go directly to configure that drive
                 self.handle_configure_drive(value)
-                menu_cache = None  # Invalidate cache after configure (setlists may change)
+                # Fast update: just regenerate this folder + global totals
+                if menu_cache:
+                    update_menu_cache_on_toggle(
+                        menu_cache, value, self.folders, self.user_settings,
+                        self.folder_stats_cache, combined_drives, self._background_scanner
+                    )
 
             elif action == "toggle":
                 # Space on a drive - toggle drive on/off
