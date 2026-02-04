@@ -2,36 +2,32 @@
 Purge planning for DM Chart Sync.
 
 Determines what files should be deleted (disabled drives, extra files, videos, partials).
+Uses marker files as the source of truth for extracted archive contents.
 """
 
 from dataclasses import dataclass
 from pathlib import Path
-from typing import List, Tuple, Optional, Set
+from typing import List, Tuple, Set
 
 from ..core.constants import VIDEO_EXTENSIONS
-from ..core.formatting import relative_posix, parent_posix, sanitize_path
+from ..core.formatting import relative_posix, parent_posix, sanitize_path, sanitize_filename, normalize_path_key
 from ..core.logging import debug_log
 from .cache import scan_local_files
-from .state import SyncState
+from .markers import get_all_marker_files
 from .sync_checker import is_archive_file
 
 
 @dataclass
 class PurgeStats:
     """Detailed breakdown of what would be purged."""
-    # Files from disabled drives/setlists
-    chart_count: int = 0  # Actually file count (legacy naming)
+    chart_count: int = 0
     chart_size: int = 0
-    # Extra files not in manifest
     extra_file_count: int = 0
     extra_file_size: int = 0
-    # Partial downloads
     partial_count: int = 0
     partial_size: int = 0
-    # Video files (when delete_videos is enabled)
     video_count: int = 0
     video_size: int = 0
-    # Estimated chart count (archives = 1 chart each)
     estimated_charts: int = 0
 
     @property
@@ -46,21 +42,11 @@ class PurgeStats:
 def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tuple[Path, int]]:
     """
     Find partial download files (files with _download_ prefix).
-
-    These are incomplete archive downloads that were interrupted and can't be resumed.
-
-    Args:
-        base_path: Base download path to scan
-        local_files: Optional pre-scanned local files dict (avoids expensive rglob)
-
-    Returns:
-        List of (Path, size) tuples for partial download files
     """
     partial_files = []
     if not base_path.exists():
         return partial_files
 
-    # Use cached local_files if available (much faster than rglob)
     if local_files is not None:
         for rel_path, size in local_files.items():
             filename = rel_path.split("/")[-1] if "/" in rel_path else rel_path
@@ -68,7 +54,6 @@ def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tu
                 partial_files.append((base_path / rel_path, size))
         return partial_files
 
-    # Fallback to rglob if no cached files
     for f in base_path.rglob("_download_*"):
         if f.is_file():
             try:
@@ -82,22 +67,18 @@ def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tu
 def find_extra_files(
     folder_name: str,
     folder_path: Path,
-    sync_state: Optional[SyncState],
+    marker_files: Set[str],
     manifest_paths: Set[str],
     local_files: dict = None,
 ) -> List[Tuple[Path, int]]:
     """
-    Find local files not tracked in sync_state AND not in manifest.
-
-    A file is considered "extra" only if it's not in sync_state AND doesn't
-    match any manifest path. No disk heuristics - we rely on markers/sync_state
-    to know what files were extracted from archives.
+    Find local files not tracked in markers AND not in manifest.
 
     Args:
         folder_name: Name of the folder (for building paths)
         folder_path: Path to the folder on disk
-        sync_state: SyncState instance with tracked files (can be None)
-        manifest_paths: Set of sanitized manifest paths for this folder
+        marker_files: Set of file paths from all markers (lowercase)
+        manifest_paths: Set of manifest paths for this folder (lowercase)
         local_files: Optional pre-scanned local files dict
 
     Returns:
@@ -108,23 +89,19 @@ def find_extra_files(
     if not local_files:
         return []
 
-    # Get all tracked files from sync_state (lowercase for case-insensitive matching)
-    tracked_files = sync_state.get_all_files() if sync_state else set()
-    tracked_lower = {p.lower() for p in tracked_files}
-    manifest_lower = {p.lower() for p in manifest_paths}
-
-    # Find extras - files on disk not in sync_state AND not in manifest
     extras = []
     for rel_path, size in local_files.items():
-        # Build the full path (folder_name/rel_path)
-        full_path = f"{folder_name}/{rel_path}".lower()
+        # Markers store paths relative to drive folder (no drive prefix)
+        marker_path = normalize_path_key(rel_path)
+        # Manifest paths include drive prefix
+        manifest_path = normalize_path_key(f"{folder_name}/{rel_path}")
 
-        # Check sync_state first
-        if full_path in tracked_lower:
+        # Check markers (extracted archive contents)
+        if marker_path in marker_files:
             continue
 
-        # Check manifest (disk path should match sanitized manifest path)
-        if full_path in manifest_lower:
+        # Check manifest (loose files + archives themselves)
+        if manifest_path in manifest_paths:
             continue
 
         extras.append((folder_path / rel_path, size))
@@ -136,29 +113,23 @@ def plan_purge(
     folders: list,
     base_path: Path,
     user_settings=None,
-    sync_state: Optional[SyncState] = None,
 ) -> Tuple[List[Tuple[Path, int]], PurgeStats]:
     """
     Plan what files should be purged.
 
-    This identifies:
-    - Files from disabled drives/setlists
-    - Extra files not in manifest (or not in sync_state if provided)
-    - Partial downloads
-    - Video files (when delete_videos is enabled)
+    Valid files come from two sources:
+    1. Marker files - track extracted archive contents
+    2. Manifest - tracks loose files and archive files themselves
 
-    Args:
-        folders: List of folder dicts from manifest
-        base_path: Base download path
-        user_settings: UserSettings instance for checking enabled states
-        sync_state: SyncState instance for checking tracked files (optional)
-
-    Returns:
-        Tuple of (files_to_purge, stats)
-        files_to_purge is a list of (Path, size) tuples
+    Everything else on disk is "extra" and should be purged.
     """
     stats = PurgeStats()
     all_files = []
+
+    # Get ALL tracked files from markers (one lookup, used for all folders)
+    all_marker_files = get_all_marker_files()
+    marker_files_normalized = {normalize_path_key(p) for p in all_marker_files}
+    debug_log(f"PURGE | marker_files={len(marker_files_normalized)}")
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
@@ -168,7 +139,6 @@ def plan_purge(
         if not folder_path.exists():
             continue
 
-        # Use cached local file scan
         local_files = scan_local_files(folder_path)
         if not local_files:
             continue
@@ -176,78 +146,72 @@ def plan_purge(
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
 
         if not drive_enabled:
-            # Drive is disabled - count ALL local files as "charts" (includes partials)
+            # Drive is disabled - purge ALL local files
             chart_parents = set()
             for rel_path, size in local_files.items():
                 stats.chart_count += 1
                 stats.chart_size += size
                 all_files.append((folder_path / rel_path, size))
-                # Estimate charts: archives are 1 chart, else group by parent folder
                 if is_archive_file(rel_path):
                     stats.estimated_charts += 1
                 else:
                     chart_parents.add(parent_posix(rel_path))
-            # Add unique parent folders as estimated charts
             stats.estimated_charts += len(chart_parents)
             continue
 
-        # Find partial downloads using cached local_files (fast dict iteration)
+        # Find partial downloads
         partial_files = find_partial_downloads(folder_path, local_files)
         if partial_files:
             stats.partial_count += len(partial_files)
             stats.partial_size += sum(size for _, size in partial_files)
-            stats.estimated_charts += len(partial_files)  # Each partial is 1 chart
+            stats.estimated_charts += len(partial_files)
             all_files.extend(partial_files)
 
-        # Drive is enabled - count files in disabled setlists + extra files separately
+        # Get disabled setlists (sanitize names to match local filesystem paths)
+        disabled_setlists_raw = user_settings.get_disabled_subfolders(folder_id) if user_settings else set()
+        disabled_setlists = {sanitize_filename(name) for name in disabled_setlists_raw}
+
+        # Count files in disabled setlists (these get purged)
         disabled_setlist_paths = set()
         disabled_chart_parents = set()
-
-        # Get disabled setlists
-        disabled_setlists = user_settings.get_disabled_subfolders(folder_id) if user_settings else set()
-
-        # Count files in disabled setlists
         for rel_path, size in local_files.items():
             first_slash = rel_path.find("/")
             setlist_name = rel_path[:first_slash] if first_slash != -1 else rel_path
+            # Sanitize to match disabled_setlists (which are also sanitized)
+            setlist_name = sanitize_filename(setlist_name)
             if setlist_name in disabled_setlists:
                 disabled_setlist_paths.add(rel_path)
                 stats.chart_count += 1
                 stats.chart_size += size
                 all_files.append((folder_path / rel_path, size))
-                # Estimate charts for disabled setlist files
                 if is_archive_file(rel_path):
                     stats.estimated_charts += 1
                 else:
                     disabled_chart_parents.add(parent_posix(rel_path))
-        # Add unique parent folders as estimated charts
         stats.estimated_charts += len(disabled_chart_parents)
 
-        # Build set of valid manifest paths for this folder (enabled setlists only)
+        # Build manifest paths (loose files + archives in enabled setlists)
         manifest_paths: Set[str] = set()
         manifest_files = folder.get("files")
 
-        # Warn if files not loaded (lazy loading) - can't properly detect extras
         if manifest_files is None:
-            debug_log(f"PURGE_WARN | folder={folder_name} | files not loaded - skipping extra file detection")
-            manifest_files = []
+            # Folder not scanned - skip entirely to avoid purging valid content
+            debug_log(f"PURGE_SKIP | folder={folder_name} | not scanned, skipping entirely")
+            continue
+
         for f in manifest_files:
             file_path = f.get("path", "")
-            # Skip files in disabled setlists
             first_slash = file_path.find("/")
             setlist_name = file_path[:first_slash] if first_slash != -1 else file_path
             if setlist_name in disabled_setlists:
                 continue
-            # Add sanitized path (folder_name/sanitized_file_path)
             sanitized = sanitize_path(file_path)
-            manifest_paths.add(f"{folder_name}/{sanitized}")
+            manifest_paths.add(normalize_path_key(f"{folder_name}/{sanitized}"))
 
-        # Extra files not tracked in sync_state AND not in manifest
-        # Only detect extras if we have something to compare against (manifest or sync_state)
-        if manifest_paths or sync_state:
-            extras = find_extra_files(folder_name, folder_path, sync_state, manifest_paths, local_files)
-        else:
-            extras = []  # No manifest and no sync_state = can't determine extras
+        # Find extra files (not in markers, not in manifest)
+        extras = find_extra_files(
+            folder_name, folder_path, marker_files_normalized, manifest_paths, local_files
+        )
 
         extra_paths = set()
         for f, size in extras:
@@ -257,11 +221,10 @@ def plan_purge(
                 stats.extra_file_count += 1
                 stats.extra_file_size += size
                 all_files.append((f, size))
-                # Only count archive extras as charts
                 if is_archive_file(rel_path):
                     stats.estimated_charts += 1
 
-        # Count video files when delete_videos is enabled
+        # Video files
         delete_videos = user_settings.delete_videos if user_settings else True
         if delete_videos:
             for rel_path, size in local_files.items():
@@ -272,7 +235,7 @@ def plan_purge(
                     stats.video_size += size
                     all_files.append((folder_path / rel_path, size))
 
-    # Deduplicate (some files may be counted in multiple categories)
+    # Deduplicate
     seen = set()
     unique_files = []
     for f, size in all_files:
@@ -287,15 +250,9 @@ def count_purgeable_files(
     folders: list,
     base_path: Path,
     user_settings=None,
-    sync_state: Optional[SyncState] = None,
 ) -> Tuple[int, int, int]:
-    """
-    Count files that would be purged.
-
-    Returns:
-        Tuple of (total_files, total_size_bytes, estimated_charts)
-    """
-    _, stats = plan_purge(folders, base_path, user_settings, sync_state)
+    """Count files that would be purged."""
+    _, stats = plan_purge(folders, base_path, user_settings)
     return stats.total_files, stats.total_size, stats.estimated_charts
 
 
@@ -303,13 +260,7 @@ def count_purgeable_detailed(
     folders: list,
     base_path: Path,
     user_settings=None,
-    sync_state: Optional[SyncState] = None,
 ) -> PurgeStats:
-    """
-    Count files that would be purged with detailed breakdown.
-
-    Returns:
-        PurgeStats with breakdown of charts vs extra files
-    """
-    _, stats = plan_purge(folders, base_path, user_settings, sync_state)
+    """Count files that would be purged with detailed breakdown."""
+    _, stats = plan_purge(folders, base_path, user_settings)
     return stats

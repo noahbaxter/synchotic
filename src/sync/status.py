@@ -14,7 +14,6 @@ from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path, dedupe_files_by_newest, normalize_fs_name
 from ..core.logging import debug_log
 from .cache import scan_actual_charts
-from .state import SyncState
 from .sync_checker import is_archive_synced, is_archive_file, is_file_synced
 
 
@@ -112,7 +111,6 @@ def _build_chart_folders(manifest_files: list) -> dict:
 
 def _count_synced_charts(
     chart_folders: dict,
-    sync_state: SyncState,
     folder_name: str,
     skip_custom: bool = False,
     delete_videos: bool = True,
@@ -144,7 +142,6 @@ def _count_synced_charts(
                 checksum_path=data["checksum_path"],
                 archive_name=data["archive_name"],
                 manifest_md5=data["archive_md5"],
-                sync_state=sync_state,
                 local_base=folder_path,
             )
             if synced:
@@ -162,15 +159,11 @@ def _count_synced_charts(
             files_to_check = [(fp, fs, md5) for fp, fs, md5 in files_to_check if not _is_video_file(fp)]
 
         # Use is_file_synced for consistent logic with download_planner
-        # This includes sync_state fallback for stale manifest sizes
         is_synced = all(
             is_file_synced(
                 rel_path=fp,
                 manifest_size=fs,
-                manifest_md5=md5,
-                sync_state=sync_state,
                 local_path=folder_path / fp,
-                folder_name=folder_name,
             )
             for fp, fs, md5 in files_to_check
         )
@@ -189,7 +182,7 @@ def _count_synced_charts(
     return total_charts, synced_charts, total_size, synced_size
 
 
-def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_state: SyncState = None) -> SyncStatus:
+def get_sync_status(folders: list, base_path: Path, user_settings=None) -> SyncStatus:
     """
     Calculate sync status for enabled folders.
 
@@ -200,7 +193,6 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
         folders: List of folder dicts from manifest
         base_path: Base download path
         user_settings: UserSettings for checking enabled states
-        sync_state: SyncState for checking synced archives (optional)
 
     Returns:
         SyncStatus with totals and synced counts
@@ -217,7 +209,7 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
         if user_settings and not user_settings.is_drive_enabled(folder_id):
             continue
 
-        manifest_files = folder.get("files", [])
+        manifest_files = (folder.get("files") or [])
         if not manifest_files:
             continue
 
@@ -265,7 +257,7 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
         # Get delete_videos setting (default True if no settings)
         delete_videos = user_settings.delete_videos if user_settings else True
         total, synced, total_size, synced_size = _count_synced_charts(
-            chart_folders, sync_state, folder_name,
+            chart_folders, folder_name,
             skip_custom=(synced_from_scan is not None),
             delete_videos=delete_videos,
             folder_path=folder_path,
@@ -307,7 +299,6 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None, sync_sta
 def get_lazy_sync_status(
     folder: dict,
     base_path: Path,
-    sync_state: SyncState = None,
 ) -> SyncStatus:
     """
     Get estimated sync status for a folder without loading its file list.
@@ -318,7 +309,6 @@ def get_lazy_sync_status(
     Args:
         folder: Folder dict with metadata (but files may be None)
         base_path: Base download path
-        sync_state: SyncState for checking synced archives
 
     Returns:
         SyncStatus with estimated values and is_estimate=True
@@ -346,7 +336,6 @@ def get_setlist_sync_status(
     folder: dict,
     setlist_name: str,
     base_path: Path,
-    sync_state: SyncState = None,
     delete_videos: bool = True,
 ) -> SyncStatus:
     """
@@ -356,7 +345,6 @@ def get_setlist_sync_status(
         folder: Folder dict from manifest
         setlist_name: Name of the setlist to check
         base_path: Base download path
-        sync_state: SyncState for checking synced archives (optional)
         delete_videos: Whether to exclude video files from size calculations
 
     Returns:
@@ -367,7 +355,7 @@ def get_setlist_sync_status(
     folder_name = folder.get("name", "")
     folder_path = base_path / folder_name
 
-    manifest_files = folder.get("files", [])
+    manifest_files = (folder.get("files") or [])
     if not manifest_files:
         return status
 
@@ -389,7 +377,7 @@ def get_setlist_sync_status(
 
     # Count charts and check sync status
     total, synced, total_size, synced_size = _count_synced_charts(
-        chart_folders, sync_state, folder_name,
+        chart_folders, folder_name,
         skip_custom=False,
         delete_videos=delete_videos,
         folder_path=folder_path,

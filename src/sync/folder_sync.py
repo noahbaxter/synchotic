@@ -8,8 +8,8 @@ import time
 from pathlib import Path
 from typing import Callable, Optional, Union
 
-from ..drive import DriveClient, FolderScanner
-from ..core.formatting import dedupe_files_by_newest
+from ..drive import DriveClient
+from ..core.formatting import dedupe_files_by_newest, sanitize_filename
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
@@ -17,7 +17,6 @@ from .cache import clear_cache, clear_folder_cache
 from .download_planner import plan_downloads
 from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
-from .state import SyncState
 
 
 class FolderSync:
@@ -28,13 +27,10 @@ class FolderSync:
         client: DriveClient,
         auth_token: Optional[Union[str, Callable[[], Optional[str]]]] = None,
         delete_videos: bool = True,
-        sync_state: Optional[SyncState] = None,
     ):
         self.client = client
         self.auth_token = auth_token
         self.delete_videos = delete_videos
-        self.sync_state = sync_state
-        # Import here to avoid circular dependency
         from .downloader import FileDownloader
         self.downloader = FileDownloader(auth_token=auth_token, delete_videos=delete_videos)
 
@@ -44,99 +40,74 @@ class FolderSync:
         base_path: Path,
         disabled_prefixes: list[str] = None,
         cancel_check: Optional[Callable[[], bool]] = None,
+        scan_stats_getter: Optional[Callable] = None,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
-
-        Args:
-            folder: Folder dict from manifest
-            base_path: Base download path
-            disabled_prefixes: List of path prefixes to exclude (disabled subfolders)
-            cancel_check: Optional callback that returns True to trigger cancellation.
-                         Called periodically during download.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
         """
         folder_path = base_path / folder["name"]
-        scan_start = time.time()
         disabled_prefixes = disabled_prefixes or []
         filtered_count = 0
 
-        # Use manifest files if available (official folders)
         manifest_files = folder.get("files")
 
-        if manifest_files:
-            # Filter out files in disabled subfolders
-            if disabled_prefixes:
-                original_count = len(manifest_files)
-                manifest_files = [
-                    f for f in manifest_files
-                    if not any(f.get("path", "").startswith(prefix + "/") or f.get("path", "") == prefix
-                               for prefix in disabled_prefixes)
-                ]
-                filtered_count = original_count - len(manifest_files)
+        # Require files to be scanned before sync
+        if manifest_files is None:
+            raise ValueError(f"Cannot sync '{folder['name']}': not scanned. Run scanner first.")
 
-            # Deduplicate files with same path, keeping only newest version
-            manifest_files = dedupe_files_by_newest(manifest_files)
+        if disabled_prefixes:
+            original_count = len(manifest_files)
+            # Sanitize prefixes to match how paths appear on disk (handles : -> - etc)
+            sanitized_prefixes = {sanitize_filename(p) for p in disabled_prefixes}
+            debug_log(f"DOWNLOAD_FILTER | folder={folder['name']} | disabled={len(disabled_prefixes)} | sanitized={list(sanitized_prefixes)[:3]}")
 
-            tasks, skipped, long_paths = plan_downloads(
-                manifest_files, folder_path, self.delete_videos,
-                sync_state=self.sync_state, folder_name=folder["name"]
-            )
+            def is_path_disabled(path: str) -> bool:
+                """Check if path matches any disabled prefix."""
+                first_slash = path.find("/")
+                setlist_name = path[:first_slash] if first_slash != -1 else path
+                # Sanitize the setlist name from scanner to match sanitized prefixes
+                sanitized_name = sanitize_filename(setlist_name)
+                return sanitized_name in sanitized_prefixes
 
-            debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
+            manifest_files = [f for f in manifest_files if not is_path_disabled(f.get("path", ""))]
+            filtered_count = original_count - len(manifest_files)
+            debug_log(f"DOWNLOAD_FILTER | folder={folder['name']} | original={original_count} | after_filter={len(manifest_files)}")
 
-            # Warn about long paths on Windows
-            if long_paths:
-                print_long_path_warning(len(long_paths))
-        else:
-            # No manifest - need to scan (shouldn't happen with official folders)
-            display.scanning_folder()
-            scanner = FolderScanner(self.client)
+        manifest_files = dedupe_files_by_newest(manifest_files)
 
-            def progress(folders, files, shortcuts):
-                display.scan_progress(folders, files, shortcuts)
+        tasks, skipped, long_paths = plan_downloads(
+            manifest_files, folder_path, self.delete_videos, folder_name=folder["name"]
+        )
 
-            files = scanner.scan_for_sync(folder["folder_id"], folder_path, progress)
-            print()
+        debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
 
-            tasks, skipped, long_paths = plan_downloads(
-                [{"id": f["id"], "path": f["path"], "size": f["size"]} for f in files if not f["skip"]],
-                folder_path,
-                self.delete_videos
-            )
-            skipped += sum(1 for f in files if f["skip"])
+        if long_paths:
+            print_long_path_warning(len(long_paths))
 
-            # Warn about long paths on Windows
-            if long_paths:
-                print_long_path_warning(len(long_paths))
-
-        # Print folder status
         if not tasks and not skipped:
             display.folder_status_empty(filtered_count)
             return 0, 0, 0, [], False, 0
 
         if not tasks:
-            # All files already synced
             display.folder_status_synced(skipped, filtered_count)
             return 0, skipped, 0, [], False, 0
 
-        # Files to download
         total_size = sum(t.size for t in tasks)
         display.folder_status_downloading(len(tasks), total_size, skipped, filtered_count)
 
-        # Download
         download_start = time.time()
         downloaded, _, errors, rate_limited, cancelled, bytes_downloaded = self.downloader.download_many(
-            tasks, sync_state=self.sync_state, drive_name=folder["name"], cancel_check=cancel_check
+            tasks, drive_name=folder["name"], cancel_check=cancel_check,
+            scan_stats_getter=scan_stats_getter
         )
         download_time = time.time() - download_start
 
         if not cancelled:
             display.folder_complete(downloaded, bytes_downloaded, download_time, errors)
 
-        # Clear cache for this folder after download
         clear_folder_cache(folder_path)
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
@@ -167,7 +138,6 @@ class FolderSync:
             header = f"[{i}/{total_folders}] {folder['name']}" if total_folders > 1 else folder['name']
             print_section_header(header)
 
-            # Get disabled prefixes for this specific folder
             folder_id = folder.get("folder_id", "")
             disabled_prefixes = disabled_prefixes_map.get(folder_id, [])
 
@@ -188,12 +158,10 @@ class FolderSync:
                 was_cancelled = True
                 break
 
-        # Final summary
         elapsed = time.time() - start_time
         print()
         print_separator()
 
-        # Log sync summary for diagnostics
         debug_log(f"SYNC_SUMMARY | downloaded={total_downloaded} | skipped={total_skipped} | errors={total_errors} | bytes={total_bytes}")
 
         if was_cancelled:
@@ -211,7 +179,6 @@ class FolderSync:
         if rate_limited_folders:
             display.rate_limit_guidance(rate_limited_folders)
 
-        # Only wait here if cancelled (no purge will follow)
         if was_cancelled:
             wait_with_skip(5, "Continuing in 5s (press any key to skip)")
 
@@ -222,23 +189,11 @@ def purge_all_folders(
     folders: list,
     base_path: Path,
     user_settings=None,
-    sync_state: Optional[SyncState] = None,
 ):
     """
     Purge files that shouldn't be synced.
 
-    This includes:
-    - Files not in the manifest (extra files)
-    - Files from disabled drives
-    - Files from disabled setlists
-    - Partial downloads (interrupted archive downloads with _download_ prefix)
-    - Video files (when delete_videos is enabled)
-
-    Args:
-        folders: List of folder dicts from manifest
-        base_path: Base download path
-        user_settings: UserSettings instance for checking enabled states
-        sync_state: SyncState instance for checking tracked files (optional)
+    Uses marker files as source of truth for what's valid.
     """
     from ..ui.components import format_purge_tree
 
@@ -256,11 +211,9 @@ def purge_all_folders(
         if not folder_path.exists():
             continue
 
-        # Check if entire drive is disabled
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
 
         if not drive_enabled:
-            # Purge entire drive folder
             local_files = [(f, f.stat().st_size if f.exists() else 0)
                           for f in folder_path.rglob("*") if f.is_file()]
             if local_files:
@@ -274,8 +227,7 @@ def purge_all_folders(
                 display.purge_removed(deleted, failed)
             continue
 
-        # Drive is enabled - use plan_purge to get files
-        files_to_purge, _ = plan_purge([folder], base_path, user_settings, sync_state)
+        files_to_purge, _ = plan_purge([folder], base_path, user_settings)
 
         if not files_to_purge:
             continue
@@ -283,18 +235,15 @@ def purge_all_folders(
         folder_size = sum(size for _, size in files_to_purge)
         display.purge_folder(folder_name, len(files_to_purge), folder_size)
 
-        # Show tree structure (abbreviated)
         tree_lines = format_purge_tree(files_to_purge, base_path)
         display.purge_tree_lines(tree_lines)
 
-        # Delete automatically
         deleted, failed = delete_files(files_to_purge, base_path)
         total_deleted += deleted
         total_failed += failed
         total_size += folder_size
         display.purge_removed(deleted, failed)
 
-    # Clean up partial downloads at base level
     partial_files = find_partial_downloads(base_path)
     if partial_files:
         partial_size = sum(size for _, size in partial_files)
@@ -312,16 +261,6 @@ def purge_all_folders(
     else:
         display.purge_nothing()
 
-    # Clean up sync_state entries for files that no longer exist
-    if sync_state:
-        orphaned = sync_state.cleanup_orphaned_entries()
-        if orphaned > 0:
-            sync_state.save()
-
-    # Clear cache after purge
     clear_cache()
 
-    # Auto-dismiss after 5 seconds (any key skips)
     wait_with_skip(5, "Continuing in 5s (press any key to skip)")
-
-

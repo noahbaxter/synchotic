@@ -19,11 +19,10 @@ from dataclasses import dataclass
 import aiohttp
 
 from ..core.constants import VIDEO_EXTENSIONS
-from ..core.formatting import extract_path_context, format_download_name, normalize_fs_name
+from ..core.formatting import extract_path_context, format_download_name, normalize_fs_name, normalize_path_key
 from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
-from .extractor import extract_archive, get_folder_size, delete_video_files, scan_extracted_files
+from .extractor import extract_archive, get_folder_size, delete_video_files
 from .download_planner import DownloadTask
-from .state import SyncState
 from .markers import save_marker
 from ..ui.primitives.esc_monitor import EscMonitor
 from ..ui.widgets import FolderProgress, display
@@ -260,13 +259,12 @@ class FileDownloader:
             bytes_downloaded=downloaded_bytes,
         )
 
-    def process_archive(self, task: DownloadTask, sync_state=None, archive_rel_path: str = None) -> Tuple[bool, str, dict]:
+    def process_archive(self, task: DownloadTask, archive_rel_path: str = None) -> Tuple[bool, str, dict]:
         """
-        Process a downloaded archive: extract to temp, move contents to destination, update sync state.
+        Process a downloaded archive: extract to temp, move contents to destination, save marker.
 
         Args:
             task: Download task with archive info
-            sync_state: SyncState instance to update (optional for backward compat)
             archive_rel_path: Relative path of archive in manifest (e.g., "DriveName/Setlist/archive.7z")
 
         Returns:
@@ -276,6 +274,12 @@ class FileDownloader:
 
         archive_path = task.local_path
         chart_folder = archive_path.parent
+
+        # Note: We no longer delete old markers/files before extraction.
+        # This caused issues when Google Drive has two files with names that
+        # differ only in case (e.g., "Carol of" vs "Carol Of") - they normalize
+        # to the same marker prefix, so downloading one deleted the other's marker.
+        # Instead, we just save the new marker. Old orphaned markers are harmless.
 
         archive_name = archive_path.name.replace("_download_", "", 1)
         archive_stem = Path(archive_name).stem
@@ -305,10 +309,7 @@ class FileDownloader:
             if self.delete_videos:
                 delete_video_files(extract_tmp)
 
-            # Step 3: Scan extracted files (relative to temp folder)
-            extracted_files = scan_extracted_files(extract_tmp, extract_tmp)
-
-            # Step 4: Move extracted contents to chart_folder
+            # Step 3: Move extracted contents to chart_folder
             # Check if we should flatten to avoid double nesting.
             # Flatten ONLY when:
             #   - Archive contains exactly one folder
@@ -319,24 +320,19 @@ class FileDownloader:
             extracted_items = list(extract_tmp.iterdir())
             should_flatten = False
             flatten_folder = None
+            moved_destinations = []  # Track where we move things for scanning
 
             if len(extracted_items) == 1 and extracted_items[0].is_dir():
                 folder_name = normalize_fs_name(extracted_items[0].name)
                 chart_folder_name = normalize_fs_name(chart_folder.name)
                 # Only flatten if BOTH extracted folder AND destination match archive name
-                if (folder_name.lower() == archive_stem.lower() and
-                        chart_folder_name.lower() == archive_stem.lower()):
+                if (normalize_path_key(folder_name) == normalize_path_key(archive_stem) and
+                        normalize_path_key(chart_folder_name) == normalize_path_key(archive_stem)):
                     should_flatten = True
                     flatten_folder = extracted_items[0]
 
             if should_flatten and flatten_folder:
                 # Flatten: move folder CONTENTS directly to chart_folder
-                # Also fix extracted_files paths to match actual locations
-                folder_prefix = normalize_fs_name(flatten_folder.name) + "/"
-                extracted_files = {
-                    (path[len(folder_prefix):] if path.startswith(folder_prefix) else path): size
-                    for path, size in extracted_files.items()
-                }
                 for item in flatten_folder.iterdir():
                     dest = chart_folder / normalize_fs_name(item.name)
                     if dest.exists():
@@ -345,6 +341,7 @@ class FileDownloader:
                         else:
                             dest.unlink()
                     shutil.move(str(item), str(dest))
+                    moved_destinations.append(dest)
             else:
                 # Normal: move each top-level item to chart_folder
                 for item in extracted_items:
@@ -355,9 +352,26 @@ class FileDownloader:
                         else:
                             dest.unlink()
                     shutil.move(str(item), str(dest))
+                    moved_destinations.append(dest)
 
             # Clean up empty temp folder
             shutil.rmtree(extract_tmp, ignore_errors=True)
+
+            # Step 4: Scan AFTER move to get actual paths on disk
+            # This ensures marker paths match filesystem exactly (handles unicode normalization)
+            extracted_files = {}
+            for dest in moved_destinations:
+                if dest.is_file():
+                    rel = dest.relative_to(chart_folder)
+                    extracted_files[str(rel).replace("\\", "/")] = dest.stat().st_size
+                elif dest.is_dir():
+                    for f in dest.rglob("*"):
+                        if f.is_file():
+                            rel = f.relative_to(chart_folder)
+                            try:
+                                extracted_files[str(rel).replace("\\", "/")] = f.stat().st_size
+                            except OSError:
+                                pass
 
             # Step 5: Create marker file for this extraction
             # Markers track extracted files independently of sync_state
@@ -387,16 +401,6 @@ class FileDownloader:
                     md5=task.md5,
                     extracted_files=marker_files,
                 )
-
-            # Also update sync_state for backward compatibility during transition
-            if sync_state and archive_rel_path:
-                sync_state.add_archive(
-                    path=archive_rel_path,
-                    md5=task.md5,
-                    archive_size=archive_size,
-                    files=extracted_files
-                )
-                sync_state.save()
 
             # Step 6: Delete the archive file
             try:
@@ -434,7 +438,6 @@ class FileDownloader:
         tasks: List[DownloadTask],
         progress: Optional[FolderProgress],
         progress_callback: Optional[Callable[[DownloadResult], None]],
-        sync_state: Optional[SyncState] = None,
         cancel_check: Optional[Callable[[], bool]] = None,
     ) -> Tuple[int, int, List[DownloadTask], int, bool]:
         """Internal async implementation of download_many."""
@@ -456,7 +459,7 @@ class FileDownloader:
 
         def process_archive_limited(task: DownloadTask) -> Tuple[bool, str]:
             with extract_semaphore:
-                success, error, _ = self.process_archive(task, sync_state, task.rel_path)
+                success, error, _ = self.process_archive(task, task.rel_path)
                 return success, error
 
         ssl_context = ssl.create_default_context(cafile=get_certifi_ssl_context())
@@ -537,12 +540,6 @@ class FileDownloader:
                             if progress and result.bytes_downloaded > 0:
                                 progress.add_downloaded_bytes(result.bytes_downloaded)
 
-                            # Track direct files in sync state (use actual downloaded size, not manifest)
-                            if not task.is_archive and sync_state and task.rel_path:
-                                actual_size = result.bytes_downloaded if result.bytes_downloaded > 0 else task.size
-                                sync_state.add_file(task.rel_path, actual_size, task.md5)
-                                sync_state.save()
-
                             if progress:
                                 if not task.is_archive:
                                     completed_info = progress.file_completed(result.file_path)
@@ -576,9 +573,9 @@ class FileDownloader:
         tasks: List[DownloadTask],
         progress_callback: Optional[Callable[[DownloadResult], None]] = None,
         show_progress: bool = True,
-        sync_state: Optional[SyncState] = None,
         drive_name: str = "",
         cancel_check: Optional[Callable[[], bool]] = None,
+        scan_stats_getter: Optional[Callable] = None,
     ) -> Tuple[int, int, int, List[str], bool, int]:
         """Download multiple files concurrently using asyncio.
 
@@ -586,6 +583,7 @@ class FileDownloader:
             cancel_check: Optional callback that returns True to trigger cancellation.
                          Called periodically during download. Useful for programmatic
                          cancellation (e.g., GUI cancel button, testing).
+            scan_stats_getter: Optional callback that returns current scan stats for display.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -599,6 +597,8 @@ class FileDownloader:
             progress = FolderProgress(total_files=len(tasks), total_folders=0)
             progress.register_folders(tasks)
             progress.set_aggregate_totals(len(tasks), total_bytes, drive_name)
+            if scan_stats_getter:
+                progress.set_scan_stats_getter(scan_stats_getter)
             display.download_starting(len(tasks), progress.total_charts, self.max_workers)
 
         original_handler = None
@@ -626,7 +626,7 @@ class FileDownloader:
         cancelled = False
         try:
             downloaded, errors, retryable, auth_failures, cancelled = asyncio.run(
-                self._download_many_async(tasks, progress, progress_callback, sync_state, cancel_check)
+                self._download_many_async(tasks, progress, progress_callback, cancel_check)
             )
             rate_limited_ids = [t.file_id for t in retryable]
             permanent_errors = errors - len(retryable)
