@@ -18,6 +18,7 @@ from .box import (
 from .header import (
     ASCII_HEADER,
     print_header,
+    invalidate_header_cache,
 )
 from .formatting import (
     strip_ansi,
@@ -44,6 +45,7 @@ __all__ = [
     # Header
     "ASCII_HEADER",
     "print_header",
+    "invalidate_header_cache",
     # Formatting
     "strip_ansi",
     "calc_percent",

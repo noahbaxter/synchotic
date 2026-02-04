@@ -80,8 +80,8 @@ def read_escape_sequence(fd) -> str:
     flags = fcntl.fcntl(fd, fcntl.F_GETFL)
     fcntl.fcntl(fd, fcntl.F_SETFL, flags | os.O_NONBLOCK)
     try:
-        # Small delay to let escape sequence arrive (slow terminals)
-        time.sleep(0.02)
+        # Wait for escape sequence bytes (returns immediately if already available)
+        select.select([sys.stdin], [], [], 0.005)
         # Read any immediately available characters
         extra = ''
         try:

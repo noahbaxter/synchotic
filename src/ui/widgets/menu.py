@@ -4,6 +4,9 @@ Interactive menu widget.
 Provides terminal menus with arrow key navigation, scrolling, and hotkeys.
 """
 
+import os
+import sys
+import time
 import signal
 import shutil
 from dataclasses import dataclass, field
@@ -29,6 +32,7 @@ from ..components import (
     box_row,
     strip_ansi,
     print_header,
+    invalidate_header_cache,
     BOX_TL,
     BOX_TR,
     BOX_BL,
@@ -48,6 +52,7 @@ def _handle_resize(signum, frame):
     """Signal handler for terminal resize (SIGWINCH)."""
     global _resize_flag
     _resize_flag = True
+    invalidate_header_cache()
 
 
 # Install signal handler (Unix only)
@@ -134,6 +139,7 @@ class Menu:
     _scroll_offset: int = 0
     update_callback: callable = None  # Called periodically; return True to re-render
     refresh_interval_ms: int = 200  # How often to check for updates
+    _last_callback_time: float = 0.0
 
     def add_item(self, item):
         self.items.append(item)
@@ -214,8 +220,59 @@ class Menu:
         max_scroll = max(0, total - max_visible)
         self._scroll_offset = max(0, min(self._scroll_offset, max_scroll))
 
+    def _drain_arrow_keys(self) -> int:
+        """Read all buffered arrow keys and return net UP/DOWN delta.
+
+        Positive = DOWN, negative = UP. Non-arrow input is discarded.
+        """
+        if os.name == 'nt':
+            return 0
+
+        import fcntl
+        fd = sys.stdin.fileno()
+        flags = fcntl.fcntl(fd, fcntl.F_GETFL)
+        fcntl.fcntl(fd, fcntl.F_SETFL, flags | os.O_NONBLOCK)
+        try:
+            raw = sys.stdin.read(1024)
+        except (IOError, BlockingIOError):
+            raw = ''
+        finally:
+            fcntl.fcntl(fd, fcntl.F_SETFL, flags)
+
+        if not raw:
+            return 0
+
+        delta = 0
+        i = 0
+        while i < len(raw):
+            if raw[i] == '\x1b' and i + 2 < len(raw) and raw[i + 1] == '[':
+                code = raw[i + 2]
+                if code == 'A':
+                    delta -= 1
+                    i += 3
+                elif code == 'B':
+                    delta += 1
+                    i += 3
+                else:
+                    # Other escape sequence (e.g. [5~ for page up) — skip
+                    i += 3
+                    # Consume trailing ~ for sequences like [5~
+                    if i < len(raw) and raw[i] == '~':
+                        i += 1
+            else:
+                i += 1
+        return delta
+
     def _selectable(self) -> list[int]:
         return [i for i, item in enumerate(self.items) if isinstance(item, (MenuItem, MenuAction, MenuGroupHeader))]
+
+    def _move_selection(self, selectable: list[int], delta: int):
+        """Move selection by delta steps (positive=down, negative=up), wrapping."""
+        if not selectable or delta == 0:
+            return
+        pos = selectable.index(self._selected)
+        pos = (pos + delta) % len(selectable)
+        self._selected = selectable[pos]
 
     def _width(self) -> int:
         """Return menu width based on terminal size."""
@@ -448,6 +505,7 @@ class Menu:
 
         with cbreak_noecho():
             check_resize()
+            self._last_callback_time = time.monotonic()
             self._render()
 
             while True:
@@ -461,9 +519,9 @@ class Menu:
                     if key is None:
                         # Timeout - check for updates
                         if self.update_callback:
+                            self._last_callback_time = time.monotonic()
                             result = self.update_callback(self)
                             if result == "rebuild":
-                                # Signal caller to rebuild menu items and re-run
                                 return MenuResult(self.items[self._selected], "rebuild")
                             elif result:
                                 self._render()
@@ -475,23 +533,27 @@ class Menu:
                     self._render()
                     continue
 
+                # Periodic callback during rapid input
+                if use_timeout:
+                    now = time.monotonic()
+                    if now - self._last_callback_time >= self.refresh_interval_ms / 1000.0:
+                        self._last_callback_time = now
+                        if self.update_callback:
+                            result = self.update_callback(self)
+                            if result == "rebuild":
+                                return MenuResult(self.items[self._selected], "rebuild")
+
                 if key == KEY_ESC:
                     return None
 
                 elif key == KEY_UP:
-                    pos = selectable.index(self._selected)
-                    if pos > 0:
-                        self._selected = selectable[pos - 1]
-                    else:
-                        self._selected = selectable[-1]
+                    delta = -1 + self._drain_arrow_keys()
+                    self._move_selection(selectable, delta)
                     self._render()
 
                 elif key == KEY_DOWN:
-                    pos = selectable.index(self._selected)
-                    if pos < len(selectable) - 1:
-                        self._selected = selectable[pos + 1]
-                    else:
-                        self._selected = selectable[0]
+                    delta = 1 + self._drain_arrow_keys()
+                    self._move_selection(selectable, delta)
                     self._render()
 
                 elif key == KEY_PAGE_UP:
