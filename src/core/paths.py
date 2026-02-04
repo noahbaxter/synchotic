@@ -9,8 +9,10 @@ Directory structure:
     path/to/.dm-sync/
         settings.json       - User preferences (drive toggles, etc.)
         token.json          - User OAuth token (optional sign-in)
-        manifest.json       - Cached manifest from GitHub
-        local_manifest.json - Custom drives added by user (future)
+        local_manifest.json - Custom drives added by user
+        markers/            - Archive sync markers (source of truth)
+        logs/               - Debug logs
+        stats_cache.json    - Persistent stats for fast startup
     path/to/Sync Charts/    - Downloaded chart files
 """
 
@@ -88,11 +90,6 @@ def get_token_path() -> Path:
     return get_data_dir() / "token.json"
 
 
-def get_manifest_path() -> Path:
-    """Get path to cached manifest file."""
-    return get_data_dir() / "manifest.json"
-
-
 def get_local_manifest_path() -> Path:
     """Get path to local/custom drives manifest file."""
     return get_data_dir() / "local_manifest.json"
@@ -106,11 +103,6 @@ def get_download_path() -> Path:
 def get_drives_config_path() -> Path:
     """Get path to drives config file (bundled with app)."""
     return get_bundle_dir() / "drives.json"
-
-
-def get_sync_state_path() -> Path:
-    """Get path to sync state file."""
-    return get_data_dir() / "sync_state.json"
 
 
 def get_tmp_dir() -> Path:
@@ -138,70 +130,81 @@ def cleanup_tmp_dir():
             pass
 
 
-# Legacy paths (for migration)
-def _get_legacy_settings_path() -> Path:
-    """Old location: user_settings.json at app root."""
-    return get_app_dir() / "user_settings.json"
-
-
-def _get_legacy_token_path() -> Path:
-    """Old location: user_token.json at app root."""
-    return get_app_dir() / "user_token.json"
-
-
-def _get_legacy_manifest_path() -> Path:
-    """Old location: manifest.json at app root."""
-    return get_app_dir() / "manifest.json"
-
-
-def _get_legacy_sync_state_path() -> Path:
-    """Old location: sync_state.json was under Sync Charts/.dm-sync/"""
-    return get_download_path() / ".dm-sync" / "sync_state.json"
-
-
 def migrate_legacy_files() -> list[str]:
     """
-    Migrate files from old locations to new .dm-sync/ directory.
+    Migrate files from old locations and clean up obsolete files.
+
+    This is the SINGLE place for all legacy file handling. If we stop using
+    a file/format, add it here for cleanup.
 
     Returns:
-        List of files that were migrated (for logging).
+        List of files that were migrated/cleaned (for logging).
     """
+    import shutil
+
     migrated = []
-
-    # Ensure data dir exists
     data_dir = get_data_dir()
+    app_dir = get_app_dir()
+    download_dir = get_download_path()
 
-    # Migration mappings: (old_path, new_path)
+    # =========================================================================
+    # MIGRATIONS: Old locations -> new .dm-sync/ folder
+    # =========================================================================
     migrations = [
-        (_get_legacy_settings_path(), get_settings_path(), "user_settings.json"),
-        (_get_legacy_token_path(), get_token_path(), "user_token.json"),
-        (_get_legacy_manifest_path(), get_manifest_path(), "manifest.json"),
-        (_get_legacy_sync_state_path(), get_sync_state_path(), "sync_state.json"),
+        (app_dir / "user_settings.json", get_settings_path(), "user_settings.json"),
+        (app_dir / "user_token.json", get_token_path(), "user_token.json"),
     ]
 
     for old_path, new_path, name in migrations:
         if old_path.exists() and not new_path.exists():
             try:
-                # Move file to new location
                 old_path.rename(new_path)
-                migrated.append(name)
+                migrated.append(f"migrated {name}")
             except Exception:
-                # If rename fails (cross-device), try copy + delete
                 try:
-                    import shutil
                     shutil.copy2(old_path, new_path)
                     old_path.unlink()
-                    migrated.append(name)
+                    migrated.append(f"migrated {name}")
                 except Exception:
-                    # Migration failed, leave old file in place
                     pass
 
-    # Clean up old .dm-sync folder under Sync Charts if empty
-    old_dm_sync = get_download_path() / ".dm-sync"
-    if old_dm_sync.exists():
-        try:
-            old_dm_sync.rmdir()  # Only succeeds if empty
-        except OSError:
-            pass  # Not empty, leave it
+    # =========================================================================
+    # OBSOLETE FILES: Delete files we no longer use
+    # =========================================================================
+    obsolete_files = [
+        # sync_state.json - replaced by marker files
+        data_dir / "sync_state.json",
+        download_dir / ".dm-sync" / "sync_state.json",
+        # manifest.json - no longer used, data comes from Google Drive API
+        data_dir / "manifest.json",
+        app_dir / "manifest.json",
+    ]
+
+    for path in obsolete_files:
+        if path.exists():
+            try:
+                path.unlink()
+                migrated.append(f"removed {path.name}")
+            except Exception:
+                pass
+
+    # =========================================================================
+    # OBSOLETE DIRECTORIES: Remove empty/obsolete directories
+    # =========================================================================
+    obsolete_dirs = [
+        # Old .dm-sync under Sync Charts (data moved to app-level .dm-sync)
+        download_dir / ".dm-sync",
+    ]
+
+    for dir_path in obsolete_dirs:
+        if dir_path.exists():
+            try:
+                # Try to remove if empty
+                dir_path.rmdir()
+                migrated.append(f"removed {dir_path.name}/")
+            except OSError:
+                # Not empty - try removing all contents if it's truly obsolete
+                # For now, just leave non-empty dirs alone
+                pass
 
     return migrated
