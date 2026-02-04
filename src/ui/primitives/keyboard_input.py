@@ -147,6 +147,55 @@ WINDOWS_SPECIAL_CHARS = {
 INSTANT_MENU_COMMANDS = 'QAXCRP'
 
 
+def getch_with_timeout(timeout_ms: int = 100, return_special_keys: bool = True) -> str | None:
+    """
+    Read a single character from stdin with timeout.
+
+    Args:
+        timeout_ms: Timeout in milliseconds (default 100ms)
+        return_special_keys: If True, return KEY_* constants for arrow keys etc.
+
+    Returns:
+        Character or KEY_* constant, or None if timeout
+    """
+    timeout_sec = timeout_ms / 1000.0
+
+    if os.name == 'nt':
+        # Windows - use msvcrt.kbhit with polling
+        end_time = time.time() + timeout_sec
+        while time.time() < end_time:
+            if msvcrt.kbhit():
+                return getch(return_special_keys)
+            time.sleep(0.01)
+        return None
+    else:
+        # Unix - use select with timeout
+        with raw_terminal() as fd:
+            if select.select([sys.stdin], [], [], timeout_sec)[0]:
+                ch = sys.stdin.read(1)
+
+                # Special characters (Enter, Backspace, Tab, Space)
+                if ch in UNIX_SPECIAL_CHARS:
+                    key, raw = UNIX_SPECIAL_CHARS[ch]
+                    return key if return_special_keys else raw
+
+                # Escape sequences (arrow keys, etc.)
+                if ch == '\x1b':
+                    extra = read_escape_sequence(fd)
+                    if extra:
+                        if return_special_keys:
+                            key = UNIX_ESCAPE_CODES.get(extra, '')
+                            if key:
+                                return key
+                        return ''  # Unknown escape sequence
+                    else:
+                        # Standalone ESC
+                        return KEY_ESC if return_special_keys else '\x1b'
+
+                return ch
+            return None
+
+
 def getch(return_special_keys: bool = False) -> str:
     """
     Read a single character from stdin without echo.
