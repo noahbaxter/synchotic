@@ -21,6 +21,17 @@ def normalize_fs_name(name: str) -> str:
     return unicodedata.normalize("NFC", name)
 
 
+def normalize_path_key(path: str) -> str:
+    """Normalize a path for case-insensitive comparison.
+
+    - NFC normalization (unicode consistency)
+    - Lowercase (case-insensitive matching)
+
+    Use this when comparing paths across sources (scanner, manifest, disk, markers).
+    """
+    return unicodedata.normalize("NFC", path).lower()
+
+
 # ============================================================================
 # Filename sanitization (cross-platform)
 # ============================================================================
@@ -190,7 +201,7 @@ def format_size(size_bytes: int) -> str:
 def format_duration(seconds: float) -> str:
     """Format seconds as human readable duration."""
     if seconds < 60:
-        return f"{seconds:.1f}s"
+        return f"{int(seconds)}s"
     elif seconds < 3600:
         return f"{int(seconds // 60)}m {int(seconds % 60)}s"
     else:
