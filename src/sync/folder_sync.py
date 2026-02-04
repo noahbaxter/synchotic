@@ -13,7 +13,7 @@ from ..core.formatting import dedupe_files_by_newest, sanitize_filename
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
-from .cache import clear_cache, clear_folder_cache
+from .cache import clear_cache, clear_folder_cache, get_persistent_stats_cache
 from .download_planner import plan_downloads
 from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
@@ -109,6 +109,12 @@ class FolderSync:
             display.folder_complete(downloaded, bytes_downloaded, download_time, errors)
 
         clear_folder_cache(folder_path)
+
+        # Invalidate persistent stats cache - synced state may have changed
+        # This ensures UI deltas are recomputed from fresh marker state
+        folder_id = folder.get("folder_id", "")
+        if folder_id:
+            get_persistent_stats_cache().invalidate(folder_id)
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
 
@@ -262,5 +268,8 @@ def purge_all_folders(
         display.purge_nothing()
 
     clear_cache()
+
+    # Invalidate persistent stats cache - disk state changed
+    get_persistent_stats_cache().invalidate_all()
 
     wait_with_skip(5, "Continuing in 5s (press any key to skip)")
