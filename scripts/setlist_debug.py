@@ -9,7 +9,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from src.core.formatting import format_size
 from src.core.constants import CHART_MARKERS, CHART_ARCHIVE_EXTENSIONS
-from src.ui.screens import extract_subfolders_from_manifest
+from src.config import extract_subfolders_from_files
 from src.sync import count_purgeable_files
 from src.stats import get_best_stats
 
@@ -34,7 +34,7 @@ def main():
     print("=" * 70)
 
     # Get setlists from manifest
-    setlists = extract_subfolders_from_manifest(folder)
+    setlists = extract_subfolders_from_files(folder)
     manifest_files = folder.get("files", [])
     disabled_setlists = settings.get_disabled_subfolders(folder_id)
 

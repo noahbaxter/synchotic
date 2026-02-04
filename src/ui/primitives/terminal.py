@@ -41,8 +41,12 @@ def set_terminal_size(cols: int = 90, rows: int = 40):
 
 
 def clear_screen():
-    """Clear the terminal screen."""
-    os.system("cls" if os.name == "nt" else "clear")
+    """Clear the terminal screen using ANSI escape codes."""
+    import sys
+    # Use ANSI escape codes instead of os.system for reliability in cbreak mode
+    # \033[2J clears the entire screen, \033[H moves cursor to home position
+    sys.stdout.write("\033[2J\033[H")
+    sys.stdout.flush()
 
 
 def get_terminal_width() -> int:
