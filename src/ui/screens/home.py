@@ -57,17 +57,19 @@ def update_menu_cache_on_toggle(
 
     # Update toggled folder's display string
     cached = folder_stats_cache.get(folder_id)
+    persistent_cache = get_persistent_stats_cache()
+    settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
+    persistent_cached = persistent_cache.get(folder_id, settings_hash) if persistent_cache else None
+
     for folder in folders:
         if folder.get("folder_id") == folder_id:
             has_files = folder.get("files") is not None
-            persistent_cache = get_persistent_stats_cache()
-            settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
-            has_cache = persistent_cache.get(folder_id, settings_hash) is not None if persistent_cache else False
+            has_cache = persistent_cached is not None
             state = _get_display_state(folder_id, has_files, has_cache, background_scanner)
             scan_progress = background_scanner.get_scan_progress(folder_id) if background_scanner and state == "scanning" else None
 
             if cached:
-                # Has cached stats - show full details
+                # Has in-memory stats - show full details
                 display_string = format_home_item(
                     enabled_setlists=cached.enabled_setlists,
                     total_setlists=cached.total_setlists,
@@ -83,8 +85,20 @@ def update_menu_cache_on_toggle(
                     state=state,
                     scan_progress=scan_progress,
                 )
+            elif persistent_cached:
+                # No in-memory cache but have persistent cache - use it
+                display_string = format_home_item(
+                    enabled_setlists=persistent_cached.enabled_setlists,
+                    total_setlists=persistent_cached.total_setlists,
+                    total_size=persistent_cached.total_size,
+                    synced_size=persistent_cached.synced_size,
+                    disabled=not drive_enabled,
+                    delta_mode=delta_mode,
+                    state=state,
+                    scan_progress=scan_progress,
+                )
             else:
-                # No cache (still scanning) - show minimal info with enabled/disabled styling
+                # No cache at all - show minimal info
                 display_string = format_home_item(
                     enabled_setlists=0,
                     total_setlists=0,
