@@ -597,44 +597,38 @@ def show_main_menu(
             else:
                 new_status = f"Ready | {stats.api_calls} API calls this session"
 
-        # Check if any folders completed (before updating status)
+        # Check if any setlists were scanned since last check
         folders_changed = background_scanner.check_updates()
 
         # Update status line in-place (no full re-render needed for this)
         menu_instance.update_status_line_in_place(new_status)
 
         if not folders_changed:
-            return False  # No full re-render needed, status updated in-place
+            return False  # Status line updated, nothing else changed
 
-        # Something completed - invalidate in-memory cache for completed folders
-        # and recompute stats
+        # Setlist(s) completed - recompute stats and re-render
         nonlocal cache
         if folder_stats_cache:
             folder_stats_cache.invalidate_all()
 
-        # Recompute the cache
         cache = compute_main_menu_cache(
             folders, user_settings, download_path, drives_config,
             folder_stats_cache, background_scanner,
         )
 
-        # Update item descriptions in the menu
         for folder in folders:
             folder_id = folder.get("folder_id", "")
             new_desc = cache.folder_stats.get(folder_id, "")
             menu_instance.update_item_description(folder_id, new_desc)
 
-        # Update subtitle with new global stats
         menu_instance.subtitle = cache.subtitle
-
-        # Update Sync button description
         menu_instance.update_item_description(("sync", None), cache.sync_action_desc)
 
-        return True  # Signal to re-render
+        return True  # Re-render with updated values
 
     if background_scanner and not background_scanner.is_done():
         menu.update_callback = on_menu_update
-        # Set initial status line (always set something so in-place updates work)
+        # Set initial status line
         stats = background_scanner.get_stats()
         if stats.current_folder:
             menu.status_line = f"Scanning: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total}) | {stats.api_calls} API calls"
