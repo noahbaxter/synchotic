@@ -607,14 +607,18 @@ def show_main_menu(
             return False  # Status line updated, nothing else changed
 
         # Setlist(s) completed - recompute stats and re-render
-        nonlocal cache
+        # Mutate existing cache object so sync.py's menu_cache reference stays current
         if folder_stats_cache:
             folder_stats_cache.invalidate_all()
 
-        cache = compute_main_menu_cache(
+        new_cache = compute_main_menu_cache(
             folders, user_settings, download_path, drives_config,
             folder_stats_cache, background_scanner,
         )
+        cache.subtitle = new_cache.subtitle
+        cache.sync_action_desc = new_cache.sync_action_desc
+        cache.folder_stats = new_cache.folder_stats
+        cache.group_enabled_counts = new_cache.group_enabled_counts
 
         for folder in folders:
             folder_id = folder.get("folder_id", "")
