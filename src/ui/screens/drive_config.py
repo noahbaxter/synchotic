@@ -7,14 +7,12 @@ Allows enabling/disabling individual setlists within a chart pack.
 from pathlib import Path
 import re
 
-from src.core.formatting import format_size, dedupe_files_by_newest
+from src.core.formatting import dedupe_files_by_newest, sort_by_name
 from src.core.logging import debug_log
 from src.core.constants import CHART_MARKERS
-from src.config import UserSettings, extract_subfolders_from_manifest
+from src.config import UserSettings, extract_subfolders_from_files
 from src.sync import get_sync_status, get_setlist_sync_status, count_purgeable_files, SyncStatus
 from src.sync.download_planner import is_archive_file
-from src.sync.state import SyncState
-from src.stats import get_best_stats
 from ..primitives import Colors
 from ..components import format_drive_status, format_setlist_item
 from ..widgets import Menu, MenuItem, MenuDivider
@@ -40,7 +38,7 @@ def _get_folder_size(folder_path: Path) -> int:
 def _compute_setlist_stats_from_files(folder: dict, dedupe: bool = True) -> dict:
     """Compute setlist stats from files list."""
     stats = {}
-    files = folder.get("files", [])
+    files = (folder.get("files") or [])
 
     if dedupe:
         files = dedupe_files_by_newest(files)
@@ -91,12 +89,10 @@ class DriveConfigScreen:
         folder: dict,
         user_settings: UserSettings,
         download_path: Path = None,
-        sync_state: SyncState = None,
     ):
         self.folder = folder
         self.user_settings = user_settings
         self.download_path = download_path
-        self.sync_state = sync_state
 
     def run(self) -> str | bool:
         """Run the config screen. Returns True/False for changes, or 'scan'/'remove' for actions."""
@@ -104,7 +100,6 @@ class DriveConfigScreen:
             self.folder,
             self.user_settings,
             self.download_path,
-            self.sync_state,
         )
 
 
@@ -112,14 +107,22 @@ def show_subfolder_settings(
     folder: dict,
     user_settings: UserSettings,
     download_path: Path = None,
-    sync_state: SyncState = None
+    scanner=None,  # BackgroundScanner for discovered setlist names
 ) -> str | bool:
     """Show toggle menu for setlists within a drive."""
     folder_id = folder.get("folder_id", "")
     folder_name = folder.get("name", "Unknown")
-    setlists = extract_subfolders_from_manifest(folder)
     is_custom = folder.get("is_custom", False)
     has_files = bool(folder.get("files"))
+
+    # Prefer discovered setlist names from scanner (includes shortcuts)
+    discovered_names = scanner.get_discovered_setlist_names(folder_id) if scanner else None
+    if discovered_names:
+        setlists = sort_by_name(discovered_names)
+    else:
+        # Fallback: extract from file paths (doesn't know about shortcuts)
+        # Note: extract_subfolders_from_files already sorts
+        setlists = extract_subfolders_from_files(folder)
 
     if not setlists and not is_custom:
         return False
@@ -138,41 +141,17 @@ def show_subfolder_settings(
             return result.value
         return False
 
+    # Compute setlist stats from files (works for both custom and regular folders)
     computed_stats = _compute_setlist_stats_from_files(folder, dedupe=True)
     local_folder_path = download_path / folder_name if download_path else None
 
-    if is_custom:
-        setlist_stats = {name: {"archives": data["archives"], "total_size": data["total_size"]}
-                        for name, data in computed_stats.items()}
-    else:
-        manifest_stats = {sf.get("name"): sf for sf in folder.get("subfolders", [])}
-        setlist_stats = {}
-
-        for name, data in computed_stats.items():
-            computed_size = data["total_size"]
-            manifest_sf = manifest_stats.get(name, {})
-            manifest_charts = manifest_sf.get("charts", {}).get("total", 0)
-            manifest_size = manifest_sf.get("total_size", 0)
-
-            best_charts, best_size = get_best_stats(
-                folder_name=folder_name,
-                setlist_name=name,
-                manifest_charts=manifest_charts,
-                manifest_size=manifest_size,
-                local_path=local_folder_path,
-            )
-
-            if best_size == 0 and computed_size > 0:
-                best_size = computed_size
-
-            setlist_stats[name] = {
-                "charts": {"total": best_charts},
-                "total_size": best_size,
-            }
-
-        for name, sf in manifest_stats.items():
-            if name not in setlist_stats:
-                setlist_stats[name] = sf
+    setlist_stats = {}
+    for name, data in computed_stats.items():
+        setlist_stats[name] = {
+            "charts": {"total": data["charts"]},
+            "archives": data["archives"],
+            "total_size": data["total_size"],
+        }
 
     selected_index = 0
     changed = True  # Start true to calculate on first iteration
@@ -185,14 +164,14 @@ def show_subfolder_settings(
 
         # Recalculate all stats when settings change (fast - filesystem scans are cached)
         if changed:
-            status = get_sync_status([folder], download_path, user_settings, sync_state) if download_path else None
-            excess_files, excess_size, excess_charts = count_purgeable_files([folder], download_path, user_settings, sync_state) if download_path else (0, 0, 0)
+            status = get_sync_status([folder], download_path, user_settings) if download_path else None
+            excess_files, excess_size, excess_charts = count_purgeable_files([folder], download_path, user_settings) if download_path else (0, 0, 0)
             # Cache setlist statuses once (shows what's on disk, not affected by toggle)
             if not cached_setlist_statuses and not is_custom and download_path:
                 delete_videos = user_settings.delete_videos if user_settings else True
                 for setlist_name in setlists:
                     cached_setlist_statuses[setlist_name] = get_setlist_sync_status(
-                        folder, setlist_name, download_path, sync_state,
+                        folder, setlist_name, download_path,
                         delete_videos=delete_videos,
                     )
             changed = False
@@ -332,10 +311,57 @@ def show_subfolder_settings(
         debug_log(f"SETLIST_PAGE | subtitle: {subtitle_clean}")
         debug_log(f"SETLIST_PAGE | === End {folder_name} ===")
 
+        # Set up scanning status line and auto-refresh (same as home screen)
+        if scanner and not scanner.is_done():
+            from src.core.formatting import format_duration
+
+            # Track scan progress at menu build time
+            initial_scan_progress = scanner.get_scan_progress(folder_id)
+            initial_scanned = initial_scan_progress[0] if initial_scan_progress else 0
+
+            def on_menu_update(menu_instance) -> bool | str:
+                # Check if any new setlists finished scanning for THIS drive
+                current_progress = scanner.get_scan_progress(folder_id)
+                current_scanned = current_progress[0] if current_progress else 0
+                if current_scanned > initial_scanned:
+                    return "rebuild"  # Signal to rebuild menu items
+
+                stats = scanner.get_stats()
+                if stats.current_folder:
+                    folder_elapsed = format_duration(stats.current_folder_elapsed)
+                    total_elapsed = format_duration(stats.elapsed)
+                    new_status = (
+                        f"Scanning: {stats.current_folder} "
+                        f"({stats.folders_done + 1}/{stats.folders_total}) | "
+                        f"{folder_elapsed} | {total_elapsed} total | {stats.api_calls} API calls"
+                    )
+                else:
+                    if stats.elapsed > 0:
+                        new_status = f"Ready | {format_duration(stats.elapsed)} | {stats.api_calls} API calls"
+                    else:
+                        new_status = f"Ready | {stats.api_calls} API calls this session"
+
+                menu_instance.update_status_line_in_place(new_status)
+                return False  # No full re-render needed
+
+            menu.update_callback = on_menu_update
+            stats = scanner.get_stats()
+            if stats.current_folder:
+                menu.status_line = f"Scanning: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total}) | {stats.api_calls} API calls"
+            else:
+                menu.status_line = "Starting scan..."
+
         result = menu.run(initial_index=selected_index)
 
         if result is None or result.value[0] == "back":
             break
+
+        # Handle rebuild signal from scanner completing setlists
+        if result.action == "rebuild":
+            selected_index = menu._selected
+            cached_setlist_statuses.clear()  # Clear cache to recalculate with new data
+            changed = True  # Trigger stat recalculation
+            continue
 
         # Handle Tab to cycle delta mode
         if result.action == "tab":
@@ -351,12 +377,20 @@ def show_subfolder_settings(
             if not user_settings.is_drive_enabled(folder_id):
                 user_settings.enable_drive(folder_id)
             user_settings.enable_all(folder_id, setlists)
+            # Notify scanner about all setlists being enabled
+            if scanner:
+                for name in setlists:
+                    scanner.notify_setlist_toggled(folder_id, name, True)
             user_settings.save()
             changed = True
 
         elif action == "disable_all":
             selected_index = menu._selected_before_hotkey
             user_settings.disable_all(folder_id, setlists)
+            # Notify scanner about all setlists being disabled
+            if scanner:
+                for name in setlists:
+                    scanner.notify_setlist_toggled(folder_id, name, False)
             user_settings.save()
             changed = True
 
@@ -367,7 +401,10 @@ def show_subfolder_settings(
                 user_settings.enable_drive(folder_id)
             else:
                 # Drive is enabled - toggle the setlist
-                user_settings.toggle_subfolder(folder_id, setlist_name)
+                new_state = user_settings.toggle_subfolder(folder_id, setlist_name)
+                # Notify scanner so it can reprioritize if needed
+                if scanner:
+                    scanner.notify_setlist_toggled(folder_id, setlist_name, new_state)
             user_settings.save()
             changed = True
 
