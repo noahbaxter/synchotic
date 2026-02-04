@@ -15,6 +15,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
+from ..core.formatting import normalize_path_key
 from ..core.paths import get_data_dir
 
 
@@ -38,7 +39,8 @@ def get_marker_path(archive_path: str, md5: str) -> Path:
     """
     import hashlib
 
-    safe_name = archive_path.replace("/", "_").replace("\\", "_")
+    # Normalize for case-insensitive matching (NFC + lowercase)
+    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
 
     # Filename: {safe_name}_{md5[:8]}.json
     # Max filename on most filesystems: 255 chars
@@ -136,6 +138,35 @@ def verify_marker(marker: dict, base_path: Path) -> bool:
     return True
 
 
+def find_any_marker_for_path(archive_path: str) -> Optional[dict]:
+    """
+    Find ANY marker for an archive path, regardless of MD5.
+
+    This handles the case where Google Drive has two files with names
+    differing only in case (e.g., "Carol of" vs "Carol Of"). On case-insensitive
+    filesystems, these extract to the same folder and conflict. We consider
+    either version as "synced" to prevent infinite re-download loops.
+
+    Returns:
+        First matching marker dict, or None if no markers exist
+    """
+    markers_dir = get_markers_dir()
+    if not markers_dir.exists():
+        return None
+
+    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
+
+    for marker_file in markers_dir.glob("*.json"):
+        if normalize_path_key(marker_file.stem).startswith(safe_name + "_"):
+            try:
+                with open(marker_file) as f:
+                    return json.load(f)
+            except (json.JSONDecodeError, IOError):
+                continue
+
+    return None
+
+
 def delete_marker(archive_path: str, md5: str) -> bool:
     """
     Delete marker file for an archive.
@@ -153,6 +184,115 @@ def delete_marker(archive_path: str, md5: str) -> bool:
     return False
 
 
+def get_all_marker_files() -> set[str]:
+    """
+    Get all file paths tracked by all markers.
+
+    Returns:
+        Set of file paths relative to drive folder (e.g., "Setlist/ChartFolder/song.ini")
+    """
+    all_files = set()
+    markers_dir = get_markers_dir()
+
+    if not markers_dir.exists():
+        return all_files
+
+    for marker_file in markers_dir.glob("*.json"):
+        try:
+            with open(marker_file) as f:
+                marker = json.load(f)
+            for file_path in marker.get("files", {}).keys():
+                all_files.add(file_path)
+        except (json.JSONDecodeError, IOError):
+            continue
+
+    return all_files
+
+
+def get_all_markers() -> list[dict]:
+    """
+    Load all marker files.
+
+    Returns:
+        List of marker dicts
+    """
+    markers = []
+    markers_dir = get_markers_dir()
+
+    if not markers_dir.exists():
+        return markers
+
+    for marker_file in markers_dir.glob("*.json"):
+        try:
+            with open(marker_file) as f:
+                marker = json.load(f)
+            markers.append(marker)
+        except (json.JSONDecodeError, IOError):
+            continue
+
+    return markers
+
+
+def get_files_for_archive(archive_path: str) -> dict[str, int]:
+    """
+    Get all files tracked by markers for an archive path (any MD5).
+
+    Used to find old extracted files before re-downloading an updated archive.
+
+    Returns:
+        Dict of {file_path: size} from all markers for this archive
+    """
+    files = {}
+    markers_dir = get_markers_dir()
+
+    if not markers_dir.exists():
+        return files
+
+    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
+
+    for marker_file in markers_dir.glob("*.json"):
+        # Normalize for case-insensitive comparison (handles old mixed-case markers)
+        if normalize_path_key(marker_file.stem).startswith(safe_name + "_"):
+            try:
+                with open(marker_file) as f:
+                    marker = json.load(f)
+                files.update(marker.get("files", {}))
+            except (json.JSONDecodeError, IOError):
+                pass
+
+    return files
+
+
+def delete_markers_for_archive(archive_path: str) -> int:
+    """
+    Delete ALL marker files for an archive path (any MD5).
+
+    Used when archive MD5 changes - delete old marker before redownloading.
+
+    Returns:
+        Number of markers deleted
+    """
+    deleted = 0
+    markers_dir = get_markers_dir()
+
+    if not markers_dir.exists():
+        return deleted
+
+    # Marker files are named: {safe_archive_path}_{md5[:8]}.json
+    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
+
+    for marker_file in markers_dir.glob("*.json"):
+        # Normalize for case-insensitive comparison (handles old mixed-case markers)
+        if normalize_path_key(marker_file.stem).startswith(safe_name + "_"):
+            try:
+                marker_file.unlink()
+                deleted += 1
+            except OSError:
+                pass
+
+    return deleted
+
+
 def is_migration_done() -> bool:
     """Check if sync_state → marker migration has been completed."""
     return (get_markers_dir() / ".migrated").exists()
@@ -161,6 +301,117 @@ def is_migration_done() -> bool:
 def mark_migration_done():
     """Mark sync_state → marker migration as complete."""
     (get_markers_dir() / ".migrated").touch()
+
+
+def rebuild_markers_from_disk(
+    folders: list[dict],
+    base_path: Path,
+) -> tuple[int, int]:
+    """
+    Rebuild markers by scanning disk and matching to manifest archives.
+
+    For each archive in manifest, check if its extraction folder exists on disk.
+    If so, scan the files and create a marker.
+
+    This is useful when:
+    - Migrating from old sync_state system
+    - Recovering from lost/corrupted markers
+    - After manual file operations
+
+    Args:
+        folders: List of folder dicts from manifest (with files loaded)
+        base_path: Base download path (Sync Charts folder)
+
+    Returns:
+        Tuple of (created_count, skipped_count)
+    """
+    from ..core.constants import CHART_ARCHIVE_EXTENSIONS
+
+    created = 0
+    skipped = 0
+
+    def is_archive(filename: str) -> bool:
+        return any(filename.lower().endswith(ext) for ext in CHART_ARCHIVE_EXTENSIONS)
+
+    for folder in folders:
+        folder_name = folder.get("name", "")
+        folder_path = base_path / folder_name
+        if not folder_path.exists():
+            continue
+
+        files = folder.get("files") or []
+        if not files:
+            continue
+
+        # Group files by archive
+        archives: dict[str, dict] = {}  # archive_path -> {md5, parent_path}
+        for f in files:
+            file_path = f.get("path", "")
+            file_name = file_path.split("/")[-1] if "/" in file_path else file_path
+            if is_archive(file_name):
+                full_archive_path = f"{folder_name}/{file_path}"
+                parent = file_path.rsplit("/", 1)[0] if "/" in file_path else ""
+                archives[full_archive_path] = {
+                    "md5": f.get("md5", ""),
+                    "parent": parent,
+                    "name": file_name,
+                }
+
+        # Check each archive
+        for archive_path, info in archives.items():
+            md5 = info["md5"]
+            if not md5:
+                skipped += 1
+                continue
+
+            # Skip if marker already exists
+            existing = load_marker(archive_path, md5)
+            if existing:
+                skipped += 1
+                continue
+
+            # Figure out extraction location
+            # Archive at: folder_name/Setlist/pack.7z
+            # Extracts to: folder_name/Setlist/ (same folder as archive)
+            if info["parent"]:
+                extract_path = folder_path / info["parent"]
+            else:
+                extract_path = folder_path
+
+            if not extract_path.exists():
+                skipped += 1
+                continue
+
+            # Scan files in extraction folder
+            # We need paths relative to the drive folder (folder_name)
+            extracted_files = {}
+            try:
+                for item in extract_path.rglob("*"):
+                    if item.is_file():
+                        # Get path relative to folder_path (drive folder)
+                        rel = item.relative_to(folder_path)
+                        rel_str = str(rel).replace("\\", "/")
+                        try:
+                            extracted_files[rel_str] = item.stat().st_size
+                        except OSError:
+                            pass
+            except OSError:
+                skipped += 1
+                continue
+
+            if not extracted_files:
+                skipped += 1
+                continue
+
+            # Create marker
+            save_marker(
+                archive_path=archive_path,
+                md5=md5,
+                extracted_files=extracted_files,
+            )
+            created += 1
+
+    return created, skipped
 
 
 def migrate_sync_state_to_markers(
