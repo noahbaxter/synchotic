@@ -1,12 +1,10 @@
 """
 Manifest management for DM Chart Sync.
 
-The manifest is a JSON file containing the complete file tree with checksums,
-eliminating the need for users to scan Google Drive.
+Contains utilities for working with file lists (from scanner or legacy manifest).
 """
 
 from .manifest import Manifest, FolderEntry, FileEntry
-from .fetch import fetch_manifest, MANIFEST_URL
 from .counter import (
     ChartType,
     ChartCounts,
@@ -20,12 +18,10 @@ from .counter import (
 )
 
 __all__ = [
-    # Core manifest
+    # Core manifest types (for legacy/custom folder support)
     "Manifest",
     "FolderEntry",
     "FileEntry",
-    "fetch_manifest",
-    "MANIFEST_URL",
     # Chart counting
     "ChartType",
     "ChartCounts",
