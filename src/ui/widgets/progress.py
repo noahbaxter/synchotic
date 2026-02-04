@@ -56,6 +56,10 @@ class FolderProgress(ProgressTracker):
         self.total_bytes = total_bytes
         self._active_display.set_aggregate_totals(total_files, total_bytes, drive_name)
 
+    def set_scan_stats_getter(self, getter):
+        """Set a callback that returns current scan stats for display."""
+        self._active_display.set_scan_stats_getter(getter)
+
     def register_folders(self, tasks):
         """Register all folders and their expected file counts."""
         folder_files = {}

@@ -41,6 +41,12 @@ class ActiveDownloadsDisplay:
         self._downloaded_bytes = 0
         self._start_time: float = 0
         self._drive_name: str = ""
+        # Scan progress callback (returns ScanStats or None)
+        self._scan_stats_getter = None
+
+    def set_scan_stats_getter(self, getter):
+        """Set a callback that returns current scan stats."""
+        self._scan_stats_getter = getter
 
     def set_aggregate_totals(self, total_files: int, total_bytes: int, drive_name: str = ""):
         """Set the total files and bytes for aggregate progress."""
@@ -172,6 +178,21 @@ class ActiveDownloadsDisplay:
         overflow = len(self._downloads) - self.MAX_VISIBLE
         if overflow > 0:
             lines.append(f"  ... and {overflow} more")
+
+        # Scan progress line (if scanner is running)
+        if self._scan_stats_getter:
+            try:
+                stats = self._scan_stats_getter()
+                if stats and stats.current_folder:
+                    elapsed_str = format_duration(stats.current_folder_elapsed)
+                    scan_line = (
+                        f"  {c.MUTED}Scanning: {stats.current_folder} "
+                        f"({stats.folders_done + 1}/{stats.folders_total}) | "
+                        f"{elapsed_str} | {stats.api_calls} API calls{c.RESET}"
+                    )
+                    lines.append(scan_line)
+            except Exception:
+                pass  # Ignore errors getting scan stats
 
         return lines
 

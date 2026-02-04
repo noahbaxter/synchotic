@@ -141,16 +141,78 @@ def format_home_item(
     disabled: bool = False,
     delta_mode: str = "size",
     is_estimate: bool = False,
+    state: str = "current",
+    scan_progress: tuple[int, int] | None = None,
 ) -> str:
     """
     Format home screen item line.
+
+    States:
+        "current" - scanned this session, show normal values WITH deltas
+        "cached" - using cached values, show dimmed WITHOUT deltas (estimates unreliable)
+        "scanning" - currently scanning, show dimmed + SCANNING indicator with progress
 
     Enabled synced: 100% | 5/30 setlists, 4.0 GB
     Enabled partial: 35% | 5/30 setlists, [+2.3 GB] or [+50 files]
     Disabled: 5/30 setlists, 4.0 GB (greyed by caller)
     With purgeable: ... [+2.3 GB / -317 MB] or [+50 files / -80 files]
     Estimate (lazy): ~35% | 4.0 GB (no setlist count, files not loaded)
+    Scanning: ... SCANNING 5/30 (progress shown)
     """
+    # Only show deltas for "current" state (scanned this session)
+    # Cached values have unreliable deltas - manifest may have changed
+    show_delta = (state == "current")
+
+    # Build the values string first
+    values = _format_home_values(
+        enabled_setlists=enabled_setlists,
+        total_setlists=total_setlists,
+        total_size=total_size,
+        synced_size=synced_size,
+        purgeable_files=purgeable_files if show_delta else 0,
+        purgeable_charts=purgeable_charts if show_delta else 0,
+        purgeable_size=purgeable_size if show_delta else 0,
+        missing_charts=missing_charts if show_delta else 0,
+        disabled=disabled,
+        delta_mode=delta_mode,
+        is_estimate=is_estimate,
+        show_delta=show_delta,
+    )
+
+    # Apply state styling
+    if state == "current":
+        return values
+    elif state == "cached":
+        # Dimmer color for stale/cached data so scanned items stand out
+        return f"{Colors.STALE}{values}{Colors.RESET}" if values else ""
+    elif state == "scanning":
+        # Show progress as "SCANNING 5/30"
+        if scan_progress:
+            scanned, total = scan_progress
+            progress_str = f"{Colors.CYAN}SCANNING {scanned}/{total}{Colors.RESET}"
+        else:
+            progress_str = f"{Colors.CYAN}SCANNING{Colors.RESET}"
+        if values:
+            return f"{Colors.STALE}{values}{Colors.RESET} {progress_str}"
+        return progress_str
+    return values
+
+
+def _format_home_values(
+    enabled_setlists: int,
+    total_setlists: int,
+    total_size: int,
+    synced_size: int,
+    purgeable_files: int = 0,
+    purgeable_charts: int = 0,
+    purgeable_size: int = 0,
+    missing_charts: int = 0,
+    disabled: bool = False,
+    delta_mode: str = "size",
+    is_estimate: bool = False,
+    show_delta: bool = True,
+) -> str:
+    """Build the values string without state styling."""
     # Setlists part (skip if estimate - we don't have file paths to compute setlists)
     if total_setlists > 0 and not is_estimate:
         setlists_str = f"{enabled_setlists}/{total_setlists} setlists"
@@ -171,7 +233,7 @@ def format_home_item(
             parts.append(format_size(total_size))
         result = ", ".join(parts) if parts else ""
         # Disabled items only show purgeable (no add delta)
-        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
+        if show_delta and (purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0):
             delta = format_delta(
                 remove_size=purgeable_size,
                 remove_files=purgeable_files,
@@ -195,7 +257,7 @@ def format_home_item(
             info = ", ".join(parts) if parts else ""
             result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
             # Synced but has purgeable
-            if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
+            if show_delta and (purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0):
                 delta = format_delta(
                     remove_size=purgeable_size,
                     remove_files=purgeable_files,
@@ -206,22 +268,26 @@ def format_home_item(
                     result += f" {delta}"
         else:
             info = ", ".join(parts) if parts else ""
-            # Has missing - combine add and remove in one delta
-            delta = format_delta(
-                add_size=missing_size,
-                add_files=missing_charts,  # Use chart count for files (best we have)
-                add_charts=missing_charts,
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-            )
-            if delta:
-                if info:
-                    result = f"{pct_prefix}{pct}% | {info} {delta}"
+            if show_delta:
+                # Has missing - combine add and remove in one delta
+                delta = format_delta(
+                    add_size=missing_size,
+                    add_files=missing_charts,
+                    add_charts=missing_charts,
+                    remove_size=purgeable_size,
+                    remove_files=purgeable_files,
+                    remove_charts=purgeable_charts,
+                    mode=delta_mode,
+                )
+                if delta:
+                    if info:
+                        result = f"{pct_prefix}{pct}% | {info} {delta}"
+                    else:
+                        result = f"{pct_prefix}{pct}% | {delta}"
                 else:
-                    result = f"{pct_prefix}{pct}% | {delta}"
+                    result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
             else:
+                # No delta - just show percent and info
                 result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
 
     return result
