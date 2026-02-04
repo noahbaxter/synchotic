@@ -15,7 +15,7 @@ from .purge_planner import PurgeStats, count_purgeable_files, count_purgeable_de
 from .purger import delete_files
 from .folder_sync import FolderSync, purge_all_folders
 from .downloader import FileDownloader, DownloadResult
-from .state import SyncState
+from .background_scanner import BackgroundScanner, ScanStats
 
 # Backwards compatibility aliases
 clear_scan_cache = clear_cache
@@ -52,6 +52,7 @@ __all__ = [
     # Downloader
     "FileDownloader",
     "DownloadResult",
-    # Sync state
-    "SyncState",
+    # Background scanning
+    "BackgroundScanner",
+    "ScanStats",
 ]
