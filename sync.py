@@ -1,23 +1,38 @@
 #!/usr/bin/env python3
 """
-DM Chart Sync - Download charts from Google Drive without authentication.
+DM Chart Sync - Download charts from Google Drive.
 
-This is the user-facing app that downloads chart files using a pre-built
-manifest, eliminating the need for users to scan Google Drive.
+This is the user-facing app that downloads chart files from Google Drive.
+File lists are fetched directly from Google Drive API (no manifest needed).
 """
 
 import argparse
 import os
 import sys
+
+# Increase file descriptor limit for concurrent downloads + extraction
+# macOS defaults to 256 which is too low for 24 concurrent downloads
+def _increase_file_limit():
+    try:
+        import resource
+        soft, hard = resource.getrlimit(resource.RLIMIT_NOFILE)
+        # Try to increase soft limit to hard limit (or 4096, whichever is lower)
+        target = min(hard, 4096)
+        if soft < target:
+            resource.setrlimit(resource.RLIMIT_NOFILE, (target, hard))
+            new_soft, _ = resource.getrlimit(resource.RLIMIT_NOFILE)
+            print(f"  File limit: {soft} → {new_soft}")
+    except (ImportError, ValueError, OSError):
+        pass  # Windows doesn't have resource module, or limit change failed
+
+_increase_file_limit()
 from datetime import datetime
 from pathlib import Path
 
 from src.drive import DriveClient, AuthManager
-from src.manifest import Manifest, fetch_manifest
 from src.sync import FolderSync, purge_all_folders
-from src.sync.state import SyncState
-from src.sync.markers import migrate_sync_state_to_markers, is_migration_done
-from src.config import UserSettings, DrivesConfig, CustomFolders, extract_subfolders_from_manifest
+from src.sync.markers import is_migration_done, mark_migration_done, get_markers_dir
+from src.config import UserSettings, DrivesConfig, CustomFolders
 from src.core.formatting import format_size
 from src.core.paths import (
     get_data_dir,
@@ -36,10 +51,9 @@ from src.ui import (
     show_confirmation,
     show_oauth_prompt,
     show_add_custom_folder,
-    Colors,
     compute_main_menu_cache,
 )
-from src.sync import FolderStatsCache, count_purgeable_detailed, clear_scan_cache
+from src.sync import FolderStatsCache, count_purgeable_detailed, clear_scan_cache, BackgroundScanner
 from src.ui.primitives import clear_screen, wait_with_skip
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
@@ -61,7 +75,7 @@ API_KEY = os.environ.get("GOOGLE_API_KEY", "")
 class SyncApp:
     """Main application controller."""
 
-    def __init__(self, use_local_manifest: bool = False):
+    def __init__(self):
         import time as _t
         _t0 = _t.time()
 
@@ -85,160 +99,50 @@ class SyncApp:
         cleanup_tmp_dir()
         print(f"    [init] cleanup_tmp_dir: {(_t.time() - _t1)*1000:.0f}ms")
 
-        # Load sync state (tracks all synced files)
-        _t2 = _t.time()
-        self.sync_state = SyncState()
-        self.sync_state.load()
-        print(f"    [init] sync_state.load: {(_t.time() - _t2)*1000:.0f}ms")
-
-        # Handle legacy check.txt migration (one-time)
-        if self.sync_state.needs_check_txt_migration():
-            self._prompt_legacy_migration()
-        else:
-            print(f"    [init] check_txt: already migrated")
-
-        # Note: sync_state → marker migration runs lazily when manifest is loaded
-        # (we need manifest MD5s for proper migration validation)
-
         self.sync = FolderSync(
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
-            sync_state=self.sync_state,
         )
         self.folders = []
-        self._manifest_raw = {}  # Raw manifest data for lazy file loading
-        self.use_local_manifest = use_local_manifest
         self.folder_stats_cache = FolderStatsCache()
+        self._background_scanner: BackgroundScanner | None = None
 
-    def _migrate_to_markers(self):
-        """One-time migration from sync_state.json to marker files."""
-        import time as _t
+    def load_drives(self, quiet: bool = False):
+        """Load drive list from drives.json. File data comes from scanner.
 
-        print("\n  Migrating sync state to marker files...")
-        _t0 = _t.time()
-
-        # Build manifest MD5s dict for migration validation
-        manifest_md5s = {}
-        for folder in self.folders:
-            folder_name = folder.get("name", "")
-            for f in folder.get("files", []):
-                file_path = f.get("path", "")
-                file_md5 = f.get("md5", "")
-                if file_md5:
-                    # Build full path: FolderName/file_path
-                    full_path = f"{folder_name}/{file_path}"
-                    manifest_md5s[full_path] = file_md5
-
-        migrated, skipped = migrate_sync_state_to_markers(
-            self.sync_state,
-            get_download_path(),
-            manifest_md5s,
-        )
-
-        elapsed = (_t.time() - _t0) * 1000
-        print(f"    [init] marker migration: {elapsed:.0f}ms ({migrated} migrated, {skipped} skipped)")
-
-    def _prompt_legacy_migration(self):
-        """Prompt user about legacy check.txt file migration."""
-        import time as _t
-
-        print("\n" + "=" * 50)
-        print("Legacy File Migration")
-        print("=" * 50)
-        print("\nFound existing charts folder without sync state.")
-        print("This is a one-time migration.")
-        print()
-        print("Options:")
-        print("  [S] Scan for legacy check.txt files")
-        print("      - Slower startup this once (scans all folders)")
-        print("      - Preserves download verification state")
-        print()
-        print("  [K] Skip scan")
-        print("      - Fast startup")
-        print("      - May re-download some archives if sizes mismatch")
-        print()
-
-        while True:
-            try:
-                choice = input("Choice [S/K]: ").strip().upper()
-            except (EOFError, KeyboardInterrupt):
-                print("\nDefaulting to skip...")
-                choice = "K"
-                break
-
-            if choice in ("S", "K"):
-                break
-            print("Please enter S or K.")
-
-        print()
-
-        if choice == "S":
-            print("Scanning for legacy files...")
-            _t0 = _t.time()
-            deleted = self.sync_state.cleanup_check_txt_files()
-            elapsed = (_t.time() - _t0) * 1000
-            print(f"    [init] cleanup_check_txt: {elapsed:.0f}ms")
-            if deleted > 0:
-                print(f"Cleaned up {deleted} legacy check.txt file(s)")
-            else:
-                print("No legacy files found.")
-        else:
-            print("Skipping scan...")
-            self.sync_state.skip_check_txt_migration()
-
-        print()
-
-    def load_manifest(self, quiet: bool = False):
-        """Load manifest folders (includes custom folders).
-
-        LAZY LOADING: File lists are NOT loaded at startup. Only folder metadata
-        (name, folder_id, chart_count, total_size) is loaded initially.
-        Files are loaded on-demand when needed for sync or setlist configuration.
+        Builds folder list from static drive config only. Files are populated
+        by the BackgroundScanner when scanning completes.
         """
         if not quiet:
-            if self.use_local_manifest:
-                print("Loading local manifest...")
-            else:
-                print("Fetching folder list...")
-        manifest_data = fetch_manifest(use_local=self.use_local_manifest)
+            print("Loading drives...")
 
-        # Store raw manifest for lazy file loading
-        self._manifest_raw = manifest_data
-
-        # Filter out hidden drives and build folder list with metadata only
+        # Filter out hidden drives
         hidden_ids = {d.folder_id for d in self.drives_config.drives if d.hidden}
         self.folders = []
 
-        for f in manifest_data.get("folders", []):
-            if f.get("folder_id") in hidden_ids:
+        for drive in self.drives_config.drives:
+            if drive.folder_id in hidden_ids:
                 continue
 
-            # Build folder with metadata only - files loaded on demand
+            # Build folder with static metadata only - files come from scanner
             folder = {
-                "name": f.get("name"),
-                "folder_id": f.get("folder_id"),
-                "description": f.get("description", ""),
-                "file_count": f.get("file_count", 0),
-                "total_size": f.get("total_size", 0),
-                "chart_count": f.get("chart_count", 0),
-                "setlists": f.get("setlists", []),
-                "subfolders": f.get("subfolders", []),
-                "files": None,  # LAZY: loaded on demand via _load_folder_files()
+                "name": drive.name,
+                "folder_id": drive.folder_id,
+                "description": drive.description or "",
+                "file_count": 0,      # Unknown until scanned
+                "total_size": 0,      # Unknown until scanned
+                "chart_count": 0,     # Unknown until scanned
+                "files": None,        # MUST be scanned before sync
             }
             self.folders.append(folder)
 
-        # Run sync_state → marker migration if needed (one-time)
-        # Note: migration needs files loaded, so we defer if needed
-        if not is_migration_done() and self.sync_state._archives:
-            # Load all files for migration
-            for folder in self.folders:
-                self._load_folder_files(folder)
-            self._migrate_to_markers()
+        # Check if markers need to be rebuilt from disk
+        if not is_migration_done():
+            self._rebuild_markers_if_needed()
 
-        # Add custom folders to the folders list (lazy - files loaded on demand)
+        # Add custom folders
         for custom in self.custom_folders.folders:
-            # Get cached file count/size without loading full file list
             cached_files = self.custom_folders.get_files(custom.folder_id)
             folder_dict = {
                 "name": custom.name,
@@ -246,42 +150,39 @@ class SyncApp:
                 "description": "Custom folder",
                 "file_count": len(cached_files),
                 "total_size": sum(f.get("size", 0) for f in cached_files),
-                "chart_count": len(cached_files),  # Rough estimate
-                "files": None,  # LAZY: loaded on demand via _load_folder_files()
+                "chart_count": len(cached_files),
+                "files": None,  # Loaded on demand or by scanner
                 "complete": True,
-                "is_custom": True,  # Mark as custom for special handling
+                "is_custom": True,
             }
             self.folders.append(folder_dict)
 
-    def _load_folder_files(self, folder: dict) -> list:
-        """Load file list for a folder (lazy loading).
-
-        For manifest folders: loads from raw manifest data.
-        For custom folders: loads from custom_folders storage.
+    def _rebuild_markers_if_needed(self):
         """
-        if folder.get("files") is not None:
-            return folder["files"]
+        Check if markers need to be rebuilt from disk content.
 
-        folder_id = folder["folder_id"]
+        Note: With manifest removed, marker rebuilding requires file data from scanner.
+        This is handled during first sync when files are scanned.
+        """
+        markers_dir = get_markers_dir()
 
-        # Custom folders: load from custom_folders storage
-        if folder.get("is_custom"):
-            folder["files"] = self.custom_folders.get_files(folder_id)
-            return folder["files"]
+        # Count existing markers
+        marker_count = len(list(markers_dir.glob("*.json"))) if markers_dir.exists() else 0
 
-        # Manifest folders: load from raw manifest
-        for f in self._manifest_raw.get("folders", []):
-            if f.get("folder_id") == folder_id:
-                folder["files"] = f.get("files", [])
-                return folder["files"]
+        if marker_count > 0:
+            mark_migration_done()
+            print(f"    [init] markers: {marker_count} found")
+            return
 
-        folder["files"] = []
-        return []
+        # No markers yet - will be created during sync when files are downloaded
+        mark_migration_done()
+        print(f"    [init] markers: none (will be created during sync)")
 
     def handle_sync(self):
-        """Sync all enabled folders: download missing files, then purge extras.
+        """Sync all enabled folders: wait for scan → download per folder, then purge extras.
 
-        This ensures local state matches the manifest exactly.
+        Background scanner runs in parallel. For each folder, we wait for its scan
+        to complete, then download it. This way scanning and downloading overlap.
         """
         indices = list(range(len(self.folders)))
 
@@ -291,45 +192,41 @@ class SyncApp:
             if self.user_settings.is_drive_enabled(self.folders[i].get("folder_id", ""))
         ]
 
-        # Download enabled drives (skip if none enabled)
-        if enabled_indices:
-            # Scan ALL enabled folders via API for fresh file lists
-            self._scan_enabled_folders(enabled_indices)
+        if not enabled_indices:
+            return
 
-        # Clean up stale sync_state entries (case mismatches, outdated MD5s)
-        manifest_archives = self._build_manifest_archives()
-        stale = self.sync_state.cleanup_stale_archives(manifest_archives)
-        if stale > 0:
-            self.sync_state.save()
+        # Need OAuth for scanning and downloading
+        if not self.auth.is_signed_in:
+            display.auth_required_scan()
+            wait_with_skip(3)
+            return
 
-        if enabled_indices:
+        # Ensure background scanner is running
+        if not self._background_scanner:
+            self._start_background_scan()
 
-            # Get disabled subfolders for filtering
-            disabled_map = self._get_disabled_subfolders_for_folders(enabled_indices)
+        # Get disabled subfolders for filtering
+        disabled_map = self._get_disabled_subfolders_for_folders(enabled_indices)
 
-            # Step 1: Download missing files
-            was_cancelled = self.sync.download_folders(self.folders, enabled_indices, get_download_path(), disabled_map)
-            clear_scan_cache()  # Invalidate filesystem cache after download
-            self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
+        # Scan and download each folder sequentially
+        was_cancelled = self._sync_folders_sequentially(enabled_indices, disabled_map)
 
-            # If cancelled, don't purge - just return (wait already happened in download_folders)
-            if was_cancelled:
-                return
+        clear_scan_cache()  # Invalidate filesystem cache after download
+        self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
+
+        # If cancelled, don't purge
+        if was_cancelled:
+            return
 
         # Step 2: Purge extra files (no confirmation - sync means make it match)
         stats = count_purgeable_detailed(
-            self.folders, get_download_path(), self.user_settings, self.sync_state
+            self.folders, get_download_path(), self.user_settings
         )
 
         if stats.total_files > 0:
-            purge_all_folders(self.folders, get_download_path(), self.user_settings, self.sync_state)
+            purge_all_folders(self.folders, get_download_path(), self.user_settings)
             clear_scan_cache()  # Invalidate filesystem cache after purge
             self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
-        else:
-            # Purge didn't run, but still clean orphaned sync_state entries
-            orphaned = self.sync_state.cleanup_orphaned_entries()
-            if orphaned > 0:
-                self.sync_state.save()
 
         # Always wait before returning to menu
         from src.ui.primitives import wait_with_skip
@@ -341,13 +238,9 @@ class SyncApp:
         if not folder:
             return
 
-        # Load files if not yet loaded (needed for setlist menu)
-        if folder.get("files") is None and not folder.get("is_custom"):
-            print(f"  Loading {folder['name']}...")
-            self._load_folder_files(folder)
-
+        # Files come from BackgroundScanner - no need to load separately
         # Show subfolder settings (works for both regular and custom folders)
-        result = show_subfolder_settings(folder, self.user_settings, get_download_path(), self.sync_state)
+        result = show_subfolder_settings(folder, self.user_settings, get_download_path(), self._background_scanner)
 
         # Invalidate this folder's stats (setlists may have changed)
         self.folder_stats_cache.invalidate(folder_id)
@@ -361,14 +254,14 @@ class SyncApp:
     def _show_custom_folder_options(self, folder: dict):
         """Show options menu for a custom folder."""
         from src.ui import Menu, MenuItem, MenuDivider
-        from src.config import extract_subfolders_from_manifest
+        from src.config import extract_subfolders_from_files
 
         folder_id = folder.get("folder_id")
         folder_name = folder.get("name")
         has_files = bool(folder.get("files"))
 
         # Check if folder has setlists (subfolders)
-        setlists = extract_subfolders_from_manifest(folder) if has_files else []
+        setlists = extract_subfolders_from_files(folder) if has_files else []
 
         menu = Menu(title=folder_name)
 
@@ -402,7 +295,7 @@ class SyncApp:
             return
 
         if result.value == "setlists":
-            show_subfolder_settings(folder, self.user_settings, get_download_path(), self.sync_state)
+            show_subfolder_settings(folder, self.user_settings, get_download_path(), self._background_scanner)
         elif result.value == "scan":
             self._scan_single_custom_folder(folder)
         elif result.value == "remove":
@@ -554,21 +447,23 @@ class SyncApp:
 
         print(f"\n  Added: {folder_name}")
 
-        # Offer to scan now
-        if show_confirmation("Scan folder now?", "Scanning finds all files and setlists in the folder."):
-            # Create folder dict for scanning
-            folder_dict = {
-                "name": folder_name,
-                "folder_id": folder_id,
-                "files": [],
-                "is_custom": True,
-            }
-            self._scan_single_custom_folder(folder_dict)
-            # Reload manifest to pick up scanned files
-            self.load_manifest()
-        else:
-            print("  You can scan later from the folder options.")
-            wait_with_skip(2)
+        # Create folder dict and add to app's folder list
+        folder_dict = {
+            "name": folder_name,
+            "folder_id": folder_id,
+            "description": "Custom folder",
+            "file_count": 0,
+            "total_size": 0,
+            "chart_count": 0,
+            "files": None,  # Will be populated by scanner
+            "complete": True,
+            "is_custom": True,
+        }
+        self.folders.append(folder_dict)
+
+        # Queue for scanning (scanner handles it automatically)
+        if self._background_scanner:
+            self._background_scanner.add_folder(folder_dict)
 
         return True
 
@@ -578,8 +473,72 @@ class SyncApp:
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
-            sync_state=self.sync_state,
         )
+
+    def _start_background_scan(self):
+        """
+        Start background scanning of ALL folders.
+
+        Scans folders in the background so the UI shows live progress.
+        Enabled folders are scanned first (priority), then disabled folders.
+        Only scans folders that don't have files loaded yet.
+        """
+        # Need OAuth for scanning
+        if not self.auth.is_signed_in:
+            return
+
+        # Find folders that need scanning (files not loaded)
+        # Order: enabled first, then disabled; within each group, smallest first
+        enabled = [
+            f for f in self.folders
+            if f.get("files") is None
+            and self.user_settings.is_drive_enabled(f.get("folder_id", ""))
+        ]
+        disabled = [
+            f for f in self.folders
+            if f.get("files") is None
+            and not self.user_settings.is_drive_enabled(f.get("folder_id", ""))
+        ]
+        # Sort each group by size (smallest first) so downloads can start sooner
+        enabled.sort(key=lambda f: f.get("total_size", 0) or f.get("chart_count", 0) or 0)
+        disabled.sort(key=lambda f: f.get("total_size", 0) or f.get("chart_count", 0) or 0)
+        folders_to_scan = enabled + disabled
+
+        if not folders_to_scan:
+            # No folders need scanning - keep existing scanner for its discovery data
+            # (setlist names are needed even if files are already loaded)
+            return
+
+        # Stop any existing scanner before creating new one
+        if self._background_scanner:
+            self._background_scanner.stop()
+            self._background_scanner = None
+
+        # Callback when a folder finishes scanning - save custom folder data
+        def on_folder_complete(folder: dict):
+            if folder.get("is_custom"):
+                folder_id = folder.get("folder_id")
+                self.custom_folders.set_files(folder_id, (folder.get("files") or []))
+                self.custom_folders.save()
+
+        self._background_scanner = BackgroundScanner(
+            folders_to_scan,
+            self.auth,
+            API_KEY,
+            user_settings=self.user_settings,
+            on_folder_complete=on_folder_complete,
+        )
+        # Discovery first (synchronous) - gives accurate setlist counts immediately
+        print("  Discovering setlists...")
+        self._background_scanner.discover()
+        # Then start background scanning
+        self._background_scanner.start()
+
+    def _stop_background_scan(self):
+        """Stop background scanning if running."""
+        if self._background_scanner:
+            self._background_scanner.stop()
+            self._background_scanner = None
 
     def _get_folder_by_id(self, folder_id: str) -> dict | None:
         """Get folder dict by folder_id."""
@@ -588,12 +547,127 @@ class SyncApp:
                 return folder
         return None
 
+    def _sync_folders_sequentially(self, enabled_indices: list, disabled_map: dict) -> bool:
+        """
+        Download folders as they become ready from background scanner.
+
+        Downloads whichever folder is ready first, not in fixed order.
+        Background scanner runs in parallel, so we grab ready folders ASAP.
+
+        Returns True if cancelled.
+        """
+        import time as _time
+        from src.core.formatting import format_duration
+        from src.ui.primitives import getch_with_timeout, KEY_ESC, cbreak_noecho
+
+        total_folders = len(enabled_indices)
+        total_downloaded = 0
+        total_bytes = 0
+        was_cancelled = False
+        start_time = _time.time()
+
+        # Track which folders still need to be downloaded
+        pending = set(enabled_indices)
+        completed_count = 0
+
+        def is_folder_ready(idx: int) -> bool:
+            """Check if folder is ready for download."""
+            folder = self.folders[idx]
+            folder_id = folder.get("folder_id", "")
+            # Use scanner's is_ready_for_sync (enabled setlists done = can download)
+            if self._background_scanner:
+                return self._background_scanner.is_ready_for_sync(folder_id)
+            # Fallback for manifest-loaded folders
+            return folder.get("files") is not None
+
+        while pending and not was_cancelled:
+            # Find any folder that's ready
+            ready_idx = None
+            for idx in pending:
+                if is_folder_ready(idx):
+                    ready_idx = idx
+                    break
+
+            if ready_idx is not None:
+                # Found a ready folder - download it
+                folder = self.folders[ready_idx]
+                folder_id = folder.get("folder_id")
+                folder_name = folder.get("name")
+                completed_count += 1
+
+                # Header for this folder
+                print(f"\n━━━ [{completed_count}/{total_folders}] {folder_name} ━━━")
+
+                # Show scan stats
+                scan_duration = folder.get("scan_duration", 0)
+                scan_api_calls = folder.get("scan_api_calls", 0)
+                if scan_duration > 0:
+                    print(f"  Scanned: {len(folder['files'])} files ({format_size(folder.get('total_size', 0))}) in {format_duration(scan_duration)} ({scan_api_calls} API calls)")
+                else:
+                    print(f"  Ready: {len(folder['files'])} files ({format_size(folder.get('total_size', 0))})")
+
+                # Download this folder (pass scan stats getter for progress display)
+                disabled_prefixes = disabled_map.get(folder_id, [])
+                scan_getter = lambda: self._background_scanner.get_stats() if self._background_scanner else None
+                downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
+                    folder, get_download_path(), disabled_prefixes, scan_stats_getter=scan_getter
+                )
+
+                total_downloaded += downloaded
+                total_bytes += bytes_down
+                pending.remove(ready_idx)
+
+                if cancelled:
+                    was_cancelled = True
+            else:
+                # No folder ready yet - wait for scanner
+                print(f"\r  Waiting for scan... (ESC to cancel)", end="", flush=True)
+
+                with cbreak_noecho():
+                    while True:
+                        # Check for ESC key
+                        key = getch_with_timeout(200)
+                        if key == KEY_ESC:
+                            print("\n  Cancelled.")
+                            was_cancelled = True
+                            break
+
+                        # Check if any folder became ready
+                        any_ready = any(is_folder_ready(idx) for idx in pending)
+                        if any_ready:
+                            print()  # Clear the waiting line
+                            break
+
+                        # Show scanner progress
+                        if self._background_scanner:
+                            stats = self._background_scanner.get_stats()
+                            if stats.current_folder:
+                                elapsed_str = format_duration(stats.current_folder_elapsed)
+                                print(f"\r  Waiting for scan... ({stats.current_folder}: {elapsed_str}, {stats.api_calls} API calls)  ", end="", flush=True)
+
+        # Final summary
+        elapsed = __import__('time').time() - start_time
+        print()
+        print("━" * 50)
+
+        if was_cancelled:
+            display.sync_cancelled(total_downloaded)
+            wait_with_skip(5, "Continuing in 5s (press any key to skip)")
+        elif total_downloaded > 0:
+            display.sync_complete(total_downloaded, total_bytes, elapsed)
+        else:
+            display.sync_already_synced()
+
+        return was_cancelled
+
     def _scan_enabled_folders(self, enabled_indices: list):
         """
         Scan all enabled folders via API to get fresh file lists.
 
         This ensures downloads are always based on current Drive state,
         not potentially stale manifest data.
+
+        NOTE: This method is deprecated - use _sync_folders_sequentially instead.
         """
         from src.drive import FolderScanner
 
@@ -696,25 +770,6 @@ class SyncApp:
 
         return result
 
-    def _build_manifest_archives(self) -> dict[str, str]:
-        """
-        Build dict of {archive_path: md5} from all manifest folders.
-
-        Used for cleaning up stale sync_state entries.
-        """
-        from src.sync.sync_checker import is_archive_file
-
-        archives = {}
-        for folder in self.folders:
-            folder_name = folder.get("name", "")
-            for f in folder.get("files", []):
-                file_path = f.get("path", "")
-                file_name = file_path.split("/")[-1] if "/" in file_path else file_path
-                if is_archive_file(file_name):
-                    full_path = f"{folder_name}/{file_path}"
-                    archives[full_path] = f.get("md5", "")
-        return archives
-
     def run(self):
         """Main application loop."""
         clear_screen()
@@ -731,9 +786,15 @@ class SyncApp:
                 print_header()
 
         import time as _time
-        _t_manifest = _time.time()
-        self.load_manifest()
-        print(f"  [timing] manifest: {(_time.time() - _t_manifest)*1000:.0f}ms")
+        _t_drives = _time.time()
+        self.load_drives()
+        print(f"  [timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
+
+        # Start background scanning of folders (if signed in)
+        _t_scan = _time.time()
+        self._start_background_scan()
+        if self._background_scanner:
+            print(f"  [timing] bg_scanner started: {(_time.time() - _t_scan)*1000:.0f}ms")
 
         selected_index = 0  # Track selected position for maintaining after actions
         menu_cache = None  # Cache for expensive menu calculations
@@ -754,7 +815,8 @@ class SyncApp:
                 menu_cache = compute_main_menu_cache(
                     self.folders, self.user_settings,
                     get_download_path(), combined_drives,
-                    self.sync_state, self.folder_stats_cache
+                    self.folder_stats_cache,
+                    self._background_scanner,
                 )
 
             # Show startup time after first cache computation (actual "ready" state)
@@ -767,17 +829,21 @@ class SyncApp:
             action, value, menu_pos = show_main_menu(
                 self.folders, self.user_settings, selected_index,
                 get_download_path(), combined_drives, cache=menu_cache,
-                auth=self.auth, sync_state=self.sync_state
+                auth=self.auth,
+                background_scanner=self._background_scanner,
+                folder_stats_cache=self.folder_stats_cache,
             )
             selected_index = menu_pos  # Always preserve menu position
 
             if action == "quit":
+                self._stop_background_scan()
                 print("\nGoodbye!")
                 break
 
             elif action == "sync":
                 if self.folders:
                     self.handle_sync()
+                    # Don't restart scanner - scan happens once at startup
                 menu_cache = None  # Invalidate cache after sync
 
             elif action == "configure":
@@ -812,8 +878,7 @@ class SyncApp:
 
             elif action == "add_custom":
                 if self.handle_add_custom_folder():
-                    # Reload folders to include the new custom folder
-                    self.load_manifest(quiet=True)
+                    # Folder already added to self.folders by handle_add_custom_folder
                     menu_cache = None  # Invalidate cache - new folder added
 
 
@@ -829,12 +894,7 @@ def main():
     parser = argparse.ArgumentParser(
         description="DM Chart Sync - Download charts from Google Drive"
     )
-    parser.add_argument(
-        "--local-manifest",
-        action="store_true",
-        help="Use local manifest.json instead of fetching from GitHub"
-    )
-    args = parser.parse_args()
+    parser.parse_args()
 
     # Always log to .dm-sync/logs/YYYY-MM-DD.log
     logs_dir = get_data_dir() / "logs"
@@ -857,7 +917,7 @@ def main():
         print(f"Migrated settings to .dm-sync/: {', '.join(migrated)}")
 
     _t1 = _time.time()
-    app = SyncApp(use_local_manifest=args.local_manifest)
+    app = SyncApp()
     print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()
