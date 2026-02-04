@@ -378,6 +378,8 @@ class BackgroundScanner:
             if drive_id not in self._drive_setlist_ids:
                 self._drive_setlist_ids[drive_id] = []
                 self._drive_setlist_names[drive_id] = []
+                if drive.get("files") is None:
+                    drive["files"] = []
             self._drive_setlist_ids[drive_id].append(setlist_id)
             self._drive_setlist_names[drive_id].append(name)
 
