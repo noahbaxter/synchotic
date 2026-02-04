@@ -3,25 +3,26 @@ Home screen - main menu of the application.
 
 Shows available chart packs, sync status, and navigation options.
 """
+from __future__ import annotations
 
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING
 
-from src.config import UserSettings, DrivesConfig, extract_subfolders_from_manifest
+from src.config import UserSettings, DrivesConfig, extract_subfolders_from_files
 from src.core.logging import debug_log
 from src.sync import (
     get_sync_status, count_purgeable_files, SyncStatus,
     FolderStats, FolderStatsCache, CachedFolderStats, get_persistent_stats_cache,
     PersistentStatsCache,
 )
-from src.sync.state import SyncState
 from ..primitives import Colors
 from ..components import format_status_line, format_home_item, format_delta
 from ..widgets import Menu, MenuItem, MenuDivider, MenuGroupHeader
 
 if TYPE_CHECKING:
     from src.drive.auth import AuthManager
+    from src.sync import BackgroundScanner
 
 
 @dataclass
@@ -33,12 +34,42 @@ class MainMenuCache:
     group_enabled_counts: dict = field(default_factory=dict)
 
 
+def _get_display_state(
+    folder_id: str,
+    has_files: bool,
+    has_cache: bool,
+    scanner: BackgroundScanner,
+) -> str:
+    """
+    Determine display state for a folder.
+
+    Returns: "current" | "cached" | "scanning" | "none"
+    """
+    if scanner and scanner.is_scanned(folder_id):
+        # Scanned this session - compute real values
+        return "current"
+
+    if scanner and scanner.is_scanning(folder_id):
+        # Currently scanning - show cached values (if any) with SCANNING indicator
+        return "scanning"
+
+    # Not scanned yet this session
+    if has_files:
+        # Files loaded from manifest - current data
+        return "current"
+
+    if has_cache:
+        return "cached"  # Show italicized
+
+    return "none"  # Show "not scanned"
+
+
 def _compute_folder_stats(
     folder: dict,
     download_path: Path,
     user_settings: UserSettings,
-    sync_state: SyncState,
     persistent_cache: PersistentStatsCache = None,
+    scanner: BackgroundScanner = None,
 ) -> FolderStats | None:
     """Compute stats for a single folder (sync status, purge counts, display string)."""
     folder_id = folder.get("folder_id", "")
@@ -47,20 +78,43 @@ def _compute_folder_stats(
     # Compute settings hash for cache validation
     settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
 
+    # Check for cached stats first
+    cached = persistent_cache.get(folder_id, settings_hash) if persistent_cache else None
+    has_cache = cached is not None
+
+    # Determine display state
+    state = _get_display_state(folder_id, has_files, has_cache, scanner)
+
+    if state == "none":
+        # No cache and not scanning - return None to indicate "not scanned"
+        return None
+
     if has_files:
         # Files loaded - compute real stats
-        status = get_sync_status([folder], download_path, user_settings, sync_state)
-        purge_files, purge_size, purge_charts = count_purgeable_files([folder], download_path, user_settings, sync_state)
+        status = get_sync_status([folder], download_path, user_settings)
+        purge_files, purge_size, purge_charts = count_purgeable_files([folder], download_path, user_settings)
 
-        # Compute setlist counts (requires files to be loaded)
-        setlists = extract_subfolders_from_manifest(folder)
-        total_setlists = len(setlists) if setlists else 0
-        enabled_setlists = 0
-        if setlists and user_settings:
-            enabled_setlists = sum(
-                1 for c in setlists
-                if user_settings.is_subfolder_enabled(folder_id, c)
-            )
+        # Compute setlist counts
+        # Custom folders are a single setlist (the whole folder)
+        is_custom = folder.get("is_custom", False)
+        if is_custom:
+            total_setlists = 1
+            enabled_setlists = 1 if (user_settings.is_drive_enabled(folder_id) if user_settings else True) else 0
+        else:
+            # Prefer discovered counts from scanner (includes shortcuts)
+            discovered = scanner.get_discovered_setlist_count(folder_id) if scanner else None
+            if discovered:
+                enabled_setlists, total_setlists = discovered
+            else:
+                # Fallback: extract setlists from file paths (doesn't know about shortcuts)
+                setlists = extract_subfolders_from_files(folder)
+                total_setlists = len(setlists) if setlists else 0
+                enabled_setlists = 0
+                if setlists and user_settings:
+                    enabled_setlists = sum(
+                        1 for c in setlists
+                        if user_settings.is_subfolder_enabled(folder_id, c)
+                    )
 
         # Save to persistent cache for next startup
         if persistent_cache:
@@ -76,32 +130,58 @@ def _compute_folder_stats(
                 total_setlists=total_setlists,
                 settings_hash=settings_hash,
             ))
-    else:
-        # Files not loaded - check persistent cache first
-        cached = persistent_cache.get(folder_id, settings_hash) if persistent_cache else None
-
-        if cached:
-            # Use cached stats (accurate from previous session)
-            status = SyncStatus(
-                total_charts=cached.total_charts,
-                synced_charts=cached.synced_charts,
-                total_size=cached.total_size,
-                synced_size=cached.synced_size,
-            )
-            purge_files = cached.purge_count
-            purge_size = cached.purge_size
-            purge_charts = cached.purge_charts
-            enabled_setlists = cached.enabled_setlists
-            total_setlists = cached.total_setlists
+    elif cached:
+        # Use cached stats (accurate from previous session)
+        status = SyncStatus(
+            total_charts=cached.total_charts,
+            synced_charts=cached.synced_charts,
+            total_size=cached.total_size,
+            synced_size=cached.synced_size,
+        )
+        purge_files = cached.purge_count
+        purge_size = cached.purge_size
+        purge_charts = cached.purge_charts
+        # Custom folders are a single setlist
+        is_custom = folder.get("is_custom", False)
+        if is_custom:
+            total_setlists = 1
+            enabled_setlists = 1 if (user_settings.is_drive_enabled(folder_id) if user_settings else True) else 0
         else:
-            # No cache - return None to indicate "not scanned"
-            return None
+            # Prefer discovered counts from scanner (includes shortcuts)
+            discovered = scanner.get_discovered_setlist_count(folder_id) if scanner else None
+            if discovered:
+                enabled_setlists, total_setlists = discovered
+            else:
+                enabled_setlists = cached.enabled_setlists
+                total_setlists = cached.total_setlists
+    else:
+        # State is "scanning" without cache - show minimal stats with SCANNING indicator
+        scan_progress = scanner.get_scan_progress(folder_id) if scanner else None
+        display_string = format_home_item(
+            enabled_setlists=0,
+            total_setlists=0,
+            total_size=0,
+            synced_size=0,
+            state="scanning",
+            scan_progress=scan_progress,
+        )
+        return FolderStats(
+            folder_id=folder_id,
+            sync_status=SyncStatus(),
+            purge_count=0,
+            purge_charts=0,
+            purge_size=0,
+            enabled_setlists=0,
+            total_setlists=0,
+            display_string=display_string,
+        )
 
     # Check if drive is enabled
     drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
     delta_mode = user_settings.delta_mode if user_settings else "size"
 
-    # Build display string using new format
+    # Build display string with state styling
+    scan_progress = scanner.get_scan_progress(folder_id) if scanner and state == "scanning" else None
     display_string = format_home_item(
         enabled_setlists=enabled_setlists,
         total_setlists=total_setlists,
@@ -114,6 +194,8 @@ def _compute_folder_stats(
         disabled=not drive_enabled,
         delta_mode=delta_mode,
         is_estimate=status.is_estimate,
+        state=state,
+        scan_progress=scan_progress,
     )
 
     # Strip ANSI codes from display_string for logging
@@ -138,13 +220,17 @@ def compute_main_menu_cache(
     user_settings: UserSettings,
     download_path: Path,
     drives_config: DrivesConfig,
-    sync_state: SyncState = None,
-    folder_stats_cache: FolderStatsCache = None
+    folder_stats_cache: FolderStatsCache = None,
+    background_scanner: BackgroundScanner = None,
 ) -> MainMenuCache:
     """Compute all expensive stats for the main menu.
 
     Uses folder_stats_cache (in-memory) and persistent_stats_cache (disk) to
     avoid recalculating unchanged folders. Persistent cache survives restarts.
+
+    If background_scanner is provided, folders being scanned will show
+    "scanning..." indicator (italics with cached values, or just "scanning..."
+    if no cache exists).
     """
     cache = MainMenuCache()
 
@@ -164,22 +250,33 @@ def compute_main_menu_cache(
     for folder in folders:
         folder_id = folder.get("folder_id", "")
 
-        # Try to use in-memory cached stats for this folder
-        cached = folder_stats_cache.get(folder_id) if folder_stats_cache else None
+        # Check if this folder is currently being scanned or was scanned this session
+        is_scanning = background_scanner.is_scanning(folder_id) if background_scanner else False
+        is_scanned = background_scanner.is_scanned(folder_id) if background_scanner else False
 
-        if cached:
+        # Try to use in-memory cached stats for this folder
+        # But don't use cache if folder just finished scanning (need to recompute)
+        use_memory_cache = folder_stats_cache and not is_scanned
+        cached = folder_stats_cache.get(folder_id) if use_memory_cache else None
+
+        if cached and not is_scanning:
+            # Only use memory cache if not scanning (scanning state changes display)
             stats = cached
             debug_log(f"CACHE | {folder.get('name', '?')[:20]} | HIT")
         else:
-            stats = _compute_folder_stats(folder, download_path, user_settings, sync_state, persistent_cache)
+            stats = _compute_folder_stats(
+                folder, download_path, user_settings, persistent_cache,
+                scanner=background_scanner,
+            )
             if stats is None:
-                # No cache, no files - show "not scanned"
-                cache.folder_stats[folder_id] = "not scanned"
+                # No cache, no files - show "not scanned" in dim color
+                cache.folder_stats[folder_id] = f"{Colors.STALE}not scanned{Colors.RESET}"
                 debug_log(f"CACHE | {folder.get('name', '?')[:20]} | NOT_SCANNED")
                 continue
-            if folder_stats_cache:
+            # Cache the stats (but clear scanning display when scanner completes)
+            if folder_stats_cache and not is_scanning:
                 folder_stats_cache.set(folder_id, stats)
-            debug_log(f"CACHE | {folder.get('name', '?')[:20]} | MISS")
+            debug_log(f"CACHE | {folder.get('name', '?')[:20]} | {'SCANNING' if is_scanning else 'MISS'}")
 
         status = stats.sync_status
         folder_purge_count = stats.purge_count
@@ -192,7 +289,14 @@ def compute_main_menu_cache(
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
         delta_mode = user_settings.delta_mode if user_settings else "size"
 
+        # Determine display state
+        has_files = folder.get("files") is not None
+        settings_hash = PersistentStatsCache.compute_settings_hash(folder_id, user_settings)
+        has_cache = persistent_cache.get(folder_id, settings_hash) is not None if persistent_cache else False
+        state = _get_display_state(folder_id, has_files, has_cache, background_scanner)
+
         # Always regenerate display string with current enabled state
+        scan_progress = background_scanner.get_scan_progress(folder_id) if background_scanner and state == "scanning" else None
         display_string = format_home_item(
             enabled_setlists=enabled_setlists,
             total_setlists=total_setlists,
@@ -205,6 +309,8 @@ def compute_main_menu_cache(
             disabled=not drive_enabled,
             delta_mode=delta_mode,
             is_estimate=status.is_estimate,
+            state=state,
+            scan_progress=scan_progress,
         )
 
         # Only aggregate enabled drives into global stats for add/sync
@@ -227,32 +333,41 @@ def compute_main_menu_cache(
 
     delta_mode = user_settings.delta_mode if user_settings else "size"
 
+    # Check if scanning is complete - only show deltas when all drives are scanned
+    # (partial data gives misleading totals like "+149GB" when only 1 drive scanned)
+    scan_complete = not background_scanner or background_scanner.is_done()
+
     # Build status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB) [+50 charts / -80 charts]
+    # Hide delta while scanning - the numbers are incomplete/misleading
     cache.subtitle = format_status_line(
         synced_charts=global_status.synced_charts,
         total_charts=global_status.total_charts,
         enabled_setlists=global_enabled_setlists,
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
-        synced_size=global_status.synced_size,
-        missing_charts=global_status.missing_charts,
-        purgeable_files=global_purge_count,
-        purgeable_charts=global_purge_charts,
-        purgeable_size=global_purge_size,
+        synced_size=global_status.synced_size if scan_complete else 0,
+        missing_charts=global_status.missing_charts if scan_complete else 0,
+        purgeable_files=global_purge_count if scan_complete else 0,
+        purgeable_charts=global_purge_charts if scan_complete else 0,
+        purgeable_size=global_purge_size if scan_complete else 0,
         delta_mode=delta_mode,
     )
 
     # Build sync action description: [+2.6 MB / -317.3 MB] or [+50 files / -80 files]
-    cache.sync_action_desc = format_delta(
-        add_size=global_status.missing_size,
-        add_files=global_status.missing_charts,  # Use chart count for files (best we have)
-        add_charts=global_status.missing_charts,
-        remove_size=global_purge_size,
-        remove_files=global_purge_count,
-        remove_charts=global_purge_charts,
-        mode=delta_mode,
-        empty_text="Everything in sync",
-    )
+    # Hide delta while scanning - show neutral text instead
+    if scan_complete:
+        cache.sync_action_desc = format_delta(
+            add_size=global_status.missing_size,
+            add_files=global_status.missing_charts,
+            add_charts=global_status.missing_charts,
+            remove_size=global_purge_size,
+            remove_files=global_purge_count,
+            remove_charts=global_purge_charts,
+            mode=delta_mode,
+            empty_text="Everything in sync",
+        )
+    else:
+        cache.sync_action_desc = "Scanning..."
 
     if drives_config:
         for group_name in drives_config.get_groups():
@@ -295,14 +410,12 @@ class HomeScreen:
         download_path: Path = None,
         drives_config: DrivesConfig = None,
         auth: "AuthManager" = None,
-        sync_state: SyncState = None,
     ):
         self.folders = folders
         self.user_settings = user_settings
         self.download_path = download_path
         self.drives_config = drives_config
         self.auth = auth
-        self.sync_state = sync_state
         self._cache = None
         self._selected_index = 0
 
@@ -316,7 +429,6 @@ class HomeScreen:
             self.drives_config,
             self._cache,
             self.auth,
-            self.sync_state,
         )
 
 
@@ -328,20 +440,97 @@ def show_main_menu(
     drives_config: DrivesConfig = None,
     cache: MainMenuCache = None,
     auth=None,
-    sync_state: SyncState = None
+    background_scanner: BackgroundScanner = None,
+    folder_stats_cache: FolderStatsCache = None,
 ) -> tuple[str, str | int | None, int]:
     """
     Show main menu and get user selection.
 
     Returns tuple of (action, value, menu_position).
+
+    If background_scanner is provided, the menu will periodically refresh
+    as folders complete scanning.
     """
     if cache is None:
-        cache = compute_main_menu_cache(folders, user_settings, download_path, drives_config, sync_state)
+        cache = compute_main_menu_cache(
+            folders, user_settings, download_path, drives_config,
+            background_scanner=background_scanner,
+        )
 
     delta_mode = user_settings.delta_mode if user_settings else "size"
     mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
     legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
     menu = Menu(title="Available chart packs:", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit")
+
+    # Set up update callback for background scanning
+    def on_menu_update(menu_instance: Menu) -> bool:
+        """Called periodically to check for background scan updates."""
+        from src.core.formatting import format_duration
+
+        if not background_scanner:
+            return False
+
+        # Build new status line
+        stats = background_scanner.get_stats()
+        if stats.current_folder:
+            # Currently scanning - show current folder stats + running totals
+            folder_elapsed = format_duration(stats.current_folder_elapsed)
+            total_elapsed = format_duration(stats.elapsed)
+            new_status = (
+                f"Scanning: {stats.current_folder} "
+                f"({stats.folders_done + 1}/{stats.folders_total}) | "
+                f"{folder_elapsed} | {total_elapsed} total | {stats.api_calls} API calls"
+            )
+        else:
+            # Done scanning - show total time
+            if stats.elapsed > 0:
+                new_status = f"Ready | {format_duration(stats.elapsed)} | {stats.api_calls} API calls"
+            else:
+                new_status = f"Ready | {stats.api_calls} API calls this session"
+
+        # Check if any folders completed (before updating status)
+        folders_changed = background_scanner.check_updates()
+
+        # Update status line in-place (no full re-render needed for this)
+        menu_instance.update_status_line_in_place(new_status)
+
+        if not folders_changed:
+            return False  # No full re-render needed, status updated in-place
+
+        # Something completed - invalidate in-memory cache for completed folders
+        # and recompute stats
+        nonlocal cache
+        if folder_stats_cache:
+            folder_stats_cache.invalidate_all()
+
+        # Recompute the cache
+        cache = compute_main_menu_cache(
+            folders, user_settings, download_path, drives_config,
+            folder_stats_cache, background_scanner,
+        )
+
+        # Update item descriptions in the menu
+        for folder in folders:
+            folder_id = folder.get("folder_id", "")
+            new_desc = cache.folder_stats.get(folder_id, "")
+            menu_instance.update_item_description(folder_id, new_desc)
+
+        # Update subtitle with new global stats
+        menu_instance.subtitle = cache.subtitle
+
+        # Update Sync button description
+        menu_instance.update_item_description(("sync", None), cache.sync_action_desc)
+
+        return True  # Signal to re-render
+
+    if background_scanner and not background_scanner.is_done():
+        menu.update_callback = on_menu_update
+        # Set initial status line (always set something so in-place updates work)
+        stats = background_scanner.get_stats()
+        if stats.current_folder:
+            menu.status_line = f"Scanning: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total}) | {stats.api_calls} API calls"
+        else:
+            menu.status_line = "Starting scan..."
 
     folder_lookup = {f.get("folder_id", ""): f for f in folders}
 
