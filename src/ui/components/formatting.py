@@ -145,10 +145,10 @@ def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value
     When no colors given, returns plain text (menu applies its own color wrap).
     """
     if not pipe_color and not value_color:
-        return f"  {sync:>5}  |  {count:>5}  |  {size_str:>8}"
+        return f"  {sync:>5}  |  {count:>6}  |  {size_str:>8}"
     p = f"{pipe_color}|{Colors.RESET}"
     v = (lambda s: f"{value_color}{s}{Colors.RESET}") if value_color else (lambda s: s)
-    return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>5}')}  {p}  {v(f'{size_str:>8}')}"
+    return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>6}')}  {p}  {v(f'{size_str:>8}')}"
 
 
 def format_column_header(screen: str) -> str:
@@ -158,9 +158,9 @@ def format_column_header(screen: str) -> str:
     """
     p = f"{Colors.MUTED}|{Colors.RESET}"
     if screen == "setlist":
-        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}"
+        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}"
     # home
-    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>8}{Colors.RESET}"
+    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>8}{Colors.RESET}"
 
 
 def _compute_delta(
@@ -283,10 +283,10 @@ def format_home_item(
         if count and "/" in count:
             enabled_str, rest = count.split("/", 1)
             count_visible = len(enabled_str) + 1 + len(rest)
-            pad = " " * max(0, 5 - count_visible)
+            pad = " " * max(0, 6 - count_visible)
             count_val = f"{pad}{hl}{enabled_str}{base}/{rest}"
         else:
-            count_val = f"{count:>5}" if count else "     "
+            count_val = f"{count:>6}" if count else "      "
 
         columns = f"{Colors.ITALIC}{base}  {sync_val}  {pipe}  {count_val}  {pipe}  {size_val}{Colors.RESET}"
     elif state == "cached":
