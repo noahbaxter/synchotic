@@ -12,7 +12,7 @@ from src.core.logging import debug_log
 from src.config import UserSettings, extract_subfolders_from_files
 from src.sync import SyncStatus, CachedSetlistStats, get_persistent_stats_cache, compute_setlist_stats
 from ..primitives import Colors
-from ..components import format_drive_status, format_setlist_item
+from ..components import format_drive_status, format_setlist_item, format_column_header
 from ..widgets import Menu, MenuItem, MenuDivider
 
 
@@ -143,7 +143,8 @@ def show_subfolder_settings(
 
         mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
         legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
-        menu = Menu(title=f"{folder_name} - Setlists:", subtitle=subtitle, space_hint="Toggle", footer=legend)
+        menu = Menu(title=f"{folder_name}", subtitle=subtitle, space_hint="Toggle", footer=legend,
+                    column_header=format_column_header("setlist"))
 
         for i, setlist_name in enumerate(setlists):
             setlist_enabled = user_settings.is_subfolder_enabled(folder_id, setlist_name)
@@ -193,9 +194,7 @@ def show_subfolder_settings(
                 if setlist_enabled and not is_fully_synced:
                     missing_charts = setlist_total_charts - synced_charts
 
-            unit = "charts" if setlist_total_charts != 1 else "chart"
-
-            description = format_setlist_item(
+            columns, delta = format_setlist_item(
                 total_charts=setlist_total_charts,
                 synced_charts=synced_charts,
                 total_size=setlist_total_size,
@@ -205,18 +204,30 @@ def show_subfolder_settings(
                 purgeable_size=setlist_purgeable_size,
                 missing_charts=missing_charts,
                 disabled=not setlist_enabled or not drive_enabled,
-                unit=unit,
                 delta_mode=delta_mode,
                 state=setlist_state,
             )
 
-            desc_clean = re.sub(r'\x1b\[[0-9;]*m', '', description) if description else ""
+            # Build label with italic for scanning, delta appended
+            is_scanning = (setlist_state == "scanning")
+            is_disabled_item = not setlist_enabled or not drive_enabled
+            if is_scanning:
+                if is_disabled_item:
+                    label = f"{Colors.ITALIC}{Colors.DIM}{setlist_name}{Colors.RESET}"
+                else:
+                    label = f"{Colors.ITALIC}{setlist_name}{Colors.RESET}"
+            else:
+                label = setlist_name
+            if delta:
+                label = f"{label} {delta}"
+
+            desc_clean = re.sub(r'\x1b\[[0-9;]*m', '', columns) if columns else ""
             debug_log(f"SETLIST_PAGE | [{'+' if setlist_enabled else '-'}] {setlist_name}: {desc_clean}")
 
             item_disabled = not setlist_enabled or not drive_enabled
             show_toggle_colored = setlist_enabled and drive_enabled
 
-            menu.add_item(MenuItem(setlist_name, value=("toggle", i, setlist_name), description=description if description else None, disabled=item_disabled, show_toggle=show_toggle_colored))
+            menu.add_item(MenuItem(label, value=("toggle", i, setlist_name), description=columns if columns else None, disabled=item_disabled, show_toggle=show_toggle_colored))
 
         menu.add_item(MenuDivider(pinned=True))
 

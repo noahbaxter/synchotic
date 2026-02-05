@@ -16,7 +16,7 @@ from src.sync import (
     PersistentStatsCache, aggregate_folder_stats, compute_setlist_stats,
 )
 from ..primitives import Colors
-from ..components import format_status_line, format_home_item, format_delta
+from ..components import format_status_line, format_home_item, format_delta, format_column_header
 from ..widgets import Menu, MenuItem, MenuDivider, MenuGroupHeader
 
 if TYPE_CHECKING:
@@ -29,7 +29,9 @@ class MainMenuCache:
     """Cache for expensive main menu calculations."""
     subtitle: str = ""
     sync_action_desc: str = ""
-    folder_stats: dict = field(default_factory=dict)
+    folder_stats: dict = field(default_factory=dict)  # folder_id -> columns string
+    folder_deltas: dict = field(default_factory=dict)  # folder_id -> delta string
+    folder_states: dict = field(default_factory=dict)  # folder_id -> state string
     group_enabled_counts: dict = field(default_factory=dict)
 
 
@@ -72,7 +74,7 @@ def update_menu_cache_on_toggle(
             if has_cache and setlist_names:
                 # Re-aggregate from setlist stats (instant!)
                 agg = aggregate_folder_stats(folder_id, setlist_names, user_settings, persistent_cache)
-                display_string = format_home_item(
+                columns, delta = format_home_item(
                     enabled_setlists=agg.enabled_setlists,
                     total_setlists=agg.total_setlists,
                     total_size=agg.total_size,
@@ -100,11 +102,11 @@ def update_menu_cache_on_toggle(
                     purge_size=agg.purgeable_size,
                     enabled_setlists=agg.enabled_setlists,
                     total_setlists=agg.total_setlists,
-                    display_string=display_string,
+                    display_string=columns,
                 ))
             else:
                 # No cache - show minimal info
-                display_string = format_home_item(
+                columns, delta = format_home_item(
                     enabled_setlists=0,
                     total_setlists=len(setlist_names) if setlist_names else 0,
                     total_size=0,
@@ -114,7 +116,9 @@ def update_menu_cache_on_toggle(
                     state=state,
                     scan_progress=scan_progress,
                 )
-            menu_cache.folder_stats[folder_id] = display_string
+            menu_cache.folder_stats[folder_id] = columns
+            menu_cache.folder_deltas[folder_id] = delta
+            menu_cache.folder_states[folder_id] = state
             break
 
     # Update group enabled counts (fast - just counting)
@@ -269,7 +273,7 @@ def _compute_folder_stats(
     else:
         # No cache available - show scanning state
         scan_progress = scanner.get_scan_progress(folder_id) if scanner else None
-        display_string = format_home_item(
+        columns, _delta = format_home_item(
             enabled_setlists=0,
             total_setlists=len(setlist_names) if setlist_names else 0,
             total_size=0,
@@ -285,7 +289,7 @@ def _compute_folder_stats(
             purge_size=0,
             enabled_setlists=0,
             total_setlists=len(setlist_names) if setlist_names else 0,
-            display_string=display_string,
+            display_string=columns,
         )
 
     # Check if drive is enabled
@@ -294,7 +298,7 @@ def _compute_folder_stats(
 
     # Build display string with state styling
     scan_progress = scanner.get_scan_progress(folder_id) if scanner and state == "scanning" else None
-    display_string = format_home_item(
+    columns, _delta = format_home_item(
         enabled_setlists=enabled_setlists,
         total_setlists=total_setlists,
         total_size=status.total_size,
@@ -310,7 +314,7 @@ def _compute_folder_stats(
         scan_progress=scan_progress,
     )
 
-    display_clean = re.sub(r'\x1b\[[0-9;]*m', '', display_string)
+    display_clean = re.sub(r'\x1b\[[0-9;]*m', '', columns)
     debug_log(f"HOME_STATS | {folder_id[:8]} | +{status.missing_size} -{purge_size} | charts: +{status.missing_charts} -{purge_charts} | display: {display_clean}")
 
     return FolderStats(
@@ -321,7 +325,7 @@ def _compute_folder_stats(
         purge_size=purge_size,
         enabled_setlists=enabled_setlists,
         total_setlists=total_setlists,
-        display_string=display_string,
+        display_string=columns,
     )
 
 
@@ -381,6 +385,8 @@ def compute_main_menu_cache(
             if stats is None:
                 # No cache, no files - show "not scanned" in dim color
                 cache.folder_stats[folder_id] = f"{Colors.STALE}not scanned{Colors.RESET}"
+                cache.folder_deltas[folder_id] = ""
+                cache.folder_states[folder_id] = "none"
                 debug_log(f"CACHE | {folder.get('name', '?')[:20]} | NOT_SCANNED")
                 continue
             # Cache the stats (but clear scanning display when scanner completes)
@@ -406,7 +412,7 @@ def compute_main_menu_cache(
 
         # Always regenerate display string with current enabled state
         scan_progress = background_scanner.get_scan_progress(folder_id) if background_scanner and state == "scanning" else None
-        display_string = format_home_item(
+        columns, delta = format_home_item(
             enabled_setlists=enabled_setlists,
             total_setlists=total_setlists,
             total_size=status.total_size,
@@ -438,7 +444,9 @@ def compute_main_menu_cache(
         global_purge_charts += folder_purge_charts
         global_purge_size += folder_purge_size
 
-        cache.folder_stats[folder_id] = display_string
+        cache.folder_stats[folder_id] = columns
+        cache.folder_deltas[folder_id] = delta
+        cache.folder_states[folder_id] = state
 
     delta_mode = user_settings.delta_mode if user_settings else "size"
 
@@ -569,7 +577,8 @@ def show_main_menu(
     delta_mode = user_settings.delta_mode if user_settings else "size"
     mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
     legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
-    menu = Menu(title="Available chart packs:", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit")
+    menu = Menu(title="Chart Packs", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit",
+                column_header=format_column_header("home"))
 
     # Set up update callback for background scanning
     def on_menu_update(menu_instance: Menu) -> bool:
@@ -618,12 +627,18 @@ def show_main_menu(
         cache.subtitle = new_cache.subtitle
         cache.sync_action_desc = new_cache.sync_action_desc
         cache.folder_stats = new_cache.folder_stats
+        cache.folder_deltas = new_cache.folder_deltas
+        cache.folder_states = new_cache.folder_states
         cache.group_enabled_counts = new_cache.group_enabled_counts
 
         for folder in folders:
             folder_id = folder.get("folder_id", "")
-            new_desc = cache.folder_stats.get(folder_id, "")
-            menu_instance.update_item_description(folder_id, new_desc)
+            new_columns = cache.folder_stats.get(folder_id, "")
+            menu_instance.update_item_description(folder_id, new_columns)
+            # Check if this folder is in a group (indented)
+            is_indent = folder_id in grouped_folder_ids
+            new_label = _build_folder_label(folder.get("name", ""), folder_id, is_indent)
+            menu_instance.update_item_label(folder_id, new_label)
 
         menu_instance.subtitle = cache.subtitle
         menu_instance.update_item_description(("sync", None), cache.sync_action_desc)
@@ -652,23 +667,51 @@ def show_main_menu(
     added_folders = set()
     hotkey_num = 1
 
+    def _build_folder_label(name: str, folder_id: str, indent: bool) -> str:
+        """Build label with italic for scanning state and delta appended."""
+        state = cache.folder_states.get(folder_id, "current")
+        delta = cache.folder_deltas.get(folder_id, "")
+        is_scanning = (state == "scanning")
+        disabled = not (user_settings.is_drive_enabled(folder_id) if user_settings else True)
+
+        if indent:
+            if is_scanning:
+                if disabled:
+                    label = f"  {Colors.ITALIC}{Colors.DIM}{name}{Colors.RESET}"
+                else:
+                    label = f"  {Colors.ITALIC}{name}{Colors.RESET}"
+            else:
+                label = f"  {name}"
+        else:
+            if is_scanning:
+                if disabled:
+                    label = f"{Colors.ITALIC}{Colors.DIM}{name}{Colors.RESET}"
+                else:
+                    label = f"{Colors.ITALIC}{name}{Colors.RESET}"
+            else:
+                label = name
+
+        if delta:
+            label = f"{label} {delta}"
+        return label
+
     def add_folder_item(folder: dict, indent: bool = False):
         nonlocal hotkey_num
         folder_id = folder.get("folder_id", "")
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
-        stats = cache.folder_stats.get(folder_id)
+        columns = cache.folder_stats.get(folder_id)
 
         hotkey = None
         if not indent and hotkey_num <= 9:
             hotkey = str(hotkey_num)
             hotkey_num += 1
 
-        label = f"  {folder['name']}" if indent else folder['name']
+        label = _build_folder_label(folder['name'], folder_id, indent)
         menu.add_item(MenuItem(
             label,
             hotkey=hotkey,
             value=folder_id,
-            description=stats,
+            description=columns,
             disabled=not drive_enabled
         ))
         added_folders.add(folder_id)

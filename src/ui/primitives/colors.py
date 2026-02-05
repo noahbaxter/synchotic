@@ -7,6 +7,7 @@ class Colors:
     RESET = "\x1b[0m"
     BOLD = "\x1b[1m"
     DIM = "\x1b[2m"
+    ITALIC = "\x1b[3m"
     PURPLE = "\x1b[38;2;138;43;226m"
     INDIGO = "\x1b[38;2;99;102;241m"
     PINK = "\x1b[38;2;244;114;182m"
@@ -19,6 +20,7 @@ class Colors:
     RED = "\x1b[38;2;239;68;68m"
     GREEN = "\x1b[38;2;34;197;94m"
     CYAN = "\x1b[38;2;34;211;238m"
+    CYAN_DIM = "\x1b[38;2;20;110;130m"
 
 
 def rgb(r: int, g: int, b: int) -> str:

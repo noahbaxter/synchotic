@@ -129,6 +129,86 @@ def format_status_line(
     return result
 
 
+def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value_color: str) -> str:
+    """Build pipe-separated fixed-width column string.
+
+    Format: "  {sync:>5}  |  {count:>5}  |  {size:>8}  |"
+    Colors applied to values and pipes independently.
+    When no colors given, returns plain text (menu applies its own color wrap).
+    """
+    if not pipe_color and not value_color:
+        return f"  {sync:>5}  |  {count:>5}  |  {size_str:>8}  |"
+    p = f"{pipe_color}|{Colors.RESET}"
+    v = (lambda s: f"{value_color}{s}{Colors.RESET}") if value_color else (lambda s: s)
+    return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>5}')}  {p}  {v(f'{size_str:>8}')}  {p}"
+
+
+def format_column_header(screen: str) -> str:
+    """Return the column header row for a screen type.
+
+    Uses same fixed widths as _format_columns, with right-justified labels.
+    """
+    p = f"{Colors.MUTED}|{Colors.RESET}"
+    if screen == "setlist":
+        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'songs':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}  {p}"
+    # home
+    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}  {p}"
+
+
+def _compute_delta(
+    disabled: bool,
+    missing_size: int,
+    missing_charts: int,
+    purgeable_files: int,
+    purgeable_charts: int,
+    purgeable_size: int,
+    delta_mode: str,
+    show_add: bool,
+) -> str:
+    """Compute delta string for home/setlist items."""
+    if disabled:
+        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
+            return format_delta(
+                remove_size=purgeable_size,
+                remove_files=purgeable_files,
+                remove_charts=purgeable_charts,
+                mode=delta_mode,
+            )
+        return ""
+
+    if not show_add:
+        # Only show purgeable when add delta not reliable
+        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
+            return format_delta(
+                remove_size=purgeable_size,
+                remove_files=purgeable_files,
+                remove_charts=purgeable_charts,
+                mode=delta_mode,
+            )
+        return ""
+
+    is_synced = missing_size <= 0
+    if is_synced:
+        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
+            return format_delta(
+                remove_size=purgeable_size,
+                remove_files=purgeable_files,
+                remove_charts=purgeable_charts,
+                mode=delta_mode,
+            )
+        return ""
+
+    return format_delta(
+        add_size=missing_size,
+        add_files=missing_charts,
+        add_charts=missing_charts,
+        remove_size=purgeable_size,
+        remove_files=purgeable_files,
+        remove_charts=purgeable_charts,
+        mode=delta_mode,
+    )
+
+
 def format_home_item(
     enabled_setlists: int,
     total_setlists: int,
@@ -143,166 +223,68 @@ def format_home_item(
     is_estimate: bool = False,
     state: str = "current",
     scan_progress: tuple[int, int] | None = None,
-) -> str:
-    """
-    Format home screen item line.
+) -> tuple[str, str]:
+    """Format home screen item as (columns_str, delta_str).
+
+    Returns pipe-separated columns with state-based coloring,
+    and a separate delta string for the label.
 
     States:
-        "current" - scanned this session, show normal values WITH deltas
-        "cached" - using cached values, show dimmed WITHOUT deltas (estimates unreliable)
-        "scanning" - currently scanning, show dimmed + SCANNING indicator with progress
-
-    Enabled synced: 100% | 5/30 setlists, 4.0 GB
-    Enabled partial: 35% | 5/30 setlists, [+2.3 GB] or [+50 files]
-    Disabled: 5/30 setlists, 4.0 GB (greyed by caller)
-    With purgeable: ... [+2.3 GB / -317 MB] or [+50 files / -80 files]
-    Estimate (lazy): ~35% | 4.0 GB (no setlist count, files not loaded)
-    Scanning: ... SCANNING 5/30 (progress shown)
+        "current" - scanned, normal colors, with deltas
+        "cached" - dimmed (STALE), no add deltas
+        "scanning" - cyan/cyan_dim values (scanning indicator)
     """
-    # Only show ADD deltas for "current" state (scanned this session)
-    # Cached values have unreliable add deltas - manifest may have changed
-    # But PURGEABLE is always reliable - it's based on actual disk content
     show_add_delta = (state == "current")
-
-    # Build the values string first
-    values = _format_home_values(
-        enabled_setlists=enabled_setlists,
-        total_setlists=total_setlists,
-        total_size=total_size,
-        synced_size=synced_size,
-        purgeable_files=purgeable_files,  # Always show - based on disk, not manifest
-        purgeable_charts=purgeable_charts,
-        purgeable_size=purgeable_size,
-        missing_charts=missing_charts if show_add_delta else 0,
-        disabled=disabled,
-        delta_mode=delta_mode,
-        is_estimate=is_estimate,
-        show_delta=show_add_delta,
-    )
-
-    # Apply state styling
-    if state == "current":
-        return values
-    elif state == "cached":
-        # Dimmer color for stale/cached data so scanned items stand out
-        return f"{Colors.STALE}{values}{Colors.RESET}" if values else ""
-    elif state == "scanning":
-        # Show progress as "SCANNING 5/30"
-        # Use muted colors if drive is disabled
-        if disabled:
-            if scan_progress:
-                scanned, total = scan_progress
-                progress_str = f"{Colors.MUTED}SCANNING {scanned}/{total}{Colors.RESET}"
-            else:
-                progress_str = f"{Colors.MUTED}SCANNING{Colors.RESET}"
-            if values:
-                return f"{Colors.MUTED}{values} {progress_str}{Colors.RESET}"
-            return progress_str
-        else:
-            if scan_progress:
-                scanned, total = scan_progress
-                progress_str = f"{Colors.CYAN}SCANNING {scanned}/{total}{Colors.RESET}"
-            else:
-                progress_str = f"{Colors.CYAN}SCANNING{Colors.RESET}"
-            if values:
-                return f"{Colors.STALE}{values}{Colors.RESET} {progress_str}"
-            return progress_str
-    return values
-
-
-def _format_home_values(
-    enabled_setlists: int,
-    total_setlists: int,
-    total_size: int,
-    synced_size: int,
-    purgeable_files: int = 0,
-    purgeable_charts: int = 0,
-    purgeable_size: int = 0,
-    missing_charts: int = 0,
-    disabled: bool = False,
-    delta_mode: str = "size",
-    is_estimate: bool = False,
-    show_delta: bool = True,
-) -> str:
-    """Build the values string without state styling."""
-    # Setlists part (skip if estimate - we don't have file paths to compute setlists)
-    if total_setlists > 0 and not is_estimate:
-        setlists_str = f"{enabled_setlists}/{total_setlists} setlists"
-    else:
-        setlists_str = ""
-
-    # Prefix for estimates
-    pct_prefix = "~" if is_estimate else ""
-
     missing_size = max(0, total_size - synced_size)
 
+    # Build raw column values
+    pct_prefix = "~" if is_estimate else ""
+
     if disabled:
-        # Disabled: no percentage, show totals greyed (caller handles grey)
-        parts = []
-        if setlists_str:
-            parts.append(setlists_str)
-        if total_size > 0:
-            parts.append(format_size(total_size))
-        result = ", ".join(parts) if parts else ""
-        # Disabled items ALWAYS show purgeable (based on disk content, always reliable)
-        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
-            delta = format_delta(
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-            )
-            if delta:
-                result = f"{result} {delta}" if result else delta
+        sync = ""
     else:
-        # Enabled: show percentage and size/delta
         is_synced = missing_size <= 0
         pct = 100 if is_synced else calc_percent(synced_size, total_size)
+        sync = f"{pct_prefix}{pct}%"
 
-        parts = []
-        if setlists_str:
-            parts.append(setlists_str)
+    if total_setlists > 0 and not is_estimate:
+        count = f"{enabled_setlists}/{total_setlists}"
+    else:
+        count = ""
 
-        if is_synced:
-            if total_size > 0:
-                parts.append(format_size(total_size))
-            info = ", ".join(parts) if parts else ""
-            result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
-            # Synced but has purgeable
-            if show_delta and (purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0):
-                delta = format_delta(
-                    remove_size=purgeable_size,
-                    remove_files=purgeable_files,
-                    remove_charts=purgeable_charts,
-                    mode=delta_mode,
-                )
-                if delta:
-                    result += f" {delta}"
+    size_str = format_size(total_size) if total_size > 0 else ""
+
+    # Determine colors based on state
+    if state == "scanning":
+        if disabled:
+            value_color = Colors.CYAN_DIM
+            pipe_color = Colors.MUTED_DIM
         else:
-            info = ", ".join(parts) if parts else ""
-            if show_delta:
-                # Has missing - combine add and remove in one delta
-                delta = format_delta(
-                    add_size=missing_size,
-                    add_files=missing_charts,
-                    add_charts=missing_charts,
-                    remove_size=purgeable_size,
-                    remove_files=purgeable_files,
-                    remove_charts=purgeable_charts,
-                    mode=delta_mode,
-                )
-                if delta:
-                    if info:
-                        result = f"{pct_prefix}{pct}% | {info} {delta}"
-                    else:
-                        result = f"{pct_prefix}{pct}% | {delta}"
-                else:
-                    result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
-            else:
-                # No delta - just show percent and info
-                result = f"{pct_prefix}{pct}% | {info}" if info else f"{pct_prefix}{pct}%"
+            value_color = Colors.CYAN
+            pipe_color = Colors.MUTED
+    elif state == "cached":
+        value_color = Colors.STALE
+        pipe_color = Colors.STALE
+    else:
+        # "current" - no color codes, menu applies MUTED/MUTED_DIM
+        value_color = ""
+        pipe_color = ""
 
-    return result
+    columns = _format_columns(sync, count, size_str, pipe_color, value_color)
+
+    # Build delta string
+    delta = _compute_delta(
+        disabled=disabled,
+        missing_size=missing_size,
+        missing_charts=missing_charts if show_add_delta else 0,
+        purgeable_files=purgeable_files,
+        purgeable_charts=purgeable_charts,
+        purgeable_size=purgeable_size,
+        delta_mode=delta_mode,
+        show_add=show_add_delta,
+    )
+
+    return columns, delta
 
 
 def format_setlist_item(
@@ -318,97 +300,55 @@ def format_setlist_item(
     unit: str = "charts",
     delta_mode: str = "size",
     state: str = "current",
-) -> str:
-    """
-    Format setlist item line.
+) -> tuple[str, str]:
+    """Format setlist item as (columns_str, delta_str).
 
-    States:
-        "current" - scanned this session, show normal values
-        "cached" - using cached values, show dimmed
-        "scanning" - currently scanning, show SCANNING indicator
-
-    Enabled synced: 100% | 427 charts, 3.8 GB
-    Enabled partial: 80% | 427 charts, [+500 MB] or [+50 files]
-    Disabled: 427 charts, 3.8 GB (greyed by caller)
-    With purgeable: ... [+500 MB / -200 MB] or [+50 files / -200 files]
+    Returns pipe-separated columns with state-based coloring,
+    and a separate delta string for the label.
     """
-    # Charts/archives count
-    count_str = f"{total_charts} {unit}" if total_charts > 0 else ""
     missing_size = max(0, total_size - synced_size)
 
+    # Build raw column values
     if disabled:
-        # Disabled: no percentage, show totals (caller handles grey)
-        parts = []
-        if count_str:
-            parts.append(count_str)
-        if total_size > 0:
-            parts.append(format_size(total_size))
-        result = ", ".join(parts) if parts else ""
-        # Disabled items only show purgeable (no add delta)
-        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
-            delta = format_delta(
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-            )
-            if delta:
-                result = f"{result} {delta}" if result else delta
+        sync = ""
     else:
-        # Enabled: show percentage and size/delta
-        is_synced = synced_charts >= total_charts or missing_size <= 0
         pct = calc_percent(synced_charts, total_charts) if total_charts > 0 else 100
+        sync = f"{pct}%"
 
-        parts = []
-        if count_str:
-            parts.append(count_str)
+    count = str(total_charts) if total_charts > 0 else ""
+    size_str = format_size(total_size) if total_size > 0 else ""
 
-        if is_synced:
-            if total_size > 0:
-                parts.append(format_size(total_size))
-            info = ", ".join(parts) if parts else ""
-            result = f"{pct}% | {info}" if info else f"{pct}%"
-            # Synced but has purgeable
-            if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
-                delta = format_delta(
-                    remove_size=purgeable_size,
-                    remove_files=purgeable_files,
-                    remove_charts=purgeable_charts,
-                    mode=delta_mode,
-                )
-                if delta:
-                    result += f" {delta}"
+    # Determine colors based on state
+    if state == "scanning":
+        if disabled:
+            value_color = Colors.CYAN_DIM
+            pipe_color = Colors.MUTED_DIM
         else:
-            info = ", ".join(parts) if parts else ""
-            # Has missing - combine add and remove in one delta
-            delta = format_delta(
-                add_size=missing_size,
-                add_files=missing_charts,  # Use chart count for files (best we have)
-                add_charts=missing_charts,
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-            )
-            if delta:
-                if info:
-                    result = f"{pct}% | {info} {delta}"
-                else:
-                    result = f"{pct}% | {delta}"
-            else:
-                result = f"{pct}% | {info}" if info else f"{pct}%"
-
-    # Apply state styling
-    if state == "current":
-        return result
+            value_color = Colors.CYAN
+            pipe_color = Colors.MUTED
     elif state == "cached":
-        return f"{Colors.STALE}{result}{Colors.RESET}" if result else ""
-    elif state == "scanning":
-        scanning_indicator = f"{Colors.CYAN}SCANNING{Colors.RESET}"
-        if result:
-            return f"{Colors.STALE}{result}{Colors.RESET} {scanning_indicator}"
-        return scanning_indicator
-    return result
+        value_color = Colors.STALE
+        pipe_color = Colors.STALE
+    else:
+        value_color = ""
+        pipe_color = ""
+
+    columns = _format_columns(sync, count, size_str, pipe_color, value_color)
+
+    # Build delta string
+    show_add = (state == "current")
+    delta = _compute_delta(
+        disabled=disabled,
+        missing_size=missing_size,
+        missing_charts=missing_charts,
+        purgeable_files=purgeable_files,
+        purgeable_charts=purgeable_charts,
+        purgeable_size=purgeable_size,
+        delta_mode=delta_mode,
+        show_add=show_add,
+    )
+
+    return columns, delta
 
 
 def format_drive_status(

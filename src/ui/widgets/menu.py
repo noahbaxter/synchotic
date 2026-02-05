@@ -133,6 +133,7 @@ class Menu:
     space_hint: str = ""
     esc_label: str = "Back"
     items: list = field(default_factory=list)
+    column_header: str = ""  # Right-aligned header row rendered after title divider
     status_line: str = ""  # Rendered below menu box (for scan progress, etc.)
     _selected: int = 0
     _selected_before_hotkey: int = 0
@@ -149,6 +150,14 @@ class Menu:
         for item in self.items:
             if isinstance(item, (MenuItem, MenuAction)) and item.value == value:
                 item.description = new_description
+                return True
+        return False
+
+    def update_item_label(self, value: Any, new_label: str) -> bool:
+        """Update the label of an item by its value. Returns True if found."""
+        for item in self.items:
+            if isinstance(item, (MenuItem, MenuAction)) and item.value == value:
+                item.label = new_label
                 return True
         return False
 
@@ -169,6 +178,8 @@ class Menu:
         term_height = shutil.get_terminal_size().lines
         fixed_lines = 8 + 4 + 1 + 1  # Header + box + hint + buffer
         if self.subtitle:
+            fixed_lines += 1
+        if self.column_header:
             fixed_lines += 1
         if self.footer:
             fixed_lines += 2
@@ -308,47 +319,48 @@ class Menu:
                 toggle_prefix = ""
                 toggle_len = 0
 
-            hotkey_len = len(item.hotkey) + 3 if item.hotkey else 0
-            prefix_len = 2
-
-            # Label is never truncated - calculate description space from what remains
             label_text = item.label
-            label_len = len(label_text)
-            fixed_width = 4 + prefix_len + toggle_len + hotkey_len + label_len + 1
-            available_for_desc = w - fixed_width
+            label_visible_len = len(strip_ansi(label_text))
 
-            # Only show description if there's room (use visible length, not raw with ANSI)
-            show_desc = False
-            if item.description and available_for_desc > 3:
-                visible_desc_len = len(strip_ansi(item.description))
-                show_desc = visible_desc_len + 3 <= available_for_desc
-
+            # Build left side (selector + toggle + hotkey + label)
             if is_disabled:
                 if selected:
                     hotkey = f"{Colors.DIM_HOVER}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
-                    label = f"{Colors.DIM_HOVER}{label_text}{Colors.RESET}"
-                    if show_desc:
-                        label += f" {Colors.MUTED_DIM}{item.description}{Colors.RESET}"
-                    content = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{label}"
+                    left = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{Colors.DIM_HOVER}{label_text}{Colors.RESET}"
                 else:
                     hotkey = f"{Colors.DIM}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
-                    label = f"{Colors.DIM}{label_text}{Colors.RESET}"
-                    if show_desc:
-                        label += f" {Colors.MUTED_DIM}{item.description}{Colors.RESET}"
-                    content = f"  {toggle_prefix}{hotkey}{label}"
+                    left = f"  {toggle_prefix}{hotkey}{Colors.DIM}{label_text}{Colors.RESET}"
             else:
                 hotkey = f"{Colors.HOTKEY}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
-                label = label_text
-                if show_desc:
-                    label += f" {Colors.MUTED}{item.description}{Colors.RESET}"
                 if selected:
-                    content = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{Colors.BOLD}{label}{Colors.RESET}"
+                    left = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{Colors.BOLD}{label_text}{Colors.RESET}"
                 else:
-                    content = f"  {toggle_prefix}{hotkey}{label}"
+                    left = f"  {toggle_prefix}{hotkey}{label_text}"
 
-            visible = len(strip_ansi(content))
-            pad = max(0, w - 4 - visible)
-            print(f"{c}{BOX_V}{Colors.RESET} {content}{' ' * pad} {c}{BOX_V}{Colors.RESET}")
+            hotkey_len = len(item.hotkey) + 3 if item.hotkey else 0
+            left_visible = 2 + toggle_len + hotkey_len + label_visible_len
+
+            # Build right side (description, right-aligned)
+            right = ""
+            right_visible = 0
+            if item.description:
+                desc_visible = len(strip_ansi(item.description))
+                available = w - 4 - left_visible
+                if desc_visible > 0 and desc_visible + 2 <= available:
+                    if is_disabled:
+                        right = f"{Colors.MUTED_DIM}{item.description}{Colors.RESET}"
+                    else:
+                        right = f"{Colors.MUTED}{item.description}{Colors.RESET}"
+                    right_visible = desc_visible
+
+            if right_visible > 0:
+                gap = w - 4 - left_visible - right_visible
+                content = f"{left}{' ' * gap}{right}"
+            else:
+                pad = max(0, w - 4 - left_visible)
+                content = f"{left}{' ' * pad}"
+
+            print(f"{c}{BOX_V}{Colors.RESET} {content} {c}{BOX_V}{Colors.RESET}")
 
     def _render(self):
         """Render the full menu using buffered output to prevent flicker."""
@@ -387,6 +399,12 @@ class Menu:
                     sub_left = sub_pad // 2
                     print(f"{c}{BOX_V}{Colors.RESET} {' ' * sub_left}{Colors.MUTED}{self.subtitle}{Colors.RESET}{' ' * (sub_pad - sub_left)} {c}{BOX_V}{Colors.RESET}")
                 print(box_row(BOX_TL_DIV, BOX_H, BOX_TR_DIV, w, c))
+
+            # Column header (right-aligned, after title divider)
+            if self.column_header:
+                hdr_visible = len(strip_ansi(self.column_header))
+                hdr_pad = w - 4 - hdr_visible
+                print(f"{c}{BOX_V}{Colors.RESET} {' ' * hdr_pad}{self.column_header} {c}{BOX_V}{Colors.RESET}")
 
             # Scroll indicator (more above)
             if has_more_above:
