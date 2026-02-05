@@ -219,13 +219,26 @@ class SyncApp:
         if was_cancelled:
             return
 
+        # Build failed setlists dict to protect from purge
+        failed_setlists: dict[str, set[str]] | None = None
+        if self._background_scanner and self._background_scanner.has_scan_failures():
+            failed_setlists = {}
+            for folder in self.folders:
+                folder_id = folder.get("folder_id", "")
+                failed = self._background_scanner.get_failed_setlist_names(folder_id)
+                if failed:
+                    failed_setlists[folder_id] = failed
+            if failed_setlists:
+                all_failed = [name for names in failed_setlists.values() for name in names]
+                print(f"\n  Warning: {len(all_failed)} setlist(s) failed to scan (files preserved): {', '.join(sorted(all_failed))}")
+
         # Step 2: Purge extra files (no confirmation - sync means make it match)
         stats = count_purgeable_detailed(
-            self.folders, get_download_path(), self.user_settings
+            self.folders, get_download_path(), self.user_settings, failed_setlists
         )
 
         if stats.total_files > 0:
-            purge_all_folders(self.folders, get_download_path(), self.user_settings)
+            purge_all_folders(self.folders, get_download_path(), self.user_settings, failed_setlists)
             clear_scan_cache()  # Invalidate filesystem cache after purge
             self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
 

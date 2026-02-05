@@ -195,6 +195,7 @@ def purge_all_folders(
     folders: list,
     base_path: Path,
     user_settings=None,
+    failed_setlists: dict[str, set[str]] | None = None,
 ):
     """
     Purge files that shouldn't be synced.
@@ -233,7 +234,7 @@ def purge_all_folders(
                 display.purge_removed(deleted, failed)
             continue
 
-        files_to_purge, _ = plan_purge([folder], base_path, user_settings)
+        files_to_purge, _ = plan_purge([folder], base_path, user_settings, failed_setlists)
 
         if not files_to_purge:
             continue

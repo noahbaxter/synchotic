@@ -14,6 +14,7 @@ from pathlib import Path
 
 from ..drive import DriveClient, FolderScanner
 from ..drive.client import DriveClientConfig
+from ..core.logging import debug_log
 
 if TYPE_CHECKING:
     from ..config import UserSettings
@@ -94,6 +95,7 @@ class BackgroundScanner:
         self._all_setlists: dict[str, SetlistInfo] = {}  # setlist_id -> SetlistInfo
         self._enabled_setlist_ids: set[str] = set()
         self._scanned_setlist_ids: set[str] = set()
+        self._failed_setlist_ids: set[str] = set()  # Setlists that threw during scan
 
         # Per-drive tracking
         self._drive_setlist_ids: dict[str, list[str]] = {}  # drive_id -> [setlist_ids]
@@ -160,10 +162,13 @@ class BackgroundScanner:
             if not setlist_ids:
                 return False
             # Only need enabled setlists to be scanned for sync
+            # Failed setlists count as "done" — they'll be retried later,
+            # but we don't block sync waiting for them
+            done = self._scanned_setlist_ids | self._failed_setlist_ids
             enabled_ids = [sid for sid in setlist_ids if sid in self._enabled_setlist_ids]
             if not enabled_ids:
                 return True  # No enabled setlists = ready (nothing to download)
-            return all(sid in self._scanned_setlist_ids for sid in enabled_ids)
+            return all(sid in done for sid in enabled_ids)
 
     def is_scanned(self, drive_id: str) -> bool:
         """Check if ALL of a drive's setlists are scanned (stats complete)."""
@@ -213,13 +218,15 @@ class BackgroundScanner:
             return (enabled, total)
 
     def get_scan_progress(self, drive_id: str) -> tuple[int, int] | None:
-        """Get (scanned_count, total_count) for a drive's setlists."""
+        """Get (scanned_count, total_count) for a drive's setlists.
+        Failed setlists count toward progress so the UI doesn't stall."""
         with self._lock:
             setlist_ids = self._drive_setlist_ids.get(drive_id)
             if setlist_ids is None:
                 return None
             total = len(setlist_ids)
-            scanned = sum(1 for sid in setlist_ids if sid in self._scanned_setlist_ids)
+            done = self._scanned_setlist_ids | self._failed_setlist_ids
+            scanned = sum(1 for sid in setlist_ids if sid in done)
             return (scanned, total)
 
     def get_discovered_setlist_names(self, drive_id: str) -> list[str] | None:
@@ -234,6 +241,21 @@ class BackgroundScanner:
                 if info.drive_id == drive_id and info.name == setlist_name:
                     return setlist_id in self._scanned_setlist_ids
             return False
+
+    def get_failed_setlist_names(self, drive_id: str) -> set[str]:
+        """Get names of setlists that failed to scan for a given drive."""
+        with self._lock:
+            names = set()
+            for setlist_id in self._failed_setlist_ids:
+                info = self._all_setlists.get(setlist_id)
+                if info and info.drive_id == drive_id:
+                    names.add(info.name)
+            return names
+
+    def has_scan_failures(self) -> bool:
+        """Check if any setlists failed to scan."""
+        with self._lock:
+            return len(self._failed_setlist_ids) > 0
 
     def notify_setlist_toggled(self, drive_id: str, setlist_name: str, enabled: bool):
         """
@@ -410,25 +432,48 @@ class BackgroundScanner:
 
             self._scan_setlist(setlist, scanner)
 
+        # Retry failed setlists once
+        if not self._stop_event.is_set():
+            with self._lock:
+                retry_ids = list(self._failed_setlist_ids)
+            for setlist_id in retry_ids:
+                if self._stop_event.is_set():
+                    break
+                with self._lock:
+                    setlist = self._all_setlists.get(setlist_id)
+                    # Remove from failed so _scan_setlist can re-add on failure
+                    self._failed_setlist_ids.discard(setlist_id)
+                if setlist:
+                    debug_log(f"SCAN_RETRY | setlist={setlist.name} | id={setlist_id}")
+                    self._scan_setlist(setlist, scanner)
+                    # If still not scanned after retry, it re-failed — mark as scanned
+                    # so is_done()/is_ready_for_sync() don't hang
+                    with self._lock:
+                        if setlist_id in self._failed_setlist_ids:
+                            self._scanned_setlist_ids.add(setlist_id)
+                            self._stats.folders_done += 1
+
         # Done
         with self._lock:
             self._stats.current_folder = ""
             self._stats.end_time = time.time()
 
     def _get_next_setlist_to_scan(self) -> SetlistInfo | None:
-        """Get next setlist to scan. Prioritizes enabled ones."""
+        """Get next setlist to scan. Prioritizes enabled ones. Skips failed."""
         with self._lock:
-            # Priority: enabled but not scanned
+            done = self._scanned_setlist_ids | self._failed_setlist_ids
+
+            # Priority: enabled but not done
             for setlist_id in self._enabled_setlist_ids:
-                if setlist_id not in self._scanned_setlist_ids:
+                if setlist_id not in done:
                     return self._all_setlists[setlist_id]
 
-            # Then: any not scanned
+            # Then: any not done
             for setlist_id, info in self._all_setlists.items():
-                if setlist_id not in self._scanned_setlist_ids:
+                if setlist_id not in done:
                     return info
 
-            return None  # All scanned
+            return None  # All scanned or failed
 
     def _scan_setlist(self, setlist: SetlistInfo, scanner: FolderScanner):
         """Scan a single setlist and accumulate files into its drive."""
@@ -474,7 +519,12 @@ class BackgroundScanner:
                 drive["total_size"] = sum(f.get("size", 0) for f in drive["files"])
 
         except Exception:
-            pass  # Continue with next setlist
+            # Track failure — do NOT mark as scanned so purge can protect these files
+            with self._lock:
+                self._failed_setlist_ids.add(setlist.setlist_id)
+                self._stats.current_folder_start = 0
+            debug_log(f"SCAN_FAIL | setlist={display_name} | id={setlist.setlist_id}")
+            return
 
         # Mark as scanned
         with self._lock:

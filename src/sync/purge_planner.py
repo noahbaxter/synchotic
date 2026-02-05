@@ -113,6 +113,7 @@ def plan_purge(
     folders: list,
     base_path: Path,
     user_settings=None,
+    failed_setlists: dict[str, set[str]] | None = None,
 ) -> Tuple[List[Tuple[Path, int]], PurgeStats]:
     """
     Plan what files should be purged.
@@ -171,14 +172,25 @@ def plan_purge(
         disabled_setlists_raw = user_settings.get_disabled_subfolders(folder_id) if user_settings else set()
         disabled_setlists = {sanitize_filename(name) for name in disabled_setlists_raw}
 
+        # Get failed setlists (scan failed — protect their files from purge)
+        failed_names_raw = failed_setlists.get(folder_id, set()) if failed_setlists else set()
+        failed_names = {sanitize_filename(name) for name in failed_names_raw}
+        if failed_names:
+            debug_log(f"PURGE_SKIP | folder={folder_name} | protecting {len(failed_names)} failed setlists: {failed_names}")
+
         # Count files in disabled setlists (these get purged)
+        # Also track files in failed setlists (these are protected)
         disabled_setlist_paths = set()
+        failed_setlist_paths = set()
         disabled_chart_parents = set()
         for rel_path, size in local_files.items():
             first_slash = rel_path.find("/")
             setlist_name = rel_path[:first_slash] if first_slash != -1 else rel_path
             # Sanitize to match disabled_setlists (which are also sanitized)
             setlist_name = sanitize_filename(setlist_name)
+            if setlist_name in failed_names:
+                failed_setlist_paths.add(rel_path)
+                continue  # Don't purge files in failed setlists
             if setlist_name in disabled_setlists:
                 disabled_setlist_paths.add(rel_path)
                 stats.chart_count += 1
@@ -217,6 +229,8 @@ def plan_purge(
         for f, size in extras:
             rel_path = relative_posix(f, folder_path)
             extra_paths.add(rel_path)
+            if rel_path in failed_setlist_paths:
+                continue  # Don't purge files in failed setlists
             if rel_path not in disabled_setlist_paths:
                 stats.extra_file_count += 1
                 stats.extra_file_size += size
@@ -228,7 +242,7 @@ def plan_purge(
         delete_videos = user_settings.delete_videos if user_settings else True
         if delete_videos:
             for rel_path, size in local_files.items():
-                if rel_path in disabled_setlist_paths or rel_path in extra_paths:
+                if rel_path in disabled_setlist_paths or rel_path in extra_paths or rel_path in failed_setlist_paths:
                     continue
                 if Path(rel_path).suffix.lower() in VIDEO_EXTENSIONS:
                     stats.video_count += 1
@@ -250,9 +264,10 @@ def count_purgeable_files(
     folders: list,
     base_path: Path,
     user_settings=None,
+    failed_setlists: dict[str, set[str]] | None = None,
 ) -> Tuple[int, int, int]:
     """Count files that would be purged."""
-    _, stats = plan_purge(folders, base_path, user_settings)
+    _, stats = plan_purge(folders, base_path, user_settings, failed_setlists)
     return stats.total_files, stats.total_size, stats.estimated_charts
 
 
@@ -260,7 +275,8 @@ def count_purgeable_detailed(
     folders: list,
     base_path: Path,
     user_settings=None,
+    failed_setlists: dict[str, set[str]] | None = None,
 ) -> PurgeStats:
     """Count files that would be purged with detailed breakdown."""
-    _, stats = plan_purge(folders, base_path, user_settings)
+    _, stats = plan_purge(folders, base_path, user_settings, failed_setlists)
     return stats
