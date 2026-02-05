@@ -126,6 +126,9 @@ def show_subfolder_settings(
 
         delta_mode = user_settings.delta_mode if user_settings else "size"
 
+        # Drive delta is estimated if any enabled setlist hasn't been scanned this session
+        drive_is_estimate = scanner is not None and scanner.is_scanning(folder_id)
+
         subtitle = format_drive_status(
             synced_charts=status.synced_charts,
             total_charts=status.total_charts,
@@ -139,6 +142,7 @@ def show_subfolder_settings(
             purgeable_size=excess_size,
             disabled=not drive_enabled,
             delta_mode=delta_mode,
+            is_estimate=drive_is_estimate,
         )
 
         mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")

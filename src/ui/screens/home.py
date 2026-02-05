@@ -186,6 +186,7 @@ def update_menu_cache_on_toggle(
         purgeable_charts=global_purge_charts,
         purgeable_size=global_purge_size,
         delta_mode=delta_mode,
+        is_estimate=not scan_complete,
     )
 
     menu_cache.sync_delta = format_delta(
@@ -196,6 +197,7 @@ def update_menu_cache_on_toggle(
         remove_files=global_purge_count,
         remove_charts=global_purge_charts,
         mode=delta_mode,
+        is_estimate=not scan_complete,
     )
     if scan_complete:
         menu_cache.sync_action_desc = menu_cache.sync_delta or "Everything in sync"
@@ -472,6 +474,7 @@ def compute_main_menu_cache(
     delta_mode = user_settings.delta_mode if user_settings else "size"
 
     # Build status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB) [+50 charts / -80 charts]
+    scan_complete = not background_scanner or background_scanner.is_done()
     cache.subtitle = format_status_line(
         synced_charts=global_status.synced_charts,
         total_charts=global_status.total_charts,
@@ -484,10 +487,10 @@ def compute_main_menu_cache(
         purgeable_charts=global_purge_charts,
         purgeable_size=global_purge_size,
         delta_mode=delta_mode,
+        is_estimate=not scan_complete,
     )
 
     # Build sync delta (shown in label) and description (right-aligned)
-    scan_complete = not background_scanner or background_scanner.is_done()
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
         add_files=global_status.missing_charts,
@@ -496,6 +499,7 @@ def compute_main_menu_cache(
         remove_files=global_purge_count,
         remove_charts=global_purge_charts,
         mode=delta_mode,
+        is_estimate=not scan_complete,
     )
     if scan_complete:
         cache.sync_action_desc = cache.sync_delta or "Everything in sync"

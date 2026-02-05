@@ -28,6 +28,7 @@ def format_delta(
     remove_charts: int = 0,
     mode: str = "size",
     empty_text: str = "",
+    is_estimate: bool = False,
 ) -> str:
     """
     Format add/remove delta with combined brackets.
@@ -62,15 +63,13 @@ def format_delta(
         unit = "file" if remove_files == 1 else "files"
         remove_str = f"-{remove_files} {unit}" if has_remove else ""
 
+    i = Colors.ITALIC if is_estimate else ""
     if has_add and has_remove:
-        # White [ and add, muted /, red remove and ]
-        return f"{Colors.RESET}{Colors.BOLD}[{add_str} {Colors.MUTED}/{Colors.RESET} {Colors.RED}{remove_str}]{Colors.RESET}"
+        return f"{Colors.RESET}{i}{Colors.BOLD}[{add_str} {Colors.MUTED}/{Colors.RESET} {i}{Colors.RED}{remove_str}]{Colors.RESET}"
     elif has_add:
-        # All white
-        return f"{Colors.RESET}{Colors.BOLD}[{add_str}]{Colors.RESET}"
+        return f"{Colors.RESET}{i}{Colors.BOLD}[{add_str}]{Colors.RESET}"
     elif has_remove:
-        # All red
-        return f"{Colors.RED}[{remove_str}]{Colors.RESET}"
+        return f"{Colors.RED}{i}[{remove_str}]{Colors.RESET}"
     else:
         return empty_text
 
@@ -87,6 +86,7 @@ def format_status_line(
     purgeable_charts: int = 0,
     purgeable_size: int = 0,
     delta_mode: str = "size",
+    is_estimate: bool = False,
 ) -> str:
     """
     Format status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB)
@@ -122,6 +122,7 @@ def format_status_line(
             remove_files=purgeable_files,
             remove_charts=purgeable_charts,
             mode=delta_mode,
+            is_estimate=is_estimate,
         )
         if delta:
             result += f" {delta}"
@@ -139,30 +140,15 @@ def _rjust(text: str, width: int) -> str:
 def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value_color: str) -> str:
     """Build pipe-separated fixed-width column string.
 
-    Format: "  {sync:>5}  |  {count:>5}  |  {size:>8}  |"
+    Format: "  {sync:>5}  |  {count:>5}  |  {size:>8}"
     Colors applied to values and pipes independently.
     When no colors given, returns plain text (menu applies its own color wrap).
     """
     if not pipe_color and not value_color:
-        return f"  {sync:>5}  |  {count:>5}  |  {size_str:>8}  |"
+        return f"  {sync:>5}  |  {count:>5}  |  {size_str:>8}"
     p = f"{pipe_color}|{Colors.RESET}"
     v = (lambda s: f"{value_color}{s}{Colors.RESET}") if value_color else (lambda s: s)
-    return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>5}')}  {p}  {v(f'{size_str:>8}')}  {p}"
-
-
-def _format_columns_explicit(sync: str, count: str, size_str: str, base: str) -> str:
-    """Build columns with explicit per-value coloring. Values may contain ANSI codes.
-
-    Uses base color for pipes and any uncolored values, with ANSI-aware padding.
-    Used when individual values need different colors (e.g. green checkmark, cyan highlight).
-    """
-    pipe = f"{base}|{Colors.RESET}"
-    _v = lambda s: f"{base}{s}{Colors.RESET}" if s else ""
-    # Only wrap in base color if value doesn't already have ANSI codes
-    sync_fmt = sync if ("\x1b[" in sync) else _v(sync) if sync else ""
-    count_fmt = count if ("\x1b[" in count) else _v(count) if count else ""
-    size_fmt = size_str if ("\x1b[" in size_str) else _v(size_str) if size_str else ""
-    return f"  {_rjust(sync_fmt, 5)}  {pipe}  {_rjust(count_fmt, 5)}  {pipe}  {_rjust(size_fmt, 8)}  {pipe}"
+    return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>5}')}  {p}  {v(f'{size_str:>8}')}"
 
 
 def format_column_header(screen: str) -> str:
@@ -172,9 +158,9 @@ def format_column_header(screen: str) -> str:
     """
     p = f"{Colors.MUTED}|{Colors.RESET}"
     if screen == "setlist":
-        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}  {p}"
+        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}"
     # home
-    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>8}{Colors.RESET}  {p}"
+    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>8}{Colors.RESET}"
 
 
 def _compute_delta(
@@ -186,6 +172,7 @@ def _compute_delta(
     purgeable_size: int,
     delta_mode: str,
     show_add: bool,
+    is_estimate: bool = False,
 ) -> str:
     """Compute delta string for home/setlist items."""
     if disabled:
@@ -195,6 +182,7 @@ def _compute_delta(
                 remove_files=purgeable_files,
                 remove_charts=purgeable_charts,
                 mode=delta_mode,
+                is_estimate=is_estimate,
             )
         return ""
 
@@ -206,6 +194,7 @@ def _compute_delta(
                 remove_files=purgeable_files,
                 remove_charts=purgeable_charts,
                 mode=delta_mode,
+                is_estimate=is_estimate,
             )
         return ""
 
@@ -217,6 +206,7 @@ def _compute_delta(
                 remove_files=purgeable_files,
                 remove_charts=purgeable_charts,
                 mode=delta_mode,
+                is_estimate=is_estimate,
             )
         return ""
 
@@ -228,6 +218,7 @@ def _compute_delta(
         remove_files=purgeable_files,
         remove_charts=purgeable_charts,
         mode=delta_mode,
+        is_estimate=is_estimate,
     )
 
 
@@ -282,23 +273,29 @@ def format_home_item(
 
     # Determine colors and build columns
     if state == "scanning":
-        # Explicit per-value coloring for cyan count highlight
+        # Italic columns without mid-string RESETs (italic persists through color switches)
         base = Colors.MUTED_DIM if disabled else Colors.MUTED
+        hl = Colors.CYAN_DIM if disabled else Colors.CYAN
+        pipe = f"\x1b[23m{base}|{Colors.ITALIC}"  # disable italic for pipe, re-enable after
+        sync_val = f"{sync:>5}" if sync else "     "
+        size_val = f"{size_str:>8}" if size_str else "        "
 
-        # Count: highlight enabled count during scanning
         if count and "/" in count:
-            hl = Colors.CYAN_DIM if disabled else Colors.CYAN
             enabled_str, rest = count.split("/", 1)
-            count = f"{hl}{enabled_str}{Colors.RESET}{base}/{rest}{Colors.RESET}"
+            count_visible = len(enabled_str) + 1 + len(rest)
+            pad = " " * max(0, 5 - count_visible)
+            count_val = f"{pad}{hl}{enabled_str}{base}/{rest}"
+        else:
+            count_val = f"{count:>5}" if count else "     "
 
-        columns = _format_columns_explicit(sync, count, size_str, base)
+        columns = f"{Colors.ITALIC}{base}  {sync_val}  {pipe}  {count_val}  {pipe}  {size_val}{Colors.RESET}"
     elif state == "cached":
         columns = _format_columns(sync, count, size_str, Colors.STALE, Colors.STALE)
     else:
         # "current" - no color codes, menu applies MUTED/MUTED_DIM
         columns = _format_columns(sync, count, size_str, "", "")
 
-    # Build delta string
+    # Build delta string (estimated when scanning — partial data from cache)
     delta = _compute_delta(
         disabled=disabled,
         missing_size=missing_size,
@@ -308,6 +305,7 @@ def format_home_item(
         purgeable_size=purgeable_size,
         delta_mode=delta_mode,
         show_add=show_add_delta,
+        is_estimate=(state == "scanning"),
     )
 
     return columns, delta, show_checkmark
@@ -356,8 +354,8 @@ def format_setlist_item(
         # "current" or "scanning" - no color codes, menu applies MUTED/MUTED_DIM
         columns = _format_columns(sync, count, size_str, "", "")
 
-    # Build delta string
-    show_add = (state == "current")
+    # Build delta string (show add delta for all states, estimated when not current)
+    is_estimate = state in ("scanning", "cached")
     delta = _compute_delta(
         disabled=disabled,
         missing_size=missing_size,
@@ -366,7 +364,8 @@ def format_setlist_item(
         purgeable_charts=purgeable_charts,
         purgeable_size=purgeable_size,
         delta_mode=delta_mode,
-        show_add=show_add,
+        show_add=True,
+        is_estimate=is_estimate,
     )
 
     return columns, delta, show_checkmark
@@ -385,6 +384,7 @@ def format_drive_status(
     purgeable_size: int = 0,
     disabled: bool = False,
     delta_mode: str = "size",
+    is_estimate: bool = False,
 ) -> str:
     """
     Format drive config status line.
@@ -415,6 +415,7 @@ def format_drive_status(
         purgeable_charts=purgeable_charts,
         purgeable_size=purgeable_size,
         delta_mode=delta_mode,
+        is_estimate=is_estimate,
     )
 
 
