@@ -17,6 +17,11 @@ from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 WINDOWS_MAX_PATH = 260
 MAX_FILENAME_LENGTH = 255
 
+# Files to skip during download planning (known conflicts with existing directories)
+EXCLUDED_FILES = {
+    "vianova - Wheel of Fortune_PS.zip",
+}
+
 
 def is_long_paths_enabled() -> bool:
     """Check if Windows long paths are enabled in registry."""
@@ -89,6 +94,10 @@ def plan_downloads(
         file_md5 = f.get("md5", "")
 
         rel_path = f"{folder_name}/{file_path}" if folder_name else file_path
+
+        if file_name in EXCLUDED_FILES:
+            skipped += 1
+            continue
 
         # Skip Google Docs/Sheets
         if not file_md5 and "." not in file_name:

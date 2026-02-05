@@ -14,6 +14,7 @@ from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path, sanitize_filename, dedupe_files_by_newest, normalize_fs_name
 from ..core.logging import debug_log
 from .cache import scan_actual_charts, CachedSetlistStats
+from .download_planner import EXCLUDED_FILES
 from .sync_checker import is_archive_synced, is_archive_file, is_file_synced
 
 
@@ -75,6 +76,10 @@ def _build_chart_folders(manifest_files: list) -> dict:
         file_md5 = f.get("md5", "")
 
         sanitized_path = sanitize_path(file_path)
+        file_name = sanitized_path.rsplit("/", 1)[-1]
+        if file_name in EXCLUDED_FILES:
+            continue
+
         slash_idx = sanitized_path.rfind("/")
 
         if slash_idx == -1:
