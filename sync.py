@@ -9,6 +9,7 @@ File lists are fetched directly from Google Drive API (no manifest needed).
 import argparse
 import os
 import sys
+import threading
 
 # Increase file descriptor limit for concurrent downloads + extraction
 # macOS defaults to 256 which is too low for 24 concurrent downloads
@@ -546,7 +547,12 @@ class SyncApp:
         )
         # Discovery first (synchronous) - gives accurate setlist counts immediately
         print("  Discovering setlists...")
-        self._background_scanner.discover()
+        slow_hint = threading.Timer(5.0, lambda: print("  (waiting for Google Drive API rate limit...)"))
+        slow_hint.start()
+        try:
+            self._background_scanner.discover()
+        finally:
+            slow_hint.cancel()
         # Then start background scanning
         self._background_scanner.start()
 
