@@ -183,6 +183,14 @@ class BackgroundScanner:
         with self._lock:
             return len(self._scanned_setlist_ids) >= len(self._all_setlists)
 
+    def is_all_enabled_scanned(self) -> bool:
+        """Check if all enabled setlists across all drives are scanned."""
+        with self._lock:
+            if not self._enabled_setlist_ids:
+                return True
+            done = self._scanned_setlist_ids | self._failed_setlist_ids
+            return all(sid in done for sid in self._enabled_setlist_ids)
+
     def check_updates(self) -> bool:
         """Check if any setlists were scanned since last check. Used for UI refresh."""
         with self._lock:

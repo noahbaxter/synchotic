@@ -36,6 +36,7 @@ class MainMenuCache:
     folder_checkmarks: dict = field(default_factory=dict)  # folder_id -> bool (show green ✓)
     folder_scan_progress: dict = field(default_factory=dict)  # folder_id -> (scanned, total) or None
     group_enabled_counts: dict = field(default_factory=dict)
+    sync_checkmark: bool = False  # True when all enabled setlists verified synced
 
 
 def update_menu_cache_on_toggle(
@@ -199,7 +200,9 @@ def update_menu_cache_on_toggle(
         mode=delta_mode,
         is_estimate=not scan_complete,
     )
-    if scan_complete:
+    enabled_complete = scan_complete or (background_scanner and background_scanner.is_all_enabled_scanned())
+    menu_cache.sync_checkmark = enabled_complete and global_status.missing_size <= 0
+    if enabled_complete:
         menu_cache.sync_action_desc = menu_cache.sync_delta or "Everything in sync"
     else:
         menu_cache.sync_action_desc = "Scanning..."
@@ -475,6 +478,7 @@ def compute_main_menu_cache(
 
     # Build status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB) [+50 charts / -80 charts]
     scan_complete = not background_scanner or background_scanner.is_done()
+    enabled_complete = scan_complete or (background_scanner and background_scanner.is_all_enabled_scanned())
     cache.subtitle = format_status_line(
         synced_charts=global_status.synced_charts,
         total_charts=global_status.total_charts,
@@ -501,7 +505,9 @@ def compute_main_menu_cache(
         mode=delta_mode,
         is_estimate=not scan_complete,
     )
-    if scan_complete:
+    # Show checkmark as soon as all enabled setlists are verified synced
+    cache.sync_checkmark = enabled_complete and global_status.missing_size <= 0
+    if enabled_complete:
         cache.sync_action_desc = cache.sync_delta or "Everything in sync"
     else:
         cache.sync_action_desc = "Scanning..."
@@ -657,6 +663,7 @@ def show_main_menu(
         cache.subtitle = new_cache.subtitle
         cache.sync_action_desc = new_cache.sync_action_desc
         cache.sync_delta = new_cache.sync_delta
+        cache.sync_checkmark = new_cache.sync_checkmark
         cache.folder_stats = new_cache.folder_stats
         cache.folder_deltas = new_cache.folder_deltas
         cache.folder_checkmarks = new_cache.folder_checkmarks
