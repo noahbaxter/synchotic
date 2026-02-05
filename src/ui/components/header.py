@@ -61,4 +61,4 @@ def print_header():
         cached_lines.append("")
         _header_cache = '\n'.join(cached_lines)
 
-    print(_header_cache)
+    print(f"\n{_header_cache}")
