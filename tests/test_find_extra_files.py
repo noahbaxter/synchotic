@@ -1,7 +1,7 @@
 """
 Tests for find_extra_files.
 
-Verifies that files tracked in sync_state or manifest aren't flagged as purgeable.
+Verifies that files tracked in marker_files or manifest aren't flagged as purgeable.
 """
 
 import tempfile
@@ -9,9 +9,9 @@ from pathlib import Path
 
 import pytest
 
+from src.core.formatting import normalize_path_key
 from src.sync import clear_cache
 from src.sync.purge_planner import find_extra_files
-from src.sync.state import SyncState
 from src.sync.cache import scan_local_files
 
 # Backwards compat
@@ -20,7 +20,7 @@ clear_scan_cache = clear_cache
 
 
 class TestSyncStateExtraFiles:
-    """Tests for sync_state-based extra file detection."""
+    """Tests for marker_files-based extra file detection."""
 
     @pytest.fixture
     def temp_dir(self):
@@ -30,7 +30,7 @@ class TestSyncStateExtraFiles:
 
     def test_tracked_files_not_flagged_as_extra(self, temp_dir):
         """
-        Files tracked in sync_state should not be flagged as extra.
+        Files tracked in marker_files should not be flagged as extra.
         """
         folder_name = "TestDrive"
         folder_path = temp_dir / folder_name
@@ -42,22 +42,15 @@ class TestSyncStateExtraFiles:
         (chart_folder / "notes.mid").write_bytes(b"midi data")
         (chart_folder / "song.ogg").write_bytes(b"audio data")
 
-        # Set up sync_state with these files tracked
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            f"{folder_name}/Setlist/SomeChart/SomeChart.7z",
-            md5="abc123def456",
-            archive_size=5000,
-            files={
-                "song.ini": 18,
-                "notes.mid": 9,
-                "song.ogg": 10
-            }
-        )
+        # Build marker_files with normalized paths (relative to folder_path, no drive prefix)
+        marker_files = {
+            normalize_path_key("Setlist/SomeChart/song.ini"),
+            normalize_path_key("Setlist/SomeChart/notes.mid"),
+            normalize_path_key("Setlist/SomeChart/song.ogg"),
+        }
 
         # Find extra files (no manifest paths)
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+        extras = find_extra_files(folder_name, folder_path, marker_files, set())
 
         # Assert: tracked files should NOT be flagged as extra
         extra_names = [f.name for f, _ in extras]
@@ -66,7 +59,7 @@ class TestSyncStateExtraFiles:
         assert "song.ogg" not in extra_names, "song.ogg was incorrectly flagged as extra"
 
     def test_untracked_files_flagged_as_extra(self, temp_dir):
-        """Files not in sync_state or manifest should be flagged as extra."""
+        """Files not in marker_files or manifest should be flagged as extra."""
         folder_name = "TestDrive"
         folder_path = temp_dir / folder_name
         chart_folder = folder_path / "Setlist" / "SomeChart"
@@ -76,19 +69,19 @@ class TestSyncStateExtraFiles:
         (chart_folder / "song.ini").write_text("[song]\nname=Test")
         (chart_folder / "extra_file.txt").write_text("not tracked")
 
-        # Set up sync_state with only song.ini tracked
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_file(f"{folder_name}/Setlist/SomeChart/song.ini", size=18)
+        # Only song.ini is tracked (relative to folder_path, no drive prefix)
+        marker_files = {
+            normalize_path_key("Setlist/SomeChart/song.ini"),
+        }
 
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+        extras = find_extra_files(folder_name, folder_path, marker_files, set())
 
         extra_names = [f.name for f, _ in extras]
         assert "extra_file.txt" in extra_names, "Untracked file should be flagged"
         assert "song.ini" not in extra_names, "Tracked file should not be flagged"
 
-    def test_empty_sync_state_flags_all_files_without_manifest(self, temp_dir):
-        """With empty sync_state and no manifest, all files should be flagged as extra."""
+    def test_empty_marker_files_flags_all_files_without_manifest(self, temp_dir):
+        """With empty marker_files and no manifest, all files should be flagged as extra."""
         folder_name = "TestDrive"
         folder_path = temp_dir / folder_name
         folder_path.mkdir(parents=True)
@@ -97,16 +90,12 @@ class TestSyncStateExtraFiles:
         (folder_path / "file1.txt").write_text("content1")
         (folder_path / "file2.txt").write_text("content2")
 
-        # Empty sync_state, no manifest paths
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
+        extras = find_extra_files(folder_name, folder_path, set(), set())
 
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
-
-        assert len(extras) == 2, "All files should be extras with empty sync_state and no manifest"
+        assert len(extras) == 2, "All files should be extras with empty marker_files and no manifest"
 
     def test_manifest_paths_protect_files(self, temp_dir):
-        """Files in manifest should not be flagged as extra even without sync_state."""
+        """Files in manifest should not be flagged as extra even without marker_files."""
         folder_name = "TestDrive"
         folder_path = temp_dir / folder_name
         folder_path.mkdir(parents=True)
@@ -115,19 +104,15 @@ class TestSyncStateExtraFiles:
         (folder_path / "in_manifest.txt").write_text("content1")
         (folder_path / "not_in_manifest.txt").write_text("content2")
 
-        # Empty sync_state but one file is in manifest
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
-        manifest_paths = {f"{folder_name}/in_manifest.txt"}
-        extras = find_extra_files(folder_name, folder_path, sync_state, manifest_paths)
+        manifest_paths = {normalize_path_key(f"{folder_name}/in_manifest.txt")}
+        extras = find_extra_files(folder_name, folder_path, set(), manifest_paths)
 
         extra_names = [f.name for f, _ in extras]
         assert "in_manifest.txt" not in extra_names, "Manifest file should be protected"
         assert "not_in_manifest.txt" in extra_names, "Non-manifest file should be flagged"
 
-    def test_no_sync_state_with_manifest(self, temp_dir):
-        """With no sync_state (None), manifest paths should still protect files."""
+    def test_no_marker_files_with_manifest(self, temp_dir):
+        """With empty marker_files, manifest paths should still protect files."""
         folder_name = "TestDrive"
         folder_path = temp_dir / folder_name
         folder_path.mkdir(parents=True)
@@ -136,16 +121,16 @@ class TestSyncStateExtraFiles:
         (folder_path / "protected.txt").write_text("protected")
         (folder_path / "extra.txt").write_text("extra")
 
-        manifest_paths = {f"{folder_name}/protected.txt"}
-        extras = find_extra_files(folder_name, folder_path, None, manifest_paths)
+        manifest_paths = {normalize_path_key(f"{folder_name}/protected.txt")}
+        extras = find_extra_files(folder_name, folder_path, set(), manifest_paths)
 
         extra_names = [f.name for f, _ in extras]
         assert len(extras) == 1
         assert "extra.txt" in extra_names
 
-    def test_case_insensitive_sync_state_matching(self, temp_dir):
+    def test_case_insensitive_marker_files_matching(self, temp_dir):
         """
-        Files should match sync_state entries regardless of case.
+        Files should match marker_files entries regardless of case.
 
         This prevents case mismatches (e.g., "And" vs "and") from causing
         files to be incorrectly flagged as extra on case-insensitive filesystems.
@@ -158,17 +143,12 @@ class TestSyncStateExtraFiles:
         # Create file on disk with one casing
         (chart_folder / "song.ini").write_text("[song]\nname=Test")
 
-        # Track in sync_state with DIFFERENT casing in path
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            f"{folder_name}/Setlist/SONG NAME/archive.7z",  # Uppercase "SONG NAME"
-            md5="abc123",
-            archive_size=1000,
-            files={"song.ini": 18}
-        )
+        # Track with DIFFERENT casing in path (normalize_path_key lowercases)
+        marker_files = {
+            normalize_path_key("Setlist/SONG NAME/song.ini"),
+        }
 
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+        extras = find_extra_files(folder_name, folder_path, marker_files, set())
 
         # File should NOT be flagged as extra despite case mismatch
         extra_names = [f.name for f, _ in extras]
@@ -185,10 +165,10 @@ class TestSyncStateExtraFiles:
         # Create file on disk with lowercase
         (folder_path / "myfile.txt").write_text("content")
 
-        # Manifest has UPPERCASE
-        manifest_paths = {f"{folder_name}/MYFILE.TXT"}
+        # Manifest has UPPERCASE (normalized for case-insensitive matching)
+        manifest_paths = {normalize_path_key(f"{folder_name}/MYFILE.TXT")}
 
-        extras = find_extra_files(folder_name, folder_path, None, manifest_paths)
+        extras = find_extra_files(folder_name, folder_path, set(), manifest_paths)
 
         # File should NOT be flagged as extra
         assert len(extras) == 0, "Case mismatch should not flag file as extra"
@@ -213,14 +193,14 @@ class TestFindExtraFilesWithCache:
         (folder_path / "expected.txt").write_text("expected")
         (folder_path / "extra.txt").write_text("extra")
 
-        # Track expected.txt in sync_state
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_file(f"{folder_name}/expected.txt", size=8)
+        # Track expected.txt in marker_files (relative to folder_path, no drive prefix)
+        marker_files = {
+            normalize_path_key("expected.txt"),
+        }
 
         # Pre-scan and pass explicitly (the optimized path)
         local_files = _scan_local_files(folder_path)
-        extras = find_extra_files(folder_name, folder_path, sync_state, set(), local_files)
+        extras = find_extra_files(folder_name, folder_path, marker_files, set(), local_files)
 
         assert len(extras) == 1
         assert extras[0][0].name == "extra.txt"
@@ -231,10 +211,7 @@ class TestFindExtraFilesWithCache:
         folder_path = temp_dir / folder_name
         folder_path.mkdir()
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+        extras = find_extra_files(folder_name, folder_path, set(), set())
         assert extras == []
 
     def test_nonexistent_folder_returns_empty(self, temp_dir):
@@ -242,10 +219,7 @@ class TestFindExtraFilesWithCache:
         folder_name = "DoesNotExist"
         folder_path = temp_dir / folder_name
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+        extras = find_extra_files(folder_name, folder_path, set(), set())
         assert extras == []
 
 

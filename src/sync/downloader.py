@@ -358,18 +358,18 @@ class FileDownloader:
             shutil.rmtree(extract_tmp, ignore_errors=True)
 
             # Step 4: Scan AFTER move to get actual paths on disk
-            # This ensures marker paths match filesystem exactly (handles unicode normalization)
+            # Normalize to NFC for cross-platform consistency (macOS returns NFD)
             extracted_files = {}
             for dest in moved_destinations:
                 if dest.is_file():
                     rel = dest.relative_to(chart_folder)
-                    extracted_files[str(rel).replace("\\", "/")] = dest.stat().st_size
+                    extracted_files[normalize_fs_name(str(rel).replace("\\", "/"))] = dest.stat().st_size
                 elif dest.is_dir():
                     for f in dest.rglob("*"):
                         if f.is_file():
                             rel = f.relative_to(chart_folder)
                             try:
-                                extracted_files[str(rel).replace("\\", "/")] = f.stat().st_size
+                                extracted_files[normalize_fs_name(str(rel).replace("\\", "/"))] = f.stat().st_size
                             except OSError:
                                 pass
 

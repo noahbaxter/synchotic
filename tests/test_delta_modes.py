@@ -227,7 +227,8 @@ class TestPurgeChartEstimation:
         assert stats.chart_count == 3, f"Expected 3 files from disabled setlist, got {stats.chart_count}"
 
         # Archives Setlist has 3 archives = 3 charts
-        assert stats.estimated_charts == 3, f"Expected 3 charts, got {stats.estimated_charts}"
+        # + 1 extra archive from Mixed Setlist (empty manifest means all files are extras)
+        assert stats.estimated_charts == 4, f"Expected 4 charts, got {stats.estimated_charts}"
 
     def test_count_purgeable_returns_three_values(self, temp_drive):
         """count_purgeable_files should return (files, size, charts)."""
@@ -301,9 +302,8 @@ class TestPartialDownloadsCountAsCharts:
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 
-        # 3 partial files
+        # 3 partial files = 3 charts
         assert stats.partial_count == 3
-        # Each partial = 1 chart
         assert stats.estimated_charts == 3
 
 
@@ -312,9 +312,7 @@ class TestExtraFilesChartEstimation:
 
     @pytest.fixture
     def drive_with_extras(self, tmp_path):
-        """Create drive with extra files (not in sync state)."""
-        from src.sync.state import SyncState
-
+        """Create drive with extra files (not in manifest)."""
         drive_path = tmp_path / "TestDrive"
         drive_path.mkdir()
 
@@ -328,25 +326,19 @@ class TestExtraFilesChartEstimation:
         (setlist / "extra.txt").write_bytes(b"text")
         (setlist / "extra.jpg").write_bytes(b"image")
 
-        # Tracked file (not extra)
+        # Tracked file (in manifest, not extra)
         (setlist / "tracked.zip").write_bytes(b"tracked")
 
-        # Set up sync state tracking only tracked.zip
-        sync_state = SyncState(tmp_path)
-        sync_state.load()
-        sync_state.add_file("TestDrive/Setlist/tracked.zip", size=7)
-        sync_state.save()
-
-        return tmp_path, drive_path, sync_state
+        return tmp_path, drive_path
 
     def test_extra_archives_counted_as_charts(self, drive_with_extras):
         """Only extra archive files should count as estimated charts."""
-        base_path, drive_path, sync_state = drive_with_extras
+        base_path, drive_path = drive_with_extras
 
         folder = {
             "folder_id": "test123",
             "name": "TestDrive",
-            "files": [],
+            "files": [{"path": "Setlist/tracked.zip", "size": 7, "md5": "tracked_md5"}],
         }
 
         class MockSettings:
@@ -356,7 +348,7 @@ class TestExtraFilesChartEstimation:
                 return set()
             delete_videos = False
 
-        files, stats = plan_purge([folder], base_path, MockSettings(), sync_state)
+        files, stats = plan_purge([folder], base_path, MockSettings())
 
         # 3 extra files (extra_song.zip, extra.txt, extra.jpg)
         assert stats.extra_file_count == 3

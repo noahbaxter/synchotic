@@ -37,7 +37,7 @@ class TestMarkerPaths:
     def test_marker_path_includes_archive_path_and_md5(self, temp_dir):
         """Marker path includes sanitized archive path and MD5 prefix."""
         path = get_marker_path("TestDrive/Setlist/pack.7z", "abc123def456")
-        assert "TestDrive_Setlist_pack.7z" in str(path)
+        assert "testdrive_setlist_pack.7z" in str(path)
         assert "abc123de" in str(path)  # First 8 chars of MD5
 
     def test_marker_path_sanitizes_slashes(self, temp_dir):
@@ -167,11 +167,11 @@ class TestMarkerVerification:
 
     def test_verify_fails_when_size_wrong(self, temp_dir):
         """Verification fails when file size doesn't match."""
-        (temp_dir / "song.ini").write_text("different content")  # Different size
+        (temp_dir / "notes.mid").write_bytes(b"different content")  # Different size
 
         marker = {
             "files": {
-                "song.ini": 6,  # Expected 6, but file has different size
+                "notes.mid": 6,  # Expected 6, but file has different size
             }
         }
 

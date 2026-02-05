@@ -95,6 +95,11 @@ def get_local_manifest_path() -> Path:
     return get_data_dir() / "local_manifest.json"
 
 
+def get_sync_state_path() -> Path:
+    """Get path to sync state file."""
+    return get_data_dir() / "sync_state.json"
+
+
 def get_download_path() -> Path:
     """Get the download directory for chart files."""
     return get_app_dir() / DOWNLOAD_FOLDER_NAME

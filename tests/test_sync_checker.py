@@ -2,7 +2,7 @@
 Tests for sync_checker.py - unified sync checking logic.
 
 Verifies that the single source of truth for "is this synced?" works correctly
-using marker files as primary verification, with sync_state fallback.
+using marker files as the only verification method.
 """
 
 import tempfile
@@ -16,7 +16,6 @@ from src.sync.sync_checker import (
     is_archive_synced,
     is_file_synced,
 )
-from src.sync.state import SyncState
 from src.sync.markers import save_marker, get_markers_dir
 
 
@@ -68,7 +67,6 @@ class TestIsArchiveSynced:
             markers_dir = Path(tmpdir) / ".dm-sync" / "markers"
             markers_dir.mkdir(parents=True)
             monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
-            monkeypatch.setattr("src.sync.sync_checker.get_download_path", lambda: Path(tmpdir))
             yield Path(tmpdir)
 
     def test_synced_when_marker_valid_and_files_exist(self, temp_dir, monkeypatch):
@@ -94,7 +92,6 @@ class TestIsArchiveSynced:
             checksum_path="Setlist",
             archive_name="pack.7z",
             manifest_md5="abc123",
-            sync_state=None,
             local_base=temp_dir / "TestDrive",
         )
 
@@ -122,7 +119,6 @@ class TestIsArchiveSynced:
             checksum_path="Setlist",
             archive_name="pack.7z",
             manifest_md5="abc123",
-            sync_state=None,
             local_base=temp_dir / "TestDrive",
         )
 
@@ -141,70 +137,14 @@ class TestIsArchiveSynced:
             checksum_path="Setlist",
             archive_name="pack.7z",
             manifest_md5="abc123",
-            sync_state=None,
             local_base=temp_dir / "TestDrive",
         )
 
         # No marker and no state = NOT synced (no disk heuristics)
         assert is_synced is False
 
-    def test_synced_via_sync_state_fallback(self, temp_dir, monkeypatch):
-        """Archive synced via sync_state when no marker exists."""
-        # Create extracted files on disk at sync_root/tracked_path
-        chart_folder = temp_dir / "TestDrive" / "Setlist"
-        chart_folder.mkdir(parents=True)
-        (chart_folder / "song.ini").write_text("[song]")
-        (chart_folder / "notes.mid").write_bytes(b"midi")
-
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            path="TestDrive/Setlist/pack.7z",
-            md5="abc123",
-            archive_size=5000,
-            files={"song.ini": 6, "notes.mid": 4}
-        )
-
-        is_synced, size = is_archive_synced(
-            folder_name="TestDrive",
-            checksum_path="Setlist",
-            archive_name="pack.7z",
-            manifest_md5="abc123",
-            sync_state=sync_state,
-            local_base=temp_dir / "TestDrive",
-        )
-
-        assert is_synced is True
-        assert size == 5000
-
-    def test_not_synced_when_state_valid_but_files_missing(self, temp_dir, monkeypatch):
-        """Archive NOT synced when state has matching MD5 but files missing."""
-        # NO files on disk - just create the folder
-        chart_folder = temp_dir / "TestDrive" / "Setlist"
-        chart_folder.mkdir(parents=True)
-
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            path="TestDrive/Setlist/pack.7z",
-            md5="abc123",
-            archive_size=5000,
-            files={"song.ini": 6, "notes.mid": 4}  # These don't exist
-        )
-
-        is_synced, size = is_archive_synced(
-            folder_name="TestDrive",
-            checksum_path="Setlist",
-            archive_name="pack.7z",
-            manifest_md5="abc123",
-            sync_state=sync_state,
-            local_base=temp_dir / "TestDrive",
-        )
-
-        assert is_synced is False
-
-    def test_marker_takes_precedence_over_state(self, temp_dir, monkeypatch):
-        """Marker is checked before sync_state."""
+    def test_marker_synced_regardless_of_state(self, temp_dir, monkeypatch):
+        """Archive synced when marker has matching MD5."""
         # Create extracted files on disk
         chart_folder = temp_dir / "TestDrive" / "Setlist"
         chart_folder.mkdir(parents=True)
@@ -217,23 +157,11 @@ class TestIsArchiveSynced:
             extracted_files={"Setlist/song.ini": 6},
         )
 
-        # sync_state has OLD md5 (shouldn't be used since marker exists)
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            path="TestDrive/Setlist/pack.7z",
-            md5="old_md5",
-            archive_size=1000,
-            files={"song.ini": 6}
-        )
-
-        # Query with new_md5 - marker should be found
         is_synced, _ = is_archive_synced(
             folder_name="TestDrive",
             checksum_path="Setlist",
             archive_name="pack.7z",
-            manifest_md5="new_md5",  # Matches marker, not state
-            sync_state=sync_state,
+            manifest_md5="new_md5",
             local_base=temp_dir / "TestDrive",
         )
 
@@ -250,75 +178,85 @@ class TestIsFileSynced:
 
     def test_synced_when_file_exists_with_correct_size(self, temp_dir):
         """File synced when it exists with manifest size."""
-        local_file = temp_dir / "folder" / "song.ini"
+        local_file = temp_dir / "folder" / "notes.mid"
         local_file.parent.mkdir()
-        local_file.write_text("[song]")  # 6 bytes
+        local_file.write_bytes(b"midi data")  # 9 bytes
 
         result = is_file_synced(
-            rel_path="folder/song.ini",
-            manifest_size=6,
-            manifest_md5="abc",
-            sync_state=None,
+            rel_path="folder/notes.mid",
+            manifest_size=9,
             local_path=local_file,
-            folder_name="TestDrive",
         )
 
         assert result is True
 
     def test_not_synced_when_wrong_size(self, temp_dir):
         """File NOT synced when disk size doesn't match expected."""
-        local_file = temp_dir / "folder" / "song.ini"
+        local_file = temp_dir / "folder" / "notes.mid"
         local_file.parent.mkdir()
-        local_file.write_text("old")  # 3 bytes
+        local_file.write_bytes(b"old")  # 3 bytes
 
         result = is_file_synced(
-            rel_path="folder/song.ini",
+            rel_path="folder/notes.mid",
             manifest_size=100,
-            manifest_md5="abc",
-            sync_state=None,
             local_path=local_file,
-            folder_name="TestDrive",
         )
 
         assert result is False
 
     def test_not_synced_when_file_missing(self, temp_dir):
         """File NOT synced when file doesn't exist."""
-        local_file = temp_dir / "folder" / "song.ini"
-        # File doesn't exist
+        local_file = temp_dir / "folder" / "notes.mid"
 
         result = is_file_synced(
-            rel_path="folder/song.ini",
+            rel_path="folder/notes.mid",
             manifest_size=6,
-            manifest_md5="abc",
-            sync_state=None,
             local_path=local_file,
-            folder_name="TestDrive",
         )
 
         assert result is False
 
-    def test_synced_when_state_size_differs_but_md5_same(self, temp_dir):
-        """File synced when state has different size but same MD5 (stale manifest)."""
+    def test_ini_tolerates_size_growth(self, temp_dir):
+        """song.ini synced when larger than manifest (Clone Hero appends leaderboard data)."""
         local_file = temp_dir / "folder" / "song.ini"
         local_file.parent.mkdir()
-        local_file.write_text("actual content")  # 14 bytes
-
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_file("TestDrive/folder/song.ini", size=14, md5="abc123")
+        local_file.write_text("[song]\nscores=999")  # larger than original
 
         result = is_file_synced(
             rel_path="folder/song.ini",
-            manifest_size=10,  # Stale size in manifest
-            manifest_md5="abc123",  # Same MD5
-            sync_state=sync_state,
+            manifest_size=6,  # original was smaller
             local_path=local_file,
-            folder_name="TestDrive",
         )
 
-        # Same MD5 = same content, trust sync_state's size
         assert result is True
+
+    def test_ini_not_synced_when_smaller(self, temp_dir):
+        """song.ini NOT synced if smaller than manifest (corrupted/truncated)."""
+        local_file = temp_dir / "folder" / "song.ini"
+        local_file.parent.mkdir()
+        local_file.write_text("x")  # 1 byte, smaller than expected
+
+        result = is_file_synced(
+            rel_path="folder/song.ini",
+            manifest_size=100,
+            local_path=local_file,
+        )
+
+        assert result is False
+
+    def test_non_ini_not_tolerant_of_size_growth(self, temp_dir):
+        """Non-.ini files must match size exactly."""
+        local_file = temp_dir / "folder" / "notes.mid"
+        local_file.parent.mkdir()
+        local_file.write_bytes(b"midi data plus extra")  # larger than expected
+
+        result = is_file_synced(
+            rel_path="folder/notes.mid",
+            manifest_size=9,
+            local_path=local_file,
+        )
+
+        assert result is False
 
 
 class TestMultipleArchivesSameSetlist:
@@ -354,7 +292,6 @@ class TestMultipleArchivesSameSetlist:
             checksum_path="Setlist",
             archive_name="ChartA.7z",
             manifest_md5="aaa",
-            sync_state=None,
             local_base=temp_dir / "TestDrive",
         )
 
@@ -364,7 +301,6 @@ class TestMultipleArchivesSameSetlist:
             checksum_path="Setlist",
             archive_name="ChartB.7z",
             manifest_md5="bbb",
-            sync_state=None,
             local_base=temp_dir / "TestDrive",
         )
 

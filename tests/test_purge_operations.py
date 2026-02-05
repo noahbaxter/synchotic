@@ -2,7 +2,7 @@
 Tests for purge operations.
 
 Focus: Verify that count_purgeable_detailed() accurately predicts what
-purge_all_folders() will delete. Uses sync_state for tracking files.
+purge_all_folders() will delete.
 """
 
 import tempfile
@@ -17,7 +17,7 @@ from src.sync import (
     clear_cache,
 )
 from src.sync.purge_planner import find_extra_files
-from src.sync.state import SyncState
+from src.core.formatting import normalize_path_key
 
 # Backwards compat alias
 clear_scan_cache = clear_cache
@@ -36,7 +36,7 @@ class TestFindExtraFiles:
 
     def test_tracked_file_not_marked_as_extra(self, temp_dir):
         """
-        Files tracked in sync_state should not be flagged as extra.
+        Files tracked in marker_files should not be flagged as extra.
         """
         folder_name = "TestDrive"
         folder_path = temp_dir / folder_name
@@ -45,12 +45,10 @@ class TestFindExtraFiles:
         # Create file on disk
         (folder_path / "song.zip").write_bytes(b"test content")
 
-        # Track in sync_state
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_file(f"{folder_name}/song.zip", size=12)
-
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+        marker_files = {
+            normalize_path_key("song.zip"),
+        }
+        extras = find_extra_files(folder_name, folder_path, marker_files, set())
         assert len(extras) == 0, f"Tracked file incorrectly marked as extra: {extras}"
 
     def test_actual_extra_files_still_detected(self, temp_dir):
@@ -69,23 +67,21 @@ class TestFindExtraFiles:
         extra.mkdir()
         (extra / "rogue.zip").write_bytes(b"should be detected")
 
-        # Track only expected file
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_file(f"{folder_name}/Expected/song.zip", size=8)
-
-        extras = find_extra_files(folder_name, folder_path, sync_state, set())
+        marker_files = {
+            normalize_path_key("Expected/song.zip"),
+        }
+        extras = find_extra_files(folder_name, folder_path, marker_files, set())
         assert len(extras) == 1
         assert extras[0][0].name == "rogue.zip"
 
 
 class TestManifestProtectsFiles:
     """
-    Integration tests for the bug where files matching manifest but not in
-    sync_state were incorrectly flagged for deletion.
+    Integration tests for the bug where files matching manifest were
+    incorrectly flagged for deletion.
 
     This simulates rclone users who have files that match the manifest
-    but haven't been downloaded by Synchotic (no sync_state entries).
+    but haven't been downloaded by Synchotic.
     """
 
     @pytest.fixture
@@ -97,13 +93,10 @@ class TestManifestProtectsFiles:
     def test_manifest_files_not_flagged_for_deletion_with_empty_sync_state(self, temp_dir):
         """
         Files that match manifest paths should NOT be flagged for purge,
-        even if sync_state exists but is EMPTY.
+        even with no sync_state tracking.
 
-        This is the core bug: sync_state exists (gets created on startup) but has
-        no entries for files downloaded by rclone. The old code only checked
-        sync_state, so all files were flagged as "extra" for deletion.
-
-        This test uses an EMPTY sync_state (not None) to reproduce the actual bug.
+        This is the core bug: files downloaded by rclone match the manifest but
+        were not tracked. The old code flagged all untracked files as "extra".
         """
         folder_path = temp_dir / "TestDrive"
         setlist = folder_path / "Setlist" / "SomeChart"
@@ -125,16 +118,9 @@ class TestManifestProtectsFiles:
             ]
         }]
 
-        # Create EMPTY sync_state (not None) - this is what happens on first run
-        # The bug was: empty sync_state means nothing is tracked, so everything
-        # gets flagged as "extra" even though files match manifest
-        sync_state = SyncState(temp_dir)
-        sync_state.load()  # Empty, no entries
-
-        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None, sync_state=sync_state)
+        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None)
 
         # Files matching manifest should NOT be flagged as extra
-        # OLD BUG: This would be 3 (all files flagged for deletion!)
         assert stats.extra_file_count == 0, \
             f"Manifest-matching files incorrectly flagged as extra: {stats.extra_file_count}"
         assert stats.total_files == 0, \
@@ -163,11 +149,7 @@ class TestManifestProtectsFiles:
             ]
         }]
 
-        # Empty sync_state - simulates first run
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
-        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None, sync_state=sync_state)
+        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None)
 
         # Only the rogue file should be flagged
         # This proves the fix correctly identifies ACTUAL extras, not just "everything"
@@ -197,11 +179,7 @@ class TestManifestProtectsFiles:
             ]
         }]
 
-        # Empty sync_state
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
-        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None, sync_state=sync_state)
+        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None)
 
         # File should match after sanitization
         assert stats.extra_file_count == 0, \
@@ -235,11 +213,7 @@ class TestManifestProtectsFiles:
         mock_settings.get_disabled_subfolders.return_value = {"DisabledSetlist"}
         mock_settings.delete_videos = False
 
-        # Empty sync_state
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
-        stats = count_purgeable_detailed(folders, temp_dir, mock_settings, sync_state=sync_state)
+        stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
 
         # Disabled setlist file should be flagged, enabled should not
         assert stats.chart_count == 1, "Disabled setlist file should be purged"
@@ -247,11 +221,7 @@ class TestManifestProtectsFiles:
 
 
 class TestCountMatchesDeletion:
-    """
-    Tests that count_purgeable_detailed() accurately predicts deletions.
-
-    Uses sync_state for tracking which files are synced.
-    """
+    """Tests that count_purgeable_detailed() accurately predicts deletions."""
 
     @pytest.fixture
     def temp_dir(self):
@@ -281,12 +251,7 @@ class TestCountMatchesDeletion:
             "files": [{"path": "Expected/song.zip", "size": 100, "md5": "abc"}]
         }]
 
-        # Track expected file
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_file("TestDrive/Expected/song.zip", size=100)
-
-        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None, sync_state=sync_state)
+        stats = count_purgeable_detailed(folders, temp_dir, user_settings=None)
 
         assert stats.extra_file_count == 1
         assert stats.extra_file_size == 500  # Actual disk size

@@ -207,10 +207,10 @@ class TestArchiveEdgeCases:
 
 class TestProcessArchiveIntegration:
     """
-    End-to-end integration tests for process_archive → sync_state → scan_local_files.
+    End-to-end integration tests for process_archive → scan_local_files.
 
     This is the critical test that catches cross-platform path bugs:
-    - process_archive() extracts files and stores paths in sync_state
+    - process_archive() extracts files and returns extracted paths
     - scan_local_files() scans the same directory
     - If path formats don't match, purge detection breaks
 
@@ -242,7 +242,6 @@ class TestProcessArchiveIntegration:
         the comparison fails and files get incorrectly flagged for purge.
         """
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         # Set up folder structure simulating a drive
@@ -257,10 +256,6 @@ class TestProcessArchiveIntegration:
             "Chart Folder/Subfolder/extra.txt": "nested file",
         })
 
-        # Set up sync_state
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         # Create downloader and process the archive
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
@@ -273,7 +268,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Setlist/test_chart.zip"
+            task, archive_rel_path="TestDrive/Setlist/test_chart.zip"
         )
 
         assert success, f"process_archive failed: {error}"
@@ -281,32 +276,23 @@ class TestProcessArchiveIntegration:
         # Now scan the same directory with scan_local_files
         local_files = scan_local_files(drive_path)
 
-        # Get paths stored in sync_state (under the drive prefix)
-        all_synced = sync_state.get_all_files()
-        synced_in_setlist = {
-            p.replace("TestDrive/Setlist/", "")
-            for p in all_synced
-            if p.startswith("TestDrive/Setlist/")
-        }
-
-        # THE CRITICAL ASSERTION: paths must match exactly
-        assert synced_in_setlist == set(local_files.keys()), (
-            f"Path mismatch between sync_state and local scan!\n"
-            f"sync_state paths: {sorted(synced_in_setlist)}\n"
+        # THE CRITICAL ASSERTION: paths from extraction must match local scan
+        assert set(extracted_files.keys()) == set(local_files.keys()), (
+            f"Path mismatch between extraction and local scan!\n"
+            f"extracted paths: {sorted(extracted_files.keys())}\n"
             f"local_files paths: {sorted(local_files.keys())}\n"
             f"This indicates a cross-platform path separator bug."
         )
 
         # Verify no backslashes anywhere
-        for path in synced_in_setlist:
-            assert "\\" not in path, f"Backslash in sync_state: {path}"
+        for path in extracted_files.keys():
+            assert "\\" not in path, f"Backslash in extracted files: {path}"
         for path in local_files.keys():
             assert "\\" not in path, f"Backslash in local_files: {path}"
 
     def test_process_archive_with_deep_nesting(self, temp_dir):
         """Test with deeply nested paths - more likely to expose path issues."""
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         drive_path = temp_dir / "TestDrive" / "Deep"
@@ -321,9 +307,6 @@ class TestProcessArchiveIntegration:
             "Level1/root.txt": "root",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="deep",
@@ -334,26 +317,28 @@ class TestProcessArchiveIntegration:
             rel_path="TestDrive/Deep/deep.zip"
         )
 
-        success, error, _ = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Deep/deep.zip"
+        success, error, extracted_files = downloader.process_archive(
+            task, archive_rel_path="TestDrive/Deep/deep.zip"
         )
 
         assert success, f"Deep nesting extraction failed: {error}"
 
         # Compare paths
         local_files = scan_local_files(drive_path)
-        all_synced = sync_state.get_all_files()
-        synced_here = {
-            p.replace("TestDrive/Deep/", "")
-            for p in all_synced
-            if p.startswith("TestDrive/Deep/")
-        }
 
-        assert synced_here == set(local_files.keys()), (
+        # THE CRITICAL ASSERTION: paths from extraction must match local scan
+        assert set(extracted_files.keys()) == set(local_files.keys()), (
             f"Deep nesting path mismatch!\n"
-            f"sync_state: {sorted(synced_here)}\n"
-            f"local: {sorted(local_files.keys())}"
+            f"extracted paths: {sorted(extracted_files.keys())}\n"
+            f"local_files paths: {sorted(local_files.keys())}\n"
+            f"This indicates a cross-platform path separator bug."
         )
+
+        # Verify no backslashes anywhere
+        for path in extracted_files.keys():
+            assert "\\" not in path, f"Backslash in extracted files: {path}"
+        for path in local_files.keys():
+            assert "\\" not in path, f"Backslash in local_files: {path}"
 
     def test_process_archive_nfd_folder_normalized_to_nfc(self, temp_dir):
         """
@@ -365,7 +350,6 @@ class TestProcessArchiveIntegration:
         """
         import unicodedata
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         drive_path = temp_dir / "TestDrive" / "Misc"
@@ -384,9 +368,6 @@ class TestProcessArchiveIntegration:
             f"{nfd_folder}/notes.mid": b"MThd",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="boa",
@@ -398,7 +379,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, _ = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Misc/boa.zip"
+            task, archive_rel_path="TestDrive/Misc/boa.zip"
         )
 
         assert success, f"NFD extraction failed: {error}"
@@ -418,14 +399,6 @@ class TestProcessArchiveIntegration:
                 f"Expected NFC folder '{nfc_folder}', got '{folder_part}' (NFD={nfd_folder})"
             )
 
-        # Verify sync_state also stores NFC paths (not NFD)
-        # This is the critical assertion - scan_extracted_files must normalize to NFC
-        archive_files = sync_state.get_archive_files("TestDrive/Misc/boa.zip")
-        for path in archive_files:
-            assert unicodedata.is_normalized("NFC", path), (
-                f"sync_state has non-NFC path: {path!r}"
-            )
-
 
     def test_process_archive_preserves_internal_folder_structure(self, temp_dir):
         """
@@ -437,7 +410,6 @@ class TestProcessArchiveIntegration:
         No flattening is performed - internal structure is preserved.
         """
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         drive_path = temp_dir / "TestDrive" / "Misc"
@@ -450,9 +422,6 @@ class TestProcessArchiveIntegration:
             "Carol Of The Bells/notes.mid": b"MThd",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="carol",
@@ -464,7 +433,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, extracted = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Misc/Carol of the Bells.zip"
+            task, archive_rel_path="TestDrive/Misc/Carol of the Bells.zip"
         )
 
         assert success, f"Extraction failed: {error}"
@@ -488,7 +457,6 @@ class TestProcessArchiveIntegration:
     def test_process_archive_no_flatten_different_name(self, temp_dir):
         """Archive with folder name NOT matching archive name should NOT flatten."""
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         drive_path = temp_dir / "TestDrive" / "Misc"
@@ -502,9 +470,6 @@ class TestProcessArchiveIntegration:
             "Completely Different Name/notes.mid": b"MThd",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="mychart",
@@ -516,7 +481,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, _ = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Misc/my_chart.zip"
+            task, archive_rel_path="TestDrive/Misc/my_chart.zip"
         )
 
         assert success, f"Extraction failed: {error}"
@@ -532,7 +497,6 @@ class TestProcessArchiveIntegration:
     def test_process_archive_no_flatten_multiple_folders(self, temp_dir):
         """Archive with multiple top-level folders should NOT flatten."""
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         drive_path = temp_dir / "TestDrive" / "Misc"
@@ -545,9 +509,6 @@ class TestProcessArchiveIntegration:
             "Chart Two/song.ini": "[song]\nname=Two",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="multi",
@@ -559,7 +520,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, _ = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Misc/multi_chart.zip"
+            task, archive_rel_path="TestDrive/Misc/multi_chart.zip"
         )
 
         assert success, f"Multi-folder extraction failed: {error}"
@@ -572,7 +533,6 @@ class TestProcessArchiveIntegration:
     def test_process_archive_loose_files_no_folder(self, temp_dir):
         """Archive with loose files (no folder) should extract directly."""
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         drive_path = temp_dir / "TestDrive" / "Misc"
@@ -585,9 +545,6 @@ class TestProcessArchiveIntegration:
             "notes.mid": b"MThd",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="loose",
@@ -599,7 +556,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, _ = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Misc/loose_chart.zip"
+            task, archive_rel_path="TestDrive/Misc/loose_chart.zip"
         )
 
         assert success, f"Loose files extraction failed: {error}"
@@ -620,7 +577,6 @@ class TestProcessArchiveIntegration:
         with an existing album folder.
         """
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         # Structure: TestDrive/Artist/ (archive goes here, NOT in album subfolder)
@@ -637,9 +593,6 @@ class TestProcessArchiveIntegration:
             "One of Us Is the Killer/Song Two/notes.mid": b"MThd",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="album",
@@ -651,7 +604,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, _ = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/The Dillinger Escape Plan/One of Us Is the Killer.zip"
+            task, archive_rel_path="TestDrive/The Dillinger Escape Plan/One of Us Is the Killer.zip"
         )
 
         assert success, f"Extraction failed: {error}"
@@ -682,7 +635,6 @@ class TestProcessArchiveIntegration:
         Flatten to avoid: Artist/Album/Album/[files]
         """
         from src.sync.downloader import FileDownloader, DownloadTask
-        from src.sync.state import SyncState
         from src.sync.cache import scan_local_files
 
         # Structure: TestDrive/Artist/Album/ (archive goes here, IN the album folder)
@@ -697,9 +649,6 @@ class TestProcessArchiveIntegration:
             "Album/notes.mid": b"MThd",
         })
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         downloader = FileDownloader(delete_videos=False)
         task = DownloadTask(
             file_id="redundant",
@@ -711,7 +660,7 @@ class TestProcessArchiveIntegration:
         )
 
         success, error, _ = downloader.process_archive(
-            task, sync_state, archive_rel_path="TestDrive/Artist/Album/Album.zip"
+            task, archive_rel_path="TestDrive/Artist/Album/Album.zip"
         )
 
         assert success, f"Extraction failed: {error}"

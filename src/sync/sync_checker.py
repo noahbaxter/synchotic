@@ -5,11 +5,22 @@ Single source of truth for "is this file/archive synced?"
 Uses marker files as the ONLY authority for archive sync status.
 """
 
+from __future__ import annotations
+
+from dataclasses import dataclass
 from pathlib import Path
 
 from ..core.constants import CHART_ARCHIVE_EXTENSIONS
-from ..core.files import file_exists_with_size
 from .markers import load_marker, verify_marker, find_any_marker_for_path
+
+
+@dataclass
+class FileSpec:
+    """Specification for a file in the manifest."""
+    rel_path: str
+    size: int
+    md5: str
+    is_archive: bool = False
 
 
 def is_archive_file(filename: str) -> bool:
@@ -70,11 +81,20 @@ def is_archive_synced(
 def is_file_synced(
     rel_path: str,
     manifest_size: int,
-    local_path: Path,
+    local_path: Path = None,
 ) -> bool:
     """
     Check if a regular (non-archive) file is synced.
 
     Logic: file exists on disk with expected size from manifest.
+    .ini files get size tolerance since Clone Hero appends leaderboard data.
     """
-    return file_exists_with_size(local_path, manifest_size)
+    if not local_path or not local_path.exists():
+        return False
+    try:
+        actual_size = local_path.stat().st_size
+    except OSError:
+        return False
+    if local_path.suffix.lower() == ".ini":
+        return actual_size >= manifest_size
+    return actual_size == manifest_size

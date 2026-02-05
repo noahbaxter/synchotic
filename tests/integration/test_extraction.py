@@ -1,14 +1,14 @@
 """
-Integration tests for archive extraction and sync_state tracking.
+Integration tests for archive extraction and marker tracking.
 
 THE CRITICAL FLOW:
     1. Download archive to _download_chart.7z
     2. process_archive() extracts it
-    3. sync_state.add_archive() records the extracted files
+    3. save_marker() records the extracted files
     4. plan_downloads() should now skip this archive
     5. get_sync_status() should count it as synced
 
-This tests that extraction ACTUALLY works and sync_state is ACTUALLY updated.
+This tests that extraction ACTUALLY works and markers are ACTUALLY created.
 Uses real (synthetic) archive files, not mocks.
 """
 
@@ -18,11 +18,9 @@ from pathlib import Path
 
 import pytest
 
-from src.sync.state import SyncState
-from src.sync.status import get_sync_status
+from src.sync.markers import load_marker
 from src.sync.download_planner import plan_downloads, DownloadTask
 from src.sync.downloader import FileDownloader
-from src.sync.extractor import extract_archive, scan_extracted_files
 
 
 FIXTURES_DIR = Path(__file__).parent / "fixtures" / "test_archives"
@@ -50,14 +48,21 @@ def get_file_md5(file_path: Path) -> str:
 
 class TestArchiveExtractionTracking:
     """
-    Tests that extraction + sync_state tracking work together correctly.
+    Tests that extraction + marker tracking work together correctly.
 
     This is the critical path where "100% but missing" bugs occur.
     """
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
+            data_dir = Path(tmpdir) / ".dm-sync"
+            markers_dir = data_dir / "markers"
+            markers_dir.mkdir(parents=True)
+            extract_dir = data_dir / "tmp" / "extract"
+            extract_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
+            monkeypatch.setattr("src.sync.downloader.get_extract_tmp_dir", lambda: extract_dir)
             yield Path(tmpdir)
 
     @pytest.fixture
@@ -66,7 +71,7 @@ class TestArchiveExtractionTracking:
 
     def test_flat_archive_extraction_and_tracking(self, temp_dir, downloader):
         """
-        Flat archive extracts correctly and gets tracked in sync_state.
+        Flat archive extracts correctly and gets tracked via marker.
 
         Archive contents:
             song.ini
@@ -87,10 +92,6 @@ class TestArchiveExtractionTracking:
         archive_md5 = get_file_md5(archive_src)
         archive_size = archive_src.stat().st_size
 
-        # Create sync_state
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         # Create download task
         task = DownloadTask(
             file_id="test_file_id",
@@ -103,7 +104,7 @@ class TestArchiveExtractionTracking:
 
         # Process the archive (this is what downloader does after download)
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path=task.rel_path
+            task, archive_rel_path=task.rel_path
         )
 
         # Verify extraction succeeded
@@ -115,16 +116,15 @@ class TestArchiveExtractionTracking:
         assert (chart_folder / "notes.chart").exists(), "notes.chart not extracted"
         assert (chart_folder / "album.png").exists(), "album.png not extracted"
 
-        # Verify sync_state was updated
-        assert sync_state.is_archive_synced(task.rel_path, archive_md5), (
-            "Archive not marked as synced in sync_state"
-        )
+        # Verify marker was created
+        marker = load_marker(task.rel_path, archive_md5)
+        assert marker is not None, "Archive should have a marker after extraction"
 
-        # Verify tracked files
-        all_tracked = sync_state.get_all_files()
-        assert "TestDrive/Setlist/song.ini" in all_tracked
-        assert "TestDrive/Setlist/notes.chart" in all_tracked
-        assert "TestDrive/Setlist/album.png" in all_tracked
+        # Verify marker tracks the extracted files (paths relative to drive folder)
+        marker_files = marker.get("files", {})
+        assert "Setlist/song.ini" in marker_files
+        assert "Setlist/notes.chart" in marker_files
+        assert "Setlist/album.png" in marker_files
 
         # THE CRITICAL CHECK: plan_downloads should now skip this archive
         manifest_files = [
@@ -134,7 +134,6 @@ class TestArchiveExtractionTracking:
             manifest_files,
             temp_dir / "TestDrive",
             delete_videos=True,
-            sync_state=sync_state,
             folder_name="TestDrive"
         )
 
@@ -164,9 +163,6 @@ class TestArchiveExtractionTracking:
         archive_md5 = get_file_md5(archive_src)
         archive_size = archive_src.stat().st_size
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         task = DownloadTask(
             file_id="test_file_id",
             local_path=archive_path,
@@ -177,7 +173,7 @@ class TestArchiveExtractionTracking:
         )
 
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path=task.rel_path
+            task, archive_rel_path=task.rel_path
         )
 
         assert success, f"Extraction failed: {error}"
@@ -188,8 +184,9 @@ class TestArchiveExtractionTracking:
             "song.ini not found in expected location"
         )
 
-        # Verify sync_state tracking
-        assert sync_state.is_archive_synced(task.rel_path, archive_md5)
+        # Verify marker was created
+        marker = load_marker(task.rel_path, archive_md5)
+        assert marker is not None, "Archive should have a marker after extraction"
 
         # Plan should skip it
         manifest_files = [
@@ -199,7 +196,6 @@ class TestArchiveExtractionTracking:
             manifest_files,
             temp_dir / "TestDrive",
             delete_videos=True,
-            sync_state=sync_state,
             folder_name="TestDrive"
         )
 
@@ -233,9 +229,6 @@ class TestArchiveExtractionTracking:
         archive_md5 = get_file_md5(archive_src)
         archive_size = archive_src.stat().st_size
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         task = DownloadTask(
             file_id="test_file_id",
             local_path=archive_path,
@@ -246,7 +239,7 @@ class TestArchiveExtractionTracking:
         )
 
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path=task.rel_path
+            task, archive_rel_path=task.rel_path
         )
 
         assert success, f"Extraction failed: {error}"
@@ -256,11 +249,14 @@ class TestArchiveExtractionTracking:
             "song.ini should be in test_flatten_match/ subfolder"
         )
 
-        # Tracked files should reflect nested paths
-        all_tracked = sync_state.get_all_files()
-        song_ini_path = "TestDrive/Setlist/test_flatten_match/song.ini"
-        assert song_ini_path in all_tracked, (
-            f"Nested path {song_ini_path} not in tracked files: {all_tracked}"
+        # Verify marker tracks nested paths (relative to drive folder)
+        marker = load_marker(task.rel_path, archive_md5)
+        assert marker is not None, "Archive should have a marker after extraction"
+
+        marker_files = marker.get("files", {})
+        song_ini_path = "Setlist/test_flatten_match/song.ini"
+        assert song_ini_path in marker_files, (
+            f"Nested path {song_ini_path} not in marker files: {list(marker_files.keys())}"
         )
 
     def test_video_deleted_during_extraction(self, temp_dir, downloader):
@@ -285,9 +281,6 @@ class TestArchiveExtractionTracking:
         archive_md5 = get_file_md5(archive_src)
         archive_size = archive_src.stat().st_size
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         task = DownloadTask(
             file_id="test_file_id",
             local_path=archive_path,
@@ -298,7 +291,7 @@ class TestArchiveExtractionTracking:
         )
 
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path=task.rel_path
+            task, archive_rel_path=task.rel_path
         )
 
         assert success, f"Extraction failed: {error}"
@@ -310,17 +303,30 @@ class TestArchiveExtractionTracking:
         assert (chart_folder / "song.ini").exists()
         assert (chart_folder / "album.png").exists()
 
-        # Video should NOT be tracked in sync_state
-        all_tracked = sync_state.get_all_files()
-        assert "TestDrive/Setlist/video.mp4" not in all_tracked
+        # Video should NOT be in extracted_files (deleted before scanning)
+        video_paths = [p for p in extracted_files if "video.mp4" in p]
+        assert len(video_paths) == 0, f"Video should not be in extracted files: {video_paths}"
+
+        # Verify marker persists the exclusion (not just the return value)
+        marker = load_marker(task.rel_path, archive_md5)
+        assert marker is not None, "Marker should be saved after extraction"
+        assert not any("video" in f for f in marker.get("files", {})), \
+            "Video should not be in marker files"
 
 
 class TestExtractionEdgeCases:
     """Tests for extraction edge cases that have caused bugs."""
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
+            data_dir = Path(tmpdir) / ".dm-sync"
+            markers_dir = data_dir / "markers"
+            markers_dir.mkdir(parents=True)
+            extract_dir = data_dir / "tmp" / "extract"
+            extract_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
+            monkeypatch.setattr("src.sync.downloader.get_extract_tmp_dir", lambda: extract_dir)
             yield Path(tmpdir)
 
     @pytest.fixture
@@ -341,9 +347,6 @@ class TestExtractionEdgeCases:
         archive_md5 = get_file_md5(archive_src)
         archive_size = archive_src.stat().st_size
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         task = DownloadTask(
             file_id="test_file_id",
             local_path=archive_path,
@@ -354,13 +357,14 @@ class TestExtractionEdgeCases:
         )
 
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path=task.rel_path
+            task, archive_rel_path=task.rel_path
         )
 
         assert success, f"Unicode extraction failed: {error}"
 
-        # Verify tracking works
-        assert sync_state.is_archive_synced(task.rel_path, archive_md5)
+        # Verify marker was created
+        marker = load_marker(task.rel_path, archive_md5)
+        assert marker is not None, "Archive should have a marker after extraction"
 
     def test_deeply_nested_paths(self, temp_dir, downloader):
         """Deeply nested paths should extract and track correctly."""
@@ -376,9 +380,6 @@ class TestExtractionEdgeCases:
         archive_md5 = get_file_md5(archive_src)
         archive_size = archive_src.stat().st_size
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-
         task = DownloadTask(
             file_id="test_file_id",
             local_path=archive_path,
@@ -389,24 +390,36 @@ class TestExtractionEdgeCases:
         )
 
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path=task.rel_path
+            task, archive_rel_path=task.rel_path
         )
 
         assert success, f"Deep nested extraction failed: {error}"
         assert len(extracted_files) > 0
 
-        # Verify all tracked paths use forward slashes (cross-platform consistency)
-        all_tracked = sync_state.get_all_files()
-        for path in all_tracked:
-            assert "\\" not in path, f"Backslash in tracked path: {path}"
+        # Verify all extracted file paths use forward slashes (cross-platform consistency)
+        for path in extracted_files:
+            assert "\\" not in path, f"Backslash in extracted file path: {path}"
+
+        # Verify marker paths also use forward slashes
+        marker = load_marker(task.rel_path, archive_md5)
+        assert marker is not None
+        for path in marker.get("files", {}):
+            assert "\\" not in path, f"Backslash in marker path: {path}"
 
 
 class TestExtractionFailureHandling:
     """Tests for handling extraction failures gracefully."""
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
+            data_dir = Path(tmpdir) / ".dm-sync"
+            markers_dir = data_dir / "markers"
+            markers_dir.mkdir(parents=True)
+            extract_dir = data_dir / "tmp" / "extract"
+            extract_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
+            monkeypatch.setattr("src.sync.downloader.get_extract_tmp_dir", lambda: extract_dir)
             yield Path(tmpdir)
 
     @pytest.fixture
@@ -414,16 +427,13 @@ class TestExtractionFailureHandling:
         return FileDownloader(delete_videos=True)
 
     def test_corrupted_archive_fails_gracefully(self, temp_dir, downloader):
-        """Corrupted archives should fail without crashing or corrupting sync_state."""
+        """Corrupted archives should fail without crashing or creating markers."""
         chart_folder = temp_dir / "TestDrive" / "Setlist"
         chart_folder.mkdir(parents=True)
 
         # Create a "corrupted" archive (just random bytes)
         archive_path = chart_folder / "_download_corrupted.zip"
         archive_path.write_bytes(b"this is not a valid zip file")
-
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
 
         task = DownloadTask(
             file_id="test_file_id",
@@ -435,15 +445,16 @@ class TestExtractionFailureHandling:
         )
 
         success, error, extracted_files = downloader.process_archive(
-            task, sync_state, archive_rel_path=task.rel_path
+            task, archive_rel_path=task.rel_path
         )
 
         # Should fail gracefully
         assert not success, "Corrupted archive should fail extraction"
         assert len(error) > 0, "Should have error message"
 
-        # sync_state should NOT be corrupted
-        assert not sync_state.is_archive_synced(task.rel_path, "fake_md5")
+        # No marker should be created for failed extraction
+        marker = load_marker(task.rel_path, "fake_md5")
+        assert marker is None, "Failed extraction should not create a marker"
 
 
 if __name__ == "__main__":

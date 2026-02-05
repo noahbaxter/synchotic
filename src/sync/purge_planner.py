@@ -91,6 +91,11 @@ def find_extra_files(
 
     extras = []
     for rel_path, size in local_files.items():
+        # Skip partial downloads - handled by find_partial_downloads()
+        filename = rel_path.split("/")[-1] if "/" in rel_path else rel_path
+        if filename.startswith("_download_"):
+            continue
+
         # Markers store paths relative to drive folder (no drive prefix)
         marker_path = normalize_path_key(rel_path)
         # Manifest paths include drive prefix

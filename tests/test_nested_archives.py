@@ -19,7 +19,7 @@ from unittest.mock import Mock
 import pytest
 
 from src.sync.status import get_sync_status, get_setlist_sync_status
-from src.sync.state import SyncState
+from src.sync.markers import save_marker, get_markers_dir
 from src.stats import ManifestOverrides, SetlistOverride, FolderOverride
 from src.stats.local import LocalStatsScanner
 
@@ -28,8 +28,11 @@ class TestNestedArchiveCounts:
     """Tests for nested archive chart count adjustment."""
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
+            markers_dir = Path(tmpdir) / ".dm-sync" / "markers"
+            markers_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
             yield Path(tmpdir)
 
     def _create_chart_folder(self, path: Path):
@@ -51,7 +54,7 @@ class TestNestedArchiveCounts:
             "subfolders": []
         }
 
-        status = get_sync_status([folder], temp_dir, None, None)
+        status = get_sync_status([folder], temp_dir, None)
         assert status.total_charts == 1  # Manifest: 1 archive = 1 chart
 
     def test_chart_count_reflects_manifest_files_not_overrides(self, temp_dir):
@@ -60,13 +63,10 @@ class TestNestedArchiveCounts:
         In simplified architecture, overrides are for display hints only.
         Sync status reports manifest entries, not inflated chart counts.
         """
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            "GameRips/PackA/pack.7z",
+        save_marker(
+            archive_path="GameRips/PackA/pack.7z",
             md5="abc123",
-            archive_size=1000000,
-            files={"dummy.txt": 1}
+            extracted_files={"PackA/dummy.txt": 1},
         )
 
         (temp_dir / "GameRips" / "PackA").mkdir(parents=True)
@@ -99,7 +99,7 @@ class TestNestedArchiveCounts:
         try:
             stats_module.get_overrides = lambda _path=None: mock_overrides
 
-            status = get_sync_status([folder], temp_dir, None, sync_state)
+            status = get_sync_status([folder], temp_dir, None)
 
             # Now we report manifest file count, not override
             assert status.total_charts == 1
@@ -133,24 +133,21 @@ class TestNestedArchiveCounts:
             ]
         }
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
         extracted_files = {}
         for i in range(5):
             # Sizes must match actual files: "[song]\nname=Test" = 16 bytes, "MThd" = 4 bytes
-            extracted_files[f"Song {i}/song.ini"] = 16
-            extracted_files[f"Song {i}/notes.mid"] = 4
-        sync_state.add_archive(
-            "GameRips/PackA/pack.7z",
+            extracted_files[f"PackA/Song {i}/song.ini"] = 16
+            extracted_files[f"PackA/Song {i}/notes.mid"] = 4
+        save_marker(
+            archive_path="GameRips/PackA/pack.7z",
             md5="abc123",
-            archive_size=1000000,
-            files=extracted_files
+            extracted_files=extracted_files,
         )
 
         from src.stats.local import clear_local_stats_cache
         clear_local_stats_cache()
 
-        status = get_sync_status([folder], temp_dir, None, sync_state)
+        status = get_sync_status([folder], temp_dir, None)
 
         # Now we report manifest file count (1 archive), not local chart count (5)
         assert status.total_charts == 1
@@ -158,13 +155,10 @@ class TestNestedArchiveCounts:
 
     def test_disabled_setlist_excluded_from_adjustment(self, temp_dir):
         """Disabled setlists shouldn't be counted even with override."""
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            "GameRips/PackA/pack.7z",
+        save_marker(
+            archive_path="GameRips/PackA/pack.7z",
             md5="abc123",
-            archive_size=1000000,
-            files={"dummy.txt": 1}
+            extracted_files={"PackA/dummy.txt": 1},
         )
 
         (temp_dir / "GameRips" / "PackA").mkdir(parents=True)
@@ -190,7 +184,7 @@ class TestNestedArchiveCounts:
         mock_settings.get_disabled_subfolders.return_value = {"PackA"}
         mock_settings.is_subfolder_enabled.return_value = False
 
-        status = get_sync_status([folder], temp_dir, mock_settings, sync_state)
+        status = get_sync_status([folder], temp_dir, mock_settings)
 
         assert status.total_charts == 0
         assert status.synced_charts == 0
@@ -206,20 +200,16 @@ class TestNestedArchiveCounts:
         for i in range(3):
             (temp_dir / "TestDrive" / "RegularSetlist" / f"song{i}.txt").write_text("x")
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            "TestDrive/NestedSetlist/big_archive.7z",
+        save_marker(
+            archive_path="TestDrive/NestedSetlist/big_archive.7z",
             md5="nested_md5",
-            archive_size=5000,
-            files={"dummy.txt": 1}
+            extracted_files={"NestedSetlist/dummy.txt": 1},
         )
         for i in range(3):
-            sync_state.add_archive(
-                f"TestDrive/RegularSetlist/song{i}.7z",
+            save_marker(
+                archive_path=f"TestDrive/RegularSetlist/song{i}.7z",
                 md5=f"md5_{i}",
-                archive_size=1000,
-                files={f"song{i}.txt": 1}
+                extracted_files={f"RegularSetlist/song{i}.txt": 1},
             )
 
         folder = {
@@ -250,7 +240,7 @@ class TestNestedArchiveCounts:
         try:
             stats_module.get_overrides = lambda _path=None: mock_overrides
 
-            status = get_sync_status([folder], temp_dir, None, sync_state)
+            status = get_sync_status([folder], temp_dir, None)
 
             # Total: 1 + 3 = 4 manifest entries (not inflated by overrides)
             assert status.total_charts == 4
@@ -427,8 +417,11 @@ class TestLocalScanPriority:
     """Tests for local scan taking priority over everything."""
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
+            markers_dir = Path(tmpdir) / ".dm-sync" / "markers"
+            markers_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
             yield Path(tmpdir)
 
     def _create_chart_folder(self, path: Path):
@@ -461,11 +454,15 @@ class TestLocalScanPriority:
             ]
         }
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
+        extracted_files = {}
         for i in range(3):
-            sync_state.add_file(f"GameRips/PackA/Song {i}/song.ini", size=20)
-            sync_state.add_file(f"GameRips/PackA/Song {i}/notes.mid", size=4)
+            extracted_files[f"PackA/Song {i}/song.ini"] = 16
+            extracted_files[f"PackA/Song {i}/notes.mid"] = 4
+        save_marker(
+            archive_path="GameRips/PackA/pack.7z",
+            md5="abc123",
+            extracted_files=extracted_files,
+        )
 
         # Override says 50
         mock_overrides = ManifestOverrides()
@@ -483,7 +480,7 @@ class TestLocalScanPriority:
         try:
             stats_module.get_overrides = lambda _path=None: mock_overrides
 
-            status = get_sync_status([folder], temp_dir, None, sync_state)
+            status = get_sync_status([folder], temp_dir, None)
 
             # Manifest has 1 file, so total_charts = 1 (not 3 from local, not 50 from override)
             assert status.total_charts == 1
@@ -495,8 +492,11 @@ class TestGetSetlistSyncStatus:
     """Tests for get_setlist_sync_status guard conditions and edge cases."""
 
     @pytest.fixture
-    def temp_dir(self):
+    def temp_dir(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
+            markers_dir = Path(tmpdir) / ".dm-sync" / "markers"
+            markers_dir.mkdir(parents=True)
+            monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
             yield Path(tmpdir)
 
     def test_partial_sync_reports_manifest_counts(self, temp_dir):
@@ -505,14 +505,11 @@ class TestGetSetlistSyncStatus:
         (temp_dir / "GameRips" / "PackA").mkdir(parents=True)
         (temp_dir / "GameRips" / "PackA" / "dummy.txt").write_text("x")
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
         # Only sync ONE of the two archives
-        sync_state.add_archive(
-            "GameRips/PackA/pack1.7z",
+        save_marker(
+            archive_path="GameRips/PackA/pack1.7z",
             md5="abc123",
-            archive_size=500000,
-            files={"dummy.txt": 1}
+            extracted_files={"PackA/dummy.txt": 1},
         )
 
         folder = {
@@ -550,7 +547,6 @@ class TestGetSetlistSyncStatus:
                 folder=folder,
                 setlist_name="PackA",
                 base_path=temp_dir,
-                sync_state=sync_state,
             )
 
             # Total = 2 manifest entries (not 100 from override)
@@ -565,13 +561,10 @@ class TestGetSetlistSyncStatus:
         (temp_dir / "CustomDrive" / "MySetlist").mkdir(parents=True)
         (temp_dir / "CustomDrive" / "MySetlist" / "dummy.txt").write_text("x")
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            "CustomDrive/MySetlist/pack.7z",
+        save_marker(
+            archive_path="CustomDrive/MySetlist/pack.7z",
             md5="abc123",
-            archive_size=1000000,
-            files={"dummy.txt": 1}
+            extracted_files={"MySetlist/dummy.txt": 1},
         )
 
         folder = {
@@ -609,7 +602,6 @@ class TestGetSetlistSyncStatus:
                 folder=folder,
                 setlist_name="MySetlist",
                 base_path=temp_dir,
-                sync_state=sync_state,
             )
 
             # Should use manifest file count (1), NOT override (50)
@@ -624,13 +616,10 @@ class TestGetSetlistSyncStatus:
         (temp_dir / "SimpleDrive" / "Setlist").mkdir(parents=True)
         (temp_dir / "SimpleDrive" / "Setlist" / "dummy.txt").write_text("x")
 
-        sync_state = SyncState(temp_dir)
-        sync_state.load()
-        sync_state.add_archive(
-            "SimpleDrive/Setlist/pack.7z",
+        save_marker(
+            archive_path="SimpleDrive/Setlist/pack.7z",
             md5="abc123",
-            archive_size=1000000,
-            files={"dummy.txt": 1}
+            extracted_files={"Setlist/dummy.txt": 1},
         )
 
         folder = {
@@ -661,7 +650,6 @@ class TestGetSetlistSyncStatus:
                 folder=folder,
                 setlist_name="Setlist",
                 base_path=temp_dir,
-                sync_state=sync_state,
             )
 
             # Should use manifest file count (1), NOT override (100)

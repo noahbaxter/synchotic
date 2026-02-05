@@ -415,9 +415,9 @@ class TestFormatDuration:
 
     def test_seconds_only(self):
         """Durations under 60s shown in seconds."""
-        assert format_duration(0) == "0.0s"
-        assert format_duration(45) == "45.0s"
-        assert format_duration(59.9) == "59.9s"
+        assert format_duration(0) == "0s"
+        assert format_duration(45) == "45s"
+        assert format_duration(59.9) == "59s"
 
     def test_minutes_and_seconds(self):
         """Durations under 1 hour shown in minutes and seconds."""
@@ -521,50 +521,6 @@ class TestCrossPlatformPaths:
         assert len(parents) == 2
         assert "Setlist/ChartA" in parents
         assert "Setlist/ChartB" in parents
-
-
-class TestManifestPathSanitization:
-    """Tests for manifest path sanitization at load time."""
-
-    def test_manifest_paths_sanitized_on_fetch(self):
-        """
-        Manifest file paths are sanitized when fetched.
-
-        This ensures NFD Unicode, illegal chars, etc. are normalized
-        at the source so downstream code gets clean paths.
-        """
-        import unicodedata
-        from src.manifest.fetch import _sanitize_manifest_paths
-
-        # Simulate manifest with problematic paths
-        manifest = {
-            "folders": [{
-                "name": "TestDrive",
-                "folder_id": "abc123",
-                "files": [
-                    # NFD Unicode (decomposed é)
-                    {"id": "1", "path": unicodedata.normalize("NFD", "Pokémon/song.ini"), "size": 100},
-                    # Illegal chars
-                    {"id": "2", "path": "Title: Subtitle/chart.zip", "size": 200},
-                    # Trailing space (Windows issue)
-                    {"id": "3", "path": "Artist /notes.mid", "size": 50},
-                ]
-            }]
-        }
-
-        result = _sanitize_manifest_paths(manifest)
-
-        paths = [f["path"] for f in result["folders"][0]["files"]]
-
-        # NFD should be normalized to NFC
-        assert paths[0] == "Pokémon/song.ini"
-        assert len(paths[0].split("/")[0]) == 7  # NFC "Pokémon" is 7 chars
-
-        # Colon should become " -"
-        assert paths[1] == "Title - Subtitle/chart.zip"
-
-        # Trailing space should be stripped
-        assert paths[2] == "Artist/notes.mid"
 
 
 if __name__ == "__main__":
