@@ -256,7 +256,7 @@ def format_home_item(
         "cached" - dimmed (STALE), no add deltas
         "scanning" - enabled count highlighted cyan, rest normal
     """
-    show_add_delta = (state == "current")
+    show_add_delta = state in ("current", "scanning")
     missing_size = max(0, total_size - synced_size)
 
     # Build raw column values

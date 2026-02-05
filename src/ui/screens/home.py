@@ -29,6 +29,7 @@ class MainMenuCache:
     """Cache for expensive main menu calculations."""
     subtitle: str = ""
     sync_action_desc: str = ""
+    sync_delta: str = ""  # delta string for sync label (e.g. "[-9.2 GB]")
     folder_stats: dict = field(default_factory=dict)  # folder_id -> columns string
     folder_deltas: dict = field(default_factory=dict)  # folder_id -> delta string
     folder_states: dict = field(default_factory=dict)  # folder_id -> state string
@@ -136,11 +137,7 @@ def update_menu_cache_on_toggle(
             )
             menu_cache.group_enabled_counts[group_name] = enabled_count
 
-    # Only update global totals if ALL folders are scanned
-    if not scan_complete:
-        return
-
-    # Reaggregate global stats from all cached folder stats
+    # Reaggregate global stats from persistent cache (works during scanning)
     global_status = SyncStatus()
     global_purge_count = 0
     global_purge_charts = 0
@@ -150,21 +147,32 @@ def update_menu_cache_on_toggle(
 
     for folder in folders:
         fid = folder.get("folder_id", "")
-        folder_cached = folder_stats_cache.get(fid)
-        if not folder_cached:
+
+        # Get setlist names for this folder
+        setlist_names = background_scanner.get_discovered_setlist_names(fid) if background_scanner else None
+        if not setlist_names:
+            setlists = extract_subfolders_from_files(folder)
+            setlist_names = list(setlists) if setlists else []
+        is_custom = folder.get("is_custom", False)
+        if is_custom and not setlist_names:
+            setlist_names = [folder.get("name", "")]
+
+        if not setlist_names or not persistent_cache.has_setlist_stats(fid):
             continue
+
+        agg = aggregate_folder_stats(fid, setlist_names, user_settings, persistent_cache)
 
         is_enabled = user_settings.is_drive_enabled(fid)
         if is_enabled:
-            global_status.total_charts += folder_cached.sync_status.total_charts
-            global_status.synced_charts += folder_cached.sync_status.synced_charts
-            global_status.total_size += folder_cached.sync_status.total_size
-            global_status.synced_size += folder_cached.sync_status.synced_size
-            global_total_setlists += folder_cached.total_setlists
-            global_enabled_setlists += folder_cached.enabled_setlists
-        global_purge_count += folder_cached.purge_count
-        global_purge_charts += folder_cached.purge_charts
-        global_purge_size += folder_cached.purge_size
+            global_status.total_charts += agg.total_charts
+            global_status.synced_charts += agg.synced_charts
+            global_status.total_size += agg.total_size
+            global_status.synced_size += agg.synced_size
+            global_total_setlists += agg.total_setlists
+            global_enabled_setlists += agg.enabled_setlists
+        global_purge_count += agg.purgeable_files
+        global_purge_charts += agg.purgeable_charts
+        global_purge_size += agg.purgeable_size
 
     menu_cache.subtitle = format_status_line(
         synced_charts=global_status.synced_charts,
@@ -180,7 +188,7 @@ def update_menu_cache_on_toggle(
         delta_mode=delta_mode,
     )
 
-    menu_cache.sync_action_desc = format_delta(
+    menu_cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
         add_files=global_status.missing_charts,
         add_charts=global_status.missing_charts,
@@ -188,8 +196,11 @@ def update_menu_cache_on_toggle(
         remove_files=global_purge_count,
         remove_charts=global_purge_charts,
         mode=delta_mode,
-        empty_text="Everything in sync",
     )
+    if scan_complete:
+        menu_cache.sync_action_desc = menu_cache.sync_delta or "Everything in sync"
+    else:
+        menu_cache.sync_action_desc = "Scanning..."
 
 
 def _get_display_state(
@@ -460,39 +471,34 @@ def compute_main_menu_cache(
 
     delta_mode = user_settings.delta_mode if user_settings else "size"
 
-    # Check if scanning is complete - only show deltas when all drives are scanned
-    # (partial data gives misleading totals like "+149GB" when only 1 drive scanned)
-    scan_complete = not background_scanner or background_scanner.is_done()
-
     # Build status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB) [+50 charts / -80 charts]
-    # Hide delta while scanning - the numbers are incomplete/misleading
     cache.subtitle = format_status_line(
         synced_charts=global_status.synced_charts,
         total_charts=global_status.total_charts,
         enabled_setlists=global_enabled_setlists,
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
-        synced_size=global_status.synced_size if scan_complete else 0,
-        missing_charts=global_status.missing_charts if scan_complete else 0,
-        purgeable_files=global_purge_count if scan_complete else 0,
-        purgeable_charts=global_purge_charts if scan_complete else 0,
-        purgeable_size=global_purge_size if scan_complete else 0,
+        synced_size=global_status.synced_size,
+        missing_charts=global_status.missing_charts,
+        purgeable_files=global_purge_count,
+        purgeable_charts=global_purge_charts,
+        purgeable_size=global_purge_size,
         delta_mode=delta_mode,
     )
 
-    # Build sync action description: [+2.6 MB / -317.3 MB] or [+50 files / -80 files]
-    # Hide delta while scanning - show neutral text instead
+    # Build sync delta (shown in label) and description (right-aligned)
+    scan_complete = not background_scanner or background_scanner.is_done()
+    cache.sync_delta = format_delta(
+        add_size=global_status.missing_size,
+        add_files=global_status.missing_charts,
+        add_charts=global_status.missing_charts,
+        remove_size=global_purge_size,
+        remove_files=global_purge_count,
+        remove_charts=global_purge_charts,
+        mode=delta_mode,
+    )
     if scan_complete:
-        cache.sync_action_desc = format_delta(
-            add_size=global_status.missing_size,
-            add_files=global_status.missing_charts,
-            add_charts=global_status.missing_charts,
-            remove_size=global_purge_size,
-            remove_files=global_purge_count,
-            remove_charts=global_purge_charts,
-            mode=delta_mode,
-            empty_text="Everything in sync",
-        )
+        cache.sync_action_desc = cache.sync_delta or "Everything in sync"
     else:
         cache.sync_action_desc = "Scanning..."
 
@@ -557,6 +563,16 @@ class HomeScreen:
             self._cache,
             self.auth,
         )
+
+
+def _build_sync_label(cache: MainMenuCache) -> str:
+    """Build sync menu item label with optional delta during scanning."""
+    if cache.sync_action_desc == "Everything in sync":
+        return f"{Colors.GREEN}✓\x1b[39m Sync"
+    # Show delta in label only while scanning (when done, delta is in the description)
+    if cache.sync_action_desc == "Scanning..." and cache.sync_delta:
+        return f" Sync {cache.sync_delta}"
+    return " Sync"
 
 
 def show_main_menu(
@@ -636,6 +652,7 @@ def show_main_menu(
         )
         cache.subtitle = new_cache.subtitle
         cache.sync_action_desc = new_cache.sync_action_desc
+        cache.sync_delta = new_cache.sync_delta
         cache.folder_stats = new_cache.folder_stats
         cache.folder_deltas = new_cache.folder_deltas
         cache.folder_checkmarks = new_cache.folder_checkmarks
@@ -654,8 +671,8 @@ def show_main_menu(
 
         menu_instance.subtitle = cache.subtitle
         menu_instance.update_item_description(("sync", None), cache.sync_action_desc)
-        new_sync_label = f"{Colors.GREEN}✓\x1b[39m Sync" if cache.sync_action_desc == "Everything in sync" else " Sync"
-        menu_instance.update_item_label(("sync", None), new_sync_label)
+        sync_label = _build_sync_label(cache)
+        menu_instance.update_item_label(("sync", None), sync_label)
 
         return True  # Re-render with updated values
 
@@ -767,7 +784,7 @@ def show_main_menu(
             add_folder_item(folder)
 
     menu.add_item(MenuDivider())
-    sync_label = f"{Colors.GREEN}✓\x1b[39m Sync" if cache.sync_action_desc == "Everything in sync" else " Sync"
+    sync_label = _build_sync_label(cache)
     menu.add_item(MenuItem(sync_label, hotkey="S", value=("sync", None), description=cache.sync_action_desc))
 
     menu.add_item(MenuDivider())
