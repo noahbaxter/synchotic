@@ -194,7 +194,7 @@ def show_subfolder_settings(
                 if setlist_enabled and not is_fully_synced:
                     missing_charts = setlist_total_charts - synced_charts
 
-            columns, delta = format_setlist_item(
+            columns, delta, show_checkmark = format_setlist_item(
                 total_charts=setlist_total_charts,
                 synced_charts=synced_charts,
                 total_size=setlist_total_size,
@@ -208,16 +208,18 @@ def show_subfolder_settings(
                 state=setlist_state,
             )
 
-            # Build label with italic for scanning, delta appended
+            # Build label with checkmark, italic for scanning, delta appended
             is_scanning = (setlist_state == "scanning")
             is_disabled_item = not setlist_enabled or not drive_enabled
+            check = f"{Colors.GREEN}✓\x1b[39m" if show_checkmark else " "
+
             if is_scanning:
                 if is_disabled_item:
-                    label = f"{Colors.ITALIC}{Colors.DIM}{setlist_name}{Colors.RESET}"
+                    label = f"{check} {Colors.ITALIC}{Colors.DIM}{setlist_name}{Colors.RESET}"
                 else:
-                    label = f"{Colors.ITALIC}{setlist_name}{Colors.RESET}"
+                    label = f"{check} {Colors.ITALIC}{setlist_name}{Colors.RESET}"
             else:
-                label = setlist_name
+                label = f"{check} {setlist_name}"
             if delta:
                 label = f"{label} {delta}"
 

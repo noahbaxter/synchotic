@@ -32,6 +32,7 @@ class MainMenuCache:
     folder_stats: dict = field(default_factory=dict)  # folder_id -> columns string
     folder_deltas: dict = field(default_factory=dict)  # folder_id -> delta string
     folder_states: dict = field(default_factory=dict)  # folder_id -> state string
+    folder_checkmarks: dict = field(default_factory=dict)  # folder_id -> bool (show green ✓)
     folder_scan_progress: dict = field(default_factory=dict)  # folder_id -> (scanned, total) or None
     group_enabled_counts: dict = field(default_factory=dict)
 
@@ -76,7 +77,7 @@ def update_menu_cache_on_toggle(
             if has_cache and setlist_names:
                 # Re-aggregate from setlist stats (instant!)
                 agg = aggregate_folder_stats(folder_id, setlist_names, user_settings, persistent_cache)
-                columns, delta = format_home_item(
+                columns, delta, show_checkmark = format_home_item(
                     enabled_setlists=agg.enabled_setlists,
                     total_setlists=agg.total_setlists,
                     total_size=agg.total_size,
@@ -108,7 +109,7 @@ def update_menu_cache_on_toggle(
                 ))
             else:
                 # No cache - show minimal info
-                columns, delta = format_home_item(
+                columns, delta, show_checkmark = format_home_item(
                     enabled_setlists=0,
                     total_setlists=len(setlist_names) if setlist_names else 0,
                     total_size=0,
@@ -120,6 +121,7 @@ def update_menu_cache_on_toggle(
                 )
             menu_cache.folder_stats[folder_id] = columns
             menu_cache.folder_deltas[folder_id] = delta
+            menu_cache.folder_checkmarks[folder_id] = show_checkmark
             menu_cache.folder_states[folder_id] = state
             menu_cache.folder_scan_progress[folder_id] = scan_progress
             break
@@ -278,7 +280,7 @@ def _compute_folder_stats(
     else:
         # No cache available - show scanning state
         scan_progress = scanner.get_scan_progress(folder_id) if scanner else None
-        columns, _delta = format_home_item(
+        columns, _delta, _checkmark = format_home_item(
             enabled_setlists=0,
             total_setlists=len(setlist_names) if setlist_names else 0,
             total_size=0,
@@ -303,7 +305,7 @@ def _compute_folder_stats(
 
     # Build display string with state styling
     scan_progress = scanner.get_scan_progress(folder_id) if scanner and state == "scanning" else None
-    columns, _delta = format_home_item(
+    columns, _delta, _checkmark = format_home_item(
         enabled_setlists=enabled_setlists,
         total_setlists=total_setlists,
         total_size=status.total_size,
@@ -418,7 +420,7 @@ def compute_main_menu_cache(
         # Always regenerate display string with current enabled state
         is_still_scanning = background_scanner and background_scanner.is_scanning(folder_id)
         scan_progress = background_scanner.get_scan_progress(folder_id) if is_still_scanning else None
-        columns, delta = format_home_item(
+        columns, delta, show_checkmark = format_home_item(
             enabled_setlists=enabled_setlists,
             total_setlists=total_setlists,
             total_size=status.total_size,
@@ -452,6 +454,7 @@ def compute_main_menu_cache(
 
         cache.folder_stats[folder_id] = columns
         cache.folder_deltas[folder_id] = delta
+        cache.folder_checkmarks[folder_id] = show_checkmark
         cache.folder_states[folder_id] = state
         cache.folder_scan_progress[folder_id] = scan_progress
 
@@ -635,6 +638,7 @@ def show_main_menu(
         cache.sync_action_desc = new_cache.sync_action_desc
         cache.folder_stats = new_cache.folder_stats
         cache.folder_deltas = new_cache.folder_deltas
+        cache.folder_checkmarks = new_cache.folder_checkmarks
         cache.folder_states = new_cache.folder_states
         cache.folder_scan_progress = new_cache.folder_scan_progress
         cache.group_enabled_counts = new_cache.group_enabled_counts
@@ -676,22 +680,25 @@ def show_main_menu(
     hotkey_num = 1
 
     def _build_folder_label(name: str, folder_id: str, indent: bool) -> str:
-        """Build label with italic for scanning state, scan progress, and delta."""
+        """Build label with checkmark, italic for scanning, scan progress, and delta."""
         state = cache.folder_states.get(folder_id, "current")
         delta = cache.folder_deltas.get(folder_id, "")
+        show_checkmark = cache.folder_checkmarks.get(folder_id, False)
         scan_progress = cache.folder_scan_progress.get(folder_id)
         is_scanning = (state == "scanning")
         disabled = not (user_settings.is_drive_enabled(folder_id) if user_settings else True)
 
         prefix = "  " if indent else ""
 
+        check = f"{Colors.GREEN}✓\x1b[39m" if show_checkmark else " "
+
         if is_scanning:
             if disabled:
-                label = f"{prefix}{Colors.ITALIC}{Colors.DIM}{name}{Colors.RESET}"
+                label = f"{prefix}{check} {Colors.ITALIC}{Colors.DIM}{name}{Colors.RESET}"
             else:
-                label = f"{prefix}{Colors.ITALIC}{name}{Colors.RESET}"
+                label = f"{prefix}{check} {Colors.ITALIC}{name}{Colors.RESET}"
         else:
-            label = f"{prefix}{name}"
+            label = f"{prefix}{check} {name}"
 
         # Show scan progress (X/Y) while drive still has unscanned setlists
         if scan_progress:

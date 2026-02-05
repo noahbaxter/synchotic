@@ -172,9 +172,9 @@ def format_column_header(screen: str) -> str:
     """
     p = f"{Colors.MUTED}|{Colors.RESET}"
     if screen == "setlist":
-        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'songs':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}  {p}"
+        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}  {p}"
     # home
-    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}  {p}"
+    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>8}{Colors.RESET}  {p}"
 
 
 def _compute_delta(
@@ -277,20 +277,16 @@ def format_home_item(
 
     size_str = format_size(total_size) if total_size > 0 else ""
 
-    # Green checkmark for confirmed 100% sync
+    # Checkmark for label prefix (confirmed 100% sync)
     show_checkmark = is_synced and state == "current" and total_setlists > 0 and not is_estimate
 
     # Determine colors and build columns
-    if state == "scanning" or show_checkmark:
-        # Explicit per-value coloring (can't rely on menu's MUTED wrap)
+    if state == "scanning":
+        # Explicit per-value coloring for cyan count highlight
         base = Colors.MUTED_DIM if disabled else Colors.MUTED
 
-        # Sync: green checkmark or base
-        if show_checkmark:
-            sync = f"{Colors.GREEN}✓{Colors.RESET}"
-
         # Count: highlight enabled count during scanning
-        if state == "scanning" and count and "/" in count:
+        if count and "/" in count:
             hl = Colors.CYAN_DIM if disabled else Colors.CYAN
             enabled_str, rest = count.split("/", 1)
             count = f"{hl}{enabled_str}{Colors.RESET}{base}/{rest}{Colors.RESET}"
@@ -314,7 +310,7 @@ def format_home_item(
         show_add=show_add_delta,
     )
 
-    return columns, delta
+    return columns, delta, show_checkmark
 
 
 def format_setlist_item(
@@ -350,25 +346,14 @@ def format_setlist_item(
     count = str(total_charts) if total_charts > 0 else ""
     size_str = format_size(total_size) if total_size > 0 else ""
 
-    # Green checkmark for confirmed 100% sync
+    # Checkmark for label prefix (confirmed 100% sync)
     show_checkmark = is_synced and state == "current"
 
-    # Determine colors and build columns
-    if show_checkmark:
-        base = Colors.MUTED_DIM if disabled else Colors.MUTED
-        sync = f"{Colors.GREEN}✓{Colors.RESET}"
-        columns = _format_columns_explicit(sync, count, size_str, base)
-    elif state == "scanning":
-        if disabled:
-            value_color = Colors.CYAN_DIM
-            pipe_color = Colors.MUTED_DIM
-        else:
-            value_color = Colors.CYAN
-            pipe_color = Colors.MUTED
-        columns = _format_columns(sync, count, size_str, pipe_color, value_color)
-    elif state == "cached":
+    # Determine colors and build columns (normal colors for all states including scanning)
+    if state == "cached":
         columns = _format_columns(sync, count, size_str, Colors.STALE, Colors.STALE)
     else:
+        # "current" or "scanning" - no color codes, menu applies MUTED/MUTED_DIM
         columns = _format_columns(sync, count, size_str, "", "")
 
     # Build delta string
@@ -384,7 +369,7 @@ def format_setlist_item(
         show_add=show_add,
     )
 
-    return columns, delta
+    return columns, delta, show_checkmark
 
 
 def format_drive_status(
