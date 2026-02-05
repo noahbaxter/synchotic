@@ -209,6 +209,7 @@ def purge_all_folders(
     total_deleted = 0
     total_failed = 0
     total_size = 0
+    purged_folder_ids: set[str] = set()
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
@@ -231,6 +232,8 @@ def purge_all_folders(
                 total_deleted += deleted
                 total_failed += failed
                 total_size += folder_size
+                if deleted > 0:
+                    purged_folder_ids.add(folder_id)
                 display.purge_removed(deleted, failed)
             continue
 
@@ -249,6 +252,8 @@ def purge_all_folders(
         total_deleted += deleted
         total_failed += failed
         total_size += folder_size
+        if deleted > 0:
+            purged_folder_ids.add(folder_id)
         display.purge_removed(deleted, failed)
 
     partial_files = find_partial_downloads(base_path)
@@ -270,7 +275,9 @@ def purge_all_folders(
 
     clear_cache()
 
-    # Invalidate persistent stats cache - disk state changed
-    get_persistent_stats_cache().invalidate_all()
+    # Invalidate persistent stats cache only for folders that changed
+    persistent_cache = get_persistent_stats_cache()
+    for folder_id in purged_folder_ids:
+        persistent_cache.invalidate(folder_id)
 
-    wait_with_skip(5, "Continuing in 5s (press any key to skip)")
+    return purged_folder_ids

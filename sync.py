@@ -239,9 +239,10 @@ class SyncApp:
         )
 
         if stats.total_files > 0:
-            purge_all_folders(self.folders, get_download_path(), self.user_settings, failed_setlists)
+            purged_ids = purge_all_folders(self.folders, get_download_path(), self.user_settings, failed_setlists)
             clear_scan_cache()  # Invalidate filesystem cache after purge
-            self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
+            for fid in purged_ids:
+                self.folder_stats_cache.invalidate(fid)
 
         # Always wait before returning to menu
         from src.ui.primitives import wait_with_skip
