@@ -145,20 +145,22 @@ def folder_status_synced(file_count: int, filtered_count: int = 0):
         parts.append(f"{_c.DIM}{filtered_count} filtered{_c.RESET}")
     print(f"  {', '.join(parts)} • {_c.GREEN}✓ synced{_c.RESET}")
 
-def folder_status_downloading(to_download: int, total_size: int, skipped: int = 0, filtered_count: int = 0):
-    parts = [f"{to_download} files ({format_size(total_size)})"]
-    if skipped > 0:
-        parts.append(f"{skipped} synced")
-    if filtered_count > 0:
-        parts.append(f"{_c.DIM}{filtered_count} filtered{_c.RESET}")
-    print(f"  {', '.join(parts)}")
+def folder_synced_inline(header: str, file_count: int, width: int = 50):
+    name = f"{_c.GREEN}✓{_c.RESET} {header} • {file_count} files"
+    # Strip ANSI to measure visible length for padding
+    from ..components import strip_ansi
+    visible = f"━━━ {strip_ansi(name)} "
+    pad = max(5, width - len(visible))
+    print(f"━━━ {name} {'━' * pad}")
 
 
 # === Download messages ===
 
-def download_starting(file_count: int, chart_count: int, max_workers: int):
-    print(f"  Downloading {file_count} files across {chart_count} charts...")
-    print(f"  (max {max_workers} concurrent downloads, press ESC to cancel)")
+def download_starting(file_count: int, chart_count: int, total_size: int, skipped: int = 0):
+    line = f"  Downloading {chart_count} chart{'s' if chart_count != 1 else ''} ({file_count} files, {format_size(total_size)})"
+    if skipped > 0:
+        line += f" • {skipped} synced"
+    print(line)
     print()
 
 def download_cancelled(downloaded: int, complete_charts: int, cleaned: int = 0):

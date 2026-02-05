@@ -616,8 +616,6 @@ class SyncApp:
                 else:
                     display_name = setlist.drive_name
 
-                print(f"\n━━━ [{completed_count}/{total_setlists}] {display_name} ━━━")
-
                 # Filter drive files to just this setlist
                 all_files = drive.get("files", [])
                 if setlist.name != setlist.drive_name:
@@ -626,7 +624,6 @@ class SyncApp:
                     setlist_files = list(all_files)
 
                 total_size = sum(f.get("size", 0) for f in setlist_files)
-                print(f"  Ready: {len(setlist_files)} files ({format_size(total_size)})")
 
                 # Build temp folder dict with just this setlist's files
                 temp_folder = {
@@ -636,9 +633,11 @@ class SyncApp:
                     "total_size": total_size,
                 }
 
+                setlist_header = f"[{completed_count}/{total_setlists}] {display_name}"
                 scan_getter = lambda: scanner.get_stats()
                 downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
-                    temp_folder, get_download_path(), [], scan_stats_getter=scan_getter
+                    temp_folder, get_download_path(), [],
+                    scan_stats_getter=scan_getter, header=setlist_header,
                 )
 
                 total_downloaded += downloaded

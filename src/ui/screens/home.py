@@ -577,12 +577,12 @@ class HomeScreen:
 
 def _build_sync_label(cache: MainMenuCache) -> str:
     """Build sync menu item label with optional delta during scanning."""
-    if cache.sync_action_desc == "Everything in sync":
+    if cache.sync_checkmark:
         return f"{Colors.GREEN}✓\x1b[39m Sync"
     # Show delta in label only while scanning (when done, delta is in the description)
     if cache.sync_action_desc == "Scanning..." and cache.sync_delta:
-        return f" Sync {cache.sync_delta}"
-    return " Sync"
+        return f"  Sync {cache.sync_delta}"
+    return "  Sync"
 
 
 def show_main_menu(
@@ -718,7 +718,7 @@ def show_main_menu(
         is_scanning = (state == "scanning")
         disabled = not (user_settings.is_drive_enabled(folder_id) if user_settings else True)
 
-        prefix = "  " if indent else ""
+        prefix = "   " if indent else " "
 
         check = f"{Colors.GREEN}✓\x1b[39m" if show_checkmark else " "
 
@@ -799,17 +799,17 @@ def show_main_menu(
     menu.add_item(MenuItem(sync_label, hotkey="S", value=("sync", None), description=cache.sync_action_desc))
 
     menu.add_item(MenuDivider())
-    menu.add_item(MenuItem(" Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
+    menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
 
     if auth and auth.is_signed_in:
         email = auth.user_email
-        label = f" Sign out ({email})" if email else " Sign out of Google"
+        label = f"  Sign out ({email})" if email else "  Sign out of Google"
         menu.add_item(MenuItem(label, hotkey="G", value=("signout", None), description="Remove saved Google credentials"))
     else:
-        menu.add_item(MenuItem(" Sign in to Google", hotkey="G", value=("signin", None), description="Faster downloads with your own quota"))
+        menu.add_item(MenuItem("  Sign in to Google", hotkey="G", value=("signin", None), description="Faster downloads with your own quota"))
 
     menu.add_item(MenuDivider())
-    menu.add_item(MenuItem(" Quit", hotkey="ESC", value=("quit", None)))
+    menu.add_item(MenuItem("  Quit", hotkey="ESC", value=("quit", None)))
 
     result = menu.run(initial_index=selected_index)
     if result is None:

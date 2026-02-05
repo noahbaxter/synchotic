@@ -576,6 +576,7 @@ class FileDownloader:
         drive_name: str = "",
         cancel_check: Optional[Callable[[], bool]] = None,
         scan_stats_getter: Optional[Callable] = None,
+        skipped: int = 0,
     ) -> Tuple[int, int, int, List[str], bool, int]:
         """Download multiple files concurrently using asyncio.
 
@@ -599,7 +600,7 @@ class FileDownloader:
             progress.set_aggregate_totals(len(tasks), total_bytes, drive_name)
             if scan_stats_getter:
                 progress.set_scan_stats_getter(scan_stats_getter)
-            display.download_starting(len(tasks), progress.total_charts, self.max_workers)
+            display.download_starting(len(tasks), progress.total_charts, total_bytes, skipped)
 
         original_handler = None
 

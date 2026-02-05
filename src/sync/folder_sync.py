@@ -41,9 +41,14 @@ class FolderSync:
         disabled_prefixes: list[str] = None,
         cancel_check: Optional[Callable[[], bool]] = None,
         scan_stats_getter: Optional[Callable] = None,
+        header: str = None,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
+
+        Args:
+            header: If provided, handles section header display. Synced folders
+                    get a compact one-liner; downloads get a full ━━━ header.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -88,20 +93,25 @@ class FolderSync:
             print_long_path_warning(len(long_paths))
 
         if not tasks and not skipped:
+            if header:
+                print_section_header(header)
             display.folder_status_empty(filtered_count)
             return 0, 0, 0, [], False, 0
 
         if not tasks:
-            display.folder_status_synced(skipped, filtered_count)
+            if header:
+                display.folder_synced_inline(header, skipped)
+            else:
+                display.folder_status_synced(skipped, filtered_count)
             return 0, skipped, 0, [], False, 0
 
-        total_size = sum(t.size for t in tasks)
-        display.folder_status_downloading(len(tasks), total_size, skipped, filtered_count)
+        if header:
+            print_section_header(header)
 
         download_start = time.time()
         downloaded, _, errors, rate_limited, cancelled, bytes_downloaded = self.downloader.download_many(
             tasks, drive_name=folder["name"], cancel_check=cancel_check,
-            scan_stats_getter=scan_stats_getter
+            scan_stats_getter=scan_stats_getter, skipped=skipped,
         )
         download_time = time.time() - download_start
 
@@ -141,14 +151,13 @@ class FolderSync:
         total_folders = len(indices)
         for i, idx in enumerate(indices, 1):
             folder = folders[idx]
-            header = f"[{i}/{total_folders}] {folder['name']}" if total_folders > 1 else folder['name']
-            print_section_header(header)
+            folder_header = f"[{i}/{total_folders}] {folder['name']}" if total_folders > 1 else folder['name']
 
             folder_id = folder.get("folder_id", "")
             disabled_prefixes = disabled_prefixes_map.get(folder_id, [])
 
             downloaded, skipped, errors, rate_limited_ids, cancelled, bytes_down = self.sync_folder(
-                folder, download_path, disabled_prefixes
+                folder, download_path, disabled_prefixes, header=folder_header,
             )
 
             total_downloaded += downloaded
