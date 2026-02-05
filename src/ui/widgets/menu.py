@@ -325,22 +325,36 @@ class Menu:
             label_visible_len = len(strip_ansi(label_text))
 
             # Build left side (selector + toggle + hotkey + label)
+            # Items with hotkeys: [key] shifted so key middle aligns with ▼
+            if item.hotkey:
+                key_offset = (len(item.hotkey) - 1) // 2
+                unsel_w = max(0, 1 - key_offset)
+                sel_pfx = f"{Colors.PINK}▸{Colors.RESET}"
+                unsel_pfx = " " * unsel_w
+                pfx_width = 1 if selected else unsel_w
+                hotkey_pad = " " * max(0, 5 - pfx_width - len(item.hotkey) - 2)
+            else:
+                sel_pfx = f"{Colors.PINK}▸{Colors.RESET} "
+                unsel_pfx = "  "
+                pfx_width = 2
+                hotkey_pad = ""
+
             if is_disabled:
                 if selected:
-                    hotkey = f"{Colors.DIM_HOVER}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
-                    left = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{Colors.DIM_HOVER}{label_text}{Colors.RESET}"
+                    hotkey = f"{Colors.DIM_HOVER}[{item.hotkey}]{Colors.RESET}{hotkey_pad}" if item.hotkey else ""
+                    left = f"{sel_pfx}{toggle_prefix}{hotkey}{Colors.DIM_HOVER}{label_text}{Colors.RESET}"
                 else:
-                    hotkey = f"{Colors.DIM}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
-                    left = f"  {toggle_prefix}{hotkey}{Colors.DIM}{label_text}{Colors.RESET}"
+                    hotkey = f"{Colors.DIM}[{item.hotkey}]{Colors.RESET}{hotkey_pad}" if item.hotkey else ""
+                    left = f"{unsel_pfx}{toggle_prefix}{hotkey}{Colors.DIM}{label_text}{Colors.RESET}"
             else:
-                hotkey = f"{Colors.HOTKEY}[{item.hotkey}]{Colors.RESET} " if item.hotkey else ""
+                hotkey = f"{Colors.HOTKEY}[{item.hotkey}]{Colors.RESET}{hotkey_pad}" if item.hotkey else ""
                 if selected:
-                    left = f"{Colors.PINK}▸{Colors.RESET} {toggle_prefix}{hotkey}{Colors.BOLD}{label_text}{Colors.RESET}"
+                    left = f"{sel_pfx}{toggle_prefix}{hotkey}{Colors.BOLD}{label_text}{Colors.RESET}"
                 else:
-                    left = f"  {toggle_prefix}{hotkey}{label_text}"
+                    left = f"{unsel_pfx}{toggle_prefix}{hotkey}{label_text}"
 
-            hotkey_len = len(item.hotkey) + 3 if item.hotkey else 0
-            left_visible = 2 + toggle_len + hotkey_len + label_visible_len
+            hotkey_len = (len(item.hotkey) + 2 + len(hotkey_pad)) if item.hotkey else 0
+            left_visible = pfx_width + toggle_len + hotkey_len + label_visible_len
 
             # Build right side (description, right-aligned)
             right = ""
