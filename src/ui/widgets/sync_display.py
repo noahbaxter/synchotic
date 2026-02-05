@@ -171,17 +171,20 @@ def download_cancelled(downloaded: int, complete_charts: int, cleaned: int = 0):
 
 # === Folder completion summary ===
 
-def folder_complete(downloaded: int, bytes_downloaded: int, duration: float, errors: int = 0):
+def folder_complete(downloaded: int, bytes_downloaded: int, duration: float, errors: int = 0, width: int = 50):
+    from ..components import strip_ansi
     avg_speed = bytes_downloaded / duration if duration > 0 else 0
-    summary = f"  {_c.GREEN}✓{_c.RESET} {downloaded} files"
+    content = f"{_c.GREEN}✓{_c.RESET} {downloaded} files"
     if bytes_downloaded > 0:
-        summary += f" ({format_size(bytes_downloaded)})"
-    summary += f" in {format_duration(duration)}"
+        content += f" ({format_size(bytes_downloaded)})"
+    content += f" in {format_duration(duration)}"
     if avg_speed > 0:
-        summary += f" • {format_speed(avg_speed)}"
+        content += f" • {format_speed(avg_speed)}"
     if errors > 0:
-        summary += f" • {_c.RED}{errors} errors{_c.RESET}"
-    print(summary)
+        content += f" • {_c.RED}{errors} errors{_c.RESET}"
+    visible = f"━━━ {strip_ansi(content)} "
+    pad = max(5, width - len(visible))
+    print(f"━━━ {content} {'━' * pad}")
 
 
 # === Multi-folder completion summary ===
