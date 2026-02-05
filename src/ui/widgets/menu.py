@@ -17,6 +17,8 @@ from ..primitives import (
     getch_with_timeout,
     cbreak_noecho,
     Colors,
+    cycle_theme,
+    THEME_SWITCHER_ENABLED,
     KEY_UP,
     KEY_DOWN,
     KEY_LEFT,
@@ -445,6 +447,8 @@ class Menu:
             hint = f"  {Colors.MUTED}↑/↓ Navigate  {Colors.HOTKEY}Enter{Colors.MUTED} Select"
             if self.space_hint:
                 hint += f"  {Colors.HOTKEY}Space{Colors.MUTED} {self.space_hint}"
+            if THEME_SWITCHER_ENABLED:
+                hint += f"  {Colors.HOTKEY}C{Colors.MUTED} Theme"
             hint += f"  {Colors.HOTKEY}Esc{Colors.MUTED} {self.esc_label}{Colors.RESET}"
             print(hint)
 
@@ -603,6 +607,11 @@ class Menu:
                     current_item = self.items[self._selected]
                     if isinstance(current_item, MenuGroupHeader):
                         return MenuResult(current_item, "enter")
+
+                elif THEME_SWITCHER_ENABLED and isinstance(key, str) and len(key) == 1 and key.upper() == 'C':
+                    cycle_theme()
+                    invalidate_header_cache()
+                    self._render()
 
                 elif isinstance(key, str) and len(key) == 1:
                     upper = key.upper()

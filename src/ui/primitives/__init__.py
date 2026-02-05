@@ -48,6 +48,9 @@ from .colors import (
     lerp_color,
     GRADIENT_COLORS,
     get_gradient_color,
+    get_theme_name,
+    cycle_theme,
+    THEME_SWITCHER_ENABLED,
 )
 
 __all__ = [
@@ -93,4 +96,6 @@ __all__ = [
     "lerp_color",
     "GRADIENT_COLORS",
     "get_gradient_color",
+    "get_theme_name",
+    "cycle_theme",
 ]
