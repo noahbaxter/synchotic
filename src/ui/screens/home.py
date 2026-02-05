@@ -654,6 +654,8 @@ def show_main_menu(
 
         menu_instance.subtitle = cache.subtitle
         menu_instance.update_item_description(("sync", None), cache.sync_action_desc)
+        new_sync_label = f"{Colors.GREEN}✓\x1b[39m Sync" if cache.sync_action_desc == "Everything in sync" else " Sync"
+        menu_instance.update_item_label(("sync", None), new_sync_label)
 
         return True  # Re-render with updated values
 
@@ -765,20 +767,21 @@ def show_main_menu(
             add_folder_item(folder)
 
     menu.add_item(MenuDivider())
-    menu.add_item(MenuItem("Sync", hotkey="S", value=("sync", None), description=cache.sync_action_desc))
+    sync_label = f"{Colors.GREEN}✓\x1b[39m Sync" if cache.sync_action_desc == "Everything in sync" else " Sync"
+    menu.add_item(MenuItem(sync_label, hotkey="S", value=("sync", None), description=cache.sync_action_desc))
 
     menu.add_item(MenuDivider())
-    menu.add_item(MenuItem("Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
+    menu.add_item(MenuItem(" Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
 
     if auth and auth.is_signed_in:
         email = auth.user_email
-        label = f"Sign out ({email})" if email else "Sign out of Google"
+        label = f" Sign out ({email})" if email else " Sign out of Google"
         menu.add_item(MenuItem(label, hotkey="G", value=("signout", None), description="Remove saved Google credentials"))
     else:
-        menu.add_item(MenuItem("Sign in to Google", hotkey="G", value=("signin", None), description="Faster downloads with your own quota"))
+        menu.add_item(MenuItem(" Sign in to Google", hotkey="G", value=("signin", None), description="Faster downloads with your own quota"))
 
     menu.add_item(MenuDivider())
-    menu.add_item(MenuItem("Quit", value=("quit", None)))
+    menu.add_item(MenuItem(" Quit", hotkey="ESC", value=("quit", None)))
 
     result = menu.run(initial_index=selected_index)
     if result is None:
