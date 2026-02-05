@@ -202,10 +202,10 @@ def update_menu_cache_on_toggle(
     )
     enabled_complete = scan_complete or (background_scanner and background_scanner.is_all_enabled_scanned())
     menu_cache.sync_checkmark = enabled_complete and global_status.missing_size <= 0
-    if enabled_complete:
-        menu_cache.sync_action_desc = menu_cache.sync_delta or "Everything in sync"
+    if menu_cache.sync_checkmark:
+        menu_cache.sync_action_desc = "Everything in sync"
     else:
-        menu_cache.sync_action_desc = "Scanning..."
+        menu_cache.sync_action_desc = ""
 
 
 def _get_display_state(
@@ -507,10 +507,10 @@ def compute_main_menu_cache(
     )
     # Show checkmark as soon as all enabled setlists are verified synced
     cache.sync_checkmark = enabled_complete and global_status.missing_size <= 0
-    if enabled_complete:
-        cache.sync_action_desc = cache.sync_delta or "Everything in sync"
+    if cache.sync_checkmark:
+        cache.sync_action_desc = "Everything in sync"
     else:
-        cache.sync_action_desc = "Scanning..."
+        cache.sync_action_desc = ""
 
     if drives_config:
         for group_name in drives_config.get_groups():
@@ -576,11 +576,9 @@ class HomeScreen:
 
 
 def _build_sync_label(cache: MainMenuCache) -> str:
-    """Build sync menu item label with optional delta during scanning."""
     if cache.sync_checkmark:
         return f"{Colors.GREEN}✓\x1b[39m Sync"
-    # Show delta in label only while scanning (when done, delta is in the description)
-    if cache.sync_action_desc == "Scanning..." and cache.sync_delta:
+    if cache.sync_delta:
         return f"  Sync {cache.sync_delta}"
     return "  Sync"
 
