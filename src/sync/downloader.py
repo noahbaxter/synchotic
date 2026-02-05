@@ -374,7 +374,7 @@ class FileDownloader:
                                 pass
 
             # Step 5: Create marker file for this extraction
-            # Markers track extracted files independently of sync_state
+            # Create marker tracking extracted files for this archive
             if archive_rel_path:
                 # Convert extracted_files paths to include parent folder context
                 # extracted_files has paths like "ChartFolder/song.ini"

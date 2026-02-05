@@ -96,6 +96,7 @@ class BackgroundScanner:
         self._enabled_setlist_ids: set[str] = set()
         self._scanned_setlist_ids: set[str] = set()
         self._failed_setlist_ids: set[str] = set()  # Setlists that threw during scan
+        self._last_check_count: int = 0
 
         # Per-drive tracking
         self._drive_setlist_ids: dict[str, list[str]] = {}  # drive_id -> [setlist_ids]
@@ -195,8 +196,6 @@ class BackgroundScanner:
         """Check if any setlists were scanned since last check. Used for UI refresh."""
         with self._lock:
             current_count = len(self._scanned_setlist_ids)
-            if not hasattr(self, '_last_check_count'):
-                self._last_check_count = 0
             changed = current_count > self._last_check_count
             self._last_check_count = current_count
             return changed
@@ -507,8 +506,6 @@ class BackgroundScanner:
         display_name = f"{setlist.drive_name}/{setlist.name}" if setlist.name != setlist.drive_name else setlist.drive_name
 
         scan_start = time.time()
-        api_calls_before = self._client.api_calls
-
         with self._lock:
             self._stats.current_folder = display_name
             self._stats.current_folder_start = scan_start
@@ -566,8 +563,8 @@ class BackgroundScanner:
                 )
                 persistent_cache = get_persistent_stats_cache()
                 persistent_cache.set_setlist(setlist.drive_id, setlist.name, stats)
-            except Exception:
-                pass  # Don't fail scan on stats computation error
+            except Exception as e:
+                debug_log(f"STATS_FAIL | {display_name} | {e}")
 
         # Check if drive is now fully scanned
         if self.is_scanned(setlist.drive_id):
