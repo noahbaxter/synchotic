@@ -252,6 +252,21 @@ class BackgroundScanner:
                     names.add(info.name)
             return names
 
+    def get_scanned_enabled_setlists(self) -> list[SetlistInfo]:
+        """Get all enabled setlists that have finished scanning."""
+        with self._lock:
+            done = self._scanned_setlist_ids | self._failed_setlist_ids
+            return [
+                self._all_setlists[sid]
+                for sid in self._enabled_setlist_ids
+                if sid in done and sid in self._all_setlists
+            ]
+
+    def get_enabled_setlist_count(self) -> int:
+        """Get total number of enabled setlists across all drives."""
+        with self._lock:
+            return len(self._enabled_setlist_ids)
+
     def has_scan_failures(self) -> bool:
         """Check if any setlists failed to scan."""
         with self._lock:

@@ -181,10 +181,11 @@ class SyncApp:
         print(f"    [init] markers: none (will be created during sync)")
 
     def handle_sync(self):
-        """Sync all enabled folders: wait for scan → download per folder, then purge extras.
+        """Sync enabled setlists as they become ready, then purge extras.
 
-        Background scanner runs in parallel. For each folder, we wait for its scan
-        to complete, then download it. This way scanning and downloading overlap.
+        Downloads at setlist granularity — as soon as any setlist finishes scanning,
+        its files are downloaded immediately. Only waits when no setlists are ready.
+        Purge runs after all downloading is complete.
         """
         indices = list(range(len(self.folders)))
 
@@ -207,11 +208,8 @@ class SyncApp:
         if not self._background_scanner:
             self._start_background_scan()
 
-        # Get disabled subfolders for filtering
-        disabled_map = self._get_disabled_subfolders_for_folders(enabled_indices)
-
-        # Scan and download each folder sequentially
-        was_cancelled = self._sync_folders_sequentially(enabled_indices, disabled_map)
+        # Download setlists as they become ready from scanner
+        was_cancelled = self._sync_folders_sequentially()
 
         clear_scan_cache()  # Invalidate filesystem cache after download
         self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
@@ -570,12 +568,13 @@ class SyncApp:
                 return folder
         return None
 
-    def _sync_folders_sequentially(self, enabled_indices: list, disabled_map: dict) -> bool:
+    def _sync_folders_sequentially(self) -> bool:
         """
-        Download folders as they become ready from background scanner.
+        Download setlists as they become ready from background scanner.
 
-        Downloads whichever folder is ready first, not in fixed order.
-        Background scanner runs in parallel, so we grab ready folders ASAP.
+        Works at setlist granularity, not drive level. As soon as any enabled
+        setlist finishes scanning, its files are downloaded immediately.
+        Only waits when no setlists are ready and scanning is still in progress.
 
         Returns True if cancelled.
         """
@@ -583,93 +582,115 @@ class SyncApp:
         from src.core.formatting import format_duration
         from src.ui.primitives import getch_with_timeout, KEY_ESC, cbreak_noecho
 
-        total_folders = len(enabled_indices)
+        scanner = self._background_scanner
+        total_setlists = scanner.get_enabled_setlist_count()
+
+        if total_setlists == 0:
+            display.sync_already_synced()
+            return False
+
+        downloaded_ids: set[str] = set()
+        completed_count = 0
         total_downloaded = 0
         total_bytes = 0
         was_cancelled = False
         start_time = _time.time()
 
-        # Track which folders still need to be downloaded
-        pending = set(enabled_indices)
-        completed_count = 0
-
-        def is_folder_ready(idx: int) -> bool:
-            """Check if folder is ready for download."""
-            folder = self.folders[idx]
-            folder_id = folder.get("folder_id", "")
-            # Use scanner's is_ready_for_sync (enabled setlists done = can download)
-            if self._background_scanner:
-                return self._background_scanner.is_ready_for_sync(folder_id)
-            # Fallback for manifest-loaded folders
-            return folder.get("files") is not None
-
-        while pending and not was_cancelled:
-            # Find any folder that's ready
-            ready_idx = None
-            for idx in pending:
-                if is_folder_ready(idx):
-                    ready_idx = idx
+        while not was_cancelled:
+            # Find next scanned setlist we haven't downloaded yet
+            ready = scanner.get_scanned_enabled_setlists()
+            next_setlist = None
+            for s in ready:
+                if s.setlist_id not in downloaded_ids:
+                    next_setlist = s
                     break
 
-            if ready_idx is not None:
-                # Found a ready folder - download it
-                folder = self.folders[ready_idx]
-                folder_id = folder.get("folder_id")
-                folder_name = folder.get("name")
+            if next_setlist is not None:
                 completed_count += 1
+                setlist = next_setlist
+                drive = setlist.drive
 
-                # Header for this folder
-                print(f"\n━━━ [{completed_count}/{total_folders}] {folder_name} ━━━")
-
-                # Show scan stats
-                scan_duration = folder.get("scan_duration", 0)
-                scan_api_calls = folder.get("scan_api_calls", 0)
-                if scan_duration > 0:
-                    print(f"  Scanned: {len(folder['files'])} files ({format_size(folder.get('total_size', 0))}) in {format_duration(scan_duration)} ({scan_api_calls} API calls)")
+                # Display name: "Drive/Setlist" for subfolders, just "Drive" for flat
+                if setlist.name != setlist.drive_name:
+                    display_name = f"{setlist.drive_name}/{setlist.name}"
                 else:
-                    print(f"  Ready: {len(folder['files'])} files ({format_size(folder.get('total_size', 0))})")
+                    display_name = setlist.drive_name
 
-                # Download this folder (pass scan stats getter for progress display)
-                disabled_prefixes = disabled_map.get(folder_id, [])
-                scan_getter = lambda: self._background_scanner.get_stats() if self._background_scanner else None
+                print(f"\n━━━ [{completed_count}/{total_setlists}] {display_name} ━━━")
+
+                # Filter drive files to just this setlist
+                all_files = drive.get("files", [])
+                if setlist.name != setlist.drive_name:
+                    setlist_files = [f for f in all_files if f["path"].startswith(setlist.name + "/")]
+                else:
+                    setlist_files = list(all_files)
+
+                total_size = sum(f.get("size", 0) for f in setlist_files)
+                print(f"  Ready: {len(setlist_files)} files ({format_size(total_size)})")
+
+                # Build temp folder dict with just this setlist's files
+                temp_folder = {
+                    "name": drive.get("name", ""),
+                    "folder_id": drive.get("folder_id", ""),
+                    "files": setlist_files,
+                    "total_size": total_size,
+                }
+
+                scan_getter = lambda: scanner.get_stats()
                 downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
-                    folder, get_download_path(), disabled_prefixes, scan_stats_getter=scan_getter
+                    temp_folder, get_download_path(), [], scan_stats_getter=scan_getter
                 )
 
                 total_downloaded += downloaded
                 total_bytes += bytes_down
-                pending.remove(ready_idx)
+                downloaded_ids.add(setlist.setlist_id)
 
                 if cancelled:
                     was_cancelled = True
             else:
-                # No folder ready yet - wait for scanner
-                print(f"\r  Waiting for scan... (ESC to cancel)", end="", flush=True)
+                # Nothing ready — are we done?
+                if len(downloaded_ids) >= total_setlists or scanner.is_done():
+                    break
+
+                # Wait for scanner (ephemeral status line, erased when a setlist becomes ready)
+                CLEAR_LINE = "\033[2K\r"
+                # Clear current line (scanning status), move up, clear that line (blank line)
+                ERASE_WAIT = "\033[2K\033[A\033[2K\r"
+                try:
+                    term_width = os.get_terminal_size().columns
+                except OSError:
+                    term_width = 80
+
+                def show_wait(msg: str):
+                    truncated = msg[:term_width - 1]
+                    print(f"{CLEAR_LINE}{truncated}", end="", flush=True)
+
+                print()  # blank line before scanning status
+                show_wait("  Scanning... (ESC to cancel)")
 
                 with cbreak_noecho():
                     while True:
-                        # Check for ESC key
                         key = getch_with_timeout(200)
                         if key == KEY_ESC:
-                            print("\n  Cancelled.")
+                            print(f"{ERASE_WAIT}{CLEAR_LINE}  Cancelled.")
                             was_cancelled = True
                             break
 
-                        # Check if any folder became ready
-                        any_ready = any(is_folder_ready(idx) for idx in pending)
-                        if any_ready:
-                            print()  # Clear the waiting line
+                        # Check if any setlist became ready
+                        ready = scanner.get_scanned_enabled_setlists()
+                        if any(s.setlist_id not in downloaded_ids for s in ready):
+                            # Erase status line + blank line above it
+                            print(f"{ERASE_WAIT}", end="", flush=True)
                             break
 
                         # Show scanner progress
-                        if self._background_scanner:
-                            stats = self._background_scanner.get_stats()
-                            if stats.current_folder:
-                                elapsed_str = format_duration(stats.current_folder_elapsed)
-                                print(f"\r  Waiting for scan... ({stats.current_folder}: {elapsed_str}, {stats.api_calls} API calls)  ", end="", flush=True)
+                        stats = scanner.get_stats()
+                        if stats.current_folder:
+                            elapsed_str = format_duration(stats.current_folder_elapsed)
+                            show_wait(f"  Scanning {stats.current_folder}... ({elapsed_str}, {stats.api_calls} API calls)")
 
         # Final summary
-        elapsed = __import__('time').time() - start_time
+        elapsed = _time.time() - start_time
         print()
         print("━" * 50)
 
@@ -776,22 +797,6 @@ class SyncApp:
             ))
 
         return combined
-
-    def _get_disabled_subfolders_for_folders(self, indices: list) -> dict[str, list[str]]:
-        """
-        Get disabled subfolder names for the selected folders.
-
-        Returns dict mapping folder_id to list of disabled subfolder names.
-        """
-        result = {}
-        for idx in indices:
-            folder = self.folders[idx]
-            folder_id = folder.get("folder_id", "")
-            disabled = self.user_settings.get_disabled_subfolders(folder_id)
-            if disabled:
-                result[folder_id] = list(disabled)
-
-        return result
 
     def run(self):
         """Main application loop."""
