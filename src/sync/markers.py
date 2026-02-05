@@ -143,6 +143,19 @@ def verify_marker(marker: dict, base_path: Path) -> bool:
     return True
 
 
+def _find_markers_by_prefix(archive_path: str) -> list[Path]:
+    """Find all marker files matching an archive path prefix (any MD5)."""
+    markers_dir = get_markers_dir()
+    if not markers_dir.exists():
+        return []
+
+    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
+    return [
+        f for f in markers_dir.glob("*.json")
+        if normalize_path_key(f.stem).startswith(safe_name + "_")
+    ]
+
+
 def find_any_marker_for_path(archive_path: str) -> Optional[dict]:
     """
     Find ANY marker for an archive path, regardless of MD5.
@@ -155,19 +168,12 @@ def find_any_marker_for_path(archive_path: str) -> Optional[dict]:
     Returns:
         First matching marker dict, or None if no markers exist
     """
-    markers_dir = get_markers_dir()
-    if not markers_dir.exists():
-        return None
-
-    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
-
-    for marker_file in markers_dir.glob("*.json"):
-        if normalize_path_key(marker_file.stem).startswith(safe_name + "_"):
-            try:
-                with open(marker_file) as f:
-                    return json.load(f)
-            except (json.JSONDecodeError, IOError):
-                continue
+    for marker_file in _find_markers_by_prefix(archive_path):
+        try:
+            with open(marker_file) as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError):
+            continue
 
     return None
 
@@ -248,23 +254,13 @@ def get_files_for_archive(archive_path: str) -> dict[str, int]:
         Dict of {file_path: size} from all markers for this archive
     """
     files = {}
-    markers_dir = get_markers_dir()
-
-    if not markers_dir.exists():
-        return files
-
-    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
-
-    for marker_file in markers_dir.glob("*.json"):
-        # Normalize for case-insensitive comparison (handles old mixed-case markers)
-        if normalize_path_key(marker_file.stem).startswith(safe_name + "_"):
-            try:
-                with open(marker_file) as f:
-                    marker = json.load(f)
-                files.update(marker.get("files", {}))
-            except (json.JSONDecodeError, IOError):
-                pass
-
+    for marker_file in _find_markers_by_prefix(archive_path):
+        try:
+            with open(marker_file) as f:
+                marker = json.load(f)
+            files.update(marker.get("files", {}))
+        except (json.JSONDecodeError, IOError):
+            pass
     return files
 
 
@@ -278,23 +274,12 @@ def delete_markers_for_archive(archive_path: str) -> int:
         Number of markers deleted
     """
     deleted = 0
-    markers_dir = get_markers_dir()
-
-    if not markers_dir.exists():
-        return deleted
-
-    # Marker files are named: {safe_archive_path}_{md5[:8]}.json
-    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
-
-    for marker_file in markers_dir.glob("*.json"):
-        # Normalize for case-insensitive comparison (handles old mixed-case markers)
-        if normalize_path_key(marker_file.stem).startswith(safe_name + "_"):
-            try:
-                marker_file.unlink()
-                deleted += 1
-            except OSError:
-                pass
-
+    for marker_file in _find_markers_by_prefix(archive_path):
+        try:
+            marker_file.unlink()
+            deleted += 1
+        except OSError:
+            pass
     return deleted
 
 
