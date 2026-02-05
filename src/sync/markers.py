@@ -130,7 +130,12 @@ def verify_marker(marker: dict, base_path: Path) -> bool:
         if not full_path.exists():
             return False
         try:
-            if full_path.stat().st_size != expected_size:
+            actual_size = full_path.stat().st_size
+            is_ini = full_path.suffix.lower() == ".ini"
+            # .ini files: Clone Hero appends leaderboard data, so just check >= original
+            if is_ini and actual_size < expected_size:
+                return False
+            if not is_ini and actual_size != expected_size:
                 return False
         except OSError:
             return False
