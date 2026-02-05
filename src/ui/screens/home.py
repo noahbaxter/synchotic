@@ -32,6 +32,7 @@ class MainMenuCache:
     folder_stats: dict = field(default_factory=dict)  # folder_id -> columns string
     folder_deltas: dict = field(default_factory=dict)  # folder_id -> delta string
     folder_states: dict = field(default_factory=dict)  # folder_id -> state string
+    folder_scan_progress: dict = field(default_factory=dict)  # folder_id -> (scanned, total) or None
     group_enabled_counts: dict = field(default_factory=dict)
 
 
@@ -69,7 +70,8 @@ def update_menu_cache_on_toggle(
             has_files = folder.get("files") is not None
             has_cache = persistent_cache.has_setlist_stats(folder_id) if persistent_cache else False
             state = _get_display_state(folder_id, has_files, has_cache, background_scanner)
-            scan_progress = background_scanner.get_scan_progress(folder_id) if background_scanner and state == "scanning" else None
+            is_still_scanning = background_scanner and background_scanner.is_scanning(folder_id)
+            scan_progress = background_scanner.get_scan_progress(folder_id) if is_still_scanning else None
 
             if has_cache and setlist_names:
                 # Re-aggregate from setlist stats (instant!)
@@ -119,6 +121,7 @@ def update_menu_cache_on_toggle(
             menu_cache.folder_stats[folder_id] = columns
             menu_cache.folder_deltas[folder_id] = delta
             menu_cache.folder_states[folder_id] = state
+            menu_cache.folder_scan_progress[folder_id] = scan_progress
             break
 
     # Update group enabled counts (fast - just counting)
@@ -203,7 +206,9 @@ def _get_display_state(
         return "current"
 
     if scanner and scanner.is_scanning(folder_id):
-        # Currently scanning - show cached values (if any) with SCANNING indicator
+        # Enabled setlists done? Show normal colors (scanning only affects disabled now)
+        if scanner.is_ready_for_sync(folder_id):
+            return "current"
         return "scanning"
 
     # Not scanned yet this session
@@ -411,7 +416,8 @@ def compute_main_menu_cache(
         state = _get_display_state(folder_id, has_files, has_cache, background_scanner)
 
         # Always regenerate display string with current enabled state
-        scan_progress = background_scanner.get_scan_progress(folder_id) if background_scanner and state == "scanning" else None
+        is_still_scanning = background_scanner and background_scanner.is_scanning(folder_id)
+        scan_progress = background_scanner.get_scan_progress(folder_id) if is_still_scanning else None
         columns, delta = format_home_item(
             enabled_setlists=enabled_setlists,
             total_setlists=total_setlists,
@@ -447,6 +453,7 @@ def compute_main_menu_cache(
         cache.folder_stats[folder_id] = columns
         cache.folder_deltas[folder_id] = delta
         cache.folder_states[folder_id] = state
+        cache.folder_scan_progress[folder_id] = scan_progress
 
     delta_mode = user_settings.delta_mode if user_settings else "size"
 
@@ -629,6 +636,7 @@ def show_main_menu(
         cache.folder_stats = new_cache.folder_stats
         cache.folder_deltas = new_cache.folder_deltas
         cache.folder_states = new_cache.folder_states
+        cache.folder_scan_progress = new_cache.folder_scan_progress
         cache.group_enabled_counts = new_cache.group_enabled_counts
 
         for folder in folders:
@@ -668,28 +676,28 @@ def show_main_menu(
     hotkey_num = 1
 
     def _build_folder_label(name: str, folder_id: str, indent: bool) -> str:
-        """Build label with italic for scanning state and delta appended."""
+        """Build label with italic for scanning state, scan progress, and delta."""
         state = cache.folder_states.get(folder_id, "current")
         delta = cache.folder_deltas.get(folder_id, "")
+        scan_progress = cache.folder_scan_progress.get(folder_id)
         is_scanning = (state == "scanning")
         disabled = not (user_settings.is_drive_enabled(folder_id) if user_settings else True)
 
-        if indent:
-            if is_scanning:
-                if disabled:
-                    label = f"  {Colors.ITALIC}{Colors.DIM}{name}{Colors.RESET}"
-                else:
-                    label = f"  {Colors.ITALIC}{name}{Colors.RESET}"
+        prefix = "  " if indent else ""
+
+        if is_scanning:
+            if disabled:
+                label = f"{prefix}{Colors.ITALIC}{Colors.DIM}{name}{Colors.RESET}"
             else:
-                label = f"  {name}"
+                label = f"{prefix}{Colors.ITALIC}{name}{Colors.RESET}"
         else:
-            if is_scanning:
-                if disabled:
-                    label = f"{Colors.ITALIC}{Colors.DIM}{name}{Colors.RESET}"
-                else:
-                    label = f"{Colors.ITALIC}{name}{Colors.RESET}"
-            else:
-                label = name
+            label = f"{prefix}{name}"
+
+        # Show scan progress (X/Y) while drive still has unscanned setlists
+        if scan_progress:
+            scanned, total = scan_progress
+            progress_color = Colors.CYAN_DIM if disabled else Colors.CYAN
+            label = f"{label} {progress_color}{scanned}/{total}{Colors.RESET}"
 
         if delta:
             label = f"{label} {delta}"

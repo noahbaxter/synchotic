@@ -129,6 +129,13 @@ def format_status_line(
     return result
 
 
+def _rjust(text: str, width: int) -> str:
+    """Right-justify text to width, accounting for ANSI escape codes."""
+    visible_len = len(strip_ansi(text)) if text else 0
+    pad = max(0, width - visible_len)
+    return " " * pad + text
+
+
 def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value_color: str) -> str:
     """Build pipe-separated fixed-width column string.
 
@@ -141,6 +148,21 @@ def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value
     p = f"{pipe_color}|{Colors.RESET}"
     v = (lambda s: f"{value_color}{s}{Colors.RESET}") if value_color else (lambda s: s)
     return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>5}')}  {p}  {v(f'{size_str:>8}')}  {p}"
+
+
+def _format_columns_explicit(sync: str, count: str, size_str: str, base: str) -> str:
+    """Build columns with explicit per-value coloring. Values may contain ANSI codes.
+
+    Uses base color for pipes and any uncolored values, with ANSI-aware padding.
+    Used when individual values need different colors (e.g. green checkmark, cyan highlight).
+    """
+    pipe = f"{base}|{Colors.RESET}"
+    _v = lambda s: f"{base}{s}{Colors.RESET}" if s else ""
+    # Only wrap in base color if value doesn't already have ANSI codes
+    sync_fmt = sync if ("\x1b[" in sync) else _v(sync) if sync else ""
+    count_fmt = count if ("\x1b[" in count) else _v(count) if count else ""
+    size_fmt = size_str if ("\x1b[" in size_str) else _v(size_str) if size_str else ""
+    return f"  {_rjust(sync_fmt, 5)}  {pipe}  {_rjust(count_fmt, 5)}  {pipe}  {_rjust(size_fmt, 8)}  {pipe}"
 
 
 def format_column_header(screen: str) -> str:
@@ -230,9 +252,9 @@ def format_home_item(
     and a separate delta string for the label.
 
     States:
-        "current" - scanned, normal colors, with deltas
+        "current" - scanned, normal colors, with deltas. Green ✓ when 100%.
         "cached" - dimmed (STALE), no add deltas
-        "scanning" - cyan/cyan_dim values (scanning indicator)
+        "scanning" - enabled count highlighted cyan, rest normal
     """
     show_add_delta = (state == "current")
     missing_size = max(0, total_size - synced_size)
@@ -242,6 +264,7 @@ def format_home_item(
 
     if disabled:
         sync = ""
+        is_synced = False
     else:
         is_synced = missing_size <= 0
         pct = 100 if is_synced else calc_percent(synced_size, total_size)
@@ -254,23 +277,30 @@ def format_home_item(
 
     size_str = format_size(total_size) if total_size > 0 else ""
 
-    # Determine colors based on state
-    if state == "scanning":
-        if disabled:
-            value_color = Colors.CYAN_DIM
-            pipe_color = Colors.MUTED_DIM
-        else:
-            value_color = Colors.CYAN
-            pipe_color = Colors.MUTED
+    # Green checkmark for confirmed 100% sync
+    show_checkmark = is_synced and state == "current" and total_setlists > 0 and not is_estimate
+
+    # Determine colors and build columns
+    if state == "scanning" or show_checkmark:
+        # Explicit per-value coloring (can't rely on menu's MUTED wrap)
+        base = Colors.MUTED_DIM if disabled else Colors.MUTED
+
+        # Sync: green checkmark or base
+        if show_checkmark:
+            sync = f"{Colors.GREEN}✓{Colors.RESET}"
+
+        # Count: highlight enabled count during scanning
+        if state == "scanning" and count and "/" in count:
+            hl = Colors.CYAN_DIM if disabled else Colors.CYAN
+            enabled_str, rest = count.split("/", 1)
+            count = f"{hl}{enabled_str}{Colors.RESET}{base}/{rest}{Colors.RESET}"
+
+        columns = _format_columns_explicit(sync, count, size_str, base)
     elif state == "cached":
-        value_color = Colors.STALE
-        pipe_color = Colors.STALE
+        columns = _format_columns(sync, count, size_str, Colors.STALE, Colors.STALE)
     else:
         # "current" - no color codes, menu applies MUTED/MUTED_DIM
-        value_color = ""
-        pipe_color = ""
-
-    columns = _format_columns(sync, count, size_str, pipe_color, value_color)
+        columns = _format_columns(sync, count, size_str, "", "")
 
     # Build delta string
     delta = _compute_delta(
@@ -311,29 +341,35 @@ def format_setlist_item(
     # Build raw column values
     if disabled:
         sync = ""
+        is_synced = False
     else:
         pct = calc_percent(synced_charts, total_charts) if total_charts > 0 else 100
+        is_synced = synced_charts >= total_charts and total_charts > 0
         sync = f"{pct}%"
 
     count = str(total_charts) if total_charts > 0 else ""
     size_str = format_size(total_size) if total_size > 0 else ""
 
-    # Determine colors based on state
-    if state == "scanning":
+    # Green checkmark for confirmed 100% sync
+    show_checkmark = is_synced and state == "current"
+
+    # Determine colors and build columns
+    if show_checkmark:
+        base = Colors.MUTED_DIM if disabled else Colors.MUTED
+        sync = f"{Colors.GREEN}✓{Colors.RESET}"
+        columns = _format_columns_explicit(sync, count, size_str, base)
+    elif state == "scanning":
         if disabled:
             value_color = Colors.CYAN_DIM
             pipe_color = Colors.MUTED_DIM
         else:
             value_color = Colors.CYAN
             pipe_color = Colors.MUTED
+        columns = _format_columns(sync, count, size_str, pipe_color, value_color)
     elif state == "cached":
-        value_color = Colors.STALE
-        pipe_color = Colors.STALE
+        columns = _format_columns(sync, count, size_str, Colors.STALE, Colors.STALE)
     else:
-        value_color = ""
-        pipe_color = ""
-
-    columns = _format_columns(sync, count, size_str, pipe_color, value_color)
+        columns = _format_columns(sync, count, size_str, "", "")
 
     # Build delta string
     show_add = (state == "current")
