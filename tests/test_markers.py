@@ -89,6 +89,7 @@ class TestMarkerPaths:
     def test_windows_path_length_respected(self, temp_dir, monkeypatch):
         """On Windows, full marker path (dir + filename) fits within MAX_PATH=260."""
         monkeypatch.setattr("src.sync.markers.os.name", "nt")
+        monkeypatch.setattr("src.sync.markers._warn_long_paths_once", lambda: None)
 
         # Simulate a deep Windows markers dir (e.g., D:\Songs\.dm-sync\markers)
         # The temp_dir markers dir is already set via fixture

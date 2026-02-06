@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Enables long path support (>260 chars) on Windows 10/11.
+; Fixes marker save failures for archives with very long names.
+; Right-click → "Merge" or double-click to apply. Requires admin.
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"LongPathsEnabled"=dword:00000001

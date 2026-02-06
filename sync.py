@@ -32,7 +32,7 @@ from pathlib import Path
 
 from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync, purge_all_folders
-from src.sync.markers import is_migration_done, mark_migration_done, get_markers_dir, rebuild_markers_from_disk
+from src.sync.markers import rebuild_markers_from_disk
 from src.config import UserSettings, DrivesConfig, CustomFolders
 from src.core.formatting import format_size
 from src.core.paths import (
@@ -139,10 +139,6 @@ class SyncApp:
             }
             self.folders.append(folder)
 
-        # Check if markers need to be rebuilt from disk
-        if not is_migration_done():
-            self._rebuild_markers_if_needed()
-
         # Add custom folders
         for custom in self.custom_folders.folders:
             cached_files = self.custom_folders.get_files(custom.folder_id)
@@ -158,10 +154,6 @@ class SyncApp:
                 "is_custom": True,
             }
             self.folders.append(folder_dict)
-
-    def _rebuild_markers_if_needed(self):
-        """Mark migration as done. Actual rebuild happens pre-purge via rebuild_markers_from_disk."""
-        mark_migration_done()
 
     def handle_sync(self):
         """Sync enabled setlists as they become ready, then purge extras.
