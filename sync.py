@@ -32,7 +32,7 @@ from pathlib import Path
 
 from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync, purge_all_folders
-from src.sync.markers import is_migration_done, mark_migration_done, get_markers_dir
+from src.sync.markers import is_migration_done, mark_migration_done, get_markers_dir, rebuild_markers_from_disk
 from src.config import UserSettings, DrivesConfig, CustomFolders
 from src.core.formatting import format_size
 from src.core.paths import (
@@ -160,25 +160,8 @@ class SyncApp:
             self.folders.append(folder_dict)
 
     def _rebuild_markers_if_needed(self):
-        """
-        Check if markers need to be rebuilt from disk content.
-
-        Note: With manifest removed, marker rebuilding requires file data from scanner.
-        This is handled during first sync when files are scanned.
-        """
-        markers_dir = get_markers_dir()
-
-        # Count existing markers
-        marker_count = len(list(markers_dir.glob("*.json"))) if markers_dir.exists() else 0
-
-        if marker_count > 0:
-            mark_migration_done()
-            print(f"    [init] markers: {marker_count} found")
-            return
-
-        # No markers yet - will be created during sync when files are downloaded
+        """Mark migration as done. Actual rebuild happens pre-purge via rebuild_markers_from_disk."""
         mark_migration_done()
-        print(f"    [init] markers: none (will be created during sync)")
 
     def handle_sync(self):
         """Sync enabled setlists as they become ready, then purge extras.
@@ -230,6 +213,11 @@ class SyncApp:
             if failed_setlists:
                 all_failed = [name for names in failed_setlists.values() for name in names]
                 print(f"\n  Warning: {len(all_failed)} setlist(s) failed to scan (files preserved): {', '.join(sorted(all_failed))}")
+
+        # Rebuild markers for any extracted archives missing them (prevents mass deletion)
+        created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
+        if created > 0:
+            print(f"  Rebuilt {created} marker(s) from disk ({skipped} already up to date)")
 
         # Step 2: Purge extra files (no confirmation - sync means make it match)
         stats = count_purgeable_detailed(

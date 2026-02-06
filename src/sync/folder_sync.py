@@ -83,6 +83,13 @@ class FolderSync:
 
         manifest_files = dedupe_files_by_newest(manifest_files)
 
+        # Rebuild markers for extracted archives missing them (prevents re-downloading
+        # archives whose contents are already on disk from a pre-marker-era extraction)
+        from .markers import rebuild_markers_from_disk
+        created, _ = rebuild_markers_from_disk([folder], base_path)
+        if created > 0:
+            debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
+
         tasks, skipped, long_paths = plan_downloads(
             manifest_files, folder_path, self.delete_videos, folder_name=folder["name"]
         )
