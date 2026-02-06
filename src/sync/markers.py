@@ -11,6 +11,7 @@ This survives sync_state.json corruption/loss.
 """
 
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -43,16 +44,27 @@ def get_marker_path(archive_path: str, md5: str) -> Path:
     safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
 
     # Filename: {safe_name}_{md5[:8]}.json
-    # Max filename on most filesystems: 255 chars
-    # Reserve: .json (5) + _md5prefix (9) + safety margin for .tmp (10) = 24 chars
-    max_base_len = 230
+    # Atomic writes use .json.tmp suffix (4 chars longer than .json)
+    # suffix_len: _md5prefix(9) + .json.tmp(9) = 18
+    suffix_len = 18
+    markers_dir = get_markers_dir()
+
+    if os.name == "nt":
+        # Windows MAX_PATH = 260. Full path = markers_dir / filename
+        # Must fit: dir_sep(1) + safe_name + suffix(18) <= 260 - len(markers_dir)
+        max_base_len = 260 - len(str(markers_dir)) - 1 - suffix_len
+    else:
+        # macOS/Linux: 255 char filename limit, no full-path limit
+        max_base_len = 255 - suffix_len  # = 237
+
+    max_base_len = max(max_base_len, 50)  # floor to keep filenames usable
 
     if len(safe_name) > max_base_len:
         # Truncate and add path hash for uniqueness
         path_hash = hashlib.md5(archive_path.encode()).hexdigest()[:8]
         safe_name = safe_name[:max_base_len - 9] + "_" + path_hash
 
-    return get_markers_dir() / f"{safe_name}_{md5[:8]}.json"
+    return markers_dir / f"{safe_name}_{md5[:8]}.json"
 
 
 def load_marker(archive_path: str, md5: str) -> Optional[dict]:

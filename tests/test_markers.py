@@ -76,6 +76,29 @@ class TestMarkerPaths:
         # Should produce different filenames (via path hash)
         assert marker1.name != marker2.name
 
+    def test_long_path_marker_saves_and_loads(self, temp_dir):
+        """Long-path markers can be saved to disk and loaded back."""
+        long_path = "Misc/Joshwantsmaccas/" + "A" * 200 + "/" + "B" * 200 + ".rar"
+        marker_path = save_marker(long_path, "abc123def456", {"song.ini": 100})
+        assert marker_path.exists()
+
+        marker = load_marker(long_path, "abc123def456")
+        assert marker is not None
+        assert marker["files"] == {"song.ini": 100}
+
+    def test_windows_path_length_respected(self, temp_dir, monkeypatch):
+        """On Windows, full marker path (dir + filename) fits within MAX_PATH=260."""
+        monkeypatch.setattr("src.sync.markers.os.name", "nt")
+
+        # Simulate a deep Windows markers dir (e.g., D:\Songs\.dm-sync\markers)
+        # The temp_dir markers dir is already set via fixture
+        long_archive = "Misc/Joshwantsmaccas/" + "X" * 300 + ".rar"
+        path = get_marker_path(long_archive, "abc123def456")
+
+        # Full path including .tmp suffix for atomic writes must fit in 260
+        tmp_path = path.with_suffix(".json.tmp")
+        assert len(str(tmp_path)) <= 260, f"Full .tmp path is {len(str(tmp_path))} chars, must be <= 260"
+
 
 class TestMarkerSaveLoad:
     """Tests for saving and loading markers."""
