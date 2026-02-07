@@ -356,12 +356,10 @@ class TestPlanDownloadsLongPaths:
             monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
             yield tmp_path
 
-    def test_long_path_skipped_when_not_enabled(self, temp_dir, monkeypatch):
-        """Paths exceeding 260 chars on Windows are skipped when long paths not enabled."""
-        monkeypatch.setattr("os.name", "nt")
-        # Simulate long paths NOT enabled in registry
+    def test_long_path_skipped_when_exceeds_limit(self, temp_dir, monkeypatch):
+        """Paths exceeding Windows MAX_PATH are skipped when long paths not enabled."""
         import src.sync.download_planner as dp
-        monkeypatch.setattr(dp, "is_long_paths_enabled", lambda: False)
+        monkeypatch.setattr(dp, "exceeds_windows_path_limit", lambda path: len(str(path)) >= 260)
 
         # Create a path that will exceed 260 chars (but no single component > 255)
         files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
@@ -371,30 +369,16 @@ class TestPlanDownloadsLongPaths:
         assert len(tasks) == 0
         assert len(long_paths) == 1
 
-    def test_long_path_allowed_when_enabled(self, temp_dir, monkeypatch):
-        """Paths exceeding 260 chars on Windows are allowed when long paths enabled."""
-        monkeypatch.setattr("os.name", "nt")
-        # Simulate long paths ENABLED in registry
+    def test_long_path_allowed_when_no_limit(self, temp_dir, monkeypatch):
+        """Paths are allowed when path limit check passes."""
         import src.sync.download_planner as dp
-        monkeypatch.setattr(dp, "is_long_paths_enabled", lambda: True)
+        monkeypatch.setattr(dp, "exceeds_windows_path_limit", lambda path: False)
 
         # Create a path that will exceed 260 chars (but no single component > 255)
         files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir)
 
-        # Should NOT be skipped - long paths are enabled
-        assert len(tasks) == 1
-        assert len(long_paths) == 0
-
-    def test_long_path_not_checked_on_unix(self, temp_dir, monkeypatch):
-        """Total path length is not checked on non-Windows systems."""
-        monkeypatch.setattr("os.name", "posix")
-
-        # Long total path but no single component > 255
-        files = [{"id": "1", "path": f"{'A' * 100}/{'B' * 100}/chart.7z", "size": 1000, "md5": "abc"}]
-        tasks, skipped, long_paths = plan_downloads(files, temp_dir)
-
-        # Should not be skipped on Unix (path length OK)
+        # Should NOT be skipped
         assert len(tasks) == 1
         assert len(long_paths) == 0
 

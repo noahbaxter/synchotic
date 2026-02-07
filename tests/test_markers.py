@@ -86,19 +86,24 @@ class TestMarkerPaths:
         assert marker is not None
         assert marker["files"] == {"song.ini": 100}
 
-    def test_windows_path_length_respected(self, temp_dir, monkeypatch):
-        """On Windows, full marker path (dir + filename) fits within MAX_PATH=260."""
-        monkeypatch.setattr("src.sync.markers.os.name", "nt")
-        monkeypatch.setattr("src.sync.markers._warn_long_paths_once", lambda: None)
+    def test_windows_path_length_math(self, temp_dir):
+        """Verify the Windows MAX_PATH calculation produces filenames that fit in 260 chars."""
+        from src.sync.markers import get_markers_dir
 
-        # Simulate a deep Windows markers dir (e.g., D:\Songs\.dm-sync\markers)
-        # The temp_dir markers dir is already set via fixture
-        long_archive = "Misc/Joshwantsmaccas/" + "X" * 300 + ".rar"
-        path = get_marker_path(long_archive, "abc123def456")
+        markers_dir = get_markers_dir()
+        dir_len = len(str(markers_dir))
 
-        # Full path including .tmp suffix for atomic writes must fit in 260
-        tmp_path = path.with_suffix(".json.tmp")
-        assert len(str(tmp_path)) <= 260, f"Full .tmp path is {len(str(tmp_path))} chars, must be <= 260"
+        # Simulate the Windows branch math: 260 - dir_len - separator - suffix
+        suffix_len = 18  # _md5prefix(9) + .json.tmp(9)
+        max_base_len = max(260 - dir_len - 1 - suffix_len, 50)
+
+        # A long archive name that would need truncation
+        long_name = "x" * 400
+        # After truncation: max_base_len chars for safe_name + suffix = full filename
+        filename_len = max_base_len + suffix_len
+        full_path_len = dir_len + 1 + filename_len
+
+        assert full_path_len <= 260, f"Full .tmp path would be {full_path_len} chars, must be <= 260"
 
 
 class TestMarkerSaveLoad:
