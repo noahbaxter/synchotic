@@ -23,6 +23,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
 LAUNCHER_VERSION = "1.1"
+RELEASE_TAG = ""  # Injected to "dev-latest" for dev launcher builds
 
 
 def get_ssl_context():
@@ -46,12 +47,14 @@ GITHUB_API_BASE = f"https://api.github.com/repos/{GITHUB_REPO}/releases"
 
 
 def get_release_url() -> str:
-    """Get the release API URL, checking for test override."""
+    """Get the release API URL, checking for test override and build-time channel."""
     for i, arg in enumerate(sys.argv):
         if arg == "--test-release" and i + 1 < len(sys.argv):
             tag = sys.argv[i + 1]
             print(f"  [TEST MODE] Using release: {tag}")
             return f"{GITHUB_API_BASE}/tags/{tag}"
+    if RELEASE_TAG:
+        return f"{GITHUB_API_BASE}/tags/{RELEASE_TAG}"
     return f"{GITHUB_API_BASE}/latest"
 
 
@@ -546,7 +549,10 @@ def main():
     init_logging()
     log(f"Launcher v{LAUNCHER_VERSION}")
 
-    print(f"\nSynchotic Launcher v{LAUNCHER_VERSION}")
+    if RELEASE_TAG:
+        print(f"\nSynchotic Launcher v{LAUNCHER_VERSION} [DEV]")
+    else:
+        print(f"\nSynchotic Launcher v{LAUNCHER_VERSION}")
     print("=" * 40)
 
     # Handle --dev: local development mode

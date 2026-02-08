@@ -1,0 +1,112 @@
+name: Release (Dev)
+
+on:
+  workflow_dispatch:
+    inputs:
+      skip_tests:
+        description: 'Skip tests before building'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    if: ${{ !inputs.skip_tests }}
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            name: macos
+          - os: windows-latest
+            name: windows
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Setup UnRAR library
+        uses: ./.github/actions/setup-unrar
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Run tests
+        run: pytest tests/ -v -m "not stress"
+
+  build:
+    needs: test
+    if: ${{ !cancelled() && (needs.test.result == 'success' || needs.test.result == 'skipped') }}
+    uses: ./.github/workflows/build-app.yml
+    secrets: inherit
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get branch and commit info
+        id: info
+        run: |
+          BRANCH="${GITHUB_REF_NAME}"
+          SHORT_SHA="${GITHUB_SHA::7}"
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+          echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create or Update Dev Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          TAG="dev-latest"
+          BRANCH="${{ steps.info.outputs.branch }}"
+          SHORT_SHA="${{ steps.info.outputs.short_sha }}"
+          NOTES="Dev build from \`${BRANCH}\` @ \`${SHORT_SHA}\`"
+
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "Updating existing dev release..."
+            gh release edit "$TAG" \
+              --title "Synchotic Dev Build" \
+              --notes "$NOTES" \
+              --prerelease \
+              --latest=false
+            gh release upload "$TAG" \
+              artifacts/app-macos.zip/app-macos.zip \
+              artifacts/app-windows.zip/app-windows.zip \
+              --clobber
+          else
+            echo "Creating new dev release..."
+            gh release create "$TAG" \
+              --title "Synchotic Dev Build" \
+              --notes "$NOTES" \
+              --prerelease \
+              --latest=false \
+              artifacts/app-macos.zip/app-macos.zip \
+              artifacts/app-windows.zip/app-windows.zip
+          fi
+
+      - name: Summary
+        run: |
+          echo "### Dev Release" >> $GITHUB_STEP_SUMMARY
+          echo "- Branch: ${{ steps.info.outputs.branch }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Commit: ${{ steps.info.outputs.short_sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Tag: dev-latest (prerelease)" >> $GITHUB_STEP_SUMMARY

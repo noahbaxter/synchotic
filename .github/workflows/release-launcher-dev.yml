@@ -1,0 +1,112 @@
+name: Release Launcher (Dev)
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g., launcher-dev-v1)'
+        required: true
+        default: 'launcher-dev-v1'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: macos-latest
+            name: macos
+            artifact: synchotic-launcher-dev-macos
+          - os: windows-latest
+            name: windows
+            artifact: synchotic-launcher-dev.exe
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install pyinstaller certifi
+
+      - name: Inject dev release tag
+        run: |
+          if [ "${{ matrix.name }}" = "windows" ]; then
+            sed -i 's/RELEASE_TAG = ""/RELEASE_TAG = "dev-latest"/' launcher.py
+          else
+            sed -i '' 's/RELEASE_TAG = ""/RELEASE_TAG = "dev-latest"/' launcher.py
+          fi
+        shell: bash
+
+      - name: Build launcher (macOS)
+        if: matrix.name == 'macos'
+        run: |
+          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
+          pyinstaller --onefile --name synchotic-launcher-dev-macos --clean --noconfirm \
+            --add-data "$CERTIFI_PATH:certifi" \
+            --hidden-import certifi \
+            launcher.py
+
+      - name: Build launcher (Windows)
+        if: matrix.name == 'windows'
+        run: |
+          $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
+          pyinstaller --onefile --name synchotic-launcher-dev --clean --noconfirm `
+            --add-data "$CERTIFI_PATH;certifi" `
+            --hidden-import certifi `
+            launcher.py
+        shell: pwsh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: dist/${{ matrix.artifact }}
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create or Update Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          TAG="${{ github.event.inputs.tag }}"
+
+          if gh release view "$TAG" > /dev/null 2>&1; then
+            echo "Updating existing release $TAG..."
+            gh release upload "$TAG" \
+              artifacts/synchotic-launcher-dev.exe/synchotic-launcher-dev.exe \
+              artifacts/synchotic-launcher-dev-macos/synchotic-launcher-dev-macos \
+              --clobber
+          else
+            echo "Creating new release $TAG..."
+            gh release create "$TAG" \
+              --title "Synchotic Dev Launcher $TAG" \
+              --notes "Dev launcher — fetches from dev-latest release channel." \
+              --prerelease \
+              --latest=false \
+              artifacts/synchotic-launcher-dev.exe/synchotic-launcher-dev.exe \
+              artifacts/synchotic-launcher-dev-macos/synchotic-launcher-dev-macos
+          fi
+
+      - name: Summary
+        run: |
+          echo "### Dev Launcher Release ${{ github.event.inputs.tag }}" >> $GITHUB_STEP_SUMMARY
+          echo "- Windows: synchotic-launcher-dev.exe" >> $GITHUB_STEP_SUMMARY
+          echo "- macOS: synchotic-launcher-dev-macos" >> $GITHUB_STEP_SUMMARY
