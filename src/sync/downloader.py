@@ -504,6 +504,14 @@ class FileDownloader:
                     )
 
                     for async_task in done:
+                        # Check cancellation between results (rate-limited batches
+                        # can return dozens of results at once)
+                        if progress and progress.cancelled:
+                            cancelled = True
+                            for t in pending:
+                                t.cancel()
+                            break
+
                         task = pending.pop(async_task)
 
                         try:
