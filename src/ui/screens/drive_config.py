@@ -333,6 +333,9 @@ def show_subfolder_settings(
             selected_index = menu._selected
             if not user_settings.is_drive_enabled(folder_id):
                 user_settings.enable_drive(folder_id)
+                if scanner:
+                    for name in setlists:
+                        scanner.notify_setlist_toggled(folder_id, name, True)
             else:
                 new_state = user_settings.toggle_subfolder(folder_id, setlist_name)
                 if scanner:
