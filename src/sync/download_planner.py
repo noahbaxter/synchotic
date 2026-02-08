@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import List, Tuple
 
 from ..core.constants import VIDEO_EXTENSIONS
-from ..core.formatting import sanitize_path, normalize_path_key
+from ..core.formatting import normalize_path_key
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 WINDOWS_MAX_PATH = 260
@@ -88,7 +88,7 @@ def plan_downloads(
     seen_archive_paths: set[str] = set()
 
     for f in files:
-        file_path = sanitize_path(f["path"])
+        file_path = f["path"]
         file_name = file_path.split("/")[-1] if "/" in file_path else file_path
         file_size = f.get("size", 0)
         file_md5 = f.get("md5", "")

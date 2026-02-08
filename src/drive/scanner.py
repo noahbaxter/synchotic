@@ -11,7 +11,7 @@ from dataclasses import dataclass
 
 from .client import DriveClient
 from ..core.files import file_exists_with_size
-from ..core.formatting import escape_name_slashes
+from ..core.formatting import escape_name_slashes, sanitize_filename
 
 
 @dataclass
@@ -101,8 +101,8 @@ class FolderScanner:
 
                     for item in items:
                         item_name = item["name"]
-                        escaped_name = escape_name_slashes(item_name)
-                        item_path = f"{folder_path}/{escaped_name}" if folder_path else escaped_name
+                        safe_name = sanitize_filename(escape_name_slashes(item_name))
+                        item_path = f"{folder_path}/{safe_name}" if folder_path else safe_name
                         mime_type = item["mimeType"]
 
                         if mime_type == self.FOLDER_MIME:
@@ -189,8 +189,8 @@ class FolderScanner:
 
                             for item in items:
                                 item_name = item["name"]
-                                escaped_name = escape_name_slashes(item_name)
-                                item_path = f"{folder_path}/{escaped_name}" if folder_path else escaped_name
+                                safe_name = sanitize_filename(escape_name_slashes(item_name))
+                                item_path = f"{folder_path}/{safe_name}" if folder_path else safe_name
                                 mime_type = item["mimeType"]
 
                                 # Handle regular folders
