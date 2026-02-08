@@ -245,6 +245,8 @@ class SyncApp:
             self._scan_single_custom_folder(folder)
         elif result == "remove":
             self._remove_custom_folder(folder.get("folder_id"), folder.get("name"))
+        elif result == "rescan":
+            self._handle_force_rescan(folder_id)
 
     def _show_custom_folder_options(self, folder: dict):
         """Show options menu for a custom folder."""
@@ -554,6 +556,24 @@ class SyncApp:
                 return folder
         return None
 
+    def _handle_force_rescan(self, folder_id: str):
+        """Invalidate caches and restart background scan for a drive."""
+        from src.sync.cache import get_scan_cache, get_persistent_stats_cache
+
+        folder = self._get_folder_by_id(folder_id)
+        if not folder:
+            return
+
+        self._stop_background_scan()
+
+        get_scan_cache().invalidate_all()
+        get_persistent_stats_cache().invalidate(folder_id)
+        self.folder_stats_cache.invalidate(folder_id)
+
+        folder["files"] = None
+
+        self._start_background_scan(force_rescan=True)
+
     def _sync_folders_sequentially(self) -> bool:
         """
         Download setlists as they become ready from background scanner.
@@ -809,8 +829,16 @@ class SyncApp:
         print(f"  [timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
 
         # Start background scanning of folders (if signed in)
+        # Force rescan if scan cache is stale (>1hr old)
+        from src.sync.cache import get_scan_cache
+        newest_scan = get_scan_cache().get_newest_time()
+        force = newest_scan is None  # No cache at all
+        if newest_scan:
+            from datetime import datetime, timezone
+            age = (datetime.now(timezone.utc) - newest_scan).total_seconds()
+            force = age > get_scan_cache().MAX_AGE_SECONDS
         _t_scan = _time.time()
-        self._start_background_scan()
+        self._start_background_scan(force_rescan=force)
         if self._background_scanner:
             print(f"  [timing] bg_scanner started: {(_time.time() - _t_scan)*1000:.0f}ms")
 
@@ -888,6 +916,11 @@ class SyncApp:
                 # Enter/Space on a group - expand/collapse (NO cache invalidation!)
                 self.handle_toggle_group(value)
                 # Keep using the same cache - just showing/hiding items
+
+            elif action == "rescan":
+                if value:
+                    self._handle_force_rescan(value)
+                    menu_cache = None
 
             elif action == "cycle_delta_mode":
                 # Tab - cycle between size/files display mode

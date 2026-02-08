@@ -366,6 +366,22 @@ class ScanCache:
             except OSError:
                 pass
 
+    def get_newest_time(self) -> datetime | None:
+        """Return the most recent scanned_at across all cache files."""
+        if not self._dir.exists():
+            return None
+        newest = None
+        for path in self._dir.glob("*.json"):
+            try:
+                with open(path) as f:
+                    data = json.load(f)
+                scanned_at = datetime.fromisoformat(data["scanned_at"])
+                if newest is None or scanned_at > newest:
+                    newest = scanned_at
+            except (json.JSONDecodeError, KeyError, OSError, ValueError):
+                continue
+        return newest
+
 
 # Global scan cache instance
 _scan_cache: ScanCache | None = None

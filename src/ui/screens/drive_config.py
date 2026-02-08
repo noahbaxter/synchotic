@@ -310,6 +310,11 @@ def show_subfolder_settings(
             user_settings.save()
             continue
 
+        if result.action == "rescan":
+            if scanner and not scanner.is_done():
+                continue  # Block rescan while scanning
+            return "rescan"
+
         action, idx, setlist_name = result.value
 
         if action == "enable_all":

@@ -580,7 +580,28 @@ def show_main_menu(
 
     delta_mode = user_settings.delta_mode if user_settings else "size"
     mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
-    legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+
+    # Build rescan label with scanning state or last-scan timestamp
+    is_scanning = background_scanner and not background_scanner.is_done()
+    if is_scanning:
+        rescan_label = f"{Colors.MUTED}[R]{Colors.RESET} {Colors.CYAN}Scanning...{Colors.RESET}"
+    else:
+        from datetime import datetime, timezone
+        from src.sync.cache import get_scan_cache
+        newest = get_scan_cache().get_newest_time()
+        if newest:
+            age_s = (datetime.now(timezone.utc) - newest).total_seconds()
+            if age_s < 60:
+                age_str = "just now"
+            elif age_s < 3600:
+                age_str = f"{int(age_s // 60)}m ago"
+            else:
+                age_str = f"{int(age_s // 3600)}h {int((age_s % 3600) // 60)}m ago"
+            rescan_label = f"{Colors.MUTED}[R]{Colors.RESET} Rescan {Colors.MUTED}({age_str}){Colors.RESET}"
+        else:
+            rescan_label = f"{Colors.MUTED}[R]{Colors.RESET} Rescan"
+
+    legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {rescan_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
     menu = Menu(title="Chart Packs", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit",
                 column_header=format_column_header("home"))
 
@@ -786,6 +807,14 @@ def show_main_menu(
     # Handle Tab to cycle delta mode
     if result.action == "tab":
         return ("cycle_delta_mode", None, menu._selected)
+
+    # Handle R key to force rescan — blocked while scanning is active
+    if result.action == "rescan":
+        if background_scanner and not background_scanner.is_done():
+            return ("noop", None, menu._selected)
+        if isinstance(result.value, str) and not result.value.startswith(("download", "purge", "quit")):
+            return ("rescan", result.value, menu._selected)
+        return ("rescan", None, menu._selected)
 
     restore_pos = menu._selected_before_hotkey if menu._selected_before_hotkey != menu._selected else menu._selected
 

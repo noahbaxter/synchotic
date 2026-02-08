@@ -622,6 +622,9 @@ class Menu:
                     if isinstance(current_item, MenuGroupHeader):
                         return MenuResult(current_item, "enter")
 
+                elif isinstance(key, str) and len(key) == 1 and key.upper() == 'R':
+                    return MenuResult(self.items[self._selected], "rescan")
+
                 elif THEME_SWITCHER_ENABLED and isinstance(key, str) and len(key) == 1 and key.upper() == 'C':
                     cycle_theme()
                     invalidate_header_cache()
