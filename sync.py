@@ -226,9 +226,8 @@ class SyncApp:
 
         print(" done.")
 
-        # Wait before returning to menu
-        from src.ui.primitives import wait_with_skip, flush_input
-        flush_input()  # Discard keypresses from during cleanup
+        # Wait before returning to menu (buffered keys from cleanup skip instantly)
+        from src.ui.primitives import wait_with_skip
         wait_with_skip(5, "Continuing in 5s (press any key to skip)")
 
     def handle_configure_drive(self, folder_id: str):
