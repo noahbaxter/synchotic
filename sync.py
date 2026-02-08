@@ -34,7 +34,7 @@ from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync, purge_all_folders
 from src.sync.markers import rebuild_markers_from_disk
 from src.config import UserSettings, DrivesConfig, CustomFolders
-from src.core.formatting import format_size
+from src.core.formatting import format_size, sanitize_drive_name
 from src.core.paths import (
     get_data_dir,
     get_settings_path,
@@ -601,9 +601,11 @@ class SyncApp:
                     display_name = setlist.drive_name
 
                 # Filter drive files to just this setlist
+                # File paths use sanitized names (colons etc. replaced), so match on sanitized prefix
                 all_files = drive.get("files", [])
                 if setlist.name != setlist.drive_name:
-                    setlist_files = [f for f in all_files if f["path"].startswith(setlist.name + "/")]
+                    sanitized_name = sanitize_drive_name(setlist.name)
+                    setlist_files = [f for f in all_files if f["path"].startswith(sanitized_name + "/")]
                 else:
                     setlist_files = list(all_files)
 
