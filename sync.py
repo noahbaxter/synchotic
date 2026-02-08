@@ -564,9 +564,17 @@ class SyncApp:
         if not folder:
             return
 
+        # Get setlist IDs before stopping scanner
+        setlist_ids = []
+        if self._background_scanner:
+            setlist_ids = self._background_scanner.get_setlist_ids(folder_id)
+
         self._stop_background_scan()
 
-        get_scan_cache().invalidate_all()
+        # Invalidate only this drive's scan cache entries
+        scan_cache = get_scan_cache()
+        for sid in setlist_ids:
+            scan_cache.invalidate(sid)
         get_persistent_stats_cache().invalidate(folder_id)
         self.folder_stats_cache.invalidate(folder_id)
 
