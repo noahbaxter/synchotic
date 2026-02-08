@@ -163,6 +163,14 @@ class Menu:
                 return True
         return False
 
+    def enable_item(self, value: Any) -> bool:
+        """Enable a disabled item by its value. Returns True if found."""
+        for item in self.items:
+            if isinstance(item, MenuItem) and item.value == value:
+                item.disabled = False
+                return True
+        return False
+
     def _split_items(self) -> tuple[list[tuple[int, Any]], list[tuple[int, Any]]]:
         """Split items into scrollable and pinned lists, preserving original indices."""
         scrollable = []
@@ -621,9 +629,6 @@ class Menu:
                     current_item = self.items[self._selected]
                     if isinstance(current_item, MenuGroupHeader):
                         return MenuResult(current_item, "enter")
-
-                elif isinstance(key, str) and len(key) == 1 and key.upper() == 'R':
-                    return MenuResult(self.items[self._selected], "rescan")
 
                 elif THEME_SWITCHER_ENABLED and isinstance(key, str) and len(key) == 1 and key.upper() == 'C':
                     cycle_theme()

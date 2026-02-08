@@ -245,8 +245,6 @@ class SyncApp:
             self._scan_single_custom_folder(folder)
         elif result == "remove":
             self._remove_custom_folder(folder.get("folder_id"), folder.get("name"))
-        elif result == "rescan":
-            self._handle_force_rescan(folder_id)
 
     def _show_custom_folder_options(self, folder: dict):
         """Show options menu for a custom folder."""
@@ -556,29 +554,18 @@ class SyncApp:
                 return folder
         return None
 
-    def _handle_force_rescan(self, folder_id: str):
-        """Invalidate caches and restart background scan for a drive."""
+    def _handle_force_rescan(self):
+        """Invalidate all caches and restart background scan for all drives."""
         from src.sync.cache import get_scan_cache, get_persistent_stats_cache
-
-        folder = self._get_folder_by_id(folder_id)
-        if not folder:
-            return
-
-        # Get setlist IDs before stopping scanner
-        setlist_ids = []
-        if self._background_scanner:
-            setlist_ids = self._background_scanner.get_setlist_ids(folder_id)
 
         self._stop_background_scan()
 
-        # Invalidate only this drive's scan cache entries
-        scan_cache = get_scan_cache()
-        for sid in setlist_ids:
-            scan_cache.invalidate(sid)
-        get_persistent_stats_cache().invalidate(folder_id)
-        self.folder_stats_cache.invalidate(folder_id)
+        get_scan_cache().invalidate_all()
+        get_persistent_stats_cache().invalidate_all()
+        self.folder_stats_cache.invalidate_all()
 
-        folder["files"] = None
+        for folder in self.folders:
+            folder["files"] = None
 
         self._start_background_scan(force_rescan=True)
 
@@ -926,9 +913,8 @@ class SyncApp:
                 # Keep using the same cache - just showing/hiding items
 
             elif action == "rescan":
-                if value:
-                    self._handle_force_rescan(value)
-                    menu_cache = None
+                self._handle_force_rescan()
+                menu_cache = None
 
             elif action == "cycle_delta_mode":
                 # Tab - cycle between size/files display mode

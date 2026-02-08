@@ -580,28 +580,7 @@ def show_main_menu(
 
     delta_mode = user_settings.delta_mode if user_settings else "size"
     mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
-
-    # Build rescan label with scanning state or last-scan timestamp
-    is_scanning = background_scanner and not background_scanner.is_done()
-    if is_scanning:
-        rescan_label = f"{Colors.MUTED}[R]{Colors.RESET} {Colors.CYAN}Scanning...{Colors.RESET}"
-    else:
-        from datetime import datetime, timezone
-        from src.sync.cache import get_scan_cache
-        newest = get_scan_cache().get_newest_time()
-        if newest:
-            age_s = (datetime.now(timezone.utc) - newest).total_seconds()
-            if age_s < 60:
-                age_str = "just now"
-            elif age_s < 3600:
-                age_str = f"{int(age_s // 60)}m ago"
-            else:
-                age_str = f"{int(age_s // 3600)}h {int((age_s % 3600) // 60)}m ago"
-            rescan_label = f"{Colors.MUTED}[R]{Colors.RESET} Rescan {Colors.MUTED}({age_str}){Colors.RESET}"
-        else:
-            rescan_label = f"{Colors.MUTED}[R]{Colors.RESET} Rescan"
-
-    legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {rescan_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+    legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
     menu = Menu(title="Chart Packs", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit",
                 column_header=format_column_header("home"))
 
@@ -674,10 +653,10 @@ def show_main_menu(
         sync_label = _build_sync_label(cache)
         menu_instance.update_item_label(("sync", None), sync_label)
 
-        # Update footer when scanning finishes
+        # Update rescan item when scanning finishes
         if background_scanner.is_done():
-            rescan_part = f"{Colors.MUTED}[R]{Colors.RESET} Rescan {Colors.MUTED}(just now){Colors.RESET}"
-            menu_instance.footer = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {rescan_part}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+            menu_instance.update_item_description(("rescan", None), "Last scan: just now")
+            menu_instance.enable_item(("rescan", None))
 
         return True  # Re-render with updated values
 
@@ -792,6 +771,26 @@ def show_main_menu(
     sync_label = _build_sync_label(cache)
     menu.add_item(MenuItem(sync_label, hotkey="S", value=("sync", None), description=cache.sync_action_desc))
 
+    # Rescan item with scan age or scanning state
+    is_scanning = background_scanner and not background_scanner.is_done()
+    if is_scanning:
+        rescan_desc = f"{Colors.CYAN}Scanning...{Colors.RESET}"
+    else:
+        from datetime import datetime, timezone
+        from src.sync.cache import get_scan_cache
+        newest = get_scan_cache().get_newest_time()
+        if newest:
+            age_s = (datetime.now(timezone.utc) - newest).total_seconds()
+            if age_s < 60:
+                rescan_desc = "Last scan: just now"
+            elif age_s < 3600:
+                rescan_desc = f"Last scan: {int(age_s // 60)}m ago"
+            else:
+                rescan_desc = f"Last scan: {int(age_s // 3600)}h {int((age_s % 3600) // 60)}m ago"
+        else:
+            rescan_desc = "Force re-scan all drives"
+    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc, disabled=is_scanning))
+
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
 
@@ -812,14 +811,6 @@ def show_main_menu(
     # Handle Tab to cycle delta mode
     if result.action == "tab":
         return ("cycle_delta_mode", None, menu._selected)
-
-    # Handle R key to force rescan — blocked while scanning is active
-    if result.action == "rescan":
-        if background_scanner and not background_scanner.is_done():
-            return ("noop", None, menu._selected)
-        if isinstance(result.value, str) and not result.value.startswith(("download", "purge", "quit")):
-            return ("rescan", result.value, menu._selected)
-        return ("rescan", None, menu._selected)
 
     restore_pos = menu._selected_before_hotkey if menu._selected_before_hotkey != menu._selected else menu._selected
 

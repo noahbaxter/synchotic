@@ -217,11 +217,6 @@ class BackgroundScanner:
                 folders_total=self._stats.folders_total,
             )
 
-    def get_setlist_ids(self, drive_id: str) -> list[str]:
-        """Get setlist IDs for a drive."""
-        with self._lock:
-            return list(self._drive_setlist_ids.get(drive_id, []))
-
     def get_discovered_setlist_count(self, drive_id: str) -> tuple[int, int] | None:
         """Get (enabled_count, total_count) for a drive."""
         with self._lock:
