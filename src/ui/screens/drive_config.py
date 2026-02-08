@@ -210,6 +210,7 @@ def show_subfolder_settings(
                 disabled=not setlist_enabled or not drive_enabled,
                 delta_mode=delta_mode,
                 state=setlist_state,
+                disk_size=setlist_disk_size,
             )
 
             # Build label with checkmark, italic for scanning, delta appended

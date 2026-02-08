@@ -140,15 +140,15 @@ def _rjust(text: str, width: int) -> str:
 def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value_color: str) -> str:
     """Build pipe-separated fixed-width column string.
 
-    Format: "  {sync:>5}  |  {count:>5}  |  {size:>8}"
+    Format: "  {sync:>5}  |  {count:>6}  |  {size:>10}"
     Colors applied to values and pipes independently.
     When no colors given, returns plain text (menu applies its own color wrap).
     """
     if not pipe_color and not value_color:
-        return f"  {sync:>5}  |  {count:>6}  |  {size_str:>8}"
+        return f"  {sync:>5}  |  {count:>6}  |  {size_str:>10}"
     p = f"{pipe_color}|{Colors.RESET}"
     v = (lambda s: f"{value_color}{s}{Colors.RESET}") if value_color else (lambda s: s)
-    return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>6}')}  {p}  {v(f'{size_str:>8}')}"
+    return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>6}')}  {p}  {v(f'{size_str:>10}')}"
 
 
 def format_column_header(screen: str) -> str:
@@ -158,9 +158,9 @@ def format_column_header(screen: str) -> str:
     """
     p = f"{Colors.MUTED}|{Colors.RESET}"
     if screen == "setlist":
-        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>8}{Colors.RESET}"
+        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>10}{Colors.RESET}"
     # home
-    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>8}{Colors.RESET}"
+    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>10}{Colors.RESET}"
 
 
 def _compute_delta(
@@ -278,7 +278,7 @@ def format_home_item(
         hl = Colors.CYAN_DIM if disabled else Colors.CYAN
         pipe = f"\x1b[23m{base}|{Colors.ITALIC}"  # disable italic for pipe, re-enable after
         sync_val = f"{sync:>5}" if sync else "     "
-        size_val = f"{size_str:>8}" if size_str else "        "
+        size_val = f"{size_str:>10}" if size_str else "          "
 
         if count and "/" in count:
             enabled_str, rest = count.split("/", 1)
@@ -324,6 +324,7 @@ def format_setlist_item(
     unit: str = "charts",
     delta_mode: str = "size",
     state: str = "current",
+    disk_size: int = 0,
 ) -> tuple[str, str]:
     """Format setlist item as (columns_str, delta_str).
 
@@ -332,23 +333,42 @@ def format_setlist_item(
     """
     missing_size = max(0, total_size - synced_size)
 
-    # Build raw column values
+    # Sync column: blank when disabled or 0 charts (don't show misleading 100%)
     if disabled:
         sync = ""
         is_synced = False
+    elif total_charts == 0:
+        sync = ""
+        is_synced = False
     else:
-        pct = calc_percent(synced_charts, total_charts) if total_charts > 0 else 100
-        is_synced = synced_charts >= total_charts and total_charts > 0
+        pct = calc_percent(synced_charts, total_charts)
+        is_synced = synced_charts >= total_charts
         sync = f"{pct}%"
 
     count = str(total_charts) if total_charts > 0 else ""
-    size_str = format_size(total_size) if total_size > 0 else ""
+
+    # Size column: disk size when available, download size with ↓ when not
+    has_disk_data = disk_size > 0
+    is_download = False
+
+    if disabled and has_disk_data:
+        size_str = ""  # purge delta on label tells the story
+    elif has_disk_data:
+        size_str = format_size(disk_size)
+    elif total_size > 0:
+        size_str = f"↓ {format_size(total_size)}"
+        is_download = True
+    else:
+        size_str = ""
 
     # Checkmark for label prefix (confirmed 100% sync)
     show_checkmark = is_synced and state == "current"
 
-    # Determine colors and build columns (normal colors for all states including scanning)
+    # Determine colors and build columns
     if state == "cached":
+        columns = _format_columns(sync, count, size_str, Colors.STALE, Colors.STALE)
+    elif is_download:
+        # Download size indicator — dim the whole row
         columns = _format_columns(sync, count, size_str, Colors.STALE, Colors.STALE)
     else:
         # "current" or "scanning" - no color codes, menu applies MUTED/MUTED_DIM
