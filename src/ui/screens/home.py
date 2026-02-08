@@ -674,6 +674,11 @@ def show_main_menu(
         sync_label = _build_sync_label(cache)
         menu_instance.update_item_label(("sync", None), sync_label)
 
+        # Update footer when scanning finishes
+        if background_scanner.is_done():
+            rescan_part = f"{Colors.MUTED}[R]{Colors.RESET} Rescan {Colors.MUTED}(just now){Colors.RESET}"
+            menu_instance.footer = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {rescan_part}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+
         return True  # Re-render with updated values
 
     if background_scanner and not background_scanner.is_done():
