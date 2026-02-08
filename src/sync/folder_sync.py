@@ -218,7 +218,9 @@ def purge_all_folders(
 
     Uses marker files as source of truth for what's valid.
     """
+    from ..core.formatting import normalize_path_key
     from ..ui.components import format_purge_tree
+    from .markers import get_all_marker_files
 
     print_section_header("Purge")
 
@@ -226,6 +228,10 @@ def purge_all_folders(
     total_failed = 0
     total_size = 0
     purged_folder_ids: set[str] = set()
+
+    # Compute markers ONCE for all folders
+    all_marker_files = get_all_marker_files()
+    marker_norm = {normalize_path_key(p) for p in all_marker_files}
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
@@ -253,7 +259,10 @@ def purge_all_folders(
                 display.purge_removed(deleted, failed)
             continue
 
-        files_to_purge, _ = plan_purge([folder], base_path, user_settings, failed_setlists)
+        files_to_purge, _ = plan_purge(
+            [folder], base_path, user_settings, failed_setlists,
+            precomputed_markers=marker_norm,
+        )
 
         if not files_to_purge:
             continue

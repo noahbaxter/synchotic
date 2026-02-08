@@ -133,9 +133,18 @@ def plan_purge(
     all_files = []
 
     # Get ALL tracked files from markers (one lookup, used for all folders)
-    all_marker_files = get_all_marker_files()
-    marker_files_normalized = {normalize_path_key(p) for p in all_marker_files}
+    if precomputed_markers is not None:
+        marker_files_normalized = precomputed_markers
+    else:
+        all_marker_files = get_all_marker_files()
+        marker_files_normalized = {normalize_path_key(p) for p in all_marker_files}
     debug_log(f"PURGE | marker_files={len(marker_files_normalized)}")
+
+    for folder in folders:
+        folder_name = folder.get("name", "")
+        prefix = normalize_path_key(folder_name + "/")
+        with_prefix = sum(1 for p in marker_files_normalized if p.startswith(prefix))
+        debug_log(f"PURGE_MARKERS | folder={folder_name} | paths_with_prefix={with_prefix} | paths_without={len(marker_files_normalized) - with_prefix}")
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
