@@ -603,11 +603,18 @@ def show_main_menu(
             # Currently scanning - show current folder stats + running totals
             folder_elapsed = format_duration(stats.current_folder_elapsed)
             total_elapsed = format_duration(stats.elapsed)
-            new_status = (
-                f"Scanning: {stats.current_folder} "
-                f"({stats.folders_done + 1}/{stats.folders_total}) | "
-                f"{folder_elapsed} | {total_elapsed} total | {stats.api_calls} API calls"
-            )
+            if stats.api_calls > 0:
+                new_status = (
+                    f"Scanning: {stats.current_folder} "
+                    f"({stats.folders_done + 1}/{stats.folders_total}) | "
+                    f"{folder_elapsed} | {total_elapsed} total | {stats.api_calls} API calls"
+                )
+            else:
+                new_status = (
+                    f"Loading cache: {stats.current_folder} "
+                    f"({stats.folders_done + 1}/{stats.folders_total}) | "
+                    f"{total_elapsed}"
+                )
         else:
             # Done scanning - show total time
             if stats.elapsed > 0:
@@ -670,7 +677,10 @@ def show_main_menu(
         # Set initial status line
         stats = background_scanner.get_stats()
         if stats.current_folder:
-            menu.status_line = f"Scanning: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total}) | {stats.api_calls} API calls"
+            if stats.api_calls > 0:
+                menu.status_line = f"Scanning: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total}) | {stats.api_calls} API calls"
+            else:
+                menu.status_line = f"Loading cache: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total})"
         else:
             menu.status_line = "Starting scan..."
 
@@ -779,7 +789,9 @@ def show_main_menu(
     # Rescan item with scan age or scanning state
     is_scanning = background_scanner and not background_scanner.is_done()
     if is_scanning:
-        rescan_desc = f"{Colors.CYAN}Scanning...{Colors.RESET}"
+        api_calls = background_scanner.get_stats().api_calls
+        label = "Scanning..." if api_calls > 0 else "Loading cache..."
+        rescan_desc = f"{Colors.CYAN}{label}{Colors.RESET}"
     else:
         from datetime import datetime, timezone
         from src.sync.cache import get_scan_cache
