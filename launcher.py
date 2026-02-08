@@ -401,12 +401,18 @@ def fetch_latest_release() -> dict:
 
 
 def get_download_url(release: dict) -> tuple[str, str]:
-    """Get download URL and version from release info."""
+    """Get download URL and version from release info.
+
+    For dev builds, uses asset's updated_at as version since the tag
+    (dev-latest) never changes but the asset does on every push.
+    """
     version = release.get("tag_name", "").lstrip("v")
     asset_name = get_asset_name()
 
     for asset in release.get("assets", []):
         if asset.get("name") == asset_name:
+            if RELEASE_TAG:
+                version = asset.get("updated_at", version)
             return asset.get("browser_download_url"), version
 
     error_exit(f"Release asset '{asset_name}' not found.\nThis platform may not be supported yet.")
