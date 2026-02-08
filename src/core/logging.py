@@ -20,6 +20,7 @@ class TeeOutput:
         r'^\s*$',                 # Blank lines
         r'^\s*v\d+\.',            # Version tagline (part of banner)
         r'^\s*↓.*MB\s*\(\d+%\)', # Download progress lines (↓ File: X/Y MB (N%))
+        r'Scanning:.*\d+/\d+.*API calls',  # Scanner progress spam
     ]
 
     def __init__(self, log_path: Path, version: str = None):
@@ -38,7 +39,7 @@ class TeeOutput:
         self.terminal.write(message)
 
         # Strip ANSI escape codes
-        clean = re.sub(r'\x1b\[[0-9;]*[mKHJ]', '', message)
+        clean = re.sub(r'\x1b\[[0-9;]*[A-Za-z]', '', message)
 
         # Buffer partial lines (for \r carriage return handling)
         self._line_buffer += clean
