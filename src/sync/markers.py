@@ -27,37 +27,6 @@ def get_markers_dir() -> Path:
     return markers_dir
 
 
-_long_path_warned = False
-
-_REG_CONTENT = """\
-Windows Registry Editor Version 5.00
-
-; Enables long path support (>260 chars) on Windows 10/11.
-; Right-click > Merge or double-click to apply. Requires admin.
-
-[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem]
-"LongPathsEnabled"=dword:00000001
-"""
-
-
-def _warn_long_paths_once():
-    global _long_path_warned
-    if _long_path_warned:
-        return
-    _long_path_warned = True
-
-    reg_path = get_data_dir() / "enable_long_paths.reg"
-    try:
-        reg_path.write_text(_REG_CONTENT)
-    except OSError:
-        pass
-
-    print(
-        "  Note: some marker filenames are being truncated due to Windows path limits.\n"
-        f"  To fix, right-click and Merge: {reg_path}"
-    )
-
-
 def get_marker_path(archive_path: str, md5: str) -> Path:
     """
     Compute marker file path for an archive.
@@ -91,8 +60,6 @@ def get_marker_path(archive_path: str, md5: str) -> Path:
     max_base_len = max(max_base_len, 50)  # floor to keep filenames usable
 
     if len(safe_name) > max_base_len:
-        if os.name == "nt":
-            _warn_long_paths_once()
         path_hash = hashlib.md5(archive_path.encode()).hexdigest()[:8]
         safe_name = safe_name[:max_base_len - 9] + "_" + path_hash
 
