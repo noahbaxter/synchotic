@@ -59,7 +59,7 @@ from src.sync import FolderStatsCache, count_purgeable_detailed, clear_scan_cach
 from src.ui.primitives import clear_screen, wait_with_skip
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
-from src.core.logging import TeeOutput
+from src.core.logging import TeeOutput, debug_log
 from src.drive.client import DriveClientConfig
 
 # ============================================================================
@@ -606,6 +606,9 @@ class SyncApp:
                 if setlist.name != setlist.drive_name:
                     sanitized_name = sanitize_drive_name(setlist.name)
                     setlist_files = [f for f in all_files if f["path"].startswith(sanitized_name + "/")]
+                    if not setlist_files:
+                        prefixes = set(f["path"].split("/")[0] for f in all_files if "/" in f["path"])
+                        debug_log(f"SETLIST_FILTER | name={setlist.name} | sanitized={sanitized_name} | all_files={len(all_files)} | matched=0 | prefixes={sorted(prefixes)[:5]}")
                 else:
                     setlist_files = list(all_files)
 
