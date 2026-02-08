@@ -125,6 +125,27 @@ class MenuResult:
         return self.item.value
 
 
+def _truncate_with_ansi(text: str, max_visible: int) -> str:
+    """Truncate text to max_visible characters, preserving ANSI escape codes."""
+    if max_visible <= 1:
+        return "…"
+    target = max_visible - 1  # Reserve 1 char for ellipsis
+    visible = 0
+    i = 0
+    while i < len(text):
+        if text[i] == '\x1b':
+            j = i + 1
+            while j < len(text) and text[j] != 'm':
+                j += 1
+            i = j + 1
+            continue
+        visible += 1
+        if visible > target:
+            return text[:i] + "…"
+        i += 1
+    return text
+
+
 @dataclass
 class Menu:
     """Interactive terminal menu with arrow key navigation."""
@@ -346,6 +367,17 @@ class Menu:
                 unsel_pfx = "  "
                 pfx_width = 2
                 hotkey_pad = ""
+
+            hotkey_len = (len(item.hotkey) + 2 + len(hotkey_pad)) if item.hotkey else 0
+
+            # Truncate label to ensure description columns always fit
+            if item.description:
+                desc_vis = len(strip_ansi(item.description))
+                if desc_vis > 0:
+                    max_label = w - 4 - pfx_width - toggle_len - hotkey_len - desc_vis - 2
+                    if 4 < max_label < label_visible_len:
+                        label_text = _truncate_with_ansi(label_text, max_label)
+                        label_visible_len = max_label
 
             if is_disabled:
                 if selected:
