@@ -14,6 +14,7 @@ from pathlib import Path
 
 from ..drive import DriveClient, FolderScanner
 from ..drive.client import DriveClientConfig
+from ..core.formatting import sanitize_drive_name
 from ..core.logging import debug_log
 
 if TYPE_CHECKING:
@@ -513,7 +514,7 @@ class BackgroundScanner:
             self._stats.current_folder_start = scan_start
 
         try:
-            base_path = setlist.name if setlist.name != setlist.drive_name else ""
+            base_path = sanitize_drive_name(setlist.name) if setlist.name != setlist.drive_name else ""
 
             # Check scan cache (skip API call if fresh enough)
             scan_cache = get_scan_cache()

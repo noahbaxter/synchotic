@@ -9,7 +9,7 @@ from pathlib import Path
 from typing import Callable, Optional, Union
 
 from ..drive import DriveClient
-from ..core.formatting import dedupe_files_by_newest, sanitize_filename
+from ..core.formatting import dedupe_files_by_newest, sanitize_drive_name
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
@@ -66,7 +66,7 @@ class FolderSync:
         if disabled_prefixes:
             original_count = len(manifest_files)
             # Sanitize prefixes to match how paths appear on disk (handles : -> - etc)
-            sanitized_prefixes = {sanitize_filename(p) for p in disabled_prefixes}
+            sanitized_prefixes = {sanitize_drive_name(p) for p in disabled_prefixes}
             debug_log(f"DOWNLOAD_FILTER | folder={folder['name']} | disabled={len(disabled_prefixes)} | sanitized={list(sanitized_prefixes)[:3]}")
 
             def is_path_disabled(path: str) -> bool:
@@ -74,7 +74,7 @@ class FolderSync:
                 first_slash = path.find("/")
                 setlist_name = path[:first_slash] if first_slash != -1 else path
                 # Sanitize the setlist name from scanner to match sanitized prefixes
-                sanitized_name = sanitize_filename(setlist_name)
+                sanitized_name = sanitize_drive_name(setlist_name)
                 return sanitized_name in sanitized_prefixes
 
             manifest_files = [f for f in manifest_files if not is_path_disabled(f.get("path", ""))]

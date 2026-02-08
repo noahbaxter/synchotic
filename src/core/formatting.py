@@ -73,6 +73,15 @@ def escape_name_slashes(name: str) -> str:
     return name.replace("/", "//")
 
 
+def sanitize_drive_name(name: str) -> str:
+    """Sanitize a raw Google Drive item name for filesystem use.
+
+    Combines slash escaping with full filename sanitization.
+    Use this for any name coming directly from the Drive API.
+    """
+    return sanitize_filename(escape_name_slashes(name))
+
+
 def sanitize_filename(filename: str) -> str:
     """
     Sanitize a filename for cross-platform compatibility.

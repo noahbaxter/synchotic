@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ..stats import clear_local_stats_cache
-from ..core.formatting import normalize_fs_name
+from ..core.formatting import normalize_fs_name, sanitize_drive_name
 from ..core.paths import get_data_dir
 
 if TYPE_CHECKING:
@@ -339,6 +339,7 @@ class ScanCache:
         self._dir.mkdir(parents=True, exist_ok=True)
         path = self._dir / f"{setlist_id}.json"
         data = {
+            "version": self.CACHE_VERSION,
             "scanned_at": datetime.now(timezone.utc).isoformat(),
             "files": files,
         }

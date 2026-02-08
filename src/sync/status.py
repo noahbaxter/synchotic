@@ -11,7 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
-from ..core.formatting import sanitize_path, sanitize_filename, dedupe_files_by_newest, normalize_fs_name
+from ..core.formatting import sanitize_path, sanitize_drive_name, dedupe_files_by_newest, normalize_fs_name
 from ..core.logging import debug_log
 from .cache import scan_actual_charts, CachedSetlistStats
 from .download_planner import EXCLUDED_FILES
@@ -219,9 +219,10 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None) -> SyncS
             continue
 
         # Get disabled setlists FIRST so we can filter before expensive operations
+        # Sanitize names so they match sanitized manifest paths and disk names
         disabled_setlists = set()
         if user_settings:
-            disabled_setlists = user_settings.get_disabled_subfolders(folder_id)
+            disabled_setlists = {sanitize_drive_name(n) for n in user_settings.get_disabled_subfolders(folder_id)}
 
         # Filter out disabled setlists BEFORE dedupe (major optimization for large manifests)
         if disabled_setlists:
@@ -368,10 +369,11 @@ def get_setlist_sync_status(
     # For custom folders, the folder IS the setlist - use all files
     # For regular folders, filter to files with the setlist prefix
     if not is_custom:
-        setlist_prefix = f"{setlist_name}/"
+        sanitized_name = sanitize_drive_name(setlist_name)
+        setlist_prefix = f"{sanitized_name}/"
         manifest_files = [
             f for f in manifest_files
-            if f.get("path", "").startswith(setlist_prefix) or f.get("path", "") == setlist_name
+            if f.get("path", "").startswith(setlist_prefix) or f.get("path", "") == sanitized_name
         ]
 
     if not manifest_files:
@@ -420,7 +422,7 @@ def compute_setlist_stats(
     folder_path = base_path / folder_name
     is_custom = folder.get("is_custom", False)
     # Sanitize setlist_name for disk path (colons etc. get replaced on disk)
-    sanitized_setlist = sanitize_filename(setlist_name)
+    sanitized_setlist = sanitize_drive_name(setlist_name)
     # For custom folders, the folder itself IS the setlist (no subdirectory)
     setlist_path = folder_path if is_custom else folder_path / sanitized_setlist
     delete_videos = user_settings.delete_videos if user_settings else True
