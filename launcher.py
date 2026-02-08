@@ -218,11 +218,20 @@ def close_logging():
 
 # --- Directory change handling ---
 
+def _state_key() -> str:
+    """State key prefix so dev and prod launchers don't share state."""
+    return "dev" if RELEASE_TAG else "prod"
+
+
 def _save_launcher_state(current_path: str):
     """Save current launcher path to state file."""
+    key = _state_key()
     state = read_state()
-    state["launcher_path"] = current_path
-    state["last_run"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    state[f"launcher_path_{key}"] = current_path
+    state[f"last_run_{key}"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    # Migrate: remove old shared keys so they don't cause false triggers
+    state.pop("launcher_path", None)
+    state.pop("last_run", None)
     write_state(state)
 
 
@@ -322,7 +331,9 @@ def _prompt_fallback() -> str:
 def handle_directory_change():
     """Check if launcher moved and handle old .dm-sync folder."""
     current_path = str(get_launcher_path())
-    old_path = read_state().get("launcher_path")
+    key = _state_key()
+    state = read_state()
+    old_path = state.get(f"launcher_path_{key}") or state.get("launcher_path")
 
     # First run or same location
     if not old_path or old_path == current_path:
@@ -479,6 +490,7 @@ def extract_app(zip_path: Path, version: str):
     """Extract app zip to .dm-sync/_app/ atomically."""
     app_dir = get_app_dir()
     temp_dir = app_dir.parent / "_app_temp"
+    old_dir = app_dir.parent / "_app_old"
 
     if temp_dir.exists():
         shutil.rmtree(temp_dir)
@@ -490,11 +502,19 @@ def extract_app(zip_path: Path, version: str):
         with zipfile.ZipFile(zip_path, "r") as zf:
             zf.extractall(temp_dir)
 
+        # Swap: rename old out of the way, move new in, then delete old.
+        # If anything fails mid-swap, at least one copy survives.
+        if old_dir.exists():
+            shutil.rmtree(old_dir)
         if app_dir.exists():
-            shutil.rmtree(app_dir)
+            app_dir.rename(old_dir)
 
         temp_dir.rename(app_dir)
         (app_dir / ".version").write_text(version)
+
+        # Clean up old version
+        if old_dir.exists():
+            shutil.rmtree(old_dir, ignore_errors=True)
 
     except zipfile.BadZipFile:
         error_exit("Downloaded file is corrupted. Please try again.")
