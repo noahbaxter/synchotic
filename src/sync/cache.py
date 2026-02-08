@@ -315,6 +315,7 @@ def get_persistent_stats_cache() -> PersistentStatsCache:
 class ScanCache:
     """Cache Drive scan results to disk to skip API calls on restart."""
     CACHE_DIR = "scan_cache"
+    CACHE_VERSION = 2  # Bump when path format changes (v2: sanitized paths)
     MAX_AGE_SECONDS = 3600  # 1 hour
 
     def __init__(self):
@@ -327,6 +328,8 @@ class ScanCache:
         try:
             with open(path) as f:
                 data = json.load(f)
+            if data.get("version") != self.CACHE_VERSION:
+                return None
             scanned_at = datetime.fromisoformat(data["scanned_at"])
             age = (datetime.now(timezone.utc) - scanned_at).total_seconds()
             if age > self.MAX_AGE_SECONDS:
@@ -540,7 +543,7 @@ def scan_actual_charts(folder_path: Path, disabled_setlists: set[str] = None) ->
     result_size = full_size
 
     for setlist_name in disabled_setlists:
-        setlist_path = folder_path / setlist_name
+        setlist_path = folder_path / sanitize_drive_name(setlist_name)
         setlist_key = str(setlist_path)
 
         if setlist_key in _cache.actual_charts:
