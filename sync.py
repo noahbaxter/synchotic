@@ -43,6 +43,7 @@ from src.core.paths import (
     get_download_path,
     get_drives_config_path,
     migrate_legacy_files,
+    migrate_unsanitized_paths,
     cleanup_tmp_dir,
 )
 from src.ui import (
@@ -941,6 +942,12 @@ def main():
     migrated = migrate_legacy_files()
     if migrated:
         print(f"Migrated settings to .dm-sync/: {', '.join(migrated)}")
+
+    renamed = migrate_unsanitized_paths()
+    if renamed:
+        print(f"Sanitized {len(renamed)} path(s) on disk:")
+        for r in renamed:
+            print(f"  {r}")
 
     _t1 = _time.time()
     app = SyncApp()

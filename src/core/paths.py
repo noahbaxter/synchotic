@@ -213,3 +213,46 @@ def migrate_legacy_files() -> list[str]:
                 pass
 
     return migrated
+
+
+def migrate_unsanitized_paths() -> list[str]:
+    """
+    One-time migration: rename files/dirs that don't match sanitized names.
+
+    Introduced when sanitize_drive_name() started replacing colons with " -".
+    Directories on disk still had old names (with colons), causing marker/path
+    mismatches and unnecessary re-downloads.
+
+    Walks Sync Charts/ bottom-up and renames anything where
+    sanitize_filename(name) != name. Skips if already done (flag file).
+    """
+    from src.core.formatting import sanitize_filename
+
+    flag_file = get_data_dir() / ".paths_sanitized"
+    if flag_file.exists():
+        return []
+
+    download_dir = get_download_path()
+    if not download_dir.exists():
+        flag_file.touch()
+        return []
+
+    renamed = []
+    for dirpath, dirnames, filenames in os.walk(download_dir, topdown=False):
+        parent = Path(dirpath)
+
+        for name in filenames + dirnames:
+            sanitized = sanitize_filename(name)
+            if sanitized != name:
+                old = parent / name
+                new = parent / sanitized
+                if new.exists():
+                    continue
+                try:
+                    old.rename(new)
+                    renamed.append(f"{name} -> {sanitized}")
+                except OSError:
+                    pass
+
+    flag_file.touch()
+    return renamed
