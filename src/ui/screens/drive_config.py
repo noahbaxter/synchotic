@@ -110,8 +110,7 @@ def show_subfolder_settings(
             disabled=not drive_enabled,
         )
 
-        mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
-        legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+        legend = f"{Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
         menu = Menu(title=f"{folder_name}", subtitle=subtitle, space_hint="Toggle", footer=legend,
                     column_header=format_column_header("setlist"))
 
@@ -267,12 +266,6 @@ def show_subfolder_settings(
         if result.action == "rebuild":
             selected_index = menu._selected
             needs_cache_update = True
-            continue
-
-        if result.action == "tab":
-            selected_index = menu._selected
-            user_settings.cycle_delta_mode()
-            user_settings.save()
             continue
 
         action, idx, setlist_name = result.value

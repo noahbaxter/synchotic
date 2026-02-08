@@ -96,13 +96,6 @@ class UserSettings:
         with open(self.path, "w") as f:
             json.dump(data, f, indent=2)
 
-    def cycle_delta_mode(self) -> str:
-        """Cycle through delta display modes. Returns new mode."""
-        modes = ["size", "files", "charts"]
-        current_idx = modes.index(self.delta_mode) if self.delta_mode in modes else 0
-        self.delta_mode = modes[(current_idx + 1) % len(modes)]
-        return self.delta_mode
-
     def is_drive_enabled(self, drive_id: str) -> bool:
         """Check if a drive is enabled at the top level.
 

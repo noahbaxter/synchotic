@@ -585,9 +585,7 @@ def show_main_menu(
             background_scanner=background_scanner,
         )
 
-    delta_mode = user_settings.delta_mode if user_settings else "size"
-    mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
-    legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+    legend = f"{Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
     menu = Menu(title="Chart Packs", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit",
                 column_header=format_column_header("home"))
 
@@ -814,10 +812,6 @@ def show_main_menu(
     result = menu.run(initial_index=selected_index)
     if result is None:
         return ("quit", None, selected_index)
-
-    # Handle Tab to cycle delta mode
-    if result.action == "tab":
-        return ("cycle_delta_mode", None, menu._selected)
 
     restore_pos = menu._selected_before_hotkey if menu._selected_before_hotkey != menu._selected else menu._selected
 

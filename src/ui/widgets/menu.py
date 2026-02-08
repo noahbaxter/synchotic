@@ -648,10 +648,10 @@ class Menu:
                     self._selected = selectable[new_pos]
                     self._render()
 
-                elif key in (KEY_ENTER, KEY_SPACE, KEY_TAB):
+                elif key in (KEY_ENTER, KEY_SPACE):
                     item = self.items[self._selected]
                     if not getattr(item, 'disabled', False):
-                        action = {KEY_ENTER: "enter", KEY_SPACE: "space", KEY_TAB: "tab"}[key]
+                        action = "enter" if key == KEY_ENTER else "space"
                         return MenuResult(item, action)
 
                 elif key == KEY_LEFT or key == KEY_RIGHT:
