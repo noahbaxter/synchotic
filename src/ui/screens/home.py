@@ -806,7 +806,7 @@ def show_main_menu(
                 rescan_desc = f"Last scan: {int(age_s // 3600)}h {int((age_s % 3600) // 60)}m ago"
         else:
             rescan_desc = "Force re-scan all drives"
-    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc, disabled=is_scanning))
+    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc, disabled=is_scanning, locked=is_scanning))
 
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
