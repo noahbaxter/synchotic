@@ -13,8 +13,24 @@ from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import relative_posix, parent_posix, sanitize_path, sanitize_filename, normalize_path_key
 from ..core.logging import debug_log
 from .cache import scan_local_files
-from .markers import get_all_marker_files
+from .markers import get_all_marker_files, get_all_markers
 from .sync_checker import is_archive_file
+
+
+PURGE_RATIO_LIMIT = 0.15   # 15%
+PURGE_SIZE_LIMIT = 2 * 1024**3  # 2 GB
+
+
+def check_purge_safety(local_file_count, purge_count, purge_size):
+    """Returns (is_safe, reason) — blocks if >15% of files or >2GB."""
+    if local_file_count == 0:
+        return True, ""
+    ratio = purge_count / local_file_count
+    if ratio > PURGE_RATIO_LIMIT:
+        return False, f"{ratio:.0%} of files ({purge_count:,}/{local_file_count:,})"
+    if purge_size > PURGE_SIZE_LIMIT:
+        return False, f"{purge_size / 1024**3:.1f} GB exceeds limit"
+    return True, ""
 
 
 @dataclass
@@ -105,11 +121,35 @@ def find_extra_files(
         if marker_path in marker_files:
             continue
 
+        # Fallback: markers may store paths with drive prefix
+        if manifest_path in marker_files:
+            continue
+
         # Check manifest (loose files + archives themselves)
         if manifest_path in manifest_paths:
             continue
 
         extras.append((folder_path / rel_path, size))
+
+    # Diagnostic logging for suspicious purge volumes
+    if len(extras) > 50:
+        debug_log(f"PURGE_DIAG | folder={folder_name} | extras={len(extras)} | local_files={len(local_files)} | marker_count={len(marker_files)}")
+        for i, (path, size) in enumerate(extras[:5]):
+            rel = str(path.relative_to(folder_path)).replace("\\", "/")
+            norm = normalize_path_key(rel)
+            prefixed = normalize_path_key(f"{folder_name}/{rel}")
+            in_markers = norm in marker_files
+            in_markers_prefixed = prefixed in marker_files
+            debug_log(f"PURGE_DIAG | extra[{i}] raw={rel} | norm={norm} | in_markers={in_markers} | prefixed_in_markers={in_markers_prefixed}")
+
+        sample = list(marker_files)[:5]
+        for i, p in enumerate(sample):
+            debug_log(f"PURGE_DIAG | marker_sample[{i}]={p}")
+
+        for marker in get_all_markers()[:3]:
+            archive = marker.get("archive_path", "?")
+            files_sample = list(marker.get("files", {}).keys())[:3]
+            debug_log(f"PURGE_DIAG | marker_raw | archive={archive} | files={files_sample}")
 
     return extras
 
@@ -119,6 +159,7 @@ def plan_purge(
     base_path: Path,
     user_settings=None,
     failed_setlists: dict[str, set[str]] | None = None,
+    precomputed_markers: set[str] | None = None,
 ) -> Tuple[List[Tuple[Path, int]], PurgeStats]:
     """
     Plan what files should be purged.

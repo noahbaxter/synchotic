@@ -174,6 +174,36 @@ class TestSyncStateExtraFiles:
         assert len(extras) == 0, "Case mismatch should not flag file as extra"
 
 
+    def test_drive_prefix_fallback_protects_files(self, temp_dir):
+        """
+        Files should be protected when markers store paths WITH drive prefix.
+
+        This covers the Windows bug where markers store "DriveName/Setlist/file"
+        but find_extra_files checks without the prefix first. The fallback
+        should catch the prefixed form.
+        """
+        folder_name = "TestDrive"
+        folder_path = temp_dir / folder_name
+        chart_folder = folder_path / "Setlist" / "SomeChart"
+        chart_folder.mkdir(parents=True)
+
+        (chart_folder / "song.ini").write_text("[song]\nname=Test")
+        (chart_folder / "notes.mid").write_bytes(b"midi data")
+
+        # Markers store WITH drive prefix (the mismatch scenario)
+        marker_files = {
+            normalize_path_key("TestDrive/Setlist/SomeChart/song.ini"),
+            normalize_path_key("TestDrive/Setlist/SomeChart/notes.mid"),
+        }
+
+        extras = find_extra_files(folder_name, folder_path, marker_files, set())
+
+        extra_names = [f.name for f, _ in extras]
+        assert "song.ini" not in extra_names, "Prefixed marker should protect file via fallback"
+        assert "notes.mid" not in extra_names, "Prefixed marker should protect file via fallback"
+        assert len(extras) == 0
+
+
 class TestFindExtraFilesWithCache:
     """Tests for find_extra_files when passed pre-scanned local_files."""
 
