@@ -8,7 +8,9 @@ Cache is invalidated after downloads/purges.
 import hashlib
 import json
 import os
+import shutil
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import TYPE_CHECKING
 
@@ -308,6 +310,68 @@ def get_persistent_stats_cache() -> PersistentStatsCache:
     if _persistent_stats_cache is None:
         _persistent_stats_cache = PersistentStatsCache()
     return _persistent_stats_cache
+
+
+class ScanCache:
+    """Cache Drive scan results to disk to skip API calls on restart."""
+    CACHE_DIR = "scan_cache"
+    MAX_AGE_SECONDS = 3600  # 1 hour
+
+    def __init__(self):
+        self._dir = get_data_dir() / self.CACHE_DIR
+
+    def get(self, setlist_id: str) -> list[dict] | None:
+        path = self._dir / f"{setlist_id}.json"
+        if not path.exists():
+            return None
+        try:
+            with open(path) as f:
+                data = json.load(f)
+            scanned_at = datetime.fromisoformat(data["scanned_at"])
+            age = (datetime.now(timezone.utc) - scanned_at).total_seconds()
+            if age > self.MAX_AGE_SECONDS:
+                return None
+            return data["files"]
+        except (json.JSONDecodeError, KeyError, OSError, ValueError):
+            return None
+
+    def set(self, setlist_id: str, files: list[dict]):
+        self._dir.mkdir(parents=True, exist_ok=True)
+        path = self._dir / f"{setlist_id}.json"
+        data = {
+            "scanned_at": datetime.now(timezone.utc).isoformat(),
+            "files": files,
+        }
+        try:
+            with open(path, "w") as f:
+                json.dump(data, f)
+        except OSError:
+            pass
+
+    def invalidate(self, setlist_id: str):
+        path = self._dir / f"{setlist_id}.json"
+        try:
+            path.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+    def invalidate_all(self):
+        if self._dir.exists():
+            try:
+                shutil.rmtree(self._dir)
+            except OSError:
+                pass
+
+
+# Global scan cache instance
+_scan_cache: ScanCache | None = None
+
+
+def get_scan_cache() -> ScanCache:
+    global _scan_cache
+    if _scan_cache is None:
+        _scan_cache = ScanCache()
+    return _scan_cache
 
 
 class SyncCache:

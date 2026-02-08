@@ -79,6 +79,7 @@ class BackgroundScanner:
         user_settings: "UserSettings" = None,
         on_folder_complete: Callable[[dict], None] = None,
         download_path: Path = None,
+        force_rescan: bool = False,
     ):
         self._folders = folders
         self._auth = auth
@@ -86,6 +87,7 @@ class BackgroundScanner:
         self._user_settings = user_settings
         self._on_folder_complete = on_folder_complete
         self._download_path = download_path
+        self._force_rescan = force_rescan
 
         self._lock = threading.Lock()
         self._stop_event = threading.Event()
@@ -500,7 +502,7 @@ class BackgroundScanner:
     def _scan_setlist(self, setlist: SetlistInfo, scanner: FolderScanner):
         """Scan a single setlist and accumulate files into its drive."""
         from .status import compute_setlist_stats
-        from .cache import get_persistent_stats_cache
+        from .cache import get_persistent_stats_cache, get_scan_cache
 
         drive = setlist.drive
         display_name = f"{setlist.drive_name}/{setlist.name}" if setlist.name != setlist.drive_name else setlist.drive_name
@@ -511,25 +513,33 @@ class BackgroundScanner:
             self._stats.current_folder_start = scan_start
 
         try:
-            # base_path prefixes all file paths with the setlist name
             base_path = setlist.name if setlist.name != setlist.drive_name else ""
-            result = scanner.scan(setlist.setlist_id, base_path=base_path)
 
-            if result.cancelled or self._stop_event.is_set():
-                return
+            # Check scan cache (skip API call if fresh enough)
+            scan_cache = get_scan_cache()
+            cached_files = None if self._force_rescan else scan_cache.get(setlist.setlist_id)
 
-            # Accumulate files into parent drive
-            new_files = [
-                {
-                    "id": f["id"],
-                    "path": f["path"],
-                    "name": f["name"],
-                    "size": f.get("size", 0),
-                    "md5": f.get("md5", ""),
-                    "modified": f.get("modified", ""),
-                }
-                for f in result.files
-            ]
+            if cached_files is not None:
+                new_files = cached_files
+                debug_log(f"SCAN_CACHED | setlist={display_name} | files={len(new_files)}")
+            else:
+                result = scanner.scan(setlist.setlist_id, base_path=base_path)
+
+                if result.cancelled or self._stop_event.is_set():
+                    return
+
+                new_files = [
+                    {
+                        "id": f["id"],
+                        "path": f["path"],
+                        "name": f["name"],
+                        "size": f.get("size", 0),
+                        "md5": f.get("md5", ""),
+                        "modified": f.get("modified", ""),
+                    }
+                    for f in result.files
+                ]
+                scan_cache.set(setlist.setlist_id, new_files)
 
             with self._lock:
                 if drive.get("files") is None:

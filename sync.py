@@ -470,13 +470,16 @@ class SyncApp:
             delete_videos=self.user_settings.delete_videos,
         )
 
-    def _start_background_scan(self):
+    def _start_background_scan(self, force_rescan: bool = False):
         """
         Start background scanning of ALL folders.
 
         Scans folders in the background so the UI shows live progress.
         Enabled folders are scanned first (priority), then disabled folders.
         Only scans folders that don't have files loaded yet.
+
+        Args:
+            force_rescan: If True, bypass scan cache and hit the API for every setlist.
         """
         # Need OAuth for scanning
         if not self.auth.is_signed_in:
@@ -523,6 +526,7 @@ class SyncApp:
             user_settings=self.user_settings,
             on_folder_complete=on_folder_complete,
             download_path=get_download_path(),
+            force_rescan=force_rescan,
         )
         # Discovery first (synchronous) - gives accurate setlist counts immediately
         print("  Discovering setlists...")
