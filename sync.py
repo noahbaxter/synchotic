@@ -370,8 +370,9 @@ class SyncApp:
         """Toggle a drive on/off at the top level (preserves setlist settings)."""
         self.user_settings.toggle_drive(folder_id)
         self.user_settings.save()
-        # Don't invalidate cache - makes toggle instant
-        # Display strings are regenerated with new enabled state anyway
+        if self._background_scanner:
+            enabled = self.user_settings.is_drive_enabled(folder_id)
+            self._background_scanner.notify_drive_toggled(folder_id, enabled)
         # Purge numbers will be updated on next scan completion
 
     def handle_toggle_group(self, group_name: str):

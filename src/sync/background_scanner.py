@@ -297,6 +297,16 @@ class BackgroundScanner:
                         self._enabled_setlist_ids.discard(setlist_id)
                     break
 
+    def notify_drive_toggled(self, drive_id: str, enabled: bool):
+        """Called when user toggles an entire drive on/off from the home page."""
+        with self._lock:
+            for setlist_id, info in self._all_setlists.items():
+                if info.drive_id == drive_id:
+                    if enabled:
+                        self._enabled_setlist_ids.add(setlist_id)
+                    else:
+                        self._enabled_setlist_ids.discard(setlist_id)
+
     def add_folder(self, folder: dict):
         """Add a new folder to scan (for custom folders added at runtime)."""
         with self._lock:
