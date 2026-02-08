@@ -140,6 +140,7 @@ def update_menu_cache_on_toggle(
     global_purge_size = 0
     global_enabled_setlists = 0
     global_total_setlists = 0
+    global_disk_size = 0
 
     for folder in folders:
         fid = folder.get("folder_id", "")
@@ -157,6 +158,7 @@ def update_menu_cache_on_toggle(
             global_status.synced_size += agg.synced_size
             global_total_setlists += agg.total_setlists
             global_enabled_setlists += agg.enabled_setlists
+            global_disk_size += agg.disk_size
         global_purge_count += agg.purgeable_files
         global_purge_charts += agg.purgeable_charts
         global_purge_size += agg.purgeable_size
@@ -166,6 +168,7 @@ def update_menu_cache_on_toggle(
         global_purge_count, global_purge_charts, global_purge_size,
         global_enabled_setlists, global_total_setlists,
         delta_mode, scan_complete, background_scanner,
+        global_disk_size=global_disk_size,
     )
 
 
@@ -195,6 +198,7 @@ def _apply_global_stats(
     delta_mode: str,
     scan_complete: bool,
     scanner: "BackgroundScanner" = None,
+    global_disk_size: int = 0,
 ) -> None:
     """Format accumulated global stats and write them to the menu cache."""
     cache.subtitle = format_status_line(
@@ -203,13 +207,7 @@ def _apply_global_stats(
         enabled_setlists=global_enabled_setlists,
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
-        synced_size=global_status.synced_size,
-        missing_charts=global_status.missing_charts,
-        purgeable_files=global_purge_count,
-        purgeable_charts=global_purge_charts,
-        purgeable_size=global_purge_size,
-        delta_mode=delta_mode,
-        is_estimate=not scan_complete,
+        disk_size=global_disk_size,
     )
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
@@ -395,6 +393,7 @@ def compute_main_menu_cache(
     global_purge_size = 0
     global_enabled_setlists = 0
     global_total_setlists = 0
+    global_disk_size = 0
     cache_hits = 0
     cache_misses = 0
     cache_scanning = 0
@@ -475,6 +474,7 @@ def compute_main_menu_cache(
             global_status.synced_charts += status.synced_charts
             global_status.total_size += status.total_size
             global_status.synced_size += status.synced_size
+            global_disk_size += stats.disk_size
             if status.is_actual_charts:
                 global_status.is_actual_charts = True
             # Count setlists only for enabled drives
@@ -499,6 +499,7 @@ def compute_main_menu_cache(
         global_purge_count, global_purge_charts, global_purge_size,
         global_enabled_setlists, global_total_setlists,
         delta_mode, scan_complete, background_scanner,
+        global_disk_size=global_disk_size,
     )
 
     if drives_config:

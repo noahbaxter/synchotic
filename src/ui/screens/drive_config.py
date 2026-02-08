@@ -9,7 +9,7 @@ from pathlib import Path
 from src.core.formatting import sort_by_name
 from src.core.logging import debug_log
 from src.config import UserSettings, extract_subfolders_from_files
-from src.sync import SyncStatus, CachedSetlistStats, get_persistent_stats_cache, compute_setlist_stats
+from src.sync import get_persistent_stats_cache, compute_setlist_stats, aggregate_folder_stats
 from ..primitives import Colors
 from ..components import strip_ansi, format_drive_status, format_setlist_item, format_column_header
 from ..widgets import Menu, MenuItem, MenuDivider
@@ -93,55 +93,21 @@ def show_subfolder_settings(
             needs_cache_update = False
 
         # Aggregate stats using cached setlist data (fast!)
-        status = SyncStatus()
-        excess_files = 0
-        excess_size = 0
-        excess_charts = 0
-
-        for setlist_name in setlists:
-            cached = persistent_cache.get_setlist(folder_id, setlist_name)
-            if not cached:
-                continue
-
-            setlist_enabled = user_settings.is_subfolder_enabled(folder_id, setlist_name)
-
-            if drive_enabled and setlist_enabled:
-                status.total_charts += cached.total_charts
-                status.synced_charts += cached.synced_charts
-                status.total_size += cached.total_size
-                status.synced_size += cached.synced_size
-            elif drive_enabled and not setlist_enabled and cached.disk_files > 0:
-                excess_files += cached.disk_files
-                excess_size += cached.disk_size
-                excess_charts += cached.disk_charts
+        agg = aggregate_folder_stats(folder_id, setlists, user_settings, persistent_cache)
 
         debug_log(f"SETLIST_PAGE | === {folder_name} ===")
-        debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{status.missing_size} -{excess_size}")
-
-        enabled_setlist_count = sum(
-            1 for s in setlists
-            if user_settings.is_subfolder_enabled(folder_id, s)
-        )
+        debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{max(0, agg.total_size - agg.synced_size)} -{agg.purgeable_size}")
 
         delta_mode = user_settings.delta_mode if user_settings else "size"
 
-        # Drive delta is estimated if any enabled setlist hasn't been scanned this session
-        drive_is_estimate = scanner is not None and scanner.is_scanning(folder_id)
-
         subtitle = format_drive_status(
-            synced_charts=status.synced_charts,
-            total_charts=status.total_charts,
-            enabled_setlists=enabled_setlist_count,
-            total_setlists=len(setlists),
-            total_size=status.total_size,
-            synced_size=status.synced_size,
-            missing_charts=status.missing_charts,
-            purgeable_files=excess_files,
-            purgeable_charts=excess_charts,
-            purgeable_size=excess_size,
+            synced_charts=agg.synced_charts,
+            total_charts=agg.total_charts,
+            enabled_setlists=agg.enabled_setlists,
+            total_setlists=agg.total_setlists,
+            total_size=agg.total_size,
+            disk_size=agg.disk_size,
             disabled=not drive_enabled,
-            delta_mode=delta_mode,
-            is_estimate=drive_is_estimate,
         )
 
         mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")

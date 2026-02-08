@@ -80,20 +80,11 @@ def format_status_line(
     enabled_setlists: int,
     total_setlists: int,
     total_size: int,
-    synced_size: int = 0,
-    missing_charts: int = 0,
-    purgeable_files: int = 0,
-    purgeable_charts: int = 0,
-    purgeable_size: int = 0,
-    delta_mode: str = "size",
-    is_estimate: bool = False,
+    disk_size: int = 0,
+    **_kwargs,
 ) -> str:
-    """
-    Format status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB)
-
-    With delta: 100% | 562/562 charts, 10/15 setlists (4.0 GB) [+50 charts / -80 charts]
-    """
-    if total_charts == 0 and purgeable_files == 0 and missing_charts == 0:
+    """Format status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB)"""
+    if total_charts == 0:
         return ""
 
     pct = calc_percent(synced_charts, total_charts)
@@ -105,29 +96,11 @@ def format_status_line(
         parts.append(f"{enabled_setlists}/{total_setlists} setlists")
 
     info = ", ".join(parts)
-    if total_size > 0:
-        info += f" ({format_size(total_size)})"
+    display_size = disk_size if disk_size > 0 else total_size
+    if display_size > 0:
+        info += f" ({format_size(display_size)})"
 
-    result = f"{pct}% | {info}"
-
-    # Show full delta (add + remove)
-    missing_size = max(0, total_size - synced_size) if synced_size > 0 else 0
-    has_delta = missing_charts > 0 or purgeable_files > 0 or purgeable_charts > 0 or missing_size > 0
-    if has_delta:
-        delta = format_delta(
-            add_size=missing_size,
-            add_files=missing_charts,
-            add_charts=missing_charts,
-            remove_size=purgeable_size,
-            remove_files=purgeable_files,
-            remove_charts=purgeable_charts,
-            mode=delta_mode,
-            is_estimate=is_estimate,
-        )
-        if delta:
-            result += f" {delta}"
-
-    return result
+    return f"{pct}% | {info}"
 
 
 def _rjust(text: str, width: int) -> str:
@@ -404,30 +377,17 @@ def format_drive_status(
     enabled_setlists: int,
     total_setlists: int,
     total_size: int,
-    synced_size: int = 0,
-    missing_charts: int = 0,
-    purgeable_files: int = 0,
-    purgeable_charts: int = 0,
-    purgeable_size: int = 0,
+    disk_size: int = 0,
     disabled: bool = False,
-    delta_mode: str = "size",
-    is_estimate: bool = False,
+    **_kwargs,
 ) -> str:
     """
     Format drive config status line.
 
-    Enabled: 100% | 562/562 charts, 5/30 setlists (4.0 GB) [+50 charts / -80 charts]
-    Disabled: DISABLED [-317 MB]
+    Enabled: 100% | 562/562 charts, 5/30 setlists (4.0 GB)
+    Disabled: DISABLED
     """
     if disabled:
-        if purgeable_files > 0 or purgeable_charts > 0:
-            delta = format_delta(
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-            )
-            return f"{Colors.MUTED}DISABLED{Colors.RESET} {delta}"
         return f"{Colors.MUTED}DISABLED{Colors.RESET}"
 
     return format_status_line(
@@ -436,13 +396,7 @@ def format_drive_status(
         enabled_setlists=enabled_setlists,
         total_setlists=total_setlists,
         total_size=total_size,
-        synced_size=synced_size,
-        missing_charts=missing_charts,
-        purgeable_files=purgeable_files,
-        purgeable_charts=purgeable_charts,
-        purgeable_size=purgeable_size,
-        delta_mode=delta_mode,
-        is_estimate=is_estimate,
+        disk_size=disk_size,
     )
 
 
