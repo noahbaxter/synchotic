@@ -283,7 +283,7 @@ class SyncApp:
             menu.add_item(MenuItem("Scan folder", hotkey="S", value="scan", description="Get file list from Google Drive"))
 
         menu.add_item(MenuDivider())
-        menu.add_item(MenuItem("Remove folder", hotkey="R", value="remove", description="Remove from custom folders"))
+        menu.add_item(MenuItem("Remove folder", hotkey="X", value="remove", description="Remove from custom folders"))
         menu.add_item(MenuDivider())
         menu.add_item(MenuItem("Back", value="back"))
 
