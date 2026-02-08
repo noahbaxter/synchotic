@@ -208,11 +208,12 @@ class SyncApp:
                 print(f"\n  Warning: {len(all_failed)} setlist(s) failed to scan (files preserved): {', '.join(sorted(all_failed))}")
 
         # Rebuild markers for any extracted archives missing them (prevents mass deletion)
+        print("  Cleaning up...", end="", flush=True)
         created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
         if created > 0:
-            print(f"  Rebuilt {created} marker(s) from disk ({skipped} already up to date)")
+            print(f" rebuilt {created} marker(s),", end="", flush=True)
 
-        # Step 2: Purge extra files (no confirmation - sync means make it match)
+        # Purge extra files (no confirmation - sync means make it match)
         stats = count_purgeable_detailed(
             self.folders, get_download_path(), self.user_settings, failed_setlists
         )
@@ -223,8 +224,11 @@ class SyncApp:
             for fid in purged_ids:
                 self.folder_stats_cache.invalidate(fid)
 
-        # Always wait before returning to menu
-        from src.ui.primitives import wait_with_skip
+        print(" done.")
+
+        # Wait before returning to menu
+        from src.ui.primitives import wait_with_skip, flush_input
+        flush_input()  # Discard keypresses from during cleanup
         wait_with_skip(5, "Continuing in 5s (press any key to skip)")
 
     def handle_configure_drive(self, folder_id: str):
