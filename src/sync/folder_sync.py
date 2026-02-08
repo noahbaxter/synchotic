@@ -259,7 +259,7 @@ def purge_all_folders(
                 display.purge_removed(deleted, failed)
             continue
 
-        files_to_purge, _ = plan_purge(
+        files_to_purge, stats = plan_purge(
             [folder], base_path, user_settings, failed_setlists,
             precomputed_markers=marker_norm,
         )
@@ -269,14 +269,16 @@ def purge_all_folders(
 
         folder_size = sum(size for _, size in files_to_purge)
 
-        # Safety check: block suspiciously large purges
-        local_files = scan_local_files(folder_path)
-        is_safe, reason = check_purge_safety(len(local_files), len(files_to_purge), folder_size)
-        if not is_safe:
-            debug_log(f"PURGE_BLOCKED | folder={folder_name} | reason={reason}")
-            print(f"  WARNING: Purge blocked for {folder_name} ({reason})")
-            print(f"  This looks like a sync error — check debug log for details.")
-            continue
+        # Safety check: only for "extra" files (orphans not in markers/manifest).
+        # Disabled setlists and videos are intentional user-driven purges — skip safety.
+        if stats.extra_file_count > 0:
+            local_files = scan_local_files(folder_path)
+            is_safe, reason = check_purge_safety(len(local_files), stats.extra_file_count, stats.extra_file_size)
+            if not is_safe:
+                debug_log(f"PURGE_BLOCKED | folder={folder_name} | reason={reason}")
+                print(f"  WARNING: Purge blocked for {folder_name} ({reason})")
+                print(f"  This looks like a sync error — check debug log for details.")
+                continue
 
         display.purge_folder(folder_name, len(files_to_purge), folder_size)
 
