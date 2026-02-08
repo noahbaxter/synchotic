@@ -172,7 +172,9 @@ class TestDownloadPlannerWithSanitizedPaths:
         }]
         tasks, skipped, long_paths = plan_downloads(files, temp_dir, delete_videos=True)
         assert len(tasks) == 1
-        assert ":" not in str(tasks[0].local_path)
+        # Check the relative portion only — full path includes drive letter (C:\) on Windows
+        rel_path = str(tasks[0].local_path.relative_to(temp_dir))
+        assert ":" not in rel_path
 
     def test_archive_dedup_with_sanitized_names(self, temp_dir):
         """Two archives normalizing to same sanitized path are deduped."""
@@ -287,7 +289,9 @@ class TestEndToEndPathFlow:
         files = [{"id": "1", "path": manifest_path, "size": 500, "md5": "abc"}]
         tasks, _, _ = plan_downloads(files, tmp_path, delete_videos=True)
         assert len(tasks) == 1
-        assert ":" not in str(tasks[0].local_path)
+        # Check relative portion only — full path includes drive letter (C:\) on Windows
+        rel_path = str(tasks[0].local_path.relative_to(tmp_path))
+        assert ":" not in rel_path
 
         # Step 5: Disabled setlist filtering works
         disabled = {sanitize_drive_name(COLON_NAME)}
@@ -302,7 +306,7 @@ class TestEndToEndPathFlow:
         tasks, _, _ = plan_downloads(files, tmp_path, delete_videos=True)
         assert len(tasks) == 1
 
-        # No illegal chars in the final path
-        path_str = str(tasks[0].local_path)
+        # No illegal chars in the relative path (exclude drive letter C:\ on Windows)
+        rel_path = str(tasks[0].local_path.relative_to(tmp_path))
         for char in '<>:"|?*':
-            assert char not in path_str
+            assert char not in rel_path
