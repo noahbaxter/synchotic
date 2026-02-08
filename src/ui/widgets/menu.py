@@ -648,14 +648,11 @@ class Menu:
                     self._selected = selectable[new_pos]
                     self._render()
 
-                elif key == KEY_ENTER:
-                    return MenuResult(self.items[self._selected], "enter")
-
-                elif key == KEY_SPACE:
-                    return MenuResult(self.items[self._selected], "space")
-
-                elif key == KEY_TAB:
-                    return MenuResult(self.items[self._selected], "tab")
+                elif key in (KEY_ENTER, KEY_SPACE, KEY_TAB):
+                    item = self.items[self._selected]
+                    if not getattr(item, 'disabled', False):
+                        action = {KEY_ENTER: "enter", KEY_SPACE: "space", KEY_TAB: "tab"}[key]
+                        return MenuResult(item, action)
 
                 elif key == KEY_LEFT or key == KEY_RIGHT:
                     current_item = self.items[self._selected]
@@ -670,11 +667,15 @@ class Menu:
                 elif isinstance(key, str) and len(key) == 1:
                     upper = key.upper()
                     if upper in hotkeys:
-                        self._selected_before_hotkey = self._selected
-                        self._selected = hotkeys[upper]
-                        return MenuResult(self.items[self._selected], "enter")
+                        idx = hotkeys[upper]
+                        if not getattr(self.items[idx], 'disabled', False):
+                            self._selected_before_hotkey = self._selected
+                            self._selected = idx
+                            return MenuResult(self.items[idx], "enter")
                     if key.isdigit() and key != '0':
                         idx = int(key)
                         if idx <= len(selectable):
-                            self._selected = selectable[idx - 1]
-                            return MenuResult(self.items[self._selected], "enter")
+                            item = self.items[selectable[idx - 1]]
+                            if not getattr(item, 'disabled', False):
+                                self._selected = selectable[idx - 1]
+                                return MenuResult(item, "enter")
