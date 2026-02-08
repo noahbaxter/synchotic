@@ -264,7 +264,6 @@ def _compute_folder_stats(
     scanner: BackgroundScanner = None,
 ) -> FolderStats | None:
     """Compute stats for a single folder using setlist-centric aggregation."""
-    import re
     folder_id = folder.get("folder_id", "")
     has_files = folder.get("files") is not None
 
@@ -344,8 +343,9 @@ def _compute_folder_stats(
         scan_progress=scan_progress,
     )
 
-    display_clean = re.sub(r'\x1b\[[0-9;]*m', '', columns)
-    debug_log(f"HOME_STATS | {folder_id[:8]} | +{status.missing_size} -{purge_size} | charts: +{status.missing_charts} -{purge_charts} | display: {display_clean}")
+    # Only log when there's actual work (not for fully synced folders)
+    if status.missing_size > 0 or purge_size > 0:
+        debug_log(f"HOME_STATS | {folder_id[:8]} | +{status.missing_size} -{purge_size} | charts: +{status.missing_charts} -{purge_charts}")
 
     return FolderStats(
         folder_id=folder_id,
@@ -390,6 +390,9 @@ def compute_main_menu_cache(
     global_purge_size = 0
     global_enabled_setlists = 0
     global_total_setlists = 0
+    cache_hits = 0
+    cache_misses = 0
+    cache_scanning = 0
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
@@ -404,9 +407,8 @@ def compute_main_menu_cache(
         cached = folder_stats_cache.get(folder_id) if use_memory_cache else None
 
         if cached and not is_scanning:
-            # Only use memory cache if not scanning (scanning state changes display)
             stats = cached
-            debug_log(f"CACHE | {folder.get('name', '?')[:20]} | HIT")
+            cache_hits += 1
         else:
             stats = _compute_folder_stats(
                 folder, download_path, user_settings, persistent_cache,
@@ -417,12 +419,14 @@ def compute_main_menu_cache(
                 cache.folder_stats[folder_id] = f"{Colors.STALE}not scanned{Colors.RESET}"
                 cache.folder_deltas[folder_id] = ""
                 cache.folder_states[folder_id] = "none"
-                debug_log(f"CACHE | {folder.get('name', '?')[:20]} | NOT_SCANNED")
                 continue
             # Cache the stats (but clear scanning display when scanner completes)
             if folder_stats_cache and not is_scanning:
                 folder_stats_cache.set(folder_id, stats)
-            debug_log(f"CACHE | {folder.get('name', '?')[:20]} | {'SCANNING' if is_scanning else 'MISS'}")
+            if is_scanning:
+                cache_scanning += 1
+            else:
+                cache_misses += 1
 
         status = stats.sync_status
         folder_purge_count = stats.purge_count
@@ -501,7 +505,7 @@ def compute_main_menu_cache(
             cache.group_enabled_counts[group_name] = enabled_count
 
     enabled_count = sum(1 for f in folders if user_settings and user_settings.is_drive_enabled(f.get("folder_id", "")))
-    debug_log(f"HOME_PAGE | {enabled_count}/{len(folders)} drives enabled | checkmark={cache.sync_checkmark}")
+    debug_log(f"HOME_PAGE | {enabled_count}/{len(folders)} drives | cache: {cache_hits} hit, {cache_misses} miss, {cache_scanning} scanning | checkmark={cache.sync_checkmark}")
 
     # Save persistent cache to disk (only writes if dirty)
     persistent_cache.save()

@@ -13,9 +13,9 @@ from ..core.formatting import dedupe_files_by_newest, sanitize_filename
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
-from .cache import clear_cache, clear_folder_cache, get_persistent_stats_cache
+from .cache import clear_cache, clear_folder_cache, get_persistent_stats_cache, scan_local_files
 from .download_planner import plan_downloads
-from .purge_planner import plan_purge, find_partial_downloads
+from .purge_planner import plan_purge, find_partial_downloads, check_purge_safety
 from .purger import delete_files
 
 
@@ -218,7 +218,9 @@ def purge_all_folders(
 
     Uses marker files as source of truth for what's valid.
     """
+    from ..core.formatting import normalize_path_key
     from ..ui.components import format_purge_tree
+    from .markers import get_all_marker_files
 
     print_section_header("Purge")
 
@@ -226,6 +228,10 @@ def purge_all_folders(
     total_failed = 0
     total_size = 0
     purged_folder_ids: set[str] = set()
+
+    # Compute markers ONCE for all folders
+    all_marker_files = get_all_marker_files()
+    marker_norm = {normalize_path_key(p) for p in all_marker_files}
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
@@ -253,12 +259,25 @@ def purge_all_folders(
                 display.purge_removed(deleted, failed)
             continue
 
-        files_to_purge, _ = plan_purge([folder], base_path, user_settings, failed_setlists)
+        files_to_purge, _ = plan_purge(
+            [folder], base_path, user_settings, failed_setlists,
+            precomputed_markers=marker_norm,
+        )
 
         if not files_to_purge:
             continue
 
         folder_size = sum(size for _, size in files_to_purge)
+
+        # Safety check: block suspiciously large purges
+        local_files = scan_local_files(folder_path)
+        is_safe, reason = check_purge_safety(len(local_files), len(files_to_purge), folder_size)
+        if not is_safe:
+            debug_log(f"PURGE_BLOCKED | folder={folder_name} | reason={reason}")
+            print(f"  WARNING: Purge blocked for {folder_name} ({reason})")
+            print(f"  This looks like a sync error — check debug log for details.")
+            continue
+
         display.purge_folder(folder_name, len(files_to_purge), folder_size)
 
         tree_lines = format_purge_tree(files_to_purge, base_path)

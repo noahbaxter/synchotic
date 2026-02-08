@@ -420,5 +420,59 @@ class TestPurgeStatsTotal:
         assert stats.total_size == 2000  # 1000 + 500 + 200 + 300
 
 
+class TestPurgeSafety:
+    """Tests for check_purge_safety."""
+
+    def test_safety_blocks_large_ratio_purge(self):
+        """Purge of >15% of files should be blocked."""
+        from src.sync.purge_planner import check_purge_safety
+
+        # 20% purge ratio -> blocked
+        is_safe, reason = check_purge_safety(
+            local_file_count=1000,
+            purge_count=200,
+            purge_size=100,
+        )
+        assert not is_safe
+        assert "20%" in reason
+        assert "200" in reason
+
+    def test_safety_allows_small_purge(self):
+        """Purge of <15% of files should be allowed."""
+        from src.sync.purge_planner import check_purge_safety
+
+        # 5% purge ratio -> allowed
+        is_safe, reason = check_purge_safety(
+            local_file_count=1000,
+            purge_count=50,
+            purge_size=100,
+        )
+        assert is_safe
+        assert reason == ""
+
+    def test_safety_blocks_large_size_purge(self):
+        """Purge of >2GB should be blocked even with low ratio."""
+        from src.sync.purge_planner import check_purge_safety
+
+        is_safe, reason = check_purge_safety(
+            local_file_count=10000,
+            purge_count=100,  # 1% ratio - fine
+            purge_size=3 * 1024**3,  # 3 GB - too big
+        )
+        assert not is_safe
+        assert "GB" in reason
+
+    def test_safety_allows_zero_local_files(self):
+        """Empty folder should always be safe."""
+        from src.sync.purge_planner import check_purge_safety
+
+        is_safe, reason = check_purge_safety(
+            local_file_count=0,
+            purge_count=0,
+            purge_size=0,
+        )
+        assert is_safe
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])
