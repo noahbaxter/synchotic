@@ -33,6 +33,7 @@ class FolderStats:
     enabled_setlists: int
     total_setlists: int
     display_string: str | None
+    disk_size: int = 0
 
 
 class FolderStatsCache:
@@ -102,6 +103,7 @@ class AggregatedFolderStats:
     synced_charts: int = 0
     total_size: int = 0
     synced_size: int = 0
+    disk_size: int = 0
     purgeable_files: int = 0
     purgeable_size: int = 0
     purgeable_charts: int = 0
@@ -285,6 +287,7 @@ def aggregate_folder_stats(
             result.synced_charts += cached.synced_charts
             result.total_size += cached.total_size
             result.synced_size += cached.synced_size
+            result.disk_size += cached.disk_size
             result.enabled_setlists += 1
         elif drive_enabled and not setlist_enabled and cached.disk_files > 0:
             # Disabled with disk content: contributes to purgeable

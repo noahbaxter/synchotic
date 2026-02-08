@@ -85,6 +85,7 @@ def update_menu_cache_on_toggle(
                     delta_mode=delta_mode,
                     state=state,
                     scan_progress=scan_progress,
+                    disk_size=agg.disk_size,
                 )
                 # Update in-memory cache as well
                 folder_stats_cache.set(folder_id, FolderStats(
@@ -101,6 +102,7 @@ def update_menu_cache_on_toggle(
                     enabled_setlists=agg.enabled_setlists,
                     total_setlists=agg.total_setlists,
                     display_string=columns,
+                    disk_size=agg.disk_size,
                 ))
             else:
                 # No cache - show minimal info
@@ -299,6 +301,7 @@ def _compute_folder_stats(
         purge_charts = agg.purgeable_charts
         enabled_setlists = agg.enabled_setlists
         total_setlists = agg.total_setlists
+        agg_disk_size = agg.disk_size
     else:
         # No cache available - show scanning state
         scan_progress = scanner.get_scan_progress(folder_id) if scanner else None
@@ -341,6 +344,7 @@ def _compute_folder_stats(
         is_estimate=status.is_estimate,
         state=state,
         scan_progress=scan_progress,
+        disk_size=agg_disk_size,
     )
 
     # Only log when there's actual work (not for fully synced folders)
@@ -356,6 +360,7 @@ def _compute_folder_stats(
         enabled_setlists=enabled_setlists,
         total_setlists=total_setlists,
         display_string=columns,
+        disk_size=agg_disk_size,
     )
 
 
@@ -461,6 +466,7 @@ def compute_main_menu_cache(
             is_estimate=status.is_estimate,
             state=state,
             scan_progress=scan_progress,
+            disk_size=stats.disk_size,
         )
 
         # Only aggregate enabled drives into global stats for add/sync

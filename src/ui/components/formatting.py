@@ -236,6 +236,7 @@ def format_home_item(
     is_estimate: bool = False,
     state: str = "current",
     scan_progress: tuple[int, int] | None = None,
+    disk_size: int = 0,
 ) -> tuple[str, str]:
     """Format home screen item as (columns_str, delta_str).
 
@@ -266,7 +267,13 @@ def format_home_item(
     else:
         count = ""
 
-    size_str = format_size(total_size) if total_size > 0 else ""
+    # Size column: disk size when available, download size with ↓ when not
+    if disk_size > 0:
+        size_str = format_size(disk_size)
+    elif total_size > 0:
+        size_str = f"↓ {format_size(total_size)}"
+    else:
+        size_str = ""
 
     # Checkmark for label prefix (confirmed 100% sync)
     show_checkmark = is_synced and state == "current" and total_setlists > 0 and not is_estimate
