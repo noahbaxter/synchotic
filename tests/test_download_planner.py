@@ -416,6 +416,50 @@ class TestPlanDownloadsLongPaths:
         assert len(long_paths) == 0
 
 
+class TestPlanDownloadsArchiveDedup:
+    """Tests for case-insensitive archive deduplication."""
+
+    @pytest.fixture
+    def temp_dir(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            yield Path(tmpdir)
+
+    def test_multiple_archives_in_same_folder_all_downloaded(self, temp_dir):
+        """Multiple distinct archives in the same folder should ALL be downloaded.
+
+        Regression: old logic deduped by extraction folder, causing numbered pack
+        files (TBRB 1.7z, TBRB 2.7z, ...) to be silently skipped.
+        """
+        files = [
+            {"id": "1", "path": "Setlist/pack1.7z", "size": 1000, "md5": "aaa"},
+            {"id": "2", "path": "Setlist/pack2.7z", "size": 1000, "md5": "bbb"},
+            {"id": "3", "path": "Setlist/pack3.7z", "size": 1000, "md5": "ccc"},
+        ]
+        tasks, skipped, _ = plan_downloads(files, temp_dir, folder_name="Drive")
+        assert len(tasks) == 3
+        assert skipped == 0
+
+    def test_case_only_duplicate_archives_deduped(self, temp_dir):
+        """Archives differing only in case should be deduped (case-insensitive FS)."""
+        files = [
+            {"id": "1", "path": "Carol of the Bells/pack.7z", "size": 1000, "md5": "aaa"},
+            {"id": "2", "path": "Carol Of The Bells/pack.7z", "size": 1000, "md5": "bbb"},
+        ]
+        tasks, skipped, _ = plan_downloads(files, temp_dir, folder_name="Drive")
+        assert len(tasks) == 1
+        assert skipped == 1
+
+    def test_numbered_packs_like_rock_band(self, temp_dir):
+        """Realistic scenario: 44 numbered .7z packs in one folder."""
+        files = [
+            {"id": str(i), "path": f"Beatles/TBRB {i}.7z", "size": 1000, "md5": f"md5_{i}"}
+            for i in range(1, 45)
+        ]
+        tasks, skipped, _ = plan_downloads(files, temp_dir, folder_name="Rock Band")
+        assert len(tasks) == 44
+        assert skipped == 0
+
+
 class TestDownloadTaskDataclass:
     """Tests for DownloadTask dataclass."""
 
