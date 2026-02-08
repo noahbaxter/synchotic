@@ -5,14 +5,13 @@ Allows enabling/disabling individual setlists within a chart pack.
 """
 
 from pathlib import Path
-import re
 
 from src.core.formatting import sort_by_name
 from src.core.logging import debug_log
 from src.config import UserSettings, extract_subfolders_from_files
 from src.sync import SyncStatus, CachedSetlistStats, get_persistent_stats_cache, compute_setlist_stats
 from ..primitives import Colors
-from ..components import format_drive_status, format_setlist_item, format_column_header
+from ..components import strip_ansi, format_drive_status, format_setlist_item, format_column_header
 from ..widgets import Menu, MenuItem, MenuDivider
 
 
@@ -228,7 +227,7 @@ def show_subfolder_settings(
             if delta:
                 label = f"{label} {delta}"
 
-            desc_clean = re.sub(r'\x1b\[[0-9;]*m', '', columns) if columns else ""
+            desc_clean = strip_ansi(columns) if columns else ""
             debug_log(f"SETLIST_PAGE | [{'+' if setlist_enabled else '-'}] {setlist_name}: {desc_clean}")
 
             item_disabled = not setlist_enabled or not drive_enabled
@@ -252,7 +251,7 @@ def show_subfolder_settings(
         menu.add_item(MenuDivider(pinned=True))
         menu.add_item(MenuItem("Back", value=("back", None, None), pinned=True))
 
-        subtitle_clean = re.sub(r'\x1b\[[0-9;]*m', '', subtitle)
+        subtitle_clean = strip_ansi(subtitle)
         debug_log(f"SETLIST_PAGE | subtitle: {subtitle_clean}")
         debug_log(f"SETLIST_PAGE | === End {folder_name} ===")
 
