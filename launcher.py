@@ -101,8 +101,9 @@ def get_launcher_path() -> Path:
 
 
 def get_app_dir() -> Path:
-    """Get the extracted app directory."""
-    return get_launcher_dir() / ".dm-sync" / "_app"
+    """Get the extracted app directory. Dev channel uses separate dir to coexist with production."""
+    subdir = "_app_dev" if RELEASE_TAG else "_app"
+    return get_launcher_dir() / ".dm-sync" / subdir
 
 
 def get_dm_sync_dir() -> Path:
