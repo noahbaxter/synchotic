@@ -22,7 +22,6 @@ from src.sync.markers import load_marker
 from src.sync.download_planner import plan_downloads, DownloadTask
 from src.sync.downloader import FileDownloader
 
-
 FIXTURES_DIR = Path(__file__).parent / "fixtures" / "test_archives"
 
 
