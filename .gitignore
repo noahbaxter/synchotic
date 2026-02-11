@@ -21,6 +21,9 @@ manifest.json
 # OS
 .DS_Store
 
+# Logs
+*.log
+
 # IDE
 .vscode/
 .idea/
