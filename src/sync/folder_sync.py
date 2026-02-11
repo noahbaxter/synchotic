@@ -13,10 +13,13 @@ from ..core.formatting import dedupe_files_by_newest, sanitize_drive_name
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
-from .cache import clear_cache, clear_folder_cache, get_persistent_stats_cache, scan_local_files
+from .cache import clear_cache, clear_folder_cache, get_persistent_stats_cache
 from .download_planner import plan_downloads
-from .purge_planner import plan_purge, find_partial_downloads, check_purge_safety
+from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
+
+PURGE_CONFIRM_FILE_THRESHOLD = 100
+PURGE_CONFIRM_SIZE_THRESHOLD = 500 * 1024**2  # 500 MB
 
 
 class FolderSync:
@@ -269,21 +272,22 @@ def purge_all_folders(
 
         folder_size = sum(size for _, size in files_to_purge)
 
-        # Safety check: only for "extra" files (orphans not in markers/manifest).
-        # Disabled setlists and videos are intentional user-driven purges — skip safety.
-        if stats.extra_file_count > 0:
-            local_files = scan_local_files(folder_path)
-            is_safe, reason = check_purge_safety(len(local_files), stats.extra_file_count, stats.extra_file_size)
-            if not is_safe:
-                debug_log(f"PURGE_BLOCKED | folder={folder_name} | reason={reason}")
-                print(f"  WARNING: Purge blocked for {folder_name} ({reason})")
-                print(f"  This looks like a sync error — check debug log for details.")
-                continue
-
         display.purge_folder(folder_name, len(files_to_purge), folder_size)
 
         tree_lines = format_purge_tree(files_to_purge, base_path)
         display.purge_tree_lines(tree_lines)
+
+        purge_count = len(files_to_purge)
+        if purge_count > PURGE_CONFIRM_FILE_THRESHOLD or folder_size > PURGE_CONFIRM_SIZE_THRESHOLD:
+            from ..core.formatting import format_size
+            from ..ui.widgets.confirm import ConfirmDialog
+            dialog = ConfirmDialog(
+                f"Purge {purge_count:,} files ({format_size(folder_size)}) from {folder_name}?"
+            )
+            if not dialog.run():
+                debug_log(f"PURGE_SKIPPED | folder={folder_name} | user declined")
+                print(f"  Skipped.")
+                continue
 
         deleted, failed = delete_files(files_to_purge, base_path)
         total_deleted += deleted
