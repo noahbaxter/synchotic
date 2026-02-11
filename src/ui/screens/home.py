@@ -401,13 +401,11 @@ def compute_main_menu_cache(
     for folder in folders:
         folder_id = folder.get("folder_id", "")
 
-        # Check if this folder is currently being scanned or was scanned this session
+        # Check if this folder is currently being scanned
         is_scanning = background_scanner.is_scanning(folder_id) if background_scanner else False
-        is_scanned = background_scanner.is_scanned(folder_id) if background_scanner else False
 
-        # Try to use in-memory cached stats for this folder
-        # But don't use cache if folder just finished scanning (need to recompute)
-        use_memory_cache = folder_stats_cache and not is_scanned
+        # Use in-memory cache when available (already invalidated per-folder after sync/purge)
+        use_memory_cache = folder_stats_cache is not None
         cached = folder_stats_cache.get(folder_id) if use_memory_cache else None
 
         if cached and not is_scanning:

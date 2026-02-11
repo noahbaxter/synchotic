@@ -13,7 +13,7 @@ from ..core.formatting import dedupe_files_by_newest, sanitize_drive_name
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
-from .cache import clear_cache, clear_folder_cache, get_persistent_stats_cache
+from .cache import clear_folder_cache, get_persistent_stats_cache
 from .download_planner import plan_downloads
 from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
@@ -46,6 +46,7 @@ class FolderSync:
         scan_stats_getter: Optional[Callable] = None,
         header: str = None,
         setlist_name: str = None,
+        skip_marker_rebuild: bool = False,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
@@ -89,10 +90,11 @@ class FolderSync:
 
         # Rebuild markers for extracted archives missing them (prevents re-downloading
         # archives whose contents are already on disk from a pre-marker-era extraction)
-        from .markers import rebuild_markers_from_disk
-        created, _ = rebuild_markers_from_disk([folder], base_path)
-        if created > 0:
-            debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
+        if not skip_marker_rebuild:
+            from .markers import rebuild_markers_from_disk
+            created, _ = rebuild_markers_from_disk([folder], base_path)
+            if created > 0:
+                debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
 
         tasks, skipped, long_paths = plan_downloads(
             manifest_files, folder_path, self.delete_videos, folder_name=folder["name"]
@@ -257,7 +259,7 @@ def purge_all_folders(
                 folder_size = sum(size for _, size in local_files)
                 display.purge_drive_disabled(folder_name, len(local_files), folder_size)
 
-                deleted, failed = delete_files(local_files, base_path)
+                deleted, failed = delete_files(local_files, base_path, cleanup_path=folder_path)
                 total_deleted += deleted
                 total_failed += failed
                 total_size += folder_size
@@ -293,7 +295,7 @@ def purge_all_folders(
                 print(f"  Skipped.")
                 continue
 
-        deleted, failed = delete_files(files_to_purge, base_path)
+        deleted, failed = delete_files(files_to_purge, base_path, cleanup_path=folder_path)
         total_deleted += deleted
         total_failed += failed
         total_size += folder_size
@@ -318,7 +320,11 @@ def purge_all_folders(
     else:
         display.purge_nothing()
 
-    clear_cache()
+    # Invalidate filesystem cache only for folders that changed
+    for folder in folders:
+        fid = folder.get("folder_id", "")
+        if fid in purged_folder_ids:
+            clear_folder_cache(base_path / folder.get("name", ""))
 
     # Invalidate persistent stats cache only for folders that changed
     persistent_cache = get_persistent_stats_cache()
