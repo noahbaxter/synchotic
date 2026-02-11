@@ -227,6 +227,13 @@ class PersistentStatsCache:
             del self._setlist_cache[folder_id]
             self._dirty = True
 
+    def invalidate_setlist(self, folder_id: str, setlist_name: str):
+        """Remove cached stats for a single setlist."""
+        if folder_id in self._setlist_cache:
+            if setlist_name in self._setlist_cache[folder_id]:
+                del self._setlist_cache[folder_id][setlist_name]
+                self._dirty = True
+
     def invalidate_all(self):
         """Clear all cached stats."""
         if self._cache or self._setlist_cache:

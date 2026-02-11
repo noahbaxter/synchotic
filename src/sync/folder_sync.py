@@ -45,6 +45,7 @@ class FolderSync:
         cancel_check: Optional[Callable[[], bool]] = None,
         scan_stats_getter: Optional[Callable] = None,
         header: str = None,
+        setlist_name: str = None,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
@@ -134,7 +135,10 @@ class FolderSync:
         # This ensures UI deltas are recomputed from fresh marker state
         folder_id = folder.get("folder_id", "")
         if folder_id:
-            get_persistent_stats_cache().invalidate(folder_id)
+            if setlist_name:
+                get_persistent_stats_cache().invalidate_setlist(folder_id, setlist_name)
+            else:
+                get_persistent_stats_cache().invalidate(folder_id)
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
 

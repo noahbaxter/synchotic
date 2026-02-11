@@ -647,6 +647,7 @@ class SyncApp:
                 downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
                     temp_folder, get_download_path(), [],
                     scan_stats_getter=scan_getter, header=setlist_header,
+                    setlist_name=setlist.name,
                 )
 
                 total_downloaded += downloaded
