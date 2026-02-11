@@ -13,7 +13,7 @@ from pathlib import Path
 from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
 from ..core.formatting import sanitize_path, sanitize_drive_name, dedupe_files_by_newest, normalize_fs_name
 from ..core.logging import debug_log
-from .cache import scan_actual_charts, CachedSetlistStats
+from .cache import scan_actual_charts, scan_disk_stats, CachedSetlistStats
 from .download_planner import EXCLUDED_FILES
 from .sync_checker import is_archive_synced, is_archive_file, is_file_synced
 
@@ -441,19 +441,8 @@ def compute_setlist_stats(
         synced_charts = 0
         synced_size = 0
 
-    # Scan actual disk content
-    disk_files = 0
-    disk_size = 0
-    disk_charts = 0
-    if setlist_path.exists():
-        disk_charts, _ = scan_actual_charts(setlist_path, set())
-        try:
-            for f in setlist_path.rglob("*"):
-                if f.is_file():
-                    disk_files += 1
-                    disk_size += f.stat().st_size
-        except OSError:
-            pass
+    # Scan actual disk content (single pass for charts + file counts)
+    disk_charts, _, disk_files, disk_size = scan_disk_stats(setlist_path)
 
     # Purgeable is the disk content when setlist has files but is disabled or has orphans
     # The actual purgeable calculation depends on enabled state, which is handled in aggregation

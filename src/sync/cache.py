@@ -540,6 +540,63 @@ def _scan_actual_charts_uncached(folder_path: Path) -> tuple[int, int]:
     return chart_count, total_size
 
 
+def scan_disk_stats(folder_path: Path) -> tuple[int, int, int, int]:
+    """
+    Single-pass scan for both chart stats and disk stats.
+
+    Returns:
+        Tuple of (chart_count, chart_size, file_count, disk_size)
+    """
+    if not folder_path.exists():
+        return 0, 0, 0, 0
+
+    chart_count = 0
+    chart_size = 0
+    file_count = 0
+    disk_size = 0
+    chart_markers = {"song.ini", "notes.mid", "notes.chart"}
+
+    def scan(dir_path: Path) -> int:
+        nonlocal chart_count, chart_size, file_count, disk_size
+        try:
+            has_marker = False
+            subdirs = []
+            direct_size = 0
+            local_file_count = 0
+
+            with os.scandir(dir_path) as entries:
+                for entry in entries:
+                    if entry.is_file(follow_symlinks=False):
+                        local_file_count += 1
+                        if entry.name.lower() in chart_markers:
+                            has_marker = True
+                        try:
+                            sz = entry.stat(follow_symlinks=False).st_size
+                            direct_size += sz
+                            file_count += 1
+                            disk_size += sz
+                        except OSError:
+                            pass
+                    elif entry.is_dir(follow_symlinks=False):
+                        subdirs.append(Path(entry.path))
+
+            subdir_non_chart_size = 0
+            for subdir in subdirs:
+                subdir_non_chart_size += scan(subdir)
+
+            if has_marker:
+                chart_count += 1
+                chart_size += direct_size + subdir_non_chart_size
+                return 0
+            else:
+                return direct_size + subdir_non_chart_size
+        except OSError:
+            return 0
+
+    scan(folder_path)
+    return chart_count, chart_size, file_count, disk_size
+
+
 def scan_actual_charts(folder_path: Path, disabled_setlists: set[str] = None) -> tuple[int, int]:
     """
     Scan folder for actual chart folders (containing song.ini, notes.mid, etc).
