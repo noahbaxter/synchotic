@@ -12,6 +12,7 @@ import pytest
 from src.sync.status import get_setlist_sync_status
 from src.sync.download_planner import plan_downloads
 from src.core.formatting import dedupe_files_by_newest
+from src.sync.markers import save_failed_marker
 from tests.conftest import (
     SyncEnv,
     make_synced_archive,
@@ -459,3 +460,181 @@ class TestMixedArchivesAndLooseFiles:
         )
         assert status.total_charts == 5  # 2 archive + 1 archive + 1 loose + 1 loose
         assert status.synced_charts == 3  # 2 synced archives + 1 synced loose
+
+
+class TestFailedMarkerContract:
+    """Failed marker archives excluded from both status and planner."""
+
+    def test_failed_synced_unsynced_contract(self, sync_env):
+        folder_name = "TestDrive"
+        setlist = "Mixed"
+        files = []
+
+        # 1 synced archive
+        chart_files = {
+            f"{setlist}/Good/song.ini": 100,
+            f"{setlist}/Good/notes.mid": 200,
+        }
+        files.append(make_synced_archive(
+            sync_env, folder_name, setlist, "good.7z",
+            md5="good_md5", chart_files=chart_files,
+        ))
+
+        # 1 permanently failed archive
+        failed_rel = f"{folder_name}/{setlist}/failed.7z"
+        save_failed_marker(failed_rel, "fail_md5", "path too long")
+        files.append(sync_env.make_manifest_entry(
+            path=f"{setlist}/failed.7z", md5="fail_md5",
+        ))
+
+        # 1 unsynced archive
+        files.append(make_unsynced_archive(
+            sync_env, folder_name, setlist, "missing.7z", md5="miss_md5",
+        ))
+
+        folder = sync_env.make_folder_dict(folder_name, files=files)
+        status, tasks = assert_contract(
+            folder, setlist, sync_env.base_path, files, folder_name,
+        )
+        # Failed archive excluded from total, so total=2 (1 synced + 1 unsynced)
+        assert status.total_charts == 2
+        assert status.synced_charts == 1
+        assert len(tasks) == 1
+
+
+class TestINISmallerThanManifest:
+    """.ini file on disk smaller than manifest size should be unsynced."""
+
+    def test_ini_smaller_triggers_redownload(self, sync_env):
+        folder_name = "TestDrive"
+        setlist = "INISmall"
+
+        # song.ini on disk is SMALLER than manifest (corrupted or partial)
+        sync_env.make_files(folder_name, {
+            f"{setlist}/Chart/song.ini": 30,
+            f"{setlist}/Chart/notes.mid": 200,
+        })
+
+        files = [
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/song.ini", size=50, md5="",
+            ),
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/notes.mid", size=200, md5="",
+            ),
+        ]
+
+        folder = sync_env.make_folder_dict(folder_name, files=files)
+        status, tasks = assert_contract(
+            folder, setlist, sync_env.base_path, files, folder_name,
+        )
+        assert status.synced_charts == 0
+        assert len(tasks) == 1  # Re-download the truncated ini
+
+
+class TestCustomFolderContract:
+    """Custom folder (folder IS the setlist) — contract holds."""
+
+    def test_custom_folder_synced_archive(self, sync_env):
+        folder_name = "CustomDrive"
+        # For custom folders, the folder IS the setlist — files at root level
+        # Use the archive at root of the folder
+        archive_name = "chart.7z"
+        md5 = "custom_md5"
+
+        chart_files = {
+            f"{archive_name.replace('.7z', '')}/song.ini": 100,
+            f"{archive_name.replace('.7z', '')}/notes.mid": 200,
+        }
+
+        # Create files and marker
+        sync_env.make_files(folder_name, chart_files)
+        archive_path = f"{folder_name}/{archive_name}"
+        sync_env.make_marker(archive_path, md5, chart_files)
+
+        files = [sync_env.make_manifest_entry(path=archive_name, md5=md5)]
+        folder = sync_env.make_folder_dict(folder_name, files=files, is_custom=True)
+
+        # For custom folders, status uses all files (no setlist prefix filtering)
+        status = get_setlist_sync_status(
+            folder=folder,
+            setlist_name=folder_name,
+            base_path=sync_env.base_path,
+            delete_videos=True,
+        )
+
+        tasks, skipped, _ = plan_downloads(
+            files,
+            sync_env.base_path / folder_name,
+            delete_videos=True,
+            folder_name=folder_name,
+        )
+
+        assert status.total_charts == 1
+        assert status.synced_charts == 1
+        assert len(tasks) == 0
+
+
+class TestDeleteVideosFalse:
+    """delete_videos=False — videos count toward sync status."""
+
+    def test_all_files_including_video_synced(self, sync_env):
+        folder_name = "TestDrive"
+        setlist = "VidTest"
+
+        # All files including video on disk
+        sync_env.make_files(folder_name, {
+            f"{setlist}/Chart/song.ini": 50,
+            f"{setlist}/Chart/notes.mid": 200,
+            f"{setlist}/Chart/video.mp4": 50000,
+        })
+
+        files = [
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/song.ini", size=50, md5="",
+            ),
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/notes.mid", size=200, md5="",
+            ),
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/video.mp4", size=50000, md5="",
+            ),
+        ]
+
+        folder = sync_env.make_folder_dict(folder_name, files=files)
+        status, tasks = assert_contract(
+            folder, setlist, sync_env.base_path, files, folder_name,
+            delete_videos=False,
+        )
+        assert status.synced_charts == 1
+        assert len(tasks) == 0
+
+    def test_video_missing_means_unsynced(self, sync_env):
+        folder_name = "TestDrive"
+        setlist = "VidMissing"
+
+        # Files on disk but video is missing
+        sync_env.make_files(folder_name, {
+            f"{setlist}/Chart/song.ini": 50,
+            f"{setlist}/Chart/notes.mid": 200,
+        })
+
+        files = [
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/song.ini", size=50, md5="",
+            ),
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/notes.mid", size=200, md5="",
+            ),
+            sync_env.make_manifest_entry(
+                path=f"{setlist}/Chart/video.mp4", size=50000, md5="",
+            ),
+        ]
+
+        folder = sync_env.make_folder_dict(folder_name, files=files)
+        status, tasks = assert_contract(
+            folder, setlist, sync_env.base_path, files, folder_name,
+            delete_videos=False,
+        )
+        assert status.synced_charts == 0
+        assert len(tasks) == 1  # Download the missing video
