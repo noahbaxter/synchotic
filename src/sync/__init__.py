@@ -9,6 +9,7 @@ from .cache import (
     clear_cache, clear_folder_cache, FolderStats, FolderStatsCache,
     CachedFolderStats, CachedSetlistStats, AggregatedFolderStats,
     PersistentStatsCache, get_persistent_stats_cache, aggregate_folder_stats,
+    ScanCache, get_scan_cache,
 )
 from .status import SyncStatus, get_sync_status, get_setlist_sync_status, get_lazy_sync_status, compute_setlist_stats
 from .download_planner import DownloadTask, plan_downloads

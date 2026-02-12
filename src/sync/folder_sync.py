@@ -9,14 +9,17 @@ from pathlib import Path
 from typing import Callable, Optional, Union
 
 from ..drive import DriveClient
-from ..core.formatting import dedupe_files_by_newest, sanitize_filename
+from ..core.formatting import dedupe_files_by_newest, sanitize_drive_name
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
-from .cache import clear_cache, clear_folder_cache, get_persistent_stats_cache, scan_local_files
+from .cache import clear_folder_cache, get_persistent_stats_cache
 from .download_planner import plan_downloads
-from .purge_planner import plan_purge, find_partial_downloads, check_purge_safety
+from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
+
+PURGE_CONFIRM_FILE_THRESHOLD = 100
+PURGE_CONFIRM_SIZE_THRESHOLD = 500 * 1024**2  # 500 MB
 
 
 class FolderSync:
@@ -42,6 +45,8 @@ class FolderSync:
         cancel_check: Optional[Callable[[], bool]] = None,
         scan_stats_getter: Optional[Callable] = None,
         header: str = None,
+        setlist_name: str = None,
+        skip_marker_rebuild: bool = False,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
@@ -66,7 +71,7 @@ class FolderSync:
         if disabled_prefixes:
             original_count = len(manifest_files)
             # Sanitize prefixes to match how paths appear on disk (handles : -> - etc)
-            sanitized_prefixes = {sanitize_filename(p) for p in disabled_prefixes}
+            sanitized_prefixes = {sanitize_drive_name(p) for p in disabled_prefixes}
             debug_log(f"DOWNLOAD_FILTER | folder={folder['name']} | disabled={len(disabled_prefixes)} | sanitized={list(sanitized_prefixes)[:3]}")
 
             def is_path_disabled(path: str) -> bool:
@@ -74,7 +79,7 @@ class FolderSync:
                 first_slash = path.find("/")
                 setlist_name = path[:first_slash] if first_slash != -1 else path
                 # Sanitize the setlist name from scanner to match sanitized prefixes
-                sanitized_name = sanitize_filename(setlist_name)
+                sanitized_name = sanitize_drive_name(setlist_name)
                 return sanitized_name in sanitized_prefixes
 
             manifest_files = [f for f in manifest_files if not is_path_disabled(f.get("path", ""))]
@@ -85,10 +90,11 @@ class FolderSync:
 
         # Rebuild markers for extracted archives missing them (prevents re-downloading
         # archives whose contents are already on disk from a pre-marker-era extraction)
-        from .markers import rebuild_markers_from_disk
-        created, _ = rebuild_markers_from_disk([folder], base_path)
-        if created > 0:
-            debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
+        if not skip_marker_rebuild:
+            from .markers import rebuild_markers_from_disk
+            created, _ = rebuild_markers_from_disk([folder], base_path)
+            if created > 0:
+                debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
 
         tasks, skipped, long_paths = plan_downloads(
             manifest_files, folder_path, self.delete_videos, folder_name=folder["name"]
@@ -131,7 +137,10 @@ class FolderSync:
         # This ensures UI deltas are recomputed from fresh marker state
         folder_id = folder.get("folder_id", "")
         if folder_id:
-            get_persistent_stats_cache().invalidate(folder_id)
+            if setlist_name:
+                get_persistent_stats_cache().invalidate_setlist(folder_id, setlist_name)
+            else:
+                get_persistent_stats_cache().invalidate(folder_id)
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
 
@@ -207,19 +216,97 @@ class FolderSync:
         return was_cancelled
 
 
+def _purge_disabled_drive(
+    folder_id: str, folder_name: str, folder_path: Path, base_path: Path,
+    persistent_cache,
+) -> tuple[int, int, int]:
+    """Purge all files from a disabled drive. Returns (deleted, failed, size)."""
+    local_files = [(f, f.stat().st_size if f.exists() else 0)
+                  for f in folder_path.rglob("*") if f.is_file()]
+    if not local_files:
+        return 0, 0, 0
+
+    folder_size = sum(size for _, size in local_files)
+    display.purge_drive_disabled(folder_name, len(local_files), folder_size)
+
+    # Invalidate BEFORE delete — crash-safe (empty cache rebuilds correctly)
+    persistent_cache.invalidate(folder_id)
+    deleted, failed = delete_files(local_files, base_path, cleanup_path=folder_path)
+    display.purge_removed(deleted, failed)
+    return deleted, failed, folder_size
+
+
+def _purge_enabled_drive(
+    folder: dict, folder_path: Path, base_path: Path,
+    user_settings, failed_setlists, marker_norm: set, persistent_cache,
+) -> tuple[int, int, int]:
+    """Purge orphaned files from an enabled drive. Returns (deleted, failed, size)."""
+    from ..core.formatting import format_size
+    from ..ui.components import format_purge_tree
+
+    folder_id = folder.get("folder_id", "")
+    folder_name = folder.get("name", "")
+
+    files_to_purge, _ = plan_purge(
+        [folder], base_path, user_settings, failed_setlists,
+        precomputed_markers=marker_norm,
+    )
+    if not files_to_purge:
+        return 0, 0, 0
+
+    folder_size = sum(size for _, size in files_to_purge)
+    display.purge_folder(folder_name, len(files_to_purge), folder_size)
+    display.purge_tree_lines(format_purge_tree(files_to_purge, base_path))
+
+    purge_count = len(files_to_purge)
+    if purge_count > PURGE_CONFIRM_FILE_THRESHOLD or folder_size > PURGE_CONFIRM_SIZE_THRESHOLD:
+        from ..ui.widgets.confirm import ConfirmDialog
+        dialog = ConfirmDialog(
+            f"Purge {purge_count:,} files ({format_size(folder_size)}) from {folder_name}?"
+        )
+        if not dialog.run():
+            debug_log(f"PURGE_SKIPPED | folder={folder_name} | user declined")
+            print(f"  Skipped.")
+            return 0, 0, 0
+
+    # Invalidate affected setlists BEFORE delete — crash-safe
+    affected_sanitized = set()
+    for file_path, _ in files_to_purge:
+        try:
+            affected_sanitized.add(file_path.relative_to(folder_path).parts[0])
+        except (ValueError, IndexError):
+            pass
+    if affected_sanitized:
+        for raw_name in list(persistent_cache.get_all_setlists(folder_id)):
+            if sanitize_drive_name(raw_name) in affected_sanitized:
+                persistent_cache.invalidate_setlist(folder_id, raw_name)
+
+    deleted, failed = delete_files(files_to_purge, base_path, cleanup_path=folder_path)
+    display.purge_removed(deleted, failed)
+    return deleted, failed, folder_size
+
+
+def _purge_partial_downloads(base_path: Path) -> tuple[int, int, int]:
+    """Clean up incomplete downloads. Returns (deleted, failed, size)."""
+    partial_files = find_partial_downloads(base_path)
+    if not partial_files:
+        return 0, 0, 0
+
+    partial_size = sum(size for _, size in partial_files)
+    display.purge_partial_downloads(len(partial_files), partial_size)
+    deleted, failed = delete_files(partial_files, base_path)
+    display.purge_partial_cleaned(deleted, failed)
+    return deleted, failed, partial_size
+
+
 def purge_all_folders(
     folders: list,
     base_path: Path,
     user_settings=None,
     failed_setlists: dict[str, set[str]] | None = None,
 ):
-    """
-    Purge files that shouldn't be synced.
-
-    Uses marker files as source of truth for what's valid.
-    """
+    """Purge files that shouldn't be synced. Uses marker files as source of truth."""
     from ..core.formatting import normalize_path_key
-    from ..ui.components import format_purge_tree
     from .markers import get_all_marker_files
 
     print_section_header("Purge")
@@ -228,6 +315,7 @@ def purge_all_folders(
     total_failed = 0
     total_size = 0
     purged_folder_ids: set[str] = set()
+    persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
     all_marker_files = get_all_marker_files()
@@ -235,8 +323,7 @@ def purge_all_folders(
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
-        folder_name = folder.get("name", "")
-        folder_path = base_path / folder_name
+        folder_path = base_path / folder.get("name", "")
 
         if not folder_path.exists():
             continue
@@ -244,62 +331,25 @@ def purge_all_folders(
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
 
         if not drive_enabled:
-            local_files = [(f, f.stat().st_size if f.exists() else 0)
-                          for f in folder_path.rglob("*") if f.is_file()]
-            if local_files:
-                folder_size = sum(size for _, size in local_files)
-                display.purge_drive_disabled(folder_name, len(local_files), folder_size)
+            deleted, failed, size = _purge_disabled_drive(
+                folder_id, folder.get("name", ""), folder_path, base_path, persistent_cache,
+            )
+        else:
+            deleted, failed, size = _purge_enabled_drive(
+                folder, folder_path, base_path,
+                user_settings, failed_setlists, marker_norm, persistent_cache,
+            )
 
-                deleted, failed = delete_files(local_files, base_path)
-                total_deleted += deleted
-                total_failed += failed
-                total_size += folder_size
-                if deleted > 0:
-                    purged_folder_ids.add(folder_id)
-                display.purge_removed(deleted, failed)
-            continue
-
-        files_to_purge, _ = plan_purge(
-            [folder], base_path, user_settings, failed_setlists,
-            precomputed_markers=marker_norm,
-        )
-
-        if not files_to_purge:
-            continue
-
-        folder_size = sum(size for _, size in files_to_purge)
-
-        # Safety check: block suspiciously large purges
-        local_files = scan_local_files(folder_path)
-        is_safe, reason = check_purge_safety(len(local_files), len(files_to_purge), folder_size)
-        if not is_safe:
-            debug_log(f"PURGE_BLOCKED | folder={folder_name} | reason={reason}")
-            print(f"  WARNING: Purge blocked for {folder_name} ({reason})")
-            print(f"  This looks like a sync error — check debug log for details.")
-            continue
-
-        display.purge_folder(folder_name, len(files_to_purge), folder_size)
-
-        tree_lines = format_purge_tree(files_to_purge, base_path)
-        display.purge_tree_lines(tree_lines)
-
-        deleted, failed = delete_files(files_to_purge, base_path)
         total_deleted += deleted
         total_failed += failed
-        total_size += folder_size
+        total_size += size
         if deleted > 0:
             purged_folder_ids.add(folder_id)
-        display.purge_removed(deleted, failed)
 
-    partial_files = find_partial_downloads(base_path)
-    if partial_files:
-        partial_size = sum(size for _, size in partial_files)
-        display.purge_partial_downloads(len(partial_files), partial_size)
-        deleted, failed = delete_files(partial_files, base_path)
-        total_deleted += deleted
-        total_failed += failed
-        total_size += partial_size
-        display.purge_partial_cleaned(deleted, failed)
+    deleted, failed, size = _purge_partial_downloads(base_path)
+    total_deleted += deleted
+    total_failed += failed
+    total_size += size
 
     print()
     print_separator()
@@ -308,11 +358,10 @@ def purge_all_folders(
     else:
         display.purge_nothing()
 
-    clear_cache()
-
-    # Invalidate persistent stats cache only for folders that changed
-    persistent_cache = get_persistent_stats_cache()
-    for folder_id in purged_folder_ids:
-        persistent_cache.invalidate(folder_id)
+    # Invalidate in-memory filesystem cache for folders that changed
+    for folder in folders:
+        fid = folder.get("folder_id", "")
+        if fid in purged_folder_ids:
+            clear_folder_cache(base_path / folder.get("name", ""))
 
     return purged_folder_ids

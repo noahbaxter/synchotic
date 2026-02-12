@@ -10,27 +10,11 @@ from pathlib import Path
 from typing import List, Tuple, Set
 
 from ..core.constants import VIDEO_EXTENSIONS
-from ..core.formatting import relative_posix, parent_posix, sanitize_path, sanitize_filename, normalize_path_key
+from ..core.formatting import relative_posix, parent_posix, sanitize_path, sanitize_drive_name, normalize_path_key
 from ..core.logging import debug_log
 from .cache import scan_local_files
 from .markers import get_all_marker_files, get_all_markers
 from .sync_checker import is_archive_file
-
-
-PURGE_RATIO_LIMIT = 0.15   # 15%
-PURGE_SIZE_LIMIT = 2 * 1024**3  # 2 GB
-
-
-def check_purge_safety(local_file_count, purge_count, purge_size):
-    """Returns (is_safe, reason) — blocks if >15% of files or >2GB."""
-    if local_file_count == 0:
-        return True, ""
-    ratio = purge_count / local_file_count
-    if ratio > PURGE_RATIO_LIMIT:
-        return False, f"{ratio:.0%} of files ({purge_count:,}/{local_file_count:,})"
-    if purge_size > PURGE_SIZE_LIMIT:
-        return False, f"{purge_size / 1024**3:.1f} GB exceeds limit"
-    return True, ""
 
 
 @dataclass
@@ -225,11 +209,11 @@ def plan_purge(
 
         # Get disabled setlists (sanitize names to match local filesystem paths)
         disabled_setlists_raw = user_settings.get_disabled_subfolders(folder_id) if user_settings else set()
-        disabled_setlists = {sanitize_filename(name) for name in disabled_setlists_raw}
+        disabled_setlists = {sanitize_drive_name(name) for name in disabled_setlists_raw}
 
         # Get failed setlists (scan failed — protect their files from purge)
         failed_names_raw = failed_setlists.get(folder_id, set()) if failed_setlists else set()
-        failed_names = {sanitize_filename(name) for name in failed_names_raw}
+        failed_names = {sanitize_drive_name(name) for name in failed_names_raw}
         if failed_names:
             debug_log(f"PURGE_SKIP | folder={folder_name} | protecting {len(failed_names)} failed setlists: {failed_names}")
 
@@ -242,7 +226,7 @@ def plan_purge(
             first_slash = rel_path.find("/")
             setlist_name = rel_path[:first_slash] if first_slash != -1 else rel_path
             # Sanitize to match disabled_setlists (which are also sanitized)
-            setlist_name = sanitize_filename(setlist_name)
+            setlist_name = sanitize_drive_name(setlist_name)
             if setlist_name in failed_names:
                 failed_setlist_paths.add(rel_path)
                 continue  # Don't purge files in failed setlists

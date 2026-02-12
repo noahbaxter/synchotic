@@ -82,10 +82,9 @@ def print_progress(message: str, prefix: str = "  "):
     width = get_terminal_width()
     full_msg = f"{prefix}{message}"
 
-    # Truncate if too long (use visible length for check, strip for output)
-    visible_len = len(strip_ansi(full_msg))
-    if visible_len >= width:
-        full_msg = strip_ansi(full_msg)[:width - 4] + "..."
+    # Truncate if too long
+    if len(strip_ansi(full_msg)) >= width:
+        full_msg = truncate_text(full_msg, width - 1)
 
     # Clear line and print (\033[2K clears entire line)
     print(f"\033[2K\r{full_msg}", end="", flush=True)

@@ -34,7 +34,7 @@ from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync, purge_all_folders
 from src.sync.markers import rebuild_markers_from_disk
 from src.config import UserSettings, DrivesConfig, CustomFolders
-from src.core.formatting import format_size
+from src.core.formatting import format_size, sanitize_drive_name
 from src.core.paths import (
     get_data_dir,
     get_settings_path,
@@ -43,6 +43,7 @@ from src.core.paths import (
     get_download_path,
     get_drives_config_path,
     migrate_legacy_files,
+    migrate_unsanitized_paths,
     cleanup_tmp_dir,
 )
 from src.ui import (
@@ -55,11 +56,11 @@ from src.ui import (
     compute_main_menu_cache,
     update_menu_cache_on_toggle,
 )
-from src.sync import FolderStatsCache, count_purgeable_detailed, clear_scan_cache, BackgroundScanner
+from src.sync import FolderStatsCache, BackgroundScanner
 from src.ui.primitives import clear_screen, wait_with_skip
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
-from src.core.logging import TeeOutput
+from src.core.logging import TeeOutput, debug_log
 from src.drive.client import DriveClientConfig
 
 # ============================================================================
@@ -161,7 +162,11 @@ class SyncApp:
         Downloads at setlist granularity — as soon as any setlist finishes scanning,
         its files are downloaded immediately. Only waits when no setlists are ready.
         Purge runs after all downloading is complete.
+
+        Returns menu_cache if recomputed, or None if cancelled/no-op.
         """
+        import time as _time
+
         indices = list(range(len(self.folders)))
 
         # Filter out disabled drives
@@ -171,27 +176,30 @@ class SyncApp:
         ]
 
         if not enabled_indices:
-            return
+            return None
 
         # Need OAuth for scanning and downloading
         if not self.auth.is_signed_in:
             display.auth_required_scan()
             wait_with_skip(3)
-            return
+            return None
 
         # Ensure background scanner is running
         if not self._background_scanner:
             self._start_background_scan()
 
         # Download setlists as they become ready from scanner
-        was_cancelled = self._sync_folders_sequentially()
+        t0 = _time.time()
+        was_cancelled, synced_drive_ids = self._sync_folders_sequentially()
+        debug_log(f"TIMING | sync_folders: {_time.time() - t0:.1f}s")
 
-        clear_scan_cache()  # Invalidate filesystem cache after download
-        self.folder_stats_cache.invalidate_all()  # Invalidate all folder stats
+        # Per-folder invalidation (only folders that were synced)
+        for fid in synced_drive_ids:
+            self.folder_stats_cache.invalidate(fid)
 
-        # If cancelled, don't purge
+        # If cancelled, don't purge — but still invalidate synced folders
         if was_cancelled:
-            return
+            return None
 
         # Build failed setlists dict to protect from purge
         failed_setlists: dict[str, set[str]] | None = None
@@ -207,24 +215,38 @@ class SyncApp:
                 print(f"\n  Warning: {len(all_failed)} setlist(s) failed to scan (files preserved): {', '.join(sorted(all_failed))}")
 
         # Rebuild markers for any extracted archives missing them (prevents mass deletion)
+        print("  Rebuilding markers...", end="", flush=True)
+        t0 = _time.time()
         created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
+        debug_log(f"TIMING | rebuild_markers: {_time.time() - t0:.1f}s | created={created}")
         if created > 0:
-            print(f"  Rebuilt {created} marker(s) from disk ({skipped} already up to date)")
+            print(f" {created} rebuilt.", flush=True)
+        else:
+            print(" ok.", flush=True)
 
-        # Step 2: Purge extra files (no confirmation - sync means make it match)
-        stats = count_purgeable_detailed(
-            self.folders, get_download_path(), self.user_settings, failed_setlists
+        # Purge extra files (no confirmation - sync means make it match)
+        t0 = _time.time()
+        purged_ids = purge_all_folders(self.folders, get_download_path(), self.user_settings, failed_setlists)
+        debug_log(f"TIMING | purge: {_time.time() - t0:.1f}s")
+        for fid in purged_ids:
+            self.folder_stats_cache.invalidate(fid)
+
+        # Recompute menu cache now — this is the expensive part, do it here
+        # with feedback instead of silently after "done"
+        print("  Updating stats...", end="", flush=True)
+        t0 = _time.time()
+        combined_drives = self._get_combined_drives_config()
+        menu_cache = compute_main_menu_cache(
+            self.folders, self.user_settings,
+            get_download_path(), combined_drives,
+            self.folder_stats_cache, self._background_scanner,
         )
+        debug_log(f"TIMING | menu_recompute: {_time.time() - t0:.1f}s")
+        print(" done.")
 
-        if stats.total_files > 0:
-            purged_ids = purge_all_folders(self.folders, get_download_path(), self.user_settings, failed_setlists)
-            clear_scan_cache()  # Invalidate filesystem cache after purge
-            for fid in purged_ids:
-                self.folder_stats_cache.invalidate(fid)
-
-        # Always wait before returning to menu
-        from src.ui.primitives import wait_with_skip
+        # NOW we can say "done" — because it actually is
         wait_with_skip(5, "Continuing in 5s (press any key to skip)")
+        return menu_cache
 
     def handle_configure_drive(self, folder_id: str):
         """Configure setlists for a specific drive, or show options for custom folders."""
@@ -280,7 +302,7 @@ class SyncApp:
             menu.add_item(MenuItem("Scan folder", hotkey="S", value="scan", description="Get file list from Google Drive"))
 
         menu.add_item(MenuDivider())
-        menu.add_item(MenuItem("Remove folder", hotkey="R", value="remove", description="Remove from custom folders"))
+        menu.add_item(MenuItem("Remove folder", hotkey="X", value="remove", description="Remove from custom folders"))
         menu.add_item(MenuDivider())
         menu.add_item(MenuItem("Back", value="back"))
 
@@ -369,8 +391,9 @@ class SyncApp:
         """Toggle a drive on/off at the top level (preserves setlist settings)."""
         self.user_settings.toggle_drive(folder_id)
         self.user_settings.save()
-        # Don't invalidate cache - makes toggle instant
-        # Display strings are regenerated with new enabled state anyway
+        if self._background_scanner:
+            enabled = self.user_settings.is_drive_enabled(folder_id)
+            self._background_scanner.notify_drive_toggled(folder_id, enabled)
         # Purge numbers will be updated on next scan completion
 
     def handle_toggle_group(self, group_name: str):
@@ -470,13 +493,16 @@ class SyncApp:
             delete_videos=self.user_settings.delete_videos,
         )
 
-    def _start_background_scan(self):
+    def _start_background_scan(self, force_rescan: bool = False):
         """
         Start background scanning of ALL folders.
 
         Scans folders in the background so the UI shows live progress.
         Enabled folders are scanned first (priority), then disabled folders.
         Only scans folders that don't have files loaded yet.
+
+        Args:
+            force_rescan: If True, bypass scan cache and hit the API for every setlist.
         """
         # Need OAuth for scanning
         if not self.auth.is_signed_in:
@@ -523,6 +549,7 @@ class SyncApp:
             user_settings=self.user_settings,
             on_folder_complete=on_folder_complete,
             download_path=get_download_path(),
+            force_rescan=force_rescan,
         )
         # Discovery first (synchronous) - gives accurate setlist counts immediately
         print("  Discovering setlists...")
@@ -548,7 +575,22 @@ class SyncApp:
                 return folder
         return None
 
-    def _sync_folders_sequentially(self) -> bool:
+    def _handle_force_rescan(self):
+        """Invalidate all caches and restart background scan for all drives."""
+        from src.sync.cache import get_scan_cache, get_persistent_stats_cache
+
+        self._stop_background_scan()
+
+        get_scan_cache().invalidate_all()
+        get_persistent_stats_cache().invalidate_all()
+        self.folder_stats_cache.invalidate_all()
+
+        for folder in self.folders:
+            folder["files"] = None
+
+        self._start_background_scan(force_rescan=True)
+
+    def _sync_folders_sequentially(self) -> tuple[bool, set[str]]:
         """
         Download setlists as they become ready from background scanner.
 
@@ -556,7 +598,7 @@ class SyncApp:
         setlist finishes scanning, its files are downloaded immediately.
         Only waits when no setlists are ready and scanning is still in progress.
 
-        Returns True if cancelled.
+        Returns (was_cancelled, synced_drive_ids).
         """
         import time as _time
         from src.core.formatting import format_duration
@@ -567,9 +609,10 @@ class SyncApp:
 
         if total_setlists == 0:
             display.sync_already_synced()
-            return False
+            return False, set()
 
         downloaded_ids: set[str] = set()
+        synced_drive_ids: set[str] = set()
         completed_count = 0
         total_downloaded = 0
         total_bytes = 0
@@ -597,9 +640,14 @@ class SyncApp:
                     display_name = setlist.drive_name
 
                 # Filter drive files to just this setlist
+                # File paths use sanitized names (colons etc. replaced), so match on sanitized prefix
                 all_files = drive.get("files", [])
                 if setlist.name != setlist.drive_name:
-                    setlist_files = [f for f in all_files if f["path"].startswith(setlist.name + "/")]
+                    sanitized_name = sanitize_drive_name(setlist.name)
+                    setlist_files = [f for f in all_files if f["path"].startswith(sanitized_name + "/")]
+                    if not setlist_files:
+                        prefixes = set(f["path"].split("/")[0] for f in all_files if "/" in f["path"])
+                        debug_log(f"SETLIST_FILTER | name={setlist.name} | sanitized={sanitized_name} | all_files={len(all_files)} | matched=0 | prefixes={sorted(prefixes)[:5]}")
                 else:
                     setlist_files = list(all_files)
 
@@ -618,11 +666,14 @@ class SyncApp:
                 downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
                     temp_folder, get_download_path(), [],
                     scan_stats_getter=scan_getter, header=setlist_header,
+                    setlist_name=setlist.name,
+                    skip_marker_rebuild=True,
                 )
 
                 total_downloaded += downloaded
                 total_bytes += bytes_down
                 downloaded_ids.add(setlist.setlist_id)
+                synced_drive_ids.add(setlist.drive_id)
 
                 if cancelled:
                     was_cancelled = True
@@ -681,7 +732,7 @@ class SyncApp:
         else:
             display.sync_already_synced()
 
-        return was_cancelled
+        return was_cancelled, synced_drive_ids
 
     def _scan_enabled_folders(self, enabled_indices: list):
         """
@@ -798,8 +849,16 @@ class SyncApp:
         print(f"  [timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
 
         # Start background scanning of folders (if signed in)
+        # Force rescan if scan cache is stale (>1hr old)
+        from src.sync.cache import get_scan_cache
+        newest_scan = get_scan_cache().get_newest_time()
+        force = newest_scan is None  # No cache at all
+        if newest_scan:
+            from datetime import datetime, timezone
+            age = (datetime.now(timezone.utc) - newest_scan).total_seconds()
+            force = age > get_scan_cache().MAX_AGE_SECONDS
         _t_scan = _time.time()
-        self._start_background_scan()
+        self._start_background_scan(force_rescan=force)
         if self._background_scanner:
             print(f"  [timing] bg_scanner started: {(_time.time() - _t_scan)*1000:.0f}ms")
 
@@ -849,9 +908,11 @@ class SyncApp:
 
             elif action == "sync":
                 if self.folders:
-                    self.handle_sync()
-                    # Don't restart scanner - scan happens once at startup
-                menu_cache = None  # Invalidate cache after sync
+                    result = self.handle_sync()
+                    if result is not None:
+                        menu_cache = result  # Pre-computed during sync
+                    else:
+                        menu_cache = None  # Cancelled or no-op, recompute normally
 
             elif action == "configure":
                 # Enter on a drive - go directly to configure that drive
@@ -878,12 +939,10 @@ class SyncApp:
                 self.handle_toggle_group(value)
                 # Keep using the same cache - just showing/hiding items
 
-            elif action == "cycle_delta_mode":
-                # Tab - cycle between size/files display mode
-                self.user_settings.cycle_delta_mode()
-                self.user_settings.save()
-                self.folder_stats_cache.invalidate_all()  # Clear cached display strings
-                menu_cache = None  # Invalidate cache to refresh display
+            elif action == "rescan":
+                self._handle_force_rescan()
+                menu_cache = None
+
 
             elif action == "signin":
                 self.handle_signin()
@@ -932,6 +991,12 @@ def main():
     migrated = migrate_legacy_files()
     if migrated:
         print(f"Migrated settings to .dm-sync/: {', '.join(migrated)}")
+
+    renamed = migrate_unsanitized_paths()
+    if renamed:
+        print(f"Sanitized {len(renamed)} path(s) on disk:")
+        for r in renamed:
+            print(f"  {r}")
 
     _t1 = _time.time()
     app = SyncApp()

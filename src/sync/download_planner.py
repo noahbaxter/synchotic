@@ -11,7 +11,8 @@ from pathlib import Path
 from typing import List, Tuple
 
 from ..core.constants import VIDEO_EXTENSIONS
-from ..core.formatting import sanitize_path, normalize_path_key
+from ..core.formatting import normalize_path_key
+from .markers import is_permanently_failed
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 WINDOWS_MAX_PATH = 260
@@ -75,20 +76,19 @@ def plan_downloads(
     For archives: check if marker exists with matching MD5 and files verified.
 
     Handles case-insensitive duplicates: if Google Drive has two archives with
-    names differing only in case (e.g., "Carol of" vs "Carol Of"), they would
-    extract to the same folder on macOS/Windows. We only process the first one
-    encountered; duplicates are skipped.
+    names differing only in case (e.g., "Carol of.7z" vs "Carol Of.7z"), they
+    would conflict on macOS/Windows. We only process the first one encountered.
     """
     to_download = []
     skipped = 0
     long_paths = []
 
-    # Track seen archive extraction paths (normalized for case-insensitive comparison)
-    # This handles Google Drive having duplicate archives with case-only differences
+    # Track seen archive paths (normalized for case-insensitive comparison)
+    # Dedupes archives whose names differ only in case — NOT all archives in the same folder
     seen_archive_paths: set[str] = set()
 
     for f in files:
-        file_path = sanitize_path(f["path"])
+        file_path = f["path"]
         file_name = file_path.split("/")[-1] if "/" in file_path else file_path
         file_size = f.get("size", 0)
         file_md5 = f.get("md5", "")
@@ -108,16 +108,14 @@ def plan_downloads(
         local_path = local_base / file_path
 
         if is_archive:
-            # Check for case-insensitive duplicates
-            # Archives extract to their parent folder, so normalize that path
-            extract_folder = file_path.rsplit("/", 1)[0] if "/" in file_path else ""
-            normalized_extract = normalize_path_key(f"{folder_name}/{extract_folder}")
+            # Dedupe archives whose full paths differ only in case
+            # (e.g., "Setlist/Carol of.7z" vs "Setlist/Carol Of.7z")
+            normalized_archive = normalize_path_key(f"{folder_name}/{file_path}")
 
-            if normalized_extract in seen_archive_paths:
-                # Duplicate - another archive already extracts here, skip
+            if normalized_archive in seen_archive_paths:
                 skipped += 1
                 continue
-            seen_archive_paths.add(normalized_extract)
+            seen_archive_paths.add(normalized_archive)
 
             download_path = local_path.parent / f"_download_{file_name}"
         else:
@@ -131,6 +129,11 @@ def plan_downloads(
             continue
         if exceeds_windows_path_limit(download_path):
             long_paths.append(file_path)
+            continue
+
+        # Skip permanently failed archives (e.g., extracted paths too long)
+        if is_archive and is_permanently_failed(rel_path, file_md5):
+            skipped += 1
             continue
 
         # Check if already synced

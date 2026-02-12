@@ -23,12 +23,21 @@ from ..core.formatting import extract_path_context, format_download_name, normal
 from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
 from .extractor import extract_archive, get_folder_size, delete_video_files
 from .download_planner import DownloadTask
-from .markers import save_marker
+from .markers import save_marker, save_failed_marker
 from ..ui.primitives.esc_monitor import EscMonitor
 from ..ui.widgets import FolderProgress, display
 
 # Large file threshold for reducing download concurrency (500MB)
 LARGE_FILE_THRESHOLD = 500_000_000
+
+
+def _is_path_length_error(error_str: str) -> bool:
+    """Detect path-too-long errors across platforms."""
+    return any(s in error_str for s in (
+        "WinError 206",   # Windows: filename or extension is too long
+        "Errno 36",       # Linux: ENAMETOOLONG
+        "Errno 63",       # macOS HFS+: ENAMETOOLONG
+    ))
 
 # Progress tracking thresholds
 PROGRESS_TRACK_MIN_SIZE = 512 * 1024  # 512KB - minimum size to show in active downloads
@@ -303,6 +312,8 @@ class FileDownloader:
             success, error = extract_archive(archive_path, extract_tmp)
             if not success:
                 shutil.rmtree(extract_tmp, ignore_errors=True)
+                if _is_path_length_error(error) and archive_rel_path:
+                    save_failed_marker(archive_rel_path, task.md5, error)
                 return False, f"Extract failed: {error}", {}
 
             # Step 2: Delete videos if enabled
@@ -413,6 +424,8 @@ class FileDownloader:
         except Exception as e:
             # Cleanup on error
             shutil.rmtree(extract_tmp, ignore_errors=True)
+            if _is_path_length_error(str(e)) and archive_rel_path:
+                save_failed_marker(archive_rel_path, task.md5, str(e))
             return False, str(e), {}
 
     def _cleanup_partial_downloads(self, tasks: List[DownloadTask]) -> int:
@@ -504,6 +517,14 @@ class FileDownloader:
                     )
 
                     for async_task in done:
+                        # Check cancellation between results (rate-limited batches
+                        # can return dozens of results at once)
+                        if progress and progress.cancelled:
+                            cancelled = True
+                            for t in pending:
+                                t.cancel()
+                            break
+
                         task = pending.pop(async_task)
 
                         try:

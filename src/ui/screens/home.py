@@ -85,6 +85,7 @@ def update_menu_cache_on_toggle(
                     delta_mode=delta_mode,
                     state=state,
                     scan_progress=scan_progress,
+                    disk_size=agg.disk_size,
                 )
                 # Update in-memory cache as well
                 folder_stats_cache.set(folder_id, FolderStats(
@@ -101,6 +102,7 @@ def update_menu_cache_on_toggle(
                     enabled_setlists=agg.enabled_setlists,
                     total_setlists=agg.total_setlists,
                     display_string=columns,
+                    disk_size=agg.disk_size,
                 ))
             else:
                 # No cache - show minimal info
@@ -138,6 +140,7 @@ def update_menu_cache_on_toggle(
     global_purge_size = 0
     global_enabled_setlists = 0
     global_total_setlists = 0
+    global_disk_size = 0
 
     for folder in folders:
         fid = folder.get("folder_id", "")
@@ -155,6 +158,7 @@ def update_menu_cache_on_toggle(
             global_status.synced_size += agg.synced_size
             global_total_setlists += agg.total_setlists
             global_enabled_setlists += agg.enabled_setlists
+            global_disk_size += agg.disk_size
         global_purge_count += agg.purgeable_files
         global_purge_charts += agg.purgeable_charts
         global_purge_size += agg.purgeable_size
@@ -164,6 +168,7 @@ def update_menu_cache_on_toggle(
         global_purge_count, global_purge_charts, global_purge_size,
         global_enabled_setlists, global_total_setlists,
         delta_mode, scan_complete, background_scanner,
+        global_disk_size=global_disk_size,
     )
 
 
@@ -193,6 +198,7 @@ def _apply_global_stats(
     delta_mode: str,
     scan_complete: bool,
     scanner: "BackgroundScanner" = None,
+    global_disk_size: int = 0,
 ) -> None:
     """Format accumulated global stats and write them to the menu cache."""
     cache.subtitle = format_status_line(
@@ -201,13 +207,7 @@ def _apply_global_stats(
         enabled_setlists=global_enabled_setlists,
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
-        synced_size=global_status.synced_size,
-        missing_charts=global_status.missing_charts,
-        purgeable_files=global_purge_count,
-        purgeable_charts=global_purge_charts,
-        purgeable_size=global_purge_size,
-        delta_mode=delta_mode,
-        is_estimate=not scan_complete,
+        disk_size=global_disk_size,
     )
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
@@ -299,6 +299,7 @@ def _compute_folder_stats(
         purge_charts = agg.purgeable_charts
         enabled_setlists = agg.enabled_setlists
         total_setlists = agg.total_setlists
+        agg_disk_size = agg.disk_size
     else:
         # No cache available - show scanning state
         scan_progress = scanner.get_scan_progress(folder_id) if scanner else None
@@ -341,6 +342,7 @@ def _compute_folder_stats(
         is_estimate=status.is_estimate,
         state=state,
         scan_progress=scan_progress,
+        disk_size=agg_disk_size,
     )
 
     # Only log when there's actual work (not for fully synced folders)
@@ -356,6 +358,7 @@ def _compute_folder_stats(
         enabled_setlists=enabled_setlists,
         total_setlists=total_setlists,
         display_string=columns,
+        disk_size=agg_disk_size,
     )
 
 
@@ -390,6 +393,7 @@ def compute_main_menu_cache(
     global_purge_size = 0
     global_enabled_setlists = 0
     global_total_setlists = 0
+    global_disk_size = 0
     cache_hits = 0
     cache_misses = 0
     cache_scanning = 0
@@ -397,13 +401,11 @@ def compute_main_menu_cache(
     for folder in folders:
         folder_id = folder.get("folder_id", "")
 
-        # Check if this folder is currently being scanned or was scanned this session
+        # Check if this folder is currently being scanned
         is_scanning = background_scanner.is_scanning(folder_id) if background_scanner else False
-        is_scanned = background_scanner.is_scanned(folder_id) if background_scanner else False
 
-        # Try to use in-memory cached stats for this folder
-        # But don't use cache if folder just finished scanning (need to recompute)
-        use_memory_cache = folder_stats_cache and not is_scanned
+        # Use in-memory cache when available (already invalidated per-folder after sync/purge)
+        use_memory_cache = folder_stats_cache is not None
         cached = folder_stats_cache.get(folder_id) if use_memory_cache else None
 
         if cached and not is_scanning:
@@ -461,6 +463,7 @@ def compute_main_menu_cache(
             is_estimate=status.is_estimate,
             state=state,
             scan_progress=scan_progress,
+            disk_size=stats.disk_size,
         )
 
         # Only aggregate enabled drives into global stats for add/sync
@@ -469,6 +472,7 @@ def compute_main_menu_cache(
             global_status.synced_charts += status.synced_charts
             global_status.total_size += status.total_size
             global_status.synced_size += status.synced_size
+            global_disk_size += stats.disk_size
             if status.is_actual_charts:
                 global_status.is_actual_charts = True
             # Count setlists only for enabled drives
@@ -493,6 +497,7 @@ def compute_main_menu_cache(
         global_purge_count, global_purge_charts, global_purge_size,
         global_enabled_setlists, global_total_setlists,
         delta_mode, scan_complete, background_scanner,
+        global_disk_size=global_disk_size,
     )
 
     if drives_config:
@@ -578,9 +583,7 @@ def show_main_menu(
             background_scanner=background_scanner,
         )
 
-    delta_mode = user_settings.delta_mode if user_settings else "size"
-    mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
-    legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+    legend = f"{Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
     menu = Menu(title="Chart Packs", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit",
                 column_header=format_column_header("home"))
 
@@ -598,11 +601,18 @@ def show_main_menu(
             # Currently scanning - show current folder stats + running totals
             folder_elapsed = format_duration(stats.current_folder_elapsed)
             total_elapsed = format_duration(stats.elapsed)
-            new_status = (
-                f"Scanning: {stats.current_folder} "
-                f"({stats.folders_done + 1}/{stats.folders_total}) | "
-                f"{folder_elapsed} | {total_elapsed} total | {stats.api_calls} API calls"
-            )
+            if stats.api_calls > 0:
+                new_status = (
+                    f"Scanning: {stats.current_folder} "
+                    f"({stats.folders_done + 1}/{stats.folders_total}) | "
+                    f"{folder_elapsed} | {total_elapsed} total | {stats.api_calls} API calls"
+                )
+            else:
+                new_status = (
+                    f"Loading cache: {stats.current_folder} "
+                    f"({stats.folders_done + 1}/{stats.folders_total}) | "
+                    f"{total_elapsed}"
+                )
         else:
             # Done scanning - show total time
             if stats.elapsed > 0:
@@ -653,6 +663,11 @@ def show_main_menu(
         sync_label = _build_sync_label(cache)
         menu_instance.update_item_label(("sync", None), sync_label)
 
+        # Update rescan item when scanning finishes
+        if background_scanner.is_done():
+            menu_instance.update_item_description(("rescan", None), "Last scan: just now")
+            menu_instance.enable_item(("rescan", None))
+
         return True  # Re-render with updated values
 
     if background_scanner and not background_scanner.is_done():
@@ -660,7 +675,10 @@ def show_main_menu(
         # Set initial status line
         stats = background_scanner.get_stats()
         if stats.current_folder:
-            menu.status_line = f"Scanning: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total}) | {stats.api_calls} API calls"
+            if stats.api_calls > 0:
+                menu.status_line = f"Scanning: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total}) | {stats.api_calls} API calls"
+            else:
+                menu.status_line = f"Loading cache: {stats.current_folder} ({stats.folders_done + 1}/{stats.folders_total})"
         else:
             menu.status_line = "Starting scan..."
 
@@ -766,6 +784,28 @@ def show_main_menu(
     sync_label = _build_sync_label(cache)
     menu.add_item(MenuItem(sync_label, hotkey="S", value=("sync", None), description=cache.sync_action_desc))
 
+    # Rescan item with scan age or scanning state
+    is_scanning = background_scanner and not background_scanner.is_done()
+    if is_scanning:
+        api_calls = background_scanner.get_stats().api_calls
+        label = "Scanning..." if api_calls > 0 else "Loading cache..."
+        rescan_desc = f"{Colors.CYAN}{label}{Colors.RESET}"
+    else:
+        from datetime import datetime, timezone
+        from src.sync.cache import get_scan_cache
+        newest = get_scan_cache().get_newest_time()
+        if newest:
+            age_s = (datetime.now(timezone.utc) - newest).total_seconds()
+            if age_s < 60:
+                rescan_desc = "Last scan: just now"
+            elif age_s < 3600:
+                rescan_desc = f"Last scan: {int(age_s // 60)}m ago"
+            else:
+                rescan_desc = f"Last scan: {int(age_s // 3600)}h {int((age_s % 3600) // 60)}m ago"
+        else:
+            rescan_desc = "Force re-scan all drives"
+    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc, disabled=is_scanning, locked=is_scanning))
+
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
 
@@ -782,10 +822,6 @@ def show_main_menu(
     result = menu.run(initial_index=selected_index)
     if result is None:
         return ("quit", None, selected_index)
-
-    # Handle Tab to cycle delta mode
-    if result.action == "tab":
-        return ("cycle_delta_mode", None, menu._selected)
 
     restore_pos = menu._selected_before_hotkey if menu._selected_before_hotkey != menu._selected else menu._selected
 

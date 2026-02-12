@@ -27,37 +27,6 @@ def get_markers_dir() -> Path:
     return markers_dir
 
 
-_long_path_warned = False
-
-_REG_CONTENT = """\
-Windows Registry Editor Version 5.00
-
-; Enables long path support (>260 chars) on Windows 10/11.
-; Right-click > Merge or double-click to apply. Requires admin.
-
-[HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\FileSystem]
-"LongPathsEnabled"=dword:00000001
-"""
-
-
-def _warn_long_paths_once():
-    global _long_path_warned
-    if _long_path_warned:
-        return
-    _long_path_warned = True
-
-    reg_path = get_data_dir() / "enable_long_paths.reg"
-    try:
-        reg_path.write_text(_REG_CONTENT)
-    except OSError:
-        pass
-
-    print(
-        "  Note: some marker filenames are being truncated due to Windows path limits.\n"
-        f"  To fix, right-click and Merge: {reg_path}"
-    )
-
-
 def get_marker_path(archive_path: str, md5: str) -> Path:
     """
     Compute marker file path for an archive.
@@ -91,8 +60,6 @@ def get_marker_path(archive_path: str, md5: str) -> Path:
     max_base_len = max(max_base_len, 50)  # floor to keep filenames usable
 
     if len(safe_name) > max_base_len:
-        if os.name == "nt":
-            _warn_long_paths_once()
         path_hash = hashlib.md5(archive_path.encode()).hexdigest()[:8]
         safe_name = safe_name[:max_base_len - 9] + "_" + path_hash
 
@@ -324,6 +291,118 @@ def delete_markers_for_archive(archive_path: str) -> int:
             deleted += 1
         except OSError:
             pass
+    return deleted
+
+
+# ---------------------------------------------------------------------------
+# Failed markers — extraction failures (e.g., path length limits)
+# Markers expire after FAILED_MARKER_TTL_DAYS so environment changes
+# (e.g., enabling Windows long paths) trigger an automatic retry.
+# ---------------------------------------------------------------------------
+
+FAILED_MARKER_TTL_DAYS = 7
+
+def _get_failed_marker_path(archive_path: str, md5: str) -> Path:
+    """Compute failed marker file path for an archive (same naming as get_marker_path but with failed_ prefix)."""
+    import hashlib
+
+    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
+    suffix_len = 18  # _md5prefix(9) + .json.tmp(9)
+    markers_dir = get_markers_dir()
+
+    if os.name == "nt":
+        max_base_len = 260 - len(str(markers_dir)) - 1 - suffix_len - 7  # 7 for "failed_"
+    else:
+        max_base_len = 255 - suffix_len - 7  # = 230
+
+    max_base_len = max(max_base_len, 50)
+
+    if len(safe_name) > max_base_len:
+        path_hash = hashlib.md5(archive_path.encode()).hexdigest()[:8]
+        safe_name = safe_name[:max_base_len - 9] + "_" + path_hash
+
+    return markers_dir / f"failed_{safe_name}_{md5[:8]}.json"
+
+
+def save_failed_marker(archive_path: str, md5: str, error: str) -> Path:
+    """Save a failed marker for an archive that permanently failed extraction."""
+    marker = {
+        "archive_path": archive_path,
+        "md5": md5,
+        "error": error,
+        "failed_at": datetime.now().isoformat(),
+    }
+
+    marker_path = _get_failed_marker_path(archive_path, md5)
+    marker_path.parent.mkdir(parents=True, exist_ok=True)
+
+    tmp_path = marker_path.with_suffix(".json.tmp")
+    with open(tmp_path, "w") as f:
+        json.dump(marker, f, indent=2)
+    tmp_path.replace(marker_path)
+
+    return marker_path
+
+
+def is_permanently_failed(archive_path: str, md5: str) -> bool:
+    """Check if an archive has a non-expired failed marker."""
+    marker_path = _get_failed_marker_path(archive_path, md5)
+    if not marker_path.exists():
+        return False
+    try:
+        age_seconds = (datetime.now() - datetime.fromtimestamp(marker_path.stat().st_mtime)).total_seconds()
+        if age_seconds > FAILED_MARKER_TTL_DAYS * 86400:
+            marker_path.unlink(missing_ok=True)
+            return False
+    except OSError:
+        return False
+    return True
+
+
+def load_failed_marker(archive_path: str, md5: str) -> Optional[dict]:
+    """Load failed marker for an archive if it exists."""
+    marker_path = _get_failed_marker_path(archive_path, md5)
+    if not marker_path.exists():
+        return None
+    try:
+        with open(marker_path) as f:
+            return json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return None
+
+
+def get_all_failed_markers() -> list[dict]:
+    """Load all failed marker files."""
+    markers = []
+    markers_dir = get_markers_dir()
+    if not markers_dir.exists():
+        return markers
+
+    for marker_file in markers_dir.glob("failed_*.json"):
+        try:
+            with open(marker_file) as f:
+                markers.append(json.load(f))
+        except (json.JSONDecodeError, IOError):
+            continue
+
+    return markers
+
+
+def delete_failed_markers_for_archive(archive_path: str) -> int:
+    """Delete ALL failed markers for an archive path (any MD5)."""
+    markers_dir = get_markers_dir()
+    if not markers_dir.exists():
+        return 0
+
+    safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
+    deleted = 0
+    for marker_file in markers_dir.glob("failed_*.json"):
+        if normalize_path_key(marker_file.stem).startswith(f"failed_{safe_name}_"):
+            try:
+                marker_file.unlink()
+                deleted += 1
+            except OSError:
+                pass
     return deleted
 
 

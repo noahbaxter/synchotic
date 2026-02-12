@@ -7,6 +7,10 @@ on:
         description: 'Whether to upload build artifacts'
         type: boolean
         default: true
+      version_suffix:
+        description: 'Suffix to append to VERSION (e.g. dev build timestamp)'
+        type: string
+        default: ''
 
 jobs:
   build:
@@ -25,6 +29,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Stamp version
+        if: inputs.version_suffix != ''
+        run: |
+          TIMESTAMP=$(date -u +%Y%m%d.%H%M)
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          echo "$(cat VERSION)-${{ inputs.version_suffix }}.${TIMESTAMP}.${SHORT_SHA}" > VERSION
+          cat VERSION
+        shell: bash
 
       - name: Set up Python
         uses: actions/setup-python@v5

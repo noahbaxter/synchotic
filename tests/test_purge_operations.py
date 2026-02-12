@@ -388,6 +388,68 @@ class TestPartialDownloadsPerFolder:
             assert stats_b.partial_count == 0  # Bug: was 1 before fix
 
 
+class TestDisabledSetlistsCategorization:
+    """Disabled setlist files should be categorized as charts, not extras."""
+
+    def test_all_setlists_disabled_has_zero_extras(self):
+        """All-disabled produces chart_count only, extra_file_count=0."""
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_dir = Path(tmpdir)
+            folder_path = temp_dir / "Rock Band"
+            (folder_path / "RB1" / "Song").mkdir(parents=True)
+            (folder_path / "RB1" / "Song" / "song.ini").write_bytes(b"x" * 50)
+            (folder_path / "RB2" / "Song").mkdir(parents=True)
+            (folder_path / "RB2" / "Song" / "song.ini").write_bytes(b"x" * 50)
+
+            folders = [{"folder_id": "rb", "name": "Rock Band", "files": [
+                {"path": "RB1/Song/song.ini", "size": 50, "md5": "a"},
+                {"path": "RB2/Song/song.ini", "size": 50, "md5": "b"},
+            ]}]
+
+            mock_settings = Mock()
+            mock_settings.is_drive_enabled.return_value = True
+            mock_settings.get_disabled_subfolders.return_value = {"RB1", "RB2"}
+            mock_settings.delete_videos = False
+
+            stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
+
+            # Files land in chart_count (disabled setlist), NOT extra_file_count
+            assert stats.chart_count == 2
+            assert stats.extra_file_count == 0
+
+    def test_some_disabled_some_extras_separates_categories(self):
+        """Mixed: disabled setlist files → chart_count, orphans → extra_file_count."""
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            temp_dir = Path(tmpdir)
+            folder_path = temp_dir / "TestDrive"
+
+            # Disabled setlist with files
+            (folder_path / "Disabled" / "chart").mkdir(parents=True)
+            (folder_path / "Disabled" / "chart" / "song.ini").write_bytes(b"x" * 50)
+
+            # Enabled setlist with an orphan file (not in manifest or markers)
+            (folder_path / "Enabled" / "orphan").mkdir(parents=True)
+            (folder_path / "Enabled" / "orphan" / "junk.txt").write_bytes(b"x" * 30)
+
+            folders = [{"folder_id": "td", "name": "TestDrive", "files": [
+                {"path": "Disabled/chart/song.ini", "size": 50, "md5": "a"},
+                # Enabled setlist manifest has nothing matching "junk.txt"
+                {"path": "Enabled/real.zip", "size": 100, "md5": "b"},
+            ]}]
+
+            mock_settings = Mock()
+            mock_settings.is_drive_enabled.return_value = True
+            mock_settings.get_disabled_subfolders.return_value = {"Disabled"}
+            mock_settings.delete_videos = False
+
+            stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
+
+            assert stats.chart_count == 1      # Disabled setlist file
+            assert stats.extra_file_count == 1  # Orphan in enabled setlist
+
+
 class TestPurgeStatsTotal:
     """Tests for PurgeStats total calculations."""
 
@@ -420,58 +482,44 @@ class TestPurgeStatsTotal:
         assert stats.total_size == 2000  # 1000 + 500 + 200 + 300
 
 
-class TestPurgeSafety:
-    """Tests for check_purge_safety."""
+class TestPurgeConfirmationThreshold:
+    """Tests for the confirmation prompt threshold logic."""
 
-    def test_safety_blocks_large_ratio_purge(self):
-        """Purge of >15% of files should be blocked."""
-        from src.sync.purge_planner import check_purge_safety
+    def test_large_file_count_requires_confirmation(self):
+        """Purge of >100 files should require confirmation."""
+        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
-        # 20% purge ratio -> blocked
-        is_safe, reason = check_purge_safety(
-            local_file_count=1000,
-            purge_count=200,
-            purge_size=100,
-        )
-        assert not is_safe
-        assert "20%" in reason
-        assert "200" in reason
+        purge_count = 150
+        purge_size = 100 * 1024**2  # 100 MB (under size threshold)
+        needs_confirm = purge_count > PURGE_CONFIRM_FILE_THRESHOLD or purge_size > PURGE_CONFIRM_SIZE_THRESHOLD
+        assert needs_confirm
 
-    def test_safety_allows_small_purge(self):
-        """Purge of <15% of files should be allowed."""
-        from src.sync.purge_planner import check_purge_safety
+    def test_large_size_requires_confirmation(self):
+        """Purge of >500MB should require confirmation even with few files."""
+        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
-        # 5% purge ratio -> allowed
-        is_safe, reason = check_purge_safety(
-            local_file_count=1000,
-            purge_count=50,
-            purge_size=100,
-        )
-        assert is_safe
-        assert reason == ""
+        purge_count = 10  # Under file threshold
+        purge_size = 600 * 1024**2  # 600 MB
+        needs_confirm = purge_count > PURGE_CONFIRM_FILE_THRESHOLD or purge_size > PURGE_CONFIRM_SIZE_THRESHOLD
+        assert needs_confirm
 
-    def test_safety_blocks_large_size_purge(self):
-        """Purge of >2GB should be blocked even with low ratio."""
-        from src.sync.purge_planner import check_purge_safety
+    def test_small_purge_no_confirmation(self):
+        """Purge of <=100 files AND <=500MB should not require confirmation."""
+        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
-        is_safe, reason = check_purge_safety(
-            local_file_count=10000,
-            purge_count=100,  # 1% ratio - fine
-            purge_size=3 * 1024**3,  # 3 GB - too big
-        )
-        assert not is_safe
-        assert "GB" in reason
+        purge_count = 50
+        purge_size = 200 * 1024**2  # 200 MB
+        needs_confirm = purge_count > PURGE_CONFIRM_FILE_THRESHOLD or purge_size > PURGE_CONFIRM_SIZE_THRESHOLD
+        assert not needs_confirm
 
-    def test_safety_allows_zero_local_files(self):
-        """Empty folder should always be safe."""
-        from src.sync.purge_planner import check_purge_safety
+    def test_boundary_values(self):
+        """Exactly 100 files / 500MB should NOT require confirmation (threshold is >)."""
+        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
-        is_safe, reason = check_purge_safety(
-            local_file_count=0,
-            purge_count=0,
-            purge_size=0,
-        )
-        assert is_safe
+        # Exactly at threshold — should not trigger
+        assert not (100 > PURGE_CONFIRM_FILE_THRESHOLD or 500 * 1024**2 > PURGE_CONFIRM_SIZE_THRESHOLD)
+        # One over — should trigger
+        assert (101 > PURGE_CONFIRM_FILE_THRESHOLD or 0 > PURGE_CONFIRM_SIZE_THRESHOLD)
 
 
 if __name__ == "__main__":

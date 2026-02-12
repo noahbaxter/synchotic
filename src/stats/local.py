@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Optional
 
 from ..core.constants import CHART_MARKERS
-from ..core.formatting import normalize_fs_name
+from ..core.formatting import normalize_fs_name, sanitize_drive_name
 
 
 @dataclass
@@ -82,7 +82,8 @@ class LocalStatsScanner:
             if now - cached.scanned_at < self.cache_ttl:
                 # Apply disabled filter to cached results
                 if disabled_setlists:
-                    return self._filter_folder_stats(cached, disabled_setlists)
+                    sanitized_disabled = {sanitize_drive_name(n) for n in disabled_setlists}
+                    return self._filter_folder_stats(cached, sanitized_disabled)
                 return cached
 
         # Scan fresh
@@ -90,7 +91,8 @@ class LocalStatsScanner:
         self._folder_cache[cache_key] = stats
 
         if disabled_setlists:
-            return self._filter_folder_stats(stats, disabled_setlists)
+            sanitized_disabled = {sanitize_drive_name(n) for n in disabled_setlists}
+            return self._filter_folder_stats(stats, sanitized_disabled)
         return stats
 
     def get_setlist_stats(self, setlist_path: Path) -> SetlistStats:

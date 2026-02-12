@@ -8,12 +8,14 @@ Cache is invalidated after downloads/purges.
 import hashlib
 import json
 import os
+import shutil
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import TYPE_CHECKING
 
 from ..stats import clear_local_stats_cache
-from ..core.formatting import normalize_fs_name
+from ..core.formatting import normalize_fs_name, sanitize_drive_name
 from ..core.paths import get_data_dir
 
 if TYPE_CHECKING:
@@ -31,6 +33,7 @@ class FolderStats:
     enabled_setlists: int
     total_setlists: int
     display_string: str | None
+    disk_size: int = 0
 
 
 class FolderStatsCache:
@@ -100,6 +103,7 @@ class AggregatedFolderStats:
     synced_charts: int = 0
     total_size: int = 0
     synced_size: int = 0
+    disk_size: int = 0
     purgeable_files: int = 0
     purgeable_size: int = 0
     purgeable_charts: int = 0
@@ -223,6 +227,13 @@ class PersistentStatsCache:
             del self._setlist_cache[folder_id]
             self._dirty = True
 
+    def invalidate_setlist(self, folder_id: str, setlist_name: str):
+        """Remove cached stats for a single setlist."""
+        if folder_id in self._setlist_cache:
+            if setlist_name in self._setlist_cache[folder_id]:
+                del self._setlist_cache[folder_id][setlist_name]
+                self._dirty = True
+
     def invalidate_all(self):
         """Clear all cached stats."""
         if self._cache or self._setlist_cache:
@@ -283,6 +294,7 @@ def aggregate_folder_stats(
             result.synced_charts += cached.synced_charts
             result.total_size += cached.total_size
             result.synced_size += cached.synced_size
+            result.disk_size += cached.disk_size
             result.enabled_setlists += 1
         elif drive_enabled and not setlist_enabled and cached.disk_files > 0:
             # Disabled with disk content: contributes to purgeable
@@ -308,6 +320,88 @@ def get_persistent_stats_cache() -> PersistentStatsCache:
     if _persistent_stats_cache is None:
         _persistent_stats_cache = PersistentStatsCache()
     return _persistent_stats_cache
+
+
+class ScanCache:
+    """Cache Drive scan results to disk to skip API calls on restart."""
+    CACHE_DIR = "scan_cache"
+    CACHE_VERSION = 2  # Bump when path format changes (v2: sanitized paths)
+    MAX_AGE_SECONDS = 3600  # 1 hour
+
+    def __init__(self):
+        self._dir = get_data_dir() / self.CACHE_DIR
+
+    def get(self, setlist_id: str) -> list[dict] | None:
+        path = self._dir / f"{setlist_id}.json"
+        if not path.exists():
+            return None
+        try:
+            with open(path) as f:
+                data = json.load(f)
+            if data.get("version") != self.CACHE_VERSION:
+                return None
+            scanned_at = datetime.fromisoformat(data["scanned_at"])
+            age = (datetime.now(timezone.utc) - scanned_at).total_seconds()
+            if age > self.MAX_AGE_SECONDS:
+                return None
+            return data["files"]
+        except (json.JSONDecodeError, KeyError, OSError, ValueError):
+            return None
+
+    def set(self, setlist_id: str, files: list[dict]):
+        self._dir.mkdir(parents=True, exist_ok=True)
+        path = self._dir / f"{setlist_id}.json"
+        data = {
+            "version": self.CACHE_VERSION,
+            "scanned_at": datetime.now(timezone.utc).isoformat(),
+            "files": files,
+        }
+        try:
+            with open(path, "w") as f:
+                json.dump(data, f)
+        except OSError:
+            pass
+
+    def invalidate(self, setlist_id: str):
+        path = self._dir / f"{setlist_id}.json"
+        try:
+            path.unlink(missing_ok=True)
+        except OSError:
+            pass
+
+    def invalidate_all(self):
+        if self._dir.exists():
+            try:
+                shutil.rmtree(self._dir)
+            except OSError:
+                pass
+
+    def get_newest_time(self) -> datetime | None:
+        """Return the most recent scanned_at across all cache files."""
+        if not self._dir.exists():
+            return None
+        newest = None
+        for path in self._dir.glob("*.json"):
+            try:
+                with open(path) as f:
+                    data = json.load(f)
+                scanned_at = datetime.fromisoformat(data["scanned_at"])
+                if newest is None or scanned_at > newest:
+                    newest = scanned_at
+            except (json.JSONDecodeError, KeyError, OSError, ValueError):
+                continue
+        return newest
+
+
+# Global scan cache instance
+_scan_cache: ScanCache | None = None
+
+
+def get_scan_cache() -> ScanCache:
+    global _scan_cache
+    if _scan_cache is None:
+        _scan_cache = ScanCache()
+    return _scan_cache
 
 
 class SyncCache:
@@ -446,6 +540,63 @@ def _scan_actual_charts_uncached(folder_path: Path) -> tuple[int, int]:
     return chart_count, total_size
 
 
+def scan_disk_stats(folder_path: Path) -> tuple[int, int, int, int]:
+    """
+    Single-pass scan for both chart stats and disk stats.
+
+    Returns:
+        Tuple of (chart_count, chart_size, file_count, disk_size)
+    """
+    if not folder_path.exists():
+        return 0, 0, 0, 0
+
+    chart_count = 0
+    chart_size = 0
+    file_count = 0
+    disk_size = 0
+    chart_markers = {"song.ini", "notes.mid", "notes.chart"}
+
+    def scan(dir_path: Path) -> int:
+        nonlocal chart_count, chart_size, file_count, disk_size
+        try:
+            has_marker = False
+            subdirs = []
+            direct_size = 0
+            local_file_count = 0
+
+            with os.scandir(dir_path) as entries:
+                for entry in entries:
+                    if entry.is_file(follow_symlinks=False):
+                        local_file_count += 1
+                        if entry.name.lower() in chart_markers:
+                            has_marker = True
+                        try:
+                            sz = entry.stat(follow_symlinks=False).st_size
+                            direct_size += sz
+                            file_count += 1
+                            disk_size += sz
+                        except OSError:
+                            pass
+                    elif entry.is_dir(follow_symlinks=False):
+                        subdirs.append(Path(entry.path))
+
+            subdir_non_chart_size = 0
+            for subdir in subdirs:
+                subdir_non_chart_size += scan(subdir)
+
+            if has_marker:
+                chart_count += 1
+                chart_size += direct_size + subdir_non_chart_size
+                return 0
+            else:
+                return direct_size + subdir_non_chart_size
+        except OSError:
+            return 0
+
+    scan(folder_path)
+    return chart_count, chart_size, file_count, disk_size
+
+
 def scan_actual_charts(folder_path: Path, disabled_setlists: set[str] = None) -> tuple[int, int]:
     """
     Scan folder for actual chart folders (containing song.ini, notes.mid, etc).
@@ -475,7 +626,7 @@ def scan_actual_charts(folder_path: Path, disabled_setlists: set[str] = None) ->
     result_size = full_size
 
     for setlist_name in disabled_setlists:
-        setlist_path = folder_path / setlist_name
+        setlist_path = folder_path / sanitize_drive_name(setlist_name)
         setlist_key = str(setlist_path)
 
         if setlist_key in _cache.actual_charts:

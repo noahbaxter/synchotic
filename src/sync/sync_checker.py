@@ -67,12 +67,18 @@ def is_archive_synced(
     # Handle case-insensitive filesystem conflicts:
     # Google Drive may have two files with names differing only in case
     # (e.g., "Carol of" vs "Carol Of"). On macOS/Windows they extract to
-    # the same folder and conflict. If ANY marker exists for this path,
-    # consider it synced to prevent infinite re-download loops.
+    # the same folder and conflict. If a marker exists for a DIFFERENT path
+    # (case variant), consider it synced to prevent infinite re-download loops.
+    #
+    # But if the marker's archive_path is identical to ours, this is an MD5
+    # update (charter uploaded a new version) — NOT a case duplicate. In that
+    # case, fall through so the user gets the update.
     any_marker = find_any_marker_for_path(archive_path)
     if any_marker and verify_marker(any_marker, local_base):
-        total_size = sum(any_marker.get("files", {}).values())
-        return True, total_size
+        marker_archive_path = any_marker.get("archive_path", "")
+        if marker_archive_path != archive_path:
+            total_size = sum(any_marker.get("files", {}).values())
+            return True, total_size
 
     # No valid marker = not synced
     return False, 0

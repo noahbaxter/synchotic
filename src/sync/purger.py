@@ -25,13 +25,14 @@ def _fix_path_permissions(path: Path) -> bool:
         return False
 
 
-def delete_files(files: List[Tuple[Path, int]], base_path: Path) -> Tuple[int, int]:
+def delete_files(files: List[Tuple[Path, int]], base_path: Path, cleanup_path: Path = None) -> Tuple[int, int]:
     """
     Delete files and clean up empty directories.
 
     Args:
         files: List of (Path, size) tuples
         base_path: Base path to clean empty dirs under
+        cleanup_path: If provided, only clean empty dirs under this path (not entire base_path)
 
     Returns tuple of (deleted_count, failed_count).
     """
@@ -56,8 +57,9 @@ def delete_files(files: List[Tuple[Path, int]], base_path: Path) -> Tuple[int, i
             failed += 1
 
     # Clean up empty directories (fix permissions as needed)
+    cleanup_root = cleanup_path or base_path
     try:
-        for d in sorted(base_path.rglob("*"), reverse=True):
+        for d in sorted(cleanup_root.rglob("*"), reverse=True):
             if d.is_dir():
                 try:
                     if not any(d.iterdir()):

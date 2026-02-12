@@ -79,6 +79,7 @@ class MenuItem:
     value: Any = None
     description: str | None = None
     disabled: bool = False
+    locked: bool = False  # Truly non-interactive (blocks all input, unlike disabled which is visual-only)
     show_toggle: bool | None = None
     pinned: bool = False
 
@@ -125,6 +126,27 @@ class MenuResult:
         return self.item.value
 
 
+def _truncate_with_ansi(text: str, max_visible: int) -> str:
+    """Truncate text to max_visible characters, preserving ANSI escape codes."""
+    if max_visible <= 1:
+        return "…"
+    target = max_visible - 1  # Reserve 1 char for ellipsis
+    visible = 0
+    i = 0
+    while i < len(text):
+        if text[i] == '\x1b':
+            j = i + 1
+            while j < len(text) and text[j] != 'm':
+                j += 1
+            i = j + 1
+            continue
+        visible += 1
+        if visible > target:
+            return text[:i] + "…"
+        i += 1
+    return text
+
+
 @dataclass
 class Menu:
     """Interactive terminal menu with arrow key navigation."""
@@ -160,6 +182,15 @@ class Menu:
         for item in self.items:
             if isinstance(item, (MenuItem, MenuAction)) and item.value == value:
                 item.label = new_label
+                return True
+        return False
+
+    def enable_item(self, value: Any) -> bool:
+        """Enable a locked/disabled item by its value. Returns True if found."""
+        for item in self.items:
+            if isinstance(item, MenuItem) and item.value == value:
+                item.disabled = False
+                item.locked = False
                 return True
         return False
 
@@ -338,6 +369,17 @@ class Menu:
                 unsel_pfx = "  "
                 pfx_width = 2
                 hotkey_pad = ""
+
+            hotkey_len = (len(item.hotkey) + 2 + len(hotkey_pad)) if item.hotkey else 0
+
+            # Truncate label to ensure description columns always fit
+            if item.description:
+                desc_vis = len(strip_ansi(item.description))
+                if desc_vis > 0:
+                    max_label = w - 4 - pfx_width - toggle_len - hotkey_len - desc_vis - 2
+                    if 4 < max_label < label_visible_len:
+                        label_text = _truncate_with_ansi(label_text, max_label)
+                        label_visible_len = max_label
 
             if is_disabled:
                 if selected:
@@ -608,14 +650,11 @@ class Menu:
                     self._selected = selectable[new_pos]
                     self._render()
 
-                elif key == KEY_ENTER:
-                    return MenuResult(self.items[self._selected], "enter")
-
-                elif key == KEY_SPACE:
-                    return MenuResult(self.items[self._selected], "space")
-
-                elif key == KEY_TAB:
-                    return MenuResult(self.items[self._selected], "tab")
+                elif key in (KEY_ENTER, KEY_SPACE):
+                    item = self.items[self._selected]
+                    if not getattr(item, 'locked', False):
+                        action = "enter" if key == KEY_ENTER else "space"
+                        return MenuResult(item, action)
 
                 elif key == KEY_LEFT or key == KEY_RIGHT:
                     current_item = self.items[self._selected]
@@ -630,11 +669,15 @@ class Menu:
                 elif isinstance(key, str) and len(key) == 1:
                     upper = key.upper()
                     if upper in hotkeys:
-                        self._selected_before_hotkey = self._selected
-                        self._selected = hotkeys[upper]
-                        return MenuResult(self.items[self._selected], "enter")
+                        idx = hotkeys[upper]
+                        if not getattr(self.items[idx], 'locked', False):
+                            self._selected_before_hotkey = self._selected
+                            self._selected = idx
+                            return MenuResult(self.items[idx], "enter")
                     if key.isdigit() and key != '0':
                         idx = int(key)
                         if idx <= len(selectable):
-                            self._selected = selectable[idx - 1]
-                            return MenuResult(self.items[self._selected], "enter")
+                            item = self.items[selectable[idx - 1]]
+                            if not getattr(item, 'locked', False):
+                                self._selected = selectable[idx - 1]
+                                return MenuResult(item, "enter")

@@ -307,13 +307,17 @@ class DriveClient:
                 self._api_calls += len(batch_ids)  # Count each batched call
                 response.raise_for_status()
 
-                # Parse multipart response, track folders needing pagination
+                # Parse multipart response, track folders needing follow-up
                 needs_pagination = []
-                self._parse_batch_response(response, results, needs_pagination)
+                failed_ids = []
+                self._parse_batch_response(response, results, needs_pagination, failed_ids)
+
+                # Retry failed sub-requests individually (e.g. intermittent 403 on shared folders)
+                for folder_id in failed_ids:
+                    results[folder_id] = self.list_folder(folder_id)
 
                 # Handle pagination for folders with >1000 items
                 for folder_id, page_token in needs_pagination:
-                    # Fall back to individual list_folder which handles pagination
                     results[folder_id] = self.list_folder(folder_id)
 
             except requests.exceptions.HTTPError:
@@ -323,7 +327,8 @@ class DriveClient:
 
         return results
 
-    def _parse_batch_response(self, response: requests.Response, results: dict, needs_pagination: list = None):
+    def _parse_batch_response(self, response: requests.Response, results: dict,
+                              needs_pagination: list = None, failed_ids: list = None):
         """Parse a multipart/mixed batch response and populate results dict."""
         content_type = response.headers.get("Content-Type", "")
         boundary_match = re.search(r'boundary=([^\s;]+)', content_type)
@@ -346,16 +351,12 @@ class DriveClient:
             if folder_id not in results:
                 continue
 
-            # Check HTTP status in this part
+            # Check HTTP status in this part — retry failures individually
             status_match = re.search(r'HTTP/[\d.]+ (\d+)', part)
-            if status_match:
-                status = int(status_match.group(1))
-                if status == 403 or status == 404:
-                    # Access denied or not found - leave as empty list
-                    continue
-                if status >= 400:
-                    # Other error - leave as empty list
-                    continue
+            if status_match and int(status_match.group(1)) >= 400:
+                if failed_ids is not None:
+                    failed_ids.append(folder_id)
+                continue
 
             # Find JSON body (after blank line following headers)
             json_match = re.search(r'\r?\n\r?\n({.*})', part, re.DOTALL)

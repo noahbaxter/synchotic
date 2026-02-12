@@ -1,6 +1,8 @@
 name: Release (Dev)
 
 on:
+  push:
+    branches: [dev]
   workflow_dispatch:
     inputs:
       skip_tests:
@@ -49,6 +51,8 @@ jobs:
     needs: test
     if: ${{ !cancelled() && (needs.test.result == 'success' || needs.test.result == 'skipped') }}
     uses: ./.github/workflows/build-app.yml
+    with:
+      version_suffix: "dev"
     secrets: inherit
 
   release:

@@ -5,14 +5,13 @@ Allows enabling/disabling individual setlists within a chart pack.
 """
 
 from pathlib import Path
-import re
 
 from src.core.formatting import sort_by_name
 from src.core.logging import debug_log
 from src.config import UserSettings, extract_subfolders_from_files
-from src.sync import SyncStatus, CachedSetlistStats, get_persistent_stats_cache, compute_setlist_stats
+from src.sync import get_persistent_stats_cache, compute_setlist_stats, aggregate_folder_stats
 from ..primitives import Colors
-from ..components import format_drive_status, format_setlist_item, format_column_header
+from ..components import strip_ansi, format_drive_status, format_setlist_item, format_column_header
 from ..widgets import Menu, MenuItem, MenuDivider
 
 
@@ -94,59 +93,24 @@ def show_subfolder_settings(
             needs_cache_update = False
 
         # Aggregate stats using cached setlist data (fast!)
-        status = SyncStatus()
-        excess_files = 0
-        excess_size = 0
-        excess_charts = 0
-
-        for setlist_name in setlists:
-            cached = persistent_cache.get_setlist(folder_id, setlist_name)
-            if not cached:
-                continue
-
-            setlist_enabled = user_settings.is_subfolder_enabled(folder_id, setlist_name)
-
-            if drive_enabled and setlist_enabled:
-                status.total_charts += cached.total_charts
-                status.synced_charts += cached.synced_charts
-                status.total_size += cached.total_size
-                status.synced_size += cached.synced_size
-            elif drive_enabled and not setlist_enabled and cached.disk_files > 0:
-                excess_files += cached.disk_files
-                excess_size += cached.disk_size
-                excess_charts += cached.disk_charts
+        agg = aggregate_folder_stats(folder_id, setlists, user_settings, persistent_cache)
 
         debug_log(f"SETLIST_PAGE | === {folder_name} ===")
-        debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{status.missing_size} -{excess_size}")
-
-        enabled_setlist_count = sum(
-            1 for s in setlists
-            if user_settings.is_subfolder_enabled(folder_id, s)
-        )
+        debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{max(0, agg.total_size - agg.synced_size)} -{agg.purgeable_size}")
 
         delta_mode = user_settings.delta_mode if user_settings else "size"
 
-        # Drive delta is estimated if any enabled setlist hasn't been scanned this session
-        drive_is_estimate = scanner is not None and scanner.is_scanning(folder_id)
-
         subtitle = format_drive_status(
-            synced_charts=status.synced_charts,
-            total_charts=status.total_charts,
-            enabled_setlists=enabled_setlist_count,
-            total_setlists=len(setlists),
-            total_size=status.total_size,
-            synced_size=status.synced_size,
-            missing_charts=status.missing_charts,
-            purgeable_files=excess_files,
-            purgeable_charts=excess_charts,
-            purgeable_size=excess_size,
+            synced_charts=agg.synced_charts,
+            total_charts=agg.total_charts,
+            enabled_setlists=agg.enabled_setlists,
+            total_setlists=agg.total_setlists,
+            total_size=agg.total_size,
+            disk_size=agg.disk_size,
             disabled=not drive_enabled,
-            delta_mode=delta_mode,
-            is_estimate=drive_is_estimate,
         )
 
-        mode_label = {"size": "Size  ", "files": "Files ", "charts": "Charts"}.get(delta_mode, "Size  ")
-        legend = f"{Colors.MUTED}[Tab]{Colors.RESET} {mode_label}   {Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+        legend = f"{Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
         menu = Menu(title=f"{folder_name}", subtitle=subtitle, space_hint="Toggle", footer=legend,
                     column_header=format_column_header("setlist"))
 
@@ -210,6 +174,7 @@ def show_subfolder_settings(
                 disabled=not setlist_enabled or not drive_enabled,
                 delta_mode=delta_mode,
                 state=setlist_state,
+                disk_size=setlist_disk_size,
             )
 
             # Build label with checkmark, italic for scanning, delta appended
@@ -227,7 +192,7 @@ def show_subfolder_settings(
             if delta:
                 label = f"{label} {delta}"
 
-            desc_clean = re.sub(r'\x1b\[[0-9;]*m', '', columns) if columns else ""
+            desc_clean = strip_ansi(columns) if columns else ""
             debug_log(f"SETLIST_PAGE | [{'+' if setlist_enabled else '-'}] {setlist_name}: {desc_clean}")
 
             item_disabled = not setlist_enabled or not drive_enabled
@@ -251,7 +216,7 @@ def show_subfolder_settings(
         menu.add_item(MenuDivider(pinned=True))
         menu.add_item(MenuItem("Back", value=("back", None, None), pinned=True))
 
-        subtitle_clean = re.sub(r'\x1b\[[0-9;]*m', '', subtitle)
+        subtitle_clean = strip_ansi(subtitle)
         debug_log(f"SETLIST_PAGE | subtitle: {subtitle_clean}")
         debug_log(f"SETLIST_PAGE | === End {folder_name} ===")
 
@@ -303,12 +268,6 @@ def show_subfolder_settings(
             needs_cache_update = True
             continue
 
-        if result.action == "tab":
-            selected_index = menu._selected
-            user_settings.cycle_delta_mode()
-            user_settings.save()
-            continue
-
         action, idx, setlist_name = result.value
 
         if action == "enable_all":
@@ -333,6 +292,9 @@ def show_subfolder_settings(
             selected_index = menu._selected
             if not user_settings.is_drive_enabled(folder_id):
                 user_settings.enable_drive(folder_id)
+                if scanner:
+                    for name in setlists:
+                        scanner.notify_setlist_toggled(folder_id, name, True)
             else:
                 new_state = user_settings.toggle_subfolder(folder_id, setlist_name)
                 if scanner:
