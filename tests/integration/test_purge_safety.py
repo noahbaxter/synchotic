@@ -5,6 +5,8 @@ Tests the purge planner in scenarios that historically caused data loss.
 The 185GB incident was caused by purge misclassifying extracted archives as "extras".
 """
 
+from pathlib import Path
+
 from src.core.formatting import normalize_path_key, sanitize_path
 from src.sync.purge_planner import plan_purge, find_extra_files, find_partial_downloads
 from src.sync.markers import get_all_marker_files, rebuild_markers_from_disk
@@ -321,6 +323,99 @@ class TestPartialDownloadsPurged:
 
         assert len(partials) == 1
         assert partials[0][0].name == "_download_pack.7z"
+
+
+class TestLargeArchiveExtractionPurgeSafety:
+    """Single archive extracts to many chart folders — none should be purged."""
+
+    def test_50_charts_from_one_archive_zero_purge(self, sync_env):
+        folder_name = "TestDrive"
+        folder_id = "drive1"
+
+        # Simulate a compressed archive that extracts to 50 chart folders (200 files)
+        chart_files = {}
+        for i in range(50):
+            chart_files[f"Setlist/Chart{i:03d}/song.ini"] = 100
+            chart_files[f"Setlist/Chart{i:03d}/notes.mid"] = 200
+            chart_files[f"Setlist/Chart{i:03d}/album.png"] = 300
+            chart_files[f"Setlist/Chart{i:03d}/guitar.ogg"] = 5000
+
+        sync_env.make_files(folder_name, chart_files)
+        sync_env.make_marker(
+            f"{folder_name}/Setlist/megapack.7z", "md5_mega", chart_files,
+        )
+
+        manifest_files = [
+            sync_env.make_manifest_entry("Setlist/megapack.7z", md5="md5_mega"),
+        ]
+        folders = [sync_env.make_folder_dict(folder_name, folder_id=folder_id, files=manifest_files)]
+
+        settings = MockSettings()
+        clear_cache()
+        purge_files, stats = plan_purge(
+            folders, sync_env.base_path, user_settings=settings,
+        )
+
+        assert stats.extra_file_count == 0, (
+            f"200 files from one archive should not be purged as extras. Got {stats.extra_file_count}"
+        )
+        assert stats.total_files == 0
+
+
+class TestExtraFilesInFailedSetlist:
+    """Files in a failed setlist should be protected, extras in good setlists still caught."""
+
+    def test_failed_setlist_protected_good_setlist_extras_caught(self, sync_env):
+        folder_name = "TestDrive"
+        folder_id = "drive1"
+
+        # Good setlist with an extra file
+        sync_env.make_files(folder_name, {
+            "GoodSetlist/Chart/song.ini": 100,
+            "GoodSetlist/Chart/notes.mid": 200,
+            "GoodSetlist/random_junk.txt": 50,
+        })
+        sync_env.make_marker(
+            f"{folder_name}/GoodSetlist/pack.7z", "md5_good",
+            {"GoodSetlist/Chart/song.ini": 100, "GoodSetlist/Chart/notes.mid": 200},
+        )
+
+        # Failed setlist with files on disk
+        sync_env.make_files(folder_name, {
+            "FailedSetlist/Chart/song.ini": 100,
+            "FailedSetlist/orphan.txt": 50,
+        })
+
+        manifest_files = [
+            sync_env.make_manifest_entry("GoodSetlist/pack.7z", md5="md5_good"),
+            # FailedSetlist not in manifest (scan failed)
+        ]
+        folders = [sync_env.make_folder_dict(folder_name, folder_id=folder_id, files=manifest_files)]
+
+        failed_setlists = {folder_id: {"FailedSetlist"}}
+        settings = MockSettings()
+
+        clear_cache()
+        purge_files, stats = plan_purge(
+            folders, sync_env.base_path,
+            user_settings=settings,
+            failed_setlists=failed_setlists,
+        )
+
+        purged_paths = {str(p) for p, _ in purge_files}
+        failed_path = str(sync_env.base_path / folder_name / "FailedSetlist")
+
+        # Failed setlist files protected
+        for path_str in purged_paths:
+            assert not path_str.startswith(failed_path), (
+                f"Failed setlist file should be protected: {path_str}"
+            )
+
+        # Good setlist's extra file should be caught
+        extra_names = {Path(p).name for p, _ in purge_files}
+        assert "random_junk.txt" in extra_names, (
+            "Extra file in good setlist should still be caught"
+        )
 
 
 class TestPurgeWithAllSetlistsFailed:

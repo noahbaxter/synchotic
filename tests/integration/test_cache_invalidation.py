@@ -138,6 +138,58 @@ class TestCacheSetGetRoundTrip:
             assert retrieved.disk_size == 75000
 
 
+class TestSyncInvalidatesOnlyAffectedSetlist:
+    """After sync, only the affected setlist cache is invalidated."""
+
+    def test_sync_scoped_invalidation(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with patch.object(PersistentStatsCache, '_load'):
+                cache = PersistentStatsCache.__new__(PersistentStatsCache)
+                cache._cache = {}
+                cache._setlist_cache = {}
+                cache._dirty = False
+                cache._path = Path(tmpdir) / "stats.json"
+
+            folder_id = "drive1"
+            cache.set_setlist(folder_id, "SyncedSetlist", make_setlist_stats(synced_charts=5))
+            cache.set_setlist(folder_id, "UntouchedSetlist", make_setlist_stats(synced_charts=10))
+            cache.set_setlist(folder_id, "AnotherSetlist", make_setlist_stats(synced_charts=15))
+
+            # Simulate sync completing for SyncedSetlist — only invalidate that one
+            cache.invalidate_setlist(folder_id, "SyncedSetlist")
+
+            assert cache.get_setlist(folder_id, "SyncedSetlist") is None
+            assert cache.get_setlist(folder_id, "UntouchedSetlist").synced_charts == 10
+            assert cache.get_setlist(folder_id, "AnotherSetlist").synced_charts == 15
+
+
+class TestPurgeInvalidatesOnlyAffectedSetlists:
+    """After purge, only setlists with purged files are invalidated."""
+
+    def test_purge_scoped_invalidation(self):
+        with tempfile.TemporaryDirectory() as tmpdir:
+            with patch.object(PersistentStatsCache, '_load'):
+                cache = PersistentStatsCache.__new__(PersistentStatsCache)
+                cache._cache = {}
+                cache._setlist_cache = {}
+                cache._dirty = False
+                cache._path = Path(tmpdir) / "stats.json"
+
+            folder_id = "drive1"
+            cache.set_setlist(folder_id, "PurgedSetlistA", make_setlist_stats(disk_files=50))
+            cache.set_setlist(folder_id, "PurgedSetlistB", make_setlist_stats(disk_files=30))
+            cache.set_setlist(folder_id, "SafeSetlist", make_setlist_stats(disk_files=100))
+
+            # Simulate purge affecting two setlists
+            affected = ["PurgedSetlistA", "PurgedSetlistB"]
+            for name in affected:
+                cache.invalidate_setlist(folder_id, name)
+
+            assert cache.get_setlist(folder_id, "PurgedSetlistA") is None
+            assert cache.get_setlist(folder_id, "PurgedSetlistB") is None
+            assert cache.get_setlist(folder_id, "SafeSetlist").disk_files == 100
+
+
 class TestSettingsHashCacheMiss:
     """Cache set with hash "abc", get with hash "def" returns None."""
 
