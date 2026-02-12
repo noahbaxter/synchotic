@@ -15,6 +15,7 @@ from ..core.formatting import sanitize_path, sanitize_drive_name, dedupe_files_b
 from ..core.logging import debug_log
 from .cache import scan_actual_charts, scan_disk_stats, CachedSetlistStats
 from .download_planner import EXCLUDED_FILES
+from .markers import is_permanently_failed
 from .sync_checker import is_archive_synced, is_archive_file, is_file_synced
 
 
@@ -134,6 +135,15 @@ def _count_synced_charts(
     for _, data in chart_folders.items():
         if not data["is_chart"]:
             continue
+
+        # Skip permanently failed archives from all counts (keeps status/planner contract)
+        if not skip_custom and data["archive_name"]:
+            if data["checksum_path"]:
+                full_archive_path = f"{folder_name}/{data['checksum_path']}/{data['archive_name']}"
+            else:
+                full_archive_path = f"{folder_name}/{data['archive_name']}"
+            if is_permanently_failed(full_archive_path, data["archive_md5"]):
+                continue
 
         total_charts += 1
 

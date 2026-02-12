@@ -12,6 +12,7 @@ from typing import List, Tuple
 
 from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import normalize_path_key
+from .markers import is_permanently_failed
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 WINDOWS_MAX_PATH = 260
@@ -128,6 +129,11 @@ def plan_downloads(
             continue
         if exceeds_windows_path_limit(download_path):
             long_paths.append(file_path)
+            continue
+
+        # Skip permanently failed archives (e.g., extracted paths too long)
+        if is_archive and is_permanently_failed(rel_path, file_md5):
+            skipped += 1
             continue
 
         # Check if already synced
