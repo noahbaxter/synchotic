@@ -16,7 +16,7 @@ The launcher downloads charts to wherever you put it. Put the launcher in your C
 
 ## How It Works
 
-1. Launch the app - it fetches the latest chart pack list automatically
+1. Launch the app and sign in to Google (press **G**)
 2. Pick which chart packs you want (toggle with **Space**)
 3. Press **S** to Sync - downloads enabled charts, removes disabled ones
 
@@ -30,8 +30,9 @@ Charts download to a `Sync Charts` folder next to the app.
 | **Enter** | Open pack settings |
 | **Space** | Toggle pack on/off |
 | **S** | Sync all |
-| **Tab** | Switch view (Size / Files / Charts) |
+| **R** | Rescan drives |
 | **A** | Add custom Google Drive folder |
+| **X** | Remove custom folder |
 | **G** | Sign in/out of Google |
 | **Esc** | Back / Quit |
 
@@ -40,7 +41,7 @@ Charts download to a `Sync Charts` folder next to the app.
 - **Smart sync** - only downloads what's new or changed
 - **Setlist filtering** - pick exactly which setlists you want from each drive
 - **Custom folders** - add your own Google Drive folders
-- **Sign in to Google** - optional, gives you faster downloads with your own quota
+- **Google sign-in** - required for scanning and syncing (press **G** on first launch)
 - **Auto-extract** - handles .zip, .7z, and .rar archives automatically
 
 ## Troubleshooting
@@ -111,16 +112,5 @@ synchotic-launcher.exe --dev --clean   # Fresh install (nuke .dm-sync)
 - `--dev`: If `app-windows.zip` (or `app-macos.zip`) exists, extracts it and deletes the zip. If no zip, uses existing `_app` folder.
 - `--clean`: Nukes entire `.dm-sync/` folder first (fresh install).
 - Subsequent `--dev` runs without a new zip just use the existing app.
-
-### Manifest Updates
-
-The manifest auto-updates daily via GitHub Actions.
-
-**Manual trigger:** Actions → "Update Manifest" → Run workflow
-
-**Setup:**
-1. Create OAuth credentials at [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
-2. Run `python manifest_gen.py` locally to generate `token.json`
-3. Add GitHub Secrets: `GOOGLE_CREDENTIALS`, `GOOGLE_TOKEN`, `GOOGLE_API_KEY`
 
 </details>

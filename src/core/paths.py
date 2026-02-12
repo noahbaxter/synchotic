@@ -8,7 +8,7 @@ Directory structure:
     path/to/dm-sync.exe (or sync.py)
     path/to/.dm-sync/
         settings.json       - User preferences (drive toggles, etc.)
-        token.json          - User OAuth token (optional sign-in)
+        token.json          - User OAuth token (required for scanning and syncing)
         local_manifest.json - Custom drives added by user
         markers/            - Archive sync markers (source of truth)
         logs/               - Debug logs

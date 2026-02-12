@@ -151,7 +151,7 @@ class UserOAuthManager:
     - Uses embedded OAuth client credentials (no credentials.json needed)
     - Stores user token at .dm-sync/token.json
     - Provides explicit sign_in/sign_out methods
-    - Designed for optional user authentication to reduce rate limits
+    - Required for scanning and syncing
     """
 
     def __init__(self, token_path: Optional[Path] = None):

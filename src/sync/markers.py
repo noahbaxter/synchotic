@@ -7,7 +7,7 @@ Each extracted archive gets a marker file that records:
 - All extracted files with their sizes
 
 Markers are stored in .dm-sync/markers/ and named based on archive path + MD5.
-This survives sync_state.json corruption/loss.
+Markers are the primary source of truth for sync verification.
 """
 
 import json

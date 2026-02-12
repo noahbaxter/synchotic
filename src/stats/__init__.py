@@ -4,7 +4,7 @@ Stats module for DM Chart Sync.
 Provides accurate chart statistics by combining multiple data sources:
 1. Local disk scan (most accurate for downloaded/extracted content)
 2. Admin overrides (for static content with known values)
-3. Manifest data (fallback)
+3. Drive API scan data (fallback)
 """
 
 from pathlib import Path
@@ -63,17 +63,17 @@ def get_best_stats(
     Chart count priority (highest to lowest):
     1. Local disk scan (if folder exists and has extracted content)
     2. Admin override (for nested archives like game rips)
-    3. Manifest data (fallback)
+    3. Drive API scan data (fallback)
 
     Size priority:
     1. Local disk scan (actual extracted size on disk)
-    2. Manifest data (archive/download size) - overrides don't affect size
+    2. Drive API scan data (archive/download size) - overrides don't affect size
 
     Args:
         folder_name: Name of the drive folder
         setlist_name: Name of the setlist
-        manifest_charts: Chart count from manifest
-        manifest_size: Total size from manifest
+        manifest_charts: Chart count from Drive API scan
+        manifest_size: Total size from Drive API scan
         local_path: Path to the local download folder (or None if not downloaded)
         scanner: LocalStatsScanner instance (or None to use default)
         overrides: ManifestOverrides instance (or None to use default)
@@ -96,10 +96,10 @@ def get_best_stats(
                 # Local scan found charts - use this as the source of truth
                 return stats.chart_count, stats.total_size
 
-    # 2. Try admin override for chart count (size always from manifest - it's the download size)
+    # 2. Try admin override for chart count (size always from Drive API - it's the download size)
     override = overrides.get_setlist_override(folder_name, setlist_name)
     if override is not None and override.chart_count is not None:
         return override.chart_count, manifest_size
 
-    # 3. Fall back to manifest data
+    # 3. Fall back to Drive API scan data
     return manifest_charts, manifest_size
