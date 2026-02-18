@@ -76,6 +76,9 @@ def _build_chart_folders(manifest_files: list) -> dict:
         file_size = f.get("size", 0)
         file_md5 = f.get("md5", "")
 
+        if file_size == 0:
+            continue
+
         sanitized_path = sanitize_path(file_path)
         file_name = sanitized_path.rsplit("/", 1)[-1]
         if file_name in EXCLUDED_FILES:

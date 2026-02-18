@@ -251,6 +251,8 @@ def plan_purge(
             continue
 
         for f in manifest_files:
+            if f.get("size", 0) == 0:
+                continue
             file_path = f.get("path", "")
             first_slash = file_path.find("/")
             setlist_name = file_path[:first_slash] if first_slash != -1 else file_path
