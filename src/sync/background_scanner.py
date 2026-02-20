@@ -337,19 +337,6 @@ class BackgroundScanner:
         """Discover setlists within a single folder/drive."""
         drive_id = folder["folder_id"]
         drive_name = folder.get("name", "")
-        is_custom = folder.get("is_custom", False)
-
-        # Custom folders are single units (not containers of setlists)
-        if is_custom:
-            self._register_setlist(
-                setlist_id=drive_id,
-                name=drive_name,
-                drive_id=drive_id,
-                drive_name=drive_name,
-                drive=folder,
-            )
-            return
-
         with self._lock:
             self._stats.current_folder = f"{drive_name} (discovering)"
             self._stats.current_folder_start = time.time()

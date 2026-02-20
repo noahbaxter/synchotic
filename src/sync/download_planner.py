@@ -95,6 +95,10 @@ def plan_downloads(
 
         rel_path = f"{folder_name}/{file_path}" if folder_name else file_path
 
+        if file_size == 0:
+            skipped += 1
+            continue
+
         if file_name in EXCLUDED_FILES:
             skipped += 1
             continue

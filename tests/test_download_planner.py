@@ -29,6 +29,17 @@ class TestPlanDownloadsSkipping:
         assert len(tasks) == 0
         assert skipped == 1
 
+    def test_empty_files_skipped(self, temp_dir):
+        """Files with size=0 are skipped (empty Drive easter eggs)."""
+        files = [
+            {"id": "1", "path": "folder/empty.txt", "size": 0, "md5": "d41d8cd98f00b204e9800998ecf8427e"},
+            {"id": "2", "path": "folder/real.txt", "size": 100, "md5": "abc123"},
+        ]
+        tasks, skipped, _ = plan_downloads(files, temp_dir)
+        assert len(tasks) == 1
+        assert tasks[0].file_id == "2"
+        assert skipped == 1
+
     def test_file_with_md5_but_no_extension_included(self, temp_dir):
         """Files with MD5 but no extension are included (like _rb3con files)."""
         files = [{"id": "1", "path": "folder/_rb3con", "size": 100, "md5": "abc123"}]

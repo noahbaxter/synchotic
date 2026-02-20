@@ -182,7 +182,7 @@ def _get_setlist_names(
     if not setlist_names:
         setlists = extract_subfolders_from_files(folder)
         setlist_names = list(setlists) if setlists else []
-    if not setlist_names and folder.get("is_custom", False):
+    if not setlist_names:
         setlist_names = [folder.get("name", "")]
     return setlist_names
 
