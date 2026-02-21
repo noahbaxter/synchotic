@@ -77,6 +77,12 @@ class UserSettings:
         else:
             settings._is_new = True
 
+        # If marked as "new" but clearly has usage, they're not new.
+        # Fixes drives silently disabling when DEFAULT_ENABLED_DRIVES changed.
+        if settings._is_new and (settings.drive_toggles or settings.subfolder_toggles or settings.oauth_prompted):
+            settings._is_new = False
+            settings.save()
+
         return settings
 
     def save(self):

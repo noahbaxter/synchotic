@@ -199,6 +199,39 @@ class TestSettingsRegressions:
         with tempfile.TemporaryDirectory() as tmpdir:
             yield Path(tmpdir)
 
+    def test_new_flag_cleared_when_user_has_toggles(self, temp_dir):
+        """
+        Regression test: users with use_default_drives=true who have drive
+        toggles are not actually new. Clearing DEFAULT_ENABLED_DRIVES must
+        not disable drives they never explicitly toggled.
+        """
+        import json
+        settings_path = temp_dir / "settings.json"
+
+        # Simulate a user who started as "new" but has been using the app:
+        # they toggled some drives but left others at the default
+        settings_path.write_text(json.dumps({
+            "use_default_drives": True,
+            "drive_toggles": {"some_drive": False},
+            "subfolder_toggles": {},
+        }))
+
+        settings = UserSettings.load(settings_path)
+
+        # The flag should be cleared — they're not new
+        assert settings._is_new is False
+        # Untouched drives should get the existing-user default (enabled)
+        assert settings.is_drive_enabled("untouched_drive") is True
+        # Their explicit toggle is still respected
+        assert settings.is_drive_enabled("some_drive") is False
+
+    def test_new_flag_preserved_for_actual_new_users(self, temp_dir):
+        """Truly new users (no toggles, no usage) stay marked as new."""
+        settings = UserSettings.load(temp_dir / "nonexistent_settings.json")
+
+        assert settings._is_new is True
+        assert settings.is_drive_enabled("any_drive") is False
+
     def test_disabled_drive_stays_disabled_after_reload(self, temp_dir):
         """
         Regression test: disabled drives must stay disabled after app restart.
