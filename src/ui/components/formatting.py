@@ -81,10 +81,13 @@ def format_status_line(
     total_setlists: int,
     total_size: int,
     disk_size: int = 0,
+    empty_hint: str = "",
     **_kwargs,
 ) -> str:
     """Format status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB)"""
     if total_charts == 0:
+        if enabled_setlists == 0 and empty_hint:
+            return empty_hint
         return ""
 
     pct = calc_percent(synced_charts, total_charts)
@@ -397,6 +400,7 @@ def format_drive_status(
         total_setlists=total_setlists,
         total_size=total_size,
         disk_size=disk_size,
+        empty_hint="No setlists enabled — toggle with Space",
     )
 
 

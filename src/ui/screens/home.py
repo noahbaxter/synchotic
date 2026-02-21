@@ -208,6 +208,7 @@ def _apply_global_stats(
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
         disk_size=global_disk_size,
+        empty_hint="No drives enabled — toggle with Space",
     )
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
