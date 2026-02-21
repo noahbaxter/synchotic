@@ -34,7 +34,7 @@ from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync, purge_all_folders
 from src.sync.markers import rebuild_markers_from_disk
 from src.config import UserSettings, DrivesConfig, CustomFolders
-from src.core.formatting import format_size, sanitize_drive_name
+from src.core.formatting import format_size, sanitize_drive_name, normalize_path_key
 from src.core.paths import (
     get_data_dir,
     get_settings_path,
@@ -111,12 +111,91 @@ class SyncApp:
         self.folder_stats_cache = FolderStatsCache()
         self._background_scanner: BackgroundScanner | None = None
 
+    def _migrate_custom_to_released(self):
+        """Migrate custom folders that now match released drives.
+
+        When a user added a Google Drive folder as custom before it became
+        an official released pack, they end up with duplicates. This renames
+        the download folder and marker files to match the released name,
+        then removes the custom entry.
+        """
+        from src.sync.markers import get_markers_dir
+
+        released_by_id = {d.folder_id: d.name for d in self.drives_config.drives}
+
+        # Same-name duplicates: just remove the custom entry, no renames needed
+        same_name_ids = [
+            c.folder_id for c in self.custom_folders.folders
+            if c.folder_id in released_by_id and released_by_id[c.folder_id] == c.name
+        ]
+        for folder_id in same_name_ids:
+            print(f"  Removing duplicate custom entry: {released_by_id[folder_id]}")
+            self.custom_folders.remove_folder(folder_id)
+        if same_name_ids:
+            self.custom_folders.save()
+
+        # Different-name duplicates: rename folder + markers, then remove
+        to_migrate = []
+        for custom in self.custom_folders.folders:
+            released_name = released_by_id.get(custom.folder_id)
+            if released_name and released_name != custom.name:
+                to_migrate.append((custom.folder_id, custom.name, released_name))
+
+        if not to_migrate:
+            return
+
+        download_path = get_download_path()
+        markers_dir = get_markers_dir()
+
+        for folder_id, custom_name, released_name in to_migrate:
+            print(f"  Migrating custom folder: {custom_name} → {released_name}")
+
+            # a) Rename download folder on disk
+            old_dir = download_path / custom_name
+            new_dir = download_path / released_name
+            if old_dir.exists() and not new_dir.exists():
+                try:
+                    old_dir.rename(new_dir)
+                    print(f"    Renamed download folder")
+                except OSError as e:
+                    print(f"    Warning: could not rename folder: {e}")
+            elif old_dir.exists() and new_dir.exists():
+                print(f"    Warning: both '{custom_name}' and '{released_name}' exist on disk, skipping folder rename")
+
+            # b) Rename marker files
+            old_prefix = normalize_path_key(custom_name).replace("/", "_").replace("\\", "_") + "_"
+            new_prefix = normalize_path_key(released_name).replace("/", "_").replace("\\", "_") + "_"
+            renamed = 0
+            if markers_dir.exists():
+                for marker_file in markers_dir.glob("*.json"):
+                    lower_stem = marker_file.stem.lower()
+                    if lower_stem.startswith(old_prefix):
+                        new_name = new_prefix + marker_file.name[len(old_prefix):]
+                        new_path = markers_dir / new_name
+                        if not new_path.exists():
+                            try:
+                                marker_file.rename(new_path)
+                                renamed += 1
+                            except OSError:
+                                pass
+            if renamed:
+                print(f"    Renamed {renamed} marker file(s)")
+
+            # c) Remove custom folder entry
+            self.custom_folders.remove_folder(folder_id)
+
+        self.custom_folders.save()
+        print(f"  Migration complete: {len(to_migrate)} folder(s) migrated")
+
     def load_drives(self, quiet: bool = False):
         """Load drive list from drives.json. File data comes from scanner.
 
         Builds folder list from static drive config only. Files are populated
         by the BackgroundScanner when scanning completes.
         """
+        # Migrate custom folders that are now released drives
+        self._migrate_custom_to_released()
+
         if not quiet:
             print("Loading drives...")
 
@@ -437,6 +516,13 @@ class SyncApp:
         # Check if already exists
         if self.custom_folders.has_folder(folder_id):
             print(f"\n  Folder already added: {folder_name}")
+            wait_with_skip(2)
+            return False
+
+        # Block adding folders that are already released drives
+        released_ids = {d.folder_id for d in self.drives_config.drives}
+        if folder_id in released_ids:
+            print(f"\n  This folder is already available as a built-in drive.")
             wait_with_skip(2)
             return False
 
