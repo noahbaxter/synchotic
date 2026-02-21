@@ -17,7 +17,7 @@ class DriveConfig:
     folder_id: str
     description: str = ""
     group: str = ""  # Optional group name for categorization
-    hidden: bool = False  # If True, hide from sync UI (still in manifest)
+    hidden: bool = False  # If True, hide from sync UI (still scanned by API)
     rescan_hours: int = 6  # How often to force rescan shortcuts (0 = only on detected changes)
 
     def to_dict(self) -> dict:
@@ -51,7 +51,7 @@ class DrivesConfig:
     Manages drives.json - the admin-maintained list of drives.
 
     This file is shipped with the app and defines available drives.
-    Subfolders are discovered automatically from the manifest.
+    Subfolders are discovered automatically by scanning Google Drive.
     """
 
     def __init__(self, path: Path):

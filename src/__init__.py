@@ -1,12 +1,11 @@
 """
-DM Chart Sync - Download charts from Google Drive without authentication.
+DM Chart Sync - Download charts from Google Drive.
 
-This package provides classes for syncing files from Google Drive using
-a pre-built manifest approach that eliminates API calls for end users.
+This package provides classes for syncing files from Google Drive by
+scanning directly via the Google Drive API.
 
 Import from submodules directly:
     from src.config import UserSettings
-    from src.manifest import Manifest
     from src.drive import DriveClient
     from src.sync import FolderSync
     from src.ui import show_main_menu

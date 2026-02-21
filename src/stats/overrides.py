@@ -1,9 +1,9 @@
 """
-Admin override management for manifest data.
+Admin override management for Drive API scan data.
 
-This module allows forcing correct values for drives/setlists where manifest
-data is known to be incomplete (e.g., nested archives where the manifest
-only counts the archive file, not the charts inside).
+This module allows forcing correct values for drives/setlists where the
+Drive API scan is known to be incomplete (e.g., nested archives where the
+scan only counts the archive file, not the charts inside).
 """
 
 import json
@@ -14,7 +14,7 @@ from typing import Optional
 
 @dataclass
 class SetlistOverride:
-    """Override values for a setlist (chart count only, size comes from local scan or manifest)."""
+    """Override values for a setlist (chart count only, size comes from local scan or Drive API)."""
     chart_count: Optional[int] = None
 
 
@@ -28,13 +28,13 @@ class FolderOverride:
 
 class ManifestOverrides:
     """
-    Manages admin overrides for manifest data.
+    Manages admin overrides for Drive API scan data.
 
     These overrides are used when:
     1. Local disk scan returns 0 (content not downloaded)
-    2. The manifest has incorrect data (e.g., nested archives)
+    2. The Drive API scan has incorrect data (e.g., nested archives)
 
-    Priority: Local scan > Admin override > Manifest
+    Priority: Local scan > Admin override > Drive API scan
     """
 
     def __init__(self, path: Optional[Path] = None):
@@ -42,7 +42,7 @@ class ManifestOverrides:
         Initialize overrides manager.
 
         Args:
-            path: Path to manifest_overrides.json file
+            path: Path to overrides JSON file
         """
         self.path = path
         self.overrides: dict[str, FolderOverride] = {}

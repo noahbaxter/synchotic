@@ -167,17 +167,6 @@ class SyncApp:
         """
         import time as _time
 
-        indices = list(range(len(self.folders)))
-
-        # Filter out disabled drives
-        enabled_indices = [
-            i for i in indices
-            if self.user_settings.is_drive_enabled(self.folders[i].get("folder_id", ""))
-        ]
-
-        if not enabled_indices:
-            return None
-
         # Need OAuth for scanning and downloading
         if not self.auth.is_signed_in:
             display.auth_required_scan()

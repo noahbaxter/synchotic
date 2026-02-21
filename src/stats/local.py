@@ -2,7 +2,7 @@
 Local filesystem scanning module for chart statistics.
 
 This module provides accurate chart counts by scanning the actual downloaded
-and extracted content on disk, which is more reliable than manifest data
+and extracted content on disk, which is more reliable than Drive API scan data
 (especially for nested archives like game rips).
 """
 
@@ -41,8 +41,8 @@ class LocalStatsScanner:
     Scans local filesystem for chart statistics.
 
     Provides accurate counts by detecting actual chart folders (those containing
-    song.ini, notes.mid, or notes.chart files) rather than relying on manifest
-    data which may be incomplete for nested archives.
+    song.ini, notes.mid, or notes.chart files) rather than relying on Drive API
+    scan data which may be incomplete for nested archives.
 
     Results are cached with a configurable TTL (time-to-live).
     """
