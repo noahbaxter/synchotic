@@ -1,73 +1,83 @@
 # Synchotic
 
-A Clone Hero chart downloader. Browse community chart packs, pick what you want, and sync.
+Automatically download and sync Clone Hero charts from Google Drive. Pick the drives and setlists you want, hit sync, and your songs folder stays up to date — new charts download automatically, updated charts get re-downloaded, and removed setlists get cleaned up.
 
 ![Screenshot](screenshot.png)
 
-## Download
+## Getting Started
 
 **[Download the launcher here](../../releases/tag/launcher-v1.1)**
 
-- **Windows:** Download `synchotic-launcher.exe`, put it where you want your charts, and run it
-- **macOS:** Download `synchotic-launcher-macos.zip`, unzip it, drag `Synchotic Launcher.app` to where you want your charts, then:
-  - Right-click → Open → click "Open" (required first time, macOS blocks unsigned apps)
+| Platform | File |
+|----------|------|
+| Windows | `synchotic-launcher.exe` |
+| macOS | `synchotic-launcher-macos` |
 
-The launcher downloads charts to wherever you put it. Put the launcher in your Clone Hero songs folder and run it from there.
+> **Step 1.** Download the launcher for your platform
+>
+> **Step 2.** Put it in the folder where you want your charts (e.g. your Clone Hero songs folder)
+>
+> **Step 3.** Double-click it
 
-## How It Works
+The launcher handles everything from there — it downloads the app, checks for updates, and creates a **Sync Charts** folder right next to itself.
 
-1. Launch the app - it fetches the latest chart pack list automatically
-2. Pick which chart packs you want (toggle with **Space**)
-3. Press **S** to Sync - downloads enabled charts, removes disabled ones
+## How to Use
 
-Charts download to a `Sync Charts` folder next to the app.
+1. **Enable drives** — toggle drives on or off with **Space**
+2. **Pick setlists** *(optional)* — open a drive to choose individual setlists. By default all setlists are included.
+3. **Sync** — press **S** to download everything you've enabled
 
-## Controls
+Your charts appear in the **Sync Charts** folder next to the launcher. Every time you run it again, it checks for new or updated charts and syncs automatically.
 
-| Key | Action |
-|-----|--------|
-| **↑↓** or **1-9** | Navigate / jump to item |
-| **Enter** | Open pack settings |
-| **Space** | Toggle pack on/off |
-| **S** | Sync all |
-| **Tab** | Switch view (Size / Files / Charts) |
-| **A** | Add custom Google Drive folder |
-| **G** | Sign in/out of Google |
-| **Esc** | Back / Quit |
-
-## Features
-
-- **Smart sync** - only downloads what's new or changed
-- **Setlist filtering** - pick exactly which setlists you want from each drive
-- **Custom folders** - add your own Google Drive folders
-- **Sign in to Google** - optional, gives you faster downloads with your own quota
-- **Auto-extract** - handles .zip, .7z, and .rar archives automatically
+You can also add your own Google Drive folders, sign in to Google for faster downloads, and more — the controls are shown at the bottom of the screen.
 
 ## Troubleshooting
+
+### What happens when I disable a setlist?
+
+It gets removed from disk on the next sync. You can always re-enable it and sync again to re-download it.
+
+### Where are my charts?
+
+In the **Sync Charts** folder, right next to where you put the launcher.
+
+### Where are logs?
+
+In `.dm-sync/logs/` next to the launcher. Each day gets its own log file.
 
 ### Downloads fail with path errors (Windows)
 
 Windows blocks paths over 260 characters. To fix:
 
-1. Open Registry Editor (`regedit`)
+1. Open **Registry Editor** (search for `regedit` in the Start menu)
 2. Go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`
 3. Set `LongPathsEnabled` to `1`
 4. Restart your computer
 
-### Where are my charts?
+### macOS: security warning when opening
 
-In the `Sync Charts` folder, next to where you ran the app.
-
-### Where are logs?
-
-`.dm-sync/logs/` next to the app. Each day gets its own log file.
+This shouldn't happen with signed builds, but if it does: right-click the file, click **Open**, then click **Open** again in the confirmation dialog. You only need to do this once.
 
 ---
 
-## For Developers
+<details>
+<summary><strong>Linux</strong></summary>
+
+There's no pre-built binary for Linux, but it's just a Python script:
+
+```bash
+git clone https://github.com/noahbaxter/synchotic.git
+cd synchotic
+pip install -r requirements.txt
+python sync.py
+```
+
+For .rar archive extraction, you'll also need `unrar` installed (`sudo apt install unrar` or equivalent).
+
+</details>
 
 <details>
-<summary>Click to expand</summary>
+<summary><strong>For Developers</strong></summary>
 
 ### Running from Source
 
@@ -78,49 +88,23 @@ python sync.py
 
 ### Building
 
-Builds are automatic via GitHub Actions on push to main.
+Builds are automatic via GitHub Actions on push to `main`. To build locally:
 
 ```bash
-pip install pyinstaller
-pyinstaller --onefile --name synchotic sync.py
+./build.sh                       # Build app only
+./build.sh launcher              # Build launcher only
+./build.sh dev ~/Desktop/test    # Build both and copy to a test folder
 ```
 
-### Local Testing (Windows builds from WSL/macOS)
+### Local Testing
 
-For testing Windows builds locally without pushing to GitHub:
+After `build.sh dev`, run the launcher from the target folder:
 
 ```bash
-# Build launcher + app, copy to a test folder
-./build.sh dev /mnt/t/TEST      # WSL example
-./build.sh dev ~/Desktop/test   # macOS example
+./synchotic-launcher-macos --dev           # Replace app, keep settings
+./synchotic-launcher-macos --dev --clean   # Fresh install (nuke .dm-sync)
 ```
 
-Then run the launcher with dev flags:
-
-```
-# Windows (in target folder)
-synchotic-launcher.exe --dev           # Replace app, keep settings
-synchotic-launcher.exe --dev --clean   # Fresh install (nuke .dm-sync)
-
-# macOS
-./synchotic-launcher-macos --dev
-./synchotic-launcher-macos --dev --clean
-```
-
-**How it works:**
-- `--dev`: If `app-windows.zip` (or `app-macos.zip`) exists, extracts it and deletes the zip. If no zip, uses existing `_app` folder.
-- `--clean`: Nukes entire `.dm-sync/` folder first (fresh install).
-- Subsequent `--dev` runs without a new zip just use the existing app.
-
-### Manifest Updates
-
-The manifest auto-updates daily via GitHub Actions.
-
-**Manual trigger:** Actions → "Update Manifest" → Run workflow
-
-**Setup:**
-1. Create OAuth credentials at [Google Cloud Console](https://console.cloud.google.com/apis/credentials)
-2. Run `python manifest_gen.py` locally to generate `token.json`
-3. Add GitHub Secrets: `GOOGLE_CREDENTIALS`, `GOOGLE_TOKEN`, `GOOGLE_API_KEY`
+`--dev` uses a local `app-macos.zip` if present, otherwise the existing `_app` folder. `--clean` nukes `.dm-sync/` first.
 
 </details>
