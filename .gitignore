@@ -31,6 +31,9 @@ manifest.json
 # Claude session files
 .claude/
 
+# Telemetry
+telemetry-id
+
 # App data (user settings, tokens, cached manifest)
 .dm-sync/
 
