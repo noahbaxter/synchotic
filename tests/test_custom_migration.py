@@ -2,7 +2,7 @@
 
 import tempfile
 from pathlib import Path
-from unittest.mock import patch
+from unittest.mock import patch, MagicMock
 
 import pytest
 
@@ -10,6 +10,7 @@ from src.config import DrivesConfig, CustomFolders, UserSettings
 from src.config.drives import DriveConfig
 from src.core.formatting import normalize_path_key
 from src.sync.markers import save_marker
+from src.sync.background_scanner import SetlistInfo
 
 
 # ============================================================================
@@ -303,10 +304,214 @@ class TestBlockReleasedAsCustom:
 
         app.auth = type("Auth", (), {"is_signed_in": True, "get_token": lambda _: "tok"})()
 
+        mock_client = MagicMock()
+        mock_client.get_file_metadata.return_value = {"parents": ["unrelated_parent"]}
+
         with patch("sync.show_add_custom_folder", return_value=("new_custom_id", "My Folder")), \
-             patch("sync.DriveClient"), \
+             patch("sync.DriveClient", return_value=mock_client), \
              patch("sync.DriveClientConfig"):
             result = app.handle_add_custom_folder()
 
         assert result is True
         assert app.custom_folders.has_folder("new_custom_id")
+
+
+# ============================================================================
+# Block adding released drive subfolders as custom
+# ============================================================================
+
+class TestBlockReleasedSubfolderAsCustom:
+    """Tests for blocking subfolders of released drives from being added as custom."""
+
+    def _make_app(self, env: MigrationEnv, drives: list[DriveConfig]):
+        from sync import SyncApp
+
+        app = object.__new__(SyncApp)
+        app.drives_config = env.make_drives_config(drives)
+        app.custom_folders = env.make_custom_folders([])
+        app.user_settings = UserSettings.load(env.temp_dir / "settings.json")
+        app.folders = []
+        app._background_scanner = None
+        return app
+
+    def test_subfolder_of_released_drive_blocked(self, migration_env):
+        """Adding a subfolder of a released drive is rejected."""
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives)
+        app.auth = type("Auth", (), {"is_signed_in": True, "get_token": lambda _: "tok"})()
+
+        mock_client = MagicMock()
+        mock_client.get_file_metadata.return_value = {"parents": ["drive_abc"]}
+
+        with patch("sync.show_add_custom_folder", return_value=("subfolder_xyz", "Miscellany")), \
+             patch("sync.DriveClient", return_value=mock_client), \
+             patch("sync.DriveClientConfig"), \
+             patch("sync.wait_with_skip"):
+            result = app.handle_add_custom_folder()
+
+        assert result is False
+        assert not app.custom_folders.has_folder("subfolder_xyz")
+
+    def test_unrelated_folder_allowed(self, migration_env):
+        """Folder whose parent is not a released drive is allowed."""
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives)
+        app.auth = type("Auth", (), {"is_signed_in": True, "get_token": lambda _: "tok"})()
+
+        mock_client = MagicMock()
+        mock_client.get_file_metadata.return_value = {"parents": ["some_other_parent"]}
+
+        with patch("sync.show_add_custom_folder", return_value=("unrelated_id", "My Folder")), \
+             patch("sync.DriveClient", return_value=mock_client), \
+             patch("sync.DriveClientConfig"):
+            result = app.handle_add_custom_folder()
+
+        assert result is True
+        assert app.custom_folders.has_folder("unrelated_id")
+
+    def test_parent_check_handles_api_error(self, migration_env):
+        """If get_file_metadata returns None, allow the add (graceful degradation)."""
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives)
+        app.auth = type("Auth", (), {"is_signed_in": True, "get_token": lambda _: "tok"})()
+
+        mock_client = MagicMock()
+        mock_client.get_file_metadata.return_value = None
+
+        with patch("sync.show_add_custom_folder", return_value=("mystery_id", "Unknown Folder")), \
+             patch("sync.DriveClient", return_value=mock_client), \
+             patch("sync.DriveClientConfig"):
+            result = app.handle_add_custom_folder()
+
+        assert result is True
+        assert app.custom_folders.has_folder("mystery_id")
+
+
+# ============================================================================
+# Migrate subfolder customs after discovery
+# ============================================================================
+
+class TestMigrateSubfolderCustoms:
+    """Tests for _migrate_subfolder_customs()."""
+
+    def _make_app(self, env: MigrationEnv, drives: list[DriveConfig], custom_folders: list[tuple[str, str]]):
+        from sync import SyncApp
+
+        app = object.__new__(SyncApp)
+        app.drives_config = env.make_drives_config(drives)
+        app.custom_folders = env.make_custom_folders(custom_folders)
+        app.folders = []
+        return app
+
+    def _make_scanner_with_setlists(self, setlists: dict[str, SetlistInfo]):
+        scanner = MagicMock()
+        scanner.all_setlists = setlists
+        return scanner
+
+    def test_subfolder_custom_removed_after_discovery(self, migration_env):
+        """Custom folder whose ID matches a discovered setlist gets removed."""
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives, [("setlist_xyz", "Miscellany")])
+
+        setlist = SetlistInfo(
+            setlist_id="setlist_xyz", name="Miscellany",
+            drive_id="drive_abc", drive_name="Popular Charters", drive={},
+        )
+        app._background_scanner = self._make_scanner_with_setlists({"setlist_xyz": setlist})
+
+        app._migrate_subfolder_customs()
+
+        assert not app.custom_folders.has_folder("setlist_xyz")
+
+    def test_subfolder_download_folder_moved(self, migration_env):
+        """Download folder moves from top-level into drive subfolder."""
+        migration_env.make_download_folder("Miscellany", {"Chart1/song.ini": 100})
+
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives, [("setlist_xyz", "Miscellany")])
+
+        setlist = SetlistInfo(
+            setlist_id="setlist_xyz", name="Miscellany",
+            drive_id="drive_abc", drive_name="Popular Charters", drive={},
+        )
+        app._background_scanner = self._make_scanner_with_setlists({"setlist_xyz": setlist})
+
+        app._migrate_subfolder_customs()
+
+        assert not (migration_env.download_path / "Miscellany").exists()
+        assert (migration_env.download_path / "Popular Charters" / "Miscellany").exists()
+        assert (migration_env.download_path / "Popular Charters" / "Miscellany" / "Chart1" / "song.ini").exists()
+
+    def test_subfolder_markers_renamed(self, migration_env):
+        """Markers prefixed with custom name get drive/setlist prefix."""
+        migration_env.make_marker_file(
+            "Miscellany", "Chart1/pack.7z", "abc12345",
+            {"Chart1/Song/song.ini": 100},
+        )
+
+        old_prefix = normalize_path_key("Miscellany").replace("/", "_").replace("\\", "_") + "_"
+        new_prefix = (
+            normalize_path_key("Popular Charters").replace("/", "_").replace("\\", "_") + "_"
+            + normalize_path_key("Miscellany").replace("/", "_").replace("\\", "_") + "_"
+        )
+
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives, [("setlist_xyz", "Miscellany")])
+
+        setlist = SetlistInfo(
+            setlist_id="setlist_xyz", name="Miscellany",
+            drive_id="drive_abc", drive_name="Popular Charters", drive={},
+        )
+        app._background_scanner = self._make_scanner_with_setlists({"setlist_xyz": setlist})
+
+        app._migrate_subfolder_customs()
+
+        remaining_old = [f for f in migration_env.markers_dir.glob("*.json") if f.stem.lower().startswith(old_prefix)]
+        assert len(remaining_old) == 0
+
+        new_markers = [f for f in migration_env.markers_dir.glob("*.json") if f.stem.lower().startswith(new_prefix)]
+        assert len(new_markers) == 1
+
+    def test_non_subfolder_customs_preserved(self, migration_env):
+        """Custom folders that aren't subfolders of released drives are untouched."""
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives, [
+            ("setlist_xyz", "Miscellany"),
+            ("unrelated_id", "My Custom Pack"),
+        ])
+
+        setlist = SetlistInfo(
+            setlist_id="setlist_xyz", name="Miscellany",
+            drive_id="drive_abc", drive_name="Popular Charters", drive={},
+        )
+        # Only setlist_xyz is in discovered setlists, not unrelated_id
+        app._background_scanner = self._make_scanner_with_setlists({"setlist_xyz": setlist})
+
+        app._migrate_subfolder_customs()
+
+        assert not app.custom_folders.has_folder("setlist_xyz")
+        assert app.custom_folders.has_folder("unrelated_id")
+        assert len(app.custom_folders.folders) == 1
+
+    def test_migration_when_target_dir_exists(self, migration_env):
+        """Drive folder already exists — subfolder should still be moved into it."""
+        # Drive dir already has other setlists
+        migration_env.make_download_folder("Popular Charters/OtherSetlist", {"file.txt": 50})
+        migration_env.make_download_folder("Miscellany", {"Chart1/song.ini": 100})
+
+        drives = [DriveConfig(name="Popular Charters", folder_id="drive_abc")]
+        app = self._make_app(migration_env, drives, [("setlist_xyz", "Miscellany")])
+
+        setlist = SetlistInfo(
+            setlist_id="setlist_xyz", name="Miscellany",
+            drive_id="drive_abc", drive_name="Popular Charters", drive={},
+        )
+        app._background_scanner = self._make_scanner_with_setlists({"setlist_xyz": setlist})
+
+        app._migrate_subfolder_customs()
+
+        # Old folder gone, new in place
+        assert not (migration_env.download_path / "Miscellany").exists()
+        assert (migration_env.download_path / "Popular Charters" / "Miscellany" / "Chart1" / "song.ini").exists()
+        # Existing content preserved
+        assert (migration_env.download_path / "Popular Charters" / "OtherSetlist" / "file.txt").exists()

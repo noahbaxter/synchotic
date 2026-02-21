@@ -282,6 +282,12 @@ class BackgroundScanner:
         with self._lock:
             return len(self._failed_setlist_ids) > 0
 
+    @property
+    def all_setlists(self) -> dict[str, "SetlistInfo"]:
+        """Get all discovered setlists (setlist_id -> SetlistInfo)."""
+        with self._lock:
+            return dict(self._all_setlists)
+
     def notify_setlist_toggled(self, drive_id: str, setlist_name: str, enabled: bool):
         """
         Called when user toggles a setlist. Updates enabled set.
