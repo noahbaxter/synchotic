@@ -1,6 +1,24 @@
 {
   "drives": [
     {
+      "name": "CSC Released Packs",
+      "folder_id": "12zmgQJ-zJ4MPwVyGb3aS8vN6Wya4_TAo",
+      "description": "Custom Songs Central - Released Setlists",
+      "group": "Community"
+    },
+    {
+      "name": "Community Track Packs",
+      "folder_id": "1CGS-E8pZa85sjsh-b8Tzh8U3Xj_r-64t",
+      "description": "Community Track Packs collection",
+      "group": "Community"
+    },
+    {
+      "name": "Popular Charters",
+      "folder_id": "1cnDpOmMOxpiphQLBw2FnMvZTLJkcDKVk",
+      "description": "Popular community charter collections",
+      "group": "Community"
+    },
+    {
       "name": "BirdmanExe Drive",
       "folder_id": "1OTcP60EwXnT73FYy-yjbB2C7yU6mVMTf",
       "description": "BirdmanExe's chart collection",
@@ -19,16 +37,16 @@
       "group": "Drums"
     },
     {
-      "name": "Rock Band",
-      "folder_id": "1jUnIkQ3k6j3vnMxxIAfyOewNB10Tygb8",
-      "description": "Rock Band exports (all games)",
+      "name": "Guitar Hero",
+      "folder_id": "1tQXLCLRbHQfJbnqq-WqliymvqO0mw8e5",
+      "description": "Guitar Hero exports (all games)",
       "group": "Games",
       "rescan_hours": 168
     },
     {
-      "name": "Guitar Hero",
-      "folder_id": "1tQXLCLRbHQfJbnqq-WqliymvqO0mw8e5",
-      "description": "Guitar Hero exports (all games)",
+      "name": "Rock Band",
+      "folder_id": "1jUnIkQ3k6j3vnMxxIAfyOewNB10Tygb8",
+      "description": "Rock Band exports (all games)",
       "group": "Games",
       "rescan_hours": 168
     }

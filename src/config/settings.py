@@ -36,10 +36,7 @@ class UserSettings:
     """
 
     # Drives enabled by default when no settings file exists
-    DEFAULT_ENABLED_DRIVES = {
-        "1OTcP60EwXnT73FYy-yjbB2C7yU6mVMTf",  # BirdmanExe Drive
-        "1bqsJzbXRkmRda3qJFX3W36UD3Sg_eIVj",  # Drummer's Monthly Drive
-    }
+    DEFAULT_ENABLED_DRIVES = set()
 
     def __init__(self, path: Path):
         self.path = path

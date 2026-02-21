@@ -20,15 +20,12 @@ class TestUserSettingsDefaults:
         with tempfile.TemporaryDirectory() as tmpdir:
             yield Path(tmpdir)
 
-    def test_new_user_default_drives_only(self, temp_dir):
-        """New users (no settings file) only have default drives enabled."""
+    def test_new_user_no_drives_enabled(self, temp_dir):
+        """New users (no settings file) have no drives enabled by default."""
         settings = UserSettings.load(temp_dir / "settings.json")
 
-        # Default drives should be enabled
-        assert settings.is_drive_enabled("1OTcP60EwXnT73FYy-yjbB2C7yU6mVMTf")  # BirdmanExe
-        assert settings.is_drive_enabled("1bqsJzbXRkmRda3qJFX3W36UD3Sg_eIVj")  # Drummer's Monthly
-
-        # Non-default drives should be disabled
+        # No drives should be enabled for new users
+        assert not settings.is_drive_enabled("1OTcP60EwXnT73FYy-yjbB2C7yU6mVMTf")
         assert not settings.is_drive_enabled("some_other_drive_id")
 
     def test_existing_user_all_drives_enabled(self, temp_dir):
@@ -189,8 +186,8 @@ class TestSettingsPersistence:
 
         settings = UserSettings.load(settings_path)
 
-        # Should behave like new user (only default drives enabled)
-        assert settings.is_drive_enabled("1OTcP60EwXnT73FYy-yjbB2C7yU6mVMTf")
+        # Should behave like new user (no drives enabled)
+        assert not settings.is_drive_enabled("1OTcP60EwXnT73FYy-yjbB2C7yU6mVMTf")
         assert not settings.is_drive_enabled("random_drive")
 
 
