@@ -31,6 +31,9 @@ manifest.json
 # Claude session files
 .claude/
 
+# Script caches
+.overlap_cache.json
+
 # Telemetry
 telemetry-id
 
