@@ -11,6 +11,16 @@
   - ~30 strings in TUI, low effort to externalize
   - Suc volunteered to coordinate translations, suggested Google Form for community submissions
 
+## Active
+
+- [ ] [ops] Google OAuth verification — hit 100 user cap, new users blocked *(2026-04-01)*
+  - **Problem:** 100/100 lifetime unverified user cap reached. New users get "This app is blocked". No workaround — verification is the only fix.
+  - Privacy policy: `PRIVACY.md` (drafted, needs commit + push so GitHub URL works)
+  - Go to Verification Center in Google Auth Platform console
+  - Add privacy policy URL: `https://github.com/noahbaxter/synchotic/blob/main/PRIVACY.md`
+  - Record short screen capture of OAuth flow + how Drive data is used (unlisted YouTube)
+  - Submit for verification — typically 1-2 weeks for sensitive (non-restricted) scopes
+
 ## Active Bugs
 
 - [ ] [bug] Path length infinite loop - Windows files with paths >260 chars create endless retry cycle *(reported 2026-02-02, user "PILE")*
