@@ -20,6 +20,7 @@
   - Add privacy policy URL: `https://github.com/noahbaxter/synchotic/blob/main/PRIVACY.md`
   - Record short screen capture of OAuth flow + how Drive data is used (unlisted YouTube)
   - Submit for verification — typically 1-2 weeks for sensitive (non-restricted) scopes
+  - **Workaround published:** `legacy-rclone` branch (points at `1435ab9`) — README has a callout. When verification lands: remove the callout from `README.md` and optionally delete the branch.
 
 ## Active Bugs
 
