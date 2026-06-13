@@ -30,6 +30,15 @@ class RcloneDownloader:
                 success = self._await_job(jobid, cancel_check)
             except Exception:
                 success = False
+            if success:
+                expected = task.local_path
+                if not expected.exists():
+                    # rclone wrote the file under its real Drive name; reconcile to the _download_ temp name
+                    delivered = expected.parent / expected.name.replace("_download_", "", 1)
+                    if delivered.exists():
+                        delivered.rename(expected)
+                    else:
+                        success = False
             (ok if success else failed).append(task.file_id)
             if progress_cb:
                 progress_cb(task, success)

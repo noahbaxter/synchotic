@@ -7,9 +7,9 @@ class FakeRc:
     def __init__(self): self.jobs = {}; self._n = 0; self.stopped = []
     def copyid_async(self, fs, file_id, dest):
         self._n += 1
-        # simulate the file landing where copyid would put it
+        # simulate the file landing where copyid would put it (real Drive name)
         Path(dest).mkdir(parents=True, exist_ok=True)
-        (Path(dest) / f"_download_{file_id}.7z").write_bytes(b"data")
+        (Path(dest) / "song.7z").write_bytes(b"data")
         self.jobs[self._n] = {"finished": True, "success": True}
         return self._n
     def job_status(self, jobid): return self.jobs[jobid]
@@ -31,3 +31,19 @@ def test_cancel_stops_pending(tmp_path):
     dl = RcloneDownloader(rc=rc, fs="synchotic:")
     ok, failed = dl.download([task], cancel_check=lambda: True)
     assert "ABC" in failed and not ok
+
+def test_delivered_file_renamed_to_expected_temp_name(tmp_path):
+    from src.rclone.downloader import RcloneDownloader
+    from src.sync.download_planner import DownloadTask
+    class Rc:
+        def copyid_async(self, fs, fid, dest):
+            from pathlib import Path
+            Path(dest).mkdir(parents=True, exist_ok=True)
+            (Path(dest) / "song.7z").write_bytes(b"d")  # rclone uses real name
+            return 1
+        def job_status(self, j): return {"finished": True, "success": True}
+        def stop_job(self, j): pass
+    task = DownloadTask(file_id="ID", local_path=tmp_path / "_download_song.7z",
+                        size=1, md5="", is_archive=True, rel_path="d/song.7z")
+    RcloneDownloader(rc=Rc(), fs="synchotic:").download([task], cancel_check=lambda: False)
+    assert task.local_path.exists()  # renamed _download_song.7z
