@@ -122,7 +122,7 @@ class FolderSync:
             print_section_header(header)
 
         download_start = time.time()
-        downloaded, _, errors, rate_limited, cancelled, bytes_downloaded = self.downloader.download_many(
+        downloaded, _, errors, rate_limited, cancelled, bytes_downloaded, _blocked = self.downloader.download_many(
             tasks, drive_name=folder["name"], cancel_check=cancel_check,
             scan_stats_getter=scan_stats_getter, skipped=skipped,
         )
