@@ -53,6 +53,7 @@ class DownloadResult:
     message: str
     bytes_downloaded: int = 0
     retryable: bool = False
+    needs_auth: bool = False
 
 
 class FileDownloader:
@@ -123,6 +124,7 @@ class FileDownloader:
                                     file_path=task.local_path,
                                     message=f"SKIP (sign in to bypass virus scan): {display_name}",
                                     retryable=False,
+                                    needs_auth=True,
                                 )
 
                         return await self._write_response(response, task, progress_tracker)
@@ -458,6 +460,7 @@ class FileDownloader:
         errors = 0
         auth_failures = 0
         retryable_tasks: List[DownloadTask] = []
+        blocked_tasks: List[DownloadTask] = []
         cancelled = False
         loop = asyncio.get_event_loop()
 
@@ -571,6 +574,8 @@ class FileDownloader:
                                     progress.file_completed(result.file_path)
                         else:
                             errors += 1
+                            if getattr(result, "needs_auth", False):
+                                blocked_tasks.append(task)
                             if "auth" in result.message.lower() or "401" in result.message:
                                 auth_failures += 1
                             if result.retryable:
@@ -587,7 +592,7 @@ class FileDownloader:
                 for t in pending:
                     t.cancel()
 
-        return downloaded, errors, retryable_tasks, auth_failures, cancelled
+        return downloaded, errors, retryable_tasks, auth_failures, cancelled, blocked_tasks
 
     def download_many(
         self,
@@ -611,7 +616,7 @@ class FileDownloader:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
         """
         if not tasks:
-            return 0, 0, 0, [], False, 0
+            return 0, 0, 0, [], False, 0, []
 
         progress = None
         if show_progress:
@@ -647,7 +652,7 @@ class FileDownloader:
         permanent_errors = 0
         cancelled = False
         try:
-            downloaded, errors, retryable, auth_failures, cancelled = asyncio.run(
+            downloaded, errors, retryable, auth_failures, cancelled, blocked_tasks = asyncio.run(
                 self._download_many_async(tasks, progress, progress_callback, cancel_check)
             )
             rate_limited_ids = [t.file_id for t in retryable]
@@ -656,6 +661,7 @@ class FileDownloader:
             cancelled = True
             downloaded = 0
             permanent_errors = 0
+            blocked_tasks = []
         finally:
             esc_monitor.stop()
 
@@ -676,4 +682,4 @@ class FileDownloader:
             display.auth_expired_warning(auth_failures)
 
         bytes_downloaded = progress.downloaded_bytes if progress else 0
-        return downloaded, 0, permanent_errors, rate_limited_ids, cancelled, bytes_downloaded
+        return downloaded, 0, permanent_errors, rate_limited_ids, cancelled, bytes_downloaded, blocked_tasks

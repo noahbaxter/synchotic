@@ -85,4 +85,4 @@ def test_download_many_return_arity_is_pinned():
     dl = FileDownloader(auth_token=None)
     result = dl.download_many([], show_progress=False)
     assert isinstance(result, tuple)
-    assert len(result) == 6  # CHANGES TO 7 IN TASK 8 (with folder_sync.py:125)
+    assert len(result) == 7  # Changed to 7 in Task 8: blocked_tasks appended (with folder_sync.py:125)
