@@ -117,6 +117,30 @@ def get_tmp_dir() -> Path:
     return tmp_dir
 
 
+def get_rclone_dir() -> Path:
+    """Get the .dm-sync/rclone/ directory (binary, config, pidfile), creating it."""
+    d = get_data_dir() / "rclone"
+    d.mkdir(exist_ok=True)
+    return d
+
+
+def get_rclone_binary_path() -> Path:
+    """Path to the managed rclone binary (.exe on Windows)."""
+    import os
+    name = "rclone.exe" if os.name == "nt" else "rclone"
+    return get_rclone_dir() / name
+
+
+def get_rclone_config_path() -> Path:
+    """Path to Synchotic's isolated rclone.conf (never the user's global one)."""
+    return get_rclone_dir() / "rclone.conf"
+
+
+def get_rclone_pid_path() -> Path:
+    """Path to the rcd daemon pidfile (host:port + pid)."""
+    return get_rclone_dir() / "rcd.pid"
+
+
 def get_extract_tmp_dir() -> Path:
     """Get temp directory for extraction staging."""
     extract_dir = get_tmp_dir() / "extract"
