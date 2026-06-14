@@ -47,3 +47,26 @@ def test_delivered_file_renamed_to_expected_temp_name(tmp_path):
                         size=1, md5="", is_archive=True, rel_path="d/song.7z")
     RcloneDownloader(rc=Rc(), fs="synchotic:").download([task], cancel_check=lambda: False)
     assert task.local_path.exists()  # renamed _download_song.7z
+
+def test_delivered_name_differs_from_expected_reconciled_by_snapshot(tmp_path):
+    # rclone writes the file under its raw Drive name, which differs from the
+    # sanitized _download_ name Synchotic expects. Snapshot-diff must still find it.
+    # (Uses plainly-different legal names rather than OS-illegal sanitized chars like
+    # '?' or ':' so the fake can write the file on every platform, Windows included.)
+    from src.rclone.downloader import RcloneDownloader
+    from src.sync.download_planner import DownloadTask
+    class Rc:
+        def copyid_async(self, fs, fid, dest):
+            from pathlib import Path
+            Path(dest).mkdir(parents=True, exist_ok=True)
+            (Path(dest) / "raw_drive_name.7z").write_bytes(b"d")  # name != expected
+            return 1
+        def job_status(self, j): return {"finished": True, "success": True}
+        def stop_job(self, j): pass
+    # expected temp name differs from the delivered raw name (simulates sanitization);
+    # the old name-guessing code would look for "sanitized.7z" and fail.
+    task = DownloadTask(file_id="ID", local_path=tmp_path / "Set" / "_download_sanitized.7z",
+                        size=1, md5="", is_archive=True, rel_path="Drive/Set/sanitized.7z")
+    ok, failed = RcloneDownloader(rc=Rc(), fs="synchotic:").download([task], cancel_check=lambda: False)
+    assert ok == ["ID"] and not failed
+    assert task.local_path.exists()

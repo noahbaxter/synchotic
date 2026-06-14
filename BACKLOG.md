@@ -2,6 +2,10 @@
 
 ## Inbox
 
+- [ ] [cleanup] rclone tier minor follow-ups *(2026-06-13, from final review of feature/rclone-download-tier)*
+  - `folder_sync.py _rclone_second_pass`: when not authed, it constructs `RcloneSession()` twice (once for `ensure_authed`, once for the download `with`), resolving the binary twice. Reuse one session.
+  - `rclone/downloader.py _await_job`: no overall timeout, relies solely on `cancel_check`. Interactive sync passes a cancel_check so it is bounded by ESC, but a non-interactive caller could spin forever if a job hangs. Add a max-wait.
+
 - [ ] [feature] Beta launcher channel *(2026-03-26, prompted by Treebear scan perf discussion)*
   - Rename dev launcher to "beta" for user-facing opt-in testing
   - New `release-launcher-beta.yml`, `RELEASE_TAG = "beta-latest"`, binaries `synchotic-launcher-beta`
