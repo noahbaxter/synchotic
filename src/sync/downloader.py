@@ -122,7 +122,7 @@ class FileDownloader:
                                 return DownloadResult(
                                     success=False,
                                     file_path=task.local_path,
-                                    message=f"SKIP (sign in to bypass virus scan): {display_name}",
+                                    message=f"NEEDS AUTH (authenticated download set up automatically): {display_name}",
                                     retryable=False,
                                     needs_auth=True,
                                 )

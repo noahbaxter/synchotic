@@ -159,7 +159,15 @@ class FolderSync:
         identical to tiers 1-3. Returns (recovered_count, still_failed_count)."""
         from .. import rclone
         if not rclone.is_authed():
-            return 0, len(blocked_tasks)  # caller already counted them as errors
+            # One-time consent: pre-explain rclone before it opens the browser,
+            # then attempt setup. Defensive: a failure here just leaves the files
+            # blocked (counted as errors), same as before.
+            try:
+                display.rclone_consent_explainer()
+                if not rclone.RcloneSession().ensure_authed():
+                    return 0, len(blocked_tasks)
+            except Exception:
+                return 0, len(blocked_tasks)  # caller already counted them as errors
         recovered = 0
         try:
             with rclone.RcloneSession() as session:

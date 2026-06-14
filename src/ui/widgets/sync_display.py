@@ -72,6 +72,24 @@ def auth_expired_warning(failure_count: int):
     print("  Try signing out and back in, then sync again.")
     print()
 
+def rclone_consent_explainer() -> None:
+    """Explain the one-time rclone consent before opening the browser."""
+    print()
+    print("  Some charts (large archives) need an authenticated download.")
+    print("  Synchotic uses rclone, an established open-source tool, for this.")
+    print("  Google's consent screen will say \"rclone\" and request read-only")
+    print("  access to your Drive. This is a one-time click.")
+    print()
+
+def report_blocked_summary(needs_auth: int, rate_limited: int) -> None:
+    """Distinguish 'needs auth setup' from 'Google rate-limited (retry later)'."""
+    if needs_auth:
+        print(f"  {needs_auth} file(s) need authenticated download "
+              f"(set up once via the prompt).")
+    if rate_limited:
+        print(f"  {rate_limited} file(s) are rate-limited by Google "
+              f"(usually clears within a day; will retry next sync).")
+
 
 # === Custom folder messages ===
 
