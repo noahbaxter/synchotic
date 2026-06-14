@@ -576,7 +576,7 @@ class FileDownloader:
                             errors += 1
                             if getattr(result, "needs_auth", False):
                                 blocked_tasks.append(task)
-                            if "auth" in result.message.lower() or "401" in result.message:
+                            elif "auth" in result.message.lower() or "401" in result.message:
                                 auth_failures += 1
                             if result.retryable:
                                 retryable_tasks.append(task)
