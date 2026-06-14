@@ -19,6 +19,14 @@ Although the `drive.readonly` scope technically permits read access to all Drive
 - **OAuth token:** Stored locally on your machine at `.dm-sync/token.json`. This token is never transmitted anywhere other than Google's API servers. You can revoke it at any time by signing out within Synchotic or revoking access at [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
 - **Local settings:** Stored in `.dm-sync/` in your configured sync directory. These never leave your machine.
 
+### rclone (authenticated downloads)
+
+For some downloads, Synchotic may use [rclone](https://rclone.org), an established open-source command-line tool. rclone stores its own OAuth token locally at `.dm-sync/rclone/rclone.conf`. This token is transmitted only to Google over HTTPS. It is never sent to any Synchotic-operated server (there are none).
+
+### Bring your own credentials (BYOC)
+
+If you provide your own Google OAuth credentials, either as a `.dm-sync/credentials.json` file or via the `SYNCHOTIC_OAUTH_CLIENT_ID` and `SYNCHOTIC_OAUTH_CLIENT_SECRET` environment variables, they are stored and used locally on your machine only. They are never transmitted to anyone except Google.
+
 ## What Synchotic does NOT do
 
 - Collect, transmit, or store any personal information

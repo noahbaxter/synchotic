@@ -6,7 +6,7 @@ Automatically download and sync Clone Hero charts from Google Drive. Pick the dr
 
 ## Getting Started
 
-> **Seeing "This app is blocked" when signing in?** Synchotic is pending Google OAuth verification and has hit the unverified-user cap. While verification is in progress, you can use the original rclone-based version on the [`legacy-rclone`](../../tree/legacy-rclone) branch — it's simpler but requires manual rclone setup.
+> **How downloads work.** Synchotic downloads most files anonymously. For the rest it uses rclone automatically: a one-time Google consent click, with no manual rclone setup. If you hit limits or want full speed, you can bring your own Google OAuth credentials (see [docs/byoc.md](docs/byoc.md)). The original manual rclone version still lives on the [`legacy-rclone`](../../tree/legacy-rclone) branch as an escape hatch.
 
 **[Download the launcher here](../../releases/tag/launcher-v1.1)**
 

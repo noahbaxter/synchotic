@@ -810,6 +810,20 @@ def show_main_menu(
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
 
+    rclone_connected = False
+    try:
+        import src.rclone as rclone
+        rclone_connected = rclone.is_authed()
+    except Exception:
+        rclone_connected = False
+
+    downloads_line = "Downloads: anonymous + rclone"
+    if rclone_connected:
+        downloads_line += " (rclone connected)"
+    if auth and auth.is_signed_in:
+        downloads_line += " + account sign-in"
+    menu.add_item(MenuItem(f"  {downloads_line}", value=("noop", None), description="", disabled=True, locked=True))
+
     if auth and auth.is_signed_in:
         email = auth.user_email
         label = f"  Sign out ({email})" if email else "  Sign out of Google"
