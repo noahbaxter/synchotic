@@ -49,12 +49,3 @@ class RcloneSession:
     def __exit__(self, *exc):
         if self.daemon:
             self.daemon.stop()
-
-
-def ensure_ready() -> bool:
-    """Resolve binary + ensure consent. Returns True if tier 4 is usable."""
-    try:
-        binary = RcloneBinary().resolve()
-        return RcloneConfig(binary).is_authed()
-    except Exception:
-        return False

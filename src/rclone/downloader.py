@@ -24,25 +24,35 @@ class RcloneDownloader:
             if cancel_check and cancel_check():
                 failed.append(task.file_id)
                 continue
-            dest_dir = str(task.local_path.parent) + "/"
+            parent = task.local_path.parent
+            parent.mkdir(parents=True, exist_ok=True)
+            before = set(parent.iterdir())
+            dest_dir = str(parent) + "/"
             try:
                 jobid = self.rc.copyid_async(self.fs, task.file_id, dest_dir)
                 success = self._await_job(jobid, cancel_check)
             except Exception:
                 success = False
             if success:
-                expected = task.local_path
-                if not expected.exists():
-                    # rclone wrote the file under its real Drive name; reconcile to the _download_ temp name
-                    delivered = expected.parent / expected.name.replace("_download_", "", 1)
-                    if delivered.exists():
-                        delivered.rename(expected)
-                    else:
-                        success = False
+                success = self._reconcile(task.local_path, before)
             (ok if success else failed).append(task.file_id)
             if progress_cb:
                 progress_cb(task, success)
         return ok, failed
+
+    @staticmethod
+    def _reconcile(expected, before_entries) -> bool:
+        """Rename the single newly-delivered file (whatever Drive named it) to the
+        expected _download_ temp path. Returns False (fail-safe, no mismark) if the
+        delivered file cannot be unambiguously identified."""
+        if expected.exists():
+            return True
+        new_entries = [p for p in expected.parent.iterdir()
+                       if p not in before_entries and p.is_file()]
+        if len(new_entries) == 1:
+            new_entries[0].rename(expected)
+            return True
+        return False
 
     def _await_job(self, jobid: int, cancel_check) -> bool:
         while True:
