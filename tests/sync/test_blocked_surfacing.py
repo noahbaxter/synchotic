@@ -45,3 +45,26 @@ def test_needs_auth_blocked_does_not_trigger_auth_expired_warning(monkeypatch, t
     monkeypatch.setattr(FileDownloader, "_download_file_async", fake_dl)
     FileDownloader(auth_token=None).download_many([task], show_progress=False)
     assert calls == [], "needs_auth blocked files must not trigger the auth-expired warning"
+
+
+def test_write_response_logs_delivering_tier(monkeypatch, tmp_path):
+    # A successful delivery logs which tier wrote the file (for manual auth-mode
+    # verification, see TESTING_AUTH.md). The tier string is passed by the caller.
+    import asyncio
+    import src.sync.downloader as dl_mod
+    from src.sync.download_planner import DownloadTask
+
+    logs = []
+    monkeypatch.setattr(dl_mod, "debug_log", lambda m: logs.append(m))
+
+    class FakeResp:
+        headers = {"content-type": "application/x-7z-compressed"}
+        content_length = 4
+        async def read(self):
+            return b"data"
+
+    task = DownloadTask(file_id="ID", local_path=tmp_path / "out" / "song.7z",
+                        size=4, md5="", is_archive=True, rel_path="d/song.7z")
+    dl = FileDownloader(auth_token=None)
+    asyncio.run(dl._write_response(FakeResp(), task, None, tier="oauth"))
+    assert "TIER | oauth | song.7z" in logs

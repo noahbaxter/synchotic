@@ -20,6 +20,7 @@ import aiohttp
 
 from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import extract_path_context, format_download_name, normalize_fs_name, normalize_path_key
+from ..core.logging import debug_log
 from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
 from .extractor import extract_archive, get_folder_size, delete_video_files
 from .download_planner import DownloadTask
@@ -117,7 +118,7 @@ class FileDownloader:
                                 headers = {"Authorization": f"Bearer {auth_token}"}
                                 async with session.get(api_url, headers=headers) as auth_response:
                                     auth_response.raise_for_status()
-                                    return await self._write_response(auth_response, task, progress_tracker)
+                                    return await self._write_response(auth_response, task, progress_tracker, tier="oauth")
                             else:
                                 return DownloadResult(
                                     success=False,
@@ -127,7 +128,7 @@ class FileDownloader:
                                     needs_auth=True,
                                 )
 
-                        return await self._write_response(response, task, progress_tracker)
+                        return await self._write_response(response, task, progress_tracker, tier="anonymous")
 
                 except asyncio.TimeoutError:
                     if attempt < self.max_retries - 1:
@@ -149,7 +150,7 @@ class FileDownloader:
                             headers = {"Authorization": f"Bearer {auth_token}"}
                             async with session.get(api_url, headers=headers) as auth_response:
                                 auth_response.raise_for_status()
-                                return await self._write_response(auth_response, task, progress_tracker)
+                                return await self._write_response(auth_response, task, progress_tracker, tier="oauth")
                         except aiohttp.ClientResponseError as auth_e:
                             if auth_e.status == 403:
                                 msg = f"ERR (folder rate limited): {display_name}"
@@ -215,8 +216,13 @@ class FileDownloader:
         response: aiohttp.ClientResponse,
         task: DownloadTask,
         progress_tracker: Optional[FolderProgress] = None,
+        tier: str = "anonymous",
     ) -> DownloadResult:
-        """Write response content to file."""
+        """Write response content to file.
+
+        tier identifies which download path delivered the file (anonymous or oauth),
+        logged for manual auth-mode verification. See TESTING_AUTH.md.
+        """
         task.local_path.parent.mkdir(parents=True, exist_ok=True)
 
         downloaded_bytes = 0
@@ -263,6 +269,7 @@ class FileDownloader:
             if is_tracked and progress_tracker:
                 progress_tracker.unregister_active_download(task.file_id)
 
+        debug_log(f"TIER | {tier} | {task.local_path.name}")
         return DownloadResult(
             success=True,
             file_path=task.local_path,
