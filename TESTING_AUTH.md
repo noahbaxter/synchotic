@@ -37,7 +37,30 @@ This is the one-glance proof: you see exactly which path delivered each file, no
 - `rclone/rclone.conf` + `rclone/rclone` binary: created only when the rclone tier is set up
 - a live `rclone` process during sync (`ps aux | grep rclone`): unambiguous proof tier 4 is downloading
 
-**Force an auth tier to fire**: you need a *blocked* file, any archive >100MB (Google's virus-scan interstitial). The Misc, Rock Band, and Guitar Hero drives have them. Small loose-file drives (Birdman, Drummer's Monthly) download anonymously and never exercise auth.
+**Force an auth tier to fire**: you need a *blocked* file. The threshold is well under 100MB. The smallest measured one is 26.3MB (`anon_failure_results.json`, measured 2026-06-11), so a single mode costs ~26MB of data, not gigabytes. The Misc, Rock Band, and Guitar Hero drives have them. Small loose-file drives (Birdman, Drummer's Monthly) download anonymously and never exercise auth.
+
+**Two different failure classes, do not confuse them.** Of 754 anonymous failures measured:
+
+| outcome | count | what it means | does auth fix it |
+|---|---|---|---|
+| `virus_scan` | 637 | Google's virus-scan interstitial | yes, this is what tiers 2-4 exist for |
+| `quota` | 111 | download quota exceeded | no, retry later |
+
+Gauntlet step 3 depends entirely on telling these apart. Example `virus_scan` file: `Tonic - If You Could Only See_RB4DLCtoINI.zip` (26.3MB). Example `quota` file: `RBN 191.7z` (8.1MB), though quota state resets so it may succeed today.
+
+## Automated harness
+
+`scripts/manual_auth_test.py` automates everything below except the browser clicks. It runs against a `mkdtemp()` root via `SYNCHOTIC_ROOT`, syncs a pinned 4-file fixture (one 26.3MB blocked archive, three tiny loose files), and asserts the delivering tier, the trust invariant, and the auth-artifact matrix.
+
+```bash
+scripts/build_test_fixture.py                      # refresh pinned ids, metadata only
+scripts/manual_auth_test.py --mode anonymous       # ~31 KB
+scripts/manual_auth_test.py --mode oauth           # ~26 MB
+scripts/manual_auth_test.py --mode byoc            # ~26 MB
+scripts/manual_auth_test.py --mode rclone --keep /tmp/sc-authtest   # ~26 MB + binary
+```
+
+Run the harness first. Use the manual modes below to cover what it cannot: the consent explainer screen, the menu sign-in flow, and the Google consent page branding.
 
 **Reset between modes** so each test starts clean:
 
@@ -50,7 +73,14 @@ unset SYNCHOTIC_OAUTH_CLIENT_ID SYNCHOTIC_OAUTH_CLIENT_SECRET
 ## Modes
 
 ### Mode 1: anonymous only
-- [ ] Reset. Do not sign in. Decline the rclone consent prompt. Sync a drive with big archives.
+
+> **There is currently no way to decline.** `folder_sync.py:165-168` prints
+> `display.rclone_consent_explainer()` and then calls `ensure_authed()`, which opens the
+> browser. The explainer is print-only (`sync_display.py:75-82`), it has no prompt and no
+> return value. The only "decline" available to a user is closing the browser tab. Fix
+> that before shipping, then update this mode.
+
+- [ ] Reset. Do not sign in. Close the browser tab when rclone consent opens. Sync a drive with big archives.
 - Expect: small files succeed, big archives report `NEEDS AUTH (...)` and are skipped.
 - Prove: log shows only `TIER | anonymous | ...`; no `token.json`, no `rclone/`, no rclone process. Blocked files visibly fail. (Confirms tier 1 works and blocking is detected.)
 
@@ -89,7 +119,7 @@ Passing once is not "reliable." These are the checks that actually matter.
    - [ ] Start a mode-4 sync of a large set, hit ESC mid-download. Confirm the rclone process dies (no orphan in `ps aux | grep rclone`), and a follow-up sync resumes cleanly with no corrupted/half files left as "extra" for purge to delete.
 
 5. **Graceful degradation with no rclone.**
-   - [ ] Mode 1 (decline consent): blocked files fail with a clear message, everything else still syncs, the app never hangs or crashes waiting on auth.
+   - [ ] Mode 1 (close the consent tab): blocked files fail with a clear message, everything else still syncs, the app never hangs or crashes waiting on auth.
 
 ## Known gap
 
