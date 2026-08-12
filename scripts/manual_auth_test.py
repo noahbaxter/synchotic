@@ -44,6 +44,7 @@ TIER_RE = re.compile(r"TIER \| (anonymous|oauth|rclone) \| (.+)$")
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _env_loader import load_env  # noqa: E402
+from _harness import bootstrap, stub_rclone  # noqa: E402
 
 
 def reset_root(data_dir: Path, mode: str) -> None:
@@ -54,29 +55,6 @@ def reset_root(data_dir: Path, mode: str) -> None:
     if mode != "byoc":
         os.environ.pop("SYNCHOTIC_OAUTH_CLIENT_ID", None)
         os.environ.pop("SYNCHOTIC_OAUTH_CLIENT_SECRET", None)
-
-
-def stub_rclone() -> None:
-    """Make the tier-4 second pass a no-op.
-
-    folder_sync._rclone_second_pass does `from .. import rclone` at call time,
-    so patching the module object is enough. Without this, a tier-2 failure in
-    oauth/byoc mode would be rescued by rclone and the run would look green.
-    """
-    import src.rclone as rclone_mod
-
-    class _Blocked:
-        def ensure_authed(self):
-            return False
-
-        def __enter__(self):
-            raise RuntimeError("rclone disabled by harness")
-
-        def __exit__(self, *exc):
-            return False
-
-    rclone_mod.is_authed = lambda: False
-    rclone_mod.RcloneSession = _Blocked
 
 
 def build_folder(fixture_mode: str, shortcut_id: str, client) -> tuple[dict, list[dict]]:
@@ -146,10 +124,7 @@ def main() -> int:
         print(f"no GOOGLE_API_KEY (env file: {env_path or 'none found'})")
         return 2
 
-    root = args.keep or Path(tempfile.mkdtemp(prefix="synchotic-authtest-"))
-    root.mkdir(parents=True, exist_ok=True)
-    os.environ["SYNCHOTIC_ROOT"] = str(root)
-    sys.path.insert(0, str(REPO))
+    root = bootstrap(REPO, args.keep)
 
     from src.config import UserSettings
     from src.core.logging import TeeOutput
