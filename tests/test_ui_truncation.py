@@ -29,15 +29,17 @@ class TestTruncateText:
 
 
 class TestGetAvailableWidth:
-    @patch('src.ui.primitives.terminal.get_terminal_width', return_value=80)
+    # src.ui.primitives.terminal is a re-export shim now, so patching it does not
+    # reach the module-local lookup inside get_available_width. Patch the source.
+    @patch('chotic_ui.primitives.terminal.get_terminal_width', return_value=80)
     def test_with_reserved(self, mock_width):
         assert get_available_width(reserved=20) == 60
 
-    @patch('src.ui.primitives.terminal.get_terminal_width', return_value=80)
+    @patch('chotic_ui.primitives.terminal.get_terminal_width', return_value=80)
     def test_respects_min_width(self, mock_width):
         assert get_available_width(reserved=70, min_width=20) == 20
 
-    @patch('src.ui.primitives.terminal.get_terminal_width', return_value=30)
+    @patch('chotic_ui.primitives.terminal.get_terminal_width', return_value=30)
     def test_narrow_terminal(self, mock_width):
         assert get_available_width(reserved=20, min_width=15) == 15
 
