@@ -184,10 +184,10 @@ class FolderSync:
                 success, _, _ = self.downloader.process_archive(task, task.rel_path)
                 if success:
                     recovered += 1
-                    debug_log(f"TIER | rclone | {task.local_path.name}")
+                    debug_log(f"TIER | rclone | {task.local_path.name.removeprefix('_download_')}")
             else:
                 recovered += 1  # loose file already at final temp path
-                debug_log(f"TIER | rclone | {task.local_path.name}")
+                debug_log(f"TIER | rclone | {task.local_path.name.removeprefix('_download_')}")
         return recovered, len(blocked_tasks) - recovered
 
     def download_folders(

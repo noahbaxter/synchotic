@@ -269,7 +269,7 @@ class FileDownloader:
             if is_tracked and progress_tracker:
                 progress_tracker.unregister_active_download(task.file_id)
 
-        debug_log(f"TIER | {tier} | {task.local_path.name}")
+        debug_log(f"TIER | {tier} | {task.local_path.name.removeprefix('_download_')}")
         return DownloadResult(
             success=True,
             file_path=task.local_path,
