@@ -47,11 +47,17 @@ from _env_loader import load_env  # noqa: E402
 from _harness import bootstrap, stub_rclone  # noqa: E402
 
 
-def reset_root(data_dir: Path, mode: str) -> None:
-    """Clear auth artifacts so each mode starts from the state it claims to test."""
+def reset_root(data_dir: Path, mode: str, keep: bool = False) -> None:
+    """Clear auth artifacts so each mode starts from the state it claims to test.
+
+    With keep, the rclone setup survives. Caching the binary and the consent is
+    the whole point of --keep, and wiping it leaves a repeat run unable to
+    re-verify tier 4.
+    """
     for name in ("token.json", "credentials.json"):
         (data_dir / name).unlink(missing_ok=True)
-    shutil.rmtree(data_dir / "rclone", ignore_errors=True)
+    if not keep:
+        shutil.rmtree(data_dir / "rclone", ignore_errors=True)
     if mode != "byoc":
         os.environ.pop("SYNCHOTIC_OAUTH_CLIENT_ID", None)
         os.environ.pop("SYNCHOTIC_OAUTH_CLIENT_SECRET", None)
@@ -81,15 +87,22 @@ def build_folder(fixture_mode: str, shortcut_id: str, client) -> tuple[dict, lis
     return {"name": spec["name"], "folder_id": shortcut_id, "files": result.files}, matched
 
 
-def parse_tiers(log_path: Path) -> dict[str, str]:
-    """Map delivered filename -> tier, from the TIER lines in the daily log."""
+def parse_tiers(log_path: Path, start_offset: int = 0) -> dict[str, str]:
+    """Map delivered filename -> tier, from TIER lines written after start_offset.
+
+    The offset matters. The daily log is appended across runs, so parsing the
+    whole file makes a no-op run inherit the previous run's TIER lines and report
+    passes for files it never touched.
+    """
     if not log_path.exists():
         return {}
     tiers = {}
-    for line in log_path.read_text(errors="replace").splitlines():
-        m = TIER_RE.search(line)
-        if m:
-            tiers[m.group(2).strip()] = m.group(1)
+    with open(log_path, "r", errors="replace") as f:
+        f.seek(start_offset)
+        for line in f:
+            m = TIER_RE.search(line)
+            if m:
+                tiers[m.group(2).strip()] = m.group(1)
     return tiers
 
 
@@ -111,7 +124,12 @@ def main() -> int:
     parser.add_argument("--shortcut-folder-id", default="",
                         help="Drive folder id for --fixture shortcut")
     parser.add_argument("--keep", type=Path,
-                        help="reuse this root instead of mkdtemp (caches the rclone binary)")
+                        help="reuse this root instead of mkdtemp, preserving rclone "
+                             "binary and consent so a repeat run skips the browser")
+    parser.add_argument("--refetch", action="store_true",
+                        help="wipe downloaded files and markers but keep auth, so a "
+                             "--keep run re-downloads. this is how you test rate-limit "
+                             "repeatability without re-consenting each time")
     args = parser.parse_args()
 
     cfg = MODES[args.mode]
@@ -140,7 +158,11 @@ def main() -> int:
     print(f"root:    {root}")
     print(f"mode:    {args.mode}   fixture: {args.fixture}")
 
-    reset_root(data_dir, args.mode)
+    reset_root(data_dir, args.mode, keep=bool(args.keep))
+    if args.refetch:
+        shutil.rmtree(get_download_path(), ignore_errors=True)
+        shutil.rmtree(data_dir / "markers", ignore_errors=True)
+        print("refetch: cleared downloads and markers, auth preserved")
 
     if cfg["creds"] and not (data_dir / "credentials.json").exists() \
             and not os.environ.get("SYNCHOTIC_OAUTH_CLIENT_ID"):
@@ -174,6 +196,7 @@ def main() -> int:
 
     # debug_log is a no-op unless sys.stdout is a TeeOutput (core/logging.py:82-87),
     # so without this the TIER lines never reach the log and every check below fails.
+    log_offset = log_path.stat().st_size if log_path.exists() else 0
     real_stdout = sys.stdout
     tee = TeeOutput(log_path, version="authtest")
     sys.stdout = tee
@@ -190,47 +213,62 @@ def main() -> int:
         sys.stdout = real_stdout
         tee.close()
 
-    tiers = parse_tiers(log_path)
+    tiers = parse_tiers(log_path, log_offset)
     procs = rclone_procs()
-    checks: list[tuple[bool, str]] = []
+    checks: list[tuple[str, str]] = []
+
+    # A run that fetched nothing because everything was already on disk cannot
+    # verify which tier delivers what. Report that instead of a stale verdict.
+    no_op = downloaded == 0 and skipped > 0
+
+    def verdict(cond: bool) -> str:
+        return "PASS" if cond else "FAIL"
 
     for e in entries:
         got = tiers.get(e["name"])
-        if e["expect"] == "ok":
-            checks.append((got == "anonymous",
+        if no_op:
+            checks.append(("SKIP",
+                           f"{e['name']}: nothing fetched this run (already synced)"))
+        elif e["expect"] == "ok":
+            checks.append((verdict(got == "anonymous"),
                            f"{e['name']}: anonymous (got {got or 'not delivered'})"))
         elif cfg["blocked_tier"] is None:
-            checks.append((got is None,
+            checks.append((verdict(got is None),
                            f"{e['name']}: correctly not delivered (got {got or 'nothing'})"))
         else:
-            checks.append((got == cfg["blocked_tier"],
+            checks.append((verdict(got == cfg["blocked_tier"]),
                            f"{e['name']}: {cfg['blocked_tier']} (got {got or 'not delivered'})"))
 
     # In anonymous mode the blocked file never lands, so a re-sync correctly still
     # wants it. Every other mode must reach a fully-synced state.
     want = (sum(1 for e in entries if e["expect"] == "blocked")
             if cfg["blocked_tier"] is None else 0)
-    checks.append((len(tasks_after) == want,
+    checks.append((verdict(len(tasks_after) == want),
                    f"re-sync wants {want} files (wants {len(tasks_after)})"))
-    checks.append((not purge_after, f"purge deletes 0 files (wants {len(purge_after)})"))
-    checks.append((not procs, f"no orphan rclone process ({len(procs)} found)"))
-    checks.append(((data_dir / "token.json").exists() == cfg["token"],
+    checks.append((verdict(not purge_after), f"purge deletes 0 files (wants {len(purge_after)})"))
+    checks.append((verdict(not procs), f"no orphan rclone process ({len(procs)} found)"))
+    checks.append((verdict((data_dir / "token.json").exists() == cfg["token"]),
                    f"token.json present={cfg['token']}"))
-    checks.append(((data_dir / "rclone").exists() == cfg["rclone_dir"],
+    checks.append((verdict((data_dir / "rclone").exists() == cfg["rclone_dir"]),
                    f"rclone/ present={cfg['rclone_dir']}"))
     if not cancelled:
-        checks.append((True, "sync ran to completion"))
+        checks.append(("PASS", "sync ran to completion"))
 
     used = (f"{sync_bytes / 1e6:.1f} MB" if sync_bytes >= 1e6
             else f"{sync_bytes / 1e3:.1f} KB")
     print(f"\ndownloaded={downloaded} skipped={skipped} errors={errors} "
           f"rate_limited={len(rate_limited)} bytes={used}")
     print()
-    for ok, label in checks:
-        print(f"  {'PASS' if ok else 'FAIL'}  {label}")
+    for status, label in checks:
+        print(f"  {status}  {label}")
 
-    failed = [c for c in checks if not c[0]]
-    print(f"\n{len(checks) - len(failed)}/{len(checks)} passed, {used} used")
+    failed = [c for c in checks if c[0] == "FAIL"]
+    skips = [c for c in checks if c[0] == "SKIP"]
+    print(f"\n{len(checks) - len(failed) - len(skips)}/{len(checks)} passed, "
+          f"{len(failed)} failed, {len(skips)} skipped, {used} used")
+    if skips:
+        print("this run fetched nothing, so tier checks proved nothing. "
+              "drop --keep for a fresh root to actually re-verify.")
     print(f"log: {log_path}")
     if not args.keep:
         print(f"temp root left in place for inspection: {root}")
