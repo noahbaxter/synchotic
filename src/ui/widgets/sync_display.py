@@ -81,6 +81,15 @@ def rclone_consent_explainer() -> None:
     print("  access to your Drive. This is a one-time click.")
     print()
 
+def rclone_no_browser() -> None:
+    """Consent needs a browser and there is not one here."""
+    print()
+    print("  Large archives need an authenticated download, which requires a")
+    print("  one-time browser consent. No browser is available on this machine.")
+    print("  Run with --download-mode byoc, or set it up on a desktop session.")
+    print()
+
+
 def report_blocked_summary(needs_auth: int, rate_limited: int) -> None:
     """Distinguish 'needs auth setup' from 'Google rate-limited (retry later)'."""
     if needs_auth:

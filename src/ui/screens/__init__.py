@@ -8,8 +8,10 @@ from .home import HomeScreen, MainMenuCache, compute_main_menu_cache, show_main_
 from .drive_config import DriveConfigScreen, show_subfolder_settings
 from .oauth import OAuthPromptScreen, show_oauth_prompt
 from .add_folder import AddFolderScreen, show_add_custom_folder
+from .download_mode import choose_download_mode
 
 __all__ = [
+    "choose_download_mode",
     # Home screen
     "HomeScreen",
     "MainMenuCache",

@@ -20,10 +20,26 @@ def is_available() -> bool:
 
 def is_authed() -> bool:
     try:
+        from ..core.paths import get_rclone_config_path
+        if not get_rclone_config_path().exists():
+            return False  # no config yet; do not fetch a binary to learn that
         binary = RcloneBinary().resolve()
         return RcloneConfig(binary).is_authed()
     except Exception:
         return False
+
+
+def can_open_browser() -> bool:
+    """False where consent could never be completed, so we can skip the attempt.
+
+    Consent opens a browser. On a headless Linux box there is nobody to click it
+    and the attempt just burns a binary download and then stalls until timeout.
+    """
+    import os
+    import sys
+    if sys.platform in ("darwin", "win32"):
+        return True
+    return bool(os.environ.get("DISPLAY") or os.environ.get("WAYLAND_DISPLAY"))
 
 
 class RcloneSession:

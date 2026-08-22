@@ -1182,6 +1182,15 @@ def main():
         app.user_settings.save()
         app.sync.download_mode = cli_args.download_mode
         print(f"  download mode set to {cli_args.download_mode}")
+    elif not app.user_settings.download_mode and not app.auth.is_signed_in:
+        # Signed-in users are skipped: their token already handles blocked files
+        # via tier 2, so the question does not apply to them.
+        from src.ui.screens import choose_download_mode
+        chosen = choose_download_mode()
+        if chosen:
+            app.user_settings.download_mode = chosen
+            app.user_settings.save()
+            app.sync.download_mode = chosen
     print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()

@@ -6,10 +6,12 @@ from ..sync.download_planner import DownloadTask
 
 
 class RcloneDownloader:
-    def __init__(self, rc, fs: str, poll_interval: float = 0.5):
+    def __init__(self, rc, fs: str, poll_interval: float = 0.5,
+                 max_wait: float = 7200.0):
         self.rc = rc
         self.fs = fs
         self.poll_interval = poll_interval
+        self.max_wait = max_wait
 
     def download(
         self,
@@ -55,8 +57,12 @@ class RcloneDownloader:
         return False
 
     def _await_job(self, jobid: int, cancel_check) -> bool:
+        deadline = time.time() + self.max_wait
         while True:
             if cancel_check and cancel_check():
+                self.rc.stop_job(jobid)
+                return False
+            if time.time() > deadline:
                 self.rc.stop_job(jobid)
                 return False
             st = self.rc.job_status(jobid)
