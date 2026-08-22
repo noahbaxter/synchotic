@@ -27,6 +27,7 @@ rsync -az --delete \
   --exclude '.git/' --exclude '.venv/' --exclude '.env' \
   --exclude '__pycache__/' --exclude '.pytest_cache/' \
   --exclude 'Sync Charts/' --exclude '.dm-sync/' --exclude 'build/' --exclude 'dist/' \
+  --exclude 'libs/' \
   "$REPO/" "$HOST:$DEST/"
 
 echo "==> preparing venv on $HOST"
