@@ -26,6 +26,15 @@ def normalize_setlist_name(name: str) -> str:
     return normalized.lower().strip()
 
 
+# How blocked (virus-scan-flagged) files get downloaded. Empty means the user has
+# not chosen yet and should be asked. Embedded OAuth is deliberately not offered:
+# the 100-user cap is full, so it would fail for anyone new.
+DOWNLOAD_MODE_RCLONE = "rclone"
+DOWNLOAD_MODE_ANONYMOUS = "anonymous"
+DOWNLOAD_MODE_BYOC = "byoc"
+DOWNLOAD_MODES = (DOWNLOAD_MODE_RCLONE, DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC)
+
+
 class UserSettings:
     """
     Manages .dm-sync/settings.json - user preferences that persist across runs.
@@ -52,6 +61,8 @@ class UserSettings:
         self.oauth_prompted: bool = False
         # Delta display mode: "size", "files", or "charts"
         self.delta_mode: str = "size"
+        # How to fetch blocked files. "" = not chosen yet, ask on first run.
+        self.download_mode: str = ""
         # Track if this is a fresh settings file (no file existed)
         self._is_new: bool = False
 
@@ -71,6 +82,8 @@ class UserSettings:
                 settings.delete_videos = data.get("delete_videos", True)
                 settings.oauth_prompted = data.get("oauth_prompted", False)
                 settings.delta_mode = data.get("delta_mode", "size")
+                mode = data.get("download_mode", "")
+                settings.download_mode = mode if mode in DOWNLOAD_MODES else "" 
                 settings._is_new = data.get("use_default_drives", False)
             except (json.JSONDecodeError, IOError):
                 settings._is_new = True
@@ -94,6 +107,7 @@ class UserSettings:
             "delete_videos": self.delete_videos,
             "oauth_prompted": self.oauth_prompted,
             "delta_mode": self.delta_mode,
+            "download_mode": self.download_mode,
             "use_default_drives": self._is_new,
         }
         with open(self.path, "w") as f:

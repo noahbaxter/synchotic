@@ -34,10 +34,10 @@ class RcloneSession:
         self.daemon: Optional[RcloneDaemon] = None
         self.downloader: Optional[RcloneDownloader] = None
 
-    def ensure_authed(self) -> bool:
+    def ensure_authed(self, timeout: float = 120.0) -> bool:
         if self.config.is_authed():
             return True
-        return self.config.create_remote()
+        return self.config.create_remote(timeout=timeout)
 
     def __enter__(self):
         self.daemon = RcloneDaemon(self.binary)

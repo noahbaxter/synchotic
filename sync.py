@@ -34,6 +34,7 @@ from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync, purge_all_folders
 from src.sync.markers import rebuild_markers_from_disk
 from src.config import UserSettings, DrivesConfig, CustomFolders
+from src.config.settings import DOWNLOAD_MODES
 from src.core.formatting import format_size, sanitize_drive_name, normalize_path_key
 from src.core.paths import (
     get_data_dir,
@@ -106,6 +107,7 @@ class SyncApp:
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
+            download_mode=self.user_settings.download_mode or "rclone",
         )
         self.folders = []
         self.folder_stats_cache = FolderStatsCache()
@@ -657,6 +659,7 @@ class SyncApp:
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
+            download_mode=self.user_settings.download_mode or "rclone",
         )
 
     def _start_background_scan(self, force_rescan: bool = False):
@@ -1138,7 +1141,13 @@ def main():
     parser = argparse.ArgumentParser(
         description="DM Chart Sync - Download charts from Google Drive"
     )
-    parser.parse_args()
+    parser.add_argument(
+        "--download-mode", choices=DOWNLOAD_MODES, default=None,
+        help="how to fetch virus-scan-blocked files: rclone (one Google consent "
+             "click), anonymous (skip them), byoc (your own credentials). Saved "
+             "for next time. Use anonymous on a machine with no browser.",
+    )
+    cli_args = parser.parse_args()
 
     # Always log to .dm-sync/logs/YYYY-MM-DD.log
     logs_dir = get_data_dir() / "logs"
@@ -1168,6 +1177,11 @@ def main():
 
     _t1 = _time.time()
     app = SyncApp()
+    if cli_args.download_mode:
+        app.user_settings.download_mode = cli_args.download_mode
+        app.user_settings.save()
+        app.sync.download_mode = cli_args.download_mode
+        print(f"  download mode set to {cli_args.download_mode}")
     print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()
