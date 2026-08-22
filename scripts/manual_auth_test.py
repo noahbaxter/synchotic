@@ -63,9 +63,9 @@ def reset_root(data_dir: Path, mode: str, keep: bool = False) -> None:
         os.environ.pop("SYNCHOTIC_OAUTH_CLIENT_SECRET", None)
 
 
-def build_folder(fixture_mode: str, shortcut_id: str, client) -> tuple[dict, list[dict]]:
+def build_folder(fixture_mode: str, shortcut_id: str, client, fixture_file: Path = None) -> tuple[dict, list[dict]]:
     """Return (folder dict for sync_folder, fixture entries with 'expect')."""
-    spec = json.loads(FIXTURE.read_text())
+    spec = json.loads((fixture_file or FIXTURE).read_text())
     entries = spec["files"]
 
     if fixture_mode == "pinned":
@@ -121,6 +121,8 @@ def main() -> int:
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--mode", required=True, choices=sorted(MODES))
     parser.add_argument("--fixture", default="pinned", choices=["pinned", "shortcut"])
+    parser.add_argument("--fixture-file", type=Path, default=None,
+                        help="alternate pinned fixture json (default tests/manual/fixture_drive.json)")
     parser.add_argument("--shortcut-folder-id", default="",
                         help="Drive folder id for --fixture shortcut")
     parser.add_argument("--keep", type=Path,
@@ -171,7 +173,7 @@ def main() -> int:
         return 2
 
     client = DriveClient(DriveClientConfig(api_key=os.environ["GOOGLE_API_KEY"]))
-    folder, entries = build_folder(args.fixture, args.shortcut_folder_id, client)
+    folder, entries = build_folder(args.fixture, args.shortcut_folder_id, client, args.fixture_file)
 
     settings = UserSettings.load(get_settings_path())
     settings.set_drive_enabled(folder["folder_id"], True)
@@ -225,19 +227,21 @@ def main() -> int:
         return "PASS" if cond else "FAIL"
 
     for e in entries:
-        got = tiers.get(e["name"])
+        # TIER lines log the on-disk filename, which comes from `path`. Matching
+        # on the `name` field silently fails whenever the two disagree.
+        got = tiers.get(Path(e["path"]).name)
         if no_op:
             checks.append(("SKIP",
-                           f"{e['name']}: nothing fetched this run (already synced)"))
+                           f"{Path(e['path']).name}: nothing fetched this run (already synced)"))
         elif e["expect"] == "ok":
             checks.append((verdict(got == "anonymous"),
-                           f"{e['name']}: anonymous (got {got or 'not delivered'})"))
+                           f"{Path(e['path']).name}: anonymous (got {got or 'not delivered'})"))
         elif cfg["blocked_tier"] is None:
             checks.append((verdict(got is None),
-                           f"{e['name']}: correctly not delivered (got {got or 'nothing'})"))
+                           f"{Path(e['path']).name}: correctly not delivered (got {got or 'nothing'})"))
         else:
             checks.append((verdict(got == cfg["blocked_tier"]),
-                           f"{e['name']}: {cfg['blocked_tier']} (got {got or 'not delivered'})"))
+                           f"{Path(e['path']).name}: {cfg['blocked_tier']} (got {got or 'not delivered'})"))
 
     # In anonymous mode the blocked file never lands, so a re-sync correctly still
     # wants it. Every other mode must reach a fully-synced state.

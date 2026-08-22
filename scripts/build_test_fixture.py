@@ -10,6 +10,7 @@ import json
 import os
 import sys
 from pathlib import Path
+from pathlib import Path as pathlib_Path
 
 REPO = Path(__file__).resolve().parent.parent
 FIXTURE = REPO / "tests" / "manual" / "fixture_drive.json"
@@ -50,13 +51,21 @@ def main() -> int:
         entry["size"] = int(meta.get("size", 0))
         entry["md5"] = meta.get("md5Checksum", "")
         entry["modified"] = meta.get("modifiedTime", "")
-        entry["name"] = meta.get("name", entry["name"])
+        drive_name = meta.get("name", entry["name"])
+        entry["name"] = drive_name
+        if drive_name != pathlib_Path(entry["path"]).name:
+            print(f"  WARN   path basename {pathlib_Path(entry['path']).name!r} "
+                  f"!= drive name {drive_name!r}; harness matches on path")
 
         drift = "" if old_size == entry["size"] else f"  (was {old_size})"
         print(f"  ok     {entry['size']:>12,} B  {entry['name']}{drift}")
 
     args.fixture.write_text(json.dumps(data, indent=2) + "\n")
-    print(f"\nwrote {args.fixture.relative_to(REPO)}")
+    try:
+        shown = args.fixture.relative_to(REPO)
+    except ValueError:
+        shown = args.fixture
+    print(f"\nwrote {shown}")
 
     if stale:
         print(f"\n{len(stale)} pinned id(s) no longer resolve. Pick replacements from")
