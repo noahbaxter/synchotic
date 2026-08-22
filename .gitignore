@@ -33,6 +33,7 @@ manifest.json
 
 # Script caches
 .overlap_cache.json
+anon_failure_results.json
 
 # Telemetry
 telemetry-id

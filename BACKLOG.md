@@ -17,14 +17,24 @@
 
 ## Active
 
-- [ ] [ops] Google OAuth verification — hit 100 user cap, new users blocked *(2026-04-01)*
-  - **Problem:** 100/100 lifetime unverified user cap reached. New users get "This app is blocked". No workaround — verification is the only fix.
-  - Privacy policy: `PRIVACY.md` (drafted, needs commit + push so GitHub URL works)
-  - Go to Verification Center in Google Auth Platform console
-  - Add privacy policy URL: `https://github.com/noahbaxter/synchotic/blob/main/PRIVACY.md`
-  - Record short screen capture of OAuth flow + how Drive data is used (unlisted YouTube)
-  - Submit for verification — typically 1-2 weeks for sensitive (non-restricted) scopes
-  - **Workaround published:** `legacy-rclone` branch (points at `1435ab9`) — README has a callout. When verification lands: remove the callout from `README.md` and optionally delete the branch.
+- [ ] [ops] Google OAuth verification blocked, shipping three-tier auth instead *(decided 2026-08-09)*
+  - 100/100 unverified user cap reached. Verification submitted 2026-04-22, came back requiring CASA Tier 2 (~$540/yr). Tier 1 appeal denied 2026-04-29.
+  - Anonymous failure rate measured 2026-06-11: ~99% of small files succeed, ~63% of bytes blocked (RB/GH rips, big Misc packs). Re-read 2026-08-09: 637/1272 sampled files are `virus_scan` (50% by count) and all 5 measured drives contain blocked files, so every user hits this on their first sync.
+  - **Decision: ship the choice, not a single strategy.** Setup screen offers rclone (recommended) / anonymous / BYOC. No single option is right for every user, which is why this sat deferred since June.
+  - **Rejected, R2 mirror ($4-7/mo):** cost is not the issue. Mirroring ~116 GB turns Synchotic from an index that points at other people's Drive folders into a distributor, which is a licensing/DMCA surface we don't have today and drive maintainers may object to. Hard to walk back. Reconsider only if rclone rate limits prove unusable (gauntlet step 3 will tell us).
+  - **Rejected, CASA Tier 2 ($540/yr):** buys only what rclone gives for free. Revisit if there's ever revenue.
+  - **Rejected, service account:** key would ship inside a desktop app, public on day one.
+  - **Parked, new OAuth app to reset the cap:** this is cap evasion and Google enforces at project-owner level, so the downside is the existing app and account getting flagged, not just a denial. Weigh against 100 more users before trying.
+  - **Full status, measurement data, and implementation plans: see [OAUTH_PLAN.md](OAUTH_PLAN.md)**
+  - Workaround live: `legacy-rclone` branch (commit `1435ab9`). README has a callout pointing blocked users there.
+
+- [ ] [feature] `download_mode` setup screen, blocks the rclone tier shipping *(2026-08-09)*
+  - **Bug this fixes:** there is currently no way to decline rclone. `folder_sync.py:165-168` prints the explainer then calls `ensure_authed()`, which opens a browser. `sync_display.py:75-82` is print-only, no prompt, no return value. Only "decline" is closing the tab.
+  - Ask during setup, not on first blocked file. Blocking is constant (see measurement above), so a deferred prompt just fires 90s into every first sync.
+  - Options, rclone preselected: `rclone` (recommended, one consent click) / `anonymous` (no sign-in, large archives skipped) / `byoc` (own credentials, fastest). Declining rclone consent falls back to anonymous as behavior, not a menu item.
+  - **Precedence rule, easy to get wrong:** an existing valid `token.json` still wins. The ~100 grandfathered embedded-OAuth users must not be downgraded to anonymous by a setup screen they never asked for. Embedded OAuth is dead for new signups so it is not a menu option.
+  - Persist in settings.json, expose in the settings menu, `--download-mode` CLI override.
+  - Side benefit: makes "no rclone" a real state, so `scripts/manual_auth_test.py` can stop monkeypatching `rclone.RcloneSession` to fake a decline.
 
 ## Active Bugs
 
