@@ -118,6 +118,25 @@ def library_unavailable(path) -> None:
     print()
 
 
+def purge_skipped_new_library(path) -> None:
+    """First sync at a library we did not create. Explain, delete nothing."""
+    print()
+    print("  This looks like a library Synchotic has not synced before:")
+    print(f"    {path}")
+    print()
+    print("  Nothing was removed. From the next sync onward, Synchotic manages")
+    print("  the folders of drives you enable: anything inside them that is not")
+    print("  part of that drive WILL BE DELETED. Folders that are not drives are")
+    print("  never touched.")
+    print()
+
+
+def purge_skipped_unowned(folder_name: str) -> None:
+    """A disabled drive whose folder we never created. Almost certainly theirs."""
+    print(f"  Skipped '{folder_name}': Synchotic did not create this folder, so it")
+    print("  will not be emptied. Enable the drive to have Synchotic manage it.")
+
+
 def rclone_no_browser() -> None:
     """Consent needs a browser and there is not one here."""
     print()

@@ -17,12 +17,12 @@ from pathlib import Path
 from typing import Optional
 
 from ..core.formatting import normalize_path_key
-from ..core.paths import get_data_dir
+from ..core.paths import get_library_state_dir
 
 
 def get_markers_dir() -> Path:
     """Get the markers directory, creating it if needed."""
-    markers_dir = get_data_dir() / "markers"
+    markers_dir = get_library_state_dir() / "markers"
     markers_dir.mkdir(exist_ok=True)
     return markers_dir
 
@@ -204,6 +204,29 @@ def delete_marker(archive_path: str, md5: str) -> bool:
         except OSError:
             pass
     return False
+
+
+def get_marked_drive_names() -> set[str]:
+    """Drive folder names that have at least one marker.
+
+    A marker is proof we extracted into that folder, which is the evidence
+    ownership needs. `get_all_marker_files` cannot answer this: its paths are
+    relative to the drive folder and so have already dropped the drive name.
+    """
+    names = set()
+    markers_dir = get_markers_dir()
+    if not markers_dir.exists():
+        return names
+    for marker_file in markers_dir.glob("*.json"):
+        try:
+            with open(marker_file) as f:
+                archive_path = json.load(f).get("archive_path", "")
+        except (json.JSONDecodeError, OSError):
+            continue
+        top = archive_path.split("/")[0] if archive_path else ""
+        if top:
+            names.add(top)
+    return names
 
 
 def get_all_marker_files() -> set[str]:

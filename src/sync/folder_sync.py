@@ -144,6 +144,10 @@ class FolderSync:
         if not cancelled:
             display.folder_complete(downloaded, bytes_downloaded, download_time, errors)
 
+        if downloaded > 0:
+            from .ownership import mark_drive_owned
+            mark_drive_owned(folder.get("folder_id", ""))
+
         clear_folder_cache(folder_path)
 
         # Invalidate persistent stats cache - synced state may have changed
@@ -369,8 +373,22 @@ def purge_all_folders(
     """Purge files that shouldn't be synced. Uses marker files as source of truth."""
     from ..core.formatting import normalize_path_key
     from .markers import get_all_marker_files
+    from .ownership import (backfill_owned_from_markers, is_library_adopted,
+                            mark_library_adopted, resolve_owned_drives)
 
     print_section_header("Purge")
+
+    # A library we have never synced may be one the user already had. Their
+    # folders can share drive names, so deleting anything here is a guess.
+    if not is_library_adopted():
+        display.purge_skipped_new_library(base_path)
+        mark_library_adopted()
+        return set()
+
+    # Markers we already have prove which drives are ours, so an upgrading user
+    # does not lose purge on drives they synced before ownership existed.
+    backfill_owned_from_markers(folders)
+    owned = resolve_owned_drives(folders)
 
     total_deleted = 0
     total_failed = 0
@@ -392,6 +410,13 @@ def purge_all_folders(
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
 
         if not drive_enabled:
+            # Emptying a whole folder is only safe when we made it. A disabled
+            # drive whose folder we never synced is the user's own collection
+            # that happens to share a name.
+            if folder_id not in owned:
+                display.purge_skipped_unowned(folder.get("name", ""))
+                debug_log(f"PURGE_SKIP_UNOWNED | folder={folder.get('name', '')}")
+                continue
             deleted, failed, size = _purge_disabled_drive(
                 folder_id, folder.get("name", ""), folder_path, base_path, persistent_cache,
             )

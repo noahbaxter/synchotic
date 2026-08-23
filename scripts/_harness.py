@@ -78,14 +78,22 @@ def fixture_folder(spec: dict) -> dict:
 
 
 def snapshot_tree(base: Path) -> dict:
-    """relpath -> {size, md5} for every file under base. The completeness record."""
+    """relpath -> {size, md5} for every chart file under base.
+
+    Skips the library state dir. Markers and ownership records live inside the
+    library now, and they are our bookkeeping, not the user's charts. Including
+    them makes every comparison fail on incidental differences.
+    """
     out = {}
     if not base.exists():
         return out
     for path in sorted(base.rglob("*")):
-        if path.is_file():
-            rel = path.relative_to(base).as_posix()
-            out[rel] = {"size": path.stat().st_size, "md5": file_md5(path)}
+        if not path.is_file():
+            continue
+        rel = path.relative_to(base).as_posix()
+        if rel == ".dm-sync" or rel.startswith(".dm-sync/"):
+            continue
+        out[rel] = {"size": path.stat().st_size, "md5": file_md5(path)}
     return out
 
 

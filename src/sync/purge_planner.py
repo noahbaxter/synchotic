@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import List, Tuple, Set
 
 from ..core.constants import VIDEO_EXTENSIONS
+from ..core.paths import is_library_state_path
 from ..core.formatting import relative_posix, parent_posix, sanitize_path, sanitize_drive_name, normalize_path_key
 from ..core.logging import debug_log
 from .cache import scan_local_files
@@ -55,6 +56,8 @@ def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tu
         return partial_files
 
     for f in base_path.rglob("_download_*"):
+        if is_library_state_path(f):
+            continue  # staging lives in the library now; never purge live downloads
         if f.is_file():
             try:
                 partial_files.append((f, f.stat().st_size))

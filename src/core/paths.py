@@ -37,6 +37,85 @@ DATA_DIR_NAME = ".dm-sync"
 # Default folder name for downloaded charts
 DOWNLOAD_FOLDER_NAME = "Sync Charts"
 
+# Sync state that describes the library rather than the machine. It lives inside
+# the library so the library is self-contained: copy or move the folder and its
+# state travels with it, and a library on an unmounted volume can never be
+# described by markers that are still reachable.
+LIBRARY_STATE_DIR_NAME = ".synchotic"
+
+# Set once at startup from user settings. Kept as module state rather than read
+# from settings.json on demand, because paths.py must not import settings.
+_library_override: "Path | None" = None
+
+
+def set_library_path(path) -> None:
+    """Point the app at a library. Call before anything resolves paths."""
+    global _library_override
+    _library_override = Path(path).expanduser() if path else None
+
+
+def get_library_path() -> Path:
+    """Where charts live. SYNCHOTIC_LIBRARY wins, then settings, then default."""
+    env = os.environ.get("SYNCHOTIC_LIBRARY")
+    if env:
+        return Path(env).expanduser()
+    if _library_override:
+        return _library_override
+    return get_app_dir() / DOWNLOAD_FOLDER_NAME
+
+
+class LibraryUnavailable(RuntimeError):
+    """The configured library is not reachable, e.g. an unmounted volume."""
+
+
+def library_is_available() -> bool:
+    """True when a configured library actually exists on disk.
+
+    The default library is created on demand, so it is always available. A
+    library the user pointed us at is different: if it lives on a drive that is
+    not mounted, the path simply is not there.
+    """
+    if not _configured_library():
+        return True
+    return get_library_path().is_dir()
+
+
+def _configured_library():
+    """The user's chosen library, if they chose one."""
+    return os.environ.get("SYNCHOTIC_LIBRARY") or _library_override
+
+
+def get_library_state_dir() -> Path:
+    """Library-owned state (markers, staging). Created on demand.
+
+    Refuses to create anything when a configured library is missing. Blindly
+    running mkdir on an unmounted volume writes a new empty tree at the
+    mountpoint, which reads as a library with no markers, and the next sync
+    re-downloads everything into a folder that vanishes on remount.
+    """
+    library = get_library_path()
+    if _configured_library() and not library.is_dir():
+        raise LibraryUnavailable(
+            f"Library not found: {library}\n"
+            "If it lives on an external or network drive, connect it and retry."
+        )
+    d = library / LIBRARY_STATE_DIR_NAME
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
+def is_library_state_path(path) -> bool:
+    """True for anything under the library state dir.
+
+    Library-wide walks must skip it. purge_planner.find_partial_downloads
+    rglobs the whole library for _download_*, and staging lives here now.
+    """
+    try:
+        Path(path).relative_to(get_library_path() / LIBRARY_STATE_DIR_NAME)
+        return True
+    except ValueError:
+        return False
+
 
 def get_app_dir() -> Path:
     """
@@ -101,8 +180,8 @@ def get_sync_state_path() -> Path:
 
 
 def get_download_path() -> Path:
-    """Get the download directory for chart files."""
-    return get_app_dir() / DOWNLOAD_FOLDER_NAME
+    """Deprecated alias for get_library_path, kept for existing call sites."""
+    return get_library_path()
 
 
 def get_drives_config_path() -> Path:
@@ -111,8 +190,13 @@ def get_drives_config_path() -> Path:
 
 
 def get_tmp_dir() -> Path:
-    """Get temp directory for downloads and extraction staging."""
-    tmp_dir = get_data_dir() / "tmp"
+    """Staging for downloads and extraction.
+
+    Must sit on the same filesystem as the library: a cross-device move is
+    copy-then-delete, not an atomic rename, so a crash mid-move would leave a
+    partial file at the destination for purge to judge.
+    """
+    tmp_dir = get_library_state_dir() / "tmp"
     tmp_dir.mkdir(exist_ok=True)
     return tmp_dir
 
@@ -196,6 +280,29 @@ def migrate_legacy_files() -> list[str]:
                     migrated.append(f"migrated {name}")
                 except Exception:
                     pass
+
+    # Markers moved from the machine data dir into the library, so they travel
+    # with the charts they describe. Without this move a v1.4 user loses every
+    # marker and the next sync re-downloads everything.
+    legacy_markers = data_dir / "markers"
+    new_markers = get_library_state_dir() / "markers"
+    new_markers.mkdir(parents=True, exist_ok=True)
+    if legacy_markers.is_dir() and any(legacy_markers.iterdir()) and not any(new_markers.iterdir()):
+        moved = 0
+        for marker in legacy_markers.iterdir():
+            if not marker.is_file():
+                continue
+            try:
+                shutil.move(str(marker), str(new_markers / marker.name))
+                moved += 1
+            except Exception:
+                pass
+        if moved:
+            migrated.append(f"moved {moved} markers into the library")
+            try:
+                legacy_markers.rmdir()
+            except OSError:
+                pass
 
     # =========================================================================
     # OBSOLETE FILES: Delete files we no longer use

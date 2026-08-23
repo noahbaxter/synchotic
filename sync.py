@@ -1295,6 +1295,15 @@ def main():
 
     print(f"  [timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")
 
+    # The library location has to be known before anything resolves a path.
+    # migrate_legacy_files moves markers INTO the library, so if this ran after
+    # it, every marker would land in the default library and the real one would
+    # look empty, re-downloading the whole collection.
+    from src.config.settings import UserSettings as _EarlySettings
+    from src.core.paths import get_settings_path as _early_settings_path
+    from src.core.paths import set_library_path as _set_library_path
+    _set_library_path(_EarlySettings.load(_early_settings_path()).library_path or None)
+
     # Migrate legacy files from old locations to .dm-sync/
     # Must run BEFORE creating SyncApp so paths resolve correctly
     migrated = migrate_legacy_files()
