@@ -580,14 +580,20 @@ class SyncApp:
         except Exception:
             rclone_authed = False
 
+        from src.drive.auth import has_custom_client_config
+
         step = connection_step_for(
             chosen, rclone_authed=rclone_authed,
             signed_in=bool(self.auth and self.auth.is_signed_in),
+            byoc_configured=has_custom_client_config(),
         )
         if step == "rclone":
             self._connect_rclone()
         elif step == "signin":
             self.handle_signin()
+        elif step == "byoc_setup":
+            display.byoc_not_configured()
+            wait_with_skip(5)
 
     def _connect_rclone(self):
         """Run the one-time rclone consent now."""

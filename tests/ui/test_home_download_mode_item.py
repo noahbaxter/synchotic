@@ -13,7 +13,7 @@ from src.ui.screens.home import show_main_menu
 @pytest.fixture
 def downloads_item(monkeypatch, tmp_path):
     """Build the home menu and hand back its Downloads row."""
-    def build(mode, rclone_authed=True):
+    def build(mode, rclone_authed=True, byoc_configured=True):
         captured = {}
 
         def fake_run(self, initial_index=0):
@@ -26,6 +26,8 @@ def downloads_item(monkeypatch, tmp_path):
         monkeypatch.setattr("src.ui.widgets.menu.Menu.run", fake_run, raising=False)
         monkeypatch.setattr("chotic_ui.widgets.menu.Menu.run", fake_run, raising=False)
         monkeypatch.setattr("src.rclone.is_authed", lambda: rclone_authed, raising=False)
+        monkeypatch.setattr("src.drive.auth.has_custom_client_config",
+                            lambda: byoc_configured, raising=False)
 
         settings = UserSettings(tmp_path / "settings.json")
         settings.download_mode = mode
@@ -62,3 +64,10 @@ def test_rclone_without_consent_says_so(downloads_item):
     """Otherwise it claims rclone while every large chart is still being skipped."""
     assert "not connected yet" in downloads_item(DOWNLOAD_MODE_RCLONE, rclone_authed=False).label
     assert "not connected yet" not in downloads_item(DOWNLOAD_MODE_RCLONE, rclone_authed=True).label
+
+
+def test_byoc_without_credentials_says_so(downloads_item):
+    """Silently falling back to the blocked shared client is the failure to surface."""
+    row = downloads_item(DOWNLOAD_MODE_BYOC, byoc_configured=False)
+    assert "not set up" in row.label
+    assert "not set up" not in downloads_item(DOWNLOAD_MODE_BYOC, byoc_configured=True).label

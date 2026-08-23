@@ -828,10 +828,13 @@ def show_main_menu(
     downloads_line = f"Downloads: {mode_names.get(mode, mode)}"
     if mode == DOWNLOAD_MODE_RCLONE and not rclone_connected:
         downloads_line += " (not connected yet)"
+    if mode == DOWNLOAD_MODE_BYOC:
+        from src.drive.auth import has_custom_client_config
+        if not has_custom_client_config():
+            downloads_line += " (not set up)"
     if auth and auth.is_signed_in:
         downloads_line += " + account sign-in"
-    menu.add_item(MenuItem(f"  {downloads_line}", hotkey="D", value=("download_mode", None),
-                           description="Change how large charts download"))
+    menu.add_item(MenuItem(f"  {downloads_line}", hotkey="D", value=("download_mode", None)))
 
     if auth and auth.is_signed_in:
         email = auth.user_email

@@ -2,9 +2,23 @@
 
 ## Inbox
 
-- [ ] [cleanup] rclone tier minor follow-ups *(2026-06-13, from final review of feature/rclone-download-tier)*
-  - `folder_sync.py _rclone_second_pass`: when not authed, it constructs `RcloneSession()` twice (once for `ensure_authed`, once for the download `with`), resolving the binary twice. Reuse one session.
-  - `rclone/downloader.py _await_job`: no overall timeout, relies solely on `cancel_check`. Interactive sync passes a cancel_check so it is bounded by ESC, but a non-interactive caller could spin forever if a job hangs. Add a max-wait.
+- [ ] [perf] rclone tier downloads one file at a time *(2026-08-23)*
+  - `rclone/downloader.py download()` submits one `copyid_async` then blocks on `_await_job` before the next. Tiers 1-3 run 24 workers (`sync/downloader.py:72`). No `--transfers` is set anywhere either.
+  - `RCLONE_WRAP_DESIGN.md:35` claims tier 4 is "~4-16 concurrent transfers". It is not. Fix the doc either way.
+  - **Measure before fixing.** `RCLONE_SMOKE_CHECKLIST.md` section 4 was never run. Do one Rock Band sync, compare wall-clock to the OAuth path. If a single stream already saturates the link, sequential costs nothing and this is a doc fix only.
+  - If the gap is real: hold N jobs in flight (`copyid_async` already returns a job id) and poll together. Then re-run the tier-4 trust invariant, because concurrent jobs share the temp dir that `_reconcile` diffs.
+  - Not a correctness issue. Files arrive intact, verified byte-identical. Slow beats blocked.
+
+- [ ] [testing] BYOC has never run end to end *(2026-08-23)*
+  - Coverage is 3 unit tests on `load_client_config()` precedence plus one tier-4-skip case. Nobody has created a real Cloud project, dropped in `credentials.json`, signed in, and pulled a blocked file.
+  - Guardrail shipped in v1.5 (`has_custom_client_config`), so picking BYOC without credentials now warns instead of silently signing in with the blocked shared client. The happy path is still unverified.
+  - `docs/byoc.md` still frames BYOC as being about speed and quota ("if you just want it to work you do not need this"). That is pre-rejection framing. For a new user the shared client does not work at all.
+  - Chooser copy says BYOC is "just as fast" as rclone. Given tier 3 is 24 workers and tier 4 is sequential, BYOC is faster. Reword once the throughput measurement above exists.
+
+- [ ] [cleanup] merge chotic-ui `fix/menu-text-wrapping` into its main *(2026-08-23)*
+  - v1.5 pins the submodule to a branch off `3f37d1e`, deliberately, to keep 3 unrelated chotic-ui commits (FilterList sizing, Tab MenuResult, FilterList section headers) out of a release whose TUI was untested.
+  - After v1.5 ships: merge the fix into chotic-ui `main`, then bump the submodule to pick up the other three.
+  - stemchotic is the other consumer. It sets no `MenuItem.description` and uses short subtitles, so it is unaffected either way.
 
 - [ ] [feature] Beta launcher channel *(2026-03-26, prompted by Treebear scan perf discussion)*
   - Rename dev launcher to "beta" for user-facing opt-in testing
@@ -27,14 +41,6 @@
   - **Parked, new OAuth app to reset the cap:** this is cap evasion and Google enforces at project-owner level, so the downside is the existing app and account getting flagged, not just a denial. Weigh against 100 more users before trying.
   - **Full status, measurement data, and implementation plans: see [OAUTH_PLAN.md](OAUTH_PLAN.md)**
   - Workaround live: `legacy-rclone` branch (commit `1435ab9`). README has a callout pointing blocked users there.
-
-- [ ] [feature] `download_mode` setup screen, blocks the rclone tier shipping *(2026-08-09)*
-  - **Bug this fixes:** there is currently no way to decline rclone. `folder_sync.py:165-168` prints the explainer then calls `ensure_authed()`, which opens a browser. `sync_display.py:75-82` is print-only, no prompt, no return value. Only "decline" is closing the tab.
-  - Ask during setup, not on first blocked file. Blocking is constant (see measurement above), so a deferred prompt just fires 90s into every first sync.
-  - Options, rclone preselected: `rclone` (recommended, one consent click) / `anonymous` (no sign-in, large archives skipped) / `byoc` (own credentials, fastest). Declining rclone consent falls back to anonymous as behavior, not a menu item.
-  - **Precedence rule, easy to get wrong:** an existing valid `token.json` still wins. The ~100 grandfathered embedded-OAuth users must not be downgraded to anonymous by a setup screen they never asked for. Embedded OAuth is dead for new signups so it is not a menu option.
-  - Persist in settings.json, expose in the settings menu, `--download-mode` CLI override.
-  - Side benefit: makes "no rclone" a real state, so `scripts/manual_auth_test.py` can stop monkeypatching `rclone.RcloneSession` to fake a decline.
 
 ## Active Bugs
 
@@ -74,6 +80,10 @@
 - [ ] `delete_videos=False` path
 - [ ] Background scanner failure handling (0 tests)
 - [ ] Windows backslash in path lookups (platform-specific)
+- [ ] Windows, end to end. Never tested, and it is where most users are. Covers the whole v1.5 auth path, not just one screen.
+- [ ] Windows: confirm a freshly downloaded unsigned `rclone.exe` is not quarantined by Defender/SmartScreen (`RCLONE_SMOKE_CHECKLIST.md` section 2).
+- [ ] Windows: `reap_stale` uses `ps`, POSIX-only, so a crashed rcd daemon is not reaped. Verify no orphan `rclone.exe` lingers after a normal run.
+- [ ] Render-level UI tests exist only for the first-run chooser (`tests/ui/test_download_mode_render.py`). Every other screen is still asserted through a stubbed `Menu.run`, which is exactly how the chooser shipped broken: the tests checked `MenuItem` data that never reached the screen.
 
 ## Low Priority
 

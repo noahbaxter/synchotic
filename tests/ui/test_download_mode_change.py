@@ -68,23 +68,33 @@ class TestChanging:
 
 class TestConnectionStep:
     def test_rclone_connects_when_not_authed(self):
-        assert connection_step_for(
-            DOWNLOAD_MODE_RCLONE, rclone_authed=False, signed_in=False) == "rclone"
+        assert connection_step_for(DOWNLOAD_MODE_RCLONE, rclone_authed=False,
+                                   signed_in=False, byoc_configured=False) == "rclone"
 
     def test_rclone_already_authed_needs_nothing(self):
-        assert connection_step_for(
-            DOWNLOAD_MODE_RCLONE, rclone_authed=True, signed_in=False) == ""
+        assert connection_step_for(DOWNLOAD_MODE_RCLONE, rclone_authed=True,
+                                   signed_in=False, byoc_configured=False) == ""
 
-    def test_byoc_signs_in(self):
-        assert connection_step_for(
-            DOWNLOAD_MODE_BYOC, rclone_authed=False, signed_in=False) == "signin"
+    def test_byoc_with_credentials_signs_in(self):
+        assert connection_step_for(DOWNLOAD_MODE_BYOC, rclone_authed=False,
+                                   signed_in=False, byoc_configured=True) == "signin"
 
     def test_byoc_already_signed_in_needs_nothing(self):
-        assert connection_step_for(
-            DOWNLOAD_MODE_BYOC, rclone_authed=False, signed_in=True) == ""
+        assert connection_step_for(DOWNLOAD_MODE_BYOC, rclone_authed=False,
+                                   signed_in=True, byoc_configured=True) == ""
+
+    def test_byoc_without_credentials_never_signs_in(self):
+        """Sign-in would use the embedded client, which is the blocked one."""
+        assert connection_step_for(DOWNLOAD_MODE_BYOC, rclone_authed=False,
+                                   signed_in=False, byoc_configured=False) == "byoc_setup"
+
+    def test_byoc_without_credentials_warns_even_when_signed_in(self):
+        """A token from the shared client still cannot fetch blocked archives."""
+        assert connection_step_for(DOWNLOAD_MODE_BYOC, rclone_authed=False,
+                                   signed_in=True, byoc_configured=False) == "byoc_setup"
 
     @pytest.mark.parametrize("authed,signed_in", [(False, False), (True, True)])
     def test_anonymous_never_opens_a_browser(self, authed, signed_in):
         """Anonymous is the choice for people who cannot complete consent."""
-        assert connection_step_for(
-            DOWNLOAD_MODE_ANONYMOUS, rclone_authed=authed, signed_in=signed_in) == ""
+        assert connection_step_for(DOWNLOAD_MODE_ANONYMOUS, rclone_authed=authed,
+                                   signed_in=signed_in, byoc_configured=False) == ""

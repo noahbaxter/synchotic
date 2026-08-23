@@ -70,15 +70,23 @@ def change_download_mode(user_settings, sync=None) -> str | None:
     return chosen
 
 
-def connection_step_for(mode: str, *, rclone_authed: bool, signed_in: bool) -> str:
+def connection_step_for(mode: str, *, rclone_authed: bool, signed_in: bool,
+                        byoc_configured: bool) -> str:
     """What still needs connecting after picking `mode`.
 
-    Returns "rclone", "signin", or "" for nothing to do. Callers run the step
-    immediately rather than at download time, so a setup that cannot work fails
-    in front of the user instead of halfway through a sync.
+    Returns "rclone", "signin", "byoc_setup", or "" for nothing to do. Callers
+    run the step immediately rather than at download time, so a setup that
+    cannot work fails in front of the user instead of halfway through a sync.
+
+    BYOC without credentials must never reach sign-in: it would fall back to the
+    embedded client, which is the blocked one, while also disabling the rclone
+    tier that would have rescued the download.
     """
     if mode == DOWNLOAD_MODE_RCLONE and not rclone_authed:
         return "rclone"
-    if mode == DOWNLOAD_MODE_BYOC and not signed_in:
-        return "signin"
+    if mode == DOWNLOAD_MODE_BYOC:
+        if not byoc_configured:
+            return "byoc_setup"
+        if not signed_in:
+            return "signin"
     return ""
