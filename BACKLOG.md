@@ -4,7 +4,7 @@
 
 - [ ] [perf] rclone tier downloads one file at a time *(2026-08-23)*
   - `rclone/downloader.py download()` submits one `copyid_async` then blocks on `_await_job` before the next. Tiers 1-3 run 24 workers (`sync/downloader.py:72`). No `--transfers` is set anywhere either.
-  - `RCLONE_WRAP_DESIGN.md:35` claims tier 4 is "~4-16 concurrent transfers". It is not. Fix the doc either way.
+  - `docs/downloads.md` records the tier table and states tier 4 is sequential. Update it with real numbers once measured.
   - **Measure before fixing.** `RCLONE_SMOKE_CHECKLIST.md` section 4 was never run. Do one Rock Band sync, compare wall-clock to the OAuth path. If a single stream already saturates the link, sequential costs nothing and this is a doc fix only.
   - If the gap is real: hold N jobs in flight (`copyid_async` already returns a job id) and poll together. Then re-run the tier-4 trust invariant, because concurrent jobs share the temp dir that `_reconcile` diffs.
   - Not a correctness issue. Files arrive intact, verified byte-identical. Slow beats blocked.
@@ -19,6 +19,22 @@
   - v1.5 pins the submodule to a branch off `3f37d1e`, deliberately, to keep 3 unrelated chotic-ui commits (FilterList sizing, Tab MenuResult, FilterList section headers) out of a release whose TUI was untested.
   - After v1.5 ships: merge the fix into chotic-ui `main`, then bump the submodule to pick up the other three.
   - stemchotic is the other consumer. It sets no `MenuItem.description` and uses short subtitles, so it is unaffected either way.
+
+- [ ] [bug] stale markers are never deleted, so updated packs leak charts *(2026-08-23)*
+  - `markers.py` defines `delete_marker` (192), `delete_markers_for_archive` (278) and `delete_failed_markers_for_archive` (391). **None of the three is called anywhere in `src/`.**
+  - Markers key on `(archive_path, md5)`. When a pack updates, `downloader.py:419` writes a marker for the new md5 and the old one stays forever. Purge treats every marker's file list as protected, so charts the updated pack renamed or dropped are never reclaimed.
+  - Fails safe (keeps files rather than deleting them) and predates v1.5, so not a release blocker.
+  - Purge-adjacent, so per the repo instructions this needs manual verification, not just unit tests.
+
+- [ ] [ux] failed charts vanish from the count with no explanation *(2026-08-23)*
+  - `status.py:147` continues before `total_charts += 1`, so a permanently failed archive leaves both the numerator and the denominator. The sync reads a clean 100% while the charts are simply absent.
+  - `download_planner.py:139` correctly skips them, so nothing loops. This is purely "the user is never told".
+  - `MainMenuCache` has no failed field, so this is nearer 30-40 lines than the 15 estimated earlier. Count via `get_all_failed_markers()`, add a cache field, render it in the home status line.
+
+- [ ] [cleanup] delete the dead SyncState path *(2026-08-23)*
+  - `src/sync/state.py` is 420 lines and nothing in `src/` imports it.
+  - `markers.py:530-615 migrate_sync_state_to_markers` is likewise only ever called from `tests/test_markers.py`. The whole SyncState to markers migration is already unreachable in production, so a v1.2-era upgrade gets no migration today either way. Deleting it changes no behavior.
+  - Roughly 500 lines plus the tests that exist only to cover it.
 
 - [ ] [feature] Beta launcher channel *(2026-03-26, prompted by Treebear scan perf discussion)*
   - Rename dev launcher to "beta" for user-facing opt-in testing
@@ -39,7 +55,7 @@
   - **Rejected, CASA Tier 2 ($540/yr):** buys only what rclone gives for free. Revisit if there's ever revenue.
   - **Rejected, service account:** key would ship inside a desktop app, public on day one.
   - **Parked, new OAuth app to reset the cap:** this is cap evasion and Google enforces at project-owner level, so the downside is the existing app and account getting flagged, not just a denial. Weigh against 100 more users before trying.
-  - **Full status, measurement data, and implementation plans: see [OAUTH_PLAN.md](OAUTH_PLAN.md)**
+  - **Measurements, the four tiers, and every rejected option: see [docs/downloads.md](docs/downloads.md)**
   - Workaround live: `legacy-rclone` branch (commit `1435ab9`). README has a callout pointing blocked users there.
 
 ## Active Bugs

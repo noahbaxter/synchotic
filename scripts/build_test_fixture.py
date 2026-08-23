@@ -2,7 +2,7 @@
 """Resolve the pinned fixture IDs against Drive and fill in md5/modified/size.
 
 Metadata only, no file bytes. Run when a pinned ID goes stale.
-See AUTH_TEST_HARNESS_DESIGN.md.
+See docs/downloads.md for the tier model.
 """
 
 import argparse
