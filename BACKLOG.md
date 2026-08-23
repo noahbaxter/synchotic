@@ -36,6 +36,13 @@
   - `markers.py:530-615 migrate_sync_state_to_markers` is likewise only ever called from `tests/test_markers.py`. The whole SyncState to markers migration is already unreachable in production, so a v1.2-era upgrade gets no migration today either way. Deleting it changes no behavior.
   - Roughly 500 lines plus the tests that exist only to cover it.
 
+- [ ] [bug] redirecting output on Windows crashes the TUI *(2026-08-23)*
+  - `menu.py _render` writes the frame to `sys.__stdout__`. Against a real console Python routes through WriteConsoleW and any Unicode works, but a redirect (`synchotic.exe > out.txt`) hands it a cp1252 pipe and the rounded box characters raise `UnicodeEncodeError`.
+  - **Pre-existing, not a regression.** Identical code in v1.4 at `277df5c:src/ui/widgets/menu.py:524`.
+  - The launcher is unaffected: `launcher.py:701` uses `subprocess.run(args, env=env)` with no `stdout=`, so the app inherits the console handle rather than a pipe.
+  - Surfaced by CI when the new render test ran on Windows for the first time. The test now renders into a StringIO, so it no longer depends on console encoding.
+  - Fix would be to reconfigure to utf-8 with `errors="replace"` when stdout is not a tty.
+
 - [ ] [feature] Beta launcher channel *(2026-03-26, prompted by Treebear scan perf discussion)*
   - Rename dev launcher to "beta" for user-facing opt-in testing
   - New `release-launcher-beta.yml`, `RELEASE_TAG = "beta-latest"`, binaries `synchotic-launcher-beta`
