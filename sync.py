@@ -562,6 +562,51 @@ class SyncApp:
 
         wait_with_skip(2)
 
+    def handle_download_mode(self):
+        """Change how blocked charts download, then connect straight away.
+
+        Connecting here rather than at download time means a mode that cannot
+        work says so now, instead of stalling for consent mid-sync.
+        """
+        from src.ui.screens import change_download_mode, connection_step_for
+
+        chosen = change_download_mode(self.user_settings, self.sync)
+        if not chosen:
+            return
+
+        try:
+            import src.rclone as rclone
+            rclone_authed = rclone.is_authed()
+        except Exception:
+            rclone_authed = False
+
+        step = connection_step_for(
+            chosen, rclone_authed=rclone_authed,
+            signed_in=bool(self.auth and self.auth.is_signed_in),
+        )
+        if step == "rclone":
+            self._connect_rclone()
+        elif step == "signin":
+            self.handle_signin()
+
+    def _connect_rclone(self):
+        """Run the one-time rclone consent now."""
+        import src.rclone as rclone
+
+        if not rclone.can_open_browser():
+            display.rclone_no_browser()
+            wait_with_skip(3)
+            return
+        try:
+            display.rclone_consent_explainer()
+            if rclone.RcloneSession().ensure_authed():
+                print("  rclone connected.")
+            else:
+                print("  Setup cancelled. Large charts stay blocked until rclone connects.")
+        except Exception as e:
+            print(f"  rclone setup failed: {e}")
+        wait_with_skip(3)
+
     def handle_signout(self):
         """Handle Google sign-out."""
         self.auth.sign_out()
@@ -1122,6 +1167,10 @@ class SyncApp:
             elif action == "signout":
                 self.handle_signout()
                 # No cache invalidation needed - just auth state changed
+
+            elif action == "download_mode":
+                self.handle_download_mode()
+                # No cache invalidation needed - only the download tier changed
 
             elif action == "add_custom":
                 if self.handle_add_custom_folder():

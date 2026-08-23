@@ -53,3 +53,32 @@ def choose_download_mode(current: str = "") -> str | None:
 
     result = menu.run(initial_index=initial)
     return result.value if result else None
+
+
+def change_download_mode(user_settings, sync=None) -> str | None:
+    """Re-open the chooser later on, persist the pick, apply it to a live sync.
+
+    Returns the chosen mode, or None if the user backed out.
+    """
+    chosen = choose_download_mode(current=user_settings.download_mode)
+    if not chosen:
+        return None
+    user_settings.download_mode = chosen
+    user_settings.save()
+    if sync is not None:
+        sync.download_mode = chosen
+    return chosen
+
+
+def connection_step_for(mode: str, *, rclone_authed: bool, signed_in: bool) -> str:
+    """What still needs connecting after picking `mode`.
+
+    Returns "rclone", "signin", or "" for nothing to do. Callers run the step
+    immediately rather than at download time, so a setup that cannot work fails
+    in front of the user instead of halfway through a sync.
+    """
+    if mode == DOWNLOAD_MODE_RCLONE and not rclone_authed:
+        return "rclone"
+    if mode == DOWNLOAD_MODE_BYOC and not signed_in:
+        return "signin"
+    return ""

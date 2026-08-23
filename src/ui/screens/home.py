@@ -817,12 +817,21 @@ def show_main_menu(
     except Exception:
         rclone_connected = False
 
-    downloads_line = "Downloads: anonymous + rclone"
-    if rclone_connected:
-        downloads_line += " (rclone connected)"
+    from src.config.settings import (DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC,
+                                     DOWNLOAD_MODE_RCLONE)
+    mode = (user_settings.download_mode if user_settings else "") or DOWNLOAD_MODE_RCLONE
+    mode_names = {
+        DOWNLOAD_MODE_RCLONE: "rclone",
+        DOWNLOAD_MODE_BYOC: "your own Google credentials",
+        DOWNLOAD_MODE_ANONYMOUS: "no sign-in (most charts skipped)",
+    }
+    downloads_line = f"Downloads: {mode_names.get(mode, mode)}"
+    if mode == DOWNLOAD_MODE_RCLONE and not rclone_connected:
+        downloads_line += " (not connected yet)"
     if auth and auth.is_signed_in:
         downloads_line += " + account sign-in"
-    menu.add_item(MenuItem(f"  {downloads_line}", value=("noop", None), description="", disabled=True, locked=True))
+    menu.add_item(MenuItem(f"  {downloads_line}", hotkey="D", value=("download_mode", None),
+                           description="Change how large charts download"))
 
     if auth and auth.is_signed_in:
         email = auth.user_email
