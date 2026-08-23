@@ -53,3 +53,34 @@ def find_unexpected_files_with_sizes(folder_path: Path, expected_paths: Set[Path
         except Exception:
             result.append((f, 0))
     return result
+
+
+def open_folder(path) -> bool:
+    """Show a folder in the OS file manager. Returns False if that isn't possible.
+
+    Best effort by design: a headless box has nothing to open, and the caller
+    always prints the path as well, so failing here is not an error.
+    """
+    import os
+    import subprocess
+    import sys
+    from pathlib import Path
+
+    path = Path(path)
+    if not path.is_dir():
+        return False
+    if sys.platform == "darwin":
+        cmd = ["open", str(path)]
+    elif sys.platform == "win32":
+        cmd = ["explorer", str(path)]
+    else:
+        if not (os.environ.get("DISPLAY") or os.environ.get("WAYLAND_DISPLAY")):
+            return False
+        cmd = ["xdg-open", str(path)]
+    try:
+        # explorer.exe returns 1 even when it succeeds, so the exit code is not
+        # a usable signal on any platform here.
+        subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return True
+    except Exception:
+        return False

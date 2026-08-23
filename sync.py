@@ -592,8 +592,22 @@ class SyncApp:
         elif step == "signin":
             self.handle_signin()
         elif step == "byoc_setup":
-            display.byoc_not_configured()
-            wait_with_skip(5)
+            self._start_byoc_setup()
+
+    def _start_byoc_setup(self):
+        """Put the instructions where the credentials go, then open that folder."""
+        from src.core.files import open_folder
+        from src.drive.auth import write_byoc_instructions
+
+        path = None
+        opened = False
+        try:
+            path = write_byoc_instructions()
+            opened = open_folder(path.parent)
+        except OSError as e:
+            debug_log(f"BYOC_SETUP | could not write instructions | {e}")
+        display.byoc_not_configured(instructions_path=path, opened=opened)
+        wait_with_skip(8)
 
     def _connect_rclone(self):
         """Run the one-time rclone consent now."""
