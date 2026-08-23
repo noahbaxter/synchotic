@@ -4,8 +4,50 @@ Logging utilities for DM Chart Sync.
 
 import re
 import sys
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
+
+# Logs are one append-only file per day and nothing ever removed them, so a
+# long-lived install grows without bound. Real measurement: 37 MB across 6 days,
+# with a single sync day at 21 MB.
+LOG_RETENTION_DAYS = 14
+
+# Only ever consider files this module itself creates. Anything else a user has
+# put in the log directory is not ours to delete.
+_LOG_NAME = re.compile(r"^(\d{4})-(\d{2})-(\d{2})\.log$")
+
+
+def prune_old_logs(logs_dir: Path, keep_days: int = LOG_RETENTION_DAYS,
+                   today: date = None) -> int:
+    """Delete daily logs older than keep_days. Returns how many were removed.
+
+    Dates come from the filename, not mtime: the name is the authoritative day,
+    and copying a log directory around rewrites mtimes.
+    """
+    today = today or date.today()
+    removed = 0
+    try:
+        entries = list(logs_dir.iterdir())
+    except OSError:
+        return 0
+    for entry in entries:
+        m = _LOG_NAME.match(entry.name)
+        if not m:
+            continue
+        try:
+            stamp = date(int(m.group(1)), int(m.group(2)), int(m.group(3)))
+        except ValueError:
+            continue  # e.g. 2026-13-45.log, not a real day, leave it alone
+        if stamp >= today:
+            continue  # today's file is about to be opened for append
+        if (today - stamp).days < keep_days:
+            continue
+        try:
+            entry.unlink()
+            removed += 1
+        except OSError:
+            pass
+    return removed
 
 
 class TeeOutput:

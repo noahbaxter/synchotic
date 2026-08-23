@@ -61,7 +61,7 @@ from src.sync import FolderStatsCache, BackgroundScanner
 from src.ui.primitives import clear_screen, wait_with_skip
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
-from src.core.logging import TeeOutput, debug_log
+from src.core.logging import TeeOutput, debug_log, prune_old_logs
 from src.drive.client import DriveClientConfig
 
 # ============================================================================
@@ -1207,6 +1207,7 @@ def main():
     # Always log to .dm-sync/logs/YYYY-MM-DD.log
     logs_dir = get_data_dir() / "logs"
     logs_dir.mkdir(exist_ok=True)
+    prune_old_logs(logs_dir)
     log_path = logs_dir / f"{datetime.now().strftime('%Y-%m-%d')}.log"
     # Read version for log header
     version = None
