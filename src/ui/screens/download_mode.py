@@ -19,6 +19,7 @@ def choose_download_mode(current: str = "") -> str | None:
                  "all charts are affected, so this choice decides how much of the "
                  "library you can actually get.",
         esc_label="Decide later",
+        detail_pane=True,
     )
 
     menu.add_item(MenuItem(
