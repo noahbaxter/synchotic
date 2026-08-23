@@ -29,6 +29,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Stamp version
         if: inputs.version_suffix != ''
@@ -75,6 +77,8 @@ jobs:
             --add-binary "libs/bin/unrar:." \
             --hidden-import certifi \
             --hidden-import rarfile \
+            --paths vendor/chotic-ui \
+            --collect-submodules chotic_ui \
             sync.py
 
       - name: Build app (Windows)
@@ -88,6 +92,8 @@ jobs:
             --add-binary "libs/bin/UnRAR.exe;." `
             --hidden-import certifi `
             --hidden-import rarfile `
+            --paths vendor/chotic-ui `
+            --collect-submodules chotic_ui `
             sync.py
         shell: pwsh
 

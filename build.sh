@@ -139,7 +139,9 @@ build_app() {
         --name "$APP_NAME" \
         --clean \
         --noconfirm \
-        sync.py 2>/dev/null
+        --paths vendor/chotic-ui \
+        --collect-submodules chotic_ui \
+        sync.py
 
     echo_info "Creating $ZIP_NAME..."
     cd dist
