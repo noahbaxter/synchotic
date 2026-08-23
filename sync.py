@@ -594,6 +594,20 @@ class SyncApp:
         elif step == "byoc_setup":
             self._start_byoc_setup()
 
+    def handle_open_data_folder(self):
+        """Show the data folder. Always print the path, since opening can fail."""
+        from src.core.files import open_folder
+        from src.core.paths import get_data_dir
+
+        data_dir = get_data_dir()
+        data_dir.mkdir(parents=True, exist_ok=True)
+        opened = open_folder(data_dir)
+        print()
+        print("  Opened your data folder:" if opened else "  Your data folder:")
+        print(f"    {data_dir}")
+        print()
+        wait_with_skip(4)
+
     def _start_byoc_setup(self):
         """Put the instructions where the credentials go, then open that folder."""
         from src.core.files import open_folder
@@ -1187,6 +1201,9 @@ class SyncApp:
             elif action == "signout":
                 self.handle_signout()
                 # No cache invalidation needed - just auth state changed
+
+            elif action == "open_data_folder":
+                self.handle_open_data_folder()
 
             elif action == "download_mode":
                 self.handle_download_mode()

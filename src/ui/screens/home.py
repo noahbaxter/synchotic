@@ -843,6 +843,9 @@ def show_main_menu(
     else:
         menu.add_item(MenuItem("  Sign in to Google", hotkey="G", value=("signin", None), description="Faster downloads with your own quota"))
 
+    menu.add_item(MenuItem("  Open data folder", hotkey="F", value=("open_data_folder", None),
+                           description="Settings, logs, credentials"))
+
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Quit", hotkey="ESC", value=("quit", None)))
 
