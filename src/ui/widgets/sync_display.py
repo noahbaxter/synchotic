@@ -107,6 +107,43 @@ def byoc_not_configured(instructions_path=None, opened: bool = False) -> None:
     print()
 
 
+def library_prompt(current) -> None:
+    print()
+    print("  Chart Library")
+    print()
+    print("  Charts currently live in:")
+    print(f"    {current}")
+    print()
+    print("  Enter a folder to use instead. Markers and staging live inside the")
+    print("  library, so moving the folder later takes its state with it.")
+    print()
+    print(f"  {_c.DIM}Press ESC to cancel{_c.RESET}")
+    print()
+
+
+def library_not_a_folder(path) -> None:
+    print(f"\n  Not a folder: {path}\n")
+
+
+def library_create_failed(path, err) -> None:
+    print(f"\n  Could not create {path}")
+    print(f"  {err}\n")
+
+
+def library_is_new(path) -> None:
+    print()
+    print("  Synchotic has not synced here before, so it looks empty.")
+    print("  The next sync will download everything again into this folder.")
+    print()
+
+
+def library_changed(path) -> None:
+    print()
+    print("  Chart library is now:")
+    print(f"    {path}")
+    print()
+
+
 def library_unavailable(path) -> None:
     """The configured library is not reachable, e.g. an unmounted volume."""
     print()

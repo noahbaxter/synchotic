@@ -580,8 +580,17 @@ class SyncApp:
             self.handle_signin()
         elif action == "signout":
             self.handle_signout()
+        elif action == "library":
+            self.handle_library()
         elif action == "open_data_folder":
             self.handle_open_data_folder()
+
+    def handle_library(self):
+        """Change where charts live, then re-read what is actually there."""
+        from src.ui.screens import show_library_screen
+        if show_library_screen(self.user_settings):
+            self.folder_stats_cache = {}
+        wait_with_skip(2)
 
     def handle_download_mode(self):
         """Change how blocked charts download, then connect straight away.
