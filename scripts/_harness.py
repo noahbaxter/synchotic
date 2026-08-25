@@ -77,12 +77,22 @@ def fixture_folder(spec: dict) -> dict:
     return {"name": spec["name"], "folder_id": spec["folder_id"], "files": files}
 
 
+# Both state dir names, spelled out rather than imported from src.core.paths.
+# This harness drives dev's checkout as well as a feature branch, and dev has no
+# LIBRARY_STATE_DIR_NAME to import. Same reason stub_rclone tolerates ImportError.
+DATA_DIR_NAME = ".dm-sync"
+LIBRARY_STATE_DIR_NAME = ".synchotic"
+STATE_DIR_NAMES = (DATA_DIR_NAME, LIBRARY_STATE_DIR_NAME)
+
+
 def snapshot_tree(base: Path) -> dict:
     """relpath -> {size, md5} for every chart file under base.
 
-    Skips the library state dir. Markers and ownership records live inside the
-    library now, and they are our bookkeeping, not the user's charts. Including
-    them makes every comparison fail on incidental differences.
+    Skips app state dirs. Markers, ownership records and download staging sit
+    inside the library on branches that moved them, and they are our
+    bookkeeping, not the user's charts. Including them makes every comparison
+    fail on incidental differences, and makes in-flight staging look like a
+    chart that one side downloaded and the other did not.
     """
     out = {}
     if not base.exists():
@@ -91,21 +101,29 @@ def snapshot_tree(base: Path) -> dict:
         if not path.is_file():
             continue
         rel = path.relative_to(base).as_posix()
-        if rel == ".dm-sync" or rel.startswith(".dm-sync/"):
+        if rel.split("/")[0] in STATE_DIR_NAMES:
             continue
         out[rel] = {"size": path.stat().st_size, "md5": file_md5(path)}
     return out
 
 
-def snapshot_markers(data_dir: Path) -> dict:
-    """Marker filename -> md5 of contents. Markers are the purge source of truth."""
-    markers = data_dir / "markers"
+def snapshot_markers(data_dir: Path, library: Path | None = None) -> dict:
+    """Marker filename -> md5 of contents. Markers are the purge source of truth.
+
+    Looks in both homes. Markers live in the machine data dir on dev and inside
+    the library on branches that moved them, so checking only one place reports
+    zero markers for one side and makes the comparison vacuous.
+    """
     out = {}
-    if not markers.exists():
-        return out
-    for path in sorted(markers.rglob("*")):
-        if path.is_file():
-            out[path.relative_to(markers).as_posix()] = file_md5(path)
+    roots = [data_dir / "markers"]
+    if library is not None:
+        roots.append(library / LIBRARY_STATE_DIR_NAME / "markers")
+    for markers in roots:
+        if not markers.exists():
+            continue
+        for path in sorted(markers.rglob("*")):
+            if path.is_file():
+                out[path.relative_to(markers).as_posix()] = file_md5(path)
     return out
 
 

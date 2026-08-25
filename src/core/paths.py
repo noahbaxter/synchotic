@@ -243,6 +243,11 @@ def cleanup_tmp_dir():
             pass
 
 
+def _is_marker_name(name: str) -> bool:
+    """A real marker, not a macOS AppleDouble sidecar sitting beside one."""
+    return name.endswith(".json") and not name.startswith("._")
+
+
 def migrate_legacy_files() -> list[str]:
     """
     Migrate files from old locations and clean up obsolete files.
@@ -284,25 +289,53 @@ def migrate_legacy_files() -> list[str]:
     # Markers moved from the machine data dir into the library, so they travel
     # with the charts they describe. Without this move a v1.4 user loses every
     # marker and the next sync re-downloads everything.
+    #
+    # Every decision here is per marker, never "has the migration run yet". A
+    # library on another volume makes each move a cross-device copy-then-delete,
+    # so a run over thousands of markers can be interrupted part way. Keying the
+    # work off whether the destination directory is empty would strand whatever
+    # had not moved yet: the next launch would see a non-empty destination and
+    # skip the rest forever. A stranded marker is not a cosmetic loss. Purge
+    # treats files that no marker claims as extras, so the charts it described
+    # get deleted on the next sync.
     legacy_markers = data_dir / "markers"
-    new_markers = get_library_state_dir() / "markers"
-    new_markers.mkdir(parents=True, exist_ok=True)
-    if legacy_markers.is_dir() and any(legacy_markers.iterdir()) and not any(new_markers.iterdir()):
-        moved = 0
+    if library_is_available() and legacy_markers.is_dir():
+        new_markers = get_library_state_dir() / "markers"
+        new_markers.mkdir(parents=True, exist_ok=True)
+        moved = failed = 0
         for marker in legacy_markers.iterdir():
             if not marker.is_file():
                 continue
+            dest = new_markers / marker.name
+            if dest.exists():
+                # A resumed run already moved this one. Marker filenames carry
+                # the archive path and md5, so the same name is the same marker.
+                try:
+                    marker.unlink()
+                except OSError:
+                    failed += 1
+                continue
             try:
-                shutil.move(str(marker), str(new_markers / marker.name))
-                moved += 1
+                shutil.move(str(marker), str(dest))
+                # Count real markers only. macOS writes ._ AppleDouble sidecars
+                # next to every file on SMB shares, and they are worth draining
+                # with the rest but not worth reporting as migrated markers.
+                if _is_marker_name(marker.name):
+                    moved += 1
             except Exception:
-                pass
+                failed += 1
         if moved:
             migrated.append(f"moved {moved} markers into the library")
-            try:
-                legacy_markers.rmdir()
-            except OSError:
-                pass
+        if failed:
+            # Never silent. Reporting a short count beats claiming success while
+            # the charts those markers described are queued for deletion.
+            migrated.append(
+                f"{failed} marker(s) could not be moved, retrying on next launch"
+            )
+        try:
+            legacy_markers.rmdir()
+        except OSError:
+            pass
 
     # =========================================================================
     # OBSOLETE FILES: Delete files we no longer use

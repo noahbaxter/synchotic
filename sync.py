@@ -1304,6 +1304,20 @@ def main():
     from src.core.paths import set_library_path as _set_library_path
     _set_library_path(_EarlySettings.load(_early_settings_path()).library_path or None)
 
+    # An unreachable library has to stop startup right here. Every path helper
+    # below raises once the library is gone, and mkdir on an absent mountpoint
+    # would quietly build an empty library that the next sync fills and the
+    # remount then hides. Offer a retry so plugging the drive in is enough.
+    from src.core.paths import get_library_path as _get_library_path
+    from src.core.paths import library_is_available as _library_is_available
+    while not _library_is_available():
+        display.library_unavailable(_get_library_path())
+        if not sys.stdin.isatty():
+            sys.exit(1)
+        from src.ui.widgets.confirm import ConfirmDialog
+        if not ConfirmDialog("Retry?", "Connect the drive, then choose Yes.").run():
+            sys.exit(1)
+
     # Migrate legacy files from old locations to .dm-sync/
     # Must run BEFORE creating SyncApp so paths resolve correctly
     migrated = migrate_legacy_files()

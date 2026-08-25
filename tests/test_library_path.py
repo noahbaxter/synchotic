@@ -99,17 +99,143 @@ class TestMigration:
         assert moved == {"abc123.json", "def456.json"}
 
     def test_migration_does_not_clobber_existing_library_markers(self, tmp_path):
+        """Keep the library's copy, but still move everything else.
+
+        The earlier version of this test asserted that `old.json` stayed put,
+        which is what the old destination-is-empty guard did. That guard was the
+        bug: one marker in the destination stranded every other marker forever.
+        """
         from src.sync.markers import get_markers_dir
         new = get_markers_dir()
-        (new / "already.json").write_text("{}")
+        (new / "already.json").write_text('{"keep": "library copy"}')
 
         legacy = paths.get_data_dir() / "markers"
         legacy.mkdir(parents=True, exist_ok=True)
+        (legacy / "already.json").write_text('{"stale": "data dir copy"}')
         (legacy / "old.json").write_text("{}")
 
         paths.migrate_legacy_files()
-        assert (new / "already.json").exists()
-        assert (legacy / "old.json").exists()  # left alone, not merged blindly
+
+        assert (new / "already.json").read_text() == '{"keep": "library copy"}'
+        assert (new / "old.json").exists(), "unrelated marker was stranded"
+
+    def test_an_interrupted_migration_resumes(self, tmp_path):
+        """The failure that deletes charts.
+
+        A library on another volume makes every move a cross-device copy, so a
+        run over thousands of markers can die part way. If the next launch skips
+        the remainder, those markers are gone for good, and purge deletes the
+        charts they described because nothing claims those files any more.
+        """
+        from src.sync.markers import get_markers_dir
+        legacy = paths.get_data_dir() / "markers"
+        legacy.mkdir(parents=True, exist_ok=True)
+        for i in range(5):
+            (legacy / f"m{i}.json").write_text('{"files": []}')
+
+        # Interrupted after one of five.
+        new = get_markers_dir()
+        (new / "m0.json").write_text('{"files": []}')
+        (legacy / "m0.json").unlink()
+
+        paths.migrate_legacy_files()
+
+        assert {p.name for p in new.iterdir()} == {f"m{i}.json" for i in range(5)}
+        assert not legacy.exists(), "legacy dir should be gone once drained"
+
+    def test_every_marker_arrives(self, tmp_path):
+        """Count in equals count out. Silent partial loss is the whole risk."""
+        from src.sync.markers import get_markers_dir
+        legacy = paths.get_data_dir() / "markers"
+        legacy.mkdir(parents=True, exist_ok=True)
+        for i in range(250):
+            (legacy / f"m{i}.json").write_text('{"files": []}')
+
+        paths.migrate_legacy_files()
+        assert len(list(get_markers_dir().iterdir())) == 250
+
+    def test_sidecars_are_drained_but_not_counted(self, tmp_path):
+        """macOS writes ._ files beside every file on an SMB share.
+
+        Measured on a real 2,720 marker library: the raw file count reported
+        2,850 moved. Draining them is right, counting them as markers is not.
+        """
+        from src.sync.markers import get_markers_dir
+        legacy = paths.get_data_dir() / "markers"
+        legacy.mkdir(parents=True, exist_ok=True)
+        for i in range(3):
+            (legacy / f"m{i}.json").write_text('{"files": []}')
+            (legacy / f"._m{i}.json").write_bytes(b"\x00\x05\x16\x07")
+
+        notes = paths.migrate_legacy_files()
+
+        assert any("moved 3 markers" in n for n in notes), notes
+        assert not legacy.exists(), "sidecars should still be drained"
+        assert len([p for p in get_markers_dir().iterdir()
+                    if not p.name.startswith("._")]) == 3
+
+    def test_a_marker_it_cannot_move_is_reported(self, tmp_path, monkeypatch):
+        """Never claim success while markers are still stuck."""
+        import shutil as _shutil
+        legacy = paths.get_data_dir() / "markers"
+        legacy.mkdir(parents=True, exist_ok=True)
+        (legacy / "stuck.json").write_text("{}")
+
+        def refuse(src, dst):
+            raise OSError("device not ready")
+        monkeypatch.setattr(_shutil, "move", refuse)
+
+        notes = paths.migrate_legacy_files()
+        assert any("could not be moved" in n for n in notes), notes
+        assert (legacy / "stuck.json").exists(), "marker must survive to retry"
+
+    def test_an_unavailable_library_is_skipped_not_raised(self, tmp_path):
+        """Startup calls this before it can show anything. It must not throw."""
+        legacy = paths.get_data_dir() / "markers"
+        legacy.mkdir(parents=True, exist_ok=True)
+        (legacy / "m.json").write_text("{}")
+
+        paths.set_library_path(tmp_path / "not-mounted")
+        paths.migrate_legacy_files()  # must not raise
+
+        assert (legacy / "m.json").exists(), "markers must wait for the drive"
+        assert not (tmp_path / "not-mounted").exists()
+
+
+class TestSidecarsInTheMarkersDir:
+    """A library on an SMB share collects ._ AppleDouble files beside markers.
+
+    Found on a real 2,720 marker library: get_marked_drive_names raised
+    UnicodeDecodeError on the first sidecar. The handlers caught JSONDecodeError
+    and OSError, and UnicodeDecodeError is neither, so the ownership check and
+    the purge source of truth both died on a file that is not a marker at all.
+    """
+
+    def _with_sidecars(self):
+        from src.sync.markers import get_markers_dir
+        d = get_markers_dir()
+        (d / "real.json").write_text(
+            '{"archive_path": "Guitar Hero/pack.7z", "files": {"Guitar Hero/a/song.ini": 1}}'
+        )
+        (d / "._real.json").write_bytes(bytes([0x00, 0x05, 0x16, 0x07, 0xb0, 0xfe]))
+        return d
+
+    def test_drive_names_ignore_sidecars(self):
+        from src.sync.markers import get_marked_drive_names
+        self._with_sidecars()
+        assert get_marked_drive_names() == {"Guitar Hero"}
+
+    def test_purge_source_of_truth_survives_them(self):
+        """If this raises, purge planning dies. If it silently drops the real
+        marker, purge deletes the charts that marker protects."""
+        from src.sync.markers import get_all_marker_files
+        self._with_sidecars()
+        assert get_all_marker_files() == {"Guitar Hero/a/song.ini"}
+
+    def test_ownership_still_adopts_the_library(self):
+        from src.sync import ownership
+        self._with_sidecars()
+        assert ownership.is_library_adopted() is True
 
 
 class TestUnmountedLibrary:
