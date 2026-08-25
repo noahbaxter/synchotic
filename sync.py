@@ -558,9 +558,30 @@ class SyncApp:
             # Recreate sync with new token
             self._refresh_sync_token()
         else:
-            print("  Sign-in cancelled or failed.")
+            # Do not keep pointing at sign-in once it has already failed.
+            display.sign_in_failed_notice()
 
         wait_with_skip(2)
+
+    def handle_account(self):
+        """Account & Downloads. Owns no logic, just routes to the old handlers."""
+        from src.ui.screens import show_account_screen
+        rclone_connected = False
+        try:
+            import src.rclone as rclone
+            rclone_connected = rclone.is_authed()
+        except Exception:
+            pass
+
+        action = show_account_screen(self.user_settings, self.auth, rclone_connected)
+        if action == "download_mode":
+            self.handle_download_mode()
+        elif action == "signin":
+            self.handle_signin()
+        elif action == "signout":
+            self.handle_signout()
+        elif action == "open_data_folder":
+            self.handle_open_data_folder()
 
     def handle_download_mode(self):
         """Change how blocked charts download, then connect straight away.
@@ -1084,7 +1105,22 @@ class SyncApp:
         print_header()
 
         # First-run OAuth prompt (only shown once)
-        if not self.user_settings.oauth_prompted and self.auth.is_available:
+        #
+        # Gated on the user owning an OAuth client. Sign-in resolves its client
+        # from credentials.json and falls back to the embedded one, which is the
+        # capped app: its 100-user limit is full and verification was rejected,
+        # so for anyone new that sign-in cannot succeed. Offering it anyway is
+        # what made picking BYOC lead straight into a Synchotic sign-in that was
+        # guaranteed to fail. has_custom_client_config exists for this check.
+        #
+        # oauth_prompted is only set when the prompt actually ran, so a user who
+        # sets up BYOC later still gets asked once, at the point it can work.
+        from src.drive.auth import has_custom_client_config
+
+        if (not self.user_settings.oauth_prompted
+                and self.auth.is_available
+                and not self.auth.is_signed_in
+                and has_custom_client_config()):
             self.user_settings.oauth_prompted = True
             self.user_settings.save()
 
@@ -1163,6 +1199,12 @@ class SyncApp:
                         menu_cache = result  # Pre-computed during sync
                     else:
                         menu_cache = None  # Cancelled or no-op, recompute normally
+                    # The sync is where a dead grant surfaces, and the menu row
+                    # alone does not explain a sign-in that keeps dying weekly.
+                    if self.auth and self.auth.session_expired:
+                        display.session_expired_notice()
+                        from src.ui.primitives import wait_with_skip
+                        wait_with_skip(4.0)
 
             elif action == "configure":
                 # Enter on a drive - go directly to configure that drive
@@ -1193,6 +1235,9 @@ class SyncApp:
                 self._handle_force_rescan()
                 menu_cache = None
 
+
+            elif action == "account":
+                self.handle_account()
 
             elif action == "signin":
                 self.handle_signin()

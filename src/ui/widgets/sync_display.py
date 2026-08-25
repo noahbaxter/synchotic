@@ -39,24 +39,20 @@ def error_no_local_manifest():
 
 def auth_prompt():
     print()
-    print("  Sign in to Google for faster downloads?")
+    print("  Sign in with your Google credentials?")
     print()
-    print("  Signing in gives you your own download quota,")
-    print("  which means fewer rate limits and faster syncs.")
+    print("  Downloads require read-only access.")
+    print("  Privacy: https://noahbaxter.dev/synchotic/privacy.html")
     print()
-    print("  Your Google account is only used to download files.")
-    print("  We never upload, modify, or access anything else.")
-    print()
-    print("  Privacy policy: https://noahbaxter.dev/synchotic/privacy.html")
-    print()
-    print("  [Y] Sign in (recommended)")
-    print("  [N] Skip for now")
+    print("  [Y] Sign in    [N] Not now")
     print()
 
+
 def auth_opening_browser():
-    print("\n  Opening browser for Google sign-in...")
-    print("  (If browser doesn't open, check your terminal)")
+    print("\n  Opening your browser to sign in.")
+    print("  If nothing opens, go to the URL printed below.")
     print()
+
 
 def auth_required_custom_folders():
     print("\n  Please sign in to Google first to add custom folders.")
@@ -68,9 +64,26 @@ def auth_required_scan():
 
 def auth_expired_warning(failure_count: int):
     print()
-    print(f"  {failure_count} files failed - your sign-in may have expired.")
-    print("  Try signing out and back in, then sync again.")
+    print(f"  {failure_count} files failed: your Google sign-in expired.")
+    print("  Sign back in to fix these.")
     print()
+
+
+def session_expired_notice() -> None:
+    """The saved sign-in stopped working. Try the obvious fix first."""
+    print()
+    print("  Your Google sign-in expired.")
+    print("  Sign in again from Account, then re-sync.")
+    print()
+
+
+def sign_in_failed_notice() -> None:
+    """Sign-in was attempted and did not work, so stop suggesting it."""
+    print()
+    print("  Couldn't sign you back in.")
+    print("  Switch to another download method (rclone or BYOC) from Account.")
+    print()
+
 
 def rclone_consent_explainer() -> None:
     """Explain the one-time rclone consent before opening the browser."""
@@ -82,26 +95,26 @@ def rclone_consent_explainer() -> None:
     print()
 
 def byoc_not_configured(instructions_path=None, opened: bool = False) -> None:
-    """Picked BYOC without a client to bring."""
+    """BYOC is selected but no credentials are in place."""
     print()
-    print("  This mode needs your own Google OAuth client, and none is set up yet.")
-    print("  Until one is, Synchotic falls back to its shared client, which new")
-    print("  accounts are blocked from, so large charts will not download.")
+    print("  This mode requires your own Google credentials, and none are set up.")
+    print("  Place your 'credentials.json' in:")
+    from ...core.paths import get_data_dir
+    print(f"    {get_data_dir()}")
     print()
-    if instructions_path:
-        folder = instructions_path.parent
-        if opened:
-            print("  Opened the folder your credentials go in:")
-        else:
-            print("  Your credentials go in:")
-        print(f"    {folder}")
-        print()
-        print(f"  Step-by-step instructions are in {instructions_path.name}, in that")
-        print("  folder. Takes about ten minutes, all of it in a browser.")
-    else:
-        print("  See docs/byoc.md for setup.")
+    print("  If you have trouble, instructions are available in that folder.")
+    print("  Want something simpler? Switch to rclone.")
     print()
-    print("  To get downloads working right now instead, choose rclone.")
+
+
+def library_unavailable(path) -> None:
+    """The configured library is not reachable, e.g. an unmounted volume."""
+    print()
+    print("  Library not found:")
+    print(f"    {path}")
+    print()
+    print("  If it lives on an external or network drive, connect it and retry.")
+    print("  Nothing has been scanned, downloaded or deleted.")
     print()
 
 

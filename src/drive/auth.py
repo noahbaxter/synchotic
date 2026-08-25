@@ -8,11 +8,14 @@ import sys
 from pathlib import Path
 from typing import Callable, Optional
 
+from ..core.logging import debug_log
+
 # OAuth imports are optional (only needed for admin script)
 try:
     from google.oauth2.credentials import Credentials
     from google.auth.transport.requests import Request
     from google_auth_oauthlib.flow import InstalledAppFlow
+    from google.auth.exceptions import RefreshError
     OAUTH_AVAILABLE = True
 except ImportError:
     OAUTH_AVAILABLE = False
@@ -106,7 +109,8 @@ class OAuthManager:
                 )
                 creds = flow.run_local_server(port=0)
             except Exception as e:
-                print(f"OAuth error: {e}")
+                debug_log(f"OAUTH | interactive flow failed | {e}")
+                print("  Sign-in failed. See .dm-sync/logs.")
                 return None
 
         # Save token for next time
@@ -227,6 +231,7 @@ class UserOAuthManager:
             token_path = get_token_path()
         self.token_path = token_path
         self._credentials: Optional[Credentials] = None
+        self._session_expired = False
 
     @property
     def is_available(self) -> bool:
@@ -245,8 +250,11 @@ class UserOAuthManager:
         # Try to load and validate token
         try:
             creds = Credentials.from_authorized_user_file(str(self.token_path))
-            # Valid if not expired, or if we can refresh
-            return creds.valid or (creds.expired and creds.refresh_token)
+            # bool(), not the bare `or`: the second arm evaluates to the refresh
+            # token itself, so this used to hand callers a live secret as their
+            # "yes". Every caller happens to use it in boolean context today,
+            # which is the only reason it never reached a log.
+            return bool(creds.valid or (creds.expired and creds.refresh_token))
         except Exception:
             return False
 
@@ -276,8 +284,19 @@ class UserOAuthManager:
             try:
                 creds.refresh(Request())
                 self._save_token(creds)
+                self._session_expired = False
+            except RefreshError:
+                # Google refused the grant itself: revoked, password changed, or
+                # a Testing-mode client whose refresh tokens die after 7 days.
+                # Keeping the file would leave is_signed_in answering yes with no
+                # token behind it, so the menu offers "Sign out" and never the
+                # sign-in that actually fixes it.
+                self._session_expired = True
+                self._discard_dead_token()
+                return None
             except Exception:
-                # Refresh failed - token is invalid
+                # Transport-level failure: offline, DNS, proxy. The grant may be
+                # perfectly good, so keep the token and try again next launch.
                 return None
 
         if creds and creds.valid:
@@ -323,7 +342,8 @@ class UserOAuthManager:
                 self._credentials = creds
                 return True
         except Exception as e:
-            print(f"  Sign-in error: {e}")
+            debug_log(f"OAUTH | sign_in failed | {e}")
+            print("  Sign-in failed. See .dm-sync/logs.")
 
         return False
 
@@ -358,6 +378,19 @@ class UserOAuthManager:
                 pass
 
         return None
+
+    @property
+    def session_expired(self) -> bool:
+        """True once Google has refused this token's refresh for good."""
+        return self._session_expired
+
+    def _discard_dead_token(self) -> None:
+        """Drop a token Google will never honour again."""
+        try:
+            self.token_path.unlink()
+        except OSError:
+            pass
+        self._credentials = None
 
     def _save_token(self, creds: Credentials):
         """Save credentials to token file."""
@@ -482,6 +515,12 @@ class AuthManager:
             True if sign-in successful
         """
         return self._user_oauth.sign_in()
+
+    @property
+    def session_expired(self) -> bool:
+        """The saved sign-in died and only a fresh sign-in will fix it."""
+        return self._user_oauth.session_expired
+
 
     def sign_out(self):
         """Sign out the current user."""

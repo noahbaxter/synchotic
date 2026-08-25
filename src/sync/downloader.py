@@ -685,7 +685,11 @@ class FileDownloader:
                 else:
                     progress.print_error_summary()
 
-        if auth_failures > 0 and len(rate_limited_ids) == 0:
+        # No rate-limit guard here. auth_failures already counts only 401/auth
+        # errors (needs_auth blocked files go to blocked_tasks instead), so the
+        # old `and not rate_limited` clause did nothing except hide the message
+        # on exactly the busy syncs where it matters most.
+        if auth_failures > 0:
             display.auth_expired_warning(auth_failures)
 
         bytes_downloaded = progress.downloaded_bytes if progress else 0
