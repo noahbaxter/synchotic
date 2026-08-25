@@ -61,10 +61,12 @@ def test_box_closes_at_every_width(monkeypatch, columns):
     )
 
 
+# Phrases must be short enough to survive word-wrap at 80 columns: the render
+# breaks lines, so anything spanning a wrap point can never match.
 @pytest.mark.parametrize("mode,phrase", [
-    (DOWNLOAD_MODE_RCLONE, "One Google consent click"),
-    (DOWNLOAD_MODE_BYOC, "Google Cloud project"),
-    (DOWNLOAD_MODE_ANONYMOUS, "Skips every blocked archive"),
+    (DOWNLOAD_MODE_RCLONE, "popular online storage sync tool"),
+    (DOWNLOAD_MODE_BYOC, "rclone rate limits annoying"),
+    (DOWNLOAD_MODE_ANONYMOUS, "many game rips"),
 ])
 def test_selected_mode_explains_itself(monkeypatch, mode, phrase):
     """The consequence of a choice must reach the screen, not just MenuItem data."""

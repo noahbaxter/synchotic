@@ -15,9 +15,9 @@ def choose_download_mode(current: str = "") -> str | None:
     """Show the chooser. Returns the selected mode, or None if the user escaped."""
     menu = Menu(
         title="How should Synchotic download large charts?",
-        subtitle="Google blocks direct download of large archives. Roughly half of "
-                 "all charts are affected, so this choice decides how much of the "
-                 "library you can actually get.",
+        subtitle="Google sometimes blocks anonymous direct downloads of popular "
+                 "files, so sign in if you want to make sure you aren't missing "
+                 "anything.",
         esc_label="Decide later",
         detail_pane=True,
     )
@@ -25,24 +25,23 @@ def choose_download_mode(current: str = "") -> str | None:
     menu.add_item(MenuItem(
         label="Use rclone  (recommended)",
         value=DOWNLOAD_MODE_RCLONE,
-        description="One Google consent click, then everything downloads. Uses "
-                    "rclone, an established open-source tool, so the consent screen "
-                    "says \"rclone\" rather than Synchotic. Fetches a one-time "
-                    "helper (~65 MB) the first time.",
+        description="rclone is a popular online storage sync tool and is the "
+                    "easiest way to use Synchotic. Note that rclone shares its API "
+                    "limits with all users and may be rate limited at popular times "
+                    "of the day.",
     ))
     menu.add_item(MenuItem(
-        label="Use your own Google credentials",
+        label="Bring Your Own Creds  (advanced)",
         value=DOWNLOAD_MODE_BYOC,
-        description="Same result as rclone and just as fast, with the consent "
-                    "screen showing your own project. Requires creating a Google "
-                    "Cloud project first, see docs/byoc.md.",
+        description="If you find rclone rate limits annoying, you can always set up "
+                    "your own private Google project. This takes about ten minutes "
+                    "to do but offers the best experience.",
     ))
     menu.add_item(MenuItem(
-        label="No sign-in  (limited, most charts will not download)",
+        label="No sign-in",
         value=DOWNLOAD_MODE_ANONYMOUS,
-        description="Skips every blocked archive. You will be missing a large part "
-                    "of every drive. Pick this only if you cannot open a browser, "
-                    "for example on a headless machine.",
+        description="No sign-in is required. Just be aware that many game rips will "
+                    "not allow anonymous users to download them.",
     ))
 
     initial = 0

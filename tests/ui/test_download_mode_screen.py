@@ -56,12 +56,14 @@ def test_embedded_oauth_is_not_offered(monkeypatch):
 
 
 def test_anonymous_warns_that_charts_will_be_missing(monkeypatch):
+    """It must not read as a free lunch. The cost is stated in the blurb rather
+    than the label, which now just names the option."""
     seen = _captured(monkeypatch, pick=2)
     assert choose_download_mode() == DOWNLOAD_MODE_ANONYMOUS
     anon = seen["menu"].items[2]
     blurb = f"{anon.label} {anon.description}".lower()
-    assert "not download" in blurb or "missing" in blurb
-    assert "limited" in blurb
+    assert "will" in blurb and "not allow" in blurb
+    assert "anonymous" in blurb
 
 
 def test_current_choice_is_preselected(monkeypatch):
