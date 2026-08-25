@@ -120,10 +120,12 @@ build_app() {
         echo_info "Building macOS app..."
         APP_NAME="synchotic-app"
         ZIP_NAME="app-macos.zip"
+        ICON="packaging/macos/Synchotic.icns"
     else
         echo_info "Building Windows app..."
         APP_NAME="synchotic-app"
         ZIP_NAME="app-windows.zip"
+        ICON="packaging/windows/synchotic.ico"
     fi
 
     rm -rf build dist/*.spec
@@ -141,6 +143,8 @@ build_app() {
         --noconfirm \
         --paths vendor/chotic-ui \
         --collect-submodules chotic_ui \
+        --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
+        --icon "$ICON" \
         sync.py
 
     echo_info "Creating $ZIP_NAME..."
@@ -202,9 +206,11 @@ build_launcher() {
     if [ "$PLATFORM" = "macos" ]; then
         echo_info "Building macOS launcher..."
         LAUNCHER_NAME="synchotic-launcher-macos"
+        ICON="packaging/macos/Synchotic.icns"
     else
         echo_info "Building Windows launcher..."
         LAUNCHER_NAME="synchotic-launcher"
+        ICON="packaging/windows/synchotic.ico"
     fi
 
     rm -rf build dist/*.spec
@@ -220,6 +226,7 @@ build_launcher() {
         --name "$LAUNCHER_NAME" \
         --clean \
         --noconfirm \
+        --icon "$ICON" \
         launcher.py 2>/dev/null
 
     if [ "$PLATFORM" = "windows" ]; then

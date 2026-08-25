@@ -71,7 +71,9 @@ jobs:
         run: |
           CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
           pyinstaller --onedir --name synchotic-app --clean --noconfirm \
+            --icon "packaging/macos/Synchotic.icns" \
             --add-data "drives.json:." \
+            --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
             --add-data "VERSION:." \
             --add-data "$CERTIFI_PATH:certifi" \
             --add-binary "libs/bin/unrar:." \
@@ -86,7 +88,9 @@ jobs:
         run: |
           $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
           pyinstaller --onedir --name synchotic-app --clean --noconfirm `
+            --icon "packaging/windows/synchotic.ico" `
             --add-data "drives.json;." `
+            --add-data "src/drive/byoc_setup_instructions.txt;src/drive" `
             --add-data "VERSION;." `
             --add-data "$CERTIFI_PATH;certifi" `
             --add-binary "libs/bin/UnRAR.exe;." `

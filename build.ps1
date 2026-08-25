@@ -55,6 +55,7 @@ if ($Mode -eq "Launcher") {
     Write-Info "Building launcher (onefile)..."
     Push-Location $BuildDir
     python -m PyInstaller --onefile --name $LauncherName --clean --noconfirm `
+        --icon "packaging\windows\synchotic.ico" `
         launcher.py
     Pop-Location
 
@@ -95,7 +96,9 @@ if ($Mode -eq "Launcher") {
     Write-Info "Building app (onedir)..."
     Push-Location $BuildDir
     python -m PyInstaller --onedir --name $AppName --clean --noconfirm `
+        --icon "packaging\windows\synchotic.ico" `
         --add-data "drives.json;." `
+        --add-data "src\drive\byoc_setup_instructions.txt;src\drive" `
         --add-data "VERSION;." `
         --add-data "$CertifiPath;certifi" `
         --add-binary "libs\bin\UnRAR.exe;." `
