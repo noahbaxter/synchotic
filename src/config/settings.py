@@ -29,6 +29,11 @@ def normalize_setlist_name(name: str) -> str:
 # How blocked (virus-scan-flagged) files get downloaded. Empty means the user has
 # not chosen yet and should be asked. Embedded OAuth is deliberately not offered:
 # the 100-user cap is full, so it would fail for anyone new.
+# Written by the OS, regenerated on sight, never part of a chart.
+# ._* are macOS AppleDouble sidecars, which appear for every file on SMB and
+# exFAT: exactly the volumes Library Path points people at.
+DEFAULT_PURGE_IGNORE = ("._*", ".DS_Store", "Thumbs.db", "desktop.ini")
+
 DOWNLOAD_MODE_RCLONE = "rclone"
 DOWNLOAD_MODE_ANONYMOUS = "anonymous"
 DOWNLOAD_MODE_BYOC = "byoc"
@@ -65,6 +70,11 @@ class UserSettings:
         self.download_mode: str = ""
         # Where charts live. "" = the default beside the app.
         self.library_path: str = ""
+        # Filenames purge must leave alone. These are written by the OS and
+        # reappear the moment they are deleted, so purging them is churn that
+        # also inflates the count toward the confirm threshold. Editable in
+        # settings.json for filesystems that litter differently.
+        self.purge_ignore: list = list(DEFAULT_PURGE_IGNORE)
         # Track if this is a fresh settings file (no file existed)
         self._is_new: bool = False
 
@@ -87,6 +97,9 @@ class UserSettings:
                 mode = data.get("download_mode", "")
                 settings.download_mode = mode if mode in DOWNLOAD_MODES else "" 
                 settings.library_path = str(data.get("library_path", "") or "")
+                ignore = data.get("purge_ignore")
+                settings.purge_ignore = (list(ignore) if isinstance(ignore, list)
+                                         else list(DEFAULT_PURGE_IGNORE))
                 settings._is_new = data.get("use_default_drives", False)
             except (json.JSONDecodeError, IOError):
                 settings._is_new = True
@@ -112,6 +125,7 @@ class UserSettings:
             "delta_mode": self.delta_mode,
             "download_mode": self.download_mode,
             "library_path": self.library_path,
+            "purge_ignore": self.purge_ignore,
             "use_default_drives": self._is_new,
         }
         with open(self.path, "w") as f:

@@ -534,12 +534,15 @@ def rebuild_markers_from_disk(
             try:
                 for item in extract_path.rglob("*"):
                     if item.is_file():
-                        # Never claim a partial download. purge removes those on
-                        # sight (find_extra_files skips them for the same reason),
-                        # so a marker that lists one is left referencing a file
-                        # that is about to vanish, and the planner then re-fetches
-                        # the whole archive.
-                        if item.name.startswith("_download_"):
+                        # Never claim a partial download or OS litter. Both are
+                        # things purge will not keep: a partial gets removed, and
+                        # a ._ sidecar is regenerated rather than tracked. Either
+                        # one in a marker leaves it describing files that do not
+                        # match disk, and the planner re-fetches the whole
+                        # archive. The sidecar of a partial is named
+                        # ".__download_x.zip", so the prefix check alone misses it.
+                        from ..sync.purge_planner import _is_ignored
+                        if item.name.startswith("_download_") or _is_ignored(item.name, None):
                             continue
                         # Get path relative to folder_path (drive folder)
                         rel = item.relative_to(folder_path)
