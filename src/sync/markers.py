@@ -534,6 +534,13 @@ def rebuild_markers_from_disk(
             try:
                 for item in extract_path.rglob("*"):
                     if item.is_file():
+                        # Never claim a partial download. purge removes those on
+                        # sight (find_extra_files skips them for the same reason),
+                        # so a marker that lists one is left referencing a file
+                        # that is about to vanish, and the planner then re-fetches
+                        # the whole archive.
+                        if item.name.startswith("_download_"):
+                            continue
                         # Get path relative to folder_path (drive folder)
                         rel = item.relative_to(folder_path)
                         rel_str = str(rel).replace("\\", "/")

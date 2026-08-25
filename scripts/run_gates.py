@@ -56,6 +56,7 @@ def main() -> int:
     if not args.quick:
         gates += [
             ("cancel and resume", [py, str(SCRIPTS / "cancel_resume_test.py")]),
+            ("new downloads, old removed", [py, str(SCRIPTS / "newold_test.py")]),
             ("auth, anonymous tier", [py, str(SCRIPTS / "manual_auth_test.py"),
                                       "--mode", "anonymous"]),
         ]
