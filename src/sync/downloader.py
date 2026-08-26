@@ -342,6 +342,18 @@ class FileDownloader:
             success, error = extract_archive(archive_path, extract_tmp)
             if not success:
                 shutil.rmtree(extract_tmp, ignore_errors=True)
+                # Say what was actually on disk. "read enough data" from the
+                # archive reader is indistinguishable between a corrupt archive
+                # and a file that is not the size we just wrote.
+                try:
+                    on_disk = archive_path.stat().st_size
+                except OSError as e:
+                    on_disk = f"stat failed: {e}"
+                debug_log(
+                    f"EXTRACT_FAIL | {archive_rel_path or archive_path.name} | "
+                    f"on_disk={on_disk} expected={archive_size} "
+                    f"path={archive_path} | {error}"
+                )
                 if _is_path_length_error(error) and archive_rel_path:
                     save_failed_marker(archive_rel_path, task.md5, error)
                 return False, f"Extract failed: {error}", {}
