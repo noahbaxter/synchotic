@@ -227,6 +227,7 @@ class FileDownloader:
 
         downloaded_bytes = 0
         content_length = response.content_length or 0
+        short_name = format_download_name(task.local_path)
 
         # Small files: read all at once
         if content_length > 0 and content_length < PROGRESS_TRACK_MIN_SIZE:
@@ -268,6 +269,26 @@ class FileDownloader:
             # Unregister when done
             if is_tracked and progress_tracker:
                 progress_tracker.unregister_active_download(task.file_id)
+
+        # A truncated body writes cleanly and only fails later inside the
+        # extractor, where a rate limit reads as a corrupt archive and the chart
+        # gets blamed. Google answers some limits with a short non-HTML body, so
+        # the text/html check upstream never sees them. The manifest size is the
+        # only thing that can tell the difference, so check it here.
+        if task.size > 0 and downloaded_bytes != task.size:
+            try:
+                task.local_path.unlink()
+            except OSError:
+                pass
+            debug_log(
+                f"SHORT_DOWNLOAD | {task.rel_path} | got={downloaded_bytes} want={task.size} tier={tier}"
+            )
+            return DownloadResult(
+                success=False,
+                file_path=task.local_path,
+                message=f"ERR (got {downloaded_bytes} of {task.size} bytes): {short_name}",
+                retryable=True,
+            )
 
         debug_log(f"TIER | {tier} | {task.local_path.name.removeprefix('_download_')}")
         return DownloadResult(
