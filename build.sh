@@ -7,6 +7,7 @@
 #   ./build.sh app       Build app only (onedir → zip)
 #   ./build.sh launcher  Build launcher only (tiny onefile)
 #   ./build.sh dev <dir> Build both and copy to target dir for local testing
+#   ./build.sh mac       Build Synchotic.app and install it to /Applications
 #   ./build.sh --clean   Remove build artifacts
 #
 # The launcher is built rarely (stable). App builds happen on every release.
@@ -299,6 +300,25 @@ build_dev() {
     echo_info "Use --clean flag for fresh install (nukes .dm-sync first)"
 }
 
+# Build the macOS .app and replace the installed copy. Every fix has to land in
+# /Applications to be testable, and building into dist/ alone leaves the old
+# bundle running, which reads as "the fix did nothing".
+build_mac_app() {
+    if [ "$PLATFORM" != "macos" ]; then
+        echo_error "mac mode only runs on macOS"
+        exit 1
+    fi
+    bash "$SCRIPT_DIR/packaging/macos/build_app.sh"
+
+    local installed="/Applications/Synchotic.app"
+    # A running copy holds its bundle open, so stop it before swapping.
+    pkill -f "Synchotic.app/Contents/MacOS" 2>/dev/null || true
+    sleep 1
+    rm -rf "$installed"
+    cp -R "$SCRIPT_DIR/dist/Synchotic.app" "$installed"
+    echo_info "Installed $installed"
+}
+
 usage() {
     echo "Usage: $0 [mode]"
     echo ""
@@ -307,6 +327,7 @@ usage() {
     echo "  app        Build app only (onedir → zip)"
     echo "  launcher   Build launcher only (tiny onefile)"
     echo "  dev <dir>  Build both and copy to target dir for local testing"
+    echo "  mac        Build Synchotic.app and install it to /Applications"
     echo "  --clean    Remove build artifacts"
     echo "  --help     Show this help"
     echo ""
@@ -342,6 +363,10 @@ main() {
             check_deps
             setup_venv
             build_dev "$2"
+            ;;
+        mac)
+            detect_platform
+            build_mac_app
             ;;
         *)
             echo_error "Unknown option: $1"

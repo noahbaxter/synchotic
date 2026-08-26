@@ -22,8 +22,9 @@ from typing import NoReturn
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-LAUNCHER_VERSION = "1.1"
+LAUNCHER_VERSION = "1.2"
 RELEASE_TAG = ""  # Injected to "dev-latest" for dev launcher builds
+WEZTERM_VERSION = "20240203-110809-5046fc22"  # Windows host, downloaded first-run
 
 
 def get_ssl_context():
@@ -571,7 +572,167 @@ def set_terminal_size(cols: int = 90, rows: int = 40):
         print(f"\x1b[8;{rows};{cols}t", end="", flush=True)
 
 
+
+
+# =============================================================================
+# WezTerm host
+#
+# A Finder or Explorer launch has no usable terminal, and this is a TUI. Rather
+# than hand the app to Terminal.app and inherit whatever the user configured
+# there, run it inside a WezTerm we control: bundled in the .app on macOS,
+# downloaded once on Windows. Linux uses the native terminal via .desktop.
+# =============================================================================
+
+def should_relaunch_in_host(argv, has_terminal: bool, wezterm_exists: bool) -> bool:
+    """True when we should re-exec into the WezTerm host: a GUI launch (no
+    controlling terminal), not already hosted, and WezTerm present. The
+    `--hosted` sentinel is the recursion guard; the hosted copy has a tty."""
+    return "--hosted" not in argv and not has_terminal and wezterm_exists
+
+
+def build_host_command(wezterm: str, lua: str, cwd: str, launcher_path: str, forward_args: list) -> list:
+    """argv to run this launcher inside the WezTerm GUI with our config."""
+    return [
+        wezterm, "--config-file", lua,
+        "start", "--always-new-process", "--cwd", cwd,
+        "--", launcher_path, *forward_args, "--hosted",
+    ]
+
+
+def host_environment() -> dict:
+    """The environment to hand the WezTerm host.
+
+    PyInstaller's onefile bootloader marks its process tree with _PYI_*
+    variables. Those survive the exec into WezTerm and reach the launcher copy
+    WezTerm spawns, which then sees _PYI_PARENT_PROCESS_LEVEL, decides it is an
+    unpacking child, checks that its parent runs the same executable, finds
+    wezterm-gui instead, and exits before it can log anything."""
+    return {k: v for k, v in os.environ.items() if not k.startswith("_PYI_")}
+
+
+def wezterm_dir() -> Path:
+    """Cache dir for the first-run-downloaded Windows WezTerm."""
+    return get_dm_sync_dir() / "wezterm"
+
+
+def host_paths() -> tuple:
+    """(wezterm-gui, wezterm.lua) for this platform's host."""
+    if sys.platform == "win32":
+        d = wezterm_dir()
+        return d / "wezterm-gui.exe", d / "wezterm.lua"
+    exe_dir = Path(sys.executable).parent
+    return exe_dir / "wezterm-gui", exe_dir.parent / "Resources" / "wezterm.lua"
+
+
+def _resource_path(name: str):
+    """Locate a data file bundled into the frozen exe, falling back to the
+    source tree for dev runs."""
+    candidates = []
+    meipass = getattr(sys, "_MEIPASS", "")
+    if meipass:
+        candidates.append(Path(meipass) / name)
+    here = Path(__file__).parent / "packaging"
+    candidates += [here / "macos" / name, here / "windows" / name, here / "linux" / name]
+    return next((c for c in candidates if c.exists()), None)
+
+
+def _double_clicked_windows() -> bool:
+    """True when launched from Explorer (we own our console), so a launch from
+    an existing cmd/PowerShell is left alone."""
+    try:
+        import ctypes
+
+        arr = (ctypes.c_uint32 * 8)()
+        n = ctypes.windll.kernel32.GetConsoleProcessList(arr, 8)
+        return n <= 1
+    except Exception:
+        return False
+
+
+def _hide_windows_console():
+    """Hide our own console so the re-exec into WezTerm does not flash one."""
+    try:
+        import ctypes
+
+        hwnd = ctypes.windll.kernel32.GetConsoleWindow()
+        if hwnd:
+            ctypes.windll.user32.ShowWindow(hwnd, 0)  # SW_HIDE
+    except Exception:
+        pass
+
+
+def ensure_wezterm_windows() -> bool:
+    """Download and cache the Windows WezTerm portable build on first run."""
+    d = wezterm_dir()
+    gui = d / "wezterm-gui.exe"
+    lua = d / "wezterm.lua"
+    d.mkdir(parents=True, exist_ok=True)
+    lua_src = _resource_path("wezterm.lua")
+    if lua_src and not lua.exists():
+        shutil.copyfile(lua_src, lua)
+    if gui.exists():
+        return True
+    url = (f"https://github.com/wezterm/wezterm/releases/download/"
+           f"{WEZTERM_VERSION}/WezTerm-windows-{WEZTERM_VERSION}.zip")
+    print("  Fetching WezTerm (terminal window, ~25MB, first run only)...")
+    log(f"Downloading WezTerm: {url}")
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            archive = Path(tmp) / "wezterm.zip"
+            with urlopen(Request(url, headers={"User-Agent": "synchotic-launcher"}),
+                         context=get_ssl_context()) as r, open(archive, "wb") as f:
+                shutil.copyfileobj(r, f)
+            with zipfile.ZipFile(archive) as zf:
+                zf.extractall(tmp)
+            found = list(Path(tmp).rglob("wezterm-gui.exe"))
+            if not found:
+                log("WezTerm archive missing wezterm-gui.exe")
+                return False
+            for item in found[0].parent.iterdir():
+                dest = d / item.name
+                if item.is_dir():
+                    shutil.copytree(item, dest, dirs_exist_ok=True)
+                else:
+                    shutil.copyfile(item, dest)
+        return gui.exists()
+    except Exception as e:
+        log(f"WezTerm download failed: {e}")
+        return False
+
+
+def maybe_relaunch_in_host():
+    """Re-exec into a WezTerm window when launched from a GUI."""
+    if "--hosted" in sys.argv:
+        return
+    if sys.platform == "darwin":
+        wezterm, lua = host_paths()
+        if not should_relaunch_in_host(sys.argv, _has_terminal(), wezterm.exists()):
+            return
+    elif sys.platform == "win32":
+        if not _double_clicked_windows():
+            return
+        wezterm, lua = host_paths()
+        if wezterm.exists():
+            _hide_windows_console()  # cached: skip the console flash
+        if not ensure_wezterm_windows():
+            return  # download failed: run inline in this console
+    else:
+        return  # Linux uses the native terminal via the .desktop entry
+
+    cmd = build_host_command(
+        str(wezterm), str(lua), str(get_launcher_dir()),
+        str(get_launcher_path()), sys.argv[1:],
+    )
+    env = host_environment()
+    if sys.platform == "win32":
+        DETACHED_PROCESS = 0x00000008
+        subprocess.Popen(cmd, creationflags=DETACHED_PROCESS, close_fds=True, env=env)
+        sys.exit(0)
+    os.execve(str(wezterm), cmd, env)  # replaces this process; does not return
+
+
 def main():
+    maybe_relaunch_in_host()  # may re-exec into WezTerm and not return
     set_terminal_size(90, 40)
     init_logging()
     log(f"Launcher v{LAUNCHER_VERSION}")
