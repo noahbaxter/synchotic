@@ -38,6 +38,7 @@ from src.config.settings import DOWNLOAD_MODES
 from src.core.formatting import format_size, sanitize_drive_name, normalize_path_key
 from src.core.paths import (
     get_data_dir,
+    get_log_dir,
     get_settings_path,
     get_token_path,
     get_local_manifest_path,
@@ -325,6 +326,11 @@ class SyncApp:
         Returns menu_cache if recomputed, or None if cancelled/no-op.
         """
         import time as _time
+
+        # Sync streams its own progress, so give it the screen. Without this it
+        # prints underneath the menu box that is still on screen.
+        clear_screen()
+        print_header()
 
         # Need OAuth for scanning and downloading
         if not self.auth.is_signed_in:
@@ -830,11 +836,22 @@ class SyncApp:
             force_rescan=force_rescan,
         )
         # Discovery first (synchronous) - gives accurate setlist counts immediately
-        print("  Discovering setlists...")
-        slow_hint = threading.Timer(5.0, lambda: print("  (waiting for Google Drive API rate limit...)"))
+        from src.ui.primitives import print_progress
+
+        def _discovery_progress(done, total, name):
+            # done counts completions, which land out of order now that the
+            # drives are queried concurrently.
+            if total and done >= total:
+                print_progress(f"Discovering setlists... {total}/{total} drives")
+                print()
+            else:
+                suffix = f" - {name}" if name else ""
+                print_progress(f"Discovering setlists... {done}/{total} drives{suffix}")
+
+        slow_hint = threading.Timer(5.0, lambda: print("\n  (waiting for Google Drive API rate limit...)"))
         slow_hint.start()
         try:
-            self._background_scanner.discover()
+            self._background_scanner.discover(on_progress=_discovery_progress)
         finally:
             slow_hint.cancel()
         # Migrate custom folders that are subfolders of released drives
@@ -1113,6 +1130,22 @@ class SyncApp:
         clear_screen()
         print_header()
 
+        # First run in a .app has no library: the "next to the executable"
+        # default would point inside Contents/MacOS. Ask before anything reads
+        # a path, and let the picker adopt a pre-1.5 install if they point at one.
+        from src.core.paths import library_needs_setup
+
+        if library_needs_setup(self.user_settings):
+            from src.ui.screens import show_library_screen
+            from src.ui.widgets.confirm import ConfirmDialog
+            display.library_first_run()
+            while library_needs_setup(self.user_settings):
+                if not show_library_screen(self.user_settings):
+                    if ConfirmDialog("Quit without picking a library?").run():
+                        return
+            clear_screen()
+            print_header()
+
         # First-run OAuth prompt (only shown once)
         #
         # Gated on the user owning an OAuth client. Sign-in resolves its client
@@ -1244,6 +1277,10 @@ class SyncApp:
                 self._handle_force_rescan()
                 menu_cache = None
 
+            elif action == "library":
+                self.handle_library()
+                menu_cache = None  # different library means different stats
+
 
             elif action == "account":
                 self.handle_account()
@@ -1274,6 +1311,15 @@ def main():
     import time as _time
     _t0 = _time.time()
 
+    # The menu repaints from cursor-home on every frame and draws the banner
+    # itself via chotic-ui's print_header, which is a no-op until the app hands
+    # it the art. Without this the first paint wipes the banner for good, and
+    # the menu still reserves its 8 lines of height for it.
+    from chotic_ui import configure_header
+    from src.ui.components.header import ASCII_HEADER
+    from src import __version__ as _app_version
+    configure_header(ASCII_HEADER, _app_version)
+
     # Set terminal size (skip if launched via launcher - it handles this)
     if not os.environ.get("SYNCHOTIC_ROOT"):
         set_terminal_size(90, 40)
@@ -1290,7 +1336,7 @@ def main():
     cli_args = parser.parse_args()
 
     # Always log to .dm-sync/logs/YYYY-MM-DD.log
-    logs_dir = get_data_dir() / "logs"
+    logs_dir = get_log_dir()
     logs_dir.mkdir(exist_ok=True)
     prune_old_logs(logs_dir)
     log_path = logs_dir / f"{datetime.now().strftime('%Y-%m-%d')}.log"

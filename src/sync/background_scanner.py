@@ -7,6 +7,7 @@ Uses three simple sets: all_setlists, enabled_setlists, scanned_setlists.
 
 import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from typing import Callable, TYPE_CHECKING
 
@@ -114,8 +115,13 @@ class BackgroundScanner:
     # Public API
     # =========================================================================
 
-    def discover(self):
-        """Run discovery synchronously. Call before start()."""
+    def discover(self, on_progress=None):
+        """Run discovery synchronously. Call before start().
+
+        on_progress(done, total, drive_name) fires per drive: this is one API
+        round trip each, serialized, so on a slow link it is the longest stretch
+        of startup with nothing on screen.
+        """
         if self._client is not None:
             return  # Already discovered
 
@@ -125,7 +131,7 @@ class BackgroundScanner:
         client_config = DriveClientConfig(api_key=self._api_key)
         self._client = DriveClient(client_config, auth_token=auth_token)
 
-        self._discover_all_setlists()
+        self._discover_all_setlists(on_progress)
 
         # Save settings if discovery caused migrations
         if self._settings_changed and self._user_settings:
@@ -332,12 +338,43 @@ class BackgroundScanner:
     # Discovery
     # =========================================================================
 
-    def _discover_all_setlists(self):
-        """Discover all setlists from all folders."""
-        for folder in self._folders:
-            if self._stop_event.is_set():
-                break
-            self._discover_folder_setlists(folder)
+    DISCOVERY_WORKERS = 8
+
+    def _discover_all_setlists(self, on_progress=None):
+        """Discover all setlists from all folders.
+
+        One list_folder round trip per drive, run concurrently: the calls are
+        independent, _register_setlist holds the lock, and sync_subfolder_names
+        only touches subfolder_toggles[drive_id]. Serially this was the longest
+        stretch of startup with nothing on screen.
+        """
+        total = len(self._folders)
+        if not total:
+            if on_progress:
+                on_progress(0, 0, "")
+            return
+
+        done = 0
+        if on_progress:
+            on_progress(0, total, self._folders[0].get("name", ""))
+
+        workers = min(self.DISCOVERY_WORKERS, total)
+        with ThreadPoolExecutor(max_workers=workers) as pool:
+            futures = {}
+            for folder in self._folders:
+                if self._stop_event.is_set():
+                    break
+                futures[pool.submit(self._discover_folder_setlists, folder)] = folder
+            for fut in as_completed(futures):
+                done += 1
+                try:
+                    fut.result()
+                except Exception:
+                    # _discover_folder_setlists already falls back to treating
+                    # the drive as one unit; never let one drive sink discovery.
+                    pass
+                if on_progress:
+                    on_progress(done, total, futures[fut].get("name", ""))
 
     def _discover_folder_setlists(self, folder: dict):
         """Discover setlists within a single folder/drive."""
@@ -552,12 +589,18 @@ class BackgroundScanner:
                 drive["file_count"] = len(drive["files"])
                 drive["total_size"] = sum(f.get("size", 0) for f in drive["files"])
 
-        except Exception:
+        except Exception as e:
             # Track failure — do NOT mark as scanned so purge can protect these files
             with self._lock:
                 self._failed_setlist_ids.add(setlist.setlist_id)
                 self._stats.current_folder_start = 0
-            debug_log(f"SCAN_FAIL | setlist={display_name} | id={setlist.setlist_id}")
+            # Log why. Without this a failed scan is indistinguishable from an
+            # empty setlist, and a drive-wide failure reads as "nothing to sync".
+            detail = f"{type(e).__name__}: {e}"
+            resp = getattr(e, "response", None)
+            if resp is not None:
+                detail += f" | http={resp.status_code} body={resp.text[:300]!r}"
+            debug_log(f"SCAN_FAIL | setlist={display_name} | id={setlist.setlist_id} | {detail}")
             return
 
         # Mark as scanned

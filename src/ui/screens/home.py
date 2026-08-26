@@ -694,7 +694,6 @@ def show_main_menu(
                 grouped_folder_ids.add(drive.folder_id)
 
     added_folders = set()
-    hotkey_num = 1
 
     def _build_folder_label(name: str, folder_id: str, indent: bool) -> str:
         """Build label with checkmark, italic for scanning, scan progress, and delta."""
@@ -728,20 +727,13 @@ def show_main_menu(
         return label
 
     def add_folder_item(folder: dict, indent: bool = False):
-        nonlocal hotkey_num
         folder_id = folder.get("folder_id", "")
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
         columns = cache.folder_stats.get(folder_id)
 
-        hotkey = None
-        if not indent and hotkey_num <= 9:
-            hotkey = str(hotkey_num)
-            hotkey_num += 1
-
         label = _build_folder_label(folder['name'], folder_id, indent)
         menu.add_item(MenuItem(
             label,
-            hotkey=hotkey,
             value=folder_id,
             description=columns,
             disabled=not drive_enabled
@@ -811,11 +803,11 @@ def show_main_menu(
         else:
             rescan_desc = "Force re-scan all drives"
     rescan_blocked = bool(is_scanning or signed_out)
-    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc,
+    menu.add_item(MenuItem("  Rescan", value=("rescan", None), description=rescan_desc,
                            disabled=rescan_blocked, locked=rescan_blocked))
 
     menu.add_item(MenuDivider())
-    menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
+    menu.add_item(MenuItem("  Add Custom Folder", value=("add_custom", None), description="Add your own Google Drive folder"))
 
     rclone_connected = False
     try:
@@ -826,8 +818,12 @@ def show_main_menu(
 
     from .account import account_status
     status = account_status(user_settings, auth, rclone_connected)
-    menu.add_item(MenuItem(f"  Account: {status}", hotkey="D", value=("account", None),
+    menu.add_item(MenuItem(f"  Account: {status}", value=("account", None),
                            description="Downloads and sign-in"))
+
+    from ...core.paths import get_library_path
+    menu.add_item(MenuItem("  Chart library", value=("library", None),
+                           description=str(get_library_path())))
 
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Quit", hotkey="ESC", value=("quit", None)))
