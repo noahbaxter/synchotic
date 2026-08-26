@@ -32,6 +32,7 @@ rm -rf build/synchotic "$APP"
   --add-data="VERSION:." \
   --add-data="${CERT}:certifi" \
   --icon=packaging/macos/Synchotic.icns \
+  --osx-bundle-identifier dev.noahbaxter.synchotic \
   sync.py >/dev/null
 
 MACOS="$APP/Contents/MacOS"
@@ -48,6 +49,16 @@ if [ ! -d "$WEZ_CACHE" ]; then
 fi
 cp "$WEZ_CACHE/WezTerm-macos-$WEZ_VER/WezTerm.app/Contents/MacOS/wezterm-gui" "$MACOS/"
 cp packaging/macos/wezterm.lua packaging/macos/WezTerm-LICENSE.txt "$APP/Contents/Resources/"
+
+# TCC files a permission grant against the app's bundle identity. wezterm-gui is
+# the process that actually touches the library, and without these it checks in
+# as an anonymous binary, so the grant never attaches to Synchotic and the
+# network volume prompt returns on every launch no matter how often it is
+# accepted. The usage string is what that prompt reads.
+PLIST="$APP/Contents/Info.plist"
+plutil -replace LSAllowOtherExecutablesToCheckIn -bool true "$PLIST"
+plutil -replace NSNetworkVolumesUsageDescription -string \
+  "Synchotic reads and writes your chart library, which can live on a network volume." "$PLIST"
 
 # A frozen build puts its data next to the executable, which inside a bundle in
 # /Applications means writing settings, markers and the chart library into the
