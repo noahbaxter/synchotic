@@ -16,7 +16,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
-from ..core.formatting import normalize_path_key
+from ..core.formatting import normalize_path_key, resolve_existing_path
 from ..core.paths import get_library_state_dir
 
 
@@ -147,8 +147,8 @@ def verify_marker(marker: dict, base_path: Path) -> bool:
         return False
 
     for rel_path, expected_size in files.items():
-        full_path = base_path / rel_path
-        if not full_path.exists():
+        full_path = resolve_existing_path(base_path / rel_path)
+        if full_path is None:
             return False
         try:
             actual_size = full_path.stat().st_size

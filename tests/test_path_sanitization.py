@@ -310,3 +310,69 @@ class TestEndToEndPathFlow:
         rel_path = str(tasks[0].local_path.relative_to(tmp_path))
         for char in '<>:"|?*':
             assert char not in rel_path
+
+
+class TestResolveExistingPath:
+    """A name stored in one Unicode form must still find the file on disk.
+
+    macOS and SMB, Linux and Windows disagree about whether NFC and NFD are the
+    same name. A marker written by one and checked against a disk written by
+    another reported charts as missing while they sat right there, and the
+    archive re-downloaded on every sync.
+    """
+
+    def test_finds_a_file_written_in_the_other_form(self, tmp_path):
+        import unicodedata
+        from src.core.formatting import resolve_existing_path
+
+        # "Feinimein" with a combining acute on the e
+        nfc = unicodedata.normalize("NFC", "Uhkshak Feiniméin")
+        nfd = unicodedata.normalize("NFD", nfc)
+        assert nfc != nfd
+
+        chart = tmp_path / nfc
+        chart.mkdir()
+        (chart / "notes.chart").write_text("x")
+
+        found = resolve_existing_path(tmp_path / nfd / "notes.chart")
+        assert found is not None
+        assert found.read_text() == "x"
+
+    def test_exact_match_is_preferred(self, tmp_path):
+        from src.core.formatting import resolve_existing_path
+
+        f = tmp_path / "plain.txt"
+        f.write_text("y")
+        assert resolve_existing_path(f) == f
+
+    def test_genuinely_missing_still_returns_none(self, tmp_path):
+        from src.core.formatting import resolve_existing_path
+
+        assert resolve_existing_path(tmp_path / "nope.txt") is None
+
+    def test_case_difference_still_finds_the_file(self, tmp_path):
+        from src.core.formatting import resolve_existing_path
+
+        folder = tmp_path / "I Prevail - Heart vs. Mind"
+        folder.mkdir()
+        (folder / "guitar.ogg").write_text("z")
+
+        # marker recorded a different casing for the folder
+        found = resolve_existing_path(tmp_path / "I Prevail - Heart VS. Mind" / "guitar.ogg")
+        assert found is not None
+        assert found.read_text() == "z"
+
+    def test_several_case_variants_pick_a_stable_one(self, tmp_path):
+        from src.core.formatting import resolve_existing_path
+
+        (tmp_path / "Song.ogg").write_text("upper")
+        try:
+            (tmp_path / "song.ogg").write_text("lower")
+        except OSError:
+            pytest.skip("filesystem folds case, cannot create both")
+        if len(list(tmp_path.iterdir())) == 1:
+            pytest.skip("filesystem folds case, cannot create both")
+
+        first = resolve_existing_path(tmp_path / "SONG.ogg")
+        second = resolve_existing_path(tmp_path / "SONG.ogg")
+        assert first is not None and first == second

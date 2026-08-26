@@ -11,6 +11,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 from ..core.constants import CHART_ARCHIVE_EXTENSIONS
+from ..core.formatting import resolve_existing_path
 from .markers import load_marker, verify_marker, find_any_marker_for_path
 
 
@@ -95,7 +96,10 @@ def is_file_synced(
     Logic: file exists on disk with expected size from manifest.
     .ini files get size tolerance since Clone Hero appends leaderboard data.
     """
-    if not local_path or not local_path.exists():
+    if not local_path:
+        return False
+    local_path = resolve_existing_path(local_path)
+    if local_path is None:
         return False
     try:
         actual_size = local_path.stat().st_size
