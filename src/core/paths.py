@@ -23,6 +23,144 @@ from pathlib import Path
 import certifi
 
 
+LEGACY_ROOT_ENV = "SYNCHOTIC_LEGACY_ROOT"  # test hook
+
+# Which legacy .dm-sync entries belong in which new home. "markers" is absent on
+# purpose: it goes into the library, not a machine dir, and is handled below.
+_MIGRATION_MAP = {
+    "data": ["settings.json", "token.json", "credentials.json",
+             "local_manifest.json", "sync_state.json", "rclone",
+             ".paths_sanitized"],
+    "cache": ["folder_stats.json", "scan_cache", "stats_cache.json"],
+    "logs": ["logs"],
+}
+
+
+def find_legacy_install(library_path):
+    """Locate a pre-1.5 install given the library the user just pointed at.
+
+    v1.4.2 told users to drop the launcher into a folder; it then made
+    `.dm-sync/` and `Sync Charts/` beside itself. So the state dir is either in
+    the folder they picked or one level up if they picked the charts folder.
+    `.synchotic` is checked too because that is the current name.
+    """
+    library_path = Path(library_path)
+    for base in (library_path, library_path.parent):
+        for name in (DATA_DIR_NAME, LIBRARY_STATE_DIR_NAME):
+            if (base / name).is_dir():
+                return base / name
+    return None
+
+
+def find_legacy_markers(library_path):
+    """Markers from any pre-1.5 layout, under either state-dir name."""
+    state = find_legacy_install(library_path)
+    if state is None:
+        return None
+    markers = state / "markers"
+    return markers if markers.is_dir() else None
+
+
+def migrate_to_os_dirs(legacy_root=None) -> list:
+    """Copy a portable .dm-sync into the OS dirs the .app uses.
+
+    Copies rather than moves, and never overwrites: the source folder holds the
+    OAuth token and the library_path setting, so a half-finished move would cost
+    a user their sign-in and point the purge planner at an empty library. The
+    legacy folder is left exactly as it was and can be deleted by hand.
+    """
+    import shutil
+
+    if not _using_os_dirs():
+        return []
+    # v1.4.2 and earlier told users to drop the launcher into their own songs
+    # folder (README step 2), so the legacy root is wherever they put it. There
+    # is no default worth guessing: the caller supplies it, normally from the
+    # folder the user picks in the library screen.
+    root = legacy_root or os.environ.get(LEGACY_ROOT_ENV)
+    if not root:
+        return []
+    root = Path(root)
+    # Accept either the folder that holds the state dir or the state dir itself.
+    legacy = root if root.name in (DATA_DIR_NAME, LIBRARY_STATE_DIR_NAME) else (root / DATA_DIR_NAME)
+    if not legacy.is_dir():
+        return []
+
+    done = []
+    for kind, names in _MIGRATION_MAP.items():
+        dest_dir = {"data": get_data_dir, "cache": get_cache_dir, "logs": get_log_dir}[kind]()
+        for name in names:
+            src = legacy / name
+            if not src.exists():
+                continue
+            # logs/ maps onto the log dir itself, not a "logs" child of it
+            dest = dest_dir if (kind == "logs" and name == "logs") else dest_dir / name
+            try:
+                # Settings must merge, never skip: the library screen has
+                # already written a settings.json holding the new library_path,
+                # so a plain skip would silently drop every v1.4.2 preference
+                # (drive toggles, download_mode, purge_ignore).
+                if name == "settings.json" and dest.exists():
+                    if _merge_settings(src, dest):
+                        done.append("settings.json (merged)")
+                    continue
+                if src.is_dir():
+                    # Skip when the copy would add nothing: dest already has
+                    # content, or src is an empty dir we already created.
+                    if dest.exists() and (any(dest.iterdir()) or not any(src.iterdir())):
+                        continue
+                    shutil.copytree(src, dest, dirs_exist_ok=True)
+                else:
+                    if dest.exists():
+                        continue
+                    shutil.copy2(src, dest)
+                done.append(name)
+            except Exception:
+                pass
+
+    # Markers describe the charts, so they belong with them rather than in a
+    # machine dir. 2500 of these are the difference between adopting a library
+    # and re-downloading it.
+    try:
+        legacy_markers = legacy / "markers"
+        if legacy_markers.is_dir() and library_is_available():
+            dest_markers = get_library_state_dir() / "markers"
+            dest_markers.mkdir(parents=True, exist_ok=True)
+            copied = 0
+            for m in legacy_markers.iterdir():
+                # macOS writes ._ AppleDouble sidecars on non-native volumes.
+                if m.name.startswith("._") or not m.is_file():
+                    continue
+                target = dest_markers / m.name
+                if target.exists():
+                    continue
+                shutil.copy2(m, target)
+                copied += 1
+            if copied:
+                done.append(f"markers ({copied})")
+    except Exception:
+        pass
+    return done
+
+
+def _merge_settings(legacy_file, dest_file) -> bool:
+    """Fill the new settings from the old, keeping anything already set."""
+    import json
+
+    try:
+        legacy = json.loads(legacy_file.read_text())
+        current = json.loads(dest_file.read_text())
+    except Exception:
+        return False
+    if not isinstance(legacy, dict) or not isinstance(current, dict):
+        return False
+    merged = {**legacy, **{k: v for k, v in current.items() if v not in ("", None, {}, [])}}
+    if merged == current:
+        return False
+    dest_file.write_text(json.dumps(merged, indent=2))
+    return True
+
+
 def get_certifi_ssl_context() -> str:
     """Get path to certifi CA bundle, handling PyInstaller bundles."""
     if getattr(sys, "frozen", False):
@@ -33,6 +171,46 @@ def get_certifi_ssl_context() -> str:
 
 # Directory name for app data (hidden on Unix)
 DATA_DIR_NAME = ".dm-sync"
+
+# OS-standard dirs, used when the app ships as a .app in /Applications, where
+# writing beside the executable is neither possible nor wanted. Portable installs
+# (launcher sitting in a folder, and every dev run) keep the .dm-sync layout, so
+# SYNCHOTIC_ROOT still wins when it is set.
+APP_DIRNAME = "Synchotic"
+
+
+OS_DIRS_ENV = "SYNCHOTIC_OS_DIRS"
+
+
+def _using_os_dirs() -> bool:
+    """True only when the caller opts in.
+
+    Opt-in, not inferred: every existing install is portable, and a mode that
+    switched itself on whenever SYNCHOTIC_ROOT happened to be unset would also
+    override an injected get_app_dir, which is how the tests and every dev run
+    point the app at a scratch directory.
+    """
+    return os.environ.get(OS_DIRS_ENV) == "1"
+
+
+def _os_dir(kind: str) -> Path:
+    """OS-standard data/cache/log dir for this platform."""
+    home = Path.home()
+    if sys.platform == "darwin":
+        return {
+            "data": home / "Library" / "Application Support" / APP_DIRNAME,
+            "cache": home / "Library" / "Caches" / APP_DIRNAME,
+            "logs": home / "Library" / "Logs" / APP_DIRNAME,
+        }[kind]
+    if sys.platform == "win32":
+        base = Path(os.environ.get("LOCALAPPDATA") or (home / "AppData" / "Local"))
+        return base / APP_DIRNAME / {"data": "Data", "cache": "Cache", "logs": "Logs"}[kind]
+    xdg = {
+        "data": os.environ.get("XDG_DATA_HOME") or (home / ".local" / "share"),
+        "cache": os.environ.get("XDG_CACHE_HOME") or (home / ".cache"),
+        "logs": os.environ.get("XDG_STATE_HOME") or (home / ".local" / "state"),
+    }[kind]
+    return Path(xdg) / "synchotic"
 
 # Default folder name for downloaded charts
 DOWNLOAD_FOLDER_NAME = "Sync Charts"
@@ -61,7 +239,21 @@ def get_library_path() -> Path:
         return Path(env).expanduser()
     if _library_override:
         return _library_override
+    if _using_os_dirs():
+        # A .app has no meaningful "next to the executable": that would put the
+        # library inside Contents/MacOS. Fall back somewhere writable, though
+        # first run asks rather than silently using this.
+        return Path.home() / "Synchotic" / DOWNLOAD_FOLDER_NAME
     return get_app_dir() / DOWNLOAD_FOLDER_NAME
+
+
+def library_needs_setup(user_settings) -> bool:
+    """True when we must ask where charts go before doing anything.
+
+    Only in OS-dirs mode: a portable install has a correct default (beside the
+    launcher), which is how every pre-1.5 install already works.
+    """
+    return _using_os_dirs() and not getattr(user_settings, "library_path", "")
 
 
 class LibraryUnavailable(RuntimeError):
@@ -150,13 +342,29 @@ def get_bundle_dir() -> Path:
 
 def get_data_dir() -> Path:
     """
-    Get the .dm-sync/ data directory, creating it if needed.
+    Small precious state: settings, OAuth token, credentials, rclone config.
 
-    All user-writable app data goes here.
+    Portable installs keep .dm-sync/ next to the executable; a .app uses the
+    OS data dir.
     """
-    data_dir = get_app_dir() / DATA_DIR_NAME
-    data_dir.mkdir(exist_ok=True)
+    data_dir = _os_dir("data") if _using_os_dirs() else get_app_dir() / DATA_DIR_NAME
+    data_dir.mkdir(parents=True, exist_ok=True)
     return data_dir
+
+
+def get_cache_dir() -> Path:
+    """Regenerable bulk: scan cache and folder stats. Safe to delete."""
+    cache_dir = _os_dir("cache") if _using_os_dirs() else get_app_dir() / DATA_DIR_NAME
+    cache_dir.mkdir(parents=True, exist_ok=True)
+    return cache_dir
+
+
+def get_log_dir() -> Path:
+    """Debug logs."""
+    log_dir = (_os_dir("logs") if _using_os_dirs()
+               else get_app_dir() / DATA_DIR_NAME / "logs")
+    log_dir.mkdir(parents=True, exist_ok=True)
+    return log_dir
 
 
 def get_settings_path() -> Path:

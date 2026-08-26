@@ -17,8 +17,9 @@ from ..widgets.confirm import ConfirmDialog
 
 def show_library_screen(user_settings) -> bool:
     """Prompt for a new library path. Returns True when it changed."""
-    from ...core.paths import (LIBRARY_STATE_DIR_NAME, get_library_path,
-                               set_library_path)
+    from ...core.paths import (LIBRARY_STATE_DIR_NAME, find_legacy_markers,
+                               get_library_path, migrate_to_os_dirs,
+                               find_legacy_install, set_library_path)
     from ..primitives import CancelInput, input_with_esc
 
     clear_screen()
@@ -48,8 +49,10 @@ def show_library_screen(user_settings) -> bool:
             return False
 
     # No markers means Synchotic has never synced here, so every chart it
-    # already has elsewhere will be fetched again into this folder.
-    if not (path / LIBRARY_STATE_DIR_NAME / "markers").exists():
+    # already has elsewhere will be fetched again into this folder. Pre-1.5
+    # installs kept markers in .dm-sync beside the launcher, so check there too
+    # before telling anyone their library is new.
+    if not (path / LIBRARY_STATE_DIR_NAME / "markers").exists() and not find_legacy_markers(path):
         display.library_is_new(path)
         if not ConfirmDialog("Use this folder anyway?").run():
             return False
@@ -62,6 +65,15 @@ def show_library_screen(user_settings) -> bool:
     set_library_path(path)
     from ...sync.cache import clear_cache
     clear_cache()
+
+    # Adopt a pre-1.5 install now that we know where it is. Runs after
+    # clear_cache so the scan cache it brings over survives, and it copies
+    # rather than moves, so the old folder still works if this goes wrong.
+    legacy = find_legacy_install(path)
+    if legacy is not None:
+        moved = migrate_to_os_dirs(legacy)
+        if moved:
+            display.library_imported(legacy, moved)
 
     display.library_changed(path)
     return True
