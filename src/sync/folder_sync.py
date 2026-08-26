@@ -101,8 +101,20 @@ class FolderSync:
             if created > 0:
                 debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
 
+        def _plan_progress(done, total):
+            if total <= 200:  # fast enough that a counter is just noise
+                return
+            from ..ui.primitives import print_progress
+            if done >= total:
+                # Wipe the counter, or the section header prints onto the end of it.
+                print("\033[2K\r", end="", flush=True)
+                return
+            label = header or folder["name"]
+            print_progress(f"Checking {label}... {done}/{total}")
+
         tasks, skipped, long_paths = plan_downloads(
-            manifest_files, folder_path, self.delete_videos, folder_name=folder["name"]
+            manifest_files, folder_path, self.delete_videos, folder_name=folder["name"],
+            on_progress=_plan_progress,
         )
 
         debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
