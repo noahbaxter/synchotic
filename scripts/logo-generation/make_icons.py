@@ -19,7 +19,9 @@ from PIL import Image
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
-MASTER = HERE / "synchotic_logo.png"
+# The backed variant, not the transparent one: convert("RGB") below flattens
+# transparency to pure black, which is a harsher tile than the art wants.
+MASTER = HERE / "synchotic_logo_bg.png"
 
 
 def main():

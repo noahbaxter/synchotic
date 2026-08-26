@@ -121,13 +121,13 @@ def render(output_path="synchotic_logo.png", scale=2):
 
     if DARK_BG:
         # Base layer: dark background
-        img = Image.new("RGBA", (img_w, img_h), (18, 20, 26, 255))
+        img = Image.new("RGBA", (img_w, img_h), (30, 31, 42, 255))
         draw = ImageDraw.Draw(img)
 
         # Radial vignette: draw concentric ellipses from light center to dark edge
         cx, cy = img_w // 2, img_h // 2
-        bg_center = (32, 36, 44)
-        bg_edge = (18, 20, 26)
+        bg_center = (60, 62, 84)
+        bg_edge = (30, 31, 42)
         steps = 80
         for i in range(steps, 0, -1):
             t = i / steps
@@ -206,6 +206,10 @@ def render(output_path="synchotic_logo.png", scale=2):
 
 
 if __name__ == "__main__":
-    out = sys.argv[1] if len(sys.argv) > 1 else "synchotic_logo.png"
-    sc = int(sys.argv[2]) if len(sys.argv) > 2 else 2
+    # --bg renders the backed variant the app icons are cut from; without it the
+    # background is transparent, which is what the docs want.
+    args = [a for a in sys.argv[1:] if a != "--bg"]
+    DARK_BG = "--bg" in sys.argv
+    out = args[0] if args else "synchotic_logo.png"
+    sc = int(args[1]) if len(args) > 1 else 2
     render(out, sc)
