@@ -64,9 +64,16 @@ class DriveClient:
         return {}
 
     def _get_params(self, **kwargs) -> dict:
-        """Build request params with API key."""
-        params = {"key": self.config.api_key, **kwargs}
-        return params
+        """Build request params, adding the API key only for anonymous calls.
+
+        Google rejects a request carrying both an API key and an OAuth token
+        when the two come from different Cloud projects, which is every BYOC
+        user against a release build. The token alone authorizes the call, so
+        drop the key whenever we have one.
+        """
+        if self.auth_token:
+            return dict(kwargs)
+        return {"key": self.config.api_key, **kwargs}
 
     def _wait_for_rate_limit(self):
         """Wait if necessary to respect rate limit."""
@@ -271,14 +278,13 @@ class DriveClient:
             # Build multipart batch request body
             parts = []
             for folder_id in batch_ids:
-                query_params = urlencode({
-                    "q": f"'{folder_id}' in parents and trashed = false",
-                    "fields": "nextPageToken, files(id, name, mimeType, size, md5Checksum, modifiedTime, shortcutDetails)",
-                    "pageSize": 1000,
-                    "supportsAllDrives": "true",
-                    "includeItemsFromAllDrives": "true",
-                    "key": self.config.api_key,
-                })
+                query_params = urlencode(self._get_params(
+                    q=f"'{folder_id}' in parents and trashed = false",
+                    fields="nextPageToken, files(id, name, mimeType, size, md5Checksum, modifiedTime, shortcutDetails)",
+                    pageSize=1000,
+                    supportsAllDrives="true",
+                    includeItemsFromAllDrives="true",
+                ))
 
                 part = (
                     f"--{boundary}\r\n"
