@@ -136,12 +136,12 @@ class FolderProgress(ProgressTracker):
         remaining = max(10, term_width - prefix_len - len(path_context) - 4)
         item_name = truncate_text(item_name, remaining)
 
-        return f"  {c.GREEN}{pct:5.1f}%{c.RESET} {count_str} {ctx_part} {item_name}"
+        return f"  {c.SUCCESS}{pct:5.1f}%{c.RESET} {count_str} {ctx_part} {item_name}"
 
     def _format_error_line(self, path_context: str, message: str) -> str:
         c = Colors
         ctx_part = f"{c.DIM}[{path_context}]{c.RESET}" if path_context else ""
-        return f"  {c.RED}ERR:{c.RESET}          {ctx_part} {message}"
+        return f"  {c.ERROR}ERR:{c.RESET}          {ctx_part} {message}"
 
     def _print_with_active_section(self, line: str):
         """Print a line, managing the active downloads section."""

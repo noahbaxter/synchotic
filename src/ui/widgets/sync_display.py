@@ -24,7 +24,7 @@ def _rule_width() -> int:
 # === Network errors ===
 
 def error_offline(message: str):
-    print(f"\n{_c.RED}Error:{_c.RESET} {message}")
+    print(f"\n{_c.ERROR}Error:{_c.RESET} {message}")
     print("This app requires an internet connection to download charts.")
     print("Please check your connection and try again.\n")
 
@@ -38,7 +38,7 @@ def error_manifest_generic(error: str):
     print(f"{_c.DIM}Warning: Manifest fetch error: {error}{_c.RESET}")
 
 def error_no_local_manifest():
-    print(f"{_c.RED}Error:{_c.RESET} Local manifest not found.\n")
+    print(f"{_c.ERROR}Error:{_c.RESET} Local manifest not found.\n")
 
 
 # === Auth/OAuth messages ===
@@ -159,7 +159,7 @@ def library_first_run() -> None:
 
 def library_imported(legacy, items) -> None:
     print()
-    print(f"  {_c.GREEN}Imported your previous setup{_c.RESET} from:")
+    print(f"  {_c.SUCCESS}Imported your previous setup{_c.RESET} from:")
     print(f"    {legacy}")
     print(f"  {', '.join(items)}")
     print(f"  {_c.DIM}The old folder was left as it was.{_c.RESET}")
@@ -295,11 +295,11 @@ def folder_status_synced(file_count: int, filtered_count: int = 0):
     parts = [f"{file_count} files"]
     if filtered_count > 0:
         parts.append(f"{_c.DIM}{filtered_count} filtered{_c.RESET}")
-    print(f"  {', '.join(parts)} • {_c.GREEN}✓ synced{_c.RESET}")
+    print(f"  {', '.join(parts)} • {_c.SUCCESS}✓ synced{_c.RESET}")
 
 def folder_synced_inline(header: str, file_count: int, width: int | None = None):
     width = _rule_width() if width is None else width
-    name = f"{_c.GREEN}✓{_c.RESET} {header} • {file_count} files"
+    name = f"{_c.SUCCESS}✓{_c.RESET} {header} • {file_count} files"
     # Strip ANSI to measure visible length for padding
     from ..components import strip_ansi
     visible = f"━━━ {strip_ansi(name)} "
@@ -329,14 +329,14 @@ def folder_complete(downloaded: int, bytes_downloaded: int, duration: float,
     width = _rule_width() if width is None else width
     from ..components import strip_ansi
     avg_speed = bytes_downloaded / duration if duration > 0 else 0
-    content = f"{_c.GREEN}✓{_c.RESET} {downloaded} files"
+    content = f"{_c.SUCCESS}✓{_c.RESET} {downloaded} files"
     if bytes_downloaded > 0:
         content += f" ({format_size(bytes_downloaded)})"
     content += f" in {format_duration(duration)}"
     if avg_speed > 0:
         content += f" • {format_speed(avg_speed)}"
     if errors > 0:
-        content += f" • {_c.RED}{errors} errors{_c.RESET}"
+        content += f" • {_c.ERROR}{errors} errors{_c.RESET}"
     visible = f"━━━ {strip_ansi(content)} "
     pad = max(5, width - len(visible))
     print(f"━━━ {content} {'━' * pad}")
@@ -352,7 +352,7 @@ def sync_cancelled(downloaded: int = 0):
 
 def sync_complete(downloaded: int, bytes_downloaded: int, duration: float):
     avg_speed = bytes_downloaded / duration if duration > 0 else 0
-    summary = f"{_c.GREEN}✓{_c.RESET} {downloaded} files"
+    summary = f"{_c.SUCCESS}✓{_c.RESET} {downloaded} files"
     if bytes_downloaded > 0:
         summary += f" ({format_size(bytes_downloaded)})"
     summary += f" in {format_duration(duration)}"
@@ -361,10 +361,10 @@ def sync_complete(downloaded: int, bytes_downloaded: int, duration: float):
     print(summary)
 
 def sync_already_synced():
-    print(f"{_c.GREEN}✓{_c.RESET} All files synced")
+    print(f"{_c.SUCCESS}✓{_c.RESET} All files synced")
 
 def sync_errors(error_count: int):
-    print(f"  {_c.RED}{error_count} errors{_c.RESET}")
+    print(f"  {_c.ERROR}{error_count} errors{_c.RESET}")
 
 def sync_rate_limited(count: int):
     print(f"  {_c.DIM}{count} rate-limited{_c.RESET}")
@@ -380,11 +380,11 @@ def rate_limit_guidance(folder_names: set[str]):
 
 def purge_drive_disabled(folder_name: str, file_count: int, total_size: int):
     print(f"\n{_c.DIM}[{folder_name}]{_c.RESET} (drive disabled)")
-    print(f"  Found {_c.RED}{file_count}{_c.RESET} files ({format_size(total_size)})")
+    print(f"  Found {_c.ERROR}{file_count}{_c.RESET} files ({format_size(total_size)})")
 
 def purge_folder(folder_name: str, file_count: int, total_size: int):
     print(f"\n{_c.DIM}[{folder_name}]{_c.RESET}")
-    print(f"  Found {_c.RED}{file_count}{_c.RESET} files to purge ({format_size(total_size)})")
+    print(f"  Found {_c.ERROR}{file_count}{_c.RESET} files to purge ({format_size(total_size)})")
 
 def purge_tree_lines(lines: list[str], max_lines: int = 5):
     for line in lines[:max_lines]:
@@ -393,35 +393,35 @@ def purge_tree_lines(lines: list[str], max_lines: int = 5):
         print(f"    ... and {len(lines) - max_lines} more folders")
 
 def purge_removed(deleted: int, failed: int = 0):
-    msg = f"  {_c.RED}Removed {deleted} files{_c.RESET}"
+    msg = f"  {_c.ERROR}Removed {deleted} files{_c.RESET}"
     if failed > 0:
         msg += f" ({failed} failed)"
     print(msg)
 
 def purge_partial_downloads(file_count: int, total_size: int):
     print(f"\n{_c.DIM}[Partial Downloads]{_c.RESET}")
-    print(f"  Found {_c.RED}{file_count}{_c.RESET} incomplete download(s) ({format_size(total_size)})")
+    print(f"  Found {_c.ERROR}{file_count}{_c.RESET} incomplete download(s) ({format_size(total_size)})")
 
 def purge_partial_cleaned(deleted: int, failed: int = 0):
-    msg = f"  {_c.RED}Cleaned up {deleted} file(s){_c.RESET}"
+    msg = f"  {_c.ERROR}Cleaned up {deleted} file(s){_c.RESET}"
     if failed > 0:
         msg += f" ({failed} failed)"
     print(msg)
 
 def purge_summary(deleted: int, total_size: int, failed: int = 0):
-    print(f"{_c.RED}✗{_c.RESET} Removed {deleted} files ({format_size(total_size)})")
+    print(f"{_c.ERROR}✗{_c.RESET} Removed {deleted} files ({format_size(total_size)})")
     if failed > 0:
         print(f"  {_c.DIM}{failed} file(s) could not be deleted{_c.RESET}")
 
 def purge_nothing():
-    print(f"{_c.GREEN}✓{_c.RESET} No files to purge")
+    print(f"{_c.SUCCESS}✓{_c.RESET} No files to purge")
 
 
 # === Download errors ===
 
 def download_errors_header():
     print()
-    print(f"{_c.RED}Download errors:{_c.RESET}")
+    print(f"{_c.ERROR}Download errors:{_c.RESET}")
 
 def download_errors_context(context: str, errors: list, show_all: bool = False, sample_size: int = 3):
     if show_all or len(errors) <= sample_size:

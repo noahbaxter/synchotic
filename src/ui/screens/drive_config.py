@@ -110,7 +110,7 @@ def show_subfolder_settings(
             disabled=not drive_enabled,
         )
 
-        legend = f"{Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
+        legend = f"{Colors.RESET}+{Colors.MUTED} add   {Colors.ERROR}-{Colors.MUTED} remove"
         menu = Menu(title=f"{folder_name}", subtitle=subtitle, space_hint="Toggle", footer=legend,
                     column_header=format_column_header("setlist"))
 
@@ -180,7 +180,7 @@ def show_subfolder_settings(
             # Build label with checkmark, italic for scanning, delta appended
             is_scanning = (setlist_state == "scanning")
             is_disabled_item = not setlist_enabled or not drive_enabled
-            check = f"{Colors.GREEN}✓\x1b[39m" if show_checkmark else " "
+            check = f"{Colors.SUCCESS}✓\x1b[39m" if show_checkmark else " "
 
             if is_scanning:
                 if is_disabled_item:

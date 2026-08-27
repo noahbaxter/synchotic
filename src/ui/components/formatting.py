@@ -65,11 +65,11 @@ def format_delta(
 
     i = Colors.ITALIC if is_estimate else ""
     if has_add and has_remove:
-        return f"{Colors.RESET}{i}{Colors.BOLD}[{add_str} {Colors.MUTED}/{Colors.RESET} {i}{Colors.RED}{remove_str}]{Colors.RESET}"
+        return f"{Colors.RESET}{i}{Colors.BOLD}[{add_str} {Colors.MUTED}/{Colors.RESET} {i}{Colors.ERROR}{remove_str}]{Colors.RESET}"
     elif has_add:
         return f"{Colors.RESET}{i}{Colors.BOLD}[{add_str}]{Colors.RESET}"
     elif has_remove:
-        return f"{Colors.RED}{i}[{remove_str}]{Colors.RESET}"
+        return f"{Colors.ERROR}{i}[{remove_str}]{Colors.RESET}"
     else:
         return empty_text
 
@@ -258,7 +258,7 @@ def format_home_item(
     if state == "scanning":
         # Italic columns without mid-string RESETs (italic persists through color switches)
         base = Colors.MUTED_DIM if disabled else Colors.MUTED
-        hl = Colors.CYAN_DIM if disabled else Colors.CYAN
+        hl = Colors.INFO_DIM if disabled else Colors.INFO
         pipe = f"\x1b[23m{base}|{Colors.ITALIC}"  # disable italic for pipe, re-enable after
         sync_val = f"{sync:>5}" if sync else "     "
         size_val = f"{size_str:>10}" if size_str else "          "

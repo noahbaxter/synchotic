@@ -294,7 +294,7 @@ class Manifest:
             total_size += folder.total_size
 
             status = f" {Colors.DIM}[incomplete]{Colors.RESET}" if not folder.complete else ""
-            print(f"{Colors.PURPLE}▐{Colors.RESET} {Colors.BOLD}{folder.name}{Colors.RESET} ({chart_count} charts, {format_size(folder.total_size)}){status}")
+            print(f"{Colors.PRIMARY}▐{Colors.RESET} {Colors.BOLD}{folder.name}{Colors.RESET} ({chart_count} charts, {format_size(folder.total_size)}){status}")
 
             if folder.subfolders:
                 sorted_subs = sorted(folder.subfolders, key=lambda x: get_sort_key(x))
