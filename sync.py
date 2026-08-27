@@ -477,8 +477,11 @@ class SyncApp:
         """Scan a single custom folder."""
         from src.drive import FolderScanner
 
-        if not self.auth.is_signed_in:
-            print("\n  Please sign in to Google first to scan custom folders.")
+        # Same rule as every other Drive call, not OAuth: a public folder
+        # resolves on the API key, and rclone downloads through its own remote.
+        blocked = self._drive_blocked()
+        if blocked:
+            display.sync_blocked(blocked)
             wait_with_skip(3)
             return
 
@@ -786,8 +789,12 @@ class SyncApp:
         Args:
             force_rescan: If True, bypass scan cache and hit the API for every setlist.
         """
-        # Need OAuth for scanning
-        if not self.auth.is_signed_in:
+        # Whether the mode can reach Drive, not whether we hold a token. This
+        # is the gate handle_sync stopped applying and this one kept: rclone
+        # users got past sync's front door and then no scanner was ever built,
+        # so nothing scanned, every drive kept files=None, and the home screen
+        # read that back as "No drives enabled".
+        if self._drive_blocked():
             return
 
         # Find folders that need scanning (files not loaded)
