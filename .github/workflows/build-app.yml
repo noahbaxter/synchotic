@@ -139,9 +139,22 @@ jobs:
           Compress-Archive -Path "synchotic-app\*" -DestinationPath "app-windows.zip" -Force
         shell: pwsh
 
+      # Self-contained counterpart to Synchotic.app: bundles WezTerm so a desktop
+      # launch has a window, and needs nothing on first run.
+      - name: Build AppImage (Linux)
+        if: matrix.name == 'linux'
+        run: PYTHON=python packaging/linux/build_appimage.sh
+
       - name: Upload artifact
         if: inputs.upload_artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact }}
           path: dist/${{ matrix.artifact }}
+
+      - name: Upload AppImage
+        if: inputs.upload_artifacts && matrix.name == 'linux'
+        uses: actions/upload-artifact@v4
+        with:
+          name: appimage-linux
+          path: dist/*.AppImage

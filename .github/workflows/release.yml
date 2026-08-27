@@ -44,6 +44,7 @@ jobs:
               artifacts/app-macos.zip/app-macos.zip \
               artifacts/app-windows.zip/app-windows.zip \
               artifacts/app-linux.zip/app-linux.zip \
+              artifacts/appimage-linux/*.AppImage \
               --clobber
           else
             echo "Creating new release $VERSION..."
@@ -52,7 +53,8 @@ jobs:
               --notes "Release $VERSION" \
               artifacts/app-macos.zip/app-macos.zip \
               artifacts/app-windows.zip/app-windows.zip \
-              artifacts/app-linux.zip/app-linux.zip
+              artifacts/app-linux.zip/app-linux.zip \
+              artifacts/appimage-linux/*.AppImage
           fi
 
       - name: Summary
@@ -61,3 +63,4 @@ jobs:
           echo "- macOS: app-macos.zip" >> $GITHUB_STEP_SUMMARY
           echo "- Windows: app-windows.zip" >> $GITHUB_STEP_SUMMARY
           echo "- Linux: app-linux.zip" >> $GITHUB_STEP_SUMMARY
+          echo "- Linux (standalone): Synchotic-*.AppImage" >> $GITHUB_STEP_SUMMARY
