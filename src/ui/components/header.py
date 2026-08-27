@@ -56,7 +56,7 @@ def print_header():
 
         version_line = f" {Colors.DIM}v{__version__}{Colors.RESET}"
         if THEME_SWITCHER_ENABLED:
-            version_line += f"  {Colors.MUTED}theme: {Colors.HOTKEY}{current_theme}{Colors.RESET}"
+            version_line += f"  {Colors.MUTED}theme: {Colors.PRIMARY}{current_theme}{Colors.RESET}"
         cached_lines.append(version_line)
         cached_lines.append("")
         _header_cache = '\n'.join(cached_lines)

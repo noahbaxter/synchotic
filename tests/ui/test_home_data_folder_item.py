@@ -1,14 +1,15 @@
 """The data folder has to be reachable without a support conversation.
 
 Its location differs per install (launcher, frozen exe, dev checkout), and users
-are sent there for credentials.json, logs and settings. It used to sit on the
-main menu; it now lives on the Account screen, one keypress further in, which is
-still reachable without anyone having to explain a filesystem path.
+are sent there for credentials.json, logs and settings. It sat on the main menu,
+then on an Account screen; it is now a row in the home screen's settings pane,
+alongside the library location it belongs with.
 """
 import pytest
 
 from src.config.settings import UserSettings
-from src.ui.screens.account import show_account_screen
+from src.ui.components import strip_ansi
+from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
 
 
 @pytest.fixture
@@ -16,40 +17,51 @@ def rows(monkeypatch, tmp_path):
     def build(auth=None):
         captured = {}
 
-        def fake_run(self, initial_index=0):
-            captured["items"] = self.items
+        def fake_run(self):
+            captured["rows"] = self._right_rows(SETTINGS, "")
             return None  # user pressed Esc
 
-        monkeypatch.setattr("src.ui.widgets.menu.Menu.run", fake_run, raising=False)
-        monkeypatch.setattr("chotic_ui.widgets.menu.Menu.run", fake_run, raising=False)
+        monkeypatch.setattr("chotic_ui.widgets.two_pane.TwoPane.run",
+                            fake_run, raising=False)
         monkeypatch.setattr("src.drive.auth.has_custom_client_config",
                             lambda: True, raising=False)
-        ret = show_account_screen(user_settings=UserSettings(tmp_path / "settings.json"),
-                                  auth=auth, rclone_connected=True)
-        captured["returned"] = ret
+        captured["returned"] = show_main_menu_panes(
+            folders=[],
+            user_settings=UserSettings(tmp_path / "settings.json"),
+            download_path=tmp_path / "charts",
+            auth=auth,
+        )
         return captured
     return build
 
 
-def _find(items, text):
-    return [i for i in items if text in (getattr(i, "label", "") or "")]
+def _find(rows, text):
+    return [r for r in rows if text in strip_ansi(r[0](False, False))]
 
 
 def test_the_row_is_always_present(rows):
-    found = _find(rows()["items"], "Open data folder")
+    found = _find(rows()["rows"], "Open folder")
     assert len(found) == 1
-    assert found[0].disabled is False
-    assert found[0].value == "open_data_folder"
+    assert found[0][2] is True
+    assert found[0][1] == ("act", "open_data_folder")
 
 
-def test_it_has_a_hotkey_that_nothing_else_claims(rows):
-    items = rows()["items"]
-    row = _find(items, "Open data folder")[0]
-    assert row.hotkey == "F"
-    keys = [i.hotkey for i in items if getattr(i, "hotkey", None)]
-    assert keys.count("F") == 1, f"hotkey collision: {keys}"
+def test_it_says_what_is_in_there(rows):
+    """"Open folder" alone does not tell anyone why they were sent to it."""
+    row = _find(rows()["rows"], "Open folder")[0]
+    text = strip_ansi(row[0](False, False))
+    assert "credentials" in text and "logs" in text
 
 
-def test_escaping_the_screen_does_nothing(rows):
-    """Esc is Back, not an action. Returning a stray value would fire a handler."""
-    assert rows()["returned"] == ""
+def test_it_sits_with_the_library_location(rows):
+    """Both answer "where does Synchotic keep things", so they share a section."""
+    pane_rows = rows()["rows"]
+    labels = [strip_ansi(r[0](False, False)) for r in pane_rows]
+    location = next(i for i, l in enumerate(labels) if "Location" in l)
+    folder = next(i for i, l in enumerate(labels) if "Open folder" in l)
+    assert folder == location + 1
+
+
+def test_escaping_the_screen_quits_rather_than_acting(rows):
+    """Esc is not an action. Returning a stray value would fire a handler."""
+    assert rows()["returned"][0] == "quit"

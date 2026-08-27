@@ -3,8 +3,10 @@
 A refresh token dies for ordinary reasons: a revoked grant, a changed password,
 or an OAuth client left in "Testing" publishing status, which expires them every
 7 days. The old behaviour answered is_signed_in with a truthy value and no token
-behind it, so the home screen offered "Sign out" and never the sign-in that
-fixes it, and the explanation only appeared after a wasted sync.
+behind it, so the screen offered "Sign out" and never the sign-in that fixes it,
+and the explanation only appeared after a wasted sync.
+
+The sign-in control lives in the home screen's settings pane now.
 """
 import json
 from datetime import datetime, timedelta, timezone
@@ -12,11 +14,12 @@ from datetime import datetime, timedelta, timezone
 import pytest
 
 from src.config.settings import UserSettings
-from src.ui.screens.account import show_account_screen
+from src.ui.components import strip_ansi
+from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
 
 
 class FakeAuth:
-    """Stands in for AuthManager: only the properties the menu reads."""
+    """Stands in for AuthManager: only the properties the pane reads."""
     def __init__(self, signed_in=False, expired=False, email=None):
         self.is_signed_in = signed_in
         self.session_expired = expired
@@ -25,29 +28,36 @@ class FakeAuth:
 
 @pytest.fixture
 def rows(monkeypatch, tmp_path):
-    """The Google row now lives on the Account screen, not the main menu."""
-    def build(auth):
+    def build(auth, byoc=True, settings=None):
         captured = {}
 
-        def fake_run(self, initial_index=0):
-            captured["items"] = self.items
+        def fake_run(self):
+            captured["rows"] = self._right_rows(SETTINGS, "")
             return None
 
-        monkeypatch.setattr("src.ui.widgets.menu.Menu.run", fake_run, raising=False)
-        monkeypatch.setattr("chotic_ui.widgets.menu.Menu.run", fake_run, raising=False)
+        monkeypatch.setattr("chotic_ui.widgets.two_pane.TwoPane.run",
+                            fake_run, raising=False)
         monkeypatch.setattr("src.drive.auth.has_custom_client_config",
-                            lambda: True, raising=False)
-        show_account_screen(user_settings=UserSettings(tmp_path / "settings.json"),
-                            auth=auth, rclone_connected=True)
-        return captured["items"]
+                            lambda: byoc, raising=False)
+        show_main_menu_panes(
+            folders=[],
+            user_settings=settings or UserSettings(tmp_path / "settings.json"),
+            download_path=tmp_path / "charts",
+            auth=auth,
+        )
+        return captured["rows"]
     return build
 
 
-def _labels(items):
-    return [getattr(i, "label", "") or "" for i in items]
+def _labels(rows):
+    return [strip_ansi(r[0](False, False)).strip() for r in rows]
 
 
-class TestTheMenuOffersTheFix:
+def _row_for(rows, text):
+    return next(r for r in rows if text in strip_ansi(r[0](False, False)))
+
+
+class TestTheSettingsPaneOffersTheFix:
     def test_expired_session_offers_sign_in_again(self, rows):
         labels = _labels(rows(FakeAuth(signed_in=False, expired=True)))
         assert any("Sign in again" in l for l in labels), labels
@@ -58,25 +68,38 @@ class TestTheMenuOffersTheFix:
         labels = _labels(rows(FakeAuth(signed_in=True, expired=True)))
         assert not any("Sign out" in l for l in labels), labels
 
-    def test_a_new_user_is_offered_no_sign_in_at_all(self, monkeypatch):
-        """The capped client answers "This app is blocked", so no row is better
-        than a row that cannot work."""
-        from src.ui.screens.account import _sign_in_row
-        assert _sign_in_row(FakeAuth(), byoc_configured=False) is None
-        assert _sign_in_row(FakeAuth(), byoc_configured=True).value == "signin"
+    def test_a_new_user_sees_a_greyed_sign_in_with_the_reason(self, rows):
+        """The capped client answers "This app is blocked", so signing in cannot
+        work. This used to hide the row entirely, which left people hunting for
+        a control that was never there; it is shown unavailable instead."""
+        from src.ui.primitives import Colors
+        row = _row_for(rows(FakeAuth(), byoc=False), "Sign in")
+        assert row[2] is False
+        assert Colors.MUTED_DIM in row[0](False, False)
+        assert "Needs your own credentials" in strip_ansi(row[0](False, False))
 
-    def test_a_healthy_session_still_offers_sign_out(self, rows):
+    def test_a_healthy_session_offers_sign_out_with_the_address(self, rows):
         labels = _labels(rows(FakeAuth(signed_in=True, expired=False, email="a@b.com")))
-        assert any("Sign out (a@b.com)" in l for l in labels), labels
+        assert any("Sign out" in l and "a@b.com" in l for l in labels), labels
 
-    def test_a_signed_out_user_still_offers_sign_in(self, rows):
-        labels = _labels(rows(FakeAuth(signed_in=False, expired=False)))
-        assert any("Sign in to Google" in l for l in labels), labels
+    def test_a_signed_out_user_with_credentials_can_sign_in(self, rows):
+        row = _row_for(rows(FakeAuth(signed_in=False, expired=False)), "Sign in to Google")
+        assert row[2] is True
+        assert row[1] == ("act", "signin")
 
     def test_the_expired_row_triggers_sign_in(self, rows):
-        items = rows(FakeAuth(expired=True))
-        row = [i for i in items if "Sign in again" in (getattr(i, "label", "") or "")][0]
-        assert row.value == "signin"
+        row = _row_for(rows(FakeAuth(expired=True)), "Sign in again")
+        assert row[1] == ("act", "signin")
+
+    def test_signing_in_is_pointless_in_anonymous_mode(self, rows, tmp_path):
+        """Anonymous never authenticates, so the control is shown unavailable
+        rather than inviting a sign-in that changes nothing."""
+        from src.config.settings import DOWNLOAD_MODE_ANONYMOUS
+        settings = UserSettings(tmp_path / "settings.json")
+        settings.download_mode = DOWNLOAD_MODE_ANONYMOUS
+        row = _row_for(rows(FakeAuth(), settings=settings), "Sign in")
+        assert row[2] is False
+        assert "anonymous" in strip_ansi(row[0](False, False)).lower()
 
 
 class TestIsSignedInIsABool:

@@ -169,7 +169,7 @@ class ActiveDownloadsDisplay:
             name = truncate_text(name, name_max)
             
             ctx = f"[{ctx}]" if ctx else ""
-            arrow = f"{c.CYAN}↓{c.RESET}"
+            arrow = f"{c.INFO}↓{c.RESET}"
 
             line = f"  {arrow} {c.DIM}{ctx}{c.RESET} {name}  {dl_mb:.0f}/{total_mb:.0f} MB ({pct:.0f}%)"
             lines.append(line)
