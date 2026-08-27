@@ -787,7 +787,12 @@ def show_main_menu(
 
     # Rescan item with scan age or scanning state
     is_scanning = background_scanner and not background_scanner.is_done()
-    if is_scanning:
+    # Scanning needs OAuth: _start_background_scan bails before doing anything
+    # without it, so an enabled Rescan would just look broken. Say why instead.
+    signed_out = not (auth and getattr(auth, "is_signed_in", False))
+    if signed_out:
+        rescan_desc = "Logged out"
+    elif is_scanning:
         api_calls = background_scanner.get_stats().api_calls
         label = "Scanning..." if api_calls > 0 else "Loading cache..."
         rescan_desc = f"{Colors.CYAN}{label}{Colors.RESET}"
@@ -805,7 +810,9 @@ def show_main_menu(
                 rescan_desc = f"Last scan: {int(age_s // 3600)}h {int((age_s % 3600) // 60)}m ago"
         else:
             rescan_desc = "Force re-scan all drives"
-    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc, disabled=is_scanning, locked=is_scanning))
+    rescan_blocked = bool(is_scanning or signed_out)
+    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc,
+                           disabled=rescan_blocked, locked=rescan_blocked))
 
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
