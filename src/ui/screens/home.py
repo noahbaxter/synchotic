@@ -586,7 +586,7 @@ def show_main_menu(
 
     legend = f"{Colors.RESET}+{Colors.MUTED} add   {Colors.RED}-{Colors.MUTED} remove"
     menu = Menu(title="Chart Packs", subtitle=cache.subtitle, space_hint="Toggle", footer=legend, esc_label="Quit",
-                column_header=format_column_header("home"))
+                column_header=format_column_header("home"), filterable=True)
 
     # Set up update callback for background scanning
     def on_menu_update(menu_instance: Menu) -> bool:

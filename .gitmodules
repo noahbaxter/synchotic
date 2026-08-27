@@ -1,0 +1,3 @@
+[submodule "vendor/chotic-ui"]
+	path = vendor/chotic-ui
+	url = https://github.com/noahbaxter/chotic-ui

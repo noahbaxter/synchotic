@@ -16,6 +16,7 @@ from .menu import (
 from .confirm import ConfirmDialog
 from .progress import FolderProgress
 from . import sync_display as display
+from chotic_ui import FilterList  # real-time filterable list (from the submodule)
 
 __all__ = [
     # Menu
@@ -28,6 +29,8 @@ __all__ = [
     "check_resize",
     # Confirm
     "ConfirmDialog",
+    # Filter list
+    "FilterList",
     # Progress
     "FolderProgress",
     # Display

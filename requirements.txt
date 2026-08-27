@@ -12,3 +12,6 @@ rarfile>=4.0  # For .rar files (uses UnRAR library)
 # Development/build
 pytest>=7.0.0
 pyinstaller>=6.0.0
+
+# Shared TUI toolkit (git submodule under vendor/), installed editable.
+-e ./vendor/chotic-ui
