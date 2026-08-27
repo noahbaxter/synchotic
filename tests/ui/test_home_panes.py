@@ -6,7 +6,8 @@ toggling mutates settings in place instead of returning an action.
 """
 import pytest
 
-from src.config.settings import UserSettings
+from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
+                                 DOWNLOAD_MODE_BYOC, DOWNLOAD_MODE_RCLONE)
 from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
 
 
@@ -30,9 +31,18 @@ FOLDER = {
 def build(monkeypatch, tmp_path):
     """Drive the screen without a terminal. `act` receives the live TwoPane so a
     test can poke its cursor and callbacks the way a keypress would."""
-    def run(act=None, folders=(FOLDER,), auth=None, settings=None, scanner=None):
+    def run(act=None, folders=(FOLDER,), auth=None, settings=None, scanner=None,
+            mode=DOWNLOAD_MODE_ANONYMOUS, rclone_authed=False, byoc_creds=False):
         captured = {}
         settings = settings or UserSettings(tmp_path / "settings.json")
+        # Drive-touching rows are gated on whether the mode can reach Drive, so
+        # pin both inputs: is_authed() otherwise reads the real rclone config
+        # and the rows would differ per machine. Anonymous is the default
+        # because it always reaches Drive, leaving unrelated rows ungated.
+        settings.download_mode = mode
+        monkeypatch.setattr("src.rclone.is_authed", lambda: rclone_authed)
+        monkeypatch.setattr("src.drive.auth.has_custom_client_config",
+                            lambda: byoc_creds)
 
         def fake_run(self):
             captured["pane"] = self
@@ -83,17 +93,24 @@ class TestTheRightPane:
 
     def test_settings_shows_the_options_not_setlists(self, build):
         labels = " ".join(_labels(build()["right_for"](SETTINGS)))
-        assert "Google" in labels
+        assert "Add folder" in labels
         assert "Location" in labels
         assert "Setlist A" not in labels
 
-    def test_rescan_is_unselectable_when_signed_out(self, build):
-        rows = build(auth=None)["right_for"](SETTINGS)
+    def test_rescan_is_unselectable_when_the_mode_cannot_reach_drive(self, build):
+        rows = build(auth=None, mode=DOWNLOAD_MODE_BYOC,
+                     byoc_creds=False)["right_for"](SETTINGS)
         rescan = next(r for r in rows if r[1] == ("act", "rescan"))
         assert rescan[2] is False
 
-    def test_rescan_is_selectable_when_signed_in(self, build):
+    def test_rescan_is_selectable_when_the_mode_works(self, build):
         rows = build(auth=_Auth())["right_for"](SETTINGS)
+        rescan = next(r for r in rows if r[1] == ("act", "rescan"))
+        assert rescan[2] is True
+
+    def test_rescan_survives_being_signed_out_in_anonymous_mode(self, build):
+        """Anonymous has no token by design; the row must not be gated on one."""
+        rows = build(auth=None, mode=DOWNLOAD_MODE_ANONYMOUS)["right_for"](SETTINGS)
         rescan = next(r for r in rows if r[1] == ("act", "rescan"))
         assert rescan[2] is True
 
@@ -312,9 +329,10 @@ class TestUnavailableOptionsLookUnavailable:
         assert row[2] is False
         assert Colors.MUTED_DIM in row[0](False, False)
 
-    def test_rescan_is_grey_when_signed_out(self, build):
+    def test_rescan_is_grey_when_the_mode_cannot_reach_drive(self, build):
         from src.ui.primitives import Colors
-        row = self._rescan(build(auth=None)["right_for"](SETTINGS))
+        row = self._rescan(build(auth=None, mode=DOWNLOAD_MODE_BYOC,
+                                 byoc_creds=False)["right_for"](SETTINGS))
         assert row[2] is False
         assert Colors.MUTED_DIM in row[0](False, False)
 
@@ -324,6 +342,47 @@ class TestUnavailableOptionsLookUnavailable:
         row = self._rescan(out["right_for"](SETTINGS))
         assert row[2] is True
         assert Colors.MUTED_DIM not in row[0](False, False)
+
+
+class TestDriveRowsNeedAWorkingMode:
+    """Add folder, Rescan and Location all make Drive calls, so an unusable
+    mode has to stop them at the menu rather than several screens in at
+    "access denied"."""
+
+    GATED = [("act", "add_custom"), ("act", "rescan"), ("act", "library")]
+
+    def _rows(self, build, **kw):
+        return {r[1]: r for r in build(**kw)["right_for"](SETTINGS) if r[1] in self.GATED}
+
+    def test_byoc_without_credentials_blocks_all_three(self, build):
+        rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_BYOC, byoc_creds=False)
+        assert [rows[v][2] for v in self.GATED] == [False, False, False]
+
+    def test_the_row_says_why_it_is_unavailable(self, build):
+        """A greyed row with no reason reads as broken rather than unavailable."""
+        from src.ui.components import strip_ansi
+        rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_BYOC, byoc_creds=False)
+        text = strip_ansi(rows[("act", "add_custom")][0](False, False))
+        assert "Needs your Google credentials" in text
+
+    def test_unconnected_rclone_says_to_connect_it(self, build):
+        from src.ui.components import strip_ansi
+        rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_RCLONE, rclone_authed=False)
+        text = strip_ansi(rows[("act", "add_custom")][0](False, False))
+        assert "Connect rclone first" in text
+
+    def test_anonymous_mode_leaves_all_three_available(self, build):
+        """The regression to avoid: gating these on sign-in would kill a mode
+        that resolves public folders on the API key alone."""
+        rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_ANONYMOUS)
+        assert [rows[v][2] for v in self.GATED] == [True, True, True]
+
+    def test_open_folder_is_never_gated(self, build):
+        """It opens a local directory, so it works with no Drive access."""
+        rows = build(auth=None, mode=DOWNLOAD_MODE_BYOC,
+                     byoc_creds=False)["right_for"](SETTINGS)
+        row = next(r for r in rows if r[1] == ("act", "open_data_folder"))
+        assert row[2] is True
 
 
 class TestTheChartsColumn:

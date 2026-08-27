@@ -142,6 +142,33 @@ def _rule(width: int):
     return _row(f"{Colors.BORDER}{'─' * max(1, width)}{Colors.RESET}", None, False)
 
 
+def _mode_blocked_reason(user_settings, auth, rclone_connected) -> str:
+    """Why Drive is unreachable under the current mode, or "" when it is fine.
+
+    Defers to connection_step_for so the menu and the first-run flow cannot
+    disagree about whether a mode is usable. The returned text is shown in
+    place of the row's value, because a greyed row with no reason just reads
+    as broken.
+    """
+    from ...config.settings import DOWNLOAD_MODE_RCLONE
+    from ...drive.auth import has_custom_client_config
+    from .download_mode import connection_step_for
+
+    mode = (getattr(user_settings, "download_mode", "") if user_settings else "") \
+        or DOWNLOAD_MODE_RCLONE
+    step = connection_step_for(
+        mode,
+        rclone_authed=rclone_connected,
+        signed_in=bool(auth and getattr(auth, "is_signed_in", False)),
+        byoc_configured=has_custom_client_config(),
+    )
+    return {
+        "rclone": "Connect rclone first",
+        "byoc_setup": "Needs your Google credentials",
+        "signin": "Sign in first",
+    }.get(step, "")
+
+
 def show_main_menu_panes(
     folders: list,
     user_settings: UserSettings = None,
@@ -371,12 +398,6 @@ def show_main_menu_panes(
 
         scanning = bool(background_scanner and not background_scanner.is_done())
         signed_out = not (auth and getattr(auth, "is_signed_in", False))
-        if signed_out:
-            rescan = "Logged out"
-        elif scanning:
-            rescan = "Scanning…"
-        else:
-            rescan = "Force re-scan all drives"
 
         rclone_connected = False
         try:
@@ -384,6 +405,19 @@ def show_main_menu_panes(
             rclone_connected = rclone.is_authed()
         except Exception:
             rclone_connected = False
+
+        # Anything that talks to Drive is offered only when the chosen mode can
+        # actually reach it. Gating on sign-in instead would be wrong: anonymous
+        # mode has no token by design and still resolves public folders on the
+        # API key alone, so it would block a setup that works.
+        blocked = _mode_blocked_reason(user_settings, auth, rclone_connected)
+
+        if blocked:
+            rescan = blocked
+        elif scanning:
+            rescan = "Scanning…"
+        else:
+            rescan = "Force re-scan all drives"
 
         sign_label, sign_value, sign_action, sign_ok = _sign_in_option()
 
@@ -398,15 +432,21 @@ def show_main_menu_panes(
             opt(sign_label, sign_value, sign_action, sign_ok),
             _spacer(),
             _header_row("Library"),
-            opt("Location", str(get_library_path()), ("act", "library")),
+            # Changing it rescans the new location, so it fails the same way.
+            opt("Location", blocked or str(get_library_path()), ("act", "library"),
+                selectable=not blocked),
+            # Opens a local folder, so it works with no Drive access at all.
             opt("Open folder", "Settings, logs, credentials", ("act", "open_data_folder")),
             _spacer(),
             _header_row("Drives"),
-            opt("Add folder", "Your own Google Drive folder", ("act", "add_custom")),
-            # A rescan with no grant returns before doing any work, and one
-            # during a scan has nothing to add, so neither is offerable.
+            # Resolving a folder is a Drive call: without a working mode it
+            # only ever reaches "access denied", several screens in.
+            opt("Add folder", blocked or "Your own Google Drive folder",
+                ("act", "add_custom"), selectable=not blocked),
+            # A rescan with no working mode returns before doing any work, and
+            # one during a scan has nothing to add, so neither is offerable.
             opt("Rescan", rescan, ("act", "rescan"),
-                selectable=not (signed_out or scanning)),
+                selectable=not (blocked or scanning)),
         ]
 
     def _download_mode_label(settings):
