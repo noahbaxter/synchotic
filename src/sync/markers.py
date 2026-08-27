@@ -128,6 +128,7 @@ def save_marker(
         json.dump(marker, f, indent=2)
     tmp_path.replace(marker_path)
 
+    _invalidate_claims()
     return marker_path
 
 
@@ -210,6 +211,7 @@ def delete_marker(archive_path: str, md5: str) -> bool:
     if marker_path.exists():
         try:
             marker_path.unlink()
+            _invalidate_claims()
             return True
         except OSError:
             pass
@@ -286,6 +288,59 @@ def get_all_markers() -> list[dict]:
             continue
 
     return markers
+
+
+_claims_index: "dict | None" = None
+
+
+def _invalidate_claims():
+    """Drop the cached claims index. Every marker write calls this."""
+    global _claims_index
+    _claims_index = None
+
+
+def _claims() -> dict:
+    """Map of extracted file path -> markers claiming to have produced it.
+
+    Built once and reused: callers hit this per archive, and rereading every
+    marker each time would cost far more than the lookup saves.
+    """
+    global _claims_index
+    if _claims_index is not None:
+        return _claims_index
+
+    index: dict = {}
+    for marker in get_all_markers():
+        for rel_path in marker.get("files", {}):
+            index.setdefault(normalize_path_key(rel_path), []).append(marker)
+    _claims_index = index
+    return index
+
+
+def find_marker_delivering(files, archive_path: str, base_path: Path) -> Optional[dict]:
+    """A different archive that already put these exact files on disk.
+
+    Two archives on Drive can unpack to the same chart folder: the same chart
+    uploaded twice, once loose and once inside a folder, or names differing
+    only in case or punctuation. They overwrite each other, so whichever went
+    last is what is on disk, and the other's marker can never verify again.
+    Treating the loser as missing re-downloads it every sync forever, and
+    reports the chart as unsynced the whole time.
+
+    So whichever archive is actually on disk wins. Returns its marker, or None
+    when the files are genuinely absent rather than delivered by a twin.
+    """
+    index = _claims()
+    seen = set()
+    for rel_path in files:
+        for other in index.get(normalize_path_key(rel_path), ()):
+            other_path = other.get("archive_path", "")
+            if other_path == archive_path or other_path in seen:
+                continue
+            seen.add(other_path)
+            if verify_marker(other, base_path):
+                return other
+    return None
 
 
 def get_files_for_archive(archive_path: str) -> dict[str, int]:

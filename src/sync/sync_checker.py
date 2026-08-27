@@ -12,7 +12,8 @@ from pathlib import Path
 
 from ..core.constants import CHART_ARCHIVE_EXTENSIONS
 from ..core.formatting import resolve_existing_path
-from .markers import load_marker, verify_marker, find_any_marker_for_path
+from .markers import (load_marker, verify_marker, find_any_marker_for_path,
+                      find_marker_delivering)
 
 
 @dataclass
@@ -80,6 +81,16 @@ def is_archive_synced(
         if marker_archive_path != archive_path:
             total_size = sum(any_marker.get("files", {}).values())
             return True, total_size
+
+    # Two archives on Drive can unpack to the same chart folder, and they
+    # overwrite each other. Our marker failing here does not mean the chart is
+    # missing: it can mean the twin is the copy on disk. Counting that as
+    # missing re-downloads it every sync and reports it unsynced forever, so
+    # take whichever copy is actually present.
+    if marker:
+        twin = find_marker_delivering(marker.get("files", {}), archive_path, local_base)
+        if twin:
+            return True, sum(twin.get("files", {}).values())
 
     # No valid marker = not synced
     return False, 0
