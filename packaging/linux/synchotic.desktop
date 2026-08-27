@@ -5,7 +5,7 @@ Comment=Sync Clone Hero chart libraries from Google Drive
 Exec=AppRun
 Icon=synchotic
 Terminal=false
-Categories=Game;Utility;
+Categories=Utility;
 # Must match the --class handed to wezterm-gui in AppRun, and the basename of
 # this file. Without the pairing the window reports itself as WezTerm and the
 # taskbar shows a WezTerm button instead of Synchotic.
