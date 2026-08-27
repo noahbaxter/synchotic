@@ -8,11 +8,14 @@ import sys
 from pathlib import Path
 from typing import Callable, Optional
 
+from ..core.logging import debug_log
+
 # OAuth imports are optional (only needed for admin script)
 try:
     from google.oauth2.credentials import Credentials
     from google.auth.transport.requests import Request
     from google_auth_oauthlib.flow import InstalledAppFlow
+    from google.auth.exceptions import RefreshError
     OAUTH_AVAILABLE = True
 except ImportError:
     OAUTH_AVAILABLE = False
@@ -106,7 +109,8 @@ class OAuthManager:
                 )
                 creds = flow.run_local_server(port=0)
             except Exception as e:
-                print(f"OAuth error: {e}")
+                debug_log(f"OAUTH | interactive flow failed | {e}")
+                print("  Sign-in failed. See .dm-sync/logs.")
                 return None
 
         # Save token for next time
@@ -227,6 +231,7 @@ class UserOAuthManager:
             token_path = get_token_path()
         self.token_path = token_path
         self._credentials: Optional[Credentials] = None
+        self._session_expired = False
 
     @property
     def is_available(self) -> bool:
@@ -245,8 +250,11 @@ class UserOAuthManager:
         # Try to load and validate token
         try:
             creds = Credentials.from_authorized_user_file(str(self.token_path))
-            # Valid if not expired, or if we can refresh
-            return creds.valid or (creds.expired and creds.refresh_token)
+            # bool(), not the bare `or`: the second arm evaluates to the refresh
+            # token itself, so this used to hand callers a live secret as their
+            # "yes". Every caller happens to use it in boolean context today,
+            # which is the only reason it never reached a log.
+            return bool(creds.valid or (creds.expired and creds.refresh_token))
         except Exception:
             return False
 
@@ -276,8 +284,19 @@ class UserOAuthManager:
             try:
                 creds.refresh(Request())
                 self._save_token(creds)
+                self._session_expired = False
+            except RefreshError:
+                # Google refused the grant itself: revoked, password changed, or
+                # a Testing-mode client whose refresh tokens die after 7 days.
+                # Keeping the file would leave is_signed_in answering yes with no
+                # token behind it, so the menu offers "Sign out" and never the
+                # sign-in that actually fixes it.
+                self._session_expired = True
+                self._discard_dead_token()
+                return None
             except Exception:
-                # Refresh failed - token is invalid
+                # Transport-level failure: offline, DNS, proxy. The grant may be
+                # perfectly good, so keep the token and try again next launch.
                 return None
 
         if creds and creds.valid:
@@ -323,7 +342,8 @@ class UserOAuthManager:
                 self._credentials = creds
                 return True
         except Exception as e:
-            print(f"  Sign-in error: {e}")
+            debug_log(f"OAUTH | sign_in failed | {e}")
+            print("  Sign-in failed. See .dm-sync/logs.")
 
         return False
 
@@ -358,6 +378,19 @@ class UserOAuthManager:
                 pass
 
         return None
+
+    @property
+    def session_expired(self) -> bool:
+        """True once Google has refused this token's refresh for good."""
+        return self._session_expired
+
+    def _discard_dead_token(self) -> None:
+        """Drop a token Google will never honour again."""
+        try:
+            self.token_path.unlink()
+        except OSError:
+            pass
+        self._credentials = None
 
     def _save_token(self, creds: Credentials):
         """Save credentials to token file."""
@@ -483,6 +516,12 @@ class AuthManager:
         """
         return self._user_oauth.sign_in()
 
+    @property
+    def session_expired(self) -> bool:
+        """The saved sign-in died and only a fresh sign-in will fix it."""
+        return self._user_oauth.session_expired
+
+
     def sign_out(self):
         """Sign out the current user."""
         self._user_oauth.sign_out()
@@ -505,3 +544,82 @@ class AuthManager:
         that require the admin credentials.
         """
         return self._get_admin_oauth()
+
+
+BYOC_INSTRUCTIONS_FILE = "BYOC_SETUP_INSTRUCTIONS.txt"
+
+_BYOC_INSTRUCTIONS = """\
+Bring Your Own Credentials - Setup Instructions
+===============================================
+
+If you find that you keep hitting rate limits with rclone or would prefer
+higher download speeds, you can create your own Google OAuth credentials to
+use with Synchotic! This takes about ten minutes to set up in a browser but
+guarantees you get your own drive quota at full speeds rather than sharing it
+with every other rclone user.
+
+Instructions:
+
+1. MAKE A PROJECT
+   Go to console.cloud.google.com and sign in.
+   Project dropdown at the top, then "New Project".
+   Name it "synchotic-byoc" and click Create.
+   Wait a few seconds, then select it in that same dropdown.
+
+2. TURN ON GOOGLE DRIVE
+   Left menu: "APIs and Services", then "Library".
+   Search "Google Drive API". Open it, click Enable.
+
+3. FILL IN THE APP INFO
+   Left menu: "APIs and Services", then "OAuth consent screen".
+   Choose "External", click Create.
+   Any app name, your own email in both email boxes. Skip the rest.
+   Save and continue until it finishes.
+
+   IMPORTANT: set the publishing status to "In production".
+   If it remains "Testing" by default, Google will sign you out every 7 days.
+
+4. MAKE THE KEY
+   Left menu: "APIs and Services", then "Credentials".
+   "Create Credentials", then "OAuth client ID".
+   Application type: "Desktop app". Any name. Create.
+
+5. DOWNLOAD IT
+   Click "Download JSON" in the box that pops up.
+
+6. INSTALL IT
+   Rename the file you just downloaded to "credentials.json" exactly.
+   Move it into this folder, right next to these instructions.
+
+7. ENABLE IT
+   Start Synchotic, press D, choose "Use your own Google credentials", and
+   sign in with the same Google account.
+   Google will say the app is not verified. It is yours. Click "Advanced",
+   then "Go to ... (unsafe)".
+
+
+FAQ
+---
+Why am I being signed out every 7 days?
+   Step 3, publishing status is still "Testing". Set it to "In production".
+
+Why does Synchotic say it is not set up?
+   The file must be named exactly "credentials.json", not "credentials(1).json",
+   and must sit in this folder, beside these instructions.
+"""
+
+
+def write_byoc_instructions() -> "Path":
+    """Drop setup instructions where credentials.json needs to go.
+
+    The target folder differs per install (launcher, frozen exe, dev checkout),
+    so telling people to "find .dm-sync" is not an answer. Put the steps in the
+    folder itself and open it for them.
+    """
+    from ..core.paths import get_data_dir
+
+    data_dir = get_data_dir()
+    data_dir.mkdir(parents=True, exist_ok=True)
+    path = data_dir / BYOC_INSTRUCTIONS_FILE
+    path.write_text(_BYOC_INSTRUCTIONS, encoding="utf-8")
+    return path

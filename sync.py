@@ -61,7 +61,7 @@ from src.sync import FolderStatsCache, BackgroundScanner
 from src.ui.primitives import clear_screen, wait_with_skip
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
-from src.core.logging import TeeOutput, debug_log
+from src.core.logging import TeeOutput, debug_log, prune_old_logs
 from src.drive.client import DriveClientConfig
 
 # ============================================================================
@@ -558,9 +558,30 @@ class SyncApp:
             # Recreate sync with new token
             self._refresh_sync_token()
         else:
-            print("  Sign-in cancelled or failed.")
+            # Do not keep pointing at sign-in once it has already failed.
+            display.sign_in_failed_notice()
 
         wait_with_skip(2)
+
+    def handle_account(self):
+        """Account & Downloads. Owns no logic, just routes to the old handlers."""
+        from src.ui.screens import show_account_screen
+        rclone_connected = False
+        try:
+            import src.rclone as rclone
+            rclone_connected = rclone.is_authed()
+        except Exception:
+            pass
+
+        action = show_account_screen(self.user_settings, self.auth, rclone_connected)
+        if action == "download_mode":
+            self.handle_download_mode()
+        elif action == "signin":
+            self.handle_signin()
+        elif action == "signout":
+            self.handle_signout()
+        elif action == "open_data_folder":
+            self.handle_open_data_folder()
 
     def handle_download_mode(self):
         """Change how blocked charts download, then connect straight away.
@@ -592,8 +613,36 @@ class SyncApp:
         elif step == "signin":
             self.handle_signin()
         elif step == "byoc_setup":
-            display.byoc_not_configured()
-            wait_with_skip(5)
+            self._start_byoc_setup()
+
+    def handle_open_data_folder(self):
+        """Show the data folder. Always print the path, since opening can fail."""
+        from src.core.files import open_folder
+        from src.core.paths import get_data_dir
+
+        data_dir = get_data_dir()
+        data_dir.mkdir(parents=True, exist_ok=True)
+        opened = open_folder(data_dir)
+        print()
+        print("  Opened your data folder:" if opened else "  Your data folder:")
+        print(f"    {data_dir}")
+        print()
+        wait_with_skip(4)
+
+    def _start_byoc_setup(self):
+        """Put the instructions where the credentials go, then open that folder."""
+        from src.core.files import open_folder
+        from src.drive.auth import write_byoc_instructions
+
+        path = None
+        opened = False
+        try:
+            path = write_byoc_instructions()
+            opened = open_folder(path.parent)
+        except OSError as e:
+            debug_log(f"BYOC_SETUP | could not write instructions | {e}")
+        display.byoc_not_configured(instructions_path=path, opened=opened)
+        wait_with_skip(8)
 
     def _connect_rclone(self):
         """Run the one-time rclone consent now."""
@@ -1056,7 +1105,22 @@ class SyncApp:
         print_header()
 
         # First-run OAuth prompt (only shown once)
-        if not self.user_settings.oauth_prompted and self.auth.is_available:
+        #
+        # Gated on the user owning an OAuth client. Sign-in resolves its client
+        # from credentials.json and falls back to the embedded one, which is the
+        # capped app: its 100-user limit is full and verification was rejected,
+        # so for anyone new that sign-in cannot succeed. Offering it anyway is
+        # what made picking BYOC lead straight into a Synchotic sign-in that was
+        # guaranteed to fail. has_custom_client_config exists for this check.
+        #
+        # oauth_prompted is only set when the prompt actually ran, so a user who
+        # sets up BYOC later still gets asked once, at the point it can work.
+        from src.drive.auth import has_custom_client_config
+
+        if (not self.user_settings.oauth_prompted
+                and self.auth.is_available
+                and not self.auth.is_signed_in
+                and has_custom_client_config()):
             self.user_settings.oauth_prompted = True
             self.user_settings.save()
 
@@ -1135,6 +1199,12 @@ class SyncApp:
                         menu_cache = result  # Pre-computed during sync
                     else:
                         menu_cache = None  # Cancelled or no-op, recompute normally
+                    # The sync is where a dead grant surfaces, and the menu row
+                    # alone does not explain a sign-in that keeps dying weekly.
+                    if self.auth and self.auth.session_expired:
+                        display.session_expired_notice()
+                        from src.ui.primitives import wait_with_skip
+                        wait_with_skip(4.0)
 
             elif action == "configure":
                 # Enter on a drive - go directly to configure that drive
@@ -1166,6 +1236,9 @@ class SyncApp:
                 menu_cache = None
 
 
+            elif action == "account":
+                self.handle_account()
+
             elif action == "signin":
                 self.handle_signin()
                 # No cache invalidation needed - just auth state changed
@@ -1173,6 +1246,9 @@ class SyncApp:
             elif action == "signout":
                 self.handle_signout()
                 # No cache invalidation needed - just auth state changed
+
+            elif action == "open_data_folder":
+                self.handle_open_data_folder()
 
             elif action == "download_mode":
                 self.handle_download_mode()
@@ -1207,6 +1283,7 @@ def main():
     # Always log to .dm-sync/logs/YYYY-MM-DD.log
     logs_dir = get_data_dir() / "logs"
     logs_dir.mkdir(exist_ok=True)
+    prune_old_logs(logs_dir)
     log_path = logs_dir / f"{datetime.now().strftime('%Y-%m-%d')}.log"
     # Read version for log header
     version = None

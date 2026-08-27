@@ -787,7 +787,12 @@ def show_main_menu(
 
     # Rescan item with scan age or scanning state
     is_scanning = background_scanner and not background_scanner.is_done()
-    if is_scanning:
+    # Scanning needs OAuth: _start_background_scan bails before doing anything
+    # without it, so an enabled Rescan would just look broken. Say why instead.
+    signed_out = not (auth and getattr(auth, "is_signed_in", False))
+    if signed_out:
+        rescan_desc = "Logged out"
+    elif is_scanning:
         api_calls = background_scanner.get_stats().api_calls
         label = "Scanning..." if api_calls > 0 else "Loading cache..."
         rescan_desc = f"{Colors.CYAN}{label}{Colors.RESET}"
@@ -805,7 +810,9 @@ def show_main_menu(
                 rescan_desc = f"Last scan: {int(age_s // 3600)}h {int((age_s % 3600) // 60)}m ago"
         else:
             rescan_desc = "Force re-scan all drives"
-    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc, disabled=is_scanning, locked=is_scanning))
+    rescan_blocked = bool(is_scanning or signed_out)
+    menu.add_item(MenuItem("  Rescan", hotkey="R", value=("rescan", None), description=rescan_desc,
+                           disabled=rescan_blocked, locked=rescan_blocked))
 
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Add Custom Folder", hotkey="A", value=("add_custom", None), description="Add your own Google Drive folder"))
@@ -817,40 +824,26 @@ def show_main_menu(
     except Exception:
         rclone_connected = False
 
-    from src.config.settings import (DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC,
-                                     DOWNLOAD_MODE_RCLONE)
-    mode = (user_settings.download_mode if user_settings else "") or DOWNLOAD_MODE_RCLONE
-    mode_names = {
-        DOWNLOAD_MODE_RCLONE: "rclone",
-        DOWNLOAD_MODE_BYOC: "your own Google credentials",
-        DOWNLOAD_MODE_ANONYMOUS: "no sign-in (most charts skipped)",
-    }
-    downloads_line = f"Downloads: {mode_names.get(mode, mode)}"
-    if mode == DOWNLOAD_MODE_RCLONE and not rclone_connected:
-        downloads_line += " (not connected yet)"
-    if mode == DOWNLOAD_MODE_BYOC:
-        from src.drive.auth import has_custom_client_config
-        if not has_custom_client_config():
-            downloads_line += " (not set up)"
-    if auth and auth.is_signed_in:
-        downloads_line += " + account sign-in"
-    menu.add_item(MenuItem(f"  {downloads_line}", hotkey="D", value=("download_mode", None)))
-
-    if auth and auth.is_signed_in:
-        email = auth.user_email
-        label = f"  Sign out ({email})" if email else "  Sign out of Google"
-        menu.add_item(MenuItem(label, hotkey="G", value=("signout", None), description="Remove saved Google credentials"))
-    else:
-        menu.add_item(MenuItem("  Sign in to Google", hotkey="G", value=("signin", None), description="Faster downloads with your own quota"))
+    from .account import account_status
+    status = account_status(user_settings, auth, rclone_connected)
+    menu.add_item(MenuItem(f"  Account: {status}", hotkey="D", value=("account", None),
+                           description="Downloads and sign-in"))
 
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Quit", hotkey="ESC", value=("quit", None)))
 
+    # -1 means "no hotkey was pressed this time round". The attribute defaults
+    # to 0 and is only ever written by the hotkey branch, so without a sentinel
+    # every plain Enter below reads as a hotkey jump from item 0 and sends the
+    # cursor back to the top of the list.
+    menu._selected_before_hotkey = -1
     result = menu.run(initial_index=selected_index)
     if result is None:
         return ("quit", None, selected_index)
 
-    restore_pos = menu._selected_before_hotkey if menu._selected_before_hotkey != menu._selected else menu._selected
+    # A hotkey jumps the cursor to its item; put it back where the user left it.
+    restore_pos = (menu._selected_before_hotkey if menu._selected_before_hotkey >= 0
+                   else menu._selected)
 
     if isinstance(result.value, tuple) and len(result.value) == 2 and result.value[0] == "group":
         return ("toggle_group", result.value[1], menu._selected)
