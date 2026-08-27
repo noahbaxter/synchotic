@@ -8,9 +8,12 @@ local config = wezterm.config_builder()
 -- persistence of its own; save on resize and read it back at startup.
 local DEFAULT_COLS, DEFAULT_ROWS = 100, 34
 
+-- The launcher hands us the OS data dir for this platform; it is the only side
+-- that can work one out. Falls back to the macOS location for a stale host
+-- config left behind by an older launcher.
 local function size_file()
-  local home = os.getenv('HOME') or '.'
-  return home .. '/Library/Application Support/Synchotic/window.txt'
+  return os.getenv('SYNCHOTIC_WINDOW_FILE')
+      or ((os.getenv('HOME') or '.') .. '/Library/Application Support/Synchotic/window.txt')
 end
 
 local cols, rows = DEFAULT_COLS, DEFAULT_ROWS
@@ -31,8 +34,9 @@ config.initial_rows = rows
 
 wezterm.on('window-resized', function(_window, pane)
   local dims = pane:get_dimensions()
-  os.execute('mkdir -p "$HOME/Library/Application Support/Synchotic"')
-  local f = io.open(size_file(), 'w')
+  local path = size_file()
+  os.execute('mkdir -p "' .. path:gsub('/[^/]*$', '') .. '"')
+  local f = io.open(path, 'w')
   if f then
     f:write(tostring(dims.cols) .. '\n' .. tostring(dims.viewport_rows) .. '\n')
     f:close()
