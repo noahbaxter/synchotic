@@ -63,6 +63,8 @@ class UserSettings:
         self.delta_mode: str = "size"
         # How to fetch blocked files. "" = not chosen yet, ask on first run.
         self.download_mode: str = ""
+        # Where charts live. "" = the default beside the app.
+        self.library_path: str = ""
         # Track if this is a fresh settings file (no file existed)
         self._is_new: bool = False
 
@@ -84,6 +86,7 @@ class UserSettings:
                 settings.delta_mode = data.get("delta_mode", "size")
                 mode = data.get("download_mode", "")
                 settings.download_mode = mode if mode in DOWNLOAD_MODES else "" 
+                settings.library_path = str(data.get("library_path", "") or "")
                 settings._is_new = data.get("use_default_drives", False)
             except (json.JSONDecodeError, IOError):
                 settings._is_new = True
@@ -108,6 +111,7 @@ class UserSettings:
             "oauth_prompted": self.oauth_prompted,
             "delta_mode": self.delta_mode,
             "download_mode": self.download_mode,
+            "library_path": self.library_path,
             "use_default_drives": self._is_new,
         }
         with open(self.path, "w") as f:

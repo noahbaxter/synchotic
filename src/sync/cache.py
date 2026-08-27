@@ -16,7 +16,7 @@ from typing import TYPE_CHECKING
 
 from ..stats import clear_local_stats_cache
 from ..core.formatting import normalize_fs_name, sanitize_drive_name
-from ..core.paths import get_data_dir
+from ..core.paths import get_data_dir, get_cache_dir
 
 if TYPE_CHECKING:
     from .status import SyncStatus
@@ -124,7 +124,7 @@ class PersistentStatsCache:
         self._cache: dict[str, CachedFolderStats] = {}  # Legacy: kept for backwards compat with get()
         self._setlist_cache: dict[str, dict[str, CachedSetlistStats]] = {}  # folder_id -> setlist_name -> stats
         self._dirty = False
-        self._path = get_data_dir() / self.CACHE_FILE
+        self._path = get_cache_dir() / self.CACHE_FILE
         self._load()
 
     def _load(self):
@@ -329,7 +329,7 @@ class ScanCache:
     MAX_AGE_SECONDS = 3600  # 1 hour
 
     def __init__(self):
-        self._dir = get_data_dir() / self.CACHE_DIR
+        self._dir = get_cache_dir() / self.CACHE_DIR
 
     def get(self, setlist_id: str) -> list[dict] | None:
         path = self._dir / f"{setlist_id}.json"

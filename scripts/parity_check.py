@@ -85,7 +85,7 @@ def take_snapshot(repo: Path, out_path: Path) -> int:
         "repo": str(Path(repo).resolve()),
         "root": str(root),
         "tree": snapshot_tree(download_path),
-        "markers": snapshot_markers(data_dir),
+        "markers": snapshot_markers(data_dir, download_path),
         "counts": {
             "downloaded": downloaded, "skipped": skipped, "errors": errors,
             "rate_limited": len(rate_limited), "cancelled": cancelled,

@@ -96,6 +96,10 @@ def show_account_screen(user_settings=None, auth=None, rclone_connected=False) -
     if row is not None:
         menu.add_item(row)
     menu.add_item(MenuDivider())
+    from ...core.paths import get_library_path
+    menu.add_item(MenuItem(f"  Chart library: {get_library_path()}", hotkey="L",
+                           value="library",
+                           description="Where charts are downloaded to"))
     menu.add_item(MenuItem("  Open data folder", hotkey="F", value="open_data_folder",
                            description="Settings, logs, credentials.json"))
 

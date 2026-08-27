@@ -15,6 +15,12 @@ from ...core.formatting import format_size, format_duration, format_speed
 _c = Colors
 
 
+def _rule_width() -> int:
+    """Width for the ━━━ rules, so they span the window instead of a fixed 50."""
+    from ..primitives.terminal import get_terminal_width
+    return max(50, get_terminal_width() - 4)
+
+
 # === Network errors ===
 
 def error_offline(message: str):
@@ -107,6 +113,66 @@ def byoc_not_configured(instructions_path=None, opened: bool = False) -> None:
     print()
 
 
+def library_prompt(current, can_browse: bool = False) -> None:
+    print()
+    print("  Chart Library")
+    print()
+    print("  Charts currently live in:")
+    print(f"    {current}")
+    print()
+    print("  Enter a folder to use instead. Markers and staging live inside the")
+    print("  library, so moving the folder later takes its state with it.")
+    print()
+    if can_browse:
+        print(f"  {_c.DIM}Press B to browse, or ESC to cancel{_c.RESET}")
+    else:
+        print(f"  {_c.DIM}Press ESC to cancel{_c.RESET}")
+    print()
+
+
+
+def library_not_a_folder(path) -> None:
+    print(f"\n  Not a folder: {path}\n")
+
+
+def library_create_failed(path, err) -> None:
+    print(f"\n  Could not create {path}")
+    print(f"  {err}\n")
+
+
+def library_is_new(path) -> None:
+    print()
+    print("  Synchotic has not synced here before, so it looks empty.")
+    print("  The next sync will download everything again into this folder.")
+    print()
+
+
+def library_first_run() -> None:
+    print()
+    print("  Where should your charts live?")
+    print(f"  {_c.DIM}Point this at your Clone Hero songs folder. If you used an"
+          f" older Synchotic,{_c.RESET}")
+    print(f"  {_c.DIM}pick the same folder and your settings and markers come"
+          f" across.{_c.RESET}")
+    print()
+
+
+def library_imported(legacy, items) -> None:
+    print()
+    print(f"  {_c.GREEN}Imported your previous setup{_c.RESET} from:")
+    print(f"    {legacy}")
+    print(f"  {', '.join(items)}")
+    print(f"  {_c.DIM}The old folder was left as it was.{_c.RESET}")
+    print()
+
+
+def library_changed(path) -> None:
+    print()
+    print("  Chart library is now:")
+    print(f"    {path}")
+    print()
+
+
 def library_unavailable(path) -> None:
     """The configured library is not reachable, e.g. an unmounted volume."""
     print()
@@ -116,6 +182,25 @@ def library_unavailable(path) -> None:
     print("  If it lives on an external or network drive, connect it and retry.")
     print("  Nothing has been scanned, downloaded or deleted.")
     print()
+
+
+def purge_skipped_new_library(path) -> None:
+    """First sync at a library we did not create. Explain, delete nothing."""
+    print()
+    print("  This looks like a library Synchotic has not synced before:")
+    print(f"    {path}")
+    print()
+    print("  Nothing was removed. From the next sync onward, Synchotic manages")
+    print("  the folders of drives you enable: anything inside them that is not")
+    print("  part of that drive WILL BE DELETED. Folders that are not drives are")
+    print("  never touched.")
+    print()
+
+
+def purge_skipped_unowned(folder_name: str) -> None:
+    """A disabled drive whose folder we never created. Almost certainly theirs."""
+    print(f"  Skipped '{folder_name}': Synchotic did not create this folder, so it")
+    print("  will not be emptied. Enable the drive to have Synchotic manage it.")
 
 
 def rclone_no_browser() -> None:
@@ -212,7 +297,8 @@ def folder_status_synced(file_count: int, filtered_count: int = 0):
         parts.append(f"{_c.DIM}{filtered_count} filtered{_c.RESET}")
     print(f"  {', '.join(parts)} • {_c.GREEN}✓ synced{_c.RESET}")
 
-def folder_synced_inline(header: str, file_count: int, width: int = 50):
+def folder_synced_inline(header: str, file_count: int, width: int | None = None):
+    width = _rule_width() if width is None else width
     name = f"{_c.GREEN}✓{_c.RESET} {header} • {file_count} files"
     # Strip ANSI to measure visible length for padding
     from ..components import strip_ansi
@@ -238,7 +324,9 @@ def download_cancelled(downloaded: int, complete_charts: int, cleaned: int = 0):
 
 # === Folder completion summary ===
 
-def folder_complete(downloaded: int, bytes_downloaded: int, duration: float, errors: int = 0, width: int = 50):
+def folder_complete(downloaded: int, bytes_downloaded: int, duration: float,
+                    errors: int = 0, width: int | None = None):
+    width = _rule_width() if width is None else width
     from ..components import strip_ansi
     avg_speed = bytes_downloaded / duration if duration > 0 else 0
     content = f"{_c.GREEN}✓{_c.RESET} {downloaded} files"

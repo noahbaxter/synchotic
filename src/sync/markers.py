@@ -17,12 +17,22 @@ from pathlib import Path
 from typing import Optional
 
 from ..core.formatting import normalize_path_key
-from ..core.paths import get_data_dir
+from ..core.paths import get_library_state_dir
+
+
+def _marker_files(markers_dir: Path, pattern: str = "*.json") -> list:
+    """Real marker files, never macOS AppleDouble sidecars.
+
+    Markers live inside the library now, and a library on an SMB share (or any
+    volume without native xattr support) collects a binary ._name.json beside
+    every file. Those match the glob, are not UTF-8, and are not markers.
+    """
+    return [f for f in markers_dir.glob(pattern) if not f.name.startswith("._")]
 
 
 def get_markers_dir() -> Path:
     """Get the markers directory, creating it if needed."""
-    markers_dir = get_data_dir() / "markers"
+    markers_dir = get_library_state_dir() / "markers"
     markers_dir.mkdir(exist_ok=True)
     return markers_dir
 
@@ -79,7 +89,7 @@ def load_marker(archive_path: str, md5: str) -> Optional[dict]:
     try:
         with open(marker_path) as f:
             return json.load(f)
-    except (json.JSONDecodeError, IOError):
+    except (ValueError, OSError):
         return None
 
 
@@ -162,7 +172,7 @@ def _find_markers_by_prefix(archive_path: str) -> list[Path]:
 
     safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
     return [
-        f for f in markers_dir.glob("*.json")
+        f for f in _marker_files(markers_dir)
         if normalize_path_key(f.stem).startswith(safe_name + "_")
     ]
 
@@ -183,7 +193,7 @@ def find_any_marker_for_path(archive_path: str) -> Optional[dict]:
         try:
             with open(marker_file) as f:
                 return json.load(f)
-        except (json.JSONDecodeError, IOError):
+        except (ValueError, OSError):
             continue
 
     return None
@@ -206,6 +216,29 @@ def delete_marker(archive_path: str, md5: str) -> bool:
     return False
 
 
+def get_marked_drive_names() -> set[str]:
+    """Drive folder names that have at least one marker.
+
+    A marker is proof we extracted into that folder, which is the evidence
+    ownership needs. `get_all_marker_files` cannot answer this: its paths are
+    relative to the drive folder and so have already dropped the drive name.
+    """
+    names = set()
+    markers_dir = get_markers_dir()
+    if not markers_dir.exists():
+        return names
+    for marker_file in _marker_files(markers_dir):
+        try:
+            with open(marker_file) as f:
+                archive_path = json.load(f).get("archive_path", "")
+        except (ValueError, OSError):
+            continue
+        top = archive_path.split("/")[0] if archive_path else ""
+        if top:
+            names.add(top)
+    return names
+
+
 def get_all_marker_files() -> set[str]:
     """
     Get all file paths tracked by all markers.
@@ -219,13 +252,13 @@ def get_all_marker_files() -> set[str]:
     if not markers_dir.exists():
         return all_files
 
-    for marker_file in markers_dir.glob("*.json"):
+    for marker_file in _marker_files(markers_dir):
         try:
             with open(marker_file) as f:
                 marker = json.load(f)
             for file_path in marker.get("files", {}).keys():
                 all_files.add(file_path)
-        except (json.JSONDecodeError, IOError):
+        except (ValueError, OSError):
             continue
 
     return all_files
@@ -244,12 +277,12 @@ def get_all_markers() -> list[dict]:
     if not markers_dir.exists():
         return markers
 
-    for marker_file in markers_dir.glob("*.json"):
+    for marker_file in _marker_files(markers_dir):
         try:
             with open(marker_file) as f:
                 marker = json.load(f)
             markers.append(marker)
-        except (json.JSONDecodeError, IOError):
+        except (ValueError, OSError):
             continue
 
     return markers
@@ -270,7 +303,7 @@ def get_files_for_archive(archive_path: str) -> dict[str, int]:
             with open(marker_file) as f:
                 marker = json.load(f)
             files.update(marker.get("files", {}))
-        except (json.JSONDecodeError, IOError):
+        except (ValueError, OSError):
             pass
     return files
 
@@ -367,7 +400,7 @@ def load_failed_marker(archive_path: str, md5: str) -> Optional[dict]:
     try:
         with open(marker_path) as f:
             return json.load(f)
-    except (json.JSONDecodeError, IOError):
+    except (ValueError, OSError):
         return None
 
 
@@ -378,11 +411,11 @@ def get_all_failed_markers() -> list[dict]:
     if not markers_dir.exists():
         return markers
 
-    for marker_file in markers_dir.glob("failed_*.json"):
+    for marker_file in _marker_files(markers_dir, "failed_*.json"):
         try:
             with open(marker_file) as f:
                 markers.append(json.load(f))
-        except (json.JSONDecodeError, IOError):
+        except (ValueError, OSError):
             continue
 
     return markers
@@ -396,7 +429,7 @@ def delete_failed_markers_for_archive(archive_path: str) -> int:
 
     safe_name = normalize_path_key(archive_path).replace("/", "_").replace("\\", "_")
     deleted = 0
-    for marker_file in markers_dir.glob("failed_*.json"):
+    for marker_file in _marker_files(markers_dir, "failed_*.json"):
         if normalize_path_key(marker_file.stem).startswith(f"failed_{safe_name}_"):
             try:
                 marker_file.unlink()
