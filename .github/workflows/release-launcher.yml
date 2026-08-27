@@ -66,8 +66,12 @@ jobs:
           security import $RUNNER_TEMP/certificate.p12 -P "$APPLE_CERTIFICATE_PASSWORD" \
             -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
 
+          # The runner image ships Apple's intermediate CA now, and importing a
+          # cert that is already there exits 1, which under `bash -e` failed the
+          # whole signing step. Present is present either way.
           curl -sO https://www.apple.com/certificateauthority/DeveloperIDG2CA.cer
-          security import DeveloperIDG2CA.cer -k "$KEYCHAIN_PATH"
+          security import DeveloperIDG2CA.cer -k "$KEYCHAIN_PATH" \
+            || echo "DeveloperIDG2CA already in the keychain, continuing"
 
           security list-keychain -d user -s "$KEYCHAIN_PATH" login.keychain
           security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
