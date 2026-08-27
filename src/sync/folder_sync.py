@@ -122,10 +122,18 @@ class FolderSync:
             print_section_header(header)
 
         download_start = time.time()
-        downloaded, _, errors, rate_limited, cancelled, bytes_downloaded = self.downloader.download_many(
+        (downloaded, _, errors, rate_limited, cancelled,
+         bytes_downloaded, blocked_tasks) = self.downloader.download_many(
             tasks, drive_name=folder["name"], cancel_check=cancel_check,
             scan_stats_getter=scan_stats_getter, skipped=skipped,
         )
+
+        # Tier 4: route auth-blocked files through rclone (its verified, uncapped OAuth).
+        if blocked_tasks and not cancelled:
+            recovered, _ = self._rclone_second_pass(blocked_tasks, folder, cancel_check)
+            downloaded += recovered
+            errors -= recovered
+
         download_time = time.time() - download_start
 
         if not cancelled:
@@ -143,6 +151,44 @@ class FolderSync:
                 get_persistent_stats_cache().invalidate(folder_id)
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
+
+    def _rclone_second_pass(self, blocked_tasks, folder, cancel_check):
+        """Download auth-blocked tasks via rclone, then run existing archive processing.
+
+        Reuses FileDownloader.process_archive so extraction/markers/purge-safety are
+        identical to tiers 1-3. Returns (recovered_count, still_failed_count)."""
+        from .. import rclone
+        if not rclone.is_authed():
+            # One-time consent: pre-explain rclone before it opens the browser,
+            # then attempt setup. Defensive: a failure here just leaves the files
+            # blocked (counted as errors), same as before.
+            try:
+                display.rclone_consent_explainer()
+                if not rclone.RcloneSession().ensure_authed():
+                    return 0, len(blocked_tasks)
+            except Exception:
+                return 0, len(blocked_tasks)  # caller already counted them as errors
+        recovered = 0
+        try:
+            with rclone.RcloneSession() as session:
+                ok_ids, _ = session.downloader.download(
+                    blocked_tasks, cancel_check=cancel_check
+                )
+        except Exception:
+            return 0, len(blocked_tasks)
+        ok = set(ok_ids)
+        for task in blocked_tasks:
+            if task.file_id not in ok:
+                continue
+            if task.is_archive:
+                success, _, _ = self.downloader.process_archive(task, task.rel_path)
+                if success:
+                    recovered += 1
+                    debug_log(f"TIER | rclone | {task.local_path.name.removeprefix('_download_')}")
+            else:
+                recovered += 1  # loose file already at final temp path
+                debug_log(f"TIER | rclone | {task.local_path.name.removeprefix('_download_')}")
+        return recovered, len(blocked_tasks) - recovered
 
     def download_folders(
         self,

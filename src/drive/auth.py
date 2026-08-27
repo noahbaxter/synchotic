@@ -143,6 +143,43 @@ class OAuthManager:
         self._credentials = None
 
 
+def load_client_config() -> dict:
+    """Resolve OAuth client config: env vars -> credentials.json -> embedded defaults."""
+    import os, json
+    from ..core.paths import get_data_dir
+    from ..core.constants import USER_OAUTH_CLIENT_ID, USER_OAUTH_CLIENT_SECRET
+
+    env_id = os.environ.get("SYNCHOTIC_OAUTH_CLIENT_ID")
+    env_secret = os.environ.get("SYNCHOTIC_OAUTH_CLIENT_SECRET")
+    if env_id and env_secret:
+        client_id, client_secret = env_id, env_secret
+    else:
+        creds_file = get_data_dir() / "credentials.json"
+        if creds_file.exists():
+            try:
+                data = json.loads(creds_file.read_text())
+                inst = data.get("installed") or data.get("web") or {}
+                if inst.get("client_id") and inst.get("client_secret"):
+                    return {"installed": {
+                        "client_id": inst["client_id"],
+                        "client_secret": inst["client_secret"],
+                        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                        "token_uri": "https://oauth2.googleapis.com/token",
+                        "redirect_uris": ["http://localhost"],
+                    }}
+            except Exception:
+                pass
+        client_id, client_secret = USER_OAUTH_CLIENT_ID, USER_OAUTH_CLIENT_SECRET
+
+    return {"installed": {
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+        "token_uri": "https://oauth2.googleapis.com/token",
+        "redirect_uris": ["http://localhost"],
+    }}
+
+
 class UserOAuthManager:
     """
     OAuth manager for end-user authentication using embedded credentials.
@@ -247,23 +284,11 @@ class UserOAuthManager:
         if not OAUTH_AVAILABLE:
             return False
 
-        # Import credentials from constants
-        from ..core.constants import (
-            USER_OAUTH_CLIENT_ID,
-            USER_OAUTH_CLIENT_SECRET,
-            USER_OAUTH_SCOPES,
-        )
+        # Scopes still come from constants; client config is resolved
+        # from env vars -> credentials.json -> embedded defaults (BYOC).
+        from ..core.constants import USER_OAUTH_SCOPES
 
-        # Build client config dict (same format as credentials.json)
-        client_config = {
-            "installed": {
-                "client_id": USER_OAUTH_CLIENT_ID,
-                "client_secret": USER_OAUTH_CLIENT_SECRET,
-                "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-                "token_uri": "https://oauth2.googleapis.com/token",
-                "redirect_uris": ["http://localhost"],
-            }
-        }
+        client_config = load_client_config()
 
         try:
             flow = InstalledAppFlow.from_client_config(client_config, USER_OAUTH_SCOPES)

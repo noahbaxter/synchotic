@@ -59,7 +59,7 @@ class TestCancelCheck:
             )
 
         with patch.object(downloader, '_download_file_async', side_effect=slow_download):
-            downloaded, skipped, errors, rate_limited, cancelled, bytes_dl = downloader.download_many(
+            downloaded, skipped, errors, rate_limited, cancelled, bytes_dl, _blocked = downloader.download_many(
                 mock_tasks,
                 show_progress=False,
                 cancel_check=cancel_after_calls,
@@ -87,7 +87,7 @@ class TestCancelCheck:
             )
 
         with patch.object(downloader, '_download_file_async', side_effect=fast_download):
-            downloaded, skipped, errors, rate_limited, cancelled, bytes_dl = downloader.download_many(
+            downloaded, skipped, errors, rate_limited, cancelled, bytes_dl, _blocked = downloader.download_many(
                 mock_tasks,
                 show_progress=False,
                 cancel_check=never_cancel,
@@ -140,7 +140,7 @@ class TestCancelResponsiveness:
 
         with patch.object(downloader, '_download_file_async', side_effect=slow_download):
             start = time.time()
-            downloaded, skipped, errors, rate_limited, cancelled, bytes_dl = downloader.download_many(
+            downloaded, skipped, errors, rate_limited, cancelled, bytes_dl, _blocked = downloader.download_many(
                 tasks,
                 show_progress=False,
                 cancel_check=cancel_after_delay,

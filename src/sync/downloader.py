@@ -20,6 +20,7 @@ import aiohttp
 
 from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import extract_path_context, format_download_name, normalize_fs_name, normalize_path_key
+from ..core.logging import debug_log
 from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
 from .extractor import extract_archive, get_folder_size, delete_video_files
 from .download_planner import DownloadTask
@@ -53,6 +54,7 @@ class DownloadResult:
     message: str
     bytes_downloaded: int = 0
     retryable: bool = False
+    needs_auth: bool = False
 
 
 class FileDownloader:
@@ -116,16 +118,17 @@ class FileDownloader:
                                 headers = {"Authorization": f"Bearer {auth_token}"}
                                 async with session.get(api_url, headers=headers) as auth_response:
                                     auth_response.raise_for_status()
-                                    return await self._write_response(auth_response, task, progress_tracker)
+                                    return await self._write_response(auth_response, task, progress_tracker, tier="oauth")
                             else:
                                 return DownloadResult(
                                     success=False,
                                     file_path=task.local_path,
-                                    message=f"SKIP (sign in to bypass virus scan): {display_name}",
+                                    message=f"NEEDS AUTH (authenticated download set up automatically): {display_name}",
                                     retryable=False,
+                                    needs_auth=True,
                                 )
 
-                        return await self._write_response(response, task, progress_tracker)
+                        return await self._write_response(response, task, progress_tracker, tier="anonymous")
 
                 except asyncio.TimeoutError:
                     if attempt < self.max_retries - 1:
@@ -147,7 +150,7 @@ class FileDownloader:
                             headers = {"Authorization": f"Bearer {auth_token}"}
                             async with session.get(api_url, headers=headers) as auth_response:
                                 auth_response.raise_for_status()
-                                return await self._write_response(auth_response, task, progress_tracker)
+                                return await self._write_response(auth_response, task, progress_tracker, tier="oauth")
                         except aiohttp.ClientResponseError as auth_e:
                             if auth_e.status == 403:
                                 msg = f"ERR (folder rate limited): {display_name}"
@@ -213,8 +216,13 @@ class FileDownloader:
         response: aiohttp.ClientResponse,
         task: DownloadTask,
         progress_tracker: Optional[FolderProgress] = None,
+        tier: str = "anonymous",
     ) -> DownloadResult:
-        """Write response content to file."""
+        """Write response content to file.
+
+        tier identifies which download path delivered the file (anonymous or oauth),
+        logged for manual auth-mode verification. See TESTING_AUTH.md.
+        """
         task.local_path.parent.mkdir(parents=True, exist_ok=True)
 
         downloaded_bytes = 0
@@ -261,6 +269,7 @@ class FileDownloader:
             if is_tracked and progress_tracker:
                 progress_tracker.unregister_active_download(task.file_id)
 
+        debug_log(f"TIER | {tier} | {task.local_path.name.removeprefix('_download_')}")
         return DownloadResult(
             success=True,
             file_path=task.local_path,
@@ -458,6 +467,7 @@ class FileDownloader:
         errors = 0
         auth_failures = 0
         retryable_tasks: List[DownloadTask] = []
+        blocked_tasks: List[DownloadTask] = []
         cancelled = False
         loop = asyncio.get_event_loop()
 
@@ -571,7 +581,9 @@ class FileDownloader:
                                     progress.file_completed(result.file_path)
                         else:
                             errors += 1
-                            if "auth" in result.message.lower() or "401" in result.message:
+                            if getattr(result, "needs_auth", False):
+                                blocked_tasks.append(task)
+                            elif "auth" in result.message.lower() or "401" in result.message:
                                 auth_failures += 1
                             if result.retryable:
                                 retryable_tasks.append(task)
@@ -587,7 +599,7 @@ class FileDownloader:
                 for t in pending:
                     t.cancel()
 
-        return downloaded, errors, retryable_tasks, auth_failures, cancelled
+        return downloaded, errors, retryable_tasks, auth_failures, cancelled, blocked_tasks
 
     def download_many(
         self,
@@ -611,7 +623,7 @@ class FileDownloader:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
         """
         if not tasks:
-            return 0, 0, 0, [], False, 0
+            return 0, 0, 0, [], False, 0, []
 
         progress = None
         if show_progress:
@@ -647,7 +659,7 @@ class FileDownloader:
         permanent_errors = 0
         cancelled = False
         try:
-            downloaded, errors, retryable, auth_failures, cancelled = asyncio.run(
+            downloaded, errors, retryable, auth_failures, cancelled, blocked_tasks = asyncio.run(
                 self._download_many_async(tasks, progress, progress_callback, cancel_check)
             )
             rate_limited_ids = [t.file_id for t in retryable]
@@ -656,6 +668,7 @@ class FileDownloader:
             cancelled = True
             downloaded = 0
             permanent_errors = 0
+            blocked_tasks = []
         finally:
             esc_monitor.stop()
 
@@ -676,4 +689,4 @@ class FileDownloader:
             display.auth_expired_warning(auth_failures)
 
         bytes_downloaded = progress.downloaded_bytes if progress else 0
-        return downloaded, 0, permanent_errors, rate_limited_ids, cancelled, bytes_downloaded
+        return downloaded, 0, permanent_errors, rate_limited_ids, cancelled, bytes_downloaded, blocked_tasks
