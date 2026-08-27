@@ -121,16 +121,19 @@ def test_paginated_scan_never_reintroduces_the_key(google):
     assert all(c == {"key": False, "token": True} for c in google.calls)
 
 
-def test_credential_less_request_reports_an_empty_folder(google):
-    """A request with neither credential 403s, and list_folder swallows 403.
+def test_credential_less_request_raises_rather_than_reporting_empty(google):
+    """A request with neither credential 403s, and that must reach the caller.
 
-    So it surfaces as "no files", not as an error. Pinned because it is the
-    shape a scan takes if the key is ever missing and nobody is signed in:
-    silent zeroes feed the planner, not a failure the purge guard would see.
+    This used to return [], so a dead scan surfaced as "no files". Silent
+    zeroes reach the purge planner looking exactly like a drive whose remote
+    contents were deleted, and the planner deletes the local copies to match.
+    A local build bakes no API key, so an anonymous scan is this exact shape.
     """
     client = DriveClient(DriveClientConfig(api_key=""), auth_token=None)
 
-    assert client.list_folder("folder1") == []
+    with pytest.raises(requests.exceptions.HTTPError):
+        client.list_folder("folder1")
+
     # Retried to exhaustion first: _request_with_retry treats 403 as transient,
-    # so each dead scan costs 3 round trips plus backoff before going quiet.
+    # so each dead scan costs 3 round trips plus backoff before it gives up.
     assert google.calls == [{"key": False, "token": False}] * 3

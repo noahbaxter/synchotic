@@ -303,13 +303,25 @@ class BackgroundScanner:
             return names
 
     def get_scanned_enabled_setlists(self) -> list[SetlistInfo]:
-        """Get all enabled setlists that have finished scanning."""
+        """Enabled setlists that were scanned, for the downloader to work through.
+
+        Failed ones are excluded rather than counted as done. They are done in
+        the sense is_ready_for_sync means it, nothing is still running, but
+        their drive has no file list to download from: a scan that raised never
+        reaches the line that creates one. Handing one back walks the download
+        loop into reading files off a drive still holding None.
+
+        The failed check is not redundant with the scanned one. The retry pass
+        adds a twice-failed setlist to both sets, so that it stops is_done()
+        waiting on it, and only the failed set still says the files are missing.
+        """
         with self._lock:
-            done = self._scanned_setlist_ids | self._failed_setlist_ids
             return [
                 self._all_setlists[sid]
                 for sid in self._enabled_setlist_ids
-                if sid in done and sid in self._all_setlists
+                if sid in self._scanned_setlist_ids
+                and sid not in self._failed_setlist_ids
+                and sid in self._all_setlists
             ]
 
     def get_enabled_setlist_count(self) -> int:
@@ -500,12 +512,13 @@ class BackgroundScanner:
         with self._lock:
             self._all_setlists[setlist_id] = info
 
-            # Track per-drive
+            # Track per-drive. drive["files"] stays None until a scan actually
+            # returns: the purge planner skips a folder only while it is None,
+            # so creating the list here announced "scanned, nothing on the
+            # remote" for a drive nothing had read yet.
             if drive_id not in self._drive_setlist_ids:
                 self._drive_setlist_ids[drive_id] = []
                 self._drive_setlist_names[drive_id] = []
-                if drive.get("files") is None:
-                    drive["files"] = []
             self._drive_setlist_ids[drive_id].append(setlist_id)
             self._drive_setlist_names[drive_id].append(name)
 

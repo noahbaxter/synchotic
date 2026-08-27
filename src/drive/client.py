@@ -135,17 +135,15 @@ class DriveClient:
             if page_token:
                 params["pageToken"] = page_token
 
-            try:
-                response = self._request_with_retry(
-                    "GET", self.API_FILES,
-                    params=params,
-                    headers=self._get_headers()
-                )
-                data = response.json()
-            except requests.exceptions.HTTPError as e:
-                if hasattr(e, 'response') and e.response.status_code == 403:
-                    return []  # Access denied
-                raise
+            # A 403 used to return [] here. It must not: the scanner cannot tell
+            # that from a folder that really is empty, and the purge planner
+            # reads an empty remote as permission to delete the local copy.
+            response = self._request_with_retry(
+                "GET", self.API_FILES,
+                params=params,
+                headers=self._get_headers()
+            )
+            data = response.json()
 
             all_items.extend(data.get("files", []))
             page_token = data.get("nextPageToken")
@@ -262,7 +260,10 @@ class DriveClient:
             Dict mapping folder_id -> list of file/folder metadata
         """
         BATCH_URL = "https://www.googleapis.com/batch/drive/v3"
-        results = {fid: [] for fid in folder_ids}
+        # None means "not read yet", and stays None until something actually
+        # parses. Seeding these with [] made every unreadable sub-response look
+        # like an empty folder, which is what the purge planner deletes against.
+        results = {fid: None for fid in folder_ids}
 
         # Process in batches of batch_size
         for i in range(0, len(folder_ids), batch_size):
@@ -303,6 +304,8 @@ class DriveClient:
             if self.auth_token:
                 headers["Authorization"] = f"Bearer {self.auth_token}"
 
+            needs_pagination = []
+            failed_ids = []
             try:
                 response = requests.post(
                     BATCH_URL,
@@ -314,21 +317,29 @@ class DriveClient:
                 response.raise_for_status()
 
                 # Parse multipart response, track folders needing follow-up
-                needs_pagination = []
-                failed_ids = []
                 self._parse_batch_response(response, results, needs_pagination, failed_ids)
-
-                # Retry failed sub-requests individually (e.g. intermittent 403 on shared folders)
-                for folder_id in failed_ids:
-                    results[folder_id] = self.list_folder(folder_id)
-
-                # Handle pagination for folders with >1000 items
-                for folder_id, page_token in needs_pagination:
-                    results[folder_id] = self.list_folder(folder_id)
 
             except requests.exceptions.HTTPError:
                 # On batch failure, fall back to individual calls for this batch
-                for folder_id in batch_ids:
+                failed_ids = list(batch_ids)
+
+            # The follow-ups run outside the try so a dead folder raises instead
+            # of being caught by the batch handler and retried a second time.
+
+            # Retry failed sub-requests individually (e.g. intermittent 403 on shared folders)
+            for folder_id in failed_ids:
+                results[folder_id] = self.list_folder(folder_id)
+
+            # Handle pagination for folders with >1000 items
+            for folder_id, page_token in needs_pagination:
+                results[folder_id] = self.list_folder(folder_id)
+
+            # Anything the parser could not attribute to a folder at all: a
+            # response with no boundary, a part with no Content-ID, a truncated
+            # body. Reading zero files is a claim about the remote, so it has to
+            # come from a request that succeeded, not from one we failed to read.
+            for folder_id in batch_ids:
+                if results[folder_id] is None:
                     results[folder_id] = self.list_folder(folder_id)
 
         return results
@@ -365,8 +376,12 @@ class DriveClient:
                 continue
 
             # Find JSON body (after blank line following headers)
+            # A part we cannot read is a failed read, not an empty folder, so
+            # both misses below hand the folder back for an individual retry.
             json_match = re.search(r'\r?\n\r?\n({.*})', part, re.DOTALL)
             if not json_match:
+                if failed_ids is not None:
+                    failed_ids.append(folder_id)
                 continue
 
             try:
@@ -378,7 +393,8 @@ class DriveClient:
                 if data.get("nextPageToken") and needs_pagination is not None:
                     needs_pagination.append((folder_id, data["nextPageToken"]))
             except json.JSONDecodeError:
-                pass
+                if failed_ids is not None:
+                    failed_ids.append(folder_id)
 
     def validate_folder(self, folder_id: str) -> tuple[bool, Optional[str]]:
         """

@@ -31,9 +31,20 @@ def test_batch_body_omits_key_when_authenticated(monkeypatch):
     """The batch path built its query string separately and missed the fix once."""
     sent = {}
 
+    # A parseable body, so the client has no unread folder left to chase with an
+    # individual request. An empty one used to be absorbed as "folder1 is empty".
     class FakeResponse:
         status_code = 200
-        text = ""
+        text = (
+            "--b\r\n"
+            "Content-Type: application/http\r\n"
+            "Content-ID: <response-folder1>\r\n"
+            "\r\n"
+            "HTTP/1.1 200 OK\r\n"
+            "\r\n"
+            '{"files": []}\r\n'
+            "--b--\r\n"
+        )
         headers = {"Content-Type": "multipart/mixed; boundary=b"}
 
         def raise_for_status(self):
