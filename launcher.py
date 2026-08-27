@@ -22,8 +22,10 @@ from typing import NoReturn
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-LAUNCHER_VERSION = "1.1"
+LAUNCHER_VERSION = "1.2"
 RELEASE_TAG = ""  # Injected to "dev-latest" for dev launcher builds
+WEZTERM_VERSION = "20240203-110809-5046fc22"  # Windows/Linux host, downloaded first-run
+LINUX_WM_CLASS = "synchotic"  # must match the .desktop basename, or KDE cannot pair them
 
 
 def get_ssl_context():
@@ -122,6 +124,8 @@ def get_asset_name() -> str:
     """Get the release asset name for this platform."""
     if sys.platform == "win32":
         return "app-windows.zip"
+    if sys.platform.startswith("linux"):
+        return "app-linux.zip"
     return "app-macos.zip"
 
 
@@ -500,7 +504,16 @@ def extract_app(zip_path: Path, version: str):
         temp_dir.mkdir(parents=True, exist_ok=True)
 
         with zipfile.ZipFile(zip_path, "r") as zf:
-            zf.extractall(temp_dir)
+            # Not extractall: it drops the Unix permission bits, which the zip
+            # carries in the top half of external_attr. The app exe gets a chmod
+            # later, but every other bundled binary does not, so unrar installed
+            # non-executable and rarfile failed every RAR with "Cannot find
+            # working tool". Windows zips record mode 0, so they skip this.
+            for info in zf.infolist():
+                target = zf.extract(info, temp_dir)
+                mode = info.external_attr >> 16
+                if mode & 0o777:
+                    os.chmod(target, mode & 0o777)
 
         # Swap: rename old out of the way, move new in, then delete old.
         # If anything fails mid-swap, at least one copy survives.
@@ -571,10 +584,292 @@ def set_terminal_size(cols: int = 90, rows: int = 40):
         print(f"\x1b[8;{rows};{cols}t", end="", flush=True)
 
 
+
+
+# =============================================================================
+# WezTerm host
+#
+# A Finder or Explorer launch has no usable terminal, and this is a TUI. Rather
+# than hand the app to Terminal.app and inherit whatever the user configured
+# there, run it inside a WezTerm we control: bundled in the .app on macOS,
+# downloaded once on Windows and Linux.
+# =============================================================================
+
+def should_relaunch_in_host(argv, has_terminal: bool, wezterm_exists: bool) -> bool:
+    """True when we should re-exec into the WezTerm host: a GUI launch (no
+    controlling terminal), not already hosted, and WezTerm present. The
+    `--hosted` sentinel is the recursion guard; the hosted copy has a tty."""
+    return "--hosted" not in argv and not has_terminal and wezterm_exists
+
+
+def build_host_command(wezterm: str, lua: str, cwd: str, launcher_path: str, forward_args: list,
+                       wm_class: str = "") -> list:
+    """argv to run this launcher inside the WezTerm GUI with our config.
+
+    wm_class sets WezTerm's Wayland app_id / X11 window class. Without it the
+    window reports itself as org.wezfurlong.wezterm, so the desktop pairs it
+    with WezTerm's own .desktop file and the taskbar shows a WezTerm button
+    instead of Synchotic."""
+    klass = ["--class", wm_class] if wm_class else []
+    return [
+        wezterm, "--config-file", lua,
+        "start", "--always-new-process", "--cwd", cwd, *klass,
+        "--", launcher_path, *forward_args, "--hosted",
+    ]
+
+
+def host_environment() -> dict:
+    """The environment to hand the WezTerm host.
+
+    PyInstaller's onefile bootloader marks its process tree with _PYI_*
+    variables. Those survive the exec into WezTerm and reach the launcher copy
+    WezTerm spawns, which then sees _PYI_PARENT_PROCESS_LEVEL, decides it is an
+    unpacking child, checks that its parent runs the same executable, finds
+    wezterm-gui instead, and exits before it can log anything.
+
+    On Linux the onefile bootloader also points LD_LIBRARY_PATH at _MEIPASS,
+    which would shadow the system libssl/libcrypto for WezTerm. PyInstaller
+    stashes the pre-launch value in LD_LIBRARY_PATH_ORIG; put it back."""
+    env = {k: v for k, v in os.environ.items() if not k.startswith("_PYI_")}
+    if sys.platform.startswith("linux") and getattr(sys, "frozen", False):
+        orig = env.pop("LD_LIBRARY_PATH_ORIG", None)
+        if orig is None:
+            env.pop("LD_LIBRARY_PATH", None)
+        else:
+            env["LD_LIBRARY_PATH"] = orig
+    env["SYNCHOTIC_WINDOW_FILE"] = str(window_state_file())
+    return env
+
+
+def window_state_file() -> Path:
+    """Where the host config remembers the window size. The lua has no way to
+    work out an OS data dir, so hand it the path."""
+    home = Path.home()
+    if sys.platform == "win32":
+        base = Path(os.environ.get("LOCALAPPDATA") or (home / "AppData" / "Local"))
+        return base / "Synchotic" / "Data" / "window.txt"
+    if sys.platform == "darwin":
+        return home / "Library" / "Application Support" / "Synchotic" / "window.txt"
+    base = Path(os.environ.get("XDG_DATA_HOME") or (home / ".local" / "share"))
+    return base / "synchotic" / "window.txt"
+
+
+def wezterm_dir() -> Path:
+    """Cache dir for the first-run-downloaded Windows WezTerm."""
+    return get_dm_sync_dir() / "wezterm"
+
+
+def host_paths() -> tuple:
+    """(wezterm-gui, wezterm.lua) for this platform's host."""
+    if sys.platform == "win32":
+        d = wezterm_dir()
+        return d / "wezterm-gui.exe", d / "wezterm.lua"
+    if sys.platform.startswith("linux"):
+        d = wezterm_dir()
+        return d / "squashfs-root" / "usr" / "bin" / "wezterm-gui", d / "wezterm.lua"
+    exe_dir = Path(sys.executable).parent
+    return exe_dir / "wezterm-gui", exe_dir.parent / "Resources" / "wezterm.lua"
+
+
+def _resource_path(name: str):
+    """Locate a data file bundled into the frozen exe, falling back to the
+    source tree for dev runs."""
+    candidates = []
+    meipass = getattr(sys, "_MEIPASS", "")
+    if meipass:
+        candidates.append(Path(meipass) / name)
+    here = Path(__file__).parent / "packaging"
+    candidates += [here / "macos" / name, here / "windows" / name, here / "linux" / name]
+    return next((c for c in candidates if c.exists()), None)
+
+
+def _double_clicked_windows() -> bool:
+    """True when launched from Explorer (we own our console), so a launch from
+    an existing cmd/PowerShell is left alone."""
+    try:
+        import ctypes
+
+        arr = (ctypes.c_uint32 * 8)()
+        n = ctypes.windll.kernel32.GetConsoleProcessList(arr, 8)
+        return n <= 1
+    except Exception:
+        return False
+
+
+def _hide_windows_console():
+    """Hide our own console so the re-exec into WezTerm does not flash one."""
+    try:
+        import ctypes
+
+        hwnd = ctypes.windll.kernel32.GetConsoleWindow()
+        if hwnd:
+            ctypes.windll.user32.ShowWindow(hwnd, 0)  # SW_HIDE
+    except Exception:
+        pass
+
+
+def ensure_wezterm_windows() -> bool:
+    """Download and cache the Windows WezTerm portable build on first run."""
+    d = wezterm_dir()
+    gui = d / "wezterm-gui.exe"
+    lua = d / "wezterm.lua"
+    d.mkdir(parents=True, exist_ok=True)
+    lua_src = _resource_path("wezterm.lua")
+    if lua_src and not lua.exists():
+        shutil.copyfile(lua_src, lua)
+    if gui.exists():
+        return True
+    url = (f"https://github.com/wezterm/wezterm/releases/download/"
+           f"{WEZTERM_VERSION}/WezTerm-windows-{WEZTERM_VERSION}.zip")
+    print("  Fetching WezTerm (terminal window, ~25MB, first run only)...")
+    log(f"Downloading WezTerm: {url}")
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            archive = Path(tmp) / "wezterm.zip"
+            with urlopen(Request(url, headers={"User-Agent": "synchotic-launcher"}),
+                         context=get_ssl_context()) as r, open(archive, "wb") as f:
+                shutil.copyfileobj(r, f)
+            with zipfile.ZipFile(archive) as zf:
+                zf.extractall(tmp)
+            found = list(Path(tmp).rglob("wezterm-gui.exe"))
+            if not found:
+                log("WezTerm archive missing wezterm-gui.exe")
+                return False
+            for item in found[0].parent.iterdir():
+                dest = d / item.name
+                if item.is_dir():
+                    shutil.copytree(item, dest, dirs_exist_ok=True)
+                else:
+                    shutil.copyfile(item, dest)
+        return gui.exists()
+    except Exception as e:
+        log(f"WezTerm download failed: {e}")
+        return False
+
+
+def ensure_wezterm_linux() -> bool:
+    """Download and unpack the WezTerm AppImage on first run.
+
+    Unpacked with --appimage-extract rather than run as an AppImage: mounting one
+    needs libfuse2, which the atomic Fedora spins (Bazzite, Kinoite) do not ship.
+    The extracted tree runs straight from disk with no FUSE involved."""
+    d = wezterm_dir()
+    gui, lua = host_paths()
+    d.mkdir(parents=True, exist_ok=True)
+    lua_src = _resource_path("wezterm.lua")
+    if lua_src and not lua.exists():
+        shutil.copyfile(lua_src, lua)
+    if gui.exists():
+        return True
+    url = (f"https://github.com/wezterm/wezterm/releases/download/"
+           f"{WEZTERM_VERSION}/WezTerm-{WEZTERM_VERSION}-Ubuntu20.04.AppImage")
+    print("  Fetching WezTerm (terminal window, ~50MB, first run only)...")
+    log(f"Downloading WezTerm: {url}")
+    try:
+        with tempfile.TemporaryDirectory() as tmp:
+            image = Path(tmp) / "wezterm.AppImage"
+            with urlopen(Request(url, headers={"User-Agent": "synchotic-launcher"}),
+                         context=get_ssl_context()) as r, open(image, "wb") as f:
+                shutil.copyfileobj(r, f)
+            os.chmod(image, 0o755)
+            shutil.rmtree(d / "squashfs-root", ignore_errors=True)
+            result = subprocess.run(
+                [str(image), "--appimage-extract"], cwd=str(d),
+                stdout=subprocess.DEVNULL, stderr=subprocess.PIPE,
+            )
+            if result.returncode != 0:
+                log(f"AppImage extract failed: {result.stderr.decode(errors='replace')[:400]}")
+                return False
+        return gui.exists()
+    except Exception as e:
+        log(f"WezTerm download failed: {e}")
+        return False
+
+
+def maybe_relaunch_in_host():
+    """Re-exec into a WezTerm window when launched from a GUI."""
+    if "--hosted" in sys.argv:
+        return
+    if sys.platform == "darwin":
+        wezterm, lua = host_paths()
+        if not should_relaunch_in_host(sys.argv, _has_terminal(), wezterm.exists()):
+            return
+    elif sys.platform == "win32":
+        if not _double_clicked_windows():
+            return
+        wezterm, lua = host_paths()
+        if wezterm.exists():
+            _hide_windows_console()  # cached: skip the console flash
+        if not ensure_wezterm_windows():
+            return  # download failed: run inline in this console
+    elif sys.platform.startswith("linux"):
+        if _has_terminal():
+            return  # started from a shell: stay in it
+        wezterm, lua = host_paths()
+        if not ensure_wezterm_linux():
+            return
+    else:
+        return
+
+    cmd = build_host_command(
+        str(wezterm), str(lua), str(get_launcher_dir()),
+        str(get_launcher_path()), sys.argv[1:],
+        LINUX_WM_CLASS if sys.platform.startswith("linux") else "",
+    )
+    env = host_environment()
+    if sys.platform == "win32":
+        DETACHED_PROCESS = 0x00000008
+        subprocess.Popen(cmd, creationflags=DETACHED_PROCESS, close_fds=True, env=env)
+        sys.exit(0)
+    os.execve(str(wezterm), cmd, env)  # replaces this process; does not return
+
+
+def ensure_linux_desktop():
+    """Install a .desktop entry + icon so Synchotic shows up in the app menu.
+
+    Terminal=false on purpose: the launcher opens its own WezTerm window, and
+    handing the entry to the distro's terminal is what it used to do -- on KDE
+    that produced an empty window and no app."""
+    if not sys.platform.startswith("linux") or not getattr(sys, "frozen", False):
+        return
+    try:
+        share = Path(os.environ.get("XDG_DATA_HOME") or (Path.home() / ".local" / "share"))
+        apps = share / "applications"
+        icons = share / "icons" / "hicolor" / "256x256" / "apps"
+        apps.mkdir(parents=True, exist_ok=True)
+        icons.mkdir(parents=True, exist_ok=True)
+
+        icon_dest = icons / "synchotic.png"
+        icon_src = _resource_path("synchotic.png")
+        if icon_src and not icon_dest.exists():
+            shutil.copyfile(icon_src, icon_dest)
+
+        content = (
+            "[Desktop Entry]\n"
+            "Type=Application\n"
+            "Name=Synchotic\n"
+            "Comment=Sync Clone Hero charts from Google Drive\n"
+            f'Exec="{get_launcher_path()}"\n'
+            "Terminal=false\n"
+            "Icon=synchotic\n"
+            "Categories=Game;\n"  # one main category: two makes it show up twice in some menus
+            f"StartupWMClass={LINUX_WM_CLASS}\n"  # X11 pairing; Wayland matches on app_id
+            "StartupNotify=true\n"
+        )
+        desktop = apps / "synchotic.desktop"
+        if not desktop.exists() or desktop.read_text() != content:
+            desktop.write_text(content)
+            log("Installed/updated synchotic.desktop")
+    except Exception as e:
+        log(f"desktop install skipped: {e}")
+
+
 def main():
+    maybe_relaunch_in_host()  # may re-exec into WezTerm and not return
     set_terminal_size(90, 40)
     init_logging()
     log(f"Launcher v{LAUNCHER_VERSION}")
+    ensure_linux_desktop()
 
     if RELEASE_TAG:
         print(f"\nSynchotic Launcher v{LAUNCHER_VERSION} [DEV]")
@@ -678,7 +973,7 @@ def main():
     print("=" * 40 + "\n")
 
     # Filter out launcher-specific args before passing to app
-    launcher_flags = {"--offline", "--dev", "--clean"}
+    launcher_flags = {"--offline", "--dev", "--clean", "--hosted"}
     launcher_opts = {"--test-release"}  # These consume the next arg too
     filtered_args = []
     skip_next = False

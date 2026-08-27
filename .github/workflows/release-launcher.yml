@@ -22,6 +22,10 @@ jobs:
           - os: windows-latest
             name: windows
             artifact: synchotic-launcher.exe
+          # 22.04, not latest: oldest glibc we can build against.
+          - os: ubuntu-22.04
+            name: linux
+            artifact: synchotic-launcher-linux
 
     runs-on: ${{ matrix.os }}
 
@@ -121,9 +125,21 @@ jobs:
           $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
           pyinstaller --onefile --name synchotic-launcher --clean --noconfirm `
             --add-data "$CERTIFI_PATH;certifi" `
+            --add-data "packaging/macos/wezterm.lua;." `
             --hidden-import certifi `
             launcher.py
         shell: pwsh
+
+      - name: Build launcher (Linux)
+        if: matrix.name == 'linux'
+        run: |
+          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
+          pyinstaller --onefile --name synchotic-launcher-linux --clean --noconfirm \
+            --add-data "$CERTIFI_PATH:certifi" \
+            --add-data "packaging/macos/wezterm.lua:." \
+            --add-data "packaging/linux/synchotic.png:." \
+            --hidden-import certifi \
+            launcher.py
 
 
       - name: Upload artifact
@@ -161,6 +177,7 @@ jobs:
             gh release upload "$TAG" \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
               artifacts/synchotic-launcher-macos/synchotic-launcher-macos \
+              artifacts/synchotic-launcher-linux/synchotic-launcher-linux \
               --clobber
           else
             echo "Creating new release $TAG..."
@@ -169,7 +186,8 @@ jobs:
               --notes "Downloads and auto-updates the Synchotic app." \
               --latest=false \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
-              artifacts/synchotic-launcher-macos/synchotic-launcher-macos
+              artifacts/synchotic-launcher-macos/synchotic-launcher-macos \
+              artifacts/synchotic-launcher-linux/synchotic-launcher-linux
           fi
 
       - name: Summary
@@ -177,3 +195,4 @@ jobs:
           echo "### Launcher Release ${{ github.event.inputs.tag }}" >> $GITHUB_STEP_SUMMARY
           echo "- Windows: synchotic-launcher.exe" >> $GITHUB_STEP_SUMMARY
           echo "- macOS: synchotic-launcher-macos" >> $GITHUB_STEP_SUMMARY
+          echo "- Linux: synchotic-launcher-linux" >> $GITHUB_STEP_SUMMARY

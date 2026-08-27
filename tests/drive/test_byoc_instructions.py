@@ -39,7 +39,7 @@ class TestInstructionsFile:
 
     def test_points_at_the_folder_it_lives_in(self):
         text = write_byoc_instructions().read_text()
-        install = text[text.index("6. INSTALL IT"):text.index("7. ENABLE IT")]
+        install = text[text.index("INSTALL IT"):text.index("ENABLE IT")]
         assert "this folder" in install
         assert "next to these instructions" in install
 

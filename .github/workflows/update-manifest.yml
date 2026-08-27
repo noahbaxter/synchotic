@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ inputs.branch || 'main' }}
+          submodules: recursive
 
       - name: Set up Python
         uses: actions/setup-python@v5

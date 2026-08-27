@@ -23,12 +23,16 @@ jobs:
             name: macos
           - os: windows-latest
             name: windows
+          - os: ubuntu-22.04
+            name: linux
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -62,6 +66,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Get branch and commit info
         id: info
@@ -96,6 +102,7 @@ jobs:
             gh release upload "$TAG" \
               artifacts/app-macos.zip/app-macos.zip \
               artifacts/app-windows.zip/app-windows.zip \
+              artifacts/app-linux.zip/app-linux.zip \
               --clobber
           else
             echo "Creating new dev release..."
@@ -105,7 +112,8 @@ jobs:
               --prerelease \
               --latest=false \
               artifacts/app-macos.zip/app-macos.zip \
-              artifacts/app-windows.zip/app-windows.zip
+              artifacts/app-windows.zip/app-windows.zip \
+              artifacts/app-linux.zip/app-linux.zip
           fi
 
       - name: Summary

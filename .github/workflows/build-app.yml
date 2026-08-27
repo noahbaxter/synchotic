@@ -23,12 +23,19 @@ jobs:
           - os: windows-latest
             name: windows
             artifact: app-windows.zip
+          # 22.04, not latest: its glibc is the oldest we can build against, so
+          # the binary still starts on distros a few releases behind.
+          - os: ubuntu-22.04
+            name: linux
+            artifact: app-linux.zip
 
     runs-on: ${{ matrix.os }}
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
 
       - name: Stamp version
         if: inputs.version_suffix != ''
@@ -54,10 +61,10 @@ jobs:
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
-          if [ "${{ matrix.name }}" = "windows" ]; then
-            sed -i 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
-          else
+          if [ "${{ matrix.name }}" = "macos" ]; then
             sed -i '' 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
+          else
+            sed -i 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
           fi
         shell: bash
 
@@ -69,12 +76,32 @@ jobs:
         run: |
           CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
           pyinstaller --onedir --name synchotic-app --clean --noconfirm \
+            --icon "packaging/macos/Synchotic.icns" \
             --add-data "drives.json:." \
+            --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
             --add-data "VERSION:." \
             --add-data "$CERTIFI_PATH:certifi" \
             --add-binary "libs/bin/unrar:." \
             --hidden-import certifi \
             --hidden-import rarfile \
+            --paths vendor/chotic-ui \
+            --collect-submodules chotic_ui \
+            sync.py
+
+      - name: Build app (Linux)
+        if: matrix.name == 'linux'
+        run: |
+          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
+          pyinstaller --onedir --name synchotic-app --clean --noconfirm \
+            --add-data "drives.json:." \
+            --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
+            --add-data "VERSION:." \
+            --add-data "$CERTIFI_PATH:certifi" \
+            --add-binary "libs/bin/unrar:." \
+            --hidden-import certifi \
+            --hidden-import rarfile \
+            --paths vendor/chotic-ui \
+            --collect-submodules chotic_ui \
             sync.py
 
       - name: Build app (Windows)
@@ -82,12 +109,16 @@ jobs:
         run: |
           $CERTIFI_PATH = python -c "import certifi; print(certifi.where())"
           pyinstaller --onedir --name synchotic-app --clean --noconfirm `
+            --icon "packaging/windows/synchotic.ico" `
             --add-data "drives.json;." `
+            --add-data "src/drive/byoc_setup_instructions.txt;src/drive" `
             --add-data "VERSION;." `
             --add-data "$CERTIFI_PATH;certifi" `
             --add-binary "libs/bin/UnRAR.exe;." `
             --hidden-import certifi `
             --hidden-import rarfile `
+            --paths vendor/chotic-ui `
+            --collect-submodules chotic_ui `
             sync.py
         shell: pwsh
 
@@ -95,11 +126,11 @@ jobs:
         run: cp VERSION dist/synchotic-app/.version
         shell: bash
 
-      - name: Create app zip (macOS)
-        if: matrix.name == 'macos'
+      - name: Create app zip (macOS/Linux)
+        if: matrix.name != 'windows'
         run: |
           cd dist/synchotic-app
-          zip -r -q ../app-macos.zip .
+          zip -r -q ../${{ matrix.artifact }} .
 
       - name: Create app zip (Windows)
         if: matrix.name == 'windows'

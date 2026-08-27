@@ -547,66 +547,22 @@ class AuthManager:
 
 
 BYOC_INSTRUCTIONS_FILE = "BYOC_SETUP_INSTRUCTIONS.txt"
-
-_BYOC_INSTRUCTIONS = """\
-Bring Your Own Credentials - Setup Instructions
-===============================================
-
-If you find that you keep hitting rate limits with rclone or would prefer
-higher download speeds, you can create your own Google OAuth credentials to
-use with Synchotic! This takes about ten minutes to set up in a browser but
-guarantees you get your own drive quota at full speeds rather than sharing it
-with every other rclone user.
-
-Instructions:
-
-1. MAKE A PROJECT
-   Go to console.cloud.google.com and sign in.
-   Project dropdown at the top, then "New Project".
-   Name it "synchotic-byoc" and click Create.
-   Wait a few seconds, then select it in that same dropdown.
-
-2. TURN ON GOOGLE DRIVE
-   Left menu: "APIs and Services", then "Library".
-   Search "Google Drive API". Open it, click Enable.
-
-3. FILL IN THE APP INFO
-   Left menu: "APIs and Services", then "OAuth consent screen".
-   Choose "External", click Create.
-   Any app name, your own email in both email boxes. Skip the rest.
-   Save and continue until it finishes.
-
-   IMPORTANT: set the publishing status to "In production".
-   If it remains "Testing" by default, Google will sign you out every 7 days.
-
-4. MAKE THE KEY
-   Left menu: "APIs and Services", then "Credentials".
-   "Create Credentials", then "OAuth client ID".
-   Application type: "Desktop app". Any name. Create.
-
-5. DOWNLOAD IT
-   Click "Download JSON" in the box that pops up.
-
-6. INSTALL IT
-   Rename the file you just downloaded to "credentials.json" exactly.
-   Move it into this folder, right next to these instructions.
-
-7. ENABLE IT
-   Start Synchotic, press D, choose "Use your own Google credentials", and
-   sign in with the same Google account.
-   Google will say the app is not verified. It is yours. Click "Advanced",
-   then "Go to ... (unsafe)".
+BYOC_INSTRUCTIONS_SOURCE = "byoc_setup_instructions.txt"
 
 
-FAQ
----
-Why am I being signed out every 7 days?
-   Step 3, publishing status is still "Testing". Set it to "In production".
+def _byoc_instructions_source() -> Path:
+    """Locate the shipped instructions text.
 
-Why does Synchotic say it is not set up?
-   The file must be named exactly "credentials.json", not "credentials(1).json",
-   and must sit in this folder, beside these instructions.
-"""
+    Plain text next to this module so the wording can be fixed without
+    touching code. PyInstaller bundles it at the same relative path, where
+    __file__ points into the archive rather than at a real file.
+    """
+    from ..core.paths import get_bundle_dir
+
+    local = Path(__file__).parent / BYOC_INSTRUCTIONS_SOURCE
+    if local.is_file():
+        return local
+    return get_bundle_dir() / "src" / "drive" / BYOC_INSTRUCTIONS_SOURCE
 
 
 def write_byoc_instructions() -> "Path":
@@ -621,5 +577,6 @@ def write_byoc_instructions() -> "Path":
     data_dir = get_data_dir()
     data_dir.mkdir(parents=True, exist_ok=True)
     path = data_dir / BYOC_INSTRUCTIONS_FILE
-    path.write_text(_BYOC_INSTRUCTIONS, encoding="utf-8")
+    path.write_text(_byoc_instructions_source().read_text(encoding="utf-8"),
+                    encoding="utf-8")
     return path
