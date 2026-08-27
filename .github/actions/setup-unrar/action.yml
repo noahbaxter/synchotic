@@ -14,6 +14,16 @@ runs:
         mkdir -p ../libs/bin
         cp unrar ../libs/bin/unrar
 
+    - name: Build UnRAR CLI tool (Linux)
+      if: runner.os == 'Linux'
+      shell: bash
+      run: |
+        curl -LO https://www.rarlab.com/rar/unrarsrc-7.2.2.tar.gz
+        tar -xzf unrarsrc-7.2.2.tar.gz
+        cd unrar && make
+        mkdir -p ../libs/bin
+        cp unrar ../libs/bin/unrar
+
     - name: Download UnRAR CLI tool (Windows)
       if: runner.os == 'Windows'
       shell: pwsh

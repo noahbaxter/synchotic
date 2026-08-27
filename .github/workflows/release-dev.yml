@@ -23,6 +23,8 @@ jobs:
             name: macos
           - os: windows-latest
             name: windows
+          - os: ubuntu-22.04
+            name: linux
 
     runs-on: ${{ matrix.os }}
 
@@ -100,6 +102,7 @@ jobs:
             gh release upload "$TAG" \
               artifacts/app-macos.zip/app-macos.zip \
               artifacts/app-windows.zip/app-windows.zip \
+              artifacts/app-linux.zip/app-linux.zip \
               --clobber
           else
             echo "Creating new dev release..."
@@ -109,7 +112,8 @@ jobs:
               --prerelease \
               --latest=false \
               artifacts/app-macos.zip/app-macos.zip \
-              artifacts/app-windows.zip/app-windows.zip
+              artifacts/app-windows.zip/app-windows.zip \
+              artifacts/app-linux.zip/app-linux.zip
           fi
 
       - name: Summary
