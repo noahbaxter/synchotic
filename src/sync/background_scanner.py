@@ -97,6 +97,7 @@ class BackgroundScanner:
 
         # The three core sets
         self._all_setlists: dict[str, SetlistInfo] = {}  # setlist_id -> SetlistInfo
+        self._order_cache: list | None = None  # scan order, rebuilt when discovery grows
         self._enabled_setlist_ids: set[str] = set()
         self._scanned_setlist_ids: set[str] = set()
         self._failed_setlist_ids: set[str] = set()  # Setlists that threw during scan
@@ -523,20 +524,67 @@ class BackgroundScanner:
             self._stats.current_folder = ""
             self._stats.end_time = time.time()
 
+    def _scan_order(self) -> list:
+        """Setlist ids, fewest remembered charts first.
+
+        Downloading a setlist cannot start until it has been scanned, so
+        finishing the cheap ones first gives the downloader work sooner rather
+        than leaving it idle behind one large setlist. A setlist we have never
+        scanned has nothing to sort on and goes last, after everything we can
+        cost. Call under the lock.
+        """
+        if self._order_cache is not None and len(self._order_cache) == len(self._all_setlists):
+            return self._order_cache
+
+        from .cache import get_persistent_stats_cache
+
+        counts = get_persistent_stats_cache()
+        unknown = float("inf")
+
+        def cost(setlist_id: str) -> float:
+            info = self._all_setlists[setlist_id]
+            n = counts.remembered_chart_count(info.drive_id, info.name)
+            return unknown if n is None else n
+
+        # Cheapest first within a drive, then round-robin across drives rather
+        # than draining one drive at a time. Depth-first leaves every other
+        # drive at zero until the first one finishes, so a single large drive
+        # holds up work that was ready elsewhere.
+        by_drive: dict = {}
+        for setlist_id in self._all_setlists:
+            by_drive.setdefault(self._all_setlists[setlist_id].drive_id, []).append(setlist_id)
+        for ids in by_drive.values():
+            ids.sort(key=cost)
+
+        order = []
+        queues = list(by_drive.values())
+        while queues:
+            for ids in list(queues):
+                order.append(ids.pop(0))
+                if not ids:
+                    queues.remove(ids)
+
+        # Sorted once per scan, not per setlist: this runs inside the loop that
+        # picks the next setlist, and redoing it thousands of times would cost
+        # more than the ordering saves.
+        self._order_cache = order
+        return self._order_cache
+
     def _get_next_setlist_to_scan(self) -> SetlistInfo | None:
         """Get next setlist to scan. Prioritizes enabled ones. Skips failed."""
         with self._lock:
             done = self._scanned_setlist_ids | self._failed_setlist_ids
+            order = self._scan_order()
 
             # Priority: enabled but not done
-            for setlist_id in self._enabled_setlist_ids:
-                if setlist_id not in done:
+            for setlist_id in order:
+                if setlist_id in self._enabled_setlist_ids and setlist_id not in done:
                     return self._all_setlists[setlist_id]
 
             # Then: any not done
-            for setlist_id, info in self._all_setlists.items():
+            for setlist_id in order:
                 if setlist_id not in done:
-                    return info
+                    return self._all_setlists[setlist_id]
 
             return None  # All scanned or failed
 
