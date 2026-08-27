@@ -29,7 +29,7 @@ class RcloneConfig:
         except Exception:
             return False
 
-    def create_remote(self) -> bool:
+    def create_remote(self, timeout: float = 120.0) -> bool:
         """Run interactive consent. rclone opens the browser; user clicks consent once.
 
         Returns True if the create command succeeded (returncode 0). Does not call
@@ -40,7 +40,12 @@ class RcloneConfig:
             "config", "create", constants.RCLONE_REMOTE_NAME, "drive",
             "scope=drive.readonly", "config_is_local=true",
         ]
-        r = self.runner(args, timeout=300)
+        try:
+            r = self.runner(args, timeout=timeout)
+        except subprocess.TimeoutExpired:
+            # Headless box, no browser, nobody to click. 300s of silence was the
+            # old behaviour; fail fast and let the caller report it instead.
+            return False
         return r.returncode == 0
 
     def is_authed(self) -> bool:

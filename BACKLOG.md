@@ -2,9 +2,46 @@
 
 ## Inbox
 
-- [ ] [cleanup] rclone tier minor follow-ups *(2026-06-13, from final review of feature/rclone-download-tier)*
-  - `folder_sync.py _rclone_second_pass`: when not authed, it constructs `RcloneSession()` twice (once for `ensure_authed`, once for the download `with`), resolving the binary twice. Reuse one session.
-  - `rclone/downloader.py _await_job`: no overall timeout, relies solely on `cancel_check`. Interactive sync passes a cancel_check so it is bounded by ESC, but a non-interactive caller could spin forever if a job hangs. Add a max-wait.
+- [ ] [perf] rclone tier downloads one file at a time *(2026-08-23)*
+  - `rclone/downloader.py download()` submits one `copyid_async` then blocks on `_await_job` before the next. Tiers 1-3 run 24 workers (`sync/downloader.py:72`). No `--transfers` is set anywhere either.
+  - `docs/downloads.md` records the tier table and states tier 4 is sequential. Update it with real numbers once measured.
+  - **Measure before fixing.** `RCLONE_SMOKE_CHECKLIST.md` section 4 was never run. Do one Rock Band sync, compare wall-clock to the OAuth path. If a single stream already saturates the link, sequential costs nothing and this is a doc fix only.
+  - If the gap is real: hold N jobs in flight (`copyid_async` already returns a job id) and poll together. Then re-run the tier-4 trust invariant, because concurrent jobs share the temp dir that `_reconcile` diffs.
+  - Not a correctness issue. Files arrive intact, verified byte-identical. Slow beats blocked.
+
+- [ ] [testing] BYOC has never run end to end *(2026-08-23)*
+  - Coverage is 3 unit tests on `load_client_config()` precedence plus one tier-4-skip case. Nobody has created a real Cloud project, dropped in `credentials.json`, signed in, and pulled a blocked file.
+  - Guardrail shipped in v1.5 (`has_custom_client_config`), so picking BYOC without credentials now warns instead of silently signing in with the blocked shared client. The happy path is still unverified.
+  - `docs/byoc.md` still frames BYOC as being about speed and quota ("if you just want it to work you do not need this"). That is pre-rejection framing. For a new user the shared client does not work at all.
+  - Chooser copy says BYOC is "just as fast" as rclone. Given tier 3 is 24 workers and tier 4 is sequential, BYOC is faster. Reword once the throughput measurement above exists.
+
+- [ ] [cleanup] merge chotic-ui `fix/menu-text-wrapping` into its main *(2026-08-23)*
+  - v1.5 pins the submodule to a branch off `3f37d1e`, deliberately, to keep 3 unrelated chotic-ui commits (FilterList sizing, Tab MenuResult, FilterList section headers) out of a release whose TUI was untested.
+  - After v1.5 ships: merge the fix into chotic-ui `main`, then bump the submodule to pick up the other three.
+  - stemchotic is the other consumer. It sets no `MenuItem.description` and uses short subtitles, so it is unaffected either way.
+
+- [ ] [bug] stale markers are never deleted, so updated packs leak charts *(2026-08-23)*
+  - `markers.py` defines `delete_marker` (192), `delete_markers_for_archive` (278) and `delete_failed_markers_for_archive` (391). **None of the three is called anywhere in `src/`.**
+  - Markers key on `(archive_path, md5)`. When a pack updates, `downloader.py:419` writes a marker for the new md5 and the old one stays forever. Purge treats every marker's file list as protected, so charts the updated pack renamed or dropped are never reclaimed.
+  - Fails safe (keeps files rather than deleting them) and predates v1.5, so not a release blocker.
+  - Purge-adjacent, so per the repo instructions this needs manual verification, not just unit tests.
+
+- [ ] [ux] failed charts vanish from the count with no explanation *(2026-08-23)*
+  - `status.py:147` continues before `total_charts += 1`, so a permanently failed archive leaves both the numerator and the denominator. The sync reads a clean 100% while the charts are simply absent.
+  - `download_planner.py:139` correctly skips them, so nothing loops. This is purely "the user is never told".
+  - `MainMenuCache` has no failed field, so this is nearer 30-40 lines than the 15 estimated earlier. Count via `get_all_failed_markers()`, add a cache field, render it in the home status line.
+
+- [ ] [cleanup] delete the dead SyncState path *(2026-08-23)*
+  - `src/sync/state.py` is 420 lines and nothing in `src/` imports it.
+  - `markers.py:530-615 migrate_sync_state_to_markers` is likewise only ever called from `tests/test_markers.py`. The whole SyncState to markers migration is already unreachable in production, so a v1.2-era upgrade gets no migration today either way. Deleting it changes no behavior.
+  - Roughly 500 lines plus the tests that exist only to cover it.
+
+- [ ] [bug] redirecting output on Windows crashes the TUI *(2026-08-23)*
+  - `menu.py _render` writes the frame to `sys.__stdout__`. Against a real console Python routes through WriteConsoleW and any Unicode works, but a redirect (`synchotic.exe > out.txt`) hands it a cp1252 pipe and the rounded box characters raise `UnicodeEncodeError`.
+  - **Pre-existing, not a regression.** Identical code in v1.4 at `277df5c:src/ui/widgets/menu.py:524`.
+  - The launcher is unaffected: `launcher.py:701` uses `subprocess.run(args, env=env)` with no `stdout=`, so the app inherits the console handle rather than a pipe.
+  - Surfaced by CI when the new render test ran on Windows for the first time. The test now renders into a StringIO, so it no longer depends on console encoding.
+  - Fix would be to reconfigure to utf-8 with `errors="replace"` when stdout is not a tty.
 
 - [ ] [feature] Beta launcher channel *(2026-03-26, prompted by Treebear scan perf discussion)*
   - Rename dev launcher to "beta" for user-facing opt-in testing
@@ -17,14 +54,16 @@
 
 ## Active
 
-- [ ] [ops] Google OAuth verification — hit 100 user cap, new users blocked *(2026-04-01)*
-  - **Problem:** 100/100 lifetime unverified user cap reached. New users get "This app is blocked". No workaround — verification is the only fix.
-  - Privacy policy: `PRIVACY.md` (drafted, needs commit + push so GitHub URL works)
-  - Go to Verification Center in Google Auth Platform console
-  - Add privacy policy URL: `https://github.com/noahbaxter/synchotic/blob/main/PRIVACY.md`
-  - Record short screen capture of OAuth flow + how Drive data is used (unlisted YouTube)
-  - Submit for verification — typically 1-2 weeks for sensitive (non-restricted) scopes
-  - **Workaround published:** `legacy-rclone` branch (points at `1435ab9`) — README has a callout. When verification lands: remove the callout from `README.md` and optionally delete the branch.
+- [ ] [ops] Google OAuth verification blocked, shipping three-tier auth instead *(decided 2026-08-09)*
+  - 100/100 unverified user cap reached. Verification submitted 2026-04-22, came back requiring CASA Tier 2 (~$540/yr). Tier 1 appeal denied 2026-04-29.
+  - Anonymous failure rate measured 2026-06-11: ~99% of small files succeed, ~63% of bytes blocked (RB/GH rips, big Misc packs). Re-read 2026-08-09: 637/1272 sampled files are `virus_scan` (50% by count) and all 5 measured drives contain blocked files, so every user hits this on their first sync.
+  - **Decision: ship the choice, not a single strategy.** Setup screen offers rclone (recommended) / anonymous / BYOC. No single option is right for every user, which is why this sat deferred since June.
+  - **Rejected, R2 mirror ($4-7/mo):** cost is not the issue. Mirroring ~116 GB turns Synchotic from an index that points at other people's Drive folders into a distributor, which is a licensing/DMCA surface we don't have today and drive maintainers may object to. Hard to walk back. Reconsider only if rclone rate limits prove unusable (gauntlet step 3 will tell us).
+  - **Rejected, CASA Tier 2 ($540/yr):** buys only what rclone gives for free. Revisit if there's ever revenue.
+  - **Rejected, service account:** key would ship inside a desktop app, public on day one.
+  - **Parked, new OAuth app to reset the cap:** this is cap evasion and Google enforces at project-owner level, so the downside is the existing app and account getting flagged, not just a denial. Weigh against 100 more users before trying.
+  - **Measurements, the four tiers, and every rejected option: see [docs/downloads.md](docs/downloads.md)**
+  - Workaround live: `legacy-rclone` branch (commit `1435ab9`). README has a callout pointing blocked users there.
 
 ## Active Bugs
 
@@ -64,6 +103,10 @@
 - [ ] `delete_videos=False` path
 - [ ] Background scanner failure handling (0 tests)
 - [ ] Windows backslash in path lookups (platform-specific)
+- [ ] Windows, end to end. Never tested, and it is where most users are. Covers the whole v1.5 auth path, not just one screen.
+- [ ] Windows: confirm a freshly downloaded unsigned `rclone.exe` is not quarantined by Defender/SmartScreen (`RCLONE_SMOKE_CHECKLIST.md` section 2).
+- [ ] Windows: `reap_stale` uses `ps`, POSIX-only, so a crashed rcd daemon is not reaped. Verify no orphan `rclone.exe` lingers after a normal run.
+- [ ] Render-level UI tests exist only for the first-run chooser (`tests/ui/test_download_mode_render.py`). Every other screen is still asserted through a stubbed `Menu.run`, which is exactly how the chooser shipped broken: the tests checked `MenuItem` data that never reached the screen.
 
 ## Low Priority
 

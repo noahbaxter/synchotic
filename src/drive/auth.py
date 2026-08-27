@@ -143,6 +143,30 @@ class OAuthManager:
         self._credentials = None
 
 
+def has_custom_client_config() -> bool:
+    """True when BYOC credentials are actually present.
+
+    load_client_config falls back to the embedded client when they are not, and
+    that is the capped one new users are blocked from. Signing in with it is the
+    exact failure BYOC exists to avoid, so callers must check before offering it.
+    """
+    import os, json
+    from ..core.paths import get_data_dir
+
+    if (os.environ.get("SYNCHOTIC_OAUTH_CLIENT_ID")
+            and os.environ.get("SYNCHOTIC_OAUTH_CLIENT_SECRET")):
+        return True
+    creds_file = get_data_dir() / "credentials.json"
+    if not creds_file.exists():
+        return False
+    try:
+        data = json.loads(creds_file.read_text())
+        inst = data.get("installed") or data.get("web") or {}
+        return bool(inst.get("client_id") and inst.get("client_secret"))
+    except Exception:
+        return False
+
+
 def load_client_config() -> dict:
     """Resolve OAuth client config: env vars -> credentials.json -> embedded defaults."""
     import os, json

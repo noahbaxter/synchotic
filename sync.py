@@ -34,6 +34,7 @@ from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync, purge_all_folders
 from src.sync.markers import rebuild_markers_from_disk
 from src.config import UserSettings, DrivesConfig, CustomFolders
+from src.config.settings import DOWNLOAD_MODES
 from src.core.formatting import format_size, sanitize_drive_name, normalize_path_key
 from src.core.paths import (
     get_data_dir,
@@ -106,6 +107,7 @@ class SyncApp:
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
+            download_mode=self.user_settings.download_mode or "rclone",
         )
         self.folders = []
         self.folder_stats_cache = FolderStatsCache()
@@ -560,6 +562,57 @@ class SyncApp:
 
         wait_with_skip(2)
 
+    def handle_download_mode(self):
+        """Change how blocked charts download, then connect straight away.
+
+        Connecting here rather than at download time means a mode that cannot
+        work says so now, instead of stalling for consent mid-sync.
+        """
+        from src.ui.screens import change_download_mode, connection_step_for
+
+        chosen = change_download_mode(self.user_settings, self.sync)
+        if not chosen:
+            return
+
+        try:
+            import src.rclone as rclone
+            rclone_authed = rclone.is_authed()
+        except Exception:
+            rclone_authed = False
+
+        from src.drive.auth import has_custom_client_config
+
+        step = connection_step_for(
+            chosen, rclone_authed=rclone_authed,
+            signed_in=bool(self.auth and self.auth.is_signed_in),
+            byoc_configured=has_custom_client_config(),
+        )
+        if step == "rclone":
+            self._connect_rclone()
+        elif step == "signin":
+            self.handle_signin()
+        elif step == "byoc_setup":
+            display.byoc_not_configured()
+            wait_with_skip(5)
+
+    def _connect_rclone(self):
+        """Run the one-time rclone consent now."""
+        import src.rclone as rclone
+
+        if not rclone.can_open_browser():
+            display.rclone_no_browser()
+            wait_with_skip(3)
+            return
+        try:
+            display.rclone_consent_explainer()
+            if rclone.RcloneSession().ensure_authed():
+                print("  rclone connected.")
+            else:
+                print("  Setup cancelled. Large charts stay blocked until rclone connects.")
+        except Exception as e:
+            print(f"  rclone setup failed: {e}")
+        wait_with_skip(3)
+
     def handle_signout(self):
         """Handle Google sign-out."""
         self.auth.sign_out()
@@ -657,6 +710,7 @@ class SyncApp:
             self.client,
             auth_token=self.auth.get_token_getter(),
             delete_videos=self.user_settings.delete_videos,
+            download_mode=self.user_settings.download_mode or "rclone",
         )
 
     def _start_background_scan(self, force_rescan: bool = False):
@@ -1120,6 +1174,10 @@ class SyncApp:
                 self.handle_signout()
                 # No cache invalidation needed - just auth state changed
 
+            elif action == "download_mode":
+                self.handle_download_mode()
+                # No cache invalidation needed - only the download tier changed
+
             elif action == "add_custom":
                 if self.handle_add_custom_folder():
                     # Folder already added to self.folders by handle_add_custom_folder
@@ -1138,7 +1196,13 @@ def main():
     parser = argparse.ArgumentParser(
         description="DM Chart Sync - Download charts from Google Drive"
     )
-    parser.parse_args()
+    parser.add_argument(
+        "--download-mode", choices=DOWNLOAD_MODES, default=None,
+        help="how to fetch virus-scan-blocked files: rclone (one Google consent "
+             "click), anonymous (skip them), byoc (your own credentials). Saved "
+             "for next time. Use anonymous on a machine with no browser.",
+    )
+    cli_args = parser.parse_args()
 
     # Always log to .dm-sync/logs/YYYY-MM-DD.log
     logs_dir = get_data_dir() / "logs"
@@ -1168,6 +1232,20 @@ def main():
 
     _t1 = _time.time()
     app = SyncApp()
+    if cli_args.download_mode:
+        app.user_settings.download_mode = cli_args.download_mode
+        app.user_settings.save()
+        app.sync.download_mode = cli_args.download_mode
+        print(f"  download mode set to {cli_args.download_mode}")
+    elif not app.user_settings.download_mode and not app.auth.is_signed_in:
+        # Signed-in users are skipped: their token already handles blocked files
+        # via tier 2, so the question does not apply to them.
+        from src.ui.screens import choose_download_mode
+        chosen = choose_download_mode()
+        if chosen:
+            app.user_settings.download_mode = chosen
+            app.user_settings.save()
+            app.sync.download_mode = chosen
     print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()

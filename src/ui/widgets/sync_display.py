@@ -81,6 +81,28 @@ def rclone_consent_explainer() -> None:
     print("  access to your Drive. This is a one-time click.")
     print()
 
+def byoc_not_configured() -> None:
+    """Picked BYOC without a client to bring."""
+    print()
+    print("  This mode needs your own Google OAuth client, and none is set up yet.")
+    print("  Until one is, Synchotic falls back to its shared client, which new")
+    print("  accounts are blocked from, so large charts will not download.")
+    print()
+    print("  Follow docs/byoc.md, then pick this mode again. To get downloads")
+    print("  working now instead, choose rclone.")
+    print()
+
+
+def rclone_no_browser() -> None:
+    """Consent needs a browser and there is not one here."""
+    print()
+    print("  Large archives need an authenticated download, which requires a")
+    print("  one-time browser consent. No browser is available on this machine.")
+    print("  Set up your own credentials (docs/byoc.md), or run consent on a")
+    print("  desktop session.")
+    print()
+
+
 def report_blocked_summary(needs_auth: int, rate_limited: int) -> None:
     """Distinguish 'needs auth setup' from 'Google rate-limited (retry later)'."""
     if needs_auth:

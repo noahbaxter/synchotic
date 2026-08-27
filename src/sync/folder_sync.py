@@ -30,10 +30,15 @@ class FolderSync:
         client: DriveClient,
         auth_token: Optional[Union[str, Callable[[], Optional[str]]]] = None,
         delete_videos: bool = True,
+        download_mode: str = "rclone",
     ):
         self.client = client
         self.auth_token = auth_token
         self.delete_videos = delete_videos
+        # Which tier-4 behaviour the user chose. Anything other than "rclone"
+        # means never open a consent browser, which is what makes headless and
+        # privacy-conscious runs work.
+        self.download_mode = download_mode
         from .downloader import FileDownloader
         self.downloader = FileDownloader(auth_token=auth_token, delete_videos=delete_videos)
 
@@ -158,20 +163,30 @@ class FolderSync:
         Reuses FileDownloader.process_archive so extraction/markers/purge-safety are
         identical to tiers 1-3. Returns (recovered_count, still_failed_count)."""
         from .. import rclone
+        if self.download_mode != "rclone":
+            debug_log(f"TIER4_SKIPPED | download_mode={self.download_mode} | "
+                      f"blocked={len(blocked_tasks)}")
+            return 0, len(blocked_tasks)
+        session = None
         if not rclone.is_authed():
+            if not rclone.can_open_browser():
+                display.rclone_no_browser()
+                return 0, len(blocked_tasks)
             # One-time consent: pre-explain rclone before it opens the browser,
             # then attempt setup. Defensive: a failure here just leaves the files
-            # blocked (counted as errors), same as before.
+            # blocked (counted as errors), same as before. The session is reused
+            # below so the binary resolves once rather than twice.
             try:
                 display.rclone_consent_explainer()
-                if not rclone.RcloneSession().ensure_authed():
+                session = rclone.RcloneSession()
+                if not session.ensure_authed():
                     return 0, len(blocked_tasks)
             except Exception:
                 return 0, len(blocked_tasks)  # caller already counted them as errors
         recovered = 0
         try:
-            with rclone.RcloneSession() as session:
-                ok_ids, _ = session.downloader.download(
+            with (session or rclone.RcloneSession()) as active:
+                ok_ids, _ = active.downloader.download(
                     blocked_tasks, cancel_check=cancel_check
                 )
         except Exception:

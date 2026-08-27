@@ -8,7 +8,7 @@ nothing, and that purge deletes nothing.
   scripts/manual_auth_test.py --mode anonymous
   scripts/manual_auth_test.py --mode rclone --keep /tmp/sc-authtest
 
-See AUTH_TEST_HARNESS_DESIGN.md.
+See docs/downloads.md for the tier model.
 """
 
 import argparse
