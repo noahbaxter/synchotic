@@ -227,6 +227,7 @@ class FileDownloader:
 
         downloaded_bytes = 0
         content_length = response.content_length or 0
+        short_name = format_download_name(task.local_path)
 
         # Small files: read all at once
         if content_length > 0 and content_length < PROGRESS_TRACK_MIN_SIZE:
@@ -268,6 +269,26 @@ class FileDownloader:
             # Unregister when done
             if is_tracked and progress_tracker:
                 progress_tracker.unregister_active_download(task.file_id)
+
+        # A truncated body writes cleanly and only fails later inside the
+        # extractor, where a rate limit reads as a corrupt archive and the chart
+        # gets blamed. Google answers some limits with a short non-HTML body, so
+        # the text/html check upstream never sees them. The manifest size is the
+        # only thing that can tell the difference, so check it here.
+        if task.size > 0 and downloaded_bytes != task.size:
+            try:
+                task.local_path.unlink()
+            except OSError:
+                pass
+            debug_log(
+                f"SHORT_DOWNLOAD | {task.rel_path} | got={downloaded_bytes} want={task.size} tier={tier}"
+            )
+            return DownloadResult(
+                success=False,
+                file_path=task.local_path,
+                message=f"ERR (got {downloaded_bytes} of {task.size} bytes): {short_name}",
+                retryable=True,
+            )
 
         debug_log(f"TIER | {tier} | {task.local_path.name.removeprefix('_download_')}")
         return DownloadResult(
@@ -321,6 +342,18 @@ class FileDownloader:
             success, error = extract_archive(archive_path, extract_tmp)
             if not success:
                 shutil.rmtree(extract_tmp, ignore_errors=True)
+                # Say what was actually on disk. "read enough data" from the
+                # archive reader is indistinguishable between a corrupt archive
+                # and a file that is not the size we just wrote.
+                try:
+                    on_disk = archive_path.stat().st_size
+                except OSError as e:
+                    on_disk = f"stat failed: {e}"
+                debug_log(
+                    f"EXTRACT_FAIL | {archive_rel_path or archive_path.name} | "
+                    f"on_disk={on_disk} expected={archive_size} "
+                    f"path={archive_path} | {error}"
+                )
                 if _is_path_length_error(error) and archive_rel_path:
                     save_failed_marker(archive_rel_path, task.md5, error)
                 return False, f"Extract failed: {error}", {}

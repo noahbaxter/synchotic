@@ -101,8 +101,20 @@ class FolderSync:
             if created > 0:
                 debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
 
+        def _plan_progress(done, total):
+            if total <= 200:  # fast enough that a counter is just noise
+                return
+            from ..ui.primitives import print_progress
+            if done >= total:
+                # Wipe the counter, or the section header prints onto the end of it.
+                print("\033[2K\r", end="", flush=True)
+                return
+            label = header or folder["name"]
+            print_progress(f"Checking {label}... {done}/{total}")
+
         tasks, skipped, long_paths = plan_downloads(
-            manifest_files, folder_path, self.delete_videos, folder_name=folder["name"]
+            manifest_files, folder_path, self.delete_videos, folder_name=folder["name"],
+            on_progress=_plan_progress,
         )
 
         debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
@@ -397,15 +409,26 @@ def purge_all_folders(
     persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
+    from ..ui.primitives import print_progress
+
+    print_progress("Purge: reading markers...")
     all_marker_files = get_all_marker_files()
     marker_norm = {normalize_path_key(p) for p in all_marker_files}
 
-    for folder in folders:
+    # Each drive is walked in full to find files nothing accounts for, which is
+    # seconds per drive on a network library. Name the drive, or purge looks
+    # like it has stopped at the point where it is about to delete things.
+    total_drives = len(folders)
+    for drive_index, folder in enumerate(folders, start=1):
         folder_id = folder.get("folder_id", "")
         folder_path = base_path / folder.get("name", "")
 
         if not folder_path.exists():
             continue
+
+        print_progress(
+            f"Purge: checking {folder.get('name', '')} ({drive_index}/{total_drives})"
+        )
 
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
 
@@ -431,6 +454,7 @@ def purge_all_folders(
         total_size += size
         if deleted > 0:
             purged_folder_ids.add(folder_id)
+        print("\033[2K\r", end="", flush=True)
 
     deleted, failed, size = _purge_partial_downloads(base_path)
     total_deleted += deleted

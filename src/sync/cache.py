@@ -245,6 +245,16 @@ class PersistentStatsCache:
         """Check if any setlist stats are cached for a folder."""
         return bool(self._setlist_cache.get(folder_id))
 
+    def remembered_chart_count(self, folder_id: str, setlist_name: str) -> "int | None":
+        """Charts counted the last time this setlist was scanned, or None.
+
+        Used to scan the small setlists first, so the downloader has something
+        to work on sooner. Only ever a hint: a stale or missing count changes
+        the order, never the result.
+        """
+        stats = self._setlist_cache.get(folder_id, {}).get(setlist_name)
+        return stats.total_charts if stats else None
+
     @staticmethod
     def compute_settings_hash(folder_id: str, user_settings) -> str:
         """

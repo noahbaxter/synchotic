@@ -63,11 +63,67 @@ class DownloadTask:
     rel_path: str = ""  # Relative path for marker tracking
 
 
+# Below this many entries the planning loop is quick enough that warming costs
+# more than it saves.
+WARM_THRESHOLD = 200
+WARM_WORKERS = 16
+
+
+def _warm_sync_checks(files, local_base: Path, folder_name: str, on_progress=None):
+    """Run the planner's sync checks concurrently, discarding the answers.
+
+    Deciding whether an archive is present stats every file its marker lists.
+    That is latency, not throughput, so it parallelises nearly linearly, and on
+    a network library it is the whole cost of planning a large setlist.
+
+    Only the filesystem cache is kept: every result is thrown away and the loop
+    below still does its own checks, in order, exactly as before. So this cannot
+    change what gets downloaded or what purge later considers accounted for. The
+    worst case is wasted work, not a wrong plan.
+    """
+    from concurrent.futures import ThreadPoolExecutor
+
+    def touch(f):
+        try:
+            file_path = f["path"]
+            file_name = file_path.split("/")[-1] if "/" in file_path else file_path
+            if is_archive_file(file_name):
+                checksum_path = file_path.rsplit("/", 1)[0] if "/" in file_path else ""
+                is_archive_synced(
+                    folder_name=folder_name,
+                    checksum_path=checksum_path,
+                    archive_name=file_name,
+                    manifest_md5=f.get("md5", ""),
+                    local_base=local_base,
+                )
+            else:
+                is_file_synced(
+                    rel_path=file_path,
+                    manifest_size=f.get("size", 0),
+                    local_path=local_base / file_path,
+                )
+        except Exception:
+            pass  # warming only; the real check reports problems
+
+    from concurrent.futures import as_completed
+
+    total = len(files)
+    done = 0
+    with ThreadPoolExecutor(max_workers=WARM_WORKERS) as pool:
+        futures = [pool.submit(touch, f) for f in files]
+        for _ in as_completed(futures):
+            done += 1
+            # This is the slow phase, so it is the one that has to report.
+            if on_progress and done % 50 == 0:
+                on_progress(done, total)
+
+
 def plan_downloads(
     files: List[dict],
     local_base: Path,
     delete_videos: bool = True,
     folder_name: str = "",
+    on_progress=None,
 ) -> Tuple[List[DownloadTask], int, List[str]]:
     """
     Plan which files need to be downloaded.
@@ -87,7 +143,16 @@ def plan_downloads(
     # Dedupes archives whose names differ only in case — NOT all archives in the same folder
     seen_archive_paths: set[str] = set()
 
-    for f in files:
+    # Deciding whether an archive is already here means stat-ing every file its
+    # marker lists. On a network library that is milliseconds each, so a setlist
+    # with thousands of archives spends minutes here with nothing on screen.
+    total_files = len(files)
+    if total_files >= WARM_THRESHOLD:
+        _warm_sync_checks(files, local_base, folder_name, on_progress=on_progress)
+
+    for index, f in enumerate(files):
+        if on_progress and index % 100 == 0:
+            on_progress(index, total_files)
         file_path = f["path"]
         file_name = file_path.split("/")[-1] if "/" in file_path else file_path
         file_size = f.get("size", 0)
@@ -173,5 +238,8 @@ def plan_downloads(
                 is_archive=is_archive,
                 rel_path=rel_path,
             ))
+
+    if on_progress:
+        on_progress(total_files, total_files)
 
     return to_download, skipped, long_paths

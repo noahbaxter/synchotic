@@ -151,3 +151,52 @@ class TestCancelResponsiveness:
         # Should cancel within 500ms of the cancel_check returning True
         # (100ms poll interval + some overhead)
         assert elapsed < 1.0, f"Cancellation took too long: {elapsed:.2f}s"
+
+
+class TestShortDownloadIsRejected:
+    """A truncated body must not reach the extractor.
+
+    Google answers some rate limits with a short non-HTML body. That wrote
+    cleanly as an archive and blew up later as a corrupt RAR, so 91 charts
+    reported "Extract failed" when nothing was wrong with them.
+    """
+
+    def _run(self, tmp_path, body: bytes, declared: int):
+        import asyncio
+        from src.sync.downloader import FileDownloader, DownloadTask
+
+        class FakeContent:
+            def __init__(self, data): self._data = data
+            async def iter_chunked(self, n):
+                for i in range(0, len(self._data), n):
+                    yield self._data[i:i + n]
+            async def read(self): return self._data
+
+        class FakeResponse:
+            def __init__(self, data):
+                self.content_length = len(data)
+                self.content = FakeContent(data)
+                self.headers = {}
+            async def read(self): return self.content._data
+
+        dl = FileDownloader(auth_token=None)
+        task = DownloadTask(
+            file_id="fid",
+            local_path=tmp_path / "chart.rar",
+            rel_path="Drive/chart.rar",
+            size=declared,
+            md5="",
+        )
+        return asyncio.run(dl._write_response(FakeResponse(body), task, None, tier="anonymous")), task
+
+    def test_short_body_fails_and_leaves_no_file(self, tmp_path):
+        result, task = self._run(tmp_path, b"x" * 51, declared=10670501)
+        assert result.success is False
+        assert result.retryable is True
+        assert "51" in result.message
+        assert not task.local_path.exists()
+
+    def test_exact_size_still_succeeds(self, tmp_path):
+        result, task = self._run(tmp_path, b"y" * 2048, declared=2048)
+        assert result.success is True
+        assert task.local_path.stat().st_size == 2048
