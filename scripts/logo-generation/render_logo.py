@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render the Synchotic ASCII logo to PNG with sunset gradient."""
+"""Render the Synchotic ASCII logo to PNG with the nova gradient."""
 
 from PIL import Image, ImageDraw, ImageFont, ImageFilter
 import sys
@@ -7,20 +7,22 @@ import os
 import random
 import math
 
-# Sunset gradient from colors.py
+# The "nova" gradient, copied from chotic-ui's _THEME_GRADIENTS. Keep the two
+# in step: this renders the app icons, chotic-ui renders the TUI banner, and
+# nothing checks that they still agree.
 GRADIENT_COLORS = [
-    (80, 20, 120),    # Deep purple
-    (110, 25, 130),   # Purple
-    (150, 25, 120),   # Plum
-    (185, 30, 95),    # Magenta-red
-    (215, 35, 65),    # Crimson
-    (235, 40, 45),    # Red
-    (245, 55, 35),    # Scarlet
-    (250, 80, 30),    # Red-orange
-    (252, 115, 30),   # Dark orange
-    (254, 150, 35),   # Orange
-    (255, 185, 50),   # Amber
-    (255, 215, 75),   # Warm gold
+    (232, 58, 168),   # Hot pink
+    (238, 54, 146),   # Magenta
+    (242, 52, 122),   # Deep pink
+    (245, 54, 98),    # Rose
+    (247, 60, 74),    # Coral red
+    (249, 74, 56),    # Scarlet
+    (250, 94, 42),    # Red-orange
+    (252, 118, 36),   # Orange
+    (253, 146, 40),   # Warm orange
+    (254, 174, 54),   # Amber
+    (255, 202, 74),   # Golden amber
+    (255, 228, 112),  # Gold
 ]
 
 TEXTURE_DENSITY = 0.90  # 0.0 = none, 1.0 = every interior space
