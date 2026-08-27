@@ -47,6 +47,8 @@ def auth_prompt():
     print("  Your Google account is only used to download files.")
     print("  We never upload, modify, or access anything else.")
     print()
+    print("  Privacy policy: https://noahbaxter.dev/synchotic/privacy.html")
+    print()
     print("  [Y] Sign in (recommended)")
     print("  [N] Skip for now")
     print()
