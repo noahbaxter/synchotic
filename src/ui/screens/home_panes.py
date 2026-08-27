@@ -340,7 +340,15 @@ def show_main_menu_panes(
         if folder.get("is_custom"):
             rows.append(_spacer())
             label = "Re-scan folder" if folder.get("files") else "Scan folder"
-            rows.append(_row(f"  {label}", ("scan_folder", folder_id, None)))
+            # A scan with nowhere to write is greyed with the reason beside
+            # it, rather than left as a row that ignores you.
+            from ...core.paths import library_blocked_reason
+            lib_blocked = library_blocked_reason(user_settings)
+            if lib_blocked:
+                rows.append(_row(f"  {Colors.MUTED_DIM}{label}  ({lib_blocked}){Colors.RESET}",
+                                 ("scan_folder", folder_id, None), False))
+            else:
+                rows.append(_row(f"  {label}", ("scan_folder", folder_id, None)))
             rows.append(_row(f"  {Colors.ERROR}Remove folder{Colors.RESET}", ("remove_folder", folder_id, None)))
         return rows
 
@@ -377,7 +385,7 @@ def show_main_menu_panes(
 
     def _settings_right():
         from .account import account_status
-        from ...core.paths import get_library_path
+        from ...core.paths import get_library_path, library_blocked_reason
 
         def opt(label, value, action, selectable=True):
             """An option the cursor cannot land on is drawn grey throughout, so
@@ -404,7 +412,12 @@ def show_main_menu_panes(
         # actually reach it. Gating on sign-in instead would be wrong: anonymous
         # mode has no token by design and still resolves public folders on the
         # API key alone, so it would block a setup that works.
-        blocked = _mode_blocked_reason(user_settings, auth, rclone_connected)
+        mode_blocked = _mode_blocked_reason(user_settings, auth, rclone_connected)
+
+        # A library that is unset or unmounted blocks the same work, but not
+        # the row that fixes it: Location stays reachable either way.
+        lib_blocked = library_blocked_reason(user_settings)
+        blocked = mode_blocked or lib_blocked
 
         if blocked:
             rescan = blocked
@@ -426,19 +439,22 @@ def show_main_menu_panes(
             opt(sign_label, sign_value, sign_action, sign_ok),
             _spacer(),
             _header_row("Library"),
-            # Changing it rescans the new location, so it fails the same way.
-            opt("Location", blocked or str(get_library_path()), ("act", "library"),
-                selectable=not blocked),
+            # Changing it rescans the new location, so it fails the same way
+            # a rescan does -- except when the library itself is the problem,
+            # which is what this row exists to fix.
+            opt("Location", mode_blocked or lib_blocked or str(get_library_path()),
+                ("act", "library"), selectable=not mode_blocked),
             # Opens a local folder, so it works with no Drive access at all.
             opt("Open folder", "Settings, logs, credentials", ("act", "open_data_folder")),
             _spacer(),
             _header_row("Drives"),
             # Resolving a folder is a Drive call: without a working mode it
             # only ever reaches "access denied", several screens in.
-            opt("Add folder", blocked or "Your own Google Drive folder",
-                ("act", "add_custom"), selectable=not blocked),
-            # A rescan with no working mode returns before doing any work, and
-            # one during a scan has nothing to add, so neither is offerable.
+            opt("Add folder", mode_blocked or "Your own Google Drive folder",
+                ("act", "add_custom"), selectable=not mode_blocked),
+            # A rescan with no working mode or no library to write into
+            # returns before doing any work, and one during a scan has nothing
+            # to add, so none of the three is offerable.
             opt("Rescan", rescan, ("act", "rescan"),
                 selectable=not (blocked or scanning)),
         ]

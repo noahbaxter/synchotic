@@ -283,6 +283,33 @@ class TestUnmountedLibrary:
         assert paths.get_library_state_dir().is_dir()
 
 
+class TestScanGate:
+    """Nothing scans without somewhere to write. library_blocked_reason is the
+    one rule the menu greys rows on and every scan entry point checks."""
+
+    class _Settings:
+        def __init__(self, library_path=""):
+            self.library_path = library_path
+
+    def test_an_unmounted_library_blocks(self, tmp_path):
+        paths.set_library_path(tmp_path / "not-mounted")
+        assert paths.library_blocked_reason() == "Library not connected"
+
+    def test_an_unset_library_blocks_in_os_dirs_mode(self, monkeypatch, tmp_path):
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+        assert paths.library_blocked_reason(self._Settings("")) == "Set a library first"
+
+    def test_a_portable_install_is_never_unset(self, tmp_path):
+        """Its default sits beside the launcher, which is how pre-1.5 works."""
+        assert paths.library_blocked_reason(self._Settings("")) == ""
+
+    def test_a_mounted_library_does_not_block(self, tmp_path):
+        lib = tmp_path / "mounted"
+        lib.mkdir()
+        paths.set_library_path(lib)
+        assert paths.library_blocked_reason(self._Settings(str(lib))) == ""
+
+
 class TestLibraryPathPersists:
     def test_round_trips_through_settings(self, tmp_path):
         from src.config.settings import UserSettings

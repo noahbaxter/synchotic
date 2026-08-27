@@ -70,6 +70,17 @@ def sync_blocked(reason: str):
     print(f"\n  Cannot sync: {reason}.")
     print("  Fix this from Settings, under Account.")
 
+def library_blocked(reason: str):
+    """No library to scan into, so the work stops before it starts.
+
+    Points at Library rather than Account: nothing about the download mode or
+    the sign-in is wrong here, and sending people to the wrong section is how
+    a fixable state reads as broken.
+    """
+    print(f"\n  Cannot scan: {reason}.")
+    print("  Fix this from Settings, under Library.")
+
+
 def custom_folder_blocked(reason: str):
     print(f"\n  Cannot add a folder: {reason}.")
     print("  Fix this from Settings, under Account.")

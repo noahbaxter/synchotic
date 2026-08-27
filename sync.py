@@ -340,6 +340,12 @@ class SyncApp:
             wait_with_skip(3)
             return None
 
+        blocked = self._library_blocked()
+        if blocked:
+            display.library_blocked(blocked)
+            wait_with_skip(3)
+            return None
+
         # Ensure background scanner is running
         if not self._background_scanner:
             self._start_background_scan()
@@ -482,6 +488,12 @@ class SyncApp:
         blocked = self._drive_blocked()
         if blocked:
             display.sync_blocked(blocked)
+            wait_with_skip(3)
+            return
+
+        blocked = self._library_blocked()
+        if blocked:
+            display.library_blocked(blocked)
             wait_with_skip(3)
             return
 
@@ -797,6 +809,13 @@ class SyncApp:
         if self._drive_blocked():
             return
 
+        # Scans write markers and the scan cache into the library. With no
+        # library set, or one on a drive that is not mounted, get_library_state_dir
+        # would either raise or mkdir an empty tree at a bare mountpoint, which
+        # the next sync then fills and a remount hides.
+        if self._library_blocked():
+            return
+
         # Find folders that need scanning (files not loaded)
         # Order: enabled first, then disabled; within each group, smallest first
         enabled = [
@@ -881,6 +900,15 @@ class SyncApp:
         """Invalidate all caches and restart background scan for all drives."""
         from src.sync.cache import get_scan_cache, get_persistent_stats_cache
 
+        # Checked before anything is thrown away: with no library to scan into
+        # the rescan cannot restart, and dropping every cache first would leave
+        # the home screen empty with no way to refill it.
+        blocked = self._library_blocked()
+        if blocked:
+            display.library_blocked(blocked)
+            wait_with_skip(3)
+            return
+
         self._stop_background_scan()
 
         get_scan_cache().invalidate_all()
@@ -907,6 +935,12 @@ class SyncApp:
         except Exception:
             rclone_authed = False
         return mode_blocked_reason(self.user_settings, self.auth, rclone_authed)
+
+    def _library_blocked(self) -> str:
+        """Why the library cannot take a scan right now, or "" when it can."""
+        from src.core.paths import library_blocked_reason
+
+        return library_blocked_reason(self.user_settings)
 
     def _scan_failure(self) -> tuple[str, int] | None:
         """(reason, failed setlist count) when scans failed, else None."""
@@ -1088,6 +1122,12 @@ class SyncApp:
         blocked = self._drive_blocked()
         if blocked:
             display.sync_blocked(blocked)
+            wait_with_skip(3)
+            return
+
+        blocked = self._library_blocked()
+        if blocked:
+            display.library_blocked(blocked)
             wait_with_skip(3)
             return
 

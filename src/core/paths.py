@@ -277,6 +277,21 @@ def _configured_library():
     return os.environ.get("SYNCHOTIC_LIBRARY") or _library_override
 
 
+def library_blocked_reason(user_settings=None) -> str:
+    """Why nothing may scan or sync right now, or "" when the library is usable.
+
+    A scan writes into the library: markers, staging, the scan cache keyed to
+    it. With no library chosen, or one on a drive that is no longer mounted,
+    that work has nowhere to land, so it is refused up front instead of at the
+    first mkdir several screens in.
+    """
+    if user_settings is not None and library_needs_setup(user_settings):
+        return "Set a library first"
+    if not library_is_available():
+        return "Library not connected"
+    return ""
+
+
 def get_library_state_dir() -> Path:
     """Library-owned state (markers, staging). Created on demand.
 

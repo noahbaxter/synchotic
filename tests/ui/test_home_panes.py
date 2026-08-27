@@ -385,6 +385,49 @@ class TestDriveRowsNeedAWorkingMode:
         assert row[2] is True
 
 
+class TestScanRowsNeedALibrary:
+    """A scan writes markers and staging into the library. With none set, or
+    one on a drive that is not mounted, the rows that start one are greyed with
+    the reason instead of failing at the first mkdir."""
+
+    CUSTOM = dict(FOLDER, folder_id="custom-1", is_custom=True, files=[])
+
+    def _settings_rows(self, build, **kw):
+        return {r[1]: r for r in build(**kw)["right_for"](SETTINGS)}
+
+    def _unmounted(self, monkeypatch, tmp_path):
+        monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path / "not-mounted"))
+
+    def test_rescan_is_greyed_with_the_reason(self, build, monkeypatch, tmp_path):
+        from src.ui.components import strip_ansi
+        self._unmounted(monkeypatch, tmp_path)
+        row = self._settings_rows(build, auth=_Auth())[("act", "rescan")]
+        assert row[2] is False
+        assert "Library not connected" in strip_ansi(row[0](False, False))
+
+    def test_location_stays_reachable(self, build, monkeypatch, tmp_path):
+        """It is the row that fixes this, so gating it would be a dead end."""
+        self._unmounted(monkeypatch, tmp_path)
+        assert self._settings_rows(build, auth=_Auth())[("act", "library")][2] is True
+
+    def test_a_custom_folder_scan_is_greyed(self, build, monkeypatch, tmp_path):
+        from src.ui.components import strip_ansi
+        self._unmounted(monkeypatch, tmp_path)
+        rows = build(auth=_Auth(), folders=(self.CUSTOM,))["right_for"](("drive", "custom-1"))
+        row = next(r for r in rows if r[1] == ("scan_folder", "custom-1", None))
+        assert row[2] is False
+        assert "Library not connected" in strip_ansi(row[0](False, False))
+
+    def test_a_mounted_library_leaves_both_alone(self, build, monkeypatch, tmp_path):
+        lib = tmp_path / "mounted"
+        lib.mkdir()
+        monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(lib))
+        assert self._settings_rows(build, auth=_Auth())[("act", "rescan")][2] is True
+        rows = build(auth=_Auth(), folders=(self.CUSTOM,))["right_for"](("drive", "custom-1"))
+        row = next(r for r in rows if r[1] == ("scan_folder", "custom-1", None))
+        assert row[2] is True
+
+
 class TestTheChartsColumn:
     def test_it_shows_a_plain_count_not_a_ratio(self, build):
         from src.ui.components import strip_ansi
