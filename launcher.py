@@ -839,7 +839,7 @@ def main():
     print("=" * 40 + "\n")
 
     # Filter out launcher-specific args before passing to app
-    launcher_flags = {"--offline", "--dev", "--clean"}
+    launcher_flags = {"--offline", "--dev", "--clean", "--hosted"}
     launcher_opts = {"--test-release"}  # These consume the next arg too
     filtered_args = []
     skip_next = False
