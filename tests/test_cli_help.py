@@ -9,15 +9,19 @@ piped subprocess never emits the escape and would pass whatever the app does.
 """
 
 import os
-import pty
 import re
-import select
-import shutil
 import subprocess
 import sys
 from pathlib import Path
 
 import pytest
+
+# pty, termios and fcntl are POSIX only, and importing them at module level
+# aborts collection for the whole run on Windows. Windows cannot test this
+# anyway: without a ConPTY the app never sees a terminal, enter_alt_screen
+# returns early, and --help prints no matter which order main() uses.
+pytestmark = pytest.mark.skipif(os.name != "posix",
+                                reason="needs a pty; POSIX only")
 
 ROOT = Path(__file__).resolve().parent.parent
 ENTER_ALT_SCREEN = "\033[?1049h"
@@ -26,6 +30,9 @@ ANSI = re.compile(r"\x1b\[[0-9;?]*[a-zA-Z]|\x1b\][^\x07]*\x07")
 
 def _run_on_a_tty(*args, timeout=120):
     """Run sync.py attached to a pty and return everything it wrote."""
+    import pty
+    import select
+
     primary, secondary = pty.openpty()
     proc = subprocess.Popen(
         [sys.executable, str(ROOT / "sync.py"), *args],
