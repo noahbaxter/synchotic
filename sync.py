@@ -1224,6 +1224,10 @@ class SyncApp:
 
             if action == "quit":
                 self._stop_background_scan()
+                # Drop back to the real screen so the sign-off lands in the
+                # shell the user came from instead of the buffer we discard.
+                from chotic_ui.primitives.host import leave_alt_screen
+                leave_alt_screen()
                 print("\nGoodbye!")
                 break
 
@@ -1319,7 +1323,7 @@ def main():
     # it the art. Without this the first paint wipes the banner for good, and
     # the menu still reserves its 8 lines of height for it.
     from chotic_ui import configure_header, set_theme
-    from chotic_ui.primitives.host import bootstrap
+    from chotic_ui.primitives.host import bootstrap, use_alt_screen
     from src.ui.components.header import ASCII_HEADER
     from src import __version__ as _app_version
     from src.ui.theme import DEFAULT_THEME
@@ -1329,6 +1333,12 @@ def main():
     # it is running. Say the name we actually want. Also turns on VT processing
     # on Windows consoles, where raw ANSI otherwise renders as literal garbage.
     bootstrap("Synchotic")
+
+    # Everything below draws in the alternate screen buffer. The menus repaint
+    # in place from the home position, which only holds if home stays put: on
+    # the primary buffer a frame that scrolls, or a window the user drags
+    # taller, drags old rows back under the new frame.
+    use_alt_screen()
 
     configure_header(ASCII_HEADER, _app_version)
 
@@ -1424,5 +1434,9 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
+        # Back to the real screen first, or the parting message is written to a
+        # buffer that atexit is about to throw away.
+        from chotic_ui.primitives.host import leave_alt_screen
+        leave_alt_screen()
         print("\n\nCancelled by user.")
         sys.exit(0)
