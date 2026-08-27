@@ -880,6 +880,16 @@ class SyncApp:
 
         self._start_background_scan(force_rescan=True)
 
+    def _scan_failure(self) -> tuple[str, int] | None:
+        """(reason, failed setlist count) when scans failed, else None."""
+        scanner = self._background_scanner
+        if not (scanner and scanner.has_scan_failures()):
+            return None
+        reason = scanner.get_failure_reason() or "some setlists could not be scanned"
+        count = sum(len(scanner.get_failed_setlist_names(f.get("folder_id", "")))
+                    for f in self.folders)
+        return reason, count
+
     def _sync_folders_sequentially(self) -> tuple[bool, set[str]]:
         """
         Download setlists as they become ready from background scanner.
@@ -1019,6 +1029,12 @@ class SyncApp:
             wait_with_skip(5, "Continuing in 5s (press any key to skip)")
         elif total_downloaded > 0:
             display.sync_complete(total_downloaded, total_bytes, elapsed)
+        elif self._scan_failure():
+            # Nothing downloaded because the scans died, not because the
+            # library was already current. Saying "synced" here is how a
+            # total failure reads as a clean run.
+            reason, count = self._scan_failure()
+            display.sync_failed(reason, count)
         else:
             display.sync_already_synced()
 

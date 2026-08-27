@@ -7,6 +7,8 @@ Uses three simple sets: all_setlists, enabled_setlists, scanned_setlists.
 
 import threading
 import time
+
+import requests
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass, field
 from typing import Callable, TYPE_CHECKING
@@ -20,6 +22,36 @@ from ..core.logging import debug_log
 
 if TYPE_CHECKING:
     from ..config import UserSettings
+
+
+def describe_scan_failure(e: Exception) -> str:
+    """A short, plain reason a scan failed, for the sync summary line.
+
+    The summary used to read "All files synced" no matter how many setlists
+    threw, which is how a total scan failure reached a user looking like a
+    clean run. Anything unrecognised falls back to the exception itself
+    rather than a vague stand-in.
+    """
+    resp = getattr(e, "response", None)
+    status = getattr(resp, "status_code", None)
+    body = (getattr(resp, "text", "") or "")[:300]
+
+    if status == 400 and "different projects" in body:
+        return ("Google rejected the credentials: its API key and your sign-in "
+                "belong to different Google Cloud projects")
+    if status == 400:
+        return "Google rejected the request as malformed (400)"
+    if status == 401:
+        return "your sign-in expired or was revoked"
+    if status == 403:
+        return "Google denied access (403)"
+    if status == 429:
+        return "Google rate-limited the request"
+    if isinstance(e, requests.exceptions.Timeout):
+        return "the connection to Google timed out"
+    if isinstance(e, requests.exceptions.ConnectionError):
+        return "the connection to Google failed"
+    return f"{type(e).__name__}: {e}"
 
 
 @dataclass
@@ -101,6 +133,7 @@ class BackgroundScanner:
         self._enabled_setlist_ids: set[str] = set()
         self._scanned_setlist_ids: set[str] = set()
         self._failed_setlist_ids: set[str] = set()  # Setlists that threw during scan
+        self._failure_reason: str | None = None  # Why the first one threw
         self._last_check_count: int = 0
 
         # Per-drive tracking
@@ -283,6 +316,11 @@ class BackgroundScanner:
         """Get total number of enabled setlists across all drives."""
         with self._lock:
             return len(self._enabled_setlist_ids)
+
+    def get_failure_reason(self) -> str | None:
+        """Why the first scan failure happened, or None if nothing failed."""
+        with self._lock:
+            return self._failure_reason
 
     def has_scan_failures(self) -> bool:
         """Check if any setlists failed to scan."""
@@ -642,6 +680,8 @@ class BackgroundScanner:
             with self._lock:
                 self._failed_setlist_ids.add(setlist.setlist_id)
                 self._stats.current_folder_start = 0
+                if self._failure_reason is None:
+                    self._failure_reason = describe_scan_failure(e)
             # Log why. Without this a failed scan is indistinguishable from an
             # empty setlist, and a drive-wide failure reads as "nothing to sync".
             detail = f"{type(e).__name__}: {e}"

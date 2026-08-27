@@ -363,6 +363,11 @@ def sync_complete(downloaded: int, bytes_downloaded: int, duration: float):
 def sync_already_synced():
     print(f"{_c.SUCCESS}✓{_c.RESET} All files synced")
 
+def sync_failed(reason: str, failed_count: int = 0):
+    """Nothing downloaded because scans failed, not because nothing was due."""
+    scope = f" ({failed_count} setlist{'s' if failed_count != 1 else ''})" if failed_count else ""
+    print(f"{_c.ERROR}✗{_c.RESET} Sync failed because {reason}{scope}")
+
 def sync_errors(error_count: int):
     print(f"  {_c.ERROR}{error_count} errors{_c.RESET}")
 
