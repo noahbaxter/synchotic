@@ -20,20 +20,33 @@ def show_library_screen(user_settings) -> bool:
     from ...core.paths import (LIBRARY_STATE_DIR_NAME, find_legacy_markers,
                                get_library_path, migrate_to_os_dirs,
                                find_legacy_install, set_library_path)
-    from ..primitives import CancelInput, input_with_esc
+    from ...core.folder_picker import pick_folder, picker_available
+    from ..primitives import Browse, CancelInput, input_with_browse
 
-    clear_screen()
-    print_header()
-    display.library_prompt(get_library_path())
+    # One input path either way. With no picker to open, the hotkey is simply
+    # not bound, so 'b' stays an ordinary character.
+    can_browse = picker_available()
+    browse_key = "b" if can_browse else ""
 
-    try:
-        entered = input_with_esc("  New path: ")
-    except CancelInput:
-        return False
-    if not entered.strip():
-        return False
-
-    path = Path(entered.strip().strip('"').strip("'")).expanduser()
+    # Cancelling the dialog comes back to the prompt rather than leaving the
+    # screen: the picker sits on top of the typed path, it does not replace it.
+    # Redrawing makes that obvious, and is also the only way to clear a dialog
+    # that painted over the terminal.
+    path = None
+    while path is None:
+        clear_screen()
+        print_header()
+        display.library_prompt(get_library_path(), can_browse)
+        try:
+            entered = input_with_browse("  New path: ", browse_key)
+        except CancelInput:
+            return False
+        except Browse:
+            path = pick_folder("Choose your chart library", get_library_path())
+            continue
+        if not entered.strip():
+            return False
+        path = Path(entered.strip().strip('"').strip("'")).expanduser()
 
     if path.exists() and not path.is_dir():
         display.library_not_a_folder(path)

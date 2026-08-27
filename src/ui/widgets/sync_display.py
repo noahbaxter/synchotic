@@ -113,7 +113,7 @@ def byoc_not_configured(instructions_path=None, opened: bool = False) -> None:
     print()
 
 
-def library_prompt(current) -> None:
+def library_prompt(current, can_browse: bool = False) -> None:
     print()
     print("  Chart Library")
     print()
@@ -123,8 +123,12 @@ def library_prompt(current) -> None:
     print("  Enter a folder to use instead. Markers and staging live inside the")
     print("  library, so moving the folder later takes its state with it.")
     print()
-    print(f"  {_c.DIM}Press ESC to cancel{_c.RESET}")
+    if can_browse:
+        print(f"  {_c.DIM}Press B to browse, or ESC to cancel{_c.RESET}")
+    else:
+        print(f"  {_c.DIM}Press ESC to cancel{_c.RESET}")
     print()
+
 
 
 def library_not_a_folder(path) -> None:

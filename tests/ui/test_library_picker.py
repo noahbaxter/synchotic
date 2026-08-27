@@ -13,6 +13,15 @@ from src.ui.screens.library import show_library_screen
 
 
 @pytest.fixture(autouse=True)
+def never_open_a_real_dialog(monkeypatch):
+    """A missed patch here used to reach osascript and open a Finder dialog on
+    the machine running the suite. Fail loudly instead."""
+    def forbidden(*a, **k):
+        raise AssertionError("the real folder picker was called from a test")
+    monkeypatch.setattr("src.core.folder_picker._run", forbidden)
+
+
+@pytest.fixture(autouse=True)
 def isolated(tmp_path, monkeypatch):
     monkeypatch.setenv("SYNCHOTIC_ROOT", str(tmp_path))
     monkeypatch.delenv("SYNCHOTIC_LIBRARY", raising=False)
@@ -28,10 +37,9 @@ def drive(monkeypatch):
         answers = list(confirms)
         monkeypatch.setattr("src.ui.screens.library.clear_screen", lambda: None)
         monkeypatch.setattr("src.ui.screens.library.print_header", lambda *a, **k: None)
-        monkeypatch.setattr("src.ui.primitives.input_with_esc", lambda p="": typed,
-                            raising=False)
-        monkeypatch.setattr("chotic_ui.primitives.keyboard_input.input_with_esc",
-                            lambda p="": typed, raising=False)
+        monkeypatch.setattr("src.core.folder_picker.picker_available", lambda: False)
+        monkeypatch.setattr("src.ui.primitives.input_with_browse",
+                            lambda p="", browse_key="b": typed)
         monkeypatch.setattr("chotic_ui.widgets.confirm.ConfirmDialog.run",
                             lambda self: answers.pop(0) if answers else True)
         monkeypatch.setattr("src.ui.widgets.confirm.ConfirmDialog.run",
@@ -124,3 +132,88 @@ class TestAlreadySyncedFolder:
         s = _settings(tmp_path)
         changed, s = drive(str(target), confirms=(), settings=s)
         assert changed is True and s.library_path == str(target)
+
+
+class TestBrowsing:
+    """The native dialog is a way into the same prompt, not a bypass of it.
+    Everything after a path is chosen has to behave identically to typing it."""
+
+    @pytest.fixture
+    def browse(self, monkeypatch):
+        def run(returns, confirms=(True,), settings=None):
+            from src.ui.primitives.path_input import Browse
+            answers = list(confirms)
+            picked = iter(returns)
+            # Browse fires once per prompt, then the line reads as empty, so a
+            # loop that fails to consume a result ends the screen instead of
+            # spinning. A test must never be able to reopen a dialog forever.
+            pressed = []
+
+            def fake_input(p="", browse_key="b"):
+                if len(pressed) < len(returns):
+                    pressed.append(True)
+                    raise Browse()
+                return ""
+
+            monkeypatch.setattr("src.ui.screens.library.clear_screen", lambda: None)
+            monkeypatch.setattr("src.ui.screens.library.print_header",
+                                lambda *a, **k: None)
+            # These are imported inside show_library_screen, so the source
+            # module is the only patch point that takes.
+            monkeypatch.setattr("src.core.folder_picker.picker_available",
+                                lambda: True)
+            monkeypatch.setattr("src.core.folder_picker.pick_folder",
+                                lambda *a, **k: next(picked))
+            monkeypatch.setattr("src.ui.primitives.input_with_browse", fake_input)
+            monkeypatch.setattr("chotic_ui.widgets.confirm.ConfirmDialog.run",
+                                lambda self: answers.pop(0) if answers else True)
+            return show_library_screen(settings)
+        return run
+
+    def test_a_chosen_folder_is_saved(self, tmp_path, browse):
+        target = tmp_path / "picked"; target.mkdir()
+        (target / ".synchotic" / "markers").mkdir(parents=True)
+        s = _settings(tmp_path)
+        assert browse([target], settings=s) is True
+        assert s.library_path == str(target)
+        assert paths.get_library_path() == target
+
+    def test_cancelling_reopens_the_prompt_instead_of_leaving(self, tmp_path, browse):
+        """Cancel must not read as a chosen path and must not drop out of the
+        screen. Choosing on the second go is what proves it looped back."""
+        target = tmp_path / "picked"; target.mkdir()
+        (target / ".synchotic" / "markers").mkdir(parents=True)
+        s = _settings(tmp_path)
+        assert browse([None, target], settings=s) is True
+        assert s.library_path == str(target)
+
+    def test_a_browsed_folder_with_no_markers_still_warns(self, tmp_path, browse):
+        """The dialog cannot vouch for a folder. An empty one re-downloads
+        everything, so it hits the same confirm a typed path does."""
+        target = tmp_path / "empty"; target.mkdir()
+        s = _settings(tmp_path)
+        assert browse([target], confirms=(False,), settings=s) is False
+        assert not s.library_path
+
+
+class TestBrowseHotkey:
+    """Whether the key is bound depends on there being a dialog to open."""
+
+    def _type(self, monkeypatch, keys, browse_key):
+        from src.ui.primitives import path_input
+        it = iter(keys)
+        monkeypatch.setattr(path_input, "getch", lambda: next(it))
+        return path_input.input_with_browse("", browse_key=browse_key)
+
+    def test_unbound_without_a_picker(self, monkeypatch):
+        """With no dialog available 'b' stays a plain character, or a relative
+        path starting with it would be untypeable."""
+        assert self._type(monkeypatch, ["b", "i", "n", "\r"], "") == "bin"
+
+    def test_fires_only_while_the_line_is_empty(self, monkeypatch):
+        assert self._type(monkeypatch, ["/", "b", "\r"], "b") == "/b"
+
+    def test_fires_on_an_empty_line(self, monkeypatch):
+        from src.ui.primitives.path_input import Browse
+        with pytest.raises(Browse):
+            self._type(monkeypatch, ["b"], "b")
