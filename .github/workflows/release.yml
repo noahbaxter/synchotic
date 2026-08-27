@@ -10,7 +10,14 @@ permissions:
   contents: write
 
 jobs:
+  # Publishing is gated on the same tests CI runs. Without this the two
+  # workflows raced off one push and a release could go out over a red CI,
+  # which is exactly how v1.5.1 published from a commit whose tests failed.
+  test:
+    uses: ./.github/workflows/tests.yml
+
   build:
+    needs: test
     uses: ./.github/workflows/build-app.yml
     secrets: inherit
 
