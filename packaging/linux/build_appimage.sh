@@ -119,7 +119,9 @@ TUI="$HERE/usr/bin/synchotic-tui"
 
 # Started from a terminal: this is a TUI, so just be one. Only a launch with no
 # controlling terminal (desktop file, file manager) needs a window built for it.
-if [ -t 0 ] && [ -t 1 ]; then
+# stdin alone, matching launcher.py's _has_terminal: testing stdout too would
+# send `synchotic | less` off to open a GUI window.
+if [ -t 0 ]; then
   exec "$TUI" "$@"
 fi
 
