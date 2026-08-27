@@ -50,7 +50,7 @@ from src.core.paths import (
 )
 from src.ui import (
     print_header,
-    show_main_menu,
+    show_main_menu_panes,
     show_subfolder_settings,
     show_confirmation,
     show_oauth_prompt,
@@ -569,34 +569,21 @@ class SyncApp:
 
         wait_with_skip(2)
 
-    def handle_account(self):
-        """Account & Downloads. Owns no logic, just routes to the old handlers."""
-        from src.ui.screens import show_account_screen
-        rclone_connected = False
-        try:
-            import src.rclone as rclone
-            rclone_connected = rclone.is_authed()
-        except Exception:
-            pass
+    def handle_library(self) -> bool:
+        """Change where charts live, then re-read what is actually there.
 
-        action = show_account_screen(self.user_settings, self.auth, rclone_connected)
-        if action == "download_mode":
-            self.handle_download_mode()
-        elif action == "signin":
-            self.handle_signin()
-        elif action == "signout":
-            self.handle_signout()
-        elif action == "library":
-            self.handle_library()
-        elif action == "open_data_folder":
-            self.handle_open_data_folder()
-
-    def handle_library(self):
-        """Change where charts live, then re-read what is actually there."""
+        Returns whether the library actually moved. Backing out with Esc used to
+        cost the same two-second pause and the same full stats rebuild as a real
+        move, which made cancelling feel like the app had hung.
+        """
         from src.ui.screens import show_library_screen
-        if show_library_screen(self.user_settings):
-            self.folder_stats_cache = {}
+        if not show_library_screen(self.user_settings):
+            return False
+        # A dict here would have replaced the cache object outright, leaving
+        # later .invalidate()/.set() calls to fail on a plain dict.
+        self.folder_stats_cache.invalidate_all()
         wait_with_skip(2)
+        return True
 
     def handle_download_mode(self):
         """Change how blocked charts download, then connect straight away.
@@ -631,15 +618,21 @@ class SyncApp:
             self._start_byoc_setup()
 
     def handle_open_data_folder(self):
-        """Show the data folder. Always print the path, since opening can fail."""
+        """Open the data folder, and say nothing if that worked.
+
+        The folder is now in front of the user; announcing it under the menu
+        pushed the whole layout down and held it there for four seconds. The
+        path is still worth printing when opening fails, which is the only case
+        where the user has to find it themselves."""
         from src.core.files import open_folder
         from src.core.paths import get_data_dir
 
         data_dir = get_data_dir()
         data_dir.mkdir(parents=True, exist_ok=True)
-        opened = open_folder(data_dir)
+        if open_folder(data_dir):
+            return
         print()
-        print("  Opened your data folder:" if opened else "  Your data folder:")
+        print("  Could not open your data folder. It is at:")
         print(f"    {data_dir}")
         print()
         wait_with_skip(4)
@@ -1220,7 +1213,7 @@ class SyncApp:
                 print(f"  Ready in {elapsed:.2f}s")
                 start_time = None  # Only show once
 
-            action, value, menu_pos = show_main_menu(
+            action, value, menu_pos = show_main_menu_panes(
                 self.folders, self.user_settings, selected_index,
                 get_download_path(), combined_drives, cache=menu_cache,
                 auth=self.auth,
@@ -1278,12 +1271,9 @@ class SyncApp:
                 menu_cache = None
 
             elif action == "library":
-                self.handle_library()
-                menu_cache = None  # different library means different stats
+                if self.handle_library():
+                    menu_cache = None  # different library means different stats
 
-
-            elif action == "account":
-                self.handle_account()
 
             elif action == "signin":
                 self.handle_signin()
@@ -1305,6 +1295,19 @@ class SyncApp:
                     # Folder already added to self.folders by handle_add_custom_folder
                     menu_cache = None  # Invalidate cache - new folder added
 
+            elif action == "scan_custom":
+                folder = self._get_folder_by_id(value)
+                if folder:
+                    self._scan_single_custom_folder(folder)
+                    self.folder_stats_cache.invalidate(value)
+                menu_cache = None
+
+            elif action == "remove_custom":
+                folder = self._get_folder_by_id(value)
+                if folder:
+                    self._remove_custom_folder(folder.get("folder_id"), folder.get("name"))
+                menu_cache = None
+
 
 def main():
     """Entry point."""
@@ -1315,10 +1318,21 @@ def main():
     # itself via chotic-ui's print_header, which is a no-op until the app hands
     # it the art. Without this the first paint wipes the banner for good, and
     # the menu still reserves its 8 lines of height for it.
-    from chotic_ui import configure_header
+    from chotic_ui import configure_header, set_theme
+    from chotic_ui.primitives.host import bootstrap
     from src.ui.components.header import ASCII_HEADER
     from src import __version__ as _app_version
+    from src.ui.theme import DEFAULT_THEME
+
+    # The .app renames the binary to synchotic-tui so it does not collide with
+    # the bundle wrapper, and WezTerm titles the window after whatever program
+    # it is running. Say the name we actually want. Also turns on VT processing
+    # on Windows consoles, where raw ANSI otherwise renders as literal garbage.
+    bootstrap("Synchotic")
+
     configure_header(ASCII_HEADER, _app_version)
+
+    set_theme(os.environ.get("SYNCHOTIC_THEME") or DEFAULT_THEME)
 
     # Set terminal size (skip if launched via launcher - it handles this)
     if not os.environ.get("SYNCHOTIC_ROOT"):

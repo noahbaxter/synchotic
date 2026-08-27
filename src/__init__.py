@@ -8,7 +8,7 @@ Import from submodules directly:
     from src.config import UserSettings
     from src.drive import DriveClient
     from src.sync import FolderSync
-    from src.ui import show_main_menu
+    from src.ui import show_main_menu_panes
 """
 
 

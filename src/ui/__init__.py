@@ -51,10 +51,9 @@ from .widgets import (
     FolderProgress,
 )
 from .screens import (
-    HomeScreen,
     MainMenuCache,
     compute_main_menu_cache,
-    show_main_menu,
+    show_main_menu_panes,
     update_menu_cache_on_toggle,
     DriveConfigScreen,
     show_subfolder_settings,
@@ -106,10 +105,9 @@ __all__ = [
     "ConfirmDialog",
     "FolderProgress",
     # Screens
-    "HomeScreen",
     "MainMenuCache",
     "compute_main_menu_cache",
-    "show_main_menu",
+    "show_main_menu_panes",
     "update_menu_cache_on_toggle",
     "DriveConfigScreen",
     "show_subfolder_settings",
