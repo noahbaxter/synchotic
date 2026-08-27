@@ -501,7 +501,16 @@ def extract_app(zip_path: Path, version: str):
         temp_dir.mkdir(parents=True, exist_ok=True)
 
         with zipfile.ZipFile(zip_path, "r") as zf:
-            zf.extractall(temp_dir)
+            # Not extractall: it drops the Unix permission bits, which the zip
+            # carries in the top half of external_attr. The app exe gets a chmod
+            # later, but every other bundled binary does not, so unrar installed
+            # non-executable and rarfile failed every RAR with "Cannot find
+            # working tool". Windows zips record mode 0, so they skip this.
+            for info in zf.infolist():
+                target = zf.extract(info, temp_dir)
+                mode = info.external_attr >> 16
+                if mode & 0o777:
+                    os.chmod(target, mode & 0o777)
 
         # Swap: rename old out of the way, move new in, then delete old.
         # If anything fails mid-swap, at least one copy survives.
