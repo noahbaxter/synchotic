@@ -544,6 +544,15 @@ def rebuild_markers_from_disk(
                         from ..sync.purge_planner import _is_ignored
                         if item.name.startswith("_download_") or _is_ignored(item.name, None):
                             continue
+                        # An archive is never its own extracted output. When an
+                        # extraction failed, the archive is all that is left in
+                        # the folder, and recording it here writes a marker that
+                        # says "done" while listing nothing that came out of it.
+                        # That marker then verifies forever, because the archive
+                        # really is on disk, so the chart is never retried and
+                        # the summary reports it as synced.
+                        if item.name == info["name"]:
+                            continue
                         # Get path relative to folder_path (drive folder)
                         rel = item.relative_to(folder_path)
                         rel_str = str(rel).replace("\\", "/")
