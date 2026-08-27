@@ -393,6 +393,48 @@ class TestRebuildMarkersFromDisk:
         assert "Setlist/SomeChart/song.ini" in marker["files"]
         assert "Setlist/SomeChart/notes.mid" in marker["files"]
 
+    def test_an_archive_is_not_its_own_extracted_content(self, temp_dir):
+        """A failed extraction leaves only the archive in the folder.
+
+        Recording it writes a marker that says "done" while listing nothing that
+        came out of the archive. Because the archive really is on disk, that
+        marker verifies forever: the chart is never retried and the summary
+        reports it as synced. 91 charts sat broken behind exactly this.
+        """
+        drive_path = temp_dir / "TestDrive"
+        chart_folder = drive_path / "Setlist"
+        chart_folder.mkdir(parents=True)
+        (chart_folder / "pack.7z").write_bytes(b"x" * 5000)  # extraction failed
+
+        folders = [{
+            "name": "TestDrive",
+            "files": [{"path": "Setlist/pack.7z", "md5": "abc123", "size": 5000}],
+        }]
+
+        created, skipped = rebuild_markers_from_disk(folders, temp_dir)
+        assert created == 0, "wrote a done-marker for an archive that never extracted"
+        assert load_marker("TestDrive/Setlist/pack.7z", "abc123") is None
+
+    def test_a_real_extraction_beside_the_archive_still_counts(self, temp_dir):
+        """The archive is excluded, not the whole folder. Content next to a
+        not-yet-deleted archive is a normal successful extraction."""
+        drive_path = temp_dir / "TestDrive"
+        chart_folder = drive_path / "Setlist"
+        chart_folder.mkdir(parents=True)
+        (chart_folder / "pack.7z").write_bytes(b"x" * 5000)
+        (chart_folder / "song.ini").write_text("[song]")
+
+        folders = [{
+            "name": "TestDrive",
+            "files": [{"path": "Setlist/pack.7z", "md5": "abc123", "size": 5000}],
+        }]
+
+        created, _ = rebuild_markers_from_disk(folders, temp_dir)
+        assert created == 1
+        marker = load_marker("TestDrive/Setlist/pack.7z", "abc123")
+        assert "Setlist/song.ini" in marker["files"]
+        assert "Setlist/pack.7z" not in marker["files"], "archive recorded as its own output"
+
     def test_skips_archive_with_existing_marker(self, temp_dir):
         """Rebuild skips archives that already have markers (incremental)."""
         drive_path = temp_dir / "TestDrive"

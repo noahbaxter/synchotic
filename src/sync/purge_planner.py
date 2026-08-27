@@ -67,12 +67,26 @@ def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tu
     return partial_files
 
 
+def _is_ignored(filename: str, patterns) -> bool:
+    """True for OS-generated files purge should never count.
+
+    Falls back to the defaults for anything that is not a list of patterns, so a
+    hand-edited settings.json cannot turn this into a crash mid-purge.
+    """
+    from fnmatch import fnmatch
+    if not isinstance(patterns, (list, tuple)):
+        from ..config.settings import DEFAULT_PURGE_IGNORE
+        patterns = DEFAULT_PURGE_IGNORE
+    return any(fnmatch(filename, str(pat)) for pat in patterns)
+
+
 def find_extra_files(
     folder_name: str,
     folder_path: Path,
     marker_files: Set[str],
     manifest_paths: Set[str],
     local_files: dict = None,
+    ignore_patterns=None,
 ) -> List[Tuple[Path, int]]:
     """
     Find local files not tracked in markers AND not in manifest.
@@ -97,6 +111,10 @@ def find_extra_files(
         # Skip partial downloads - handled by find_partial_downloads()
         filename = rel_path.split("/")[-1] if "/" in rel_path else rel_path
         if filename.startswith("_download_"):
+            continue
+
+        # OS litter. Deleting it achieves nothing: the filesystem writes it back.
+        if _is_ignored(filename, ignore_patterns):
             continue
 
         # Markers store paths relative to drive folder (no drive prefix)
@@ -266,7 +284,9 @@ def plan_purge(
 
         # Find extra files (not in markers, not in manifest)
         extras = find_extra_files(
-            folder_name, folder_path, marker_files_normalized, manifest_paths, local_files
+            folder_name, folder_path, marker_files_normalized, manifest_paths,
+            local_files,
+            ignore_patterns=getattr(user_settings, "purge_ignore", None),
         )
 
         extra_paths = set()

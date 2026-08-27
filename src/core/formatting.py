@@ -21,6 +21,75 @@ def normalize_fs_name(name: str) -> str:
     return unicodedata.normalize("NFC", name)
 
 
+def _match_component(parent, name):
+    """The real entry in `parent` for `name`, or None.
+
+    Tries the other Unicode form first, then a case fold. Case is treated as
+    insensitive everywhere for consistency: macOS and Windows already fold it,
+    and a library holding two names that differ only in case is a problem with
+    the library rather than something to re-download over. When several entries
+    fold to the same name the lowest sorted one wins, so the answer is at least
+    stable between runs.
+    """
+    from pathlib import Path
+
+    for form in ("NFC", "NFD"):
+        alt = parent / unicodedata.normalize(form, name)
+        if alt.exists():
+            return alt
+    target = unicodedata.normalize("NFC", name).casefold()
+    try:
+        matches = [
+            entry for entry in parent.iterdir()
+            if unicodedata.normalize("NFC", entry.name).casefold() == target
+        ]
+    except OSError:
+        return None
+    return sorted(matches)[0] if matches else None
+
+
+def resolve_existing_path(path):
+    """The real file for `path`, tolerating spelling differences on disk.
+
+    The same name can be stored composed or decomposed, and upper or lower case,
+    depending on who wrote it. The filesystems disagree about whether either
+    matters:
+
+      macOS   APFS/HFS+ fold both, but SMB and network shares often do not
+      Linux   byte exact, so NFC/NFD and case are all genuinely different names
+      Windows NTFS preserves what it was given and folds case
+
+    So a path built from one source and checked against a disk written by
+    another can miss a file that is sitting right there, and the caller decides
+    the archive is incomplete and downloads it again. Any component can differ,
+    not just the last, so this walks them.
+
+    Exact match is tried first, so byte-exact platforms keep their existing
+    behaviour and none of this runs unless the direct hit already failed.
+
+    Returns the Path that exists, or None.
+    """
+    from pathlib import Path
+
+    path = Path(path)
+    if path.exists():
+        return path
+
+    anchor = path.anchor
+    current = Path(anchor) if anchor else Path(".")
+    parts = path.parts[1:] if anchor else path.parts
+    for part in parts:
+        direct = current / part
+        if direct.exists():
+            current = direct
+            continue
+        matched = _match_component(current, part)
+        if matched is None:
+            return None
+        current = matched
+    return current
+
+
 def normalize_path_key(path: str) -> str:
     """Normalize a path for case-insensitive comparison.
 
