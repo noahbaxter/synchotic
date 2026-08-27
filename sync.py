@@ -1371,6 +1371,20 @@ def main():
     # on Windows consoles, where raw ANSI otherwise renders as literal garbage.
     bootstrap("Synchotic")
 
+    parser = argparse.ArgumentParser(
+        description="DM Chart Sync - Download charts from Google Drive"
+    )
+    parser.add_argument(
+        "--download-mode", choices=DOWNLOAD_MODES, default=None,
+        help="how to fetch virus-scan-blocked files: rclone (one Google consent "
+             "click), anonymous (skip them), byoc (your own credentials). Saved "
+             "for next time. Use anonymous on a machine with no browser.",
+    )
+    # Parsed before the alternate screen opens. --help and a bad argument both
+    # print and exit, and anything printed into that buffer is discarded when
+    # the exit handler closes it, so --help showed the user nothing at all.
+    cli_args = parser.parse_args()
+
     # Everything below draws in the alternate screen buffer. The menus repaint
     # in place from the home position, which only holds if home stays put: on
     # the primary buffer a frame that scrolls, or a window the user drags
@@ -1384,17 +1398,6 @@ def main():
     # Set terminal size (skip if launched via launcher - it handles this)
     if not os.environ.get("SYNCHOTIC_ROOT"):
         set_terminal_size(90, 40)
-
-    parser = argparse.ArgumentParser(
-        description="DM Chart Sync - Download charts from Google Drive"
-    )
-    parser.add_argument(
-        "--download-mode", choices=DOWNLOAD_MODES, default=None,
-        help="how to fetch virus-scan-blocked files: rclone (one Google consent "
-             "click), anonymous (skip them), byoc (your own credentials). Saved "
-             "for next time. Use anonymous on a machine with no browser.",
-    )
-    cli_args = parser.parse_args()
 
     # Always log to .dm-sync/logs/YYYY-MM-DD.log
     logs_dir = get_log_dir()
