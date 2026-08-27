@@ -143,30 +143,19 @@ def _rule(width: int):
 
 
 def _mode_blocked_reason(user_settings, auth, rclone_connected) -> str:
-    """Why Drive is unreachable under the current mode, or "" when it is fine.
+    """Menu wording for the shared rule in download_mode.mode_blocked_reason.
 
-    Defers to connection_step_for so the menu and the first-run flow cannot
-    disagree about whether a mode is usable. The returned text is shown in
-    place of the row's value, because a greyed row with no reason just reads
-    as broken.
+    The row has a label beside it, so it reads as an instruction ("Sign in
+    first") where the sync summary needs a clause ("...because you are not
+    signed in").
     """
-    from ...config.settings import DOWNLOAD_MODE_RCLONE
-    from ...drive.auth import has_custom_client_config
-    from .download_mode import connection_step_for
+    from .download_mode import mode_blocked_step
 
-    mode = (getattr(user_settings, "download_mode", "") if user_settings else "") \
-        or DOWNLOAD_MODE_RCLONE
-    step = connection_step_for(
-        mode,
-        rclone_authed=rclone_connected,
-        signed_in=bool(auth and getattr(auth, "is_signed_in", False)),
-        byoc_configured=has_custom_client_config(),
-    )
     return {
         "rclone": "Connect rclone first",
         "byoc_setup": "Needs your Google credentials",
         "signin": "Sign in first",
-    }.get(step, "")
+    }.get(mode_blocked_step(user_settings, auth, rclone_connected), "")
 
 
 def show_main_menu_panes(
@@ -379,6 +368,11 @@ def show_main_menu_panes(
         if has_custom_client_config():
             return ("Sign in to Google", "Uses the credentials you set up",
                     ("act", "signin"), True)
+        if mode == DOWNLOAD_MODE_RCLONE:
+            # rclone downloads through its own remote, so a Google sign-in buys
+            # nothing. Saying "Needs your own credentials" read as an unmet
+            # requirement in the mode that is actually recommended.
+            return ("Sign in", "Not needed in rclone mode", ("act", "signin"), False)
         return ("Sign in", "Needs your own credentials", ("act", "signin"), False)
 
     def _settings_right():

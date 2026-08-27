@@ -89,3 +89,38 @@ def connection_step_for(mode: str, *, rclone_authed: bool, signed_in: bool,
         if not signed_in:
             return "signin"
     return ""
+
+
+def mode_blocked_step(user_settings, auth, rclone_authed: bool) -> str:
+    """The connection step still owed under the current mode, "" when none.
+
+    Callers word it for their own surface, so this returns the step token
+    rather than prose: keying one module's wording off another module's exact
+    sentence breaks silently the moment either is reworded.
+    """
+    from ...drive.auth import has_custom_client_config
+
+    mode = (getattr(user_settings, "download_mode", "") if user_settings else "") \
+        or DOWNLOAD_MODE_RCLONE
+    return connection_step_for(
+        mode,
+        rclone_authed=rclone_authed,
+        signed_in=bool(auth and getattr(auth, "is_signed_in", False)),
+        byoc_configured=has_custom_client_config(),
+    )
+
+
+def mode_blocked_reason(user_settings, auth, rclone_authed: bool) -> str:
+    """Why Drive is out of reach under the current mode, or "" when it is fine.
+
+    The one rule for "can this install talk to Drive", shared by the menu and
+    by sync itself. Sign-in is not that rule: rclone downloads through its own
+    remote and anonymous has no token by design, yet both scan public folders
+    on the API key alone. Gating either on OAuth blocks a setup that works,
+    which is what stopped rclone users syncing at all.
+    """
+    return {
+        "rclone": "rclone is not connected yet",
+        "byoc_setup": "your own Google credentials are not set up yet",
+        "signin": "you are not signed in to Google",
+    }.get(mode_blocked_step(user_settings, auth, rclone_authed), "")

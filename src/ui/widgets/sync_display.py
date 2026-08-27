@@ -60,13 +60,19 @@ def auth_opening_browser():
     print()
 
 
-def auth_required_custom_folders():
-    print("\n  Please sign in to Google first to add custom folders.")
-    print("  Custom folders require access to your Google Drive.")
+def sync_blocked(reason: str):
+    """Sync cannot start because the chosen download mode is not usable.
 
-def auth_required_scan():
-    print("\n  Cannot scan custom folders: not signed in to Google.")
-    print("  Sign in first to download from custom folders.")
+    Named for what it blocks. The old wording said "cannot scan custom
+    folders" while stopping every sync, so the whole feature looked broken
+    for a reason that mentioned a feature the user was not using.
+    """
+    print(f"\n  Cannot sync: {reason}.")
+    print("  Fix this from Settings, under Account.")
+
+def custom_folder_blocked(reason: str):
+    print(f"\n  Cannot add a folder: {reason}.")
+    print("  Fix this from Settings, under Account.")
 
 def auth_expired_warning(failure_count: int):
     print()

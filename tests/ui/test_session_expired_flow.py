@@ -68,15 +68,28 @@ class TestTheSettingsPaneOffersTheFix:
         labels = _labels(rows(FakeAuth(signed_in=True, expired=True)))
         assert not any("Sign out" in l for l in labels), labels
 
-    def test_a_new_user_sees_a_greyed_sign_in_with_the_reason(self, rows):
+    def test_a_new_byoc_user_sees_a_greyed_sign_in_with_the_reason(self, rows, tmp_path):
         """The capped client answers "This app is blocked", so signing in cannot
         work. This used to hide the row entirely, which left people hunting for
         a control that was never there; it is shown unavailable instead."""
         from src.ui.primitives import Colors
-        row = _row_for(rows(FakeAuth(), byoc=False), "Sign in")
+        from src.config.settings import DOWNLOAD_MODE_BYOC
+        settings = UserSettings(tmp_path / "settings.json")
+        settings.download_mode = DOWNLOAD_MODE_BYOC
+        row = _row_for(rows(FakeAuth(), byoc=False, settings=settings), "Sign in")
         assert row[2] is False
         assert Colors.MUTED_DIM in row[0](False, False)
         assert "Needs your own credentials" in strip_ansi(row[0](False, False))
+
+    def test_rclone_says_sign_in_is_unnecessary_not_missing(self, rows):
+        """rclone downloads through its own remote. Reusing the BYOC wording
+        here advertised an unmet requirement in the recommended mode, so it
+        read as broken to someone whose rclone was already connected."""
+        from src.ui.primitives import Colors
+        row = _row_for(rows(FakeAuth(), byoc=False), "Sign in")
+        assert row[2] is False
+        assert Colors.MUTED_DIM in row[0](False, False)
+        assert "Not needed in rclone mode" in strip_ansi(row[0](False, False))
 
     def test_a_healthy_session_offers_sign_out_with_the_address(self, rows):
         labels = _labels(rows(FakeAuth(signed_in=True, expired=False, email="a@b.com")))

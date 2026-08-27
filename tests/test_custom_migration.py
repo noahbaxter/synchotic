@@ -7,6 +7,7 @@ from unittest.mock import patch, MagicMock
 import pytest
 
 from src.config import DrivesConfig, CustomFolders, UserSettings
+from src.config.settings import DOWNLOAD_MODE_ANONYMOUS
 from src.config.drives import DriveConfig
 from src.core.formatting import normalize_path_key
 from src.sync.markers import save_marker
@@ -277,6 +278,7 @@ class TestBlockReleasedAsCustom:
         app.drives_config = env.make_drives_config(drives)
         app.custom_folders = env.make_custom_folders([])
         app.user_settings = UserSettings.load(env.temp_dir / "settings.json")
+        app.user_settings.download_mode = DOWNLOAD_MODE_ANONYMOUS
         app.folders = []
         app._background_scanner = None
         return app
@@ -330,6 +332,7 @@ class TestBlockReleasedSubfolderAsCustom:
         app.drives_config = env.make_drives_config(drives)
         app.custom_folders = env.make_custom_folders([])
         app.user_settings = UserSettings.load(env.temp_dir / "settings.json")
+        app.user_settings.download_mode = DOWNLOAD_MODE_ANONYMOUS
         app.folders = []
         app._background_scanner = None
         return app

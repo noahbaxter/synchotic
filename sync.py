@@ -332,9 +332,11 @@ class SyncApp:
         clear_screen()
         print_header()
 
-        # Need OAuth for scanning and downloading
-        if not self.auth.is_signed_in:
-            display.auth_required_scan()
+        # Whether the chosen mode can reach Drive, not whether we hold an OAuth
+        # token: rclone and anonymous both sync without one.
+        blocked = self._drive_blocked()
+        if blocked:
+            display.sync_blocked(blocked)
             wait_with_skip(3)
             return None
 
@@ -684,9 +686,12 @@ class SyncApp:
 
         Returns True if a folder was added successfully.
         """
-        # Require sign-in for custom folders (need OAuth to access user's Drive)
-        if not self.auth.is_signed_in:
-            display.auth_required_custom_folders()
+        # A public folder resolves on the API key alone, so this asks only that
+        # the mode works. A genuinely private folder still fails validation
+        # below, with the access error that actually describes the problem.
+        blocked = self._drive_blocked()
+        if blocked:
+            display.custom_folder_blocked(blocked)
             wait_with_skip(3)
             return False
 
@@ -880,6 +885,22 @@ class SyncApp:
 
         self._start_background_scan(force_rescan=True)
 
+    def _drive_blocked(self) -> str:
+        """Why this install cannot reach Drive right now, or "" when it can.
+
+        Not "are we signed in": rclone downloads through its own remote and
+        anonymous mode has no token by design, and both scan public folders on
+        the API key alone. Requiring OAuth here is what left rclone users
+        unable to sync at all once embedded sign-in stopped being available.
+        """
+        from src.ui.screens.download_mode import mode_blocked_reason
+        try:
+            import src.rclone as rclone
+            rclone_authed = rclone.is_authed()
+        except Exception:
+            rclone_authed = False
+        return mode_blocked_reason(self.user_settings, self.auth, rclone_authed)
+
     def _scan_failure(self) -> tuple[str, int] | None:
         """(reason, failed setlist count) when scans failed, else None."""
         scanner = self._background_scanner
@@ -1057,9 +1078,9 @@ class SyncApp:
         if not folders_to_scan:
             return
 
-        # Need user OAuth for scanning
-        if not self.auth.is_signed_in:
-            display.auth_required_scan()
+        blocked = self._drive_blocked()
+        if blocked:
+            display.sync_blocked(blocked)
             wait_with_skip(3)
             return
 
