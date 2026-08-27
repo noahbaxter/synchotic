@@ -75,3 +75,28 @@ class TestSignedIn:
         assert row.disabled is False
         assert row.locked is False
         assert row.description != "Logged out"
+
+
+class TestCursorPosition:
+    """Selecting an item used to snap the cursor to the top of the list.
+
+    show_main_menu restores the pre-jump position after a hotkey, but the
+    attribute it reads defaults to 0 and is only written by the hotkey branch,
+    so a plain Enter anywhere below item 0 looked like a jump from 0.
+    """
+
+    def test_selecting_an_item_keeps_the_cursor_on_it(self, build):
+        out = build(auth=_Auth(True), press="Rescan")
+        _action, _value, pos = out["returned"]
+        chosen = next(i for i, it in enumerate(out["items"])
+                      if getattr(it, "label", "") and "Rescan" in it.label)
+        assert pos == chosen, "cursor jumped instead of staying put"
+
+    def test_it_is_not_simply_returning_zero(self, build):
+        """Guards the fix against passing for the wrong reason: item 0 would
+        satisfy the assertion above if the bug were still present."""
+        out = build(auth=_Auth(True), press="Rescan")
+        assert out["returned"][2] != 0
+
+    def test_the_starting_position_is_honoured(self, build):
+        assert build(auth=_Auth(True), selected=3)["initial_index"] == 3

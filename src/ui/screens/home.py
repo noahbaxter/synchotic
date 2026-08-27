@@ -832,11 +832,18 @@ def show_main_menu(
     menu.add_item(MenuDivider())
     menu.add_item(MenuItem("  Quit", hotkey="ESC", value=("quit", None)))
 
+    # -1 means "no hotkey was pressed this time round". The attribute defaults
+    # to 0 and is only ever written by the hotkey branch, so without a sentinel
+    # every plain Enter below reads as a hotkey jump from item 0 and sends the
+    # cursor back to the top of the list.
+    menu._selected_before_hotkey = -1
     result = menu.run(initial_index=selected_index)
     if result is None:
         return ("quit", None, selected_index)
 
-    restore_pos = menu._selected_before_hotkey if menu._selected_before_hotkey != menu._selected else menu._selected
+    # A hotkey jumps the cursor to its item; put it back where the user left it.
+    restore_pos = (menu._selected_before_hotkey if menu._selected_before_hotkey >= 0
+                   else menu._selected)
 
     if isinstance(result.value, tuple) and len(result.value) == 2 and result.value[0] == "group":
         return ("toggle_group", result.value[1], menu._selected)
