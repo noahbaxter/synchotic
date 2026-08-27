@@ -1,0 +1,52 @@
+{
+  "_comment": "Pinned Drive file IDs for the auth-mode release gate. Sourced from anon_failure_results.json (measured 2026-06-11). Run scripts/build_test_fixture.py to refresh md5/modified/size. 'expect' is harness-only and is stripped before the list reaches the app.",
+  "folder_id": "synchotic-auth-test-fixture",
+  "name": "Auth Test",
+  "files": [
+    {
+      "id": "1Wwakitii69kwmApcBjUYgWTKxeEMa8Q3",
+      "path": "01 Blocked/Tonic - If You Could Only See_RB4DLCtoINI.zip",
+      "name": "Tonic - If You Could Only See_RB4DLCtoINI.zip",
+      "size": 26308961,
+      "md5": "bb116bd36d5fe71e47c2adf086bca61e",
+      "modified": "2024-03-06T00:47:36.675Z",
+      "expect": "blocked"
+    },
+    {
+      "id": "1KMJtRsA8BCokeE07j_as7vt37BcsmH7E",
+      "path": "03 Archive/Pearl Jam - Mind Your Manners.zip",
+      "name": "Pearl Jam - Mind Your Manners.zip",
+      "size": 7207978,
+      "md5": "599cfb21cc6ad36fd9fdc17da3c82346",
+      "modified": "2025-02-13T23:28:57.000Z",
+      "expect": "ok"
+    },
+    {
+      "id": "1_1Ygy7QYrz96w-9E-jFtz3daZntZ-gvO",
+      "path": "02 Loose/Test Chart A/song.ini",
+      "name": "song.ini",
+      "size": 1062,
+      "md5": "7b1d70ac49c95f51bcb366b44fde02c8",
+      "modified": "2023-06-16T07:34:47.000Z",
+      "expect": "ok"
+    },
+    {
+      "id": "16TerRf9m9sx_UGwFs3g29k6UNTYQgABM",
+      "path": "02 Loose/Test Chart B/notes.mid",
+      "name": "notes.mid",
+      "size": 6101,
+      "md5": "be00e1f1d96c6f6e0e5acce07470272c",
+      "modified": "2024-04-17T03:43:53.000Z",
+      "expect": "ok"
+    },
+    {
+      "id": "1J139wMDDCwp49eJBaDOedtmJbYgSu_RF",
+      "path": "02 Loose/Test Chart C/notes.chart",
+      "name": "notes.chart",
+      "size": 24439,
+      "md5": "5005f801bb0a24b7d2b278633f7848fb",
+      "modified": "2024-12-09T07:15:10.000Z",
+      "expect": "ok"
+    }
+  ]
+}
