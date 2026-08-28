@@ -18,7 +18,7 @@ jobs:
         include:
           - os: macos-latest
             name: macos
-            artifact: synchotic-launcher-macos
+            artifact: Synchotic-launcher-macos.zip
           - os: windows-latest
             name: windows
             artifact: synchotic-launcher.exe
@@ -33,57 +33,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check for Apple signing secrets
+      - name: Apple signing
         if: matrix.name == 'macos'
         id: signing
-        env:
-          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE_APPLICATION }}
-        run: |
-          if [ -n "$APPLE_CERTIFICATE" ]; then
-            echo "available=true" >> $GITHUB_OUTPUT
-          else
-            echo "available=false" >> $GITHUB_OUTPUT
-            echo "::warning::Apple signing secrets not configured — building unsigned"
-          fi
-
-      - name: Import Apple certificate
-        if: matrix.name == 'macos' && steps.signing.outputs.available == 'true'
-        env:
-          APPLE_CERTIFICATE: ${{ secrets.APPLE_CERTIFICATE_APPLICATION }}
-          APPLE_CERTIFICATE_PASSWORD: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
-          APPLE_ID: ${{ secrets.APPLE_ID }}
-          APPLE_TEAM_ID: ${{ secrets.APPLE_TEAM_ID }}
-          APPLE_APP_PASSWORD: ${{ secrets.APPLE_APP_PASSWORD }}
-        run: |
-          KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
-          KEYCHAIN_PASSWORD=$(openssl rand -base64 32)
-
-          security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
-          security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
-          security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
-
-          echo "$APPLE_CERTIFICATE" | base64 --decode > $RUNNER_TEMP/certificate.p12
-          security import $RUNNER_TEMP/certificate.p12 -P "$APPLE_CERTIFICATE_PASSWORD" \
-            -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
-
-          # The runner image ships Apple's intermediate CA now, and importing a
-          # cert that is already there exits 1, which under `bash -e` failed the
-          # whole signing step. Present is present either way.
-          curl -sO https://www.apple.com/certificateauthority/DeveloperIDG2CA.cer
-          security import DeveloperIDG2CA.cer -k "$KEYCHAIN_PATH" \
-            || echo "DeveloperIDG2CA already in the keychain, continuing"
-
-          security list-keychain -d user -s "$KEYCHAIN_PATH" login.keychain
-          security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
-          security find-identity -v -p codesigning "$KEYCHAIN_PATH"
-
-          xcrun notarytool store-credentials "notarytool-profile" \
-            --apple-id "$APPLE_ID" \
-            --team-id "$APPLE_TEAM_ID" \
-            --password "$APPLE_APP_PASSWORD"
-
-          echo "KEYCHAIN_PATH=$KEYCHAIN_PATH" >> $GITHUB_ENV
-          echo "APP_IDENTITY=Developer ID Application: Noah Baxter ($APPLE_TEAM_ID)" >> $GITHUB_ENV
+        uses: ./.github/actions/apple-signing
+        with:
+          certificate: ${{ secrets.APPLE_CERTIFICATE_APPLICATION }}
+          certificate-password: ${{ secrets.APPLE_CERTIFICATE_PASSWORD }}
+          apple-id: ${{ secrets.APPLE_ID }}
+          team-id: ${{ secrets.APPLE_TEAM_ID }}
+          app-password: ${{ secrets.APPLE_APP_PASSWORD }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -93,35 +52,29 @@ jobs:
       - name: Install dependencies
         run: pip install pyinstaller certifi
 
-      - name: Build launcher (macOS, signed)
+      # A bundle, not a bare binary. launcher.py's host_paths() looks for
+      # wezterm-gui beside sys.executable and wezterm.lua in ../Resources,
+      # which only exist inside a .app, and there is no ensure_wezterm_macos()
+      # to download one at runtime the way Windows and Linux do. The loose
+      # binary this used to ship could therefore never open its own window.
+      - name: Build launcher app (macOS)
+        run: PYTHON=python packaging/macos/build_launcher_app.sh
+        if: matrix.name == 'macos'
+
+      - name: Notarize launcher app (macOS)
         if: matrix.name == 'macos' && steps.signing.outputs.available == 'true'
         run: |
-          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
-          pyinstaller --onefile --name synchotic-launcher-macos --clean --noconfirm \
-            --add-data "$CERTIFI_PATH:certifi" \
-            --hidden-import certifi \
-            --codesign-identity "$APP_IDENTITY" \
-            launcher.py
-          codesign --verify --strict dist/synchotic-launcher-macos
+          # ditto, not zip: a .app is full of symlinks that zip flattens, and
+          # notarytool rejects what comes out the other side.
+          ditto -c -k --keepParent dist/Synchotic.app "$RUNNER_TEMP/notarize.zip"
+          xcrun notarytool submit "$RUNNER_TEMP/notarize.zip" \
+            --keychain-profile "notarytool-profile" --wait
+          xcrun stapler staple dist/Synchotic.app
+          xcrun stapler validate dist/Synchotic.app
 
-      - name: Build launcher (macOS, unsigned fallback)
-        if: matrix.name == 'macos' && steps.signing.outputs.available != 'true'
-        run: |
-          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
-          pyinstaller --onefile --name synchotic-launcher-macos --clean --noconfirm \
-            --add-data "$CERTIFI_PATH:certifi" \
-            --hidden-import certifi \
-            launcher.py
-
-      - name: Notarize launcher (macOS)
-        if: matrix.name == 'macos' && steps.signing.outputs.available == 'true'
-        run: |
-          cd dist
-          zip -q synchotic-launcher-macos.zip synchotic-launcher-macos
-          xcrun notarytool submit synchotic-launcher-macos.zip \
-            --keychain-profile "notarytool-profile" \
-            --wait
-          rm synchotic-launcher-macos.zip
+      - name: Zip launcher app (macOS)
+        if: matrix.name == 'macos'
+        run: ditto -c -k --keepParent dist/Synchotic.app dist/Synchotic-launcher-macos.zip
 
       - name: Build launcher (Windows)
         if: matrix.name == 'windows'
@@ -180,7 +133,7 @@ jobs:
             echo "Updating existing release $TAG..."
             gh release upload "$TAG" \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
-              artifacts/synchotic-launcher-macos/synchotic-launcher-macos \
+              "artifacts/Synchotic-launcher-macos.zip/Synchotic-launcher-macos.zip" \
               artifacts/synchotic-launcher-linux/synchotic-launcher-linux \
               --clobber
           else
@@ -190,7 +143,7 @@ jobs:
               --notes "Downloads and auto-updates the Synchotic app." \
               --latest=false \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
-              artifacts/synchotic-launcher-macos/synchotic-launcher-macos \
+              "artifacts/Synchotic-launcher-macos.zip/Synchotic-launcher-macos.zip" \
               artifacts/synchotic-launcher-linux/synchotic-launcher-linux
           fi
 
@@ -198,5 +151,5 @@ jobs:
         run: |
           echo "### Launcher Release ${{ github.event.inputs.tag }}" >> $GITHUB_STEP_SUMMARY
           echo "- Windows: synchotic-launcher.exe" >> $GITHUB_STEP_SUMMARY
-          echo "- macOS: synchotic-launcher-macos" >> $GITHUB_STEP_SUMMARY
+          echo "- macOS: Synchotic-launcher-macos.zip (Synchotic.app)" >> $GITHUB_STEP_SUMMARY
           echo "- Linux: synchotic-launcher-linux" >> $GITHUB_STEP_SUMMARY

@@ -83,14 +83,31 @@ def is_clean_mode() -> bool:
     return "--clean" in sys.argv
 
 
+def portable_home() -> Path:
+    """Where a bundle that cannot write beside itself keeps its files.
+
+    Same folder the standalone Synchotic.app uses, so the two macOS bundles do
+    not end up with two separate libraries.
+    """
+    d = Path.home() / "Synchotic"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
 def get_launcher_dir() -> Path:
-    """Get directory containing the launcher (or .app bundle on macOS)."""
+    """The folder the launcher owns: payload, logs and the chart library.
+
+    Inside a .app that is the folder containing the bundle, not Contents/MacOS,
+    so an update replaces the app without taking the library with it. A bundle
+    dragged to /Applications cannot write there and the whole portable layout
+    would die at the first extract, so that case falls back to ~/Synchotic.
+    """
     if getattr(sys, "frozen", False):
         exe_path = Path(sys.executable)
-        # If inside a .app bundle, return folder containing the .app
         for parent in exe_path.parents:
             if parent.suffix == ".app":
-                return parent.parent
+                holder = parent.parent
+                return holder if os.access(holder, os.W_OK) else portable_home()
         return exe_path.parent
     return Path(__file__).parent
 
