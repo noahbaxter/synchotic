@@ -78,16 +78,30 @@ plutil -replace NSNetworkVolumesUsageDescription -string \
   "Synchotic reads and writes your chart library, which can live on a network volume." "$PLIST"
 
 # A frozen build puts its data next to the executable, which inside a bundle in
-# /Applications means writing settings, markers and the chart library into the
-# app itself. Point it somewhere durable that survives replacing the app.
+# /Applications means writing settings and logs into the app itself. Turn on the
+# OS dirs instead: ~/Library/Application Support, Caches and Logs. Deliberately
+# not SYNCHOTIC_ROOT, which is the portable layout and is what put a .dm-sync in
+# ~/Synchotic on every install so far.
+#
+# The chart library is the exception and stays somewhere a person can find,
+# defaulting to ~/Synchotic/Sync Charts. Settings > Library moves it.
 cat > "$MACOS/Synchotic" <<'SHIM'
 #!/bin/bash
 DIR="$(cd "$(dirname "$0")" && pwd)"
-export SYNCHOTIC_ROOT="$HOME/Synchotic"
-mkdir -p "$SYNCHOTIC_ROOT"
+export SYNCHOTIC_OS_DIRS=1
+# Until now this shim exported SYNCHOTIC_ROOT="$HOME/Synchotic", so every
+# existing install has its settings and sign-in in ~/Synchotic/.dm-sync. Name it
+# and the app adopts it once, rather than looking factory fresh after an update.
+export SYNCHOTIC_LEGACY_ROOT="$HOME/Synchotic"
+# WezTerm has no size persistence of its own; the config reads this back.
+SUPPORT="$HOME/Library/Application Support/Synchotic"
+mkdir -p "$SUPPORT"
+export SYNCHOTIC_WINDOW_FILE="$SUPPORT/window.txt"
+CWD="$HOME/Synchotic"
+mkdir -p "$CWD"
 exec "$DIR/wezterm-gui" \
   --config-file "$DIR/../Resources/wezterm.lua" \
-  start --always-new-process --cwd "$SYNCHOTIC_ROOT" \
+  start --always-new-process --cwd "$CWD" \
   -- "$DIR/synchotic-tui"
 SHIM
 chmod +x "$MACOS/Synchotic"

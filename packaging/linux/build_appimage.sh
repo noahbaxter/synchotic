@@ -103,12 +103,15 @@ cp packaging/linux/synchotic.png "$APPDIR/usr/share/icons/hicolor/256x256/apps/"
 
 cat > "$APPDIR/AppRun" <<'APPRUN'
 #!/bin/sh
-# A frozen build writes its data next to the executable, which inside a mounted
-# AppImage is a read-only squashfs. Point it somewhere durable that survives
-# replacing the file.
 HERE="$(dirname "$(readlink -f "$0")")"
-export SYNCHOTIC_ROOT="${SYNCHOTIC_ROOT:-$HOME/Synchotic}"
-mkdir -p "$SYNCHOTIC_ROOT"
+# A frozen build writes its data next to the executable, which inside a mounted
+# AppImage is a read-only squashfs. Config, cache and state go to the XDG dirs
+# instead. Deliberately not SYNCHOTIC_ROOT, which is the portable layout. The
+# chart library is the exception and defaults to ~/Synchotic/Sync Charts, which
+# is also the cwd handed to WezTerm below.
+export SYNCHOTIC_OS_DIRS=1
+CHARTS="$HOME/Synchotic"
+mkdir -p "$CHARTS"
 
 # WezTerm has no size persistence of its own; the config reads this back.
 XDG_DATA="${XDG_DATA_HOME:-$HOME/.local/share}"
@@ -131,7 +134,7 @@ fi
 exec env LD_LIBRARY_PATH="$HERE/usr/lib/wezterm${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}" \
   "$HERE/usr/bin/wezterm-gui" \
   --config-file "$HERE/usr/share/synchotic/wezterm.lua" \
-  start --always-new-process --cwd "$SYNCHOTIC_ROOT" --class synchotic \
+  start --always-new-process --cwd "$CHARTS" --class synchotic \
   -- "$TUI" "$@"
 APPRUN
 chmod +x "$APPDIR/AppRun"

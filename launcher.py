@@ -83,40 +83,93 @@ def is_clean_mode() -> bool:
     return "--clean" in sys.argv
 
 
-def portable_home() -> Path:
-    """Where a bundle that cannot write beside itself keeps its files.
+def is_bundled() -> bool:
+    """True when we are a .app or an AppImage rather than a loose executable.
 
-    Same folder the standalone Synchotic.app uses, so the two macOS bundles do
-    not end up with two separate libraries.
+    Those installs belong in /Applications or the app menu, not in the user's
+    chart folder, so nothing may be written beside them: a .app would be
+    writing into itself, and an AppImage into a mount that disappears.
     """
-    d = Path.home() / "Synchotic"
+    if os.environ.get("APPIMAGE"):
+        return True
+    if not getattr(sys, "frozen", False):
+        return False
+    return any(p.suffix == ".app" for p in Path(sys.executable).parents)
+
+
+def os_data_dir() -> Path:
+    """The platform's application-support directory, matching src/core/paths.
+
+    Both halves have to agree on this: the launcher writes its payload and logs
+    here, and the app it starts resolves the same place from SYNCHOTIC_OS_DIRS.
+    """
+    home = Path.home()
+    if sys.platform == "darwin":
+        d = home / "Library" / "Application Support" / "Synchotic"
+    elif sys.platform == "win32":
+        base = Path(os.environ.get("LOCALAPPDATA") or (home / "AppData" / "Local"))
+        d = base / "Synchotic" / "Data"
+    else:
+        base = Path(os.environ.get("XDG_DATA_HOME") or (home / ".local" / "share"))
+        d = base / "synchotic"
     d.mkdir(parents=True, exist_ok=True)
     return d
 
 
+def app_environment() -> dict:
+    """The environment the app is started with, which is where it puts its files.
+
+    A bundle gets SYNCHOTIC_OS_DIRS, not SYNCHOTIC_ROOT. SYNCHOTIC_ROOT is the
+    portable layout and takes priority in src/core/paths.get_app_dir, so setting
+    it as well would nest a .dm-sync inside Application Support. A loose
+    executable keeps the portable layout it has always had.
+    """
+    env = os.environ.copy()
+    if is_bundled():
+        env["SYNCHOTIC_OS_DIRS"] = "1"
+        env.pop("SYNCHOTIC_ROOT", None)
+        # Bundles were portable until now, keeping .dm-sync beside themselves.
+        # Name that folder so the app can adopt the settings and sign-in that
+        # are sitting in it rather than starting from nothing.
+        legacy = portable_dir()
+        if legacy:
+            env["SYNCHOTIC_LEGACY_ROOT"] = str(legacy)
+    else:
+        env["SYNCHOTIC_ROOT"] = str(get_launcher_dir())
+    return env
+
+
+def portable_dir() -> Path | None:
+    """Where this install would have kept its files under the portable layout.
+
+    Only used to find what an older version left behind: beside the .app, or
+    beside the AppImage. None when neither applies.
+    """
+    appimage = os.environ.get("APPIMAGE")
+    if appimage:
+        return Path(appimage).parent
+    if getattr(sys, "frozen", False):
+        for parent in Path(sys.executable).parents:
+            if parent.suffix == ".app":
+                return parent.parent
+    return None
+
+
 def get_launcher_dir() -> Path:
-    """The folder the launcher owns: payload, logs and the chart library.
+    """The folder the launcher owns: the downloaded payload and its logs.
 
-    Inside a .app that is the folder containing the bundle, not Contents/MacOS,
-    so an update replaces the app without taking the library with it. A bundle
-    dragged to /Applications cannot write there and the whole portable layout
-    would die at the first extract, so that case falls back to ~/Synchotic.
-
-    SYNCHOTIC_LAUNCHER_DIR overrides both. An AppImage runs from a temporary
-    squashfs mount that is gone the moment the process exits, so sys.executable
-    says nothing about where the user put the file; AppRun reads $APPIMAGE and
-    passes the real folder in.
+    A loose executable keeps the portable layout it has always had, writing
+    .dm-sync/ beside itself. A bundle cannot, so it uses the OS data dir. Note
+    this is no longer where charts go: the app resolves the library itself and
+    defaults it to ~/Synchotic/Sync Charts.
     """
     override = os.environ.get("SYNCHOTIC_LAUNCHER_DIR")
     if override:
         return Path(override)
+    if is_bundled():
+        return os_data_dir()
     if getattr(sys, "frozen", False):
-        exe_path = Path(sys.executable)
-        for parent in exe_path.parents:
-            if parent.suffix == ".app":
-                holder = parent.parent
-                return holder if os.access(holder, os.W_OK) else portable_home()
-        return exe_path.parent
+        return Path(sys.executable).parent
     return Path(__file__).parent
 
 
@@ -141,12 +194,17 @@ def desktop_exec_path() -> Path:
 def get_app_dir() -> Path:
     """Get the extracted app directory. Dev channel uses separate dir to coexist with production."""
     subdir = "_app_dev" if RELEASE_TAG else "_app"
-    return get_launcher_dir() / ".dm-sync" / subdir
+    return get_dm_sync_dir() / subdir
 
 
 def get_dm_sync_dir() -> Path:
-    """Get the .dm-sync directory."""
-    return get_launcher_dir() / ".dm-sync"
+    """Where the payload and the launcher's own logs go.
+
+    A portable install hides them in .dm-sync so the folder the user picked for
+    charts is not littered with our files. The OS data dir is already ours and
+    already out of sight, so nesting a hidden folder inside it buys nothing.
+    """
+    return get_launcher_dir() if is_bundled() else get_launcher_dir() / ".dm-sync"
 
 
 def get_app_exe_name() -> str:
@@ -1022,8 +1080,7 @@ def main():
             filtered_args.append(arg)
 
     args = [str(app_exe)] + filtered_args
-    env = os.environ.copy()
-    env["SYNCHOTIC_ROOT"] = str(get_launcher_dir())
+    env = app_environment()
     env["SYNCHOTIC_START_TIME"] = str(_start_time)
 
     close_logging()

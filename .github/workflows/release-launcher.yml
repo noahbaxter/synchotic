@@ -107,20 +107,25 @@ jobs:
           APPIMAGE_EXTRACT_AND_RUN=1 ./Synchotic-launcher-x86_64.AppImage --appimage-extract >/dev/null
           test -x squashfs-root/AppRun
           test -x squashfs-root/usr/bin/synchotic-launcher
-          grep -q 'SYNCHOTIC_LAUNCHER_DIR' squashfs-root/AppRun
 
-          mkdir -p "$RUNNER_TEMP/charts"
-          # --hosted as well as --offline: a runner has no tty, so without the
-          # recursion guard the launcher decides it was double-clicked and goes
-          # off to open a WezTerm window on a machine with no display.
-          out=$(SYNCHOTIC_LAUNCHER_DIR="$RUNNER_TEMP/charts" \
+          # Booted the way the runtime boots it: $APPIMAGE names the file the
+          # user kept, which is what marks this as a bundle. Nothing may be
+          # written next to that file. --hosted as well as --offline because a
+          # runner has no tty, and without the recursion guard the launcher
+          # decides it was double-clicked and goes off to open a window on a
+          # machine with no display.
+          mkdir -p "$RUNNER_TEMP/kept" "$RUNNER_TEMP/xdg"
+          touch "$RUNNER_TEMP/kept/Synchotic-launcher-x86_64.AppImage"
+          out=$(APPIMAGE="$RUNNER_TEMP/kept/Synchotic-launcher-x86_64.AppImage" \
+            XDG_DATA_HOME="$RUNNER_TEMP/xdg" \
             ./squashfs-root/usr/bin/synchotic-launcher --hosted --offline 2>&1) || true
           echo "$out"
           echo "$out" | grep -q "Synchotic Launcher v"
-          test -d "$RUNNER_TEMP/charts/.dm-sync" \
-            || { echo "launcher did not use SYNCHOTIC_LAUNCHER_DIR"; exit 1; }
+          test -d "$RUNNER_TEMP/xdg/synchotic" \
+            || { echo "did not use the XDG data dir"; exit 1; }
+          test ! -e "$RUNNER_TEMP/kept/.dm-sync" \
+            || { echo "wrote beside the AppImage"; exit 1; }
           rm -rf squashfs-root
-
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4

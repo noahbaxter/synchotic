@@ -343,7 +343,7 @@ def show_main_menu_panes(
             # A scan with nowhere to write is greyed with the reason beside
             # it, rather than left as a row that ignores you.
             from ...core.paths import library_blocked_reason
-            lib_blocked = library_blocked_reason(user_settings)
+            lib_blocked = library_blocked_reason()
             if lib_blocked:
                 rows.append(_row(f"  {Colors.MUTED_DIM}{label}  ({lib_blocked}){Colors.RESET}",
                                  ("scan_folder", folder_id, None), False))
@@ -416,7 +416,7 @@ def show_main_menu_panes(
 
         # A library that is unset or unmounted blocks the same work, but not
         # the row that fixes it: Location stays reachable either way.
-        lib_blocked = library_blocked_reason(user_settings)
+        lib_blocked = library_blocked_reason()
         blocked = mode_blocked or lib_blocked
 
         if blocked:

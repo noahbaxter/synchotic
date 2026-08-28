@@ -940,7 +940,7 @@ class SyncApp:
         """Why the library cannot take a scan right now, or "" when it can."""
         from src.core.paths import library_blocked_reason
 
-        return library_blocked_reason(self.user_settings)
+        return library_blocked_reason()
 
     def _scan_failure(self) -> tuple[str, int] | None:
         """(reason, failed setlist count) when scans failed, else None."""
@@ -1207,22 +1207,6 @@ class SyncApp:
         clear_screen()
         print_header()
 
-        # First run in a .app has no library: the "next to the executable"
-        # default would point inside Contents/MacOS. Ask before anything reads
-        # a path, and let the picker adopt a pre-1.5 install if they point at one.
-        from src.core.paths import library_needs_setup
-
-        if library_needs_setup(self.user_settings):
-            from src.ui.screens import show_library_screen
-            from src.ui.widgets.confirm import ConfirmDialog
-            display.library_first_run()
-            while library_needs_setup(self.user_settings):
-                if not show_library_screen(self.user_settings):
-                    if ConfirmDialog("Quit without picking a library?").run():
-                        return
-            clear_screen()
-            print_header()
-
         # First-run OAuth prompt (only shown once)
         #
         # Gated on the user owning an OAuth client. Sign-in resolves its client
@@ -1483,6 +1467,17 @@ def main():
         from src.ui.widgets.confirm import ConfirmDialog
         if not ConfirmDialog("Retry?", "Connect the drive, then choose Yes.").run():
             sys.exit(1)
+
+    # A bundle that used to be portable has its settings, token and rclone
+    # config in a .dm-sync somewhere. The shim and the launcher both name that
+    # folder in SYNCHOTIC_LEGACY_ROOT, so bring it across before anything reads
+    # a setting, or the upgrade reads as a factory reset: signed out, no drives
+    # enabled, and a re-download of the whole library. Copies, never
+    # overwrites, and leaves the old folder alone.
+    from src.core.paths import migrate_to_os_dirs as _migrate_to_os_dirs
+    adopted = _migrate_to_os_dirs()
+    if adopted:
+        print(f"  Moved your setup into the standard folders: {', '.join(adopted)}")
 
     # Migrate legacy files from old locations to .dm-sync/
     # Must run BEFORE creating SyncApp so paths resolve correctly

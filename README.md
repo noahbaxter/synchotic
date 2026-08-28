@@ -18,11 +18,13 @@ Automatically download and sync Clone Hero charts from Google Drive. Pick the dr
 
 > **Step 1.** Download the launcher for your platform
 >
-> **Step 2.** Put it in the folder where you want your charts (e.g. your Clone Hero songs folder)
+> **Step 2.** macOS: drag `Synchotic.app` to Applications. Linux: keep the AppImage anywhere and mark it executable. Windows: put the `.exe` in the folder where you want your charts.
 >
 > **Step 3.** Double-click it
 
-The launcher handles everything from there — it downloads the app, checks for updates, and creates a **Sync Charts** folder right next to itself.
+Charts go to `~/Synchotic/Sync Charts` by default, and **Settings > Library** points that at your Clone Hero songs folder instead. Settings and logs live in the usual place for your OS (`~/Library/Application Support` on macOS, `~/.local/share` on Linux), except for the Windows launcher, which stays portable beside the `.exe`.
+
+The launcher handles everything from there: it downloads the app and checks for updates on every run.
 
 ## How to Use
 
@@ -30,7 +32,7 @@ The launcher handles everything from there — it downloads the app, checks for 
 2. **Pick setlists** *(optional)* — open a drive to choose individual setlists. By default all setlists are included.
 3. **Sync** — press **S** to download everything you've enabled
 
-Your charts appear in the **Sync Charts** folder next to the launcher. Every time you run it again, it checks for new or updated charts and syncs automatically.
+Every time you run it again, it checks for new or updated charts and syncs automatically.
 
 You can also add your own Google Drive folders, sign in to Google for faster downloads, and more — the controls are shown at the bottom of the screen.
 

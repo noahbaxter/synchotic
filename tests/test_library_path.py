@@ -7,6 +7,8 @@ markers for every existing user. Both are guarded here.
 """
 import importlib
 
+from pathlib import Path
+
 import pytest
 
 from src.core import paths
@@ -284,30 +286,59 @@ class TestUnmountedLibrary:
 
 
 class TestScanGate:
-    """Nothing scans without somewhere to write. library_blocked_reason is the
-    one rule the menu greys rows on and every scan entry point checks."""
+    """Nothing scans into a library that is not there. library_blocked_reason
+    is the one rule the menu greys rows on and every scan entry point checks.
 
-    class _Settings:
-        def __init__(self, library_path=""):
-            self.library_path = library_path
+    There is no "unset" case: every install resolves to a default, an OS-dirs
+    one to ~/Synchotic/Sync Charts. Only a folder that went missing blocks.
+    """
 
     def test_an_unmounted_library_blocks(self, tmp_path):
         paths.set_library_path(tmp_path / "not-mounted")
         assert paths.library_blocked_reason() == "Library not connected"
 
-    def test_an_unset_library_blocks_in_os_dirs_mode(self, monkeypatch, tmp_path):
-        monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
-        assert paths.library_blocked_reason(self._Settings("")) == "Set a library first"
-
-    def test_a_portable_install_is_never_unset(self, tmp_path):
-        """Its default sits beside the launcher, which is how pre-1.5 works."""
-        assert paths.library_blocked_reason(self._Settings("")) == ""
-
     def test_a_mounted_library_does_not_block(self, tmp_path):
         lib = tmp_path / "mounted"
         lib.mkdir()
         paths.set_library_path(lib)
-        assert paths.library_blocked_reason(self._Settings(str(lib))) == ""
+        assert paths.library_blocked_reason() == ""
+
+    def test_a_default_library_never_blocks(self, monkeypatch, tmp_path):
+        """It is created on demand, so it cannot be missing."""
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+        assert paths.library_blocked_reason() == ""
+
+
+class TestOsDirsBundleLayout:
+    """A .app or AppImage keeps settings, cache and logs in the OS dirs, and
+    the charts somewhere a person can find. Wired dead for a day: OS-dirs mode
+    existed but nothing set SYNCHOTIC_OS_DIRS, so every bundle wrote a portable
+    .dm-sync into ~/Synchotic instead.
+    """
+
+    @pytest.fixture(autouse=True)
+    def os_dirs(self, monkeypatch):
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+
+    def test_settings_leave_the_app_folder(self, tmp_path):
+        assert paths.DATA_DIR_NAME not in str(paths.get_settings_path())
+        assert paths.get_settings_path().is_relative_to(paths._os_dir("data"))
+
+    def test_logs_and_cache_split_off(self):
+        assert paths.get_log_dir() == paths._os_dir("logs")
+        assert paths.get_cache_dir() == paths._os_dir("cache")
+
+    def test_charts_stay_somewhere_findable(self):
+        """Not ~/Library: a chart library is tens of gigabytes of user content."""
+        library = paths.get_library_path()
+        assert library == Path.home() / "Synchotic" / paths.DOWNLOAD_FOLDER_NAME
+        assert "Library" not in library.relative_to(Path.home()).parts
+
+    def test_a_chosen_library_still_wins(self, tmp_path):
+        lib = tmp_path / "songs"
+        lib.mkdir()
+        paths.set_library_path(lib)
+        assert paths.get_library_path() == lib
 
 
 class TestLibraryPathPersists:
@@ -322,3 +353,48 @@ class TestLibraryPathPersists:
     def test_absent_setting_reads_as_empty(self, tmp_path):
         from src.config.settings import UserSettings
         assert UserSettings.load(tmp_path / "none.json").library_path == ""
+
+
+class TestUpgradingABundle:
+    """A bundle that used to be portable must not look factory fresh.
+
+    Every .app so far kept .dm-sync beside itself or in ~/Synchotic. Switching
+    to the OS dirs without adopting that folder would sign the user out, forget
+    every drive toggle, and re-download the library into a folder the settings
+    no longer point at.
+    """
+
+    @pytest.fixture
+    def legacy(self, tmp_path, monkeypatch):
+        import json
+
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+        monkeypatch.setattr(paths.Path, "home", staticmethod(lambda: tmp_path / "home"))
+        old = tmp_path / "old-install" / paths.DATA_DIR_NAME
+        old.mkdir(parents=True)
+        (old / "settings.json").write_text(json.dumps({"download_mode": "rclone",
+                                                       "library_path": "/Volumes/x/Charts"}))
+        (old / "token.json").write_text('{"token": "kept"}')
+        monkeypatch.setenv(paths.LEGACY_ROOT_ENV, str(old.parent))
+        return old
+
+    def test_the_sign_in_comes_across(self, legacy):
+        paths.migrate_to_os_dirs()
+        assert (paths.get_data_dir() / "token.json").read_text() == '{"token": "kept"}'
+
+    def test_the_settings_come_across(self, legacy):
+        import json
+
+        paths.migrate_to_os_dirs()
+        saved = json.loads(paths.get_settings_path().read_text())
+        assert saved["download_mode"] == "rclone"
+        assert saved["library_path"] == "/Volumes/x/Charts"
+
+    def test_the_old_folder_is_left_alone(self, legacy):
+        """It is copied, not moved, so a bad upgrade is recoverable by hand."""
+        paths.migrate_to_os_dirs()
+        assert (legacy / "token.json").exists()
+
+    def test_a_portable_install_is_untouched(self, legacy, monkeypatch):
+        monkeypatch.delenv(paths.OS_DIRS_ENV)
+        assert paths.migrate_to_os_dirs() == []

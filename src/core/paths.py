@@ -241,19 +241,12 @@ def get_library_path() -> Path:
         return _library_override
     if _using_os_dirs():
         # A .app has no meaningful "next to the executable": that would put the
-        # library inside Contents/MacOS. Fall back somewhere writable, though
-        # first run asks rather than silently using this.
+        # library inside Contents/MacOS, and /Applications is no place for tens
+        # of gigabytes of charts. Settings and logs go to the OS dirs; the
+        # library is the one thing that needs somewhere a person can find, and
+        # Settings > Library moves it.
         return Path.home() / "Synchotic" / DOWNLOAD_FOLDER_NAME
     return get_app_dir() / DOWNLOAD_FOLDER_NAME
-
-
-def library_needs_setup(user_settings) -> bool:
-    """True when we must ask where charts go before doing anything.
-
-    Only in OS-dirs mode: a portable install has a correct default (beside the
-    launcher), which is how every pre-1.5 install already works.
-    """
-    return _using_os_dirs() and not getattr(user_settings, "library_path", "")
 
 
 class LibraryUnavailable(RuntimeError):
@@ -277,16 +270,15 @@ def _configured_library():
     return os.environ.get("SYNCHOTIC_LIBRARY") or _library_override
 
 
-def library_blocked_reason(user_settings=None) -> str:
+def library_blocked_reason() -> str:
     """Why nothing may scan or sync right now, or "" when the library is usable.
 
     A scan writes into the library: markers, staging, the scan cache keyed to
-    it. With no library chosen, or one on a drive that is no longer mounted,
-    that work has nowhere to land, so it is refused up front instead of at the
-    first mkdir several screens in.
+    it. A library on a drive that is no longer mounted has nowhere to put that,
+    so the work is refused up front instead of at the first mkdir several
+    screens in. An unset library is not a case: every install resolves to a
+    default, and only a folder that went missing can be unusable.
     """
-    if user_settings is not None and library_needs_setup(user_settings):
-        return "Set a library first"
     if not library_is_available():
         return "Library not connected"
     return ""

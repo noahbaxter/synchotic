@@ -126,5 +126,5 @@ def test_the_menu_and_the_scan_cannot_disagree(app, missing, mounted):
     never fails once you are past it."""
     for library, expected in [(missing, True), (mounted, False)]:
         a, _ = app(library)
-        assert bool(paths.library_blocked_reason(a.user_settings)) is expected
+        assert bool(paths.library_blocked_reason()) is expected
         assert bool(a._library_blocked()) is expected

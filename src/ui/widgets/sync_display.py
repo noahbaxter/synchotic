@@ -164,16 +164,6 @@ def library_is_new(path) -> None:
     print()
 
 
-def library_first_run() -> None:
-    print()
-    print("  Where should your charts live?")
-    print(f"  {_c.DIM}Point this at your Clone Hero songs folder. If you used an"
-          f" older Synchotic,{_c.RESET}")
-    print(f"  {_c.DIM}pick the same folder and your settings and markers come"
-          f" across.{_c.RESET}")
-    print()
-
-
 def library_imported(legacy, items) -> None:
     print()
     print(f"  {_c.SUCCESS}Imported your previous setup{_c.RESET} from:")

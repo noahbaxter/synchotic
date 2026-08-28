@@ -30,32 +30,40 @@ def in_appimage(monkeypatch, tmp_path):
     monkeypatch.setattr(sys, "frozen", True, raising=False)
     monkeypatch.setattr(sys, "executable", str(exe))
     monkeypatch.setenv("APPIMAGE", str(appimage))
-    monkeypatch.setenv("SYNCHOTIC_LAUNCHER_DIR", str(kept))
+    monkeypatch.delenv("SYNCHOTIC_LAUNCHER_DIR", raising=False)
     return appimage, kept, exe
 
 
 class TestWhereTheLauncherWrites:
-    def test_it_follows_the_folder_apprun_passed_in(self, in_appimage):
-        """The payload and chart library land beside the AppImage the user
-        kept, not in a mount that disappears."""
+    """Nothing lands beside the AppImage or inside its mount."""
+
+    def test_it_uses_the_xdg_data_dir(self, in_appimage, monkeypatch, tmp_path):
+        home = tmp_path / "home"
+        home.mkdir()
+        monkeypatch.delenv("XDG_DATA_HOME", raising=False)
+        monkeypatch.setattr(launcher.Path, "home", staticmethod(lambda: home))
+        monkeypatch.setattr(launcher.sys, "platform", "linux")
+        assert launcher.get_launcher_dir() == home / ".local" / "share" / "synchotic"
+
+    def test_xdg_data_home_is_honoured(self, in_appimage, monkeypatch, tmp_path):
+        xdg = tmp_path / "xdg"
+        monkeypatch.setenv("XDG_DATA_HOME", str(xdg))
+        monkeypatch.setattr(launcher.sys, "platform", "linux")
+        assert launcher.get_launcher_dir() == xdg / "synchotic"
+
+    def test_it_is_not_beside_the_appimage(self, in_appimage, monkeypatch):
+        """The folder the user keeps it in is not ours to write into."""
         _, kept, _ = in_appimage
-        assert launcher.get_launcher_dir() == kept
+        monkeypatch.setattr(launcher.sys, "platform", "linux")
+        assert launcher.get_launcher_dir() != kept
 
-    def test_without_the_override_it_would_land_in_the_mount(self, in_appimage, monkeypatch):
-        """Why the override exists at all."""
+    def test_it_is_not_in_the_mount(self, in_appimage, monkeypatch):
         _, _, exe = in_appimage
-        monkeypatch.delenv("SYNCHOTIC_LAUNCHER_DIR")
-        assert launcher.get_launcher_dir() == exe.parent
+        monkeypatch.setattr(launcher.sys, "platform", "linux")
+        assert launcher.get_launcher_dir() != exe.parent
 
-    def test_the_override_is_ignored_when_unset(self, tmp_path, monkeypatch):
-        """Windows and macOS never set it, so nothing changes for them."""
-        monkeypatch.delenv("SYNCHOTIC_LAUNCHER_DIR", raising=False)
-        monkeypatch.delenv("APPIMAGE", raising=False)
-        exe = tmp_path / "synchotic-launcher.exe"
-        exe.touch()
-        monkeypatch.setattr(sys, "frozen", True, raising=False)
-        monkeypatch.setattr(sys, "executable", str(exe))
-        assert launcher.get_launcher_dir() == tmp_path
+    def test_an_appimage_counts_as_bundled(self, in_appimage):
+        assert launcher.is_bundled() is True
 
 
 class TestTheDesktopEntry:

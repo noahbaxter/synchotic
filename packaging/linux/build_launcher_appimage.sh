@@ -55,19 +55,12 @@ cp packaging/linux/synchotic.png "$APPDIR/usr/share/icons/hicolor/256x256/apps/"
 
 cat > "$APPDIR/AppRun" <<'APPRUN'
 #!/bin/sh
-# The launcher keeps its payload, logs and chart library in the folder it was
-# run from. Inside an AppImage sys.executable points into a temporary squashfs
-# mount that is unmounted on exit, so it cannot answer that question itself.
-# $APPIMAGE is the real path of the file the user clicked, and the runtime sets
-# it for exactly this. The fallback covers an AppDir run straight from disk.
+# Nothing is written beside the AppImage: it belongs in the app menu, not in a
+# chart folder, and inside one sys.executable points into a squashfs mount that
+# is unmounted on exit. The launcher sees $APPIMAGE, puts its payload in the
+# XDG data dir and hands the app SYNCHOTIC_OS_DIRS, so config, cache and state
+# land where a Linux desktop expects them.
 HERE="$(dirname "$(readlink -f "$0")")"
-if [ -n "$APPIMAGE" ]; then
-  SYNCHOTIC_LAUNCHER_DIR="$(dirname "$APPIMAGE")"
-else
-  SYNCHOTIC_LAUNCHER_DIR="$(pwd)"
-fi
-export SYNCHOTIC_LAUNCHER_DIR
-
 exec "$HERE/usr/bin/synchotic-launcher" "$@"
 APPRUN
 chmod +x "$APPDIR/AppRun"
