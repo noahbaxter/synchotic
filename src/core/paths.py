@@ -587,15 +587,50 @@ def get_extract_tmp_dir() -> Path:
     return extract_dir
 
 
+# Staging older than this is from a run that is not coming back.
+STAGING_MAX_AGE_SECONDS = 3600
+
+
 def cleanup_tmp_dir():
-    """Clean up temp directory (call on startup)."""
+    """Drop staging left behind by an interrupted run (call on startup).
+
+    Extraction stages a whole unpacked chart inside the library, and purge
+    deliberately never walks the library state dir, so a hard kill mid-extract
+    leaves that copy with nothing in the app that would ever remove it. This
+    pointed at the data dir until now, which is a folder nothing has staged into
+    since staging moved into the library, so it cleaned nothing at all.
+
+    Resolves the path without creating anything: an install that never syncs
+    should not get a library folder made for it on startup.
+
+    Only touches staging that has sat untouched for an hour. Nothing stops a
+    second copy of the app being launched, and clearing the folder wholesale
+    would delete the extraction the first one is in the middle of.
+    """
     import shutil
-    tmp_dir = get_data_dir() / "tmp"
-    if tmp_dir.exists():
-        try:
-            shutil.rmtree(tmp_dir)
-        except Exception:
-            pass
+    import time
+
+    if not library_is_available():
+        return
+    tmp_dir = get_library_path() / LIBRARY_STATE_DIR_NAME / "tmp"
+    if not tmp_dir.is_dir():
+        return
+    cutoff = time.time() - STAGING_MAX_AGE_SECONDS
+    for parent in (tmp_dir, tmp_dir / "extract"):
+        if not parent.is_dir():
+            continue
+        for entry in parent.iterdir():
+            if entry.name == "extract":
+                continue
+            try:
+                if entry.stat().st_mtime > cutoff:
+                    continue
+                if entry.is_dir():
+                    shutil.rmtree(entry)
+                else:
+                    entry.unlink()
+            except OSError:
+                pass
 
 
 def _is_marker_name(name: str) -> bool:
