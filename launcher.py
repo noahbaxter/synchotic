@@ -971,10 +971,14 @@ def ensure_linux_desktop():
 
 
 def main():
-    maybe_relaunch_in_host()  # may re-exec into WezTerm and not return
-    set_terminal_size(90, 40)
+    # Logging first: a GUI launch that dies in the re-exec is exactly the case
+    # with no console to print to, and starting the log afterwards meant the
+    # only failure a user cannot see anything of was also the only one that
+    # left no file behind.
     init_logging()
     log(f"Launcher v{LAUNCHER_VERSION}")
+    maybe_relaunch_in_host()  # may re-exec into WezTerm and not return
+    set_terminal_size(90, 40)
     ensure_linux_desktop()
 
     if RELEASE_TAG:
