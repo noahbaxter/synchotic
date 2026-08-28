@@ -76,8 +76,16 @@ def show_library_screen(user_settings) -> bool:
     # Apply now, not at next launch: every path helper reads module state, so
     # leaving it stale would keep writing into the old library for this session.
     set_library_path(path)
-    from ...sync.cache import clear_cache
+    from ...sync.cache import clear_cache, get_persistent_stats_cache
     clear_cache()
+    # Every stat in here was measured against the old library: what is on disk,
+    # what is synced, what is purgeable. Kept, they describe a folder we are no
+    # longer looking at, and nothing recomputes a setlist that is already
+    # cached, so an empty library goes on reporting a full one until a forced
+    # re-scan. The Drive scan cache is untouched: it describes Drive, not disk.
+    stats = get_persistent_stats_cache()
+    stats.invalidate_all()
+    stats.save()
 
     # Adopt a pre-1.5 install now that we know where it is. Runs after
     # clear_cache so the scan cache it brings over survives, and it copies
@@ -86,6 +94,11 @@ def show_library_screen(user_settings) -> bool:
     if legacy is not None:
         moved = migrate_to_os_dirs(legacy)
         if moved:
+            # The import merged into settings.json on disk, but the app is
+            # holding the object it loaded at startup and save() writes that
+            # object whole. Pick the file back up or the next toggle throws the
+            # whole import away.
+            user_settings.reload()
             display.library_imported(legacy, moved)
 
     display.library_changed(path)

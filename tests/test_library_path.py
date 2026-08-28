@@ -398,3 +398,70 @@ class TestUpgradingABundle:
     def test_a_portable_install_is_untouched(self, legacy, monkeypatch):
         monkeypatch.delenv(paths.OS_DIRS_ENV)
         assert paths.migrate_to_os_dirs() == []
+
+
+class TestStagingIsCleanedOnStartup:
+    """Extraction stages a whole unpacked chart inside the library, and purge
+    deliberately never walks the library state dir. A hard kill mid-extract
+    leaves that copy with nothing that would ever remove it, so startup does.
+    Pointed at the data dir until now, which nothing has staged into since
+    staging moved into the library: it cleaned nothing at all.
+    """
+
+    def _staged(self, lib, name, age=0.0):
+        import os
+        import time
+        paths.set_library_path(lib)
+        staged = paths.get_extract_tmp_dir() / name
+        staged.mkdir(parents=True)
+        (staged / "song.ini").write_text("x")
+        if age:
+            old = time.time() - age
+            os.utime(staged, (old, old))
+        return staged
+
+    def test_leftover_staging_is_removed(self, tmp_path):
+        lib = tmp_path / "lib"
+        lib.mkdir()
+        stale = self._staged(lib, "pack_123", age=2 * paths.STAGING_MAX_AGE_SECONDS)
+
+        paths.cleanup_tmp_dir()
+
+        assert not stale.exists()
+
+    def test_a_live_extraction_is_left_alone(self, tmp_path):
+        """Nothing stops a second copy of the app being launched, and its
+        startup must not delete the extraction the first one is running."""
+        lib = tmp_path / "lib"
+        lib.mkdir()
+        live = self._staged(lib, "pack_456")
+
+        paths.cleanup_tmp_dir()
+
+        assert (live / "song.ini").exists()
+
+    def test_the_charts_are_untouched(self, tmp_path):
+        lib = tmp_path / "lib"
+        (lib / "Drive" / "Setlist").mkdir(parents=True)
+        (lib / "Drive" / "Setlist" / "song.ini").write_text("keep me")
+        paths.set_library_path(lib)
+        paths.get_tmp_dir()
+
+        paths.cleanup_tmp_dir()
+
+        assert (lib / "Drive" / "Setlist" / "song.ini").read_text() == "keep me"
+
+    def test_an_unmounted_library_is_left_alone(self, tmp_path):
+        """No raise, and no library tree built at an absent mountpoint."""
+        missing = tmp_path / "not-mounted"
+        paths.set_library_path(missing)
+        paths.cleanup_tmp_dir()
+        assert not missing.exists()
+
+    def test_it_creates_nothing_when_there_is_nothing(self, tmp_path):
+        """An install that never syncs should not get a library made for it."""
+        lib = tmp_path / "lib"
+        lib.mkdir()
+        paths.set_library_path(lib)
+        paths.cleanup_tmp_dir()
+        assert not (lib / paths.LIBRARY_STATE_DIR_NAME).exists()

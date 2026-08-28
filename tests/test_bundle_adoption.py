@@ -172,3 +172,76 @@ class TestMergingKeepsTheLivelierFile:
         saved = json.loads(dest.read_text())
         assert saved["download_mode"] == "rclone"
         assert saved["library_path"] == "/Volumes/picked/Charts"
+
+
+class TestTheAdoptedLibraryTakesEffectImmediately:
+    """Startup resolves the library before it can read a setting, so on the one
+    launch that adopts a previous install there is no setting to read yet.
+    Leaving it at that pointed the whole session at the default library: markers
+    copied into one folder, charts downloaded into it, and the real library
+    untouched until the next launch.
+    """
+
+    @pytest.fixture
+    def previous(self, os_dirs, tmp_path):
+        library = tmp_path / "Volumes" / "nas" / "Charts"
+        library.mkdir(parents=True)
+        state = _install(os_dirs / "Synchotic", library=str(library), drives=5)
+        (state / "markers").mkdir()
+        (state / "markers" / "drive_setlist_pack_abcd1234.json").write_text('{"files": {}}')
+        return library
+
+    def test_the_session_uses_it(self, previous):
+        paths.set_library_path(None)  # what startup found: no settings yet
+        paths.adopt_legacy_install()
+        assert paths.get_library_path() == previous
+
+    def test_the_markers_land_in_it(self, previous):
+        paths.set_library_path(None)
+        paths.adopt_legacy_install()
+        adopted = previous / paths.LIBRARY_STATE_DIR_NAME / "markers"
+        assert list(adopted.glob("*.json")), "markers went somewhere else"
+
+    def test_the_default_library_is_left_alone(self, previous, os_dirs):
+        paths.set_library_path(None)
+        paths.adopt_legacy_install()
+        assert not (os_dirs / "Synchotic" / paths.DOWNLOAD_FOLDER_NAME).exists()
+
+    def test_a_library_already_chosen_is_not_overridden(self, os_dirs, tmp_path):
+        """The library screen adopts with the folder the user just picked."""
+        legacy = _install(tmp_path / "old", library="/Volumes/nas/Charts", drives=1)
+        picked = tmp_path / "picked"
+        picked.mkdir()
+        paths.set_library_path(picked)
+        paths.migrate_to_os_dirs(legacy)
+        assert paths.get_library_path() == picked
+
+
+class TestAnImportKeepsEveryPreference:
+    """The library screen writes a settings file of defaults before adopting,
+    and a default is the absence of a preference, not one. Treating it as a real
+    value let it beat the install being adopted on every key whose default is
+    not empty: delete_videos, delta_mode and purge_ignore were all reset.
+    """
+
+    def test_a_non_default_preference_survives(self, os_dirs, tmp_path):
+        legacy = tmp_path / "OldInstall" / paths.DATA_DIR_NAME
+        legacy.mkdir(parents=True)
+        (legacy / "settings.json").write_text(json.dumps({
+            "delete_videos": False,
+            "delta_mode": "charts",
+            "drive_toggles": {"driveA": True},
+        }))
+        # what the library screen has just written: defaults plus the pick
+        from src.config.settings import UserSettings
+        fresh = UserSettings.load(paths.get_settings_path())
+        fresh.library_path = "/Volumes/picked/Charts"
+        fresh.save()
+
+        paths.migrate_to_os_dirs(legacy)
+
+        saved = json.loads(paths.get_settings_path().read_text())
+        assert saved["delete_videos"] is False
+        assert saved["delta_mode"] == "charts"
+        assert saved["drive_toggles"] == {"driveA": True}
+        assert saved["library_path"] == "/Volumes/picked/Charts"

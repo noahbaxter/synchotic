@@ -188,6 +188,11 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
             except Exception:
                 pass
 
+    # The settings we just brought across name the library. Startup resolved
+    # that before this file existed, so until it is applied the session is still
+    # pointed at the default, and everything below writes into the wrong folder.
+    _apply_adopted_library()
+
     # Markers describe the charts, so they belong with them rather than in a
     # machine dir. 2500 of these are the difference between adopting a library
     # and re-downloading it.
@@ -213,11 +218,57 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
     return done
 
 
+def _apply_adopted_library() -> None:
+    """Point this session at the library the adopted settings name.
+
+    Startup has to resolve the library before it can read a setting, and on the
+    launch that adopts a previous install there is no setting to read yet. The
+    marker copy below then lands in the default library, and every path for the
+    rest of the run resolves there too: markers split across two folders, and a
+    sync that downloads a second copy of the collection into the wrong one.
+
+    Never overrides a library already chosen. The library screen calls adoption
+    with the folder the user just picked, and that pick wins.
+    """
+    import json
+
+    if _library_override or os.environ.get("SYNCHOTIC_LIBRARY"):
+        return
+    try:
+        data = json.loads(get_settings_path().read_text())
+    except Exception:
+        return
+    adopted = data.get("library_path") if isinstance(data, dict) else ""
+    if adopted:
+        set_library_path(adopted)
+
+
 # The library screen writes the folder the user just picked before adopting, so
 # that one field is always right in the destination. Everything else in a
 # destination file is only trustworthy if it is not older than what we are
 # adopting.
 _PICKED_BY_THIS_SESSION = ("library_path",)
+
+_MISSING = object()
+
+
+def _default_settings() -> dict:
+    """What a settings file holds before anyone has chosen anything.
+
+    A value equal to its default is the absence of a preference, not one, so it
+    must never beat a real choice from the install being adopted. Without this
+    the destination file the library screen has just written is a wall of
+    defaults that wins every key it has: an import kept the drive toggles, whose
+    default is empty, and silently reset delete_videos, delta_mode and
+    purge_ignore, whose defaults are not.
+    """
+    from ..config.settings import UserSettings
+
+    probe = vars(UserSettings(Path(".")))
+    defaults = {k: v for k, v in probe.items()
+                if k != "path" and not k.startswith("_")}
+    defaults["use_default_drives"] = probe.get("_is_new")
+    return defaults
 
 
 def _merge_settings(legacy_file, dest_file) -> bool:
@@ -238,7 +289,9 @@ def _merge_settings(legacy_file, dest_file) -> bool:
         return False
     if not isinstance(legacy, dict) or not isinstance(current, dict):
         return False
-    keep = {k: v for k, v in current.items() if v not in ("", None, {}, [])}
+    defaults = _default_settings()
+    keep = {k: v for k, v in current.items()
+            if v not in ("", None, {}, []) and v != defaults.get(k, _MISSING)}
     if legacy_file.stat().st_mtime > dest_file.stat().st_mtime:
         keep = {k: v for k, v in keep.items() if k in _PICKED_BY_THIS_SESSION}
     merged = {**legacy, **keep}
@@ -534,15 +587,50 @@ def get_extract_tmp_dir() -> Path:
     return extract_dir
 
 
+# Staging older than this is from a run that is not coming back.
+STAGING_MAX_AGE_SECONDS = 3600
+
+
 def cleanup_tmp_dir():
-    """Clean up temp directory (call on startup)."""
+    """Drop staging left behind by an interrupted run (call on startup).
+
+    Extraction stages a whole unpacked chart inside the library, and purge
+    deliberately never walks the library state dir, so a hard kill mid-extract
+    leaves that copy with nothing in the app that would ever remove it. This
+    pointed at the data dir until now, which is a folder nothing has staged into
+    since staging moved into the library, so it cleaned nothing at all.
+
+    Resolves the path without creating anything: an install that never syncs
+    should not get a library folder made for it on startup.
+
+    Only touches staging that has sat untouched for an hour. Nothing stops a
+    second copy of the app being launched, and clearing the folder wholesale
+    would delete the extraction the first one is in the middle of.
+    """
     import shutil
-    tmp_dir = get_data_dir() / "tmp"
-    if tmp_dir.exists():
-        try:
-            shutil.rmtree(tmp_dir)
-        except Exception:
-            pass
+    import time
+
+    if not library_is_available():
+        return
+    tmp_dir = get_library_path() / LIBRARY_STATE_DIR_NAME / "tmp"
+    if not tmp_dir.is_dir():
+        return
+    cutoff = time.time() - STAGING_MAX_AGE_SECONDS
+    for parent in (tmp_dir, tmp_dir / "extract"):
+        if not parent.is_dir():
+            continue
+        for entry in parent.iterdir():
+            if entry.name == "extract":
+                continue
+            try:
+                if entry.stat().st_mtime > cutoff:
+                    continue
+                if entry.is_dir():
+                    shutil.rmtree(entry)
+                else:
+                    entry.unlink()
+            except OSError:
+                pass
 
 
 def _is_marker_name(name: str) -> bool:

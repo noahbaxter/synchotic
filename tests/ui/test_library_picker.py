@@ -217,3 +217,99 @@ class TestBrowseHotkey:
         from src.ui.primitives.path_input import Browse
         with pytest.raises(Browse):
             self._type(monkeypatch, ["b"], "b")
+
+
+class TestImportingAPreviousInstall:
+    """Pointing the library at a pre-1.5 folder brings that install's settings
+    across. The app holds one settings object for its whole run and save()
+    writes it whole, so an import the object never sees is thrown away by the
+    next keypress: drives, download mode and sign-in prompt all back to nothing.
+    """
+
+    @pytest.fixture(autouse=True)
+    def os_dirs(self, tmp_path, monkeypatch):
+        """Only a bundle imports: portable installs already read the folder."""
+        home = tmp_path / "home"
+        home.mkdir()
+        monkeypatch.setattr(paths.Path, "home", staticmethod(lambda: home))
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+        monkeypatch.delenv("SYNCHOTIC_ROOT", raising=False)
+        return home
+
+    @pytest.fixture
+    def previous(self, tmp_path):
+        import json
+        library = tmp_path / "OldInstall" / "Sync Charts"
+        library.mkdir(parents=True)
+        state = tmp_path / "OldInstall" / paths.DATA_DIR_NAME
+        state.mkdir()
+        (state / "settings.json").write_text(json.dumps({
+            "drive_toggles": {"driveA": True, "driveB": False},
+            "download_mode": "byoc",
+        }))
+        (state / "markers").mkdir()
+        return library
+
+    def _import(self, drive, library):
+        live = UserSettings.load(paths.get_settings_path())
+        changed, live = drive(str(library), settings=live)
+        assert changed is True
+        return live
+
+    def test_the_running_app_sees_it(self, drive, previous):
+        live = self._import(drive, previous)
+        assert live.drive_toggles == {"driveA": True, "driveB": False}
+        assert live.download_mode == "byoc"
+
+    def test_it_survives_the_next_save(self, drive, previous):
+        live = self._import(drive, previous)
+        live.set_drive_enabled("driveC", True)
+        live.save()
+        saved = UserSettings.load(paths.get_settings_path())
+        assert saved.drive_toggles == {"driveA": True, "driveB": False, "driveC": True}
+        assert saved.download_mode == "byoc"
+
+    def test_the_picked_folder_still_wins(self, drive, previous):
+        """The import must not drag the old library_path back over the pick."""
+        live = self._import(drive, previous)
+        assert live.library_path == str(previous)
+        assert paths.get_library_path() == previous
+
+
+class TestStatsDoNotOutliveTheOldLibrary:
+    """Every persisted stat is a measurement of the library it was taken in:
+    what is on disk, what is synced, what is purgeable. Nothing recomputes a
+    setlist that is already cached, so keeping them means an empty library goes
+    on reporting a full one until someone forces a re-scan.
+    """
+
+    @pytest.fixture(autouse=True)
+    def fresh_cache(self, monkeypatch):
+        from src.sync import cache as cache_mod
+        monkeypatch.setattr(cache_mod, "_persistent_stats_cache", None)
+        return cache_mod
+
+    def test_disk_stats_are_dropped(self, tmp_path, drive, fresh_cache):
+        old = tmp_path / "old"; old.mkdir()
+        new = tmp_path / "new"; new.mkdir()
+        paths.set_library_path(old)
+        fresh_cache.get_persistent_stats_cache().set_setlist(
+            "drive1", "Setlist", fresh_cache.CachedSetlistStats(
+                total_charts=10, total_size=100, synced_charts=10, synced_size=100,
+                disk_files=40, disk_size=100, disk_charts=10))
+
+        changed, _ = drive(str(new), settings=_settings(tmp_path))
+
+        assert changed is True
+        assert fresh_cache.get_persistent_stats_cache().get_setlist("drive1", "Setlist") is None
+
+    def test_the_drive_scan_cache_is_kept(self, tmp_path, drive, fresh_cache):
+        """It describes Drive, not disk, so a library change does not stale it,
+        and dropping it costs a full re-scan of every setlist."""
+        target = tmp_path / "elsewhere"; target.mkdir()
+        scan = fresh_cache.get_scan_cache()
+        scan.set("setlist1", [{"path": "a.7z", "id": "x", "size": 1}])
+
+        drive(str(target), settings=_settings(tmp_path))
+
+        assert scan.get("setlist1") is not None
