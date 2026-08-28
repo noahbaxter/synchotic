@@ -16,12 +16,26 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
+source packaging/macos/sign.sh
 APP="dist/Synchotic.app"
 PY="${PYTHON:-.venv/bin/python}"
 CERT="$("$PY" -c 'import certifi; print(certifi.where())')"
 WEZ_VER="20240203-110809-5046fc22"
 WEZ_URL="https://github.com/wezterm/wezterm/releases/download/$WEZ_VER/WezTerm-macos-$WEZ_VER.zip"
 WEZ_CACHE="build/wezterm-$WEZ_VER"
+
+# libs/bin/unrar is built per platform by .github/actions/setup-unrar and is
+# not in the repo. Without it the bundle starts fine and then cannot open a
+# .rar, which only surfaces mid-sync on the first chart pack that is one.
+UNRAR="libs/bin/unrar"
+if [ ! -f "$UNRAR" ] || ! file -b "$UNRAR" | grep -q "Mach-O"; then
+  echo "error: $UNRAR is not a macOS binary." >&2
+  echo "  Build it first (same recipe as .github/actions/setup-unrar):" >&2
+  echo "    curl -LO https://www.rarlab.com/rar/unrarsrc-7.2.2.tar.gz" >&2
+  echo "    tar -xzf unrarsrc-7.2.2.tar.gz && (cd unrar && make)" >&2
+  echo "    mkdir -p libs/bin && cp unrar/unrar libs/bin/unrar" >&2
+  exit 1
+fi
 
 rm -rf build/synchotic "$APP"
 "$PY" -m PyInstaller --windowed --onedir --name Synchotic --clean --noconfirm \
@@ -31,6 +45,9 @@ rm -rf build/synchotic "$APP"
   --add-data="src/drive/byoc_setup_instructions.txt:src/drive" \
   --add-data="VERSION:." \
   --add-data="${CERT}:certifi" \
+  --add-binary="${UNRAR}:." \
+  --hidden-import certifi \
+  --hidden-import rarfile \
   --icon=packaging/macos/Synchotic.icns \
   --osx-bundle-identifier dev.noahbaxter.synchotic \
   sync.py >/dev/null
@@ -76,7 +93,9 @@ SHIM
 chmod +x "$MACOS/Synchotic"
 
 # PyInstaller signed the bundle before the shim and WezTerm existed, so re-sign
-# the whole thing.
-codesign --force --deep --sign - "$APP"
+# the whole thing. MACOS_SIGN_IDENTITY carries a Developer ID in CI, where the
+# result is notarized; a local build leaves it unset and signs ad-hoc, which is
+# enough to run on the machine that built it.
+sign_bundle "$APP"
 
 echo "built $APP"

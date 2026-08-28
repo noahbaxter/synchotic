@@ -1,0 +1,82 @@
+name: 'Apple Signing'
+description: 'Import the Developer ID certificate and store notarytool credentials'
+
+inputs:
+  certificate:
+    description: 'Base64 Developer ID Application certificate (.p12)'
+    required: true
+  certificate-password:
+    description: 'Password for the .p12'
+    required: true
+  apple-id:
+    description: 'Apple ID for notarization'
+    required: true
+  team-id:
+    description: 'Apple Developer team ID'
+    required: true
+  app-password:
+    description: 'App-specific password for notarization'
+    required: true
+
+outputs:
+  available:
+    description: 'true when the secrets were present and the certificate imported'
+    value: ${{ steps.check.outputs.available }}
+
+runs:
+  using: 'composite'
+  steps:
+    # A fork or a checkout without secrets still has to build, just unsigned,
+    # so every step below is conditional rather than required.
+    - name: Check for signing secrets
+      id: check
+      shell: bash
+      env:
+        APPLE_CERTIFICATE: ${{ inputs.certificate }}
+      run: |
+        if [ -n "$APPLE_CERTIFICATE" ]; then
+          echo "available=true" >> $GITHUB_OUTPUT
+        else
+          echo "available=false" >> $GITHUB_OUTPUT
+          echo "::warning::Apple signing secrets not configured, building unsigned"
+        fi
+
+    - name: Import certificate
+      if: steps.check.outputs.available == 'true'
+      shell: bash
+      env:
+        APPLE_CERTIFICATE: ${{ inputs.certificate }}
+        APPLE_CERTIFICATE_PASSWORD: ${{ inputs.certificate-password }}
+        APPLE_ID: ${{ inputs.apple-id }}
+        APPLE_TEAM_ID: ${{ inputs.team-id }}
+        APPLE_APP_PASSWORD: ${{ inputs.app-password }}
+      run: |
+        KEYCHAIN_PATH=$RUNNER_TEMP/app-signing.keychain-db
+        KEYCHAIN_PASSWORD=$(openssl rand -base64 32)
+
+        security create-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+        security set-keychain-settings -lut 21600 "$KEYCHAIN_PATH"
+        security unlock-keychain -p "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+
+        echo "$APPLE_CERTIFICATE" | base64 --decode > $RUNNER_TEMP/certificate.p12
+        security import $RUNNER_TEMP/certificate.p12 -P "$APPLE_CERTIFICATE_PASSWORD" \
+          -A -t cert -f pkcs12 -k "$KEYCHAIN_PATH"
+
+        # The runner image ships Apple's intermediate CA now, and importing a
+        # cert that is already there exits 1, which under `bash -e` failed the
+        # whole signing step. Present is present either way.
+        curl -sO https://www.apple.com/certificateauthority/DeveloperIDG2CA.cer
+        security import DeveloperIDG2CA.cer -k "$KEYCHAIN_PATH" \
+          || echo "DeveloperIDG2CA already in the keychain, continuing"
+
+        security list-keychain -d user -s "$KEYCHAIN_PATH" login.keychain
+        security set-key-partition-list -S apple-tool:,apple:,codesign: -s -k "$KEYCHAIN_PASSWORD" "$KEYCHAIN_PATH"
+        security find-identity -v -p codesigning "$KEYCHAIN_PATH"
+
+        xcrun notarytool store-credentials "notarytool-profile" \
+          --apple-id "$APPLE_ID" \
+          --team-id "$APPLE_TEAM_ID" \
+          --password "$APPLE_APP_PASSWORD"
+
+        echo "KEYCHAIN_PATH=$KEYCHAIN_PATH" >> $GITHUB_ENV
+        echo "MACOS_SIGN_IDENTITY=Developer ID Application: Noah Baxter ($APPLE_TEAM_ID)" >> $GITHUB_ENV

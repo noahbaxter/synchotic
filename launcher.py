@@ -83,14 +83,39 @@ def is_clean_mode() -> bool:
     return "--clean" in sys.argv
 
 
+def portable_home() -> Path:
+    """Where a bundle that cannot write beside itself keeps its files.
+
+    Same folder the standalone Synchotic.app uses, so the two macOS bundles do
+    not end up with two separate libraries.
+    """
+    d = Path.home() / "Synchotic"
+    d.mkdir(parents=True, exist_ok=True)
+    return d
+
+
 def get_launcher_dir() -> Path:
-    """Get directory containing the launcher (or .app bundle on macOS)."""
+    """The folder the launcher owns: payload, logs and the chart library.
+
+    Inside a .app that is the folder containing the bundle, not Contents/MacOS,
+    so an update replaces the app without taking the library with it. A bundle
+    dragged to /Applications cannot write there and the whole portable layout
+    would die at the first extract, so that case falls back to ~/Synchotic.
+
+    SYNCHOTIC_LAUNCHER_DIR overrides both. An AppImage runs from a temporary
+    squashfs mount that is gone the moment the process exits, so sys.executable
+    says nothing about where the user put the file; AppRun reads $APPIMAGE and
+    passes the real folder in.
+    """
+    override = os.environ.get("SYNCHOTIC_LAUNCHER_DIR")
+    if override:
+        return Path(override)
     if getattr(sys, "frozen", False):
         exe_path = Path(sys.executable)
-        # If inside a .app bundle, return folder containing the .app
         for parent in exe_path.parents:
             if parent.suffix == ".app":
-                return parent.parent
+                holder = parent.parent
+                return holder if os.access(holder, os.W_OK) else portable_home()
         return exe_path.parent
     return Path(__file__).parent
 
@@ -100,6 +125,17 @@ def get_launcher_path() -> Path:
     if getattr(sys, "frozen", False):
         return Path(sys.executable)
     return Path(__file__)
+
+
+def desktop_exec_path() -> Path:
+    """What a .desktop entry should point Exec at.
+
+    Inside an AppImage the running binary lives in a squashfs mount that is
+    unmounted on exit, so an entry naming it would be dead by the time anyone
+    clicked it. $APPIMAGE is the file the user actually keeps.
+    """
+    appimage = os.environ.get("APPIMAGE")
+    return Path(appimage) if appimage else get_launcher_path()
 
 
 def get_app_dir() -> Path:
@@ -849,7 +885,7 @@ def ensure_linux_desktop():
             "Type=Application\n"
             "Name=Synchotic\n"
             "Comment=Sync Clone Hero charts from Google Drive\n"
-            f'Exec="{get_launcher_path()}"\n'
+            f'Exec="{desktop_exec_path()}"\n'
             "Terminal=false\n"
             "Icon=synchotic\n"
             "Categories=Game;\n"  # one main category: two makes it show up twice in some menus
