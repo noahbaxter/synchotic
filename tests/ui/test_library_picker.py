@@ -274,3 +274,42 @@ class TestImportingAPreviousInstall:
         live = self._import(drive, previous)
         assert live.library_path == str(previous)
         assert paths.get_library_path() == previous
+
+
+class TestStatsDoNotOutliveTheOldLibrary:
+    """Every persisted stat is a measurement of the library it was taken in:
+    what is on disk, what is synced, what is purgeable. Nothing recomputes a
+    setlist that is already cached, so keeping them means an empty library goes
+    on reporting a full one until someone forces a re-scan.
+    """
+
+    @pytest.fixture(autouse=True)
+    def fresh_cache(self, monkeypatch):
+        from src.sync import cache as cache_mod
+        monkeypatch.setattr(cache_mod, "_persistent_stats_cache", None)
+        return cache_mod
+
+    def test_disk_stats_are_dropped(self, tmp_path, drive, fresh_cache):
+        old = tmp_path / "old"; old.mkdir()
+        new = tmp_path / "new"; new.mkdir()
+        paths.set_library_path(old)
+        fresh_cache.get_persistent_stats_cache().set_setlist(
+            "drive1", "Setlist", fresh_cache.CachedSetlistStats(
+                total_charts=10, total_size=100, synced_charts=10, synced_size=100,
+                disk_files=40, disk_size=100, disk_charts=10))
+
+        changed, _ = drive(str(new), settings=_settings(tmp_path))
+
+        assert changed is True
+        assert fresh_cache.get_persistent_stats_cache().get_setlist("drive1", "Setlist") is None
+
+    def test_the_drive_scan_cache_is_kept(self, tmp_path, drive, fresh_cache):
+        """It describes Drive, not disk, so a library change does not stale it,
+        and dropping it costs a full re-scan of every setlist."""
+        target = tmp_path / "elsewhere"; target.mkdir()
+        scan = fresh_cache.get_scan_cache()
+        scan.set("setlist1", [{"path": "a.7z", "id": "x", "size": 1}])
+
+        drive(str(target), settings=_settings(tmp_path))
+
+        assert scan.get("setlist1") is not None
