@@ -25,7 +25,7 @@ jobs:
           # 22.04, not latest: oldest glibc we can build against.
           - os: ubuntu-22.04
             name: linux
-            artifact: synchotic-launcher-linux
+            artifact: Synchotic-launcher-x86_64.AppImage
 
     runs-on: ${{ matrix.os }}
 
@@ -87,16 +87,39 @@ jobs:
             launcher.py
         shell: pwsh
 
-      - name: Build launcher (Linux)
+      # An AppImage, not a bare ELF. GNOME Files will not execute a plain
+      # binary on double-click at all, and a downloaded one carries no icon and
+      # no name, so the format the desktop actually understands is the only
+      # Linux build worth shipping.
+      - name: Build launcher AppImage (Linux)
+        if: matrix.name == 'linux'
+        run: PYTHON=python packaging/linux/build_launcher_appimage.sh
+
+      # Packing an AppImage that cannot start is easy and invisible until
+      # someone downloads it, so unpack the real artifact and boot the launcher
+      # inside it. --offline stops before any network call and exits 1, which
+      # is enough to prove the frozen Python loaded and read the folder AppRun
+      # handed it.
+      - name: Smoke test the AppImage (Linux)
         if: matrix.name == 'linux'
         run: |
-          CERTIFI_PATH=$(python -c "import certifi; print(certifi.where())")
-          pyinstaller --onefile --name synchotic-launcher-linux --clean --noconfirm \
-            --add-data "$CERTIFI_PATH:certifi" \
-            --add-data "packaging/macos/wezterm.lua:." \
-            --add-data "packaging/linux/synchotic.png:." \
-            --hidden-import certifi \
-            launcher.py
+          cd dist
+          APPIMAGE_EXTRACT_AND_RUN=1 ./Synchotic-launcher-x86_64.AppImage --appimage-extract >/dev/null
+          test -x squashfs-root/AppRun
+          test -x squashfs-root/usr/bin/synchotic-launcher
+          grep -q 'SYNCHOTIC_LAUNCHER_DIR' squashfs-root/AppRun
+
+          mkdir -p "$RUNNER_TEMP/charts"
+          # --hosted as well as --offline: a runner has no tty, so without the
+          # recursion guard the launcher decides it was double-clicked and goes
+          # off to open a WezTerm window on a machine with no display.
+          out=$(SYNCHOTIC_LAUNCHER_DIR="$RUNNER_TEMP/charts" \
+            ./squashfs-root/usr/bin/synchotic-launcher --hosted --offline 2>&1) || true
+          echo "$out"
+          echo "$out" | grep -q "Synchotic Launcher v"
+          test -d "$RUNNER_TEMP/charts/.dm-sync" \
+            || { echo "launcher did not use SYNCHOTIC_LAUNCHER_DIR"; exit 1; }
+          rm -rf squashfs-root
 
 
       - name: Upload artifact
@@ -134,7 +157,7 @@ jobs:
             gh release upload "$TAG" \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
               "artifacts/Synchotic-launcher-macos.zip/Synchotic-launcher-macos.zip" \
-              artifacts/synchotic-launcher-linux/synchotic-launcher-linux \
+              "artifacts/Synchotic-launcher-x86_64.AppImage/Synchotic-launcher-x86_64.AppImage" \
               --clobber
           else
             echo "Creating new release $TAG..."
@@ -144,7 +167,7 @@ jobs:
               --latest=false \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
               "artifacts/Synchotic-launcher-macos.zip/Synchotic-launcher-macos.zip" \
-              artifacts/synchotic-launcher-linux/synchotic-launcher-linux
+              "artifacts/Synchotic-launcher-x86_64.AppImage/Synchotic-launcher-x86_64.AppImage"
           fi
 
       - name: Summary
@@ -152,4 +175,4 @@ jobs:
           echo "### Launcher Release ${{ github.event.inputs.tag }}" >> $GITHUB_STEP_SUMMARY
           echo "- Windows: synchotic-launcher.exe" >> $GITHUB_STEP_SUMMARY
           echo "- macOS: Synchotic-launcher-macos.zip (Synchotic.app)" >> $GITHUB_STEP_SUMMARY
-          echo "- Linux: synchotic-launcher-linux" >> $GITHUB_STEP_SUMMARY
+          echo "- Linux: Synchotic-launcher-x86_64.AppImage" >> $GITHUB_STEP_SUMMARY
