@@ -710,13 +710,20 @@ class BackgroundScanner:
             self._stats.folders_done += 1
             self._stats.current_folder_start = 0
 
-        # Compute and cache stats for this setlist
+        # Compute and cache stats for this setlist. _download_path says whether
+        # there is a library to measure at all; which library it is gets asked
+        # now rather than at construction, because Library Path is reachable
+        # while a scan runs. A scan that outlived the change went on measuring
+        # the old folder and writing those numbers straight back into the cache
+        # the change had just cleared.
         if self._download_path:
             try:
+                from ..core.paths import get_download_path
+
                 stats = compute_setlist_stats(
                     folder=drive,
                     setlist_name=setlist.name,
-                    base_path=self._download_path,
+                    base_path=get_download_path(),
                     user_settings=self._user_settings,
                 )
                 persistent_cache = get_persistent_stats_cache()
