@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <!-- Notarization requires the hardened runtime, and the hardened runtime
+       breaks CPython: it maps generated code as writable-then-executable, which
+       is exactly what the runtime forbids by default. Both keys are the
+       standard PyInstaller pair. -->
+  <key>com.apple.security.cs.allow-jit</key>
+  <true/>
+  <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+  <true/>
+  <!-- The bundle carries WezTerm and its libraries, built and signed by someone
+       else before we re-sign them. Library validation would refuse to load a
+       dylib whose team ID does not match the main binary's. -->
+  <key>com.apple.security.cs.disable-library-validation</key>
+  <true/>
+</dict>
+</plist>
