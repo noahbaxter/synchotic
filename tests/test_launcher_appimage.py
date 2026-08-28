@@ -131,3 +131,50 @@ class TestTheCommandHandedToWezTerm:
         assert launcher.should_relaunch_in_host(
             spawned["argv"], has_terminal=False, wezterm_exists=True) is False
 
+
+class TestTheMovedLauncherCheck:
+    """That check reconciles a portable install's .dm-sync with a launcher the
+    user dragged somewhere else. A bundle keeps nothing beside itself, and its
+    own path is a squashfs mount with a fresh random name every run, so every
+    launch compared a path it had never seen against one that no longer existed
+    and called it a move. When a stale mount dir did still hold a .dm-sync, that
+    landed the user on a move-or-delete prompt they had done nothing to earn.
+    """
+
+    def test_a_bundle_is_never_asked(self, in_appimage, monkeypatch, tmp_path):
+        asked = []
+        monkeypatch.setattr(launcher, "_prompt_directory_action",
+                            lambda: asked.append(True) or "I")
+        monkeypatch.setattr(launcher, "read_state", lambda: {
+            "launcher_path_prod": "/tmp/.mount_gone/usr/bin/synchotic-launcher"})
+        saved = []
+        monkeypatch.setattr(launcher, "_save_launcher_state", saved.append)
+
+        launcher.handle_directory_change()
+
+        assert asked == []
+        assert saved == [], "a mount path is not an identity worth recording"
+
+    def test_a_portable_install_still_gets_the_check(self, monkeypatch, tmp_path):
+        """The case the check exists for must keep working."""
+        old = tmp_path / "old"
+        (old / ".dm-sync").mkdir(parents=True)
+        old_exe = old / "synchotic-launcher"
+        old_exe.touch()
+        new_exe = tmp_path / "new" / "synchotic-launcher"
+        new_exe.parent.mkdir()
+        new_exe.touch()
+
+        monkeypatch.delenv("APPIMAGE", raising=False)
+        monkeypatch.setattr(sys, "frozen", True, raising=False)
+        monkeypatch.setattr(sys, "executable", str(new_exe))
+        monkeypatch.setattr(launcher, "read_state",
+                            lambda: {"launcher_path_prod": str(old_exe)})
+        monkeypatch.setattr(launcher, "_save_launcher_state", lambda p: None)
+        asked = []
+        monkeypatch.setattr(launcher, "_prompt_directory_action",
+                            lambda: asked.append(True) or "I")
+
+        launcher.handle_directory_change()
+
+        assert asked == [True]

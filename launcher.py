@@ -431,7 +431,15 @@ def _prompt_fallback() -> str:
 
 
 def handle_directory_change():
-    """Check if launcher moved and handle old .dm-sync folder."""
+    """Check if launcher moved and handle old .dm-sync folder.
+
+    Portable installs only. A bundle keeps nothing beside itself, so moving one
+    moves no data and there is nothing to reconcile. Its own path is a squashfs
+    mount with a fresh random name every run besides, so each launch compared a
+    path it had never seen to one that no longer existed and called that a move.
+    """
+    if is_bundled():
+        return
     current_path = str(get_launcher_path())
     key = _state_key()
     state = read_state()
