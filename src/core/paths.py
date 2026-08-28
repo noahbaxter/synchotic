@@ -249,6 +249,27 @@ def _apply_adopted_library() -> None:
 # adopting.
 _PICKED_BY_THIS_SESSION = ("library_path",)
 
+_MISSING = object()
+
+
+def _default_settings() -> dict:
+    """What a settings file holds before anyone has chosen anything.
+
+    A value equal to its default is the absence of a preference, not one, so it
+    must never beat a real choice from the install being adopted. Without this
+    the destination file the library screen has just written is a wall of
+    defaults that wins every key it has: an import kept the drive toggles, whose
+    default is empty, and silently reset delete_videos, delta_mode and
+    purge_ignore, whose defaults are not.
+    """
+    from ..config.settings import UserSettings
+
+    probe = vars(UserSettings(Path(".")))
+    defaults = {k: v for k, v in probe.items()
+                if k != "path" and not k.startswith("_")}
+    defaults["use_default_drives"] = probe.get("_is_new")
+    return defaults
+
 
 def _merge_settings(legacy_file, dest_file) -> bool:
     """Fill the new settings from the old, keeping anything already set.
@@ -268,7 +289,9 @@ def _merge_settings(legacy_file, dest_file) -> bool:
         return False
     if not isinstance(legacy, dict) or not isinstance(current, dict):
         return False
-    keep = {k: v for k, v in current.items() if v not in ("", None, {}, [])}
+    defaults = _default_settings()
+    keep = {k: v for k, v in current.items()
+            if v not in ("", None, {}, []) and v != defaults.get(k, _MISSING)}
     if legacy_file.stat().st_mtime > dest_file.stat().st_mtime:
         keep = {k: v for k, v in keep.items() if k in _PICKED_BY_THIS_SESSION}
     merged = {**legacy, **keep}

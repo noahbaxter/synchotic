@@ -216,3 +216,32 @@ class TestTheAdoptedLibraryTakesEffectImmediately:
         paths.migrate_to_os_dirs(legacy)
         assert paths.get_library_path() == picked
 
+
+class TestAnImportKeepsEveryPreference:
+    """The library screen writes a settings file of defaults before adopting,
+    and a default is the absence of a preference, not one. Treating it as a real
+    value let it beat the install being adopted on every key whose default is
+    not empty: delete_videos, delta_mode and purge_ignore were all reset.
+    """
+
+    def test_a_non_default_preference_survives(self, os_dirs, tmp_path):
+        legacy = tmp_path / "OldInstall" / paths.DATA_DIR_NAME
+        legacy.mkdir(parents=True)
+        (legacy / "settings.json").write_text(json.dumps({
+            "delete_videos": False,
+            "delta_mode": "charts",
+            "drive_toggles": {"driveA": True},
+        }))
+        # what the library screen has just written: defaults plus the pick
+        from src.config.settings import UserSettings
+        fresh = UserSettings.load(paths.get_settings_path())
+        fresh.library_path = "/Volumes/picked/Charts"
+        fresh.save()
+
+        paths.migrate_to_os_dirs(legacy)
+
+        saved = json.loads(paths.get_settings_path().read_text())
+        assert saved["delete_videos"] is False
+        assert saved["delta_mode"] == "charts"
+        assert saved["drive_toggles"] == {"driveA": True}
+        assert saved["library_path"] == "/Volumes/picked/Charts"
