@@ -114,6 +114,19 @@ class UserSettings:
 
         return settings
 
+    def reload(self):
+        """Re-read the file into this object, in place.
+
+        The app holds one settings object for its whole run and save() writes it
+        whole, so anything that edits settings.json underneath it is erased by
+        the next toggle. Importing a previous install does exactly that: without
+        this, adopting a v1.4 setup put its drives and download mode on disk and
+        the first keypress afterwards wiped them.
+        """
+        fresh = UserSettings.load(self.path)
+        for attr, value in vars(fresh).items():
+            setattr(self, attr, value)
+
     def save(self):
         """Save user settings to file."""
         data = {

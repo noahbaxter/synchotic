@@ -217,3 +217,60 @@ class TestBrowseHotkey:
         from src.ui.primitives.path_input import Browse
         with pytest.raises(Browse):
             self._type(monkeypatch, ["b"], "b")
+
+
+class TestImportingAPreviousInstall:
+    """Pointing the library at a pre-1.5 folder brings that install's settings
+    across. The app holds one settings object for its whole run and save()
+    writes it whole, so an import the object never sees is thrown away by the
+    next keypress: drives, download mode and sign-in prompt all back to nothing.
+    """
+
+    @pytest.fixture(autouse=True)
+    def os_dirs(self, tmp_path, monkeypatch):
+        """Only a bundle imports: portable installs already read the folder."""
+        home = tmp_path / "home"
+        home.mkdir()
+        monkeypatch.setattr(paths.Path, "home", staticmethod(lambda: home))
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+        monkeypatch.delenv("SYNCHOTIC_ROOT", raising=False)
+        return home
+
+    @pytest.fixture
+    def previous(self, tmp_path):
+        import json
+        library = tmp_path / "OldInstall" / "Sync Charts"
+        library.mkdir(parents=True)
+        state = tmp_path / "OldInstall" / paths.DATA_DIR_NAME
+        state.mkdir()
+        (state / "settings.json").write_text(json.dumps({
+            "drive_toggles": {"driveA": True, "driveB": False},
+            "download_mode": "byoc",
+        }))
+        (state / "markers").mkdir()
+        return library
+
+    def _import(self, drive, library):
+        live = UserSettings.load(paths.get_settings_path())
+        changed, live = drive(str(library), settings=live)
+        assert changed is True
+        return live
+
+    def test_the_running_app_sees_it(self, drive, previous):
+        live = self._import(drive, previous)
+        assert live.drive_toggles == {"driveA": True, "driveB": False}
+        assert live.download_mode == "byoc"
+
+    def test_it_survives_the_next_save(self, drive, previous):
+        live = self._import(drive, previous)
+        live.set_drive_enabled("driveC", True)
+        live.save()
+        saved = UserSettings.load(paths.get_settings_path())
+        assert saved.drive_toggles == {"driveA": True, "driveB": False, "driveC": True}
+        assert saved.download_mode == "byoc"
+
+    def test_the_picked_folder_still_wins(self, drive, previous):
+        """The import must not drag the old library_path back over the pick."""
+        live = self._import(drive, previous)
+        assert live.library_path == str(previous)
+        assert paths.get_library_path() == previous

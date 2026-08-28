@@ -86,6 +86,11 @@ def show_library_screen(user_settings) -> bool:
     if legacy is not None:
         moved = migrate_to_os_dirs(legacy)
         if moved:
+            # The import merged into settings.json on disk, but the app is
+            # holding the object it loaded at startup and save() writes that
+            # object whole. Pick the file back up or the next toggle throws the
+            # whole import away.
+            user_settings.reload()
             display.library_imported(legacy, moved)
 
     display.library_changed(path)
