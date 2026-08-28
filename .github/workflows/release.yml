@@ -45,29 +45,34 @@ jobs:
         run: |
           VERSION="${{ steps.version.outputs.version }}"
 
+          # These three zips are not downloads, they are the launcher's update
+          # channel: launcher.py reads {repo}/releases/latest and pulls the one
+          # for its platform. That is why this release has to stay the latest
+          # non-prerelease, and why nothing else is attached to it. Anyone
+          # unpacking a zip by hand gets a build that never updates itself, so
+          # the notes send them to the launcher instead.
+          NOTES="Update payload for the Synchotic launcher. Nothing here is meant to be downloaded by hand.
+
+          **[Get Synchotic here](https://github.com/${{ github.repository }}/releases/tag/launcher-v1.2)** and the launcher keeps itself on $VERSION."
+
           if gh release view "$VERSION" > /dev/null 2>&1; then
             echo "Updating existing release $VERSION..."
             gh release upload "$VERSION" \
               artifacts/app-macos.zip/app-macos.zip \
               artifacts/app-windows.zip/app-windows.zip \
               artifacts/app-linux.zip/app-linux.zip \
-              artifacts/appimage-linux/*.AppImage \
               --clobber
           else
             echo "Creating new release $VERSION..."
             gh release create "$VERSION" \
-              --title "Synchotic $VERSION" \
-              --notes "Release $VERSION" \
+              --title "Synchotic $VERSION (launcher payload)" \
+              --notes "$NOTES" \
               artifacts/app-macos.zip/app-macos.zip \
               artifacts/app-windows.zip/app-windows.zip \
-              artifacts/app-linux.zip/app-linux.zip \
-              artifacts/appimage-linux/*.AppImage
+              artifacts/app-linux.zip/app-linux.zip
           fi
 
       - name: Summary
         run: |
           echo "### Release ${{ steps.version.outputs.version }}" >> $GITHUB_STEP_SUMMARY
-          echo "- macOS: app-macos.zip" >> $GITHUB_STEP_SUMMARY
-          echo "- Windows: app-windows.zip" >> $GITHUB_STEP_SUMMARY
-          echo "- Linux: app-linux.zip" >> $GITHUB_STEP_SUMMARY
-          echo "- Linux (standalone): Synchotic-*.AppImage" >> $GITHUB_STEP_SUMMARY
+          echo "- Launcher payloads: app-macos.zip, app-windows.zip, app-linux.zip" >> $GITHUB_STEP_SUMMARY

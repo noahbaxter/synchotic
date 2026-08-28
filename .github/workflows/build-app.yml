@@ -139,22 +139,13 @@ jobs:
           Compress-Archive -Path "synchotic-app\*" -DestinationPath "app-windows.zip" -Force
         shell: pwsh
 
-      # Self-contained counterpart to Synchotic.app: bundles WezTerm so a desktop
-      # launch has a window, and needs nothing on first run.
-      - name: Build AppImage (Linux)
-        if: matrix.name == 'linux'
-        run: PYTHON=python packaging/linux/build_appimage.sh
-
+      # No standalone .app or AppImage here on purpose. Everything this
+      # workflow produces is launcher payload: the launcher is the only way in,
+      # and a second downloadable build on the app release only invited people
+      # to install something that never updates itself.
       - name: Upload artifact
         if: inputs.upload_artifacts
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact }}
           path: dist/${{ matrix.artifact }}
-
-      - name: Upload AppImage
-        if: inputs.upload_artifacts && matrix.name == 'linux'
-        uses: actions/upload-artifact@v4
-        with:
-          name: appimage-linux
-          path: dist/*.AppImage
