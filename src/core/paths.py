@@ -188,6 +188,11 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
             except Exception:
                 pass
 
+    # The settings we just brought across name the library. Startup resolved
+    # that before this file existed, so until it is applied the session is still
+    # pointed at the default, and everything below writes into the wrong folder.
+    _apply_adopted_library()
+
     # Markers describe the charts, so they belong with them rather than in a
     # machine dir. 2500 of these are the difference between adopting a library
     # and re-downloading it.
@@ -211,6 +216,31 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
     except Exception:
         pass
     return done
+
+
+def _apply_adopted_library() -> None:
+    """Point this session at the library the adopted settings name.
+
+    Startup has to resolve the library before it can read a setting, and on the
+    launch that adopts a previous install there is no setting to read yet. The
+    marker copy below then lands in the default library, and every path for the
+    rest of the run resolves there too: markers split across two folders, and a
+    sync that downloads a second copy of the collection into the wrong one.
+
+    Never overrides a library already chosen. The library screen calls adoption
+    with the folder the user just picked, and that pick wins.
+    """
+    import json
+
+    if _library_override or os.environ.get("SYNCHOTIC_LIBRARY"):
+        return
+    try:
+        data = json.loads(get_settings_path().read_text())
+    except Exception:
+        return
+    adopted = data.get("library_path") if isinstance(data, dict) else ""
+    if adopted:
+        set_library_path(adopted)
 
 
 # The library screen writes the folder the user just picked before adopting, so
