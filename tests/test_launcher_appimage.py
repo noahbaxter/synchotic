@@ -70,7 +70,7 @@ class TestTheDesktopEntry:
     def test_it_points_at_the_appimage_not_the_mount(self, in_appimage):
         """An entry naming the mount is dead as soon as the app closes."""
         appimage, _, _ = in_appimage
-        assert launcher.desktop_exec_path() == appimage
+        assert launcher.relaunchable_path() == appimage
 
     def test_it_falls_back_to_the_running_binary(self, tmp_path, monkeypatch):
         monkeypatch.delenv("APPIMAGE", raising=False)
@@ -78,4 +78,56 @@ class TestTheDesktopEntry:
         exe.touch()
         monkeypatch.setattr(sys, "frozen", True, raising=False)
         monkeypatch.setattr(sys, "executable", str(exe))
-        assert launcher.desktop_exec_path() == exe
+        assert launcher.relaunchable_path() == exe
+
+
+class TestTheCommandHandedToWezTerm:
+    """A GUI launch re-execs into WezTerm, which then spawns the launcher again
+    with --hosted. That spawn happens after the exec has handed our process to
+    WezTerm, and inside an AppImage that releases the squashfs mount. Naming the
+    mount left WezTerm with a program that no longer existed: the window opened
+    and shut, with nothing on screen and nothing in any log. Running the same
+    build from source worked, which is how it stayed hidden.
+    """
+
+    @pytest.fixture
+    def spawned(self, in_appimage, monkeypatch, tmp_path):
+        """The argv a GUI launch would hand WezTerm, without execing anything."""
+        wez = tmp_path / "wezterm" / "squashfs-root" / "usr" / "bin"
+        wez.mkdir(parents=True)
+        gui = wez / "wezterm-gui"
+        gui.touch()
+        lua = tmp_path / "wezterm" / "wezterm.lua"
+        lua.touch()
+
+        monkeypatch.setattr(launcher.sys, "platform", "linux")
+        monkeypatch.setattr(launcher, "_has_terminal", lambda: False)
+        monkeypatch.setattr(launcher, "ensure_wezterm_linux", lambda: True)
+        monkeypatch.setattr(launcher, "host_paths", lambda: (gui, lua))
+        monkeypatch.setattr(launcher.sys, "argv", ["synchotic-launcher"])
+
+        captured = {}
+
+        def fake_execve(path, argv, env):
+            captured["path"] = path
+            captured["argv"] = argv
+
+        monkeypatch.setattr(launcher.os, "execve", fake_execve)
+        launcher.maybe_relaunch_in_host()
+        return captured
+
+    def test_it_names_the_file_the_user_keeps(self, spawned, in_appimage):
+        appimage, _, exe = in_appimage
+        assert str(appimage) in spawned["argv"]
+        assert str(exe) not in spawned["argv"]
+
+    def test_the_mount_is_never_the_program(self, spawned):
+        """The whole failure in one assertion: nothing under a .mount_ path may
+        be handed to something that outlives us."""
+        assert not any(".mount_" in part for part in spawned["argv"])
+
+    def test_hosted_is_still_the_recursion_guard(self, spawned):
+        assert spawned["argv"][-1] == "--hosted"
+        assert launcher.should_relaunch_in_host(
+            spawned["argv"], has_terminal=False, wezterm_exists=True) is False
+

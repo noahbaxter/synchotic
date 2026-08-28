@@ -180,12 +180,16 @@ def get_launcher_path() -> Path:
     return Path(__file__)
 
 
-def desktop_exec_path() -> Path:
-    """What a .desktop entry should point Exec at.
+def relaunchable_path() -> Path:
+    """The path anything outside this process may start us by.
 
     Inside an AppImage the running binary lives in a squashfs mount that is
-    unmounted on exit, so an entry naming it would be dead by the time anyone
-    clicked it. $APPIMAGE is the file the user actually keeps.
+    unmounted the moment this process goes, so sys.executable names a file that
+    is about to stop existing. $APPIMAGE is the one the user actually keeps.
+
+    Two callers need that distinction and both are broken without it: a .desktop
+    entry, which would be dead by the time anyone clicked it, and the command we
+    hand WezTerm, which is spawned after the exec has already released the mount.
     """
     appimage = os.environ.get("APPIMAGE")
     return Path(appimage) if appimage else get_launcher_path()
@@ -905,9 +909,14 @@ def maybe_relaunch_in_host():
     else:
         return
 
+    # relaunchable_path, not get_launcher_path: WezTerm spawns this after the
+    # exec below has handed our process to it, and inside an AppImage that
+    # releases the squashfs mount sys.executable lives on. Naming the mount left
+    # WezTerm with a program that no longer existed, so the window opened and
+    # shut with nothing on screen and nothing in any log.
     cmd = build_host_command(
         str(wezterm), str(lua), str(get_launcher_dir()),
-        str(get_launcher_path()), sys.argv[1:],
+        str(relaunchable_path()), sys.argv[1:],
         LINUX_WM_CLASS if sys.platform.startswith("linux") else "",
     )
     env = host_environment()
@@ -943,7 +952,7 @@ def ensure_linux_desktop():
             "Type=Application\n"
             "Name=Synchotic\n"
             "Comment=Sync Clone Hero charts from Google Drive\n"
-            f'Exec="{desktop_exec_path()}"\n'
+            f'Exec="{relaunchable_path()}"\n'
             "Terminal=false\n"
             "Icon=synchotic\n"
             # Matches packaging/linux/synchotic.desktop. This entry is the one
