@@ -946,7 +946,10 @@ def ensure_linux_desktop():
             f'Exec="{desktop_exec_path()}"\n'
             "Terminal=false\n"
             "Icon=synchotic\n"
-            "Categories=Game;\n"  # one main category: two makes it show up twice in some menus
+            # Matches packaging/linux/synchotic.desktop. This entry is the one
+            # the menu reads and it is rewritten on every launch, so a category
+            # only changed there never reaches anybody.
+            "Categories=Utility;\n"
             f"StartupWMClass={LINUX_WM_CLASS}\n"  # X11 pairing; Wayland matches on app_id
             "StartupNotify=true\n"
         )
