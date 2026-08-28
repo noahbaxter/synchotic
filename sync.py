@@ -1474,10 +1474,18 @@ def main():
     # a setting, or the upgrade reads as a factory reset: signed out, no drives
     # enabled, and a re-download of the whole library. Copies, never
     # overwrites, and leaves the old folder alone.
-    from src.core.paths import migrate_to_os_dirs as _migrate_to_os_dirs
-    adopted = _migrate_to_os_dirs()
+    from src.core.paths import adopt_legacy_install, stale_data_dir_warning
+    adopted = adopt_legacy_install()
     if adopted:
-        print(f"  Moved your setup into the standard folders: {', '.join(adopted)}")
+        print(f"  Brought your previous setup across: {', '.join(adopted)}")
+    stale = stale_data_dir_warning()
+    if stale:
+        # Silence here is what turns an upgrade into a factory reset: signed
+        # out, no drives, and an empty default library that the next sync fills
+        # by downloading the whole collection again.
+        print(f"\n  A newer setup exists in {stale}")
+        print("  but this install already has settings and will not overwrite them.")
+        print("  Settings > Library, pointed at that folder, imports it.\n")
 
     # Migrate legacy files from old locations to .dm-sync/
     # Must run BEFORE creating SyncApp so paths resolve correctly

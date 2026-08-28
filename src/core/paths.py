@@ -36,6 +36,76 @@ _MIGRATION_MAP = {
 }
 
 
+def legacy_install_candidates(explicit=None) -> list:
+    """Every folder a previous install could have left its state in, newest first.
+
+    There are three, and missing any of them reads to the user as a factory
+    reset: signed out, no drives, and a library default that points somewhere
+    empty, which the next sync fills by downloading everything again.
+
+    * the folder the user just picked in the library screen
+    * SYNCHOTIC_LEGACY_ROOT, which the bundles set to the folder they sit in
+      (os.pathsep separates several)
+    * ~/Synchotic, where the macOS shim put everything before the OS dirs
+
+    Ordered by the mtime of the settings inside, so the liveliest install wins
+    over one left behind by an old build.
+    """
+    roots = []
+    if explicit:
+        roots.append(Path(explicit))
+    env = os.environ.get(LEGACY_ROOT_ENV) or ""
+    roots += [Path(r) for r in env.split(os.pathsep) if r]
+    roots.append(Path.home() / APP_DIRNAME)
+
+    found = {}
+    for root in roots:
+        for base in (root, root.parent):
+            for name in (DATA_DIR_NAME, LIBRARY_STATE_DIR_NAME):
+                candidate = base / name
+                if candidate.is_dir() and candidate not in found:
+                    settings = candidate / "settings.json"
+                    found[candidate] = settings.stat().st_mtime if settings.exists() else 0
+    return [c for c, _ in sorted(found.items(), key=lambda kv: kv[1], reverse=True)]
+
+
+def adopt_legacy_install() -> list:
+    """Bring a previous install into the OS dirs, once, at startup.
+
+    Only when there is nothing here yet. An OS data dir that already holds
+    settings is either a real install or, for anyone who ever ran a dev build,
+    months-old leftovers. Copying over the first would be destructive and
+    telling the two apart automatically is guesswork, so that case is reported
+    rather than resolved.
+    """
+    if not _using_os_dirs():
+        return []
+    candidates = legacy_install_candidates()
+    if not candidates:
+        return []
+    if get_settings_path().exists():
+        return []
+    return migrate_to_os_dirs(candidates[0])
+
+
+def stale_data_dir_warning() -> str:
+    """A settings file here, and a livelier one in an install we did not adopt.
+
+    Says so instead of booting into whichever happened to be in the way, which
+    is how a February dev build silently beat a live install.
+    """
+    if not _using_os_dirs():
+        return ""
+    dest = get_settings_path()
+    if not dest.exists():
+        return ""
+    for candidate in legacy_install_candidates():
+        settings = candidate / "settings.json"
+        if settings.exists() and settings.stat().st_mtime > dest.stat().st_mtime:
+            return str(candidate)
+    return ""
+
+
 def find_legacy_install(library_path):
     """Locate a pre-1.5 install given the library the user just pointed at.
 
@@ -143,8 +213,22 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
     return done
 
 
+# The library screen writes the folder the user just picked before adopting, so
+# that one field is always right in the destination. Everything else in a
+# destination file is only trustworthy if it is not older than what we are
+# adopting.
+_PICKED_BY_THIS_SESSION = ("library_path",)
+
+
 def _merge_settings(legacy_file, dest_file) -> bool:
-    """Fill the new settings from the old, keeping anything already set."""
+    """Fill the new settings from the old, keeping anything already set.
+
+    A destination written more recently wins conflicts, which is the point: the
+    library screen has just put the new library_path there. When the
+    destination is the older file it wins nothing but that path, or a stale
+    settings.json left by a build from months ago silently beats a live
+    install, taking the sign-in and every drive toggle with it.
+    """
     import json
 
     try:
@@ -154,7 +238,10 @@ def _merge_settings(legacy_file, dest_file) -> bool:
         return False
     if not isinstance(legacy, dict) or not isinstance(current, dict):
         return False
-    merged = {**legacy, **{k: v for k, v in current.items() if v not in ("", None, {}, [])}}
+    keep = {k: v for k, v in current.items() if v not in ("", None, {}, [])}
+    if legacy_file.stat().st_mtime > dest_file.stat().st_mtime:
+        keep = {k: v for k, v in keep.items() if k in _PICKED_BY_THIS_SESSION}
+    merged = {**legacy, **keep}
     if merged == current:
         return False
     dest_file.write_text(json.dumps(merged, indent=2))
