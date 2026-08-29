@@ -7,6 +7,10 @@ on:
         description: 'Release tag (e.g., launcher-v1)'
         required: true
         default: 'launcher-v1'
+      notes:
+        description: 'Release notes. Say which platforms actually changed.'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -154,11 +158,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
+          # Through the env, not inline: the notes are multi-line and full of
+          # markdown, and pasting them into the script body would end the
+          # quoting at the first character the shell cares about.
+          TAG: ${{ github.event.inputs.tag }}
+          NOTES_INPUT: ${{ github.event.inputs.notes }}
         run: |
-          TAG="${{ github.event.inputs.tag }}"
+          NOTES="${NOTES_INPUT:-Downloads and auto-updates the Synchotic app.}"
 
           if gh release view "$TAG" > /dev/null 2>&1; then
             echo "Updating existing release $TAG..."
+            gh release edit "$TAG" --notes "$NOTES"
             gh release upload "$TAG" \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
               "artifacts/Synchotic-launcher-macos.zip/Synchotic-launcher-macos.zip" \
@@ -168,7 +178,7 @@ jobs:
             echo "Creating new release $TAG..."
             gh release create "$TAG" \
               --title "Synchotic Launcher $TAG" \
-              --notes "Downloads and auto-updates the Synchotic app." \
+              --notes "$NOTES" \
               --latest=false \
               artifacts/synchotic-launcher.exe/synchotic-launcher.exe \
               "artifacts/Synchotic-launcher-macos.zip/Synchotic-launcher-macos.zip" \

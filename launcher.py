@@ -22,7 +22,7 @@ from typing import NoReturn
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-LAUNCHER_VERSION = "1.2"
+LAUNCHER_VERSION = "1.3"
 RELEASE_TAG = ""  # Injected to "dev-latest" for dev launcher builds
 WEZTERM_VERSION = "20240203-110809-5046fc22"  # Windows/Linux host, downloaded first-run
 LINUX_WM_CLASS = "synchotic"  # must match the .desktop basename, or KDE cannot pair them

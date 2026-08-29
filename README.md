@@ -8,7 +8,7 @@ Automatically download and sync Clone Hero charts from Google Drive. Pick the dr
 
 > **How downloads work.** Synchotic downloads most files anonymously. For the rest it uses rclone automatically: a one-time Google consent click, with no manual rclone setup. If you hit limits or want full speed, you can bring your own Google OAuth credentials (see [docs/byoc.md](docs/byoc.md)). The original manual rclone version still lives on the [`legacy-rclone`](../../tree/legacy-rclone) branch as an escape hatch.
 
-**[Download the launcher here](../../releases/tag/launcher-v1.2)**
+**[Download the launcher here](../../releases/tag/launcher-v1.3)**
 
 | Platform | File |
 |----------|------|

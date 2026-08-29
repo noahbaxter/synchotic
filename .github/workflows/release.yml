@@ -53,7 +53,7 @@ jobs:
           # the notes send them to the launcher instead.
           NOTES="Update payload for the Synchotic launcher. Nothing here is meant to be downloaded by hand.
 
-          **[Get Synchotic here](https://github.com/${{ github.repository }}/releases/tag/launcher-v1.2)** and the launcher keeps itself on $VERSION."
+          **[Get Synchotic here](https://github.com/${{ github.repository }}/releases/tag/launcher-v1.3)** and the launcher keeps itself on $VERSION."
 
           if gh release view "$VERSION" > /dev/null 2>&1; then
             echo "Updating existing release $VERSION..."
