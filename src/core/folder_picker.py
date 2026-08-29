@@ -15,30 +15,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+from .files import system_tool_env
 from .logging import debug_log
 
 # A dialog is modal and waits on a person, so there is no sensible deadline.
 # This only guards against a helper that starts and then never draws anything.
 _TIMEOUT = 300
-
-
-def _child_env() -> dict:
-    """Environment for a dialog helper.
-
-    PyInstaller points LD_LIBRARY_PATH at its own _internal dir, and a child
-    process inherits it: kdialog then loads our bundled libstdc++ instead of the
-    system one and dies on a missing GLIBCXX, zenity dies on libssl. PyInstaller
-    keeps the pre-launch value in LD_LIBRARY_PATH_ORIG, so put it back. A no-op
-    off Linux, where neither variable exists.
-    """
-    env = os.environ.copy()
-    if getattr(sys, "frozen", False):
-        orig = env.pop("LD_LIBRARY_PATH_ORIG", None)
-        if orig is None:
-            env.pop("LD_LIBRARY_PATH", None)
-        else:
-            env["LD_LIBRARY_PATH"] = orig
-    return env
 
 
 def _has_display() -> bool:
@@ -83,7 +65,7 @@ def _run(cmd: list) -> "str | None":
         kwargs["creationflags"] = 0x08000000  # CREATE_NO_WINDOW
     try:
         result = subprocess.run(cmd, capture_output=True, text=True,
-                                timeout=_TIMEOUT, env=_child_env(), **kwargs)
+                                timeout=_TIMEOUT, env=system_tool_env(), **kwargs)
     except (OSError, subprocess.TimeoutExpired) as e:
         debug_log(f"folder picker failed: {e}")
         return None

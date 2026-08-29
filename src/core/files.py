@@ -55,6 +55,61 @@ def find_unexpected_files_with_sizes(folder_path: Path, expected_paths: Set[Path
     return result
 
 
+def system_tool_env() -> dict:
+    """Environment for an OS helper we shell out to.
+
+    PyInstaller points LD_LIBRARY_PATH at its own _internal dir and every child
+    inherits it, so the helper loads our bundled libraries instead of the
+    system's. On Fedora that meant xdg-open reached flatpak, which could not
+    load libcrypto ("version OPENSSL_3.4.0 not found") and gave up without
+    saying so: the file manager simply never opened. PyInstaller keeps the
+    pre-launch value in LD_LIBRARY_PATH_ORIG, so put it back. A no-op off
+    Linux, where neither variable exists.
+    """
+    import os
+    import sys
+
+    env = os.environ.copy()
+    if getattr(sys, "frozen", False):
+        orig = env.pop("LD_LIBRARY_PATH_ORIG", None)
+        if orig is None:
+            env.pop("LD_LIBRARY_PATH", None)
+        else:
+            env["LD_LIBRARY_PATH"] = orig
+    return env
+
+
+def system_tools_on_path():
+    """A context manager that cleans os.environ itself, then puts it back.
+
+    For a library that spawns an OS helper out of reach of any env argument:
+    webbrowser resolves to xdg-open on Linux and google-auth calls it from
+    inside run_local_server, so being clean while it runs is the only way to
+    hand it the system's libraries. Prefer system_tool_env wherever the spawn
+    is ours to make; this changes the environment of the whole process.
+    """
+    import contextlib
+    import os
+
+    @contextlib.contextmanager
+    def swap():
+        before = os.environ.get("LD_LIBRARY_PATH")
+        clean = system_tool_env().get("LD_LIBRARY_PATH")
+        if clean is None:
+            os.environ.pop("LD_LIBRARY_PATH", None)
+        else:
+            os.environ["LD_LIBRARY_PATH"] = clean
+        try:
+            yield
+        finally:
+            if before is None:
+                os.environ.pop("LD_LIBRARY_PATH", None)
+            else:
+                os.environ["LD_LIBRARY_PATH"] = before
+
+    return swap()
+
+
 def open_folder(path) -> bool:
     """Show a folder in the OS file manager. Returns False if that isn't possible.
 
@@ -80,7 +135,8 @@ def open_folder(path) -> bool:
     try:
         # explorer.exe returns 1 even when it succeeds, so the exit code is not
         # a usable signal on any platform here.
-        subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.Popen(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                         env=system_tool_env())
         return True
     except Exception:
         return False

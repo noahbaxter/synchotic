@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 from typing import Callable, Optional
 
+from ..core.files import system_tools_on_path
 from ..core.logging import debug_log
 
 # OAuth imports are optional (only needed for admin script)
@@ -107,7 +108,12 @@ class OAuthManager:
                     str(self.credentials_path),
                     self.SCOPES
                 )
-                creds = flow.run_local_server(port=0)
+                # run_local_server opens the consent page through webbrowser,
+                # which is xdg-open on Linux. A frozen build that hands it our
+                # bundled libraries gets no browser and no error, just a wait
+                # for a click nobody was invited to make.
+                with system_tools_on_path():
+                    creds = flow.run_local_server(port=0)
             except Exception as e:
                 debug_log(f"OAUTH | interactive flow failed | {e}")
                 print("  Sign-in failed. See .dm-sync/logs.")
@@ -335,7 +341,8 @@ class UserOAuthManager:
 
         try:
             flow = InstalledAppFlow.from_client_config(client_config, USER_OAUTH_SCOPES)
-            creds = flow.run_local_server(port=0)
+            with system_tools_on_path():  # see the note on the other flow
+                creds = flow.run_local_server(port=0)
 
             if creds:
                 self._save_token(creds)
