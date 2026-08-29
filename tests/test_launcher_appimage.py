@@ -112,8 +112,16 @@ class TestTheCommandHandedToWezTerm:
             captured["path"] = path
             captured["argv"] = argv
 
+        def fake_survived(cmd, env):
+            captured["path"] = cmd[0]
+            captured["argv"] = cmd
+            return True
+
         monkeypatch.setattr(launcher.os, "execve", fake_execve)
-        launcher.maybe_relaunch_in_host()
+        monkeypatch.setattr(launcher, "host_survived_startup", fake_survived)
+        monkeypatch.setattr(launcher, "get_dm_sync_dir", lambda: tmp_path)
+        with pytest.raises(SystemExit):
+            launcher.maybe_relaunch_in_host()
         return captured
 
     def test_it_names_the_file_the_user_keeps(self, spawned, in_appimage):
@@ -178,3 +186,82 @@ class TestTheMovedLauncherCheck:
         launcher.handle_directory_change()
 
         assert asked == [True]
+
+
+class TestWhenTheWaylandWindowWillNotStayOpen:
+    """A KWin session can hand WezTerm a wp_linux_drm_syncobj surface that Mesa
+    then commits with no acquire point. The protocol error kills the message
+    loop, so the window opens and shuts and the report is "clicking the icon
+    does nothing". WezTerm raises it as a desktop notification rather than on
+    any stream we own, and the crash is specific to a GPU stack, so the only
+    thing worth reading is whether the window it opened is still there.
+    """
+
+    @pytest.fixture
+    def attempts(self, in_appimage, monkeypatch, tmp_path):
+        """Every command tried, with each attempt's fate scripted in turn."""
+        monkeypatch.setattr(launcher, "get_dm_sync_dir", lambda: tmp_path)
+        monkeypatch.setattr(launcher, "log", lambda *a: None)
+        tried = []
+
+        def script(*fates):
+            def fake_survived(cmd, env):
+                tried.append(cmd)
+                return fates[len(tried) - 1]
+            monkeypatch.setattr(launcher, "host_survived_startup", fake_survived)
+            return tried
+
+        return script
+
+    def test_a_window_that_stays_open_is_left_alone(self, attempts):
+        tried = attempts(True)
+        with pytest.raises(SystemExit) as e:
+            launcher.relaunch_in_host_linux(["wezterm-gui", "start"], {})
+        assert e.value.code == 0
+        assert len(tried) == 1, "a working session must not be retried"
+        assert "enable_wayland=false" not in tried[0]
+
+    def test_a_window_that_dies_is_retried_without_wayland(self, attempts):
+        tried = attempts(False, True)
+        with pytest.raises(SystemExit) as e:
+            launcher.relaunch_in_host_linux(["wezterm-gui", "start"], {})
+        assert e.value.code == 0
+        assert tried[1] == ["wezterm-gui", "--config", "enable_wayland=false", "start"]
+
+    def test_the_override_lands_before_the_subcommand(self, attempts):
+        """Anything after "start" is an argument to it, not to WezTerm."""
+        cmd = launcher.without_wayland(
+            ["wezterm-gui", "--config-file", "x.lua", "start", "--", "prog"])
+        assert cmd.index("--config") < cmd.index("start")
+        assert cmd[-2:] == ["--", "prog"]
+
+    def test_a_proven_fallback_is_remembered(self, attempts, tmp_path):
+        attempts(False, True)
+        with pytest.raises(SystemExit):
+            launcher.relaunch_in_host_linux(["wezterm-gui", "start"], {})
+        assert launcher.no_wayland_marker().exists()
+
+    def test_the_next_launch_skips_straight_to_x11(self, attempts, monkeypatch, tmp_path):
+        attempts(True)
+        (tmp_path / "no-wayland").write_text("")
+        execed = {}
+
+        def fake_execve(path, argv, env):
+            execed["argv"] = argv
+            raise SystemExit(0)  # the real one never returns either
+
+        monkeypatch.setattr(launcher.os, "execve", fake_execve)
+
+        with pytest.raises(SystemExit):
+            launcher.relaunch_in_host_linux(["wezterm-gui", "start"], {})
+
+        assert "enable_wayland=false" in execed["argv"]
+
+    def test_a_failure_on_both_is_not_recorded(self, attempts):
+        """Nothing was proven, and forcing X11 forever would hide the real fault."""
+        tried = attempts(False, False)
+        with pytest.raises(SystemExit) as e:
+            launcher.relaunch_in_host_linux(["wezterm-gui", "start"], {})
+        assert e.value.code == 1
+        assert len(tried) == 2
+        assert not launcher.no_wayland_marker().exists()

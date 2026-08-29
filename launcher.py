@@ -26,6 +26,7 @@ LAUNCHER_VERSION = "1.3"
 RELEASE_TAG = ""  # Injected to "dev-latest" for dev launcher builds
 WEZTERM_VERSION = "20240203-110809-5046fc22"  # Windows/Linux host, downloaded first-run
 LINUX_WM_CLASS = "synchotic"  # must match the .desktop basename, or KDE cannot pair them
+HOST_STARTUP_GRACE = 4.0  # seconds a WezTerm window that actually opened will outlive
 
 
 def get_ssl_context():
@@ -892,6 +893,71 @@ def ensure_wezterm_linux() -> bool:
         return False
 
 
+def without_wayland(cmd: list) -> list:
+    """The same WezTerm command, told to talk X11 instead of Wayland.
+
+    On some GPU stacks KWin offers wp_linux_drm_syncobj, Mesa then commits a
+    buffer with no acquire point, and the protocol error kills WezTerm's message
+    loop before anything reaches the screen (wezterm/wezterm#6645). Nothing in
+    WezTerm binds that protocol itself, so there is no newer build to move to:
+    20240203 is still the newest release there has ever been. XWayland does not
+    go anywhere near that path.
+
+    Before "start", not after: everything past the subcommand belongs to it.
+    """
+    return [cmd[0], "--config", "enable_wayland=false", *cmd[1:]]
+
+
+def no_wayland_marker() -> Path:
+    """Set once XWayland has been proven to work here and Wayland has not.
+
+    Beside the logs, not beside the launcher: a portable install sits in a
+    folder the user picked, and our bookkeeping does not belong in it.
+    """
+    return get_dm_sync_dir() / "no-wayland"
+
+
+def host_survived_startup(cmd: list, env: dict) -> bool:
+    """Start WezTerm and wait long enough to see whether the window sticks.
+
+    A window that opens and shuts is the whole symptom, and it is the only
+    signal available: WezTerm reports the protocol error through a desktop
+    notification, so there is nothing on our end to read. Anything still alive
+    after the grace period has a real window with the app running in it.
+    """
+    proc = subprocess.Popen(cmd, env=env)
+    try:
+        code = proc.wait(timeout=HOST_STARTUP_GRACE)
+    except subprocess.TimeoutExpired:
+        return True
+    log(f"WezTerm exited {code} within {HOST_STARTUP_GRACE}s of starting")
+    return False
+
+
+def relaunch_in_host_linux(cmd: list, env: dict) -> NoReturn:
+    """Open the window, and fall back to XWayland if Wayland cannot hold one."""
+    if no_wayland_marker().exists():
+        cmd = without_wayland(cmd)
+        os.execve(cmd[0], cmd, env)  # replaces this process; does not return
+
+    if host_survived_startup(cmd, env):
+        sys.exit(0)  # the window is up and owns the session now
+
+    log("Retrying WezTerm without Wayland")
+    if not host_survived_startup(without_wayland(cmd), env):
+        log("WezTerm would not stay open either way")
+        sys.exit(1)
+
+    # Only now, with XWayland proven to work on this machine, is it worth
+    # skipping straight to it. Guessing earlier would cost every other Linux
+    # user native Wayland to fix a fault none of them have.
+    try:
+        no_wayland_marker().write_text("")
+    except OSError as e:
+        log(f"Could not record the Wayland fallback: {e}")
+    sys.exit(0)
+
+
 def maybe_relaunch_in_host():
     """Re-exec into a WezTerm window when launched from a GUI."""
     if "--hosted" in sys.argv:
@@ -932,6 +998,8 @@ def maybe_relaunch_in_host():
         DETACHED_PROCESS = 0x00000008
         subprocess.Popen(cmd, creationflags=DETACHED_PROCESS, close_fds=True, env=env)
         sys.exit(0)
+    if sys.platform.startswith("linux"):
+        relaunch_in_host_linux(cmd, env)  # may exec, always exits
     os.execve(str(wezterm), cmd, env)  # replaces this process; does not return
 
 
