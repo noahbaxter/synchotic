@@ -17,6 +17,24 @@ def pytest_configure(config):
     )
 
 
+@pytest.fixture(autouse=True)
+def isolated_os_dirs(monkeypatch, tmp_path):
+    """Keep OS-dirs mode inside this test's own tmp dir, on every platform.
+
+    Patching Path.home is not enough. _os_dir reads LOCALAPPDATA on Windows and
+    XDG_DATA_HOME on Linux before it ever looks at home, so every test that
+    turned on SYNCHOTIC_OS_DIRS shared the runner's real data dir: one test left
+    a settings.json behind and the next one's adoption declined to run, because
+    declining when a real install is already there is exactly its job. It passed
+    on macOS, which has no such variable, and failed on Windows CI on whichever
+    tests the random order happened to put second.
+    """
+    monkeypatch.setenv("LOCALAPPDATA", str(tmp_path / "AppData" / "Local"))
+    monkeypatch.setenv("XDG_DATA_HOME", str(tmp_path / "xdg" / "data"))
+    monkeypatch.setenv("XDG_CACHE_HOME", str(tmp_path / "xdg" / "cache"))
+    monkeypatch.setenv("XDG_STATE_HOME", str(tmp_path / "xdg" / "state"))
+
+
 @dataclass
 class SyncEnv:
     """Isolated sync environment for integration tests."""
