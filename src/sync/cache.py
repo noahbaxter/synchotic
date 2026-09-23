@@ -460,8 +460,10 @@ class SyncCache:
     def clear_folder(self, folder_path: str):
         """Clear cached data for a specific folder."""
         self.local_files.pop(folder_path, None)
-        # Clear actual_charts for this folder and all subfolders
-        to_remove = [k for k in self.actual_charts if k.startswith(folder_path)]
+        # Clear actual_charts for this folder and all subfolders. list() copies
+        # the keys in one step, so a scan thread adding one mid-loop cannot
+        # raise "dictionary changed size during iteration".
+        to_remove = [k for k in list(self.actual_charts) if k.startswith(folder_path)]
         for k in to_remove:
             self.actual_charts.pop(k, None)
 
