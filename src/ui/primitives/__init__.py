@@ -42,10 +42,6 @@ from .keyboard_input import (
     KEY_TAB,
     KEY_SPACE,
 )
-from .path_input import (
-    Browse,
-    input_with_browse,
-)
 from .spinner import working
 from .colors import (
     Colors,
@@ -80,9 +76,7 @@ __all__ = [
     "getch_with_timeout",
     "check_esc_pressed",
     "input_with_esc",
-    "input_with_browse",
     "working",
-    "Browse",
     "wait_for_key",
     "menu_input",
     "flush_input",

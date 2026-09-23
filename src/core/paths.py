@@ -410,7 +410,6 @@ from .legacy_migration import (  # noqa: E402,F401
     adopt_legacy_install,
     stale_data_dir_warning,
     find_legacy_install,
-    find_legacy_markers,
     migrate_to_os_dirs,
     migrate_legacy_files,
     migrate_unsanitized_paths,

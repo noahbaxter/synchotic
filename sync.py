@@ -423,8 +423,7 @@ def main():
         # out, no drives, and an empty default library that the next sync fills
         # by downloading the whole collection again.
         print(f"\n  A newer setup exists in {stale}")
-        print("  but this install already has settings and will not overwrite them.")
-        print("  Settings > Library, pointed at that folder, imports it.\n")
+        print("  but this install already has settings and will not overwrite them.\n")
 
     # settings.json is meant to be edited, so write it on the first run, after
     # adoption has had its say about what goes in it.

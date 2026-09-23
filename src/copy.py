@@ -51,6 +51,24 @@ SETTINGS_OPEN_DATA = f"{SETTINGS} > {ROW_APP} > {ROW_OPEN_DATA}"
 
 FIX_FROM = "Go to {where}."
 
+# --- buttons and step names -------------------------------------------------
+
+BTN_BACK = "Back"
+BTN_CANCEL = "Cancel"
+
+SETUP_TITLE = "FIRST TIME SETUP"
+STEP_LIBRARY = "Chart Library"
+
+# --- deleting ---------------------------------------------------------------
+
+# {what} is DELETION_ANY before a folder is counted and DELETION_ALL after.
+DELETION_WARNING = (
+    "{warn_open}BE WARNED:{warn_close} {what} in this folder "
+    "{warn_open}WILL BE DELETED{warn_close} on sync."
+)
+DELETION_ANY = "any unmanaged files"
+DELETION_ALL = "all {files}"   # {files} is count(n, "unmanaged file")
+
 # --- the library ------------------------------------------------------------
 
 LIBRARY_UNSET = "No library set"
@@ -72,6 +90,11 @@ STATUS_SIGNED_OUT = "You are signed out"
 STATUS_SIGNIN_EXPIRED = "Your sign-in has expired"
 FIX_SIGN_IN = f"Sign in again from {SETTINGS_SIGN_IN}, then re-sync."
 
+# How something the user started came out. A failure is printed as
+# "FAILURE: {reason}" with the real reason, not advice written for a guess.
+SUCCESS = "SUCCESS"
+FAILURE = "FAILURE"
+
 CREDENTIALS_FILE = "credentials.json"
 
 ANON_LIMIT = ("Many charts may still download, but expect game rips and large "
@@ -83,6 +106,42 @@ NO_DRIVES = "No drives enabled"
 NO_SETLISTS = "No setlists enabled"
 TOGGLE_DRIVE = "Press Space to toggle one."
 TOGGLE_SETLIST = "Press Tab on a drive to enter it, then Space to toggle."
+
+
+# ===========================================================================
+# Setup step 1: where the charts go
+# ===========================================================================
+
+LIBRARY_QUESTION = "Where should the library live?"
+LIBRARY_BROWSE = "Pick a folder"
+LIBRARY_TYPE = "Path: "
+
+FOLDER_CREATE_ASK = "Create {path}?"
+FOLDER_NOT_A_FOLDER = "ERROR: Not a folder: {path}"
+
+# --- what the folder turned out to be --------------------------------------
+#
+# Asked after a folder is picked. CONFIRM_Q for an empty folder or an existing
+# library. CONFIRM_RISKY_Q when the folder has other stuff in it: the deletion
+# warning is shown right above it, and the cursor starts on "No".
+
+CONFIRM_Q = "Use this folder?"
+CONFIRM_RISKY_Q = "Are you sure you want to use this folder?"
+
+LIBRARY_USE = "Yes, use this folder"
+LIBRARY_PICK_ANOTHER = "No, choose another"
+
+FOLDER_IS_NEW = "This folder is empty."
+
+# Anything in the folder that is not ours, charts or not. {counts} is the
+# folder's contents ("12 chart folders, 89 files, 20 folders"), with a "+" on
+# the numbers when counting stopped early.
+
+FOLDER_NOT_EMPTY = "{counts}\n\n{warning}"
+
+KNOWN_LIBRARY = "Existing Synchotic library found."
+
+DRIVE_LINE = "  · {name}: {setlists}"
 
 
 # ===========================================================================

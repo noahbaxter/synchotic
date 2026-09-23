@@ -149,15 +149,6 @@ def default_library_to_adopt():
     return None
 
 
-def find_legacy_markers(library_path):
-    """Markers from any pre-1.5 layout, under either state-dir name."""
-    state = find_legacy_install(library_path)
-    if state is None:
-        return None
-    markers = state / "markers"
-    return markers if markers.is_dir() else None
-
-
 def migrate_to_os_dirs(legacy_root=None) -> list:
     """Copy a portable .dm-sync into the OS dirs the .app uses.
 
@@ -172,8 +163,7 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
         return []
     # v1.4.2 and earlier told users to drop the launcher into their own songs
     # folder (README step 2), so the legacy root is wherever they put it. There
-    # is no default worth guessing: the caller supplies it, normally from the
-    # folder the user picks in the library screen.
+    # is no default worth guessing: the caller supplies it.
     root = legacy_root or os.environ.get(LEGACY_ROOT_ENV)
     if not root:
         return []

@@ -9,8 +9,9 @@ Usage:
     display.folder_complete(downloaded, bytes, duration, errors)
 """
 
+from ... import copy
 from ..primitives.colors import Colors
-from ...core.formatting import format_size, format_duration, format_speed
+from ...core.formatting import count, format_size, format_duration, format_speed
 
 _c = Colors
 
@@ -130,54 +131,94 @@ def byoc_not_configured(instructions_path=None, opened: bool = False) -> None:
     print()
 
 
-def library_prompt(current, can_browse: bool = False) -> None:
-    print()
-    print("  Chart Library")
-    print()
-    print("  Charts currently live in:")
-    print(f"    {current}")
-    print()
-    print("  Enter a folder to use instead. Markers and staging live inside the")
-    print("  library, so moving the folder later takes its state with it.")
-    print()
-    if can_browse:
-        print(f"  {_c.DIM}Press B to browse, or ESC to cancel{_c.RESET}")
-    else:
-        print(f"  {_c.DIM}Press ESC to cancel{_c.RESET}")
-    print()
+def setup_frame(question: str, body: str, setup_step=None, step_name="") -> tuple:
+    """(box title, subtitle) for one screen. Inside setup the box is headed
+    FIRST TIME SETUP with "Chart Library - 1/3" under it, so the steps read
+    as one sequence, and the question moves to just above the answers."""
+    if not setup_step:
+        return question, body
 
+    # (step, total) or (step, total, title): a repair launch is headed as
+    # setup, not as a first run.
+    step, total, *title = setup_step
+    parts = [f"{step_name or question} - {step}/{total}"]
+    if body:
+        parts.append(body)
+    # A screen whose options are the answer passes "" and has none.
+    if question and step_name and question != step_name:
+        parts.append(question)
+    return (title[0] if title else copy.SETUP_TITLE), "\n\n".join(parts)
 
 
 def library_not_a_folder(path) -> None:
-    print(f"\n  Not a folder: {path}\n")
+    print(f"\n  {copy.FOLDER_NOT_A_FOLDER.format(path=path)}\n")
 
 
-def library_create_failed(path, err) -> None:
-    print(f"\n  Could not create {path}")
-    print(f"  {err}\n")
+def library_create_failed(err) -> None:
+    """The OS error names the path and why, so it is the whole message."""
+    print(f"\n  {copy.FAILURE}: {err}\n")
 
 
-def library_is_new(path) -> None:
-    print()
-    print("  Synchotic has not synced here before, so it looks empty.")
-    print("  The next sync will download everything again into this folder.")
-    print()
+def library_not_empty(path, chart_folders: int, files: int, folders: int,
+                      more: bool = False) -> str:
+    """A folder with things in it Synchotic did not put there. Returned, not
+    printed: a menu comes next and repaints the screen."""
+    return f"{path}\n\n" + copy.FOLDER_NOT_EMPTY.format(
+        counts=_counts(chart_folders, files, folders, more),
+        warning=deletion_warning(files, more))
 
 
-def library_imported(legacy, items) -> None:
-    print()
-    print(f"  {_c.SUCCESS}Imported your previous setup{_c.RESET} from:")
-    print(f"    {legacy}")
-    print(f"  {', '.join(items)}")
-    print(f"  {_c.DIM}The old folder was left as it was.{_c.RESET}")
-    print()
+def deletion_warning(files: int = 0, more: bool = False) -> str:
+    """The one warning, coloured. No count for a folder of empty folders:
+    "all 0 files" reads as nothing at stake, and the folders still go."""
+    what = (copy.DELETION_ALL.format(files=count(files, "unmanaged file", more))
+            if files else copy.DELETION_ANY)
+    return copy.DELETION_WARNING.format(warn_open=_c.ERROR,
+                                        warn_close=_c.RESET, what=what)
 
 
-def library_changed(path) -> None:
-    print()
-    print("  Chart library is now:")
-    print(f"    {path}")
-    print()
+def _counts(chart_folders: int, files: int, folders: int, more: bool) -> str:
+    parts = [count(chart_folders, "chart folder", more)] if chart_folders else []
+    parts += [count(files, "file", more), count(folders, "folder", more)]
+    return ", ".join(parts)
+
+
+def library_contents(contents) -> str:
+    """Drives in a library under their group headings, in home screen order.
+    `contents` is (group, name, setlist count)."""
+    lines, current = [], None
+    for group, name, setlists in contents:
+        heading = (group or "OTHER").upper()
+        if heading != current:
+            if lines:
+                lines.append("")
+            # Dimmed, so a heading reads differently from the drives under it.
+            lines.append(f"{_c.MUTED_DIM}{heading}{_c.RESET}")
+            current = heading
+        lines.append(copy.DRIVE_LINE.format(
+            name=name, setlists=count(setlists, "setlist")))
+    return "\n".join(lines)
+
+
+def library_summary(path, *, chart_folders: int, files: int, folders: int,
+                    more: bool, drive_matches=(), has_markers: bool = False,
+                    contents=()) -> tuple:
+    """(question, body, risky) for the folder somebody just picked. `risky`
+    is true when a sync would delete what is in it, and puts the cursor on
+    No."""
+    where = f"{path}\n\n"
+    listing = f"\n\n{library_contents(contents)}" if contents else ""
+
+    if has_markers or drive_matches:
+        return (copy.CONFIRM_Q, where + copy.KNOWN_LIBRARY + listing, False)
+
+    # Anything in here that is not ours gets deleted on sync, charts or not.
+    if files or folders:
+        return (copy.CONFIRM_RISKY_Q,
+                library_not_empty(path, chart_folders, files, folders, more),
+                True)
+
+    return (copy.CONFIRM_Q, where + copy.FOLDER_IS_NEW, False)
 
 
 def library_unavailable(path) -> None:
