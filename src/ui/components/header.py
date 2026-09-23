@@ -1,11 +1,18 @@
 """
 Application header component.
 
-ASCII art header with gradient coloring.
+ASCII art header with gradient coloring. chotic-ui draws it on every screen;
+this configures it.
 """
 
-from ..primitives import Colors, rgb, get_gradient_color
-from ..primitives.colors import get_theme_name, THEME_SWITCHER_ENABLED
+from chotic_ui.components.header import (
+    configure_header,
+    header_height,
+    invalidate_header_cache,
+    print_header as _draw_header,
+)
+
+from ..primitives import Colors
 
 
 ASCII_HEADER = r"""
@@ -17,48 +24,69 @@ ASCII_HEADER = r"""
 ╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝ ╚═════╝
 """.strip('\n')
 
+LIBRARY_LABEL = "library → "
+NOT_SET = "NOT SET"
 
-_header_cache = None
-_header_theme = None
-
-
-def invalidate_header_cache():
-    """Clear cached header (call on terminal resize or theme change)."""
-    global _header_cache, _header_theme
-    _header_cache = None
-    _header_theme = None
+__all__ = ["ASCII_HEADER", "install_header", "print_header", "header_height",
+           "invalidate_header_cache", "library_detail"]
 
 
-def print_header():
-    """Print the ASCII header with diagonal gradient and version."""
-    global _header_cache, _header_theme
+def install_header() -> None:
+    """Hand chotic-ui the banner, the version, and the library line."""
+    from src import __version__
+    configure_header(ASCII_HEADER, __version__, detail=library_detail)
 
-    current_theme = get_theme_name()
-    if _header_cache is None or _header_theme != current_theme:
-        from src import __version__
 
-        _header_theme = current_theme
+def print_header() -> None:
+    """Draw the banner, installing it first if nothing has yet."""
+    if not header_height():
+        install_header()
+    _draw_header()
 
-        lines = ASCII_HEADER.split('\n')
-        total = len(lines)
-        cached_lines = []
 
-        for row, line in enumerate(lines):
-            result = []
-            for col, char in enumerate(line):
-                if char != ' ':
-                    pos = (row / total) * 0.4 + (col / len(line)) * 0.6
-                    r, g, b = get_gradient_color(pos)
-                    result.append(f"{rgb(r, g, b)}{char}")
-                else:
-                    result.append(char)
-            cached_lines.append(''.join(result) + Colors.RESET)
+def library_detail(room: int) -> str:
+    """Where the charts are going: "library → path", fitted into `room`, or
+    NOT SET in the error colour. It is on every screen because a path that
+    only appears in Settings is a path nobody checks."""
+    from ...core import paths
 
-        version_line = f" {Colors.DIM}v{__version__}{Colors.RESET}"
-        if THEME_SWITCHER_ENABLED:
-            version_line += f"  {Colors.MUTED}theme: {Colors.PRIMARY}{current_theme}{Colors.RESET}"
-        cached_lines.append(version_line)
-        cached_lines.append("")
-        _header_cache = '\n'.join(cached_lines)
+    if room <= len(LIBRARY_LABEL):
+        return ""
+    if not paths.library_is_set():
+        return f"{Colors.MUTED}{LIBRARY_LABEL}{Colors.RESET}{Colors.ERROR}{NOT_SET}{Colors.RESET}"
 
-    print(f"\n{_header_cache}")
+    library = _library_label()
+    if not library:
+        return ""
+    path = _fit_path(library, room - len(LIBRARY_LABEL))
+    return f"{Colors.MUTED}{LIBRARY_LABEL}{Colors.RESET}{path}"
+
+
+def _fit_path(path: str, room: int) -> str:
+    """Shorten from the front: the folder name at the end is the part anyone
+    reads."""
+    if len(path) <= room:
+        return path
+    parts = path.split("/")
+    while len(parts) > 1:
+        parts.pop(0)
+        candidate = "…/" + "/".join(parts)
+        if len(candidate) <= room:
+            return candidate
+    return "…" + path[-(room - 1):]
+
+
+def _library_label() -> str:
+    """The library path, with home shortened to ~. Empty if it cannot be read."""
+    from pathlib import Path
+
+    from ...core import paths
+
+    try:
+        library = Path(paths.get_library_path())
+    except Exception:
+        return ""
+    try:
+        return f"~/{library.relative_to(Path.home())}"
+    except ValueError:
+        return str(library)

@@ -305,10 +305,9 @@ def main():
     # itself via chotic-ui's print_header, which is a no-op until the app hands
     # it the art. Without this the first paint wipes the banner for good, and
     # the menu still reserves its 8 lines of height for it.
-    from chotic_ui import configure_header, set_theme
+    from chotic_ui import set_theme
     from chotic_ui.primitives.host import bootstrap, use_alt_screen
-    from src.ui.components.header import ASCII_HEADER
-    from src import __version__ as _app_version
+    from src.ui.components.header import install_header
     from src.ui.theme import DEFAULT_THEME
 
     # The .app renames the binary to synchotic-tui so it does not collide with
@@ -348,7 +347,7 @@ def main():
     # taller, drags old rows back under the new frame.
     use_alt_screen()
 
-    configure_header(ASCII_HEADER, _app_version)
+    install_header()
 
     set_theme(os.environ.get("SYNCHOTIC_THEME") or DEFAULT_THEME)
 
