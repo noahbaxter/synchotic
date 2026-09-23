@@ -37,10 +37,15 @@ SETTINGS = "Settings"
 ROW_ACCOUNT = "Account"
 ROW_MODE = "Mode"
 ROW_SIGN_IN = "Sign in to Google"
+ROW_SIGN_OUT = "Sign out"  # AI-COPY
 ROW_LIBRARY = "Library"
+ROW_OPEN_CHARTS = "Open library"
 ROW_LOCATION = "Edit path"
 ROW_APP = "App"
 ROW_OPEN_DATA = "Open data"
+ROW_DRIVES = "Drives"
+ROW_ADD_CUSTOM = "Add custom drive"
+ROW_RESCAN = "Rescan"  # AI-COPY
 
 SETTINGS_ACCOUNT = f"{SETTINGS} > {ROW_ACCOUNT}"
 SETTINGS_MODE = f"{SETTINGS_ACCOUNT} > {ROW_MODE}"
@@ -50,6 +55,13 @@ SETTINGS_LOCATION = f"{SETTINGS_LIBRARY} > {ROW_LOCATION}"
 SETTINGS_OPEN_DATA = f"{SETTINGS} > {ROW_APP} > {ROW_OPEN_DATA}"
 
 FIX_FROM = "Go to {where}."
+
+# A row's value is its state, or why it is greyed. Never what the row does:
+# the label says that.
+SIGNIN_NOT_USED = "Not used in anonymous mode"  # AI-COPY
+SCANNING = "Scanning…"  # AI-COPY
+
+OPEN_FAILED = "Could not open this folder. It is at:"  # AI-COPY
 
 # --- buttons and step names -------------------------------------------------
 
@@ -66,7 +78,7 @@ SETUP_REPAIR_TITLE = "SETUP REPAIR"
 SETUP_NEEDS_TERMINAL = "Something is misconfigured. Run Synchotic interactively once to repair."
 STEP_LIBRARY = "Chart Library"
 STEP_MODE = "Download Mode"
-STEP_DRIVES = "Drives"
+STEP_DRIVES = ROW_DRIVES
 
 # --- deleting ---------------------------------------------------------------
 

@@ -114,8 +114,25 @@ class AuthMixin:
         if open_folder(data_dir):
             return
         print()
-        print("  Could not open your data folder. It is at:")
+        print(f"  {copy.OPEN_FAILED}")
         print(f"    {data_dir}")
+        print()
+        wait_with_skip(4)
+
+    def handle_open_library_folder(self):
+        """Open the charts folder, and say nothing if that worked."""
+        from src.core.files import open_folder
+        from src.core.paths import get_library_path, library_is_set, plain_path
+
+        if not library_is_set():
+            return
+        library = get_library_path()
+        there = library.is_dir()
+        if there and open_folder(library):
+            return
+        print()
+        print(f"  {copy.OPEN_FAILED if there else copy.LIBRARY_MISSING + ':'}")
+        print(f"    {plain_path(library)}")
         print()
         wait_with_skip(4)
 

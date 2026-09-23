@@ -22,6 +22,8 @@ from pathlib import Path
 
 import certifi
 
+from .. import copy
+
 
 def get_certifi_ssl_context() -> str:
     """Get path to certifi CA bundle, handling PyInstaller bundles."""
@@ -187,9 +189,9 @@ def library_blocked_reason() -> str:
     unmounted library refuses the work up front rather than at the first mkdir.
     """
     if not library_is_set():
-        return "Library not set"
+        return copy.LIBRARY_UNSET
     if not library_is_available():
-        return "Library not connected"
+        return copy.LIBRARY_MISSING
     return ""
 
 

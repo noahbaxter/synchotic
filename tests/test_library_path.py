@@ -11,6 +11,7 @@ from pathlib import Path
 
 import pytest
 
+from src import copy
 from src.config import jsonc
 from src.core import paths
 
@@ -299,7 +300,7 @@ class TestScanGate:
 
     def test_an_unmounted_library_blocks(self, tmp_path):
         paths.set_library_path(tmp_path / "not-mounted")
-        assert paths.library_blocked_reason() == "Library not connected"
+        assert paths.library_blocked_reason() == copy.LIBRARY_MISSING
 
     def test_a_mounted_library_does_not_block(self, tmp_path):
         lib = tmp_path / "mounted"
@@ -312,7 +313,7 @@ class TestScanGate:
         monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
         monkeypatch.delenv("SYNCHOTIC_LIBRARY", raising=False)
         paths.set_library_path(None)
-        assert paths.library_blocked_reason() == "Library not set"
+        assert paths.library_blocked_reason() == copy.LIBRARY_UNSET
 
     def test_the_env_override_counts_as_chosen(self, monkeypatch, tmp_path):
         paths.set_library_path(None)

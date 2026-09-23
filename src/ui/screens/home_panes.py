@@ -111,19 +111,11 @@ def _copy_cache(dst: MainMenuCache, src: MainMenuCache) -> None:
 
 
 def _mode_blocked_reason(user_settings, auth, rclone_connected) -> str:
-    """Menu wording for the shared rule in download_mode.mode_blocked_reason.
+    """The shared rule in download_mode.mode_blocked_reason, in the same
+    words everywhere else says it."""
+    from .download_mode import mode_blocked_reason
 
-    The row has a label beside it, so it reads as an instruction ("Sign in
-    first") where the sync summary needs a clause ("...because you are not
-    signed in").
-    """
-    from .download_mode import mode_blocked_step
-
-    return {
-        "rclone": "Connect rclone first",
-        "byoc_setup": "Needs your Google credentials",
-        "signin": "Sign in first",
-    }.get(mode_blocked_step(user_settings, auth, rclone_connected), "")
+    return mode_blocked_reason(user_settings, auth, rclone_connected)
 
 
 def show_main_menu_panes(
@@ -265,7 +257,7 @@ def show_main_menu_panes(
             add(folder)
 
         rows.append(_rule(LEFT_WIDTH - 2))
-        rows.append(_row(f"{Colors.PRIMARY}⚙{Colors.RESET}  Settings", SETTINGS))
+        rows.append(_row(f"{Colors.PRIMARY}⚙{Colors.RESET}  {copy.SETTINGS}", SETTINGS))
         return rows
 
     # ---- right pane: a drive's setlists ----
@@ -379,35 +371,38 @@ def show_main_menu_panes(
         from ...config.settings import DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_RCLONE
 
         mode = (user_settings.download_mode if user_settings else "") or DOWNLOAD_MODE_RCLONE
+        sign_in = ("act", "signin")
         if mode == DOWNLOAD_MODE_ANONYMOUS:
-            return ("Sign in", "Not used in anonymous mode", ("act", "signin"), False)
+            return (copy.ROW_SIGN_IN, copy.SIGNIN_NOT_USED, sign_in, False)
         if mode == DOWNLOAD_MODE_RCLONE:
             # rclone signs in to Google with its own remote, not our token.
             status = status_warmer.snapshot
             if status.rclone_dead:
-                return ("Sign in to Google", copy.STATUS_SIGNIN_EXPIRED,
-                        ("act", "signin"), True)
+                return (copy.ROW_SIGN_IN, copy.STATUS_SIGNIN_EXPIRED, sign_in, True)
             if status.rclone_connected:
-                return ("Sign out", "", ("act", "signout"), True)
-            return ("Sign in to Google", "", ("act", "signin"), True)
+                return (copy.ROW_SIGN_OUT, "", ("act", "signout"), True)
+            return (copy.ROW_SIGN_IN, "", sign_in, True)
         if auth is not None and getattr(auth, "session_expired", False):
-            return ("Sign in again", "Restores fast downloads", ("act", "signin"), True)
+            return (copy.ROW_SIGN_IN, "", sign_in, True)
         if auth is not None and getattr(auth, "is_signed_in", False):
-            email = getattr(auth, "user_email", "")
-            return ("Sign out", email or "Signed in to Google", ("act", "signout"), True)
+            return (copy.ROW_SIGN_OUT, getattr(auth, "user_email", "") or "",
+                    ("act", "signout"), True)
         if has_custom_client_config():
-            return ("Sign in to Google", "Uses the credentials you set up",
-                    ("act", "signin"), True)
-        return ("Sign in", "Needs your own credentials", ("act", "signin"), False)
+            return (copy.ROW_SIGN_IN, "", sign_in, True)
+        return (copy.ROW_SIGN_IN, copy.STATUS_BYOC, sign_in, False)
 
     def _settings_right():
         from .account import account_status
-        from ...core.paths import get_library_path, plain_path
+        from ...core.paths import library_is_set
 
         def opt(label, value, action, selectable=True):
             """An option the cursor cannot land on is drawn grey throughout, so
-            it reads as unavailable rather than as a row that ignores you."""
-            pad = " " * max(1, 18 - len(label))
+            it reads as unavailable rather than as a row that ignores you.
+
+            `value` is state, or why the row is greyed. Never a description of
+            what the row does: the label says that.
+            """
+            pad = " " * max(2, 20 - len(label))
             if selectable:
                 text = f"  {Colors.MUTED}{label}{Colors.RESET}{pad}{value}"
             else:
@@ -436,46 +431,52 @@ def show_main_menu_panes(
         if blocked:
             rescan = blocked
         elif scanning:
-            rescan = "Scanning…"
+            rescan = copy.SCANNING
         else:
-            rescan = "Force re-scan all drives"
+            rescan = ""
 
         sign_label, sign_value, sign_action, sign_ok = _sign_in_option()
+        # The path itself is on the banner line, so the library rows only say
+        # what is wrong with it.
+        has_library = library_is_set()
+        location = lib_blocked if has_library else f"{Colors.ERROR}{lib_blocked}{Colors.RESET}"
 
         return [
-            _header_row("Account"),
-            # download_mode, under the name the chooser it opens already uses.
-            # The value reports whether that mode can actually download, not
+            _header_row(copy.ROW_ACCOUNT),
+            # The value reports whether the mode can actually download, not
             # just which one is set: a mode that cannot is the thing worth
             # seeing without opening anything.
-            opt("Mode", account_status(user_settings, auth, rclone_connected,
-                                       status.rclone_dead),
+            opt(copy.ROW_MODE, account_status(user_settings, auth, rclone_connected,
+                                              status.rclone_dead),
                 ("act", "download_mode")),
             opt(sign_label, sign_value, sign_action, sign_ok),
             _spacer(),
-            _header_row("Library"),
-            # Changing it rescans the new location, so it fails the same way
-            # a rescan does -- except when the library itself is the problem,
-            # which is what this row exists to fix.
-            opt("Location", mode_blocked or lib_blocked or plain_path(get_library_path()),
-                ("act", "library"), selectable=not mode_blocked),
-            # Opens a local folder, so it works with no Drive access at all.
-            opt("Open folder", "Settings, logs, credentials", ("act", "open_data_folder")),
+            _header_row(copy.ROW_LIBRARY),
+            # Two folders, two rows. One "Open folder" under the Library
+            # header that opened the settings folder is how people ended up
+            # looking for their charts in Application Support.
+            opt(copy.ROW_OPEN_CHARTS, "" if has_library else lib_blocked,
+                ("act", "open_library"), selectable=has_library),
+            # Never gated on the download mode. Picking a folder is a local
+            # act that needs nothing from Drive, and gating it told a new user
+            # to connect rclone before they could say where their charts go.
+            opt(copy.ROW_LOCATION, location, ("act", "library")),
             _spacer(),
-            _header_row("Drives"),
+            _header_row(copy.ROW_APP),
+            # Opens a local folder, so it works with no Drive access at all.
+            opt(copy.ROW_OPEN_DATA, "", ("act", "open_data_folder")),
+            _spacer(),
+            _header_row(copy.ROW_DRIVES),
             # Resolving a folder is a Drive call: without a working mode it
             # only ever reaches "access denied", several screens in.
-            opt("Add folder", mode_blocked or "Your own Google Drive folder",
+            opt(copy.ROW_ADD_CUSTOM, mode_blocked,
                 ("act", "add_custom"), selectable=not mode_blocked),
             # A rescan with no working mode or no library to write into
             # returns before doing any work, and one during a scan has nothing
             # to add, so none of the three is offerable.
-            opt("Rescan", rescan, ("act", "rescan"),
+            opt(copy.ROW_RESCAN, rescan, ("act", "rescan"),
                 selectable=not (blocked or scanning)),
         ]
-
-    def _download_mode_label(settings):
-        return (getattr(settings, "download_mode", "") if settings else "") or "Not set"
 
     # ---- wiring ----
 
@@ -485,7 +486,7 @@ def show_main_menu_panes(
         pane = pane_box.get("pane")
         if active == SETTINGS:
             if pane:
-                pane.right_header = f"{Colors.BOLD}Settings{Colors.RESET}"
+                pane.right_header = f"{Colors.BOLD}{copy.SETTINGS}{Colors.RESET}"
                 pane.show_count = False
             return _settings_right()
 

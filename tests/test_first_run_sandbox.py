@@ -5,6 +5,7 @@ import os
 import pytest
 
 import sync as sync_entry
+from src import copy
 from src.core import paths
 from src.core.legacy_migration import FRESH_ENV, default_library_to_adopt
 
@@ -31,7 +32,7 @@ class TestTheSandbox:
         assert str(paths.get_data_dir()).startswith(str(sandbox))
 
     def test_no_library_is_set(self, sandbox):
-        assert paths.library_blocked_reason() == "Library not set"
+        assert paths.library_blocked_reason() == copy.LIBRARY_UNSET
 
     def test_a_former_default_library_is_not_adopted(self, sandbox, tmp_path, monkeypatch):
         """Without this the charts already on disk get picked up and the

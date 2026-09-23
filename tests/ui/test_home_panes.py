@@ -137,8 +137,8 @@ class TestTheRightPane:
 
     def test_settings_shows_the_options_not_setlists(self, build):
         labels = " ".join(_labels(build()["right_for"](SETTINGS)))
-        assert "Add folder" in labels
-        assert "Location" in labels
+        assert copy.ROW_ADD_CUSTOM in labels
+        assert copy.ROW_LOCATION in labels
         assert "Setlist A" not in labels
 
     def test_rescan_is_unselectable_when_the_mode_cannot_reach_drive(self, build):
@@ -544,37 +544,43 @@ class TestUnavailableOptionsLookUnavailable:
 
 
 class TestDriveRowsNeedAWorkingMode:
-    """Add folder, Rescan and Location all make Drive calls, so an unusable
-    mode has to stop them at the menu rather than several screens in at
-    "access denied"."""
+    """Add custom drive and Rescan make Drive calls, so an unusable mode has to
+    stop them at the menu rather than several screens in at "access denied"."""
 
-    GATED = [("act", "add_custom"), ("act", "rescan"), ("act", "library")]
+    GATED = [("act", "add_custom"), ("act", "rescan")]
 
     def _rows(self, build, **kw):
         return {r[1]: r for r in build(**kw)["right_for"](SETTINGS) if r[1] in self.GATED}
 
-    def test_byoc_without_credentials_blocks_all_three(self, build):
+    def test_byoc_without_credentials_blocks_them(self, build):
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_BYOC, byoc_creds=False)
-        assert [rows[v][2] for v in self.GATED] == [False, False, False]
+        assert [rows[v][2] for v in self.GATED] == [False, False]
 
     def test_the_row_says_why_it_is_unavailable(self, build):
         """A greyed row with no reason reads as broken rather than unavailable."""
         from src.ui.components import strip_ansi
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_BYOC, byoc_creds=False)
         text = strip_ansi(rows[("act", "add_custom")][0](False, False))
-        assert "Needs your Google credentials" in text
+        assert copy.STATUS_BYOC in text
 
-    def test_unconnected_rclone_says_to_connect_it(self, build):
+    def test_unconnected_rclone_says_so(self, build):
         from src.ui.components import strip_ansi
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_RCLONE, rclone_authed=False)
         text = strip_ansi(rows[("act", "add_custom")][0](False, False))
-        assert "Connect rclone first" in text
+        assert copy.STATUS_RCLONE in text
 
-    def test_anonymous_mode_leaves_all_three_available(self, build):
+    def test_anonymous_mode_leaves_them_available(self, build):
         """The regression to avoid: gating these on sign-in would kill a mode
         that resolves public folders on the API key alone."""
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_ANONYMOUS)
-        assert [rows[v][2] for v in self.GATED] == [True, True, True]
+        assert [rows[v][2] for v in self.GATED] == [True, True]
+
+    def test_picking_a_library_is_never_gated_on_the_mode(self, build):
+        """Picking a folder is local. Gating it told a new user to connect
+        rclone before they could say where their charts go."""
+        rows = build(auth=None, mode=DOWNLOAD_MODE_RCLONE,
+                     rclone_authed=False)["right_for"](SETTINGS)
+        assert next(r for r in rows if r[1] == ("act", "library"))[2] is True
 
     def test_open_folder_is_never_gated(self, build):
         """It opens a local directory, so it works with no Drive access."""
@@ -641,7 +647,7 @@ class TestScanRowsNeedALibrary:
         self._unmounted(monkeypatch, tmp_path)
         row = self._settings_rows(build, auth=_Auth())[("act", "rescan")]
         assert row[2] is False
-        assert "Library not connected" in strip_ansi(row[0](False, False))
+        assert copy.LIBRARY_MISSING in strip_ansi(row[0](False, False))
 
     def test_location_stays_reachable(self, build, monkeypatch, tmp_path):
         """It is the row that fixes this, so gating it would be a dead end."""
@@ -654,7 +660,7 @@ class TestScanRowsNeedALibrary:
         rows = build(auth=_Auth(), folders=(self.CUSTOM,))["right_for"](("drive", "custom-1"))
         row = next(r for r in rows if r[1] == ("scan_folder", "custom-1", None))
         assert row[2] is False
-        assert "Library not connected" in strip_ansi(row[0](False, False))
+        assert copy.LIBRARY_MISSING in strip_ansi(row[0](False, False))
 
     def test_a_mounted_library_leaves_both_alone(self, build, monkeypatch, tmp_path):
         lib = tmp_path / "mounted"

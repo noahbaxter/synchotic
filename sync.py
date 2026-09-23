@@ -230,6 +230,9 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
             elif action == "open_data_folder":
                 self.handle_open_data_folder()
 
+            elif action == "open_library":
+                self.handle_open_library_folder()
+
             elif action == "download_mode":
                 self.handle_download_mode()
                 # No cache invalidation needed - only the download tier changed
