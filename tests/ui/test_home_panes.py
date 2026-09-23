@@ -510,12 +510,25 @@ class TestALiveScanDoesNotRepaintForNothing:
         assert pane.update_callback(pane) is False    # nothing moved since
 
     def test_it_repaints_when_the_scan_reports_a_change(self, build):
+        """The recompute lands from a worker within a poll or two. Polls from
+        inside `act`, because the workers stop once the screen returns."""
+        import time
         scanner = _Scanner(done=False)
-        out = build(auth=_Auth(), scanner=scanner)
-        pane = out["pane"]
-        pane.update_callback(pane)
-        scanner.check_updates = lambda: True
-        assert pane.update_callback(pane) is True
+        holder = {"repainted": False}
+
+        def act(pane):
+            pane.update_callback(pane)
+            scanner.check_updates = lambda: True
+
+            deadline = time.time() + 2.0
+            while time.time() < deadline:
+                if pane.update_callback(pane):
+                    holder["repainted"] = True
+                    break
+                time.sleep(0.01)
+
+        build(act=act, auth=_Auth(), scanner=scanner)
+        assert holder["repainted"], "expected a repaint once the background recompute landed"
 
     def test_it_repaints_when_the_footer_text_moves(self, build):
         scanner = _Scanner(done=False)
@@ -753,6 +766,59 @@ class TestThereIsNoFilter:
     def test_the_footer_does_not_advertise_one(self, build):
         from src.ui.components import strip_ansi
         assert "filter" not in strip_ansi(build()["pane"].footer()).lower()
+
+
+def test_a_slow_recompute_never_blocks_the_tick(build, monkeypatch):
+    """A scan change triggers a full recompute that can take tens of seconds.
+    The key loop runs on_tick, so on_tick must never wait for it."""
+    import threading
+    import time
+    import src.ui.screens.home_panes as home_panes
+
+    release = threading.Event()
+    scanner = _Scanner(done=False)
+    elapsed = []
+
+    def act(pane):
+        monkeypatch.setattr(home_panes, "compute_main_menu_cache",
+                            lambda *a, **kw: release.wait(5))
+        scanner.check_updates = lambda: True
+        time.sleep(0.05)  # give the worker a chance to start recomputing
+        t = time.time()
+        pane.update_callback(pane)
+        elapsed.append(time.time() - t)
+        release.set()
+        return None
+
+    build(act=act, auth=_Auth(), scanner=scanner)
+    assert elapsed[0] < 0.5
+
+
+def test_a_toggle_invalidates_any_recompute_in_flight(build, monkeypatch):
+    """A recompute started before the toggle would paint the old numbers back."""
+    calls = []
+
+    class Warmer:
+        def __init__(self, *a, **kw):
+            pass
+
+        def invalidate(self):
+            calls.append("invalidate")
+
+        def drain(self):
+            return None
+
+        def stop(self):
+            pass
+
+    monkeypatch.setattr("src.ui.screens.home_panes.MenuCacheWarmer", Warmer)
+
+    def act(pane):
+        pane._on_left_space(("drive", "drive-1"))
+        return None
+
+    build(act=act)
+    assert calls == ["invalidate"]
 
 
 def test_a_new_status_snapshot_repaints_once(build):

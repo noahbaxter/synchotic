@@ -9,6 +9,7 @@ import hashlib
 import json
 import os
 import shutil
+import threading
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -37,26 +38,32 @@ class FolderStats:
 
 
 class FolderStatsCache:
-    """Per-folder stats cache with selective invalidation (in-memory)."""
+    """Per-folder stats cache with selective invalidation (in-memory). Locked:
+    the menu recompute worker and the toggling main thread both touch it."""
 
     def __init__(self):
         self._cache: dict[str, FolderStats] = {}
+        self._lock = threading.Lock()
 
     def invalidate(self, folder_id: str):
         """Invalidate one folder's stats."""
-        self._cache.pop(folder_id, None)
+        with self._lock:
+            self._cache.pop(folder_id, None)
 
     def invalidate_all(self):
         """Full invalidation (after sync/purge)."""
-        self._cache.clear()
+        with self._lock:
+            self._cache.clear()
 
     def get(self, folder_id: str) -> FolderStats | None:
         """Get cached stats for a folder, or None if not cached."""
-        return self._cache.get(folder_id)
+        with self._lock:
+            return self._cache.get(folder_id)
 
     def set(self, folder_id: str, stats: FolderStats):
         """Store stats for a folder."""
-        self._cache[folder_id] = stats
+        with self._lock:
+            self._cache[folder_id] = stats
 
 
 @dataclass
@@ -117,6 +124,9 @@ class PersistentStatsCache:
 
     Stores per-setlist stats. Folder stats are computed on-the-fly via aggregation.
     Old folder-level cache entries are ignored on load (migration).
+
+    Every public method locks: the main thread writes measured setlists while
+    the menu recompute worker reads.
     """
     CACHE_FILE = "folder_stats.json"
 
@@ -125,6 +135,7 @@ class PersistentStatsCache:
         self._setlist_cache: dict[str, dict[str, CachedSetlistStats]] = {}  # folder_id -> setlist_name -> stats
         self._dirty = False
         self._path = get_cache_dir() / self.CACHE_FILE
+        self._lock = threading.RLock()
         self._load()
 
     def _load(self):
@@ -158,33 +169,34 @@ class PersistentStatsCache:
 
     def save(self):
         """Save cache to disk (only if dirty). Only saves setlist stats (not folder stats)."""
-        if not self._dirty:
-            return
+        with self._lock:
+            if not self._dirty:
+                return
 
-        # Save setlist stats only (folder stats are computed on-the-fly via aggregation)
-        data = {"_setlists": {}}
-        for folder_id, setlists in self._setlist_cache.items():
-            data["_setlists"][folder_id] = {}
-            for setlist_name, stats in setlists.items():
-                data["_setlists"][folder_id][setlist_name] = {
-                    "total_charts": stats.total_charts,
-                    "total_size": stats.total_size,
-                    "synced_charts": stats.synced_charts,
-                    "synced_size": stats.synced_size,
-                    "disk_files": stats.disk_files,
-                    "disk_size": stats.disk_size,
-                    "disk_charts": stats.disk_charts,
-                    "purgeable_files": stats.purgeable_files,
-                    "purgeable_size": stats.purgeable_size,
-                    "purgeable_charts": stats.purgeable_charts,
-                }
+            # Save setlist stats only (folder stats are computed on-the-fly via aggregation)
+            data = {"_setlists": {}}
+            for folder_id, setlists in self._setlist_cache.items():
+                data["_setlists"][folder_id] = {}
+                for setlist_name, stats in setlists.items():
+                    data["_setlists"][folder_id][setlist_name] = {
+                        "total_charts": stats.total_charts,
+                        "total_size": stats.total_size,
+                        "synced_charts": stats.synced_charts,
+                        "synced_size": stats.synced_size,
+                        "disk_files": stats.disk_files,
+                        "disk_size": stats.disk_size,
+                        "disk_charts": stats.disk_charts,
+                        "purgeable_files": stats.purgeable_files,
+                        "purgeable_size": stats.purgeable_size,
+                        "purgeable_charts": stats.purgeable_charts,
+                    }
 
-        try:
-            with open(self._path, "w") as f:
-                json.dump(data, f)
-            self._dirty = False
-        except OSError:
-            pass
+            try:
+                with open(self._path, "w") as f:
+                    json.dump(data, f)
+                self._dirty = False
+            except OSError:
+                pass
 
     def get(self, folder_id: str, settings_hash: str) -> CachedFolderStats | None:
         """
@@ -192,58 +204,67 @@ class PersistentStatsCache:
 
         Returns None if no cache exists or settings have changed.
         """
-        cached = self._cache.get(folder_id)
-        if cached and cached.settings_hash == settings_hash:
-            return cached
-        return None
+        with self._lock:
+            cached = self._cache.get(folder_id)
+            if cached and cached.settings_hash == settings_hash:
+                return cached
+            return None
 
     def set(self, folder_id: str, stats: CachedFolderStats):
         """Store stats for a folder."""
-        self._cache[folder_id] = stats
-        self._dirty = True
+        with self._lock:
+            self._cache[folder_id] = stats
+            self._dirty = True
 
     def get_setlist(self, folder_id: str, setlist_name: str) -> CachedSetlistStats | None:
         """Get cached stats for a setlist."""
-        folder_setlists = self._setlist_cache.get(folder_id, {})
-        return folder_setlists.get(setlist_name)
+        with self._lock:
+            folder_setlists = self._setlist_cache.get(folder_id, {})
+            return folder_setlists.get(setlist_name)
 
     def set_setlist(self, folder_id: str, setlist_name: str, stats: CachedSetlistStats):
         """Store stats for a setlist."""
-        if folder_id not in self._setlist_cache:
-            self._setlist_cache[folder_id] = {}
-        self._setlist_cache[folder_id][setlist_name] = stats
-        self._dirty = True
+        with self._lock:
+            if folder_id not in self._setlist_cache:
+                self._setlist_cache[folder_id] = {}
+            self._setlist_cache[folder_id][setlist_name] = stats
+            self._dirty = True
 
     def get_all_setlists(self, folder_id: str) -> dict[str, CachedSetlistStats]:
         """Get all cached setlist stats for a folder."""
-        return self._setlist_cache.get(folder_id, {})
+        with self._lock:
+            return dict(self._setlist_cache.get(folder_id, {}))
 
     def invalidate(self, folder_id: str):
         """Remove cached stats for a folder (including setlists)."""
-        if folder_id in self._cache:
-            del self._cache[folder_id]
-            self._dirty = True
-        if folder_id in self._setlist_cache:
-            del self._setlist_cache[folder_id]
-            self._dirty = True
+        with self._lock:
+            if folder_id in self._cache:
+                del self._cache[folder_id]
+                self._dirty = True
+            if folder_id in self._setlist_cache:
+                del self._setlist_cache[folder_id]
+                self._dirty = True
 
     def invalidate_setlist(self, folder_id: str, setlist_name: str):
         """Remove cached stats for a single setlist."""
-        if folder_id in self._setlist_cache:
-            if setlist_name in self._setlist_cache[folder_id]:
-                del self._setlist_cache[folder_id][setlist_name]
-                self._dirty = True
+        with self._lock:
+            if folder_id in self._setlist_cache:
+                if setlist_name in self._setlist_cache[folder_id]:
+                    del self._setlist_cache[folder_id][setlist_name]
+                    self._dirty = True
 
     def invalidate_all(self):
         """Clear all cached stats."""
-        if self._cache or self._setlist_cache:
-            self._cache.clear()
-            self._setlist_cache.clear()
-            self._dirty = True
+        with self._lock:
+            if self._cache or self._setlist_cache:
+                self._cache.clear()
+                self._setlist_cache.clear()
+                self._dirty = True
 
     def has_setlist_stats(self, folder_id: str) -> bool:
         """Check if any setlist stats are cached for a folder."""
-        return bool(self._setlist_cache.get(folder_id))
+        with self._lock:
+            return bool(self._setlist_cache.get(folder_id))
 
     def remembered_chart_count(self, folder_id: str, setlist_name: str) -> "int | None":
         """Charts counted the last time this setlist was scanned, or None.
@@ -252,8 +273,9 @@ class PersistentStatsCache:
         to work on sooner. Only ever a hint: a stale or missing count changes
         the order, never the result.
         """
-        stats = self._setlist_cache.get(folder_id, {}).get(setlist_name)
-        return stats.total_charts if stats else None
+        with self._lock:
+            stats = self._setlist_cache.get(folder_id, {}).get(setlist_name)
+            return stats.total_charts if stats else None
 
     @staticmethod
     def compute_settings_hash(folder_id: str, user_settings) -> str:

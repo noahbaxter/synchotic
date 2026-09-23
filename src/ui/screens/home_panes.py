@@ -33,6 +33,7 @@ from ..primitives import Colors
 from ..components import strip_ansi, format_setlist_item
 from .stats_warm import BackgroundWarmer
 from .status_warm import StatusWarmer, StatusSnapshot
+from .menu_cache_warm import MenuCacheWarmer
 from .pane_layout import (
     LEFT_WIDTH, LEFT_CHANGE_W,
     stat_widths as _stat_widths,
@@ -167,6 +168,25 @@ def show_main_menu_panes(
                               library_blocked=library_blocked_reason())
 
     status_warmer = StatusWarmer(_check_status)
+
+    def _recompute_menu_cache() -> MainMenuCache:
+        # Runs on MenuCacheWarmer's thread. It can measure the same setlist as
+        # BackgroundWarmer at the same time; both caches lock, so the worst
+        # case is measuring it twice.
+        if folder_stats_cache:
+            folder_stats_cache.invalidate_all()
+        return compute_main_menu_cache(
+            folders, user_settings, download_path, drives_config,
+            folder_stats_cache, background_scanner,
+        )
+
+    def _scanner_changed() -> bool:
+        return background_scanner.check_updates() if background_scanner else False
+
+    menu_cache_warmer = MenuCacheWarmer(
+        _scanner_changed,
+        _recompute_menu_cache,
+    )
 
     def _setlists(folder):
         return sort_by_name(_get_setlist_names(folder, background_scanner))
@@ -473,6 +493,7 @@ def show_main_menu_panes(
         """Repoint the left pane's numbers at the toggle that just happened.
         The fast path needs a stats cache to write through; without one the only
         correct option is to recompute the lot."""
+        menu_cache_warmer.invalidate()
         if folder_stats_cache is not None:
             update_menu_cache_on_toggle(
                 cache, folder_id, folders, user_settings,
@@ -581,19 +602,18 @@ def show_main_menu_panes(
             return True
         if warmer.busy:
             return True  # keep repainting so the rest arrive as they land
-        if not background_scanner:
-            return False
-        changed = background_scanner.check_updates()
-        if changed:
-            if folder_stats_cache:
-                folder_stats_cache.invalidate_all()
-            _copy_cache(cache, compute_main_menu_cache(
-                folders, user_settings, download_path, drives_config,
-                folder_stats_cache, background_scanner,
-            ))
+
+        # A scan-triggered recompute finished on MenuCacheWarmer's thread;
+        # applying it here is only attribute copies.
+        new_cache = menu_cache_warmer.drain()
+        if new_cache is not None:
+            _copy_cache(cache, new_cache)
             warmed.clear()
             last_footer["text"] = None
             return True
+
+        if not background_scanner:
+            return False
 
         # Otherwise repaint only when the one line that moves has actually
         # moved. Redrawing on every tick regardless is what made a running scan
@@ -656,9 +676,10 @@ def show_main_menu_panes(
     try:
         out = pane.run()
     finally:
-        # Even when run() raises, so neither worker thread outlives the screen.
+        # Even when run() raises, so no worker thread outlives the screen.
         warmer.stop()
         status_warmer.stop()
+        menu_cache_warmer.stop()
 
     position = pane._left_cursor
 
