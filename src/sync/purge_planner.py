@@ -37,9 +37,12 @@ class PurgeStats:
         return self.chart_size + self.extra_file_size + self.partial_size
 
 
-def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tuple[Path, int]]:
+def find_partial_downloads(base_path: Path, local_files: dict = None,
+                           skip_dirs=None) -> List[Tuple[Path, int]]:
     """
     Find partial download files (files with _download_ prefix).
+
+    skip_dirs are top-level directories a caller already walked itself.
     """
     partial_files = []
     if not base_path.exists():
@@ -52,14 +55,25 @@ def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tu
                 partial_files.append((base_path / rel_path, size))
         return partial_files
 
-    for f in base_path.rglob("_download_*"):
-        if is_library_state_path(f):
-            continue  # staging lives in the library now; never purge live downloads
-        if f.is_file():
-            try:
-                partial_files.append((f, f.stat().st_size))
-            except Exception:
-                partial_files.append((f, 0))
+    skip = {str(path) for path in (skip_dirs or ())}
+    try:
+        roots = [entry for entry in base_path.iterdir()
+                 if not (entry.is_dir() and str(entry) in skip)]
+    except OSError:
+        roots = [base_path]
+
+    for root in roots:
+        candidates = [root] if root.is_file() else root.rglob("_download_*")
+        for f in candidates:
+            if not f.name.startswith("_download_"):
+                continue
+            if is_library_state_path(f):
+                continue  # staging lives in the library now; never purge live downloads
+            if f.is_file():
+                try:
+                    partial_files.append((f, f.stat().st_size))
+                except Exception:
+                    partial_files.append((f, 0))
 
     return partial_files
 
@@ -162,6 +176,7 @@ def plan_purge(
     user_settings=None,
     failed_setlists: dict[str, set[str]] | None = None,
     precomputed_markers: set[str] | None = None,
+    on_walk=None,
 ) -> Tuple[List[Tuple[Path, int]], PurgeStats]:
     """
     Plan what files should be purged.
@@ -171,6 +186,8 @@ def plan_purge(
     2. Manifest - tracks loose files and archive files themselves
 
     Everything else on disk is "extra" and should be purged.
+
+    on_walk(count) reports the drive walk as it goes.
     """
     stats = PurgeStats()
     all_files = []
@@ -197,7 +214,7 @@ def plan_purge(
         if not folder_path.exists():
             continue
 
-        local_files = scan_local_files(folder_path)
+        local_files = scan_local_files(folder_path, on_progress=on_walk)
         if not local_files:
             continue
 

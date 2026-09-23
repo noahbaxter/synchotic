@@ -489,12 +489,19 @@ def clear_folder_cache(folder_path: Path):
     clear_local_stats_cache(folder_path)
 
 
-def scan_local_files(folder_path: Path) -> dict[str, int]:
+# Often enough to visibly move on a network share, rarely enough to be cheap.
+WALK_REPORT_EVERY = 250
+
+
+def scan_local_files(folder_path: Path, on_progress=None) -> dict[str, int]:
     """
     Scan local folder and return dict of {relative_path: size}.
 
     Uses os.scandir for better performance than individual exists()/stat() calls.
     Results are cached until clear_cache() is called.
+
+    on_progress(count), if given, is called as the walk goes: on a network
+    share it takes minutes, right before purge deletes anything.
     """
     cache_key = str(folder_path)
     if cache_key in _cache.local_files:
@@ -515,12 +522,16 @@ def scan_local_files(folder_path: Path) -> dict[str, int]:
                             local_files[rel_path] = entry.stat(follow_symlinks=False).st_size
                         except OSError:
                             pass
+                        if on_progress and len(local_files) % WALK_REPORT_EVERY == 0:
+                            on_progress(len(local_files))
                     elif entry.is_dir(follow_symlinks=False):
                         scan_dir(Path(entry.path), f"{rel_path}/")
         except OSError:
             pass
 
     scan_dir(folder_path)
+    if on_progress:
+        on_progress(len(local_files))
     _cache.local_files[cache_key] = local_files
     return local_files
 

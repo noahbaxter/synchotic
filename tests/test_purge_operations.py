@@ -16,7 +16,8 @@ from src.sync import (
     PurgeStats,
     clear_cache,
 )
-from src.sync.purge_planner import find_extra_files
+from src.sync.cache import scan_local_files
+from src.sync.purge_planner import find_extra_files, find_partial_downloads, plan_purge
 from src.core.formatting import normalize_path_key
 
 # Backwards compat alias
@@ -383,6 +384,80 @@ class TestPartialDownloadsPerFolder:
 
             stats_b = count_purgeable_detailed([folder_b], temp_dir, user_settings=None)
             assert stats_b.partial_count == 0  # Bug: was 1 before fix
+
+
+class TestTheSweepSkipsWhatWasAlreadyWalked:
+    """Each drive's own purge pass already took its partials."""
+
+    def _library(self, tmpdir):
+        base = Path(tmpdir)
+        (base / "DriveA" / "Setlist").mkdir(parents=True)
+        (base / "DriveA" / "Setlist" / "_download_a.7z").write_bytes(b"a" * 10)
+        (base / "DriveB" / "Setlist").mkdir(parents=True)
+        (base / "DriveB" / "Setlist" / "_download_b.7z").write_bytes(b"b" * 20)
+        return base
+
+    def test_a_walked_drive_is_not_searched_again(self):
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = self._library(tmpdir)
+
+            found = find_partial_downloads(base, skip_dirs=[base / "DriveA"])
+
+            names = sorted(p.name for p, _ in found)
+            assert names == ["_download_b.7z"], f"swept the skipped drive: {names}"
+
+    def test_everything_else_is_still_swept(self):
+        """Drives that were skipped, and loose files at the library root, are
+        exactly what the sweep is for."""
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = self._library(tmpdir)
+            (base / "_download_loose.7z").write_bytes(b"c" * 30)
+            (base / "notes.txt").write_text("someone's own file")
+
+            found = find_partial_downloads(base, skip_dirs=[])
+
+            names = sorted(p.name for p, _ in found)
+            assert names == ["_download_a.7z", "_download_b.7z", "_download_loose.7z"]
+
+
+class TestTheWalkSaysHowFarItHasGot:
+    """Walking a drive over a share is minutes of silence, immediately before
+    files get deleted."""
+
+    def test_the_walk_reports_as_it_goes(self):
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = Path(tmpdir)
+            drive = base / "Drive"
+            drive.mkdir()
+            for i in range(600):
+                (drive / f"chart{i}.ogg").write_bytes(b"x")
+
+            seen = []
+            files = scan_local_files(drive, on_progress=seen.append)
+
+            assert len(files) == 600
+            # Not just a count at the end: the point is that it moves while
+            # the walk is still running.
+            assert len(seen) >= 3, f"only reported {len(seen)} times: {seen}"
+            assert seen[0] < 600, "the first word came after the walk finished"
+            assert seen[-1] == 600, f"the last word was {seen[-1]}, not the total"
+            assert seen == sorted(seen), "the count went backwards"
+
+    def test_planning_passes_the_count_through(self):
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = Path(tmpdir)
+            (base / "Drive").mkdir()
+            (base / "Drive" / "song.ini").write_text("x")
+
+            seen = []
+            plan_purge([{"folder_id": "d", "name": "Drive", "files": None}], base,
+                       precomputed_markers=set(), on_walk=seen.append)
+
+            assert seen == [1]
 
 
 class TestDisabledSetlistsCategorization:

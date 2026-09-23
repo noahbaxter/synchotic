@@ -135,6 +135,11 @@ def extract_archive(archive_path: Path, dest_folder: Path) -> Tuple[bool, str]:
         fix_permissions(dest_folder)
         return True, ""
     except Exception as e:
+        # The caller only gets str(e), which for an ENOENT names a file and
+        # nothing about where it came from.
+        import traceback
+        from ..core.logging import debug_log
+        debug_log(f"EXTRACT_EXC | {archive_path.name} | {traceback.format_exc()}")
         return False, str(e)
 
 

@@ -8,9 +8,9 @@ covers downloading; this covers only deleting.
 
 from pathlib import Path
 
-from ..core.formatting import sanitize_drive_name
+from ..core.formatting import count, sanitize_drive_name
 from ..core.logging import debug_log
-from ..ui.primitives import print_section_header, print_separator
+from ..ui.primitives import print_progress, print_section_header, print_separator
 from ..ui.widgets import display
 from .cache import clear_folder_cache, get_persistent_stats_cache
 from .purge_planner import plan_purge, find_partial_downloads
@@ -55,9 +55,15 @@ def _purge_enabled_drive(
     folder_id = folder.get("folder_id", "")
     folder_name = folder.get("name", "")
 
+    def walked(n: int) -> None:
+        if progress:
+            progress.set_stage(f"checking {folder_name} · {count(n, 'file')}")
+        else:
+            print_progress(f"Purge: checking {folder_name}... {count(n, 'file')}")
+
     files_to_purge, _ = plan_purge(
         [folder], base_path, user_settings, failed_setlists,
-        precomputed_markers=marker_norm,
+        precomputed_markers=marker_norm, on_walk=walked,
     )
     if not files_to_purge:
         return 0, 0, 0
@@ -79,7 +85,8 @@ def _purge_enabled_drive(
         try:
             with (progress.suspended() if progress else nullcontext()):
                 dialog = ConfirmDialog(
-                    f"Purge {purge_count:,} files ({format_size(folder_size)}) from {folder_name}?"
+                    f"Delete {count(purge_count, 'file')} ({format_size(folder_size)}) "
+                    f"from {folder_name}?"
                 )
                 confirmed = dialog.run()
         finally:
@@ -88,7 +95,7 @@ def _purge_enabled_drive(
         if not confirmed:
             debug_log(f"PURGE_SKIPPED | folder={folder_name} | user declined")
             if progress:
-                progress.note(folder_name, context="purge skipped")
+                progress.note(folder_name, context="delete skipped")
             else:
                 print(f"  Skipped.")
             return 0, 0, 0
@@ -111,9 +118,13 @@ def _purge_enabled_drive(
     return deleted, failed, folder_size
 
 
-def _purge_partial_downloads(base_path: Path, progress=None) -> tuple[int, int, int]:
-    """Clean up incomplete downloads. Returns (deleted, failed, size)."""
-    partial_files = find_partial_downloads(base_path)
+def _purge_partial_downloads(base_path: Path, progress=None,
+                             already_walked=()) -> tuple[int, int, int]:
+    """Clean up incomplete downloads outside the drives just purged, whose
+    own passes already took theirs."""
+    if progress:
+        progress.set_stage("checking for interrupted downloads...")
+    partial_files = find_partial_downloads(base_path, skip_dirs=already_walked)
     if not partial_files:
         return 0, 0, 0
 
@@ -122,7 +133,7 @@ def _purge_partial_downloads(base_path: Path, progress=None) -> tuple[int, int, 
         display.purge_partial_downloads(len(partial_files), partial_size)
     deleted, failed = delete_files(partial_files, base_path)
     if progress:
-        progress.note("Partial downloads", context=f"{deleted} cleaned up")
+        progress.note("Partial downloads", context=f"{count(deleted, 'file')} deleted")
     else:
         display.purge_partial_cleaned(deleted, failed)
     return deleted, failed, partial_size
@@ -174,11 +185,10 @@ def purge_all_folders(
     total_failed = 0
     total_size = 0
     purged_folder_ids: set[str] = set()
+    walked_paths: list[Path] = []  # the partials sweep skips these
     persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
-    from ..ui.primitives import print_progress
-
     if progress:
         progress.set_stage("reading markers...")
     else:
@@ -239,6 +249,9 @@ def purge_all_folders(
                 user_settings, failed_setlists, marker_norm, persistent_cache,
                 progress=progress, pause_keys=pause_keys, resume_keys=resume_keys,
             )
+        # Including a declined drive: its partials were in the list turned
+        # down, so sweeping them would override that answer.
+        walked_paths.append(folder_path)
 
         total_deleted += deleted
         total_failed += failed
@@ -248,13 +261,14 @@ def purge_all_folders(
             if progress:
                 from ..core.formatting import format_size
                 progress.note(folder.get("name", ""),
-                              context=f"{deleted} purged ({format_size(size)})")
+                              context=f"{count(deleted, 'file')} deleted ({format_size(size)})")
         if progress:
             progress.advance_run()
         if not progress:
             print("\033[2K\r", end="", flush=True)
 
-    deleted, failed, size = _purge_partial_downloads(base_path, progress=progress)
+    deleted, failed, size = _purge_partial_downloads(
+        base_path, progress=progress, already_walked=walked_paths)
     total_deleted += deleted
     total_failed += failed
     total_size += size
@@ -263,11 +277,11 @@ def purge_all_folders(
         progress.set_stage("")
         from ..core.formatting import format_size
         if total_deleted > 0 or total_failed > 0:
-            context = f"{total_deleted} removed ({format_size(total_size)})"
+            context = f"{count(total_deleted, 'file')} deleted ({format_size(total_size)})"
             if total_failed:
-                context += f", {total_failed} failed"
+                context += f", {total_failed:,} failed"
         else:
-            context = "nothing to remove"
+            context = "nothing to delete"
         progress.note("Purge complete", context=context)
     else:
         print()
