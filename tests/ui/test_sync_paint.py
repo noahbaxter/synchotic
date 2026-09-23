@@ -1,6 +1,7 @@
 """Painting the frame in place, and one plain line per row when piped."""
 import re
 
+from src import copy
 from src.ui.widgets.sync_paint import ScreenPainter
 from src.ui.widgets.sync_screen import CHROME_LINES, SyncScreen
 
@@ -98,7 +99,7 @@ class TestPaintingInPlace:
         assert len(drawn) == screen.compact_height(), (
             f"drew {len(drawn)} rows for an empty run")
         assert len(drawn) < term.size[1] // 2, "still most of the screen"
-        assert any("nothing to download yet" in ln for ln in drawn), (
+        assert any(copy.NOTHING_TO_SHOW in ln for ln in drawn), (
             "an empty body has to say why it is empty")
 
     def test_it_opens_out_once_there_are_charts(self, charts):

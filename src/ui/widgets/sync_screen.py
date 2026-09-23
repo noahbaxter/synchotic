@@ -64,7 +64,7 @@ MIN_ROOM_BESIDE_BOX = 38
 # With nothing arriving for this long the rate shows as idle rather than the
 # last value, which would make a run busy checking setlists look like a crawl.
 TRANSFER_IDLE_SECONDS = 3.0
-IDLE_SPEED = copy.IDLE_SPEED
+IDLE_SPEED = "-- KB/s"
 
 # The body while the list is empty: a line of air, then the note saying why.
 EMPTY_BODY = ("blank", "note")
@@ -214,7 +214,7 @@ class EntryList:
         tail = active[:cap]
         hidden = len(active) - len(tail)
         if hidden > 0:
-            tail = tail + [Entry(key="", name=copy.MORE_DOWNLOADING.format(n=hidden),
+            tail = tail + [Entry(key="", name=f"… {copy.AND_MORE.format(n=hidden)}",
                                  state=OVERFLOW)]
 
         return self._history[-(height - len(tail)):] + tail if len(tail) < height else tail
@@ -347,7 +347,7 @@ class SyncScreen:
         self.title = title
         # The stage word in the header: SYNC, DOWNLOAD, VERIFY, PURGE...
         self.phase = copy.SYNC.upper()
-        self.controls = controls or copy.KEY_CANCEL
+        self.controls = controls or f"ESC {copy.BTN_CANCEL.lower()}"
         self.entries = EntryList()
         self.total_files = 0
         self.total_bytes = 0
@@ -519,9 +519,8 @@ class SyncScreen:
         """Said in the body while the list is empty, so a mostly current library
         reads as an answer rather than a hung app."""
         c = Colors
-        note = (copy.NOTHING_TO_DOWNLOAD if self.phase == copy.PHASE_DOWNLOAD.upper()
-                else copy.NOTHING_TO_SHOW)
-        return f"  {c.MUTED}{truncate_text(note, max(4, width - 4))}{c.RESET}"
+        note = truncate_text(copy.NOTHING_TO_SHOW, max(4, width - 4))
+        return f"  {c.MUTED}{note}{c.RESET}"
 
     def frame(self, width: int, height: int) -> list[str]:
         """Exactly `height` lines, each exactly `width` visible columns wide."""

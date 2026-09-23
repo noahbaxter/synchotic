@@ -1,6 +1,7 @@
 """The bordered sync frame: exactly the lines asked for, each the full width."""
 import re
 
+from src import copy
 from src.ui.primitives import strip_ansi
 from src.ui.widgets.sync_screen import (CHROME_LINES, HEADER_ROWS, SPINNER,
                                         SyncScreen)
@@ -243,20 +244,20 @@ class TestTheAdviceSaysWhoHasToAct:
 
     def test_something_that_passes_says_so(self):
         from src.ui.widgets.sync_display import TRANSIENT, advise
-        tone, reason, advice = advise(["rate limited", "rate limited"])
-        assert (tone, reason) == (TRANSIENT, "rate limited")
-        assert "retries" in advice
+        tone, reason, advice = advise([copy.FAIL_RATE_LIMITED] * 2)
+        assert (tone, reason, advice) == (TRANSIENT, copy.FAIL_RATE_LIMITED,
+                                          copy.RETRIES_NEXT_SYNC)
 
     def test_something_you_must_fix_wins_even_when_rarer(self):
         """Nine timeouts and one full disk: the disk is the news."""
         from src.ui.widgets.sync_display import FIX, advise
-        tone, reason, _ = advise(["timed out"] * 9 + ["disk full"])
-        assert (tone, reason) == (FIX, "disk full")
+        tone, reason, _ = advise([copy.FAIL_TIMED_OUT] * 9 + [copy.FAIL_DISK_FULL])
+        assert (tone, reason) == (FIX, copy.FAIL_DISK_FULL)
 
     def test_the_unexplained_ranks_above_the_passing(self):
         from src.ui.widgets.sync_display import REPORT, advise
-        tone, reason, _ = advise(["timed out", "timed out", "unpack failed"])
-        assert (tone, reason) == (REPORT, "unpack failed")
+        tone, reason, _ = advise([copy.FAIL_TIMED_OUT] * 2 + [copy.FAIL_UNPACK])
+        assert (tone, reason) == (REPORT, copy.FAIL_UNPACK)
 
     def test_a_reason_nobody_wrote_advice_for_still_gets_some(self):
         from src.ui.widgets.sync_display import REPORT, advise
@@ -354,7 +355,7 @@ class TestTheDividerShowsItIsAlive:
         screen.scroll(-1)
         assert not screen.following, "the view did not actually hold"
 
-        assert "held" in self._divider(screen)
+        assert copy.HELD in self._divider(screen)
         assert not any(glyph in self._divider(screen) for glyph in SPINNER)
 
     def test_the_spinner_does_not_break_the_frame_width(self):

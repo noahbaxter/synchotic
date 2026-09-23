@@ -98,8 +98,8 @@ def _sync_label(cache: MainMenuCache) -> str:
     if cache.sync_checkmark:
         return f"{Colors.SUCCESS}\u2713{Colors.RESET} {copy.FOOTER_SYNCED}"
     if cache.sync_delta:
-        return f"{copy.FOOTER_SYNC} {cache.sync_delta}"
-    return copy.FOOTER_SYNC
+        return f"{copy.SYNC.lower()} {cache.sync_delta}"
+    return copy.SYNC.lower()
 
 
 def _copy_cache(dst: MainMenuCache, src: MainMenuCache) -> None:
@@ -345,7 +345,7 @@ def show_main_menu_panes(
         rows.append(_row(f"  {Colors.PRIMARY}{copy.DISABLE_ALL}{Colors.RESET}", ("disable_all", folder_id, None)))
         if folder.get("is_custom"):
             rows.append(_spacer())
-            label = copy.RESCAN_FOLDER if folder.get("files") else copy.SCAN_FOLDER
+            label = copy.ROW_RESCAN
             # A scan with nowhere to write is greyed with the reason beside
             # it, rather than left as a row that ignores you.
             lib_blocked = status_warmer.snapshot.library_blocked
@@ -373,7 +373,7 @@ def show_main_menu_panes(
         mode = (user_settings.download_mode if user_settings else "") or DOWNLOAD_MODE_RCLONE
         sign_in = ("act", "signin")
         if mode == DOWNLOAD_MODE_ANONYMOUS:
-            return (copy.ROW_SIGN_IN, copy.SIGNIN_NOT_USED, sign_in, False)
+            return (copy.ROW_SIGN_IN, copy.MODE_ANON_LABEL, sign_in, False)
         if mode == DOWNLOAD_MODE_RCLONE:
             # rclone signs in to Google with its own remote, not our token.
             status = status_warmer.snapshot
@@ -595,17 +595,16 @@ def show_main_menu_panes(
         if background_scanner and not background_scanner.is_done():
             stats = background_scanner.get_stats()
             if stats.current_folder:
-                line = copy.FOOTER_SCANNING if stats.api_calls > 0 else copy.FOOTER_LOADING
-                parts.append(line.format(folder=stats.current_folder,
-                                         done=stats.folders_done + 1,
-                                         total=stats.folders_total,
-                                         elapsed=format_duration(stats.elapsed)))
+                parts.append(copy.FOOTER_SCAN.format(folder=stats.current_folder,
+                                                     done=stats.folders_done + 1,
+                                                     total=stats.folders_total,
+                                                     elapsed=format_duration(stats.elapsed)))
         # Nothing else goes here: the totals already sit in the title band, and
         # repeating them is how a status bar turns into noise.
 
         hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} {copy.FOOTER_PANES}  "
                  f"{Colors.PRIMARY}Space{Colors.MUTED} {copy.FOOTER_TOGGLE}  "
-                 f"{Colors.PRIMARY}Esc{Colors.MUTED} {copy.FOOTER_QUIT}")
+                 f"{Colors.PRIMARY}Esc{Colors.MUTED} {copy.BTN_QUIT.lower()}")
         # Neither line may wrap: the frame redraws from the top every tick, so
         # a wrapped line pushes the box's bottom off the screen. One column
         # spare, since a line that exactly fills the width wraps on some
@@ -665,7 +664,7 @@ def show_main_menu_panes(
         return "return"
 
     pane = TwoPane(
-        title=copy.HOME_TITLE,
+        title=copy.ROW_LIBRARY,
         subtitle=strip_ansi(cache.subtitle or ""),
         left_rows=_timed("home_left_rows", left_rows),
         right_rows=_timed("home_right_rows", right_rows),

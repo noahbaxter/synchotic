@@ -103,7 +103,7 @@ class TestTheSettingsPaneOffersTheFix:
         settings.download_mode = DOWNLOAD_MODE_ANONYMOUS
         row = _row(rows(FakeAuth(), settings=settings), SIGN_IN)
         assert row[2] is False
-        assert copy.SIGNIN_NOT_USED in _text(row)
+        assert copy.MODE_ANON_LABEL in _text(row)
 
 
 class TestIsSignedInIsABool:

@@ -92,7 +92,7 @@ class TestErrorSummary:
         progress = _progress()
         progress.print_error("Setlist", "NEEDS AUTH (set up automatically): pack.7z")
 
-        assert copy.ADVICE_NEEDS_SIGN_IN in self._summary(progress)
+        assert copy.FIX_FROM.format(where=copy.SETTINGS_MODE) in self._summary(progress)
 
     def test_nothing_is_printed_when_nothing_failed(self):
         assert self._summary(_progress()) == ""

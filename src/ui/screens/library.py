@@ -8,6 +8,7 @@ just looks somewhere else, which is why the screen says what it found there.
 from pathlib import Path
 
 from ... import copy
+from ...core.formatting import count
 from ..widgets import display
 from ..widgets.confirm import ConfirmDialog
 
@@ -147,8 +148,8 @@ def show_library_screen(user_settings, intro: str = "", setup_step=None) -> bool
             reading = copy.LIBRARY_READING.format(path=plain_path(path))
             if not seen["files"]:
                 return reading
-            return f"{reading}  " + copy.LIBRARY_READ_SO_FAR.format(
-                charts=f"{seen['charts']:,}", files=f"{seen['files']:,}")
+            return (f"{reading}  {count(seen['charts'], 'chart')}, "
+                    f"{count(seen['files'], 'file')}")
 
         # A library we already sync is not walked: its drive listing below
         # says what is there, and walking an external drive to learn the same

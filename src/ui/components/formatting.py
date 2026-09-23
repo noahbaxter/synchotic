@@ -6,8 +6,7 @@ Functions for formatting sync status, counts, sizes with colors.
 
 import math
 
-from src import copy
-from src.core.formatting import format_size
+from src.core.formatting import count, format_size
 from ..primitives import Colors, strip_ansi
 
 
@@ -68,9 +67,9 @@ def format_status_line(
 
     parts = []
     if total_charts > 0:
-        parts.append(copy.HOME_CHARTS.format(synced=synced_charts, total=total_charts))
+        parts.append(f"{synced_charts}/{count(total_charts, 'chart')}")
     if total_setlists > 0:
-        parts.append(copy.HOME_SETLISTS.format(enabled=enabled_setlists, total=total_setlists))
+        parts.append(f"{enabled_setlists}/{count(total_setlists, 'setlist')}")
 
     info = ", ".join(parts)
     display_size = disk_size if disk_size > 0 else total_size

@@ -73,7 +73,7 @@ class DrivesConfig:
                 for drive_data in data.get("drives", []):
                     config.drives.append(DriveConfig.from_dict(drive_data))
             except (json.JSONDecodeError, IOError) as e:
-                print(f"{copy.DRIVES_JSON_FAILED}: {e}")
+                print(f"{copy.FAILURE}: {path.name}: {e}")
 
         return config
 

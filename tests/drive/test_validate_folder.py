@@ -62,7 +62,7 @@ def test_running_out_of_retries_is_a_reason_not_a_crash(client, monkeypatch):
 
 def test_a_file_is_not_a_folder(client, monkeypatch):
     _answer(client, monkeypatch, _Response({"name": "song.zip", "mimeType": "application/zip"}))
-    assert client.validate_folder("id") == (None, copy.URL_IS_FILE)
+    assert client.validate_folder("id") == (None, copy.NOT_A_FOLDER_LINK)
 
 
 def test_the_screen_prints_the_reason(monkeypatch, capsys):

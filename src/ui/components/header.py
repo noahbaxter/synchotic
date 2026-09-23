@@ -25,7 +25,7 @@ ASCII_HEADER = r"""
 ╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝ ╚═════╝
 """.strip('\n')
 
-LIBRARY_LABEL = copy.BANNER_LIBRARY
+LIBRARY_LABEL = f"{copy.ROW_LIBRARY.lower()} → "
 
 __all__ = ["ASCII_HEADER", "install_header", "print_header", "header_height",
            "invalidate_header_cache", "library_detail"]
@@ -46,15 +46,14 @@ def print_header() -> None:
 
 def library_detail(room: int) -> str:
     """Where the charts are going: "library → path", fitted into `room`, or
-    NOT SET in the error colour. It is on every screen because a path that
-    only appears in Settings is a path nobody checks."""
+    LIBRARY_UNSET in the error colour. It is on every screen because a path
+    that only appears in Settings is a path nobody checks."""
     from ...core import paths
 
     if room <= len(LIBRARY_LABEL):
         return ""
     if not paths.library_is_set():
-        return (f"{Colors.MUTED}{LIBRARY_LABEL}{Colors.RESET}"
-                f"{Colors.ERROR}{copy.BANNER_UNSET}{Colors.RESET}")
+        return f"{Colors.ERROR}{copy.LIBRARY_UNSET}{Colors.RESET}"
 
     library = _library_label()
     if not library:

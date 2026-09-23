@@ -68,7 +68,7 @@ def test_the_block_message_says_why_and_where_to_fix_it(capsys):
     sync_display.sync_blocked(copy.STATUS_RCLONE)
     out = capsys.readouterr().out
 
-    assert copy.SYNC_BLOCKED.format(reason=copy.STATUS_RCLONE) in out
+    assert copy.STATUS_RCLONE in out
     assert copy.FIX_FROM.format(where=copy.SETTINGS_MODE) in out
 
 

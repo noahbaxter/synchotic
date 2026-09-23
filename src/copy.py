@@ -8,12 +8,6 @@ output (--help, --first-run), exception text shown as FAILURE: {reason}, the
 downloader's log lines that are translated before display, and the nouns
 count() pluralises.
 
-    # AI-COPY
-
-marks a string the model wrote that nobody has rewritten yet. Grep for it to
-see what is left, and delete the marker when a string is yours. Anything
-without one has been through a human.
-
 Placeholders are named, so they can be reordered or dropped: a string that
 stops using {path} is fine, one that invents {pathh} raises at render.
 
@@ -40,7 +34,7 @@ SETTINGS = "Settings"
 ROW_ACCOUNT = "Account"
 ROW_MODE = "Mode"
 ROW_SIGN_IN = "Sign in to Google"
-ROW_SIGN_OUT = "Sign out"  # AI-COPY
+ROW_SIGN_OUT = "Sign out"
 ROW_LIBRARY = "Library"
 ROW_OPEN_CHARTS = "Open library"
 ROW_LOCATION = "Edit path"
@@ -48,7 +42,7 @@ ROW_APP = "App"
 ROW_OPEN_DATA = "Open data"
 ROW_DRIVES = "Drives"
 ROW_ADD_CUSTOM = "Add custom drive"
-ROW_RESCAN = "Rescan"  # AI-COPY
+ROW_RESCAN = "Rescan"
 
 SETTINGS_ACCOUNT = f"{SETTINGS} > {ROW_ACCOUNT}"
 SETTINGS_MODE = f"{SETTINGS_ACCOUNT} > {ROW_MODE}"
@@ -59,12 +53,7 @@ SETTINGS_OPEN_DATA = f"{SETTINGS} > {ROW_APP} > {ROW_OPEN_DATA}"
 
 FIX_FROM = "Go to {where}."
 
-# A row's value is its state, or why it is greyed. Never what the row does:
-# the label says that.
-SIGNIN_NOT_USED = "Not used in anonymous mode"  # AI-COPY
-SCANNING = "Scanning…"  # AI-COPY
-
-OPEN_FAILED = "Could not open this folder. It is at:"  # AI-COPY
+SCANNING = "Scanning…"
 
 # --- buttons and step names -------------------------------------------------
 
@@ -98,29 +87,14 @@ DELETION_ALL = "all {files}"   # {files} is count(n, "unmanaged file")
 LIBRARY_UNSET = "No library set"
 LIBRARY_MISSING = "Library not connected"
 FIX_RECONNECT = "Reconnect the drive and sync again."
-# Under LIBRARY_MISSING: at startup nothing has happened yet, mid-run it has.
-NOTHING_CHANGED = "Nothing has been scanned, downloaded or deleted."  # AI-COPY
-STOPPED_MIDWAY = "Synchotic stopped where it was."  # AI-COPY
 
 # --- download mode ----------------------------------------------------------
 
 MODE_NAME_RCLONE = "rclone"
 MODE_NAME_BYOC = "BYOC"
-MODE_NAME_ANON = "no sign-in"  # AI-COPY
-
-# The Mode row's value: "{mode} - {state}", whether the mode can download.
-MODE_STATE = "{mode} - {state}"
-STATE_ANON = "most charts skipped"  # AI-COPY
-STATE_EXPIRED = "session expired"  # AI-COPY
-STATE_NOT_SET_UP = "not set up"  # AI-COPY
-STATE_SIGNED_IN = "signed in"  # AI-COPY
-STATE_SIGNED_OUT = "signed out"  # AI-COPY
-STATE_NOT_CONNECTED = "not connected"  # AI-COPY
-STATE_CONNECTED = "connected"  # AI-COPY
-STATE_CONNECTED_SIGNED_IN = f"{STATE_CONNECTED}, {STATE_SIGNED_IN}"
 
 # Why a mode cannot download yet. Used as the setup page title, the preflight
-# headline, the blocked-sync reason and the home screen hint.
+# headline, the blocked-sync reason and the settings pane's Mode row.
 STATUS_MISCONFIGURED = "{mode} is misconfigured"
 STATUS_RCLONE = STATUS_MISCONFIGURED.format(mode=MODE_NAME_RCLONE)
 STATUS_BYOC = STATUS_MISCONFIGURED.format(mode=MODE_NAME_BYOC)
@@ -131,8 +105,10 @@ FIX_SIGN_IN = f"Sign in again from {SETTINGS_SIGN_IN}, then re-sync."
 
 # How something the user started came out. A failure is printed as
 # "FAILURE: {reason}" with the real reason, not advice written for a guess.
+# WARNING is for something that went wrong while the rest carried on.
 SUCCESS = "SUCCESS"
 FAILURE = "FAILURE"
+WARNING = "WARNING"
 
 # --- files the user handles -------------------------------------------------
 
@@ -159,74 +135,43 @@ TOGGLE_SETLIST = "Press Tab on a drive to enter it, then Space to toggle."
 # Home screen
 # ===========================================================================
 
-HOME_TITLE = "Chart Packs"  # AI-COPY
 HOME_NO_DRIVES = f"{NO_DRIVES}. {TOGGLE_DRIVE}"
-# The title band: "100% | 562/562 charts, 10/15 setlists (4.0 GB)".
-HOME_CHARTS = "{synced}/{total} charts"  # AI-COPY
-HOME_SETLISTS = "{enabled}/{total} setlists"  # AI-COPY
-
-# The banner line under the logo, on every screen.
-BANNER_LIBRARY = "library → "  # AI-COPY
-BANNER_UNSET = "NOT SET"  # AI-COPY
 
 # A drive's column headers and the rows under its setlists.
-COL_CHARTS = "CHARTS"  # AI-COPY
-COL_SIZE = "SIZE"  # AI-COPY
-ENABLE_ALL = "Enable all"  # AI-COPY
-DISABLE_ALL = "Disable all"  # AI-COPY
-SCAN_FOLDER = "Scan folder"  # AI-COPY
-RESCAN_FOLDER = "Re-scan folder"  # AI-COPY
-REMOVE_FOLDER = "Remove custom drive"  # AI-COPY
+COL_CHARTS = "CHARTS"
+COL_SIZE = "SIZE"
+ENABLE_ALL = "Enable all"
+DISABLE_ALL = "Disable all"
+REMOVE_FOLDER = "Remove custom drive"
 
-# The footer. Key names (S, Tab, Space, Esc) stay with the code binding them.
-FOOTER_SYNC = "sync"  # AI-COPY
-FOOTER_SYNCED = "synced"  # AI-COPY
-FOOTER_PANES = "panes"  # AI-COPY
-FOOTER_TOGGLE = "toggle"  # AI-COPY
-FOOTER_QUIT = "quit"  # AI-COPY
-FOOTER_SCANNING = "Scanning {folder} ({done}/{total}) · {elapsed}"  # AI-COPY
-FOOTER_LOADING = "Loading cache {folder} ({done}/{total}) · {elapsed}"  # AI-COPY
+# The footer, lower case. Key names (S, Tab, Space, Esc) stay with the code
+# binding them.
+FOOTER_SYNCED = "synced"
+FOOTER_PANES = "switch panes"
+FOOTER_TOGGLE = "enable/disable"
+FOOTER_SCAN = SCANNING + " {folder} ({done}/{total}) · {elapsed}"
 
 # Section headings in the drive list, for drives drives.json does not group.
-GROUP_CUSTOM = "Custom"  # AI-COPY
-GROUP_OTHER = "Other"  # AI-COPY
+GROUP_CUSTOM = "Custom"
+GROUP_OTHER = "Other"
 
 
 # ===========================================================================
 # Custom drives: a Google Drive folder the user adds by link
 # ===========================================================================
 
-LOADING_DRIVES = "Loading drives..."  # AI-COPY
-DRIVE_URL_EXAMPLE ="https://drive.google.com/drive/folders/abc123..."
-ADD_HOWTO = ("Paste a Google Drive folder URL or ID.\n"  # AI-COPY
-             "The folder must be shared (anyone with link) or in your Drive.")
-ADD_EXAMPLE = f"Example: {DRIVE_URL_EXAMPLE}"  # AI-COPY
-ESC_TO_CANCEL = "Press ESC to cancel"  # AI-COPY
-ADD_INPUT = "URL or ID: "  # AI-COPY
-ADD_EMPTY = "No URL entered."  # AI-COPY
-ADD_CHECKING = "Checking folder access..."  # AI-COPY
-ADD_FOUND = "Found: {bold_open}{name}{bold_close}"  # AI-COPY
+DRIVE_URL_EXAMPLE = "https://drive.google.com/drive/folders/abc123..."
+ADD_HOWTO = ("Paste a Google Drive folder link or ID.\n"
+             "The folder must be shared with \"anyone with the link\".\n"
+             f"Example: {DRIVE_URL_EXAMPLE}")
+ADD_INPUT = "Link or ID: "
+NOT_A_FOLDER_LINK = "Not a valid Google Drive folder link"
+ADD_ALREADY = "{name} is already in your drives"
 
-# Why a pasted link is not a folder we can use.
-URL_IS_FILE = "That's a file link, not a folder link"  # AI-COPY
-URL_UNRECOGNIZED = "Unrecognized Google Drive URL format"  # AI-COPY
-URL_NOT_DRIVE = "Not a Google Drive URL"  # AI-COPY
-URL_USE_FOLDER_LINK = f"Please use a Google Drive folder link like:\n{DRIVE_URL_EXAMPLE}"  # AI-COPY
+REMOVE_BODY = ("'{name}' will be removed from your custom drives.\n"
+               "Its charts WILL BE DELETED on next sync.")
 
-ADD_ALREADY = "Folder already added: {name}"  # AI-COPY
-ADD_IS_DRIVE = "This folder is already available as a built-in drive."  # AI-COPY
-ADD_INSIDE_DRIVE = "This folder is inside the built-in drive: {name}"  # AI-COPY
-ADD_INSIDE_FIX = "Enable it from the drive list instead."  # AI-COPY
-ADD_DONE = "Added: {name}"  # AI-COPY
-
-REMOVE_ASK = "Remove custom drive?"  # AI-COPY
-REMOVE_BODY = ("This will remove '{name}' from your custom drives.\n"  # AI-COPY
-               "Downloaded files will NOT be deleted.")
-REMOVE_DONE = "Removed: {name}"  # AI-COPY
-
-SCAN_TITLE = "Scanning: {name}"  # AI-COPY
-SCAN_PROGRESS = "Scanning... {folders} folders, {files} files found"  # AI-COPY
-SCAN_DONE = "Done! Found {files} ({size})"  # AI-COPY
+SCAN_PROGRESS = SCANNING + " {folders}, {files}"
 
 
 # ===========================================================================
@@ -243,8 +188,7 @@ LIBRARY_QUESTION = "Where should the library live?"
 LIBRARY_BROWSE = "Pick a folder"
 LIBRARY_TYPE = "Path: "
 # The spinner while a picked folder is counted.
-LIBRARY_READING = "reading {path}"  # AI-COPY
-LIBRARY_READ_SO_FAR = "{charts} charts, {files} files"  # AI-COPY
+LIBRARY_READING = "reading {path}"
 
 FOLDER_CREATE_ASK = "Create {path}?"
 FOLDER_NOT_A_FOLDER = FAILURE + ": Not a folder: {path}"
@@ -263,9 +207,8 @@ LIBRARY_PICK_ANOTHER = "No, choose another"
 
 FOLDER_IS_NEW = "This folder is empty."
 
-# Anything in the folder that is not ours, charts or not. {counts} is the
-# folder's contents ("12 chart folders, 89 files, 20 folders"), with a "+" on
-# the numbers when counting stopped early.
+# {counts} is the folder's contents ("12 chart folders, 89 files, 20
+# folders"), with a "+" on the numbers when counting stopped early.
 
 FOLDER_NOT_EMPTY = "{counts}\n\n{warning}"
 
@@ -324,8 +267,7 @@ MODE_ANON_DESC = (
 # --- the mode was picked but never finished ---------------------------------
 #
 # Each is a STATUS_* title, then BODY, then UNFINISHED_RETRY and BTN_QUIT as
-# the answers. Retry goes back to the download options, whichever mode it was.
-# Setup does not go on without a working mode.
+# the answers.
 
 UNFINISHED_NOT_SIGNED_IN = ("Looks like you haven't signed in to Google yet. "
                             "{mode} requires read-only access to a Google account.")
@@ -351,7 +293,7 @@ BYOC_STEPS = (f"Follow the steps in {BYOC_FILE}, then put "
 
 SIGNIN_QUESTION = "Sign in to Google?"
 SIGNIN_SCOPE = "Synchotic only asks for read-only access to your Drive."
-SIGNIN_PRIVACY = "Privacy: https://noahbaxter.dev/synchotic/privacy.html"  # AI-COPY
+SIGNIN_PRIVACY = "Privacy: https://noahbaxter.dev/synchotic/privacy.html"
 SIGNIN_KEYS = "[Y] Sign in    [N] Not now"
 SIGNIN_OPENING = ("Opening your browser to sign in.\n"
                   "If nothing opens, use the link printed below.")
@@ -383,22 +325,15 @@ READY_GO = "Ready"
 # Before a sync: the check that runs when S is pressed
 # ===========================================================================
 #
-# Each problem is a headline, an optional line of detail, and a fix. Most
-# reuse the shared strings above; only what is said nowhere else lives here.
-# Nothing is shown at all when there is nothing wrong.
+# Each problem is a headline, an optional line of detail, and a fix.
 
 PRE_TITLE_BLOCKED = "Unable to sync"
 
-# The mode or the library stops the work before it starts. {reason} is a
-# STATUS_* or LIBRARY_* line; FIX_FROM follows with the row that fixes it.
-SYNC_BLOCKED = PRE_TITLE_BLOCKED + ": {reason}."
-SCAN_BLOCKED = "Unable to scan: {reason}."  # AI-COPY
-ADD_BLOCKED = "Unable to add a custom drive: {reason}."  # AI-COPY
 PRE_FREE = "{size} free"
 PRE_ASK = "Sync anyway?"
 
 PRE_READONLY = "Library is read-only"
-PRE_RCLONE_DEAD = "Google drive is not responding"
+PRE_RCLONE_DEAD = "Google Drive is not responding"
 PRE_BYOC_FIX = f"Place your {CREDENTIALS_FILE} in {SETTINGS_OPEN_DATA}."
 PRE_ANON = "Some charts may not download"
 
@@ -412,7 +347,7 @@ PRE_UNOWNED_MORE = " " + AND_MORE
 PRE_SPACE = "Not enough disk space"
 PRE_AT_LEAST = " at least"
 # Fits, but leaves the disk nearly full, or unmeasured drives could tip it over.
-PRE_LOW_SPACE = "Low on disk space"  # AI-COPY
+PRE_LOW_SPACE = "Low on disk space"
 PRE_SPACE_DETAIL = "Needs{floor} {needed}, you have {free}."
 PRE_FREE_UP = "Free up space, or disable some setlists."
 
@@ -426,103 +361,66 @@ PRE_PURGE_DETAIL = "That's {size} from drives and setlists you've disabled."
 # ===========================================================================
 
 # Before the panel opens, while drives are listed.
-DISCOVERING = "Discovering setlists... {done}/{total} drives"  # AI-COPY
-DISCOVERING_DRIVE = "{name} (discovering)"  # AI-COPY
-RATE_LIMIT_WAIT = "(waiting for Google Drive API rate limit...)"  # AI-COPY
+DISCOVERING = SCANNING + " {done}/{total}"
 
 # The stage word in the panel's title (drawn in capitals), and what the list
 # says while empty. SYNC and PURGE also name the run's own rows in the list.
-SYNC = "Sync"  # AI-COPY
-PURGE = "Purge"  # AI-COPY
-PHASE_DOWNLOAD = "Download"  # AI-COPY
-PHASE_VERIFY = "Verify"  # AI-COPY
-PHASE_STATS = "Stats"  # AI-COPY
-NOTHING_TO_DOWNLOAD = "nothing to download yet"  # AI-COPY
-NOTHING_TO_SHOW = "nothing to show yet"  # AI-COPY
+SYNC = "Sync"
+PURGE = "Purge"
+PHASE_DOWNLOAD = "Download"
+PHASE_VERIFY = "Verify"
+PHASE_STATS = "Stats"
+NOTHING_TO_SHOW = "nothing to show yet"
 
-# The keys under the list. Key names stay with the code that binds them.
-KEY_CANCEL = "ESC cancel"  # AI-COPY
-KEY_SCROLL = "↑↓ scroll"  # AI-COPY
-KEY_ALL_CHARTS = "E all charts"  # AI-COPY
-KEY_ERRORS_ONLY = "E errors only"  # AI-COPY
-SHOWING_ERRORS = "showing errors only · {n}"  # AI-COPY
-HELD = "held · END to follow"  # AI-COPY
+# The keys under the list, and the divider while the list is filtered or paused.
+KEY_SCROLL = "↑↓ scroll"
+KEY_ALL_CHARTS = "E all charts"
+KEY_ERRORS_ONLY = "E errors only"
+SHOWING_ERRORS = "errors only · {n}"
+HELD = "paused · END to resume"
 
-NETWORK = "network"  # AI-COPY
-IDLE_SPEED = "-- KB/s"  # AI-COPY
-EXTRACTING = "extracting…"  # AI-COPY
-MORE_DOWNLOADING = "… and {n} more downloading"  # AI-COPY
+NETWORK = "network"
+EXTRACTING = "extracting…"
 
 # What the divider says the run is doing.
-STAGE_CHECKING = "checking {name}"  # AI-COPY
+STAGE_CHECKING = "checking {name}"
 # A long check, with how far it has got: "1200/5000" or "3,400 files".
 STAGE_CHECKING_COUNT = STAGE_CHECKING + " · {count}"
-STAGE_DOWNLOADING = "downloading {name}"  # AI-COPY
-STAGE_RCLONE = "rclone: fetching {charts} Google would not serve"  # AI-COPY
-STAGE_SCANNING_AHEAD = "scanning ahead: {name}"  # AI-COPY
-STAGE_MARKERS = "rebuilding markers..."  # AI-COPY
-STAGE_READING_MARKERS = "reading markers..."  # AI-COPY
-STAGE_PARTIALS = "checking for interrupted downloads..."  # AI-COPY
-STAGE_STATS = "updating stats..."  # AI-COPY
+STAGE_DOWNLOADING = "downloading {name}"
+STAGE_RCLONE = "downloading {charts} with rclone"
+STAGE_SCANNING_AHEAD = "scanning {name}"
 
-# Rows the run adds to the list that are not charts: a name, then what happened.
-NOTE_ALREADY_SYNCED = "already synced"  # AI-COPY
-NOTE_SCAN_WARNING = "Scan warning"  # AI-COPY
-NOTE_SCAN_FAILED = "{setlists} failed, files preserved"  # AI-COPY
-NOTE_REBUILT = "Rebuild markers"  # AI-COPY
-NOTE_REBUILT_COUNT = "{n} rebuilt"  # AI-COPY
-NOTE_NEW_LIBRARY = "skipped: new library"  # AI-COPY
-NOTE_DELETE_SKIPPED = "delete skipped"  # AI-COPY
-NOTE_PARTIALS = "Partial downloads"  # AI-COPY
-NOTE_DELETED = "{files} deleted"  # AI-COPY
+# Rows the run adds to the list that are not charts: a name (a phase word,
+# WARNING or a drive), then what happened.
+NOTE_SCAN_FAILED = "{setlists} could not be scanned, untouched"
+NOTE_PARTIALS = "Partial downloads"
+NOTE_DELETED = "{files} deleted"
 NOTE_DELETED_SIZE = NOTE_DELETED + " ({size})"
-NOTE_NOT_DELETED = "{n} failed"  # AI-COPY
-NOTE_PURGE_DONE = PURGE + " complete"  # AI-COPY
-NOTE_NOTHING_DELETED = "nothing to delete"  # AI-COPY
 
-PURGE_CONFIRM = "Delete {files} ({size}) from {name}?"  # AI-COPY
+PURGE_CONFIRM = "Delete {files} ({size}) from {name}?"
 
 # --- why a chart failed ------------------------------------------------------
 #
 # The downloader's messages are written for the log. Each failed row shows one
 # of these instead, and the advice line under the counts says what to do.
 
-FAIL_DISK_FULL = "disk full"  # AI-COPY
-FAIL_OFFLINE = "no connection"  # AI-COPY
-FAIL_NEEDS_SIGN_IN = "needs sign-in"  # AI-COPY
-FAIL_RATE_LIMITED = "rate limited"  # AI-COPY
-FAIL_SIGNED_OUT = STATE_SIGNED_OUT
-FAIL_TIMED_OUT = "timed out"  # AI-COPY
-FAIL_CUT_SHORT = "cut short"  # AI-COPY
-FAIL_GONE = "not on Drive"  # AI-COPY
-FAIL_DRIVE_ERROR = "Drive error"  # AI-COPY
-FAIL_FORMAT = "unknown format"  # AI-COPY
-FAIL_UNPACK = "unpack failed"  # AI-COPY
-FAIL_UNKNOWN = "failed"  # AI-COPY
+FAIL_DISK_FULL = "disk full"
+FAIL_OFFLINE = "no connection"
+FAIL_NEEDS_SIGN_IN = "needs sign-in"
+FAIL_RATE_LIMITED = "rate limited"
+FAIL_SIGNED_OUT = "signed out"
+FAIL_TIMED_OUT = "timed out"
+FAIL_CUT_SHORT = "incomplete"
+FAIL_GONE = "removed"
+FAIL_DRIVE_ERROR = "Google error"
+FAIL_FORMAT = "unknown format"
+FAIL_UNPACK = "extract failed"
+FAIL_UNKNOWN = "failed"
 
-RETRIES_NEXT_SYNC = "The next sync retries these"  # AI-COPY
-NOTHING_TO_FIX = "Nothing to fix"  # AI-COPY
-REPORT_IT = "Report it if it keeps happening"  # AI-COPY
-
-ADVICE_DISK_FULL = "Free up space on the drive holding your library, then sync again."  # AI-COPY
-ADVICE_OFFLINE = "Check your internet, then sync again."  # AI-COPY
-# Mode, not sign-in: rclone signs in from there too.
-ADVICE_NEEDS_SIGN_IN = f"{SETTINGS_MODE}: connect rclone, or set up your own credentials."  # AI-COPY
-ADVICE_RATE_LIMITED = "Google throttled the drive. Usually clears within a day"  # AI-COPY
-ADVICE_CUT_SHORT = "Usually a throttle in disguise"  # AI-COPY
-ADVICE_GONE = "These were removed upstream. The next scan drops them"  # AI-COPY
-ADVICE_DRIVE_ERROR = "Google's end, not yours"  # AI-COPY
-ADVICE_FORMAT = "Not a format Clone Hero reads"  # AI-COPY
-ADVICE_UNPACK = "The archive would not open"  # AI-COPY
-ADVICE_UNKNOWN = "No cause reported"  # AI-COPY
-
-# Why a scan failed, after SYNC_FAILED. Signed out, rate limited, timed out
-# and offline reuse the FAIL_* words above.
-SCAN_MIXED_PROJECTS = ("Google rejected the credentials: its API key and your "  # AI-COPY
-                       "sign-in belong to different Google Cloud projects")
-SCAN_MALFORMED = "Google rejected the request as malformed (400)"  # AI-COPY
-SCAN_DENIED = "Google denied access (403)"  # AI-COPY
-SCAN_SOME_FAILED = "some setlists could not be scanned"  # AI-COPY
+RETRIES_NEXT_SYNC = "These will retry next sync."
+NOTHING_TO_FIX = "Nothing to fix."
+REPORT_IT = "Please report it at github.com/noahbaxter/synchotic/issues"
+FIX_OFFLINE = "Reconnect to your internet and try again."
 
 
 # ===========================================================================
@@ -530,42 +428,21 @@ SCAN_SOME_FAILED = "some setlists could not be scanned"  # AI-COPY
 # ===========================================================================
 
 ALL_SYNCED = "Everything in sync"
-DOWNLOADED_FILES = "Downloaded {files}."  # AI-COPY
-DONE_IN = "in {time}"  # AI-COPY
-AVG_SPEED = "{speed} avg"  # AI-COPY
-SYNC_FAILED = "Sync failed: {reason}"  # AI-COPY
-DID_NOT_DOWNLOAD = "{charts} did not download"  # AI-COPY
-FINISHED_IN = "Finished in {time}"  # AI-COPY
+DID_NOT_DOWNLOAD = "{charts} failed to download"
+FINISHED_IN = "Finished in {time}"
 CONTINUING_IN = "Continuing in 5s (press any key to skip)"
 
 
 # ===========================================================================
-# Startup and quitting: what a launch did to an older install
+# Startup: what a launch did to an older install
 # ===========================================================================
 
-GOODBYE = "Goodbye!"  # AI-COPY
-NO_FOLDERS = "No folders available!"  # AI-COPY
-DRIVES_JSON_FAILED = "Could not load drives.json"  # AI-COPY
-MODE_SET = "download mode set to {mode}"  # AI-COPY
+# {what} lists what came across, comma separated.
+ADOPTED = "Imported from a previous install: {what}"
+ADOPT_SKIPPED = ("Found settings from another install in {path}\n"
+                 "This install already has its own, so they were not imported.")
+MARKERS_LEFT = "{markers} could not be moved, retrying next launch"
+SANITIZED = "Renamed {paths} to remove illegal characters:"
 
-# Bringing a portable install's .dm-sync across. {what} lists the ADOPTED_*
-# and MIGRATED_* items below, comma separated.
-ADOPTED = "Brought your previous setup across: {what}"  # AI-COPY
-ADOPT_SKIPPED = ("A newer setup exists in {path}\n"  # AI-COPY
-                 "but this install already has settings and will not overwrite them.")
-ADOPTED_MERGED = "{name} (merged)"  # AI-COPY
-MIGRATED = "Migrated settings to .dm-sync/: {what}"  # AI-COPY
-MIGRATED_ITEM = "migrated {name}"  # AI-COPY
-REMOVED_ITEM = "removed {name}"  # AI-COPY
-MOVED_MARKERS = "moved {n} markers into the library"  # AI-COPY
-MARKERS_LEFT = "{markers} could not be moved, retrying on next launch"  # AI-COPY
-SANITIZED = "Sanitized {paths} on disk:"  # AI-COPY
-RENAMED_PATH = "{old} -> {new}"  # AI-COPY
-
-# A custom drive that turned out to be a released drive, or inside one.
-MIGRATE_DUPLICATE = "Removing duplicate custom entry: {name}"  # AI-COPY
-MIGRATE_CUSTOM = "Migrating custom folder: {old} → {new}"  # AI-COPY
-MIGRATE_MOVED = "Moved download folder"  # AI-COPY
-MIGRATE_EXISTS = "Warning: '{target}' already exists, leaving the folder where it is"  # AI-COPY
-MIGRATE_MARKERS = "Renamed {markers}"  # AI-COPY
-MIGRATE_DONE = "Migration complete: {folders} migrated"  # AI-COPY
+MIGRATE_CUSTOM = "Moving custom drive: {old} → {new}"
+MIGRATE_EXISTS = FAILURE + ": '{target}' already exists"

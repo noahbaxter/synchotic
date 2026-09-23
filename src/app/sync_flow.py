@@ -126,18 +126,16 @@ class SyncFlowMixin:
                             failed_setlists[folder_id] = failed
                     if failed_setlists:
                         all_failed = [name for names in failed_setlists.values() for name in names]
-                        progress.note(copy.NOTE_SCAN_WARNING, context=copy.NOTE_SCAN_FAILED.format(
+                        progress.note(copy.WARNING, context=copy.NOTE_SCAN_FAILED.format(
                             setlists=count(len(all_failed), "setlist")))
 
                 # Rebuild markers for any extracted archives missing them (prevents mass deletion)
                 progress.set_phase(copy.PHASE_VERIFY)
                 progress.set_title("")
-                progress.set_stage(copy.STAGE_MARKERS)
+                progress.set_stage("")
                 t0 = _time.time()
                 created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
                 debug_log(f"TIMING | rebuild_markers: {_time.time() - t0:.1f}s | created={created}")
-                if created:
-                    progress.note(copy.NOTE_REBUILT, context=copy.NOTE_REBUILT_COUNT.format(n=created))
 
                 # Purge extra files (no confirmation - sync means make it match)
                 progress.set_phase(copy.PURGE)
@@ -155,7 +153,7 @@ class SyncFlowMixin:
                 # Recompute menu cache now — this is the expensive part, do it here
                 # with feedback instead of silently after "done"
                 progress.set_phase(copy.PHASE_STATS)
-                progress.set_stage(copy.STAGE_STATS)
+                progress.set_stage("")
                 t0 = _time.time()
                 combined_drives = self._get_combined_drives_config()
                 menu_cache = compute_main_menu_cache(
@@ -210,7 +208,7 @@ class SyncFlowMixin:
         start_time = _time.time()
 
         if total_setlists == 0:
-            progress.note(copy.SYNC, context=copy.NOTE_ALREADY_SYNCED)
+            progress.note(copy.SYNC, context=copy.ALL_SYNCED)
             return False, set(), 0, 0, 0.0
 
         downloaded_ids: set[str] = set()

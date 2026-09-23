@@ -40,24 +40,20 @@ def auth_opening_browser():
     print()
 
 
-def _blocked(line: str, reason: str, where: str) -> None:
-    print(f"\n  {line.format(reason=reason)}")
-    print(f"  {copy.FIX_FROM.format(where=where)}")
+def _blocked(reason: str, where: str) -> None:
+    """What stops the work, then the settings row that fixes it."""
+    print(f"\n  {sentences(reason, copy.FIX_FROM.format(where=where))}")
 
 
 def sync_blocked(reason: str):
-    """Sync cannot start because the chosen download mode is not usable."""
-    _blocked(copy.SYNC_BLOCKED, reason, copy.SETTINGS_MODE)
+    """Sync, scan or adding a drive cannot start: the mode is not usable."""
+    _blocked(reason, copy.SETTINGS_MODE)
 
 
 def library_blocked(reason: str):
     """No library to scan into. Points at the library row, not Account:
     nothing about the mode is wrong here."""
-    _blocked(copy.SCAN_BLOCKED, reason, copy.SETTINGS_LOCATION)
-
-
-def custom_folder_blocked(reason: str):
-    _blocked(copy.ADD_BLOCKED, reason, copy.SETTINGS_MODE)
+    _blocked(reason, copy.SETTINGS_LOCATION)
 
 
 def session_expired_notice() -> None:
@@ -177,24 +173,13 @@ def library_summary(path, *, chart_folders: int, files: int, folders: int,
 
 
 def library_unavailable(path) -> None:
-    """The configured library is not reachable, e.g. an unmounted volume."""
+    """The library is not reachable: an unmounted volume at startup, or a
+    drive unplugged mid-run."""
     print()
     print(f"  {copy.LIBRARY_MISSING}:")
     print(f"    {path}")
     print()
     print(f"  {copy.FIX_RECONNECT}")
-    print(f"  {copy.NOTHING_CHANGED}")
-    print()
-
-
-def library_lost(path) -> None:
-    """The library went away mid-run. Unlike library_unavailable, this cannot
-    promise nothing has happened yet."""
-    print()
-    print(f"  {copy.LIBRARY_MISSING}:")
-    print(f"    {path}")
-    print()
-    print(f"  {sentences(copy.STOPPED_MIDWAY, copy.FIX_RECONNECT)}")
     print()
 
 
@@ -213,21 +198,15 @@ def add_folder_prompt():
     print()
     say(copy.ADD_HOWTO)
     print()
-    print(f"  {copy.ADD_EXAMPLE}")
-    print()
-    print(f"  {_c.DIM}{copy.ESC_TO_CANCEL}{_c.RESET}")
+    print(f"  {_c.DIM}Esc {copy.BTN_CANCEL.lower()}{_c.RESET}")
     print()
 
-def add_folder_invalid_url(error: str):
-    print(f"\n  {_c.BOLD}{error}{_c.RESET}")
-    say(copy.URL_USE_FOLDER_LINK)
+def add_folder_invalid_url():
+    print(f"\n  {_c.BOLD}{copy.FAILURE}:{_c.RESET} {copy.NOT_A_FOLDER_LINK}")
 
 def add_folder_failed(error: str):
     """Google's own reason, not a guess at what is wrong with the folder."""
     print(f"\n  {_c.BOLD}{copy.FAILURE}:{_c.RESET} {error}")
-
-def add_folder_found(folder_name: str):
-    print(f"  {copy.ADD_FOUND.format(bold_open=_c.BOLD, bold_close=_c.RESET, name=folder_name)}")
 
 
 # === Scan messages ===
@@ -235,12 +214,13 @@ def add_folder_found(folder_name: str):
 def scan_header(folder_name: str):
     print()
     print("=" * 50)
-    print(copy.SCAN_TITLE.format(name=folder_name))
+    print(f"{copy.SCANNING} {folder_name}")
     print("=" * 50)
 
 def scan_progress(folders: int, files: int):
     from ..primitives import print_progress
-    print_progress(copy.SCAN_PROGRESS.format(folders=folders, files=files))
+    print_progress(copy.SCAN_PROGRESS.format(folders=count(folders, "folder"),
+                                             files=count(files, "file")))
 
 
 # === Sync run summary, under the panel it leaves behind ===
@@ -248,17 +228,17 @@ def scan_progress(folders: int, files: int):
 def sync_cancelled(downloaded: int = 0):
     summary = f"{_c.DIM}{copy.CANCELLED}.{_c.RESET}"
     if downloaded > 0:
-        summary += " " + copy.DOWNLOADED_FILES.format(files=count(downloaded, "file"))
+        summary += f" {count(downloaded, 'file')}"
     print(summary)
 
 def sync_complete(downloaded: int, bytes_downloaded: int, duration: float):
+    """How much came down. How long the run took is FINISHED_IN, printed after."""
     avg_speed = bytes_downloaded / duration if duration > 0 else 0
     summary = f"{_c.SUCCESS}✓{_c.RESET} {count(downloaded, 'file')}"
     if bytes_downloaded > 0:
         summary += f" ({format_size(bytes_downloaded)})"
-    summary += " " + copy.DONE_IN.format(time=format_duration(duration))
     if avg_speed > 0:
-        summary += " • " + copy.AVG_SPEED.format(speed=format_speed(avg_speed))
+        summary += f" • {format_speed(avg_speed)}"
     print(summary)
 
 def sync_already_synced():
@@ -267,7 +247,7 @@ def sync_already_synced():
 def sync_failed(reason: str, failed_count: int = 0):
     """Nothing downloaded because scans failed, not because nothing was due."""
     scope = f" ({count(failed_count, 'setlist')})" if failed_count else ""
-    print(f"{_c.ERROR}✗{_c.RESET} {copy.SYNC_FAILED.format(reason=reason)}{scope}")
+    print(f"{_c.ERROR}✗{_c.RESET} {copy.FAILURE}: {reason}{scope}")
 
 # === Download errors ===
 
@@ -295,18 +275,19 @@ _FAILURE_WORDS = (
 
 # What to do about each, including "nothing to fix" where that is the answer.
 ADVICE = {
-    copy.FAIL_DISK_FULL: copy.ADVICE_DISK_FULL,
-    copy.FAIL_OFFLINE: copy.ADVICE_OFFLINE,
-    copy.FAIL_NEEDS_SIGN_IN: copy.ADVICE_NEEDS_SIGN_IN,
-    copy.FAIL_SIGNED_OUT: sentences(copy.STATUS_SIGNIN_EXPIRED, copy.FIX_SIGN_IN),
-    copy.FAIL_RATE_LIMITED: sentences(copy.ADVICE_RATE_LIMITED, copy.RETRIES_NEXT_SYNC),
-    copy.FAIL_TIMED_OUT: sentences(copy.RETRIES_NEXT_SYNC, copy.NOTHING_TO_FIX),
-    copy.FAIL_CUT_SHORT: sentences(copy.ADVICE_CUT_SHORT, copy.RETRIES_NEXT_SYNC),
-    copy.FAIL_GONE: sentences(copy.ADVICE_GONE, copy.NOTHING_TO_FIX),
-    copy.FAIL_DRIVE_ERROR: sentences(copy.ADVICE_DRIVE_ERROR, copy.RETRIES_NEXT_SYNC),
-    copy.FAIL_FORMAT: sentences(copy.ADVICE_FORMAT, copy.NOTHING_TO_FIX),
-    copy.FAIL_UNPACK: sentences(copy.ADVICE_UNPACK, copy.REPORT_IT),
-    copy.FAIL_UNKNOWN: sentences(copy.ADVICE_UNKNOWN, copy.RETRIES_NEXT_SYNC),
+    copy.FAIL_DISK_FULL: copy.PRE_FREE_UP,
+    copy.FAIL_OFFLINE: copy.FIX_OFFLINE,
+    # Mode, not sign-in: rclone and BYOC both sign in from there.
+    copy.FAIL_NEEDS_SIGN_IN: copy.FIX_FROM.format(where=copy.SETTINGS_MODE),
+    copy.FAIL_SIGNED_OUT: copy.FIX_SIGN_IN,
+    copy.FAIL_RATE_LIMITED: copy.RETRIES_NEXT_SYNC,
+    copy.FAIL_TIMED_OUT: copy.RETRIES_NEXT_SYNC,
+    copy.FAIL_CUT_SHORT: copy.RETRIES_NEXT_SYNC,
+    copy.FAIL_DRIVE_ERROR: copy.RETRIES_NEXT_SYNC,
+    copy.FAIL_UNKNOWN: copy.RETRIES_NEXT_SYNC,
+    copy.FAIL_GONE: copy.NOTHING_TO_FIX,
+    copy.FAIL_FORMAT: copy.NOTHING_TO_FIX,
+    copy.FAIL_UNPACK: copy.REPORT_IT,
 }
 
 # Reasons nothing will fix until someone does something.
@@ -344,7 +325,7 @@ def advise(reasons: list[str]) -> tuple[str, str, str]:
     for tone, pool in ((FIX, needs_you), (REPORT, unexplained), (TRANSIENT, passing)):
         reason = most(pool)
         if reason:
-            return tone, reason, ADVICE.get(reason, sentences(copy.REPORT_IT))
+            return tone, reason, ADVICE.get(reason, copy.REPORT_IT)
     return "", "", ""
 
 

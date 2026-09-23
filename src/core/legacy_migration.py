@@ -191,7 +191,7 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
                 # (drive toggles, download_mode, purge_ignore).
                 if name == "settings.json" and dest.exists():
                     if _merge_settings(src, dest):
-                        done.append(copy.ADOPTED_MERGED.format(name=name))
+                        done.append(name)
                     continue
                 if src.is_dir():
                     # Skip when the copy would add nothing: dest already has
@@ -350,12 +350,12 @@ def migrate_legacy_files() -> list[str]:
         if old_path.exists() and not new_path.exists():
             try:
                 old_path.rename(new_path)
-                migrated.append(copy.MIGRATED_ITEM.format(name=name))
+                migrated.append(name)
             except Exception:
                 try:
                     shutil.copy2(old_path, new_path)
                     old_path.unlink()
-                    migrated.append(copy.MIGRATED_ITEM.format(name=name))
+                    migrated.append(name)
                 except Exception:
                     pass
 
@@ -398,7 +398,7 @@ def migrate_legacy_files() -> list[str]:
             except Exception:
                 failed += 1
         if moved:
-            migrated.append(copy.MOVED_MARKERS.format(n=moved))
+            migrated.append(count(moved, "marker"))
         if failed:
             # Never silent. Reporting a short count beats claiming success while
             # the charts those markers described are queued for deletion.
@@ -424,7 +424,6 @@ def migrate_legacy_files() -> list[str]:
         if path.exists():
             try:
                 path.unlink()
-                migrated.append(copy.REMOVED_ITEM.format(name=path.name))
             except Exception:
                 pass
 
@@ -441,7 +440,6 @@ def migrate_legacy_files() -> list[str]:
             try:
                 # Try to remove if empty
                 dir_path.rmdir()
-                migrated.append(copy.REMOVED_ITEM.format(name=f"{dir_path.name}/"))
             except OSError:
                 # Not empty - try removing all contents if it's truly obsolete
                 # For now, just leave non-empty dirs alone
@@ -485,7 +483,7 @@ def migrate_unsanitized_paths() -> list[str]:
                     continue
                 try:
                     old.rename(new)
-                    renamed.append(copy.RENAMED_PATH.format(old=name, new=sanitized))
+                    renamed.append(f"{name} → {sanitized}")
                 except OSError:
                     pass
 

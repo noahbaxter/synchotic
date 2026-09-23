@@ -504,7 +504,7 @@ class TestTheFooterNeverWraps:
     def test_it_still_says_what_is_being_scanned(self, build, monkeypatch):
         lines = self._footer_lines(build, monkeypatch, 120)
 
-        assert "Scanning Drummer's Monthly Drive" in lines[0]
+        assert f"{copy.SCANNING} Drummer's Monthly Drive" in lines[0]
 
     def test_a_narrow_terminal_does_not_lose_the_second_line(self, build, monkeypatch):
         lines = self._footer_lines(build, monkeypatch, 24)
@@ -568,6 +568,15 @@ class TestDriveRowsNeedAWorkingMode:
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_RCLONE, rclone_authed=False)
         text = strip_ansi(rows[("act", "add_custom")][0](False, False))
         assert copy.STATUS_RCLONE in text
+
+    @pytest.mark.parametrize("mode, status", [
+        (DOWNLOAD_MODE_BYOC, copy.STATUS_BYOC),
+        (DOWNLOAD_MODE_RCLONE, copy.STATUS_RCLONE),
+    ])
+    def test_the_mode_row_says_why_it_cannot_download(self, build, mode, status):
+        rows = build(auth=None, mode=mode)["right_for"](SETTINGS)
+        row = next(r for r in rows if r[1] == ("act", "download_mode"))
+        assert status in _labels([row])[0]
 
     def test_anonymous_mode_leaves_them_available(self, build):
         """The regression to avoid: gating these on sign-in would kill a mode

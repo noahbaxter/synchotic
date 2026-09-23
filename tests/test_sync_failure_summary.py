@@ -18,6 +18,10 @@ class _Response:
         self.status_code = status_code
         self.text = text
 
+    def json(self):
+        import json
+        return json.loads(self.text)
+
 
 def _http_error(status, body=""):
     err = requests.exceptions.HTTPError(f"{status}")
@@ -25,15 +29,20 @@ def _http_error(status, body=""):
     return err
 
 
-def test_cross_project_failure_names_the_cause():
-    body = '{"error": {"message": "The API Key and the authentication credential are from different projects."}}'
-    reason = describe_scan_failure(_http_error(400, body))
-    assert reason == copy.SCAN_MIXED_PROJECTS
+def test_a_google_error_says_googles_own_message():
+    """The cross-project 400 is only fixable once you know it is that."""
+    message = "The API Key and the authentication credential are from different projects."
+    body = '{"error": {"message": "%s"}}' % message
+    assert describe_scan_failure(_http_error(400, body)) == message
+
+
+def test_a_google_error_without_a_message_still_says_something():
+    assert describe_scan_failure(_http_error(403, "<html>")) == "HTTP 403"
 
 
 def test_expired_signin_is_distinguished_from_denial():
     assert describe_scan_failure(_http_error(401)) == copy.FAIL_SIGNED_OUT
-    assert describe_scan_failure(_http_error(403)) == copy.SCAN_DENIED
+    assert describe_scan_failure(_http_error(403)) != copy.FAIL_SIGNED_OUT
 
 
 def test_unrecognised_failure_falls_back_to_the_exception():
@@ -46,7 +55,7 @@ def test_summary_line_states_the_reason(capsys):
     sync_display.sync_failed(copy.FAIL_SIGNED_OUT, failed_count=7)
     out = capsys.readouterr().out
 
-    assert copy.SYNC_FAILED.format(reason=copy.FAIL_SIGNED_OUT) in out
+    assert f"{copy.FAILURE}: {copy.FAIL_SIGNED_OUT}" in out
     assert "(7 setlists)" in out
     assert copy.ALL_SYNCED not in out
 

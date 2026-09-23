@@ -71,7 +71,7 @@ def _purge_enabled_drive(
                 resume_keys()
         if not confirmed:
             debug_log(f"PURGE_SKIPPED | folder={folder_name} | user declined")
-            progress.note(folder_name, context=copy.NOTE_DELETE_SKIPPED)
+            progress.note(folder_name, context=copy.CANCELLED)
             return 0, 0, 0
 
     # Invalidate affected setlists BEFORE delete — crash-safe
@@ -94,7 +94,7 @@ def _purge_partial_downloads(base_path: Path, progress,
                              already_walked=()) -> tuple[int, int, int]:
     """Clean up incomplete downloads outside the drives just purged, whose
     own passes already took theirs."""
-    progress.set_stage(copy.STAGE_PARTIALS)
+    progress.set_stage(copy.STAGE_CHECKING.format(name=copy.NOTE_PARTIALS.lower()))
     partial_files = find_partial_downloads(base_path, skip_dirs=already_walked)
     if not partial_files:
         return 0, 0, 0
@@ -133,7 +133,6 @@ def purge_all_folders(
     # A library we have never synced may be one the user already had. Their
     # folders can share drive names, so deleting anything here is a guess.
     if not is_library_adopted():
-        progress.note(copy.PURGE, context=copy.NOTE_NEW_LIBRARY)
         mark_library_adopted()
         return set()
 
@@ -150,7 +149,7 @@ def purge_all_folders(
     persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
-    progress.set_stage(copy.STAGE_READING_MARKERS)
+    progress.set_stage("")
     all_marker_files = get_all_marker_files()
     marker_norm = {normalize_path_key(p) for p in all_marker_files}
 
@@ -220,10 +219,10 @@ def purge_all_folders(
         context = copy.NOTE_DELETED_SIZE.format(files=count(total_deleted, "file"),
                                                 size=format_size(total_size))
         if total_failed:
-            context += ", " + copy.NOTE_NOT_DELETED.format(n=f"{total_failed:,}")
+            context += f", {total_failed:,} {copy.FAIL_UNKNOWN}"
     else:
-        context = copy.NOTE_NOTHING_DELETED
-    progress.note(copy.NOTE_PURGE_DONE, context=context)
+        context = copy.NOTE_DELETED.format(files=count(0, "file"))
+    progress.note(copy.PURGE, context=context)
 
     # Invalidate in-memory filesystem cache for folders that changed
     for folder in folders:

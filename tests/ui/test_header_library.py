@@ -3,6 +3,7 @@ import io
 import re
 from contextlib import redirect_stdout
 
+from src import copy
 from src.ui.components import header as header_module
 
 # Colour and the erase-to-end-of-line the banner puts on every row. strip_ansi
@@ -88,4 +89,4 @@ def test_an_unset_library_says_so_on_every_screen(monkeypatch):
     with redirect_stdout(out):
         header_module.print_header()
 
-    assert "library → NOT SET" in CSI.sub("", out.getvalue())
+    assert copy.LIBRARY_UNSET in CSI.sub("", out.getvalue())

@@ -50,17 +50,13 @@ def show_add_custom_folder(client, auth=None) -> tuple[str | None, str | None]:
         return None, None
 
     if not url_input.strip():
-        print(f"\n  {copy.ADD_EMPTY}")
-        wait_with_skip(2)
         return None, None
 
-    folder_id, error = parse_drive_folder_url(url_input)
+    folder_id, _ = parse_drive_folder_url(url_input)
     if not folder_id:
-        display.add_folder_invalid_url(error)
+        display.add_folder_invalid_url()
         wait_with_skip(3)
         return None, None
-
-    print(f"\n  {copy.ADD_CHECKING}")
 
     folder_name, error = client.validate_folder(folder_id)
 
@@ -68,8 +64,5 @@ def show_add_custom_folder(client, auth=None) -> tuple[str | None, str | None]:
         display.add_folder_failed(error)
         wait_with_skip(3)
         return None, None
-
-    display.add_folder_found(folder_name)
-    wait_with_skip(1)
 
     return folder_id, folder_name

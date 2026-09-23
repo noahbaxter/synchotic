@@ -26,27 +26,23 @@ if TYPE_CHECKING:
 
 
 def describe_scan_failure(e: Exception) -> str:
-    """A short, plain reason a scan failed, for the sync summary line.
-
-    The summary used to read "All files synced" no matter how many setlists
-    threw, which is how a total scan failure reached a user looking like a
-    clean run. Anything unrecognised falls back to the exception itself
-    rather than a vague stand-in.
+    """A short, plain reason a scan failed, for the sync summary line: the
+    same words a failed chart uses, or Google's own message. Anything
+    unrecognised falls back to the exception itself rather than a vague
+    stand-in.
     """
     resp = getattr(e, "response", None)
     status = getattr(resp, "status_code", None)
-    body = (getattr(resp, "text", "") or "")[:300]
 
-    if status == 400 and "different projects" in body:
-        return copy.SCAN_MIXED_PROJECTS
-    if status == 400:
-        return copy.SCAN_MALFORMED
     if status == 401:
         return copy.FAIL_SIGNED_OUT
-    if status == 403:
-        return copy.SCAN_DENIED
     if status == 429:
         return copy.FAIL_RATE_LIMITED
+    if status is not None:
+        try:
+            return resp.json()["error"]["message"]
+        except Exception:
+            return f"HTTP {status}"
     if isinstance(e, requests.exceptions.Timeout):
         return copy.FAIL_TIMED_OUT
     if isinstance(e, requests.exceptions.ConnectionError):
@@ -432,7 +428,7 @@ class BackgroundScanner:
         drive_id = folder["folder_id"]
         drive_name = folder.get("name", "")
         with self._lock:
-            self._stats.current_folder = copy.DISCOVERING_DRIVE.format(name=drive_name)
+            self._stats.current_folder = drive_name
             self._stats.current_folder_start = time.time()
 
         try:

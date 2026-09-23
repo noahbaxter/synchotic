@@ -420,5 +420,5 @@ class DriveClient:
 
         metadata = response.json()
         if metadata.get("mimeType") != "application/vnd.google-apps.folder":
-            return None, copy.URL_IS_FILE
+            return None, copy.NOT_A_FOLDER_LINK
         return metadata.get("name"), None

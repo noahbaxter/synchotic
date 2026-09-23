@@ -1,8 +1,6 @@
 """Background scanning: discovering and refreshing what's actually on each
 drive, off the input thread so the menu stays responsive while it runs."""
 
-import threading
-
 from src import copy
 from src.app.config import API_KEY
 from src.core.paths import get_download_path
@@ -95,12 +93,7 @@ class ScanMixin:
                 suffix = f" - {name}" if name else ""
                 print_progress(copy.DISCOVERING.format(done=done, total=total) + suffix)
 
-        slow_hint = threading.Timer(5.0, lambda: print(f"\n  {copy.RATE_LIMIT_WAIT}"))
-        slow_hint.start()
-        try:
-            self._background_scanner.discover(on_progress=_discovery_progress)
-        finally:
-            slow_hint.cancel()
+        self._background_scanner.discover(on_progress=_discovery_progress)
         # Migrate custom folders that are subfolders of released drives
         self._migrate_subfolder_customs()
         # Then start background scanning
@@ -141,7 +134,7 @@ class ScanMixin:
         scanner = self._background_scanner
         if not (scanner and scanner.has_scan_failures()):
             return None
-        reason = scanner.get_failure_reason() or copy.SCAN_SOME_FAILED
+        reason = scanner.get_failure_reason() or copy.FAIL_UNKNOWN
         count = sum(len(scanner.get_failed_setlist_names(f.get("folder_id", "")))
                     for f in self.folders)
         return reason, count

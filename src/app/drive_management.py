@@ -14,7 +14,7 @@ from src.ui.widgets import display
 
 class DriveManagementMixin:
 
-    def load_drives(self, quiet: bool = False):
+    def load_drives(self):
         """Load drive list from drives.json. File data comes from scanner.
 
         Builds folder list from static drive config only. Files are populated
@@ -22,9 +22,6 @@ class DriveManagementMixin:
         """
         # Migrate custom folders that are now released drives
         self._migrate_custom_to_released()
-
-        if not quiet:
-            print(copy.LOADING_DRIVES)
 
         # Filter out hidden drives
         hidden_ids = {d.folder_id for d in self.drives_config.drives if d.hidden}
@@ -125,13 +122,14 @@ class DriveManagementMixin:
         self.custom_folders.set_files(folder_id, folder["files"])
         self.custom_folders.save()
 
-        print(f"  {copy.SCAN_DONE.format(files=count(len(result.files), 'file'), size=format_size(folder['total_size']))}")
+        print(f"  {copy.SUCCESS}: {count(len(result.files), 'file')} "
+              f"({format_size(folder['total_size'])})")
         print()
         wait_with_skip(2)
 
     def _remove_custom_folder(self, folder_id: str, folder_name: str):
         """Remove a custom folder after confirmation."""
-        if not show_confirmation(copy.REMOVE_ASK, copy.REMOVE_BODY.format(name=folder_name)):
+        if not show_confirmation(f"{copy.REMOVE_FOLDER}?", copy.REMOVE_BODY.format(name=folder_name)):
             return
 
         self.custom_folders.remove_folder(folder_id)
@@ -140,7 +138,7 @@ class DriveManagementMixin:
         # Remove from folders list
         self.folders = [f for f in self.folders if f.get("folder_id") != folder_id]
 
-        print(f"\n  {copy.REMOVE_DONE.format(name=folder_name)}")
+        print(f"\n  {copy.SUCCESS}: {folder_name}")
         wait_with_skip(2)
 
     def handle_add_custom_folder(self) -> bool:
@@ -154,7 +152,7 @@ class DriveManagementMixin:
         # below, with the access error that actually describes the problem.
         blocked = self._drive_blocked()
         if blocked:
-            display.custom_folder_blocked(blocked)
+            display.sync_blocked(blocked)
             wait_with_skip(3)
             return False
 
@@ -179,7 +177,7 @@ class DriveManagementMixin:
         released_by_id = {d.folder_id: d.name for d in self.drives_config.drives}
         released_ids = set(released_by_id)
         if folder_id in released_ids:
-            print(f"\n  {copy.ADD_IS_DRIVE}")
+            print(f"\n  {copy.ADD_ALREADY.format(name=released_by_id[folder_id])}")
             wait_with_skip(2)
             return False
 
@@ -190,8 +188,7 @@ class DriveManagementMixin:
             parent_match = parents & released_ids
             if parent_match:
                 drive_name = released_by_id[parent_match.pop()]
-                print(f"\n  {copy.ADD_INSIDE_DRIVE.format(name=drive_name)}")
-                print(f"  {copy.ADD_INSIDE_FIX}")
+                print(f"\n  {copy.ADD_ALREADY.format(name=drive_name)}")
                 wait_with_skip(3)
                 return False
 
@@ -203,7 +200,7 @@ class DriveManagementMixin:
         self.user_settings.set_drive_enabled(folder_id, True)
         self.user_settings.save()
 
-        print(f"\n  {copy.ADD_DONE.format(name=folder_name)}")
+        print(f"\n  {copy.SUCCESS}: {folder_name}")
 
         # Create folder dict and add to app's folder list
         folder_dict = {

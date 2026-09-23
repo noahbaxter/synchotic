@@ -115,7 +115,7 @@ class AuthMixin:
         if open_folder(data_dir):
             return
         print()
-        print(f"  {copy.OPEN_FAILED}")
+        print(f"  {copy.FAILURE}:")
         print(f"    {data_dir}")
         print()
         wait_with_skip(4)
@@ -132,7 +132,7 @@ class AuthMixin:
         if there and open_folder(library):
             return
         print()
-        print(f"  {copy.OPEN_FAILED if there else copy.LIBRARY_MISSING + ':'}")
+        print(f"  {copy.FAILURE if there else copy.LIBRARY_MISSING}:")
         print(f"    {plain_path(library)}")
         print()
         wait_with_skip(4)

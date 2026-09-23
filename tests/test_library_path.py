@@ -178,7 +178,7 @@ class TestMigration:
 
         notes = paths.migrate_legacy_files()
 
-        assert copy.MOVED_MARKERS.format(n=3) in notes, notes
+        assert "3 markers" in notes, notes
         assert not legacy.exists(), "sidecars should still be drained"
         assert len([p for p in get_markers_dir().iterdir()
                     if not p.name.startswith("._")]) == 3

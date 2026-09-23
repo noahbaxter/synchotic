@@ -154,12 +154,6 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         start_time = os.environ.get("SYNCHOTIC_START_TIME")  # For startup timing
 
         while True:
-            if not self.folders:
-                clear_screen()
-                print_header()
-                print(copy.NO_FOLDERS)
-                print()
-
             # Compute cache if needed (first run or after state-changing actions)
             # Use combined drives config that includes custom folders
             combined_drives = self._get_combined_drives_config()
@@ -190,11 +184,8 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
 
             if action == "quit":
                 self._stop_background_scan()
-                # Drop back to the real screen so the sign-off lands in the
-                # shell the user came from instead of the buffer we discard.
                 from chotic_ui.primitives.host import leave_alt_screen
                 leave_alt_screen()
-                print(f"\n{copy.GOODBYE}")
                 break
 
             elif action == "sync":
@@ -412,7 +403,7 @@ def main():
         if not sys.stdin.isatty():
             sys.exit(1)
         from src.ui.widgets.confirm import ConfirmDialog
-        if not ConfirmDialog("Retry?", "Connect the drive, then choose Yes.").run():
+        if not ConfirmDialog(f"{copy.UNFINISHED_RETRY}?", copy.LIBRARY_MISSING).run():
             sys.exit(1)
 
     # A bundle that used to be portable has its settings, token and rclone
@@ -444,7 +435,7 @@ def main():
     # Must run BEFORE creating SyncApp so paths resolve correctly
     migrated = migrate_legacy_files()
     if migrated:
-        print(copy.MIGRATED.format(what=", ".join(migrated)))
+        print(f"  {copy.ADOPTED.format(what=', '.join(migrated))}")
 
     renamed = migrate_unsanitized_paths()
     if renamed:
@@ -458,7 +449,6 @@ def main():
         app.user_settings.download_mode = cli_args.download_mode
         app.user_settings.save()
         app.sync.download_mode = cli_args.download_mode
-        print(f"  {copy.MODE_SET.format(mode=cli_args.download_mode)}")
 
     if not startup_setup(app):
         from chotic_ui.primitives.host import leave_alt_screen
@@ -494,7 +484,7 @@ def run():
         from src.core.paths import get_library_path, plain_path
         leave_alt_screen()
         try:
-            display.library_lost(plain_path(get_library_path()))
+            display.library_unavailable(plain_path(get_library_path()))
         except Exception:
             print(f"\n\n{copy.LIBRARY_MISSING}. {copy.FIX_RECONNECT}")
         sys.exit(1)
