@@ -13,6 +13,7 @@ import time
 
 import pytest
 
+from src.config import jsonc
 from src.core import paths
 
 
@@ -95,19 +96,19 @@ class TestAdoptingItAtStartup:
         """The expensive one. An empty library_path defaults somewhere new, and
         the next sync downloads the entire collection into it."""
         paths.adopt_legacy_install()
-        saved = json.loads(paths.get_settings_path().read_text())
+        saved = jsonc.loads(paths.get_settings_path().read_text())
         assert saved["library_path"] == "/Volumes/nas/Charts"
 
     def test_the_drive_toggles_survive(self, previous):
         paths.adopt_legacy_install()
-        saved = json.loads(paths.get_settings_path().read_text())
+        saved = jsonc.loads(paths.get_settings_path().read_text())
         assert sum(1 for v in saved["drive_toggles"].values() if v) == 5
 
     def test_it_does_not_run_twice(self, previous):
         paths.adopt_legacy_install()
         paths.get_settings_path().write_text(json.dumps({"download_mode": "rclone"}))
         assert paths.adopt_legacy_install() == []
-        assert json.loads(paths.get_settings_path().read_text())["download_mode"] == "rclone"
+        assert jsonc.loads(paths.get_settings_path().read_text())["download_mode"] == "rclone"
 
 
 class TestAStaleDataDirDoesNotWinSilently:
@@ -130,7 +131,7 @@ class TestAStaleDataDirDoesNotWinSilently:
 
     def test_nothing_is_overwritten_behind_their_back(self, conflict):
         paths.adopt_legacy_install()
-        saved = json.loads(paths.get_settings_path().read_text())
+        saved = jsonc.loads(paths.get_settings_path().read_text())
         assert saved.get("library_path") in (None, "")
 
     def test_an_up_to_date_data_dir_raises_no_warning(self, os_dirs):
@@ -155,7 +156,7 @@ class TestMergingKeepsTheLivelierFile:
 
         paths.migrate_to_os_dirs(tmp_path / "live")
 
-        saved = json.loads(dest.read_text())
+        saved = jsonc.loads(dest.read_text())
         assert saved["library_path"] == "/Volumes/picked/Charts", "lost the picked folder"
         assert sum(1 for v in saved["drive_toggles"].values() if v) == 5, "stale toggles won"
         assert (live / "token.json").exists()
@@ -169,7 +170,7 @@ class TestMergingKeepsTheLivelierFile:
 
         paths.migrate_to_os_dirs(tmp_path / "ancient")
 
-        saved = json.loads(dest.read_text())
+        saved = jsonc.loads(dest.read_text())
         assert saved["download_mode"] == "rclone"
         assert saved["library_path"] == "/Volumes/picked/Charts"
 
@@ -218,18 +219,16 @@ class TestTheAdoptedLibraryTakesEffectImmediately:
 
 
 class TestAnImportKeepsEveryPreference:
-    """The library screen writes a settings file of defaults before adopting,
-    and a default is the absence of a preference, not one. Treating it as a real
-    value let it beat the install being adopted on every key whose default is
-    not empty: delete_videos, delta_mode and purge_ignore were all reset.
-    """
+    """The library screen writes a file of defaults before adopting. A default
+    is not a preference, so it must not beat the install being adopted on keys
+    whose default is not empty."""
 
     def test_a_non_default_preference_survives(self, os_dirs, tmp_path):
         legacy = tmp_path / "OldInstall" / paths.DATA_DIR_NAME
         legacy.mkdir(parents=True)
         (legacy / "settings.json").write_text(json.dumps({
             "delete_videos": False,
-            "delta_mode": "charts",
+            "purge_ignore": ["*.txt"],
             "drive_toggles": {"driveA": True},
         }))
         # what the library screen has just written: defaults plus the pick
@@ -240,8 +239,68 @@ class TestAnImportKeepsEveryPreference:
 
         paths.migrate_to_os_dirs(legacy)
 
-        saved = json.loads(paths.get_settings_path().read_text())
-        assert saved["delete_videos"] is False
-        assert saved["delta_mode"] == "charts"
-        assert saved["drive_toggles"] == {"driveA": True}
-        assert saved["library_path"] == "/Volumes/picked/Charts"
+        saved = UserSettings.load(paths.get_settings_path())
+        assert saved.download_ignore == []
+        assert saved.purge_ignore == ["*.txt"]
+        assert saved.drive_toggles == {"driveA": True}
+        assert saved.library_path == "/Volumes/picked/Charts"
+
+
+class TestAPlaceholderIsNotAnInstall:
+    """Any launch that finds nothing to adopt writes a file of defaults. That
+    file must not lock adoption out or silence the staleness warning."""
+
+    @pytest.fixture
+    def placeholder(self, os_dirs):
+        """A real install elsewhere, and defaults sitting in the OS data dir."""
+        live = _install(os_dirs / "Synchotic", library="/Volumes/nas/Charts",
+                        drives=5, age=7 * 86400)
+        from src.config.settings import UserSettings
+        UserSettings.load(paths.get_settings_path()).save()
+        return live
+
+    def test_defaults_do_not_block_adoption(self, placeholder):
+        assert paths.adopt_legacy_install() != []
+
+    def test_the_sign_in_and_library_come_across(self, placeholder):
+        paths.adopt_legacy_install()
+        saved = jsonc.loads(paths.get_settings_path().read_text())
+        assert saved["library_path"] == "/Volumes/nas/Charts"
+        assert (paths.get_data_dir() / "token.json").exists()
+
+    def test_a_real_preference_still_blocks_it(self, os_dirs):
+        """One real choice here means this could be a live install."""
+        _install(os_dirs / "Synchotic", library="/Volumes/nas/Charts", drives=5)
+        from src.config.settings import UserSettings
+        s = UserSettings.load(paths.get_settings_path())
+        s.download_mode = "byoc"
+        s.save()
+
+        assert paths.adopt_legacy_install() == []
+        assert jsonc.loads(paths.get_settings_path().read_text())["download_mode"] == "byoc"
+
+    def test_a_library_pick_alone_is_still_told_about_the_real_install(self, os_dirs):
+        """A newer file holding only a fresh library pick is not a rival install."""
+        live = _install(os_dirs / "Synchotic", library="/Volumes/nas/Charts",
+                        drives=5, age=7 * 86400)
+        from src.config.settings import UserSettings
+        fresh = UserSettings.load(paths.get_settings_path())
+        fresh.library_path = "/Volumes/picked/Charts"
+        fresh.save()
+
+        assert str(live) in paths.stale_data_dir_warning()
+
+    def test_an_empty_previous_install_is_not_worth_reporting(self, os_dirs):
+        """Nothing to adopt from a folder whose settings are defaults too."""
+        empty = os_dirs / "Synchotic" / paths.DATA_DIR_NAME
+        empty.mkdir(parents=True)
+        (empty / "settings.json").write_text(json.dumps({"drive_toggles": {}}))
+        from src.config.settings import UserSettings
+        s = UserSettings.load(paths.get_settings_path())
+        s.download_mode = "byoc"
+        s.save()
+        # Newer than the file here, so only its lack of choices keeps it quiet.
+        later = time.time() + 60
+        os.utime(empty / "settings.json", (later, later))
+
+        assert paths.stale_data_dir_warning() == ""

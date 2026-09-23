@@ -99,6 +99,7 @@ if ($Mode -eq "Launcher") {
         --icon "packaging\windows\synchotic.ico" `
         --add-data "drives.json;." `
         --add-data "src\drive\byoc_setup_instructions.txt;src\drive" `
+        --add-data "docs\settings.template.jsonc;docs" `
         --add-data "VERSION;." `
         --add-data "$CertifiPath;certifi" `
         --add-binary "libs\bin\UnRAR.exe;." `

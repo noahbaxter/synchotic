@@ -63,36 +63,40 @@ def legacy_install_candidates(explicit=None) -> list:
 def adopt_legacy_install() -> list:
     """Bring a previous install into the OS dirs, once, at startup.
 
-    Only when there is nothing here yet. An OS data dir that already holds
-    settings is either a real install or, for anyone who ever ran a dev build,
-    months-old leftovers. Copying over the first would be destructive and
-    telling the two apart automatically is guesswork, so that case is reported
-    rather than resolved.
+    Only when nobody has chosen anything here yet. An OS data dir holding real
+    preferences is either a live install or a dev build's leftovers, and
+    telling them apart is guesswork, so that case is reported rather than
+    resolved. A file of pure defaults, which any launch that found nothing to
+    adopt writes, does not count.
     """
     if not paths._using_os_dirs():
         return []
     candidates = legacy_install_candidates()
     if not candidates:
         return []
-    if paths.get_settings_path().exists():
+    if _preferences_in(paths.get_settings_path()):
         return []
     return migrate_to_os_dirs(candidates[0])
 
 
 def stale_data_dir_warning() -> str:
-    """A settings file here, and a livelier one in an install we did not adopt.
+    """A real install we did not adopt, and no sign of it on screen otherwise.
 
-    Says so instead of booting into whichever happened to be in the way, which
-    is how a February dev build silently beat a live install.
+    Says so instead of booting into whichever happened to be in the way. A
+    newer file here only outranks the candidate if it holds real choices; a
+    placeholder or a lone library pick is not a rival install.
     """
     if not paths._using_os_dirs():
         return ""
     dest = paths.get_settings_path()
     if not dest.exists():
         return ""
+    settled = set(_preferences_in(dest)) - set(_PICKED_BY_THIS_SESSION)
     for candidate in legacy_install_candidates():
         settings = candidate / "settings.json"
-        if settings.exists() and settings.stat().st_mtime > dest.stat().st_mtime:
+        if not _preferences_in(settings):
+            continue
+        if not settled or settings.stat().st_mtime > dest.stat().st_mtime:
             return str(candidate)
     return ""
 
@@ -221,12 +225,12 @@ def _apply_adopted_library() -> None:
     Never overrides a library already chosen. The library screen calls adoption
     with the folder the user just picked, and that pick wins.
     """
-    import json
+    from ..config import jsonc
 
     if paths._library_override or os.environ.get("SYNCHOTIC_LIBRARY"):
         return
     try:
-        data = json.loads(paths.get_settings_path().read_text())
+        data = jsonc.loads(paths.get_settings_path().read_text())
     except Exception:
         return
     adopted = data.get("library_path") if isinstance(data, dict) else ""
@@ -240,26 +244,16 @@ def _apply_adopted_library() -> None:
 # adopting.
 _PICKED_BY_THIS_SESSION = ("library_path",)
 
-_MISSING = object()
 
+def _preferences_in(settings_file) -> dict:
+    """chosen_settings for a path that may be missing or may not be JSON."""
+    from ..config import jsonc
+    from ..config.settings import chosen_settings
 
-def _default_settings() -> dict:
-    """What a settings file holds before anyone has chosen anything.
-
-    A value equal to its default is the absence of a preference, not one, so it
-    must never beat a real choice from the install being adopted. Without this
-    the destination file the library screen has just written is a wall of
-    defaults that wins every key it has: an import kept the drive toggles, whose
-    default is empty, and silently reset delete_videos, delta_mode and
-    purge_ignore, whose defaults are not.
-    """
-    from ..config.settings import UserSettings
-
-    probe = vars(UserSettings(Path(".")))
-    defaults = {k: v for k, v in probe.items()
-                if k != "path" and not k.startswith("_")}
-    defaults["use_default_drives"] = probe.get("_is_new")
-    return defaults
+    try:
+        return chosen_settings(jsonc.loads(Path(settings_file).read_text()))
+    except Exception:
+        return {}
 
 
 def _merge_settings(legacy_file, dest_file) -> bool:
@@ -273,21 +267,27 @@ def _merge_settings(legacy_file, dest_file) -> bool:
     """
     import json
 
+    from ..config import jsonc
+    from ..config.settings import chosen_settings, unknown_settings
+
     try:
-        legacy = json.loads(legacy_file.read_text())
-        current = json.loads(dest_file.read_text())
+        legacy = jsonc.loads(legacy_file.read_text())
+        current = jsonc.loads(dest_file.read_text())
     except Exception:
         return False
     if not isinstance(legacy, dict) or not isinstance(current, dict):
         return False
-    defaults = _default_settings()
-    keep = {k: v for k, v in current.items()
-            if v not in ("", None, {}, []) and v != defaults.get(k, _MISSING)}
+    keep = chosen_settings(current)
     if legacy_file.stat().st_mtime > dest_file.stat().st_mtime:
         keep = {k: v for k, v in keep.items() if k in _PICKED_BY_THIS_SESSION}
-    merged = {**legacy, **keep}
+    # An unknown key fills a gap but never overrules the install being adopted.
+    strays = {k: v for k, v in unknown_settings(current).items() if k not in legacy}
+    merged = {**legacy, **strays, **keep}
     if merged == current:
         return False
+    # Plain JSON, not the template writer: the template would stamp a version
+    # and fill in defaults, and the next load would skip migrating the old
+    # keys. That load rewrites the file with its comments anyway.
     dest_file.write_text(json.dumps(merged, indent=2))
     return True
 

@@ -1,0 +1,49 @@
+// Synchotic user settings
+// Note: edit with Synchotic closed or your changes likely will be overwritten.
+{
+  "version": 1,
+
+  // Sync chart folder location. If empty, uses default path which is:
+  //    Windows: C:\Users\<you>\Synchotic\Sync Charts
+  //    macOS: ~/Synchotic/Sync Charts
+  //    Linux: ~/Synchotic/Sync Charts
+  "library_path": "",
+
+  // How google drive files are fetched.
+  //    "rclone": (Recommended) a popular online storage sync tool and the easiest 
+  //              way to use Synchotic. Shares its API limits with all users and may
+  //              be rate limited at popular times of the day.
+  //    "byoc": (Advanced) your own private Google project. About ten minutes 
+  //            to set up but offers the best experience. See docs/byoc.md
+  //    "anonymous": no sign-in required. Many game rips will not allow
+  //                 anonymous users to download them.
+  // Empty "" results in first time setup prompt.
+  "download_mode": "",
+
+  // Never downloads these files from the remote drive.
+  // Files IN this list are never downloaded, and are stripped from archives.
+  // Files NOT IN this list will download and replace any local files with the same name.
+  "download_ignore": [
+    "*.mp4",
+    "*.avi",
+    "*.webm",
+    "*.mkv",
+    "*.mov"
+  ],
+
+  // Never deletes these files from the local library.
+  // Files IN this list are never deleted.
+  // Files NOT IN this list will be deleted if they're missing from the remote drive, or if their drive is disabled.
+  "purge_ignore": [
+    "._*",
+    ".DS_Store",
+    "Thumbs.db",
+    "desktop.ini"
+  ],
+
+  // Enabled drives, by Google Drive folder ID. Unlisted means off.
+  "drive_toggles": {},
+
+  // Enabled setlists per drive.
+  "subfolder_toggles": {}
+}

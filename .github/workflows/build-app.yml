@@ -81,6 +81,7 @@ jobs:
             --icon "packaging/macos/Synchotic.icns" \
             --add-data "drives.json:." \
             --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
+            --add-data "docs/settings.template.jsonc:docs" \
             --add-data "VERSION:." \
             --add-data "$CERTIFI_PATH:certifi" \
             --add-binary "libs/bin/unrar:." \
@@ -97,6 +98,7 @@ jobs:
           pyinstaller --onedir --name synchotic-app --clean --noconfirm \
             --add-data "drives.json:." \
             --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
+            --add-data "docs/settings.template.jsonc:docs" \
             --add-data "VERSION:." \
             --add-data "$CERTIFI_PATH:certifi" \
             --add-binary "libs/bin/unrar:." \
@@ -114,6 +116,7 @@ jobs:
             --icon "packaging/windows/synchotic.ico" `
             --add-data "drives.json;." `
             --add-data "src/drive/byoc_setup_instructions.txt;src/drive" `
+            --add-data "docs/settings.template.jsonc;docs" `
             --add-data "VERSION;." `
             --add-data "$CERTIFI_PATH;certifi" `
             --add-binary "libs/bin/UnRAR.exe;." `

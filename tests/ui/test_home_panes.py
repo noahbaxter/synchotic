@@ -117,13 +117,15 @@ class TestTheRightPane:
 
 class TestTogglingStaysOnTheScreen:
     def test_space_on_a_drive_toggles_it_without_returning(self, build):
+        """Nothing has been chosen in this settings object, so the drive is off
+        and Space turns it on."""
         def act(pane):
             pane.focus = "left"
             pane._on_left_space(("drive", "drive-1"))
             return None
 
         out = build(act=act)
-        assert out["settings"].is_drive_enabled("drive-1") is False
+        assert out["settings"].is_drive_enabled("drive-1") is True
         assert out["returned"][0] == "quit"
 
     def test_toggling_a_setlist_returns_nothing(self, build):
@@ -135,11 +137,15 @@ class TestTogglingStaysOnTheScreen:
         build(act=act)
 
     def test_a_setlist_toggle_is_persisted(self, build):
+        """Enter on a setlist inside a drive that is off turns the drive on
+        instead, so the second press is the one that toggles the setlist."""
         def act(pane):
+            pane._on_right_enter(("setlist", "drive-1", "Setlist A"))
             pane._on_right_enter(("setlist", "drive-1", "Setlist A"))
             return None
 
         settings = build(act=act)["settings"]
+        assert settings.is_drive_enabled("drive-1") is True
         assert settings.is_subfolder_enabled("drive-1", "Setlist A") is False
 
 

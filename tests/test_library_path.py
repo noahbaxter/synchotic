@@ -11,6 +11,7 @@ from pathlib import Path
 
 import pytest
 
+from src.config import jsonc
 from src.core import paths
 
 
@@ -383,10 +384,8 @@ class TestUpgradingABundle:
         assert (paths.get_data_dir() / "token.json").read_text() == '{"token": "kept"}'
 
     def test_the_settings_come_across(self, legacy):
-        import json
-
         paths.migrate_to_os_dirs()
-        saved = json.loads(paths.get_settings_path().read_text())
+        saved = jsonc.loads(paths.get_settings_path().read_text())
         assert saved["download_mode"] == "rclone"
         assert saved["library_path"] == "/Volumes/x/Charts"
 

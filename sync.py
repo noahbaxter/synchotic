@@ -112,26 +112,17 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         clear_screen()
         print_header()
 
-        # First-run OAuth prompt (only shown once)
-        #
-        # Gated on the user owning an OAuth client. Sign-in resolves its client
-        # from credentials.json and falls back to the embedded one, which is the
-        # capped app: its 100-user limit is full and verification was rejected,
-        # so for anyone new that sign-in cannot succeed. Offering it anyway is
-        # what made picking BYOC lead straight into a Synchotic sign-in that was
-        # guaranteed to fail. has_custom_client_config exists for this check.
-        #
-        # oauth_prompted is only set when the prompt actually ran, so a user who
-        # sets up BYOC later still gets asked once, at the point it can work.
+        # Offered on every start while the chosen mode is missing a sign-in and
+        # nothing else. connection_step_for keeps BYOC without credentials away
+        # from sign-in, which would fall back to the capped embedded client.
         from src.drive.auth import has_custom_client_config
+        from src.ui.screens.download_mode import connection_step_for
 
-        if (not self.user_settings.oauth_prompted
-                and self.auth.is_available
-                and not self.auth.is_signed_in
-                and has_custom_client_config()):
-            self.user_settings.oauth_prompted = True
-            self.user_settings.save()
-
+        step = connection_step_for(self.user_settings.download_mode,
+                                   rclone_authed=True,
+                                   signed_in=self.auth.is_signed_in,
+                                   byoc_configured=has_custom_client_config())
+        if self.auth.is_available and step == "signin":
             if show_oauth_prompt():
                 self.handle_signin()
                 clear_screen()
@@ -391,6 +382,12 @@ def main():
         print(f"\n  A newer setup exists in {stale}")
         print("  but this install already has settings and will not overwrite them.")
         print("  Settings > Library, pointed at that folder, imports it.\n")
+
+    # settings.json is meant to be edited, so write it on the first run, after
+    # adoption has had its say about what goes in it.
+    from src.core.paths import get_settings_path
+    if not get_settings_path().exists():
+        UserSettings.load(get_settings_path()).save()
 
     # Migrate legacy files from old locations to .dm-sync/
     # Must run BEFORE creating SyncApp so paths resolve correctly

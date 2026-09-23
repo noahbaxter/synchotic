@@ -28,17 +28,30 @@ class TestUserSettingsDefaults:
         assert not settings.is_drive_enabled("1OTcP60EwXnT73FYy-yjbB2C7yU6mVMTf")
         assert not settings.is_drive_enabled("some_other_drive_id")
 
-    def test_existing_user_all_drives_enabled(self, temp_dir):
-        """Existing users (have settings file) default all drives to enabled."""
-        # Create empty settings file
+    def test_an_upgrade_keeps_the_drives_it_had(self, temp_dir):
+        """1.5.4 had every unseen drive on without writing it down. The upgrade
+        writes it down once the drives are known."""
         settings_path = temp_dir / "settings.json"
-        settings_path.write_text("{}")
+        settings_path.write_text(
+            '{"download_mode": "rclone", "delete_videos": true, "use_default_drives": false}')
 
         settings = UserSettings.load(settings_path)
+        settings.settle_drive_defaults(["any_drive_id", "another_drive"])
 
-        # Any drive not explicitly toggled should be enabled
-        assert settings.is_drive_enabled("any_drive_id")
-        assert settings.is_drive_enabled("another_drive")
+        assert settings.drive_toggles == {"any_drive_id": True, "another_drive": True}
+
+    def test_a_hand_written_file_turns_nothing_on(self, temp_dir):
+        """No version and no retired keys is a person's file, not an old one."""
+        settings_path = temp_dir / "settings.json"
+        settings_path.write_text('{"library_path": "/mnt/ch", "drive_toggles": {"a": true}}')
+
+        settings = UserSettings.load(settings_path)
+        assert settings.settle_drive_defaults(["a", "b"]) is False
+        assert settings.is_drive_enabled("b") is False
+
+    def test_a_drive_nobody_has_decided_about_is_off(self, temp_dir):
+        settings = UserSettings.load(temp_dir / "settings.json")
+        assert settings.is_drive_enabled("any_drive_id") is False
 
     def test_explicit_toggle_respected(self, temp_dir):
         """Explicit drive toggles override defaults."""
@@ -55,18 +68,18 @@ class TestUserSettingsDefaults:
     def test_toggle_drive_returns_new_state(self, temp_dir):
         """toggle_drive() returns the new enabled state."""
         settings_path = temp_dir / "settings.json"
-        settings_path.write_text("{}")  # Existing user, all enabled by default
+        settings_path.write_text('{"version": 2}')
         settings = UserSettings.load(settings_path)
 
-        # First toggle disables
-        new_state = settings.toggle_drive("test_drive")
-        assert new_state is False
-        assert not settings.is_drive_enabled("test_drive")
-
-        # Second toggle enables
+        # A drive nobody has decided about is off, so the first toggle enables
         new_state = settings.toggle_drive("test_drive")
         assert new_state is True
         assert settings.is_drive_enabled("test_drive")
+
+        # Second toggle disables
+        new_state = settings.toggle_drive("test_drive")
+        assert new_state is False
+        assert not settings.is_drive_enabled("test_drive")
 
 
 class TestSubfolderToggles:
@@ -152,32 +165,21 @@ class TestSettingsPersistence:
         settings = UserSettings.load(settings_path)
         settings.set_drive_enabled("drive1", False)
         settings.set_subfolder_enabled("drive2", "setlist1", False)
-        settings.delete_videos = False
+        settings.download_ignore = []
         settings.save()
 
         # Load fresh
         settings2 = UserSettings.load(settings_path)
         assert not settings2.is_drive_enabled("drive1")
         assert not settings2.is_subfolder_enabled("drive2", "setlist1")
-        assert settings2.delete_videos is False
+        assert settings2.download_ignore == []
+        assert settings2.delete_videos is False, "nothing to strip means nothing to skip"
 
     def test_delete_videos_defaults_true(self, temp_dir):
         """delete_videos defaults to True."""
         settings = UserSettings.load(temp_dir / "settings.json")
         assert settings.delete_videos is True
 
-    def test_oauth_prompted_persists(self, temp_dir):
-        """oauth_prompted flag persists."""
-        settings_path = temp_dir / "settings.json"
-
-        settings = UserSettings.load(settings_path)
-        assert settings.oauth_prompted is False
-
-        settings.oauth_prompted = True
-        settings.save()
-
-        settings2 = UserSettings.load(settings_path)
-        assert settings2.oauth_prompted is True
 
     def test_corrupted_file_treated_as_new(self, temp_dir):
         """Corrupted JSON file treated as new user."""
@@ -199,17 +201,13 @@ class TestSettingsRegressions:
         with tempfile.TemporaryDirectory() as tmpdir:
             yield Path(tmpdir)
 
-    def test_new_flag_cleared_when_user_has_toggles(self, temp_dir):
-        """
-        Regression test: users with use_default_drives=true who have drive
-        toggles are not actually new. Clearing DEFAULT_ENABLED_DRIVES must
-        not disable drives they never explicitly toggled.
-        """
+    def test_a_file_that_calls_itself_new_but_has_been_used(self, temp_dir):
+        """use_default_drives said "new" over a file full of toggles, and the
+        old loader corrected it on sight. The upgrade has to read the corrected
+        answer, or an install in use for a year loses every drive it never
+        explicitly turned on."""
         import json
         settings_path = temp_dir / "settings.json"
-
-        # Simulate a user who started as "new" but has been using the app:
-        # they toggled some drives but left others at the default
         settings_path.write_text(json.dumps({
             "use_default_drives": True,
             "drive_toggles": {"some_drive": False},
@@ -217,19 +215,16 @@ class TestSettingsRegressions:
         }))
 
         settings = UserSettings.load(settings_path)
+        settings.settle_drive_defaults(["some_drive", "untouched_drive"])
 
-        # The flag should be cleared — they're not new
-        assert settings._is_new is False
-        # Untouched drives should get the existing-user default (enabled)
         assert settings.is_drive_enabled("untouched_drive") is True
-        # Their explicit toggle is still respected
-        assert settings.is_drive_enabled("some_drive") is False
+        assert settings.is_drive_enabled("some_drive") is False, "their own choice stands"
 
-    def test_new_flag_preserved_for_actual_new_users(self, temp_dir):
-        """Truly new users (no toggles, no usage) stay marked as new."""
+    def test_a_fresh_install_turns_nothing_on_by_itself(self, temp_dir):
         settings = UserSettings.load(temp_dir / "nonexistent_settings.json")
 
-        assert settings._is_new is True
+        assert settings.is_drive_enabled("any_drive") is False
+        assert settings.settle_drive_defaults(["any_drive"]) is False, "nothing to carry over"
         assert settings.is_drive_enabled("any_drive") is False
 
     def test_disabled_drive_stays_disabled_after_reload(self, temp_dir):
@@ -280,16 +275,18 @@ class TestGroupExpanded:
         assert new_state is True
         assert settings.is_group_expanded("test_group")
 
-    def test_group_state_persists(self, temp_dir):
-        """Group expanded state persists."""
+    def test_group_state_lasts_the_session_and_is_not_written_down(self, temp_dir):
+        """Which groups are open is where the cursor was, not a decision, so it
+        is no longer kept in settings.json."""
         settings_path = temp_dir / "settings.json"
 
         settings = UserSettings.load(settings_path)
         settings.toggle_group_expanded("collapsed_group")
         settings.save()
 
-        settings2 = UserSettings.load(settings_path)
-        assert not settings2.is_group_expanded("collapsed_group")
+        assert not settings.is_group_expanded("collapsed_group"), "still holds for now"
+        assert "group_expanded" not in settings_path.read_text()
+        assert UserSettings.load(settings_path).is_group_expanded("collapsed_group")
 
 
 if __name__ == "__main__":
