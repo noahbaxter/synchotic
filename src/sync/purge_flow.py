@@ -117,9 +117,13 @@ def _purge_enabled_drive(
     return deleted, failed, folder_size
 
 
-def _purge_partial_downloads(base_path: Path, progress=None) -> tuple[int, int, int]:
-    """Clean up incomplete downloads. Returns (deleted, failed, size)."""
-    partial_files = find_partial_downloads(base_path)
+def _purge_partial_downloads(base_path: Path, progress=None,
+                             already_walked=()) -> tuple[int, int, int]:
+    """Clean up incomplete downloads outside the drives just purged, whose
+    own passes already took theirs."""
+    if progress:
+        progress.set_stage("checking for interrupted downloads...")
+    partial_files = find_partial_downloads(base_path, skip_dirs=already_walked)
     if not partial_files:
         return 0, 0, 0
 
@@ -180,6 +184,7 @@ def purge_all_folders(
     total_failed = 0
     total_size = 0
     purged_folder_ids: set[str] = set()
+    walked_paths: list[Path] = []  # the partials sweep skips these
     persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
@@ -243,6 +248,9 @@ def purge_all_folders(
                 user_settings, failed_setlists, marker_norm, persistent_cache,
                 progress=progress, pause_keys=pause_keys, resume_keys=resume_keys,
             )
+        # Including a declined drive: its partials were in the list turned
+        # down, so sweeping them would override that answer.
+        walked_paths.append(folder_path)
 
         total_deleted += deleted
         total_failed += failed
@@ -258,7 +266,8 @@ def purge_all_folders(
         if not progress:
             print("\033[2K\r", end="", flush=True)
 
-    deleted, failed, size = _purge_partial_downloads(base_path, progress=progress)
+    deleted, failed, size = _purge_partial_downloads(
+        base_path, progress=progress, already_walked=walked_paths)
     total_deleted += deleted
     total_failed += failed
     total_size += size

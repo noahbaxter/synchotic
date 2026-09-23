@@ -17,7 +17,7 @@ from src.sync import (
     clear_cache,
 )
 from src.sync.cache import scan_local_files
-from src.sync.purge_planner import find_extra_files, plan_purge
+from src.sync.purge_planner import find_extra_files, find_partial_downloads, plan_purge
 from src.core.formatting import normalize_path_key
 
 # Backwards compat alias
@@ -384,6 +384,42 @@ class TestPartialDownloadsPerFolder:
 
             stats_b = count_purgeable_detailed([folder_b], temp_dir, user_settings=None)
             assert stats_b.partial_count == 0  # Bug: was 1 before fix
+
+
+class TestTheSweepSkipsWhatWasAlreadyWalked:
+    """Each drive's own purge pass already took its partials."""
+
+    def _library(self, tmpdir):
+        base = Path(tmpdir)
+        (base / "DriveA" / "Setlist").mkdir(parents=True)
+        (base / "DriveA" / "Setlist" / "_download_a.7z").write_bytes(b"a" * 10)
+        (base / "DriveB" / "Setlist").mkdir(parents=True)
+        (base / "DriveB" / "Setlist" / "_download_b.7z").write_bytes(b"b" * 20)
+        return base
+
+    def test_a_walked_drive_is_not_searched_again(self):
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = self._library(tmpdir)
+
+            found = find_partial_downloads(base, skip_dirs=[base / "DriveA"])
+
+            names = sorted(p.name for p, _ in found)
+            assert names == ["_download_b.7z"], f"swept the skipped drive: {names}"
+
+    def test_everything_else_is_still_swept(self):
+        """Drives that were skipped, and loose files at the library root, are
+        exactly what the sweep is for."""
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = self._library(tmpdir)
+            (base / "_download_loose.7z").write_bytes(b"c" * 30)
+            (base / "notes.txt").write_text("someone's own file")
+
+            found = find_partial_downloads(base, skip_dirs=[])
+
+            names = sorted(p.name for p, _ in found)
+            assert names == ["_download_a.7z", "_download_b.7z", "_download_loose.7z"]
 
 
 class TestTheWalkSaysHowFarItHasGot:
