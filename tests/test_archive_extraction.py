@@ -678,5 +678,99 @@ class TestProcessArchiveIntegration:
         )
 
 
+class TestAppleDoubleSidecars:
+    """Extracting onto a share where macOS writes a `._` sidecar beside
+    everything and removes it along with its partner."""
+
+    SONG = "Tenacious D - Master Exploder"
+
+    @pytest.fixture
+    def library(self, tmp_path, monkeypatch):
+        """A library whose staging lives inside it, as on a real install."""
+        lib = tmp_path / "Sync Charts"
+        lib.mkdir()
+        monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(lib))
+        return lib
+
+    def _run(self, library, monkeypatch, chart_dir, song, move=None):
+        """process_archive on `{chart_dir}/{song}.zip`, extracting `song/`
+        plus sidecars. Moving anything clears the sidecars beside it, so
+        treating one as content either copies it in or dies on ENOENT."""
+        import shutil as shutil_mod
+
+        from src.sync import downloader as dl
+        from src.sync.downloader import DownloadTask, FileDownloader
+
+        def extract(archive_path, dest_folder):
+            chart = Path(dest_folder) / song
+            chart.mkdir(parents=True)
+            (chart / "song.ini").write_text("[song]\nname=Test\n")
+            (chart / "._song.ini").write_bytes(b"\x00\x05\x16\x07")
+            (Path(dest_folder) / f"._{song}").write_bytes(b"\x00\x05\x16\x07")
+            return True, ""
+
+        real_move = shutil_mod.move
+
+        def vanishing_move(src, dst):
+            result = real_move(src, dst)
+            for sidecar in Path(src).parent.glob("._*"):
+                sidecar.unlink()
+            return result
+
+        chart_folder = library / "TestDrive" / chart_dir
+        chart_folder.mkdir(parents=True, exist_ok=True)
+        archive = chart_folder / f"{song}.zip"
+        archive.write_bytes(b"not really a zip")
+        monkeypatch.setattr(dl, "extract_archive", extract)
+        monkeypatch.setattr(shutil_mod, "move", move or vanishing_move)
+
+        task = DownloadTask(file_id="sidecar", local_path=archive,
+                            size=archive.stat().st_size, md5="sidecar123",
+                            is_archive=True,
+                            rel_path=f"TestDrive/{chart_dir}/{song}.zip")
+        success, error, _ = FileDownloader(download_ignore=[]).process_archive(task)
+        return success, error, chart_folder
+
+    @pytest.mark.parametrize("chart_dir,song,lands_in", [
+        ("Rock Band 2", SONG, SONG),
+        # Archive, folder and chart folder share a name: contents are flattened.
+        (SONG, SONG, ""),
+    ], ids=["normal", "flattened"])
+    def test_sidecars_are_not_content(self, library, monkeypatch, chart_dir,
+                                      song, lands_in):
+        success, error, chart_folder = self._run(library, monkeypatch, chart_dir, song)
+
+        assert success, f"sidecar broke the extraction: {error}"
+        assert (chart_folder / lands_in / "song.ini").exists()
+        strays = [p.name for p in chart_folder.glob("._*")]
+        assert not strays, f"sidecars copied into the library: {strays}"
+
+    def test_reextract_over_existing_chart(self, library, monkeypatch):
+        """The case that failed in the field: the song is already on disk."""
+        old = library / "TestDrive" / "Rock Band 2" / self.SONG
+        old.mkdir(parents=True)
+        (old / "song.ini").write_text("[song]\nname=Old\n")
+        (old / "._song.ini").write_bytes(b"\x00\x05\x16\x07")
+
+        success, error, _ = self._run(library, monkeypatch, "Rock Band 2", self.SONG)
+
+        assert success, f"re-extract over an existing chart failed: {error}"
+        assert (old / "song.ini").read_text().endswith("Test\n")
+
+    def test_old_copy_survives_a_failed_move(self, library, monkeypatch):
+        old = library / "TestDrive" / "Rock Band 2" / self.SONG
+        old.mkdir(parents=True)
+        (old / "song.ini").write_text("[song]\nname=Old\n")
+
+        def exploding_move(src, dst):
+            raise OSError("network went away mid-move")
+
+        success, _, _ = self._run(library, monkeypatch, "Rock Band 2", self.SONG,
+                                  move=exploding_move)
+
+        assert not success
+        assert (old / "song.ini").read_text() == "[song]\nname=Old\n"
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

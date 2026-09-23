@@ -32,6 +32,54 @@ from ..ui.widgets import FolderProgress, display
 LARGE_FILE_THRESHOLD = 500_000_000
 
 
+def _is_os_litter(name: str) -> bool:
+    """True for files the OS writes beside real ones, like macOS `._`
+    sidecars on a share. Not content: moving the partner takes the sidecar
+    along, so moving it too dies on ENOENT."""
+    from fnmatch import fnmatch
+
+    from ..config.settings import DEFAULT_PURGE_IGNORE
+    return any(fnmatch(name, pat) for pat in DEFAULT_PURGE_IGNORE)
+
+
+def _replace_path(item: Path, dest: Path, aside_dir: Path) -> None:
+    """Put `item` at `dest`. The old copy is moved into staging and only
+    deleted once the new one is in place: deleting first leaves a chart half
+    gone when the delete fails partway, which a sidecar vanishing mid-walk on
+    a network share does."""
+    import errno
+    import shutil
+
+    def _discard(path: Path) -> None:
+        if path.is_dir():
+            shutil.rmtree(path, ignore_errors=True)
+        elif path.exists():
+            try:
+                path.unlink()
+            except FileNotFoundError:
+                pass
+
+    aside = None
+    if dest.exists():
+        candidate = aside_dir / f"_replaced_{dest.name}"
+        _discard(candidate)
+        try:
+            os.replace(dest, candidate)
+            aside = candidate
+        except OSError as e:
+            if e.errno != errno.EXDEV:
+                raise
+            # Staging is on another filesystem, so no rename can reach it.
+            _discard(dest)
+    try:
+        shutil.move(str(item), str(dest))
+    except Exception:
+        if aside is not None:
+            os.replace(aside, dest)  # put the old copy back where it was
+        raise
+    # The old copy stays in staging, which is cleared with ignore_errors.
+
+
 def _is_path_length_error(error_str: str) -> bool:
     """Detect path-too-long errors across platforms."""
     return any(s in error_str for s in (
@@ -370,7 +418,9 @@ class FileDownloader:
             #   - AND the destination folder (chart_folder) also matches
             # This prevents: Artist/Album/Album.zip → Artist/Album/Album/[files]
             # But allows: Artist/Album.zip → Artist/Album/[files] (creates folder)
-            extracted_items = list(extract_tmp.iterdir())
+            # A sidecar would also break the single-folder flatten test below.
+            extracted_items = [item for item in extract_tmp.iterdir()
+                               if not _is_os_litter(item.name)]
             should_flatten = False
             flatten_folder = None
             moved_destinations = []  # Track where we move things for scanning
@@ -387,24 +437,16 @@ class FileDownloader:
             if should_flatten and flatten_folder:
                 # Flatten: move folder CONTENTS directly to chart_folder
                 for item in flatten_folder.iterdir():
+                    if _is_os_litter(item.name):
+                        continue
                     dest = chart_folder / normalize_fs_name(item.name)
-                    if dest.exists():
-                        if dest.is_dir():
-                            shutil.rmtree(dest)
-                        else:
-                            dest.unlink()
-                    shutil.move(str(item), str(dest))
+                    _replace_path(item, dest, extract_tmp)
                     moved_destinations.append(dest)
             else:
                 # Normal: move each top-level item to chart_folder
                 for item in extracted_items:
                     dest = chart_folder / normalize_fs_name(item.name)
-                    if dest.exists():
-                        if dest.is_dir():
-                            shutil.rmtree(dest)
-                        else:
-                            dest.unlink()
-                    shutil.move(str(item), str(dest))
+                    _replace_path(item, dest, extract_tmp)
                     moved_destinations.append(dest)
 
             # Clean up empty temp folder
@@ -465,7 +507,13 @@ class FileDownloader:
 
         except Exception as e:
             # Cleanup on error
+            import traceback
             shutil.rmtree(extract_tmp, ignore_errors=True)
+            # The screen only gets a truncated str(e); log where it came from.
+            debug_log(
+                f"ARCHIVE_FAIL | {archive_rel_path or archive_path.name} | "
+                f"{type(e).__name__}: {e} | {traceback.format_exc()}"
+            )
             if _is_path_length_error(str(e)) and archive_rel_path:
                 save_failed_marker(archive_rel_path, task.md5, str(e))
             return False, str(e), {}
