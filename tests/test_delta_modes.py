@@ -82,7 +82,7 @@ class TestPurgeChartEstimation:
                 return False
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 
@@ -115,7 +115,7 @@ class TestPurgeChartEstimation:
                 return True
             def get_disabled_subfolders(self, _):
                 return {"Archives Setlist"}
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 
@@ -141,7 +141,7 @@ class TestPurgeChartEstimation:
                 return False
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         result = count_purgeable_files([folder], base_path, MockSettings())
 
@@ -194,7 +194,7 @@ class TestPartialDownloadsCountAsCharts:
                 return True
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 
@@ -242,7 +242,7 @@ class TestExtraFilesChartEstimation:
                 return True
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 

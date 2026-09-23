@@ -29,6 +29,9 @@ sys.path.insert(0, str(SCRIPTS))
 from _env_loader import load_env  # noqa: E402
 from _harness import bootstrap, fixture_folder, load_fixture, stub_rclone  # noqa: E402
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
+
 
 def seed_old_set(drive_dir: Path) -> list[Path]:
     """Files no manifest and no marker will ever claim. Purge must take these."""
@@ -101,13 +104,13 @@ def main() -> int:
     tee = TeeOutput(log_path, version="newold")
     sys.stdout = tee
     try:
-        sync = FolderSync(client, auth_token=auth.get_token_getter(), delete_videos=True)
+        sync = FolderSync(client, auth_token=auth.get_token_getter(), download_ignore=VIDEO_IGNORE)
         downloaded, skipped, errors, rate_limited, cancelled, _ = \
             sync.sync_folder(folder, base)
         planned, _ = plan_purge([folder], base, None, None)
         purge_all_folders([folder], base, None, None)
         tasks_after, _, _ = plan_downloads(
-            folder["files"], drive_dir, True, folder_name=folder["name"])
+            folder["files"], drive_dir, VIDEO_IGNORE, folder_name=folder["name"])
         purge_after, _ = plan_purge([folder], base, None, None)
     finally:
         sys.stdout = real_stdout

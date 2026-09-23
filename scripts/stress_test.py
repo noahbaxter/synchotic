@@ -34,6 +34,8 @@ sys.path.insert(0, str(SCRIPTS))
 from _env_loader import load_env  # noqa: E402
 from _harness import bootstrap, stub_rclone  # noqa: E402
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 def build_folder(client, setlist: str) -> dict:
     """The folder dict sync_folder expects, for one real setlist.
@@ -102,11 +104,11 @@ def main() -> int:
     tee = TeeOutput(log_path, version="stress")
     sys.stdout = tee
     try:
-        sync = FolderSync(client, auth_token=auth.get_token_getter(), delete_videos=True)
+        sync = FolderSync(client, auth_token=auth.get_token_getter(), download_ignore=VIDEO_IGNORE)
         downloaded, skipped, errors, rate_limited, cancelled, _ = \
             sync.sync_folder(folder, base)
         tasks_after, _, _ = plan_downloads(
-            folder["files"], base / DRIVE_NAME, True, folder_name=DRIVE_NAME)
+            folder["files"], base / DRIVE_NAME, VIDEO_IGNORE, folder_name=DRIVE_NAME)
         purge_after, _ = plan_purge([folder], base, None, None)
     finally:
         sys.stdout = real_stdout

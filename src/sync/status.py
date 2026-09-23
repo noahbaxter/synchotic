@@ -9,7 +9,8 @@ from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 
-from ..core.constants import CHART_MARKERS, VIDEO_EXTENSIONS
+from ..core.constants import CHART_MARKERS
+from ..core.files import matches_ignore
 from ..core.formatting import sanitize_path, sanitize_drive_name, dedupe_files_by_newest
 from ..core.logging import debug_log
 from .cache import scan_actual_charts, scan_disk_stats, CachedSetlistStats
@@ -49,11 +50,6 @@ def _file_in_disabled_setlist(file_path: str, disabled_setlists: set) -> bool:
     first_slash = file_path.find("/")
     setlist = file_path[:first_slash] if first_slash != -1 else file_path
     return setlist in disabled_setlists
-
-
-def _is_video_file(path: str) -> bool:
-    """Check if a path is a video file."""
-    return Path(path).suffix.lower() in VIDEO_EXTENSIONS
 
 
 def _build_chart_folders(manifest_files: list) -> dict:
@@ -121,7 +117,7 @@ def _count_synced_charts(
     chart_folders: dict,
     folder_name: str,
     skip_custom: bool = False,
-    delete_videos: bool = True,
+    download_ignore=None,
     folder_path: Path = None,
 ) -> tuple[int, int, int, int]:
     """
@@ -170,10 +166,9 @@ def _count_synced_charts(
                 total_size += data["total_size"]
             continue
 
-        # Folder chart - check if all (non-video) files are synced
-        files_to_check = data["files"]
-        if delete_videos:
-            files_to_check = [(fp, fs, md5) for fp, fs, md5 in files_to_check if not _is_video_file(fp)]
+        # Folder chart - check if all files we would actually fetch are synced
+        files_to_check = [(fp, fs, md5) for fp, fs, md5 in data["files"]
+                          if not matches_ignore(fp, download_ignore)]
 
         # Use is_file_synced for consistent logic with download_planner
         is_synced = all(
@@ -185,11 +180,9 @@ def _count_synced_charts(
             for fp, fs, md5 in files_to_check
         )
 
-        # Calculate size excluding videos if delete_videos is enabled
-        if delete_videos:
-            chart_size = sum(fs for fp, fs, _ in data["files"] if not _is_video_file(fp))
-        else:
-            chart_size = data["total_size"]
+        # Size counts the same files the sync check just looked at, or a chart
+        # reads as short by the size of something we deliberately never fetch.
+        chart_size = sum(fs for fp, fs, _ in files_to_check)
 
         if is_synced:
             synced_charts += 1
@@ -249,12 +242,11 @@ def get_sync_status(folders: list, base_path: Path, user_settings=None) -> SyncS
         chart_folders = _build_chart_folders(manifest_files)
 
         # Count charts and check sync status
-        # Get delete_videos setting (default True if no settings)
-        delete_videos = user_settings.delete_videos if user_settings else True
+        download_ignore = getattr(user_settings, "download_ignore", None)
         total, synced, total_size, synced_size = _count_synced_charts(
             chart_folders, folder_name,
             skip_custom=False,
-            delete_videos=delete_videos,
+            download_ignore=download_ignore,
             folder_path=folder_path,
         )
         status.total_charts += total
@@ -307,7 +299,7 @@ def get_setlist_sync_status(
     folder: dict,
     setlist_name: str,
     base_path: Path,
-    delete_videos: bool = True,
+    download_ignore=None,
 ) -> SyncStatus:
     """
     Calculate sync status for a single setlist within a folder.
@@ -316,7 +308,7 @@ def get_setlist_sync_status(
         folder: Folder dict from manifest
         setlist_name: Name of the setlist to check
         base_path: Base download path
-        delete_videos: Whether to exclude video files from size calculations
+        download_ignore: Globs whose files are never fetched, so never counted
 
     Returns:
         SyncStatus with totals and synced counts for just this setlist
@@ -353,7 +345,7 @@ def get_setlist_sync_status(
     total, synced, total_size, synced_size = _count_synced_charts(
         chart_folders, folder_name,
         skip_custom=False,
-        delete_videos=delete_videos,
+        download_ignore=download_ignore,
         folder_path=folder_path,
     )
 
@@ -380,7 +372,7 @@ def compute_setlist_stats(
         folder: Folder dict from manifest
         setlist_name: Name of the setlist to compute stats for
         base_path: Base download path
-        user_settings: UserSettings for delete_videos preference
+        user_settings: UserSettings for the download_ignore preference
     """
     folder_name = folder.get("name", "")
     folder_path = base_path / folder_name
@@ -388,12 +380,13 @@ def compute_setlist_stats(
     sanitized_setlist = sanitize_drive_name(setlist_name)
     # For flat folders (folder IS the setlist), use folder_path directly
     setlist_path = folder_path if setlist_name == folder_name else folder_path / sanitized_setlist
-    delete_videos = user_settings.delete_videos if user_settings else True
+    download_ignore = getattr(user_settings, "download_ignore", None)
 
     # Get sync status from manifest comparison
     has_files = folder.get("files") is not None
     if has_files:
-        sync_status = get_setlist_sync_status(folder, setlist_name, base_path, delete_videos=delete_videos)
+        sync_status = get_setlist_sync_status(folder, setlist_name, base_path,
+                                              download_ignore=download_ignore)
         total_charts = sync_status.total_charts
         total_size = sync_status.total_size
         synced_charts = sync_status.synced_charts

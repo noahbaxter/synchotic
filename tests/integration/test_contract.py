@@ -22,6 +22,8 @@ from tests.conftest import (
     make_corrupted_file,
 )
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 def _count_missing_charts(tasks):
     """Count distinct missing charts from planner tasks.
@@ -44,7 +46,7 @@ def _count_missing_charts(tasks):
     return missing_charts
 
 
-def assert_contract(folder, setlist_name, base_path, files, folder_name, delete_videos=True):
+def assert_contract(folder, setlist_name, base_path, files, folder_name, download_ignore=VIDEO_IGNORE):
     """Assert status and planner agree on sync state.
 
     The invariant: status.missing_charts == count of distinct missing charts from planner.
@@ -54,7 +56,7 @@ def assert_contract(folder, setlist_name, base_path, files, folder_name, delete_
         folder=folder,
         setlist_name=setlist_name,
         base_path=base_path,
-        delete_videos=delete_videos,
+        download_ignore=download_ignore,
     )
 
     # Filter manifest files to just this setlist (same as status does internally)
@@ -68,7 +70,7 @@ def assert_contract(folder, setlist_name, base_path, files, folder_name, delete_
     tasks, skipped, _ = plan_downloads(
         setlist_files,
         base_path / folder_name,
-        delete_videos=delete_videos,
+        download_ignore=download_ignore,
         folder_name=folder_name,
     )
 
@@ -330,10 +332,10 @@ class TestINIExtraData:
         assert len(tasks) == 0
 
 
-class TestVideoSkipping:
-    """Videos in manifest, delete_videos=True — both skip them."""
+class TestIgnoredTypesSkipped:
+    """Videos in manifest, download_ignore=VIDEO_IGNORE — both skip them."""
 
-    def test_videos_skipped_when_delete_enabled(self, sync_env):
+    def test_videos_skipped_when_ignored(self, sync_env):
         folder_name = "TestDrive"
         setlist = "VideoTest"
 
@@ -358,7 +360,7 @@ class TestVideoSkipping:
         folder = sync_env.make_folder_dict(folder_name, files=files)
         status, tasks = assert_contract(
             folder, setlist, sync_env.base_path, files, folder_name,
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
         )
         # Video excluded from totals — chart should be fully synced
         assert status.synced_charts == 1
@@ -399,7 +401,7 @@ class TestCaseInsensitiveArchiveDupes:
         # Both should see 1 chart total (deduped), and it should be synced
         status = get_setlist_sync_status(
             folder=folder, setlist_name=setlist,
-            base_path=sync_env.base_path, delete_videos=True,
+            base_path=sync_env.base_path, download_ignore=VIDEO_IGNORE,
         )
 
         setlist_files = [f for f in files if f["path"].startswith(f"{setlist}/")]
@@ -408,7 +410,7 @@ class TestCaseInsensitiveArchiveDupes:
         tasks, _, _ = plan_downloads(
             setlist_files,
             sync_env.base_path / folder_name,
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
             folder_name=folder_name,
         )
 
@@ -560,13 +562,13 @@ class TestCustomFolderContract:
             folder=folder,
             setlist_name=folder_name,
             base_path=sync_env.base_path,
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
         )
 
         tasks, skipped, _ = plan_downloads(
             files,
             sync_env.base_path / folder_name,
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
             folder_name=folder_name,
         )
 
@@ -575,8 +577,8 @@ class TestCustomFolderContract:
         assert len(tasks) == 0
 
 
-class TestDeleteVideosFalse:
-    """delete_videos=False — videos count toward sync status."""
+class TestNothingIgnored:
+    """download_ignore=[] — videos count toward sync status."""
 
     def test_all_files_including_video_synced(self, sync_env):
         folder_name = "TestDrive"
@@ -604,7 +606,7 @@ class TestDeleteVideosFalse:
         folder = sync_env.make_folder_dict(folder_name, files=files)
         status, tasks = assert_contract(
             folder, setlist, sync_env.base_path, files, folder_name,
-            delete_videos=False,
+            download_ignore=[],
         )
         assert status.synced_charts == 1
         assert len(tasks) == 0
@@ -634,7 +636,7 @@ class TestDeleteVideosFalse:
         folder = sync_env.make_folder_dict(folder_name, files=files)
         status, tasks = assert_contract(
             folder, setlist, sync_env.base_path, files, folder_name,
-            delete_videos=False,
+            download_ignore=[],
         )
         assert status.synced_charts == 0
         assert len(tasks) == 1  # Download the missing video

@@ -9,9 +9,9 @@ import sys
 import unicodedata
 import zipfile
 from pathlib import Path
-from typing import Tuple, Set
+from typing import Tuple
 
-from ..core.constants import VIDEO_EXTENSIONS
+from ..core.files import matches_ignore
 from ..core.formatting import relative_posix
 
 # Optional archive format support
@@ -150,36 +150,28 @@ def get_folder_size(folder_path: Path) -> int:
     return total
 
 
-def delete_ignored_files(folder_path: Path, ignored_extensions: Set[str]) -> int:
+def delete_ignored_files(folder_path: Path, patterns) -> int:
     """
-    Delete files with ignored extensions from folder recursively.
+    Delete files matching download_ignore globs from folder recursively. Only
+    ever run on a temp extract dir, before it is moved into the library.
 
     Args:
         folder_path: Path to scan
-        ignored_extensions: Set of extensions to delete (e.g., {".mp4", ".avi"})
+        patterns: Globs to delete (e.g., ["*.mp4", "*.avi"])
 
     Returns count of deleted files.
     """
+    if not patterns:
+        return 0
     deleted = 0
     for f in folder_path.rglob("*"):
-        if f.is_file() and f.suffix.lower() in ignored_extensions:
+        if f.is_file() and matches_ignore(f.name, patterns):
             try:
                 f.unlink()
                 deleted += 1
             except Exception:
                 pass
     return deleted
-
-
-def delete_video_files(folder_path: Path) -> int:
-    """
-    Delete video files from folder recursively.
-
-    Convenience wrapper around delete_ignored_files using VIDEO_EXTENSIONS.
-
-    Returns count of deleted files.
-    """
-    return delete_ignored_files(folder_path, VIDEO_EXTENSIONS)
 
 
 def scan_extracted_files(folder_path: Path, base_path: Path = None) -> dict[str, int]:

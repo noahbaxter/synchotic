@@ -18,9 +18,11 @@ from tests.conftest import (
     make_synced_loose_file,
 )
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 class MockSettings:
-    delete_videos = True
+    download_ignore = VIDEO_IGNORE
 
     def __init__(self, disabled_drives=None, disabled_subfolders=None):
         self._disabled_drives = disabled_drives or set()

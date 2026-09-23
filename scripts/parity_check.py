@@ -28,6 +28,8 @@ from _env_loader import load_env  # noqa: E402
 from _harness import (bootstrap, diff_snapshots, fixture_folder, load_fixture,  # noqa: E402
                       snapshot_markers, snapshot_tree, stub_rclone)
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 def take_snapshot(repo: Path, out_path: Path) -> int:
     spec = load_fixture(FIXTURE)
@@ -69,11 +71,11 @@ def take_snapshot(repo: Path, out_path: Path) -> int:
     tee = TeeOutput(log_path, version="parity")
     sys.stdout = tee
     try:
-        sync = FolderSync(client, auth_token=auth.get_token_getter(), delete_videos=True)
+        sync = FolderSync(client, auth_token=auth.get_token_getter(), download_ignore=VIDEO_IGNORE)
         downloaded, skipped, errors, rate_limited, cancelled, sync_bytes = \
             sync.sync_folder(folder, download_path)
         tasks_after, _, _ = plan_downloads(
-            folder["files"], download_path / folder["name"], True,
+            folder["files"], download_path / folder["name"], VIDEO_IGNORE,
             folder_name=folder["name"],
         )
         purge_after, _ = plan_purge([folder], download_path, None, None)

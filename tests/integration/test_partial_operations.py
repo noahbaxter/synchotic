@@ -17,9 +17,11 @@ from tests.conftest import (
     make_unsynced_archive,
 )
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 class MockSettings:
-    delete_videos = True
+    download_ignore = VIDEO_IGNORE
 
     def is_drive_enabled(self, folder_id):
         return True

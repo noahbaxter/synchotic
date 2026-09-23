@@ -2,8 +2,19 @@
 File system utilities for DM Chart Sync.
 """
 
-from pathlib import Path
+from fnmatch import fnmatch
+from pathlib import Path, PurePosixPath
 from typing import Set, List, Tuple
+
+
+def matches_ignore(path, patterns) -> bool:
+    """True when a file's name matches any glob in an ignore list, ignoring
+    case. The one matcher behind download_ignore and purge_ignore, so the
+    planners and status agree on what "ignored" means."""
+    if not patterns:
+        return False
+    name = PurePosixPath(str(path).replace("\\", "/")).name.lower()
+    return any(fnmatch(name, str(pat).lower()) for pat in patterns)
 
 
 def file_exists_with_size(path: Path, expected_size: int) -> bool:

@@ -38,6 +38,7 @@ DEFAULT_PURGE_IGNORE = ("._*", ".DS_Store", "Thumbs.db", "desktop.ini")
 
 # Never fetched, and stripped out of archives as they are extracted. Videos are
 # most of the size of a pack and Clone Hero does not need them to play a song.
+# Only ever stops a download: nothing on disk is deleted for matching it.
 DEFAULT_DOWNLOAD_IGNORE = ("*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov")
 
 DOWNLOAD_MODE_RCLONE = "rclone"
@@ -271,12 +272,6 @@ class UserSettings:
         data.update({f.name: getattr(self, f.name) for f in SETTING_FIELDS})
         data.update(self._extra)
         write_settings_file(self.path, data)
-
-    @property
-    def delete_videos(self) -> bool:
-        """Whether videos are among the types we do not fetch. Derived from
-        download_ignore, which the sync layer does not read yet."""
-        return any(p in self.download_ignore for p in DEFAULT_DOWNLOAD_IGNORE)
 
     def is_drive_enabled(self, drive_id: str) -> bool:
         """Whether a drive is on. An undecided drive is off."""

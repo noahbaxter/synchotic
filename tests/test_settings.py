@@ -173,12 +173,11 @@ class TestSettingsPersistence:
         assert not settings2.is_drive_enabled("drive1")
         assert not settings2.is_subfolder_enabled("drive2", "setlist1")
         assert settings2.download_ignore == []
-        assert settings2.delete_videos is False, "nothing to strip means nothing to skip"
 
-    def test_delete_videos_defaults_true(self, temp_dir):
-        """delete_videos defaults to True."""
+    def test_download_ignore_defaults_to_the_video_types(self, temp_dir):
+        """A new install skips videos and nothing else."""
         settings = UserSettings.load(temp_dir / "settings.json")
-        assert settings.delete_videos is True
+        assert settings.download_ignore == ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
 
 
     def test_corrupted_file_treated_as_new(self, temp_dir):

@@ -15,9 +15,6 @@ USER_OAUTH_SCOPES = ["https://www.googleapis.com/auth/drive.readonly"]
 # Archive extensions that contain charts
 CHART_ARCHIVE_EXTENSIONS = {".zip", ".7z", ".rar"}
 
-# Video file extensions to delete from extracted charts
-VIDEO_EXTENSIONS = {".mp4", ".avi", ".webm", ".mkv", ".mov"}
-
 
 import platform as _platform
 

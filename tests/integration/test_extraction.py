@@ -22,11 +22,13 @@ from src.sync.markers import load_marker
 from src.sync.download_planner import plan_downloads, DownloadTask
 from src.sync.downloader import FileDownloader
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 FIXTURES_DIR = Path(__file__).parent / "fixtures" / "test_archives"
 
 
 class MockSettings:
-    delete_videos = True
+    download_ignore = VIDEO_IGNORE
 
     def is_drive_enabled(self, folder_id):
         return True
@@ -66,7 +68,7 @@ class TestArchiveExtractionTracking:
 
     @pytest.fixture
     def downloader(self):
-        return FileDownloader(delete_videos=True)
+        return FileDownloader(download_ignore=VIDEO_IGNORE)
 
     def test_flat_archive_extraction_and_tracking(self, temp_dir, downloader):
         """
@@ -132,7 +134,7 @@ class TestArchiveExtractionTracking:
         tasks, skipped, _ = plan_downloads(
             manifest_files,
             temp_dir / "TestDrive",
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
             folder_name="TestDrive"
         )
 
@@ -194,7 +196,7 @@ class TestArchiveExtractionTracking:
         tasks, skipped, _ = plan_downloads(
             manifest_files,
             temp_dir / "TestDrive",
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
             folder_name="TestDrive"
         )
 
@@ -260,7 +262,7 @@ class TestArchiveExtractionTracking:
 
     def test_video_deleted_during_extraction(self, temp_dir, downloader):
         """
-        Video files should be deleted during extraction when delete_videos=True.
+        Video files should be deleted during extraction when download_ignore=VIDEO_IGNORE.
 
         Archive contents:
             song.ini
@@ -330,7 +332,7 @@ class TestExtractionEdgeCases:
 
     @pytest.fixture
     def downloader(self):
-        return FileDownloader(delete_videos=True)
+        return FileDownloader(download_ignore=VIDEO_IGNORE)
 
     def test_unicode_filenames(self, temp_dir, downloader):
         """Unicode characters in filenames should work correctly."""
@@ -423,7 +425,7 @@ class TestExtractionFailureHandling:
 
     @pytest.fixture
     def downloader(self):
-        return FileDownloader(delete_videos=True)
+        return FileDownloader(download_ignore=VIDEO_IGNORE)
 
     def test_corrupted_archive_fails_gracefully(self, temp_dir, downloader):
         """Corrupted archives should fail without crashing or creating markers."""

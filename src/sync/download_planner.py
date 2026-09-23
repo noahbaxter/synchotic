@@ -10,7 +10,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple
 
-from ..core.constants import VIDEO_EXTENSIONS
+from ..core.files import matches_ignore
 from ..core.formatting import normalize_path_key
 from .markers import is_permanently_failed
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
@@ -121,7 +121,7 @@ def _warm_sync_checks(files, local_base: Path, folder_name: str, on_progress=Non
 def plan_downloads(
     files: List[dict],
     local_base: Path,
-    delete_videos: bool = True,
+    download_ignore=None,
     folder_name: str = "",
     on_progress=None,
 ) -> Tuple[List[DownloadTask], int, List[str]]:
@@ -189,7 +189,7 @@ def plan_downloads(
             download_path = local_path.parent / f"_download_{file_name}"
         else:
             download_path = local_path
-            if delete_videos and Path(file_name).suffix.lower() in VIDEO_EXTENSIONS:
+            if matches_ignore(file_name, download_ignore):
                 skipped += 1
                 continue
 
