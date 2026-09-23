@@ -465,7 +465,8 @@ def main():
     app.run()
 
 
-if __name__ == "__main__":
+def run():
+    """main() with Ctrl+C turned into a clean exit."""
     try:
         main()
     except KeyboardInterrupt:
@@ -475,3 +476,19 @@ if __name__ == "__main__":
         leave_alt_screen()
         print("\n\nCancelled by user.")
         sys.exit(0)
+
+
+def cli():
+    """The `synchotic` command: a checkout run like the installed bundles, which
+    export SYNCHOTIC_OS_DIRS=1. SYNCHOTIC_OS_DIRS=0 opts out.
+
+    Only this entry point defaults it. Frozen builds run this file as __main__,
+    and the Windows launcher starts a loose executable in the portable layout
+    it has always had.
+    """
+    os.environ.setdefault("SYNCHOTIC_OS_DIRS", "1")
+    run()
+
+
+if __name__ == "__main__":
+    run()

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synchotic"
+description = "Google Drive sync for Clone Hero setlists"
+requires-python = ">=3.10"
+dynamic = ["version"]
+# Dependencies live in requirements.txt, which is what the venv command reads.
+
+[project.scripts]
+synchotic = "sync:cli"
+
+[tool.setuptools.dynamic]
+version = { file = "VERSION" }
+
+[tool.setuptools]
+py-modules = ["sync"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]

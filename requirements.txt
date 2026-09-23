@@ -15,3 +15,6 @@ pyinstaller>=6.0.0
 
 # Shared TUI toolkit (git submodule under vendor/), installed editable.
 -e ./vendor/chotic-ui
+
+# This checkout, editable, so `synchotic` is on PATH once the venv is active.
+-e .
