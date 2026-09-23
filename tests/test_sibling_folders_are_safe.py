@@ -16,7 +16,7 @@ charts Synchotic never downloaded.
 import pytest
 
 from src.sync.cache import SyncCache
-from src.sync.folder_sync import purge_all_folders
+from src.sync.purge_flow import purge_all_folders
 from src.sync.markers import save_marker
 
 DRIVES = ["BirdmanExe Drive", "Drummer's Monthly Drive", "Guitar Hero", "Misc"]

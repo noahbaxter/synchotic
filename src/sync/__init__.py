@@ -15,7 +15,8 @@ from .status import SyncStatus, get_sync_status, get_setlist_sync_status, get_la
 from .download_planner import DownloadTask, plan_downloads
 from .purge_planner import PurgeStats, count_purgeable_files, count_purgeable_detailed
 from .purger import delete_files
-from .folder_sync import FolderSync, purge_all_folders
+from .folder_sync import FolderSync
+from .purge_flow import purge_all_folders
 from .downloader import FileDownloader, DownloadResult
 from .background_scanner import BackgroundScanner, ScanStats
 
