@@ -18,7 +18,7 @@ from ..widgets.confirm import ConfirmDialog
 def show_library_screen(user_settings) -> bool:
     """Prompt for a new library path. Returns True when it changed."""
     from ...core.paths import (LIBRARY_STATE_DIR_NAME, find_legacy_markers,
-                               get_library_path, migrate_to_os_dirs,
+                               get_library_path, migrate_to_os_dirs, plain_path,
                                find_legacy_install, set_library_path)
     from ...core.folder_picker import pick_folder, picker_available
     from ..primitives import Browse, CancelInput, input_with_browse
@@ -36,13 +36,13 @@ def show_library_screen(user_settings) -> bool:
     while path is None:
         clear_screen()
         print_header()
-        display.library_prompt(get_library_path(), can_browse)
+        display.library_prompt(plain_path(get_library_path()), can_browse)
         try:
             entered = input_with_browse("  New path: ", browse_key)
         except CancelInput:
             return False
         except Browse:
-            path = pick_folder("Choose your chart library", get_library_path())
+            path = pick_folder("Choose your chart library", plain_path(get_library_path()))
             continue
         if not entered.strip():
             return False

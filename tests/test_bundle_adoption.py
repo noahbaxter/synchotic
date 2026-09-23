@@ -11,10 +11,17 @@ import json
 import os
 import time
 
+from pathlib import Path
+
 import pytest
 
 from src.config import jsonc
 from src.core import paths
+
+
+def _library():
+    """The library without the Windows MAX_PATH prefix."""
+    return Path(paths.plain_path(paths.get_library_path()))
 
 
 @pytest.fixture(autouse=True)
@@ -195,7 +202,7 @@ class TestTheAdoptedLibraryTakesEffectImmediately:
     def test_the_session_uses_it(self, previous):
         paths.set_library_path(None)  # what startup found: no settings yet
         paths.adopt_legacy_install()
-        assert paths.get_library_path() == previous
+        assert _library() == previous
 
     def test_the_markers_land_in_it(self, previous):
         paths.set_library_path(None)
@@ -215,7 +222,7 @@ class TestTheAdoptedLibraryTakesEffectImmediately:
         picked.mkdir()
         paths.set_library_path(picked)
         paths.migrate_to_os_dirs(legacy)
-        assert paths.get_library_path() == picked
+        assert _library() == picked
 
 
 class TestAnImportKeepsEveryPreference:

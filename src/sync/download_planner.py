@@ -11,11 +11,15 @@ from pathlib import Path
 from typing import List, Tuple
 
 from ..core.files import matches_ignore
+from ..core.paths import EXTENDED_PREFIX
 from ..core.formatting import normalize_path_key
 from .markers import is_permanently_failed
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 WINDOWS_MAX_PATH = 260
+# CreateDirectory reserves 12 characters for an 8.3 name inside the folder, so a
+# directory runs out before a file does.
+WINDOWS_MAX_DIR = WINDOWS_MAX_PATH - 12
 MAX_FILENAME_LENGTH = 255
 
 # Files to skip during download planning (known conflicts with existing directories)
@@ -42,8 +46,15 @@ def is_long_paths_enabled() -> bool:
 
 
 def exceeds_windows_path_limit(path: Path) -> bool:
-    """Check if path exceeds Windows MAX_PATH and long paths aren't enabled."""
-    return os.name == 'nt' and not is_long_paths_enabled() and len(str(path)) >= WINDOWS_MAX_PATH
+    """Whether Windows would refuse to write this path: the file against
+    MAX_PATH, its folder against the lower directory cap. A prefixed library
+    path is exempt from both."""
+    if os.name != 'nt' or is_long_paths_enabled():
+        return False
+    text = str(path)
+    if text.startswith(EXTENDED_PREFIX):
+        return False
+    return len(text) >= WINDOWS_MAX_PATH or len(str(path.parent)) >= WINDOWS_MAX_DIR
 
 
 def has_long_filename(file_path: str) -> bool:

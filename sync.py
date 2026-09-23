@@ -356,8 +356,9 @@ def main():
     # remount then hides. Offer a retry so plugging the drive in is enough.
     from src.core.paths import get_library_path as _get_library_path
     from src.core.paths import library_is_available as _library_is_available
+    from src.core.paths import plain_path as _plain_path
     while not _library_is_available():
-        display.library_unavailable(_get_library_path())
+        display.library_unavailable(_plain_path(_get_library_path()))
         if not sys.stdin.isatty():
             sys.exit(1)
         from src.ui.widgets.confirm import ConfirmDialog

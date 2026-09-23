@@ -331,7 +331,7 @@ def show_main_menu_panes(
 
     def _settings_right():
         from .account import account_status
-        from ...core.paths import get_library_path, library_blocked_reason
+        from ...core.paths import get_library_path, library_blocked_reason, plain_path
 
         def opt(label, value, action, selectable=True):
             """An option the cursor cannot land on is drawn grey throughout, so
@@ -388,7 +388,7 @@ def show_main_menu_panes(
             # Changing it rescans the new location, so it fails the same way
             # a rescan does -- except when the library itself is the problem,
             # which is what this row exists to fix.
-            opt("Location", mode_blocked or lib_blocked or str(get_library_path()),
+            opt("Location", mode_blocked or lib_blocked or plain_path(get_library_path()),
                 ("act", "library"), selectable=not mode_blocked),
             # Opens a local folder, so it works with no Drive access at all.
             opt("Open folder", "Settings, logs, credentials", ("act", "open_data_folder")),

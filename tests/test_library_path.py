@@ -15,6 +15,11 @@ from src.config import jsonc
 from src.core import paths
 
 
+def _library():
+    """The library without the Windows MAX_PATH prefix."""
+    return Path(paths.plain_path(paths.get_library_path()))
+
+
 @pytest.fixture(autouse=True)
 def isolated(tmp_path, monkeypatch):
     monkeypatch.setenv("SYNCHOTIC_ROOT", str(tmp_path))
@@ -26,18 +31,18 @@ def isolated(tmp_path, monkeypatch):
 
 class TestResolution:
     def test_defaults_beside_the_app(self, tmp_path):
-        assert paths.get_library_path() == tmp_path / paths.DOWNLOAD_FOLDER_NAME
+        assert _library() == tmp_path / paths.DOWNLOAD_FOLDER_NAME
 
     def test_setting_overrides_default(self, tmp_path):
         (tmp_path / "elsewhere").mkdir(parents=True, exist_ok=True)
         paths.set_library_path(tmp_path / "elsewhere")
-        assert paths.get_library_path() == tmp_path / "elsewhere"
+        assert _library() == tmp_path / "elsewhere"
 
     def test_env_beats_setting(self, tmp_path, monkeypatch):
         (tmp_path / "from-settings").mkdir(parents=True, exist_ok=True)
         paths.set_library_path(tmp_path / "from-settings")
         monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path / "from-env"))
-        assert paths.get_library_path() == tmp_path / "from-env"
+        assert _library() == tmp_path / "from-env"
 
     def test_download_path_is_an_alias(self):
         assert paths.get_download_path() == paths.get_library_path()
@@ -331,7 +336,7 @@ class TestOsDirsBundleLayout:
 
     def test_charts_stay_somewhere_findable(self):
         """Not ~/Library: a chart library is tens of gigabytes of user content."""
-        library = paths.get_library_path()
+        library = _library()
         assert library == Path.home() / "Synchotic" / paths.DOWNLOAD_FOLDER_NAME
         assert "Library" not in library.relative_to(Path.home()).parts
 
@@ -339,7 +344,7 @@ class TestOsDirsBundleLayout:
         lib = tmp_path / "songs"
         lib.mkdir()
         paths.set_library_path(lib)
-        assert paths.get_library_path() == lib
+        assert _library() == lib
 
 
 class TestLibraryPathPersists:
