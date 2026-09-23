@@ -6,8 +6,8 @@ from contextlib import redirect_stdout
 import pytest
 
 import sync as sync_entry
+from src import copy
 from src.core.paths import LibraryUnavailable
-from src.ui.widgets import display
 
 
 def _run_cli(monkeypatch, raise_with):
@@ -33,7 +33,8 @@ def test_it_says_what_happened_instead_of_a_traceback(monkeypatch):
     code, printed = _run_cli(monkeypatch, LibraryUnavailable("gone"))
 
     assert code == 1
-    assert "Library disconnected" in printed
+    assert copy.LIBRARY_MISSING in printed
+    assert copy.FIX_RECONNECT in printed
     assert "Traceback" not in printed
 
 
@@ -54,16 +55,4 @@ def test_cancelling_still_exits_cleanly(monkeypatch):
     did not swallow it."""
     code, printed = _run_cli(monkeypatch, KeyboardInterrupt())
     assert code == 0
-    assert "Cancelled by user" in printed
-
-
-def test_the_two_library_messages_stay_different():
-    """Startup can promise nothing has happened yet. Mid-run cannot."""
-    startup, lost = io.StringIO(), io.StringIO()
-    with redirect_stdout(startup):
-        display.library_unavailable("/Volumes/Charts")
-    with redirect_stdout(lost):
-        display.library_lost("/Volumes/Charts")
-
-    assert "Nothing has been scanned" in startup.getvalue()
-    assert "Nothing has been scanned" not in lost.getvalue()
+    assert copy.CANCELLED in printed

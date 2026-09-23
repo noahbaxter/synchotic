@@ -1,20 +1,14 @@
-"""
-Folder sync orchestration for DM Chart Sync.
+"""Downloading and extracting one folder into the library, drawn on the sync
+run's panel. Purging lives in purge_flow.py."""
 
-Coordinates downloading and extraction for folder synchronization. Purging
-lives in purge_flow.py.
-"""
-
-import time
-from contextlib import nullcontext
 from pathlib import Path
 from typing import Callable, Optional, Union
 
+from .. import copy
 from ..drive import DriveClient
-from ..core.formatting import (dedupe_files_by_newest, extract_path_context,
+from ..core.formatting import (count, dedupe_files_by_newest, extract_path_context,
                                format_download_name, sanitize_drive_name)
 from ..core.logging import debug_log
-from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
 from .cache import clear_folder_cache, get_persistent_stats_cache
 from .download_planner import plan_downloads
@@ -47,30 +41,25 @@ class FolderSync:
         disabled_prefixes: list[str] = None,
         cancel_check: Optional[Callable[[], bool]] = None,
         scan_stats_getter: Optional[Callable] = None,
-        header: str = None,
         setlist_name: str = None,
         label: str = None,
         skip_marker_rebuild: bool = False,
-        progress=None,
+        *,
+        progress,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
 
         Args:
-            header: If provided, handles section header display. Without a
-                    shared `progress` screen: synced folders get a compact
-                    one-liner, downloads get a full ━━━ header.
-            label: The folder's name on the panel's divider (header carries a
-                   "[17/80]" count the bar already shows).
-            progress: The sync run's panel. When given, nothing prints to the
-                      terminal, which the panel owns.
+            label: The folder's name on the panel's divider.
+            progress: The sync run's panel. Nothing prints to the terminal,
+                      which the panel owns.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
         """
         folder_path = base_path / folder["name"]
         disabled_prefixes = disabled_prefixes or []
-        filtered_count = 0
 
         manifest_files = folder.get("files")
 
@@ -93,7 +82,6 @@ class FolderSync:
                 return sanitized_name in sanitized_prefixes
 
             manifest_files = [f for f in manifest_files if not is_path_disabled(f.get("path", ""))]
-            filtered_count = original_count - len(manifest_files)
             debug_log(f"DOWNLOAD_FILTER | folder={folder['name']} | original={original_count} | after_filter={len(manifest_files)}")
 
         manifest_files = dedupe_files_by_newest(manifest_files)
@@ -106,25 +94,17 @@ class FolderSync:
             if created > 0:
                 debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
 
-        caption = label or header or folder["name"]
+        caption = label or folder["name"]
 
         def _plan_progress(done, total):
             if total <= 200:  # fast enough that a counter is just noise
                 return
-            label = caption
-            if progress:
-                # A big folder takes a while to check; show that it is moving.
-                progress.set_stage("" if done >= total else f"checking {label} against disk... {done}/{total}")
-                progress.set_current_fraction(done / total)
-                return
-            from ..ui.primitives import print_progress
-            if done >= total:
-                # Wipe the counter, or the section header prints onto the end of it.
-                print("\033[2K\r", end="", flush=True)
-                return
-            print_progress(f"Checking {label}... {done}/{total}")
+            # A big folder takes a while to check; show that it is moving.
+            progress.set_stage("" if done >= total else copy.STAGE_CHECKING_COUNT.format(
+                name=caption, count=f"{done}/{total}"))
+            progress.set_current_fraction(done / total)
 
-        tasks, skipped, long_paths = plan_downloads(
+        tasks, skipped, _long_paths = plan_downloads(
             manifest_files, folder_path, self.download_ignore, folder_name=folder["name"],
             on_progress=_plan_progress, cancel_check=cancel_check,
         )
@@ -134,54 +114,25 @@ class FolderSync:
         if cancel_check and cancel_check():
             return 0, 0, 0, [], True, 0
 
-        if long_paths and not progress:
-            print_long_path_warning(len(long_paths))
-
-        # A setlist that needs nothing says nothing on the shared panel: its bar
-        # already counts it as done. Only the printed output reports it.
-        if not tasks and not skipped:
-            if not progress:
-                if header:
-                    print_section_header(header)
-                display.folder_status_empty(filtered_count)
-            return 0, 0, 0, [], False, 0
-
+        # A setlist that needs nothing says nothing: its bar already counts it
+        # as done.
         if not tasks:
-            if not progress:
-                if header:
-                    display.folder_synced_inline(header, skipped)
-                else:
-                    display.folder_status_synced(skipped, filtered_count)
             return 0, skipped, 0, [], False, 0
 
-        if header and not progress:
-            print_section_header(header)
-        elif progress:
-            progress.set_stage(f"downloading {caption}")
+        progress.set_stage(copy.STAGE_DOWNLOADING.format(name=caption))
 
-        download_start = time.time()
         (downloaded, _, errors, rate_limited, cancelled,
          bytes_downloaded, blocked_tasks) = self.downloader.download_many(
             tasks, drive_name=folder["name"], cancel_check=cancel_check,
-            scan_stats_getter=scan_stats_getter, skipped=skipped,
-            progress=progress,
+            scan_stats_getter=scan_stats_getter, progress=progress,
         )
 
         # Tier 4: route auth-blocked files through rclone (its verified, uncapped OAuth).
         if blocked_tasks and not cancelled:
-            recovered, still_blocked = self._rclone_second_pass(
+            recovered, _ = self._rclone_second_pass(
                 blocked_tasks, folder, cancel_check, progress)
             downloaded += recovered
             errors -= recovered
-            # Nothing was said about these while they were blocked, so say it
-            # here, once, and only about the ones that really did not arrive.
-            if not progress:
-                display.blocked_outcome(recovered, still_blocked, self.download_mode)
-
-        download_time = time.time() - download_start
-
-        if not cancelled and not progress:
-            display.folder_complete(downloaded, bytes_downloaded, download_time, errors)
 
         if downloaded > 0:
             from .ownership import mark_drive_owned
@@ -200,7 +151,7 @@ class FolderSync:
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
 
-    def _rclone_second_pass(self, blocked_tasks, folder, cancel_check, progress=None):
+    def _rclone_second_pass(self, blocked_tasks, folder, cancel_check, progress):
         """Download auth-blocked tasks via rclone, then run existing archive processing.
 
         Reuses FileDownloader.process_archive so extraction/markers/purge-safety are
@@ -217,10 +168,6 @@ class FolderSync:
         session = None
         if not rclone.is_authed():
             if not rclone.can_open_browser():
-                # On the panel the failed rows carry this; a print would be
-                # painted over at once.
-                if not progress:
-                    display.rclone_no_browser()
                 self._blocked_rows(progress, blocked_tasks, "no browser to sign in with")
                 return 0, len(blocked_tasks)
             # One-time consent: explain rclone, then open the browser, with the
@@ -228,7 +175,7 @@ class FolderSync:
             # A failure leaves the files blocked and says which failure. The
             # session is reused below so the binary resolves once.
             try:
-                with (progress.suspended() if progress else nullcontext()):
+                with progress.suspended():
                     display.rclone_consent_explainer()
                     session = rclone.RcloneSession()
                     authed = session.ensure_authed()
@@ -241,9 +188,7 @@ class FolderSync:
                                    f"rclone sign-in failed: {type(err).__name__}")
                 return 0, len(blocked_tasks)
 
-        if progress:
-            progress.set_stage(f"rclone: fetching {len(blocked_tasks)} chart(s) "
-                               f"Google would not serve")
+        progress.set_stage(copy.STAGE_RCLONE.format(charts=count(len(blocked_tasks), "chart")))
         recovered = 0
         try:
             with (session or rclone.RcloneSession()) as active:
@@ -257,8 +202,7 @@ class FolderSync:
             self._blocked_rows(progress, blocked_tasks, f"rclone failed: {type(err).__name__}")
             return 0, len(blocked_tasks)
         finally:
-            if progress:
-                progress.set_stage("")
+            progress.set_stage("")
 
         ok = set(ok_ids)
         for task in blocked_tasks:
@@ -271,117 +215,40 @@ class FolderSync:
                 if success:
                     recovered += 1
                     debug_log(f"TIER | rclone | {name}")
-                    if progress:
-                        # Its bytes count like any other chart's.
-                        progress.add_downloaded_bytes(task.size, file_id=task.file_id)
-                        progress.archive_completed(task.local_path, name,
-                                                   extract_path_context(task.rel_path),
-                                                   file_id=task.file_id)
-                elif progress:
+                    # Its bytes count like any other chart's.
+                    progress.add_downloaded_bytes(task.size, file_id=task.file_id)
+                    progress.archive_completed(task.local_path, name,
+                                               extract_path_context(task.rel_path),
+                                               file_id=task.file_id)
+                else:
                     progress.print_error(extract_path_context(task.rel_path),
                                          f"extract: {name} - {error}", file_id=task.file_id)
             else:
                 recovered += 1  # loose file already at final temp path
                 debug_log(f"TIER | rclone | {name}")
                 # Its chart row comes from the folder resolving, not from here.
-                if progress:
-                    progress.add_downloaded_bytes(task.size, file_id=task.file_id)
-                    progress.unregister_active_download(task.file_id)
+                progress.add_downloaded_bytes(task.size, file_id=task.file_id)
+                progress.unregister_active_download(task.file_id)
         return recovered, len(blocked_tasks) - recovered
 
     @staticmethod
     def _rclone_row_started(progress, task) -> None:
-        if progress:
-            progress.register_active_download(
-                task.file_id, format_download_name(task.local_path),
-                extract_path_context(task.rel_path), task.size)
+        progress.register_active_download(
+            task.file_id, format_download_name(task.local_path),
+            extract_path_context(task.rel_path), task.size)
 
     @staticmethod
     def _rclone_row_bytes(progress, task, sent: int) -> None:
-        if progress:
-            progress.update_active_download(task.file_id, sent)
+        progress.update_active_download(task.file_id, sent)
 
     @staticmethod
     def _blocked_rows(progress, tasks, detail: str) -> None:
         """Fail these charts on the panel as "needs sign-in"; `detail` carries
-        the specific cause into the error summary and the log."""
-        if not progress:
-            return
+        the specific cause into the log."""
         for task in tasks:
             name = task.local_path.name.removeprefix("_download_")
             progress.print_error(extract_path_context(task.rel_path),
                                  f"NEEDS AUTH ({detail}): {name}",
                                  file_id=task.file_id)
-
-    def download_folders(
-        self,
-        folders: list,
-        indices: list,
-        download_path: Path,
-        disabled_prefixes_map: dict[str, list[str]] = None
-    ) -> bool:
-        """Download folders. Returns True if cancelled."""
-        download_path.mkdir(parents=True, exist_ok=True)
-        disabled_prefixes_map = disabled_prefixes_map or {}
-
-        total_downloaded = 0
-        total_skipped = 0
-        total_errors = 0
-        total_bytes = 0
-        total_rate_limited = 0
-        was_cancelled = False
-        rate_limited_folders: set[str] = set()
-        start_time = time.time()
-
-        total_folders = len(indices)
-        for i, idx in enumerate(indices, 1):
-            folder = folders[idx]
-            folder_header = f"[{i}/{total_folders}] {folder['name']}" if total_folders > 1 else folder['name']
-
-            folder_id = folder.get("folder_id", "")
-            disabled_prefixes = disabled_prefixes_map.get(folder_id, [])
-
-            downloaded, skipped, errors, rate_limited_ids, cancelled, bytes_down = self.sync_folder(
-                folder, download_path, disabled_prefixes, header=folder_header,
-            )
-
-            total_downloaded += downloaded
-            total_skipped += skipped
-            total_errors += errors
-            total_bytes += bytes_down
-            total_rate_limited += len(rate_limited_ids)
-
-            if rate_limited_ids:
-                rate_limited_folders.add(folder['name'])
-
-            if cancelled:
-                was_cancelled = True
-                break
-
-        elapsed = time.time() - start_time
-        print()
-        print_separator()
-
-        debug_log(f"SYNC_SUMMARY | downloaded={total_downloaded} | skipped={total_skipped} | errors={total_errors} | bytes={total_bytes}")
-
-        if was_cancelled:
-            display.sync_cancelled(total_downloaded)
-        elif total_downloaded > 0:
-            display.sync_complete(total_downloaded, total_bytes, elapsed)
-        else:
-            display.sync_already_synced()
-
-        if total_errors > 0:
-            display.sync_errors(total_errors)
-        if total_rate_limited > 0:
-            display.sync_rate_limited(total_rate_limited)
-
-        if rate_limited_folders:
-            display.rate_limit_guidance(rate_limited_folders)
-
-        if was_cancelled:
-            wait_with_skip(5, "Continuing in 5s (press any key to skip)")
-
-        return was_cancelled
 
 

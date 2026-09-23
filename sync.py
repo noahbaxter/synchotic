@@ -29,6 +29,8 @@ _increase_file_limit()
 from datetime import datetime
 from pathlib import Path
 
+from src import copy
+from src.core.formatting import count
 from src.app.config import API_KEY
 from src.app.onboarding import OnboardingMixin
 from src.app.drive_management import DriveManagementMixin
@@ -41,6 +43,7 @@ from src.config import UserSettings, DrivesConfig, CustomFolders
 from src.config.settings import DOWNLOAD_MODES
 from src.core.paths import (
     LibraryUnavailable,
+    library_is_set,
     get_log_dir,
     get_settings_path,
     get_token_path,
@@ -56,10 +59,10 @@ from src.ui import (
     show_main_menu_panes,
     show_oauth_prompt,
     compute_main_menu_cache,
-    update_menu_cache_on_toggle,
 )
 from src.sync import FolderStatsCache, BackgroundScanner
-from src.ui.primitives import clear_screen
+from src.ui.primitives import CancelInput, clear_screen
+from src.ui.screens.first_run import run_setup, setup_needs
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
 from src.core.logging import TeeOutput, prune_old_logs
@@ -107,23 +110,22 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         self.folders = []
         self.folder_stats_cache = FolderStatsCache()
         self._background_scanner: BackgroundScanner | None = None
+        self._library_found: dict = {}
+
+    def _should_offer_signin(self) -> bool:
+        """Offered on every start while the chosen mode is missing a sign-in
+        and nothing else. Asked of the mode, not of the disk: a credentials.json
+        left from trying BYOC once must not prompt an rclone user forever."""
+        return (self.auth.is_available
+                and not self.auth.is_signed_in
+                and self._drive_blocked_step() == "signin")
 
     def run(self):
         """Main application loop."""
         clear_screen()
         print_header()
 
-        # Offered on every start while the chosen mode is missing a sign-in and
-        # nothing else. connection_step_for keeps BYOC without credentials away
-        # from sign-in, which would fall back to the capped embedded client.
-        from src.drive.auth import has_custom_client_config
-        from src.ui.screens.download_mode import connection_step_for
-
-        step = connection_step_for(self.user_settings.download_mode,
-                                   rclone_authed=True,
-                                   signed_in=self.auth.is_signed_in,
-                                   byoc_configured=has_custom_client_config())
-        if self.auth.is_available and step == "signin":
+        if self._should_offer_signin():
             if show_oauth_prompt():
                 self.handle_signin()
                 clear_screen()
@@ -133,6 +135,9 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         _t_drives = _time.time()
         self.load_drives()
         print(f"  [timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
+        # However the library got here (setup, SYNCHOTIC_LIBRARY, adoption),
+        # a drive it holds charts for is never left off by default.
+        self._turn_on_library_drives(undecided_only=True)
 
         # Start background scanning of folders (if signed in)
         # Force rescan if scan cache is stale (>1hr old)
@@ -153,12 +158,6 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         start_time = os.environ.get("SYNCHOTIC_START_TIME")  # For startup timing
 
         while True:
-            if not self.folders:
-                clear_screen()
-                print_header()
-                print("No folders available!")
-                print()
-
             # Compute cache if needed (first run or after state-changing actions)
             # Use combined drives config that includes custom folders
             combined_drives = self._get_combined_drives_config()
@@ -189,11 +188,8 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
 
             if action == "quit":
                 self._stop_background_scan()
-                # Drop back to the real screen so the sign-off lands in the
-                # shell the user came from instead of the buffer we discard.
                 from chotic_ui.primitives.host import leave_alt_screen
                 leave_alt_screen()
-                print("\nGoodbye!")
                 break
 
             elif action == "sync":
@@ -209,31 +205,6 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
                         display.session_expired_notice()
                         from src.ui.primitives import wait_with_skip
                         wait_with_skip(4.0)
-
-            elif action == "configure":
-                # Enter on a drive - go directly to configure that drive
-                self.handle_configure_drive(value)
-                # Fast update: just regenerate this folder + global totals
-                if menu_cache:
-                    update_menu_cache_on_toggle(
-                        menu_cache, value, self.folders, self.user_settings,
-                        self.folder_stats_cache, combined_drives, self._background_scanner
-                    )
-
-            elif action == "toggle":
-                # Space on a drive - toggle drive on/off
-                self.handle_toggle_drive(value)
-                # Fast update: just regenerate toggled folder + global totals
-                if menu_cache:
-                    update_menu_cache_on_toggle(
-                        menu_cache, value, self.folders, self.user_settings,
-                        self.folder_stats_cache, combined_drives, self._background_scanner
-                    )
-
-            elif action == "toggle_group":
-                # Enter/Space on a group - expand/collapse (NO cache invalidation!)
-                self.handle_toggle_group(value)
-                # Keep using the same cache - just showing/hiding items
 
             elif action == "rescan":
                 self._handle_force_rescan()
@@ -254,6 +225,9 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
 
             elif action == "open_data_folder":
                 self.handle_open_data_folder()
+
+            elif action == "open_library":
+                self.handle_open_library_folder()
 
             elif action == "download_mode":
                 self.handle_download_mode()
@@ -282,11 +256,18 @@ def use_first_run_sandbox() -> Path:
     """Point this run at an empty install in a throwaway temp folder, so a
     machine that already runs Synchotic can show what a new user sees.
     Nothing installed is read or adopted. Returns the folder."""
+    import shutil
     import tempfile
 
     from src.core.legacy_migration import FRESH_ENV
+    from src.core.paths import get_drives_config_path
 
     sandbox = Path(tempfile.mkdtemp(prefix="synchotic-first-run-"))
+    # SYNCHOTIC_ROOT moves the bundled drives.json too. Without it the sandbox
+    # has no drives, which no real install ever sees.
+    drives = get_drives_config_path()
+    if drives.exists():
+        shutil.copy2(drives, sandbox / drives.name)
     os.environ["SYNCHOTIC_ROOT"] = str(sandbox)
     os.environ["SYNCHOTIC_OS_DIRS"] = "0"
     os.environ[FRESH_ENV] = "1"
@@ -294,6 +275,45 @@ def use_first_run_sandbox() -> Path:
     os.environ.pop("SYNCHOTIC_LIBRARY", None)
     os.environ.pop("SYNCHOTIC_LEGACY_ROOT", None)
     return sandbox
+
+
+def startup_setup(app) -> bool:
+    """Ask whatever setup this launch still needs. False means quit.
+
+    Every launch, not just the first: a library and a download mode that can
+    download are required, so anything missing or broken since last time is
+    asked again here and setup repairs itself.
+    """
+    first_run = not library_is_set()
+    needs = setup_needs(library_set=not first_run,
+                        mode_chosen=bool(app.user_settings.download_mode),
+                        mode_blocked=app._drive_blocked_step())
+    if not needs:
+        return True
+    if not sys.stdin.isatty():
+        print(f"  {copy.SETUP_NEEDS_TERMINAL}")
+        sys.exit(1)
+    return run_setup(
+        needs,
+        choose_library=lambda intro, at: app.handle_library(
+            intro=intro, setup_step=at),
+        choose_mode=lambda intro, at: app.handle_download_mode(
+            intro=intro, setup_step=at, esc_label=copy.BTN_QUIT),
+        library_is_set=library_is_set,
+        mode_chosen=lambda: bool(app.user_settings.download_mode),
+        blocked_step=lambda: app._drive_blocked_step(),
+        pick_starting_drives=lambda: _found_summary(app),
+        first_run=first_run,
+    )
+
+
+def _found_summary(app) -> str:
+    """The drives the picked library held, for the last setup page, in home
+    screen order. "" when it held none."""
+    found = app._library_found
+    return display.library_contents(tuple(
+        (d.group, d.name, len(found[d.folder_id]))
+        for d in app._get_combined_drives_config().drives if d.folder_id in found))
 
 
 def main():
@@ -305,10 +325,9 @@ def main():
     # itself via chotic-ui's print_header, which is a no-op until the app hands
     # it the art. Without this the first paint wipes the banner for good, and
     # the menu still reserves its 8 lines of height for it.
-    from chotic_ui import configure_header, set_theme
+    from chotic_ui import set_theme
     from chotic_ui.primitives.host import bootstrap, use_alt_screen
-    from src.ui.components.header import ASCII_HEADER
-    from src import __version__ as _app_version
+    from src.ui.components.header import install_header
     from src.ui.theme import DEFAULT_THEME
 
     # The .app renames the binary to synchotic-tui so it does not collide with
@@ -318,7 +337,7 @@ def main():
     bootstrap("Synchotic")
 
     parser = argparse.ArgumentParser(
-        description="DM Chart Sync - Download charts from Google Drive"
+        description="Synchotic - sync Clone Hero chart packs from Google Drive"
     )
     parser.add_argument(
         "--first-run", "--firsttime", action="store_true", dest="first_run",
@@ -348,7 +367,7 @@ def main():
     # taller, drags old rows back under the new frame.
     use_alt_screen()
 
-    configure_header(ASCII_HEADER, _app_version)
+    install_header()
 
     set_theme(os.environ.get("SYNCHOTIC_THEME") or DEFAULT_THEME)
 
@@ -405,7 +424,7 @@ def main():
         if not sys.stdin.isatty():
             sys.exit(1)
         from src.ui.widgets.confirm import ConfirmDialog
-        if not ConfirmDialog("Retry?", "Connect the drive, then choose Yes.").run():
+        if not ConfirmDialog(f"{copy.UNFINISHED_RETRY}?", copy.LIBRARY_MISSING).run():
             sys.exit(1)
 
     # A bundle that used to be portable has its settings, token and rclone
@@ -417,15 +436,15 @@ def main():
     from src.core.paths import adopt_legacy_install, stale_data_dir_warning
     adopted = adopt_legacy_install()
     if adopted:
-        print(f"  Brought your previous setup across: {', '.join(adopted)}")
+        print(f"  {copy.ADOPTED.format(what=', '.join(adopted))}")
     stale = stale_data_dir_warning()
     if stale:
         # Silence here is what turns an upgrade into a factory reset: signed
         # out, no drives, and an empty default library that the next sync fills
         # by downloading the whole collection again.
-        print(f"\n  A newer setup exists in {stale}")
-        print("  but this install already has settings and will not overwrite them.")
-        print("  Settings > Library, pointed at that folder, imports it.\n")
+        print()
+        display.say(copy.ADOPT_SKIPPED.format(path=stale))
+        print()
 
     # settings.json is meant to be edited, so write it on the first run, after
     # adoption has had its say about what goes in it.
@@ -437,11 +456,11 @@ def main():
     # Must run BEFORE creating SyncApp so paths resolve correctly
     migrated = migrate_legacy_files()
     if migrated:
-        print(f"Migrated settings to .dm-sync/: {', '.join(migrated)}")
+        print(f"  {copy.ADOPTED.format(what=', '.join(migrated))}")
 
     renamed = migrate_unsanitized_paths()
     if renamed:
-        print(f"Sanitized {len(renamed)} path(s) on disk:")
+        print(copy.SANITIZED.format(paths=count(len(renamed), "path")))
         for r in renamed:
             print(f"  {r}")
 
@@ -451,16 +470,11 @@ def main():
         app.user_settings.download_mode = cli_args.download_mode
         app.user_settings.save()
         app.sync.download_mode = cli_args.download_mode
-        print(f"  download mode set to {cli_args.download_mode}")
-    elif not app.user_settings.download_mode and not app.auth.is_signed_in:
-        # Signed-in users are skipped: their token already handles blocked files
-        # via tier 2, so the question does not apply to them.
-        from src.ui.screens import choose_download_mode
-        chosen = choose_download_mode()
-        if chosen:
-            app.user_settings.download_mode = chosen
-            app.user_settings.save()
-            app.sync.download_mode = chosen
+
+    if not startup_setup(app):
+        from chotic_ui.primitives.host import leave_alt_screen
+        leave_alt_screen()
+        sys.exit(0)
     print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()
@@ -475,7 +489,14 @@ def run():
         # buffer that atexit is about to throw away.
         from chotic_ui.primitives.host import leave_alt_screen
         leave_alt_screen()
-        print("\n\nCancelled by user.")
+        print(f"\n\n{copy.CANCELLED}.")
+        sys.exit(0)
+    except CancelInput:
+        # Esc backs out of any prompt, including ones that read a key rather
+        # than a line. Uncaught it ended the run on a traceback.
+        from chotic_ui.primitives.host import leave_alt_screen
+        leave_alt_screen()
+        print(f"\n\n{copy.CANCELLED}.")
         sys.exit(0)
     except LibraryUnavailable:
         # The library went away mid-run (a drive unplugged): every path helper
@@ -484,9 +505,9 @@ def run():
         from src.core.paths import get_library_path, plain_path
         leave_alt_screen()
         try:
-            display.library_lost(plain_path(get_library_path()))
+            display.library_unavailable(plain_path(get_library_path()))
         except Exception:
-            print("\n\nLibrary disconnected. Reconnect the drive and sync again.")
+            print(f"\n\n{copy.LIBRARY_MISSING}. {copy.FIX_RECONNECT}")
         sys.exit(1)
 
 

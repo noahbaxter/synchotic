@@ -3,27 +3,26 @@ Two-pane home screen.
 
 Left pane is the drive list, with group names demoted to section headers. Right
 pane is whatever the left cursor sits on: a drive's setlists, or the settings
-list. That folds in the drill-down that used to be drive_config.py -- toggling a
-setlist and watching its drive's totals move now happen on one screen instead of
-two.
+list.
 
 Sync and Quit are keys rather than rows (S and Esc). Their live state moves to
 the footer, which TwoPane recomputes every frame, so the sync delta and the scan
 progress stay visible from every row instead of only when you scroll to them.
 
-Returns the same ``(action, value, position)`` triple the one-column menu did,
-so sync.py's dispatch loop is unchanged. Setlist and drive toggles never return:
-they mutate settings and refresh the cache in place, because leaving the screen
-to apply a toggle is the thing this layout exists to stop doing.
+Returns an ``(action, value, position)`` triple for sync.py to dispatch.
+Setlist and drive toggles never return: they mutate settings and refresh the
+cache in place.
 """
 
 import shutil
 import time as _time
+from threading import Thread
 from pathlib import Path
 
 from chotic_ui.widgets.two_pane import TwoPane
 from chotic_ui.primitives.terminal import get_terminal_width, truncate_ansi
 
+from src import copy
 from src.config import UserSettings, DrivesConfig
 from src.core.formatting import sort_by_name, format_duration, format_size
 from src.core.logging import debug_log
@@ -97,34 +96,26 @@ def _sync_label(cache: MainMenuCache) -> str:
     """What Sync will do, for the footer: a tick when there is nothing to fetch,
     otherwise the size of what is missing."""
     if cache.sync_checkmark:
-        return f"{Colors.SUCCESS}\u2713{Colors.RESET} synced"
+        return f"{Colors.SUCCESS}\u2713{Colors.RESET} {copy.FOOTER_SYNCED}"
     if cache.sync_delta:
-        return f"sync {cache.sync_delta}"
-    return "sync"
+        return f"{copy.SYNC.lower()} {cache.sync_delta}"
+    return copy.SYNC.lower()
 
 
 def _copy_cache(dst: MainMenuCache, src: MainMenuCache) -> None:
     """Refresh in place: sync.py holds a reference to this object."""
-    for f in ("subtitle", "sync_action_desc", "sync_delta", "sync_checkmark",
-              "folder_stats", "folder_deltas", "folder_checkmarks", "folder_states",
+    for f in ("subtitle", "sync_delta", "sync_checkmark",
+              "folder_deltas", "folder_checkmarks", "folder_states",
               "folder_scan_progress", "group_enabled_counts"):
         setattr(dst, f, getattr(src, f))
 
 
 def _mode_blocked_reason(user_settings, auth, rclone_connected) -> str:
-    """Menu wording for the shared rule in download_mode.mode_blocked_reason.
+    """The shared rule in download_mode.mode_blocked_reason, in the same
+    words everywhere else says it."""
+    from .download_mode import mode_blocked_reason
 
-    The row has a label beside it, so it reads as an instruction ("Sign in
-    first") where the sync summary needs a clause ("...because you are not
-    signed in").
-    """
-    from .download_mode import mode_blocked_step
-
-    return {
-        "rclone": "Connect rclone first",
-        "byoc_setup": "Needs your Google credentials",
-        "signin": "Sign in first",
-    }.get(mode_blocked_step(user_settings, auth, rclone_connected), "")
+    return mode_blocked_reason(user_settings, auth, rclone_connected)
 
 
 def show_main_menu_panes(
@@ -157,15 +148,32 @@ def show_main_menu_panes(
             folder, name, download_path, user_settings)
     )
 
+    # Proving the token is a Drive call of up to 20s, so it runs on its own
+    # thread, once per screen and again only when the remote comes back.
+    probed = {"started": False, "dead": False}
+
+    def _probe_rclone():
+        import src.rclone as rclone
+        probed["dead"] = rclone.connection_state() == rclone.DEAD
+
     def _check_status() -> StatusSnapshot:
         from ...core.paths import library_blocked_reason
+        from ...config.settings import DOWNLOAD_MODE_RCLONE
         try:
             import src.rclone as rclone
             rclone_connected = rclone.is_authed()
         except Exception:
             rclone_connected = False
+        uses_rclone = ((user_settings.download_mode if user_settings else "")
+                       or DOWNLOAD_MODE_RCLONE) == DOWNLOAD_MODE_RCLONE
+        if not (rclone_connected and uses_rclone):
+            probed.update(started=False, dead=False)
+        elif not probed["started"]:
+            probed["started"] = True
+            Thread(target=_probe_rclone, daemon=True, name="rclone-probe").start()
         return StatusSnapshot(rclone_connected=rclone_connected,
-                              library_blocked=library_blocked_reason())
+                              library_blocked=library_blocked_reason(),
+                              rclone_dead=probed["dead"])
 
     status_warmer = StatusWarmer(_check_status)
 
@@ -249,7 +257,7 @@ def show_main_menu_panes(
             add(folder)
 
         rows.append(_rule(LEFT_WIDTH - 2))
-        rows.append(_row(f"{Colors.PRIMARY}⚙{Colors.RESET}  Settings", SETTINGS))
+        rows.append(_row(f"{Colors.PRIMARY}⚙{Colors.RESET}  {copy.SETTINGS}", SETTINGS))
         return rows
 
     # ---- right pane: a drive's setlists ----
@@ -333,11 +341,11 @@ def show_main_menu_panes(
 
         rows = [_setlist_row(folder_id, n, drive_enabled) for n in setlists]
         rows.append(_spacer())
-        rows.append(_row(f"  {Colors.PRIMARY}Enable all{Colors.RESET}", ("enable_all", folder_id, None)))
-        rows.append(_row(f"  {Colors.PRIMARY}Disable all{Colors.RESET}", ("disable_all", folder_id, None)))
+        rows.append(_row(f"  {Colors.PRIMARY}{copy.ENABLE_ALL}{Colors.RESET}", ("enable_all", folder_id, None)))
+        rows.append(_row(f"  {Colors.PRIMARY}{copy.DISABLE_ALL}{Colors.RESET}", ("disable_all", folder_id, None)))
         if folder.get("is_custom"):
             rows.append(_spacer())
-            label = "Re-scan folder" if folder.get("files") else "Scan folder"
+            label = copy.ROW_RESCAN
             # A scan with nowhere to write is greyed with the reason beside
             # it, rather than left as a row that ignores you.
             lib_blocked = status_warmer.snapshot.library_blocked
@@ -346,48 +354,55 @@ def show_main_menu_panes(
                                  ("scan_folder", folder_id, None), False))
             else:
                 rows.append(_row(f"  {label}", ("scan_folder", folder_id, None)))
-            rows.append(_row(f"  {Colors.ERROR}Remove folder{Colors.RESET}", ("remove_folder", folder_id, None)))
+            rows.append(_row(f"  {Colors.ERROR}{copy.REMOVE_FOLDER}{Colors.RESET}", ("remove_folder", folder_id, None)))
         return rows
 
     # ---- right pane: settings ----
 
     def _sign_in_option():
-        """Sign-in has four states and only one of them is a plain "sign in".
+        """The Google sign-in the mode downloads with: rclone's remote, or our
+        own OAuth token for BYOC.
 
-        Embedded OAuth is dead, so a signed-out user with no credentials of
-        their own cannot sign in at all -- that used to mean hiding the row,
-        which left people hunting for a control that was never there. It is
-        shown greyed with the reason instead.
+        A BYOC user with no credentials of their own cannot sign in at all.
+        The row is shown greyed with the reason rather than hidden, which left
+        people hunting for a control that was never there.
         """
         from ...drive.auth import has_custom_client_config
         from ...config.settings import DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_RCLONE
 
         mode = (user_settings.download_mode if user_settings else "") or DOWNLOAD_MODE_RCLONE
+        sign_in = ("act", "signin")
         if mode == DOWNLOAD_MODE_ANONYMOUS:
-            return ("Sign in", "Not used in anonymous mode", ("act", "signin"), False)
-        if auth is not None and getattr(auth, "session_expired", False):
-            return ("Sign in again", "Restores fast downloads", ("act", "signin"), True)
-        if auth is not None and getattr(auth, "is_signed_in", False):
-            email = getattr(auth, "user_email", "")
-            return ("Sign out", email or "Signed in to Google", ("act", "signout"), True)
-        if has_custom_client_config():
-            return ("Sign in to Google", "Uses the credentials you set up",
-                    ("act", "signin"), True)
+            return (copy.ROW_SIGN_IN, copy.MODE_ANON_LABEL, sign_in, False)
         if mode == DOWNLOAD_MODE_RCLONE:
-            # rclone downloads through its own remote, so a Google sign-in buys
-            # nothing. Saying "Needs your own credentials" read as an unmet
-            # requirement in the mode that is actually recommended.
-            return ("Sign in", "Not needed in rclone mode", ("act", "signin"), False)
-        return ("Sign in", "Needs your own credentials", ("act", "signin"), False)
+            # rclone signs in to Google with its own remote, not our token.
+            status = status_warmer.snapshot
+            if status.rclone_dead:
+                return (copy.ROW_SIGN_IN, copy.STATUS_SIGNIN_EXPIRED, sign_in, True)
+            if status.rclone_connected:
+                return (copy.ROW_SIGN_OUT, "", ("act", "signout"), True)
+            return (copy.ROW_SIGN_IN, "", sign_in, True)
+        if auth is not None and getattr(auth, "session_expired", False):
+            return (copy.ROW_SIGN_IN, "", sign_in, True)
+        if auth is not None and getattr(auth, "is_signed_in", False):
+            return (copy.ROW_SIGN_OUT, getattr(auth, "user_email", "") or "",
+                    ("act", "signout"), True)
+        if has_custom_client_config():
+            return (copy.ROW_SIGN_IN, "", sign_in, True)
+        return (copy.ROW_SIGN_IN, copy.STATUS_BYOC, sign_in, False)
 
     def _settings_right():
         from .account import account_status
-        from ...core.paths import get_library_path, plain_path
+        from ...core.paths import library_is_set
 
         def opt(label, value, action, selectable=True):
             """An option the cursor cannot land on is drawn grey throughout, so
-            it reads as unavailable rather than as a row that ignores you."""
-            pad = " " * max(1, 18 - len(label))
+            it reads as unavailable rather than as a row that ignores you.
+
+            `value` is state, or why the row is greyed. Never a description of
+            what the row does: the label says that.
+            """
+            pad = " " * max(2, 20 - len(label))
             if selectable:
                 text = f"  {Colors.MUTED}{label}{Colors.RESET}{pad}{value}"
             else:
@@ -416,45 +431,52 @@ def show_main_menu_panes(
         if blocked:
             rescan = blocked
         elif scanning:
-            rescan = "Scanning…"
+            rescan = copy.SCANNING
         else:
-            rescan = "Force re-scan all drives"
+            rescan = ""
 
         sign_label, sign_value, sign_action, sign_ok = _sign_in_option()
+        # The path itself is on the banner line, so the library rows only say
+        # what is wrong with it.
+        has_library = library_is_set()
+        location = lib_blocked if has_library else f"{Colors.ERROR}{lib_blocked}{Colors.RESET}"
 
         return [
-            _header_row("Account"),
-            # download_mode, under the name the chooser it opens already uses.
-            # The value reports whether that mode can actually download, not
+            _header_row(copy.ROW_ACCOUNT),
+            # The value reports whether the mode can actually download, not
             # just which one is set: a mode that cannot is the thing worth
             # seeing without opening anything.
-            opt("Mode", account_status(user_settings, auth, rclone_connected),
+            opt(copy.ROW_MODE, account_status(user_settings, auth, rclone_connected,
+                                              status.rclone_dead),
                 ("act", "download_mode")),
             opt(sign_label, sign_value, sign_action, sign_ok),
             _spacer(),
-            _header_row("Library"),
-            # Changing it rescans the new location, so it fails the same way
-            # a rescan does -- except when the library itself is the problem,
-            # which is what this row exists to fix.
-            opt("Location", mode_blocked or lib_blocked or plain_path(get_library_path()),
-                ("act", "library"), selectable=not mode_blocked),
-            # Opens a local folder, so it works with no Drive access at all.
-            opt("Open folder", "Settings, logs, credentials", ("act", "open_data_folder")),
+            _header_row(copy.ROW_LIBRARY),
+            # Two folders, two rows. One "Open folder" under the Library
+            # header that opened the settings folder is how people ended up
+            # looking for their charts in Application Support.
+            opt(copy.ROW_OPEN_CHARTS, "" if has_library else lib_blocked,
+                ("act", "open_library"), selectable=has_library),
+            # Never gated on the download mode. Picking a folder is a local
+            # act that needs nothing from Drive, and gating it told a new user
+            # to connect rclone before they could say where their charts go.
+            opt(copy.ROW_LOCATION, location, ("act", "library")),
             _spacer(),
-            _header_row("Drives"),
+            _header_row(copy.ROW_APP),
+            # Opens a local folder, so it works with no Drive access at all.
+            opt(copy.ROW_OPEN_DATA, "", ("act", "open_data_folder")),
+            _spacer(),
+            _header_row(copy.ROW_DRIVES),
             # Resolving a folder is a Drive call: without a working mode it
             # only ever reaches "access denied", several screens in.
-            opt("Add folder", mode_blocked or "Your own Google Drive folder",
+            opt(copy.ROW_ADD_CUSTOM, mode_blocked,
                 ("act", "add_custom"), selectable=not mode_blocked),
             # A rescan with no working mode or no library to write into
             # returns before doing any work, and one during a scan has nothing
             # to add, so none of the three is offerable.
-            opt("Rescan", rescan, ("act", "rescan"),
+            opt(copy.ROW_RESCAN, rescan, ("act", "rescan"),
                 selectable=not (blocked or scanning)),
         ]
-
-    def _download_mode_label(settings):
-        return (getattr(settings, "download_mode", "") if settings else "") or "Not set"
 
     # ---- wiring ----
 
@@ -464,7 +486,7 @@ def show_main_menu_panes(
         pane = pane_box.get("pane")
         if active == SETTINGS:
             if pane:
-                pane.right_header = f"{Colors.BOLD}Settings{Colors.RESET}"
+                pane.right_header = f"{Colors.BOLD}{copy.SETTINGS}{Colors.RESET}"
                 pane.show_count = False
             return _settings_right()
 
@@ -484,9 +506,9 @@ def show_main_menu_panes(
             # One short of the pane width: the frame adds a single space itself.
             row_width = _right_text_width()
             charts_w, size_w = _stat_widths(row_width)
-            head_cells = [("CHARTS", charts_w, Colors.MUTED)]
+            head_cells = [(copy.COL_CHARTS, charts_w, Colors.MUTED)]
             if size_w:
-                head_cells.append(("SIZE", size_w, Colors.MUTED))
+                head_cells.append((copy.COL_SIZE, size_w, Colors.MUTED))
             pane.right_header = _columns(
                 f"{Colors.BOLD}{folder.get('name', '')}{Colors.RESET}",
                 head_cells,
@@ -573,16 +595,16 @@ def show_main_menu_panes(
         if background_scanner and not background_scanner.is_done():
             stats = background_scanner.get_stats()
             if stats.current_folder:
-                verb = "Scanning" if stats.api_calls > 0 else "Loading cache"
-                parts.append(f"{verb} {stats.current_folder} "
-                             f"({stats.folders_done + 1}/{stats.folders_total})"
-                             f" · {format_duration(stats.elapsed)}")
+                parts.append(copy.FOOTER_SCAN.format(folder=stats.current_folder,
+                                                     done=stats.folders_done + 1,
+                                                     total=stats.folders_total,
+                                                     elapsed=format_duration(stats.elapsed)))
         # Nothing else goes here: the totals already sit in the title band, and
         # repeating them is how a status bar turns into noise.
 
-        hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} panes  "
-                 f"{Colors.PRIMARY}Space{Colors.MUTED} toggle  "
-                 f"{Colors.PRIMARY}Esc{Colors.MUTED} quit")
+        hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} {copy.FOOTER_PANES}  "
+                 f"{Colors.PRIMARY}Space{Colors.MUTED} {copy.FOOTER_TOGGLE}  "
+                 f"{Colors.PRIMARY}Esc{Colors.MUTED} {copy.BTN_QUIT.lower()}")
         # Neither line may wrap: the frame redraws from the top every tick, so
         # a wrapped line pushes the box's bottom off the screen. One column
         # spare, since a line that exactly fills the width wraps on some
@@ -642,14 +664,14 @@ def show_main_menu_panes(
         return "return"
 
     pane = TwoPane(
-        title="Chart Packs",
+        title=copy.ROW_LIBRARY,
         subtitle=strip_ansi(cache.subtitle or ""),
         left_rows=_timed("home_left_rows", left_rows),
         right_rows=_timed("home_right_rows", right_rows),
         on_left_space=on_left_space,
         on_right_enter=on_right_enter,
         space_activates=True,
-        left_header="Drives",
+        left_header=copy.ROW_DRIVES,
         left_width=LEFT_WIDTH,
         # The cursor row carries a background shift; an inverted chip on the
         # pane header as well was two things shouting the same thing.

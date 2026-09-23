@@ -4,6 +4,8 @@ Drive-related utilities for DM Chart Sync.
 
 import re
 
+from .. import copy
+
 
 def parse_drive_folder_url(url_or_id: str) -> tuple[str | None, str | None]:
     """
@@ -25,11 +27,6 @@ def parse_drive_folder_url(url_or_id: str) -> tuple[str | None, str | None]:
     """
     url_or_id = url_or_id.strip()
 
-    # Check if it's a Google Drive file link (not a folder)
-    file_pattern = r"drive\.google\.com/file/d/([a-zA-Z0-9_-]+)"
-    if re.search(file_pattern, url_or_id):
-        return None, "That's a file link, not a folder link"
-
     # Pattern for folder ID in URL path
     folder_pattern = r"drive\.google\.com/drive(?:/u/\d+)?/folders/([a-zA-Z0-9_-]+)"
     match = re.search(folder_pattern, url_or_id)
@@ -41,8 +38,4 @@ def parse_drive_folder_url(url_or_id: str) -> tuple[str | None, str | None]:
     if re.match(raw_id_pattern, url_or_id):
         return url_or_id, None
 
-    # Check if it looks like a Google Drive URL but wrong format
-    if "drive.google.com" in url_or_id:
-        return None, "Unrecognized Google Drive URL format"
-
-    return None, "Not a Google Drive URL"
+    return None, copy.NOT_A_FOLDER_LINK

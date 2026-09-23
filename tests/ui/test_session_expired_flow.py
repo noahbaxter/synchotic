@@ -13,7 +13,8 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 
-from src.config.settings import UserSettings
+from src import copy
+from src.config.settings import UserSettings, DOWNLOAD_MODE_BYOC
 from src.ui.components import strip_ansi
 from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
 
@@ -39,9 +40,14 @@ def rows(monkeypatch, tmp_path):
                             fake_run, raising=False)
         monkeypatch.setattr("src.drive.auth.has_custom_client_config",
                             lambda: byoc, raising=False)
+        monkeypatch.setattr("src.rclone.is_authed", lambda: False)
+        if settings is None:
+            # Our own OAuth token is what expires here, and only BYOC uses it.
+            settings = UserSettings(tmp_path / "settings.json")
+            settings.download_mode = DOWNLOAD_MODE_BYOC
         show_main_menu_panes(
             folders=[],
-            user_settings=settings or UserSettings(tmp_path / "settings.json"),
+            user_settings=settings,
             download_path=tmp_path / "charts",
             auth=auth,
         )
@@ -49,60 +55,45 @@ def rows(monkeypatch, tmp_path):
     return build
 
 
-def _labels(rows):
-    return [strip_ansi(r[0](False, False)).strip() for r in rows]
+SIGN_IN = ("act", "signin")
+SIGN_OUT = ("act", "signout")
 
 
-def _row_for(rows, text):
-    return next(r for r in rows if text in strip_ansi(r[0](False, False)))
+def _row(rows, action):
+    return next((r for r in rows if r[1] == action), None)
+
+
+def _text(row):
+    return strip_ansi(row[0](False, False))
 
 
 class TestTheSettingsPaneOffersTheFix:
-    def test_expired_session_offers_sign_in_again(self, rows):
-        labels = _labels(rows(FakeAuth(signed_in=False, expired=True)))
-        assert any("Sign in again" in l for l in labels), labels
+    def test_expired_session_offers_sign_in(self, rows):
+        row = _row(rows(FakeAuth(signed_in=False, expired=True)), SIGN_IN)
+        assert row[2] is True
+        assert copy.ROW_SIGN_IN in _text(row)
 
     def test_expired_session_never_offers_sign_out(self, rows):
         """The bug: the only Google row was "Sign out", which reads as the
         opposite of what a signed-out user needs to do."""
-        labels = _labels(rows(FakeAuth(signed_in=True, expired=True)))
-        assert not any("Sign out" in l for l in labels), labels
+        assert _row(rows(FakeAuth(signed_in=True, expired=True)), SIGN_OUT) is None
 
     def test_a_new_byoc_user_sees_a_greyed_sign_in_with_the_reason(self, rows, tmp_path):
         """The capped client answers "This app is blocked", so signing in cannot
-        work. This used to hide the row entirely, which left people hunting for
-        a control that was never there; it is shown unavailable instead."""
+        work. The row is shown unavailable rather than hidden."""
         from src.ui.primitives import Colors
-        from src.config.settings import DOWNLOAD_MODE_BYOC
-        settings = UserSettings(tmp_path / "settings.json")
-        settings.download_mode = DOWNLOAD_MODE_BYOC
-        row = _row_for(rows(FakeAuth(), byoc=False, settings=settings), "Sign in")
+        row = _row(rows(FakeAuth(), byoc=False), SIGN_IN)
         assert row[2] is False
         assert Colors.MUTED_DIM in row[0](False, False)
-        assert "Needs your own credentials" in strip_ansi(row[0](False, False))
-
-    def test_rclone_says_sign_in_is_unnecessary_not_missing(self, rows):
-        """rclone downloads through its own remote. Reusing the BYOC wording
-        here advertised an unmet requirement in the recommended mode, so it
-        read as broken to someone whose rclone was already connected."""
-        from src.ui.primitives import Colors
-        row = _row_for(rows(FakeAuth(), byoc=False), "Sign in")
-        assert row[2] is False
-        assert Colors.MUTED_DIM in row[0](False, False)
-        assert "Not needed in rclone mode" in strip_ansi(row[0](False, False))
+        assert copy.STATUS_BYOC in _text(row)
 
     def test_a_healthy_session_offers_sign_out_with_the_address(self, rows):
-        labels = _labels(rows(FakeAuth(signed_in=True, expired=False, email="a@b.com")))
-        assert any("Sign out" in l and "a@b.com" in l for l in labels), labels
+        row = _row(rows(FakeAuth(signed_in=True, expired=False, email="a@b.com")), SIGN_OUT)
+        assert copy.ROW_SIGN_OUT in _text(row) and "a@b.com" in _text(row)
 
     def test_a_signed_out_user_with_credentials_can_sign_in(self, rows):
-        row = _row_for(rows(FakeAuth(signed_in=False, expired=False)), "Sign in to Google")
+        row = _row(rows(FakeAuth(signed_in=False, expired=False)), SIGN_IN)
         assert row[2] is True
-        assert row[1] == ("act", "signin")
-
-    def test_the_expired_row_triggers_sign_in(self, rows):
-        row = _row_for(rows(FakeAuth(expired=True)), "Sign in again")
-        assert row[1] == ("act", "signin")
 
     def test_signing_in_is_pointless_in_anonymous_mode(self, rows, tmp_path):
         """Anonymous never authenticates, so the control is shown unavailable
@@ -110,9 +101,9 @@ class TestTheSettingsPaneOffersTheFix:
         from src.config.settings import DOWNLOAD_MODE_ANONYMOUS
         settings = UserSettings(tmp_path / "settings.json")
         settings.download_mode = DOWNLOAD_MODE_ANONYMOUS
-        row = _row_for(rows(FakeAuth(), settings=settings), "Sign in")
+        row = _row(rows(FakeAuth(), settings=settings), SIGN_IN)
         assert row[2] is False
-        assert "anonymous" in strip_ansi(row[0](False, False)).lower()
+        assert copy.MODE_ANON_LABEL in _text(row)
 
 
 class TestIsSignedInIsABool:

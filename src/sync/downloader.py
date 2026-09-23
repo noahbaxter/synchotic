@@ -24,9 +24,7 @@ from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
 from .extractor import extract_archive, get_folder_size, delete_ignored_files
 from .download_planner import DownloadTask
 from .markers import save_marker, save_failed_marker
-from ..ui.primitives.keys import KeyMonitor
-from ..ui.widgets.sync_screen import handle_key
-from ..ui.widgets import FolderProgress, display
+from ..ui.widgets import FolderProgress
 
 # Large file threshold for reducing download concurrency (500MB)
 LARGE_FILE_THRESHOLD = 500_000_000
@@ -702,12 +700,11 @@ class FileDownloader:
         self,
         tasks: List[DownloadTask],
         progress_callback: Optional[Callable[[DownloadResult], None]] = None,
-        show_progress: bool = True,
         drive_name: str = "",
         cancel_check: Optional[Callable[[], bool]] = None,
         scan_stats_getter: Optional[Callable] = None,
-        skipped: int = 0,
-        progress: Optional[FolderProgress] = None,
+        *,
+        progress: FolderProgress,
     ) -> Tuple[int, int, int, List[str], bool, int]:
         """Download multiple files concurrently using asyncio.
 
@@ -716,8 +713,8 @@ class FileDownloader:
                          Called periodically during download. Useful for programmatic
                          cancellation (e.g., GUI cancel button, testing).
             scan_stats_getter: Optional callback that returns current scan stats for display.
-            progress: An open screen owned by the caller, who also reads keys
-                      and closes it.
+            progress: The sync run's open panel. Its owner reads keys, closes
+                      it and reports what failed; every failure is a row on it.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -725,50 +722,30 @@ class FileDownloader:
         if not tasks:
             return 0, 0, 0, [], False, 0, []
 
-        owns_progress = progress is None
-        if owns_progress and show_progress:
-            progress = FolderProgress(total_files=len(tasks), total_folders=0)
-        if progress:
-            total_bytes = sum(t.size for t in tasks)
-            progress.begin_unit(total_bytes)
-            progress.register_folders(tasks)
-            progress.set_aggregate_totals(len(tasks), total_bytes, drive_name)
-            if scan_stats_getter:
-                progress.set_scan_stats_getter(scan_stats_getter)
-            if owns_progress:
-                # A shared screen is already painting; a raw print would corrupt it.
-                display.download_starting(len(tasks), progress.total_charts, total_bytes, skipped)
+        total_bytes = sum(t.size for t in tasks)
+        progress.begin_unit(total_bytes)
+        progress.register_folders(tasks)
+        progress.set_aggregate_totals(len(tasks), total_bytes, drive_name)
+        if scan_stats_getter:
+            progress.set_scan_stats_getter(scan_stats_getter)
 
         original_handler = None
 
-        def handle_cancel():
-            if progress and not progress.cancelled:
-                progress.cancel()
-
         def handle_interrupt(signum, frame):
-            handle_cancel()
+            if not progress.cancelled:
+                progress.cancel()
 
         try:
             original_handler = signal.signal(signal.SIGINT, handle_interrupt)
         except Exception:
             pass
 
-        def on_key(key):
-            if progress:
-                handle_key(progress.screen, key, handle_cancel)
-
-        # A shared screen's owner already reads keys; two readers fight over stdin.
-        keys = KeyMonitor(on_key=on_key) if (progress and owns_progress) else None
-        if keys:
-            keys.start()
-
-        auth_failures = 0
         rate_limited_ids: List[str] = []
         downloaded = 0
         permanent_errors = 0
         cancelled = False
         try:
-            downloaded, errors, retryable, auth_failures, cancelled, blocked_tasks = asyncio.run(
+            downloaded, errors, retryable, _, cancelled, blocked_tasks = asyncio.run(
                 self._download_many_async(tasks, progress, progress_callback, cancel_check)
             )
             rate_limited_ids = [t.file_id for t in retryable]
@@ -779,30 +756,12 @@ class FileDownloader:
             permanent_errors = 0
             blocked_tasks = []
         finally:
-            if keys:
-                keys.stop()
-
             try:
                 signal.signal(signal.SIGINT, original_handler or signal.SIG_DFL)
             except Exception:
                 pass
+            if cancelled:
+                self._cleanup_partial_downloads(tasks)
 
-            if progress:
-                if cancelled:
-                    cleaned = self._cleanup_partial_downloads(tasks)
-                    if owns_progress:
-                        progress.close()
-                        display.download_cancelled(downloaded, progress.completed_charts, cleaned)
-                elif owns_progress:
-                    progress.close()
-                    progress.print_error_summary()
-
-        # No rate-limit guard here. auth_failures already counts only 401/auth
-        # errors (needs_auth blocked files go to blocked_tasks instead), so the
-        # old `and not rate_limited` clause did nothing except hide the message
-        # on exactly the busy syncs where it matters most.
-        if auth_failures > 0:
-            display.auth_expired_warning(auth_failures)
-
-        bytes_downloaded = progress.downloaded_bytes if progress else 0
-        return downloaded, 0, permanent_errors, rate_limited_ids, cancelled, bytes_downloaded, blocked_tasks
+        return (downloaded, 0, permanent_errors, rate_limited_ids, cancelled,
+                progress.downloaded_bytes, blocked_tasks)

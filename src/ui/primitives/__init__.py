@@ -12,9 +12,6 @@ from .terminal import (
     truncate_text,
     get_available_width,
     print_progress,
-    print_long_path_warning,
-    print_section_header,
-    print_separator,
     make_separator,
     SECTION_WIDTH,
 )
@@ -42,10 +39,7 @@ from .keyboard_input import (
     KEY_TAB,
     KEY_SPACE,
 )
-from .path_input import (
-    Browse,
-    input_with_browse,
-)
+from .spinner import working
 from .colors import (
     Colors,
     rgb,
@@ -66,9 +60,6 @@ __all__ = [
     "truncate_text",
     "get_available_width",
     "print_progress",
-    "print_long_path_warning",
-    "print_section_header",
-    "print_separator",
     "make_separator",
     "SECTION_WIDTH",
     # Keyboard input
@@ -79,8 +70,7 @@ __all__ = [
     "getch_with_timeout",
     "check_esc_pressed",
     "input_with_esc",
-    "input_with_browse",
-    "Browse",
+    "working",
     "wait_for_key",
     "menu_input",
     "flush_input",

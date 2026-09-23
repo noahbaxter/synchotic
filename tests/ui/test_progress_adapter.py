@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 
+from src import copy
 from src.ui.widgets.progress import FolderProgress
 
 
@@ -80,13 +81,13 @@ class TestResolutions:
 
         entry = progress.screen.entries.ordered()[0]
         assert entry.state == "failed"
-        assert entry.reason == "needs sign-in"
+        assert entry.reason == copy.FAIL_NEEDS_SIGN_IN
 
     def test_the_reason_survives_into_the_summary(self):
         progress = _progress()
         progress.print_error("DM 2024-06", "ERR (timeout): x.7z")
 
-        assert progress.errors[0].reason == "timed out"
+        assert progress.errors[0].reason == copy.FAIL_TIMED_OUT
 
 
 class TestTheRateIsCurrent:

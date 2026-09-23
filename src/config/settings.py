@@ -200,6 +200,9 @@ class UserSettings:
         # Keys from a hand edit or a newer version, carried through untouched.
         self._extra: dict = {}
         self._owed_drive_defaults = False
+        # Drives turned on because the library holds them, whose setlists
+        # are settled against the disk once their names are known.
+        self._from_disk: set[str] = set()
 
     @classmethod
     def load(cls, path: Path) -> "UserSettings":
@@ -364,6 +367,30 @@ class UserSettings:
         if changed:
             self.subfolder_toggles[drive_id] = new_toggles
 
+        return changed
+
+    def turn_on_from_disk(self, drive_id: str) -> None:
+        """Turn on a drive the library holds a folder for. Its setlists stay
+        on until settle_from_disk has their names."""
+        self.set_drive_enabled(drive_id, True)
+        self._from_disk.add(drive_id)
+
+    def settle_from_disk(self, drive_id: str, names, on_disk) -> bool:
+        """Turn off the setlists of a drive turned on from disk that have
+        nothing on disk, so it does not download the rest of the drive.
+
+        Never turns off a setlist `on_disk(name)` finds in the library: those
+        stay on, so the next sync keeps them. Returns True if anything changed.
+        """
+        if drive_id not in self._from_disk:
+            return False
+        self._from_disk.discard(drive_id)
+        toggles = self.subfolder_toggles.setdefault(drive_id, {})
+        changed = False
+        for name in names:
+            if name not in toggles and not on_disk(name):
+                toggles[name] = False
+                changed = True
         return changed
 
     def enable_all(self, drive_id: str, subfolder_names: list[str]):

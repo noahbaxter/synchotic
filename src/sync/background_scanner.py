@@ -15,6 +15,7 @@ from typing import Callable, TYPE_CHECKING
 
 from pathlib import Path
 
+from .. import copy
 from ..drive import DriveClient, FolderScanner
 from ..drive.client import DriveClientConfig
 from ..core.formatting import sanitize_drive_name
@@ -25,32 +26,27 @@ if TYPE_CHECKING:
 
 
 def describe_scan_failure(e: Exception) -> str:
-    """A short, plain reason a scan failed, for the sync summary line.
-
-    The summary used to read "All files synced" no matter how many setlists
-    threw, which is how a total scan failure reached a user looking like a
-    clean run. Anything unrecognised falls back to the exception itself
-    rather than a vague stand-in.
+    """A short, plain reason a scan failed, for the sync summary line: the
+    same words a failed chart uses, or Google's own message. Anything
+    unrecognised falls back to the exception itself rather than a vague
+    stand-in.
     """
     resp = getattr(e, "response", None)
     status = getattr(resp, "status_code", None)
-    body = (getattr(resp, "text", "") or "")[:300]
 
-    if status == 400 and "different projects" in body:
-        return ("Google rejected the credentials: its API key and your sign-in "
-                "belong to different Google Cloud projects")
-    if status == 400:
-        return "Google rejected the request as malformed (400)"
     if status == 401:
-        return "your sign-in expired or was revoked"
-    if status == 403:
-        return "Google denied access (403)"
+        return copy.FAIL_SIGNED_OUT
     if status == 429:
-        return "Google rate-limited the request"
+        return copy.FAIL_RATE_LIMITED
+    if status is not None:
+        try:
+            return resp.json()["error"]["message"]
+        except Exception:
+            return f"HTTP {status}"
     if isinstance(e, requests.exceptions.Timeout):
-        return "the connection to Google timed out"
+        return copy.FAIL_TIMED_OUT
     if isinstance(e, requests.exceptions.ConnectionError):
-        return "the connection to Google failed"
+        return copy.FAIL_OFFLINE
     return f"{type(e).__name__}: {e}"
 
 
@@ -134,6 +130,8 @@ class BackgroundScanner:
         self._scanned_setlist_ids: set[str] = set()
         self._failed_setlist_ids: set[str] = set()  # Setlists that threw during scan
         self._failure_reason: str | None = None  # Why the first one threw
+        # Drives whose listing threw, so their setlists are not known at all.
+        self._discovery_failed_drives: set[str] = set()
         self._last_check_count: int = 0
 
         # Per-drive tracking
@@ -335,9 +333,14 @@ class BackgroundScanner:
             return self._failure_reason
 
     def has_scan_failures(self) -> bool:
-        """Check if any setlists failed to scan."""
+        """Check if any setlists failed to scan, or any drive would not list."""
         with self._lock:
-            return len(self._failed_setlist_ids) > 0
+            return bool(self._failed_setlist_ids or self._discovery_failed_drives)
+
+    def discovery_failed(self, drive_id: str) -> bool:
+        """True when this drive's listing threw, so its setlists are unknown."""
+        with self._lock:
+            return drive_id in self._discovery_failed_drives
 
     @property
     def all_setlists(self) -> dict[str, "SetlistInfo"]:
@@ -396,7 +399,7 @@ class BackgroundScanner:
 
         One list_folder round trip per drive, run concurrently: the calls are
         independent, _register_setlist holds the lock, and sync_subfolder_names
-        only touches subfolder_toggles[drive_id]. Serially this was the longest
+        and settle_from_disk only touch that drive's own entries. Serially this was the longest
         stretch of startup with nothing on screen.
         """
         total = len(self._folders)
@@ -432,13 +435,19 @@ class BackgroundScanner:
         drive_id = folder["folder_id"]
         drive_name = folder.get("name", "")
         with self._lock:
-            self._stats.current_folder = f"{drive_name} (discovering)"
+            self._stats.current_folder = drive_name
             self._stats.current_folder_start = time.time()
 
         try:
             items = self._client.list_folder(drive_id)
-        except Exception:
-            # On error, treat whole drive as one unit
+        except Exception as e:
+            # Registered as one unit, the same shape a flat drive has, so it
+            # has to be recorded as a failure or it passes for one.
+            with self._lock:
+                self._discovery_failed_drives.add(drive_id)
+                if self._failure_reason is None:
+                    self._failure_reason = describe_scan_failure(e)
+            debug_log(f"DISCOVERY_FAILED | drive={drive_name} | {type(e).__name__}: {e}")
             self._register_setlist(
                 setlist_id=drive_id,
                 name=drive_name,
@@ -448,7 +457,7 @@ class BackgroundScanner:
             )
             return
 
-        discovered_names = []
+        discovered = []
 
         for item in items:
             mime_type = item.get("mimeType")
@@ -468,7 +477,23 @@ class BackgroundScanner:
             else:
                 continue
 
-            discovered_names.append(setlist_name)
+            discovered.append((setlist_id, setlist_name))
+        discovered_names = [name for _, name in discovered]
+
+        # Settings first, so each setlist below is registered as enabled or
+        # not by the toggles it ends up with, and the scanner never downloads
+        # a setlist the purge then counts as off.
+        if self._user_settings and discovered_names:
+            if self._user_settings.sync_subfolder_names(drive_id, discovered_names):
+                self._settings_changed = True
+            from ..core.paths import get_library_path
+            from .library_probe import setlist_on_disk
+            if self._user_settings.settle_from_disk(
+                    drive_id, discovered_names,
+                    setlist_on_disk(get_library_path(), drive_name)):
+                self._settings_changed = True
+
+        for setlist_id, setlist_name in discovered:
             self._register_setlist(
                 setlist_id=setlist_id,
                 name=setlist_name,
@@ -476,11 +501,6 @@ class BackgroundScanner:
                 drive_name=drive_name,
                 drive=folder,
             )
-
-        # Sync settings with discovered names (Google Drive is source of truth)
-        if self._user_settings and discovered_names:
-            if self._user_settings.sync_subfolder_names(drive_id, discovered_names):
-                self._settings_changed = True
 
         # Handle flat drives (no setlist subfolders)
         if not discovered_names:

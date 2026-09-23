@@ -11,6 +11,7 @@ from pathlib import Path
 
 import pytest
 
+from src import copy
 from src.config import jsonc
 from src.core import paths
 
@@ -177,7 +178,7 @@ class TestMigration:
 
         notes = paths.migrate_legacy_files()
 
-        assert any("moved 3 markers" in n for n in notes), notes
+        assert "3 markers" in notes, notes
         assert not legacy.exists(), "sidecars should still be drained"
         assert len([p for p in get_markers_dir().iterdir()
                     if not p.name.startswith("._")]) == 3
@@ -194,7 +195,7 @@ class TestMigration:
         monkeypatch.setattr(_shutil, "move", refuse)
 
         notes = paths.migrate_legacy_files()
-        assert any("could not be moved" in n for n in notes), notes
+        assert copy.MARKERS_LEFT.format(markers="1 marker") in notes, notes
         assert (legacy / "stuck.json").exists(), "marker must survive to retry"
 
     def test_an_unavailable_library_is_skipped_not_raised(self, tmp_path):
@@ -299,7 +300,7 @@ class TestScanGate:
 
     def test_an_unmounted_library_blocks(self, tmp_path):
         paths.set_library_path(tmp_path / "not-mounted")
-        assert paths.library_blocked_reason() == "Library not connected"
+        assert paths.library_blocked_reason() == copy.LIBRARY_MISSING
 
     def test_a_mounted_library_does_not_block(self, tmp_path):
         lib = tmp_path / "mounted"
@@ -312,7 +313,7 @@ class TestScanGate:
         monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
         monkeypatch.delenv("SYNCHOTIC_LIBRARY", raising=False)
         paths.set_library_path(None)
-        assert paths.library_blocked_reason() == "Library not set"
+        assert paths.library_blocked_reason() == copy.LIBRARY_UNSET
 
     def test_the_env_override_counts_as_chosen(self, monkeypatch, tmp_path):
         paths.set_library_path(None)

@@ -9,6 +9,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 from src.sync.downloader import FileDownloader, DownloadTask
+from src.ui.widgets.progress import FolderProgress
 
 # EscMonitor can't access stdin during pytest (it's captured), which is fine
 # since we use cancel_check for programmatic cancellation in tests
@@ -61,13 +62,32 @@ class TestCancelCheck:
         with patch.object(downloader, '_download_file_async', side_effect=slow_download):
             downloaded, skipped, errors, rate_limited, cancelled, bytes_dl, _blocked = downloader.download_many(
                 mock_tasks,
-                show_progress=False,
+                progress=FolderProgress(0, 0),
                 cancel_check=cancel_after_calls,
             )
 
         # Should have cancelled before completing all downloads
         assert cancelled, "download_many should report cancelled=True"
         assert downloaded < len(mock_tasks), f"Should not complete all {len(mock_tasks)} downloads"
+
+    def test_cancelling_removes_half_downloaded_archives(self, temp_dir):
+        """A cancelled archive is left as _download_* staging. Kept, the next
+        sync would find a partial and treat it as the chart."""
+        partial = temp_dir / "_download_pack.7z"
+        task = DownloadTask(file_id="id", local_path=partial, size=1000, md5="",
+                            rel_path="Drive/pack.7z", is_archive=True)
+
+        async def half_download(*args, **kwargs):
+            partial.write_bytes(b"half")
+            await asyncio.sleep(0.5)
+
+        downloader = FileDownloader(max_workers=1)
+        with patch.object(downloader, '_download_file_async', side_effect=half_download):
+            result = downloader.download_many(
+                [task], progress=FolderProgress(0, 0), cancel_check=lambda: partial.exists())
+
+        assert result[4], "download_many should report cancelled=True"
+        assert not partial.exists()
 
     def test_cancel_check_not_called_when_fast(self, mock_tasks):
         """Fast downloads should complete without cancellation."""
@@ -89,7 +109,7 @@ class TestCancelCheck:
         with patch.object(downloader, '_download_file_async', side_effect=fast_download):
             downloaded, skipped, errors, rate_limited, cancelled, bytes_dl, _blocked = downloader.download_many(
                 mock_tasks,
-                show_progress=False,
+                progress=FolderProgress(0, 0),
                 cancel_check=never_cancel,
             )
 
@@ -142,7 +162,7 @@ class TestCancelResponsiveness:
             start = time.time()
             downloaded, skipped, errors, rate_limited, cancelled, bytes_dl, _blocked = downloader.download_many(
                 tasks,
-                show_progress=False,
+                progress=FolderProgress(0, 0),
                 cancel_check=cancel_after_delay,
             )
             elapsed = time.time() - start

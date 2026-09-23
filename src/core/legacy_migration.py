@@ -11,7 +11,9 @@ monkeypatched getter is still seen.
 import os
 from pathlib import Path
 
+from .. import copy
 from . import paths
+from .formatting import count
 
 
 LEGACY_ROOT_ENV = "SYNCHOTIC_LEGACY_ROOT"  # test hook
@@ -149,15 +151,6 @@ def default_library_to_adopt():
     return None
 
 
-def find_legacy_markers(library_path):
-    """Markers from any pre-1.5 layout, under either state-dir name."""
-    state = find_legacy_install(library_path)
-    if state is None:
-        return None
-    markers = state / "markers"
-    return markers if markers.is_dir() else None
-
-
 def migrate_to_os_dirs(legacy_root=None) -> list:
     """Copy a portable .dm-sync into the OS dirs the .app uses.
 
@@ -172,8 +165,7 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
         return []
     # v1.4.2 and earlier told users to drop the launcher into their own songs
     # folder (README step 2), so the legacy root is wherever they put it. There
-    # is no default worth guessing: the caller supplies it, normally from the
-    # folder the user picks in the library screen.
+    # is no default worth guessing: the caller supplies it.
     root = legacy_root or os.environ.get(LEGACY_ROOT_ENV)
     if not root:
         return []
@@ -199,7 +191,7 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
                 # (drive toggles, download_mode, purge_ignore).
                 if name == "settings.json" and dest.exists():
                     if _merge_settings(src, dest):
-                        done.append("settings.json (merged)")
+                        done.append(name)
                     continue
                 if src.is_dir():
                     # Skip when the copy would add nothing: dest already has
@@ -239,7 +231,7 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
                 shutil.copy2(m, target)
                 copied += 1
             if copied:
-                done.append(f"markers ({copied})")
+                done.append(count(copied, "marker"))
     except Exception:
         pass
     return done
@@ -358,12 +350,12 @@ def migrate_legacy_files() -> list[str]:
         if old_path.exists() and not new_path.exists():
             try:
                 old_path.rename(new_path)
-                migrated.append(f"migrated {name}")
+                migrated.append(name)
             except Exception:
                 try:
                     shutil.copy2(old_path, new_path)
                     old_path.unlink()
-                    migrated.append(f"migrated {name}")
+                    migrated.append(name)
                 except Exception:
                     pass
 
@@ -406,13 +398,11 @@ def migrate_legacy_files() -> list[str]:
             except Exception:
                 failed += 1
         if moved:
-            migrated.append(f"moved {moved} markers into the library")
+            migrated.append(count(moved, "marker"))
         if failed:
             # Never silent. Reporting a short count beats claiming success while
             # the charts those markers described are queued for deletion.
-            migrated.append(
-                f"{failed} marker(s) could not be moved, retrying on next launch"
-            )
+            migrated.append(copy.MARKERS_LEFT.format(markers=count(failed, "marker")))
         try:
             legacy_markers.rmdir()
         except OSError:
@@ -434,7 +424,6 @@ def migrate_legacy_files() -> list[str]:
         if path.exists():
             try:
                 path.unlink()
-                migrated.append(f"removed {path.name}")
             except Exception:
                 pass
 
@@ -451,7 +440,6 @@ def migrate_legacy_files() -> list[str]:
             try:
                 # Try to remove if empty
                 dir_path.rmdir()
-                migrated.append(f"removed {dir_path.name}/")
             except OSError:
                 # Not empty - try removing all contents if it's truly obsolete
                 # For now, just leave non-empty dirs alone
@@ -495,7 +483,7 @@ def migrate_unsanitized_paths() -> list[str]:
                     continue
                 try:
                     old.rename(new)
-                    renamed.append(f"{name} -> {sanitized}")
+                    renamed.append(f"{name} → {sanitized}")
                 except OSError:
                     pass
 

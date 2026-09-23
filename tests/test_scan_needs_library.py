@@ -106,7 +106,9 @@ def test_a_forced_rescan_keeps_the_caches(app, missing, monkeypatch, capsys):
 
     assert invalidated == []
     assert a.folders[0]["files"] is None
-    assert "Cannot scan" in capsys.readouterr().out
+    out = capsys.readouterr().out
+    assert copy.LIBRARY_MISSING in out
+    assert copy.FIX_FROM.format(where=copy.SETTINGS_LOCATION) in out
 
 
 def test_sync_refuses_and_says_why(app, missing, monkeypatch, capsys):

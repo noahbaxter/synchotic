@@ -6,6 +6,7 @@ Tests parse_drive_folder_url() - URL parsing for Google Drive folder links.
 
 import pytest
 
+from src import copy
 from src.drive.utils import parse_drive_folder_url
 
 
@@ -81,15 +82,14 @@ class TestParseDriveFolderUrlErrors:
         url = "https://drive.google.com/file/d/1ABC123def456/view"
         folder_id, error = parse_drive_folder_url(url)
         assert folder_id is None
-        assert error is not None
-        assert "file" in error.lower()
+        assert error == copy.NOT_A_FOLDER_LINK
 
     def test_file_url_with_usp_rejected(self):
         """File URL with query params rejected."""
         url = "https://drive.google.com/file/d/1ABC123def456/view?usp=sharing"
         folder_id, error = parse_drive_folder_url(url)
         assert folder_id is None
-        assert "file" in error.lower()
+        assert error == copy.NOT_A_FOLDER_LINK
 
     def test_open_url_format_rejected(self):
         """Old ?id= format URL rejected."""

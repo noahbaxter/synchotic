@@ -9,6 +9,7 @@ and returned, with rclone connected and working.
 
 import pytest
 
+from src import copy
 from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
                                  DOWNLOAD_MODE_BYOC, DOWNLOAD_MODE_RCLONE)
 
@@ -44,32 +45,31 @@ def test_anonymous_can_sync_without_signing_in(app):
 
 def test_unconnected_rclone_is_blocked_and_says_so(app):
     assert app(DOWNLOAD_MODE_RCLONE, rclone_authed=False)._drive_blocked() == \
-        "rclone is not connected yet"
+        copy.STATUS_RCLONE
 
 
 def test_byoc_without_credentials_is_blocked(app):
     assert app(DOWNLOAD_MODE_BYOC, byoc_creds=False)._drive_blocked() == \
-        "your own Google credentials are not set up yet"
+        copy.STATUS_BYOC
 
 
 def test_byoc_signed_out_is_blocked(app):
     assert app(DOWNLOAD_MODE_BYOC, byoc_creds=True, signed_in=False)._drive_blocked() == \
-        "you are not signed in to Google"
+        copy.STATUS_SIGNED_OUT
 
 
 def test_byoc_signed_in_can_sync(app):
     assert app(DOWNLOAD_MODE_BYOC, byoc_creds=True, signed_in=True)._drive_blocked() == ""
 
 
-def test_the_block_message_names_syncing_not_custom_folders(capsys):
-    """The old text described a feature the user was not using."""
+def test_the_block_message_says_why_and_where_to_fix_it(capsys):
     from src.ui.widgets import sync_display
 
-    sync_display.sync_blocked("rclone is not connected yet")
+    sync_display.sync_blocked(copy.STATUS_RCLONE)
     out = capsys.readouterr().out
 
-    assert "Cannot sync: rclone is not connected yet" in out
-    assert "custom folders" not in out
+    assert copy.STATUS_RCLONE in out
+    assert copy.FIX_FROM.format(where=copy.SETTINGS_MODE) in out
 
 
 def test_the_menu_and_sync_cannot_disagree(app):

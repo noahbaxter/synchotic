@@ -5,7 +5,7 @@ Organized into layers:
 - primitives/: Terminal I/O (keyboard, colors, terminal control)
 - components/: Visual building blocks (box, header, formatting)
 - widgets/: Interactive reusable pieces (menu, confirm, progress)
-- screens/: Full-page views (home, drive_config, oauth, add_folder)
+- screens/: Full-page views (home, oauth, add_folder)
 """
 
 # Re-export commonly used items for convenience
@@ -37,8 +37,6 @@ from .components import (
     format_status_line,
     format_home_item,
     format_setlist_item,
-    format_drive_status,
-    format_purge_tree,
 )
 from .widgets import (
     Menu,
@@ -55,8 +53,6 @@ from .screens import (
     compute_main_menu_cache,
     show_main_menu_panes,
     update_menu_cache_on_toggle,
-    DriveConfigScreen,
-    show_subfolder_settings,
     OAuthPromptScreen,
     show_oauth_prompt,
     AddFolderScreen,
@@ -93,8 +89,6 @@ __all__ = [
     "format_status_line",
     "format_home_item",
     "format_setlist_item",
-    "format_drive_status",
-    "format_purge_tree",
     # Widgets
     "Menu",
     "MenuItem",
@@ -109,8 +103,6 @@ __all__ = [
     "compute_main_menu_cache",
     "show_main_menu_panes",
     "update_menu_cache_on_toggle",
-    "DriveConfigScreen",
-    "show_subfolder_settings",
     "OAuthPromptScreen",
     "show_oauth_prompt",
     "AddFolderScreen",

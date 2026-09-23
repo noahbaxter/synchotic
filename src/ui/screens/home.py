@@ -14,13 +14,13 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+from src import copy
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_files
 from src.core.logging import debug_log
 from src.sync import (
     SyncStatus, FolderStats, FolderStatsCache, get_persistent_stats_cache,
     PersistentStatsCache, aggregate_folder_stats, compute_setlist_stats,
 )
-from ..primitives import Colors
 from ..components import format_status_line, format_home_item, format_delta
 
 if TYPE_CHECKING:
@@ -32,9 +32,7 @@ if TYPE_CHECKING:
 class MainMenuCache:
     """Cache for expensive main menu calculations."""
     subtitle: str = ""
-    sync_action_desc: str = ""
     sync_delta: str = ""  # delta string for sync label (e.g. "[-9.2 GB]")
-    folder_stats: dict = field(default_factory=dict)  # folder_id -> columns string
     folder_deltas: dict = field(default_factory=dict)  # folder_id -> delta string
     folder_states: dict = field(default_factory=dict)  # folder_id -> state string
     folder_checkmarks: dict = field(default_factory=dict)  # folder_id -> bool (show green ✓)
@@ -114,7 +112,6 @@ def update_menu_cache_on_toggle(
                     state=state,
                     scan_progress=scan_progress,
                 )
-            menu_cache.folder_stats[folder_id] = columns
             menu_cache.folder_deltas[folder_id] = delta
             menu_cache.folder_checkmarks[folder_id] = show_checkmark
             menu_cache.folder_states[folder_id] = state
@@ -162,6 +159,7 @@ def update_menu_cache_on_toggle(
         global_enabled_setlists, global_total_setlists,
         scan_complete, background_scanner,
         global_disk_size=global_disk_size,
+        empty_hint=_empty_hint(folders, user_settings, scan_complete),
     )
 
 
@@ -180,6 +178,19 @@ def _get_setlist_names(
     return setlist_names
 
 
+def _empty_hint(folders, user_settings, scan_complete: bool) -> str:
+    """What the header says with nothing measured, asked of the settings: the
+    numbers are also zero for the whole first scan, when restored drives are
+    on but nothing is counted yet."""
+    on = any(user_settings.is_drive_enabled(f.get("folder_id", ""))
+             for f in folders) if user_settings else False
+    if not on:
+        return copy.HOME_NO_DRIVES
+    if not scan_complete:
+        return ""  # the footer already says what the scan is doing
+    return copy.HOME_NO_SETLISTS
+
+
 def _apply_global_stats(
     cache: MainMenuCache,
     global_status: SyncStatus,
@@ -189,6 +200,7 @@ def _apply_global_stats(
     scan_complete: bool,
     scanner: "BackgroundScanner" = None,
     global_disk_size: int = 0,
+    empty_hint: str = "",
 ) -> None:
     """Format accumulated global stats and write them to the menu cache."""
     cache.subtitle = format_status_line(
@@ -198,7 +210,7 @@ def _apply_global_stats(
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
         disk_size=global_disk_size,
-        empty_hint="No drives enabled — toggle with Space",
+        empty_hint=empty_hint,
     )
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
@@ -207,7 +219,6 @@ def _apply_global_stats(
     )
     enabled_complete = scan_complete or (scanner and scanner.is_all_enabled_scanned())
     cache.sync_checkmark = enabled_complete and global_status.missing_size <= 0
-    cache.sync_action_desc = "Everything in sync" if cache.sync_checkmark else ""
 
 
 def _get_display_state(
@@ -221,6 +232,11 @@ def _get_display_state(
 
     Returns: "current" | "cached" | "scanning" | "none"
     """
+    # A drive whose listing threw would otherwise report its stand-in as
+    # scanned: one setlist, zero charts, everything in sync.
+    if scanner and scanner.discovery_failed(folder_id):
+        return "none"
+
     if scanner and scanner.is_scanned(folder_id):
         # Scanned this session - compute real values
         return "current"
@@ -396,8 +412,7 @@ def compute_main_menu_cache(
                 scanner=background_scanner,
             )
             if stats is None:
-                # No cache, no files - show "not scanned" in dim color
-                cache.folder_stats[folder_id] = f"{Colors.STALE}not scanned{Colors.RESET}"
+                # No cache and no files yet
                 cache.folder_deltas[folder_id] = ""
                 cache.folder_states[folder_id] = "none"
                 continue
@@ -453,7 +468,6 @@ def compute_main_menu_cache(
         # Always aggregate purgeable (disabled drives may have content to remove)
         global_purge_size += folder_purge_size
 
-        cache.folder_stats[folder_id] = columns
         cache.folder_deltas[folder_id] = delta
         cache.folder_checkmarks[folder_id] = show_checkmark
         cache.folder_states[folder_id] = state
@@ -466,6 +480,7 @@ def compute_main_menu_cache(
         global_enabled_setlists, global_total_setlists,
         scan_complete, background_scanner,
         global_disk_size=global_disk_size,
+        empty_hint=_empty_hint(folders, user_settings, scan_complete),
     )
 
     if drives_config:

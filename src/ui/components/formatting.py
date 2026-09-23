@@ -5,10 +5,8 @@ Functions for formatting sync status, counts, sizes with colors.
 """
 
 import math
-from collections import defaultdict
-from pathlib import Path
 
-from src.core.formatting import format_size
+from src.core.formatting import count, format_size
 from ..primitives import Colors, strip_ansi
 
 
@@ -69,9 +67,9 @@ def format_status_line(
 
     parts = []
     if total_charts > 0:
-        parts.append(f"{synced_charts}/{total_charts} charts")
+        parts.append(f"{synced_charts}/{count(total_charts, 'chart')}")
     if total_setlists > 0:
-        parts.append(f"{enabled_setlists}/{total_setlists} setlists")
+        parts.append(f"{enabled_setlists}/{count(total_setlists, 'setlist')}")
 
     info = ", ".join(parts)
     display_size = disk_size if disk_size > 0 else total_size
@@ -79,13 +77,6 @@ def format_status_line(
         info += f" ({format_size(display_size)})"
 
     return f"{pct}% | {info}"
-
-
-def _rjust(text: str, width: int) -> str:
-    """Right-justify text to width, accounting for ANSI escape codes."""
-    visible_len = len(strip_ansi(text)) if text else 0
-    pad = max(0, width - visible_len)
-    return " " * pad + text
 
 
 def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value_color: str) -> str:
@@ -100,18 +91,6 @@ def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value
     p = f"{pipe_color}|{Colors.RESET}"
     v = (lambda s: f"{value_color}{s}{Colors.RESET}") if value_color else (lambda s: s)
     return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>6}')}  {p}  {v(f'{size_str:>10}')}"
-
-
-def format_column_header(screen: str) -> str:
-    """Return the column header row for a screen type.
-
-    Uses same fixed widths as _format_columns, with right-justified labels.
-    """
-    p = f"{Colors.MUTED}|{Colors.RESET}"
-    if screen == "setlist":
-        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>10}{Colors.RESET}"
-    # home
-    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>10}{Colors.RESET}"
 
 
 def _compute_delta(
@@ -287,61 +266,3 @@ def format_setlist_item(
     )
 
     return columns, delta, show_checkmark
-
-
-def format_drive_status(
-    synced_charts: int,
-    total_charts: int,
-    enabled_setlists: int,
-    total_setlists: int,
-    total_size: int,
-    disk_size: int = 0,
-    disabled: bool = False,
-    **_kwargs,
-) -> str:
-    """
-    Format drive config status line.
-
-    Enabled: 100% | 562/562 charts, 5/30 setlists (4.0 GB)
-    Disabled: DISABLED
-    """
-    if disabled:
-        return f"{Colors.MUTED}DISABLED{Colors.RESET}"
-
-    return format_status_line(
-        synced_charts=synced_charts,
-        total_charts=total_charts,
-        enabled_setlists=enabled_setlists,
-        total_setlists=total_setlists,
-        total_size=total_size,
-        disk_size=disk_size,
-        empty_hint="No setlists enabled — toggle with Space",
-    )
-
-
-def format_purge_tree(files: list[tuple[Path, int]], base_path: Path) -> list[str]:
-    """
-    Format files to purge as a tree showing file counts per folder.
-
-    Args:
-        files: List of (Path, size) tuples
-        base_path: Base path for relative display
-
-    Returns:
-        List of formatted strings to print.
-    """
-    by_folder = defaultdict(lambda: {"count": 0, "size": 0})
-    for f, size in files:
-        rel_path = f.relative_to(base_path)
-        parent = str(rel_path.parent)
-        by_folder[parent]["count"] += 1
-        by_folder[parent]["size"] += size
-
-    sorted_folders = sorted(by_folder.items())
-
-    lines = []
-    for folder_path, stats in sorted_folders:
-        file_word = "file" if stats["count"] == 1 else "files"
-        lines.append(f"  {folder_path}/ ({stats['count']} {file_word}, {format_size(stats['size'])})")
-
-    return lines

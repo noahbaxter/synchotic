@@ -8,6 +8,7 @@ import os
 
 import pytest
 
+from src import copy
 from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
                                  DOWNLOAD_MODE_BYOC, DOWNLOAD_MODE_RCLONE)
 from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
@@ -24,6 +25,14 @@ class _SyncStatus:
 
     def stop(self):
         pass
+
+
+class _Inline:
+    def __init__(self, target, **kw):
+        self._target = target
+
+    def start(self):
+        self._target()
 
 
 class _Auth:
@@ -47,7 +56,8 @@ def build(monkeypatch, tmp_path):
     """Drive the screen without a terminal. `act` receives the live TwoPane so a
     test can poke its cursor and callbacks the way a keypress would."""
     def run(act=None, folders=(FOLDER,), auth=None, settings=None, scanner=None,
-            mode=DOWNLOAD_MODE_ANONYMOUS, rclone_authed=False, byoc_creds=False):
+            mode=DOWNLOAD_MODE_ANONYMOUS, rclone_authed=False, byoc_creds=False,
+            rclone_dead=False, probes=None):
         captured = {}
         settings = settings or UserSettings(tmp_path / "settings.json")
         # A library nobody chose greys every row that writes into one, which
@@ -68,6 +78,15 @@ def build(monkeypatch, tmp_path):
         # The real warmer checks on a thread, so rows read straight after
         # building would race it. Check once, up front.
         monkeypatch.setattr("src.ui.screens.home_panes.StatusWarmer", _SyncStatus)
+        # Same for the token probe: run it inline.
+        monkeypatch.setattr("src.ui.screens.home_panes.Thread", _Inline)
+
+        def connection_state():
+            if probes is not None:
+                probes.append(1)
+            import src.rclone as rclone
+            return rclone.DEAD if rclone_dead else rclone.OK
+        monkeypatch.setattr("src.rclone.connection_state", connection_state)
 
         def fake_run(self):
             captured["pane"] = self
@@ -118,8 +137,8 @@ class TestTheRightPane:
 
     def test_settings_shows_the_options_not_setlists(self, build):
         labels = " ".join(_labels(build()["right_for"](SETTINGS)))
-        assert "Add folder" in labels
-        assert "Location" in labels
+        assert copy.ROW_ADD_CUSTOM in labels
+        assert copy.ROW_LOCATION in labels
         assert "Setlist A" not in labels
 
     def test_rescan_is_unselectable_when_the_mode_cannot_reach_drive(self, build):
@@ -485,7 +504,7 @@ class TestTheFooterNeverWraps:
     def test_it_still_says_what_is_being_scanned(self, build, monkeypatch):
         lines = self._footer_lines(build, monkeypatch, 120)
 
-        assert "Scanning Drummer's Monthly Drive" in lines[0]
+        assert f"{copy.SCANNING} Drummer's Monthly Drive" in lines[0]
 
     def test_a_narrow_terminal_does_not_lose_the_second_line(self, build, monkeypatch):
         lines = self._footer_lines(build, monkeypatch, 24)
@@ -525,37 +544,52 @@ class TestUnavailableOptionsLookUnavailable:
 
 
 class TestDriveRowsNeedAWorkingMode:
-    """Add folder, Rescan and Location all make Drive calls, so an unusable
-    mode has to stop them at the menu rather than several screens in at
-    "access denied"."""
+    """Add custom drive and Rescan make Drive calls, so an unusable mode has to
+    stop them at the menu rather than several screens in at "access denied"."""
 
-    GATED = [("act", "add_custom"), ("act", "rescan"), ("act", "library")]
+    GATED = [("act", "add_custom"), ("act", "rescan")]
 
     def _rows(self, build, **kw):
         return {r[1]: r for r in build(**kw)["right_for"](SETTINGS) if r[1] in self.GATED}
 
-    def test_byoc_without_credentials_blocks_all_three(self, build):
+    def test_byoc_without_credentials_blocks_them(self, build):
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_BYOC, byoc_creds=False)
-        assert [rows[v][2] for v in self.GATED] == [False, False, False]
+        assert [rows[v][2] for v in self.GATED] == [False, False]
 
     def test_the_row_says_why_it_is_unavailable(self, build):
         """A greyed row with no reason reads as broken rather than unavailable."""
         from src.ui.components import strip_ansi
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_BYOC, byoc_creds=False)
         text = strip_ansi(rows[("act", "add_custom")][0](False, False))
-        assert "Needs your Google credentials" in text
+        assert copy.STATUS_BYOC in text
 
-    def test_unconnected_rclone_says_to_connect_it(self, build):
+    def test_unconnected_rclone_says_so(self, build):
         from src.ui.components import strip_ansi
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_RCLONE, rclone_authed=False)
         text = strip_ansi(rows[("act", "add_custom")][0](False, False))
-        assert "Connect rclone first" in text
+        assert copy.STATUS_RCLONE in text
 
-    def test_anonymous_mode_leaves_all_three_available(self, build):
+    @pytest.mark.parametrize("mode, status", [
+        (DOWNLOAD_MODE_BYOC, copy.STATUS_BYOC),
+        (DOWNLOAD_MODE_RCLONE, copy.STATUS_RCLONE),
+    ])
+    def test_the_mode_row_says_why_it_cannot_download(self, build, mode, status):
+        rows = build(auth=None, mode=mode)["right_for"](SETTINGS)
+        row = next(r for r in rows if r[1] == ("act", "download_mode"))
+        assert status in _labels([row])[0]
+
+    def test_anonymous_mode_leaves_them_available(self, build):
         """The regression to avoid: gating these on sign-in would kill a mode
         that resolves public folders on the API key alone."""
         rows = self._rows(build, auth=None, mode=DOWNLOAD_MODE_ANONYMOUS)
-        assert [rows[v][2] for v in self.GATED] == [True, True, True]
+        assert [rows[v][2] for v in self.GATED] == [True, True]
+
+    def test_picking_a_library_is_never_gated_on_the_mode(self, build):
+        """Picking a folder is local. Gating it told a new user to connect
+        rclone before they could say where their charts go."""
+        rows = build(auth=None, mode=DOWNLOAD_MODE_RCLONE,
+                     rclone_authed=False)["right_for"](SETTINGS)
+        assert next(r for r in rows if r[1] == ("act", "library"))[2] is True
 
     def test_open_folder_is_never_gated(self, build):
         """It opens a local directory, so it works with no Drive access."""
@@ -563,6 +597,45 @@ class TestDriveRowsNeedAWorkingMode:
                      byoc_creds=False)["right_for"](SETTINGS)
         row = next(r for r in rows if r[1] == ("act", "open_data_folder"))
         assert row[2] is True
+
+
+class TestRcloneSignsInFromSettings:
+    """rclone signs in to Google too, with its own remote. When that breaks,
+    the settings pane is where to sign it out and back in."""
+
+    def _rows(self, build, **kw):
+        rows = build(auth=None, mode=DOWNLOAD_MODE_RCLONE, **kw)["right_for"](SETTINGS)
+        return {r[1]: r for r in rows if r[1] in (("act", "signin"), ("act", "signout"))}
+
+    def test_no_remote_offers_sign_in(self, build):
+        rows = self._rows(build, rclone_authed=False)
+        assert list(rows) == [("act", "signin")]
+        assert rows[("act", "signin")][2] is True
+
+    def test_a_working_remote_offers_sign_out(self, build):
+        rows = self._rows(build, rclone_authed=True)
+        assert list(rows) == [("act", "signout")]
+        assert rows[("act", "signout")][2] is True
+
+    def test_a_dead_remote_offers_sign_in_and_says_why(self, build):
+        from src.ui.components import strip_ansi
+        rows = self._rows(build, rclone_authed=True, rclone_dead=True)
+        assert list(rows) == [("act", "signin")]
+        assert copy.STATUS_SIGNIN_EXPIRED in strip_ansi(rows[("act", "signin")][0](False, False))
+
+    def test_the_mode_row_does_not_call_a_dead_remote_working(self, build):
+        def mode_row(**kw):
+            rows = build(auth=None, mode=DOWNLOAD_MODE_RCLONE, rclone_authed=True,
+                         **kw)["right_for"](SETTINGS)
+            return next(_labels([r]) for r in rows if r[1] == ("act", "download_mode"))
+        assert mode_row(rclone_dead=True) != mode_row(rclone_dead=False)
+
+    def test_other_modes_never_probe_drive(self, build):
+        """The probe is a Drive call. A leftover rclone remote must not cost a
+        BYOC user one every time the home screen opens."""
+        probes = []
+        build(auth=None, mode=DOWNLOAD_MODE_BYOC, rclone_authed=True, probes=probes)
+        assert probes == []
 
 
 class TestScanRowsNeedALibrary:
@@ -583,7 +656,7 @@ class TestScanRowsNeedALibrary:
         self._unmounted(monkeypatch, tmp_path)
         row = self._settings_rows(build, auth=_Auth())[("act", "rescan")]
         assert row[2] is False
-        assert "Library not connected" in strip_ansi(row[0](False, False))
+        assert copy.LIBRARY_MISSING in strip_ansi(row[0](False, False))
 
     def test_location_stays_reachable(self, build, monkeypatch, tmp_path):
         """It is the row that fixes this, so gating it would be a dead end."""
@@ -596,7 +669,7 @@ class TestScanRowsNeedALibrary:
         rows = build(auth=_Auth(), folders=(self.CUSTOM,))["right_for"](("drive", "custom-1"))
         row = next(r for r in rows if r[1] == ("scan_folder", "custom-1", None))
         assert row[2] is False
-        assert "Library not connected" in strip_ansi(row[0](False, False))
+        assert copy.LIBRARY_MISSING in strip_ansi(row[0](False, False))
 
     def test_a_mounted_library_leaves_both_alone(self, build, monkeypatch, tmp_path):
         lib = tmp_path / "mounted"

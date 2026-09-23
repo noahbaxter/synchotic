@@ -1,6 +1,7 @@
 """One-time migrations run as drives load: custom folders that turned out to
 already be released drives, or subfolders of them."""
 
+from src import copy
 from src.core.formatting import normalize_path_key
 from src.core.paths import get_download_path
 
@@ -25,7 +26,6 @@ class OnboardingMixin:
             if c.folder_id in released_by_id and released_by_id[c.folder_id] == c.name
         ]
         for folder_id in same_name_ids:
-            print(f"  Removing duplicate custom entry: {released_by_id[folder_id]}")
             self.custom_folders.remove_folder(folder_id)
         if same_name_ids:
             self.custom_folders.save()
@@ -44,7 +44,7 @@ class OnboardingMixin:
         markers_dir = get_markers_dir()
 
         for folder_id, custom_name, released_name in to_migrate:
-            print(f"  Migrating custom folder: {custom_name} → {released_name}")
+            print(f"  {copy.MIGRATE_CUSTOM.format(old=custom_name, new=released_name)}")
 
             # a) Rename download folder on disk
             old_dir = download_path / custom_name
@@ -52,16 +52,14 @@ class OnboardingMixin:
             if old_dir.exists() and not new_dir.exists():
                 try:
                     old_dir.rename(new_dir)
-                    print(f"    Renamed download folder")
                 except OSError as e:
-                    print(f"    Warning: could not rename folder: {e}")
+                    print(f"    {copy.FAILURE}: {e}")
             elif old_dir.exists() and new_dir.exists():
-                print(f"    Warning: both '{custom_name}' and '{released_name}' exist on disk, skipping folder rename")
+                print(f"    {copy.MIGRATE_EXISTS.format(target=released_name)}")
 
             # b) Rename marker files
             old_prefix = normalize_path_key(custom_name).replace("/", "_").replace("\\", "_") + "_"
             new_prefix = normalize_path_key(released_name).replace("/", "_").replace("\\", "_") + "_"
-            renamed = 0
             if markers_dir.exists():
                 for marker_file in markers_dir.glob("*.json"):
                     lower_stem = marker_file.stem.lower()
@@ -71,17 +69,13 @@ class OnboardingMixin:
                         if not new_path.exists():
                             try:
                                 marker_file.rename(new_path)
-                                renamed += 1
                             except OSError:
                                 pass
-            if renamed:
-                print(f"    Renamed {renamed} marker file(s)")
 
             # c) Remove custom folder entry
             self.custom_folders.remove_folder(folder_id)
 
         self.custom_folders.save()
-        print(f"  Migration complete: {len(to_migrate)} folder(s) migrated")
 
     def _migrate_subfolder_customs(self):
         """Migrate custom folders that are subfolders of released drives.
@@ -116,7 +110,8 @@ class OnboardingMixin:
         for folder_id, custom_name, setlist in to_migrate:
             drive_name = setlist.drive_name
             setlist_name = setlist.name
-            print(f"  Migrating subfolder custom: {custom_name} → {drive_name}/{setlist_name}")
+            target = f"{drive_name}/{setlist_name}"
+            print(f"  {copy.MIGRATE_CUSTOM.format(old=custom_name, new=target)}")
 
             # a) Move download folder into drive subfolder
             old_dir = download_path / custom_name
@@ -126,17 +121,15 @@ class OnboardingMixin:
                 try:
                     drive_dir.mkdir(parents=True, exist_ok=True)
                     old_dir.rename(new_dir)
-                    print(f"    Moved download folder")
                 except OSError as e:
-                    print(f"    Warning: could not move folder: {e}")
+                    print(f"    {copy.FAILURE}: {e}")
             elif old_dir.exists() and new_dir.exists():
-                print(f"    Warning: target '{drive_name}/{setlist_name}' already exists, skipping folder move")
+                print(f"    {copy.MIGRATE_EXISTS.format(target=target)}")
 
             # b) Rename marker files
             old_prefix = normalize_path_key(custom_name).replace("/", "_").replace("\\", "_") + "_"
             new_prefix = normalize_path_key(drive_name).replace("/", "_").replace("\\", "_") + "_" + \
                 normalize_path_key(setlist_name).replace("/", "_").replace("\\", "_") + "_"
-            renamed = 0
             if markers_dir.exists():
                 for marker_file in markers_dir.glob("*.json"):
                     lower_stem = marker_file.stem.lower()
@@ -146,11 +139,8 @@ class OnboardingMixin:
                         if not new_path.exists():
                             try:
                                 marker_file.rename(new_path)
-                                renamed += 1
                             except OSError:
                                 pass
-            if renamed:
-                print(f"    Renamed {renamed} marker file(s)")
 
             # c) Remove custom folder entry
             self.custom_folders.remove_folder(folder_id)
@@ -159,4 +149,3 @@ class OnboardingMixin:
             self.folders[:] = [f for f in self.folders if f.get("folder_id") != folder_id]
 
         self.custom_folders.save()
-        print(f"  Subfolder migration complete: {len(to_migrate)} folder(s) migrated")

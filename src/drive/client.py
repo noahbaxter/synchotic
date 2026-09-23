@@ -12,6 +12,8 @@ from typing import Optional
 from dataclasses import dataclass
 from urllib.parse import urlencode
 
+from .. import copy
+
 
 @dataclass
 class DriveClientConfig:
@@ -396,27 +398,27 @@ class DriveClient:
                 if failed_ids is not None:
                     failed_ids.append(folder_id)
 
-    def validate_folder(self, folder_id: str) -> tuple[bool, Optional[str]]:
+    def validate_folder(self, folder_id: str) -> tuple[Optional[str], Optional[str]]:
+        """(folder name, None) when the folder can be opened, else (None, why).
+
+        The why is Google's own message where there is one.
         """
-        Check if a folder is accessible and get its name.
+        params = self._get_params(fields="id,name,mimeType", supportsAllDrives="true")
+        try:
+            response = self._request_with_retry(
+                "GET", f"{self.API_FILES}/{folder_id}",
+                params=params, headers=self._get_headers())
+        except requests.exceptions.HTTPError as e:
+            try:
+                return None, e.response.json()["error"]["message"]
+            except Exception:
+                return None, f"HTTP {e.response.status_code}"
+        except requests.exceptions.RequestException as e:
+            return None, type(e).__name__
+        except RuntimeError as e:  # retries exhausted
+            return None, str(e)
 
-        Args:
-            folder_id: Google Drive folder ID
-
-        Returns:
-            Tuple of (is_valid, folder_name)
-            - (True, "Folder Name") if accessible
-            - (False, None) if not accessible or not a folder
-        """
-        metadata = self.get_file_metadata(
-            folder_id, fields="id,name,mimeType"
-        )
-
-        if not metadata:
-            return False, None
-
-        # Check it's actually a folder
+        metadata = response.json()
         if metadata.get("mimeType") != "application/vnd.google-apps.folder":
-            return False, None
-
-        return True, metadata.get("name")
+            return None, copy.NOT_A_FOLDER_LINK
+        return metadata.get("name"), None

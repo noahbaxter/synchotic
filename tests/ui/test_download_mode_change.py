@@ -28,8 +28,10 @@ class FakeSync:
 def _pick(monkeypatch, value):
     seen = {}
 
-    def fake_chooser(current=""):
+    def fake_chooser(current="", intro="", setup_step=None):
         seen["current"] = current
+        seen["intro"] = intro
+        seen["setup_step"] = setup_step
         return value
 
     monkeypatch.setattr("src.ui.screens.download_mode.choose_download_mode", fake_chooser)

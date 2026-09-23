@@ -85,6 +85,7 @@ def test_download_many_return_arity_is_pinned():
     folder_sync caller. Until then this asserts the current 6-tuple."""
     from src.sync.downloader import FileDownloader
     dl = FileDownloader(auth_token=None)
-    result = dl.download_many([], show_progress=False)
+    from src.ui.widgets.progress import FolderProgress
+    result = dl.download_many([], progress=FolderProgress(0, 0))
     assert isinstance(result, tuple)
     assert len(result) == 7  # Changed to 7 in Task 8: blocked_tasks appended (with folder_sync.py:125)

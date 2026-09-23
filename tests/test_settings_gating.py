@@ -8,6 +8,7 @@ flow uses to decide what still needs connecting.
 
 import pytest
 
+from src import copy
 from src.config.settings import (DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC,
                                  DOWNLOAD_MODE_RCLONE)
 from src.ui.screens.home_panes import _mode_blocked_reason
@@ -38,17 +39,17 @@ def test_connected_rclone_is_not_blocked(monkeypatch):
 
 
 def test_unconnected_rclone_is_blocked(monkeypatch):
-    assert _reason(DOWNLOAD_MODE_RCLONE, rclone=False, monkeypatch=monkeypatch) == "Connect rclone first"
+    assert _reason(DOWNLOAD_MODE_RCLONE, rclone=False, monkeypatch=monkeypatch) == copy.STATUS_RCLONE
 
 
 def test_byoc_without_credentials_asks_for_them(monkeypatch):
     reason = _reason(DOWNLOAD_MODE_BYOC, byoc_creds=False, monkeypatch=monkeypatch)
-    assert reason == "Needs your Google credentials"
+    assert reason == copy.STATUS_BYOC
 
 
 def test_byoc_with_credentials_but_signed_out_asks_for_signin(monkeypatch):
     reason = _reason(DOWNLOAD_MODE_BYOC, byoc_creds=True, signed_in=False, monkeypatch=monkeypatch)
-    assert reason == "Sign in first"
+    assert reason == copy.STATUS_SIGNED_OUT
 
 
 def test_fully_configured_byoc_is_not_blocked(monkeypatch):

@@ -10,6 +10,7 @@ from contextlib import contextmanager
 from dataclasses import dataclass
 from pathlib import Path
 
+from ... import copy
 from ...core.constants import CHART_MARKERS
 from ...core.formatting import extract_path_context
 from ...core.progress import ProgressTracker
@@ -159,7 +160,7 @@ class FolderProgress(ProgressTracker):
             return ""
         # No count: the scanner walks switched-off drives too, so its total
         # would disagree with the run's own.
-        return f"scanning ahead: {stats.current_folder}"
+        return copy.STAGE_SCANNING_AHEAD.format(name=stats.current_folder)
 
     def _start_painting(self):
         """Take over the terminal, but only when there is one to take over."""

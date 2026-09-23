@@ -1,5 +1,6 @@
 """Looking back through a run without stopping it: scrolling up holds the view,
 the bottom follows again, and the errors view filters to failures."""
+from src import copy
 from src.ui.primitives import strip_ansi
 from src.ui.widgets.sync_screen import SyncScreen
 
@@ -72,7 +73,7 @@ class TestErrorsOnly:
         screen.show_errors_only(True)
         frame = strip_ansi("\n".join(screen.frame(width=78, height=14)))
 
-        assert "showing errors only · 3" in frame
+        assert copy.SHOWING_ERRORS.format(n=3) in frame
 
     def test_turning_it_off_brings_the_run_back(self, charts):
         screen = _run(charts)

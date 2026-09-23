@@ -318,7 +318,7 @@ def preflight(*, needed_bytes: int, free_bytes: int, unmeasured_drives: int = 0,
             kind=kind,
             headline=headline,
             detail=copy.PRE_SPACE_DETAIL.format(
-                floor=" at least" if unmeasured_drives else "",
+                floor=copy.PRE_AT_LEAST if unmeasured_drives else "",
                 needed=_size(needed_bytes), free=_size(free_bytes)),
             fix=copy.PRE_FREE_UP,
         ))

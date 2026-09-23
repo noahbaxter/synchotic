@@ -1,6 +1,7 @@
 """What a failed chart is called: a reason a person can act on, in their words."""
 import pytest
 
+from src import copy
 from src.ui.widgets.sync_display import ADVICE, _FAILURE_WORDS, describe_failure
 from src.ui.widgets.sync_screen import STATUS_W
 
@@ -8,24 +9,24 @@ from src.ui.widgets.sync_screen import STATUS_W
 @pytest.mark.parametrize("message, reason", [
     # A full disk is the one failure the person must act on immediately, and it
     # arrives as an extract error, where it used to read as a corrupt archive.
-    ("extract: Pack - [Errno 28] No space left on device", "disk full"),
-    ("ERR: x.7z - [Errno 28] No space left on device", "disk full"),
+    ("extract: Pack - [Errno 28] No space left on device", copy.FAIL_DISK_FULL),
+    ("ERR: x.7z - [Errno 28] No space left on device", copy.FAIL_DISK_FULL),
     # Status codes are not words. Each of these has a plain meaning and a
     # different answer: sign in again, wait, or nothing.
-    ("ERR (HTTP 401): x.7z", "signed out"),
-    ("ERR (HTTP 403): x.7z", "rate limited"),
-    ("ERR (HTTP 429): x.7z", "rate limited"),
-    ("ERR: x.7z - Cannot connect to host www.googleapis.com", "no connection"),
-    ("extract: Pack - Unsupported archive format: .tar", "unknown format"),
-    ("extract: Pack - py7zr library not available", "unpack failed"),
-    ("NEEDS AUTH (authenticated download set up automatically): x.7z", "needs sign-in"),
-    ("ERR (rate limited): x.7z", "rate limited"),
-    ("ERR (folder rate limited): x.7z", "rate limited"),
-    ("ERR (timeout): x.7z", "timed out"),
-    ("ERR (got 400 of 1200 bytes): x.7z", "cut short"),
-    ("ERR (HTTP 404): x.7z", "not on Drive"),
-    ("ERR (HTTP 500): x.7z [file_id=abc]", "Drive error"),
-    ("extract: Pack - x.7z - bad archive", "unpack failed"),
+    ("ERR (HTTP 401): x.7z", copy.FAIL_SIGNED_OUT),
+    ("ERR (HTTP 403): x.7z", copy.FAIL_RATE_LIMITED),
+    ("ERR (HTTP 429): x.7z", copy.FAIL_RATE_LIMITED),
+    ("ERR: x.7z - Cannot connect to host www.googleapis.com", copy.FAIL_OFFLINE),
+    ("extract: Pack - Unsupported archive format: .tar", copy.FAIL_FORMAT),
+    ("extract: Pack - py7zr library not available", copy.FAIL_UNPACK),
+    ("NEEDS AUTH (authenticated download set up automatically): x.7z", copy.FAIL_NEEDS_SIGN_IN),
+    ("ERR (rate limited): x.7z", copy.FAIL_RATE_LIMITED),
+    ("ERR (folder rate limited): x.7z", copy.FAIL_RATE_LIMITED),
+    ("ERR (timeout): x.7z", copy.FAIL_TIMED_OUT),
+    ("ERR (got 400 of 1200 bytes): x.7z", copy.FAIL_CUT_SHORT),
+    ("ERR (HTTP 404): x.7z", copy.FAIL_GONE),
+    ("ERR (HTTP 500): x.7z [file_id=abc]", copy.FAIL_DRIVE_ERROR),
+    ("extract: Pack - x.7z - bad archive", copy.FAIL_UNPACK),
 ])
 def test_a_person_could_act_on_every_reason(message, reason):
     assert describe_failure(message) == reason

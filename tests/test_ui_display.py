@@ -12,6 +12,8 @@ import io
 from contextlib import redirect_stdout
 from pathlib import Path
 
+from src import copy
+from src.core.formatting import count
 from src.ui.widgets.progress import FolderProgress
 
 
@@ -46,7 +48,7 @@ class TestErrors:
         progress.print_error("Setlist", "ERR (timeout): filename.ogg")
 
         assert len(progress.errors) == 1
-        assert progress.errors[0].reason == "timed out"
+        assert progress.errors[0].reason == copy.FAIL_TIMED_OUT
         assert progress.errors[0].filename == "filename.ogg"
 
     def test_a_message_with_no_filename_is_still_recorded(self):
@@ -74,25 +76,23 @@ class TestErrorSummary:
             progress.print_error("Setlist", f"NEEDS AUTH (set up automatically): pack{i}.7z")
 
         output = self._summary(progress)
-        assert "5 chart(s) did not download" in output
-        assert "3 timed out" in output
-        assert "2 needs sign-in" in output
+        assert copy.DID_NOT_DOWNLOAD.format(charts=count(5, "chart")) in output
+        assert f"3 {copy.FAIL_TIMED_OUT}" in output
+        assert f"2 {copy.FAIL_NEEDS_SIGN_IN}" in output
 
     def test_a_long_list_is_cut_short(self):
         progress = _progress(total_files=100)
         for i in range(50):
             progress.print_error("Setlist", f"ERR (timeout): file{i}.ogg")
 
-        assert "and 47 more" in self._summary(progress)
+        assert copy.AND_MORE.format(n=47) in self._summary(progress)
 
     def test_sign_in_failures_say_what_to_do_about_them(self):
-        """The whole point of the rewording: a reason you can act on."""
+        """A reason you can act on, pointing at the row that fixes it."""
         progress = _progress()
         progress.print_error("Setlist", "NEEDS AUTH (set up automatically): pack.7z")
 
-        # Names the Mode row, not the sign-in row: in rclone mode the latter is
-        # greyed out, so the old advice pointed at a control nobody could use.
-        assert "Settings → Account → Mode" in self._summary(progress)
+        assert copy.FIX_FROM.format(where=copy.SETTINGS_MODE) in self._summary(progress)
 
     def test_nothing_is_printed_when_nothing_failed(self):
         assert self._summary(_progress()) == ""
