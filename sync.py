@@ -40,6 +40,7 @@ from src.sync import FolderSync
 from src.config import UserSettings, DrivesConfig, CustomFolders
 from src.config.settings import DOWNLOAD_MODES
 from src.core.paths import (
+    LibraryUnavailable,
     get_log_dir,
     get_settings_path,
     get_token_path,
@@ -476,6 +477,17 @@ def run():
         leave_alt_screen()
         print("\n\nCancelled by user.")
         sys.exit(0)
+    except LibraryUnavailable:
+        # The library went away mid-run (a drive unplugged): every path helper
+        # raises, and uncaught that is a traceback inside the alternate screen.
+        from chotic_ui.primitives.host import leave_alt_screen
+        from src.core.paths import get_library_path, plain_path
+        leave_alt_screen()
+        try:
+            display.library_lost(plain_path(get_library_path()))
+        except Exception:
+            print("\n\nLibrary disconnected. Reconnect the drive and sync again.")
+        sys.exit(1)
 
 
 def cli():

@@ -191,6 +191,17 @@ def library_unavailable(path) -> None:
     print()
 
 
+def library_lost(path) -> None:
+    """The library went away mid-run. Unlike library_unavailable, this cannot
+    promise nothing has happened yet."""
+    print()
+    print("  Library disconnected:")
+    print(f"    {path}")
+    print()
+    print("  Synchotic stopped where it was. Reconnect the drive and sync again.")
+    print()
+
+
 def purge_skipped_new_library(path) -> None:
     """First sync at a library we did not create. Explain, delete nothing."""
     print()
