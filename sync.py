@@ -110,6 +110,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         self.folders = []
         self.folder_stats_cache = FolderStatsCache()
         self._background_scanner: BackgroundScanner | None = None
+        self._library_found: dict = {}
 
     def _should_offer_signin(self) -> bool:
         """Offered on every start while the chosen mode is missing a sign-in
@@ -134,6 +135,9 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         _t_drives = _time.time()
         self.load_drives()
         print(f"  [timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
+        # However the library got here (setup, SYNCHOTIC_LIBRARY, adoption),
+        # a drive it holds charts for is never left off by default.
+        self._turn_on_library_drives(undecided_only=True)
 
         # Start background scanning of folders (if signed in)
         # Force rescan if scan cache is stale (>1hr old)
@@ -291,8 +295,18 @@ def startup_setup(app) -> bool:
         library_is_set=library_is_set,
         mode_chosen=lambda: bool(app.user_settings.download_mode),
         blocked_step=lambda: app._drive_blocked_step(),
+        pick_starting_drives=lambda: _found_summary(app),
         first_run=first_run,
     )
+
+
+def _found_summary(app) -> str:
+    """The drives the picked library held, for the last setup page, in home
+    screen order. "" when it held none."""
+    found = app._library_found
+    return display.library_contents(tuple(
+        (d.group, d.name, len(found[d.folder_id]))
+        for d in app._get_combined_drives_config().drives if d.folder_id in found))
 
 
 def main():

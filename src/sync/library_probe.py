@@ -146,6 +146,60 @@ def previous_selection(path, drives, skip=()) -> dict:
     return found
 
 
+def turn_on_found(user_settings, path, drives, undecided_only=False) -> dict:
+    """Turn on every drive this library holds a folder for, and return
+    previous_selection's answer. Never turns anything off: a drive that is off
+    with charts on disk is a drive the next sync deletes.
+
+    `undecided_only` leaves alone a drive somebody switched off, which is how
+    a drive gets removed on purpose.
+    """
+    from ..core.paths import LIBRARY_STATE_DIR_NAME
+
+    found = previous_selection(path, drives, skip=(LIBRARY_STATE_DIR_NAME,))
+    changed = False
+    for folder_id in found:
+        if undecided_only and folder_id in user_settings.drive_toggles:
+            continue
+        if not user_settings.is_drive_enabled(folder_id):
+            user_settings.turn_on_from_disk(folder_id)
+            changed = True
+    if changed:
+        user_settings.save()
+    return found
+
+
+def setlist_on_disk(library, drive_name):
+    """A check for whether a setlist has a folder under this drive's folder.
+
+    Matches loosely on purpose, and says yes when the folder cannot be read:
+    a setlist called absent is turned off, and off is what purge deletes.
+    The folder is read on the first call, not before.
+    """
+    from ..config.settings import normalize_setlist_name
+
+    present = []
+
+    def read():
+        drive_dir = Path(library) / drive_name
+        if not drive_dir.is_dir():
+            drive_dir = Path(library) / sanitize_drive_name(drive_name)
+        try:
+            with os.scandir(drive_dir) as entries:
+                return {normalize_setlist_name(e.name) for e in entries if _is_dir(e)}
+        except OSError:
+            return None
+
+    def on_disk(name):
+        if not present:
+            present.append(read())
+        names = present[0]
+        return (names is None
+                or normalize_setlist_name(name) in names
+                or normalize_setlist_name(sanitize_drive_name(name)) in names)
+    return on_disk
+
+
 def _is_dir(entry) -> bool:
     try:
         return entry.is_dir(follow_symlinks=False)

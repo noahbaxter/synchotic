@@ -55,11 +55,41 @@ class AuthMixin:
         if not show_library_screen(self.user_settings, intro=intro,
                                    setup_step=setup_step):
             return False
+        self._library_found = self._turn_on_library_drives()
         # A dict here would have replaced the cache object outright, leaving
         # later .invalidate()/.set() calls to fail on a plain dict.
         self.folder_stats_cache.invalidate_all()
         wait_with_skip(2)
         return True
+
+    def _turn_on_library_drives(self, undecided_only=False) -> dict:
+        """Turn on every drive the library holds a folder for, so pressing S
+        keeps those charts instead of purging them as drives nobody turned
+        on. Returns what was found: {drive id: [setlist folders]}.
+
+        With discovery already done its setlists settle now; otherwise
+        discovery settles them when it names them.
+        """
+        from src.core.paths import get_library_path
+        from src.sync.library_probe import setlist_on_disk, turn_on_found
+
+        library = get_library_path()
+        drives = self._get_combined_drives_config().drives
+        found = turn_on_found(self.user_settings, library, drives, undecided_only)
+        scanner = self._background_scanner
+        if not scanner:
+            return found
+        names_by_id = {d.folder_id: d.name for d in drives}
+        for folder_id in found:
+            setlists = scanner.get_discovered_setlist_names(folder_id) or []
+            if self.user_settings.settle_from_disk(
+                    folder_id, setlists, setlist_on_disk(library, names_by_id[folder_id])):
+                self.user_settings.save()
+            scanner.notify_drive_toggled(folder_id, True)
+            for name in setlists:
+                scanner.notify_setlist_toggled(
+                    folder_id, name, self.user_settings.is_subfolder_enabled(folder_id, name))
+        return found
 
     def handle_download_mode(self, intro: str = "", setup_step=None, **kw):
         """Change how blocked charts download, then connect straight away.

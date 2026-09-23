@@ -399,7 +399,7 @@ class BackgroundScanner:
 
         One list_folder round trip per drive, run concurrently: the calls are
         independent, _register_setlist holds the lock, and sync_subfolder_names
-        only touches subfolder_toggles[drive_id]. Serially this was the longest
+        and settle_from_disk only touch that drive's own entries. Serially this was the longest
         stretch of startup with nothing on screen.
         """
         total = len(self._folders)
@@ -457,7 +457,7 @@ class BackgroundScanner:
             )
             return
 
-        discovered_names = []
+        discovered = []
 
         for item in items:
             mime_type = item.get("mimeType")
@@ -477,7 +477,23 @@ class BackgroundScanner:
             else:
                 continue
 
-            discovered_names.append(setlist_name)
+            discovered.append((setlist_id, setlist_name))
+        discovered_names = [name for _, name in discovered]
+
+        # Settings first, so each setlist below is registered as enabled or
+        # not by the toggles it ends up with, and the scanner never downloads
+        # a setlist the purge then counts as off.
+        if self._user_settings and discovered_names:
+            if self._user_settings.sync_subfolder_names(drive_id, discovered_names):
+                self._settings_changed = True
+            from ..core.paths import get_library_path
+            from .library_probe import setlist_on_disk
+            if self._user_settings.settle_from_disk(
+                    drive_id, discovered_names,
+                    setlist_on_disk(get_library_path(), drive_name)):
+                self._settings_changed = True
+
+        for setlist_id, setlist_name in discovered:
             self._register_setlist(
                 setlist_id=setlist_id,
                 name=setlist_name,
@@ -485,11 +501,6 @@ class BackgroundScanner:
                 drive_name=drive_name,
                 drive=folder,
             )
-
-        # Sync settings with discovered names (Google Drive is source of truth)
-        if self._user_settings and discovered_names:
-            if self._user_settings.sync_subfolder_names(drive_id, discovered_names):
-                self._settings_changed = True
 
         # Handle flat drives (no setlist subfolders)
         if not discovered_names:

@@ -35,6 +35,9 @@ class _Settings:
     def sync_subfolder_names(self, *a):
         return False
 
+    def settle_from_disk(self, *a):
+        return False
+
     def save(self):
         pass
 
