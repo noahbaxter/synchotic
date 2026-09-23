@@ -16,6 +16,13 @@ from ...core.formatting import count, format_size, format_duration, format_speed
 _c = Colors
 
 
+def _say(text: str, indent: str = "  ") -> None:
+    """Print a copy string at the scrollback's indent, every line of it:
+    copy.py keeps layout out of its strings."""
+    for line in text.split("\n"):
+        print(f"{indent}{line}" if line else "")
+
+
 def _rule_width() -> int:
     """Width for the ━━━ rules, so they span the window instead of a fixed 50."""
     from ..primitives.terminal import get_terminal_width
@@ -110,24 +117,21 @@ def sign_in_failed_notice() -> None:
 
 
 def rclone_consent_explainer() -> None:
-    """Explain the one-time rclone consent before opening the browser."""
+    """One line before the browser opens. The mode screen already explained
+    why; the only new fact is that Google's screen will say "rclone"."""
     print()
-    print("  Some charts (large archives) need an authenticated download.")
-    print("  Synchotic uses rclone, an established open-source tool, for this.")
-    print("  Google's consent screen will say \"rclone\" and request read-only")
-    print("  access to your Drive. This is a one-time click.")
+    _say(copy.RCLONE_CONSENT)
     print()
 
-def byoc_not_configured(instructions_path=None, opened: bool = False) -> None:
-    """BYOC is selected but no credentials are in place."""
-    print()
-    print("  This mode requires your own Google credentials, and none are set up.")
-    print("  Place your 'credentials.json' in:")
+
+def byoc_not_configured() -> None:
+    """BYOC is selected but no credentials are in place. The path is always
+    printed: with no file manager the folder never pops up."""
     from ...core.paths import get_data_dir
-    print(f"    {get_data_dir()}")
+
     print()
-    print("  If you have trouble, instructions are available in that folder.")
-    print("  Want something simpler? Switch to rclone.")
+    print(f"  {copy.BYOC_STEPS}")
+    print(f"    {get_data_dir()}")
     print()
 
 

@@ -6,47 +6,62 @@ contains them. Embedded OAuth is not offered because the 100-user cap is full an
 verification was rejected, so it would simply fail for anyone new.
 """
 
+from ... import copy
 from ..widgets.menu import Menu, MenuItem
 from ...config.settings import (DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC,
                                 DOWNLOAD_MODE_RCLONE)
 
 
-def choose_download_mode(current: str = "") -> str | None:
-    """Show the chooser. Returns the selected mode, or None if the user escaped."""
+def choose_download_mode(current: str = "", intro: str = "",
+                         setup_step=None, esc_label: str = "Decide later") -> str | None:
+    """Show the chooser. Returns the selected mode, or None if the user escaped.
+
+    `intro` replaces the standing subtitle, for callers with something more
+    specific to say. It is a parameter rather than something the caller prints
+    first because this screen repaints. `setup_step` heads the box the same way
+    every other first-run screen is headed.
+    """
+    from ..widgets import display
+
+    question = copy.MODE_QUESTION
+    body = intro or copy.MODE_INTRO
+    # In setup the box is headed FIRST TIME SETUP / Download Mode, and the
+    # three options are the question, so asking it again in words is a line
+    # nobody needs to read.
+    heading, subtitle = display.setup_frame("" if setup_step else question,
+                                            body, setup_step, copy.STEP_MODE)
+
     menu = Menu(
-        title="How should Synchotic download large charts?",
-        subtitle="Google sometimes blocks anonymous direct downloads of popular "
-                 "files, so sign in if you want to make sure you aren't missing "
-                 "anything.",
-        esc_label="Decide later",
+        title=heading,
+        subtitle=subtitle,
+        esc_label=esc_label,
         detail_pane=True,
     )
 
-    menu.add_item(MenuItem(
-        label="Use rclone  (recommended)",
-        value=DOWNLOAD_MODE_RCLONE,
-        description="rclone is a popular online storage sync tool and is the "
-                    "easiest way to use Synchotic. Note that rclone shares its API "
-                    "limits with all users and may be rate limited at popular times "
-                    "of the day.",
-    ))
-    menu.add_item(MenuItem(
-        label="Bring Your Own Creds  (advanced)",
-        value=DOWNLOAD_MODE_BYOC,
-        description="If you find rclone rate limits annoying, you can always set up "
-                    "your own private Google project. This takes about ten minutes "
-                    "to do but offers the best experience.",
-    ))
-    menu.add_item(MenuItem(
-        label="No sign-in",
-        value=DOWNLOAD_MODE_ANONYMOUS,
-        description="No sign-in is required. Just be aware that many game rips will "
-                    "not allow anonymous users to download them.",
-    ))
+    menu.add_item(MenuItem(label=copy.MODE_RCLONE_LABEL,
+                           value=DOWNLOAD_MODE_RCLONE,
+                           description=copy.MODE_RCLONE_DESC))
+    menu.add_item(MenuItem(label=copy.MODE_BYOC_LABEL,
+                           value=DOWNLOAD_MODE_BYOC,
+                           description=copy.MODE_BYOC_DESC))
+    menu.add_item(MenuItem(label=copy.MODE_ANON_LABEL,
+                           value=DOWNLOAD_MODE_ANONYMOUS,
+                           description=copy.MODE_ANON_DESC))
+
+    # Whatever they are on now, else the best option they can actually take.
+    # Somebody with credentials.json already in place has done the ten minutes
+    # of work, so starting them on the easy-but-expiring option would be
+    # recommending the worse of the two to the one person it does not cost
+    # anything.
+    preferred = current
+    if not preferred:
+        from ...drive.auth import has_custom_client_config
+        preferred = (DOWNLOAD_MODE_BYOC if has_custom_client_config()
+                     else DOWNLOAD_MODE_RCLONE)
 
     initial = 0
     for i, item in enumerate(menu.items):
-        if item.value == current:
+        if item.value == preferred:
             initial = i
             break
 
@@ -54,12 +69,14 @@ def choose_download_mode(current: str = "") -> str | None:
     return result.value if result else None
 
 
-def change_download_mode(user_settings, sync=None) -> str | None:
+def change_download_mode(user_settings, sync=None, intro: str = "",
+                         setup_step=None, **kw) -> str | None:
     """Re-open the chooser later on, persist the pick, apply it to a live sync.
 
     Returns the chosen mode, or None if the user backed out.
     """
-    chosen = choose_download_mode(current=user_settings.download_mode)
+    chosen = choose_download_mode(current=user_settings.download_mode,
+                                  intro=intro, setup_step=setup_step, **kw)
     if not chosen:
         return None
     user_settings.download_mode = chosen
@@ -119,8 +136,14 @@ def mode_blocked_reason(user_settings, auth, rclone_authed: bool) -> str:
     on the API key alone. Gating either on OAuth blocks a setup that works,
     which is what stopped rclone users syncing at all.
     """
-    return {
-        "rclone": "rclone is not connected yet",
-        "byoc_setup": "your own Google credentials are not set up yet",
-        "signin": "you are not signed in to Google",
-    }.get(mode_blocked_step(user_settings, auth, rclone_authed), "")
+    return MODE_STATUS.get(mode_blocked_step(user_settings, auth, rclone_authed), "")
+
+
+# Keyed by the step tokens mode_blocked_step returns. The same line is the
+# setup page title, the preflight headline, the blocked-sync reason and the
+# home screen hint.
+MODE_STATUS = {
+    "rclone": copy.STATUS_RCLONE,
+    "byoc_setup": copy.STATUS_BYOC,
+    "signin": copy.STATUS_SIGNED_OUT,
+}

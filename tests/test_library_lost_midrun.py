@@ -6,6 +6,7 @@ from contextlib import redirect_stdout
 import pytest
 
 import sync as sync_entry
+from src import copy
 from src.core.paths import LibraryUnavailable
 from src.ui.widgets import display
 
@@ -54,7 +55,7 @@ def test_cancelling_still_exits_cleanly(monkeypatch):
     did not swallow it."""
     code, printed = _run_cli(monkeypatch, KeyboardInterrupt())
     assert code == 0
-    assert "Cancelled by user" in printed
+    assert copy.CANCELLED in printed
 
 
 def test_the_two_library_messages_stay_different():

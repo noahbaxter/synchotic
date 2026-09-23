@@ -98,7 +98,7 @@ def app(monkeypatch):
     a.user_settings = None
     a.sync = None
     a.auth = None
-    monkeypatch.setattr("src.app.auth.wait_with_skip", lambda *a_, **k: None)
+    monkeypatch.setattr("src.app.auth._pause", lambda *a_, **k: None)
     monkeypatch.setattr("src.app.auth.display.rclone_consent_explainer", lambda: None)
     monkeypatch.setattr("src.rclone.can_open_browser", lambda: True)
     return a
@@ -107,22 +107,23 @@ def app(monkeypatch):
 def test_picking_rclone_with_a_dead_remote_goes_to_reconnect(app, monkeypatch):
     """A configured remote that does not work is not connected."""
     calls = []
-    monkeypatch.setattr("src.ui.screens.change_download_mode", lambda *a: "rclone")
+    monkeypatch.setattr("src.ui.screens.change_download_mode", lambda *a, **k: "rclone")
     monkeypatch.setattr("src.rclone.connection_state", lambda *a, **k: rclone.DEAD)
     monkeypatch.setattr("src.rclone.is_authed", lambda: True)  # configured, but dead
-    monkeypatch.setattr(type(app), "_connect_rclone", lambda self: calls.append("connect"))
+    monkeypatch.setattr(type(app), "_connect_rclone",
+                        lambda self, state: calls.append(("connect", state)))
     app.handle_download_mode()
-    assert calls == ["connect"]
+    # The probe's answer is handed over, not asked for again.
+    assert calls == [("connect", rclone.DEAD)]
 
 
 def test_a_dead_remote_is_reconnected_not_created_again(app, monkeypatch):
     """`config create` over a live remote leaves the dead token in place."""
     calls = []
-    monkeypatch.setattr("src.rclone.connection_state", lambda *a, **k: rclone.DEAD)
     monkeypatch.setattr("src.rclone.reconnect", lambda *a, **k: calls.append("reconnect") or True)
     monkeypatch.setattr("src.rclone.RcloneSession",
                         lambda: calls.append("create") or FakeConfig())
-    app._connect_rclone()
+    app._connect_rclone(rclone.DEAD)
     assert calls == ["reconnect"]
 
 

@@ -11,6 +11,7 @@ import sys
 
 import pytest
 
+from src import copy
 from src.config.settings import (DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC,
                                  DOWNLOAD_MODE_RCLONE)
 from src.ui.screens.download_mode import choose_download_mode
@@ -61,15 +62,15 @@ def test_box_closes_at_every_width(monkeypatch, columns):
     )
 
 
-# Phrases must be short enough to survive word-wrap at 80 columns: the render
-# breaks lines, so anything spanning a wrap point can never match.
-@pytest.mark.parametrize("mode,phrase", [
-    (DOWNLOAD_MODE_RCLONE, "popular online storage sync tool"),
-    (DOWNLOAD_MODE_BYOC, "rclone rate limits annoying"),
-    (DOWNLOAD_MODE_ANONYMOUS, "many game rips"),
+@pytest.mark.parametrize("mode,description", [
+    (DOWNLOAD_MODE_RCLONE, copy.MODE_RCLONE_DESC),
+    (DOWNLOAD_MODE_BYOC, copy.MODE_BYOC_DESC),
+    (DOWNLOAD_MODE_ANONYMOUS, copy.MODE_ANON_DESC),
 ])
-def test_selected_mode_explains_itself(monkeypatch, mode, phrase):
+def test_selected_mode_explains_itself(monkeypatch, mode, description):
     """The consequence of a choice must reach the screen, not just MenuItem data."""
+    # The opening words: anything spanning a wrap point could never match.
+    phrase = " ".join(description.split()[:3])
     painted = "\n".join(_paint(monkeypatch, current=mode))
     assert phrase in painted, f"description missing from render: {phrase!r}"
 

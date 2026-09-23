@@ -55,15 +55,29 @@ def test_embedded_oauth_is_not_offered(monkeypatch):
     assert "oauth" not in [i.value for i in seen["menu"].items]
 
 
-def test_anonymous_warns_that_charts_will_be_missing(monkeypatch):
-    """It must not read as a free lunch. The cost is stated in the blurb rather
-    than the label, which now just names the option."""
-    seen = _captured(monkeypatch, pick=2)
-    assert choose_download_mode() == DOWNLOAD_MODE_ANONYMOUS
-    anon = seen["menu"].items[2]
-    blurb = f"{anon.label} {anon.description}".lower()
-    assert "will" in blurb and "not allow" in blurb
-    assert "anonymous" in blurb
+class TestWhereTheCursorStarts:
+    """rclone is the easy option and the one with an expiry date on it. The
+    one person who should not be steered there is the one who already did the
+    work BYOC asks for."""
+
+    def _initial(self, monkeypatch, has_creds, current=""):
+        seen = _captured(monkeypatch, pick=0)
+        monkeypatch.setattr("src.drive.auth.has_custom_client_config",
+                            lambda: has_creds)
+        choose_download_mode(current=current)
+        return seen["initial"]
+
+    def test_a_fresh_install_starts_on_the_easy_one(self, monkeypatch):
+        assert self._initial(monkeypatch, has_creds=False) == 0
+
+    def test_existing_credentials_start_on_byoc(self, monkeypatch):
+        """They have already paid the setup cost, and it is the option that
+        outlasts the 2026 retirement."""
+        assert self._initial(monkeypatch, has_creds=True) == 1
+
+    def test_a_chosen_mode_still_wins(self, monkeypatch):
+        assert self._initial(monkeypatch, has_creds=True,
+                             current=DOWNLOAD_MODE_ANONYMOUS) == 2
 
 
 def test_current_choice_is_preselected(monkeypatch):

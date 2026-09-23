@@ -29,6 +29,7 @@ _increase_file_limit()
 from datetime import datetime
 from pathlib import Path
 
+from src import copy
 from src.app.config import API_KEY
 from src.app.onboarding import OnboardingMixin
 from src.app.drive_management import DriveManagementMixin
@@ -41,6 +42,7 @@ from src.config import UserSettings, DrivesConfig, CustomFolders
 from src.config.settings import DOWNLOAD_MODES
 from src.core.paths import (
     LibraryUnavailable,
+    library_is_set,
     get_log_dir,
     get_settings_path,
     get_token_path,
@@ -59,7 +61,8 @@ from src.ui import (
     update_menu_cache_on_toggle,
 )
 from src.sync import FolderStatsCache, BackgroundScanner
-from src.ui.primitives import clear_screen
+from src.ui.primitives import CancelInput, clear_screen
+from src.ui.screens.first_run import run_setup, setup_needs
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
 from src.core.logging import TeeOutput, prune_old_logs
@@ -108,22 +111,20 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         self.folder_stats_cache = FolderStatsCache()
         self._background_scanner: BackgroundScanner | None = None
 
+    def _should_offer_signin(self) -> bool:
+        """Offered on every start while the chosen mode is missing a sign-in
+        and nothing else. Asked of the mode, not of the disk: a credentials.json
+        left from trying BYOC once must not prompt an rclone user forever."""
+        return (self.auth.is_available
+                and not self.auth.is_signed_in
+                and self._drive_blocked_step() == "signin")
+
     def run(self):
         """Main application loop."""
         clear_screen()
         print_header()
 
-        # Offered on every start while the chosen mode is missing a sign-in and
-        # nothing else. connection_step_for keeps BYOC without credentials away
-        # from sign-in, which would fall back to the capped embedded client.
-        from src.drive.auth import has_custom_client_config
-        from src.ui.screens.download_mode import connection_step_for
-
-        step = connection_step_for(self.user_settings.download_mode,
-                                   rclone_authed=True,
-                                   signed_in=self.auth.is_signed_in,
-                                   byoc_configured=has_custom_client_config())
-        if self.auth.is_available and step == "signin":
+        if self._should_offer_signin():
             if show_oauth_prompt():
                 self.handle_signin()
                 clear_screen()
@@ -296,6 +297,35 @@ def use_first_run_sandbox() -> Path:
     return sandbox
 
 
+def startup_setup(app) -> bool:
+    """Ask whatever setup this launch still needs. False means quit.
+
+    Every launch, not just the first: a library and a download mode that can
+    download are required, so anything missing or broken since last time is
+    asked again here and setup repairs itself.
+    """
+    first_run = not library_is_set()
+    needs = setup_needs(library_set=not first_run,
+                        mode_chosen=bool(app.user_settings.download_mode),
+                        mode_blocked=app._drive_blocked_step())
+    if not needs:
+        return True
+    if not sys.stdin.isatty():
+        print(f"  {copy.SETUP_NEEDS_TERMINAL}")
+        sys.exit(1)
+    return run_setup(
+        needs,
+        choose_library=lambda intro, at: app.handle_library(
+            intro=intro, setup_step=at),
+        choose_mode=lambda intro, at: app.handle_download_mode(
+            intro=intro, setup_step=at, esc_label=copy.BTN_QUIT),
+        library_is_set=library_is_set,
+        mode_chosen=lambda: bool(app.user_settings.download_mode),
+        blocked_step=lambda: app._drive_blocked_step(),
+        first_run=first_run,
+    )
+
+
 def main():
     """Entry point."""
     import time as _time
@@ -450,15 +480,11 @@ def main():
         app.user_settings.save()
         app.sync.download_mode = cli_args.download_mode
         print(f"  download mode set to {cli_args.download_mode}")
-    elif not app.user_settings.download_mode and not app.auth.is_signed_in:
-        # Signed-in users are skipped: their token already handles blocked files
-        # via tier 2, so the question does not apply to them.
-        from src.ui.screens import choose_download_mode
-        chosen = choose_download_mode()
-        if chosen:
-            app.user_settings.download_mode = chosen
-            app.user_settings.save()
-            app.sync.download_mode = chosen
+
+    if not startup_setup(app):
+        from chotic_ui.primitives.host import leave_alt_screen
+        leave_alt_screen()
+        sys.exit(0)
     print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()
@@ -473,7 +499,14 @@ def run():
         # buffer that atexit is about to throw away.
         from chotic_ui.primitives.host import leave_alt_screen
         leave_alt_screen()
-        print("\n\nCancelled by user.")
+        print(f"\n\n{copy.CANCELLED}.")
+        sys.exit(0)
+    except CancelInput:
+        # Esc backs out of any prompt, including ones that read a key rather
+        # than a line. Uncaught it ended the run on a traceback.
+        from chotic_ui.primitives.host import leave_alt_screen
+        leave_alt_screen()
+        print(f"\n\n{copy.CANCELLED}.")
         sys.exit(0)
     except LibraryUnavailable:
         # The library went away mid-run (a drive unplugged): every path helper
@@ -484,7 +517,7 @@ def run():
         try:
             display.library_lost(plain_path(get_library_path()))
         except Exception:
-            print("\n\nLibrary disconnected. Reconnect the drive and sync again.")
+            print(f"\n\n{copy.LIBRARY_MISSING}. {copy.FIX_RECONNECT}")
         sys.exit(1)
 
 
