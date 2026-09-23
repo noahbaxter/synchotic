@@ -116,6 +116,39 @@ setup_venv() {
 }
 
 # Build the app (onedir → zip)
+# Bake GOOGLE_API_KEY into config.py for the build, the way CI does, then put
+# the file back. A build without one lists nothing in rclone or no-sign-in mode.
+CONFIG_PY="src/app/config.py"
+CONFIG_BACKUP=""
+
+bake_api_key() {
+    local key="${GOOGLE_API_KEY:-}"
+    if [ -z "$key" ] && [ -f .env ]; then
+        key=$(grep '^GOOGLE_API_KEY=' .env | cut -d= -f2- | tr -d "\"'")
+    fi
+    if [ -z "$key" ]; then
+        echo_warn "No GOOGLE_API_KEY in the environment or .env: rclone and no-sign-in modes will list nothing"
+        return
+    fi
+    CONFIG_BACKUP=$(mktemp)
+    cp "$CONFIG_PY" "$CONFIG_BACKUP"
+    trap restore_api_key EXIT
+    sed "s/os.environ.get(\"GOOGLE_API_KEY\", \"\")/\"$key\"/" "$CONFIG_BACKUP" > "$CONFIG_PY"
+    if grep -q 'os.environ.get("GOOGLE_API_KEY"' "$CONFIG_PY"; then
+        restore_api_key
+        echo_error "Could not bake GOOGLE_API_KEY into $CONFIG_PY"
+        exit 1
+    fi
+}
+
+restore_api_key() {
+    if [ -n "$CONFIG_BACKUP" ]; then
+        cp "$CONFIG_BACKUP" "$CONFIG_PY"
+        rm -f "$CONFIG_BACKUP"
+        CONFIG_BACKUP=""
+    fi
+}
+
 build_app() {
     if [ "$PLATFORM" = "macos" ]; then
         echo_info "Building macOS app..."
@@ -136,6 +169,7 @@ build_app() {
         return
     fi
 
+    bake_api_key
     echo_info "Building app with --onedir..."
     pyinstaller \
         --onedir \
@@ -148,6 +182,7 @@ build_app() {
         --add-data "docs/settings.template.jsonc:docs" \
         --icon "$ICON" \
         sync.py
+    restore_api_key
 
     echo_info "Creating $ZIP_NAME..."
     cd dist
@@ -309,7 +344,9 @@ build_mac_app() {
         echo_error "mac mode only runs on macOS"
         exit 1
     fi
+    bake_api_key
     bash "$SCRIPT_DIR/packaging/macos/build_app.sh"
+    restore_api_key
 
     local installed="/Applications/Synchotic.app"
     # A running copy holds its bundle open, so stop it before swapping.
