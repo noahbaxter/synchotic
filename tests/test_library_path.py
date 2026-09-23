@@ -292,11 +292,9 @@ class TestUnmountedLibrary:
 
 
 class TestScanGate:
-    """Nothing scans into a library that is not there. library_blocked_reason
-    is the one rule the menu greys rows on and every scan entry point checks.
-
-    There is no "unset" case: every install resolves to a default, an OS-dirs
-    one to ~/Synchotic/Sync Charts. Only a folder that went missing blocks.
+    """Nothing scans into a library that is not there, and nothing scans into
+    one nobody chose. library_blocked_reason is the one rule the menu greys
+    rows on and every scan entry point checks.
     """
 
     def test_an_unmounted_library_blocks(self, tmp_path):
@@ -309,9 +307,17 @@ class TestScanGate:
         paths.set_library_path(lib)
         assert paths.library_blocked_reason() == ""
 
-    def test_a_default_library_never_blocks(self, monkeypatch, tmp_path):
-        """It is created on demand, so it cannot be missing."""
+    def test_a_library_nobody_chose_blocks(self, monkeypatch, tmp_path):
+        """There is no default: purge must never manage an unchosen folder."""
         monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+        monkeypatch.delenv("SYNCHOTIC_LIBRARY", raising=False)
+        paths.set_library_path(None)
+        assert paths.library_blocked_reason() == "Library not set"
+
+    def test_the_env_override_counts_as_chosen(self, monkeypatch, tmp_path):
+        paths.set_library_path(None)
+        monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path))
+        assert paths.library_is_set() is True
         assert paths.library_blocked_reason() == ""
 
 

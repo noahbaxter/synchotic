@@ -172,15 +172,22 @@ def _configured_library():
     return os.environ.get("SYNCHOTIC_LIBRARY") or _library_override
 
 
+def library_is_set() -> bool:
+    """True when someone chose where charts go. There is no default: purge
+    deletes what it did not download, so an unchosen folder must never be
+    managed. get_library_path still answers for the state and log dirs, but
+    nothing scans, syncs or purges until this is true."""
+    return bool(_configured_library())
+
+
 def library_blocked_reason() -> str:
     """Why nothing may scan or sync right now, or "" when the library is usable.
 
-    A scan writes into the library: markers, staging, the scan cache keyed to
-    it. A library on a drive that is no longer mounted has nowhere to put that,
-    so the work is refused up front instead of at the first mkdir several
-    screens in. An unset library is not a case: every install resolves to a
-    default, and only a folder that went missing can be unusable.
+    A scan writes markers, staging and cache into the library, so an unset or
+    unmounted library refuses the work up front rather than at the first mkdir.
     """
+    if not library_is_set():
+        return "Library not set"
     if not library_is_available():
         return "Library not connected"
     return ""

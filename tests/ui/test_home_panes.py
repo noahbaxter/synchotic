@@ -4,6 +4,8 @@ The point of the layout is that a setlist toggle never leaves the screen, so
 these check both halves: that the panes contain what they should, and that
 toggling mutates settings in place instead of returning an action.
 """
+import os
+
 import pytest
 
 from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
@@ -35,6 +37,13 @@ def build(monkeypatch, tmp_path):
             mode=DOWNLOAD_MODE_ANONYMOUS, rclone_authed=False, byoc_creds=False):
         captured = {}
         settings = settings or UserSettings(tmp_path / "settings.json")
+        # A library nobody chose greys every row that writes into one, which
+        # is the point of it, but it is not what these tests are about. Set
+        # one unless the test set its own first.
+        if not os.environ.get("SYNCHOTIC_LIBRARY"):
+            library = tmp_path / "library"
+            library.mkdir(exist_ok=True)
+            monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(library))
         # Drive-touching rows are gated on whether the mode can reach Drive, so
         # pin both inputs: is_authed() otherwise reads the real rclone config
         # and the rows would differ per machine. Anonymous is the default

@@ -117,6 +117,28 @@ def find_legacy_install(library_path):
     return None
 
 
+def former_default_libraries() -> list:
+    """Where 1.5.4 and earlier put the library by default: under the home
+    folder for the bundles, beside the executable otherwise."""
+    return [
+        Path.home() / paths.APP_DIRNAME / paths.DOWNLOAD_FOLDER_NAME,
+        paths.get_app_dir() / paths.DOWNLOAD_FOLDER_NAME,
+    ]
+
+
+def default_library_to_adopt():
+    """The former default library an upgrading install was already using, or
+    None. Only a folder with something in it (charts or just its state dir):
+    an empty one costs nothing to ask about."""
+    for candidate in former_default_libraries():
+        try:
+            if candidate.is_dir() and any(candidate.iterdir()):
+                return candidate
+        except OSError:
+            continue
+    return None
+
+
 def find_legacy_markers(library_path):
     """Markers from any pre-1.5 layout, under either state-dir name."""
     state = find_legacy_install(library_path)

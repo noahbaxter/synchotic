@@ -3,10 +3,7 @@
 {
   "version": 1,
 
-  // Sync chart folder location. If empty, uses default path which is:
-  //    Windows: C:\Users\<you>\Synchotic\Sync Charts
-  //    macOS: ~/Synchotic/Sync Charts
-  //    Linux: ~/Synchotic/Sync Charts
+  // Sync chart folder location. Required: nothing syncs while it is empty.
   "library_path": "",
 
   // How google drive files are fetched.

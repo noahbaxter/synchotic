@@ -348,7 +348,20 @@ def main():
     from src.config.settings import UserSettings as _EarlySettings
     from src.core.paths import get_settings_path as _early_settings_path
     from src.core.paths import set_library_path as _set_library_path
-    _set_library_path(_EarlySettings.load(_early_settings_path()).library_path or None)
+    _early = _EarlySettings.load(_early_settings_path())
+    _set_library_path(_early.library_path or None)
+
+    # A library is required now, so an install running on the old default is
+    # handed that folder explicitly rather than upgrading into "not set".
+    if not _early.library_path:
+        from src.core.legacy_migration import default_library_to_adopt
+        _adopted = default_library_to_adopt()
+        if _adopted:
+            from src.core.logging import debug_log as _debug_log
+            _early.library_path = str(_adopted)
+            _early.save()
+            _set_library_path(_adopted)
+            _debug_log(f"LIBRARY | adopted former default | {_adopted}")
 
     # An unreachable library has to stop startup right here. Every path helper
     # below raises once the library is gone, and mkdir on an absent mountpoint
