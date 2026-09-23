@@ -715,3 +715,48 @@ class TestThereIsNoFilter:
     def test_the_footer_does_not_advertise_one(self, build):
         from src.ui.components import strip_ansi
         assert "filter" not in strip_ansi(build()["pane"].footer()).lower()
+
+
+class TestSetlistsAreMeasuredOffTheRenderThread:
+    """Measuring walks the disk, seconds per setlist on a network library, so
+    opening a drive must hand the work to a worker and the tick must collect it."""
+
+    def test_measured_on_a_worker_and_collected_on_tick(self, build, monkeypatch):
+        import threading
+        import time
+
+        on_render_thread = []
+
+        def compute(folder, name, path, settings):
+            on_render_thread.append(threading.current_thread() is threading.main_thread())
+            return f"stats:{name}"
+
+        class Cache:
+            stored = {}
+
+            def get_setlist(self, folder_id, name):
+                return None
+
+            def set_setlist(self, folder_id, name, stats):
+                self.stored[name] = stats
+
+            def save(self):
+                pass
+
+        cache = Cache()
+        monkeypatch.setattr("src.ui.screens.home_panes.compute_setlist_stats", compute)
+        monkeypatch.setattr("src.ui.screens.home_panes.get_persistent_stats_cache",
+                            lambda: cache)
+
+        def act(pane):
+            pane._right_rows(("drive", "drive-1"), "")
+            deadline = time.time() + 5
+            while len(cache.stored) < 2 and time.time() < deadline:
+                pane.update_callback(pane)
+                time.sleep(0.01)
+            return None
+
+        build(act=act)
+        assert on_render_thread == [False, False]
+        assert cache.stored == {"Setlist A": "stats:Setlist A",
+                                "Setlist B": "stats:Setlist B"}

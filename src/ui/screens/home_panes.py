@@ -29,6 +29,7 @@ from src.sync import get_persistent_stats_cache, compute_setlist_stats
 from src.sync.archive_charts import effective_chart_count, forced_counts
 from ..primitives import Colors
 from ..components import strip_ansi, format_setlist_item
+from .stats_warm import BackgroundWarmer
 from .pane_layout import (
     LEFT_WIDTH, LEFT_CHANGE_W,
     columns as _columns,
@@ -133,9 +134,14 @@ def show_main_menu_panes(
     persistent = get_persistent_stats_cache()
     # Read once for the life of the screen rather than per row per frame.
     forced = forced_counts()
-    # Setlist stats are computed once per drive, not per frame: right_rows runs
-    # on every repaint and compute_setlist_stats walks the disk.
+    # Setlist stats are requested once per drive and measured on a worker:
+    # compute_setlist_stats walks the disk, seconds per setlist on a network
+    # library, and right_rows runs on every repaint.
     warmed: set[str] = set()
+    warmer = BackgroundWarmer(
+        lambda folder, name: compute_setlist_stats(
+            folder, name, download_path, user_settings)
+    )
 
     def _setlists(folder):
         return sort_by_name(_get_setlist_names(folder, background_scanner))
@@ -199,20 +205,13 @@ def show_main_menu_panes(
     # ---- right pane: a drive's setlists ----
 
     def _warm(folder, setlists):
+        """Hand unmeasured setlists to the worker; on_tick collects the results."""
         folder_id = folder.get("folder_id", "")
         if folder_id in warmed or not download_path or not folder.get("files"):
             return
-        dirty = False
-        for name in setlists:
-            if not persistent.get_setlist(folder_id, name):
-                persistent.set_setlist(
-                    folder_id, name,
-                    compute_setlist_stats(folder, name, download_path, user_settings),
-                )
-                dirty = True
-        if dirty:
-            persistent.save()
-        warmed.add(folder_id)
+        warmed.add(folder_id)  # asked for once; the worker owns it from here
+        warmer.request(folder, folder_id,
+                       [n for n in setlists if not persistent.get_setlist(folder_id, n)])
 
     def _setlist_row(folder_id, name, drive_enabled):
         enabled = user_settings.is_subfolder_enabled(folder_id, name)
@@ -537,6 +536,16 @@ def show_main_menu_panes(
     last_footer = {"text": None}
 
     def on_tick(_pane):
+        # Written here so the cache stays on this thread; the worker only measures.
+        measured = warmer.drain()
+        if measured:
+            for folder_id, name, stats in measured:
+                if stats is not None:
+                    persistent.set_setlist(folder_id, name, stats)
+            persistent.save()
+            return True
+        if warmer.busy:
+            return True  # keep repainting so the rest arrive as they land
         if not background_scanner:
             return False
         changed = background_scanner.check_updates()
@@ -590,7 +599,8 @@ def show_main_menu_panes(
         right_filterable=False,
         footer=footer,
         keys={"s": key_sync, "S": key_sync},
-        update_callback=on_tick if background_scanner else None,
+        # Always ticking: measured setlists arrive whether or not a scan runs.
+        update_callback=on_tick,
         # The footer clock counts in seconds; polling far faster than it changes
         # only buys repaints nobody asked for.
         refresh_interval_ms=400,
@@ -610,6 +620,8 @@ def show_main_menu_panes(
 
     out = pane.run()
     position = pane._left_cursor
+
+    warmer.stop()
 
     rows = left_rows()
     pane._clamp_left(rows)
