@@ -159,6 +159,7 @@ def update_menu_cache_on_toggle(
         global_enabled_setlists, global_total_setlists,
         scan_complete, background_scanner,
         global_disk_size=global_disk_size,
+        empty_hint=_empty_hint(folders, user_settings, scan_complete),
     )
 
 
@@ -177,6 +178,19 @@ def _get_setlist_names(
     return setlist_names
 
 
+def _empty_hint(folders, user_settings, scan_complete: bool) -> str:
+    """What the header says with nothing measured, asked of the settings: the
+    numbers are also zero for the whole first scan, when restored drives are
+    on but nothing is counted yet."""
+    on = any(user_settings.is_drive_enabled(f.get("folder_id", ""))
+             for f in folders) if user_settings else False
+    if not on:
+        return copy.HOME_NO_DRIVES
+    if not scan_complete:
+        return ""  # the footer already says what the scan is doing
+    return copy.HOME_NO_SETLISTS
+
+
 def _apply_global_stats(
     cache: MainMenuCache,
     global_status: SyncStatus,
@@ -186,6 +200,7 @@ def _apply_global_stats(
     scan_complete: bool,
     scanner: "BackgroundScanner" = None,
     global_disk_size: int = 0,
+    empty_hint: str = "",
 ) -> None:
     """Format accumulated global stats and write them to the menu cache."""
     cache.subtitle = format_status_line(
@@ -195,7 +210,7 @@ def _apply_global_stats(
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
         disk_size=global_disk_size,
-        empty_hint=copy.HOME_NO_DRIVES,
+        empty_hint=empty_hint,
     )
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
@@ -460,6 +475,7 @@ def compute_main_menu_cache(
         global_enabled_setlists, global_total_setlists,
         scan_complete, background_scanner,
         global_disk_size=global_disk_size,
+        empty_hint=_empty_hint(folders, user_settings, scan_complete),
     )
 
     if drives_config:

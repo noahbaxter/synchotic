@@ -136,6 +136,7 @@ TOGGLE_SETLIST = "Press Tab on a drive to enter it, then Space to toggle."
 # ===========================================================================
 
 HOME_NO_DRIVES = f"{NO_DRIVES}. {TOGGLE_DRIVE}"
+HOME_NO_SETLISTS = f"{NO_SETLISTS}. {TOGGLE_SETLIST}"
 
 # A drive's column headers and the rows under its setlists.
 COL_CHARTS = "CHARTS"
