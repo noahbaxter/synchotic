@@ -277,6 +277,15 @@ class PersistentStatsCache:
             stats = self._setlist_cache.get(folder_id, {}).get(setlist_name)
             return stats.total_charts if stats else None
 
+    def remembered_needs_attention(self, folder_id: str, setlist_name: str) -> bool:
+        """True unless the last scan found this setlist fully synced with
+        nothing to purge. A setlist never scanned needs attention too."""
+        with self._lock:
+            stats = self._setlist_cache.get(folder_id, {}).get(setlist_name)
+            if stats is None:
+                return True
+            return stats.synced_charts < stats.total_charts or stats.purgeable_charts > 0
+
     @staticmethod
     def compute_settings_hash(folder_id: str, user_settings) -> str:
         """
