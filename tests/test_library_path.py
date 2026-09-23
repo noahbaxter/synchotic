@@ -178,7 +178,7 @@ class TestMigration:
 
         notes = paths.migrate_legacy_files()
 
-        assert any("moved 3 markers" in n for n in notes), notes
+        assert copy.MOVED_MARKERS.format(n=3) in notes, notes
         assert not legacy.exists(), "sidecars should still be drained"
         assert len([p for p in get_markers_dir().iterdir()
                     if not p.name.startswith("._")]) == 3
@@ -195,7 +195,7 @@ class TestMigration:
         monkeypatch.setattr(_shutil, "move", refuse)
 
         notes = paths.migrate_legacy_files()
-        assert any("could not be moved" in n for n in notes), notes
+        assert copy.MARKERS_LEFT.format(markers="1 marker") in notes, notes
         assert (legacy / "stuck.json").exists(), "marker must survive to retry"
 
     def test_an_unavailable_library_is_skipped_not_raised(self, tmp_path):

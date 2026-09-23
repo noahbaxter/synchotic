@@ -2,8 +2,11 @@
 
 Edit the strings here rather than hunting them through the screens. Nothing in
 this file does anything: the screens import these and fill in the {fields}.
-Setup, the home screen's empty states, and anything said on more than one
-screen live here; text that appears in exactly one place may still be inline.
+Every string a person reads lives here. What stays in the code is what nobody
+reads as the app talking: diagnostics ([timing], the debug log), dev-only
+output (--help, --first-run), exception text shown as FAILURE: {reason}, the
+downloader's log lines that are translated before display, and the nouns
+count() pluralises.
 
     # AI-COPY
 
@@ -534,3 +537,35 @@ SYNC_FAILED = "Sync failed: {reason}"  # AI-COPY
 DID_NOT_DOWNLOAD = "{charts} did not download"  # AI-COPY
 FINISHED_IN = "Finished in {time}"  # AI-COPY
 CONTINUING_IN = "Continuing in 5s (press any key to skip)"
+
+
+# ===========================================================================
+# Startup and quitting: what a launch did to an older install
+# ===========================================================================
+
+GOODBYE = "Goodbye!"  # AI-COPY
+NO_FOLDERS = "No folders available!"  # AI-COPY
+DRIVES_JSON_FAILED = "Could not load drives.json"  # AI-COPY
+MODE_SET = "download mode set to {mode}"  # AI-COPY
+
+# Bringing a portable install's .dm-sync across. {what} lists the ADOPTED_*
+# and MIGRATED_* items below, comma separated.
+ADOPTED = "Brought your previous setup across: {what}"  # AI-COPY
+ADOPT_SKIPPED = ("A newer setup exists in {path}\n"  # AI-COPY
+                 "but this install already has settings and will not overwrite them.")
+ADOPTED_MERGED = "{name} (merged)"  # AI-COPY
+MIGRATED = "Migrated settings to .dm-sync/: {what}"  # AI-COPY
+MIGRATED_ITEM = "migrated {name}"  # AI-COPY
+REMOVED_ITEM = "removed {name}"  # AI-COPY
+MOVED_MARKERS = "moved {n} markers into the library"  # AI-COPY
+MARKERS_LEFT = "{markers} could not be moved, retrying on next launch"  # AI-COPY
+SANITIZED = "Sanitized {paths} on disk:"  # AI-COPY
+RENAMED_PATH = "{old} -> {new}"  # AI-COPY
+
+# A custom drive that turned out to be a released drive, or inside one.
+MIGRATE_DUPLICATE = "Removing duplicate custom entry: {name}"  # AI-COPY
+MIGRATE_CUSTOM = "Migrating custom folder: {old} → {new}"  # AI-COPY
+MIGRATE_MOVED = "Moved download folder"  # AI-COPY
+MIGRATE_EXISTS = "Warning: '{target}' already exists, leaving the folder where it is"  # AI-COPY
+MIGRATE_MARKERS = "Renamed {markers}"  # AI-COPY
+MIGRATE_DONE = "Migration complete: {folders} migrated"  # AI-COPY

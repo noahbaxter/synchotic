@@ -30,6 +30,7 @@ from datetime import datetime
 from pathlib import Path
 
 from src import copy
+from src.core.formatting import count
 from src.app.config import API_KEY
 from src.app.onboarding import OnboardingMixin
 from src.app.drive_management import DriveManagementMixin
@@ -156,7 +157,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
             if not self.folders:
                 clear_screen()
                 print_header()
-                print("No folders available!")
+                print(copy.NO_FOLDERS)
                 print()
 
             # Compute cache if needed (first run or after state-changing actions)
@@ -193,7 +194,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
                 # shell the user came from instead of the buffer we discard.
                 from chotic_ui.primitives.host import leave_alt_screen
                 leave_alt_screen()
-                print("\nGoodbye!")
+                print(f"\n{copy.GOODBYE}")
                 break
 
             elif action == "sync":
@@ -324,7 +325,7 @@ def main():
     bootstrap("Synchotic")
 
     parser = argparse.ArgumentParser(
-        description="DM Chart Sync - Download charts from Google Drive"
+        description="Synchotic - sync Clone Hero chart packs from Google Drive"
     )
     parser.add_argument(
         "--first-run", "--firsttime", action="store_true", dest="first_run",
@@ -423,14 +424,15 @@ def main():
     from src.core.paths import adopt_legacy_install, stale_data_dir_warning
     adopted = adopt_legacy_install()
     if adopted:
-        print(f"  Brought your previous setup across: {', '.join(adopted)}")
+        print(f"  {copy.ADOPTED.format(what=', '.join(adopted))}")
     stale = stale_data_dir_warning()
     if stale:
         # Silence here is what turns an upgrade into a factory reset: signed
         # out, no drives, and an empty default library that the next sync fills
         # by downloading the whole collection again.
-        print(f"\n  A newer setup exists in {stale}")
-        print("  but this install already has settings and will not overwrite them.\n")
+        print()
+        display.say(copy.ADOPT_SKIPPED.format(path=stale))
+        print()
 
     # settings.json is meant to be edited, so write it on the first run, after
     # adoption has had its say about what goes in it.
@@ -442,11 +444,11 @@ def main():
     # Must run BEFORE creating SyncApp so paths resolve correctly
     migrated = migrate_legacy_files()
     if migrated:
-        print(f"Migrated settings to .dm-sync/: {', '.join(migrated)}")
+        print(copy.MIGRATED.format(what=", ".join(migrated)))
 
     renamed = migrate_unsanitized_paths()
     if renamed:
-        print(f"Sanitized {len(renamed)} path(s) on disk:")
+        print(copy.SANITIZED.format(paths=count(len(renamed), "path")))
         for r in renamed:
             print(f"  {r}")
 
@@ -456,7 +458,7 @@ def main():
         app.user_settings.download_mode = cli_args.download_mode
         app.user_settings.save()
         app.sync.download_mode = cli_args.download_mode
-        print(f"  download mode set to {cli_args.download_mode}")
+        print(f"  {copy.MODE_SET.format(mode=cli_args.download_mode)}")
 
     if not startup_setup(app):
         from chotic_ui.primitives.host import leave_alt_screen

@@ -9,6 +9,7 @@ from typing import Callable, Optional, List
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 
+from .. import copy
 from .client import DriveClient
 from ..core.files import file_exists_with_size
 from ..core.formatting import sanitize_drive_name
@@ -147,7 +148,7 @@ class FolderScanner:
 
         except KeyboardInterrupt:
             cancelled = True
-            print("\n  Scan interrupted by user (Ctrl+C)")
+            print(f"\n  {copy.CANCELLED}.")
 
         return ScanResult(
             files=all_files,
@@ -241,11 +242,11 @@ class FolderScanner:
 
                         except Exception as e:
                             # Log error but continue scanning
-                            print(f"\n  Error scanning folder: {e}")
+                            print(f"\n  {copy.FAILURE}: {e}")
 
         except KeyboardInterrupt:
             cancelled = True
-            print("\n  Scan interrupted by user (Ctrl+C)")
+            print(f"\n  {copy.CANCELLED}.")
 
         return ScanResult(
             files=all_files,

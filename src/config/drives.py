@@ -9,6 +9,8 @@ from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional
 
+from .. import copy
+
 
 @dataclass
 class DriveConfig:
@@ -71,7 +73,7 @@ class DrivesConfig:
                 for drive_data in data.get("drives", []):
                     config.drives.append(DriveConfig.from_dict(drive_data))
             except (json.JSONDecodeError, IOError) as e:
-                print(f"Warning: Could not load drives.json: {e}")
+                print(f"{copy.DRIVES_JSON_FAILED}: {e}")
 
         return config
 

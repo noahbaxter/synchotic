@@ -14,7 +14,7 @@ def sentences(*parts: str) -> str:
     return " ".join(p if p[-1:] in ".!?:" else p + "." for p in parts if p)
 
 
-def _say(text: str, indent: str = "  ") -> None:
+def say(text: str, indent: str = "  ") -> None:
     """Print a copy string at the scrollback's indent, every line of it:
     copy.py keeps layout out of its strings."""
     for line in text.split("\n"):
@@ -36,7 +36,7 @@ def auth_prompt():
 
 def auth_opening_browser():
     print()
-    _say(copy.SIGNIN_OPENING)
+    say(copy.SIGNIN_OPENING)
     print()
 
 
@@ -63,7 +63,7 @@ def custom_folder_blocked(reason: str):
 def session_expired_notice() -> None:
     """The saved sign-in stopped working. Try the obvious fix first."""
     print()
-    _say(copy.SIGNIN_EXPIRED)
+    say(copy.SIGNIN_EXPIRED)
     print()
 
 
@@ -71,7 +71,7 @@ def rclone_consent_explainer() -> None:
     """One line before the browser opens. The mode screen already explained
     why; the only new fact is that Google's screen will say "rclone"."""
     print()
-    _say(copy.RCLONE_CONSENT)
+    say(copy.RCLONE_CONSENT)
     print()
 
 
@@ -201,7 +201,7 @@ def library_lost(path) -> None:
 def rclone_no_browser() -> None:
     """Consent needs a browser and there is not one here."""
     print()
-    _say(copy.NO_BROWSER)
+    say(copy.NO_BROWSER)
     print()
 
 
@@ -211,7 +211,7 @@ def add_folder_prompt():
     print()
     print(f"  {copy.ROW_ADD_CUSTOM}")
     print()
-    _say(copy.ADD_HOWTO)
+    say(copy.ADD_HOWTO)
     print()
     print(f"  {copy.ADD_EXAMPLE}")
     print()
@@ -220,7 +220,7 @@ def add_folder_prompt():
 
 def add_folder_invalid_url(error: str):
     print(f"\n  {_c.BOLD}{error}{_c.RESET}")
-    _say(copy.URL_USE_FOLDER_LINK)
+    say(copy.URL_USE_FOLDER_LINK)
 
 def add_folder_failed(error: str):
     """Google's own reason, not a guess at what is wrong with the folder."""

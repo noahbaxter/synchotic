@@ -11,7 +11,9 @@ monkeypatched getter is still seen.
 import os
 from pathlib import Path
 
+from .. import copy
 from . import paths
+from .formatting import count
 
 
 LEGACY_ROOT_ENV = "SYNCHOTIC_LEGACY_ROOT"  # test hook
@@ -189,7 +191,7 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
                 # (drive toggles, download_mode, purge_ignore).
                 if name == "settings.json" and dest.exists():
                     if _merge_settings(src, dest):
-                        done.append("settings.json (merged)")
+                        done.append(copy.ADOPTED_MERGED.format(name=name))
                     continue
                 if src.is_dir():
                     # Skip when the copy would add nothing: dest already has
@@ -229,7 +231,7 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
                 shutil.copy2(m, target)
                 copied += 1
             if copied:
-                done.append(f"markers ({copied})")
+                done.append(count(copied, "marker"))
     except Exception:
         pass
     return done
@@ -348,12 +350,12 @@ def migrate_legacy_files() -> list[str]:
         if old_path.exists() and not new_path.exists():
             try:
                 old_path.rename(new_path)
-                migrated.append(f"migrated {name}")
+                migrated.append(copy.MIGRATED_ITEM.format(name=name))
             except Exception:
                 try:
                     shutil.copy2(old_path, new_path)
                     old_path.unlink()
-                    migrated.append(f"migrated {name}")
+                    migrated.append(copy.MIGRATED_ITEM.format(name=name))
                 except Exception:
                     pass
 
@@ -396,13 +398,11 @@ def migrate_legacy_files() -> list[str]:
             except Exception:
                 failed += 1
         if moved:
-            migrated.append(f"moved {moved} markers into the library")
+            migrated.append(copy.MOVED_MARKERS.format(n=moved))
         if failed:
             # Never silent. Reporting a short count beats claiming success while
             # the charts those markers described are queued for deletion.
-            migrated.append(
-                f"{failed} marker(s) could not be moved, retrying on next launch"
-            )
+            migrated.append(copy.MARKERS_LEFT.format(markers=count(failed, "marker")))
         try:
             legacy_markers.rmdir()
         except OSError:
@@ -424,7 +424,7 @@ def migrate_legacy_files() -> list[str]:
         if path.exists():
             try:
                 path.unlink()
-                migrated.append(f"removed {path.name}")
+                migrated.append(copy.REMOVED_ITEM.format(name=path.name))
             except Exception:
                 pass
 
@@ -441,7 +441,7 @@ def migrate_legacy_files() -> list[str]:
             try:
                 # Try to remove if empty
                 dir_path.rmdir()
-                migrated.append(f"removed {dir_path.name}/")
+                migrated.append(copy.REMOVED_ITEM.format(name=f"{dir_path.name}/"))
             except OSError:
                 # Not empty - try removing all contents if it's truly obsolete
                 # For now, just leave non-empty dirs alone
@@ -485,7 +485,7 @@ def migrate_unsanitized_paths() -> list[str]:
                     continue
                 try:
                     old.rename(new)
-                    renamed.append(f"{name} -> {sanitized}")
+                    renamed.append(copy.RENAMED_PATH.format(old=name, new=sanitized))
                 except OSError:
                     pass
 
