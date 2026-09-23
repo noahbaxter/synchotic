@@ -34,8 +34,8 @@ def migration_env(temp_dir, monkeypatch):
 
     monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
 
-    # Patch get_download_path in sync.py where it's called
-    monkeypatch.setattr("sync.get_download_path", lambda: download_path)
+    # Patch get_download_path where the migration mixin calls it
+    monkeypatch.setattr("src.app.onboarding.get_download_path", lambda: download_path)
 
     return MigrationEnv(
         temp_dir=temp_dir,
@@ -290,10 +290,10 @@ class TestBlockReleasedAsCustom:
 
         app.auth = type("Auth", (), {"is_signed_in": True, "get_token": lambda _: "tok"})()
 
-        with patch("sync.show_add_custom_folder", return_value=("released_id", "My Folder")), \
-             patch("sync.DriveClient"), \
-             patch("sync.DriveClientConfig"), \
-             patch("sync.wait_with_skip"):
+        with patch("src.app.drive_management.show_add_custom_folder", return_value=("released_id", "My Folder")), \
+             patch("src.app.drive_management.DriveClient"), \
+             patch("src.app.drive_management.DriveClientConfig"), \
+             patch("src.app.drive_management.wait_with_skip"):
             result = app.handle_add_custom_folder()
 
         assert result is False
@@ -309,9 +309,9 @@ class TestBlockReleasedAsCustom:
         mock_client = MagicMock()
         mock_client.get_file_metadata.return_value = {"parents": ["unrelated_parent"]}
 
-        with patch("sync.show_add_custom_folder", return_value=("new_custom_id", "My Folder")), \
-             patch("sync.DriveClient", return_value=mock_client), \
-             patch("sync.DriveClientConfig"):
+        with patch("src.app.drive_management.show_add_custom_folder", return_value=("new_custom_id", "My Folder")), \
+             patch("src.app.drive_management.DriveClient", return_value=mock_client), \
+             patch("src.app.drive_management.DriveClientConfig"):
             result = app.handle_add_custom_folder()
 
         assert result is True
@@ -346,10 +346,10 @@ class TestBlockReleasedSubfolderAsCustom:
         mock_client = MagicMock()
         mock_client.get_file_metadata.return_value = {"parents": ["drive_abc"]}
 
-        with patch("sync.show_add_custom_folder", return_value=("subfolder_xyz", "Miscellany")), \
-             patch("sync.DriveClient", return_value=mock_client), \
-             patch("sync.DriveClientConfig"), \
-             patch("sync.wait_with_skip"):
+        with patch("src.app.drive_management.show_add_custom_folder", return_value=("subfolder_xyz", "Miscellany")), \
+             patch("src.app.drive_management.DriveClient", return_value=mock_client), \
+             patch("src.app.drive_management.DriveClientConfig"), \
+             patch("src.app.drive_management.wait_with_skip"):
             result = app.handle_add_custom_folder()
 
         assert result is False
@@ -364,9 +364,9 @@ class TestBlockReleasedSubfolderAsCustom:
         mock_client = MagicMock()
         mock_client.get_file_metadata.return_value = {"parents": ["some_other_parent"]}
 
-        with patch("sync.show_add_custom_folder", return_value=("unrelated_id", "My Folder")), \
-             patch("sync.DriveClient", return_value=mock_client), \
-             patch("sync.DriveClientConfig"):
+        with patch("src.app.drive_management.show_add_custom_folder", return_value=("unrelated_id", "My Folder")), \
+             patch("src.app.drive_management.DriveClient", return_value=mock_client), \
+             patch("src.app.drive_management.DriveClientConfig"):
             result = app.handle_add_custom_folder()
 
         assert result is True
@@ -381,9 +381,9 @@ class TestBlockReleasedSubfolderAsCustom:
         mock_client = MagicMock()
         mock_client.get_file_metadata.return_value = None
 
-        with patch("sync.show_add_custom_folder", return_value=("mystery_id", "Unknown Folder")), \
-             patch("sync.DriveClient", return_value=mock_client), \
-             patch("sync.DriveClientConfig"):
+        with patch("src.app.drive_management.show_add_custom_folder", return_value=("mystery_id", "Unknown Folder")), \
+             patch("src.app.drive_management.DriveClient", return_value=mock_client), \
+             patch("src.app.drive_management.DriveClientConfig"):
             result = app.handle_add_custom_folder()
 
         assert result is True

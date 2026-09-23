@@ -76,7 +76,8 @@ def main() -> int:
     from src.drive.auth import AuthManager
     from src.drive.client import DriveClient, DriveClientConfig
     from src.sync.download_planner import plan_downloads
-    from src.sync.folder_sync import FolderSync, purge_all_folders
+    from src.sync.folder_sync import FolderSync
+    from src.sync.purge_flow import purge_all_folders
     from src.sync.purge_planner import plan_purge
 
     stub_rclone()

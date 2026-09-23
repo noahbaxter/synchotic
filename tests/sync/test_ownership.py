@@ -65,7 +65,7 @@ class TestPurgeRefusesUnownedFolders:
 
     def test_first_sync_at_an_adopted_library_purges_nothing(self, library, capsys):
         """The catastrophic case: user points at their own collection."""
-        from src.sync.folder_sync import purge_all_folders
+        from src.sync.purge_flow import purge_all_folders
         theirs = library / "Guitar Hero"
         theirs.mkdir(parents=True)
         (theirs / "their_chart.ini").write_text("mine, not yours")
@@ -76,7 +76,7 @@ class TestPurgeRefusesUnownedFolders:
         assert "has not synced before" in capsys.readouterr().out
 
     def test_disabled_drive_we_never_created_is_not_emptied(self, library, capsys):
-        from src.sync.folder_sync import purge_all_folders
+        from src.sync.purge_flow import purge_all_folders
 
         class Settings:
             def is_drive_enabled(self, drive_id):
@@ -131,7 +131,7 @@ class TestUpgradingUsersKeepPurge:
 
     def test_disabled_drive_still_purges_after_upgrade(self, library):
         """The end to end case, exactly as an existing user hits it."""
-        from src.sync.folder_sync import purge_all_folders
+        from src.sync.purge_flow import purge_all_folders
         from src.sync.markers import save_marker
 
         class Disabled:

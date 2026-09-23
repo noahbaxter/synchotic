@@ -487,7 +487,7 @@ class TestPurgeConfirmationThreshold:
 
     def test_large_file_count_requires_confirmation(self):
         """Purge of >100 files should require confirmation."""
-        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
+        from src.sync.purge_flow import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
         purge_count = 150
         purge_size = 100 * 1024**2  # 100 MB (under size threshold)
@@ -496,7 +496,7 @@ class TestPurgeConfirmationThreshold:
 
     def test_large_size_requires_confirmation(self):
         """Purge of >500MB should require confirmation even with few files."""
-        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
+        from src.sync.purge_flow import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
         purge_count = 10  # Under file threshold
         purge_size = 600 * 1024**2  # 600 MB
@@ -505,7 +505,7 @@ class TestPurgeConfirmationThreshold:
 
     def test_small_purge_no_confirmation(self):
         """Purge of <=100 files AND <=500MB should not require confirmation."""
-        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
+        from src.sync.purge_flow import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
         purge_count = 50
         purge_size = 200 * 1024**2  # 200 MB
@@ -514,7 +514,7 @@ class TestPurgeConfirmationThreshold:
 
     def test_boundary_values(self):
         """Exactly 100 files / 500MB should NOT require confirmation (threshold is >)."""
-        from src.sync.folder_sync import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
+        from src.sync.purge_flow import PURGE_CONFIRM_FILE_THRESHOLD, PURGE_CONFIRM_SIZE_THRESHOLD
 
         # Exactly at threshold — should not trigger
         assert not (100 > PURGE_CONFIRM_FILE_THRESHOLD or 500 * 1024**2 > PURGE_CONFIRM_SIZE_THRESHOLD)

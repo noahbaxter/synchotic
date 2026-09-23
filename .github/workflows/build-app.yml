@@ -62,10 +62,12 @@ jobs:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
           if [ "${{ matrix.name }}" = "macos" ]; then
-            sed -i '' 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
+            sed -i '' 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' src/app/config.py
           else
-            sed -i 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' sync.py
+            sed -i 's/os.environ.get("GOOGLE_API_KEY", "")/"'"$GOOGLE_API_KEY"'"/' src/app/config.py
           fi
+          # Fails if the key moved and the substitution matched nothing.
+          ! grep -q 'os.environ.get("GOOGLE_API_KEY"' src/app/config.py
         shell: bash
 
       - name: Setup UnRAR library
