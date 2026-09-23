@@ -8,9 +8,9 @@ covers downloading; this covers only deleting.
 
 from pathlib import Path
 
-from ..core.formatting import sanitize_drive_name
+from ..core.formatting import count, sanitize_drive_name
 from ..core.logging import debug_log
-from ..ui.primitives import print_section_header, print_separator
+from ..ui.primitives import print_progress, print_section_header, print_separator
 from ..ui.widgets import display
 from .cache import clear_folder_cache, get_persistent_stats_cache
 from .purge_planner import plan_purge, find_partial_downloads
@@ -55,9 +55,15 @@ def _purge_enabled_drive(
     folder_id = folder.get("folder_id", "")
     folder_name = folder.get("name", "")
 
+    def walked(n: int) -> None:
+        if progress:
+            progress.set_stage(f"checking {folder_name} · {count(n, 'file')}")
+        else:
+            print_progress(f"Purge: checking {folder_name}... {count(n, 'file')}")
+
     files_to_purge, _ = plan_purge(
         [folder], base_path, user_settings, failed_setlists,
-        precomputed_markers=marker_norm,
+        precomputed_markers=marker_norm, on_walk=walked,
     )
     if not files_to_purge:
         return 0, 0, 0
@@ -177,8 +183,6 @@ def purge_all_folders(
     persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
-    from ..ui.primitives import print_progress
-
     if progress:
         progress.set_stage("reading markers...")
     else:

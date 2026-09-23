@@ -16,7 +16,8 @@ from src.sync import (
     PurgeStats,
     clear_cache,
 )
-from src.sync.purge_planner import find_extra_files
+from src.sync.cache import scan_local_files
+from src.sync.purge_planner import find_extra_files, plan_purge
 from src.core.formatting import normalize_path_key
 
 # Backwards compat alias
@@ -383,6 +384,44 @@ class TestPartialDownloadsPerFolder:
 
             stats_b = count_purgeable_detailed([folder_b], temp_dir, user_settings=None)
             assert stats_b.partial_count == 0  # Bug: was 1 before fix
+
+
+class TestTheWalkSaysHowFarItHasGot:
+    """Walking a drive over a share is minutes of silence, immediately before
+    files get deleted."""
+
+    def test_the_walk_reports_as_it_goes(self):
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = Path(tmpdir)
+            drive = base / "Drive"
+            drive.mkdir()
+            for i in range(600):
+                (drive / f"chart{i}.ogg").write_bytes(b"x")
+
+            seen = []
+            files = scan_local_files(drive, on_progress=seen.append)
+
+            assert len(files) == 600
+            # Not just a count at the end: the point is that it moves while
+            # the walk is still running.
+            assert len(seen) >= 3, f"only reported {len(seen)} times: {seen}"
+            assert seen[0] < 600, "the first word came after the walk finished"
+            assert seen[-1] == 600, f"the last word was {seen[-1]}, not the total"
+            assert seen == sorted(seen), "the count went backwards"
+
+    def test_planning_passes_the_count_through(self):
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            base = Path(tmpdir)
+            (base / "Drive").mkdir()
+            (base / "Drive" / "song.ini").write_text("x")
+
+            seen = []
+            plan_purge([{"folder_id": "d", "name": "Drive", "files": None}], base,
+                       precomputed_markers=set(), on_walk=seen.append)
+
+            assert seen == [1]
 
 
 class TestDisabledSetlistsCategorization:

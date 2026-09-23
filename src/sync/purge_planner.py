@@ -162,6 +162,7 @@ def plan_purge(
     user_settings=None,
     failed_setlists: dict[str, set[str]] | None = None,
     precomputed_markers: set[str] | None = None,
+    on_walk=None,
 ) -> Tuple[List[Tuple[Path, int]], PurgeStats]:
     """
     Plan what files should be purged.
@@ -171,6 +172,8 @@ def plan_purge(
     2. Manifest - tracks loose files and archive files themselves
 
     Everything else on disk is "extra" and should be purged.
+
+    on_walk(count) reports the drive walk as it goes.
     """
     stats = PurgeStats()
     all_files = []
@@ -197,7 +200,7 @@ def plan_purge(
         if not folder_path.exists():
             continue
 
-        local_files = scan_local_files(folder_path)
+        local_files = scan_local_files(folder_path, on_progress=on_walk)
         if not local_files:
             continue
 
