@@ -6,6 +6,7 @@ Prompts user for folder URL/ID, validates it, and returns folder info.
 
 from typing import TYPE_CHECKING
 
+from src import copy
 from src.drive.utils import parse_drive_folder_url
 from ..primitives import clear_screen, input_with_esc, CancelInput, wait_with_skip
 from ..components import print_header
@@ -44,12 +45,12 @@ def show_add_custom_folder(client, auth=None) -> tuple[str | None, str | None]:
     display.add_folder_prompt()
 
     try:
-        url_input = input_with_esc("  URL or ID: ")
+        url_input = input_with_esc(f"  {copy.ADD_INPUT}")
     except CancelInput:
         return None, None
 
     if not url_input.strip():
-        print("\n  No URL entered.")
+        print(f"\n  {copy.ADD_EMPTY}")
         wait_with_skip(2)
         return None, None
 
@@ -59,12 +60,12 @@ def show_add_custom_folder(client, auth=None) -> tuple[str | None, str | None]:
         wait_with_skip(3)
         return None, None
 
-    print("\n  Checking folder access...")
+    print(f"\n  {copy.ADD_CHECKING}")
 
-    is_valid, folder_name = client.validate_folder(folder_id)
+    folder_name, error = client.validate_folder(folder_id)
 
-    if not is_valid:
-        display.add_folder_access_denied()
+    if error:
+        display.add_folder_failed(error)
         wait_with_skip(3)
         return None, None
 

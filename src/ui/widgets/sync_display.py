@@ -164,7 +164,7 @@ def library_contents(contents) -> str:
     `contents` is (group, name, setlist count)."""
     lines, current = [], None
     for group, name, setlists in contents:
-        heading = (group or "OTHER").upper()
+        heading = (group or copy.GROUP_OTHER).upper()
         if heading != current:
             if lines:
                 lines.append("")
@@ -249,27 +249,25 @@ def rclone_no_browser() -> None:
 
 def add_folder_prompt():
     print()
-    print("  Add Custom Folder")
+    print(f"  {copy.ROW_ADD_CUSTOM}")
     print()
-    print("  Paste a Google Drive folder URL or ID.")
-    print("  The folder must be shared (anyone with link) or in your Drive.")
+    _say(copy.ADD_HOWTO)
     print()
-    print("  Example: https://drive.google.com/drive/folders/abc123...")
+    print(f"  {copy.ADD_EXAMPLE}")
     print()
-    print(f"  {_c.DIM}Press ESC to cancel{_c.RESET}")
+    print(f"  {_c.DIM}{copy.ESC_TO_CANCEL}{_c.RESET}")
     print()
 
 def add_folder_invalid_url(error: str):
     print(f"\n  {_c.BOLD}{error}{_c.RESET}")
-    print("  Please use a Google Drive folder link like:")
-    print("  https://drive.google.com/drive/folders/abc123...")
+    _say(copy.URL_USE_FOLDER_LINK)
 
-def add_folder_access_denied():
-    print(f"\n  {_c.BOLD}Could not access folder.{_c.RESET}")
-    print("  Make sure the folder is shared or you have access.")
+def add_folder_failed(error: str):
+    """Google's own reason, not a guess at what is wrong with the folder."""
+    print(f"\n  {_c.BOLD}{copy.FAILURE}:{_c.RESET} {error}")
 
 def add_folder_found(folder_name: str):
-    print(f"  Found: {_c.BOLD}{folder_name}{_c.RESET}")
+    print(f"  {copy.ADD_FOUND.format(bold_open=_c.BOLD, bold_close=_c.RESET, name=folder_name)}")
 
 
 # === Scan messages ===
@@ -277,13 +275,12 @@ def add_folder_found(folder_name: str):
 def scan_header(folder_name: str):
     print()
     print("=" * 50)
-    print(f"Scanning: {folder_name}")
+    print(copy.SCAN_TITLE.format(name=folder_name))
     print("=" * 50)
 
-def scan_progress(folders: int, files: int, shortcuts: int = 0):
+def scan_progress(folders: int, files: int):
     from ..primitives import print_progress
-    shortcut_info = f", {shortcuts} shortcuts" if shortcuts else ""
-    print_progress(f"Scanning... {folders} folders, {files} files{shortcut_info}")
+    print_progress(copy.SCAN_PROGRESS.format(folders=folders, files=files))
 
 
 # === Folder status messages ===

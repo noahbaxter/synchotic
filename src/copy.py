@@ -183,6 +183,47 @@ FOOTER_QUIT = "quit"  # AI-COPY
 FOOTER_SCANNING = "Scanning {folder} ({done}/{total}) · {elapsed}"  # AI-COPY
 FOOTER_LOADING = "Loading cache {folder} ({done}/{total}) · {elapsed}"  # AI-COPY
 
+# Section headings in the drive list, for drives drives.json does not group.
+GROUP_CUSTOM = "Custom"  # AI-COPY
+GROUP_OTHER = "Other"  # AI-COPY
+
+
+# ===========================================================================
+# Custom drives: a Google Drive folder the user adds by link
+# ===========================================================================
+
+LOADING_DRIVES = "Loading drives..."  # AI-COPY
+DRIVE_URL_EXAMPLE ="https://drive.google.com/drive/folders/abc123..."
+ADD_HOWTO = ("Paste a Google Drive folder URL or ID.\n"  # AI-COPY
+             "The folder must be shared (anyone with link) or in your Drive.")
+ADD_EXAMPLE = f"Example: {DRIVE_URL_EXAMPLE}"  # AI-COPY
+ESC_TO_CANCEL = "Press ESC to cancel"  # AI-COPY
+ADD_INPUT = "URL or ID: "  # AI-COPY
+ADD_EMPTY = "No URL entered."  # AI-COPY
+ADD_CHECKING = "Checking folder access..."  # AI-COPY
+ADD_FOUND = "Found: {bold_open}{name}{bold_close}"  # AI-COPY
+
+# Why a pasted link is not a folder we can use.
+URL_IS_FILE = "That's a file link, not a folder link"  # AI-COPY
+URL_UNRECOGNIZED = "Unrecognized Google Drive URL format"  # AI-COPY
+URL_NOT_DRIVE = "Not a Google Drive URL"  # AI-COPY
+URL_USE_FOLDER_LINK = f"Please use a Google Drive folder link like:\n{DRIVE_URL_EXAMPLE}"  # AI-COPY
+
+ADD_ALREADY = "Folder already added: {name}"  # AI-COPY
+ADD_IS_DRIVE = "This folder is already available as a built-in drive."  # AI-COPY
+ADD_INSIDE_DRIVE = "This folder is inside the built-in drive: {name}"  # AI-COPY
+ADD_INSIDE_FIX = "Enable it from the drive list instead."  # AI-COPY
+ADD_DONE = "Added: {name}"  # AI-COPY
+
+REMOVE_ASK = "Remove custom drive?"  # AI-COPY
+REMOVE_BODY = ("This will remove '{name}' from your custom drives.\n"  # AI-COPY
+               "Downloaded files will NOT be deleted.")
+REMOVE_DONE = "Removed: {name}"  # AI-COPY
+
+SCAN_TITLE = "Scanning: {name}"  # AI-COPY
+SCAN_PROGRESS = "Scanning... {folders} folders, {files} files found"  # AI-COPY
+SCAN_DONE = "Done! Found {files} ({size})"  # AI-COPY
+
 
 # ===========================================================================
 # Setup step 1: where the charts go
@@ -197,6 +238,9 @@ LIBRARY_INTRO = (
 LIBRARY_QUESTION = "Where should the library live?"
 LIBRARY_BROWSE = "Pick a folder"
 LIBRARY_TYPE = "Path: "
+# The spinner while a picked folder is counted.
+LIBRARY_READING = "reading {path}"  # AI-COPY
+LIBRARY_READ_SO_FAR = "{charts} charts, {files} files"  # AI-COPY
 
 FOLDER_CREATE_ASK = "Create {path}?"
 FOLDER_NOT_A_FOLDER = FAILURE + ": Not a folder: {path}"

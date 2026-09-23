@@ -1,9 +1,10 @@
 """Drive list and custom-folder management: loading, scanning, adding, and
 removing them."""
 
+from src import copy
 from src.app.config import API_KEY
 from src.config import DrivesConfig
-from src.core.formatting import format_size
+from src.core.formatting import count, format_size
 from src.drive import DriveClient
 from src.drive.client import DriveClientConfig
 from src.ui import show_add_custom_folder, show_confirmation
@@ -23,7 +24,7 @@ class DriveManagementMixin:
         self._migrate_custom_to_released()
 
         if not quiet:
-            print("Loading drives...")
+            print(copy.LOADING_DRIVES)
 
         # Filter out hidden drives
         hidden_ids = {d.folder_id for d in self.drives_config.drives if d.hidden}
@@ -95,13 +96,13 @@ class DriveManagementMixin:
         scanner = FolderScanner(auth_client)
 
         def progress_cb(folders_scanned, files_found, shortcuts_found, files_list=None):
-            print(f"\r  Scanning... {folders_scanned} folders, {files_found} files found", end="", flush=True)
+            display.scan_progress(folders_scanned, files_found)
 
         result = scanner.scan(folder_id, progress_callback=progress_cb)
         print()
 
         if result.cancelled:
-            print("  Scan cancelled.")
+            print(f"  {copy.CANCELLED}.")
             wait_with_skip(2)
             return
 
@@ -124,16 +125,13 @@ class DriveManagementMixin:
         self.custom_folders.set_files(folder_id, folder["files"])
         self.custom_folders.save()
 
-        print(f"  Done! Found {len(result.files)} files ({format_size(folder['total_size'])})")
+        print(f"  {copy.SCAN_DONE.format(files=count(len(result.files), 'file'), size=format_size(folder['total_size']))}")
         print()
         wait_with_skip(2)
 
     def _remove_custom_folder(self, folder_id: str, folder_name: str):
         """Remove a custom folder after confirmation."""
-        if not show_confirmation(
-            "Remove custom folder?",
-            f"This will remove '{folder_name}' from your custom folders.\nDownloaded files will NOT be deleted."
-        ):
+        if not show_confirmation(copy.REMOVE_ASK, copy.REMOVE_BODY.format(name=folder_name)):
             return
 
         self.custom_folders.remove_folder(folder_id)
@@ -142,7 +140,7 @@ class DriveManagementMixin:
         # Remove from folders list
         self.folders = [f for f in self.folders if f.get("folder_id") != folder_id]
 
-        print(f"\n  Removed: {folder_name}")
+        print(f"\n  {copy.REMOVE_DONE.format(name=folder_name)}")
         wait_with_skip(2)
 
     def handle_add_custom_folder(self) -> bool:
@@ -173,7 +171,7 @@ class DriveManagementMixin:
 
         # Check if already exists
         if self.custom_folders.has_folder(folder_id):
-            print(f"\n  Folder already added: {folder_name}")
+            print(f"\n  {copy.ADD_ALREADY.format(name=folder_name)}")
             wait_with_skip(2)
             return False
 
@@ -181,7 +179,7 @@ class DriveManagementMixin:
         released_by_id = {d.folder_id: d.name for d in self.drives_config.drives}
         released_ids = set(released_by_id)
         if folder_id in released_ids:
-            print(f"\n  This folder is already available as a built-in drive.")
+            print(f"\n  {copy.ADD_IS_DRIVE}")
             wait_with_skip(2)
             return False
 
@@ -192,24 +190,20 @@ class DriveManagementMixin:
             parent_match = parents & released_ids
             if parent_match:
                 drive_name = released_by_id[parent_match.pop()]
-                print(f"\n  This folder is inside the built-in drive: {drive_name}")
-                print(f"  Enable it from the drive list instead.")
+                print(f"\n  {copy.ADD_INSIDE_DRIVE.format(name=drive_name)}")
+                print(f"  {copy.ADD_INSIDE_FIX}")
                 wait_with_skip(3)
                 return False
 
         # Add to custom folders
-        is_first_custom = len(self.custom_folders.folders) == 0
         self.custom_folders.add_folder(folder_id, folder_name)
         self.custom_folders.save()
 
         # Enable the drive by default
         self.user_settings.set_drive_enabled(folder_id, True)
-        # Expand Custom group when first custom folder is added
-        if is_first_custom:
-            self.user_settings.group_expanded["Custom"] = True
         self.user_settings.save()
 
-        print(f"\n  Added: {folder_name}")
+        print(f"\n  {copy.ADD_DONE.format(name=folder_name)}")
 
         # Create folder dict and add to app's folder list
         folder_dict = {
@@ -252,7 +246,7 @@ class DriveManagementMixin:
                 name=custom.name,
                 folder_id=custom.folder_id,
                 description="Custom folder",
-                group="Custom",
+                group=copy.GROUP_CUSTOM,
             ))
 
         return combined

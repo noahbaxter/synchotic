@@ -13,7 +13,7 @@ from ...config.settings import (DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC,
 
 
 def choose_download_mode(current: str = "", intro: str = "",
-                         setup_step=None, esc_label: str = "Decide later") -> str | None:
+                         setup_step=None, esc_label: str = copy.BTN_BACK) -> str | None:
     """Show the chooser. Returns the selected mode, or None if the user escaped.
 
     `intro` replaces the standing subtitle, for callers with something more

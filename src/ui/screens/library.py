@@ -71,7 +71,7 @@ def _ask_for_path(intro: str, can_browse: bool, setup_step) -> str:
         if result.item.value != "browse":
             return _clean(result.item.text)
 
-        picked = pick_folder("Choose your chart library", current)
+        picked = pick_folder(copy.LIBRARY_QUESTION, current)
         if picked:
             return _clean(picked)
         typed = menu.items[-1].text
@@ -144,10 +144,11 @@ def show_library_screen(user_settings, intro: str = "", setup_step=None) -> bool
             seen["charts"], seen["files"] = charts, files
 
         def label():
+            reading = copy.LIBRARY_READING.format(path=plain_path(path))
             if not seen["files"]:
-                return f"reading {plain_path(path)}"
-            return (f"reading {plain_path(path)}  "
-                    f"{seen['charts']:,} charts, {seen['files']:,} files")
+                return reading
+            return f"{reading}  " + copy.LIBRARY_READ_SO_FAR.format(
+                charts=f"{seen['charts']:,}", files=f"{seen['files']:,}")
 
         # A library we already sync is not walked: its drive listing below
         # says what is there, and walking an external drive to learn the same
