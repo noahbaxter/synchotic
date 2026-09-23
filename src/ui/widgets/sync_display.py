@@ -415,6 +415,98 @@ def purge_nothing():
 
 # === Download errors ===
 
+# Raw downloader messages, in words a person can act on. First match wins, so
+# specific patterns come first; a full disk or a lost connection can arrive
+# inside another failure's message.
+_FAILURE_WORDS = (
+    ("no space left", "disk full"),
+    ("errno 28", "disk full"),
+    ("cannot connect", "no connection"),
+    ("connection reset", "no connection"),
+    ("nodename nor servname", "no connection"),
+    ("needs auth", "needs sign-in"),
+    ("rate limited", "rate limited"),
+    ("http 403", "rate limited"),
+    ("http 429", "rate limited"),
+    ("http 401", "signed out"),
+    ("timeout", "timed out"),
+    ("bytes)", "cut short"),
+    ("http 404", "not on Drive"),
+    ("http 5", "Drive error"),
+    ("unsupported archive", "unknown format"),
+    ("extract", "unpack failed"),
+)
+
+# What to do about each, including "nothing to fix" where that is the answer.
+ADVICE = {
+    "disk full": "Free up space on the drive holding your library, then sync again.",
+    "no connection": "Check your internet, then sync again.",
+    "needs sign-in": "Sign in from Account, or switch to rclone, then sync again.",
+    "signed out": "Your Google sign-in expired. Sign in again from Account.",
+    "rate limited": "Google throttled the drive. Usually clears within a day; "
+                    "the next sync retries them.",
+    "timed out": "The next sync retries these. Nothing to fix.",
+    "cut short": "Usually a throttle in disguise. The next sync retries these.",
+    "not on Drive": "These were removed upstream. The next scan drops them. "
+                    "Nothing to fix.",
+    "Drive error": "Google's end, not yours. The next sync retries these.",
+    "unknown format": "Not a format Clone Hero reads. Nothing to fix.",
+    "unpack failed": "The archive would not open. Report it if it keeps happening.",
+    "failed": "No cause reported. The next sync retries these.",
+}
+
+# Reasons nothing will fix until someone does something.
+NEEDS_YOU = frozenset({"disk full", "no connection", "needs sign-in", "signed out"})
+
+# Reasons that clear up on their own, or where there is nothing to fix. Anything
+# in neither set is unexplained, which is the case worth reporting.
+SORTS_ITSELF_OUT = frozenset({"rate limited", "timed out", "cut short", "Drive error",
+                              "not on Drive", "unknown format", "failed"})
+
+FIX = "fix"
+REPORT = "report"
+TRANSIENT = "transient"
+
+
+def advise(reasons: list[str]) -> tuple[str, str, str]:
+    """What to do about this run's failures, as (tone, reason, advice): the
+    most pressing reason present. Something that needs doing beats something
+    nobody can explain, which beats something that will pass."""
+    if not reasons:
+        return "", "", ""
+    tally: dict[str, int] = {}
+    for reason in reasons:
+        tally[reason] = tally.get(reason, 0) + 1
+
+    def most(pool):
+        return max(pool, key=lambda r: tally[r]) if pool else None
+
+    needs_you = [r for r in tally if r in NEEDS_YOU]
+    unexplained = [r for r in tally if r not in NEEDS_YOU and r not in SORTS_ITSELF_OUT]
+    passing = [r for r in tally if r in SORTS_ITSELF_OUT]
+
+    for tone, pool in ((FIX, needs_you), (REPORT, unexplained), (TRANSIENT, passing)):
+        reason = most(pool)
+        if reason:
+            return tone, reason, ADVICE.get(reason, "Report it if it keeps happening.")
+    return "", "", ""
+
+
+def describe_failure(message: str) -> str:
+    """One short reason for a failed chart, from a downloader message written
+    for a log."""
+    lowered = message.lower()
+    for pattern, reason in _FAILURE_WORDS:
+        if pattern in lowered:
+            return reason
+
+    # Unrecognised: the parenthetical is the closest thing to a cause, and a
+    # raw cause beats a vague stand-in.
+    if "(" in message and ")" in message:
+        return message[message.index("(") + 1:message.index(")")]
+    return "failed"
+
+
 def download_errors_header():
     print()
     print(f"{_c.ERROR}Download errors:{_c.RESET}")
