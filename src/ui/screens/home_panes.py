@@ -30,6 +30,7 @@ from src.sync.archive_charts import effective_chart_count, forced_counts
 from ..primitives import Colors
 from ..components import strip_ansi, format_setlist_item
 from .stats_warm import BackgroundWarmer
+from .status_warm import StatusWarmer, StatusSnapshot
 from .pane_layout import (
     LEFT_WIDTH, LEFT_CHANGE_W,
     stat_widths as _stat_widths,
@@ -138,6 +139,18 @@ def show_main_menu_panes(
         lambda folder, name: compute_setlist_stats(
             folder, name, download_path, user_settings)
     )
+
+    def _check_status() -> StatusSnapshot:
+        from ...core.paths import library_blocked_reason
+        try:
+            import src.rclone as rclone
+            rclone_connected = rclone.is_authed()
+        except Exception:
+            rclone_connected = False
+        return StatusSnapshot(rclone_connected=rclone_connected,
+                              library_blocked=library_blocked_reason())
+
+    status_warmer = StatusWarmer(_check_status)
 
     def _setlists(folder):
         return sort_by_name(_get_setlist_names(folder, background_scanner))
@@ -286,8 +299,7 @@ def show_main_menu_panes(
             label = "Re-scan folder" if folder.get("files") else "Scan folder"
             # A scan with nowhere to write is greyed with the reason beside
             # it, rather than left as a row that ignores you.
-            from ...core.paths import library_blocked_reason
-            lib_blocked = library_blocked_reason()
+            lib_blocked = status_warmer.snapshot.library_blocked
             if lib_blocked:
                 rows.append(_row(f"  {Colors.MUTED_DIM}{label}  ({lib_blocked}){Colors.RESET}",
                                  ("scan_folder", folder_id, None), False))
@@ -329,7 +341,7 @@ def show_main_menu_panes(
 
     def _settings_right():
         from .account import account_status
-        from ...core.paths import get_library_path, library_blocked_reason, plain_path
+        from ...core.paths import get_library_path, plain_path
 
         def opt(label, value, action, selectable=True):
             """An option the cursor cannot land on is drawn grey throughout, so
@@ -345,12 +357,9 @@ def show_main_menu_panes(
         scanning = bool(background_scanner and not background_scanner.is_done())
         signed_out = not (auth and getattr(auth, "is_signed_in", False))
 
-        rclone_connected = False
-        try:
-            import src.rclone as rclone
-            rclone_connected = rclone.is_authed()
-        except Exception:
-            rclone_connected = False
+        # From status_warmer, never checked here: this renders every frame.
+        status = status_warmer.snapshot
+        rclone_connected = status.rclone_connected
 
         # Anything that talks to Drive is offered only when the chosen mode can
         # actually reach it. Gating on sign-in instead would be wrong: anonymous
@@ -360,7 +369,7 @@ def show_main_menu_panes(
 
         # A library that is unset or unmounted blocks the same work, but not
         # the row that fixes it: Location stays reachable either way.
-        lib_blocked = library_blocked_reason()
+        lib_blocked = status.library_blocked
         blocked = mode_blocked or lib_blocked
 
         if blocked:
@@ -536,8 +545,16 @@ def show_main_menu_panes(
                 f"  {hints}{Colors.RESET}")
 
     last_footer = {"text": None}
+    last_status = {"snap": status_warmer.snapshot}
 
     def on_tick(_pane):
+        # A new status snapshot repaints, so a greyed row clears the moment
+        # rclone connects or the library comes back.
+        snap = status_warmer.snapshot
+        if snap != last_status["snap"]:
+            last_status["snap"] = snap
+            return True
+
         # Written here so the cache stays on this thread; the worker only measures.
         measured = warmer.drain()
         if measured:
@@ -620,10 +637,14 @@ def show_main_menu_panes(
         pane._cursor = _LAST["right_cursor"]
         pane._scroll = _LAST["right_scroll"]
 
-    out = pane.run()
-    position = pane._left_cursor
+    try:
+        out = pane.run()
+    finally:
+        # Even when run() raises, so neither worker thread outlives the screen.
+        warmer.stop()
+        status_warmer.stop()
 
-    warmer.stop()
+    position = pane._left_cursor
 
     rows = left_rows()
     pane._clamp_left(rows)

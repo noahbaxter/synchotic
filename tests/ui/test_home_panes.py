@@ -13,6 +13,19 @@ from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
 from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
 
 
+class _SyncStatus:
+    """StatusWarmer without the thread."""
+
+    last = None
+
+    def __init__(self, compute):
+        self.snapshot = compute()
+        _SyncStatus.last = self
+
+    def stop(self):
+        pass
+
+
 class _Auth:
     def __init__(self, signed_in=True):
         self.is_signed_in = signed_in
@@ -52,6 +65,9 @@ def build(monkeypatch, tmp_path):
         monkeypatch.setattr("src.rclone.is_authed", lambda: rclone_authed)
         monkeypatch.setattr("src.drive.auth.has_custom_client_config",
                             lambda: byoc_creds)
+        # The real warmer checks on a thread, so rows read straight after
+        # building would race it. Check once, up front.
+        monkeypatch.setattr("src.ui.screens.home_panes.StatusWarmer", _SyncStatus)
 
         def fake_run(self):
             captured["pane"] = self
@@ -737,6 +753,21 @@ class TestThereIsNoFilter:
     def test_the_footer_does_not_advertise_one(self, build):
         from src.ui.components import strip_ansi
         assert "filter" not in strip_ansi(build()["pane"].footer()).lower()
+
+
+def test_a_new_status_snapshot_repaints_once(build):
+    """A greyed row clears the moment rclone connects or the library returns."""
+    from src.ui.screens.status_warm import StatusSnapshot
+    ticks = []
+
+    def act(pane):
+        _SyncStatus.last.snapshot = StatusSnapshot(True, "")
+        ticks.append(pane.update_callback(pane))
+        ticks.append(pane.update_callback(pane))
+        return None
+
+    build(act=act)
+    assert ticks == [True, False]
 
 
 class TestSetlistsAreMeasuredOffTheRenderThread:
