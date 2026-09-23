@@ -181,8 +181,30 @@ class TestWhatItHandsBack:
 
 
 class TestTheColumnsLineUp:
-    """Numbers used to drift left and right with the length of the name beside
-    them, which made two rows impossible to compare at a glance."""
+    """Numbers line up across rows whatever the length of the name beside them."""
+
+    def test_a_narrow_pane_drops_size_before_crushing_names(self):
+        from src.ui.screens.pane_layout import CHARTS_W, SIZE_W, stat_widths
+        assert stat_widths(80) == (CHARTS_W, SIZE_W)
+        assert stat_widths(30) == (CHARTS_W, 0)
+
+    def test_the_size_column_shows_a_pending_removal(self, build, monkeypatch, tmp_path):
+        """A setlist turned off with charts on disk shows what purge will take."""
+        from types import SimpleNamespace
+        stats = SimpleNamespace(total_charts=1, total_size=100, synced_charts=1,
+                                synced_size=100, disk_files=1, disk_size=2048,
+                                disk_charts=1)
+        monkeypatch.setattr(
+            "src.ui.screens.home_panes.get_persistent_stats_cache",
+            lambda: SimpleNamespace(get_setlist=lambda f, n: stats,
+                                    set_setlist=lambda *a: None, save=lambda: None))
+        settings = UserSettings(tmp_path / "settings.json")
+        settings.set_drive_enabled("drive-1", True)
+        settings.set_subfolder_enabled("drive-1", "Setlist A", False)
+
+        rows = build(settings=settings)["right_for"](("drive", "drive-1"))
+        row = next(ln for ln in _labels(rows) if "Setlist A" in ln)
+        assert row.endswith("-2.0 KB")
 
     def test_every_setlist_row_is_the_same_visible_width(self, build):
         from chotic_ui.primitives.terminal import visible_len
@@ -196,7 +218,7 @@ class TestTheColumnsLineUp:
         out = build()
         out["right_for"](("drive", "drive-1"))
         header = strip_ansi(out["pane"].right_header)
-        assert "CHARTS" in header and "SIZE" in header and "CHANGE" in header
+        assert "CHARTS" in header and "SIZE" in header
 
     def test_drive_rows_are_the_same_visible_width(self, build):
         from chotic_ui.primitives.terminal import visible_len
@@ -543,7 +565,7 @@ class TestTheColumnHeaderSitsOverItsNumbers:
 
         # CHARTS is the first numeric column; its label and its value must share
         # a right edge.
-        assert header.rstrip().endswith("CHANGE")
+        assert header.rstrip().endswith("SIZE")
         charts_end = header.index("CHARTS") + len("CHARTS")
         value = row[:charts_end].rstrip()
         assert value and value[-1].isdigit(), f"{value!r} does not end at {charts_end}"

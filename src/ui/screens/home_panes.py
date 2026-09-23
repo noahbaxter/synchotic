@@ -32,6 +32,7 @@ from ..components import strip_ansi, format_setlist_item
 from .stats_warm import BackgroundWarmer
 from .pane_layout import (
     LEFT_WIDTH, LEFT_CHANGE_W,
+    stat_widths as _stat_widths,
     columns as _columns,
     plain_delta as _plain_delta,
     row as _row,
@@ -72,11 +73,6 @@ def _right_text_width() -> int:
     cols = shutil.get_terminal_size((100, 34))[0]
     w = max(72, min(cols - 2, 110))
     return max(20, (w - 4) - LEFT_WIDTH - 3 - 2)
-
-
-# Right-pane columns. Fixed widths so every row's numbers line up in the same
-# place instead of drifting with the length of the name beside them.
-CHARTS_W, SIZE_W, CHANGE_W = 7, 10, 11
 
 
 def _sync_label(cache: MainMenuCache) -> str:
@@ -248,26 +244,29 @@ def show_main_menu_panes(
         if state == "scanning":
             body = f"{Colors.ITALIC}{body}{Colors.RESET}"
 
-        # Three columns that each answer one question: how much of it do I have,
-        # how big is it, and what will Sync do to it.
+        # Two columns: how much of it do I have, and how big is it -- or, while
+        # Sync has something to do, what Sync will do to it instead.
         shown_charts = effective_chart_count(
             name, total_charts, disk_charts,
             drive_name=folder_lookup.get(folder_id, {}).get("name", ""),
             forced=forced,
         )
         charts = f"{shown_charts}" if shown_charts else ""
-        size = format_size(total_size) if total_size else ""
         change = _plain_delta(delta)
-        change_tint = (Colors.SUCCESS if change.startswith("+")
-                       else Colors.ERROR if change else "")
+        if change:
+            size_col = change
+            size_tint = Colors.SUCCESS if change.startswith("+") else Colors.ERROR
+        else:
+            size_col = format_size(total_size) if total_size else ""
+            size_tint = Colors.MUTED
 
-        label = _columns(
-            f"{dot} {body}",
-            [(charts, CHARTS_W, Colors.MUTED),
-             (size, SIZE_W, Colors.MUTED),
-             (change, CHANGE_W, change_tint)],
-            _right_text_width(),
-        )
+        row_width = _right_text_width()
+        charts_w, size_w = _stat_widths(row_width)
+        cells = [(charts, charts_w, Colors.MUTED)]
+        if size_w:
+            cells.append((size_col, size_w, size_tint))
+
+        label = _columns(f"{dot} {body}", cells, row_width)
         return _row(label, ("setlist", folder_id, name))
 
     def _drive_right(folder_id):
@@ -433,12 +432,15 @@ def show_main_menu_panes(
             # Column labels live in the header band rather than as a first row,
             # so they stay put while a 79-setlist drive scrolls underneath.
             # One short of the pane width: the frame adds a single space itself.
+            row_width = _right_text_width()
+            charts_w, size_w = _stat_widths(row_width)
+            head_cells = [("CHARTS", charts_w, Colors.MUTED)]
+            if size_w:
+                head_cells.append(("SIZE", size_w, Colors.MUTED))
             pane.right_header = _columns(
                 f"{Colors.BOLD}{folder.get('name', '')}{Colors.RESET}",
-                [("CHARTS", CHARTS_W, Colors.MUTED),
-                 ("SIZE", SIZE_W, Colors.MUTED),
-                 ("CHANGE", CHANGE_W, Colors.MUTED)],
-                _right_text_width(),
+                head_cells,
+                row_width,
             )
         return _drive_right(folder_id)
 
