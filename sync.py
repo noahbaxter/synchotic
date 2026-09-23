@@ -58,7 +58,6 @@ from src.ui import (
     show_main_menu_panes,
     show_oauth_prompt,
     compute_main_menu_cache,
-    update_menu_cache_on_toggle,
 )
 from src.sync import FolderStatsCache, BackgroundScanner
 from src.ui.primitives import CancelInput, clear_screen
@@ -210,31 +209,6 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
                         display.session_expired_notice()
                         from src.ui.primitives import wait_with_skip
                         wait_with_skip(4.0)
-
-            elif action == "configure":
-                # Enter on a drive - go directly to configure that drive
-                self.handle_configure_drive(value)
-                # Fast update: just regenerate this folder + global totals
-                if menu_cache:
-                    update_menu_cache_on_toggle(
-                        menu_cache, value, self.folders, self.user_settings,
-                        self.folder_stats_cache, combined_drives, self._background_scanner
-                    )
-
-            elif action == "toggle":
-                # Space on a drive - toggle drive on/off
-                self.handle_toggle_drive(value)
-                # Fast update: just regenerate toggled folder + global totals
-                if menu_cache:
-                    update_menu_cache_on_toggle(
-                        menu_cache, value, self.folders, self.user_settings,
-                        self.folder_stats_cache, combined_drives, self._background_scanner
-                    )
-
-            elif action == "toggle_group":
-                # Enter/Space on a group - expand/collapse (NO cache invalidation!)
-                self.handle_toggle_group(value)
-                # Keep using the same cache - just showing/hiding items
 
             elif action == "rescan":
                 self._handle_force_rescan()

@@ -1,13 +1,12 @@
-"""Drive list and custom-folder management: loading, configuring, scanning,
-adding, and removing them."""
+"""Drive list and custom-folder management: loading, scanning, adding, and
+removing them."""
 
 from src.app.config import API_KEY
 from src.config import DrivesConfig
 from src.core.formatting import format_size
-from src.core.paths import get_download_path
 from src.drive import DriveClient
 from src.drive.client import DriveClientConfig
-from src.ui import show_add_custom_folder, show_confirmation, show_subfolder_settings
+from src.ui import show_add_custom_folder, show_confirmation
 from src.ui.primitives import wait_with_skip
 from src.ui.widgets import display
 
@@ -66,25 +65,6 @@ class DriveManagementMixin:
         # are known, write that down as toggles (a no-op after the first run).
         self.user_settings.settle_drive_defaults(
             [f["folder_id"] for f in self.folders])
-
-    def handle_configure_drive(self, folder_id: str):
-        """Configure setlists for a specific drive, or show options for custom folders."""
-        folder = self._get_folder_by_id(folder_id)
-        if not folder:
-            return
-
-        # Files come from BackgroundScanner - no need to load separately
-        # Show subfolder settings (works for both regular and custom folders)
-        result = show_subfolder_settings(folder, self.user_settings, get_download_path(), self._background_scanner)
-
-        # Invalidate this folder's stats (setlists may have changed)
-        self.folder_stats_cache.invalidate(folder_id)
-
-        # Handle custom folder actions
-        if result == "scan":
-            self._scan_single_custom_folder(folder)
-        elif result == "remove":
-            self._remove_custom_folder(folder.get("folder_id"), folder.get("name"))
 
     def _scan_single_custom_folder(self, folder: dict):
         """Scan a single custom folder."""
@@ -164,19 +144,6 @@ class DriveManagementMixin:
 
         print(f"\n  Removed: {folder_name}")
         wait_with_skip(2)
-
-    def handle_toggle_drive(self, folder_id: str):
-        """Toggle a drive on/off at the top level (preserves setlist settings)."""
-        self.user_settings.toggle_drive(folder_id)
-        self.user_settings.save()
-        if self._background_scanner:
-            enabled = self.user_settings.is_drive_enabled(folder_id)
-            self._background_scanner.notify_drive_toggled(folder_id, enabled)
-
-    def handle_toggle_group(self, group_name: str):
-        """Toggle a group expanded/collapsed."""
-        self.user_settings.toggle_group_expanded(group_name)
-        self.user_settings.save()
 
     def handle_add_custom_folder(self) -> bool:
         """

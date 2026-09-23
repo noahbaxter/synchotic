@@ -3,18 +3,15 @@ Two-pane home screen.
 
 Left pane is the drive list, with group names demoted to section headers. Right
 pane is whatever the left cursor sits on: a drive's setlists, or the settings
-list. That folds in the drill-down that used to be drive_config.py -- toggling a
-setlist and watching its drive's totals move now happen on one screen instead of
-two.
+list.
 
 Sync and Quit are keys rather than rows (S and Esc). Their live state moves to
 the footer, which TwoPane recomputes every frame, so the sync delta and the scan
 progress stay visible from every row instead of only when you scroll to them.
 
-Returns the same ``(action, value, position)`` triple the one-column menu did,
-so sync.py's dispatch loop is unchanged. Setlist and drive toggles never return:
-they mutate settings and refresh the cache in place, because leaving the screen
-to apply a toggle is the thing this layout exists to stop doing.
+Returns an ``(action, value, position)`` triple for sync.py to dispatch.
+Setlist and drive toggles never return: they mutate settings and refresh the
+cache in place.
 """
 
 import shutil
