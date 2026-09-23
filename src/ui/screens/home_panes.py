@@ -18,19 +18,25 @@ to apply a toggle is the thing this layout exists to stop doing.
 """
 
 import shutil
+import time as _time
 from pathlib import Path
 
 from chotic_ui.widgets.two_pane import TwoPane
-from chotic_ui.primitives.terminal import truncate_ansi
+from chotic_ui.primitives.terminal import get_terminal_width, truncate_ansi
 
 from src.config import UserSettings, DrivesConfig
 from src.core.formatting import sort_by_name, format_duration, format_size
+from src.core.logging import debug_log
 from src.sync import get_persistent_stats_cache, compute_setlist_stats
 from src.sync.archive_charts import effective_chart_count, forced_counts
 from ..primitives import Colors
 from ..components import strip_ansi, format_setlist_item
+from .stats_warm import BackgroundWarmer
+from .status_warm import StatusWarmer, StatusSnapshot
+from .menu_cache_warm import MenuCacheWarmer
 from .pane_layout import (
     LEFT_WIDTH, LEFT_CHANGE_W,
+    stat_widths as _stat_widths,
     columns as _columns,
     plain_delta as _plain_delta,
     row as _row,
@@ -73,9 +79,18 @@ def _right_text_width() -> int:
     return max(20, (w - 4) - LEFT_WIDTH - 3 - 2)
 
 
-# Right-pane columns. Fixed widths so every row's numbers line up in the same
-# place instead of drifting with the length of the name beside them.
-CHARTS_W, SIZE_W, CHANGE_W = 7, 10, 11
+def _timed(label, fn):
+    """fn, logging any call over 50ms to the debug log. A frozen home screen
+    otherwise leaves nothing to say which closure it was stuck in."""
+    def timed(*args, **kwargs):
+        t0 = _time.time()
+        try:
+            return fn(*args, **kwargs)
+        finally:
+            dt = _time.time() - t0
+            if dt > 0.05:
+                debug_log(f"TIMING | {label} SLOW: {dt:.3f}s")
+    return timed
 
 
 def _sync_label(cache: MainMenuCache) -> str:
@@ -133,14 +148,55 @@ def show_main_menu_panes(
     persistent = get_persistent_stats_cache()
     # Read once for the life of the screen rather than per row per frame.
     forced = forced_counts()
-    # Setlist stats are computed once per drive, not per frame: right_rows runs
-    # on every repaint and compute_setlist_stats walks the disk.
+    # Setlist stats are requested once per drive and measured on a worker:
+    # compute_setlist_stats walks the disk, seconds per setlist on a network
+    # library, and right_rows runs on every repaint.
     warmed: set[str] = set()
+    warmer = BackgroundWarmer(
+        lambda folder, name: compute_setlist_stats(
+            folder, name, download_path, user_settings)
+    )
+
+    def _check_status() -> StatusSnapshot:
+        from ...core.paths import library_blocked_reason
+        try:
+            import src.rclone as rclone
+            rclone_connected = rclone.is_authed()
+        except Exception:
+            rclone_connected = False
+        return StatusSnapshot(rclone_connected=rclone_connected,
+                              library_blocked=library_blocked_reason())
+
+    status_warmer = StatusWarmer(_check_status)
+
+    def _recompute_menu_cache() -> MainMenuCache:
+        # Runs on MenuCacheWarmer's thread. It can measure the same setlist as
+        # BackgroundWarmer at the same time; both caches lock, so the worst
+        # case is measuring it twice.
+        if folder_stats_cache:
+            folder_stats_cache.invalidate_all()
+        return compute_main_menu_cache(
+            folders, user_settings, download_path, drives_config,
+            folder_stats_cache, background_scanner,
+        )
+
+    def _scanner_changed() -> bool:
+        return background_scanner.check_updates() if background_scanner else False
+
+    menu_cache_warmer = MenuCacheWarmer(
+        _scanner_changed,
+        _recompute_menu_cache,
+    )
 
     def _setlists(folder):
         return sort_by_name(_get_setlist_names(folder, background_scanner))
 
     # ---- left pane ----
+
+    def _unverified(body: str) -> str:
+        """Italic and dim for a row whose numbers are remembered or still
+        being counted rather than scanned. A disabled row stays darker still."""
+        return f"{Colors.ITALIC}{Colors.MUTED}{body}{Colors.RESET}"
 
     def _drive_label(folder, indent):
         folder_id = folder.get("folder_id", "")
@@ -151,8 +207,8 @@ def show_main_menu_panes(
 
         dot = f"{Colors.SUCCESS}●{Colors.RESET}" if enabled else f"{Colors.MUTED_DIM}○{Colors.RESET}"
         body = name if enabled else f"{Colors.MUTED_DIM}{name}{Colors.RESET}"
-        if state == "scanning":
-            body = f"{Colors.ITALIC}{body}{Colors.RESET}"
+        if state != "current":
+            body = _unverified(body)
 
         head = f"{'  ' if indent else ''}{dot} {body}"
 
@@ -199,20 +255,13 @@ def show_main_menu_panes(
     # ---- right pane: a drive's setlists ----
 
     def _warm(folder, setlists):
+        """Hand unmeasured setlists to the worker; on_tick collects the results."""
         folder_id = folder.get("folder_id", "")
         if folder_id in warmed or not download_path or not folder.get("files"):
             return
-        dirty = False
-        for name in setlists:
-            if not persistent.get_setlist(folder_id, name):
-                persistent.set_setlist(
-                    folder_id, name,
-                    compute_setlist_stats(folder, name, download_path, user_settings),
-                )
-                dirty = True
-        if dirty:
-            persistent.save()
-        warmed.add(folder_id)
+        warmed.add(folder_id)  # asked for once; the worker owns it from here
+        warmer.request(folder, folder_id,
+                       [n for n in setlists if not persistent.get_setlist(folder_id, n)])
 
     def _setlist_row(folder_id, name, drive_enabled):
         enabled = user_settings.is_subfolder_enabled(folder_id, name)
@@ -246,29 +295,32 @@ def show_main_menu_panes(
         off = not enabled or not drive_enabled
         dot = f"{Colors.MUTED_DIM}○{Colors.RESET}" if off else f"{Colors.SUCCESS}●{Colors.RESET}"
         body = f"{Colors.MUTED_DIM}{name}{Colors.RESET}" if off else name
-        if state == "scanning":
-            body = f"{Colors.ITALIC}{body}{Colors.RESET}"
+        if state != "current":
+            body = _unverified(body)
 
-        # Three columns that each answer one question: how much of it do I have,
-        # how big is it, and what will Sync do to it.
+        # Two columns: how much of it do I have, and how big is it -- or, while
+        # Sync has something to do, what Sync will do to it instead.
         shown_charts = effective_chart_count(
             name, total_charts, disk_charts,
             drive_name=folder_lookup.get(folder_id, {}).get("name", ""),
             forced=forced,
         )
         charts = f"{shown_charts}" if shown_charts else ""
-        size = format_size(total_size) if total_size else ""
         change = _plain_delta(delta)
-        change_tint = (Colors.SUCCESS if change.startswith("+")
-                       else Colors.ERROR if change else "")
+        if change:
+            size_col = change
+            size_tint = Colors.SUCCESS if change.startswith("+") else Colors.ERROR
+        else:
+            size_col = format_size(total_size) if total_size else ""
+            size_tint = Colors.MUTED
 
-        label = _columns(
-            f"{dot} {body}",
-            [(charts, CHARTS_W, Colors.MUTED),
-             (size, SIZE_W, Colors.MUTED),
-             (change, CHANGE_W, change_tint)],
-            _right_text_width(),
-        )
+        row_width = _right_text_width()
+        charts_w, size_w = _stat_widths(row_width)
+        cells = [(charts, charts_w, Colors.MUTED)]
+        if size_w:
+            cells.append((size_col, size_w, size_tint))
+
+        label = _columns(f"{dot} {body}", cells, row_width)
         return _row(label, ("setlist", folder_id, name))
 
     def _drive_right(folder_id):
@@ -288,8 +340,7 @@ def show_main_menu_panes(
             label = "Re-scan folder" if folder.get("files") else "Scan folder"
             # A scan with nowhere to write is greyed with the reason beside
             # it, rather than left as a row that ignores you.
-            from ...core.paths import library_blocked_reason
-            lib_blocked = library_blocked_reason()
+            lib_blocked = status_warmer.snapshot.library_blocked
             if lib_blocked:
                 rows.append(_row(f"  {Colors.MUTED_DIM}{label}  ({lib_blocked}){Colors.RESET}",
                                  ("scan_folder", folder_id, None), False))
@@ -331,7 +382,7 @@ def show_main_menu_panes(
 
     def _settings_right():
         from .account import account_status
-        from ...core.paths import get_library_path, library_blocked_reason, plain_path
+        from ...core.paths import get_library_path, plain_path
 
         def opt(label, value, action, selectable=True):
             """An option the cursor cannot land on is drawn grey throughout, so
@@ -347,12 +398,9 @@ def show_main_menu_panes(
         scanning = bool(background_scanner and not background_scanner.is_done())
         signed_out = not (auth and getattr(auth, "is_signed_in", False))
 
-        rclone_connected = False
-        try:
-            import src.rclone as rclone
-            rclone_connected = rclone.is_authed()
-        except Exception:
-            rclone_connected = False
+        # From status_warmer, never checked here: this renders every frame.
+        status = status_warmer.snapshot
+        rclone_connected = status.rclone_connected
 
         # Anything that talks to Drive is offered only when the chosen mode can
         # actually reach it. Gating on sign-in instead would be wrong: anonymous
@@ -362,7 +410,7 @@ def show_main_menu_panes(
 
         # A library that is unset or unmounted blocks the same work, but not
         # the row that fixes it: Location stays reachable either way.
-        lib_blocked = library_blocked_reason()
+        lib_blocked = status.library_blocked
         blocked = mode_blocked or lib_blocked
 
         if blocked:
@@ -434,12 +482,15 @@ def show_main_menu_panes(
             # Column labels live in the header band rather than as a first row,
             # so they stay put while a 79-setlist drive scrolls underneath.
             # One short of the pane width: the frame adds a single space itself.
+            row_width = _right_text_width()
+            charts_w, size_w = _stat_widths(row_width)
+            head_cells = [("CHARTS", charts_w, Colors.MUTED)]
+            if size_w:
+                head_cells.append(("SIZE", size_w, Colors.MUTED))
             pane.right_header = _columns(
                 f"{Colors.BOLD}{folder.get('name', '')}{Colors.RESET}",
-                [("CHARTS", CHARTS_W, Colors.MUTED),
-                 ("SIZE", SIZE_W, Colors.MUTED),
-                 ("CHANGE", CHANGE_W, Colors.MUTED)],
-                _right_text_width(),
+                head_cells,
+                row_width,
             )
         return _drive_right(folder_id)
 
@@ -447,6 +498,7 @@ def show_main_menu_panes(
         """Repoint the left pane's numbers at the toggle that just happened.
         The fast path needs a stats cache to write through; without one the only
         correct option is to recompute the lot."""
+        menu_cache_warmer.invalidate()
         if folder_stats_cache is not None:
             update_menu_cache_on_toggle(
                 cache, folder_id, folders, user_settings,
@@ -531,25 +583,48 @@ def show_main_menu_panes(
         hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} panes  "
                  f"{Colors.PRIMARY}Space{Colors.MUTED} toggle  "
                  f"{Colors.PRIMARY}Esc{Colors.MUTED} quit")
-        return (f"  {Colors.MUTED}{('   ·   '.join(parts))}{Colors.RESET}\n"
-                f"  {hints}{Colors.RESET}")
+        # Neither line may wrap: the frame redraws from the top every tick, so
+        # a wrapped line pushes the box's bottom off the screen. One column
+        # spare, since a line that exactly fills the width wraps on some
+        # terminals.
+        width = max(8, get_terminal_width() - 1)
+        status = f"  {Colors.MUTED}{('   ·   '.join(parts))}{Colors.RESET}"
+        return (f"{truncate_ansi(status, width)}{Colors.RESET}\n"
+                f"{truncate_ansi(f'  {hints}', width)}{Colors.RESET}")
 
     last_footer = {"text": None}
+    last_status = {"snap": status_warmer.snapshot}
 
     def on_tick(_pane):
-        if not background_scanner:
-            return False
-        changed = background_scanner.check_updates()
-        if changed:
-            if folder_stats_cache:
-                folder_stats_cache.invalidate_all()
-            _copy_cache(cache, compute_main_menu_cache(
-                folders, user_settings, download_path, drives_config,
-                folder_stats_cache, background_scanner,
-            ))
+        # A new status snapshot repaints, so a greyed row clears the moment
+        # rclone connects or the library comes back.
+        snap = status_warmer.snapshot
+        if snap != last_status["snap"]:
+            last_status["snap"] = snap
+            return True
+
+        # Written here so the cache stays on this thread; the worker only measures.
+        measured = warmer.drain()
+        if measured:
+            for folder_id, name, stats in measured:
+                if stats is not None:
+                    persistent.set_setlist(folder_id, name, stats)
+            persistent.save()
+            return True
+        if warmer.busy:
+            return True  # keep repainting so the rest arrive as they land
+
+        # A scan-triggered recompute finished on MenuCacheWarmer's thread;
+        # applying it here is only attribute copies.
+        new_cache = menu_cache_warmer.drain()
+        if new_cache is not None:
+            _copy_cache(cache, new_cache)
             warmed.clear()
             last_footer["text"] = None
             return True
+
+        if not background_scanner:
+            return False
 
         # Otherwise repaint only when the one line that moves has actually
         # moved. Redrawing on every tick regardless is what made a running scan
@@ -569,8 +644,8 @@ def show_main_menu_panes(
     pane = TwoPane(
         title="Chart Packs",
         subtitle=strip_ansi(cache.subtitle or ""),
-        left_rows=left_rows,
-        right_rows=right_rows,
+        left_rows=_timed("home_left_rows", left_rows),
+        right_rows=_timed("home_right_rows", right_rows),
         on_left_space=on_left_space,
         on_right_enter=on_right_enter,
         space_activates=True,
@@ -590,7 +665,8 @@ def show_main_menu_panes(
         right_filterable=False,
         footer=footer,
         keys={"s": key_sync, "S": key_sync},
-        update_callback=on_tick if background_scanner else None,
+        # Always ticking: measured setlists arrive whether or not a scan runs.
+        update_callback=_timed("home_on_tick", on_tick),
         # The footer clock counts in seconds; polling far faster than it changes
         # only buys repaints nobody asked for.
         refresh_interval_ms=400,
@@ -608,7 +684,14 @@ def show_main_menu_panes(
         pane._cursor = _LAST["right_cursor"]
         pane._scroll = _LAST["right_scroll"]
 
-    out = pane.run()
+    try:
+        out = pane.run()
+    finally:
+        # Even when run() raises, so no worker thread outlives the screen.
+        warmer.stop()
+        status_warmer.stop()
+        menu_cache_warmer.stop()
+
     position = pane._left_cursor
 
     rows = left_rows()

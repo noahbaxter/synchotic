@@ -576,13 +576,10 @@ class BackgroundScanner:
             self._stats.end_time = time.time()
 
     def _scan_order(self) -> list:
-        """Setlist ids, fewest remembered charts first.
-
-        Downloading a setlist cannot start until it has been scanned, so
-        finishing the cheap ones first gives the downloader work sooner rather
-        than leaving it idle behind one large setlist. A setlist we have never
-        scanned has nothing to sort on and goes last, after everything we can
-        cost. Call under the lock.
+        """Setlist ids: ones last seen out of sync (or never scanned) first,
+        since they are the likeliest to need a download or purge, then fewest
+        remembered charts, so the downloader gets work sooner. Call under the
+        lock.
         """
         if self._order_cache is not None and len(self._order_cache) == len(self._all_setlists):
             return self._order_cache
@@ -597,6 +594,11 @@ class BackgroundScanner:
             n = counts.remembered_chart_count(info.drive_id, info.name)
             return unknown if n is None else n
 
+        def priority(setlist_id: str) -> tuple:
+            info = self._all_setlists[setlist_id]
+            needs_attention = counts.remembered_needs_attention(info.drive_id, info.name)
+            return (0 if needs_attention else 1, cost(setlist_id))
+
         # Cheapest first within a drive, then round-robin across drives rather
         # than draining one drive at a time. Depth-first leaves every other
         # drive at zero until the first one finishes, so a single large drive
@@ -605,7 +607,7 @@ class BackgroundScanner:
         for setlist_id in self._all_setlists:
             by_drive.setdefault(self._all_setlists[setlist_id].drive_id, []).append(setlist_id)
         for ids in by_drive.values():
-            ids.sort(key=cost)
+            ids.sort(key=priority)
 
         order = []
         queues = list(by_drive.values())

@@ -9,8 +9,25 @@ from ..components import strip_ansi
 
 LEFT_WIDTH = 38
 
+# Right-pane columns, fixed so numbers line up across rows. The SIZE column
+# shows the pending change instead while there is one.
+CHARTS_W, SIZE_W = 7, 11
+
+# Below this, a name isn't worth reading; drop columns before crushing it further.
+MIN_NAME_W = 24
+
 # Left-pane columns.
 LEFT_CHANGE_W = 9
+
+
+def stat_widths(width: int) -> tuple[int, int]:
+    """Which of CHARTS/SIZE fit before the name column gets crushed. Priority
+    is NAME > CHARTS (always kept) > SIZE, so a narrow terminal loses SIZE
+    first."""
+    for charts_w, size_w in ((CHARTS_W, SIZE_W), (CHARTS_W, 0)):
+        if width - (charts_w + size_w) - 1 >= MIN_NAME_W:
+            return charts_w, size_w
+    return CHARTS_W, 0
 
 
 def cell(text: str, width: int, color: str = "") -> str:

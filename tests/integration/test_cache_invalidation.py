@@ -6,6 +6,7 @@ doesn't blow away folder B's cache. 7+ fix commits for cache invalidation bugs.
 """
 
 import tempfile
+import threading
 from pathlib import Path
 from unittest.mock import patch
 
@@ -44,6 +45,7 @@ class TestPerSetlistInvalidation:
                 cache._setlist_cache = {}
                 cache._dirty = False
                 cache._path = Path(tmpdir) / "stats.json"
+                cache._lock = threading.RLock()
 
             folder_id = "drive1"
             cache.set_setlist(folder_id, "SetlistA", make_setlist_stats(total_charts=10))
@@ -71,6 +73,7 @@ class TestPerFolderInvalidation:
                 cache._setlist_cache = {}
                 cache._dirty = False
                 cache._path = Path(tmpdir) / "stats.json"
+                cache._lock = threading.RLock()
 
             cache.set_setlist("driveX", "SetlistX", make_setlist_stats(total_charts=10))
             cache.set_setlist("driveY", "SetlistY", make_setlist_stats(total_charts=20))
@@ -94,6 +97,7 @@ class TestFullInvalidation:
                 cache._setlist_cache = {}
                 cache._dirty = False
                 cache._path = Path(tmpdir) / "stats.json"
+                cache._lock = threading.RLock()
 
             cache.set_setlist("drive1", "A", make_setlist_stats())
             cache.set_setlist("drive2", "B", make_setlist_stats())
@@ -117,6 +121,7 @@ class TestCacheSetGetRoundTrip:
                 cache._setlist_cache = {}
                 cache._dirty = False
                 cache._path = Path(tmpdir) / "stats.json"
+                cache._lock = threading.RLock()
 
             original = make_setlist_stats(
                 total_charts=42,
@@ -149,6 +154,7 @@ class TestSyncInvalidatesOnlyAffectedSetlist:
                 cache._setlist_cache = {}
                 cache._dirty = False
                 cache._path = Path(tmpdir) / "stats.json"
+                cache._lock = threading.RLock()
 
             folder_id = "drive1"
             cache.set_setlist(folder_id, "SyncedSetlist", make_setlist_stats(synced_charts=5))
@@ -174,6 +180,7 @@ class TestPurgeInvalidatesOnlyAffectedSetlists:
                 cache._setlist_cache = {}
                 cache._dirty = False
                 cache._path = Path(tmpdir) / "stats.json"
+                cache._lock = threading.RLock()
 
             folder_id = "drive1"
             cache.set_setlist(folder_id, "PurgedSetlistA", make_setlist_stats(disk_files=50))
@@ -201,6 +208,7 @@ class TestSettingsHashCacheMiss:
                 cache._setlist_cache = {}
                 cache._dirty = False
                 cache._path = Path(tmpdir) / "stats.json"
+                cache._lock = threading.RLock()
 
             # The legacy folder-level cache uses settings_hash
             folder_stats = CachedFolderStats(

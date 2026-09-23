@@ -13,6 +13,19 @@ from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
 from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
 
 
+class _SyncStatus:
+    """StatusWarmer without the thread."""
+
+    last = None
+
+    def __init__(self, compute):
+        self.snapshot = compute()
+        _SyncStatus.last = self
+
+    def stop(self):
+        pass
+
+
 class _Auth:
     def __init__(self, signed_in=True):
         self.is_signed_in = signed_in
@@ -52,6 +65,9 @@ def build(monkeypatch, tmp_path):
         monkeypatch.setattr("src.rclone.is_authed", lambda: rclone_authed)
         monkeypatch.setattr("src.drive.auth.has_custom_client_config",
                             lambda: byoc_creds)
+        # The real warmer checks on a thread, so rows read straight after
+        # building would race it. Check once, up front.
+        monkeypatch.setattr("src.ui.screens.home_panes.StatusWarmer", _SyncStatus)
 
         def fake_run(self):
             captured["pane"] = self
@@ -181,8 +197,30 @@ class TestWhatItHandsBack:
 
 
 class TestTheColumnsLineUp:
-    """Numbers used to drift left and right with the length of the name beside
-    them, which made two rows impossible to compare at a glance."""
+    """Numbers line up across rows whatever the length of the name beside them."""
+
+    def test_a_narrow_pane_drops_size_before_crushing_names(self):
+        from src.ui.screens.pane_layout import CHARTS_W, SIZE_W, stat_widths
+        assert stat_widths(80) == (CHARTS_W, SIZE_W)
+        assert stat_widths(30) == (CHARTS_W, 0)
+
+    def test_the_size_column_shows_a_pending_removal(self, build, monkeypatch, tmp_path):
+        """A setlist turned off with charts on disk shows what purge will take."""
+        from types import SimpleNamespace
+        stats = SimpleNamespace(total_charts=1, total_size=100, synced_charts=1,
+                                synced_size=100, disk_files=1, disk_size=2048,
+                                disk_charts=1)
+        monkeypatch.setattr(
+            "src.ui.screens.home_panes.get_persistent_stats_cache",
+            lambda: SimpleNamespace(get_setlist=lambda f, n: stats,
+                                    set_setlist=lambda *a: None, save=lambda: None))
+        settings = UserSettings(tmp_path / "settings.json")
+        settings.set_drive_enabled("drive-1", True)
+        settings.set_subfolder_enabled("drive-1", "Setlist A", False)
+
+        rows = build(settings=settings)["right_for"](("drive", "drive-1"))
+        row = next(ln for ln in _labels(rows) if "Setlist A" in ln)
+        assert row.endswith("-2.0 KB")
 
     def test_every_setlist_row_is_the_same_visible_width(self, build):
         from chotic_ui.primitives.terminal import visible_len
@@ -196,7 +234,7 @@ class TestTheColumnsLineUp:
         out = build()
         out["right_for"](("drive", "drive-1"))
         header = strip_ansi(out["pane"].right_header)
-        assert "CHARTS" in header and "SIZE" in header and "CHANGE" in header
+        assert "CHARTS" in header and "SIZE" in header
 
     def test_drive_rows_are_the_same_visible_width(self, build):
         from chotic_ui.primitives.terminal import visible_len
@@ -328,6 +366,133 @@ class _Scanner:
 
     def __getattr__(self, name):
         return lambda *a, **k: False
+
+
+class TestUnscannedRowsLookUnscanned:
+    """A count from memory and a count from a scan must look different."""
+
+    class _Scan:
+        def __init__(self, scanned):
+            self._scanned = scanned
+
+        def is_setlist_scanned(self, folder_id, name):
+            return self._scanned
+
+        def is_scanning(self, folder_id):
+            return not self._scanned
+
+        def is_scanned(self, folder_id):
+            return self._scanned
+
+        def is_done(self):
+            return self._scanned
+
+        def get_stats(self):
+            class _S:
+                current_folder = None
+                folders_done = 0
+                folders_total = 1
+                api_calls = 0
+                elapsed = 0.0
+                current_folder_elapsed = 0.0
+            return _S()
+
+        def __getattr__(self, name):
+            return lambda *a, **k: False
+
+    def _setlist_labels(self, build, scanned):
+        rows = build(auth=_Auth(), scanner=self._Scan(scanned))["right_for"](
+            ("drive", "drive-1"))
+        return [r[0](False, False) for r in rows
+                if r[1] and r[1][0] == "setlist"]
+
+    def test_a_row_still_being_counted_is_dimmed(self, build):
+        """MUTED appears elsewhere in a row, so this checks the pair wrapping
+        the name."""
+        from src.ui.primitives import Colors
+        mark = f"{Colors.ITALIC}{Colors.MUTED}"
+        labels = self._setlist_labels(build, scanned=False)
+
+        assert labels, "no setlist rows"
+        for label in labels:
+            assert mark in label, f"italic but not dimmed: {label!r}"
+
+    def test_a_scanned_row_is_left_alone(self, build):
+        from src.ui.primitives import Colors
+        mark = f"{Colors.ITALIC}{Colors.MUTED}"
+        labels = self._setlist_labels(build, scanned=True)
+
+        assert labels, "no setlist rows"
+        for label in labels:
+            assert mark not in label, f"marked unverified: {label!r}"
+            assert Colors.ITALIC not in label, f"still italic: {label!r}"
+
+    def test_the_two_do_not_look_the_same(self, build):
+        unscanned = self._setlist_labels(build, scanned=False)
+        scanned = self._setlist_labels(build, scanned=True)
+
+        assert unscanned != scanned, "scanned and unscanned render identically"
+
+
+class TestTheFooterNeverWraps:
+    """The frame is redrawn from the top of the screen every tick. A footer
+    line that wraps pushes every row below it down, so the box grows a line and
+    its bottom walks off the screen."""
+
+    class _LongScan:
+        """Mid-scan on a setlist with a name long enough to overflow."""
+
+        def is_done(self):
+            return False
+
+        def is_scanning(self, folder_id):
+            return True
+
+        def get_stats(self):
+            class _S:
+                current_folder = ("Drummer's Monthly Drive/"
+                                  "Tournament of Champions Season 4 Qualifiers")
+                folders_done = 3
+                folders_total = 177
+                api_calls = 12
+                elapsed = 11.0
+                current_folder_elapsed = 11.0
+            return _S()
+
+        def __getattr__(self, name):
+            return lambda *a, **k: False
+
+    def _footer_lines(self, build, monkeypatch, width):
+        from src.ui.components import strip_ansi
+        monkeypatch.setattr("src.ui.screens.home_panes.get_terminal_width",
+                            lambda: width)
+        captured = {}
+
+        def act(pane):
+            captured["footer"] = pane.footer()
+            return None
+
+        build(act=act, auth=_Auth(), scanner=self._LongScan())
+        return [strip_ansi(line) for line in captured["footer"].split("\n")]
+
+    def test_a_long_setlist_name_is_cut_to_the_width(self, build, monkeypatch):
+        lines = self._footer_lines(build, monkeypatch, 60)
+
+        assert lines, "no footer was drawn"
+        for line in lines:
+            assert len(line) < 60, f"{len(line)} columns wide: {line!r}"
+
+    def test_it_still_says_what_is_being_scanned(self, build, monkeypatch):
+        lines = self._footer_lines(build, monkeypatch, 120)
+
+        assert "Scanning Drummer's Monthly Drive" in lines[0]
+
+    def test_a_narrow_terminal_does_not_lose_the_second_line(self, build, monkeypatch):
+        lines = self._footer_lines(build, monkeypatch, 24)
+
+        assert len(lines) == 2, f"expected two footer lines, got {lines}"
+        for line in lines:
+            assert len(line) < 24, f"{len(line)} columns wide: {line!r}"
 
 
 class TestUnavailableOptionsLookUnavailable:
@@ -472,12 +637,25 @@ class TestALiveScanDoesNotRepaintForNothing:
         assert pane.update_callback(pane) is False    # nothing moved since
 
     def test_it_repaints_when_the_scan_reports_a_change(self, build):
+        """The recompute lands from a worker within a poll or two. Polls from
+        inside `act`, because the workers stop once the screen returns."""
+        import time
         scanner = _Scanner(done=False)
-        out = build(auth=_Auth(), scanner=scanner)
-        pane = out["pane"]
-        pane.update_callback(pane)
-        scanner.check_updates = lambda: True
-        assert pane.update_callback(pane) is True
+        holder = {"repainted": False}
+
+        def act(pane):
+            pane.update_callback(pane)
+            scanner.check_updates = lambda: True
+
+            deadline = time.time() + 2.0
+            while time.time() < deadline:
+                if pane.update_callback(pane):
+                    holder["repainted"] = True
+                    break
+                time.sleep(0.01)
+
+        build(act=act, auth=_Auth(), scanner=scanner)
+        assert holder["repainted"], "expected a repaint once the background recompute landed"
 
     def test_it_repaints_when_the_footer_text_moves(self, build):
         scanner = _Scanner(done=False)
@@ -543,7 +721,7 @@ class TestTheColumnHeaderSitsOverItsNumbers:
 
         # CHARTS is the first numeric column; its label and its value must share
         # a right edge.
-        assert header.rstrip().endswith("CHANGE")
+        assert header.rstrip().endswith("SIZE")
         charts_end = header.index("CHARTS") + len("CHARTS")
         value = row[:charts_end].rstrip()
         assert value and value[-1].isdigit(), f"{value!r} does not end at {charts_end}"
@@ -715,3 +893,116 @@ class TestThereIsNoFilter:
     def test_the_footer_does_not_advertise_one(self, build):
         from src.ui.components import strip_ansi
         assert "filter" not in strip_ansi(build()["pane"].footer()).lower()
+
+
+def test_a_slow_recompute_never_blocks_the_tick(build, monkeypatch):
+    """A scan change triggers a full recompute that can take tens of seconds.
+    The key loop runs on_tick, so on_tick must never wait for it."""
+    import threading
+    import time
+    import src.ui.screens.home_panes as home_panes
+
+    release = threading.Event()
+    scanner = _Scanner(done=False)
+    elapsed = []
+
+    def act(pane):
+        monkeypatch.setattr(home_panes, "compute_main_menu_cache",
+                            lambda *a, **kw: release.wait(5))
+        scanner.check_updates = lambda: True
+        time.sleep(0.05)  # give the worker a chance to start recomputing
+        t = time.time()
+        pane.update_callback(pane)
+        elapsed.append(time.time() - t)
+        release.set()
+        return None
+
+    build(act=act, auth=_Auth(), scanner=scanner)
+    assert elapsed[0] < 0.5
+
+
+def test_a_toggle_invalidates_any_recompute_in_flight(build, monkeypatch):
+    """A recompute started before the toggle would paint the old numbers back."""
+    calls = []
+
+    class Warmer:
+        def __init__(self, *a, **kw):
+            pass
+
+        def invalidate(self):
+            calls.append("invalidate")
+
+        def drain(self):
+            return None
+
+        def stop(self):
+            pass
+
+    monkeypatch.setattr("src.ui.screens.home_panes.MenuCacheWarmer", Warmer)
+
+    def act(pane):
+        pane._on_left_space(("drive", "drive-1"))
+        return None
+
+    build(act=act)
+    assert calls == ["invalidate"]
+
+
+def test_a_new_status_snapshot_repaints_once(build):
+    """A greyed row clears the moment rclone connects or the library returns."""
+    from src.ui.screens.status_warm import StatusSnapshot
+    ticks = []
+
+    def act(pane):
+        _SyncStatus.last.snapshot = StatusSnapshot(True, "")
+        ticks.append(pane.update_callback(pane))
+        ticks.append(pane.update_callback(pane))
+        return None
+
+    build(act=act)
+    assert ticks == [True, False]
+
+
+class TestSetlistsAreMeasuredOffTheRenderThread:
+    """Measuring walks the disk, seconds per setlist on a network library, so
+    opening a drive must hand the work to a worker and the tick must collect it."""
+
+    def test_measured_on_a_worker_and_collected_on_tick(self, build, monkeypatch):
+        import threading
+        import time
+
+        on_render_thread = []
+
+        def compute(folder, name, path, settings):
+            on_render_thread.append(threading.current_thread() is threading.main_thread())
+            return f"stats:{name}"
+
+        class Cache:
+            stored = {}
+
+            def get_setlist(self, folder_id, name):
+                return None
+
+            def set_setlist(self, folder_id, name, stats):
+                self.stored[name] = stats
+
+            def save(self):
+                pass
+
+        cache = Cache()
+        monkeypatch.setattr("src.ui.screens.home_panes.compute_setlist_stats", compute)
+        monkeypatch.setattr("src.ui.screens.home_panes.get_persistent_stats_cache",
+                            lambda: cache)
+
+        def act(pane):
+            pane._right_rows(("drive", "drive-1"), "")
+            deadline = time.time() + 5
+            while len(cache.stored) < 2 and time.time() < deadline:
+                pane.update_callback(pane)
+                time.sleep(0.01)
+            return None
+
+        build(act=act)
+        assert on_render_thread == [False, False]
+        assert cache.stored == {"Setlist A": "stats:Setlist A",
+                                "Setlist B": "stats:Setlist B"}

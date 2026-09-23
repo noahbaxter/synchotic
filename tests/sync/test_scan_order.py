@@ -16,12 +16,22 @@ from src.sync.background_scanner import BackgroundScanner, SetlistInfo
 @pytest.fixture
 def scanner(monkeypatch):
     """A scanner with a stubbed stats cache, so tests pick the counts."""
-    def build(setlists, remembered=None, enabled=()):
+    def build(setlists, remembered=None, enabled=(), out_of_sync=None):
         remembered = remembered or {}
+        # Unless a test says which are out of sync, all of them are, so the
+        # order falls through to cost.
+        out_of_sync = set(out_of_sync) if out_of_sync is not None else None
 
         class FakeCounts:
             def remembered_chart_count(self, drive_id, name):
                 return remembered.get((drive_id, name))
+
+            def remembered_needs_attention(self, drive_id, name):
+                if out_of_sync is None:
+                    return True
+                if (drive_id, name) not in remembered:
+                    return True  # never scanned: nothing yet to say it's fine
+                return (drive_id, name) in out_of_sync
 
         monkeypatch.setattr("src.sync.cache.get_persistent_stats_cache",
                             lambda: FakeCounts())
@@ -83,6 +93,62 @@ class TestAcrossDrives:
         order = s._scan_order()
         assert sorted(order) == sorted(sid for sid, _, _ in setlists)
         assert len(order) == len(set(order))
+
+
+class TestWhatCountsAsNeedingAttention:
+    """The real cache's answer, which the ordering tests stub."""
+
+    @pytest.fixture
+    def cache(self):
+        import threading
+        from src.sync.cache import CachedSetlistStats, PersistentStatsCache
+
+        cache = PersistentStatsCache.__new__(PersistentStatsCache)
+        cache._lock = threading.RLock()
+        cache._setlist_cache = {"d1": {
+            "current": CachedSetlistStats(10, 100, 10, 100, 10, 100),
+            "missing": CachedSetlistStats(10, 100, 9, 90, 9, 90),
+            "purgeable": CachedSetlistStats(10, 100, 10, 100, 11, 110,
+                                            purgeable_charts=1),
+        }}
+        return cache
+
+    def test_fully_synced_with_nothing_to_purge_does_not(self, cache):
+        assert cache.remembered_needs_attention("d1", "current") is False
+
+    @pytest.mark.parametrize("name", ["missing", "purgeable", "never scanned"])
+    def test_anything_else_does(self, cache, name):
+        assert cache.remembered_needs_attention("d1", name) is True
+
+
+class TestOutOfSyncFirst:
+    """A setlist expected to have added or removed files should be checked
+    before ones already believed current, so real work surfaces sooner."""
+
+    def test_out_of_sync_beats_a_cheaper_in_sync_setlist(self, scanner):
+        s = scanner(
+            [("stale", "big", "d1"), ("current", "small", "d1")],
+            remembered={("d1", "big"): 900, ("d1", "small"): 3},
+            out_of_sync=[("d1", "big")],
+        )
+        assert s._scan_order() == ["stale", "current"]
+
+    def test_never_scanned_counts_as_out_of_sync_too(self, scanner):
+        s = scanner(
+            [("new", "unseen", "d1"), ("current", "small", "d1")],
+            remembered={("d1", "small"): 3},
+            out_of_sync=[],  # "unseen" has no remembered stats at all
+        )
+        assert s._scan_order() == ["new", "current"]
+
+    def test_cost_still_breaks_ties_within_a_priority(self, scanner):
+        s = scanner(
+            [("stale_big", "a", "d1"), ("stale_small", "b", "d1"),
+             ("current", "c", "d1")],
+            remembered={("d1", "a"): 900, ("d1", "b"): 3, ("d1", "c"): 1},
+            out_of_sync=[("d1", "a"), ("d1", "b")],
+        )
+        assert s._scan_order() == ["stale_small", "stale_big", "current"]
 
 
 class TestPicking:
