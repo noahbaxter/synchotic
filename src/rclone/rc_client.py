@@ -13,15 +13,22 @@ class RcClient:
         r.raise_for_status()
         return r.json()
 
-    def copyid_async(self, fs: str, file_id: str, dest: str) -> int:
-        """Queue a copyid job. dest ending in '/' means 'into this dir, keep name'."""
-        resp = self._post("/backend/command", {
+    def copyid_async(self, fs: str, file_id: str, dest: str,
+                     group: Optional[str] = None) -> int:
+        """Queue a copyid job. dest ending in '/' means 'into this dir, keep name'.
+
+        `group` names the job's stats group, so core_stats can report its bytes.
+        """
+        payload = {
             "command": "copyid",
             "fs": fs,
             "arg": [file_id, dest],
             "opt": {"drive-acknowledge-abuse": "true"},
             "_async": True,
-        })
+        }
+        if group:
+            payload["_group"] = group
+        resp = self._post("/backend/command", payload)
         return resp["jobid"]
 
     def job_status(self, jobid: int) -> dict:

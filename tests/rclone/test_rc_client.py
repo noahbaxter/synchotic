@@ -41,3 +41,11 @@ def test_job_status_and_acknowledge_abuse_opt(server):
     assert seen["opt"]["drive-acknowledge-abuse"] == "true"
     st = c.job_status(1)
     assert st["finished"] and st["success"]
+
+def test_a_job_can_be_given_a_stats_group(server):
+    """The downloader asks core_stats for this group to see if the job moves."""
+    seen = {}
+    def cmd(b): seen.update(b); return {"jobid": 1}
+    Handler.routes["/backend/command"] = cmd
+    RcClient(server).copyid_async("drive:", "ID", "/tmp/", group="synchotic/ID")
+    assert seen["_group"] == "synchotic/ID"
