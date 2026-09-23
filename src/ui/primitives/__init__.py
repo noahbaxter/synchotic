@@ -46,6 +46,7 @@ from .path_input import (
     Browse,
     input_with_browse,
 )
+from .spinner import working
 from .colors import (
     Colors,
     rgb,
@@ -80,6 +81,7 @@ __all__ = [
     "check_esc_pressed",
     "input_with_esc",
     "input_with_browse",
+    "working",
     "Browse",
     "wait_for_key",
     "menu_input",
