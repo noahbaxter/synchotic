@@ -15,6 +15,7 @@ from typing import Callable, TYPE_CHECKING
 
 from pathlib import Path
 
+from .. import copy
 from ..drive import DriveClient, FolderScanner
 from ..drive.client import DriveClientConfig
 from ..core.formatting import sanitize_drive_name
@@ -37,20 +38,19 @@ def describe_scan_failure(e: Exception) -> str:
     body = (getattr(resp, "text", "") or "")[:300]
 
     if status == 400 and "different projects" in body:
-        return ("Google rejected the credentials: its API key and your sign-in "
-                "belong to different Google Cloud projects")
+        return copy.SCAN_MIXED_PROJECTS
     if status == 400:
-        return "Google rejected the request as malformed (400)"
+        return copy.SCAN_MALFORMED
     if status == 401:
-        return "your sign-in expired or was revoked"
+        return copy.FAIL_SIGNED_OUT
     if status == 403:
-        return "Google denied access (403)"
+        return copy.SCAN_DENIED
     if status == 429:
-        return "Google rate-limited the request"
+        return copy.FAIL_RATE_LIMITED
     if isinstance(e, requests.exceptions.Timeout):
-        return "the connection to Google timed out"
+        return copy.FAIL_TIMED_OUT
     if isinstance(e, requests.exceptions.ConnectionError):
-        return "the connection to Google failed"
+        return copy.FAIL_OFFLINE
     return f"{type(e).__name__}: {e}"
 
 
@@ -432,7 +432,7 @@ class BackgroundScanner:
         drive_id = folder["folder_id"]
         drive_name = folder.get("name", "")
         with self._lock:
-            self._stats.current_folder = f"{drive_name} (discovering)"
+            self._stats.current_folder = copy.DISCOVERING_DRIVE.format(name=drive_name)
             self._stats.current_folder_start = time.time()
 
         try:

@@ -3,6 +3,7 @@ stats, with the Drive, disk and terminal work stubbed. Unit tests of each piece
 passed while the run itself crashed on its first line."""
 import pytest
 
+from src import copy
 from src.config.settings import DOWNLOAD_MODE_ANONYMOUS, UserSettings
 
 
@@ -91,4 +92,4 @@ def test_a_run_with_nothing_to_do_goes_all_the_way_through(run, capsys):
     app, calls = run
     assert app.handle_sync() == "fresh menu cache"
     assert calls["purge_progress"] is not None, "purge must draw into the run's panel"
-    assert "Finished in" in capsys.readouterr().out
+    assert copy.FINISHED_IN.split("{")[0] in capsys.readouterr().out

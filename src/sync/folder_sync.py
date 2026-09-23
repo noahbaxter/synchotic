@@ -4,8 +4,9 @@ run's panel. Purging lives in purge_flow.py."""
 from pathlib import Path
 from typing import Callable, Optional, Union
 
+from .. import copy
 from ..drive import DriveClient
-from ..core.formatting import (dedupe_files_by_newest, extract_path_context,
+from ..core.formatting import (count, dedupe_files_by_newest, extract_path_context,
                                format_download_name, sanitize_drive_name)
 from ..core.logging import debug_log
 from ..ui.widgets import display
@@ -99,7 +100,8 @@ class FolderSync:
             if total <= 200:  # fast enough that a counter is just noise
                 return
             # A big folder takes a while to check; show that it is moving.
-            progress.set_stage("" if done >= total else f"checking {caption} against disk... {done}/{total}")
+            progress.set_stage("" if done >= total else copy.STAGE_CHECKING_COUNT.format(
+                name=caption, count=f"{done}/{total}"))
             progress.set_current_fraction(done / total)
 
         tasks, skipped, _long_paths = plan_downloads(
@@ -117,7 +119,7 @@ class FolderSync:
         if not tasks:
             return 0, skipped, 0, [], False, 0
 
-        progress.set_stage(f"downloading {caption}")
+        progress.set_stage(copy.STAGE_DOWNLOADING.format(name=caption))
 
         (downloaded, _, errors, rate_limited, cancelled,
          bytes_downloaded, blocked_tasks) = self.downloader.download_many(
@@ -186,8 +188,7 @@ class FolderSync:
                                    f"rclone sign-in failed: {type(err).__name__}")
                 return 0, len(blocked_tasks)
 
-        progress.set_stage(f"rclone: fetching {len(blocked_tasks)} chart(s) "
-                           f"Google would not serve")
+        progress.set_stage(copy.STAGE_RCLONE.format(charts=count(len(blocked_tasks), "chart")))
         recovered = 0
         try:
             with (session or rclone.RcloneSession()) as active:

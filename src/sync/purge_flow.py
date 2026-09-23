@@ -1,13 +1,9 @@
-"""
-Purge orchestration for DM Chart Sync.
-
-Walks every drive to find files nothing accounts for and deletes them, using
-marker files as source of truth. Split out of folder_sync.py, which now only
-covers downloading; this covers only deleting.
-"""
+"""Walks every drive to find files nothing accounts for and deletes them,
+using marker files as source of truth, drawn on the sync run's panel."""
 
 from pathlib import Path
 
+from .. import copy
 from ..core.formatting import count, format_size, sanitize_drive_name
 from ..core.logging import debug_log
 from .cache import clear_folder_cache, get_persistent_stats_cache
@@ -46,7 +42,7 @@ def _purge_enabled_drive(
     folder_name = folder.get("name", "")
 
     def walked(n: int) -> None:
-        progress.set_stage(f"checking {folder_name} · {count(n, 'file')}")
+        progress.set_stage(copy.STAGE_CHECKING_COUNT.format(name=folder_name, count=count(n, "file")))
 
     files_to_purge, _ = plan_purge(
         [folder], base_path, user_settings, failed_setlists,
@@ -66,17 +62,16 @@ def _purge_enabled_drive(
             pause_keys()
         try:
             with progress.suspended():
-                dialog = ConfirmDialog(
-                    f"Delete {count(purge_count, 'file')} ({format_size(folder_size)}) "
-                    f"from {folder_name}?"
-                )
+                dialog = ConfirmDialog(copy.PURGE_CONFIRM.format(
+                    files=count(purge_count, "file"), size=format_size(folder_size),
+                    name=folder_name))
                 confirmed = dialog.run()
         finally:
             if resume_keys:
                 resume_keys()
         if not confirmed:
             debug_log(f"PURGE_SKIPPED | folder={folder_name} | user declined")
-            progress.note(folder_name, context="delete skipped")
+            progress.note(folder_name, context=copy.NOTE_DELETE_SKIPPED)
             return 0, 0, 0
 
     # Invalidate affected setlists BEFORE delete — crash-safe
@@ -99,14 +94,14 @@ def _purge_partial_downloads(base_path: Path, progress,
                              already_walked=()) -> tuple[int, int, int]:
     """Clean up incomplete downloads outside the drives just purged, whose
     own passes already took theirs."""
-    progress.set_stage("checking for interrupted downloads...")
+    progress.set_stage(copy.STAGE_PARTIALS)
     partial_files = find_partial_downloads(base_path, skip_dirs=already_walked)
     if not partial_files:
         return 0, 0, 0
 
     partial_size = sum(size for _, size in partial_files)
     deleted, failed = delete_files(partial_files, base_path)
-    progress.note("Partial downloads", context=f"{count(deleted, 'file')} deleted")
+    progress.note(copy.NOTE_PARTIALS, context=copy.NOTE_DELETED.format(files=count(deleted, "file")))
     return deleted, failed, partial_size
 
 
@@ -138,7 +133,7 @@ def purge_all_folders(
     # A library we have never synced may be one the user already had. Their
     # folders can share drive names, so deleting anything here is a guess.
     if not is_library_adopted():
-        progress.note("Purge", context="skipped: new library")
+        progress.note(copy.PURGE, context=copy.NOTE_NEW_LIBRARY)
         mark_library_adopted()
         return set()
 
@@ -155,7 +150,7 @@ def purge_all_folders(
     persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
-    progress.set_stage("reading markers...")
+    progress.set_stage(copy.STAGE_READING_MARKERS)
     all_marker_files = get_all_marker_files()
     marker_norm = {normalize_path_key(p) for p in all_marker_files}
 
@@ -180,7 +175,7 @@ def purge_all_folders(
             continue
 
         # No count: the bar above already says which drive of how many.
-        progress.set_stage(f"checking {folder.get('name', '')}")
+        progress.set_stage(copy.STAGE_CHECKING.format(name=folder.get("name", "")))
 
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
 
@@ -210,8 +205,8 @@ def purge_all_folders(
         total_size += size
         if deleted > 0:
             purged_folder_ids.add(folder_id)
-            progress.note(folder.get("name", ""),
-                          context=f"{count(deleted, 'file')} deleted ({format_size(size)})")
+            progress.note(folder.get("name", ""), context=copy.NOTE_DELETED_SIZE.format(
+                files=count(deleted, "file"), size=format_size(size)))
         progress.advance_run()
 
     deleted, failed, size = _purge_partial_downloads(
@@ -222,12 +217,13 @@ def purge_all_folders(
 
     progress.set_stage("")
     if total_deleted > 0 or total_failed > 0:
-        context = f"{count(total_deleted, 'file')} deleted ({format_size(total_size)})"
+        context = copy.NOTE_DELETED_SIZE.format(files=count(total_deleted, "file"),
+                                                size=format_size(total_size))
         if total_failed:
-            context += f", {total_failed:,} failed"
+            context += ", " + copy.NOTE_NOT_DELETED.format(n=f"{total_failed:,}")
     else:
-        context = "nothing to delete"
-    progress.note("Purge complete", context=context)
+        context = copy.NOTE_NOTHING_DELETED
+    progress.note(copy.NOTE_PURGE_DONE, context=context)
 
     # Invalidate in-memory filesystem cache for folders that changed
     for folder in folders:

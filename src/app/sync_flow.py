@@ -1,7 +1,8 @@
 """The sync run itself: preflight, downloading setlists as they're scanned,
 then handing off to verify and purge."""
 
-from src.core.formatting import format_duration, sanitize_drive_name
+from src import copy
+from src.core.formatting import count, format_duration, sanitize_drive_name
 from src.core.logging import debug_log
 from src.core.paths import get_download_path
 from src.sync import purge_all_folders
@@ -81,7 +82,7 @@ class SyncFlowMixin:
         # One panel for the whole run (download, verify, purge, stats), so ESC
         # works throughout and nothing prints underneath it.
         progress = FolderProgress(total_files=0, total_folders=0)
-        progress.set_phase("DOWNLOAD")
+        progress.set_phase(copy.PHASE_DOWNLOAD)
         progress.start()
 
         def handle_cancel():
@@ -125,21 +126,21 @@ class SyncFlowMixin:
                             failed_setlists[folder_id] = failed
                     if failed_setlists:
                         all_failed = [name for names in failed_setlists.values() for name in names]
-                        progress.note("Scan warning",
-                                      context=f"{len(all_failed)} setlist(s) failed, files preserved")
+                        progress.note(copy.NOTE_SCAN_WARNING, context=copy.NOTE_SCAN_FAILED.format(
+                            setlists=count(len(all_failed), "setlist")))
 
                 # Rebuild markers for any extracted archives missing them (prevents mass deletion)
-                progress.set_phase("VERIFY")
+                progress.set_phase(copy.PHASE_VERIFY)
                 progress.set_title("")
-                progress.set_stage("rebuilding markers...")
+                progress.set_stage(copy.STAGE_MARKERS)
                 t0 = _time.time()
                 created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
                 debug_log(f"TIMING | rebuild_markers: {_time.time() - t0:.1f}s | created={created}")
                 if created:
-                    progress.note("Rebuild markers", context=f"{created} rebuilt")
+                    progress.note(copy.NOTE_REBUILT, context=copy.NOTE_REBUILT_COUNT.format(n=created))
 
                 # Purge extra files (no confirmation - sync means make it match)
-                progress.set_phase("PURGE")
+                progress.set_phase(copy.PURGE)
                 progress.set_title("")
                 t0 = _time.time()
                 purged_ids = purge_all_folders(
@@ -153,8 +154,8 @@ class SyncFlowMixin:
 
                 # Recompute menu cache now — this is the expensive part, do it here
                 # with feedback instead of silently after "done"
-                progress.set_phase("STATS")
-                progress.set_stage("updating stats...")
+                progress.set_phase(copy.PHASE_STATS)
+                progress.set_stage(copy.STAGE_STATS)
                 t0 = _time.time()
                 combined_drives = self._get_combined_drives_config()
                 menu_cache = compute_main_menu_cache(
@@ -176,16 +177,16 @@ class SyncFlowMixin:
             # Nothing downloaded because the scans died, not because the
             # library was already current. Saying "synced" here is how a
             # total failure reads as a clean run.
-            reason, count = self._scan_failure()
-            display.sync_failed(reason, count)
+            reason, failed = self._scan_failure()
+            display.sync_failed(reason, failed)
         else:
             display.sync_already_synced()
 
         # The whole run, not just the download phase's `elapsed`.
-        print(f"  Finished in {format_duration(_time.time() - run_start)}")
+        print(f"  {copy.FINISHED_IN.format(time=format_duration(_time.time() - run_start))}")
 
         # NOW we can say "done" — because it actually is
-        wait_with_skip(5, "Continuing in 5s (press any key to skip)")
+        wait_with_skip(5, copy.CONTINUING_IN)
         return menu_cache
 
     def _sync_folders_sequentially(self, progress) -> tuple[bool, set[str], int, int, float]:
@@ -209,7 +210,7 @@ class SyncFlowMixin:
         start_time = _time.time()
 
         if total_setlists == 0:
-            progress.note("Sync", context="already synced")
+            progress.note(copy.SYNC, context=copy.NOTE_ALREADY_SYNCED)
             return False, set(), 0, 0, 0.0
 
         downloaded_ids: set[str] = set()
@@ -264,7 +265,7 @@ class SyncFlowMixin:
 
                 # On the divider, not the list, which is charts. No count: the
                 # bar keeps it.
-                progress.set_stage(f"checking {display_name}")
+                progress.set_stage(copy.STAGE_CHECKING.format(name=display_name))
                 downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
                     temp_folder, get_download_path(), [],
                     setlist_name=setlist.name,

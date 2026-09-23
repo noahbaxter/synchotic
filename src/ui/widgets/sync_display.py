@@ -246,28 +246,28 @@ def scan_progress(folders: int, files: int):
 # === Sync run summary, under the panel it leaves behind ===
 
 def sync_cancelled(downloaded: int = 0):
-    summary = f"{_c.DIM}Cancelled{_c.RESET}"
+    summary = f"{_c.DIM}{copy.CANCELLED}.{_c.RESET}"
     if downloaded > 0:
-        summary += f" - {downloaded} files downloaded"
+        summary += " " + copy.DOWNLOADED_FILES.format(files=count(downloaded, "file"))
     print(summary)
 
 def sync_complete(downloaded: int, bytes_downloaded: int, duration: float):
     avg_speed = bytes_downloaded / duration if duration > 0 else 0
-    summary = f"{_c.SUCCESS}✓{_c.RESET} {downloaded} files"
+    summary = f"{_c.SUCCESS}✓{_c.RESET} {count(downloaded, 'file')}"
     if bytes_downloaded > 0:
         summary += f" ({format_size(bytes_downloaded)})"
-    summary += f" in {format_duration(duration)}"
+    summary += " " + copy.DONE_IN.format(time=format_duration(duration))
     if avg_speed > 0:
-        summary += f" • {format_speed(avg_speed)} avg"
+        summary += " • " + copy.AVG_SPEED.format(speed=format_speed(avg_speed))
     print(summary)
 
 def sync_already_synced():
-    print(f"{_c.SUCCESS}✓{_c.RESET} All files synced")
+    print(f"{_c.SUCCESS}✓{_c.RESET} {copy.ALL_SYNCED}")
 
 def sync_failed(reason: str, failed_count: int = 0):
     """Nothing downloaded because scans failed, not because nothing was due."""
-    scope = f" ({failed_count} setlist{'s' if failed_count != 1 else ''})" if failed_count else ""
-    print(f"{_c.ERROR}✗{_c.RESET} Sync failed because {reason}{scope}")
+    scope = f" ({count(failed_count, 'setlist')})" if failed_count else ""
+    print(f"{_c.ERROR}✗{_c.RESET} {copy.SYNC_FAILED.format(reason=reason)}{scope}")
 
 # === Download errors ===
 
@@ -275,51 +275,49 @@ def sync_failed(reason: str, failed_count: int = 0):
 # specific patterns come first; a full disk or a lost connection can arrive
 # inside another failure's message.
 _FAILURE_WORDS = (
-    ("no space left", "disk full"),
-    ("errno 28", "disk full"),
-    ("cannot connect", "no connection"),
-    ("connection reset", "no connection"),
-    ("nodename nor servname", "no connection"),
-    ("needs auth", "needs sign-in"),
-    ("rate limited", "rate limited"),
-    ("http 403", "rate limited"),
-    ("http 429", "rate limited"),
-    ("http 401", "signed out"),
-    ("timeout", "timed out"),
-    ("bytes)", "cut short"),
-    ("http 404", "not on Drive"),
-    ("http 5", "Drive error"),
-    ("unsupported archive", "unknown format"),
-    ("extract", "unpack failed"),
+    ("no space left", copy.FAIL_DISK_FULL),
+    ("errno 28", copy.FAIL_DISK_FULL),
+    ("cannot connect", copy.FAIL_OFFLINE),
+    ("connection reset", copy.FAIL_OFFLINE),
+    ("nodename nor servname", copy.FAIL_OFFLINE),
+    ("needs auth", copy.FAIL_NEEDS_SIGN_IN),
+    ("rate limited", copy.FAIL_RATE_LIMITED),
+    ("http 403", copy.FAIL_RATE_LIMITED),
+    ("http 429", copy.FAIL_RATE_LIMITED),
+    ("http 401", copy.FAIL_SIGNED_OUT),
+    ("timeout", copy.FAIL_TIMED_OUT),
+    ("bytes)", copy.FAIL_CUT_SHORT),
+    ("http 404", copy.FAIL_GONE),
+    ("http 5", copy.FAIL_DRIVE_ERROR),
+    ("unsupported archive", copy.FAIL_FORMAT),
+    ("extract", copy.FAIL_UNPACK),
 )
 
 # What to do about each, including "nothing to fix" where that is the answer.
 ADVICE = {
-    "disk full": "Free up space on the drive holding your library, then sync again.",
-    "no connection": "Check your internet, then sync again.",
-    # Mode, not sign-in: the sign-in row is greyed out in rclone mode.
-    "needs sign-in": "Settings → Account → Mode: connect rclone, or set up your "
-                     "own credentials.",
-    "signed out": "Your Google sign-in expired. Sign in again from Account.",
-    "rate limited": "Google throttled the drive. Usually clears within a day; "
-                    "the next sync retries them.",
-    "timed out": "The next sync retries these. Nothing to fix.",
-    "cut short": "Usually a throttle in disguise. The next sync retries these.",
-    "not on Drive": "These were removed upstream. The next scan drops them. "
-                    "Nothing to fix.",
-    "Drive error": "Google's end, not yours. The next sync retries these.",
-    "unknown format": "Not a format Clone Hero reads. Nothing to fix.",
-    "unpack failed": "The archive would not open. Report it if it keeps happening.",
-    "failed": "No cause reported. The next sync retries these.",
+    copy.FAIL_DISK_FULL: copy.ADVICE_DISK_FULL,
+    copy.FAIL_OFFLINE: copy.ADVICE_OFFLINE,
+    copy.FAIL_NEEDS_SIGN_IN: copy.ADVICE_NEEDS_SIGN_IN,
+    copy.FAIL_SIGNED_OUT: sentences(copy.STATUS_SIGNIN_EXPIRED, copy.FIX_SIGN_IN),
+    copy.FAIL_RATE_LIMITED: sentences(copy.ADVICE_RATE_LIMITED, copy.RETRIES_NEXT_SYNC),
+    copy.FAIL_TIMED_OUT: sentences(copy.RETRIES_NEXT_SYNC, copy.NOTHING_TO_FIX),
+    copy.FAIL_CUT_SHORT: sentences(copy.ADVICE_CUT_SHORT, copy.RETRIES_NEXT_SYNC),
+    copy.FAIL_GONE: sentences(copy.ADVICE_GONE, copy.NOTHING_TO_FIX),
+    copy.FAIL_DRIVE_ERROR: sentences(copy.ADVICE_DRIVE_ERROR, copy.RETRIES_NEXT_SYNC),
+    copy.FAIL_FORMAT: sentences(copy.ADVICE_FORMAT, copy.NOTHING_TO_FIX),
+    copy.FAIL_UNPACK: sentences(copy.ADVICE_UNPACK, copy.REPORT_IT),
+    copy.FAIL_UNKNOWN: sentences(copy.ADVICE_UNKNOWN, copy.RETRIES_NEXT_SYNC),
 }
 
 # Reasons nothing will fix until someone does something.
-NEEDS_YOU = frozenset({"disk full", "no connection", "needs sign-in", "signed out"})
+NEEDS_YOU = frozenset({copy.FAIL_DISK_FULL, copy.FAIL_OFFLINE,
+                       copy.FAIL_NEEDS_SIGN_IN, copy.FAIL_SIGNED_OUT})
 
 # Reasons that clear up on their own, or where there is nothing to fix. Anything
 # in neither set is unexplained, which is the case worth reporting.
-SORTS_ITSELF_OUT = frozenset({"rate limited", "timed out", "cut short", "Drive error",
-                              "not on Drive", "unknown format", "failed"})
+SORTS_ITSELF_OUT = frozenset({copy.FAIL_RATE_LIMITED, copy.FAIL_TIMED_OUT,
+                              copy.FAIL_CUT_SHORT, copy.FAIL_DRIVE_ERROR,
+                              copy.FAIL_GONE, copy.FAIL_FORMAT, copy.FAIL_UNKNOWN})
 
 FIX = "fix"
 REPORT = "report"
@@ -346,7 +344,7 @@ def advise(reasons: list[str]) -> tuple[str, str, str]:
     for tone, pool in ((FIX, needs_you), (REPORT, unexplained), (TRANSIENT, passing)):
         reason = most(pool)
         if reason:
-            return tone, reason, ADVICE.get(reason, "Report it if it keeps happening.")
+            return tone, reason, ADVICE.get(reason, sentences(copy.REPORT_IT))
     return "", "", ""
 
 
@@ -362,21 +360,21 @@ def describe_failure(message: str) -> str:
     # raw cause beats a vague stand-in.
     if "(" in message and ")" in message:
         return message[message.index("(") + 1:message.index(")")]
-    return "failed"
+    return copy.FAIL_UNKNOWN
 
 
 def failure_summary(by_reason: dict) -> None:
     """What failed and why, grouped, under the frame the sync just left."""
     total = sum(len(errors) for errors in by_reason.values())
     print()
-    print(f"  {_c.ERROR}{total} chart(s) did not download{_c.RESET}")
+    print(f"  {_c.ERROR}{copy.DID_NOT_DOWNLOAD.format(charts=count(total, 'chart'))}{_c.RESET}")
     for reason, errors in sorted(by_reason.items(), key=lambda kv: -len(kv[1])):
         print(f"    {len(errors)} {reason}")
         for err in errors[:3]:
             context = f"{_c.DIM}[{err.path_context}]{_c.RESET} " if err.path_context else ""
             print(f"      {context}{err.filename}")
         if len(errors) > 3:
-            print(f"      {_c.MUTED}and {len(errors) - 3} more{_c.RESET}")
+            print(f"      {_c.MUTED}{copy.AND_MORE.format(n=len(errors) - 3)}{_c.RESET}")
         advice = ADVICE.get(reason)
         if advice:
             print(f"      {_c.MUTED}{advice}{_c.RESET}")

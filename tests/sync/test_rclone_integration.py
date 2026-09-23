@@ -1,5 +1,6 @@
 # tests/sync/test_rclone_integration.py
 from pathlib import Path
+from src import copy
 from src.sync.folder_sync import FolderSync
 from src.ui.widgets.progress import FolderProgress
 
@@ -222,7 +223,7 @@ class TestTierFourShowsOnThePanel:
         fs._rclone_second_pass(self._tasks(tmp_path, "A"), _make_folder(["A"]), None, progress)
 
         (entry,) = progress.screen.entries.ordered()
-        assert (entry.state, entry.reason) == ("failed", "needs sign-in")
+        assert (entry.state, entry.reason) == ("failed", copy.FAIL_NEEDS_SIGN_IN)
 
     def test_rclone_sign_in_failing_is_not_silent(self, monkeypatch, tmp_path):
         """The failure and its cause are recorded, not swallowed."""
@@ -238,7 +239,7 @@ class TestTierFourShowsOnThePanel:
 
         assert (recovered, blocked) == (0, 2)
         assert [e.reason for e in progress.screen.entries.failures()] == \
-            ["needs sign-in", "needs sign-in"]
+            [copy.FAIL_NEEDS_SIGN_IN, copy.FAIL_NEEDS_SIGN_IN]
         # and the specific cause survives into the error summary
         assert any("RuntimeError" in e.filename for e in progress.errors)
 

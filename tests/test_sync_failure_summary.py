@@ -8,6 +8,7 @@ dead one.
 
 import requests
 
+from src import copy
 from src.sync.background_scanner import describe_scan_failure
 from src.ui.widgets import sync_display
 
@@ -27,12 +28,12 @@ def _http_error(status, body=""):
 def test_cross_project_failure_names_the_cause():
     body = '{"error": {"message": "The API Key and the authentication credential are from different projects."}}'
     reason = describe_scan_failure(_http_error(400, body))
-    assert "different Google Cloud projects" in reason
+    assert reason == copy.SCAN_MIXED_PROJECTS
 
 
 def test_expired_signin_is_distinguished_from_denial():
-    assert "expired" in describe_scan_failure(_http_error(401))
-    assert "denied" in describe_scan_failure(_http_error(403))
+    assert describe_scan_failure(_http_error(401)) == copy.FAIL_SIGNED_OUT
+    assert describe_scan_failure(_http_error(403)) == copy.SCAN_DENIED
 
 
 def test_unrecognised_failure_falls_back_to_the_exception():
@@ -42,14 +43,14 @@ def test_unrecognised_failure_falls_back_to_the_exception():
 
 
 def test_summary_line_states_the_reason(capsys):
-    sync_display.sync_failed("your sign-in expired or was revoked", failed_count=7)
+    sync_display.sync_failed(copy.FAIL_SIGNED_OUT, failed_count=7)
     out = capsys.readouterr().out
 
-    assert "Sync failed because your sign-in expired or was revoked" in out
-    assert "7 setlists" in out
-    assert "All files synced" not in out
+    assert copy.SYNC_FAILED.format(reason=copy.FAIL_SIGNED_OUT) in out
+    assert "(7 setlists)" in out
+    assert copy.ALL_SYNCED not in out
 
 
 def test_single_failure_is_not_pluralised(capsys):
-    sync_display.sync_failed("Google rate-limited the request", failed_count=1)
+    sync_display.sync_failed(copy.FAIL_RATE_LIMITED, failed_count=1)
     assert "(1 setlist)" in capsys.readouterr().out

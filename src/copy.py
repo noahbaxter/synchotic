@@ -142,6 +142,7 @@ ANON_LIMIT = ("Many charts may still download, but expect game rips and large "
 # --- sync results -----------------------------------------------------------
 
 CANCELLED = "Cancelled"
+AND_MORE = "and {n} more"
 
 # --- nothing turned on ------------------------------------------------------
 
@@ -402,10 +403,11 @@ PRE_UNOWNED = "This folder contains unmanaged charts"
 PRE_UNOWNED_DETAIL = ("Same name as a drive you have enabled: {names}{more}. "
                       "Anything inside WILL BE DELETED unless it also exists "
                       "inside a setlist from that drive.")
-PRE_UNOWNED_MORE = " and {n} more"
+PRE_UNOWNED_MORE = " " + AND_MORE
 
-# {floor} is " at least" while some drives are unmeasured, "" once all are.
+# {floor} is PRE_AT_LEAST while some drives are unmeasured, "" once all are.
 PRE_SPACE = "Not enough disk space"
+PRE_AT_LEAST = " at least"
 # Fits, but leaves the disk nearly full, or unmeasured drives could tip it over.
 PRE_LOW_SPACE = "Low on disk space"  # AI-COPY
 PRE_SPACE_DETAIL = "Needs{floor} {needed}, you have {free}."
@@ -414,3 +416,121 @@ PRE_FREE_UP = "Free up space, or disable some setlists."
 # {charts} comes from count(), e.g. "300 charts".
 PRE_PURGE = "This sync will purge {charts}"
 PRE_PURGE_DETAIL = "That's {size} from drives and setlists you've disabled."
+
+
+# ===========================================================================
+# During a sync: the live panel
+# ===========================================================================
+
+# Before the panel opens, while drives are listed.
+DISCOVERING = "Discovering setlists... {done}/{total} drives"  # AI-COPY
+DISCOVERING_DRIVE = "{name} (discovering)"  # AI-COPY
+RATE_LIMIT_WAIT = "(waiting for Google Drive API rate limit...)"  # AI-COPY
+
+# The stage word in the panel's title (drawn in capitals), and what the list
+# says while empty. SYNC and PURGE also name the run's own rows in the list.
+SYNC = "Sync"  # AI-COPY
+PURGE = "Purge"  # AI-COPY
+PHASE_DOWNLOAD = "Download"  # AI-COPY
+PHASE_VERIFY = "Verify"  # AI-COPY
+PHASE_STATS = "Stats"  # AI-COPY
+NOTHING_TO_DOWNLOAD = "nothing to download yet"  # AI-COPY
+NOTHING_TO_SHOW = "nothing to show yet"  # AI-COPY
+
+# The keys under the list. Key names stay with the code that binds them.
+KEY_CANCEL = "ESC cancel"  # AI-COPY
+KEY_SCROLL = "↑↓ scroll"  # AI-COPY
+KEY_ALL_CHARTS = "E all charts"  # AI-COPY
+KEY_ERRORS_ONLY = "E errors only"  # AI-COPY
+SHOWING_ERRORS = "showing errors only · {n}"  # AI-COPY
+HELD = "held · END to follow"  # AI-COPY
+
+NETWORK = "network"  # AI-COPY
+IDLE_SPEED = "-- KB/s"  # AI-COPY
+EXTRACTING = "extracting…"  # AI-COPY
+MORE_DOWNLOADING = "… and {n} more downloading"  # AI-COPY
+
+# What the divider says the run is doing.
+STAGE_CHECKING = "checking {name}"  # AI-COPY
+# A long check, with how far it has got: "1200/5000" or "3,400 files".
+STAGE_CHECKING_COUNT = STAGE_CHECKING + " · {count}"
+STAGE_DOWNLOADING = "downloading {name}"  # AI-COPY
+STAGE_RCLONE = "rclone: fetching {charts} Google would not serve"  # AI-COPY
+STAGE_SCANNING_AHEAD = "scanning ahead: {name}"  # AI-COPY
+STAGE_MARKERS = "rebuilding markers..."  # AI-COPY
+STAGE_READING_MARKERS = "reading markers..."  # AI-COPY
+STAGE_PARTIALS = "checking for interrupted downloads..."  # AI-COPY
+STAGE_STATS = "updating stats..."  # AI-COPY
+
+# Rows the run adds to the list that are not charts: a name, then what happened.
+NOTE_ALREADY_SYNCED = "already synced"  # AI-COPY
+NOTE_SCAN_WARNING = "Scan warning"  # AI-COPY
+NOTE_SCAN_FAILED = "{setlists} failed, files preserved"  # AI-COPY
+NOTE_REBUILT = "Rebuild markers"  # AI-COPY
+NOTE_REBUILT_COUNT = "{n} rebuilt"  # AI-COPY
+NOTE_NEW_LIBRARY = "skipped: new library"  # AI-COPY
+NOTE_DELETE_SKIPPED = "delete skipped"  # AI-COPY
+NOTE_PARTIALS = "Partial downloads"  # AI-COPY
+NOTE_DELETED = "{files} deleted"  # AI-COPY
+NOTE_DELETED_SIZE = NOTE_DELETED + " ({size})"
+NOTE_NOT_DELETED = "{n} failed"  # AI-COPY
+NOTE_PURGE_DONE = PURGE + " complete"  # AI-COPY
+NOTE_NOTHING_DELETED = "nothing to delete"  # AI-COPY
+
+PURGE_CONFIRM = "Delete {files} ({size}) from {name}?"  # AI-COPY
+
+# --- why a chart failed ------------------------------------------------------
+#
+# The downloader's messages are written for the log. Each failed row shows one
+# of these instead, and the advice line under the counts says what to do.
+
+FAIL_DISK_FULL = "disk full"  # AI-COPY
+FAIL_OFFLINE = "no connection"  # AI-COPY
+FAIL_NEEDS_SIGN_IN = "needs sign-in"  # AI-COPY
+FAIL_RATE_LIMITED = "rate limited"  # AI-COPY
+FAIL_SIGNED_OUT = STATE_SIGNED_OUT
+FAIL_TIMED_OUT = "timed out"  # AI-COPY
+FAIL_CUT_SHORT = "cut short"  # AI-COPY
+FAIL_GONE = "not on Drive"  # AI-COPY
+FAIL_DRIVE_ERROR = "Drive error"  # AI-COPY
+FAIL_FORMAT = "unknown format"  # AI-COPY
+FAIL_UNPACK = "unpack failed"  # AI-COPY
+FAIL_UNKNOWN = "failed"  # AI-COPY
+
+RETRIES_NEXT_SYNC = "The next sync retries these"  # AI-COPY
+NOTHING_TO_FIX = "Nothing to fix"  # AI-COPY
+REPORT_IT = "Report it if it keeps happening"  # AI-COPY
+
+ADVICE_DISK_FULL = "Free up space on the drive holding your library, then sync again."  # AI-COPY
+ADVICE_OFFLINE = "Check your internet, then sync again."  # AI-COPY
+# Mode, not sign-in: rclone signs in from there too.
+ADVICE_NEEDS_SIGN_IN = f"{SETTINGS_MODE}: connect rclone, or set up your own credentials."  # AI-COPY
+ADVICE_RATE_LIMITED = "Google throttled the drive. Usually clears within a day"  # AI-COPY
+ADVICE_CUT_SHORT = "Usually a throttle in disguise"  # AI-COPY
+ADVICE_GONE = "These were removed upstream. The next scan drops them"  # AI-COPY
+ADVICE_DRIVE_ERROR = "Google's end, not yours"  # AI-COPY
+ADVICE_FORMAT = "Not a format Clone Hero reads"  # AI-COPY
+ADVICE_UNPACK = "The archive would not open"  # AI-COPY
+ADVICE_UNKNOWN = "No cause reported"  # AI-COPY
+
+# Why a scan failed, after SYNC_FAILED. Signed out, rate limited, timed out
+# and offline reuse the FAIL_* words above.
+SCAN_MIXED_PROJECTS = ("Google rejected the credentials: its API key and your "  # AI-COPY
+                       "sign-in belong to different Google Cloud projects")
+SCAN_MALFORMED = "Google rejected the request as malformed (400)"  # AI-COPY
+SCAN_DENIED = "Google denied access (403)"  # AI-COPY
+SCAN_SOME_FAILED = "some setlists could not be scanned"  # AI-COPY
+
+
+# ===========================================================================
+# After a sync: printed under the panel it leaves behind
+# ===========================================================================
+
+ALL_SYNCED = "Everything in sync"
+DOWNLOADED_FILES = "Downloaded {files}."  # AI-COPY
+DONE_IN = "in {time}"  # AI-COPY
+AVG_SPEED = "{speed} avg"  # AI-COPY
+SYNC_FAILED = "Sync failed: {reason}"  # AI-COPY
+DID_NOT_DOWNLOAD = "{charts} did not download"  # AI-COPY
+FINISHED_IN = "Finished in {time}"  # AI-COPY
+CONTINUING_IN = "Continuing in 5s (press any key to skip)"

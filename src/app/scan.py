@@ -3,6 +3,7 @@ drive, off the input thread so the menu stays responsive while it runs."""
 
 import threading
 
+from src import copy
 from src.app.config import API_KEY
 from src.core.paths import get_download_path
 from src.sync import BackgroundScanner
@@ -88,13 +89,13 @@ class ScanMixin:
             # done counts completions, which land out of order now that the
             # drives are queried concurrently.
             if total and done >= total:
-                print_progress(f"Discovering setlists... {total}/{total} drives")
+                print_progress(copy.DISCOVERING.format(done=total, total=total))
                 print()
             else:
                 suffix = f" - {name}" if name else ""
-                print_progress(f"Discovering setlists... {done}/{total} drives{suffix}")
+                print_progress(copy.DISCOVERING.format(done=done, total=total) + suffix)
 
-        slow_hint = threading.Timer(5.0, lambda: print("\n  (waiting for Google Drive API rate limit...)"))
+        slow_hint = threading.Timer(5.0, lambda: print(f"\n  {copy.RATE_LIMIT_WAIT}"))
         slow_hint.start()
         try:
             self._background_scanner.discover(on_progress=_discovery_progress)
@@ -140,7 +141,7 @@ class ScanMixin:
         scanner = self._background_scanner
         if not (scanner and scanner.has_scan_failures()):
             return None
-        reason = scanner.get_failure_reason() or "some setlists could not be scanned"
+        reason = scanner.get_failure_reason() or copy.SCAN_SOME_FAILED
         count = sum(len(scanner.get_failed_setlist_names(f.get("folder_id", "")))
                     for f in self.folders)
         return reason, count
