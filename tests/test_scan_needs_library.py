@@ -9,6 +9,7 @@ the whole collection into a folder that disappears on remount.
 
 import pytest
 
+from src import copy
 from src.config.settings import UserSettings, DOWNLOAD_MODE_ANONYMOUS
 from src.core import paths
 
@@ -109,15 +110,23 @@ def test_a_forced_rescan_keeps_the_caches(app, missing, monkeypatch, capsys):
 
 
 def test_sync_refuses_and_says_why(app, missing, monkeypatch, capsys):
+    """And says what to do about it: the preflight table owns this now, so the
+    refusal carries a fix instead of one line with nowhere to go."""
     a, started = app(missing)
     monkeypatch.setattr("src.app.sync_flow.wait_with_skip", lambda *a_: None)
     monkeypatch.setattr("src.app.sync_flow.clear_screen", lambda: None)
     monkeypatch.setattr("src.app.sync_flow.print_header", lambda: None)
+    monkeypatch.setattr("src.ui.screens.preflight.wait_with_skip", lambda *a_: None)
+    monkeypatch.setattr("src.ui.screens.preflight.clear_screen", lambda: None)
+    monkeypatch.setattr("src.ui.screens.preflight.print_header", lambda: None)
 
     assert a.handle_sync() is None
-    out = capsys.readouterr().out
-    assert "Cannot scan: Library not connected" in out
-    assert "Library" in out
+    # Colour codes and the line wrapping both land inside the sentence, so the
+    # assertion reads what someone sees, not how it was printed.
+    from src.ui.primitives.terminal import strip_ansi
+    out = " ".join(strip_ansi(capsys.readouterr().out).split())
+    assert copy.LIBRARY_MISSING in out
+    assert copy.FIX_RECONNECT in out
     assert not started.get("started")
 
 

@@ -1,6 +1,10 @@
-"""The numbers preflight needs, from the stats cache. A drive never scanned
-counts as unmeasured, so the total is a floor."""
-from src.sync.preflight import GB, concerns_for, gather
+"""What preflight reads: the numbers from the stats cache, and the setup. A
+drive never scanned counts as unmeasured, so the total is a floor."""
+import sys
+
+import pytest
+
+from src.sync.preflight import GB, Setup, concerns_for, gather, read_setup
 
 
 class FakeSettings:
@@ -116,6 +120,17 @@ class TestTheWholeCheck:
 
         assert (concerns, free) == ([], 0)
 
+    def test_a_disk_it_cannot_measure_still_reports_the_setup(self):
+        """An unplugged library is exactly the disk that cannot be measured."""
+        def explode(path):
+            raise OSError("no such volume")
+
+        concerns, _ = concerns_for([], FakeSettings(), FakeCache({}), "/Songs",
+                                   disk_usage=explode,
+                                   setup=Setup(library_available=False))
+
+        assert "library_missing" in [c.kind for c in concerns]
+
 
 class TestWhatWouldBeDeleted:
     def test_a_setlist_turned_off_with_files_on_disk_is_purgeable(self):
@@ -136,3 +151,52 @@ class TestWhatWouldBeDeleted:
                                            FakeSettings(enabled=[]), cache)
 
         assert (charts, purge_bytes) == (20, 5 * GB)
+
+
+class TestReadingTheSetup:
+    @pytest.fixture
+    def probes(self, monkeypatch):
+        """A set, present, never-adopted library; records each rclone probe."""
+        calls = []
+
+        def state(*a, **k):
+            calls.append("rclone")
+            return "ok"
+
+        monkeypatch.setattr("src.rclone.connection_state", state)
+        monkeypatch.setattr("src.core.paths.library_is_set", lambda: True)
+        monkeypatch.setattr("src.core.paths.library_is_available", lambda: True)
+        monkeypatch.setattr("src.sync.ownership.is_library_adopted", lambda: False)
+        monkeypatch.setattr("src.drive.auth.has_custom_client_config", lambda: True)
+        return calls
+
+    def _settings(self, mode):
+        s = FakeSettings(enabled=["d1"])
+        s.download_mode = mode
+        return s
+
+    @pytest.mark.skipif(sys.platform == "win32", reason="no read-only folders")
+    def test_a_library_it_cannot_write_to(self, probes, tmp_path):
+        library = tmp_path / "Songs"
+        library.mkdir()
+        library.chmod(0o500)
+        try:
+            setup = read_setup(self._settings("rclone"), None, [], library)
+        finally:
+            library.chmod(0o700)
+
+        assert setup.library_available and not setup.library_writable
+
+    def test_only_rclone_mode_pays_for_the_rclone_probe(self, probes, tmp_path):
+        setup = read_setup(self._settings("byoc"), None, [], tmp_path)
+
+        assert probes == []
+        assert setup.rclone_working is None
+
+    def test_a_folder_under_the_sanitized_drive_name_collides(self, probes, tmp_path):
+        """Windows gets "Rock - Band" for a drive called "Rock: Band"."""
+        (tmp_path / "Rock - Band").mkdir()
+        setup = read_setup(self._settings("rclone"), None,
+                           [_folder("d1", "Rock: Band", [])], tmp_path)
+
+        assert setup.colliding_folders == ("Rock - Band",)

@@ -14,11 +14,12 @@ from src.ui.widgets import display
 class SyncFlowMixin:
 
     def _preflight_ok(self) -> bool:
-        """Ask before a sync that will not fit or deletes a lot. Sizes come
-        from the stats cache, so nothing waits on the scan."""
+        """Stop, or ask, before a sync that cannot work, will not fit, or
+        deletes a lot. Sizes come from the stats cache, so nothing waits on
+        the scan."""
         from src.core.paths import plain_path
         from src.sync.cache import get_persistent_stats_cache
-        from src.sync.preflight import concerns_for
+        from src.sync.preflight import concerns_for, read_setup
         from src.ui.screens.home import _get_setlist_names
         from src.ui.screens.preflight import confirm_sync
 
@@ -28,8 +29,10 @@ class SyncFlowMixin:
              "setlists": _get_setlist_names(f, self._background_scanner)}
             for f in self.folders
         ]
+        setup = read_setup(self.user_settings, self.auth, folders, library)
         concerns, free = concerns_for(folders, self.user_settings,
-                                      get_persistent_stats_cache(), library)
+                                      get_persistent_stats_cache(), library,
+                                      setup=setup)
         return confirm_sync(concerns, plain_path(library), free)
 
     def handle_sync(self):
@@ -48,7 +51,8 @@ class SyncFlowMixin:
         clear_screen()
         print_header()
 
-        # Space and deletions: silent unless something is wrong.
+        # Sign-in, library, what is turned on, space, deletions: silent unless
+        # something is wrong. The one-line gates below stay as a backstop.
         if not self._preflight_ok():
             return None
 
