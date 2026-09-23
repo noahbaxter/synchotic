@@ -368,6 +368,67 @@ class _Scanner:
         return lambda *a, **k: False
 
 
+class TestTheFooterNeverWraps:
+    """The frame is redrawn from the top of the screen every tick. A footer
+    line that wraps pushes every row below it down, so the box grows a line and
+    its bottom walks off the screen."""
+
+    class _LongScan:
+        """Mid-scan on a setlist with a name long enough to overflow."""
+
+        def is_done(self):
+            return False
+
+        def is_scanning(self, folder_id):
+            return True
+
+        def get_stats(self):
+            class _S:
+                current_folder = ("Drummer's Monthly Drive/"
+                                  "Tournament of Champions Season 4 Qualifiers")
+                folders_done = 3
+                folders_total = 177
+                api_calls = 12
+                elapsed = 11.0
+                current_folder_elapsed = 11.0
+            return _S()
+
+        def __getattr__(self, name):
+            return lambda *a, **k: False
+
+    def _footer_lines(self, build, monkeypatch, width):
+        from src.ui.components import strip_ansi
+        monkeypatch.setattr("src.ui.screens.home_panes.get_terminal_width",
+                            lambda: width)
+        captured = {}
+
+        def act(pane):
+            captured["footer"] = pane.footer()
+            return None
+
+        build(act=act, auth=_Auth(), scanner=self._LongScan())
+        return [strip_ansi(line) for line in captured["footer"].split("\n")]
+
+    def test_a_long_setlist_name_is_cut_to_the_width(self, build, monkeypatch):
+        lines = self._footer_lines(build, monkeypatch, 60)
+
+        assert lines, "no footer was drawn"
+        for line in lines:
+            assert len(line) < 60, f"{len(line)} columns wide: {line!r}"
+
+    def test_it_still_says_what_is_being_scanned(self, build, monkeypatch):
+        lines = self._footer_lines(build, monkeypatch, 120)
+
+        assert "Scanning Drummer's Monthly Drive" in lines[0]
+
+    def test_a_narrow_terminal_does_not_lose_the_second_line(self, build, monkeypatch):
+        lines = self._footer_lines(build, monkeypatch, 24)
+
+        assert len(lines) == 2, f"expected two footer lines, got {lines}"
+        for line in lines:
+            assert len(line) < 24, f"{len(line)} columns wide: {line!r}"
+
+
 class TestUnavailableOptionsLookUnavailable:
     """An option the cursor skips has to say so, or it reads as a row that
     ignores you."""

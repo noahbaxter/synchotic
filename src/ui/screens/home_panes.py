@@ -22,7 +22,7 @@ import time as _time
 from pathlib import Path
 
 from chotic_ui.widgets.two_pane import TwoPane
-from chotic_ui.primitives.terminal import truncate_ansi
+from chotic_ui.primitives.terminal import get_terminal_width, truncate_ansi
 
 from src.config import UserSettings, DrivesConfig
 from src.core.formatting import sort_by_name, format_duration, format_size
@@ -578,8 +578,14 @@ def show_main_menu_panes(
         hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} panes  "
                  f"{Colors.PRIMARY}Space{Colors.MUTED} toggle  "
                  f"{Colors.PRIMARY}Esc{Colors.MUTED} quit")
-        return (f"  {Colors.MUTED}{('   ·   '.join(parts))}{Colors.RESET}\n"
-                f"  {hints}{Colors.RESET}")
+        # Neither line may wrap: the frame redraws from the top every tick, so
+        # a wrapped line pushes the box's bottom off the screen. One column
+        # spare, since a line that exactly fills the width wraps on some
+        # terminals.
+        width = max(8, get_terminal_width() - 1)
+        status = f"  {Colors.MUTED}{('   ·   '.join(parts))}{Colors.RESET}"
+        return (f"{truncate_ansi(status, width)}{Colors.RESET}\n"
+                f"{truncate_ansi(f'  {hints}', width)}{Colors.RESET}")
 
     last_footer = {"text": None}
     last_status = {"snap": status_warmer.snapshot}
