@@ -18,13 +18,49 @@ def is_available() -> bool:
         return False
 
 
+MISSING = "missing"   # no remote configured
+DEAD = "dead"         # a remote, but Drive will not answer for it
+OK = "ok"
+
+
 def is_authed() -> bool:
+    """True when a remote is configured. Says nothing about whether it works.
+
+    Kept cheap on purpose: the home screen reads it every frame through the
+    status warmer. Use connection_state() where a wrong answer costs a sync.
+    """
     try:
         from ..core.paths import get_rclone_config_path
         if not get_rclone_config_path().exists():
             return False  # no config yet; do not fetch a binary to learn that
         binary = RcloneBinary().resolve()
         return RcloneConfig(binary).is_authed()
+    except Exception:
+        return False
+
+
+def connection_state(timeout: float = 20.0) -> str:
+    """MISSING, DEAD or OK: what rclone can actually do for us right now. One
+    API call, so not for a render loop. DEAD looks like OK everywhere else and
+    fails every large chart."""
+    try:
+        from ..core.paths import get_rclone_config_path
+        if not get_rclone_config_path().exists():
+            return MISSING
+        config = RcloneConfig(RcloneBinary().resolve())
+        if not config.has_remote():
+            return MISSING
+        return OK if config.token_works(timeout=timeout) else DEAD
+    except Exception:
+        # An rclone we cannot resolve or run is not a dead token: saying DEAD
+        # would send someone to redo consent over a missing binary.
+        return MISSING
+
+
+def reconnect(timeout: float = 120.0) -> bool:
+    """Redo consent for an existing remote. True when it works afterwards."""
+    try:
+        return RcloneConfig(RcloneBinary().resolve()).reconnect(timeout=timeout)
     except Exception:
         return False
 

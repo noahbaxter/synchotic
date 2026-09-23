@@ -53,7 +53,9 @@ class AuthMixin:
 
         try:
             import src.rclone as rclone
-            rclone_authed = rclone.is_authed()
+            # Whether it works, not whether it is configured: picking rclone is
+            # how someone asks to fix a dead remote.
+            rclone_authed = rclone.connection_state() == rclone.OK
         except Exception:
             rclone_authed = False
 
@@ -107,16 +109,29 @@ class AuthMixin:
         wait_with_skip(8)
 
     def _connect_rclone(self):
-        """Run the one-time rclone consent now."""
+        """Connect rclone, or reconnect one whose access stopped working."""
         import src.rclone as rclone
 
         if not rclone.can_open_browser():
             display.rclone_no_browser()
             wait_with_skip(3)
             return
+
+        state = rclone.connection_state()
+        if state == rclone.OK:
+            print("  rclone is already connected.")
+            wait_with_skip(2)
+            return
+
         try:
             display.rclone_consent_explainer()
-            if rclone.RcloneSession().ensure_authed():
+            if state == rclone.DEAD:
+                print("  rclone's access stopped working. Asking for it again.")
+                connected = rclone.reconnect()
+            else:
+                connected = rclone.RcloneSession().ensure_authed()
+
+            if connected:
                 print("  rclone connected.")
             else:
                 print("  Setup cancelled. Large charts stay blocked until rclone connects.")

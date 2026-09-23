@@ -35,6 +35,69 @@ def test_has_remote_true_when_present(tmp_path, monkeypatch):
     assert cfg.has_remote() is True
 
 
+class TestTheRemoteActuallyWorking:
+    """A remote in the config file is not a working one. Its token can be
+    revoked from a Google account page or simply expire, and nothing else in
+    the app can tell the difference: it just fails every large chart, forever.
+    """
+
+    def _cfg(self, tmp_path, monkeypatch, returncode=0, raises=None):
+        monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
+        calls = []
+
+        def runner(args, **kw):
+            calls.append(args)
+            if raises:
+                raise raises
+            class R:
+                pass
+            r = R()
+            r.returncode = returncode
+            r.stdout = '{"synchotic": {"type": "drive"}}' if "dump" in args else "{}"
+            r.stderr = ""
+            return r
+
+        return RcloneConfig(binary="/x/rclone", runner=runner), calls
+
+    def test_a_token_that_answers_is_working(self, tmp_path, monkeypatch):
+        cfg, calls = self._cfg(tmp_path, monkeypatch, returncode=0)
+        assert cfg.token_works() is True
+        assert "about" in calls[-1]
+        assert f"{constants.RCLONE_REMOTE_NAME}:" in calls[-1]
+
+    def test_a_token_google_refuses_is_not_working(self, tmp_path, monkeypatch):
+        cfg, _ = self._cfg(tmp_path, monkeypatch, returncode=1)
+        assert cfg.token_works() is False
+
+    def test_a_probe_that_hangs_is_not_working(self, tmp_path, monkeypatch):
+        import subprocess
+        cfg, _ = self._cfg(tmp_path, monkeypatch,
+                           raises=subprocess.TimeoutExpired("rclone", 20))
+        assert cfg.token_works() is False
+
+    def test_reconnect_redoes_consent_for_the_existing_remote(self, tmp_path, monkeypatch):
+        """`config create` over a live remote does not refresh its token, so
+        this is the only way back for a remote that stopped working."""
+        cfg, calls = self._cfg(tmp_path, monkeypatch, returncode=0)
+        assert cfg.reconnect() is True
+        assert ["config", "reconnect"] == [a for a in calls[0] if a in ("config", "reconnect")]
+
+    def test_reconnect_is_only_true_once_the_token_answers(self, tmp_path, monkeypatch):
+        """Consent can exit cleanly and still leave a remote that cannot
+        reach Drive, which is how this state is reached in the first place."""
+        cfg, _ = self._cfg(tmp_path, monkeypatch, returncode=1)
+        assert cfg.reconnect() is False
+
+    def test_a_clean_reconnect_that_still_cannot_reach_drive_is_false(self, tmp_path, monkeypatch):
+        monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
+
+        def runner(args, **kw):
+            return type("R", (), {"returncode": 1 if "about" in args else 0,
+                                  "stdout": "{}", "stderr": ""})()
+
+        assert RcloneConfig(binary="/x/rclone", runner=runner).reconnect() is False
+
+
 def test_create_remote_passes_scope_and_config(tmp_path, monkeypatch):
     monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
     runner = FakeRunner()
