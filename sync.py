@@ -256,11 +256,18 @@ def use_first_run_sandbox() -> Path:
     """Point this run at an empty install in a throwaway temp folder, so a
     machine that already runs Synchotic can show what a new user sees.
     Nothing installed is read or adopted. Returns the folder."""
+    import shutil
     import tempfile
 
     from src.core.legacy_migration import FRESH_ENV
+    from src.core.paths import get_drives_config_path
 
     sandbox = Path(tempfile.mkdtemp(prefix="synchotic-first-run-"))
+    # SYNCHOTIC_ROOT moves the bundled drives.json too. Without it the sandbox
+    # has no drives, which no real install ever sees.
+    drives = get_drives_config_path()
+    if drives.exists():
+        shutil.copy2(drives, sandbox / drives.name)
     os.environ["SYNCHOTIC_ROOT"] = str(sandbox)
     os.environ["SYNCHOTIC_OS_DIRS"] = "0"
     os.environ[FRESH_ENV] = "1"
