@@ -3,6 +3,7 @@
 #
 #   ./dev.sh                              the app, against the installed locations
 #   ./dev.sh --portable                   against the repo's own .dm-sync instead
+#   ./dev.sh --first-run                  against an empty throwaway install
 #   ./dev.sh -m tests.manual.preflight_check --free 100G
 #
 # Installed locations means the real settings, cache, logs and library: the same
@@ -37,15 +38,18 @@ fi
 
 "$PY" - <<'BANNER'
 import os
-from src.core.paths import get_cache_dir, get_data_dir, get_download_path
+from src.core.paths import (get_cache_dir, get_data_dir, get_download_path,
+                            library_is_set)
 
 installed = os.environ.get("SYNCHOTIC_OS_DIRS") == "1"
+# get_download_path answers even when no library is chosen, so say so instead.
+library = get_download_path() if library_is_set() else "NOT SET"
 print()
 print(f"  running the working tree against "
       f"{'the installed locations' if installed else 'the repo (.dm-sync)'}")
 print(f"    data     {get_data_dir()}")
 print(f"    cache    {get_cache_dir()}")
-print(f"    library  {get_download_path()}")
+print(f"    library  {library}")
 print()
 BANNER
 

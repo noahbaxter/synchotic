@@ -277,6 +277,24 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
                 menu_cache = None
 
 
+def use_first_run_sandbox() -> Path:
+    """Point this run at an empty install in a throwaway temp folder, so a
+    machine that already runs Synchotic can show what a new user sees.
+    Nothing installed is read or adopted. Returns the folder."""
+    import tempfile
+
+    from src.core.legacy_migration import FRESH_ENV
+
+    sandbox = Path(tempfile.mkdtemp(prefix="synchotic-first-run-"))
+    os.environ["SYNCHOTIC_ROOT"] = str(sandbox)
+    os.environ["SYNCHOTIC_OS_DIRS"] = "0"
+    os.environ[FRESH_ENV] = "1"
+    # Both would hand the sandbox a real install to adopt.
+    os.environ.pop("SYNCHOTIC_LIBRARY", None)
+    os.environ.pop("SYNCHOTIC_LEGACY_ROOT", None)
+    return sandbox
+
+
 def main():
     """Entry point."""
     import time as _time
@@ -302,6 +320,12 @@ def main():
         description="DM Chart Sync - Download charts from Google Drive"
     )
     parser.add_argument(
+        "--first-run", "--firsttime", action="store_true", dest="first_run",
+        help="run against an empty throwaway install, for seeing what a new "
+             "user sees. Nothing on this machine is read or written: no "
+             "settings, no sign-in, no library, and no adoption of either.",
+    )
+    parser.add_argument(
         "--download-mode", choices=DOWNLOAD_MODES, default=None,
         help="how to fetch virus-scan-blocked files: rclone (one Google consent "
              "click), anonymous (skip them), byoc (your own credentials). Saved "
@@ -311,6 +335,11 @@ def main():
     # print and exit, and anything printed into that buffer is discarded when
     # the exit handler closes it, so --help showed the user nothing at all.
     cli_args = parser.parse_args()
+
+    if cli_args.first_run:
+        sandbox = use_first_run_sandbox()
+        # Before the alternate screen opens, so it is still there after quitting.
+        print(f"  first-run sandbox: {sandbox}")
 
     # Everything below draws in the alternate screen buffer. The menus repaint
     # in place from the home position, which only holds if home stays put: on

@@ -60,6 +60,14 @@ def legacy_install_candidates(explicit=None) -> list:
     return [c for c, _ in sorted(found.items(), key=lambda kv: kv[1], reverse=True)]
 
 
+FRESH_ENV = "SYNCHOTIC_FRESH"  # see sync.py --first-run
+
+
+def pretending_to_be_new() -> bool:
+    """True for a --first-run sandbox, where every adoption path stays off."""
+    return os.environ.get(FRESH_ENV) == "1"
+
+
 def adopt_legacy_install() -> list:
     """Bring a previous install into the OS dirs, once, at startup.
 
@@ -130,6 +138,8 @@ def default_library_to_adopt():
     """The former default library an upgrading install was already using, or
     None. Only a folder with something in it (charts or just its state dir):
     an empty one costs nothing to ask about."""
+    if pretending_to_be_new():
+        return None
     for candidate in former_default_libraries():
         try:
             if candidate.is_dir() and any(candidate.iterdir()):
