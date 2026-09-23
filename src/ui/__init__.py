@@ -37,7 +37,6 @@ from .components import (
     format_status_line,
     format_home_item,
     format_setlist_item,
-    format_purge_tree,
 )
 from .widgets import (
     Menu,
@@ -90,7 +89,6 @@ __all__ = [
     "format_status_line",
     "format_home_item",
     "format_setlist_item",
-    "format_purge_tree",
     # Widgets
     "Menu",
     "MenuItem",

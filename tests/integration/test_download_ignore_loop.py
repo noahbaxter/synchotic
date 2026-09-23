@@ -19,6 +19,7 @@ from src.sync.downloader import DownloadResult
 from src.sync.folder_sync import FolderSync
 from src.sync.purge_planner import plan_purge
 from src.sync.status import get_setlist_sync_status
+from src.ui.widgets.progress import FolderProgress
 
 DRIVE = "TestDrive"
 FID = "fid_TestDrive"
@@ -106,7 +107,7 @@ class _Drive:
                           download_ignore=settings.download_ignore,
                           download_mode="byoc")
         downloaded, skipped, errors, _, cancelled, _ = sync.sync_folder(
-            self.folder, self.library)
+            self.folder, self.library, progress=FolderProgress(0, 0))
         assert errors == 0 and not cancelled
         return downloaded, skipped
 

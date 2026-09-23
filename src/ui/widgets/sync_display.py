@@ -1,13 +1,5 @@
-"""
-Centralized display functions for formatted output.
-
-Any output with color codes or complex formatting belongs here.
-Plain text prints can be inlined at the call site.
-
-Usage:
-    from src.ui.widgets import display
-    display.folder_complete(downloaded, bytes, duration, errors)
-"""
+"""Messages printed to the scrollback, outside the full-screen panels. The
+words come from copy.py; this adds the colour and the indent."""
 
 from ... import copy
 from ..primitives.colors import Colors
@@ -27,12 +19,6 @@ def _say(text: str, indent: str = "  ") -> None:
     copy.py keeps layout out of its strings."""
     for line in text.split("\n"):
         print(f"{indent}{line}" if line else "")
-
-
-def _rule_width() -> int:
-    """Width for the ━━━ rules, so they span the window instead of a fixed 50."""
-    from ..primitives.terminal import get_terminal_width
-    return max(50, get_terminal_width() - 4)
 
 
 # === Auth/OAuth messages ===
@@ -72,13 +58,6 @@ def library_blocked(reason: str):
 
 def custom_folder_blocked(reason: str):
     _blocked(copy.ADD_BLOCKED, reason, copy.SETTINGS_MODE)
-
-
-def auth_expired_warning(failure_count: int):
-    print()
-    print(f"  {sentences(count(failure_count, 'file') + ' failed', copy.STATUS_SIGNIN_EXPIRED)}")
-    print(f"  {copy.FIX_SIGN_IN}")
-    print()
 
 
 def session_expired_notice() -> None:
@@ -219,25 +198,6 @@ def library_lost(path) -> None:
     print()
 
 
-def purge_skipped_new_library(path) -> None:
-    """First sync at a library we did not create. Explain, delete nothing."""
-    print()
-    print("  This looks like a library Synchotic has not synced before:")
-    print(f"    {path}")
-    print()
-    print("  Nothing was removed. From the next sync onward, Synchotic manages")
-    print("  the folders of drives you enable: anything inside them that is not")
-    print("  part of that drive WILL BE DELETED. Folders that are not drives are")
-    print("  never touched.")
-    print()
-
-
-def purge_skipped_unowned(folder_name: str) -> None:
-    """A disabled drive whose folder we never created. Almost certainly theirs."""
-    print(f"  Skipped '{folder_name}': Synchotic did not create this folder, so it")
-    print("  will not be emptied. Enable the drive to have Synchotic manage it.")
-
-
 def rclone_no_browser() -> None:
     """Consent needs a browser and there is not one here."""
     print()
@@ -283,66 +243,7 @@ def scan_progress(folders: int, files: int):
     print_progress(copy.SCAN_PROGRESS.format(folders=folders, files=files))
 
 
-# === Folder status messages ===
-
-def folder_status_empty(filtered_count: int = 0):
-    parts = ["no files"]
-    if filtered_count > 0:
-        parts.append(f"{_c.DIM}{filtered_count} filtered{_c.RESET}")
-    print(f"  {', '.join(parts)}")
-
-def folder_status_synced(file_count: int, filtered_count: int = 0):
-    parts = [f"{file_count} files"]
-    if filtered_count > 0:
-        parts.append(f"{_c.DIM}{filtered_count} filtered{_c.RESET}")
-    print(f"  {', '.join(parts)} • {_c.SUCCESS}✓ synced{_c.RESET}")
-
-def folder_synced_inline(header: str, file_count: int, width: int | None = None):
-    width = _rule_width() if width is None else width
-    name = f"{_c.SUCCESS}✓{_c.RESET} {header} • {file_count} files"
-    # Strip ANSI to measure visible length for padding
-    from ..components import strip_ansi
-    visible = f"━━━ {strip_ansi(name)} "
-    pad = max(5, width - len(visible))
-    print(f"━━━ {name} {'━' * pad}")
-
-
-# === Download messages ===
-
-def download_starting(file_count: int, chart_count: int, total_size: int, skipped: int = 0):
-    line = f"  Downloading {chart_count} chart{'s' if chart_count != 1 else ''} ({file_count} files, {format_size(total_size)})"
-    if skipped > 0:
-        line += f" • {skipped} synced"
-    print(line)
-    print()
-
-def download_cancelled(downloaded: int, complete_charts: int, cleaned: int = 0):
-    print(f"  Cancelled. Downloaded {downloaded} files ({complete_charts} complete charts).")
-    if cleaned > 0:
-        print(f"  Cleaned up {cleaned} partial download(s).")
-
-
-# === Folder completion summary ===
-
-def folder_complete(downloaded: int, bytes_downloaded: int, duration: float,
-                    errors: int = 0, width: int | None = None):
-    width = _rule_width() if width is None else width
-    from ..components import strip_ansi
-    avg_speed = bytes_downloaded / duration if duration > 0 else 0
-    content = f"{_c.SUCCESS}✓{_c.RESET} {downloaded} files"
-    if bytes_downloaded > 0:
-        content += f" ({format_size(bytes_downloaded)})"
-    content += f" in {format_duration(duration)}"
-    if avg_speed > 0:
-        content += f" • {format_speed(avg_speed)}"
-    if errors > 0:
-        content += f" • {_c.ERROR}{errors} errors{_c.RESET}"
-    visible = f"━━━ {strip_ansi(content)} "
-    pad = max(5, width - len(visible))
-    print(f"━━━ {content} {'━' * pad}")
-
-
-# === Multi-folder completion summary ===
+# === Sync run summary, under the panel it leaves behind ===
 
 def sync_cancelled(downloaded: int = 0):
     summary = f"{_c.DIM}Cancelled{_c.RESET}"
@@ -367,60 +268,6 @@ def sync_failed(reason: str, failed_count: int = 0):
     """Nothing downloaded because scans failed, not because nothing was due."""
     scope = f" ({failed_count} setlist{'s' if failed_count != 1 else ''})" if failed_count else ""
     print(f"{_c.ERROR}✗{_c.RESET} Sync failed because {reason}{scope}")
-
-def sync_errors(error_count: int):
-    print(f"  {_c.ERROR}{error_count} errors{_c.RESET}")
-
-def sync_rate_limited(count: int):
-    print(f"  {_c.DIM}{count} rate-limited{_c.RESET}")
-
-def rate_limit_guidance(folder_names: set[str]):
-    print()
-    folder_list = ", ".join(sorted(folder_names))
-    print(f"  {_c.DIM}[{folder_list}] hit Google's download limit.{_c.RESET}")
-    print(f"  {_c.DIM}Run sync again later, or try tomorrow (resets every 24h).{_c.RESET}")
-
-
-# === Purge messages ===
-
-def purge_drive_disabled(folder_name: str, file_count: int, total_size: int):
-    print(f"\n{_c.DIM}[{folder_name}]{_c.RESET} (drive disabled)")
-    print(f"  Found {_c.ERROR}{file_count}{_c.RESET} files ({format_size(total_size)})")
-
-def purge_folder(folder_name: str, file_count: int, total_size: int):
-    print(f"\n{_c.DIM}[{folder_name}]{_c.RESET}")
-    print(f"  Found {_c.ERROR}{file_count}{_c.RESET} files to purge ({format_size(total_size)})")
-
-def purge_tree_lines(lines: list[str], max_lines: int = 5):
-    for line in lines[:max_lines]:
-        print(f"  {line}")
-    if len(lines) > max_lines:
-        print(f"    ... and {len(lines) - max_lines} more folders")
-
-def purge_removed(deleted: int, failed: int = 0):
-    msg = f"  {_c.ERROR}Removed {deleted} files{_c.RESET}"
-    if failed > 0:
-        msg += f" ({failed} failed)"
-    print(msg)
-
-def purge_partial_downloads(file_count: int, total_size: int):
-    print(f"\n{_c.DIM}[Partial Downloads]{_c.RESET}")
-    print(f"  Found {_c.ERROR}{file_count}{_c.RESET} incomplete download(s) ({format_size(total_size)})")
-
-def purge_partial_cleaned(deleted: int, failed: int = 0):
-    msg = f"  {_c.ERROR}Cleaned up {deleted} file(s){_c.RESET}"
-    if failed > 0:
-        msg += f" ({failed} failed)"
-    print(msg)
-
-def purge_summary(deleted: int, total_size: int, failed: int = 0):
-    print(f"{_c.ERROR}✗{_c.RESET} Removed {deleted} files ({format_size(total_size)})")
-    if failed > 0:
-        print(f"  {_c.DIM}{failed} file(s) could not be deleted{_c.RESET}")
-
-def purge_nothing():
-    print(f"{_c.SUCCESS}✓{_c.RESET} No files to purge")
-
 
 # === Download errors ===
 
@@ -516,26 +363,6 @@ def describe_failure(message: str) -> str:
     if "(" in message and ")" in message:
         return message[message.index("(") + 1:message.index(")")]
     return "failed"
-
-
-def blocked_outcome(recovered: int, still_blocked: int, mode: str = "rclone") -> None:
-    """Report charts Google would not serve anonymously, once the retry has
-    run, and only about what actually happened."""
-    if recovered:
-        print(f"  {_c.SUCCESS}✓{_c.RESET} {recovered} large chart(s) downloaded "
-              f"through rclone")
-    if not still_blocked:
-        return
-
-    print(f"  {_c.ERROR}{still_blocked} chart(s) need an authenticated "
-          f"download{_c.RESET}")
-    if mode == "rclone":
-        print(f"  {_c.MUTED}rclone already tried these. The next sync retries "
-              f"them; if they keep failing, set up your own credentials."
-              f"{_c.RESET}")
-    else:
-        print(f"  {_c.MUTED}Settings → Account → Mode: connect rclone, "
-              f"then sync again.{_c.RESET}")
 
 
 def failure_summary(by_reason: dict) -> None:

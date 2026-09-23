@@ -8,10 +8,8 @@ covers downloading; this covers only deleting.
 
 from pathlib import Path
 
-from ..core.formatting import count, sanitize_drive_name
+from ..core.formatting import count, format_size, sanitize_drive_name
 from ..core.logging import debug_log
-from ..ui.primitives import print_progress, print_section_header, print_separator
-from ..ui.widgets import display
 from .cache import clear_folder_cache, get_persistent_stats_cache
 from .purge_planner import plan_purge, find_partial_downloads
 from .purger import delete_files
@@ -22,8 +20,7 @@ PURGE_CONFIRM_SIZE_THRESHOLD = 500 * 1024**2  # 500 MB
 
 
 def _purge_disabled_drive(
-    folder_id: str, folder_name: str, folder_path: Path, base_path: Path,
-    persistent_cache, progress=None,
+    folder_id: str, folder_path: Path, base_path: Path, persistent_cache,
 ) -> tuple[int, int, int]:
     """Purge all files from a disabled drive. Returns (deleted, failed, size)."""
     local_files = [(f, f.stat().st_size if f.exists() else 0)
@@ -32,34 +29,24 @@ def _purge_disabled_drive(
         return 0, 0, 0
 
     folder_size = sum(size for _, size in local_files)
-    if not progress:
-        display.purge_drive_disabled(folder_name, len(local_files), folder_size)
 
     # Invalidate BEFORE delete — crash-safe (empty cache rebuilds correctly)
     persistent_cache.invalidate(folder_id)
     deleted, failed = delete_files(local_files, base_path, cleanup_path=folder_path)
-    if not progress:
-        display.purge_removed(deleted, failed)
     return deleted, failed, folder_size
 
 
 def _purge_enabled_drive(
     folder: dict, folder_path: Path, base_path: Path,
     user_settings, failed_setlists, marker_norm: set, persistent_cache,
-    progress=None, pause_keys=None, resume_keys=None,
+    progress, pause_keys=None, resume_keys=None,
 ) -> tuple[int, int, int]:
     """Purge orphaned files from an enabled drive. Returns (deleted, failed, size)."""
-    from ..core.formatting import format_size
-    from ..ui.components import format_purge_tree
-
     folder_id = folder.get("folder_id", "")
     folder_name = folder.get("name", "")
 
     def walked(n: int) -> None:
-        if progress:
-            progress.set_stage(f"checking {folder_name} · {count(n, 'file')}")
-        else:
-            print_progress(f"Purge: checking {folder_name}... {count(n, 'file')}")
+        progress.set_stage(f"checking {folder_name} · {count(n, 'file')}")
 
     files_to_purge, _ = plan_purge(
         [folder], base_path, user_settings, failed_setlists,
@@ -69,21 +56,16 @@ def _purge_enabled_drive(
         return 0, 0, 0
 
     folder_size = sum(size for _, size in files_to_purge)
-    if not progress:
-        display.purge_folder(folder_name, len(files_to_purge), folder_size)
-        display.purge_tree_lines(format_purge_tree(files_to_purge, base_path))
 
     purge_count = len(files_to_purge)
     if purge_count > PURGE_CONFIRM_FILE_THRESHOLD or folder_size > PURGE_CONFIRM_SIZE_THRESHOLD:
-        from contextlib import nullcontext
-
         from ..ui.widgets.confirm import ConfirmDialog
         # The dialog reads keys and draws itself: pause the key reader (or it
         # steals keystrokes) and the paint loop (or it paints over the dialog).
         if pause_keys:
             pause_keys()
         try:
-            with (progress.suspended() if progress else nullcontext()):
+            with progress.suspended():
                 dialog = ConfirmDialog(
                     f"Delete {count(purge_count, 'file')} ({format_size(folder_size)}) "
                     f"from {folder_name}?"
@@ -94,10 +76,7 @@ def _purge_enabled_drive(
                 resume_keys()
         if not confirmed:
             debug_log(f"PURGE_SKIPPED | folder={folder_name} | user declined")
-            if progress:
-                progress.note(folder_name, context="delete skipped")
-            else:
-                print(f"  Skipped.")
+            progress.note(folder_name, context="delete skipped")
             return 0, 0, 0
 
     # Invalidate affected setlists BEFORE delete — crash-safe
@@ -113,29 +92,21 @@ def _purge_enabled_drive(
                 persistent_cache.invalidate_setlist(folder_id, raw_name)
 
     deleted, failed = delete_files(files_to_purge, base_path, cleanup_path=folder_path)
-    if not progress:
-        display.purge_removed(deleted, failed)
     return deleted, failed, folder_size
 
 
-def _purge_partial_downloads(base_path: Path, progress=None,
+def _purge_partial_downloads(base_path: Path, progress,
                              already_walked=()) -> tuple[int, int, int]:
     """Clean up incomplete downloads outside the drives just purged, whose
     own passes already took theirs."""
-    if progress:
-        progress.set_stage("checking for interrupted downloads...")
+    progress.set_stage("checking for interrupted downloads...")
     partial_files = find_partial_downloads(base_path, skip_dirs=already_walked)
     if not partial_files:
         return 0, 0, 0
 
     partial_size = sum(size for _, size in partial_files)
-    if not progress:
-        display.purge_partial_downloads(len(partial_files), partial_size)
     deleted, failed = delete_files(partial_files, base_path)
-    if progress:
-        progress.note("Partial downloads", context=f"{count(deleted, 'file')} deleted")
-    else:
-        display.purge_partial_cleaned(deleted, failed)
+    progress.note("Partial downloads", context=f"{count(deleted, 'file')} deleted")
     return deleted, failed, partial_size
 
 
@@ -144,7 +115,8 @@ def purge_all_folders(
     base_path: Path,
     user_settings=None,
     failed_setlists: dict[str, set[str]] | None = None,
-    progress=None,
+    *,
+    progress,
     cancel_check=None,
     pause_keys=None,
     resume_keys=None,
@@ -152,7 +124,7 @@ def purge_all_folders(
     """Purge files that shouldn't be synced. Uses marker files as source of truth.
 
     Args:
-        progress: The sync run's panel; purge draws into it instead of printing.
+        progress: The sync run's panel, which purge draws into.
         cancel_check: Polled between drives. A drive already deleting finishes.
         pause_keys/resume_keys: Hand stdin to ConfirmDialog and take it back.
     """
@@ -161,18 +133,12 @@ def purge_all_folders(
     from .ownership import (backfill_owned_from_markers, is_library_adopted,
                             mark_library_adopted, resolve_owned_drives)
 
-    if progress:
-        progress.set_title("")  # the phase word already says PURGE
-    else:
-        print_section_header("Purge")
+    progress.set_title("")  # the phase word already says PURGE
 
     # A library we have never synced may be one the user already had. Their
     # folders can share drive names, so deleting anything here is a guess.
     if not is_library_adopted():
-        if progress:
-            progress.note("Purge", context="skipped: new library")
-        else:
-            display.purge_skipped_new_library(base_path)
+        progress.note("Purge", context="skipped: new library")
         mark_library_adopted()
         return set()
 
@@ -189,10 +155,7 @@ def purge_all_folders(
     persistent_cache = get_persistent_stats_cache()
 
     # Compute markers ONCE for all folders
-    if progress:
-        progress.set_stage("reading markers...")
-    else:
-        print_progress("Purge: reading markers...")
+    progress.set_stage("reading markers...")
     all_marker_files = get_all_marker_files()
     marker_norm = {normalize_path_key(p) for p in all_marker_files}
 
@@ -200,8 +163,7 @@ def purge_all_folders(
     # seconds per drive on a network library. Name the drive, or purge looks
     # like it has stopped at the point where it is about to delete things.
     total_drives = len(folders)
-    if progress:
-        progress.set_run_total(total_drives, "drives")
+    progress.set_run_total(total_drives, "drives")
 
     for drive_index, folder in enumerate(folders, start=1):
         # ESC finishes the drive already in flight, then stops here, before
@@ -214,17 +176,11 @@ def purge_all_folders(
         folder_path = base_path / folder.get("name", "")
 
         if not folder_path.exists():
-            if progress:
-                progress.advance_run()
+            progress.advance_run()
             continue
 
-        if progress:
-            # No count: the bar above already says which drive of how many.
-            progress.set_stage(f"checking {folder.get('name', '')}")
-        else:
-            print_progress(
-                f"Purge: checking {folder.get('name', '')} ({drive_index}/{total_drives})"
-            )
+        # No count: the bar above already says which drive of how many.
+        progress.set_stage(f"checking {folder.get('name', '')}")
 
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
 
@@ -233,15 +189,11 @@ def purge_all_folders(
             # drive whose folder we never synced is the user's own collection
             # that happens to share a name.
             if folder_id not in owned:
-                if not progress:
-                    display.purge_skipped_unowned(folder.get("name", ""))
                 debug_log(f"PURGE_SKIP_UNOWNED | folder={folder.get('name', '')}")
-                if progress:
-                    progress.advance_run()
+                progress.advance_run()
                 continue
             deleted, failed, size = _purge_disabled_drive(
-                folder_id, folder.get("name", ""), folder_path, base_path, persistent_cache,
-                progress=progress,
+                folder_id, folder_path, base_path, persistent_cache,
             )
         else:
             deleted, failed, size = _purge_enabled_drive(
@@ -258,14 +210,9 @@ def purge_all_folders(
         total_size += size
         if deleted > 0:
             purged_folder_ids.add(folder_id)
-            if progress:
-                from ..core.formatting import format_size
-                progress.note(folder.get("name", ""),
-                              context=f"{count(deleted, 'file')} deleted ({format_size(size)})")
-        if progress:
-            progress.advance_run()
-        if not progress:
-            print("\033[2K\r", end="", flush=True)
+            progress.note(folder.get("name", ""),
+                          context=f"{count(deleted, 'file')} deleted ({format_size(size)})")
+        progress.advance_run()
 
     deleted, failed, size = _purge_partial_downloads(
         base_path, progress=progress, already_walked=walked_paths)
@@ -273,23 +220,14 @@ def purge_all_folders(
     total_failed += failed
     total_size += size
 
-    if progress:
-        progress.set_stage("")
-        from ..core.formatting import format_size
-        if total_deleted > 0 or total_failed > 0:
-            context = f"{count(total_deleted, 'file')} deleted ({format_size(total_size)})"
-            if total_failed:
-                context += f", {total_failed:,} failed"
-        else:
-            context = "nothing to delete"
-        progress.note("Purge complete", context=context)
+    progress.set_stage("")
+    if total_deleted > 0 or total_failed > 0:
+        context = f"{count(total_deleted, 'file')} deleted ({format_size(total_size)})"
+        if total_failed:
+            context += f", {total_failed:,} failed"
     else:
-        print()
-        print_separator()
-        if total_deleted > 0 or total_failed > 0:
-            display.purge_summary(total_deleted, total_size, total_failed)
-        else:
-            display.purge_nothing()
+        context = "nothing to delete"
+    progress.note("Purge complete", context=context)
 
     # Invalidate in-memory filesystem cache for folders that changed
     for folder in folders:

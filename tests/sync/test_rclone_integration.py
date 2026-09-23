@@ -1,6 +1,11 @@
 # tests/sync/test_rclone_integration.py
 from pathlib import Path
 from src.sync.folder_sync import FolderSync
+from src.ui.widgets.progress import FolderProgress
+
+
+def _panel():
+    return FolderProgress(total_files=0, total_folders=0)
 
 
 def test_blocked_tasks_routed_through_rclone(monkeypatch, tmp_path):
@@ -35,7 +40,7 @@ def test_blocked_tasks_routed_through_rclone(monkeypatch, tmp_path):
     fs = FolderSync(client=None, auth_token=None)
     folder = {"name": "Drive", "folder_id": "fid",
               "files": [{"id": "ID", "path": "Set/a.7z", "size": 1, "md5": ""}]}
-    fs.sync_folder(folder, tmp_path)
+    fs.sync_folder(folder, tmp_path, progress=_panel())
     assert calls["ids"] == ["ID"]            # rclone got the blocked task
     assert processed["rel"] == "Drive/Set/a.7z"  # existing extraction path reused
 
@@ -73,7 +78,7 @@ def test_loose_file_recovered_without_extraction(monkeypatch, tmp_path):
     fs = FolderSync(client=None, auth_token=None)
     folder = _make_folder(["ID"])
     folder["files"][0]["path"] = "Set/loose.txt"
-    result = fs.sync_folder(folder, tmp_path)
+    result = fs.sync_folder(folder, tmp_path, progress=_panel())
     downloaded, skipped, errors = result[0], result[1], result[2]
     assert downloaded == 1            # loose file counted as recovered
     assert errors == 0               # error subtracted away
@@ -96,7 +101,7 @@ def test_not_authed_leaves_blocked_as_errors(monkeypatch, tmp_path):
 
     fs = FolderSync(client=None, auth_token=None)
     folder = _make_folder(["ID"])
-    result = fs.sync_folder(folder, tmp_path)
+    result = fs.sync_folder(folder, tmp_path, progress=_panel())
     downloaded, errors = result[0], result[2]
     assert downloaded == 0    # nothing recovered
     assert errors == 1        # blocked file stays an error
@@ -128,7 +133,7 @@ def test_rclone_exception_keeps_files_failed(monkeypatch, tmp_path):
 
     fs = FolderSync(client=None, auth_token=None)
     folder = _make_folder(["ID"])
-    result = fs.sync_folder(folder, tmp_path)   # must not raise
+    result = fs.sync_folder(folder, tmp_path, progress=_panel())   # must not raise
     downloaded, errors = result[0], result[2]
     assert downloaded == 0           # nothing recovered after exception
     assert errors == 1              # error count unchanged
@@ -163,7 +168,7 @@ def test_errors_never_go_negative_when_partial_recovery(monkeypatch, tmp_path):
 
     fs = FolderSync(client=None, auth_token=None)
     folder = _make_folder(["A", "B"])
-    result = fs.sync_folder(folder, tmp_path)
+    result = fs.sync_folder(folder, tmp_path, progress=_panel())
     downloaded, errors = result[0], result[2]
     assert downloaded == 1    # one archive recovered
     assert errors == 1        # 2 errors - 1 recovered

@@ -12,9 +12,6 @@ from .terminal import (
     truncate_text,
     get_available_width,
     print_progress,
-    print_long_path_warning,
-    print_section_header,
-    print_separator,
     make_separator,
     SECTION_WIDTH,
 )
@@ -63,9 +60,6 @@ __all__ = [
     "truncate_text",
     "get_available_width",
     "print_progress",
-    "print_long_path_warning",
-    "print_section_header",
-    "print_separator",
     "make_separator",
     "SECTION_WIDTH",
     # Keyboard input

@@ -214,7 +214,6 @@ class SyncFlowMixin:
 
         downloaded_ids: set[str] = set()
         synced_drive_ids: set[str] = set()
-        completed_count = 0
         total_downloaded = 0
         total_bytes = 0
         was_cancelled = False
@@ -232,7 +231,6 @@ class SyncFlowMixin:
                     break
 
             if next_setlist is not None:
-                completed_count += 1
                 setlist = next_setlist
                 drive = setlist.drive
 
@@ -264,13 +262,11 @@ class SyncFlowMixin:
                     "total_size": total_size,
                 }
 
-                setlist_header = f"[{completed_count}/{total_setlists}] {display_name}"
                 # On the divider, not the list, which is charts. No count: the
                 # bar keeps it.
                 progress.set_stage(f"checking {display_name}")
                 downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
                     temp_folder, get_download_path(), [],
-                    header=setlist_header,
                     setlist_name=setlist.name,
                     label=display_name,
                     skip_marker_rebuild=True,

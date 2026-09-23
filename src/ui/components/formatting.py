@@ -5,11 +5,9 @@ Functions for formatting sync status, counts, sizes with colors.
 """
 
 import math
-from collections import defaultdict
-from pathlib import Path
 
 from src import copy
-from src.core.formatting import count, format_size
+from src.core.formatting import format_size
 from ..primitives import Colors, strip_ansi
 
 
@@ -269,31 +267,3 @@ def format_setlist_item(
     )
 
     return columns, delta, show_checkmark
-
-
-def format_purge_tree(files: list[tuple[Path, int]], base_path: Path) -> list[str]:
-    """
-    Format files to purge as a tree showing file counts per folder.
-
-    Args:
-        files: List of (Path, size) tuples
-        base_path: Base path for relative display
-
-    Returns:
-        List of formatted strings to print.
-    """
-    by_folder = defaultdict(lambda: {"count": 0, "size": 0})
-    for f, size in files:
-        rel_path = f.relative_to(base_path)
-        parent = str(rel_path.parent)
-        by_folder[parent]["count"] += 1
-        by_folder[parent]["size"] += size
-
-    sorted_folders = sorted(by_folder.items())
-
-    lines = []
-    for folder_path, stats in sorted_folders:
-        lines.append(f"  {folder_path}/ ({count(stats['count'], 'file')}, "
-                     f"{format_size(stats['size'])})")
-
-    return lines

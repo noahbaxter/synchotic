@@ -9,6 +9,7 @@ import pytest
 
 from src.core import paths
 from src.sync import ownership
+from src.ui.widgets.progress import FolderProgress
 
 
 @pytest.fixture(autouse=True)
@@ -63,19 +64,19 @@ class TestPurgeRefusesUnownedFolders:
     def _folder(self, name="Guitar Hero", fid="gh"):
         return {"name": name, "folder_id": fid, "files": []}
 
-    def test_first_sync_at_an_adopted_library_purges_nothing(self, library, capsys):
+    def test_first_sync_at_an_adopted_library_purges_nothing(self, library):
         """The catastrophic case: user points at their own collection."""
         from src.sync.purge_flow import purge_all_folders
         theirs = library / "Guitar Hero"
         theirs.mkdir(parents=True)
         (theirs / "their_chart.ini").write_text("mine, not yours")
 
-        purge_all_folders([self._folder()], library, user_settings=None)
+        purge_all_folders([self._folder()], library, user_settings=None,
+                          progress=FolderProgress(0, 0))
 
         assert (theirs / "their_chart.ini").exists()
-        assert "has not synced before" in capsys.readouterr().out
 
-    def test_disabled_drive_we_never_created_is_not_emptied(self, library, capsys):
+    def test_disabled_drive_we_never_created_is_not_emptied(self, library):
         from src.sync.purge_flow import purge_all_folders
 
         class Settings:
@@ -87,10 +88,10 @@ class TestPurgeRefusesUnownedFolders:
         theirs.mkdir(parents=True)
         (theirs / "their_chart.ini").write_text("mine, not yours")
 
-        purge_all_folders([self._folder()], library, user_settings=Settings())
+        purge_all_folders([self._folder()], library, user_settings=Settings(),
+                          progress=FolderProgress(0, 0))
 
         assert (theirs / "their_chart.ini").exists()
-        assert "did not create this folder" in capsys.readouterr().out
 
 
 class TestUpgradingUsersKeepPurge:
@@ -145,6 +146,7 @@ class TestUpgradingUsersKeepPurge:
         save_marker("Guitar Hero/pack.7z", "abc",
                     {"synced_chart.ini": chart.stat().st_size})
 
-        purge_all_folders([self._folder()], library, user_settings=Disabled())
+        purge_all_folders([self._folder()], library, user_settings=Disabled(),
+                          progress=FolderProgress(0, 0))
 
         assert not chart.exists(), "disabled drive was not purged after upgrade"

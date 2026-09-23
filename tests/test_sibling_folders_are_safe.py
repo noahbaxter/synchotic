@@ -18,6 +18,7 @@ import pytest
 from src.sync.cache import SyncCache
 from src.sync.purge_flow import purge_all_folders
 from src.sync.markers import save_marker
+from src.ui.widgets.progress import FolderProgress
 
 DRIVES = ["BirdmanExe Drive", "Drummer's Monthly Drive", "Guitar Hero", "Misc"]
 
@@ -52,7 +53,8 @@ def test_sibling_custom_folder_is_untouched(install, capsys):
     """The headline: purging the library must not reach into Custom."""
     theirs = install["theirs"]
 
-    purge_all_folders(_folders(), install["library"], user_settings=None)
+    purge_all_folders(_folders(), install["library"], user_settings=None,
+                      progress=FolderProgress(0, 0))
 
     assert (theirs / "song.ini").exists()
     assert (theirs / "notes.chart").exists()
@@ -68,7 +70,8 @@ def test_purge_is_actually_doing_something(install):
     stray = install["library"] / "Guitar Hero" / "not_from_us.chart"
     stray.write_text("x")
 
-    purge_all_folders(_folders(), install["library"], user_settings=None)
+    purge_all_folders(_folders(), install["library"], user_settings=None,
+                      progress=FolderProgress(0, 0))
 
     assert not stray.exists(), "purge did not run, so the sibling test proves nothing"
     assert (install["theirs"] / "song.ini").exists()
@@ -82,7 +85,8 @@ def test_marked_files_in_the_library_survive(install):
     chart.write_text("synced")
     save_marker("Guitar Hero/pack.7z", "abc123", {"pack/song.ini": chart.stat().st_size})
 
-    purge_all_folders(_folders(), library, user_settings=None)
+    purge_all_folders(_folders(), library, user_settings=None,
+                      progress=FolderProgress(0, 0))
 
     assert chart.exists()
     assert (install["theirs"] / "song.ini").exists()
@@ -94,7 +98,8 @@ def test_a_disabled_drive_does_not_leak_into_custom(install):
         def is_drive_enabled(self, drive_id):
             return False
 
-    purge_all_folders(_folders(), install["library"], user_settings=AllDisabled())
+    purge_all_folders(_folders(), install["library"], user_settings=AllDisabled(),
+                      progress=FolderProgress(0, 0))
 
     assert (install["theirs"] / "song.ini").exists()
     assert (install["theirs"] / "notes.chart").exists()

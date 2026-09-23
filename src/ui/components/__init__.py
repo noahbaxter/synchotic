@@ -27,7 +27,6 @@ from .formatting import (
     format_status_line,
     format_home_item,
     format_setlist_item,
-    format_purge_tree,
 )
 
 __all__ = [
@@ -52,5 +51,4 @@ __all__ = [
     "format_status_line",
     "format_home_item",
     "format_setlist_item",
-    "format_purge_tree",
 ]

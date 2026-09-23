@@ -12,6 +12,7 @@ import pytest
 from src.config.settings import DOWNLOAD_MODES, UserSettings
 from src.sync.download_planner import DownloadTask
 from src.sync.folder_sync import FolderSync
+from src.ui.widgets.progress import FolderProgress
 
 
 def _blocked_task(tmp_path):
@@ -41,7 +42,8 @@ def test_non_rclone_modes_never_touch_rclone(monkeypatch, tmp_path, one_blocked,
     monkeypatch.setattr("src.rclone.RcloneSession", boom)
 
     fs = FolderSync(client=None, auth_token=None, download_mode=mode)
-    downloaded, _, errors, _, _, _ = fs.sync_folder(_folder(), tmp_path)
+    downloaded, _, errors, _, _, _ = fs.sync_folder(_folder(), tmp_path,
+                                                    progress=FolderProgress(0, 0))
 
     assert downloaded == 0
     assert errors == 1  # still reported as failed, not silently dropped
@@ -66,7 +68,7 @@ def test_rclone_mode_still_uses_the_tier(monkeypatch, tmp_path, one_blocked):
                         lambda self, task, rel=None: (True, "", {}))
 
     fs = FolderSync(client=None, auth_token=None, download_mode="rclone")
-    fs.sync_folder(_folder(), tmp_path)
+    fs.sync_folder(_folder(), tmp_path, progress=FolderProgress(0, 0))
     assert seen["ids"] == ["ID"]
 
 
