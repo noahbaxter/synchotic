@@ -13,6 +13,25 @@ from src.ui.widgets import display
 
 class SyncFlowMixin:
 
+    def _preflight_ok(self) -> bool:
+        """Ask before a sync that will not fit or deletes a lot. Sizes come
+        from the stats cache, so nothing waits on the scan."""
+        from src.core.paths import plain_path
+        from src.sync.cache import get_persistent_stats_cache
+        from src.sync.preflight import concerns_for
+        from src.ui.screens.home import _get_setlist_names
+        from src.ui.screens.preflight import confirm_sync
+
+        library = get_download_path()
+        folders = [
+            {"folder_id": f.get("folder_id", ""), "name": f.get("name", ""),
+             "setlists": _get_setlist_names(f, self._background_scanner)}
+            for f in self.folders
+        ]
+        concerns, free = concerns_for(folders, self.user_settings,
+                                      get_persistent_stats_cache(), library)
+        return confirm_sync(concerns, plain_path(library), free)
+
     def handle_sync(self):
         """Sync enabled setlists as they become ready, then purge extras.
 
@@ -29,8 +48,10 @@ class SyncFlowMixin:
         clear_screen()
         print_header()
 
-        # Whether the chosen mode can reach Drive, not whether we hold an OAuth
-        # token: rclone and anonymous both sync without one.
+        # Space and deletions: silent unless something is wrong.
+        if not self._preflight_ok():
+            return None
+
         blocked = self._drive_blocked()
         if blocked:
             display.sync_blocked(blocked)

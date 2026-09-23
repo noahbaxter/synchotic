@@ -69,6 +69,7 @@ def run(tmp_path, monkeypatch):
     app.folder_stats_cache = type("C", (), {"invalidate": lambda self, fid: None})()
     app.auth = type("A", (), {"is_signed_in": False, "is_available": False})()
     monkeypatch.setattr(type(app), "_get_combined_drives_config", lambda self: None)
+    monkeypatch.setattr(type(app), "_preflight_ok", lambda self: True)
     return app, calls
 
 
