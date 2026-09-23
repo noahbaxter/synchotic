@@ -24,7 +24,8 @@ from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
 from .extractor import extract_archive, get_folder_size, delete_ignored_files
 from .download_planner import DownloadTask
 from .markers import save_marker, save_failed_marker
-from ..ui.primitives.esc_monitor import EscMonitor
+from ..ui.primitives.keys import KeyMonitor
+from ..ui.widgets.sync_screen import handle_key
 from ..ui.widgets import FolderProgress, display
 
 # Large file threshold for reducing download concurrency (500MB)
@@ -265,9 +266,10 @@ class FileDownloader:
                                 last_update = now
                                 progress_tracker.update_active_download(task.file_id, downloaded_bytes)
 
-            # Unregister when done
+            # The row stays up past the last byte: an archive still has to
+            # extract, and the result handler settles the row either way.
             if is_tracked and progress_tracker:
-                progress_tracker.unregister_active_download(task.file_id)
+                progress_tracker.update_active_download(task.file_id, downloaded_bytes)
 
         # A truncated body writes cleanly and only fails later inside the
         # extractor, where a rate limit reads as a corrupt archive and the chart
@@ -513,6 +515,8 @@ class FileDownloader:
 
         def process_archive_limited(task: DownloadTask) -> Tuple[bool, str]:
             with extract_semaphore:
+                if progress:
+                    progress.mark_extracting(task.file_id)
                 success, error, _ = self.process_archive(task, task.rel_path)
                 return success, error
 
@@ -576,6 +580,7 @@ class FileDownloader:
                             errors += 1
                             if progress:
                                 progress.file_completed(task.local_path)
+                                progress.unregister_active_download(task.file_id)
                             continue
 
                         path_context = extract_path_context(task.rel_path)
@@ -589,21 +594,27 @@ class FileDownloader:
                                     errors += 1
                                     if progress:
                                         progress.file_completed(task.local_path)
-                                        progress.print_error(path_context, f"extract: {task.local_path.parent.name} - {archive_error}")
+                                        progress.print_error(path_context, f"extract: {task.local_path.parent.name} - {archive_error}",
+                                                             file_id=task.file_id)
                                     continue
 
                                 if progress:
                                     archive_name = task.local_path.name
                                     if archive_name.startswith("_download_"):
                                         archive_name = archive_name[10:]
-                                    progress.archive_completed(task.local_path, archive_name, path_context)
+                                    progress.archive_completed(task.local_path, archive_name, path_context,
+                                                               file_id=task.file_id)
 
                             downloaded += 1
                             if progress and result.bytes_downloaded > 0:
-                                progress.add_downloaded_bytes(result.bytes_downloaded)
+                                progress.add_downloaded_bytes(result.bytes_downloaded,
+                                                              file_id=task.file_id)
 
                             if progress:
                                 if not task.is_archive:
+                                    # A loose file is not a chart row: its
+                                    # folder resolves once every file is in.
+                                    progress.unregister_active_download(task.file_id)
                                     completed_info = progress.file_completed(result.file_path)
                                     if completed_info:
                                         folder_name, is_chart, ctx = completed_info
@@ -612,7 +623,8 @@ class FileDownloader:
                                     progress.file_completed(result.file_path)
                         else:
                             errors += 1
-                            if getattr(result, "needs_auth", False):
+                            blocked = getattr(result, "needs_auth", False)
+                            if blocked:
                                 blocked_tasks.append(task)
                             elif "auth" in result.message.lower() or "401" in result.message:
                                 auth_failures += 1
@@ -620,7 +632,13 @@ class FileDownloader:
                                 retryable_tasks.append(task)
                             if progress:
                                 progress.file_completed(result.file_path)
-                                progress.print_error(path_context, result.message)
+                                # A blocked file is not a failure yet: tier 4
+                                # fetches most of them through rclone next.
+                                if not blocked:
+                                    progress.print_error(path_context, result.message,
+                                                         file_id=task.file_id)
+                                else:
+                                    progress.unregister_active_download(task.file_id)
 
                         if progress_callback:
                             progress_callback(result)
@@ -641,6 +659,7 @@ class FileDownloader:
         cancel_check: Optional[Callable[[], bool]] = None,
         scan_stats_getter: Optional[Callable] = None,
         skipped: int = 0,
+        progress: Optional[FolderProgress] = None,
     ) -> Tuple[int, int, int, List[str], bool, int]:
         """Download multiple files concurrently using asyncio.
 
@@ -649,6 +668,8 @@ class FileDownloader:
                          Called periodically during download. Useful for programmatic
                          cancellation (e.g., GUI cancel button, testing).
             scan_stats_getter: Optional callback that returns current scan stats for display.
+            progress: An open screen owned by the caller, who also reads keys
+                      and closes it.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -656,22 +677,25 @@ class FileDownloader:
         if not tasks:
             return 0, 0, 0, [], False, 0, []
 
-        progress = None
-        if show_progress:
-            total_bytes = sum(t.size for t in tasks)
+        owns_progress = progress is None
+        if owns_progress and show_progress:
             progress = FolderProgress(total_files=len(tasks), total_folders=0)
+        if progress:
+            total_bytes = sum(t.size for t in tasks)
+            progress.begin_unit(total_bytes)
             progress.register_folders(tasks)
             progress.set_aggregate_totals(len(tasks), total_bytes, drive_name)
             if scan_stats_getter:
                 progress.set_scan_stats_getter(scan_stats_getter)
-            display.download_starting(len(tasks), progress.total_charts, total_bytes, skipped)
+            if owns_progress:
+                # A shared screen is already painting; a raw print would corrupt it.
+                display.download_starting(len(tasks), progress.total_charts, total_bytes, skipped)
 
         original_handler = None
 
         def handle_cancel():
             if progress and not progress.cancelled:
                 progress.cancel()
-                print("\n  Cancelling downloads...")
 
         def handle_interrupt(signum, frame):
             handle_cancel()
@@ -681,8 +705,14 @@ class FileDownloader:
         except Exception:
             pass
 
-        esc_monitor = EscMonitor(on_esc=handle_cancel)
-        esc_monitor.start()
+        def on_key(key):
+            if progress:
+                handle_key(progress.screen, key, handle_cancel)
+
+        # A shared screen's owner already reads keys; two readers fight over stdin.
+        keys = KeyMonitor(on_key=on_key) if (progress and owns_progress) else None
+        if keys:
+            keys.start()
 
         auth_failures = 0
         rate_limited_ids: List[str] = []
@@ -701,7 +731,8 @@ class FileDownloader:
             permanent_errors = 0
             blocked_tasks = []
         finally:
-            esc_monitor.stop()
+            if keys:
+                keys.stop()
 
             try:
                 signal.signal(signal.SIGINT, original_handler or signal.SIG_DFL)
@@ -709,11 +740,13 @@ class FileDownloader:
                 pass
 
             if progress:
-                progress.close()
                 if cancelled:
                     cleaned = self._cleanup_partial_downloads(tasks)
-                    display.download_cancelled(downloaded, progress.completed_charts, cleaned)
-                else:
+                    if owns_progress:
+                        progress.close()
+                        display.download_cancelled(downloaded, progress.completed_charts, cleaned)
+                elif owns_progress:
+                    progress.close()
                     progress.print_error_summary()
 
         # No rate-limit guard here. auth_failures already counts only 401/auth

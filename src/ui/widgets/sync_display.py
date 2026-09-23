@@ -507,19 +507,38 @@ def describe_failure(message: str) -> str:
     return "failed"
 
 
-def download_errors_header():
-    print()
-    print(f"{_c.ERROR}Download errors:{_c.RESET}")
+def blocked_outcome(recovered: int, still_blocked: int, mode: str = "rclone") -> None:
+    """Report charts Google would not serve anonymously, once the retry has
+    run, and only about what actually happened."""
+    if recovered:
+        print(f"  {_c.SUCCESS}✓{_c.RESET} {recovered} large chart(s) downloaded "
+              f"through rclone")
+    if not still_blocked:
+        return
 
-def download_errors_context(context: str, errors: list, show_all: bool = False, sample_size: int = 3):
-    if show_all or len(errors) <= sample_size:
-        print(f"  {_c.DIM}[{context}]{_c.RESET} {len(errors)} failed:")
-        for err in errors:
-            print(f"    - {err.filename} ({err.reason})")
-    elif len(errors) <= 100:
-        print(f"  {_c.DIM}[{context}]{_c.RESET} {len(errors)} failed:")
-        for err in errors[:sample_size]:
-            print(f"    - {err.filename} ({err.reason})")
-        print(f"    ... and {len(errors) - sample_size} more")
+    print(f"  {_c.ERROR}{still_blocked} chart(s) need an authenticated "
+          f"download{_c.RESET}")
+    if mode == "rclone":
+        print(f"  {_c.MUTED}rclone could not fetch these. Try again later, "
+              f"or sign in from Account.{_c.RESET}")
     else:
-        print(f"  {_c.DIM}[{context}]{_c.RESET} {len(errors)} failed")
+        print(f"  {_c.MUTED}Sign in from Account, or switch to rclone, "
+              f"then sync again.{_c.RESET}")
+
+
+def failure_summary(by_reason: dict) -> None:
+    """What failed and why, grouped, under the frame the sync just left."""
+    total = sum(len(errors) for errors in by_reason.values())
+    print()
+    print(f"  {_c.ERROR}{total} chart(s) did not download{_c.RESET}")
+    for reason, errors in sorted(by_reason.items(), key=lambda kv: -len(kv[1])):
+        print(f"    {len(errors)} {reason}")
+        for err in errors[:3]:
+            context = f"{_c.DIM}[{err.path_context}]{_c.RESET} " if err.path_context else ""
+            print(f"      {context}{err.filename}")
+        if len(errors) > 3:
+            print(f"      {_c.MUTED}and {len(errors) - 3} more{_c.RESET}")
+        advice = ADVICE.get(reason)
+        if advice:
+            print(f"      {_c.MUTED}{advice}{_c.RESET}")
+    print()

@@ -47,14 +47,21 @@ class FolderSync:
         scan_stats_getter: Optional[Callable] = None,
         header: str = None,
         setlist_name: str = None,
+        label: str = None,
         skip_marker_rebuild: bool = False,
+        progress=None,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
 
         Args:
-            header: If provided, handles section header display. Synced folders
-                    get a compact one-liner; downloads get a full ━━━ header.
+            header: If provided, handles section header display. Without a
+                    shared `progress` screen: synced folders get a compact
+                    one-liner, downloads get a full ━━━ header.
+            label: The folder's name on the panel's divider (header carries a
+                   "[17/80]" count the bar already shows).
+            progress: The sync run's panel. When given, nothing prints to the
+                      terminal, which the panel owns.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -97,59 +104,81 @@ class FolderSync:
             if created > 0:
                 debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
 
+        caption = label or header or folder["name"]
+
         def _plan_progress(done, total):
             if total <= 200:  # fast enough that a counter is just noise
+                return
+            label = caption
+            if progress:
+                # A big folder takes a while to check; show that it is moving.
+                progress.set_stage("" if done >= total else f"checking {label} against disk... {done}/{total}")
+                progress.set_current_fraction(done / total)
                 return
             from ..ui.primitives import print_progress
             if done >= total:
                 # Wipe the counter, or the section header prints onto the end of it.
                 print("\033[2K\r", end="", flush=True)
                 return
-            label = header or folder["name"]
             print_progress(f"Checking {label}... {done}/{total}")
 
         tasks, skipped, long_paths = plan_downloads(
             manifest_files, folder_path, self.download_ignore, folder_name=folder["name"],
-            on_progress=_plan_progress,
+            on_progress=_plan_progress, cancel_check=cancel_check,
         )
 
         debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
 
-        if long_paths:
+        if cancel_check and cancel_check():
+            return 0, 0, 0, [], True, 0
+
+        if long_paths and not progress:
             print_long_path_warning(len(long_paths))
 
+        # A setlist that needs nothing says nothing on the shared panel: its bar
+        # already counts it as done. Only the printed output reports it.
         if not tasks and not skipped:
-            if header:
-                print_section_header(header)
-            display.folder_status_empty(filtered_count)
+            if not progress:
+                if header:
+                    print_section_header(header)
+                display.folder_status_empty(filtered_count)
             return 0, 0, 0, [], False, 0
 
         if not tasks:
-            if header:
-                display.folder_synced_inline(header, skipped)
-            else:
-                display.folder_status_synced(skipped, filtered_count)
+            if not progress:
+                if header:
+                    display.folder_synced_inline(header, skipped)
+                else:
+                    display.folder_status_synced(skipped, filtered_count)
             return 0, skipped, 0, [], False, 0
 
-        if header:
+        if header and not progress:
             print_section_header(header)
+        elif progress:
+            progress.set_stage(f"downloading {caption}")
 
         download_start = time.time()
         (downloaded, _, errors, rate_limited, cancelled,
          bytes_downloaded, blocked_tasks) = self.downloader.download_many(
             tasks, drive_name=folder["name"], cancel_check=cancel_check,
             scan_stats_getter=scan_stats_getter, skipped=skipped,
+            progress=progress,
         )
 
         # Tier 4: route auth-blocked files through rclone (its verified, uncapped OAuth).
         if blocked_tasks and not cancelled:
-            recovered, _ = self._rclone_second_pass(blocked_tasks, folder, cancel_check)
+            recovered, still_blocked = self._rclone_second_pass(
+                blocked_tasks, folder, cancel_check)
             downloaded += recovered
             errors -= recovered
+            # Nothing was said about these while they were blocked, so say it
+            # here, once, and only about the ones that really did not arrive.
+            if not progress:
+                display.blocked_outcome(recovered, still_blocked, self.download_mode)
 
         download_time = time.time() - download_start
 
-        if not cancelled:
+        if not cancelled and not progress:
             display.folder_complete(downloaded, bytes_downloaded, download_time, errors)
 
         if downloaded > 0:
