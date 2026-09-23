@@ -18,6 +18,7 @@ to apply a toggle is the thing this layout exists to stop doing.
 """
 
 import shutil
+import time as _time
 from pathlib import Path
 
 from chotic_ui.widgets.two_pane import TwoPane
@@ -25,6 +26,7 @@ from chotic_ui.primitives.terminal import truncate_ansi
 
 from src.config import UserSettings, DrivesConfig
 from src.core.formatting import sort_by_name, format_duration, format_size
+from src.core.logging import debug_log
 from src.sync import get_persistent_stats_cache, compute_setlist_stats
 from src.sync.archive_charts import effective_chart_count, forced_counts
 from ..primitives import Colors
@@ -74,6 +76,20 @@ def _right_text_width() -> int:
     cols = shutil.get_terminal_size((100, 34))[0]
     w = max(72, min(cols - 2, 110))
     return max(20, (w - 4) - LEFT_WIDTH - 3 - 2)
+
+
+def _timed(label, fn):
+    """fn, logging any call over 50ms to the debug log. A frozen home screen
+    otherwise leaves nothing to say which closure it was stuck in."""
+    def timed(*args, **kwargs):
+        t0 = _time.time()
+        try:
+            return fn(*args, **kwargs)
+        finally:
+            dt = _time.time() - t0
+            if dt > 0.05:
+                debug_log(f"TIMING | {label} SLOW: {dt:.3f}s")
+    return timed
 
 
 def _sync_label(cache: MainMenuCache) -> str:
@@ -597,8 +613,8 @@ def show_main_menu_panes(
     pane = TwoPane(
         title="Chart Packs",
         subtitle=strip_ansi(cache.subtitle or ""),
-        left_rows=left_rows,
-        right_rows=right_rows,
+        left_rows=_timed("home_left_rows", left_rows),
+        right_rows=_timed("home_right_rows", right_rows),
         on_left_space=on_left_space,
         on_right_enter=on_right_enter,
         space_activates=True,
@@ -619,7 +635,7 @@ def show_main_menu_panes(
         footer=footer,
         keys={"s": key_sync, "S": key_sync},
         # Always ticking: measured setlists arrive whether or not a scan runs.
-        update_callback=on_tick,
+        update_callback=_timed("home_on_tick", on_tick),
         # The footer clock counts in seconds; polling far faster than it changes
         # only buys repaints nobody asked for.
         refresh_interval_ms=400,
