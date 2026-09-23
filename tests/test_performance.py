@@ -102,9 +102,12 @@ class TestCountPurgeableUsesCache:
     """Tests that count_purgeable uses cached data."""
 
     @pytest.fixture
-    def folder_with_manifest(self):
+    def folder_with_manifest(self, monkeypatch):
         with tempfile.TemporaryDirectory() as tmpdir:
             base = Path(tmpdir)
+            # Or planning reads the markers of whatever real library the repo
+            # resolves to, and this times those instead of the cache.
+            monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(base))
             folder_path = base / "TestDrive"
             folder_path.mkdir()
 
