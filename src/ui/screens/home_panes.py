@@ -193,6 +193,11 @@ def show_main_menu_panes(
 
     # ---- left pane ----
 
+    def _unverified(body: str) -> str:
+        """Italic and dim for a row whose numbers are remembered or still
+        being counted rather than scanned. A disabled row stays darker still."""
+        return f"{Colors.ITALIC}{Colors.MUTED}{body}{Colors.RESET}"
+
     def _drive_label(folder, indent):
         folder_id = folder.get("folder_id", "")
         name = folder.get("name", "")
@@ -202,8 +207,8 @@ def show_main_menu_panes(
 
         dot = f"{Colors.SUCCESS}●{Colors.RESET}" if enabled else f"{Colors.MUTED_DIM}○{Colors.RESET}"
         body = name if enabled else f"{Colors.MUTED_DIM}{name}{Colors.RESET}"
-        if state == "scanning":
-            body = f"{Colors.ITALIC}{body}{Colors.RESET}"
+        if state != "current":
+            body = _unverified(body)
 
         head = f"{'  ' if indent else ''}{dot} {body}"
 
@@ -290,8 +295,8 @@ def show_main_menu_panes(
         off = not enabled or not drive_enabled
         dot = f"{Colors.MUTED_DIM}○{Colors.RESET}" if off else f"{Colors.SUCCESS}●{Colors.RESET}"
         body = f"{Colors.MUTED_DIM}{name}{Colors.RESET}" if off else name
-        if state == "scanning":
-            body = f"{Colors.ITALIC}{body}{Colors.RESET}"
+        if state != "current":
+            body = _unverified(body)
 
         # Two columns: how much of it do I have, and how big is it -- or, while
         # Sync has something to do, what Sync will do to it instead.

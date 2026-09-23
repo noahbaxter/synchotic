@@ -368,6 +368,72 @@ class _Scanner:
         return lambda *a, **k: False
 
 
+class TestUnscannedRowsLookUnscanned:
+    """A count from memory and a count from a scan must look different."""
+
+    class _Scan:
+        def __init__(self, scanned):
+            self._scanned = scanned
+
+        def is_setlist_scanned(self, folder_id, name):
+            return self._scanned
+
+        def is_scanning(self, folder_id):
+            return not self._scanned
+
+        def is_scanned(self, folder_id):
+            return self._scanned
+
+        def is_done(self):
+            return self._scanned
+
+        def get_stats(self):
+            class _S:
+                current_folder = None
+                folders_done = 0
+                folders_total = 1
+                api_calls = 0
+                elapsed = 0.0
+                current_folder_elapsed = 0.0
+            return _S()
+
+        def __getattr__(self, name):
+            return lambda *a, **k: False
+
+    def _setlist_labels(self, build, scanned):
+        rows = build(auth=_Auth(), scanner=self._Scan(scanned))["right_for"](
+            ("drive", "drive-1"))
+        return [r[0](False, False) for r in rows
+                if r[1] and r[1][0] == "setlist"]
+
+    def test_a_row_still_being_counted_is_dimmed(self, build):
+        """MUTED appears elsewhere in a row, so this checks the pair wrapping
+        the name."""
+        from src.ui.primitives import Colors
+        mark = f"{Colors.ITALIC}{Colors.MUTED}"
+        labels = self._setlist_labels(build, scanned=False)
+
+        assert labels, "no setlist rows"
+        for label in labels:
+            assert mark in label, f"italic but not dimmed: {label!r}"
+
+    def test_a_scanned_row_is_left_alone(self, build):
+        from src.ui.primitives import Colors
+        mark = f"{Colors.ITALIC}{Colors.MUTED}"
+        labels = self._setlist_labels(build, scanned=True)
+
+        assert labels, "no setlist rows"
+        for label in labels:
+            assert mark not in label, f"marked unverified: {label!r}"
+            assert Colors.ITALIC not in label, f"still italic: {label!r}"
+
+    def test_the_two_do_not_look_the_same(self, build):
+        unscanned = self._setlist_labels(build, scanned=False)
+        scanned = self._setlist_labels(build, scanned=True)
+
+        assert unscanned != scanned, "scanned and unscanned render identically"
+
+
 class TestTheFooterNeverWraps:
     """The frame is redrawn from the top of the screen every tick. A footer
     line that wraps pushes every row below it down, so the box grows a line and
