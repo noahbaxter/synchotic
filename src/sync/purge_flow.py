@@ -85,7 +85,8 @@ def _purge_enabled_drive(
         try:
             with (progress.suspended() if progress else nullcontext()):
                 dialog = ConfirmDialog(
-                    f"Purge {purge_count:,} files ({format_size(folder_size)}) from {folder_name}?"
+                    f"Delete {count(purge_count, 'file')} ({format_size(folder_size)}) "
+                    f"from {folder_name}?"
                 )
                 confirmed = dialog.run()
         finally:
@@ -94,7 +95,7 @@ def _purge_enabled_drive(
         if not confirmed:
             debug_log(f"PURGE_SKIPPED | folder={folder_name} | user declined")
             if progress:
-                progress.note(folder_name, context="purge skipped")
+                progress.note(folder_name, context="delete skipped")
             else:
                 print(f"  Skipped.")
             return 0, 0, 0
@@ -132,7 +133,7 @@ def _purge_partial_downloads(base_path: Path, progress=None,
         display.purge_partial_downloads(len(partial_files), partial_size)
     deleted, failed = delete_files(partial_files, base_path)
     if progress:
-        progress.note("Partial downloads", context=f"{deleted} cleaned up")
+        progress.note("Partial downloads", context=f"{count(deleted, 'file')} deleted")
     else:
         display.purge_partial_cleaned(deleted, failed)
     return deleted, failed, partial_size
@@ -260,7 +261,7 @@ def purge_all_folders(
             if progress:
                 from ..core.formatting import format_size
                 progress.note(folder.get("name", ""),
-                              context=f"{deleted} purged ({format_size(size)})")
+                              context=f"{count(deleted, 'file')} deleted ({format_size(size)})")
         if progress:
             progress.advance_run()
         if not progress:
@@ -276,11 +277,11 @@ def purge_all_folders(
         progress.set_stage("")
         from ..core.formatting import format_size
         if total_deleted > 0 or total_failed > 0:
-            context = f"{total_deleted} removed ({format_size(total_size)})"
+            context = f"{count(total_deleted, 'file')} deleted ({format_size(total_size)})"
             if total_failed:
-                context += f", {total_failed} failed"
+                context += f", {total_failed:,} failed"
         else:
-            context = "nothing to remove"
+            context = "nothing to delete"
         progress.note("Purge complete", context=context)
     else:
         print()
