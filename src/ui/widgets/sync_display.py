@@ -29,26 +29,6 @@ def _rule_width() -> int:
     return max(50, get_terminal_width() - 4)
 
 
-# === Network errors ===
-
-def error_offline(message: str):
-    print(f"\n{_c.ERROR}Error:{_c.RESET} {message}")
-    print("This app requires an internet connection to download charts.")
-    print("Please check your connection and try again.\n")
-
-def error_manifest_http(status_code: int):
-    print(f"{_c.DIM}Warning: Failed to fetch manifest (HTTP {status_code}){_c.RESET}")
-
-def error_manifest_timeout():
-    print(f"{_c.DIM}Warning: Manifest fetch timed out{_c.RESET}")
-
-def error_manifest_generic(error: str):
-    print(f"{_c.DIM}Warning: Manifest fetch error: {error}{_c.RESET}")
-
-def error_no_local_manifest():
-    print(f"{_c.ERROR}Error:{_c.RESET} Local manifest not found.\n")
-
-
 # === Auth/OAuth messages ===
 
 def auth_prompt():
@@ -276,16 +256,6 @@ def rclone_no_browser() -> None:
     print()
 
 
-def report_blocked_summary(needs_auth: int, rate_limited: int) -> None:
-    """Distinguish 'needs auth setup' from 'Google rate-limited (retry later)'."""
-    if needs_auth:
-        print(f"  {needs_auth} file(s) need authenticated download "
-              f"(set up once via the prompt).")
-    if rate_limited:
-        print(f"  {rate_limited} file(s) are rate-limited by Google "
-              f"(usually clears within a day; will retry next sync).")
-
-
 # === Custom folder messages ===
 
 def add_folder_prompt():
@@ -325,9 +295,6 @@ def scan_progress(folders: int, files: int, shortcuts: int = 0):
     from ..primitives import print_progress
     shortcut_info = f", {shortcuts} shortcuts" if shortcuts else ""
     print_progress(f"Scanning... {folders} folders, {files} files{shortcut_info}")
-
-def scanning_folder():
-    print(f"  {_c.DIM}Scanning folder...{_c.RESET}")
 
 
 # === Folder status messages ===

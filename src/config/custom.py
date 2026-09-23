@@ -9,8 +9,6 @@ from pathlib import Path
 from dataclasses import dataclass
 from typing import Optional
 
-from .drives import DriveConfig
-
 
 @dataclass
 class CustomFolder:
@@ -122,15 +120,3 @@ class CustomFolders:
     def get_folder_ids(self) -> set[str]:
         """Get set of all custom folder IDs."""
         return {f.folder_id for f in self.folders}
-
-    def to_drive_configs(self) -> list[DriveConfig]:
-        """Convert custom folders to DriveConfig objects for menu display."""
-        return [
-            DriveConfig(
-                name=f.name,
-                folder_id=f.folder_id,
-                description="Custom folder",
-                group="Custom Folders",
-            )
-            for f in self.folders
-        ]

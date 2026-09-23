@@ -11,8 +11,6 @@ from datetime import datetime, timezone
 from dataclasses import dataclass, field
 from typing import Optional
 
-from ..core.formatting import name_sort_key, format_size
-
 
 @dataclass
 class FileEntry:
@@ -251,57 +249,3 @@ class Manifest:
                 fid = file_entry.get("id") if isinstance(file_entry, dict) else file_entry.id
                 lookup[fid] = (fi, fli)
         return lookup
-
-    def print_tree(self, sort_by: str = "charts"):
-        """
-        Print a tree view of manifest contents.
-
-        Args:
-            sort_by: Sort order - "charts", "size", or "name"
-        """
-        try:
-            from ..ui.colors import Colors
-        except ImportError:
-            from colors import Colors
-
-        def get_sort_key(item, is_folder=False):
-            if is_folder:
-                charts = item.charts or {}
-                chart_count = charts.get("total", item.chart_count)
-                size = item.total_size
-                name = item.name
-            else:
-                chart_count = item.get("charts", {}).get("total", 0)
-                size = item.get("total_size", 0)
-                name = item.get("name", "")
-
-            if sort_by == "size":
-                return (-size, name_sort_key(name))
-            elif sort_by == "name":
-                return (name_sort_key(name),)
-            else:  # charts (default)
-                return (-chart_count, name_sort_key(name))
-
-        total_charts = 0
-        total_size = 0
-
-        sorted_folders = sorted(self.folders, key=lambda f: get_sort_key(f, is_folder=True))
-
-        for folder in sorted_folders:
-            charts = folder.charts or {}
-            chart_count = charts.get("total", folder.chart_count)
-            total_charts += chart_count
-            total_size += folder.total_size
-
-            status = f" {Colors.DIM}[incomplete]{Colors.RESET}" if not folder.complete else ""
-            print(f"{Colors.PRIMARY}▐{Colors.RESET} {Colors.BOLD}{folder.name}{Colors.RESET} ({chart_count} charts, {format_size(folder.total_size)}){status}")
-
-            if folder.subfolders:
-                sorted_subs = sorted(folder.subfolders, key=lambda x: get_sort_key(x))
-                for sf in sorted_subs:
-                    sf_charts = sf.get("charts", {}).get("total", 0)
-                    sf_size = sf.get("total_size", 0)
-                    print(f"  {sf.get('name', '?')} {Colors.MUTED}({sf_charts} charts, {format_size(sf_size)}){Colors.RESET}")
-
-        print()
-        print(f"Total: {total_charts} charts, {format_size(total_size)}")

@@ -81,13 +81,6 @@ def format_status_line(
     return f"{pct}% | {info}"
 
 
-def _rjust(text: str, width: int) -> str:
-    """Right-justify text to width, accounting for ANSI escape codes."""
-    visible_len = len(strip_ansi(text)) if text else 0
-    pad = max(0, width - visible_len)
-    return " " * pad + text
-
-
 def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value_color: str) -> str:
     """Build pipe-separated fixed-width column string.
 
@@ -100,18 +93,6 @@ def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value
     p = f"{pipe_color}|{Colors.RESET}"
     v = (lambda s: f"{value_color}{s}{Colors.RESET}") if value_color else (lambda s: s)
     return f"  {v(f'{sync:>5}')}  {p}  {v(f'{count:>6}')}  {p}  {v(f'{size_str:>10}')}"
-
-
-def format_column_header(screen: str) -> str:
-    """Return the column header row for a screen type.
-
-    Uses same fixed widths as _format_columns, with right-justified labels.
-    """
-    p = f"{Colors.MUTED}|{Colors.RESET}"
-    if screen == "setlist":
-        return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'charts':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'size':>10}{Colors.RESET}"
-    # home
-    return f"  {Colors.MUTED}{'sync':>5}{Colors.RESET}  {p}  {Colors.MUTED}{'sets':>6}{Colors.RESET}  {p}  {Colors.MUTED}{'disk':>10}{Colors.RESET}"
 
 
 def _compute_delta(
@@ -287,36 +268,6 @@ def format_setlist_item(
     )
 
     return columns, delta, show_checkmark
-
-
-def format_drive_status(
-    synced_charts: int,
-    total_charts: int,
-    enabled_setlists: int,
-    total_setlists: int,
-    total_size: int,
-    disk_size: int = 0,
-    disabled: bool = False,
-    **_kwargs,
-) -> str:
-    """
-    Format drive config status line.
-
-    Enabled: 100% | 562/562 charts, 5/30 setlists (4.0 GB)
-    Disabled: DISABLED
-    """
-    if disabled:
-        return f"{Colors.MUTED}DISABLED{Colors.RESET}"
-
-    return format_status_line(
-        synced_charts=synced_charts,
-        total_charts=total_charts,
-        enabled_setlists=enabled_setlists,
-        total_setlists=total_setlists,
-        total_size=total_size,
-        disk_size=disk_size,
-        empty_hint="No setlists enabled — toggle with Space",
-    )
 
 
 def format_purge_tree(files: list[tuple[Path, int]], base_path: Path) -> list[str]:

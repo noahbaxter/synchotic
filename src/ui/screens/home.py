@@ -20,7 +20,6 @@ from src.sync import (
     SyncStatus, FolderStats, FolderStatsCache, get_persistent_stats_cache,
     PersistentStatsCache, aggregate_folder_stats, compute_setlist_stats,
 )
-from ..primitives import Colors
 from ..components import format_status_line, format_home_item, format_delta
 
 if TYPE_CHECKING:
@@ -32,9 +31,7 @@ if TYPE_CHECKING:
 class MainMenuCache:
     """Cache for expensive main menu calculations."""
     subtitle: str = ""
-    sync_action_desc: str = ""
     sync_delta: str = ""  # delta string for sync label (e.g. "[-9.2 GB]")
-    folder_stats: dict = field(default_factory=dict)  # folder_id -> columns string
     folder_deltas: dict = field(default_factory=dict)  # folder_id -> delta string
     folder_states: dict = field(default_factory=dict)  # folder_id -> state string
     folder_checkmarks: dict = field(default_factory=dict)  # folder_id -> bool (show green ✓)
@@ -114,7 +111,6 @@ def update_menu_cache_on_toggle(
                     state=state,
                     scan_progress=scan_progress,
                 )
-            menu_cache.folder_stats[folder_id] = columns
             menu_cache.folder_deltas[folder_id] = delta
             menu_cache.folder_checkmarks[folder_id] = show_checkmark
             menu_cache.folder_states[folder_id] = state
@@ -207,7 +203,6 @@ def _apply_global_stats(
     )
     enabled_complete = scan_complete or (scanner and scanner.is_all_enabled_scanned())
     cache.sync_checkmark = enabled_complete and global_status.missing_size <= 0
-    cache.sync_action_desc = "Everything in sync" if cache.sync_checkmark else ""
 
 
 def _get_display_state(
@@ -396,8 +391,7 @@ def compute_main_menu_cache(
                 scanner=background_scanner,
             )
             if stats is None:
-                # No cache, no files - show "not scanned" in dim color
-                cache.folder_stats[folder_id] = f"{Colors.STALE}not scanned{Colors.RESET}"
+                # No cache and no files yet
                 cache.folder_deltas[folder_id] = ""
                 cache.folder_states[folder_id] = "none"
                 continue
@@ -453,7 +447,6 @@ def compute_main_menu_cache(
         # Always aggregate purgeable (disabled drives may have content to remove)
         global_purge_size += folder_purge_size
 
-        cache.folder_stats[folder_id] = columns
         cache.folder_deltas[folder_id] = delta
         cache.folder_checkmarks[folder_id] = show_checkmark
         cache.folder_states[folder_id] = state

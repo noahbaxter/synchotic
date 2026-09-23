@@ -102,8 +102,8 @@ def _sync_label(cache: MainMenuCache) -> str:
 
 def _copy_cache(dst: MainMenuCache, src: MainMenuCache) -> None:
     """Refresh in place: sync.py holds a reference to this object."""
-    for f in ("subtitle", "sync_action_desc", "sync_delta", "sync_checkmark",
-              "folder_stats", "folder_deltas", "folder_checkmarks", "folder_states",
+    for f in ("subtitle", "sync_delta", "sync_checkmark",
+              "folder_deltas", "folder_checkmarks", "folder_states",
               "folder_scan_progress", "group_enabled_counts"):
         setattr(dst, f, getattr(src, f))
 
