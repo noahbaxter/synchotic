@@ -16,6 +16,8 @@ from src.sync.sync_checker import is_archive_synced
 from src.sync.download_planner import plan_downloads
 from src.sync.markers import save_marker
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 class TestMarkerBasedSync:
     """
@@ -193,7 +195,7 @@ class TestMarkerDiskMismatch:
         tasks, skipped, _ = plan_downloads(
             manifest_files,
             temp_dir / "TestDrive",
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
             folder_name="TestDrive"
         )
 
@@ -234,7 +236,7 @@ class TestMarkerDiskMismatch:
         tasks, skipped, _ = plan_downloads(
             manifest_files,
             temp_dir / "TestDrive",
-            delete_videos=True,
+            download_ignore=VIDEO_IGNORE,
             folder_name="TestDrive"
         )
 

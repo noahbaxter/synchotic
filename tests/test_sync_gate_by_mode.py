@@ -105,6 +105,9 @@ class TestScanningStartsWithoutOAuth:
             a.custom_folders = None
             a._background_scanner = None
             monkeypatch.setattr("src.app.scan.get_download_path", lambda: tmp_path)
+            # A scan writes into the library, so one has to be chosen or the
+            # gate stops it for a reason this class is not about.
+            monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path))
             started = {}
 
             class _Scanner:

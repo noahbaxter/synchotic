@@ -62,6 +62,11 @@ class DriveManagementMixin:
             }
             self.folders.append(folder_dict)
 
+        # An upgraded install had unseen drives on by default. Once the drives
+        # are known, write that down as toggles (a no-op after the first run).
+        self.user_settings.settle_drive_defaults(
+            [f["folder_id"] for f in self.folders])
+
     def handle_configure_drive(self, folder_id: str):
         """Configure setlists for a specific drive, or show options for custom folders."""
         folder = self._get_folder_by_id(folder_id)

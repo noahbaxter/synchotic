@@ -137,7 +137,7 @@ class AuthMixin:
         self.sync = FolderSync(
             self.client,
             auth_token=self.auth.get_token_getter(),
-            delete_videos=self.user_settings.delete_videos,
+            download_ignore=self.user_settings.download_ignore,
             download_mode=self.user_settings.download_mode or "rclone",
         )
 

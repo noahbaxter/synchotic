@@ -17,9 +17,11 @@ from src.sync.cache import clear_cache
 from src.core.formatting import dedupe_files_by_newest
 from tests.conftest import make_synced_archive
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 class MockSettings:
-    delete_videos = True
+    download_ignore = VIDEO_IGNORE
     def is_drive_enabled(self, folder_id): return True
     def is_subfolder_enabled(self, folder_id, subfolder): return True
     def get_disabled_subfolders(self, folder_id): return set()
@@ -36,7 +38,7 @@ def test_tier4_delivered_archive_is_synced_and_purge_safe(sync_env):
     folder = sync_env.make_folder_dict("Drive", folder_id="fid_drive", files=files)
 
     status = get_setlist_sync_status(
-        folder=folder, setlist_name="SetA", base_path=sync_env.base_path, delete_videos=True
+        folder=folder, setlist_name="SetA", base_path=sync_env.base_path, download_ignore=VIDEO_IGNORE
     )
     assert status.missing_charts == 0, "tier-4 delivered archive must read as synced"
 

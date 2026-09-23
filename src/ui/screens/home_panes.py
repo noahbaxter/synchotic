@@ -214,7 +214,7 @@ def show_main_menu_panes(
             persistent.save()
         warmed.add(folder_id)
 
-    def _setlist_row(folder_id, name, drive_enabled, delta_mode):
+    def _setlist_row(folder_id, name, drive_enabled):
         enabled = user_settings.is_subfolder_enabled(folder_id, name)
         cached = persistent.get_setlist(folder_id, name)
 
@@ -233,21 +233,14 @@ def show_main_menu_panes(
         disk_size = cached.disk_size if cached else 0
         disk_charts = cached.disk_charts if cached else 0
 
-        fully_synced = synced_charts == total_charts and total_charts > 0
-        purge_files = purge_size = purge_charts = missing = 0
-        if drive_enabled:
-            if not enabled and disk_files > 0:
-                purge_files, purge_size, purge_charts = disk_files, disk_size, disk_charts
-            if enabled and not fully_synced:
-                missing = total_charts - synced_charts
+        purge_size = disk_size if drive_enabled and not enabled and disk_files > 0 else 0
 
         columns, delta, check = format_setlist_item(
             total_charts=total_charts, synced_charts=synced_charts,
             total_size=total_size, synced_size=synced_size,
-            purgeable_files=purge_files, purgeable_charts=purge_charts,
-            purgeable_size=purge_size, missing_charts=missing,
+            purgeable_size=purge_size,
             disabled=not enabled or not drive_enabled,
-            delta_mode=delta_mode, state=state, disk_size=disk_size,
+            state=state, disk_size=disk_size,
         )
 
         off = not enabled or not drive_enabled
@@ -285,9 +278,8 @@ def show_main_menu_panes(
         setlists = _setlists(folder)
         _warm(folder, setlists)
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
-        delta_mode = user_settings.delta_mode if user_settings else "size"
 
-        rows = [_setlist_row(folder_id, n, drive_enabled, delta_mode) for n in setlists]
+        rows = [_setlist_row(folder_id, n, drive_enabled) for n in setlists]
         rows.append(_spacer())
         rows.append(_row(f"  {Colors.PRIMARY}Enable all{Colors.RESET}", ("enable_all", folder_id, None)))
         rows.append(_row(f"  {Colors.PRIMARY}Disable all{Colors.RESET}", ("disable_all", folder_id, None)))
@@ -339,7 +331,7 @@ def show_main_menu_panes(
 
     def _settings_right():
         from .account import account_status
-        from ...core.paths import get_library_path, library_blocked_reason
+        from ...core.paths import get_library_path, library_blocked_reason, plain_path
 
         def opt(label, value, action, selectable=True):
             """An option the cursor cannot land on is drawn grey throughout, so
@@ -396,7 +388,7 @@ def show_main_menu_panes(
             # Changing it rescans the new location, so it fails the same way
             # a rescan does -- except when the library itself is the problem,
             # which is what this row exists to fix.
-            opt("Location", mode_blocked or lib_blocked or str(get_library_path()),
+            opt("Location", mode_blocked or lib_blocked or plain_path(get_library_path()),
                 ("act", "library"), selectable=not mode_blocked),
             # Opens a local folder, so it works with no Drive access at all.
             opt("Open folder", "Settings, logs, credentials", ("act", "open_data_folder")),

@@ -211,7 +211,6 @@ class TestManifestProtectsFiles:
         mock_settings = Mock()
         mock_settings.is_drive_enabled.return_value = True
         mock_settings.get_disabled_subfolders.return_value = {"DisabledSetlist"}
-        mock_settings.delete_videos = False
 
         stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
 
@@ -308,7 +307,6 @@ class TestCountMatchesDeletion:
         mock_settings = Mock()
         mock_settings.is_drive_enabled.return_value = True
         mock_settings.get_disabled_subfolders.return_value = {"DisabledSetlist"}
-        mock_settings.delete_videos = False
 
         stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
 
@@ -353,7 +351,6 @@ class TestCountMatchesDeletion:
         mock_settings = Mock()
         mock_settings.is_drive_enabled.return_value = True
         mock_settings.get_disabled_subfolders.return_value = {"DisabledSetlist"}
-        mock_settings.delete_videos = False
 
         stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
 
@@ -410,7 +407,6 @@ class TestDisabledSetlistsCategorization:
             mock_settings = Mock()
             mock_settings.is_drive_enabled.return_value = True
             mock_settings.get_disabled_subfolders.return_value = {"RB1", "RB2"}
-            mock_settings.delete_videos = False
 
             stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
 
@@ -442,7 +438,6 @@ class TestDisabledSetlistsCategorization:
             mock_settings = Mock()
             mock_settings.is_drive_enabled.return_value = True
             mock_settings.get_disabled_subfolders.return_value = {"Disabled"}
-            mock_settings.delete_videos = False
 
             stats = count_purgeable_detailed(folders, temp_dir, mock_settings)
 
@@ -454,7 +449,7 @@ class TestPurgeStatsTotal:
     """Tests for PurgeStats total calculations."""
 
     def test_total_files_sums_all_categories(self):
-        """total_files should sum charts + extras + partials + videos."""
+        """total_files should sum charts + extras + partials."""
         stats = PurgeStats(
             chart_count=10,
             chart_size=1000,
@@ -462,10 +457,8 @@ class TestPurgeStatsTotal:
             extra_file_size=500,
             partial_count=2,
             partial_size=200,
-            video_count=3,
-            video_size=300,
         )
-        assert stats.total_files == 20  # 10 + 5 + 2 + 3
+        assert stats.total_files == 17  # 10 + 5 + 2
 
     def test_total_size_sums_all_categories(self):
         """total_size should sum all size fields."""
@@ -476,10 +469,8 @@ class TestPurgeStatsTotal:
             extra_file_size=500,
             partial_count=2,
             partial_size=200,
-            video_count=3,
-            video_size=300,
         )
-        assert stats.total_size == 2000  # 1000 + 500 + 200 + 300
+        assert stats.total_size == 1700  # 1000 + 500 + 200
 
 
 class TestPurgeConfirmationThreshold:

@@ -5,11 +5,18 @@ pointing at a different folder just looks somewhere else. A folder Synchotic
 has never synced reads as empty and the next sync re-downloads into it, which
 has to be said before the user watches it happen.
 """
+from pathlib import Path
+
 import pytest
 
 from src.config.settings import UserSettings
 from src.core import paths
 from src.ui.screens.library import show_library_screen
+
+
+def _library():
+    """The library without the Windows MAX_PATH prefix."""
+    return Path(paths.plain_path(paths.get_library_path()))
 
 
 @pytest.fixture(autouse=True)
@@ -60,7 +67,7 @@ class TestChoosingAFolder:
         changed, s = drive(str(target), settings=s)
         assert changed is True
         assert s.library_path == str(target)
-        assert paths.get_library_path() == target
+        assert _library() == target
 
     def test_it_persists_for_the_next_launch(self, tmp_path, drive):
         target = tmp_path / "elsewhere"; target.mkdir()
@@ -176,7 +183,7 @@ class TestBrowsing:
         s = _settings(tmp_path)
         assert browse([target], settings=s) is True
         assert s.library_path == str(target)
-        assert paths.get_library_path() == target
+        assert _library() == target
 
     def test_cancelling_reopens_the_prompt_instead_of_leaving(self, tmp_path, browse):
         """Cancel must not read as a chosen path and must not drop out of the
@@ -273,7 +280,7 @@ class TestImportingAPreviousInstall:
         """The import must not drag the old library_path back over the pick."""
         live = self._import(drive, previous)
         assert live.library_path == str(previous)
-        assert paths.get_library_path() == previous
+        assert _library() == previous
 
 
 class TestStatsDoNotOutliveTheOldLibrary:

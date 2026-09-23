@@ -1,7 +1,7 @@
 """
 Purge planning for DM Chart Sync.
 
-Determines what files should be deleted (disabled drives, extra files, videos, partials).
+Determines what files should be deleted (disabled drives, extra files, partials).
 Uses marker files as the source of truth for extracted archive contents.
 """
 
@@ -9,7 +9,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Set
 
-from ..core.constants import VIDEO_EXTENSIONS
 from ..core.paths import is_library_state_path
 from ..core.formatting import relative_posix, parent_posix, sanitize_path, sanitize_drive_name, normalize_path_key
 from ..core.logging import debug_log
@@ -27,17 +26,15 @@ class PurgeStats:
     extra_file_size: int = 0
     partial_count: int = 0
     partial_size: int = 0
-    video_count: int = 0
-    video_size: int = 0
     estimated_charts: int = 0
 
     @property
     def total_files(self) -> int:
-        return self.chart_count + self.extra_file_count + self.partial_count + self.video_count
+        return self.chart_count + self.extra_file_count + self.partial_count
 
     @property
     def total_size(self) -> int:
-        return self.chart_size + self.extra_file_size + self.partial_size + self.video_size
+        return self.chart_size + self.extra_file_size + self.partial_size
 
 
 def find_partial_downloads(base_path: Path, local_files: dict = None) -> List[Tuple[Path, int]]:
@@ -73,11 +70,11 @@ def _is_ignored(filename: str, patterns) -> bool:
     Falls back to the defaults for anything that is not a list of patterns, so a
     hand-edited settings.json cannot turn this into a crash mid-purge.
     """
-    from fnmatch import fnmatch
+    from ..core.files import matches_ignore
     if not isinstance(patterns, (list, tuple)):
         from ..config.settings import DEFAULT_PURGE_IGNORE
         patterns = DEFAULT_PURGE_IGNORE
-    return any(fnmatch(filename, str(pat)) for pat in patterns)
+    return matches_ignore(filename, patterns)
 
 
 def find_extra_files(
@@ -301,17 +298,6 @@ def plan_purge(
                 all_files.append((f, size))
                 if is_archive_file(rel_path):
                     stats.estimated_charts += 1
-
-        # Video files
-        delete_videos = user_settings.delete_videos if user_settings else True
-        if delete_videos:
-            for rel_path, size in local_files.items():
-                if rel_path in disabled_setlist_paths or rel_path in extra_paths or rel_path in failed_setlist_paths:
-                    continue
-                if Path(rel_path).suffix.lower() in VIDEO_EXTENSIONS:
-                    stats.video_count += 1
-                    stats.video_size += size
-                    all_files.append((folder_path / rel_path, size))
 
     # Deduplicate
     seen = set()

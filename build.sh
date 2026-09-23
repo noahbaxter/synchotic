@@ -145,6 +145,7 @@ build_app() {
         --paths vendor/chotic-ui \
         --collect-submodules chotic_ui \
         --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
+        --add-data "docs/settings.template.jsonc:docs" \
         --icon "$ICON" \
         sync.py
 

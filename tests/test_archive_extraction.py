@@ -257,7 +257,7 @@ class TestProcessArchiveIntegration:
         })
 
         # Create downloader and process the archive
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="test123",
             local_path=archive_path,
@@ -307,7 +307,7 @@ class TestProcessArchiveIntegration:
             "Level1/root.txt": "root",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="deep",
             local_path=archive_path,
@@ -368,7 +368,7 @@ class TestProcessArchiveIntegration:
             f"{nfd_folder}/notes.mid": b"MThd",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="boa",
             local_path=archive_path,
@@ -422,7 +422,7 @@ class TestProcessArchiveIntegration:
             "Carol Of The Bells/notes.mid": b"MThd",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="carol",
             local_path=archive_path,
@@ -470,7 +470,7 @@ class TestProcessArchiveIntegration:
             "Completely Different Name/notes.mid": b"MThd",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="mychart",
             local_path=archive_path,
@@ -509,7 +509,7 @@ class TestProcessArchiveIntegration:
             "Chart Two/song.ini": "[song]\nname=Two",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="multi",
             local_path=archive_path,
@@ -545,7 +545,7 @@ class TestProcessArchiveIntegration:
             "notes.mid": b"MThd",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="loose",
             local_path=archive_path,
@@ -593,7 +593,7 @@ class TestProcessArchiveIntegration:
             "One of Us Is the Killer/Song Two/notes.mid": b"MThd",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="album",
             local_path=archive_path,
@@ -649,7 +649,7 @@ class TestProcessArchiveIntegration:
             "Album/notes.mid": b"MThd",
         })
 
-        downloader = FileDownloader(delete_videos=False)
+        downloader = FileDownloader(download_ignore=[])
         task = DownloadTask(
             file_id="redundant",
             local_path=archive_path,

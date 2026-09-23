@@ -100,7 +100,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         self.sync = FolderSync(
             self.client,
             auth_token=self.auth.get_token_getter(),
-            delete_videos=self.user_settings.delete_videos,
+            download_ignore=self.user_settings.download_ignore,
             download_mode=self.user_settings.download_mode or "rclone",
         )
         self.folders = []
@@ -112,26 +112,17 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         clear_screen()
         print_header()
 
-        # First-run OAuth prompt (only shown once)
-        #
-        # Gated on the user owning an OAuth client. Sign-in resolves its client
-        # from credentials.json and falls back to the embedded one, which is the
-        # capped app: its 100-user limit is full and verification was rejected,
-        # so for anyone new that sign-in cannot succeed. Offering it anyway is
-        # what made picking BYOC lead straight into a Synchotic sign-in that was
-        # guaranteed to fail. has_custom_client_config exists for this check.
-        #
-        # oauth_prompted is only set when the prompt actually ran, so a user who
-        # sets up BYOC later still gets asked once, at the point it can work.
+        # Offered on every start while the chosen mode is missing a sign-in and
+        # nothing else. connection_step_for keeps BYOC without credentials away
+        # from sign-in, which would fall back to the capped embedded client.
         from src.drive.auth import has_custom_client_config
+        from src.ui.screens.download_mode import connection_step_for
 
-        if (not self.user_settings.oauth_prompted
-                and self.auth.is_available
-                and not self.auth.is_signed_in
-                and has_custom_client_config()):
-            self.user_settings.oauth_prompted = True
-            self.user_settings.save()
-
+        step = connection_step_for(self.user_settings.download_mode,
+                                   rclone_authed=True,
+                                   signed_in=self.auth.is_signed_in,
+                                   byoc_configured=has_custom_client_config())
+        if self.auth.is_available and step == "signin":
             if show_oauth_prompt():
                 self.handle_signin()
                 clear_screen()
@@ -286,6 +277,24 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
                 menu_cache = None
 
 
+def use_first_run_sandbox() -> Path:
+    """Point this run at an empty install in a throwaway temp folder, so a
+    machine that already runs Synchotic can show what a new user sees.
+    Nothing installed is read or adopted. Returns the folder."""
+    import tempfile
+
+    from src.core.legacy_migration import FRESH_ENV
+
+    sandbox = Path(tempfile.mkdtemp(prefix="synchotic-first-run-"))
+    os.environ["SYNCHOTIC_ROOT"] = str(sandbox)
+    os.environ["SYNCHOTIC_OS_DIRS"] = "0"
+    os.environ[FRESH_ENV] = "1"
+    # Both would hand the sandbox a real install to adopt.
+    os.environ.pop("SYNCHOTIC_LIBRARY", None)
+    os.environ.pop("SYNCHOTIC_LEGACY_ROOT", None)
+    return sandbox
+
+
 def main():
     """Entry point."""
     import time as _time
@@ -311,6 +320,12 @@ def main():
         description="DM Chart Sync - Download charts from Google Drive"
     )
     parser.add_argument(
+        "--first-run", "--firsttime", action="store_true", dest="first_run",
+        help="run against an empty throwaway install, for seeing what a new "
+             "user sees. Nothing on this machine is read or written: no "
+             "settings, no sign-in, no library, and no adoption of either.",
+    )
+    parser.add_argument(
         "--download-mode", choices=DOWNLOAD_MODES, default=None,
         help="how to fetch virus-scan-blocked files: rclone (one Google consent "
              "click), anonymous (skip them), byoc (your own credentials). Saved "
@@ -320,6 +335,11 @@ def main():
     # print and exit, and anything printed into that buffer is discarded when
     # the exit handler closes it, so --help showed the user nothing at all.
     cli_args = parser.parse_args()
+
+    if cli_args.first_run:
+        sandbox = use_first_run_sandbox()
+        # Before the alternate screen opens, so it is still there after quitting.
+        print(f"  first-run sandbox: {sandbox}")
 
     # Everything below draws in the alternate screen buffer. The menus repaint
     # in place from the home position, which only holds if home stays put: on
@@ -357,7 +377,20 @@ def main():
     from src.config.settings import UserSettings as _EarlySettings
     from src.core.paths import get_settings_path as _early_settings_path
     from src.core.paths import set_library_path as _set_library_path
-    _set_library_path(_EarlySettings.load(_early_settings_path()).library_path or None)
+    _early = _EarlySettings.load(_early_settings_path())
+    _set_library_path(_early.library_path or None)
+
+    # A library is required now, so an install running on the old default is
+    # handed that folder explicitly rather than upgrading into "not set".
+    if not _early.library_path:
+        from src.core.legacy_migration import default_library_to_adopt
+        _adopted = default_library_to_adopt()
+        if _adopted:
+            from src.core.logging import debug_log as _debug_log
+            _early.library_path = str(_adopted)
+            _early.save()
+            _set_library_path(_adopted)
+            _debug_log(f"LIBRARY | adopted former default | {_adopted}")
 
     # An unreachable library has to stop startup right here. Every path helper
     # below raises once the library is gone, and mkdir on an absent mountpoint
@@ -365,8 +398,9 @@ def main():
     # remount then hides. Offer a retry so plugging the drive in is enough.
     from src.core.paths import get_library_path as _get_library_path
     from src.core.paths import library_is_available as _library_is_available
+    from src.core.paths import plain_path as _plain_path
     while not _library_is_available():
-        display.library_unavailable(_get_library_path())
+        display.library_unavailable(_plain_path(_get_library_path()))
         if not sys.stdin.isatty():
             sys.exit(1)
         from src.ui.widgets.confirm import ConfirmDialog
@@ -391,6 +425,12 @@ def main():
         print(f"\n  A newer setup exists in {stale}")
         print("  but this install already has settings and will not overwrite them.")
         print("  Settings > Library, pointed at that folder, imports it.\n")
+
+    # settings.json is meant to be edited, so write it on the first run, after
+    # adoption has had its say about what goes in it.
+    from src.core.paths import get_settings_path
+    if not get_settings_path().exists():
+        UserSettings.load(get_settings_path()).save()
 
     # Migrate legacy files from old locations to .dm-sync/
     # Must run BEFORE creating SyncApp so paths resolve correctly
@@ -425,7 +465,8 @@ def main():
     app.run()
 
 
-if __name__ == "__main__":
+def run():
+    """main() with Ctrl+C turned into a clean exit."""
     try:
         main()
     except KeyboardInterrupt:
@@ -435,3 +476,19 @@ if __name__ == "__main__":
         leave_alt_screen()
         print("\n\nCancelled by user.")
         sys.exit(0)
+
+
+def cli():
+    """The `synchotic` command: a checkout run like the installed bundles, which
+    export SYNCHOTIC_OS_DIRS=1. SYNCHOTIC_OS_DIRS=0 opts out.
+
+    Only this entry point defaults it. Frozen builds run this file as __main__,
+    and the Windows launcher starts a loose executable in the portable layout
+    it has always had.
+    """
+    os.environ.setdefault("SYNCHOTIC_OS_DIRS", "1")
+    run()
+
+
+if __name__ == "__main__":
+    run()

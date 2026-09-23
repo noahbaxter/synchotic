@@ -4,6 +4,8 @@ The point of the layout is that a setlist toggle never leaves the screen, so
 these check both halves: that the panes contain what they should, and that
 toggling mutates settings in place instead of returning an action.
 """
+import os
+
 import pytest
 
 from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
@@ -35,6 +37,13 @@ def build(monkeypatch, tmp_path):
             mode=DOWNLOAD_MODE_ANONYMOUS, rclone_authed=False, byoc_creds=False):
         captured = {}
         settings = settings or UserSettings(tmp_path / "settings.json")
+        # A library nobody chose greys every row that writes into one, which
+        # is the point of it, but it is not what these tests are about. Set
+        # one unless the test set its own first.
+        if not os.environ.get("SYNCHOTIC_LIBRARY"):
+            library = tmp_path / "library"
+            library.mkdir(exist_ok=True)
+            monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(library))
         # Drive-touching rows are gated on whether the mode can reach Drive, so
         # pin both inputs: is_authed() otherwise reads the real rclone config
         # and the rows would differ per machine. Anonymous is the default
@@ -117,13 +126,15 @@ class TestTheRightPane:
 
 class TestTogglingStaysOnTheScreen:
     def test_space_on_a_drive_toggles_it_without_returning(self, build):
+        """Nothing has been chosen in this settings object, so the drive is off
+        and Space turns it on."""
         def act(pane):
             pane.focus = "left"
             pane._on_left_space(("drive", "drive-1"))
             return None
 
         out = build(act=act)
-        assert out["settings"].is_drive_enabled("drive-1") is False
+        assert out["settings"].is_drive_enabled("drive-1") is True
         assert out["returned"][0] == "quit"
 
     def test_toggling_a_setlist_returns_nothing(self, build):
@@ -135,11 +146,15 @@ class TestTogglingStaysOnTheScreen:
         build(act=act)
 
     def test_a_setlist_toggle_is_persisted(self, build):
+        """Enter on a setlist inside a drive that is off turns the drive on
+        instead, so the second press is the one that toggles the setlist."""
         def act(pane):
+            pane._on_right_enter(("setlist", "drive-1", "Setlist A"))
             pane._on_right_enter(("setlist", "drive-1", "Setlist A"))
             return None
 
         settings = build(act=act)["settings"]
+        assert settings.is_drive_enabled("drive-1") is True
         assert settings.is_subfolder_enabled("drive-1", "Setlist A") is False
 
 

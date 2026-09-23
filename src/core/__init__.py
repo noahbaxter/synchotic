@@ -7,7 +7,6 @@ Shared constants, paths, file operations, and formatting.
 from .constants import (
     CHART_MARKERS,
     CHART_ARCHIVE_EXTENSIONS,
-    VIDEO_EXTENSIONS,
     USER_OAUTH_CLIENT_ID,
     USER_OAUTH_CLIENT_SECRET,
     USER_OAUTH_SCOPES,
@@ -31,6 +30,7 @@ from .paths import (
 from .files import (
     file_exists_with_size,
     find_unexpected_files,
+    matches_ignore,
 )
 
 from .formatting import (
@@ -49,7 +49,6 @@ __all__ = [
     # Constants
     "CHART_MARKERS",
     "CHART_ARCHIVE_EXTENSIONS",
-    "VIDEO_EXTENSIONS",
     "USER_OAUTH_CLIENT_ID",
     "USER_OAUTH_CLIENT_SECRET",
     "USER_OAUTH_SCOPES",
@@ -68,6 +67,7 @@ __all__ = [
     "migrate_legacy_files",
     # Files
     "file_exists_with_size",
+    "matches_ignore",
     "find_unexpected_files",
     # Formatting
     "format_size",

@@ -18,11 +18,10 @@ from dataclasses import dataclass
 
 import aiohttp
 
-from ..core.constants import VIDEO_EXTENSIONS
 from ..core.formatting import extract_path_context, format_download_name, normalize_fs_name, normalize_path_key
 from ..core.logging import debug_log
 from ..core.paths import get_extract_tmp_dir, get_certifi_ssl_context
-from .extractor import extract_archive, get_folder_size, delete_video_files
+from .extractor import extract_archive, get_folder_size, delete_ignored_files
 from .download_planner import DownloadTask
 from .markers import save_marker, save_failed_marker
 from ..ui.primitives.esc_monitor import EscMonitor
@@ -74,14 +73,14 @@ class FileDownloader:
         timeout: Tuple[int, int] = (10, 120),
         chunk_size: int = 32768,
         auth_token: Optional[Union[str, Callable[[], Optional[str]]]] = None,
-        delete_videos: bool = True,
+        download_ignore=None,
     ):
         self.max_workers = max_workers
         self.max_retries = max_retries
         self.timeout = aiohttp.ClientTimeout(connect=timeout[0], sock_read=timeout[1])
         self.chunk_size = chunk_size
         self._auth_token = auth_token
-        self.delete_videos = delete_videos
+        self.download_ignore = download_ignore
 
     def _get_auth_token(self) -> Optional[str]:
         """Get current auth token, calling getter if it's a callable."""
@@ -358,9 +357,8 @@ class FileDownloader:
                     save_failed_marker(archive_rel_path, task.md5, error)
                 return False, f"Extract failed: {error}", {}
 
-            # Step 2: Delete videos if enabled
-            if self.delete_videos:
-                delete_video_files(extract_tmp)
+            # Step 2: Strip the file types the user does not want fetched
+            delete_ignored_files(extract_tmp, self.download_ignore)
 
             # Step 3: Move extracted contents to chart_folder
             # Check if we should flatten to avoid double nesting.

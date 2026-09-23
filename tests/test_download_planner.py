@@ -13,6 +13,8 @@ import pytest
 from src.sync.download_planner import plan_downloads, DownloadTask
 from src.sync.markers import save_marker
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 class TestPlanDownloadsSkipping:
     """Tests for files that should be skipped."""
@@ -25,7 +27,7 @@ class TestPlanDownloadsSkipping:
     def test_google_docs_skipped(self, temp_dir):
         """Files with no MD5 AND no extension are skipped (Google Docs/Sheets)."""
         files = [{"id": "1", "path": "My Document", "size": 0, "md5": ""}]
-        tasks, skipped, long_paths = plan_downloads(files, temp_dir, delete_videos=True)
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 0
         assert skipped == 1
 
@@ -43,28 +45,28 @@ class TestPlanDownloadsSkipping:
     def test_file_with_md5_but_no_extension_included(self, temp_dir):
         """Files with MD5 but no extension are included (like _rb3con files)."""
         files = [{"id": "1", "path": "folder/_rb3con", "size": 100, "md5": "abc123"}]
-        tasks, skipped, long_paths = plan_downloads(files, temp_dir, delete_videos=True)
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 1
 
-    def test_video_files_skipped_when_delete_videos_true(self, temp_dir):
-        """Video files skipped when delete_videos=True."""
+    def test_video_files_skipped_when_ignored(self, temp_dir):
+        """Video files skipped when download_ignore=VIDEO_IGNORE."""
         files = [{"id": "1", "path": "folder/video.mp4", "size": 1000, "md5": "abc"}]
-        tasks, skipped, long_paths = plan_downloads(files, temp_dir, delete_videos=True)
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 0
         assert skipped == 1
 
-    def test_video_files_included_when_delete_videos_false(self, temp_dir):
-        """Video files included when delete_videos=False."""
+    def test_video_files_included_when_not_ignored(self, temp_dir):
+        """Video files included when download_ignore=[]."""
         files = [{"id": "1", "path": "folder/video.mp4", "size": 1000, "md5": "abc"}]
-        tasks, skipped, long_paths = plan_downloads(files, temp_dir, delete_videos=False)
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir, download_ignore=[])
         assert len(tasks) == 1
 
     def test_various_video_extensions_skipped(self, temp_dir):
-        """All video extensions are skipped when delete_videos=True."""
+        """All video extensions are skipped when download_ignore=VIDEO_IGNORE."""
         video_extensions = [".mp4", ".avi", ".webm", ".mov", ".mkv"]
         for ext in video_extensions:
             files = [{"id": "1", "path": f"folder/video{ext}", "size": 1000, "md5": "abc"}]
-            tasks, skipped, _ = plan_downloads(files, temp_dir, delete_videos=True)
+            tasks, skipped, _ = plan_downloads(files, temp_dir, download_ignore=VIDEO_IGNORE)
             assert len(tasks) == 0, f"{ext} should be skipped"
             assert skipped == 1
 
@@ -247,7 +249,7 @@ class TestPlanDownloadsRegularFiles:
         local_file.write_text("content")  # 7 bytes
 
         files = [{"id": "1", "path": "folder/song.ini", "size": 7, "md5": "abc"}]
-        tasks, skipped, _ = plan_downloads(files, temp_dir, delete_videos=True)
+        tasks, skipped, _ = plan_downloads(files, temp_dir, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 0
         assert skipped == 1
 

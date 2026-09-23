@@ -46,6 +46,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from _env_loader import load_env  # noqa: E402
 from _harness import bootstrap, stub_rclone  # noqa: E402
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
+
 
 def reset_root(data_dir: Path, mode: str, keep: bool = False) -> None:
     """Clear auth artifacts so each mode starts from the state it claims to test.
@@ -203,12 +206,12 @@ def main() -> int:
     tee = TeeOutput(log_path, version="authtest")
     sys.stdout = tee
     try:
-        sync = FolderSync(client, auth_token=auth.get_token_getter(), delete_videos=True)
+        sync = FolderSync(client, auth_token=auth.get_token_getter(), download_ignore=VIDEO_IGNORE)
         downloaded, skipped, errors, rate_limited, cancelled, sync_bytes = \
             sync.sync_folder(folder, download_path)
 
         tasks_after, _, _ = plan_downloads(
-            folder["files"], download_path / folder["name"], True, folder_name=folder["name"]
+            folder["files"], download_path / folder["name"], VIDEO_IGNORE, folder_name=folder["name"]
         )
         purge_after, _ = plan_purge([folder], download_path, settings, None)
     finally:

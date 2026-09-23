@@ -25,18 +25,18 @@ class FolderSync:
         self,
         client: DriveClient,
         auth_token: Optional[Union[str, Callable[[], Optional[str]]]] = None,
-        delete_videos: bool = True,
+        download_ignore=None,
         download_mode: str = "rclone",
     ):
         self.client = client
         self.auth_token = auth_token
-        self.delete_videos = delete_videos
+        self.download_ignore = download_ignore
         # Which tier-4 behaviour the user chose. Anything other than "rclone"
         # means never open a consent browser, which is what makes headless and
         # privacy-conscious runs work.
         self.download_mode = download_mode
         from .downloader import FileDownloader
-        self.downloader = FileDownloader(auth_token=auth_token, delete_videos=delete_videos)
+        self.downloader = FileDownloader(auth_token=auth_token, download_ignore=download_ignore)
 
     def sync_folder(
         self,
@@ -109,7 +109,7 @@ class FolderSync:
             print_progress(f"Checking {label}... {done}/{total}")
 
         tasks, skipped, long_paths = plan_downloads(
-            manifest_files, folder_path, self.delete_videos, folder_name=folder["name"],
+            manifest_files, folder_path, self.download_ignore, folder_name=folder["name"],
             on_progress=_plan_progress,
         )
 

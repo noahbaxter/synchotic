@@ -35,7 +35,10 @@ FIXTURE = REPO / "tests" / "manual" / "fixture_drive.json"
 sys.path.insert(0, str(SCRIPTS))
 from _env_loader import load_env  # noqa: E402
 from _harness import (bootstrap, diff_snapshots, fixture_folder, load_fixture,  # noqa: E402
+
                       snapshot_tree, stub_rclone)
+
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
 
 # downloader.py:515 polls cancel_check every 0.1s inside the `while pending` loop.
 # Keying on bytes-on-disk does not work: writes are buffered, so the bytes only
@@ -86,7 +89,7 @@ def run_phase(phase: str, root: Path, out: Path, cancel_on_poll: int) -> int:
     tee = TeeOutput(logs / f"{datetime.now().strftime('%Y-%m-%d')}.log", version=phase)
     sys.stdout = tee
     try:
-        sync = FolderSync(client, auth_token=auth.get_token_getter(), delete_videos=True)
+        sync = FolderSync(client, auth_token=auth.get_token_getter(), download_ignore=VIDEO_IGNORE)
         downloaded, skipped, errors, rate_limited, cancelled, sync_bytes = sync.sync_folder(
             folder, download_path,
             cancel_check=cancel_check if phase == "cancel" else None,

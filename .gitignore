@@ -41,6 +41,9 @@ telemetry-id
 # App data (user settings, tokens, cached manifest)
 .dm-sync/
 
+# Editable install metadata
+*.egg-info/
+
 # PyInstaller build artifacts
 build/
 dist/

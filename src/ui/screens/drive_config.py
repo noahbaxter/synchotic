@@ -98,8 +98,6 @@ def show_subfolder_settings(
         debug_log(f"SETLIST_PAGE | === {folder_name} ===")
         debug_log(f"SETLIST_PAGE | drive_enabled={drive_enabled} | +{max(0, agg.total_size - agg.synced_size)} -{agg.purgeable_size}")
 
-        delta_mode = user_settings.delta_mode if user_settings else "size"
-
         subtitle = format_drive_status(
             synced_charts=agg.synced_charts,
             total_charts=agg.total_charts,
@@ -135,7 +133,6 @@ def show_subfolder_settings(
                 synced_size = cached.synced_size
                 setlist_disk_files = cached.disk_files
                 setlist_disk_size = cached.disk_size
-                setlist_disk_charts = cached.disk_charts
             else:
                 setlist_total_charts = 0
                 setlist_total_size = 0
@@ -143,36 +140,19 @@ def show_subfolder_settings(
                 synced_size = 0
                 setlist_disk_files = 0
                 setlist_disk_size = 0
-                setlist_disk_charts = 0
 
-            is_fully_synced = synced_charts == setlist_total_charts and setlist_total_charts > 0
-
-            # Calculate purgeable for this setlist
-            setlist_purgeable_files = 0
+            # What purge would take from this setlist
             setlist_purgeable_size = 0
-            setlist_purgeable_charts = 0
-            missing_charts = 0
-
-            if drive_enabled:
-                if not setlist_enabled and setlist_disk_files > 0:
-                    setlist_purgeable_files = setlist_disk_files
-                    setlist_purgeable_size = setlist_disk_size
-                    setlist_purgeable_charts = setlist_disk_charts
-
-                if setlist_enabled and not is_fully_synced:
-                    missing_charts = setlist_total_charts - synced_charts
+            if drive_enabled and not setlist_enabled and setlist_disk_files > 0:
+                setlist_purgeable_size = setlist_disk_size
 
             columns, delta, show_checkmark = format_setlist_item(
                 total_charts=setlist_total_charts,
                 synced_charts=synced_charts,
                 total_size=setlist_total_size,
                 synced_size=synced_size,
-                purgeable_files=setlist_purgeable_files,
-                purgeable_charts=setlist_purgeable_charts,
                 purgeable_size=setlist_purgeable_size,
-                missing_charts=missing_charts,
                 disabled=not setlist_enabled or not drive_enabled,
-                delta_mode=delta_mode,
                 state=setlist_state,
                 disk_size=setlist_disk_size,
             )

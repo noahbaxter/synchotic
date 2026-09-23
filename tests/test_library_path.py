@@ -11,7 +11,13 @@ from pathlib import Path
 
 import pytest
 
+from src.config import jsonc
 from src.core import paths
+
+
+def _library():
+    """The library without the Windows MAX_PATH prefix."""
+    return Path(paths.plain_path(paths.get_library_path()))
 
 
 @pytest.fixture(autouse=True)
@@ -25,18 +31,18 @@ def isolated(tmp_path, monkeypatch):
 
 class TestResolution:
     def test_defaults_beside_the_app(self, tmp_path):
-        assert paths.get_library_path() == tmp_path / paths.DOWNLOAD_FOLDER_NAME
+        assert _library() == tmp_path / paths.DOWNLOAD_FOLDER_NAME
 
     def test_setting_overrides_default(self, tmp_path):
         (tmp_path / "elsewhere").mkdir(parents=True, exist_ok=True)
         paths.set_library_path(tmp_path / "elsewhere")
-        assert paths.get_library_path() == tmp_path / "elsewhere"
+        assert _library() == tmp_path / "elsewhere"
 
     def test_env_beats_setting(self, tmp_path, monkeypatch):
         (tmp_path / "from-settings").mkdir(parents=True, exist_ok=True)
         paths.set_library_path(tmp_path / "from-settings")
         monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path / "from-env"))
-        assert paths.get_library_path() == tmp_path / "from-env"
+        assert _library() == tmp_path / "from-env"
 
     def test_download_path_is_an_alias(self):
         assert paths.get_download_path() == paths.get_library_path()
@@ -286,11 +292,9 @@ class TestUnmountedLibrary:
 
 
 class TestScanGate:
-    """Nothing scans into a library that is not there. library_blocked_reason
-    is the one rule the menu greys rows on and every scan entry point checks.
-
-    There is no "unset" case: every install resolves to a default, an OS-dirs
-    one to ~/Synchotic/Sync Charts. Only a folder that went missing blocks.
+    """Nothing scans into a library that is not there, and nothing scans into
+    one nobody chose. library_blocked_reason is the one rule the menu greys
+    rows on and every scan entry point checks.
     """
 
     def test_an_unmounted_library_blocks(self, tmp_path):
@@ -303,9 +307,17 @@ class TestScanGate:
         paths.set_library_path(lib)
         assert paths.library_blocked_reason() == ""
 
-    def test_a_default_library_never_blocks(self, monkeypatch, tmp_path):
-        """It is created on demand, so it cannot be missing."""
+    def test_a_library_nobody_chose_blocks(self, monkeypatch, tmp_path):
+        """There is no default: purge must never manage an unchosen folder."""
         monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
+        monkeypatch.delenv("SYNCHOTIC_LIBRARY", raising=False)
+        paths.set_library_path(None)
+        assert paths.library_blocked_reason() == "Library not set"
+
+    def test_the_env_override_counts_as_chosen(self, monkeypatch, tmp_path):
+        paths.set_library_path(None)
+        monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path))
+        assert paths.library_is_set() is True
         assert paths.library_blocked_reason() == ""
 
 
@@ -330,7 +342,7 @@ class TestOsDirsBundleLayout:
 
     def test_charts_stay_somewhere_findable(self):
         """Not ~/Library: a chart library is tens of gigabytes of user content."""
-        library = paths.get_library_path()
+        library = _library()
         assert library == Path.home() / "Synchotic" / paths.DOWNLOAD_FOLDER_NAME
         assert "Library" not in library.relative_to(Path.home()).parts
 
@@ -338,7 +350,7 @@ class TestOsDirsBundleLayout:
         lib = tmp_path / "songs"
         lib.mkdir()
         paths.set_library_path(lib)
-        assert paths.get_library_path() == lib
+        assert _library() == lib
 
 
 class TestLibraryPathPersists:
@@ -383,10 +395,8 @@ class TestUpgradingABundle:
         assert (paths.get_data_dir() / "token.json").read_text() == '{"token": "kept"}'
 
     def test_the_settings_come_across(self, legacy):
-        import json
-
         paths.migrate_to_os_dirs()
-        saved = json.loads(paths.get_settings_path().read_text())
+        saved = jsonc.loads(paths.get_settings_path().read_text())
         assert saved["download_mode"] == "rclone"
         assert saved["library_path"] == "/Volumes/x/Charts"
 

@@ -18,10 +18,12 @@ import requests
 
 from src.sync.purge_planner import plan_purge
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 class _Settings:
     purge_ignore = None
-    delete_videos = True
+    download_ignore = VIDEO_IGNORE
 
     def is_drive_enabled(self, folder_id):
         return True

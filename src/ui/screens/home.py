@@ -58,7 +58,6 @@ def update_menu_cache_on_toggle(
     Uses aggregate_folder_stats for instant re-aggregation without disk I/O.
     """
     drive_enabled = user_settings.is_drive_enabled(folder_id)
-    delta_mode = user_settings.delta_mode
     scan_complete = not background_scanner or background_scanner.is_done()
     persistent_cache = get_persistent_stats_cache()
 
@@ -81,12 +80,8 @@ def update_menu_cache_on_toggle(
                     total_setlists=agg.total_setlists,
                     total_size=agg.total_size,
                     synced_size=agg.synced_size,
-                    purgeable_files=agg.purgeable_files,
-                    purgeable_charts=agg.purgeable_charts,
                     purgeable_size=agg.purgeable_size,
-                    missing_charts=agg.total_charts - agg.synced_charts,
                     disabled=not drive_enabled,
-                    delta_mode=delta_mode,
                     state=state,
                     scan_progress=scan_progress,
                     disk_size=agg.disk_size,
@@ -116,7 +111,6 @@ def update_menu_cache_on_toggle(
                     total_size=0,
                     synced_size=0,
                     disabled=not drive_enabled,
-                    delta_mode=delta_mode,
                     state=state,
                     scan_progress=scan_progress,
                 )
@@ -139,8 +133,6 @@ def update_menu_cache_on_toggle(
 
     # Reaggregate global stats from persistent cache (works during scanning)
     global_status = SyncStatus()
-    global_purge_count = 0
-    global_purge_charts = 0
     global_purge_size = 0
     global_enabled_setlists = 0
     global_total_setlists = 0
@@ -163,15 +155,12 @@ def update_menu_cache_on_toggle(
             global_total_setlists += agg.total_setlists
             global_enabled_setlists += agg.enabled_setlists
             global_disk_size += agg.disk_size
-        global_purge_count += agg.purgeable_files
-        global_purge_charts += agg.purgeable_charts
         global_purge_size += agg.purgeable_size
 
     _apply_global_stats(
-        menu_cache, global_status,
-        global_purge_count, global_purge_charts, global_purge_size,
+        menu_cache, global_status, global_purge_size,
         global_enabled_setlists, global_total_setlists,
-        delta_mode, scan_complete, background_scanner,
+        scan_complete, background_scanner,
         global_disk_size=global_disk_size,
     )
 
@@ -194,12 +183,9 @@ def _get_setlist_names(
 def _apply_global_stats(
     cache: MainMenuCache,
     global_status: SyncStatus,
-    global_purge_count: int,
-    global_purge_charts: int,
     global_purge_size: int,
     global_enabled_setlists: int,
     global_total_setlists: int,
-    delta_mode: str,
     scan_complete: bool,
     scanner: "BackgroundScanner" = None,
     global_disk_size: int = 0,
@@ -216,12 +202,7 @@ def _apply_global_stats(
     )
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
-        add_files=global_status.missing_charts,
-        add_charts=global_status.missing_charts,
         remove_size=global_purge_size,
-        remove_files=global_purge_count,
-        remove_charts=global_purge_charts,
-        mode=delta_mode,
         is_estimate=not scan_complete,
     )
     enabled_complete = scan_complete or (scanner and scanner.is_all_enabled_scanned())
@@ -329,7 +310,6 @@ def _compute_folder_stats(
 
     # Check if drive is enabled
     drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
-    delta_mode = user_settings.delta_mode if user_settings else "size"
 
     # Build display string with state styling
     scan_progress = scanner.get_scan_progress(folder_id) if scanner and state == "scanning" else None
@@ -338,12 +318,8 @@ def _compute_folder_stats(
         total_setlists=total_setlists,
         total_size=status.total_size,
         synced_size=status.synced_size,
-        purgeable_files=purge_files,
-        purgeable_charts=purge_charts,
         purgeable_size=purge_size,
-        missing_charts=status.missing_charts,
         disabled=not drive_enabled,
-        delta_mode=delta_mode,
         is_estimate=status.is_estimate,
         state=state,
         scan_progress=scan_progress,
@@ -393,8 +369,6 @@ def compute_main_menu_cache(
     persistent_cache = get_persistent_stats_cache()
 
     global_status = SyncStatus()
-    global_purge_count = 0
-    global_purge_charts = 0
     global_purge_size = 0
     global_enabled_setlists = 0
     global_total_setlists = 0
@@ -436,15 +410,12 @@ def compute_main_menu_cache(
                 cache_misses += 1
 
         status = stats.sync_status
-        folder_purge_count = stats.purge_count
-        folder_purge_charts = stats.purge_charts
         folder_purge_size = stats.purge_size
         enabled_setlists = stats.enabled_setlists
         total_setlists = stats.total_setlists
 
         # Check if drive is enabled (for display string and aggregation)
         drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
-        delta_mode = user_settings.delta_mode if user_settings else "size"
 
         # Determine display state
         has_files = folder.get("files") is not None
@@ -459,12 +430,8 @@ def compute_main_menu_cache(
             total_setlists=total_setlists,
             total_size=status.total_size,
             synced_size=status.synced_size,
-            purgeable_files=folder_purge_count,
-            purgeable_charts=folder_purge_charts,
             purgeable_size=folder_purge_size,
-            missing_charts=status.missing_charts,
             disabled=not drive_enabled,
-            delta_mode=delta_mode,
             is_estimate=status.is_estimate,
             state=state,
             scan_progress=scan_progress,
@@ -484,8 +451,6 @@ def compute_main_menu_cache(
             global_total_setlists += total_setlists
             global_enabled_setlists += enabled_setlists
         # Always aggregate purgeable (disabled drives may have content to remove)
-        global_purge_count += folder_purge_count
-        global_purge_charts += folder_purge_charts
         global_purge_size += folder_purge_size
 
         cache.folder_stats[folder_id] = columns
@@ -494,14 +459,12 @@ def compute_main_menu_cache(
         cache.folder_states[folder_id] = state
         cache.folder_scan_progress[folder_id] = scan_progress
 
-    delta_mode = user_settings.delta_mode if user_settings else "size"
     scan_complete = not background_scanner or background_scanner.is_done()
 
     _apply_global_stats(
-        cache, global_status,
-        global_purge_count, global_purge_charts, global_purge_size,
+        cache, global_status, global_purge_size,
         global_enabled_setlists, global_total_setlists,
-        delta_mode, scan_complete, background_scanner,
+        scan_complete, background_scanner,
         global_disk_size=global_disk_size,
     )
 

@@ -1,8 +1,4 @@
-"""Tests for delta display modes (size, files, charts).
-
-Verifies that size/files/charts counts are calculated differently
-and displayed correctly in each mode.
-"""
+"""Tests for the add/remove delta and purge chart estimation."""
 
 import pytest
 from pathlib import Path
@@ -12,119 +8,19 @@ from src.ui.components.formatting import format_delta, strip_ansi
 from src.sync.purge_planner import plan_purge, count_purgeable_files, PurgeStats
 
 
-class TestFormatDeltaModes:
-    """Test format_delta with different modes."""
+class TestFormatDelta:
+    def test_add_and_remove(self):
+        text = strip_ansi(format_delta(add_size=1024 * 1024, remove_size=512 * 1024))
+        assert text == "[+1.0 MB / -512.0 KB]"
 
-    def test_size_mode_shows_sizes(self):
-        """Size mode should show sizes, not counts."""
-        result = format_delta(
-            add_size=1024 * 1024,  # 1 MB
-            add_files=10,
-            add_charts=5,
-            remove_size=512 * 1024,  # 512 KB
-            remove_files=20,
-            remove_charts=8,
-            mode="size",
-        )
-        text = strip_ansi(result)
-        assert "+1.0 MB" in text
-        assert "-512.0 KB" in text
-        assert "files" not in text
-        assert "charts" not in text
+    def test_add_only(self):
+        assert strip_ansi(format_delta(add_size=1024)) == "[+1.0 KB]"
 
-    def test_files_mode_shows_file_counts(self):
-        """Files mode should show file counts."""
-        result = format_delta(
-            add_size=1024 * 1024,
-            add_files=10,
-            add_charts=5,
-            remove_size=512 * 1024,
-            remove_files=20,
-            remove_charts=8,
-            mode="files",
-        )
-        text = strip_ansi(result)
-        assert "+10 files" in text  # "files " with trailing space
-        assert "-20 files" in text
-        assert "MB" not in text
-        assert "charts" not in text
+    def test_remove_only(self):
+        assert strip_ansi(format_delta(remove_size=1024)) == "[-1.0 KB]"
 
-    def test_charts_mode_shows_chart_counts(self):
-        """Charts mode should show chart counts."""
-        result = format_delta(
-            add_size=1024 * 1024,
-            add_files=10,
-            add_charts=5,
-            remove_size=512 * 1024,
-            remove_files=20,
-            remove_charts=8,
-            mode="charts",
-        )
-        text = strip_ansi(result)
-        assert "+5 charts" in text
-        assert "-8 charts" in text
-        assert "MB" not in text
-        assert "file" not in text
-
-    def test_singular_units(self):
-        """Should use singular when count is 1."""
-        result = format_delta(add_files=1, add_charts=1, mode="files")
-        assert "+1 file]" in strip_ansi(result)
-
-        result = format_delta(add_files=1, add_charts=1, mode="charts")
-        assert "+1 chart]" in strip_ansi(result)
-
-    def test_plural_units(self):
-        """Should use plural when count > 1."""
-        result = format_delta(add_files=2, mode="files")
-        assert "+2 files]" in strip_ansi(result)
-
-        result = format_delta(add_charts=2, mode="charts")
-        assert "+2 charts]" in strip_ansi(result)
-
-    def test_add_only_white_brackets(self):
-        """Add-only delta should have white brackets."""
-        result = format_delta(add_size=1024, mode="size")
-        # Just verify it doesn't crash and has content
-        assert "[" in strip_ansi(result)
-        assert "]" in strip_ansi(result)
-
-    def test_remove_only_shows_brackets(self):
-        """Remove-only delta should show brackets."""
-        result = format_delta(remove_size=1024, mode="size")
-        assert "[" in strip_ansi(result)
-        assert "-" in strip_ansi(result)
-
-    def test_combined_add_remove(self):
-        """Combined add/remove should show both with separator."""
-        result = format_delta(
-            add_size=1024,
-            remove_size=512,
-            mode="size",
-        )
-        text = strip_ansi(result)
-        assert "+" in text
-        assert "-" in text
-        assert "/" in text
-
-    def test_empty_returns_empty_text(self):
-        """No add or remove should return empty_text."""
-        result = format_delta(empty_text="All synced")
-        assert result == "All synced"
-
-    def test_zero_counts_return_empty(self):
-        """Zero counts should return empty_text."""
-        result = format_delta(
-            add_size=0,
-            add_files=0,
-            add_charts=0,
-            remove_size=0,
-            remove_files=0,
-            remove_charts=0,
-            mode="files",
-            empty_text="Nothing to do",
-        )
-        assert result == "Nothing to do"
+    def test_nothing_returns_empty_text(self):
+        assert format_delta(empty_text="All synced") == "All synced"
 
 
 class TestPurgeChartEstimation:
@@ -186,7 +82,7 @@ class TestPurgeChartEstimation:
                 return False
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 
@@ -219,7 +115,7 @@ class TestPurgeChartEstimation:
                 return True
             def get_disabled_subfolders(self, _):
                 return {"Archives Setlist"}
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 
@@ -245,7 +141,7 @@ class TestPurgeChartEstimation:
                 return False
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         result = count_purgeable_files([folder], base_path, MockSettings())
 
@@ -298,7 +194,7 @@ class TestPartialDownloadsCountAsCharts:
                 return True
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 
@@ -346,7 +242,7 @@ class TestExtraFilesChartEstimation:
                 return True
             def get_disabled_subfolders(self, _):
                 return set()
-            delete_videos = False
+            download_ignore = []
 
         files, stats = plan_purge([folder], base_path, MockSettings())
 

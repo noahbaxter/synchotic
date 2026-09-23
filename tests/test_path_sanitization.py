@@ -22,6 +22,8 @@ from src.sync.cache import ScanCache, scan_actual_charts
 from src.sync.download_planner import plan_downloads
 from src.sync.status import _file_in_disabled_setlist, get_sync_status
 
+VIDEO_IGNORE = ["*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov"]
+
 
 # Common test names with illegal Windows characters
 COLON_NAME = "Guitar Hero III: Legends of Rock"
@@ -170,7 +172,7 @@ class TestDownloadPlannerWithSanitizedPaths:
             "size": 1000,
             "md5": "abc123",
         }]
-        tasks, skipped, long_paths = plan_downloads(files, temp_dir, delete_videos=True)
+        tasks, skipped, long_paths = plan_downloads(files, temp_dir, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 1
         # Check the relative portion only — full path includes drive letter (C:\) on Windows
         rel_path = str(tasks[0].local_path.relative_to(temp_dir))
@@ -182,7 +184,7 @@ class TestDownloadPlannerWithSanitizedPaths:
             {"id": "1", "path": "Setlist/chart.zip", "size": 1000, "md5": "abc", "modified": "2024-01-02"},
             {"id": "2", "path": "Setlist/chart.zip", "size": 1000, "md5": "def", "modified": "2024-01-01"},
         ]
-        tasks, skipped, _ = plan_downloads(files, temp_dir, delete_videos=True)
+        tasks, skipped, _ = plan_downloads(files, temp_dir, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 1
         assert tasks[0].md5 == "abc"  # Newest kept
 
@@ -240,7 +242,7 @@ class TestGetSyncStatusWithDisabledSetlists:
         # Mock user_settings that disables the colon-named setlist
         settings = MagicMock()
         settings.is_drive_enabled.return_value = True
-        settings.delete_videos = True
+        settings.download_ignore = VIDEO_IGNORE
         settings.get_disabled_subfolders.return_value = {COLON_NAME}
 
         status = get_sync_status(folders, tmp_path, user_settings=settings)
@@ -261,7 +263,7 @@ class TestGetSyncStatusWithDisabledSetlists:
 
         settings = MagicMock()
         settings.is_drive_enabled.return_value = True
-        settings.delete_videos = True
+        settings.download_ignore = VIDEO_IGNORE
         settings.get_disabled_subfolders.return_value = set()
 
         status = get_sync_status(folders, tmp_path, user_settings=settings)
@@ -287,7 +289,7 @@ class TestEndToEndPathFlow:
 
         # Step 4: Download planner creates valid local path
         files = [{"id": "1", "path": manifest_path, "size": 500, "md5": "abc"}]
-        tasks, _, _ = plan_downloads(files, tmp_path, delete_videos=True)
+        tasks, _, _ = plan_downloads(files, tmp_path, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 1
         # Check relative portion only — full path includes drive letter (C:\) on Windows
         rel_path = str(tasks[0].local_path.relative_to(tmp_path))
@@ -303,7 +305,7 @@ class TestEndToEndPathFlow:
         manifest_path = f"{sanitized}/track.sng"
 
         files = [{"id": "1", "path": manifest_path, "size": 300, "md5": "xyz"}]
-        tasks, _, _ = plan_downloads(files, tmp_path, delete_videos=True)
+        tasks, _, _ = plan_downloads(files, tmp_path, download_ignore=VIDEO_IGNORE)
         assert len(tasks) == 1
 
         # No illegal chars in the relative path (exclude drive letter C:\ on Windows)

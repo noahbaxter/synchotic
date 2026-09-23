@@ -88,6 +88,46 @@ LIBRARY_STATE_DIR_NAME = ".synchotic"
 _library_override: "Path | None" = None
 
 
+# Windows caps a path at MAX_PATH (260) and a directory at 248 unless the call
+# opts out with this prefix, and nested chart folders pass that routinely. The
+# prefix goes on the library root only, so every derived path inherits it.
+# Never mix the two forms: WindowsPath(r"\\?\C:\a") != WindowsPath(r"C:\a"), so
+# purge would read tracked files as strays. Markers store library-relative
+# paths and are unaffected.
+EXTENDED_PREFIX = "\\\\?\\"
+EXTENDED_UNC_PREFIX = "\\\\?\\UNC\\"
+
+
+def _extend(text: str) -> str:
+    """The string half of _extended, so it can be tested away from Windows."""
+    if text.startswith(EXTENDED_PREFIX):
+        return text
+    if text.startswith("\\\\"):
+        # A UNC share becomes \\?\UNC\NAS\charts, never \\?\\NAS\charts.
+        return EXTENDED_UNC_PREFIX + text[2:]
+    if len(text) < 2 or text[1] != ":":
+        return text  # the prefix needs a full drive-letter path
+    return EXTENDED_PREFIX + text
+
+
+def _extended(path: Path) -> Path:
+    """The library root, opted out of MAX_PATH. A no-op off Windows."""
+    if os.name != "nt":
+        return path
+    return Path(_extend(str(path)))
+
+
+def plain_path(path) -> str:
+    """A path as the user would write it, without the MAX_PATH prefix, for
+    screens, prompts, pickers and settings."""
+    text = str(path)
+    if text.startswith(EXTENDED_UNC_PREFIX):
+        return "\\\\" + text[len(EXTENDED_UNC_PREFIX):]
+    if text.startswith(EXTENDED_PREFIX):
+        return text[len(EXTENDED_PREFIX):]
+    return text
+
+
 def set_library_path(path) -> None:
     """Point the app at a library. Call before anything resolves paths."""
     global _library_override
@@ -98,17 +138,17 @@ def get_library_path() -> Path:
     """Where charts live. SYNCHOTIC_LIBRARY wins, then settings, then default."""
     env = os.environ.get("SYNCHOTIC_LIBRARY")
     if env:
-        return Path(env).expanduser()
+        return _extended(Path(env).expanduser())
     if _library_override:
-        return _library_override
+        return _extended(_library_override)
     if _using_os_dirs():
         # A .app has no meaningful "next to the executable": that would put the
         # library inside Contents/MacOS, and /Applications is no place for tens
         # of gigabytes of charts. Settings and logs go to the OS dirs; the
         # library is the one thing that needs somewhere a person can find, and
         # Settings > Library moves it.
-        return Path.home() / "Synchotic" / DOWNLOAD_FOLDER_NAME
-    return get_app_dir() / DOWNLOAD_FOLDER_NAME
+        return _extended(Path.home() / "Synchotic" / DOWNLOAD_FOLDER_NAME)
+    return _extended(get_app_dir() / DOWNLOAD_FOLDER_NAME)
 
 
 class LibraryUnavailable(RuntimeError):
@@ -132,15 +172,22 @@ def _configured_library():
     return os.environ.get("SYNCHOTIC_LIBRARY") or _library_override
 
 
+def library_is_set() -> bool:
+    """True when someone chose where charts go. There is no default: purge
+    deletes what it did not download, so an unchosen folder must never be
+    managed. get_library_path still answers for the state and log dirs, but
+    nothing scans, syncs or purges until this is true."""
+    return bool(_configured_library())
+
+
 def library_blocked_reason() -> str:
     """Why nothing may scan or sync right now, or "" when the library is usable.
 
-    A scan writes into the library: markers, staging, the scan cache keyed to
-    it. A library on a drive that is no longer mounted has nowhere to put that,
-    so the work is refused up front instead of at the first mkdir several
-    screens in. An unset library is not a case: every install resolves to a
-    default, and only a folder that went missing can be unusable.
+    A scan writes markers, staging and cache into the library, so an unset or
+    unmounted library refuses the work up front rather than at the first mkdir.
     """
+    if not library_is_set():
+        return "Library not set"
     if not library_is_available():
         return "Library not connected"
     return ""
@@ -171,8 +218,9 @@ def is_library_state_path(path) -> bool:
     Library-wide walks must skip it. purge_planner.find_partial_downloads
     rglobs the whole library for _download_*, and staging lives here now.
     """
+    state = plain_path(get_library_path() / LIBRARY_STATE_DIR_NAME)
     try:
-        Path(path).relative_to(get_library_path() / LIBRARY_STATE_DIR_NAME)
+        Path(plain_path(path)).relative_to(state)
         return True
     except ValueError:
         return False

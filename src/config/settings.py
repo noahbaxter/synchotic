@@ -8,6 +8,8 @@ import json
 import re
 from pathlib import Path
 
+from . import jsonc
+
 
 def normalize_setlist_name(name: str) -> str:
     """
@@ -34,10 +36,147 @@ def normalize_setlist_name(name: str) -> str:
 # exFAT: exactly the volumes Library Path points people at.
 DEFAULT_PURGE_IGNORE = ("._*", ".DS_Store", "Thumbs.db", "desktop.ini")
 
+# Never fetched, and stripped out of archives as they are extracted. Videos are
+# most of the size of a pack and Clone Hero does not need them to play a song.
+# Only ever stops a download: nothing on disk is deleted for matching it.
+DEFAULT_DOWNLOAD_IGNORE = ("*.mp4", "*.avi", "*.webm", "*.mkv", "*.mov")
+
 DOWNLOAD_MODE_RCLONE = "rclone"
 DOWNLOAD_MODE_ANONYMOUS = "anonymous"
 DOWNLOAD_MODE_BYOC = "byoc"
 DOWNLOAD_MODES = (DOWNLOAD_MODE_RCLONE, DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_BYOC)
+
+
+SETTINGS_VERSION = 1
+
+
+class _Field:
+    """One entry in settings.json. Load, save and adoption all read this table,
+    so their idea of a default cannot drift apart."""
+
+    __slots__ = ("name", "_default", "coerce")
+
+    def __init__(self, name, default, *, coerce=None):
+        self.name = name
+        self._default = default
+        self.coerce = coerce
+
+    def default(self):
+        """A fresh default, so no two instances share a dict or list."""
+        return self._default() if callable(self._default) else self._default
+
+    def read(self, data):
+        """The value in data, or the default when it is missing or junk (a
+        coercer returns None for a value it cannot use)."""
+        raw = data.get(self.name)
+        value = self.coerce(raw) if self.coerce and raw is not None else raw
+        return self.default() if value is None else value
+
+
+def _as_mode(value):
+    """An unknown mode reads as unchosen, so the app asks again."""
+    return value if value in DOWNLOAD_MODES else ""
+
+
+def _as_patterns(value):
+    return list(value) if isinstance(value, list) else None
+
+
+def _as_str(value):
+    return str(value or "")
+
+
+def _as_map(value):
+    return value if isinstance(value, dict) else None
+
+
+# Written in this order. People read this file, so the editable settings come
+# first and the Drive ID maps last.
+SETTING_FIELDS = (
+    _Field("library_path", "", coerce=_as_str),
+    _Field("download_mode", "", coerce=_as_mode),
+    _Field("download_ignore", lambda: list(DEFAULT_DOWNLOAD_IGNORE),
+           coerce=_as_patterns),
+    _Field("purge_ignore", lambda: list(DEFAULT_PURGE_IGNORE), coerce=_as_patterns),
+    _Field("drive_toggles", dict, coerce=_as_map),
+    _Field("subfolder_toggles", dict, coerce=_as_map),
+)
+
+KNOWN_KEYS = frozenset(f.name for f in SETTING_FIELDS) | {"version"}
+
+# Written by 1.5.4 and earlier, dropped on upgrade.
+_RETIRED_KEYS = ("delete_videos", "group_expanded", "use_default_drives",
+                 "oauth_prompted", "delta_mode")
+
+
+def default_settings() -> dict:
+    """settings.json as it stands before anyone has chosen anything."""
+    return {f.name: f.default() for f in SETTING_FIELDS}
+
+
+def chosen_settings(data) -> dict:
+    """The entries that record a choice somebody made. A default is not a
+    choice, and neither is a key we cannot interpret."""
+    if not isinstance(data, dict):
+        return {}
+    chosen = {}
+    for f in SETTING_FIELDS:
+        if f.name not in data:
+            continue
+        value = data[f.name]
+        if value not in ("", None, {}, []) and value != f.default():
+            chosen[f.name] = value
+    return chosen
+
+
+TEMPLATE_FILENAME = "settings.template.jsonc"
+
+
+def template_path() -> Path:
+    """The template: in the bundle when frozen, in docs/ from source. Resolved
+    from this file, not the app dir, which the launcher repoints."""
+    import sys
+
+    if getattr(sys, "frozen", False):
+        from ..core.paths import get_bundle_dir
+        return get_bundle_dir() / "docs" / TEMPLATE_FILENAME
+    return Path(__file__).resolve().parents[2] / "docs" / TEMPLATE_FILENAME
+
+
+def template_text() -> str:
+    """The commented template, as shipped. Empty if it did not make the build."""
+    try:
+        return template_path().read_text()
+    except OSError:
+        return ""
+
+
+def write_settings_file(path, data: dict) -> None:
+    """Write settings.json with the template's comments around the values, or
+    as plain JSON if the template did not make the build."""
+    text = template_text()
+    body = (jsonc.render(text, data) if text
+            else json.dumps(data, indent=2) + "\n")
+    Path(path).write_text(body)
+
+
+def _keep_unreadable(path) -> None:
+    """Move a settings file we could not parse aside, so the next save of
+    defaults does not write over it."""
+    from time import strftime
+
+    try:
+        Path(path).replace(Path(path).with_suffix(
+            f".broken-{strftime('%Y%m%d-%H%M%S')}.json"))
+    except OSError:
+        pass
+
+
+def unknown_settings(data) -> dict:
+    """Entries we do not recognise, kept so a save does not drop them."""
+    if not isinstance(data, dict):
+        return {}
+    return {k: v for k, v in data.items() if k not in KNOWN_KEYS}
 
 
 class UserSettings:
@@ -49,114 +188,94 @@ class UserSettings:
     - Subfolder toggle states (which subfolders are enabled/disabled per drive)
     """
 
-    # Drives enabled by default when no settings file exists
-    DEFAULT_ENABLED_DRIVES = set()
+    # Fields are declared in SETTING_FIELDS and documented in
+    # docs/settings.template.jsonc, which is the file the user edits.
 
     def __init__(self, path: Path):
         self.path = path
-        # Drive-level toggles: { drive_folder_id: enabled_bool }
-        self.drive_toggles: dict[str, bool] = {}
-        # Subfolder toggles: { drive_folder_id: { subfolder_name: enabled_bool } }
-        self.subfolder_toggles: dict[str, dict[str, bool]] = {}
-        # Group expanded state: { group_name: expanded_bool }
-        self.group_expanded: dict[str, bool] = {}
-        # Whether to delete video files from extracted archive charts
-        self.delete_videos: bool = True
-        # Whether user has been prompted to sign in to Google
-        self.oauth_prompted: bool = False
-        # Delta display mode: "size", "files", or "charts"
-        self.delta_mode: str = "size"
-        # How to fetch blocked files. "" = not chosen yet, ask on first run.
-        self.download_mode: str = ""
-        # Where charts live. "" = the default beside the app.
-        self.library_path: str = ""
-        # Filenames purge must leave alone. These are written by the OS and
-        # reappear the moment they are deleted, so purging them is churn that
-        # also inflates the count toward the confirm threshold. Editable in
-        # settings.json for filesystems that litter differently.
-        self.purge_ignore: list = list(DEFAULT_PURGE_IGNORE)
-        # Track if this is a fresh settings file (no file existed)
-        self._is_new: bool = False
+        for f in SETTING_FIELDS:
+            setattr(self, f.name, f.default())
+        # Which groups are open on the home screen. Not persisted.
+        self.group_expanded: dict = {}
+        # Keys from a hand edit or a newer version, carried through untouched.
+        self._extra: dict = {}
+        self._owed_drive_defaults = False
 
     @classmethod
     def load(cls, path: Path) -> "UserSettings":
-        """Load user settings from file."""
+        """Read settings.json, comments and trailing commas included."""
         settings = cls(path)
 
         if path.exists():
             try:
-                with open(path) as f:
-                    data = json.load(f)
-
-                settings.drive_toggles = data.get("drive_toggles", {})
-                settings.subfolder_toggles = data.get("subfolder_toggles", {})
-                settings.group_expanded = data.get("group_expanded", {})
-                settings.delete_videos = data.get("delete_videos", True)
-                settings.oauth_prompted = data.get("oauth_prompted", False)
-                settings.delta_mode = data.get("delta_mode", "size")
-                mode = data.get("download_mode", "")
-                settings.download_mode = mode if mode in DOWNLOAD_MODES else "" 
-                settings.library_path = str(data.get("library_path", "") or "")
-                ignore = data.get("purge_ignore")
-                settings.purge_ignore = (list(ignore) if isinstance(ignore, list)
-                                         else list(DEFAULT_PURGE_IGNORE))
-                settings._is_new = data.get("use_default_drives", False)
-            except (json.JSONDecodeError, IOError):
-                settings._is_new = True
-        else:
-            settings._is_new = True
-
-        # If marked as "new" but clearly has usage, they're not new.
-        # Fixes drives silently disabling when DEFAULT_ENABLED_DRIVES changed.
-        if settings._is_new and (settings.drive_toggles or settings.subfolder_toggles or settings.oauth_prompted):
-            settings._is_new = False
-            settings.save()
+                data = jsonc.loads(path.read_text())
+                if not isinstance(data, dict):
+                    raise json.JSONDecodeError("not an object", "", 0)
+                for f in SETTING_FIELDS:
+                    setattr(settings, f.name, f.read(data))
+                settings._extra = unknown_settings(data)
+                settings._migrate(data)
+            except (json.JSONDecodeError, OSError):
+                _keep_unreadable(path)
 
         return settings
 
-    def reload(self):
-        """Re-read the file into this object, in place.
+    def _migrate(self, data: dict) -> None:
+        """Bring a file from before the settings had a version up to date."""
+        if data.get("version") == SETTINGS_VERSION:
+            return
+        if "download_ignore" not in data and "delete_videos" in data:
+            self.download_ignore = (list(DEFAULT_DOWNLOAD_IGNORE)
+                                    if data.get("delete_videos") else [])
+        # Files written by 1.5.4 and earlier had every unseen drive on unless
+        # use_default_drives said the install was new, and the old loader
+        # overruled that flag whenever the file showed any use. Carry the
+        # corrected answer, written down as toggles by settle_drive_defaults.
+        # Every such file carries a retired key; a hand-written one does not,
+        # and must not wake up with every drive on.
+        was_new = bool(data.get("use_default_drives", False)) and not (
+            data.get("drive_toggles") or data.get("subfolder_toggles")
+            or data.get("oauth_prompted"))
+        written_by_old_version = any(k in data for k in _RETIRED_KEYS)
+        self._owed_drive_defaults = written_by_old_version and not was_new
+        for gone in _RETIRED_KEYS:
+            self._extra.pop(gone, None)
+        self.save()
 
-        The app holds one settings object for its whole run and save() writes it
-        whole, so anything that edits settings.json underneath it is erased by
-        the next toggle. Importing a previous install does exactly that: without
-        this, adopting a v1.4 setup put its drives and download mode on disk and
-        the first keypress afterwards wiped them.
-        """
+    def settle_drive_defaults(self, drive_ids) -> bool:
+        """Write down what an upgraded install already had on, once the drives
+        are known. After this an undecided drive is off, as for a new install."""
+        if not self._owed_drive_defaults:
+            return False
+        self._owed_drive_defaults = False
+        added = False
+        for drive_id in drive_ids:
+            if drive_id not in self.drive_toggles:
+                self.drive_toggles[drive_id] = True
+                added = True
+        if added:
+            self.save()
+        return added
+
+    def reload(self):
+        """Re-read the file into this object, in place. save() writes the whole
+        object, so anything that edited settings.json underneath it (importing
+        a previous install) would otherwise be erased by the next toggle."""
         fresh = UserSettings.load(self.path)
         for attr, value in vars(fresh).items():
             setattr(self, attr, value)
 
     def save(self):
-        """Save user settings to file."""
-        data = {
-            "drive_toggles": self.drive_toggles,
-            "subfolder_toggles": self.subfolder_toggles,
-            "group_expanded": self.group_expanded,
-            "delete_videos": self.delete_videos,
-            "oauth_prompted": self.oauth_prompted,
-            "delta_mode": self.delta_mode,
-            "download_mode": self.download_mode,
-            "library_path": self.library_path,
-            "purge_ignore": self.purge_ignore,
-            "use_default_drives": self._is_new,
-        }
-        with open(self.path, "w") as f:
-            json.dump(data, f, indent=2)
+        """Write the file back: values in table order, the template's comments
+        around them, unrecognised keys after them."""
+        data = {"version": SETTINGS_VERSION}
+        data.update({f.name: getattr(self, f.name) for f in SETTING_FIELDS})
+        data.update(self._extra)
+        write_settings_file(self.path, data)
 
     def is_drive_enabled(self, drive_id: str) -> bool:
-        """Check if a drive is enabled at the top level.
-
-        For new users (no settings file), only DEFAULT_ENABLED_DRIVES are enabled.
-        For existing users, any drive not explicitly set defaults to enabled.
-        """
-        if drive_id in self.drive_toggles:
-            return self.drive_toggles[drive_id]
-        # New users: only default drives enabled
-        if self._is_new:
-            return drive_id in self.DEFAULT_ENABLED_DRIVES
-        # Existing users: default to enabled for backwards compatibility
-        return True
+        """Whether a drive is on. An undecided drive is off."""
+        return self.drive_toggles.get(drive_id, False)
 
     def set_drive_enabled(self, drive_id: str, enabled: bool):
         """Set whether a drive is enabled at the top level."""

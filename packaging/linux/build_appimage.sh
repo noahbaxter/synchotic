@@ -59,6 +59,7 @@ CERT="$("$PY" -c 'import certifi; print(certifi.where())')"
   --paths vendor/chotic-ui --collect-submodules chotic_ui \
   --add-data "drives.json:." \
   --add-data "src/drive/byoc_setup_instructions.txt:src/drive" \
+  --add-data "docs/settings.template.jsonc:docs" \
   --add-data "VERSION:." \
   --add-data "${CERT}:certifi" \
   --add-binary "libs/bin/unrar:." \

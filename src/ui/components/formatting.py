@@ -21,47 +21,22 @@ def calc_percent(synced: int, total: int) -> int:
 
 def format_delta(
     add_size: int = 0,
-    add_files: int = 0,
-    add_charts: int = 0,
     remove_size: int = 0,
-    remove_files: int = 0,
-    remove_charts: int = 0,
-    mode: str = "size",
     empty_text: str = "",
     is_estimate: bool = False,
 ) -> str:
     """
-    Format add/remove delta with combined brackets.
-
-    Modes:
-        "size": [+2.3 GB / -317.3 MB]
-        "files": [+50 files / -80 files]
-        "charts": [+50 charts / -80 charts]
+    Format add/remove sizes with combined brackets: [+2.3 GB / -317.3 MB]
 
     Bracket colors:
         Add only: white [...]
         Remove only: red [...]
         Both: white [ + white add + / + red remove + red ]
     """
-    if mode == "size":
-        has_add = add_size > 0
-        has_remove = remove_size > 0
-        add_str = f"+{format_size(add_size)}" if has_add else ""
-        remove_str = f"-{format_size(remove_size)}" if has_remove else ""
-    elif mode == "charts":
-        has_add = add_charts > 0
-        has_remove = remove_charts > 0
-        unit = "chart" if add_charts == 1 else "charts"
-        add_str = f"+{add_charts} {unit}" if has_add else ""
-        unit = "chart" if remove_charts == 1 else "charts"
-        remove_str = f"-{remove_charts} {unit}" if has_remove else ""
-    else:  # files
-        has_add = add_files > 0
-        has_remove = remove_files > 0
-        unit = "file" if add_files == 1 else "files"
-        add_str = f"+{add_files} {unit}" if has_add else ""
-        unit = "file" if remove_files == 1 else "files"
-        remove_str = f"-{remove_files} {unit}" if has_remove else ""
+    has_add = add_size > 0
+    has_remove = remove_size > 0
+    add_str = f"+{format_size(add_size)}" if has_add else ""
+    remove_str = f"-{format_size(remove_size)}" if has_remove else ""
 
     i = Colors.ITALIC if is_estimate else ""
     if has_add and has_remove:
@@ -142,60 +117,16 @@ def format_column_header(screen: str) -> str:
 def _compute_delta(
     disabled: bool,
     missing_size: int,
-    missing_charts: int,
-    purgeable_files: int,
-    purgeable_charts: int,
     purgeable_size: int,
-    delta_mode: str,
     show_add: bool,
     is_estimate: bool = False,
 ) -> str:
-    """Compute delta string for home/setlist items."""
-    if disabled:
-        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
-            return format_delta(
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-                is_estimate=is_estimate,
-            )
-        return ""
-
-    if not show_add:
-        # Only show purgeable when add delta not reliable
-        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
-            return format_delta(
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-                is_estimate=is_estimate,
-            )
-        return ""
-
-    is_synced = missing_size <= 0
-    if is_synced:
-        if purgeable_files > 0 or purgeable_charts > 0 or purgeable_size > 0:
-            return format_delta(
-                remove_size=purgeable_size,
-                remove_files=purgeable_files,
-                remove_charts=purgeable_charts,
-                mode=delta_mode,
-                is_estimate=is_estimate,
-            )
-        return ""
-
-    return format_delta(
-        add_size=missing_size,
-        add_files=missing_charts,
-        add_charts=missing_charts,
-        remove_size=purgeable_size,
-        remove_files=purgeable_files,
-        remove_charts=purgeable_charts,
-        mode=delta_mode,
-        is_estimate=is_estimate,
-    )
+    """Delta string for home/setlist items. Only what purge would remove when
+    the drive is off, nothing is missing, or the add size is not reliable."""
+    if disabled or not show_add or missing_size <= 0:
+        return format_delta(remove_size=purgeable_size, is_estimate=is_estimate)
+    return format_delta(add_size=missing_size, remove_size=purgeable_size,
+                        is_estimate=is_estimate)
 
 
 def format_home_item(
@@ -203,12 +134,8 @@ def format_home_item(
     total_setlists: int,
     total_size: int,
     synced_size: int,
-    purgeable_files: int = 0,
-    purgeable_charts: int = 0,
     purgeable_size: int = 0,
-    missing_charts: int = 0,
     disabled: bool = False,
-    delta_mode: str = "size",
     is_estimate: bool = False,
     state: str = "current",
     scan_progress: tuple[int, int] | None = None,
@@ -282,11 +209,7 @@ def format_home_item(
     delta = _compute_delta(
         disabled=disabled,
         missing_size=missing_size,
-        missing_charts=missing_charts if show_add_delta else 0,
-        purgeable_files=purgeable_files,
-        purgeable_charts=purgeable_charts,
         purgeable_size=purgeable_size,
-        delta_mode=delta_mode,
         show_add=show_add_delta,
         is_estimate=(state == "scanning"),
     )
@@ -299,13 +222,9 @@ def format_setlist_item(
     synced_charts: int,
     total_size: int,
     synced_size: int,
-    purgeable_files: int = 0,
-    purgeable_charts: int = 0,
     purgeable_size: int = 0,
-    missing_charts: int = 0,
     disabled: bool = False,
     unit: str = "charts",
-    delta_mode: str = "size",
     state: str = "current",
     disk_size: int = 0,
 ) -> tuple[str, str]:
@@ -362,11 +281,7 @@ def format_setlist_item(
     delta = _compute_delta(
         disabled=disabled,
         missing_size=missing_size,
-        missing_charts=missing_charts,
-        purgeable_files=purgeable_files,
-        purgeable_charts=purgeable_charts,
         purgeable_size=purgeable_size,
-        delta_mode=delta_mode,
         show_add=True,
         is_estimate=is_estimate,
     )
