@@ -4,6 +4,7 @@ import subprocess
 from typing import Callable
 
 from ..core import constants
+from ..core.logging import debug_log
 from ..core.paths import get_rclone_config_path
 
 
@@ -28,6 +29,39 @@ class RcloneConfig:
             return constants.RCLONE_REMOTE_NAME in json.loads(r.stdout)
         except Exception:
             return False
+
+    def token_works(self, timeout: float = 20.0) -> bool:
+        """True when the remote can actually reach Drive right now. A revoked,
+        expired or half-written token leaves the config looking healthy.
+        `about` is one API call, so it proves the token without listing."""
+        try:
+            r = self.runner(self._base() + ["about", f"{constants.RCLONE_REMOTE_NAME}:",
+                                            "--json"], timeout=timeout)
+        except subprocess.TimeoutExpired:
+            debug_log("RCLONE_PROBE | timed out")
+            return False
+        except Exception as err:
+            debug_log(f"RCLONE_PROBE | {type(err).__name__}: {err}")
+            return False
+        if r.returncode != 0:
+            # Keep rclone's reason: a revoked token is reconnectable, a retired
+            # client id is not.
+            debug_log(f"RCLONE_PROBE | rc={r.returncode} | "
+                      f"{(r.stderr or '').strip()[:300]}")
+            return False
+        return True
+
+    def reconnect(self, timeout: float = 120.0) -> bool:
+        """Redo consent for a remote that exists but no longer works. `config
+        create` over a live remote does not refresh its token."""
+        try:
+            r = self.runner(
+                self._base() + ["config", "reconnect",
+                                f"{constants.RCLONE_REMOTE_NAME}:"],
+                timeout=timeout)
+        except subprocess.TimeoutExpired:
+            return False
+        return r.returncode == 0 and self.token_works()
 
     def create_remote(self, timeout: float = 120.0) -> bool:
         """Run interactive consent. rclone opens the browser; user clicks consent once.

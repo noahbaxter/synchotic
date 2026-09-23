@@ -6,11 +6,13 @@ lives in purge_flow.py.
 """
 
 import time
+from contextlib import nullcontext
 from pathlib import Path
 from typing import Callable, Optional, Union
 
 from ..drive import DriveClient
-from ..core.formatting import dedupe_files_by_newest, sanitize_drive_name
+from ..core.formatting import (dedupe_files_by_newest, extract_path_context,
+                               format_download_name, sanitize_drive_name)
 from ..core.logging import debug_log
 from ..ui.primitives import print_long_path_warning, print_section_header, print_separator, wait_with_skip
 from ..ui.widgets import display
@@ -47,14 +49,21 @@ class FolderSync:
         scan_stats_getter: Optional[Callable] = None,
         header: str = None,
         setlist_name: str = None,
+        label: str = None,
         skip_marker_rebuild: bool = False,
+        progress=None,
     ) -> tuple[int, int, int, list[str], bool, int]:
         """
         Sync a folder to local disk.
 
         Args:
-            header: If provided, handles section header display. Synced folders
-                    get a compact one-liner; downloads get a full ━━━ header.
+            header: If provided, handles section header display. Without a
+                    shared `progress` screen: synced folders get a compact
+                    one-liner, downloads get a full ━━━ header.
+            label: The folder's name on the panel's divider (header carries a
+                   "[17/80]" count the bar already shows).
+            progress: The sync run's panel. When given, nothing prints to the
+                      terminal, which the panel owns.
 
         Returns:
             Tuple of (downloaded, skipped, errors, rate_limited_file_ids, cancelled, bytes_downloaded)
@@ -97,59 +106,81 @@ class FolderSync:
             if created > 0:
                 debug_log(f"REBUILD_MARKERS | folder={folder['name']} | created={created}")
 
+        caption = label or header or folder["name"]
+
         def _plan_progress(done, total):
             if total <= 200:  # fast enough that a counter is just noise
+                return
+            label = caption
+            if progress:
+                # A big folder takes a while to check; show that it is moving.
+                progress.set_stage("" if done >= total else f"checking {label} against disk... {done}/{total}")
+                progress.set_current_fraction(done / total)
                 return
             from ..ui.primitives import print_progress
             if done >= total:
                 # Wipe the counter, or the section header prints onto the end of it.
                 print("\033[2K\r", end="", flush=True)
                 return
-            label = header or folder["name"]
             print_progress(f"Checking {label}... {done}/{total}")
 
         tasks, skipped, long_paths = plan_downloads(
             manifest_files, folder_path, self.download_ignore, folder_name=folder["name"],
-            on_progress=_plan_progress,
+            on_progress=_plan_progress, cancel_check=cancel_check,
         )
 
         debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
 
-        if long_paths:
+        if cancel_check and cancel_check():
+            return 0, 0, 0, [], True, 0
+
+        if long_paths and not progress:
             print_long_path_warning(len(long_paths))
 
+        # A setlist that needs nothing says nothing on the shared panel: its bar
+        # already counts it as done. Only the printed output reports it.
         if not tasks and not skipped:
-            if header:
-                print_section_header(header)
-            display.folder_status_empty(filtered_count)
+            if not progress:
+                if header:
+                    print_section_header(header)
+                display.folder_status_empty(filtered_count)
             return 0, 0, 0, [], False, 0
 
         if not tasks:
-            if header:
-                display.folder_synced_inline(header, skipped)
-            else:
-                display.folder_status_synced(skipped, filtered_count)
+            if not progress:
+                if header:
+                    display.folder_synced_inline(header, skipped)
+                else:
+                    display.folder_status_synced(skipped, filtered_count)
             return 0, skipped, 0, [], False, 0
 
-        if header:
+        if header and not progress:
             print_section_header(header)
+        elif progress:
+            progress.set_stage(f"downloading {caption}")
 
         download_start = time.time()
         (downloaded, _, errors, rate_limited, cancelled,
          bytes_downloaded, blocked_tasks) = self.downloader.download_many(
             tasks, drive_name=folder["name"], cancel_check=cancel_check,
             scan_stats_getter=scan_stats_getter, skipped=skipped,
+            progress=progress,
         )
 
         # Tier 4: route auth-blocked files through rclone (its verified, uncapped OAuth).
         if blocked_tasks and not cancelled:
-            recovered, _ = self._rclone_second_pass(blocked_tasks, folder, cancel_check)
+            recovered, still_blocked = self._rclone_second_pass(
+                blocked_tasks, folder, cancel_check, progress)
             downloaded += recovered
             errors -= recovered
+            # Nothing was said about these while they were blocked, so say it
+            # here, once, and only about the ones that really did not arrive.
+            if not progress:
+                display.blocked_outcome(recovered, still_blocked, self.download_mode)
 
         download_time = time.time() - download_start
 
-        if not cancelled:
+        if not cancelled and not progress:
             display.folder_complete(downloaded, bytes_downloaded, download_time, errors)
 
         if downloaded > 0:
@@ -169,53 +200,118 @@ class FolderSync:
 
         return downloaded, skipped, errors, rate_limited, cancelled, bytes_downloaded
 
-    def _rclone_second_pass(self, blocked_tasks, folder, cancel_check):
+    def _rclone_second_pass(self, blocked_tasks, folder, cancel_check, progress=None):
         """Download auth-blocked tasks via rclone, then run existing archive processing.
 
         Reuses FileDownloader.process_archive so extraction/markers/purge-safety are
-        identical to tiers 1-3. Returns (recovered_count, still_failed_count)."""
+        identical to tiers 1-3. Returns (recovered_count, still_failed_count).
+        Every task ends on the panel as arrived or failed, never silently lost.
+        """
         from .. import rclone
         if self.download_mode != "rclone":
             debug_log(f"TIER4_SKIPPED | download_mode={self.download_mode} | "
                       f"blocked={len(blocked_tasks)}")
+            self._blocked_rows(progress, blocked_tasks, f"{self.download_mode} mode")
             return 0, len(blocked_tasks)
+
         session = None
         if not rclone.is_authed():
             if not rclone.can_open_browser():
-                display.rclone_no_browser()
+                # On the panel the failed rows carry this; a print would be
+                # painted over at once.
+                if not progress:
+                    display.rclone_no_browser()
+                self._blocked_rows(progress, blocked_tasks, "no browser to sign in with")
                 return 0, len(blocked_tasks)
-            # One-time consent: pre-explain rclone before it opens the browser,
-            # then attempt setup. Defensive: a failure here just leaves the files
-            # blocked (counted as errors), same as before. The session is reused
-            # below so the binary resolves once rather than twice.
+            # One-time consent: explain rclone, then open the browser, with the
+            # panel suspended so the explanation stays readable while it waits.
+            # A failure leaves the files blocked and says which failure. The
+            # session is reused below so the binary resolves once.
             try:
-                display.rclone_consent_explainer()
-                session = rclone.RcloneSession()
-                if not session.ensure_authed():
+                with (progress.suspended() if progress else nullcontext()):
+                    display.rclone_consent_explainer()
+                    session = rclone.RcloneSession()
+                    authed = session.ensure_authed()
+                if not authed:
+                    self._blocked_rows(progress, blocked_tasks, "rclone sign-in not completed")
                     return 0, len(blocked_tasks)
-            except Exception:
-                return 0, len(blocked_tasks)  # caller already counted them as errors
+            except Exception as err:
+                debug_log(f"TIER4_AUTH_FAILED | {type(err).__name__}: {err}")
+                self._blocked_rows(progress, blocked_tasks,
+                                   f"rclone sign-in failed: {type(err).__name__}")
+                return 0, len(blocked_tasks)
+
+        if progress:
+            progress.set_stage(f"rclone: fetching {len(blocked_tasks)} chart(s) "
+                               f"Google would not serve")
         recovered = 0
         try:
             with (session or rclone.RcloneSession()) as active:
                 ok_ids, _ = active.downloader.download(
-                    blocked_tasks, cancel_check=cancel_check
+                    blocked_tasks, cancel_check=cancel_check,
+                    on_start=lambda task: self._rclone_row_started(progress, task),
+                    on_bytes=lambda task, sent: self._rclone_row_bytes(progress, task, sent),
                 )
-        except Exception:
+        except Exception as err:
+            debug_log(f"TIER4_FAILED | {type(err).__name__}: {err}")
+            self._blocked_rows(progress, blocked_tasks, f"rclone failed: {type(err).__name__}")
             return 0, len(blocked_tasks)
+        finally:
+            if progress:
+                progress.set_stage("")
+
         ok = set(ok_ids)
         for task in blocked_tasks:
+            name = task.local_path.name.removeprefix("_download_")
             if task.file_id not in ok:
+                self._blocked_rows(progress, [task], "rclone could not fetch it")
                 continue
             if task.is_archive:
-                success, _, _ = self.downloader.process_archive(task, task.rel_path)
+                success, error, _ = self.downloader.process_archive(task, task.rel_path)
                 if success:
                     recovered += 1
-                    debug_log(f"TIER | rclone | {task.local_path.name.removeprefix('_download_')}")
+                    debug_log(f"TIER | rclone | {name}")
+                    if progress:
+                        # Its bytes count like any other chart's.
+                        progress.add_downloaded_bytes(task.size, file_id=task.file_id)
+                        progress.archive_completed(task.local_path, name,
+                                                   extract_path_context(task.rel_path),
+                                                   file_id=task.file_id)
+                elif progress:
+                    progress.print_error(extract_path_context(task.rel_path),
+                                         f"extract: {name} - {error}", file_id=task.file_id)
             else:
                 recovered += 1  # loose file already at final temp path
-                debug_log(f"TIER | rclone | {task.local_path.name.removeprefix('_download_')}")
+                debug_log(f"TIER | rclone | {name}")
+                # Its chart row comes from the folder resolving, not from here.
+                if progress:
+                    progress.add_downloaded_bytes(task.size, file_id=task.file_id)
+                    progress.unregister_active_download(task.file_id)
         return recovered, len(blocked_tasks) - recovered
+
+    @staticmethod
+    def _rclone_row_started(progress, task) -> None:
+        if progress:
+            progress.register_active_download(
+                task.file_id, format_download_name(task.local_path),
+                extract_path_context(task.rel_path), task.size)
+
+    @staticmethod
+    def _rclone_row_bytes(progress, task, sent: int) -> None:
+        if progress:
+            progress.update_active_download(task.file_id, sent)
+
+    @staticmethod
+    def _blocked_rows(progress, tasks, detail: str) -> None:
+        """Fail these charts on the panel as "needs sign-in"; `detail` carries
+        the specific cause into the error summary and the log."""
+        if not progress:
+            return
+        for task in tasks:
+            name = task.local_path.name.removeprefix("_download_")
+            progress.print_error(extract_path_context(task.rel_path),
+                                 f"NEEDS AUTH ({detail}): {name}",
+                                 file_id=task.file_id)
 
     def download_folders(
         self,

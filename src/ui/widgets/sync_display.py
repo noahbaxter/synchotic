@@ -191,6 +191,17 @@ def library_unavailable(path) -> None:
     print()
 
 
+def library_lost(path) -> None:
+    """The library went away mid-run. Unlike library_unavailable, this cannot
+    promise nothing has happened yet."""
+    print()
+    print("  Library disconnected:")
+    print(f"    {path}")
+    print()
+    print("  Synchotic stopped where it was. Reconnect the drive and sync again.")
+    print()
+
+
 def purge_skipped_new_library(path) -> None:
     """First sync at a library we did not create. Explain, delete nothing."""
     print()
@@ -415,19 +426,133 @@ def purge_nothing():
 
 # === Download errors ===
 
-def download_errors_header():
-    print()
-    print(f"{_c.ERROR}Download errors:{_c.RESET}")
+# Raw downloader messages, in words a person can act on. First match wins, so
+# specific patterns come first; a full disk or a lost connection can arrive
+# inside another failure's message.
+_FAILURE_WORDS = (
+    ("no space left", "disk full"),
+    ("errno 28", "disk full"),
+    ("cannot connect", "no connection"),
+    ("connection reset", "no connection"),
+    ("nodename nor servname", "no connection"),
+    ("needs auth", "needs sign-in"),
+    ("rate limited", "rate limited"),
+    ("http 403", "rate limited"),
+    ("http 429", "rate limited"),
+    ("http 401", "signed out"),
+    ("timeout", "timed out"),
+    ("bytes)", "cut short"),
+    ("http 404", "not on Drive"),
+    ("http 5", "Drive error"),
+    ("unsupported archive", "unknown format"),
+    ("extract", "unpack failed"),
+)
 
-def download_errors_context(context: str, errors: list, show_all: bool = False, sample_size: int = 3):
-    if show_all or len(errors) <= sample_size:
-        print(f"  {_c.DIM}[{context}]{_c.RESET} {len(errors)} failed:")
-        for err in errors:
-            print(f"    - {err.filename} ({err.reason})")
-    elif len(errors) <= 100:
-        print(f"  {_c.DIM}[{context}]{_c.RESET} {len(errors)} failed:")
-        for err in errors[:sample_size]:
-            print(f"    - {err.filename} ({err.reason})")
-        print(f"    ... and {len(errors) - sample_size} more")
+# What to do about each, including "nothing to fix" where that is the answer.
+ADVICE = {
+    "disk full": "Free up space on the drive holding your library, then sync again.",
+    "no connection": "Check your internet, then sync again.",
+    # Mode, not sign-in: the sign-in row is greyed out in rclone mode.
+    "needs sign-in": "Settings → Account → Mode: connect rclone, or set up your "
+                     "own credentials.",
+    "signed out": "Your Google sign-in expired. Sign in again from Account.",
+    "rate limited": "Google throttled the drive. Usually clears within a day; "
+                    "the next sync retries them.",
+    "timed out": "The next sync retries these. Nothing to fix.",
+    "cut short": "Usually a throttle in disguise. The next sync retries these.",
+    "not on Drive": "These were removed upstream. The next scan drops them. "
+                    "Nothing to fix.",
+    "Drive error": "Google's end, not yours. The next sync retries these.",
+    "unknown format": "Not a format Clone Hero reads. Nothing to fix.",
+    "unpack failed": "The archive would not open. Report it if it keeps happening.",
+    "failed": "No cause reported. The next sync retries these.",
+}
+
+# Reasons nothing will fix until someone does something.
+NEEDS_YOU = frozenset({"disk full", "no connection", "needs sign-in", "signed out"})
+
+# Reasons that clear up on their own, or where there is nothing to fix. Anything
+# in neither set is unexplained, which is the case worth reporting.
+SORTS_ITSELF_OUT = frozenset({"rate limited", "timed out", "cut short", "Drive error",
+                              "not on Drive", "unknown format", "failed"})
+
+FIX = "fix"
+REPORT = "report"
+TRANSIENT = "transient"
+
+
+def advise(reasons: list[str]) -> tuple[str, str, str]:
+    """What to do about this run's failures, as (tone, reason, advice): the
+    most pressing reason present. Something that needs doing beats something
+    nobody can explain, which beats something that will pass."""
+    if not reasons:
+        return "", "", ""
+    tally: dict[str, int] = {}
+    for reason in reasons:
+        tally[reason] = tally.get(reason, 0) + 1
+
+    def most(pool):
+        return max(pool, key=lambda r: tally[r]) if pool else None
+
+    needs_you = [r for r in tally if r in NEEDS_YOU]
+    unexplained = [r for r in tally if r not in NEEDS_YOU and r not in SORTS_ITSELF_OUT]
+    passing = [r for r in tally if r in SORTS_ITSELF_OUT]
+
+    for tone, pool in ((FIX, needs_you), (REPORT, unexplained), (TRANSIENT, passing)):
+        reason = most(pool)
+        if reason:
+            return tone, reason, ADVICE.get(reason, "Report it if it keeps happening.")
+    return "", "", ""
+
+
+def describe_failure(message: str) -> str:
+    """One short reason for a failed chart, from a downloader message written
+    for a log."""
+    lowered = message.lower()
+    for pattern, reason in _FAILURE_WORDS:
+        if pattern in lowered:
+            return reason
+
+    # Unrecognised: the parenthetical is the closest thing to a cause, and a
+    # raw cause beats a vague stand-in.
+    if "(" in message and ")" in message:
+        return message[message.index("(") + 1:message.index(")")]
+    return "failed"
+
+
+def blocked_outcome(recovered: int, still_blocked: int, mode: str = "rclone") -> None:
+    """Report charts Google would not serve anonymously, once the retry has
+    run, and only about what actually happened."""
+    if recovered:
+        print(f"  {_c.SUCCESS}✓{_c.RESET} {recovered} large chart(s) downloaded "
+              f"through rclone")
+    if not still_blocked:
+        return
+
+    print(f"  {_c.ERROR}{still_blocked} chart(s) need an authenticated "
+          f"download{_c.RESET}")
+    if mode == "rclone":
+        print(f"  {_c.MUTED}rclone already tried these. The next sync retries "
+              f"them; if they keep failing, set up your own credentials."
+              f"{_c.RESET}")
     else:
-        print(f"  {_c.DIM}[{context}]{_c.RESET} {len(errors)} failed")
+        print(f"  {_c.MUTED}Settings → Account → Mode: connect rclone, "
+              f"then sync again.{_c.RESET}")
+
+
+def failure_summary(by_reason: dict) -> None:
+    """What failed and why, grouped, under the frame the sync just left."""
+    total = sum(len(errors) for errors in by_reason.values())
+    print()
+    print(f"  {_c.ERROR}{total} chart(s) did not download{_c.RESET}")
+    for reason, errors in sorted(by_reason.items(), key=lambda kv: -len(kv[1])):
+        print(f"    {len(errors)} {reason}")
+        for err in errors[:3]:
+            context = f"{_c.DIM}[{err.path_context}]{_c.RESET} " if err.path_context else ""
+            print(f"      {context}{err.filename}")
+        if len(errors) > 3:
+            print(f"      {_c.MUTED}and {len(errors) - 3} more{_c.RESET}")
+        advice = ADVICE.get(reason)
+        if advice:
+            print(f"      {_c.MUTED}{advice}{_c.RESET}")
+    print()

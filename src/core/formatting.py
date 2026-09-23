@@ -267,6 +267,13 @@ def extract_path_context(rel_path: str | None) -> str:
 # Size and duration formatting
 # ============================================================================
 
+def count(n: int, word: str, more: bool = False) -> str:
+    """ "1 chart", "2,885 charts", or "20,000+ files" when `more` says the
+    count stopped early. Every count on screen goes through here, so nothing
+    says "chart(s)" or "1 files"."""
+    return f"{n:,}{'+' if more else ''} {word}{'' if n == 1 else 's'}"
+
+
 def format_size(size_bytes: int) -> str:
     """Format bytes as human readable string."""
     for unit in ["B", "KB", "MB", "GB", "TB"]:

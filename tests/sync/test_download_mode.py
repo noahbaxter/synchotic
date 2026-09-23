@@ -55,7 +55,7 @@ def test_rclone_mode_still_uses_the_tier(monkeypatch, tmp_path, one_blocked):
         def __exit__(self, *a): pass
         def ensure_authed(self, timeout=120.0): return True
         downloader = type("D", (), {
-            "download": lambda self, tasks, cancel_check=None, progress_cb=None: (
+            "download": lambda self, tasks, cancel_check=None, progress_cb=None, **kw: (
                 seen.update(ids=[t.file_id for t in tasks]) or (["ID"], [])
             )
         })()

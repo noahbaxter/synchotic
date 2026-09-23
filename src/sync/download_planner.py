@@ -80,7 +80,7 @@ WARM_THRESHOLD = 200
 WARM_WORKERS = 16
 
 
-def _warm_sync_checks(files, local_base: Path, folder_name: str, on_progress=None):
+def _warm_sync_checks(files, local_base: Path, folder_name: str, on_progress=None, cancel_check=None):
     """Run the planner's sync checks concurrently, discarding the answers.
 
     Deciding whether an archive is present stats every file its marker lists.
@@ -122,11 +122,17 @@ def _warm_sync_checks(files, local_base: Path, folder_name: str, on_progress=Non
     done = 0
     with ThreadPoolExecutor(max_workers=WARM_WORKERS) as pool:
         futures = [pool.submit(touch, f) for f in files]
-        for _ in as_completed(futures):
+        for future in as_completed(futures):
             done += 1
             # This is the slow phase, so it is the one that has to report.
             if on_progress and done % 50 == 0:
                 on_progress(done, total)
+            # Warming only throws its answers away (see docstring), so cutting
+            # it short changes nothing about what gets downloaded.
+            if cancel_check and done % 50 == 0 and cancel_check():
+                for f in futures:
+                    f.cancel()
+                break
 
 
 def plan_downloads(
@@ -135,6 +141,7 @@ def plan_downloads(
     download_ignore=None,
     folder_name: str = "",
     on_progress=None,
+    cancel_check=None,
 ) -> Tuple[List[DownloadTask], int, List[str]]:
     """
     Plan which files need to be downloaded.
@@ -159,9 +166,11 @@ def plan_downloads(
     # with thousands of archives spends minutes here with nothing on screen.
     total_files = len(files)
     if total_files >= WARM_THRESHOLD:
-        _warm_sync_checks(files, local_base, folder_name, on_progress=on_progress)
+        _warm_sync_checks(files, local_base, folder_name, on_progress=on_progress, cancel_check=cancel_check)
 
     for index, f in enumerate(files):
+        if cancel_check and index % 100 == 0 and cancel_check():
+            break
         if on_progress and index % 100 == 0:
             on_progress(index, total_files)
         file_path = f["path"]

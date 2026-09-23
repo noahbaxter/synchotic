@@ -1,93 +1,98 @@
-"""
-UI display state tests.
+"""UI display state tests.
 
-Tests that UI widgets render correctly and handle state properly.
+These used to assert the shape of two printed lines, a completion and an error,
+because that was all the download output was. It is one framed list now, so what
+is worth pinning here is what the downloader's events do to it: a chart resolves
+onto the list, and a failure keeps a reason that survives into the summary.
+
 Run with: pytest tests/test_ui_display.py -v
 """
+
+import io
+from contextlib import redirect_stdout
+from pathlib import Path
 
 from src.ui.widgets.progress import FolderProgress
 
 
-class TestProgressFormatting:
-    """Test progress tracker formatting."""
+def _progress(total_files=10):
+    return FolderProgress(total_files=total_files, total_folders=1)
 
-    def test_completion_line_format(self):
-        progress = FolderProgress(total_files=10, total_folders=1)
-        progress.total_charts = 100
-        progress.completed_charts = 50
 
-        line = progress._format_completion_line("TestSetlist", "Chart Name Here")
-        assert "50.0%" in line
-        assert "(50/100)" in line or "( 50/100)" in line
-        assert "[TestSetlist]" in line
-        assert "Chart Name Here" in line
+class TestChartsResolving:
+    def test_an_extracted_archive_lands_on_the_list(self):
+        progress = _progress()
+        progress.archive_completed(Path("/songs/DM/Pack/x.7z"), "Pack 12.7z", "TestSetlist")
 
-    def test_error_line_format(self):
-        progress = FolderProgress(total_files=10, total_folders=1)
+        entry = progress.screen.entries.ordered()[0]
+        assert (entry.name, entry.context, entry.state) == ("Pack 12.7z", "TestSetlist", "done")
 
-        line = progress._format_error_line("TestSetlist", "ERR: something failed")
-        assert "ERR:" in line
-        assert "[TestSetlist]" in line
+    def test_a_chart_of_loose_files_resolves_once_its_last_file_lands(self):
+        """One row per chart, not one per album.png inside it."""
+        progress = _progress()
+        progress.folder_progress["/songs/DM/Chart"] = {
+            "expected": 2, "completed": 0, "is_chart": True, "path_context": "TestSetlist",
+        }
 
-    def test_error_parsing(self):
-        progress = FolderProgress(total_files=10, total_folders=1)
-        progress._is_tty = False  # Disable TTY operations
+        assert progress.file_completed(Path("/songs/DM/Chart/notes.chart")) is None
+        done = progress.file_completed(Path("/songs/DM/Chart/song.ini"))
 
-        # Test with colon separator
+        assert done == ("Chart", True, "TestSetlist")
+
+
+class TestErrors:
+    def test_a_failure_keeps_a_reason_and_a_filename(self):
+        progress = _progress()
         progress.print_error("Setlist", "ERR (timeout): filename.ogg")
+
         assert len(progress.errors) == 1
-        assert progress.errors[0].reason == "ERR (timeout)"
+        assert progress.errors[0].reason == "timed out"
         assert progress.errors[0].filename == "filename.ogg"
 
-        # Test without colon
-        progress.errors.clear()
+    def test_a_message_with_no_filename_is_still_recorded(self):
+        progress = _progress()
         progress.print_error("Setlist", "simple error message")
-        assert progress.errors[0].reason == "error"
+
         assert progress.errors[0].filename == "simple error message"
+        assert progress.errors[0].reason == "failed"
 
 
 class TestErrorSummary:
-    """Test error summary formatting."""
+    """The summary prints under the frame, once the sync has finished."""
 
-    def test_few_errors_all_shown(self):
-        progress = FolderProgress(total_files=10, total_folders=1)
-        progress._is_tty = False
-
-        # Add a few errors
-        for i in range(5):
-            progress._record_error("Setlist", f"file{i}.ogg", "timeout")
-
-        # Capture output
-        import io
-        import sys
+    def _summary(self, progress):
         captured = io.StringIO()
-        sys.stdout = captured
-        try:
+        with redirect_stdout(captured):
             progress.print_error_summary()
-        finally:
-            sys.stdout = sys.__stdout__
+        return captured.getvalue()
 
-        output = captured.getvalue()
-        assert "Download errors:" in output
-        assert "[Setlist]" in output
-        assert "5 failed" in output
+    def test_failures_are_grouped_by_reason(self):
+        progress = _progress()
+        for i in range(3):
+            progress.print_error("Setlist", f"ERR (timeout): file{i}.ogg")
+        for i in range(2):
+            progress.print_error("Setlist", f"NEEDS AUTH (set up automatically): pack{i}.7z")
 
-    def test_many_errors_truncated(self):
-        progress = FolderProgress(total_files=100, total_folders=1)
-        progress._is_tty = False
+        output = self._summary(progress)
+        assert "5 chart(s) did not download" in output
+        assert "3 timed out" in output
+        assert "2 needs sign-in" in output
 
-        # Add many errors
+    def test_a_long_list_is_cut_short(self):
+        progress = _progress(total_files=100)
         for i in range(50):
-            progress._record_error("Setlist", f"file{i}.ogg", "timeout")
+            progress.print_error("Setlist", f"ERR (timeout): file{i}.ogg")
 
-        import io
-        import sys
-        captured = io.StringIO()
-        sys.stdout = captured
-        try:
-            progress.print_error_summary()
-        finally:
-            sys.stdout = sys.__stdout__
+        assert "and 47 more" in self._summary(progress)
 
-        output = captured.getvalue()
-        assert "... and" in output  # Should have truncation
+    def test_sign_in_failures_say_what_to_do_about_them(self):
+        """The whole point of the rewording: a reason you can act on."""
+        progress = _progress()
+        progress.print_error("Setlist", "NEEDS AUTH (set up automatically): pack.7z")
+
+        # Names the Mode row, not the sign-in row: in rclone mode the latter is
+        # greyed out, so the old advice pointed at a control nobody could use.
+        assert "Settings → Account → Mode" in self._summary(progress)
+
+    def test_nothing_is_printed_when_nothing_failed(self):
+        assert self._summary(_progress()) == ""

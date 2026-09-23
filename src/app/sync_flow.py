@@ -1,9 +1,7 @@
 """The sync run itself: preflight, downloading setlists as they're scanned,
 then handing off to verify and purge."""
 
-import os
-
-from src.core.formatting import sanitize_drive_name
+from src.core.formatting import format_duration, sanitize_drive_name
 from src.core.logging import debug_log
 from src.core.paths import get_download_path
 from src.sync import purge_all_folders
@@ -14,6 +12,28 @@ from src.ui.widgets import display
 
 
 class SyncFlowMixin:
+
+    def _preflight_ok(self) -> bool:
+        """Stop, or ask, before a sync that cannot work, will not fit, or
+        deletes a lot. Sizes come from the stats cache, so nothing waits on
+        the scan."""
+        from src.core.paths import plain_path
+        from src.sync.cache import get_persistent_stats_cache
+        from src.sync.preflight import concerns_for, read_setup
+        from src.ui.screens.home import _get_setlist_names
+        from src.ui.screens.preflight import confirm_sync
+
+        library = get_download_path()
+        folders = [
+            {"folder_id": f.get("folder_id", ""), "name": f.get("name", ""),
+             "setlists": _get_setlist_names(f, self._background_scanner)}
+            for f in self.folders
+        ]
+        setup = read_setup(self.user_settings, self.auth, folders, library)
+        concerns, free = concerns_for(folders, self.user_settings,
+                                      get_persistent_stats_cache(), library,
+                                      setup=setup)
+        return confirm_sync(concerns, plain_path(library), free)
 
     def handle_sync(self):
         """Sync enabled setlists as they become ready, then purge extras.
@@ -31,8 +51,11 @@ class SyncFlowMixin:
         clear_screen()
         print_header()
 
-        # Whether the chosen mode can reach Drive, not whether we hold an OAuth
-        # token: rclone and anonymous both sync without one.
+        # Sign-in, library, what is turned on, space, deletions: silent unless
+        # something is wrong. The one-line gates below stay as a backstop.
+        if not self._preflight_ok():
+            return None
+
         blocked = self._drive_blocked()
         if blocked:
             display.sync_blocked(blocked)
@@ -49,67 +72,123 @@ class SyncFlowMixin:
         if not self._background_scanner:
             self._start_background_scan()
 
-        # Download setlists as they become ready from scanner
-        t0 = _time.time()
-        was_cancelled, synced_drive_ids = self._sync_folders_sequentially()
-        debug_log(f"TIMING | sync_folders: {_time.time() - t0:.1f}s")
+        run_start = _time.time()
 
-        # Per-folder invalidation (only folders that were synced)
-        for fid in synced_drive_ids:
-            self.folder_stats_cache.invalidate(fid)
+        from src.ui.widgets.progress import FolderProgress
+        from src.ui.widgets.sync_screen import handle_key
+        from src.ui.primitives.keys import KeyMonitor
 
-        # If cancelled, don't purge — but still invalidate synced folders
+        # One panel for the whole run (download, verify, purge, stats), so ESC
+        # works throughout and nothing prints underneath it.
+        progress = FolderProgress(total_files=0, total_folders=0)
+        progress.set_phase("DOWNLOAD")
+        progress.start()
+
+        def handle_cancel():
+            if not progress.cancelled:
+                progress.cancel()
+
+        # A holder so resume_keys can swap in a fresh KeyMonitor (a stopped one
+        # cannot restart) after a ConfirmDialog has had stdin to itself.
+        active_keys = [KeyMonitor(on_key=lambda key: handle_key(progress.screen, key, handle_cancel)).start()]
+
+        def pause_keys():
+            active_keys[0].stop()
+
+        def resume_keys():
+            active_keys[0] = KeyMonitor(
+                on_key=lambda key: handle_key(progress.screen, key, handle_cancel)).start()
+
+        menu_cache = None
+        was_cancelled = False
+        try:
+            # Download setlists as they become ready from scanner
+            t0 = _time.time()
+            (was_cancelled, synced_drive_ids,
+             total_downloaded, total_bytes, elapsed) = self._sync_folders_sequentially(progress)
+            debug_log(f"TIMING | sync_folders: {_time.time() - t0:.1f}s")
+
+            # Per-folder invalidation (only folders that were synced)
+            for fid in synced_drive_ids:
+                self.folder_stats_cache.invalidate(fid)
+
+            # If cancelled, don't purge — but still invalidate synced folders
+            if not was_cancelled:
+                # Build failed setlists dict to protect from purge
+                failed_setlists: dict[str, set[str]] | None = None
+                if self._background_scanner and self._background_scanner.has_scan_failures():
+                    failed_setlists = {}
+                    for folder in self.folders:
+                        folder_id = folder.get("folder_id", "")
+                        failed = self._background_scanner.get_failed_setlist_names(folder_id)
+                        if failed:
+                            failed_setlists[folder_id] = failed
+                    if failed_setlists:
+                        all_failed = [name for names in failed_setlists.values() for name in names]
+                        progress.note("Scan warning",
+                                      context=f"{len(all_failed)} setlist(s) failed, files preserved")
+
+                # Rebuild markers for any extracted archives missing them (prevents mass deletion)
+                progress.set_phase("VERIFY")
+                progress.set_title("")
+                progress.set_stage("rebuilding markers...")
+                t0 = _time.time()
+                created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
+                debug_log(f"TIMING | rebuild_markers: {_time.time() - t0:.1f}s | created={created}")
+                if created:
+                    progress.note("Rebuild markers", context=f"{created} rebuilt")
+
+                # Purge extra files (no confirmation - sync means make it match)
+                progress.set_phase("PURGE")
+                progress.set_title("")
+                t0 = _time.time()
+                purged_ids = purge_all_folders(
+                    self.folders, get_download_path(), self.user_settings, failed_setlists,
+                    progress=progress, cancel_check=lambda: progress.cancelled,
+                    pause_keys=pause_keys, resume_keys=resume_keys,
+                )
+                debug_log(f"TIMING | purge: {_time.time() - t0:.1f}s")
+                for fid in purged_ids:
+                    self.folder_stats_cache.invalidate(fid)
+
+                # Recompute menu cache now — this is the expensive part, do it here
+                # with feedback instead of silently after "done"
+                progress.set_phase("STATS")
+                progress.set_stage("updating stats...")
+                t0 = _time.time()
+                combined_drives = self._get_combined_drives_config()
+                menu_cache = compute_main_menu_cache(
+                    self.folders, self.user_settings,
+                    get_download_path(), combined_drives,
+                    self.folder_stats_cache, self._background_scanner,
+                )
+                debug_log(f"TIMING | menu_recompute: {_time.time() - t0:.1f}s")
+        finally:
+            active_keys[0].stop()
+            progress.close()
+            progress.print_error_summary()
+
         if was_cancelled:
-            return None
-
-        # Build failed setlists dict to protect from purge
-        failed_setlists: dict[str, set[str]] | None = None
-        if self._background_scanner and self._background_scanner.has_scan_failures():
-            failed_setlists = {}
-            for folder in self.folders:
-                folder_id = folder.get("folder_id", "")
-                failed = self._background_scanner.get_failed_setlist_names(folder_id)
-                if failed:
-                    failed_setlists[folder_id] = failed
-            if failed_setlists:
-                all_failed = [name for names in failed_setlists.values() for name in names]
-                print(f"\n  Warning: {len(all_failed)} setlist(s) failed to scan (files preserved): {', '.join(sorted(all_failed))}")
-
-        # Rebuild markers for any extracted archives missing them (prevents mass deletion)
-        print("  Rebuilding markers...", end="", flush=True)
-        t0 = _time.time()
-        created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
-        debug_log(f"TIMING | rebuild_markers: {_time.time() - t0:.1f}s | created={created}")
-        if created > 0:
-            print(f" {created} rebuilt.", flush=True)
+            display.sync_cancelled(total_downloaded)
+        elif total_downloaded > 0:
+            display.sync_complete(total_downloaded, total_bytes, elapsed)
+        elif self._scan_failure():
+            # Nothing downloaded because the scans died, not because the
+            # library was already current. Saying "synced" here is how a
+            # total failure reads as a clean run.
+            reason, count = self._scan_failure()
+            display.sync_failed(reason, count)
         else:
-            print(" ok.", flush=True)
+            display.sync_already_synced()
 
-        # Purge extra files (no confirmation - sync means make it match)
-        t0 = _time.time()
-        purged_ids = purge_all_folders(self.folders, get_download_path(), self.user_settings, failed_setlists)
-        debug_log(f"TIMING | purge: {_time.time() - t0:.1f}s")
-        for fid in purged_ids:
-            self.folder_stats_cache.invalidate(fid)
-
-        # Recompute menu cache now — this is the expensive part, do it here
-        # with feedback instead of silently after "done"
-        print("  Updating stats...", end="", flush=True)
-        t0 = _time.time()
-        combined_drives = self._get_combined_drives_config()
-        menu_cache = compute_main_menu_cache(
-            self.folders, self.user_settings,
-            get_download_path(), combined_drives,
-            self.folder_stats_cache, self._background_scanner,
-        )
-        debug_log(f"TIMING | menu_recompute: {_time.time() - t0:.1f}s")
-        print(" done.")
+        # The whole run, not just the download phase's `elapsed`.
+        print(f"  Finished in {format_duration(_time.time() - run_start)}")
 
         # NOW we can say "done" — because it actually is
         wait_with_skip(5, "Continuing in 5s (press any key to skip)")
         return menu_cache
 
-    def _sync_folders_sequentially(self) -> tuple[bool, set[str]]:
+    def _sync_folders_sequentially(self, progress) -> tuple[bool, set[str], int, int, float]:
         """
         Download setlists as they become ready from background scanner.
 
@@ -117,18 +196,21 @@ class SyncFlowMixin:
         setlist finishes scanning, its files are downloaded immediately.
         Only waits when no setlists are ready and scanning is still in progress.
 
-        Returns (was_cancelled, synced_drive_ids).
+        `progress` is the panel for the whole sync run (download, then verify,
+        then purge): created, phased, and closed by the caller, so it stays
+        open across all three stages instead of opening and closing per stage.
+
+        Returns (was_cancelled, synced_drive_ids, total_downloaded, total_bytes, elapsed).
         """
         import time as _time
-        from src.core.formatting import format_duration
-        from src.ui.primitives import getch_with_timeout, KEY_ESC, cbreak_noecho
 
         scanner = self._background_scanner
         total_setlists = scanner.get_enabled_setlist_count()
+        start_time = _time.time()
 
         if total_setlists == 0:
-            display.sync_already_synced()
-            return False, set()
+            progress.note("Sync", context="already synced")
+            return False, set(), 0, 0, 0.0
 
         downloaded_ids: set[str] = set()
         synced_drive_ids: set[str] = set()
@@ -136,7 +218,9 @@ class SyncFlowMixin:
         total_downloaded = 0
         total_bytes = 0
         was_cancelled = False
-        start_time = _time.time()
+
+        progress.set_scan_stats_getter(lambda: scanner.get_stats())
+        progress.set_run_total(total_setlists, "setlists")
 
         while not was_cancelled:
             # Find next scanned setlist we haven't downloaded yet
@@ -181,12 +265,17 @@ class SyncFlowMixin:
                 }
 
                 setlist_header = f"[{completed_count}/{total_setlists}] {display_name}"
-                scan_getter = lambda: scanner.get_stats()
+                # On the divider, not the list, which is charts. No count: the
+                # bar keeps it.
+                progress.set_stage(f"checking {display_name}")
                 downloaded, _, _, _, cancelled, bytes_down = self.sync.sync_folder(
                     temp_folder, get_download_path(), [],
-                    scan_stats_getter=scan_getter, header=setlist_header,
+                    header=setlist_header,
                     setlist_name=setlist.name,
+                    label=display_name,
                     skip_marker_rebuild=True,
+                    progress=progress,
+                    cancel_check=lambda: progress.cancelled,
                 )
 
                 total_downloaded += downloaded
@@ -196,65 +285,18 @@ class SyncFlowMixin:
 
                 if cancelled:
                     was_cancelled = True
+                else:
+                    progress.advance_run()
             else:
                 # Nothing ready — are we done?
                 if len(downloaded_ids) >= total_setlists or scanner.is_done():
                     break
 
-                # Wait for scanner (ephemeral status line, erased when a setlist becomes ready)
-                CLEAR_LINE = "\033[2K\r"
-                # Clear current line (scanning status), move up, clear that line (blank line)
-                ERASE_WAIT = "\033[2K\033[A\033[2K\r"
-                try:
-                    term_width = os.get_terminal_size().columns
-                except OSError:
-                    term_width = 80
+                # Wait for the scanner; the divider shows its progress.
+                if progress.cancelled:
+                    was_cancelled = True
+                    break
+                _time.sleep(0.2)
 
-                def show_wait(msg: str):
-                    truncated = msg[:term_width - 1]
-                    print(f"{CLEAR_LINE}{truncated}", end="", flush=True)
-
-                print()  # blank line before scanning status
-                show_wait("  Scanning... (ESC to cancel)")
-
-                with cbreak_noecho():
-                    while True:
-                        key = getch_with_timeout(200)
-                        if key == KEY_ESC:
-                            print(f"{ERASE_WAIT}{CLEAR_LINE}  Cancelled.")
-                            was_cancelled = True
-                            break
-
-                        # Check if any setlist became ready
-                        ready = scanner.get_scanned_enabled_setlists()
-                        if any(s.setlist_id not in downloaded_ids for s in ready):
-                            # Erase status line + blank line above it
-                            print(f"{ERASE_WAIT}", end="", flush=True)
-                            break
-
-                        # Show scanner progress
-                        stats = scanner.get_stats()
-                        if stats.current_folder:
-                            elapsed_str = format_duration(stats.current_folder_elapsed)
-                            show_wait(f"  Scanning {stats.current_folder}... ({elapsed_str}, {stats.api_calls} API calls)")
-
-        # Final summary
         elapsed = _time.time() - start_time
-        print()
-        print("━" * 50)
-
-        if was_cancelled:
-            display.sync_cancelled(total_downloaded)
-            wait_with_skip(5, "Continuing in 5s (press any key to skip)")
-        elif total_downloaded > 0:
-            display.sync_complete(total_downloaded, total_bytes, elapsed)
-        elif self._scan_failure():
-            # Nothing downloaded because the scans died, not because the
-            # library was already current. Saying "synced" here is how a
-            # total failure reads as a clean run.
-            reason, count = self._scan_failure()
-            display.sync_failed(reason, count)
-        else:
-            display.sync_already_synced()
-
-        return was_cancelled, synced_drive_ids
+        return was_cancelled, synced_drive_ids, total_downloaded, total_bytes, elapsed
