@@ -21,7 +21,7 @@ import shutil
 from pathlib import Path
 
 from chotic_ui.widgets.two_pane import TwoPane
-from chotic_ui.primitives.terminal import visible_len, truncate_ansi
+from chotic_ui.primitives.terminal import truncate_ansi
 
 from src.config import UserSettings, DrivesConfig
 from src.core.formatting import sort_by_name, format_duration, format_size
@@ -29,6 +29,15 @@ from src.sync import get_persistent_stats_cache, compute_setlist_stats
 from src.sync.archive_charts import effective_chart_count, forced_counts
 from ..primitives import Colors
 from ..components import strip_ansi, format_setlist_item
+from .pane_layout import (
+    LEFT_WIDTH, LEFT_CHANGE_W,
+    columns as _columns,
+    plain_delta as _plain_delta,
+    row as _row,
+    header_row as _header_row,
+    spacer as _spacer,
+    rule as _rule,
+)
 from .home import (
     MainMenuCache, compute_main_menu_cache, update_menu_cache_on_toggle,
     _get_setlist_names,
@@ -43,7 +52,6 @@ def _drive(folder_id):
 
 SETTINGS = ("settings", None)
 
-LEFT_WIDTH = 38
 
 # Which pane you were in and where the cursor sat, remembered across a trip to
 # another screen. sync.py rebuilds this screen from scratch every time it comes
@@ -68,38 +76,6 @@ def _right_text_width() -> int:
 # Right-pane columns. Fixed widths so every row's numbers line up in the same
 # place instead of drifting with the length of the name beside them.
 CHARTS_W, SIZE_W, CHANGE_W = 7, 10, 11
-# Left-pane columns.
-LEFT_CHANGE_W = 9
-
-
-def _cell(text: str, width: int, color: str = "") -> str:
-    """Right-align `text` in a fixed column, measuring what is actually visible
-    so ANSI codes do not shove the column out of true. Over-long values are cut
-    to the column: letting one row run wide pushed the whole line past the pane,
-    and the frame's own truncation then replaced the last cell with an ellipsis."""
-    text = text or ""
-    if visible_len(text) > width:
-        text = truncate_ansi(text, width)
-    pad = max(0, width - visible_len(text))
-    body = f"{color}{text}{Colors.RESET}" if color and text else text
-    return " " * pad + body
-
-
-def _columns(head: str, cells, width: int) -> str:
-    """`head` flush left, `cells` as fixed right-aligned columns at the far edge."""
-    tail = "".join(_cell(t, w, c) for t, w, c in cells)
-    tail_w = sum(w for _, w, _ in cells)
-    room = width - tail_w - 1
-    if visible_len(head) > room:
-        head = truncate_ansi(head, max(1, room))
-    gap = width - visible_len(head) - tail_w
-    return f"{head}{' ' * max(1, gap)}{tail}"
-
-
-def _plain_delta(delta: str) -> str:
-    """Deltas arrive wrapped for inline use ("[+22.9 MB]"); in a column of their
-    own the brackets are just noise."""
-    return strip_ansi(delta or "").strip().strip("[]").strip()
 
 
 def _sync_label(cache: MainMenuCache) -> str:
@@ -118,28 +94,6 @@ def _copy_cache(dst: MainMenuCache, src: MainMenuCache) -> None:
               "folder_stats", "folder_deltas", "folder_checkmarks", "folder_states",
               "folder_scan_progress", "group_enabled_counts"):
         setattr(dst, f, getattr(src, f))
-
-
-def _row(text, value, selectable=True):
-    """TwoPane wants (render(focused, cursor) -> str, value, selectable). Nothing
-    here varies with focus; the widget owns the cursor marker."""
-    return (lambda focused, cursor: text, value, selectable)
-
-
-def _header_row(label):
-    """Flush against the left edge while the rows under it are indented, so the
-    grouping reads at a glance without a count to decode."""
-    return _row(f"{Colors.BOLD}{Colors.PRIMARY}{label.upper()}{Colors.RESET}", None, False)
-
-
-def _spacer():
-    return _row("", None, False)
-
-
-def _rule(width: int):
-    """A drawn divider, not a blank line: Settings is a different kind of thing
-    from the drives above it and the gap alone did not say so."""
-    return _row(f"{Colors.BORDER}{'─' * max(1, width)}{Colors.RESET}", None, False)
 
 
 def _mode_blocked_reason(user_settings, auth, rclone_connected) -> str:
