@@ -62,15 +62,14 @@ def test_byoc_signed_in_can_sync(app):
     assert app(DOWNLOAD_MODE_BYOC, byoc_creds=True, signed_in=True)._drive_blocked() == ""
 
 
-def test_the_block_message_names_syncing_not_custom_folders(capsys):
-    """The old text described a feature the user was not using."""
+def test_the_block_message_says_why_and_where_to_fix_it(capsys):
     from src.ui.widgets import sync_display
 
-    sync_display.sync_blocked("rclone is not connected yet")
+    sync_display.sync_blocked(copy.STATUS_RCLONE)
     out = capsys.readouterr().out
 
-    assert "Cannot sync: rclone is not connected yet" in out
-    assert "custom folders" not in out
+    assert copy.SYNC_BLOCKED.format(reason=copy.STATUS_RCLONE) in out
+    assert copy.FIX_FROM.format(where=copy.SETTINGS_MODE) in out
 
 
 def test_the_menu_and_sync_cannot_disagree(app):

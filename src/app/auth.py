@@ -34,12 +34,13 @@ class AuthMixin:
         display.auth_opening_browser()
 
         if self.auth.sign_in():
-            print("  Signed in successfully!")
+            print(f"  {copy.SUCCESS}")
             # Recreate sync with new token
             self._refresh_sync_token()
         else:
-            # Do not keep pointing at sign-in once it has already failed.
-            display.sign_in_failed_notice()
+            # The reason, not advice: the fix depends on it.
+            err = self.auth.last_error
+            print(f"  {copy.FAILURE}: {err}" if err else f"  {copy.FAILURE}")
 
         wait_with_skip(2)
 
@@ -188,7 +189,7 @@ class AuthMixin:
             self.auth.sign_out()
             # Recreate sync without user token (falls back to admin or anonymous)
             self._refresh_sync_token()
-        print("\n  Signed out of Google.")
+        print(f"\n  {copy.SUCCESS}")
         wait_with_skip(2)
 
     def _refresh_sync_token(self):

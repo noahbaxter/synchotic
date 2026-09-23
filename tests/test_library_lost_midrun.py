@@ -34,7 +34,8 @@ def test_it_says_what_happened_instead_of_a_traceback(monkeypatch):
     code, printed = _run_cli(monkeypatch, LibraryUnavailable("gone"))
 
     assert code == 1
-    assert "Library disconnected" in printed
+    assert copy.LIBRARY_MISSING in printed
+    assert copy.STOPPED_MIDWAY in printed
     assert "Traceback" not in printed
 
 

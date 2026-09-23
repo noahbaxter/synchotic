@@ -95,6 +95,9 @@ DELETION_ALL = "all {files}"   # {files} is count(n, "unmanaged file")
 LIBRARY_UNSET = "No library set"
 LIBRARY_MISSING = "Library not connected"
 FIX_RECONNECT = "Reconnect the drive and sync again."
+# Under LIBRARY_MISSING: at startup nothing has happened yet, mid-run it has.
+NOTHING_CHANGED = "Nothing has been scanned, downloaded or deleted."  # AI-COPY
+STOPPED_MIDWAY = "Synchotic stopped where it was."  # AI-COPY
 
 # --- download mode ----------------------------------------------------------
 
@@ -196,7 +199,7 @@ LIBRARY_BROWSE = "Pick a folder"
 LIBRARY_TYPE = "Path: "
 
 FOLDER_CREATE_ASK = "Create {path}?"
-FOLDER_NOT_A_FOLDER = "ERROR: Not a folder: {path}"
+FOLDER_NOT_A_FOLDER = FAILURE + ": Not a folder: {path}"
 
 # --- what the folder turned out to be --------------------------------------
 #
@@ -296,6 +299,17 @@ RCLONE_CONSENT = "Please sign in to Google to give rclone read-only access to yo
 BYOC_STEPS = (f"Follow the steps in {BYOC_FILE}, then put "
               f"{CREDENTIALS_FILE} in the same folder:")
 
+# --- signing in to Google ---------------------------------------------------
+
+SIGNIN_QUESTION = "Sign in to Google?"
+SIGNIN_SCOPE = "Synchotic only asks for read-only access to your Drive."
+SIGNIN_PRIVACY = "Privacy: https://noahbaxter.dev/synchotic/privacy.html"  # AI-COPY
+SIGNIN_KEYS = "[Y] Sign in    [N] Not now"
+SIGNIN_OPENING = ("Opening your browser to sign in.\n"
+                  "If nothing opens, use the link printed below.")
+SIGNIN_EXPIRED = STATUS_SIGNIN_EXPIRED + ".\n" + FIX_SIGN_IN
+NO_BROWSER = "Signing in requires a web browser, and this machine doesn't appear to have one."
+
 
 # ===========================================================================
 # Setup step 3: the last page
@@ -326,6 +340,12 @@ READY_GO = "Ready"
 # Nothing is shown at all when there is nothing wrong.
 
 PRE_TITLE_BLOCKED = "Unable to sync"
+
+# The mode or the library stops the work before it starts. {reason} is a
+# STATUS_* or LIBRARY_* line; FIX_FROM follows with the row that fixes it.
+SYNC_BLOCKED = PRE_TITLE_BLOCKED + ": {reason}."
+SCAN_BLOCKED = "Unable to scan: {reason}."  # AI-COPY
+ADD_BLOCKED = "Unable to add a custom drive: {reason}."  # AI-COPY
 PRE_FREE = "{size} free"
 PRE_ASK = "Sync anyway?"
 

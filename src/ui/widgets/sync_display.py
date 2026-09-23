@@ -16,6 +16,12 @@ from ...core.formatting import count, format_size, format_duration, format_speed
 _c = Colors
 
 
+def sentences(*parts: str) -> str:
+    """Join copy strings as sentences, adding a full stop to any that end
+    without punctuation, so a shared fragment works on its own or in a line."""
+    return " ".join(p if p[-1:] in ".!?:" else p + "." for p in parts if p)
+
+
 def _say(text: str, indent: str = "  ") -> None:
     """Print a copy string at the scrollback's indent, every line of it:
     copy.py keeps layout out of its strings."""
@@ -33,66 +39,52 @@ def _rule_width() -> int:
 
 def auth_prompt():
     print()
-    print("  Sign in with your Google credentials?")
+    print(f"  {copy.SIGNIN_QUESTION}")
     print()
-    print("  Downloads require read-only access.")
-    print("  Privacy: https://noahbaxter.dev/synchotic/privacy.html")
+    print(f"  {copy.SIGNIN_SCOPE}")
+    print(f"  {copy.SIGNIN_PRIVACY}")
     print()
-    print("  [Y] Sign in    [N] Not now")
+    print(f"  {copy.SIGNIN_KEYS}")
     print()
 
 
 def auth_opening_browser():
-    print("\n  Opening your browser to sign in.")
-    print("  If nothing opens, go to the URL printed below.")
     print()
+    _say(copy.SIGNIN_OPENING)
+    print()
+
+
+def _blocked(line: str, reason: str, where: str) -> None:
+    print(f"\n  {line.format(reason=reason)}")
+    print(f"  {copy.FIX_FROM.format(where=where)}")
 
 
 def sync_blocked(reason: str):
-    """Sync cannot start because the chosen download mode is not usable.
+    """Sync cannot start because the chosen download mode is not usable."""
+    _blocked(copy.SYNC_BLOCKED, reason, copy.SETTINGS_MODE)
 
-    Named for what it blocks. The old wording said "cannot scan custom
-    folders" while stopping every sync, so the whole feature looked broken
-    for a reason that mentioned a feature the user was not using.
-    """
-    print(f"\n  Cannot sync: {reason}.")
-    print("  Fix this from Settings, under Account.")
 
 def library_blocked(reason: str):
-    """No library to scan into, so the work stops before it starts.
-
-    Points at Library rather than Account: nothing about the download mode or
-    the sign-in is wrong here, and sending people to the wrong section is how
-    a fixable state reads as broken.
-    """
-    print(f"\n  Cannot scan: {reason}.")
-    print("  Fix this from Settings, under Library.")
+    """No library to scan into. Points at the library row, not Account:
+    nothing about the mode is wrong here."""
+    _blocked(copy.SCAN_BLOCKED, reason, copy.SETTINGS_LOCATION)
 
 
 def custom_folder_blocked(reason: str):
-    print(f"\n  Cannot add a folder: {reason}.")
-    print("  Fix this from Settings, under Account.")
+    _blocked(copy.ADD_BLOCKED, reason, copy.SETTINGS_MODE)
+
 
 def auth_expired_warning(failure_count: int):
     print()
-    print(f"  {failure_count} files failed: your Google sign-in expired.")
-    print("  Sign back in to fix these.")
+    print(f"  {sentences(count(failure_count, 'file') + ' failed', copy.STATUS_SIGNIN_EXPIRED)}")
+    print(f"  {copy.FIX_SIGN_IN}")
     print()
 
 
 def session_expired_notice() -> None:
     """The saved sign-in stopped working. Try the obvious fix first."""
     print()
-    print("  Your Google sign-in expired.")
-    print("  Sign in again from Account, then re-sync.")
-    print()
-
-
-def sign_in_failed_notice() -> None:
-    """Sign-in was attempted and did not work, so stop suggesting it."""
-    print()
-    print("  Couldn't sign you back in.")
-    print("  Switch to another download method (rclone or BYOC) from Account.")
+    _say(copy.SIGNIN_EXPIRED)
     print()
 
 
@@ -208,11 +200,11 @@ def library_summary(path, *, chart_folders: int, files: int, folders: int,
 def library_unavailable(path) -> None:
     """The configured library is not reachable, e.g. an unmounted volume."""
     print()
-    print("  Library not found:")
+    print(f"  {copy.LIBRARY_MISSING}:")
     print(f"    {path}")
     print()
-    print("  If it lives on an external or network drive, connect it and retry.")
-    print("  Nothing has been scanned, downloaded or deleted.")
+    print(f"  {copy.FIX_RECONNECT}")
+    print(f"  {copy.NOTHING_CHANGED}")
     print()
 
 
@@ -220,10 +212,10 @@ def library_lost(path) -> None:
     """The library went away mid-run. Unlike library_unavailable, this cannot
     promise nothing has happened yet."""
     print()
-    print("  Library disconnected:")
+    print(f"  {copy.LIBRARY_MISSING}:")
     print(f"    {path}")
     print()
-    print("  Synchotic stopped where it was. Reconnect the drive and sync again.")
+    print(f"  {sentences(copy.STOPPED_MIDWAY, copy.FIX_RECONNECT)}")
     print()
 
 
@@ -249,10 +241,7 @@ def purge_skipped_unowned(folder_name: str) -> None:
 def rclone_no_browser() -> None:
     """Consent needs a browser and there is not one here."""
     print()
-    print("  Large archives need an authenticated download, which requires a")
-    print("  one-time browser consent. No browser is available on this machine.")
-    print("  Set up your own credentials (docs/byoc.md), or run consent on a")
-    print("  desktop session.")
+    _say(copy.NO_BROWSER)
     print()
 
 

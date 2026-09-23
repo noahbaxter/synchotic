@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 from typing import Callable, Optional
 
+from .. import copy
 from ..core.files import system_tools_on_path
 from ..core.logging import debug_log
 
@@ -45,7 +46,7 @@ class OAuthManager:
             token_path: Path to save/load token
         """
         base_path = self._get_base_path()
-        self.credentials_path = credentials_path or base_path / "credentials.json"
+        self.credentials_path = credentials_path or base_path / copy.CREDENTIALS_FILE
         self.token_path = token_path or base_path / "token.json"
         self._credentials: Optional[Credentials] = None
 
@@ -116,7 +117,7 @@ class OAuthManager:
                     creds = flow.run_local_server(port=0)
             except Exception as e:
                 debug_log(f"OAUTH | interactive flow failed | {e}")
-                print("  Sign-in failed. See .dm-sync/logs.")
+                print("  Admin sign-in failed. See the debug log.")
                 return None
 
         # Save token for next time
@@ -166,7 +167,7 @@ def has_custom_client_config() -> bool:
     if (os.environ.get("SYNCHOTIC_OAUTH_CLIENT_ID")
             and os.environ.get("SYNCHOTIC_OAUTH_CLIENT_SECRET")):
         return True
-    creds_file = get_data_dir() / "credentials.json"
+    creds_file = get_data_dir() / copy.CREDENTIALS_FILE
     if not creds_file.exists():
         return False
     try:
@@ -188,7 +189,7 @@ def load_client_config() -> dict:
     if env_id and env_secret:
         client_id, client_secret = env_id, env_secret
     else:
-        creds_file = get_data_dir() / "credentials.json"
+        creds_file = get_data_dir() / copy.CREDENTIALS_FILE
         if creds_file.exists():
             try:
                 data = json.loads(creds_file.read_text())
@@ -238,6 +239,8 @@ class UserOAuthManager:
         self.token_path = token_path
         self._credentials: Optional[Credentials] = None
         self._session_expired = False
+        # Why the last sign_in failed, for the caller to print.
+        self.last_error: Optional[str] = None
 
     @property
     def is_available(self) -> bool:
@@ -330,6 +333,7 @@ class UserOAuthManager:
         Returns:
             True if sign-in successful, False otherwise
         """
+        self.last_error = None
         if not OAUTH_AVAILABLE:
             return False
 
@@ -349,8 +353,10 @@ class UserOAuthManager:
                 self._credentials = creds
                 return True
         except Exception as e:
+            # No print: the caller prints the failure with this reason, and
+            # two messages for one failure read as two failures.
             debug_log(f"OAUTH | sign_in failed | {e}")
-            print("  Sign-in failed. See .dm-sync/logs.")
+            self.last_error = str(e) or type(e).__name__
 
         return False
 
@@ -524,6 +530,11 @@ class AuthManager:
         return self._user_oauth.sign_in()
 
     @property
+    def last_error(self) -> Optional[str]:
+        """Why the last sign_in failed, or None."""
+        return self._user_oauth.last_error
+
+    @property
     def session_expired(self) -> bool:
         """The saved sign-in died and only a fresh sign-in will fix it."""
         return self._user_oauth.session_expired
@@ -553,7 +564,7 @@ class AuthManager:
         return self._get_admin_oauth()
 
 
-BYOC_INSTRUCTIONS_FILE = "BYOC_SETUP_INSTRUCTIONS.txt"
+BYOC_INSTRUCTIONS_FILE = copy.BYOC_FILE
 BYOC_INSTRUCTIONS_SOURCE = "byoc_setup_instructions.txt"
 
 
