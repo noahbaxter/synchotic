@@ -265,22 +265,6 @@ def scan_header(folder_name: str):
     print(f"Scanning: {folder_name}")
     print("=" * 50)
 
-def scan_custom_folders_header():
-    print()
-    print("=" * 50)
-    print("Scanning custom folders...")
-    print("=" * 50)
-
-def scan_complete_header():
-    print()
-    print("=" * 50)
-    print("Scan complete. Starting download...")
-    print("=" * 50)
-
-def scan_folder_header(folder_name: str):
-    print(f"\n[{folder_name}]")
-    print("-" * 40)
-
 def scan_progress(folders: int, files: int, shortcuts: int = 0):
     from ..primitives import print_progress
     shortcut_info = f", {shortcuts} shortcuts" if shortcuts else ""

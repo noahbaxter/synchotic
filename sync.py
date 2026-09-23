@@ -39,7 +39,6 @@ from src.drive import DriveClient, AuthManager
 from src.sync import FolderSync
 from src.config import UserSettings, DrivesConfig, CustomFolders
 from src.config.settings import DOWNLOAD_MODES
-from src.core.formatting import format_size
 from src.core.paths import (
     get_log_dir,
     get_settings_path,
@@ -54,13 +53,12 @@ from src.core.paths import (
 from src.ui import (
     print_header,
     show_main_menu_panes,
-    show_subfolder_settings,
     show_oauth_prompt,
     compute_main_menu_cache,
     update_menu_cache_on_toggle,
 )
 from src.sync import FolderStatsCache, BackgroundScanner
-from src.ui.primitives import clear_screen, wait_with_skip
+from src.ui.primitives import clear_screen
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
 from src.core.logging import TeeOutput, prune_old_logs
@@ -108,140 +106,6 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         self.folders = []
         self.folder_stats_cache = FolderStatsCache()
         self._background_scanner: BackgroundScanner | None = None
-
-    def _show_custom_folder_options(self, folder: dict):
-        """Show options menu for a custom folder."""
-        from src.ui import Menu, MenuItem, MenuDivider
-        from src.config import extract_subfolders_from_files
-
-        folder_id = folder.get("folder_id")
-        folder_name = folder.get("name")
-        has_files = bool(folder.get("files"))
-
-        # Check if folder has setlists (subfolders)
-        setlists = extract_subfolders_from_files(folder) if has_files else []
-
-        menu = Menu(title=folder_name)
-
-        # Setlist settings (if folder has subfolders)
-        if setlists:
-            enabled_count = sum(
-                1 for s in setlists
-                if self.user_settings.is_subfolder_enabled(folder_id, s)
-            )
-            menu.add_item(MenuItem(
-                "Configure setlists",
-                hotkey="C",
-                value="setlists",
-                description=f"{enabled_count}/{len(setlists)} enabled"
-            ))
-            menu.add_item(MenuDivider())
-
-        # Scan option
-        if has_files:
-            menu.add_item(MenuItem("Re-scan folder", hotkey="S", value="scan", description="Refresh file list from Google Drive"))
-        else:
-            menu.add_item(MenuItem("Scan folder", hotkey="S", value="scan", description="Get file list from Google Drive"))
-
-        menu.add_item(MenuDivider())
-        menu.add_item(MenuItem("Remove folder", hotkey="X", value="remove", description="Remove from custom folders"))
-        menu.add_item(MenuDivider())
-        menu.add_item(MenuItem("Back", value="back"))
-
-        result = menu.run()
-        if not result or result.value == "back":
-            return
-
-        if result.value == "setlists":
-            show_subfolder_settings(folder, self.user_settings, get_download_path(), self._background_scanner)
-        elif result.value == "scan":
-            self._scan_single_custom_folder(folder)
-        elif result.value == "remove":
-            self._remove_custom_folder(folder_id, folder_name)
-
-
-        # Purge numbers will be updated on next scan completion
-
-    def _scan_enabled_folders(self, enabled_indices: list):
-        """
-        Scan all enabled folders via API to get fresh file lists.
-
-        This ensures downloads are always based on current Drive state,
-        not potentially stale manifest data.
-
-        NOTE: This method is deprecated - use _sync_folders_sequentially instead.
-        """
-        from src.drive import FolderScanner
-
-        # Collect all enabled folders
-        folders_to_scan = [(idx, self.folders[idx]) for idx in enabled_indices]
-
-        if not folders_to_scan:
-            return
-
-        blocked = self._drive_blocked()
-        if blocked:
-            display.sync_blocked(blocked)
-            wait_with_skip(3)
-            return
-
-        blocked = self._library_blocked()
-        if blocked:
-            display.library_blocked(blocked)
-            wait_with_skip(3)
-            return
-
-        # Show scanning header
-        print("\n" + "=" * 50)
-        print("Scanning folders...")
-        print("=" * 50 + "\n")
-
-        # Create scanner with user's OAuth
-        auth_token = self.auth.get_token()
-        client_config = DriveClientConfig(api_key=API_KEY)
-        auth_client = DriveClient(client_config, auth_token=auth_token)
-        scanner = FolderScanner(auth_client)
-
-        for idx, folder in folders_to_scan:
-            folder_id = folder.get("folder_id")
-            folder_name = folder.get("name")
-            is_custom = folder.get("is_custom", False)
-
-            display.scan_folder_header(folder_name)
-
-            def progress_cb(folders_scanned, files_found, shortcuts_found, files_list=None):
-                print(f"\r  Scanning... {folders_scanned} folders, {files_found} files found", end="", flush=True)
-
-            result = scanner.scan(folder_id, progress_callback=progress_cb)
-            print()
-
-            if result.cancelled:
-                print("  Scan cancelled.")
-                continue
-
-            # Update folder dict with scan results
-            folder["files"] = [
-                {
-                    "id": f["id"],
-                    "path": f["path"],
-                    "name": f["name"],
-                    "size": f.get("size", 0),
-                    "md5": f.get("md5", ""),
-                    "modified": f.get("modified", ""),
-                }
-                for f in result.files
-            ]
-            folder["file_count"] = len(result.files)
-            folder["total_size"] = sum(f.get("size", 0) for f in result.files)
-
-            # Save to custom folders storage (only for custom folders)
-            if is_custom:
-                self.custom_folders.set_files(folder_id, folder["files"])
-                self.custom_folders.save()
-
-            print(f"  Done! Found {len(result.files)} files ({format_size(folder['total_size'])})")
-
-        display.scan_complete_header()
 
     def run(self):
         """Main application loop."""
