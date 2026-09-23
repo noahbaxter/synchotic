@@ -441,7 +441,9 @@ _FAILURE_WORDS = (
 ADVICE = {
     "disk full": "Free up space on the drive holding your library, then sync again.",
     "no connection": "Check your internet, then sync again.",
-    "needs sign-in": "Sign in from Account, or switch to rclone, then sync again.",
+    # Mode, not sign-in: the sign-in row is greyed out in rclone mode.
+    "needs sign-in": "Settings → Account → Mode: connect rclone, or set up your "
+                     "own credentials.",
     "signed out": "Your Google sign-in expired. Sign in again from Account.",
     "rate limited": "Google throttled the drive. Usually clears within a day; "
                     "the next sync retries them.",
@@ -519,10 +521,11 @@ def blocked_outcome(recovered: int, still_blocked: int, mode: str = "rclone") ->
     print(f"  {_c.ERROR}{still_blocked} chart(s) need an authenticated "
           f"download{_c.RESET}")
     if mode == "rclone":
-        print(f"  {_c.MUTED}rclone could not fetch these. Try again later, "
-              f"or sign in from Account.{_c.RESET}")
+        print(f"  {_c.MUTED}rclone already tried these. The next sync retries "
+              f"them; if they keep failing, set up your own credentials."
+              f"{_c.RESET}")
     else:
-        print(f"  {_c.MUTED}Sign in from Account, or switch to rclone, "
+        print(f"  {_c.MUTED}Settings → Account → Mode: connect rclone, "
               f"then sync again.{_c.RESET}")
 
 

@@ -21,9 +21,12 @@ def test_a_clean_recovery_is_reported_as_success():
 
 
 def test_charts_that_really_failed_say_what_to_do():
+    """In rclone mode the retry has already happened, so the answer is what
+    comes next, not "sign in": the sign-in row is greyed out in this mode."""
     said = _said(recovered=9, still_blocked=3)
     assert "3" in said
-    assert "sign in" in said.lower()
+    assert "next sync retries" in said.lower()
+    assert "credentials" in said.lower()
 
 
 def test_anonymous_mode_names_the_reason_it_could_not_try():

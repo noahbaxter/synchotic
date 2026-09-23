@@ -19,7 +19,7 @@ def test_blocked_tasks_routed_through_rclone(monkeypatch, tmp_path):
         def __exit__(self, *a): pass
         def ensure_authed(self): return True
         downloader = type("D", (), {
-            "download": lambda self, tasks, cancel_check=None, progress_cb=None: (
+            "download": lambda self, tasks, cancel_check=None, progress_cb=None, **kw: (
                 calls.update(ids=[t.file_id for t in tasks]) or (["ID"], [])
             )
         })()
@@ -59,7 +59,7 @@ def test_loose_file_recovered_without_extraction(monkeypatch, tmp_path):
         def __enter__(self): return self
         def __exit__(self, *a): pass
         downloader = type("D", (), {
-            "download": lambda self, tasks, cancel_check=None, progress_cb=None: (["ID"], [])
+            "download": lambda self, tasks, cancel_check=None, progress_cb=None, **kw: (["ID"], [])
         })()
     monkeypatch.setattr("src.rclone.is_authed", lambda: True)
     monkeypatch.setattr("src.rclone.RcloneSession", FakeSession)
@@ -115,7 +115,7 @@ def test_rclone_exception_keeps_files_failed(monkeypatch, tmp_path):
         def __enter__(self): return self
         def __exit__(self, *a): pass
         downloader = type("D", (), {
-            "download": lambda self, tasks, cancel_check=None, progress_cb=None: (_ for _ in ()).throw(RuntimeError("rclone boom"))
+            "download": lambda self, tasks, cancel_check=None, progress_cb=None, **kw: (_ for _ in ()).throw(RuntimeError("rclone boom"))
         })()
     monkeypatch.setattr("src.rclone.is_authed", lambda: True)
     monkeypatch.setattr("src.rclone.RcloneSession", FakeSession)
@@ -151,7 +151,7 @@ def test_errors_never_go_negative_when_partial_recovery(monkeypatch, tmp_path):
         def __exit__(self, *a): pass
         downloader = type("D", (), {
             # rclone only recovers one of the two ids
-            "download": lambda self, tasks, cancel_check=None, progress_cb=None: (["A"], ["B"])
+            "download": lambda self, tasks, cancel_check=None, progress_cb=None, **kw: (["A"], ["B"])
         })()
     monkeypatch.setattr("src.rclone.is_authed", lambda: True)
     monkeypatch.setattr("src.rclone.RcloneSession", FakeSession)
@@ -168,3 +168,111 @@ def test_errors_never_go_negative_when_partial_recovery(monkeypatch, tmp_path):
     assert downloaded == 1    # one archive recovered
     assert errors == 1        # 2 errors - 1 recovered
     assert errors >= 0        # never negative
+
+
+class TestTierFourShowsOnThePanel:
+    """Blocked charts say nothing until rclone has tried, so tier 4 owes every
+    one of them a row: arrived, or failed with what to do."""
+
+    def _progress(self):
+        from src.ui.widgets.progress import FolderProgress
+        return FolderProgress(total_files=0, total_folders=0)
+
+    def _tasks(self, tmp_path, *ids):
+        from src.sync.download_planner import DownloadTask
+        return [DownloadTask(file_id=i, local_path=tmp_path / "Set" / f"_download_{i}.7z",
+                             size=1, md5="", is_archive=True, rel_path=f"Drive/Set/{i}.7z")
+                for i in ids]
+
+    def _session(self, monkeypatch, ok_ids, failed_ids):
+        class FakeSession:
+            def __enter__(self): return self
+            def __exit__(self, *a): pass
+            downloader = type("D", (), {
+                "download": lambda self, tasks, cancel_check=None, progress_cb=None, **kw:
+                    (ok_ids, failed_ids)
+            })()
+        monkeypatch.setattr("src.rclone.is_authed", lambda: True)
+        monkeypatch.setattr("src.rclone.RcloneSession", FakeSession)
+
+    def test_a_chart_rclone_rescued_gets_its_own_done_row(self, monkeypatch, tmp_path):
+        self._session(monkeypatch, ["A"], [])
+        monkeypatch.setattr("src.sync.downloader.FileDownloader.process_archive",
+                            lambda self, task, rel=None: (True, "", {}))
+        progress = self._progress()
+        fs = FolderSync(client=None, auth_token=None)
+
+        fs._rclone_second_pass(self._tasks(tmp_path, "A"), _make_folder(["A"]), None, progress)
+
+        (entry,) = progress.screen.entries.ordered()
+        assert (entry.name, entry.state) == ("A.7z", "done")
+        assert progress.screen.entries.ok == 1
+        assert progress.downloaded_bytes == 1, "its bytes count like any other chart's"
+
+    def test_a_chart_still_blocked_says_what_to_do(self, monkeypatch, tmp_path):
+        self._session(monkeypatch, [], ["A"])
+        progress = self._progress()
+        fs = FolderSync(client=None, auth_token=None)
+
+        fs._rclone_second_pass(self._tasks(tmp_path, "A"), _make_folder(["A"]), None, progress)
+
+        (entry,) = progress.screen.entries.ordered()
+        assert (entry.state, entry.reason) == ("failed", "needs sign-in")
+
+    def test_rclone_sign_in_failing_is_not_silent(self, monkeypatch, tmp_path):
+        """The failure and its cause are recorded, not swallowed."""
+        monkeypatch.setattr("src.rclone.is_authed", lambda: False)
+        monkeypatch.setattr("src.rclone.can_open_browser", lambda: True)
+        monkeypatch.setattr("src.rclone.RcloneSession",
+                            lambda: (_ for _ in ()).throw(RuntimeError("no binary")))
+        progress = self._progress()
+        fs = FolderSync(client=None, auth_token=None)
+
+        recovered, blocked = fs._rclone_second_pass(
+            self._tasks(tmp_path, "A", "B"), _make_folder(["A", "B"]), None, progress)
+
+        assert (recovered, blocked) == (0, 2)
+        assert [e.reason for e in progress.screen.entries.failures()] == \
+            ["needs sign-in", "needs sign-in"]
+        # and the specific cause survives into the error summary
+        assert any("RuntimeError" in e.filename for e in progress.errors)
+
+    def test_the_consent_explanation_is_not_painted_over(self, monkeypatch, tmp_path):
+        """The panel stops painting while rclone explains itself and waits for
+        the browser, or the explanation is gone before anyone reads it."""
+        import contextlib
+        events = []
+        progress = self._progress()
+
+        @contextlib.contextmanager
+        def suspended():
+            events.append("suspend")
+            yield
+            events.append("resume")
+
+        class Session:
+            def ensure_authed(self):
+                events.append("browser")
+                return False
+
+        monkeypatch.setattr(progress, "suspended", suspended)
+        monkeypatch.setattr("src.rclone.is_authed", lambda: False)
+        monkeypatch.setattr("src.rclone.can_open_browser", lambda: True)
+        monkeypatch.setattr("src.rclone.RcloneSession", Session)
+        monkeypatch.setattr("src.sync.folder_sync.display.rclone_consent_explainer",
+                            lambda: events.append("explain"))
+
+        FolderSync(client=None, auth_token=None)._rclone_second_pass(
+            self._tasks(tmp_path, "A"), _make_folder(["A"]), None, progress)
+
+        assert events == ["suspend", "explain", "browser", "resume"]
+
+    def test_a_mode_that_never_runs_tier_four_still_reports_the_charts(self, monkeypatch, tmp_path):
+        progress = self._progress()
+        fs = FolderSync(client=None, auth_token=None, download_mode="anonymous")
+
+        recovered, blocked = fs._rclone_second_pass(
+            self._tasks(tmp_path, "A"), _make_folder(["A"]), None, progress)
+
+        assert (recovered, blocked) == (0, 1)
+        assert progress.screen.entries.failed == 1

@@ -90,7 +90,9 @@ class TestErrorSummary:
         progress = _progress()
         progress.print_error("Setlist", "NEEDS AUTH (set up automatically): pack.7z")
 
-        assert "Sign in from Account" in self._summary(progress)
+        # Names the Mode row, not the sign-in row: in rclone mode the latter is
+        # greyed out, so the old advice pointed at a control nobody could use.
+        assert "Settings → Account → Mode" in self._summary(progress)
 
     def test_nothing_is_printed_when_nothing_failed(self):
         assert self._summary(_progress()) == ""
