@@ -19,8 +19,18 @@ def _pause(prompt: str) -> None:
 
 class AuthMixin:
 
+    def _uses_rclone(self) -> bool:
+        from src.config.settings import DOWNLOAD_MODE_RCLONE
+        return (self.user_settings.download_mode or DOWNLOAD_MODE_RCLONE) == DOWNLOAD_MODE_RCLONE
+
     def handle_signin(self):
-        """Handle Google sign-in."""
+        """Sign in to Google through whatever the mode downloads with: rclone's
+        own remote, or Synchotic's OAuth."""
+        if self._uses_rclone():
+            import src.rclone as rclone
+            self._connect_rclone(rclone.connection_state())
+            return
+
         display.auth_opening_browser()
 
         if self.auth.sign_in():
@@ -148,10 +158,19 @@ class AuthMixin:
         _pause(f"  {copy.PRESS_ENTER}")
 
     def handle_signout(self):
-        """Handle Google sign-out."""
-        self.auth.sign_out()
-        # Recreate sync without user token (falls back to admin or anonymous)
-        self._refresh_sync_token()
+        """Sign out of whichever Google sign-in the mode downloads with."""
+        if self._uses_rclone():
+            import src.rclone as rclone
+            try:
+                rclone.sign_out()
+            except Exception as e:
+                print(f"\n  {copy.FAILURE}: {e}")
+                _pause(f"  {copy.PRESS_ENTER}")
+                return
+        else:
+            self.auth.sign_out()
+            # Recreate sync without user token (falls back to admin or anonymous)
+            self._refresh_sync_token()
         print("\n  Signed out of Google.")
         wait_with_skip(2)
 

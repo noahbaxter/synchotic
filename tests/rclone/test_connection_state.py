@@ -2,7 +2,7 @@
 remote whose access Google no longer honours."""
 import pytest
 
-from src import rclone
+from src import copy, rclone
 
 
 class FakeConfig:
@@ -132,3 +132,47 @@ def test_is_authed_still_answers_the_cheap_question(wired):
     check: a dead remote is still a configured one."""
     wired(FakeConfig(works=False))
     assert rclone.is_authed() is True
+
+
+class _Auth:
+    def __init__(self):
+        self.signed_out = False
+
+    def sign_out(self):
+        self.signed_out = True
+
+
+class TestSettingsSignInFollowsTheMode:
+    """One sign-in row, and it signs in to whichever Google access the mode
+    downloads with."""
+
+    @pytest.fixture
+    def rclone_app(self, app, monkeypatch):
+        from types import SimpleNamespace
+        app.user_settings = SimpleNamespace(download_mode="rclone")
+        app.auth = _Auth()
+        monkeypatch.setattr("src.app.auth.wait_with_skip", lambda *a, **k: None)
+        return app
+
+    def test_sign_in_connects_rclone_with_its_real_state(self, rclone_app, monkeypatch):
+        calls = []
+        monkeypatch.setattr("src.rclone.connection_state", lambda *a, **k: rclone.DEAD)
+        monkeypatch.setattr(type(rclone_app), "_connect_rclone",
+                            lambda self, state: calls.append(state))
+        rclone_app.handle_signin()
+        assert calls == [rclone.DEAD]
+
+    def test_sign_out_forgets_the_rclone_remote_not_our_token(self, rclone_app, monkeypatch):
+        calls = []
+        monkeypatch.setattr("src.rclone.sign_out", lambda: calls.append("rclone"))
+        rclone_app.handle_signout()
+        assert calls == ["rclone"]
+        assert rclone_app.auth.signed_out is False
+
+    def test_a_failed_sign_out_says_why(self, rclone_app, monkeypatch, capsys):
+        def refuse():
+            raise RuntimeError("config is read-only")
+        monkeypatch.setattr("src.rclone.sign_out", refuse)
+        rclone_app.handle_signout()
+        out = capsys.readouterr().out
+        assert f"{copy.FAILURE}: config is read-only" in out

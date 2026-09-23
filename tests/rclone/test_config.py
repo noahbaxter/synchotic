@@ -98,6 +98,36 @@ class TestTheRemoteActuallyWorking:
         assert RcloneConfig(binary="/x/rclone", runner=runner).reconnect() is False
 
 
+class TestSigningOut:
+    def _cfg(self, tmp_path, monkeypatch, returncode=0, stderr=""):
+        monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
+        calls = []
+
+        def runner(args, **kw):
+            calls.append(args)
+            return type("R", (), {"returncode": returncode, "stdout": "",
+                                  "stderr": stderr})()
+
+        return RcloneConfig(binary="/x/rclone", runner=runner), calls
+
+    def test_it_deletes_our_remote_from_our_config(self, tmp_path, monkeypatch):
+        """Only our remote, only in our file: the user's own rclone setup is
+        not ours to sign out of."""
+        cfg, calls = self._cfg(tmp_path, monkeypatch)
+        cfg.delete_remote()
+        args = calls[-1]
+        assert args[args.index("config", 3):] == ["config", "delete",
+                                                  constants.RCLONE_REMOTE_NAME]
+        assert args[1:3] == ["--config", str(paths.get_rclone_config_path())]
+
+    def test_a_failure_carries_rclones_reason(self, tmp_path, monkeypatch):
+        import pytest
+        cfg, _ = self._cfg(tmp_path, monkeypatch, returncode=1,
+                           stderr="Failed to delete: permission denied\n")
+        with pytest.raises(RuntimeError, match="permission denied"):
+            cfg.delete_remote()
+
+
 def test_create_remote_passes_scope_and_config(tmp_path, monkeypatch):
     monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
     runner = FakeRunner()

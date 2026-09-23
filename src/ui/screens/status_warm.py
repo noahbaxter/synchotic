@@ -14,6 +14,9 @@ from dataclasses import dataclass
 class StatusSnapshot:
     rclone_connected: bool
     library_blocked: str
+    # A remote Google no longer answers for. It still counts as connected:
+    # nothing but a Drive call tells the two apart.
+    rclone_dead: bool = False
 
 
 class StatusWarmer:

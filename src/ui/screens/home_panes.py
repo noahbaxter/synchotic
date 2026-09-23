@@ -16,11 +16,13 @@ cache in place.
 
 import shutil
 import time as _time
+from threading import Thread
 from pathlib import Path
 
 from chotic_ui.widgets.two_pane import TwoPane
 from chotic_ui.primitives.terminal import get_terminal_width, truncate_ansi
 
+from src import copy
 from src.config import UserSettings, DrivesConfig
 from src.core.formatting import sort_by_name, format_duration, format_size
 from src.core.logging import debug_log
@@ -154,15 +156,32 @@ def show_main_menu_panes(
             folder, name, download_path, user_settings)
     )
 
+    # Proving the token is a Drive call of up to 20s, so it runs on its own
+    # thread, once per screen and again only when the remote comes back.
+    probed = {"started": False, "dead": False}
+
+    def _probe_rclone():
+        import src.rclone as rclone
+        probed["dead"] = rclone.connection_state() == rclone.DEAD
+
     def _check_status() -> StatusSnapshot:
         from ...core.paths import library_blocked_reason
+        from ...config.settings import DOWNLOAD_MODE_RCLONE
         try:
             import src.rclone as rclone
             rclone_connected = rclone.is_authed()
         except Exception:
             rclone_connected = False
+        uses_rclone = ((user_settings.download_mode if user_settings else "")
+                       or DOWNLOAD_MODE_RCLONE) == DOWNLOAD_MODE_RCLONE
+        if not (rclone_connected and uses_rclone):
+            probed.update(started=False, dead=False)
+        elif not probed["started"]:
+            probed["started"] = True
+            Thread(target=_probe_rclone, daemon=True, name="rclone-probe").start()
         return StatusSnapshot(rclone_connected=rclone_connected,
-                              library_blocked=library_blocked_reason())
+                              library_blocked=library_blocked_reason(),
+                              rclone_dead=probed["dead"])
 
     status_warmer = StatusWarmer(_check_status)
 
@@ -349,12 +368,12 @@ def show_main_menu_panes(
     # ---- right pane: settings ----
 
     def _sign_in_option():
-        """Sign-in has four states and only one of them is a plain "sign in".
+        """The Google sign-in the mode downloads with: rclone's remote, or our
+        own OAuth token for BYOC.
 
-        Embedded OAuth is dead, so a signed-out user with no credentials of
-        their own cannot sign in at all -- that used to mean hiding the row,
-        which left people hunting for a control that was never there. It is
-        shown greyed with the reason instead.
+        A BYOC user with no credentials of their own cannot sign in at all.
+        The row is shown greyed with the reason rather than hidden, which left
+        people hunting for a control that was never there.
         """
         from ...drive.auth import has_custom_client_config
         from ...config.settings import DOWNLOAD_MODE_ANONYMOUS, DOWNLOAD_MODE_RCLONE
@@ -362,6 +381,15 @@ def show_main_menu_panes(
         mode = (user_settings.download_mode if user_settings else "") or DOWNLOAD_MODE_RCLONE
         if mode == DOWNLOAD_MODE_ANONYMOUS:
             return ("Sign in", "Not used in anonymous mode", ("act", "signin"), False)
+        if mode == DOWNLOAD_MODE_RCLONE:
+            # rclone signs in to Google with its own remote, not our token.
+            status = status_warmer.snapshot
+            if status.rclone_dead:
+                return ("Sign in to Google", copy.STATUS_SIGNIN_EXPIRED,
+                        ("act", "signin"), True)
+            if status.rclone_connected:
+                return ("Sign out", "", ("act", "signout"), True)
+            return ("Sign in to Google", "", ("act", "signin"), True)
         if auth is not None and getattr(auth, "session_expired", False):
             return ("Sign in again", "Restores fast downloads", ("act", "signin"), True)
         if auth is not None and getattr(auth, "is_signed_in", False):
@@ -370,11 +398,6 @@ def show_main_menu_panes(
         if has_custom_client_config():
             return ("Sign in to Google", "Uses the credentials you set up",
                     ("act", "signin"), True)
-        if mode == DOWNLOAD_MODE_RCLONE:
-            # rclone downloads through its own remote, so a Google sign-in buys
-            # nothing. Saying "Needs your own credentials" read as an unmet
-            # requirement in the mode that is actually recommended.
-            return ("Sign in", "Not needed in rclone mode", ("act", "signin"), False)
         return ("Sign in", "Needs your own credentials", ("act", "signin"), False)
 
     def _settings_right():
@@ -425,7 +448,8 @@ def show_main_menu_panes(
             # The value reports whether that mode can actually download, not
             # just which one is set: a mode that cannot is the thing worth
             # seeing without opening anything.
-            opt("Mode", account_status(user_settings, auth, rclone_connected),
+            opt("Mode", account_status(user_settings, auth, rclone_connected,
+                                       status.rclone_dead),
                 ("act", "download_mode")),
             opt(sign_label, sign_value, sign_action, sign_ok),
             _spacer(),

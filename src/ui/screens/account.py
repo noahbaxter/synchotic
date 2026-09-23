@@ -16,7 +16,8 @@ MODE_NAMES = {
 }
 
 
-def account_status(user_settings=None, auth=None, rclone_connected=False) -> str:
+def account_status(user_settings=None, auth=None, rclone_connected=False,
+                   rclone_dead=False) -> str:
     """The one-line state for the main menu tagline, e.g. "rclone - signed out".
 
     Says the mode first because that is what the user chose, then whether it is
@@ -44,6 +45,8 @@ def account_status(user_settings=None, auth=None, rclone_connected=False) -> str
     # downloads. An account sign-in on top is a bonus, not a requirement.
     if not rclone_connected:
         return f"{name} - not connected"
+    if rclone_dead:
+        return f"{name} - session expired"
     if auth and auth.is_signed_in:
         return f"{name} - connected, signed in"
     return f"{name} - connected"

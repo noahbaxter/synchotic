@@ -8,6 +8,7 @@ import os
 
 import pytest
 
+from src import copy
 from src.config.settings import (UserSettings, DOWNLOAD_MODE_ANONYMOUS,
                                  DOWNLOAD_MODE_BYOC, DOWNLOAD_MODE_RCLONE)
 from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
@@ -24,6 +25,14 @@ class _SyncStatus:
 
     def stop(self):
         pass
+
+
+class _Inline:
+    def __init__(self, target, **kw):
+        self._target = target
+
+    def start(self):
+        self._target()
 
 
 class _Auth:
@@ -47,7 +56,8 @@ def build(monkeypatch, tmp_path):
     """Drive the screen without a terminal. `act` receives the live TwoPane so a
     test can poke its cursor and callbacks the way a keypress would."""
     def run(act=None, folders=(FOLDER,), auth=None, settings=None, scanner=None,
-            mode=DOWNLOAD_MODE_ANONYMOUS, rclone_authed=False, byoc_creds=False):
+            mode=DOWNLOAD_MODE_ANONYMOUS, rclone_authed=False, byoc_creds=False,
+            rclone_dead=False, probes=None):
         captured = {}
         settings = settings or UserSettings(tmp_path / "settings.json")
         # A library nobody chose greys every row that writes into one, which
@@ -68,6 +78,15 @@ def build(monkeypatch, tmp_path):
         # The real warmer checks on a thread, so rows read straight after
         # building would race it. Check once, up front.
         monkeypatch.setattr("src.ui.screens.home_panes.StatusWarmer", _SyncStatus)
+        # Same for the token probe: run it inline.
+        monkeypatch.setattr("src.ui.screens.home_panes.Thread", _Inline)
+
+        def connection_state():
+            if probes is not None:
+                probes.append(1)
+            import src.rclone as rclone
+            return rclone.DEAD if rclone_dead else rclone.OK
+        monkeypatch.setattr("src.rclone.connection_state", connection_state)
 
         def fake_run(self):
             captured["pane"] = self
@@ -563,6 +582,45 @@ class TestDriveRowsNeedAWorkingMode:
                      byoc_creds=False)["right_for"](SETTINGS)
         row = next(r for r in rows if r[1] == ("act", "open_data_folder"))
         assert row[2] is True
+
+
+class TestRcloneSignsInFromSettings:
+    """rclone signs in to Google too, with its own remote. When that breaks,
+    the settings pane is where to sign it out and back in."""
+
+    def _rows(self, build, **kw):
+        rows = build(auth=None, mode=DOWNLOAD_MODE_RCLONE, **kw)["right_for"](SETTINGS)
+        return {r[1]: r for r in rows if r[1] in (("act", "signin"), ("act", "signout"))}
+
+    def test_no_remote_offers_sign_in(self, build):
+        rows = self._rows(build, rclone_authed=False)
+        assert list(rows) == [("act", "signin")]
+        assert rows[("act", "signin")][2] is True
+
+    def test_a_working_remote_offers_sign_out(self, build):
+        rows = self._rows(build, rclone_authed=True)
+        assert list(rows) == [("act", "signout")]
+        assert rows[("act", "signout")][2] is True
+
+    def test_a_dead_remote_offers_sign_in_and_says_why(self, build):
+        from src.ui.components import strip_ansi
+        rows = self._rows(build, rclone_authed=True, rclone_dead=True)
+        assert list(rows) == [("act", "signin")]
+        assert copy.STATUS_SIGNIN_EXPIRED in strip_ansi(rows[("act", "signin")][0](False, False))
+
+    def test_the_mode_row_does_not_call_a_dead_remote_working(self, build):
+        def mode_row(**kw):
+            rows = build(auth=None, mode=DOWNLOAD_MODE_RCLONE, rclone_authed=True,
+                         **kw)["right_for"](SETTINGS)
+            return next(_labels([r]) for r in rows if r[1] == ("act", "download_mode"))
+        assert mode_row(rclone_dead=True) != mode_row(rclone_dead=False)
+
+    def test_other_modes_never_probe_drive(self, build):
+        """The probe is a Drive call. A leftover rclone remote must not cost a
+        BYOC user one every time the home screen opens."""
+        probes = []
+        build(auth=None, mode=DOWNLOAD_MODE_BYOC, rclone_authed=True, probes=probes)
+        assert probes == []
 
 
 class TestScanRowsNeedALibrary:

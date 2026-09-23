@@ -63,6 +63,15 @@ class RcloneConfig:
             return False
         return r.returncode == 0 and self.token_works()
 
+    def delete_remote(self) -> None:
+        """Forget the remote and its token, raising with rclone's reason when
+        it cannot. Only touches our own config file, so any rclone remotes the
+        user has elsewhere are safe."""
+        r = self.runner(self._base() + ["config", "delete",
+                                        constants.RCLONE_REMOTE_NAME], timeout=10)
+        if r.returncode != 0:
+            raise RuntimeError((r.stderr or "").strip() or f"rclone exited {r.returncode}")
+
     def create_remote(self, timeout: float = 120.0) -> bool:
         """Run interactive consent. rclone opens the browser; user clicks consent once.
 

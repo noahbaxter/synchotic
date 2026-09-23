@@ -13,7 +13,7 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 
-from src.config.settings import UserSettings
+from src.config.settings import UserSettings, DOWNLOAD_MODE_BYOC
 from src.ui.components import strip_ansi
 from src.ui.screens.home_panes import show_main_menu_panes, SETTINGS
 
@@ -39,9 +39,14 @@ def rows(monkeypatch, tmp_path):
                             fake_run, raising=False)
         monkeypatch.setattr("src.drive.auth.has_custom_client_config",
                             lambda: byoc, raising=False)
+        monkeypatch.setattr("src.rclone.is_authed", lambda: False)
+        if settings is None:
+            # Our own OAuth token is what expires here, and only BYOC uses it.
+            settings = UserSettings(tmp_path / "settings.json")
+            settings.download_mode = DOWNLOAD_MODE_BYOC
         show_main_menu_panes(
             folders=[],
-            user_settings=settings or UserSettings(tmp_path / "settings.json"),
+            user_settings=settings,
             download_path=tmp_path / "charts",
             auth=auth,
         )
@@ -73,23 +78,10 @@ class TestTheSettingsPaneOffersTheFix:
         work. This used to hide the row entirely, which left people hunting for
         a control that was never there; it is shown unavailable instead."""
         from src.ui.primitives import Colors
-        from src.config.settings import DOWNLOAD_MODE_BYOC
-        settings = UserSettings(tmp_path / "settings.json")
-        settings.download_mode = DOWNLOAD_MODE_BYOC
-        row = _row_for(rows(FakeAuth(), byoc=False, settings=settings), "Sign in")
-        assert row[2] is False
-        assert Colors.MUTED_DIM in row[0](False, False)
-        assert "Needs your own credentials" in strip_ansi(row[0](False, False))
-
-    def test_rclone_says_sign_in_is_unnecessary_not_missing(self, rows):
-        """rclone downloads through its own remote. Reusing the BYOC wording
-        here advertised an unmet requirement in the recommended mode, so it
-        read as broken to someone whose rclone was already connected."""
-        from src.ui.primitives import Colors
         row = _row_for(rows(FakeAuth(), byoc=False), "Sign in")
         assert row[2] is False
         assert Colors.MUTED_DIM in row[0](False, False)
-        assert "Not needed in rclone mode" in strip_ansi(row[0](False, False))
+        assert "Needs your own credentials" in strip_ansi(row[0](False, False))
 
     def test_a_healthy_session_offers_sign_out_with_the_address(self, rows):
         labels = _labels(rows(FakeAuth(signed_in=True, expired=False, email="a@b.com")))

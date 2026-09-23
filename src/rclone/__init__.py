@@ -65,6 +65,12 @@ def reconnect(timeout: float = 120.0) -> bool:
         return False
 
 
+def sign_out() -> None:
+    """Forget the remote, so the next sign-in runs consent from scratch.
+    Raises with the reason when it cannot."""
+    RcloneConfig(RcloneBinary().resolve()).delete_remote()
+
+
 def can_open_browser() -> bool:
     """False where consent could never be completed, so we can skip the attempt.
 
