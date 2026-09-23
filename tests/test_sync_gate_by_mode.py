@@ -104,7 +104,7 @@ class TestScanningStartsWithoutOAuth:
             a.folders = [{"folder_id": "drive1", "name": "Drive One", "files": None}]
             a.custom_folders = None
             a._background_scanner = None
-            monkeypatch.setattr("sync.get_download_path", lambda: tmp_path)
+            monkeypatch.setattr("src.app.scan.get_download_path", lambda: tmp_path)
             started = {}
 
             class _Scanner:
@@ -115,7 +115,7 @@ class TestScanningStartsWithoutOAuth:
                 def start(self):
                     started["started"] = True
 
-            monkeypatch.setattr("sync.BackgroundScanner", _Scanner)
+            monkeypatch.setattr("src.app.scan.BackgroundScanner", _Scanner)
             monkeypatch.setattr(a, "_migrate_subfolder_customs", lambda: None)
             return a, started
         return build

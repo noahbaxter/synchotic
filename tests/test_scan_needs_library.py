@@ -33,7 +33,7 @@ def app(tmp_path, monkeypatch):
         a.custom_folders = None
         a._background_scanner = None
         monkeypatch.setattr("src.rclone.is_authed", lambda: False)
-        monkeypatch.setattr("sync.get_download_path", lambda: tmp_path)
+        monkeypatch.setattr("src.app.scan.get_download_path", lambda: tmp_path)
         monkeypatch.setattr(a, "_migrate_subfolder_customs", lambda: None)
         started = {}
 
@@ -50,7 +50,7 @@ def app(tmp_path, monkeypatch):
             def stop(self):
                 pass
 
-        monkeypatch.setattr("sync.BackgroundScanner", _Scanner)
+        monkeypatch.setattr("src.app.scan.BackgroundScanner", _Scanner)
         return a, started
 
     return build
@@ -91,7 +91,7 @@ def test_a_forced_rescan_keeps_the_caches(app, missing, monkeypatch, capsys):
     a, _ = app(missing)
     invalidated = []
     monkeypatch.setattr("src.ui.primitives.wait_with_skip", lambda *a_: None)
-    monkeypatch.setattr("sync.wait_with_skip", lambda *a_: None)
+    monkeypatch.setattr("src.app.scan.wait_with_skip", lambda *a_: None)
 
     class _Cache:
         def invalidate_all(self):
@@ -110,9 +110,9 @@ def test_a_forced_rescan_keeps_the_caches(app, missing, monkeypatch, capsys):
 
 def test_sync_refuses_and_says_why(app, missing, monkeypatch, capsys):
     a, started = app(missing)
-    monkeypatch.setattr("sync.wait_with_skip", lambda *a_: None)
-    monkeypatch.setattr("sync.clear_screen", lambda: None)
-    monkeypatch.setattr("sync.print_header", lambda: None)
+    monkeypatch.setattr("src.app.sync_flow.wait_with_skip", lambda *a_: None)
+    monkeypatch.setattr("src.app.sync_flow.clear_screen", lambda: None)
+    monkeypatch.setattr("src.app.sync_flow.print_header", lambda: None)
 
     assert a.handle_sync() is None
     out = capsys.readouterr().out
