@@ -232,6 +232,11 @@ def _get_display_state(
 
     Returns: "current" | "cached" | "scanning" | "none"
     """
+    # A drive whose listing threw would otherwise report its stand-in as
+    # scanned: one setlist, zero charts, everything in sync.
+    if scanner and scanner.discovery_failed(folder_id):
+        return "none"
+
     if scanner and scanner.is_scanned(folder_id):
         # Scanned this session - compute real values
         return "current"

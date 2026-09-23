@@ -130,6 +130,8 @@ class BackgroundScanner:
         self._scanned_setlist_ids: set[str] = set()
         self._failed_setlist_ids: set[str] = set()  # Setlists that threw during scan
         self._failure_reason: str | None = None  # Why the first one threw
+        # Drives whose listing threw, so their setlists are not known at all.
+        self._discovery_failed_drives: set[str] = set()
         self._last_check_count: int = 0
 
         # Per-drive tracking
@@ -331,9 +333,14 @@ class BackgroundScanner:
             return self._failure_reason
 
     def has_scan_failures(self) -> bool:
-        """Check if any setlists failed to scan."""
+        """Check if any setlists failed to scan, or any drive would not list."""
         with self._lock:
-            return len(self._failed_setlist_ids) > 0
+            return bool(self._failed_setlist_ids or self._discovery_failed_drives)
+
+    def discovery_failed(self, drive_id: str) -> bool:
+        """True when this drive's listing threw, so its setlists are unknown."""
+        with self._lock:
+            return drive_id in self._discovery_failed_drives
 
     @property
     def all_setlists(self) -> dict[str, "SetlistInfo"]:
@@ -433,8 +440,14 @@ class BackgroundScanner:
 
         try:
             items = self._client.list_folder(drive_id)
-        except Exception:
-            # On error, treat whole drive as one unit
+        except Exception as e:
+            # Registered as one unit, the same shape a flat drive has, so it
+            # has to be recorded as a failure or it passes for one.
+            with self._lock:
+                self._discovery_failed_drives.add(drive_id)
+                if self._failure_reason is None:
+                    self._failure_reason = describe_scan_failure(e)
+            debug_log(f"DISCOVERY_FAILED | drive={drive_name} | {type(e).__name__}: {e}")
             self._register_setlist(
                 setlist_id=drive_id,
                 name=drive_name,
