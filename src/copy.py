@@ -100,6 +100,18 @@ FIX_RECONNECT = "Reconnect the drive and sync again."
 
 MODE_NAME_RCLONE = "rclone"
 MODE_NAME_BYOC = "BYOC"
+MODE_NAME_ANON = "no sign-in"  # AI-COPY
+
+# The Mode row's value: "{mode} - {state}", whether the mode can download.
+MODE_STATE = "{mode} - {state}"
+STATE_ANON = "most charts skipped"  # AI-COPY
+STATE_EXPIRED = "session expired"  # AI-COPY
+STATE_NOT_SET_UP = "not set up"  # AI-COPY
+STATE_SIGNED_IN = "signed in"  # AI-COPY
+STATE_SIGNED_OUT = "signed out"  # AI-COPY
+STATE_NOT_CONNECTED = "not connected"  # AI-COPY
+STATE_CONNECTED = "connected"  # AI-COPY
+STATE_CONNECTED_SIGNED_IN = f"{STATE_CONNECTED}, {STATE_SIGNED_IN}"
 
 # Why a mode cannot download yet. Used as the setup page title, the preflight
 # headline, the blocked-sync reason and the home screen hint.
@@ -134,6 +146,39 @@ NO_DRIVES = "No drives enabled"
 NO_SETLISTS = "No setlists enabled"
 TOGGLE_DRIVE = "Press Space to toggle one."
 TOGGLE_SETLIST = "Press Tab on a drive to enter it, then Space to toggle."
+
+
+# ===========================================================================
+# Home screen
+# ===========================================================================
+
+HOME_TITLE = "Chart Packs"  # AI-COPY
+HOME_NO_DRIVES = f"{NO_DRIVES}. {TOGGLE_DRIVE}"
+# The title band: "100% | 562/562 charts, 10/15 setlists (4.0 GB)".
+HOME_CHARTS = "{synced}/{total} charts"  # AI-COPY
+HOME_SETLISTS = "{enabled}/{total} setlists"  # AI-COPY
+
+# The banner line under the logo, on every screen.
+BANNER_LIBRARY = "library → "  # AI-COPY
+BANNER_UNSET = "NOT SET"  # AI-COPY
+
+# A drive's column headers and the rows under its setlists.
+COL_CHARTS = "CHARTS"  # AI-COPY
+COL_SIZE = "SIZE"  # AI-COPY
+ENABLE_ALL = "Enable all"  # AI-COPY
+DISABLE_ALL = "Disable all"  # AI-COPY
+SCAN_FOLDER = "Scan folder"  # AI-COPY
+RESCAN_FOLDER = "Re-scan folder"  # AI-COPY
+REMOVE_FOLDER = "Remove custom drive"  # AI-COPY
+
+# The footer. Key names (S, Tab, Space, Esc) stay with the code binding them.
+FOOTER_SYNC = "sync"  # AI-COPY
+FOOTER_SYNCED = "synced"  # AI-COPY
+FOOTER_PANES = "panes"  # AI-COPY
+FOOTER_TOGGLE = "toggle"  # AI-COPY
+FOOTER_QUIT = "quit"  # AI-COPY
+FOOTER_SCANNING = "Scanning {folder} ({done}/{total}) · {elapsed}"  # AI-COPY
+FOOTER_LOADING = "Loading cache {folder} ({done}/{total}) · {elapsed}"  # AI-COPY
 
 
 # ===========================================================================

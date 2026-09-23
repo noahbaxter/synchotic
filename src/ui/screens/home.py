@@ -14,6 +14,7 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+from src import copy
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_files
 from src.core.logging import debug_log
 from src.sync import (
@@ -194,7 +195,7 @@ def _apply_global_stats(
         total_setlists=global_total_setlists,
         total_size=global_status.total_size,
         disk_size=global_disk_size,
-        empty_hint="No drives enabled — toggle with Space",
+        empty_hint=copy.HOME_NO_DRIVES,
     )
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,

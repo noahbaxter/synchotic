@@ -8,7 +8,8 @@ import math
 from collections import defaultdict
 from pathlib import Path
 
-from src.core.formatting import format_size
+from src import copy
+from src.core.formatting import count, format_size
 from ..primitives import Colors, strip_ansi
 
 
@@ -69,9 +70,9 @@ def format_status_line(
 
     parts = []
     if total_charts > 0:
-        parts.append(f"{synced_charts}/{total_charts} charts")
+        parts.append(copy.HOME_CHARTS.format(synced=synced_charts, total=total_charts))
     if total_setlists > 0:
-        parts.append(f"{enabled_setlists}/{total_setlists} setlists")
+        parts.append(copy.HOME_SETLISTS.format(enabled=enabled_setlists, total=total_setlists))
 
     info = ", ".join(parts)
     display_size = disk_size if disk_size > 0 else total_size
@@ -292,7 +293,7 @@ def format_purge_tree(files: list[tuple[Path, int]], base_path: Path) -> list[st
 
     lines = []
     for folder_path, stats in sorted_folders:
-        file_word = "file" if stats["count"] == 1 else "files"
-        lines.append(f"  {folder_path}/ ({stats['count']} {file_word}, {format_size(stats['size'])})")
+        lines.append(f"  {folder_path}/ ({count(stats['count'], 'file')}, "
+                     f"{format_size(stats['size'])})")
 
     return lines

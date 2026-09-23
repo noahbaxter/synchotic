@@ -96,10 +96,10 @@ def _sync_label(cache: MainMenuCache) -> str:
     """What Sync will do, for the footer: a tick when there is nothing to fetch,
     otherwise the size of what is missing."""
     if cache.sync_checkmark:
-        return f"{Colors.SUCCESS}\u2713{Colors.RESET} synced"
+        return f"{Colors.SUCCESS}\u2713{Colors.RESET} {copy.FOOTER_SYNCED}"
     if cache.sync_delta:
-        return f"sync {cache.sync_delta}"
-    return "sync"
+        return f"{copy.FOOTER_SYNC} {cache.sync_delta}"
+    return copy.FOOTER_SYNC
 
 
 def _copy_cache(dst: MainMenuCache, src: MainMenuCache) -> None:
@@ -341,11 +341,11 @@ def show_main_menu_panes(
 
         rows = [_setlist_row(folder_id, n, drive_enabled) for n in setlists]
         rows.append(_spacer())
-        rows.append(_row(f"  {Colors.PRIMARY}Enable all{Colors.RESET}", ("enable_all", folder_id, None)))
-        rows.append(_row(f"  {Colors.PRIMARY}Disable all{Colors.RESET}", ("disable_all", folder_id, None)))
+        rows.append(_row(f"  {Colors.PRIMARY}{copy.ENABLE_ALL}{Colors.RESET}", ("enable_all", folder_id, None)))
+        rows.append(_row(f"  {Colors.PRIMARY}{copy.DISABLE_ALL}{Colors.RESET}", ("disable_all", folder_id, None)))
         if folder.get("is_custom"):
             rows.append(_spacer())
-            label = "Re-scan folder" if folder.get("files") else "Scan folder"
+            label = copy.RESCAN_FOLDER if folder.get("files") else copy.SCAN_FOLDER
             # A scan with nowhere to write is greyed with the reason beside
             # it, rather than left as a row that ignores you.
             lib_blocked = status_warmer.snapshot.library_blocked
@@ -354,7 +354,7 @@ def show_main_menu_panes(
                                  ("scan_folder", folder_id, None), False))
             else:
                 rows.append(_row(f"  {label}", ("scan_folder", folder_id, None)))
-            rows.append(_row(f"  {Colors.ERROR}Remove folder{Colors.RESET}", ("remove_folder", folder_id, None)))
+            rows.append(_row(f"  {Colors.ERROR}{copy.REMOVE_FOLDER}{Colors.RESET}", ("remove_folder", folder_id, None)))
         return rows
 
     # ---- right pane: settings ----
@@ -506,9 +506,9 @@ def show_main_menu_panes(
             # One short of the pane width: the frame adds a single space itself.
             row_width = _right_text_width()
             charts_w, size_w = _stat_widths(row_width)
-            head_cells = [("CHARTS", charts_w, Colors.MUTED)]
+            head_cells = [(copy.COL_CHARTS, charts_w, Colors.MUTED)]
             if size_w:
-                head_cells.append(("SIZE", size_w, Colors.MUTED))
+                head_cells.append((copy.COL_SIZE, size_w, Colors.MUTED))
             pane.right_header = _columns(
                 f"{Colors.BOLD}{folder.get('name', '')}{Colors.RESET}",
                 head_cells,
@@ -595,16 +595,17 @@ def show_main_menu_panes(
         if background_scanner and not background_scanner.is_done():
             stats = background_scanner.get_stats()
             if stats.current_folder:
-                verb = "Scanning" if stats.api_calls > 0 else "Loading cache"
-                parts.append(f"{verb} {stats.current_folder} "
-                             f"({stats.folders_done + 1}/{stats.folders_total})"
-                             f" · {format_duration(stats.elapsed)}")
+                line = copy.FOOTER_SCANNING if stats.api_calls > 0 else copy.FOOTER_LOADING
+                parts.append(line.format(folder=stats.current_folder,
+                                         done=stats.folders_done + 1,
+                                         total=stats.folders_total,
+                                         elapsed=format_duration(stats.elapsed)))
         # Nothing else goes here: the totals already sit in the title band, and
         # repeating them is how a status bar turns into noise.
 
-        hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} panes  "
-                 f"{Colors.PRIMARY}Space{Colors.MUTED} toggle  "
-                 f"{Colors.PRIMARY}Esc{Colors.MUTED} quit")
+        hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} {copy.FOOTER_PANES}  "
+                 f"{Colors.PRIMARY}Space{Colors.MUTED} {copy.FOOTER_TOGGLE}  "
+                 f"{Colors.PRIMARY}Esc{Colors.MUTED} {copy.FOOTER_QUIT}")
         # Neither line may wrap: the frame redraws from the top every tick, so
         # a wrapped line pushes the box's bottom off the screen. One column
         # spare, since a line that exactly fills the width wraps on some
@@ -664,14 +665,14 @@ def show_main_menu_panes(
         return "return"
 
     pane = TwoPane(
-        title="Chart Packs",
+        title=copy.HOME_TITLE,
         subtitle=strip_ansi(cache.subtitle or ""),
         left_rows=_timed("home_left_rows", left_rows),
         right_rows=_timed("home_right_rows", right_rows),
         on_left_space=on_left_space,
         on_right_enter=on_right_enter,
         space_activates=True,
-        left_header="Drives",
+        left_header=copy.ROW_DRIVES,
         left_width=LEFT_WIDTH,
         # The cursor row carries a background shift; an inverted chip on the
         # pane header as well was two things shouting the same thing.

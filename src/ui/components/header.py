@@ -12,6 +12,7 @@ from chotic_ui.components.header import (
     print_header as _draw_header,
 )
 
+from ... import copy
 from ..primitives import Colors
 
 
@@ -24,8 +25,7 @@ ASCII_HEADER = r"""
 ╚══════╝   ╚═╝   ╚═╝  ╚═══╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝ ╚═════╝
 """.strip('\n')
 
-LIBRARY_LABEL = "library → "
-NOT_SET = "NOT SET"
+LIBRARY_LABEL = copy.BANNER_LIBRARY
 
 __all__ = ["ASCII_HEADER", "install_header", "print_header", "header_height",
            "invalidate_header_cache", "library_detail"]
@@ -53,7 +53,8 @@ def library_detail(room: int) -> str:
     if room <= len(LIBRARY_LABEL):
         return ""
     if not paths.library_is_set():
-        return f"{Colors.MUTED}{LIBRARY_LABEL}{Colors.RESET}{Colors.ERROR}{NOT_SET}{Colors.RESET}"
+        return (f"{Colors.MUTED}{LIBRARY_LABEL}{Colors.RESET}"
+                f"{Colors.ERROR}{copy.BANNER_UNSET}{Colors.RESET}")
 
     library = _library_label()
     if not library:
