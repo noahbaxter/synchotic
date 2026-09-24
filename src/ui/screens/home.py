@@ -16,12 +16,13 @@ from typing import TYPE_CHECKING
 
 from src import copy
 from src.config import UserSettings, DrivesConfig, extract_subfolders_from_files
+from src.core.formatting import count, format_size
 from src.core.logging import debug_log
 from src.sync import (
     SyncStatus, FolderStats, FolderStatsCache, get_persistent_stats_cache,
     PersistentStatsCache, aggregate_folder_stats, compute_setlist_stats,
 )
-from ..components import format_status_line, format_home_item, format_delta
+from ..components import calc_percent, format_home_item, format_delta
 
 if TYPE_CHECKING:
     from src.drive.auth import AuthManager
@@ -100,6 +101,8 @@ def update_menu_cache_on_toggle(
                     total_setlists=agg.total_setlists,
                     display_string=columns,
                     disk_size=agg.disk_size,
+                    unmeasured_setlists=agg.unmeasured_setlists,
+                    disk_charts=agg.disk_charts,
                 ))
             else:
                 # No cache - show minimal info
@@ -134,17 +137,20 @@ def update_menu_cache_on_toggle(
     global_enabled_setlists = 0
     global_total_setlists = 0
     global_disk_size = 0
+    global_disk_charts = 0
+    global_unmeasured = 0
 
     for folder in folders:
         fid = folder.get("folder_id", "")
         setlist_names = _get_setlist_names(folder, background_scanner)
 
-        if not setlist_names or not persistent_cache.has_setlist_stats(fid):
+        if not setlist_names:
             continue
 
         agg = aggregate_folder_stats(fid, setlist_names, user_settings, persistent_cache)
 
         if user_settings.is_drive_enabled(fid):
+            global_unmeasured += agg.unmeasured_setlists
             global_status.total_charts += agg.total_charts
             global_status.synced_charts += agg.synced_charts
             global_status.total_size += agg.total_size
@@ -152,6 +158,7 @@ def update_menu_cache_on_toggle(
             global_total_setlists += agg.total_setlists
             global_enabled_setlists += agg.enabled_setlists
             global_disk_size += agg.disk_size
+            global_disk_charts += agg.disk_charts
         global_purge_size += agg.purgeable_size
 
     _apply_global_stats(
@@ -160,6 +167,8 @@ def update_menu_cache_on_toggle(
         scan_complete, background_scanner,
         global_disk_size=global_disk_size,
         empty_hint=_empty_hint(folders, user_settings, scan_complete),
+        unmeasured=global_unmeasured,
+        disk_charts=global_disk_charts,
     )
 
 
@@ -201,17 +210,29 @@ def _apply_global_stats(
     scanner: "BackgroundScanner" = None,
     global_disk_size: int = 0,
     empty_hint: str = "",
+    unmeasured: int = 0,
+    disk_charts: int = 0,
 ) -> None:
-    """Format accumulated global stats and write them to the menu cache."""
-    cache.subtitle = format_status_line(
-        synced_charts=global_status.synced_charts,
-        total_charts=global_status.total_charts,
-        enabled_setlists=global_enabled_setlists,
-        total_setlists=global_total_setlists,
-        total_size=global_status.total_size,
-        disk_size=global_disk_size,
-        empty_hint=empty_hint,
-    )
+    """Format accumulated global stats and write them to the menu cache.
+
+    The header is the library as it is on disk: charts and size in the enabled
+    setlists, from the stats cache, so it needs nothing from Drive. While a
+    first scan still has enabled setlists nobody has measured, the chart
+    figure is a floor ("3,200+ charts"). Checking Drive, and what sync would
+    change, are the footer's. `global_enabled_setlists` counts the measured ones.
+    """
+    if not global_enabled_setlists:
+        cache.subtitle = empty_hint
+    else:
+        partial = bool(unmeasured) and not scan_complete
+        subtitle = f"{count(disk_charts, 'chart', partial)} · {format_size(global_disk_size)}"
+        # How much of what Drive has is here, by charts: size counts the videos
+        # most people skip. Only with every enabled setlist compared, cached or
+        # fresh, so from the start of any launch after the first.
+        if not partial and global_status.total_charts:
+            pct = calc_percent(global_status.synced_charts, global_status.total_charts)
+            subtitle += f" · {pct}% {copy.FOOTER_SYNCED}"
+        cache.subtitle = subtitle
     cache.sync_delta = format_delta(
         add_size=global_status.missing_size,
         remove_size=global_purge_size,
@@ -359,6 +380,8 @@ def _compute_folder_stats(
         total_setlists=total_setlists,
         display_string=columns,
         disk_size=agg_disk_size,
+        unmeasured_setlists=agg.unmeasured_setlists,
+        disk_charts=agg.disk_charts,
     )
 
 
@@ -397,6 +420,8 @@ def compute_main_menu_cache(
     global_enabled_setlists = 0
     global_total_setlists = 0
     global_disk_size = 0
+    global_disk_charts = 0
+    global_unmeasured = 0
     cache_hits = 0
     cache_misses = 0
     cache_scanning = 0
@@ -468,11 +493,13 @@ def compute_main_menu_cache(
             global_status.total_size += status.total_size
             global_status.synced_size += status.synced_size
             global_disk_size += stats.disk_size
+            global_disk_charts += stats.disk_charts
             if status.is_actual_charts:
                 global_status.is_actual_charts = True
             # Count setlists only for enabled drives
             global_total_setlists += total_setlists
             global_enabled_setlists += enabled_setlists
+            global_unmeasured += stats.unmeasured_setlists
         # Always aggregate purgeable (disabled drives may have content to remove)
         global_purge_size += folder_purge_size
 
@@ -489,6 +516,8 @@ def compute_main_menu_cache(
         scan_complete, background_scanner,
         global_disk_size=global_disk_size,
         empty_hint=_empty_hint(folders, user_settings, scan_complete),
+        unmeasured=global_unmeasured,
+        disk_charts=global_disk_charts,
     )
 
     if drives_config:

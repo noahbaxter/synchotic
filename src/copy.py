@@ -150,7 +150,8 @@ REMOVE_FOLDER = "Remove custom drive"
 FOOTER_SYNCED = "synced"
 FOOTER_PANES = "switch panes"
 FOOTER_TOGGLE = "enable/disable"
-FOOTER_SCAN = SCANNING + " {folder} ({done}/{total}) · {elapsed}"
+CHECKING_DRIVE = "Checking Google Drive {done}/{setlists} · {elapsed}"
+DRIVE_CHECKED = "Google Drive checked"
 
 # Section headings in the drive list, for drives drives.json does not group.
 GROUP_CUSTOM = "Custom"

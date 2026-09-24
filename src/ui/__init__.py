@@ -34,7 +34,6 @@ from .components import (
     strip_ansi,
     calc_percent,
     format_delta,
-    format_status_line,
     format_home_item,
     format_setlist_item,
 )
@@ -86,7 +85,6 @@ __all__ = [
     "strip_ansi",
     "calc_percent",
     "format_delta",
-    "format_status_line",
     "format_home_item",
     "format_setlist_item",
     # Widgets

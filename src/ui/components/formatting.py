@@ -6,7 +6,7 @@ Functions for formatting sync status, counts, sizes with colors.
 
 import math
 
-from src.core.formatting import count, format_size
+from src.core.formatting import format_size
 from ..primitives import Colors, strip_ansi
 
 
@@ -45,38 +45,6 @@ def format_delta(
         return f"{Colors.ERROR}{i}[{remove_str}]{Colors.RESET}"
     else:
         return empty_text
-
-
-def format_status_line(
-    synced_charts: int,
-    total_charts: int,
-    enabled_setlists: int,
-    total_setlists: int,
-    total_size: int,
-    disk_size: int = 0,
-    empty_hint: str = "",
-    **_kwargs,
-) -> str:
-    """Format status line: 100% | 562/562 charts, 10/15 setlists (4.0 GB)"""
-    if total_charts == 0:
-        if enabled_setlists == 0 and empty_hint:
-            return empty_hint
-        return ""
-
-    pct = calc_percent(synced_charts, total_charts)
-
-    parts = []
-    if total_charts > 0:
-        parts.append(f"{synced_charts}/{count(total_charts, 'chart')}")
-    if total_setlists > 0:
-        parts.append(f"{enabled_setlists}/{count(total_setlists, 'setlist')}")
-
-    info = ", ".join(parts)
-    display_size = disk_size if disk_size > 0 else total_size
-    if display_size > 0:
-        info += f" ({format_size(display_size)})"
-
-    return f"{pct}% | {info}"
 
 
 def _format_columns(sync: str, count: str, size_str: str, pipe_color: str, value_color: str) -> str:

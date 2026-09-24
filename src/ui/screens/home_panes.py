@@ -24,7 +24,7 @@ from chotic_ui.primitives.terminal import get_terminal_width, truncate_ansi
 
 from src import copy
 from src.config import UserSettings, DrivesConfig
-from src.core.formatting import sort_by_name, format_duration, format_size
+from src.core.formatting import count, sort_by_name, format_duration, format_size
 from src.core.logging import debug_log
 from src.sync import get_persistent_stats_cache, compute_setlist_stats
 from src.sync.archive_charts import effective_chart_count, forced_counts
@@ -592,14 +592,17 @@ def show_main_menu_panes(
     def footer():
         parts = [f"{Colors.PRIMARY}S{Colors.MUTED} {_sync_label(cache)}"]
 
-        if background_scanner and not background_scanner.is_done():
-            stats = background_scanner.get_stats()
-            if stats.current_folder:
-                parts.append(copy.FOOTER_SCAN.format(folder=stats.current_folder,
-                                                     done=stats.folders_done + 1,
-                                                     total=stats.folders_total,
-                                                     elapsed=format_duration(stats.elapsed)))
-        # Nothing else goes here: the totals already sit in the title band, and
+        # Only the setlists sync needs: once those are checked, the rest of the
+        # scan (drives and setlists that are off) carries on without a counter.
+        if background_scanner:
+            done, total = background_scanner.enabled_progress()
+            if total and done < total:
+                parts.append(copy.CHECKING_DRIVE.format(
+                    done=done, setlists=count(total, "setlist"),
+                    elapsed=format_duration(background_scanner.get_stats().elapsed)))
+            elif total:
+                parts.append(f"{Colors.SUCCESS}✓{Colors.MUTED} {copy.DRIVE_CHECKED}")
+        # Nothing else goes here: the library totals sit in the title band, and
         # repeating them is how a status bar turns into noise.
 
         hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} {copy.FOOTER_PANES}  "

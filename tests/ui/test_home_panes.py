@@ -388,6 +388,9 @@ class _Scanner:
     def is_scanning(self, folder_id):
         return not self._done
 
+    def enabled_progress(self):
+        return (1, 1) if self._done else (0, 1)
+
     def get_stats(self):
         class _S:
             current_folder = None
@@ -476,11 +479,16 @@ class TestTheFooterNeverWraps:
     class _LongScan:
         """Mid-scan on a setlist with a name long enough to overflow."""
 
+        progress = (45, 81)
+
         def is_done(self):
             return False
 
         def is_scanning(self, folder_id):
             return True
+
+        def enabled_progress(self):
+            return self.progress
 
         def get_stats(self):
             class _S:
@@ -496,17 +504,19 @@ class TestTheFooterNeverWraps:
         def __getattr__(self, name):
             return lambda *a, **k: False
 
-    def _footer_lines(self, build, monkeypatch, width):
+    def _footer_lines(self, build, monkeypatch, width, progress=(45, 81)):
         from src.ui.components import strip_ansi
         monkeypatch.setattr("src.ui.screens.home_panes.get_terminal_width",
                             lambda: width)
         captured = {}
+        scanner = self._LongScan()
+        scanner.progress = progress
 
         def act(pane):
             captured["footer"] = pane.footer()
             return None
 
-        build(act=act, auth=_Auth(), scanner=self._LongScan())
+        build(act=act, auth=_Auth(), scanner=scanner)
         return [strip_ansi(line) for line in captured["footer"].split("\n")]
 
     def test_a_long_setlist_name_is_cut_to_the_width(self, build, monkeypatch):
@@ -516,10 +526,20 @@ class TestTheFooterNeverWraps:
         for line in lines:
             assert len(line) < 60, f"{len(line)} columns wide: {line!r}"
 
-    def test_it_still_says_what_is_being_scanned(self, build, monkeypatch):
+    def test_it_counts_the_enabled_setlists_checked_against_drive(self, build, monkeypatch):
+        """Out of the ones sync needs, not every setlist on every drive: those
+        are the numbers that decide what S will do."""
+        from src.core.formatting import count
         lines = self._footer_lines(build, monkeypatch, 120)
 
-        assert f"{copy.SCANNING} Drummer's Monthly Drive" in lines[0]
+        assert copy.CHECKING_DRIVE.format(done=45, setlists=count(81, "setlist"),
+                                          elapsed="11s") in lines[0]
+
+    def test_it_says_when_drive_is_checked(self, build, monkeypatch):
+        lines = self._footer_lines(build, monkeypatch, 120, progress=(81, 81))
+
+        assert copy.DRIVE_CHECKED in lines[0]
+        assert copy.CHECKING_DRIVE.split("{")[0] not in lines[0]
 
     def test_a_narrow_terminal_does_not_lose_the_second_line(self, build, monkeypatch):
         lines = self._footer_lines(build, monkeypatch, 24)

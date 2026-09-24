@@ -235,6 +235,13 @@ class BackgroundScanner:
             done = self._scanned_setlist_ids | self._failed_setlist_ids
             return all(sid in done for sid in self._enabled_setlist_ids)
 
+    def enabled_progress(self) -> tuple[int, int]:
+        """(checked, total) over the enabled setlists: the ones sync needs.
+        A setlist that failed to scan counts as checked, as for is_all_enabled_scanned."""
+        with self._lock:
+            done = self._scanned_setlist_ids | self._failed_setlist_ids
+            return (len(self._enabled_setlist_ids & done), len(self._enabled_setlist_ids))
+
     def check_updates(self) -> bool:
         """Check if any setlists were scanned since last check. Used for UI refresh."""
         with self._lock:
