@@ -37,8 +37,7 @@ def legacy_install_candidates(explicit=None) -> list:
     empty, which the next sync fills by downloading everything again.
 
     * the folder the user just picked in the library screen
-    * SYNCHOTIC_LEGACY_ROOT, which the bundles set to the folder they sit in
-      (os.pathsep separates several)
+    * the folder a portable launcher sat in (_legacy_roots)
     * ~/Synchotic, where the macOS shim put everything before the OS dirs
 
     Ordered by the mtime of the settings inside, so the liveliest install wins
@@ -47,8 +46,7 @@ def legacy_install_candidates(explicit=None) -> list:
     roots = []
     if explicit:
         roots.append(Path(explicit))
-    env = os.environ.get(LEGACY_ROOT_ENV) or ""
-    roots += [Path(r) for r in env.split(os.pathsep) if r]
+    roots += _legacy_roots()
     roots.append(Path.home() / paths.APP_DIRNAME)
 
     found = {}
@@ -60,6 +58,19 @@ def legacy_install_candidates(explicit=None) -> list:
                     settings = candidate / "settings.json"
                     found[candidate] = settings.stat().st_mtime if settings.exists() else 0
     return [c for c, _ in sorted(found.items(), key=lambda kv: kv[1], reverse=True)]
+
+
+def _legacy_roots() -> list:
+    """Folders a portable launcher kept .dm-sync in: SYNCHOTIC_LEGACY_ROOT,
+    which launchers from 1.4 set to the folder they sit in (os.pathsep
+    separates several), and SYNCHOTIC_ROOT, which launcher 1.3 still sets on
+    Windows after the app has moved to the OS dirs by itself."""
+    env = os.environ.get(LEGACY_ROOT_ENV) or ""
+    roots = [Path(r) for r in env.split(os.pathsep) if r]
+    root = os.environ.get("SYNCHOTIC_ROOT")
+    if root and paths._using_os_dirs():
+        roots.append(Path(root))
+    return roots
 
 
 FRESH_ENV = "SYNCHOTIC_FRESH"  # see sync.py --first-run
@@ -77,14 +88,15 @@ def adopt_legacy_install() -> list:
     preferences is either a live install or a dev build's leftovers, and
     telling them apart is guesswork, so that case is reported rather than
     resolved. A file of pure defaults, which any launch that found nothing to
-    adopt writes, does not count.
+    adopt writes, does not count, and neither does the former default library
+    startup writes into it just before this runs.
     """
     if not paths._using_os_dirs():
         return []
     candidates = legacy_install_candidates()
     if not candidates:
         return []
-    if _preferences_in(paths.get_settings_path()):
+    if set(_preferences_in(paths.get_settings_path())) - set(_PICKED_BY_THIS_SESSION):
         return []
     return migrate_to_os_dirs(candidates[0])
 
@@ -129,11 +141,13 @@ def find_legacy_install(library_path):
 
 def former_default_libraries() -> list:
     """Where 1.5.4 and earlier put the library by default: under the home
-    folder for the bundles, beside the executable otherwise."""
+    folder for the bundles, beside the executable otherwise. Once the app is
+    in the OS dirs the executable is the payload, so the launcher's old folder
+    is what "beside" means."""
     return [
         Path.home() / paths.APP_DIRNAME / paths.DOWNLOAD_FOLDER_NAME,
         paths.get_app_dir() / paths.DOWNLOAD_FOLDER_NAME,
-    ]
+    ] + [root / paths.DOWNLOAD_FOLDER_NAME for root in _legacy_roots()]
 
 
 def default_library_to_adopt():

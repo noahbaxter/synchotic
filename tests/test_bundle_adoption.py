@@ -31,6 +31,7 @@ def os_dirs(monkeypatch, tmp_path):
     monkeypatch.setattr(paths.Path, "home", staticmethod(lambda: home))
     monkeypatch.setenv(paths.OS_DIRS_ENV, "1")
     monkeypatch.delenv(paths.LEGACY_ROOT_ENV, raising=False)
+    monkeypatch.delenv("SYNCHOTIC_ROOT", raising=False)
     monkeypatch.delenv("SYNCHOTIC_LIBRARY", raising=False)
     paths.set_library_path(None)
     yield home
@@ -311,3 +312,88 @@ class TestAPlaceholderIsNotAnInstall:
         os.utime(empty / "settings.json", (later, later))
 
         assert paths.stale_data_dir_warning() == ""
+
+
+class TestAWindowsPortableInstall:
+    """1.5.4 and earlier on Windows: the launcher's folder holds .dm-sync and,
+    by default, Sync Charts. The upgrade moves the state into the OS dirs and
+    leaves the library exactly where it was."""
+
+    @pytest.fixture
+    def old(self, tmp_path, monkeypatch):
+        """The folder the exe sat in, synced on the default library. The app
+        runs from its payload, as a shipped build does, not from a checkout
+        that may hold a Sync Charts of its own."""
+        monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path / "_app")
+        folder = tmp_path / "Clone Hero"
+        _install(folder, library="", drives=3)
+        pack = folder / paths.DOWNLOAD_FOLDER_NAME / "Drive" / "Setlist" / "song.ini"
+        pack.parent.mkdir(parents=True)
+        pack.write_text("[song]")
+        return folder
+
+    def _startup(self):
+        """What sync.py does before anything else reads a setting."""
+        from src.config.settings import UserSettings
+        from src.core.legacy_migration import default_library_to_adopt
+
+        early = UserSettings.load(paths.get_settings_path())
+        adopted = default_library_to_adopt()
+        if adopted:
+            early.library_path = str(adopted)
+            early.save()
+            paths.set_library_path(adopted)
+        return paths.adopt_legacy_install()
+
+    def test_the_default_library_beside_the_exe_is_kept(self, old, monkeypatch):
+        """Found through the old folder: under the OS dirs, "beside the
+        executable" is the payload, not where the charts are."""
+        monkeypatch.setenv(paths.LEGACY_ROOT_ENV, str(old))
+        self._startup()
+        assert _library() == old / paths.DOWNLOAD_FOLDER_NAME
+        assert (old / paths.DOWNLOAD_FOLDER_NAME / "Drive" / "Setlist" / "song.ini").exists()
+
+    def test_the_sign_in_and_drives_come_across(self, old, monkeypatch):
+        """The library pick startup just wrote is not a rival install. Treating
+        it as one skipped adoption: signed out, no drives, every upgrade."""
+        monkeypatch.setenv(paths.LEGACY_ROOT_ENV, str(old))
+        assert self._startup() != []
+        assert (paths.get_data_dir() / "token.json").exists()
+        saved = jsonc.loads(paths.get_settings_path().read_text())
+        assert len(saved["drive_toggles"]) == 3
+        assert saved["library_path"] == str(old / paths.DOWNLOAD_FOLDER_NAME)
+
+    def test_launcher_1_3_still_leads_to_it(self, old, monkeypatch):
+        """That launcher does not update itself and names its folder only as
+        SYNCHOTIC_ROOT, which counts once the app is in the OS dirs."""
+        monkeypatch.setenv("SYNCHOTIC_ROOT", str(old))
+        assert self._startup() != []
+        assert (paths.get_data_dir() / "token.json").exists()
+
+    def test_the_old_folder_is_left_as_it_was(self, old, monkeypatch):
+        monkeypatch.setenv(paths.LEGACY_ROOT_ENV, str(old))
+        self._startup()
+        assert (old / paths.DATA_DIR_NAME / "token.json").exists()
+
+
+class TestAFrozenWindowsAppChoosesTheOsDirs:
+    """Launcher 1.3 sets only SYNCHOTIC_ROOT, so the app decides for itself."""
+
+    @pytest.fixture
+    def frozen_windows(self, monkeypatch):
+        monkeypatch.setattr(paths.sys, "platform", "win32")
+        monkeypatch.setattr(paths.sys, "frozen", True, raising=False)
+        monkeypatch.delenv(paths.OS_DIRS_ENV, raising=False)
+
+    def test_unset_means_os_dirs(self, frozen_windows):
+        assert paths._using_os_dirs() is True
+
+    def test_a_dev_run_can_still_say_no(self, frozen_windows, monkeypatch):
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "0")
+        assert paths._using_os_dirs() is False
+
+    def test_a_source_run_stays_beside_the_checkout(self, monkeypatch):
+        monkeypatch.setattr(paths.sys, "platform", "win32")
+        monkeypatch.setattr(paths.sys, "frozen", False, raising=False)
+        monkeypatch.delenv(paths.OS_DIRS_ENV, raising=False)
+        assert paths._using_os_dirs() is False

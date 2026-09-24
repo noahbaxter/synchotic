@@ -5,7 +5,6 @@ Synchotic Launcher
 Tiny launcher that fetches the app from GitHub releases.
 - Checks for updates on every launch
 - Downloads and extracts new versions automatically
-- Handles directory changes (prompts to move/delete old data)
 """
 
 import json
@@ -84,18 +83,16 @@ def is_clean_mode() -> bool:
     return "--clean" in sys.argv
 
 
-def is_bundled() -> bool:
-    """True when we are a .app or an AppImage rather than a loose executable.
+def is_installed() -> bool:
+    """True for every launcher we ship: the Windows exe, the .app and the
+    AppImage. Each keeps its files in the OS data dir and nothing beside
+    itself, so the launcher can live anywhere and moving it loses nothing.
 
-    Those installs belong in /Applications or the app menu, not in the user's
-    chart folder, so nothing may be written beside them: a .app would be
-    writing into itself, and an AppImage into a mount that disappears.
+    --dev stays beside the binary, where --clean cannot reach a real install.
     """
-    if os.environ.get("APPIMAGE"):
-        return True
-    if not getattr(sys, "frozen", False):
+    if is_dev_mode():
         return False
-    return any(p.suffix == ".app" for p in Path(sys.executable).parents)
+    return bool(os.environ.get("APPIMAGE") or getattr(sys, "frozen", False))
 
 
 def os_data_dir() -> Path:
@@ -120,54 +117,51 @@ def os_data_dir() -> Path:
 def app_environment() -> dict:
     """The environment the app is started with, which is where it puts its files.
 
-    A bundle gets SYNCHOTIC_OS_DIRS, not SYNCHOTIC_ROOT. SYNCHOTIC_ROOT is the
-    portable layout and takes priority in src/core/paths.get_app_dir, so setting
-    it as well would nest a .dm-sync inside Application Support. A loose
-    executable keeps the portable layout it has always had.
+    SYNCHOTIC_OS_DIRS, not SYNCHOTIC_ROOT: SYNCHOTIC_ROOT is the portable
+    layout and takes priority in src/core/paths.get_app_dir, so setting it as
+    well would nest a .dm-sync inside the OS data dir. A --dev run says "0"
+    outright, since a frozen Windows app otherwise picks the OS dirs itself.
     """
     env = os.environ.copy()
-    if is_bundled():
+    if is_installed():
         env["SYNCHOTIC_OS_DIRS"] = "1"
         env.pop("SYNCHOTIC_ROOT", None)
-        # Bundles were portable until now, keeping .dm-sync beside themselves.
-        # Name that folder so the app can adopt the settings and sign-in that
-        # are sitting in it rather than starting from nothing.
+        # Launchers before 1.4 kept .dm-sync beside themselves. Name that
+        # folder so the app can adopt the settings and sign-in sitting in it
+        # rather than starting from nothing.
         legacy = portable_dir()
         if legacy:
             env["SYNCHOTIC_LEGACY_ROOT"] = str(legacy)
     else:
+        env["SYNCHOTIC_OS_DIRS"] = "0"
         env["SYNCHOTIC_ROOT"] = str(get_launcher_dir())
     return env
 
 
 def portable_dir() -> Path | None:
-    """Where this install would have kept its files under the portable layout.
-
-    Only used to find what an older version left behind: beside the .app, or
-    beside the AppImage. None when neither applies.
-    """
+    """Where launchers before 1.4 kept .dm-sync: beside the exe, the .app or
+    the AppImage. Only used to find what they left behind."""
     appimage = os.environ.get("APPIMAGE")
     if appimage:
         return Path(appimage).parent
-    if getattr(sys, "frozen", False):
-        for parent in Path(sys.executable).parents:
-            if parent.suffix == ".app":
-                return parent.parent
-    return None
+    if not getattr(sys, "frozen", False):
+        return None
+    exe = Path(sys.executable)
+    for parent in exe.parents:
+        if parent.suffix == ".app":
+            return parent.parent
+    return exe.parent
 
 
 def get_launcher_dir() -> Path:
-    """The folder the launcher owns: the downloaded payload and its logs.
-
-    A loose executable keeps the portable layout it has always had, writing
-    .dm-sync/ beside itself. A bundle cannot, so it uses the OS data dir. Note
-    this is no longer where charts go: the app resolves the library itself and
-    defaults it to ~/Synchotic/Sync Charts.
+    """The folder the launcher owns: the downloaded payload and its logs. The
+    OS data dir for a shipped launcher, beside the binary for --dev and source
+    runs. Charts never go here: the app resolves the library itself.
     """
     override = os.environ.get("SYNCHOTIC_LAUNCHER_DIR")
     if override:
         return Path(override)
-    if is_bundled():
+    if is_installed():
         return os_data_dir()
     if getattr(sys, "frozen", False):
         return Path(sys.executable).parent
@@ -203,13 +197,9 @@ def get_app_dir() -> Path:
 
 
 def get_dm_sync_dir() -> Path:
-    """Where the payload and the launcher's own logs go.
-
-    A portable install hides them in .dm-sync so the folder the user picked for
-    charts is not littered with our files. The OS data dir is already ours and
-    already out of sight, so nesting a hidden folder inside it buys nothing.
-    """
-    return get_launcher_dir() if is_bundled() else get_launcher_dir() / ".dm-sync"
+    """Where the payload and the launcher's own logs go. The OS data dir is
+    already ours and out of sight; a --dev folder hides them in .dm-sync."""
+    return get_launcher_dir() if is_installed() else get_launcher_dir() / ".dm-sync"
 
 
 def get_app_exe_name() -> str:
@@ -229,8 +219,8 @@ def get_asset_name() -> str:
 
 
 def get_local_zip_path() -> Path:
-    """Get path to local app zip (same folder as launcher)."""
-    return get_launcher_dir() / get_asset_name()
+    """A local app zip beside the launcher binary, which is what --dev reads."""
+    return relaunchable_path().parent / get_asset_name()
 
 
 def get_version_file() -> Path:
@@ -244,40 +234,6 @@ def get_installed_version() -> str:
     if version_file.exists():
         return version_file.read_text().strip()
     return ""
-
-
-# --- State file management ---
-
-def get_state_dir() -> Path:
-    """Get the directory for launcher state file."""
-    if sys.platform == "win32":
-        appdata = os.environ.get("APPDATA", "")
-        if appdata:
-            return Path(appdata) / "synchotic"
-    return Path.home() / ".synchotic"
-
-
-def get_state_file() -> Path:
-    """Get path to state file."""
-    return get_state_dir() / "state.json"
-
-
-def read_state() -> dict:
-    """Read launcher state from file."""
-    state_file = get_state_file()
-    if state_file.exists():
-        try:
-            return json.loads(state_file.read_text())
-        except (json.JSONDecodeError, IOError):
-            pass
-    return {}
-
-
-def write_state(state: dict):
-    """Write launcher state to file."""
-    state_file = get_state_file()
-    state_file.parent.mkdir(parents=True, exist_ok=True)
-    state_file.write_text(json.dumps(state, indent=2))
 
 
 # --- Logging ---
@@ -319,167 +275,12 @@ def close_logging():
         _log_file = None
 
 
-# --- Directory change handling ---
-
-def _state_key() -> str:
-    """State key prefix so dev and prod launchers don't share state."""
-    return "dev" if RELEASE_TAG else "prod"
-
-
-def _save_launcher_state(current_path: str):
-    """Save current launcher path to state file."""
-    key = _state_key()
-    state = read_state()
-    state[f"launcher_path_{key}"] = current_path
-    state[f"last_run_{key}"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-    # Migrate: remove old shared keys so they don't cause false triggers
-    state.pop("launcher_path", None)
-    state.pop("last_run", None)
-    write_state(state)
-
-
 def _has_terminal() -> bool:
     """Check if we have an interactive terminal for prompts."""
     try:
         return sys.stdin is not None and sys.stdin.isatty()
     except Exception:
         return False
-
-
-def _prompt_directory_action() -> str:
-    """Prompt user for directory change action. Returns 'M', 'D', or 'I'."""
-    # No terminal - auto-ignore to avoid blocking
-    if not _has_terminal():
-        log("No terminal available, auto-ignoring old data")
-        return "I"
-
-    print("\nWhat would you like to do?")
-    print("  [M] Move the data to the new location (faster startup)")
-    print("  [D] Delete the old data (fresh download)")
-    print("  [I] Ignore (leave old data, download fresh here)")
-
-    while True:
-        try:
-            choice = input("\nChoice [M/D/I]: ").strip().upper()
-        except (EOFError, KeyboardInterrupt):
-            print("\nCancelled.")
-            sys.exit(1)
-
-        if choice in ("M", "D", "I"):
-            return choice
-        print("Please enter M, D, or I.")
-
-
-def _do_delete(old_dm_sync: Path):
-    """Delete old .dm-sync folder."""
-    log(f"Deleting old data: {old_dm_sync}")
-    print(f"\nDeleting old data at {old_dm_sync}...")
-    try:
-        shutil.rmtree(old_dm_sync)
-        print("Done!")
-    except Exception as e:
-        log(f"Delete failed: {e}")
-        print(f"Warning: Failed to delete: {e}")
-        print("Continuing anyway...")
-
-
-def _do_move(old_dm_sync: Path) -> bool:
-    """Move old .dm-sync to new location. Returns True on success."""
-    new_dm_sync = get_dm_sync_dir()
-    log(f"Moving data: {old_dm_sync} -> {new_dm_sync}")
-
-    if new_dm_sync.exists():
-        print(f"\nNote: {new_dm_sync} already exists, removing it first...")
-        try:
-            shutil.rmtree(new_dm_sync)
-        except Exception as e:
-            log(f"Failed to remove existing folder: {e}")
-            print(f"Failed to remove existing folder: {e}")
-            return False
-
-    print("\nMoving data to new location...")
-    try:
-        shutil.move(str(old_dm_sync), str(new_dm_sync))
-        print("Done!")
-        return True
-    except Exception as e:
-        log(f"Move failed: {e}")
-        print(f"Failed to move: {e}")
-        return False
-
-
-def _prompt_fallback() -> str:
-    """Prompt for fallback action after move fails. Returns 'D' or 'I'."""
-    # No terminal - auto-ignore
-    if not _has_terminal():
-        log("No terminal available, auto-ignoring after move failure")
-        return "I"
-
-    print("\nWould you like to:")
-    print("  [D] Delete the old data instead")
-    print("  [I] Ignore and download fresh")
-
-    while True:
-        try:
-            choice = input("\nChoice [D/I]: ").strip().upper()
-        except (EOFError, KeyboardInterrupt):
-            print("\nCancelled.")
-            sys.exit(1)
-
-        if choice in ("D", "I"):
-            return choice
-        print("Please enter D or I.")
-
-
-def handle_directory_change():
-    """Check if launcher moved and handle old .dm-sync folder.
-
-    Portable installs only. A bundle keeps nothing beside itself, so moving one
-    moves no data and there is nothing to reconcile. Its own path is a squashfs
-    mount with a fresh random name every run besides, so each launch compared a
-    path it had never seen to one that no longer existed and called that a move.
-    """
-    if is_bundled():
-        return
-    current_path = str(get_launcher_path())
-    key = _state_key()
-    state = read_state()
-    old_path = state.get(f"launcher_path_{key}") or state.get("launcher_path")
-
-    # First run or same location
-    if not old_path or old_path == current_path:
-        _save_launcher_state(current_path)
-        return
-
-    old_dm_sync = Path(old_path).parent / ".dm-sync"
-
-    # Old location has no data
-    if not old_dm_sync.exists():
-        _save_launcher_state(current_path)
-        return
-
-    log(f"Launcher moved: {old_path} -> {current_path}")
-
-    # Prompt user
-    print(f"\nIt looks like you moved the launcher from:")
-    print(f"  {Path(old_path).parent}")
-    print(f"\nFound cached app data at old location.")
-
-    choice = _prompt_directory_action()
-    log(f"User chose: {choice}")
-
-    if choice == "M":
-        if not _do_move(old_dm_sync):
-            choice = _prompt_fallback()
-
-    if choice == "D":
-        _do_delete(old_dm_sync)
-    elif choice == "I":
-        log("Ignoring old data")
-        print("\nIgnoring old data, will download fresh.")
-
-    _save_launcher_state(current_path)
-    print()
 
 
 # --- GitHub API ---
@@ -1111,8 +912,6 @@ def main():
         if not app_exe.exists():
             error_exit("No cached app found. Run without --offline to download.")
     else:
-        handle_directory_change()
-
         print("Checking for updates...")
         release = fetch_latest_release()
         download_url, remote_version = get_download_url(release)

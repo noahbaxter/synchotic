@@ -89,10 +89,10 @@ def _library_label() -> str:
     from ...core import paths
 
     try:
-        library = Path(paths.get_library_path())
+        library = Path(paths.plain_path(paths.get_library_path()))
     except Exception:
         return ""
     try:
-        return f"~/{library.relative_to(Path.home())}"
+        return str(Path("~") / library.relative_to(Path.home()))
     except ValueError:
         return str(library)
