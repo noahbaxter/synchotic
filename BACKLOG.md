@@ -2,6 +2,47 @@
 
 ## Inbox
 
+- [ ] [cleanup] remove adopted data from the old `.dm-sync` beside the Windows exe *(2026-09-24)*
+  - 1.5.5 copies settings, token, rclone config, caches, logs and markers into the OS dirs and leaves the originals, as the fallback if an adoption goes wrong in the field.
+  - Once 1.5.5 upgrades are confirmed, delete on a later launch only what provably arrived: each file present at its destination, and every marker present in the library. A marker deleted before it arrived turns its charts into purge extras. Purge-adjacent, so manual verification.
+  - Never `_app`, `wezterm` or launcher logs: launcher 1.3 still runs from there, so the folder itself stays until people have a newer launcher.
+
+- [ ] [feature] let the app update the launcher *(2026-09-24)*
+  - The app updates every run, the launcher never does, and there is no channel to tell people to download it again. Launcher-side changes (e.g. the OS-dirs layout in `eb19d72`) reach nobody until they do.
+  - The app knows when launcher 1.3 started it (frozen Windows, `SYNCHOTIC_ROOT` set). Windows will not overwrite a running exe, and the 1.3 launcher waits on the app, so it would have to rename the old exe aside and drop the new one in place.
+
+- [ ] [ux] first-run gaps left from the Discord thread *(2026-09-12, #ask-anything)*
+  - Guided setup, checks on every launch, the unowned-library warning and the library row confusion all landed after 1.5.4. What is left:
+  - **"Which drives?" recommendations.** Three toggles, one per top-level category (drums, guitar/community, official game setlists), each flipping its whole group. The community tab is mostly guitar charts, so a drummer who enables everything gets hundreds of GB they never wanted.
+  - **BYOC consent screen.** Google will not publish it until its fields are filled, and the user did not see the defaults in `docs/byoc.md`. Call them out where the form is described.
+  - **Set expectations.** A first full sync runs for hours (reported ~8h). Say so up front.
+  - **Manual downloads.** The ready page says sync matches the drives exactly, but not that manually downloaded copies of the same charts become duplicates, or that scores are untouched unless a chart updates.
+  - Icebox candidate: help users find charts that duplicate synced ones (one user had ~4k dupes).
+
+- [ ] [bug] turning a type back on does not re-extract packs already extracted *(2026-08-29)*
+  - Add `*.mp4` to `download_ignore`, sync, then take it out again: loose videos come down on the next sync, but ones inside an archive do not. The marker says the pack is synced, so `is_archive_synced` never re-extracts it, and the file stripped at extraction time stays gone until the pack's md5 changes.
+  - Pinned as-is by `tests/integration/test_download_ignore_loop.py::test_an_archive_already_extracted_is_left_as_extracted`, so a fix has to change that test deliberately.
+  - Fix would be to notice that `download_ignore` shrank and re-extract affected packs, which means recording the list a marker was written under. Not obviously worth it.
+
+- [ ] [bug] purge_ignore cannot spare a folder *(2026-08-29)*
+  - `matches_ignore` (`core/files.py:10`) fnmatches the filename only, so `MyCustoms/*` matches nothing and there is no way to tell purge to leave a folder of hand-made charts alone.
+  - Match the relative path as well as the filename. `download_ignore` and `purge_ignore` share that matcher, so a folder pattern would start working for both at once. Check what that means for downloads before doing it.
+
+- [ ] [bug] a relocated AppImage cannot find the install it came from *(2026-08-29)*
+  - `portable_dir()` in `launcher.py` answers "the folder the AppImage sits in", which is where adoption looks for a previous install. AppImageLauncher moves AppImages into `~/Applications`, so for anyone who accepts its prompt the old install is never found and the upgrade reads as a factory reset.
+  - Hit in the field on 2026-08-28. The user recovered by hand-copying settings.json, token.json and credentials.json into `~/.local/share/synchotic`.
+  - A defaults-only settings file no longer counts as an install, so a launch that *can* see the old folder adopts it. This is the other half, finding the folder at all: add `~/Applications` to `legacy_install_candidates()`, or ask the desktop entry where it was launched from.
+
+- [ ] [linux] AppImage ships an icon nothing renders *(2026-08-28)*
+  - `build_launcher_appimage.sh` says the AppImage carries its .desktop entry and icon, so the launcher need not write them into ~/.local/share. Only half true.
+  - On Fedora 44 / KDE there is no AppImage thumbnailer, and neither plasmashell nor dolphin reads `.DirIcon`. The icon users see comes from `~/.local/share/icons`, written by `ensure_linux_desktop()` on first run.
+  - Cosmetic. Either fix the comment or accept that a `.desktop` launcher is the only way to get the logo on a Plasma desktop.
+
+- [ ] [risk] rebuild_markers_from_disk can mark charts synced that were never downloaded *(2026-08-28)*
+  - For an archive with no marker it rglobs the whole setlist folder and writes a marker claiming every file in it. An archive that was never fetched into an already-populated setlist therefore reads as synced and is never downloaded.
+  - Deliberate, and `tests/integration/test_partial_operations.py` asserts it. It is the trade against mass deletion.
+  - Logged so the trade is a decision rather than a surprise. Silent missing charts are the cost.
+
 - [ ] [perf] rclone tier downloads one file at a time *(2026-08-23)*
   - `rclone/downloader.py download()` submits one `copyid_async` then blocks on `_await_job` before the next. Tiers 1-3 run 24 workers (`sync/downloader.py:72`). No `--transfers` is set anywhere either.
   - `docs/downloads.md` records the tier table and states tier 4 is sequential. Update it with real numbers once measured.
@@ -15,10 +56,13 @@
   - `docs/byoc.md` still frames BYOC as being about speed and quota ("if you just want it to work you do not need this"). That is pre-rejection framing. For a new user the shared client does not work at all.
   - Chooser copy says BYOC is "just as fast" as rclone. Given tier 3 is 24 workers and tier 4 is sequential, BYOC is faster. Reword once the throughput measurement above exists.
 
-- [ ] [cleanup] merge chotic-ui `fix/menu-text-wrapping` into its main *(2026-08-23)*
-  - v1.5 pins the submodule to a branch off `3f37d1e`, deliberately, to keep 3 unrelated chotic-ui commits (FilterList sizing, Tab MenuResult, FilterList section headers) out of a release whose TUI was untested.
-  - After v1.5 ships: merge the fix into chotic-ui `main`, then bump the submodule to pick up the other three.
-  - stemchotic is the other consumer. It sets no `MenuItem.description` and uses short subtitles, so it is unaffected either way.
+- [ ] [cleanup] rip out the remote manifest pipeline *(2026-09-24)*
+  - The app scans drives itself and never reads the `manifest` release. Only dev tooling does: `manifest_gen.py`, `src/manifest/`, `src/drive/changes.py`, `.github/workflows/update-manifest.yml`, and `scripts/measure_anon_failures.py` / `measure_overlap.py`, ~2.1k lines.
+  - Nightly cron stays off: it bought nothing and a dead `GOOGLE_TOKEN` secret would fail it every night.
+  - Keep until the measurement scripts are no longer wanted, since the blocked-rate numbers in `docs/downloads.md` came from them. `src/stats/` and `manifest_overrides.json` are app code, not part of this.
+
+- [ ] [cleanup] finish chotic-ui `fix/menu-text-wrapping` *(2026-08-23)*
+  - The wrapping fix (`99e9a5a`) is in chotic-ui `main`. `c3bce2f` (a real grey for disabled rows instead of the dim attribute) is not. Merge it or delete the branch.
 
 - [ ] [bug] stale markers are never deleted, so updated packs leak charts *(2026-08-23)*
   - `markers.py` defines `delete_marker` (192), `delete_markers_for_archive` (278) and `delete_failed_markers_for_archive` (391). **None of the three is called anywhere in `src/`.**
@@ -54,6 +98,14 @@
 
 ## Active
 
+- [ ] [ops] rclone's shared client id is being retired, so rclone mode has an expiry date *(2026-09-20)*
+  - Google will charge for requests through rclone's built-in Drive client id, so rclone will disable and then remove it after ~90 days notice. Tracking issue, no date yet: https://github.com/rclone/rclone/issues/9580
+  - After removal an rclone remote needs the user's own client id: the same Cloud project and copy-paste as BYOC, on a sequential pipe. rclone stops being the easy option.
+  - No free "just sign in" path exists (checked 2026-09-20). Reading other people's shared folders needs a restricted scope, and `drive.file` via the Google Picker does not grant a folder's contents. The choice is CASA Tier 2 (~$540/yr) or every user brings credentials. A money decision, not an engineering one.
+  - **Done:** the chooser labels rclone "(easiest)" and marks it deprecated, and labels BYOC "(best)". rclone stays available while it works.
+  - **Trigger: rclone starts its 90-day notice.** Then decide CASA vs BYOC for everyone, and reframe `docs/byoc.md` (it still says most people do not need it). Open option: inject the user's own client id into the rclone remote instead of native BYOC.
+  - Full notes: [docs/downloads.md](docs/downloads.md)
+
 - [ ] [ops] Google OAuth verification blocked, shipping three-tier auth instead *(decided 2026-08-09)*
   - 100/100 unverified user cap reached. Verification submitted 2026-04-22, came back requiring CASA Tier 2 (~$540/yr). Tier 1 appeal denied 2026-04-29.
   - Anonymous failure rate measured 2026-06-11: ~99% of small files succeed, ~63% of bytes blocked (RB/GH rips, big Misc packs). Re-read 2026-08-09: 637/1272 sampled files are `virus_scan` (50% by count) and all 5 measured drives contain blocked files, so every user hits this on their first sync.
@@ -63,13 +115,14 @@
   - **Rejected, service account:** key would ship inside a desktop app, public on day one.
   - **Parked, new OAuth app to reset the cap:** this is cap evasion and Google enforces at project-owner level, so the downside is the existing app and account getting flagged, not just a denial. Weigh against 100 more users before trying.
   - **Measurements, the four tiers, and every rejected option: see [docs/downloads.md](docs/downloads.md)**
-  - Workaround live: `legacy-rclone` branch (commit `1435ab9`). README has a callout pointing blocked users there.
+  - The `legacy-rclone` branch (commit `1435ab9`) stays up for people still on it, but the README no longer mentions it.
 
 ## Active Bugs
 
 - [ ] [bug] Path length infinite loop - Windows files with paths >260 chars create endless retry cycle *(reported 2026-02-02, user "PILE")*
   - **Symptoms:** GUI shows "2.3GB to download" but nothing syncs, same files retry forever
   - **Root cause:** Files download but extraction fails with `WinError 206` (path too long), marker creation also fails, purge deletes partial files as "extra", next sync sees same files as missing
+  - The library now opts out of MAX_PATH on Windows (`f4dcbc2`), which should remove the trigger. Confirm with PILE before closing.
   - **Status:** Steps 1-4 of failed markers done (markers.py, downloader.py, download_planner.py have failed marker support). Remaining:
     - [ ] `purge_planner.py`: Don't purge files with failed markers
     - [ ] `home.py`: Show failed count in status ("562/562 synced, 5 failed (long paths)")
@@ -100,7 +153,6 @@
 - [ ] Extra files in failed setlist folders
 - [ ] Per-setlist cache invalidation during sync/purge
 - [ ] INI smaller than manifest should fail
-- [ ] `delete_videos=False` path
 - [ ] Background scanner failure handling (0 tests)
 - [ ] Windows backslash in path lookups (platform-specific)
 - [ ] Windows, end to end. Never tested, and it is where most users are. Covers the whole v1.5 auth path, not just one screen.
