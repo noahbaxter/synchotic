@@ -24,7 +24,7 @@ from chotic_ui.primitives.terminal import get_terminal_width, truncate_ansi
 
 from src import copy
 from src.config import UserSettings, DrivesConfig
-from src.core.formatting import sort_by_name, format_duration, format_size
+from src.core.formatting import count, sort_by_name, format_duration, format_size
 from src.core.logging import debug_log
 from src.sync import get_persistent_stats_cache, compute_setlist_stats
 from src.sync.archive_charts import effective_chart_count, forced_counts
@@ -185,7 +185,7 @@ def show_main_menu_panes(
             folder_stats_cache.invalidate_all()
         return compute_main_menu_cache(
             folders, user_settings, download_path, drives_config,
-            folder_stats_cache, background_scanner,
+            folder_stats_cache, background_scanner, measure=False,
         )
 
     def _scanner_changed() -> bool:
@@ -529,7 +529,7 @@ def show_main_menu_panes(
         else:
             _copy_cache(cache, compute_main_menu_cache(
                 folders, user_settings, download_path, drives_config,
-                background_scanner=background_scanner,
+                background_scanner=background_scanner, measure=False,
             ))
         warmed.discard(folder_id)
 
@@ -592,14 +592,17 @@ def show_main_menu_panes(
     def footer():
         parts = [f"{Colors.PRIMARY}S{Colors.MUTED} {_sync_label(cache)}"]
 
-        if background_scanner and not background_scanner.is_done():
-            stats = background_scanner.get_stats()
-            if stats.current_folder:
-                parts.append(copy.FOOTER_SCAN.format(folder=stats.current_folder,
-                                                     done=stats.folders_done + 1,
-                                                     total=stats.folders_total,
-                                                     elapsed=format_duration(stats.elapsed)))
-        # Nothing else goes here: the totals already sit in the title band, and
+        # Only the setlists sync needs: once those are checked, the rest of the
+        # scan (drives and setlists that are off) carries on without a counter.
+        if background_scanner:
+            done, total = background_scanner.enabled_progress()
+            if total and done < total:
+                parts.append(copy.CHECKING_DRIVE.format(
+                    done=done, setlists=count(total, "setlist"),
+                    elapsed=format_duration(background_scanner.get_stats().elapsed)))
+            elif total:
+                parts.append(f"{Colors.SUCCESS}✓{Colors.MUTED} {copy.DRIVE_CHECKED}")
+        # Nothing else goes here: the library totals sit in the title band, and
         # repeating them is how a status bar turns into noise.
 
         hints = (f"{Colors.PRIMARY}Tab{Colors.MUTED} {copy.FOOTER_PANES}  "
@@ -617,13 +620,24 @@ def show_main_menu_panes(
     last_footer = {"text": None}
     last_status = {"snap": status_warmer.snapshot}
 
-    def on_tick(_pane):
+    def on_tick(pane):
+        # The pane took the header as a string when it was built, so it has
+        # to be handed each new one: scans and toggles move the numbers.
+        header = strip_ansi(cache.subtitle or "")
+        if pane.subtitle != header:
+            pane.subtitle = header
+            return True
+
         # A new status snapshot repaints, so a greyed row clears the moment
         # rclone connects or the library comes back.
         snap = status_warmer.snapshot
         if snap != last_status["snap"]:
             last_status["snap"] = snap
             return True
+
+        # Both drained every tick. Returning on a busy warmer first left each
+        # finished recompute undrained for as long as a big setlist measured.
+        repaint = False
 
         # Written here so the cache stays on this thread; the worker only measures.
         measured = warmer.drain()
@@ -632,9 +646,7 @@ def show_main_menu_panes(
                 if stats is not None:
                     persistent.set_setlist(folder_id, name, stats)
             persistent.save()
-            return True
-        if warmer.busy:
-            return True  # keep repainting so the rest arrive as they land
+            repaint = True
 
         # A scan-triggered recompute finished on MenuCacheWarmer's thread;
         # applying it here is only attribute copies.
@@ -643,7 +655,10 @@ def show_main_menu_panes(
             _copy_cache(cache, new_cache)
             warmed.clear()
             last_footer["text"] = None
-            return True
+            repaint = True
+
+        if repaint or warmer.busy:
+            return True  # a busy warmer keeps repainting so the rest arrive as they land
 
         if not background_scanner:
             return False

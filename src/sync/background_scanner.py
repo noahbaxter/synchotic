@@ -126,6 +126,8 @@ class BackgroundScanner:
         # The three core sets
         self._all_setlists: dict[str, SetlistInfo] = {}  # setlist_id -> SetlistInfo
         self._order_cache: list | None = None  # scan order, rebuilt when discovery grows
+        # Entries on disk per setlist id, the size hint when nothing is remembered.
+        self._disk_estimates: dict[str, int] = {}
         self._enabled_setlist_ids: set[str] = set()
         self._scanned_setlist_ids: set[str] = set()
         self._failed_setlist_ids: set[str] = set()  # Setlists that threw during scan
@@ -232,6 +234,13 @@ class BackgroundScanner:
                 return True
             done = self._scanned_setlist_ids | self._failed_setlist_ids
             return all(sid in done for sid in self._enabled_setlist_ids)
+
+    def enabled_progress(self) -> tuple[int, int]:
+        """(checked, total) over the enabled setlists: the ones sync needs.
+        A setlist that failed to scan counts as checked, as for is_all_enabled_scanned."""
+        with self._lock:
+            done = self._scanned_setlist_ids | self._failed_setlist_ids
+            return (len(self._enabled_setlist_ids & done), len(self._enabled_setlist_ids))
 
     def check_updates(self) -> bool:
         """Check if any setlists were scanned since last check. Used for UI refresh."""
@@ -558,9 +567,33 @@ class BackgroundScanner:
     # Scanning
     # =========================================================================
 
+    def _estimate_from_disk(self):
+        """Size hints for setlists the stats cache has no count for, which on
+        a first scan is all of them. Read in parallel and off the lock: a
+        hundred setlists take seconds one at a time on an external drive."""
+        from ..core.paths import get_library_path
+        from .cache import get_persistent_stats_cache
+        from .library_probe import entries_on_disk
+
+        counts = get_persistent_stats_cache()
+        with self._lock:
+            todo = [(sid, info.drive_name, info.name)
+                    for sid, info in self._all_setlists.items()
+                    if counts.remembered_chart_count(info.drive_id, info.name) is None]
+        if not todo:
+            return
+        library = get_library_path()
+        with ThreadPoolExecutor(max_workers=self.DISCOVERY_WORKERS) as pool:
+            sizes = list(pool.map(lambda t: entries_on_disk(library, t[1], t[2]), todo))
+        with self._lock:
+            self._disk_estimates.update(
+                {sid: n for (sid, _, _), n in zip(todo, sizes) if n is not None})
+            self._order_cache = None
+
     def _scan_worker(self):
         """Background thread: scan setlists, prioritizing enabled ones."""
         scanner = FolderScanner(self._client)
+        self._estimate_from_disk()
 
         while not self._stop_event.is_set():
             setlist = self._get_next_setlist_to_scan()
@@ -597,9 +630,10 @@ class BackgroundScanner:
 
     def _scan_order(self) -> list:
         """Setlist ids: ones last seen out of sync (or never scanned) first,
-        since they are the likeliest to need a download or purge, then fewest
-        remembered charts, so the downloader gets work sooner. Call under the
-        lock.
+        since they are the likeliest to need a download or purge, then
+        cheapest first across every drive, so as many as possible finish
+        early. Cost is the remembered chart count, or on a first scan the
+        setlist's size on disk. Call under the lock.
         """
         if self._order_cache is not None and len(self._order_cache) == len(self._all_setlists):
             return self._order_cache
@@ -612,6 +646,8 @@ class BackgroundScanner:
         def cost(setlist_id: str) -> float:
             info = self._all_setlists[setlist_id]
             n = counts.remembered_chart_count(info.drive_id, info.name)
+            if n is None:
+                n = self._disk_estimates.get(setlist_id)
             return unknown if n is None else n
 
         def priority(setlist_id: str) -> tuple:
@@ -619,23 +655,9 @@ class BackgroundScanner:
             needs_attention = counts.remembered_needs_attention(info.drive_id, info.name)
             return (0 if needs_attention else 1, cost(setlist_id))
 
-        # Cheapest first within a drive, then round-robin across drives rather
-        # than draining one drive at a time. Depth-first leaves every other
-        # drive at zero until the first one finishes, so a single large drive
-        # holds up work that was ready elsewhere.
-        by_drive: dict = {}
-        for setlist_id in self._all_setlists:
-            by_drive.setdefault(self._all_setlists[setlist_id].drive_id, []).append(setlist_id)
-        for ids in by_drive.values():
-            ids.sort(key=priority)
-
-        order = []
-        queues = list(by_drive.values())
-        while queues:
-            for ids in list(queues):
-                order.append(ids.pop(0))
-                if not ids:
-                    queues.remove(ids)
+        # One order across drives. Taking turns per drive put a small drive's
+        # huge setlist ahead of dozens of quick ones elsewhere.
+        order = sorted(self._all_setlists, key=priority)
 
         # Sorted once per scan, not per setlist: this runs inside the loop that
         # picks the next setlist, and redoing it thousands of times would cost

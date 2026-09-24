@@ -35,6 +35,8 @@ class FolderStats:
     total_setlists: int
     display_string: str | None
     disk_size: int = 0
+    unmeasured_setlists: int = 0
+    disk_charts: int = 0
 
 
 class FolderStatsCache:
@@ -111,11 +113,13 @@ class AggregatedFolderStats:
     total_size: int = 0
     synced_size: int = 0
     disk_size: int = 0
+    disk_charts: int = 0  # chart folders on disk in the enabled setlists
     purgeable_files: int = 0
     purgeable_size: int = 0
     purgeable_charts: int = 0
     enabled_setlists: int = 0
     total_setlists: int = 0
+    unmeasured_setlists: int = 0  # enabled, but no stats yet, so not in the totals
 
 
 class PersistentStatsCache:
@@ -324,10 +328,11 @@ def aggregate_folder_stats(
 
     for setlist_name in setlist_names:
         cached = persistent_cache.get_setlist(folder_id, setlist_name)
-        if not cached:
-            continue
-
         setlist_enabled = user_settings.is_subfolder_enabled(folder_id, setlist_name) if user_settings else True
+        if not cached:
+            if drive_enabled and setlist_enabled:
+                result.unmeasured_setlists += 1
+            continue
 
         if drive_enabled and setlist_enabled:
             # Enabled: contributes to sync totals
@@ -336,6 +341,7 @@ def aggregate_folder_stats(
             result.total_size += cached.total_size
             result.synced_size += cached.synced_size
             result.disk_size += cached.disk_size
+            result.disk_charts += cached.disk_charts
             result.enabled_setlists += 1
         elif drive_enabled and not setlist_enabled and cached.disk_files > 0:
             # Disabled with disk content: contributes to purgeable
