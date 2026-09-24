@@ -1,115 +1,87 @@
 # Synchotic
 
-Automatically download and sync Clone Hero charts from Google Drive. Pick the drives and setlists you want, hit sync, and your songs folder stays up to date — new charts download automatically, updated charts get re-downloaded, and removed setlists get cleaned up.
+Synchotic is a tool to automate the downloading and updating of charts from Google Drive for rhythm games like Clone Hero and YARG. Pick from a curated selection of popular drives and setlists (or add your own), press sync, wait, and enjoy the best charts the community has to offer! Ever been confused about which charts people actually need to play online? This is not a bad place to start.
 
 ![Screenshot](screenshot.png)
 
-## Getting Started
+## Install
 
-> **How downloads work.** Synchotic downloads most files anonymously. For the rest it uses rclone automatically: a one-time Google consent click, with no manual rclone setup. If you hit limits or want full speed, you can bring your own Google OAuth credentials (see [docs/byoc.md](docs/byoc.md)). The original manual rclone version still lives on the [`legacy-rclone`](../../tree/legacy-rclone) branch as an escape hatch.
+**[Download the launcher](../../releases/tag/launcher-v1.3)**
 
-**[Download the launcher here](../../releases/tag/launcher-v1.3)**
+| Platform | File | Then |
+|----------|------|------|
+| Windows | `synchotic-launcher.exe` | Keep it anywhere. |
+| macOS | `Synchotic-launcher-macos.zip` | Unzip and drag `Synchotic.app` to Applications. |
+| Linux | `Synchotic-launcher-x86_64.AppImage` | Keep it anywhere, mark it executable. |
 
-| Platform | File |
-|----------|------|
-| Windows | `synchotic-launcher.exe` |
-| macOS | `Synchotic-launcher-macos.zip` (unzip for `Synchotic.app`) |
-| Linux | `Synchotic-launcher-x86_64.AppImage` |
+Double-click the launcher and it'll run automatic updates on Synchotic. The first time you run it'll ask where your library goes and how to authenticate downloads.
 
-> **Step 1.** Download the launcher for your platform
->
-> **Step 2.** macOS: drag `Synchotic.app` to Applications. Linux: keep the AppImage anywhere and mark it executable. Windows: put the `.exe` in the folder where you want your charts.
->
-> **Step 3.** Double-click it
+## Use
 
-Charts go to `~/Synchotic/Sync Charts` by default, and **Settings > Library** points that at your Clone Hero songs folder instead. Settings and logs live in the usual place for your OS (`~/Library/Application Support` on macOS, `~/.local/share` on Linux), except for the Windows launcher, which stays portable beside the `.exe`.
+In the left column are chart **drives** that contain **setlists** in the right column. To enable/disable any drive or setlist press space. To jump into the setlists list press tab on a drive.
 
-The launcher handles everything from there: it downloads the app and checks for updates on every run.
+To sync press S. This will download, update and delete files to match exclusively the setlists you've selected.
 
-## How to Use
+## Library
 
-1. **Enable drives** — toggle drives on or off with **Space**
-2. **Pick setlists** *(optional)* — open a drive to choose individual setlists. By default all setlists are included.
-3. **Sync** — press **S** to download everything you've enabled
+Synchotic keeps one local folder in sync with the drives and setlists you choose. **BE WARNED:** any unmanaged files in this folder **WILL BE DELETED** on sync. Pick an empty folder or a previous sync folder or face the consequences...
 
-Every time you run it again, it checks for new or updated charts and syncs automatically.
+Change it anytime under **Settings > Library**.
 
-You can also add your own Google Drive folders, sign in to Google for faster downloads, and more — the controls are shown at the bottom of the screen.
+## Download modes
+
+Google prevents anonymous downloads for most popular large chart packs. To get around this limitation you can choose to authenticate Synchotic with your Google account in a few different ways.
+
+- **Sign in with rclone (easiest):** sign in to your Google account to give rclone read-only access and you're done. Google will retire this option sometime in 2026.
+- **Bring Your Own Credentials (best):** setup takes ~10 minutes and is a bit confusing, but you get parallel threading, which makes large downloads like an initial one much faster. See [docs/byoc.md](docs/byoc.md).
+- **No sign-in:** Google will block certain downloads, mostly game rips and other large chart packs.
+
+Change it under **Settings > Account > Mode**.
 
 ## Troubleshooting
 
-### What happens when I disable a setlist?
+**Where are logs?**
 
-It gets removed from disk on the next sync. You can always re-enable it and sync again to re-download it.
+| Windows | macOS | Linux |
+|---|---|---|
+| `%LOCALAPPDATA%\Synchotic\Logs` | `~/Library/Logs/Synchotic` | `~/.local/state/synchotic` |
 
-### Where are my charts?
-
-In the **Sync Charts** folder, right next to where you put the launcher.
-
-### Where are logs?
-
-In `.dm-sync/logs/` next to the launcher. Each day gets its own log file.
-
-### Downloads fail with path errors (Windows)
-
-Windows blocks paths over 260 characters. To fix:
-
-1. Open **Registry Editor** (search for `regedit` in the Start menu)
-2. Go to `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem`
-3. Set `LongPathsEnabled` to `1`
-4. Restart your computer
-
-### macOS: security warning when opening
-
-This shouldn't happen with signed builds, but if it does: right-click the file, click **Open**, then click **Open** again in the confirmation dialog. You only need to do this once.
-
----
+**macOS security warning.** This shouldn't happen, but if it does let me know, then right-click the app, **Open**, then **Open** again.
 
 <details>
-<summary><strong>Linux</strong></summary>
+<summary><strong>For developers</strong></summary>
 
-There's no pre-built binary for Linux, but it's just a Python script:
-
-```bash
-git clone https://github.com/noahbaxter/synchotic.git
-cd synchotic
-pip install -r requirements.txt
-python sync.py
-```
-
-For .rar archive extraction, you'll also need `unrar` installed (`sudo apt install unrar` or equivalent).
-
-</details>
-
-<details>
-<summary><strong>For Developers</strong></summary>
-
-### Running from Source
+### Run from source
 
 ```bash
 pip install -r requirements.txt
 python sync.py
 ```
 
-### Building
+Put `GOOGLE_API_KEY=...` in a `.env` at the checkout root. Without it Google refuses the scan and no drives list. `unrar` is needed for .rar extraction.
 
-Builds are automatic via GitHub Actions on push to `main`. To build locally:
+`python sync.py --first-run` runs against a throwaway empty install, to see what a new user sees. Your `credentials.json` is copied in unless you pass `--no-creds`.
+
+### Build
+
+GitHub Actions builds on push to `main`. Locally:
 
 ```bash
-./build.sh                       # Build app only
-./build.sh launcher              # Build launcher only
-./build.sh dev ~/Desktop/test    # Build both and copy to a test folder
+./build.sh                       # app only
+./build.sh launcher              # launcher only
+./build.sh mac                   # Synchotic.app, installed to /Applications
+./build.sh dev ~/Desktop/test    # both, copied to a test folder
 ```
 
-### Local Testing
+### Test a build
 
 After `build.sh dev`, run the launcher from the target folder:
 
 ```bash
-./synchotic-launcher-macos --dev           # Replace app, keep settings
-./synchotic-launcher-macos --dev --clean   # Fresh install (nuke .dm-sync)
+./synchotic-launcher-macos --dev           # replace app, keep settings
+./synchotic-launcher-macos --dev --clean   # fresh install, wipes .dm-sync
 ```
 
-`--dev` uses a local `app-macos.zip` if present, otherwise the existing `_app` folder. `--clean` nukes `.dm-sync/` first.
+`--dev` uses a local `app-macos.zip` if present, otherwise the existing `_app` folder.
 
 </details>
