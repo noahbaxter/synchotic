@@ -185,7 +185,7 @@ def show_main_menu_panes(
             folder_stats_cache.invalidate_all()
         return compute_main_menu_cache(
             folders, user_settings, download_path, drives_config,
-            folder_stats_cache, background_scanner,
+            folder_stats_cache, background_scanner, measure=False,
         )
 
     def _scanner_changed() -> bool:
@@ -529,7 +529,7 @@ def show_main_menu_panes(
         else:
             _copy_cache(cache, compute_main_menu_cache(
                 folders, user_settings, download_path, drives_config,
-                background_scanner=background_scanner,
+                background_scanner=background_scanner, measure=False,
             ))
         warmed.discard(folder_id)
 
@@ -617,13 +617,24 @@ def show_main_menu_panes(
     last_footer = {"text": None}
     last_status = {"snap": status_warmer.snapshot}
 
-    def on_tick(_pane):
+    def on_tick(pane):
+        # The pane took the header as a string when it was built, so it has
+        # to be handed each new one: scans and toggles move the numbers.
+        header = strip_ansi(cache.subtitle or "")
+        if pane.subtitle != header:
+            pane.subtitle = header
+            return True
+
         # A new status snapshot repaints, so a greyed row clears the moment
         # rclone connects or the library comes back.
         snap = status_warmer.snapshot
         if snap != last_status["snap"]:
             last_status["snap"] = snap
             return True
+
+        # Both drained every tick. Returning on a busy warmer first left each
+        # finished recompute undrained for as long as a big setlist measured.
+        repaint = False
 
         # Written here so the cache stays on this thread; the worker only measures.
         measured = warmer.drain()
@@ -632,9 +643,7 @@ def show_main_menu_panes(
                 if stats is not None:
                     persistent.set_setlist(folder_id, name, stats)
             persistent.save()
-            return True
-        if warmer.busy:
-            return True  # keep repainting so the rest arrive as they land
+            repaint = True
 
         # A scan-triggered recompute finished on MenuCacheWarmer's thread;
         # applying it here is only attribute copies.
@@ -643,7 +652,10 @@ def show_main_menu_panes(
             _copy_cache(cache, new_cache)
             warmed.clear()
             last_footer["text"] = None
-            return True
+            repaint = True
+
+        if repaint or warmer.busy:
+            return True  # a busy warmer keeps repainting so the rest arrive as they land
 
         if not background_scanner:
             return False

@@ -172,6 +172,21 @@ class TestTogglingStaysOnTheScreen:
         assert out["settings"].is_drive_enabled("drive-1") is True
         assert out["returned"][0] == "quit"
 
+    def test_the_header_follows_the_numbers(self, build):
+        """The pane was built with the header as a string, so a scan or a
+        toggle moved the numbers without the header ever showing them."""
+        seen = {}
+
+        def act(pane):
+            pane.focus = "left"
+            pane._on_left_space(("drive", "drive-1"))
+            pane.update_callback(pane)
+            seen["header"] = pane.subtitle
+            return None
+
+        build(act=act)
+        assert seen["header"] not in ("", copy.HOME_NO_DRIVES)
+
     def test_toggling_a_setlist_returns_nothing(self, build):
         """A None return is what keeps TwoPane's loop running."""
         def act(pane):
@@ -1019,6 +1034,52 @@ def test_a_toggle_invalidates_any_recompute_in_flight(build, monkeypatch):
 
     build(act=act)
     assert calls == ["invalidate"]
+
+
+def test_a_recompute_lands_while_the_right_pane_is_still_measuring(build, monkeypatch):
+    """Viewing a drive whose big setlists take minutes to measure kept the
+    warmer busy, and a busy warmer returned before the recompute was applied,
+    so the header stayed blank for the whole first scan."""
+    from src.ui.screens.home import MainMenuCache
+
+    class Busy:
+        busy = True
+
+        def __init__(self, *a, **kw):
+            pass
+
+        def __getattr__(self, name):
+            return lambda *a, **kw: None
+
+    fresh = MainMenuCache()
+    fresh.subtitle = "100% | 3/3 charts"
+    landed = [fresh]
+
+    class Landed:
+        def __init__(self, *a, **kw):
+            pass
+
+        def drain(self):
+            return landed.pop() if landed else None
+
+        def invalidate(self):
+            pass
+
+        def stop(self):
+            pass
+
+    monkeypatch.setattr("src.ui.screens.home_panes.BackgroundWarmer", Busy)
+    monkeypatch.setattr("src.ui.screens.home_panes.MenuCacheWarmer", Landed)
+    seen = {}
+
+    def act(pane):
+        pane.update_callback(pane)   # applies the recompute
+        pane.update_callback(pane)   # hands the header to the pane
+        seen["header"] = pane.subtitle
+        return None
+
+    build(act=act, scanner=_Scanner(done=False))
+    assert seen["header"] == fresh.subtitle
 
 
 def test_a_new_status_snapshot_repaints_once(build):

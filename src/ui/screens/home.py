@@ -264,8 +264,11 @@ def _compute_folder_stats(
     user_settings: UserSettings,
     persistent_cache: PersistentStatsCache = None,
     scanner: BackgroundScanner = None,
+    measure: bool = True,
 ) -> FolderStats | None:
-    """Compute stats for a single folder using setlist-centric aggregation."""
+    """Compute stats for a single folder using setlist-centric aggregation.
+    Without `measure`, setlists nobody has measured yet are left out rather
+    than walked on disk here."""
     folder_id = folder.get("folder_id", "")
     has_files = folder.get("files") is not None
 
@@ -281,7 +284,7 @@ def _compute_folder_stats(
         return None
 
     # If files are loaded, ensure all setlist stats are cached (compute if missing)
-    if has_files and persistent_cache and download_path:
+    if measure and has_files and persistent_cache and download_path:
         for setlist_name in setlist_names:
             if not persistent_cache.get_setlist(folder_id, setlist_name):
                 stats = compute_setlist_stats(folder, setlist_name, download_path, user_settings)
@@ -366,11 +369,16 @@ def compute_main_menu_cache(
     drives_config: DrivesConfig,
     folder_stats_cache: FolderStatsCache = None,
     background_scanner: BackgroundScanner = None,
+    measure: bool = True,
 ) -> MainMenuCache:
     """Compute all expensive stats for the main menu.
 
     Uses folder_stats_cache (in-memory) and persistent_stats_cache (disk) to
     avoid recalculating unchanged folders. Persistent cache survives restarts.
+
+    `measure=False` only adds up setlists already measured, for recomputes
+    while the home screen is up: the scanner and the right pane measure as
+    they go, and walking the rest here took minutes per refresh.
 
     If background_scanner is provided, folders being scanned will show
     "scanning..." indicator (italics with cached values, or just "scanning..."
@@ -409,7 +417,7 @@ def compute_main_menu_cache(
         else:
             stats = _compute_folder_stats(
                 folder, download_path, user_settings, persistent_cache,
-                scanner=background_scanner,
+                scanner=background_scanner, measure=measure,
             )
             if stats is None:
                 # No cache and no files yet
