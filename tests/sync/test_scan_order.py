@@ -16,7 +16,7 @@ from src.sync.background_scanner import BackgroundScanner, SetlistInfo
 @pytest.fixture
 def scanner(monkeypatch):
     """A scanner with a stubbed stats cache, so tests pick the counts."""
-    def build(setlists, remembered=None, enabled=(), out_of_sync=None):
+    def build(setlists, remembered=None, enabled=(), out_of_sync=None, on_disk=None):
         remembered = remembered or {}
         # Unless a test says which are out of sync, all of them are, so the
         # order falls through to cost.
@@ -46,6 +46,7 @@ def scanner(monkeypatch):
             for sid, name, drive in setlists
         }
         s._order_cache = None
+        s._disk_estimates = dict(on_disk or {})
         s._enabled_setlist_ids = set(enabled)
         s._scanned_setlist_ids = set()
         s._failed_setlist_ids = set()
@@ -72,18 +73,35 @@ class TestCheapestFirst:
 
 
 class TestAcrossDrives:
-    def test_drives_are_interleaved_not_drained(self, scanner):
-        """Depth-first leaves every other drive at zero until the first one
-        finishes. Round-robin gets each drive producing work early."""
+    def test_a_small_drives_huge_setlist_waits_its_turn(self, scanner):
+        """Taking turns per drive put a four-setlist drive's 2,500-chart
+        setlist ahead of dozens of quick ones on the other drives."""
         s = scanner(
-            [("a1", "s1", "d1"), ("a2", "s2", "d1"), ("a3", "s3", "d1"),
-             ("b1", "s1", "d2"), ("c1", "s1", "d3")],
-            remembered={("d1", "s1"): 1, ("d1", "s2"): 2, ("d1", "s3"): 3,
-                        ("d2", "s1"): 1, ("d3", "s1"): 1},
+            [("huge", "josh", "misc"), ("a1", "s1", "d1"), ("a2", "s2", "d1"),
+             ("b1", "s1", "d2")],
+            remembered={("misc", "josh"): 2500, ("d1", "s1"): 5,
+                        ("d1", "s2"): 9, ("d2", "s1"): 7},
         )
-        order = s._scan_order()
-        assert order[:3] == ["a1", "b1", "c1"], "drained one drive before the others"
-        assert order[3:] == ["a2", "a3"]
+        assert s._scan_order() == ["a1", "b1", "a2", "huge"]
+
+    def test_a_first_scan_is_ordered_by_what_is_on_disk(self, scanner):
+        """Nothing is remembered on a first scan, so every setlist tied and
+        the biggest could go first. The library already says which are big."""
+        s = scanner(
+            [("huge", "josh", "misc"), ("small", "s1", "d1"), ("absent", "new", "d1")],
+            on_disk={"huge": 2510, "small": 6},
+        )
+        assert s._scan_order() == ["small", "huge", "absent"]
+
+    def test_the_disk_is_read_for_that_size(self, scanner, tmp_path, monkeypatch):
+        for name, entries in (("josh", 5), ("s1", 1)):
+            for i in range(entries):
+                (tmp_path / "misc" / name / f"chart{i}").mkdir(parents=True)
+        monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path))
+        s = scanner([("huge", "josh", "misc"), ("small", "s1", "misc")])
+
+        s._estimate_from_disk()
+        assert s._scan_order() == ["small", "huge"]
 
     def test_every_setlist_is_still_scheduled_exactly_once(self, scanner):
         """Ordering is a hint. Dropping or duplicating one would change what

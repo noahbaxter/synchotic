@@ -200,6 +200,20 @@ def setlist_on_disk(library, drive_name):
     return on_disk
 
 
+def entries_on_disk(library, drive_name, setlist_name):
+    """How many entries this setlist's folder holds, or None when it is not
+    on disk. A size hint for scan order only: bigger on disk, bigger on
+    Drive, longer to scan."""
+    for drive in (drive_name, sanitize_drive_name(drive_name)):
+        for name in (setlist_name, sanitize_drive_name(setlist_name)):
+            try:
+                with os.scandir(Path(library) / drive / name) as entries:
+                    return sum(1 for _ in entries)
+            except OSError:
+                continue
+    return None
+
+
 def _is_dir(entry) -> bool:
     try:
         return entry.is_dir(follow_symlinks=False)
