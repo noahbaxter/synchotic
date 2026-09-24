@@ -8,8 +8,8 @@ this configures it.
 from chotic_ui.components.header import (
     configure_header,
     header_height,
+    header_text as _header_text,
     invalidate_header_cache,
-    print_header as _draw_header,
 )
 
 from ... import copy
@@ -27,8 +27,8 @@ ASCII_HEADER = r"""
 
 LIBRARY_LABEL = f"{copy.ROW_LIBRARY.lower()} → "
 
-__all__ = ["ASCII_HEADER", "install_header", "print_header", "header_height",
-           "invalidate_header_cache", "library_detail"]
+__all__ = ["ASCII_HEADER", "install_header", "print_header", "header_text",
+           "header_height", "invalidate_header_cache", "library_detail"]
 
 
 def install_header() -> None:
@@ -39,9 +39,15 @@ def install_header() -> None:
 
 def print_header() -> None:
     """Draw the banner, installing it first if nothing has yet."""
+    print(header_text(), end="")
+
+
+def header_text() -> str:
+    """The banner as print_header draws it, installing it first if nothing
+    has yet. header_height() rows."""
     if not header_height():
         install_header()
-    _draw_header()
+    return _header_text()
 
 
 def library_detail(room: int) -> str:

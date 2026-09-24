@@ -20,10 +20,16 @@ def _terminal_size() -> tuple[int, int]:
 class ScreenPainter:
     """Draws a SyncScreen, in place on a terminal or as lines to a pipe."""
 
-    def __init__(self, screen, write=None, size=None, is_tty=None):
+    def __init__(self, screen, write=None, size=None, is_tty=None,
+                 banner_text=None, banner_rows=None):
+        """`banner_text()` and `banner_rows()` are the app banner sitting above
+        the frame, as every other screen has it. The frame fits under it, and a
+        redraw from scratch puts it back rather than wiping it."""
         self.screen = screen
         self._write = write or (lambda text: sys.stdout.write(text))
         self._size = size or _terminal_size
+        self._banner_text = banner_text or (lambda: "")
+        self._banner_rows = banner_rows or (lambda: 0)
         if is_tty is None:
             is_tty = bool(sys.__stdout__ and sys.__stdout__.isatty())
         self.is_tty = is_tty
@@ -36,8 +42,9 @@ class ScreenPainter:
 
     def _frame_size(self) -> tuple[int, int]:
         width, height = self._size()
-        # One row is left free so the shell prompt has somewhere to sit.
-        height = max(8, height - 1)
+        # One row is left free so the shell prompt has somewhere to sit, and the
+        # banner keeps its rows above.
+        height = max(8, height - 1 - self._banner_rows())
         total = self.screen.total_files
         if not total and not self.screen.entries.count():
             # Compact while there is nothing to list: a screen of blank rows
@@ -58,8 +65,10 @@ class ScreenPainter:
 
             width, height = self._frame_size()
             if self._last_size not in (None, (width, height)):
-                # A resized terminal leaves the old block's rows behind.
-                self._write("\x1b[2J\x1b[H")
+                # A resized terminal leaves the old block's rows behind. Every
+                # run resizes once too, when the compact frame opens out, so
+                # clearing without the banner lost it for the whole sync.
+                self._write("\x1b[2J\x1b[H" + self._banner_text())
                 self._drawn = 0
             self._last_size = (width, height)
 

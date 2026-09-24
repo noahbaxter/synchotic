@@ -56,7 +56,9 @@ class FolderProgress(ProgressTracker):
         self.errors: list[DownloadError] = []
 
         self.screen = SyncScreen()
-        self.painter = ScreenPainter(self.screen)
+        from ..components.header import header_height, header_text
+        self.painter = ScreenPainter(self.screen, banner_text=header_text,
+                                     banner_rows=header_height)
         self._loop = None
         self._scan_stats_getter = None
         # What is blocking the run right now, shown ahead of the scan note.

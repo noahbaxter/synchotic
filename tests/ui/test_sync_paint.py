@@ -71,6 +71,35 @@ class TestPaintingInPlace:
         assert "\x1b[2J" in term.out() or "\x1b[J" in term.out()
         assert len([ln for ln in term.lines() if ln.startswith("╭")]) == 1
 
+    BANNER = "\n".join(f"banner {i}" for i in range(5)) + "\n"
+
+    def _with_banner(self, charts, term):
+        return ScreenPainter(_screen(charts), write=term.write, size=lambda: term.size,
+                             is_tty=True, banner_text=lambda: self.BANNER,
+                             banner_rows=lambda: 5)
+
+    def test_the_frame_fits_under_the_banner(self, charts):
+        """Sized to the whole terminal, the frame scrolled the banner off the top."""
+        term = Terminal(height=20)
+        self._with_banner(charts, term).paint()
+
+        drawn = [ln for ln in term.lines() if ln.startswith(("╭", "│", "├", "╰"))]
+        assert len(drawn) == 20 - 1 - 5
+
+    def test_a_redraw_from_scratch_puts_the_banner_back(self, charts):
+        """Every run redraws once, when the compact frame opens out. Clearing
+        without the banner lost it for the whole sync."""
+        term = Terminal(height=20)
+        painter = self._with_banner(charts, term)
+        painter.paint()
+        term.size = (78, 16)
+        term.written.clear()
+        painter.paint()
+
+        out = term.out()
+        assert out.index(self.BANNER) > out.index("\x1b[2J")
+        assert out.index(self.BANNER) < out.index("╭")
+
     def test_a_small_run_does_not_reserve_a_full_screen_box(self, charts):
         """4 files on a 70-row terminal used to draw 69 rows, most of them
         blank padding below the last entry."""
