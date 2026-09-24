@@ -46,11 +46,7 @@ class AuthMixin:
 
     def handle_library(self, intro: str = "", setup_step=None) -> bool:
         """Change where charts live, then re-read what is actually there.
-
-        Returns whether the library actually moved. Backing out with Esc used to
-        cost the same two-second pause and the same full stats rebuild as a real
-        move, which made cancelling feel like the app had hung.
-        """
+        Returns whether the library actually moved."""
         from src.ui.screens import show_library_screen
         if not show_library_screen(self.user_settings, intro=intro,
                                    setup_step=setup_step):
@@ -59,7 +55,6 @@ class AuthMixin:
         # A dict here would have replaced the cache object outright, leaving
         # later .invalidate()/.set() calls to fail on a plain dict.
         self.folder_stats_cache.invalidate_all()
-        wait_with_skip(2)
         return True
 
     def _turn_on_library_drives(self, undecided_only=False) -> dict:

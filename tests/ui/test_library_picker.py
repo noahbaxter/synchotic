@@ -220,3 +220,21 @@ class TestStatsDoNotOutliveTheOldLibrary:
         drive(str(target), settings=_settings(tmp_path))
 
         assert scan.get("setlist1") is not None
+
+
+def test_a_picked_library_moves_on_without_a_pause(monkeypatch):
+    """The next screen follows at once. A pause here showed a frozen frame and
+    echoed keys pressed during it."""
+    from sync import SyncApp
+
+    app = object.__new__(SyncApp)
+    app.user_settings = object()
+    app.folder_stats_cache = type("Stats", (), {"invalidate_all": lambda s: None})()
+    monkeypatch.setattr("src.ui.screens.show_library_screen", lambda *a, **k: True)
+    monkeypatch.setattr(SyncApp, "_turn_on_library_drives", lambda self: {})
+
+    def paused(*a, **k):
+        raise AssertionError("paused after picking a library")
+    monkeypatch.setattr("src.app.auth.wait_with_skip", paused)
+
+    assert app.handle_library() is True
