@@ -85,15 +85,61 @@ class TestWhereTheLauncherWrites:
 
     def test_a_bundle_is_recognised_as_one(self, bundle, frozen):
         frozen(bundle / "Contents" / "MacOS" / "Synchotic")
-        assert launcher.is_bundled() is True
+        assert launcher.is_installed() is True
 
-    def test_a_loose_binary_stays_portable(self, tmp_path, frozen):
-        """Windows ships exactly that, and it keeps .dm-sync beside itself."""
-        exe = tmp_path / "synchotic-launcher.exe"
-        exe.touch()
-        frozen(exe)
-        assert launcher.is_bundled() is False
-        assert launcher.get_launcher_dir() == tmp_path
+
+@pytest.fixture
+def windows_exe(tmp_path, frozen, monkeypatch):
+    """The Windows launcher: one loose exe, wherever the user dropped it."""
+    exe = tmp_path / "Downloads" / "synchotic-launcher.exe"
+    exe.parent.mkdir()
+    exe.touch()
+    frozen(exe)
+    monkeypatch.setattr(sys, "platform", "win32")
+    monkeypatch.setenv("LOCALAPPDATA", str(tmp_path / "local"))
+    monkeypatch.delenv("SYNCHOTIC_LAUNCHER_DIR", raising=False)
+    return exe
+
+
+class TestTheWindowsExe:
+    """One exe, run from anywhere, with its files in the OS data dir like the
+    .app and the AppImage. It used to keep a .dm-sync beside itself, which put
+    a second layout into the world and a move-or-delete prompt in front of
+    anyone who moved it."""
+
+    def test_nothing_is_kept_beside_it(self, windows_exe, tmp_path):
+        assert launcher.get_launcher_dir() == tmp_path / "local" / "Synchotic" / "Data"
+        assert launcher.get_app_dir() == tmp_path / "local" / "Synchotic" / "Data" / "_app"
+
+    def test_the_app_is_told_to_use_os_dirs(self, windows_exe, monkeypatch):
+        monkeypatch.setenv("SYNCHOTIC_ROOT", "/somewhere/stale")
+        env = launcher.app_environment()
+        assert env["SYNCHOTIC_OS_DIRS"] == "1"
+        assert "SYNCHOTIC_ROOT" not in env
+
+    def test_its_folder_is_handed_over_to_adopt(self, windows_exe):
+        """Where launcher 1.3 kept .dm-sync, so an upgrade keeps the sign-in."""
+        env = launcher.app_environment()
+        assert env["SYNCHOTIC_LEGACY_ROOT"] == str(windows_exe.parent)
+
+
+class TestADevRun:
+    """--dev reads a zip beside the binary and --clean deletes its folder, so it
+    must never resolve to the OS data dir a real install lives in."""
+
+    @pytest.fixture(autouse=True)
+    def dev(self, monkeypatch):
+        monkeypatch.setattr(sys, "argv", ["synchotic-launcher", "--dev"])
+
+    def test_it_stays_beside_the_binary(self, windows_exe):
+        assert launcher.is_installed() is False
+        assert launcher.get_app_dir() == windows_exe.parent / ".dm-sync" / "_app"
+
+    def test_the_app_stays_out_of_the_os_dirs(self, windows_exe):
+        """A frozen Windows app picks the OS dirs itself unless told not to."""
+        env = launcher.app_environment()
+        assert env["SYNCHOTIC_OS_DIRS"] == "0"
+        assert env["SYNCHOTIC_ROOT"] == str(windows_exe.parent)
 
 
 class TestTheTwoHalvesAgree:
@@ -124,28 +170,12 @@ class TestTheTwoHalvesAgree:
         assert env["SYNCHOTIC_OS_DIRS"] == "1"
         assert "SYNCHOTIC_ROOT" not in env
 
-    def test_a_loose_executable_still_gets_a_root(self, tmp_path, frozen, monkeypatch):
-        monkeypatch.delenv("SYNCHOTIC_OS_DIRS", raising=False)
-        exe = tmp_path / "synchotic-launcher.exe"
-        exe.touch()
-        frozen(exe)
-        env = launcher.app_environment()
-        assert env["SYNCHOTIC_ROOT"] == str(tmp_path)
-        assert "SYNCHOTIC_OS_DIRS" not in env
 
-
-class TestTheHiddenFolderIsPortableOnly:
-    """.dm-sync exists to keep our files out of the user's chart folder. Inside
-    the OS data dir there is nothing to hide from, and nesting it there just
-    buries the payload a level deeper."""
+class TestTheHiddenFolderIsDevOnly:
+    """Inside the OS data dir there is nothing to hide from, and nesting a
+    .dm-sync there just buries the payload a level deeper."""
 
     def test_a_bundle_has_no_dm_sync_level(self, bundle, frozen):
         frozen(bundle / "Contents" / "MacOS" / "Synchotic")
         assert ".dm-sync" not in str(launcher.get_app_dir())
         assert launcher.get_app_dir() == launcher.os_data_dir() / "_app"
-
-    def test_a_loose_executable_keeps_it(self, tmp_path, frozen):
-        exe = tmp_path / "synchotic-launcher.exe"
-        exe.touch()
-        frozen(exe)
-        assert launcher.get_app_dir() == tmp_path / ".dm-sync" / "_app"
