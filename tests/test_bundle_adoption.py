@@ -363,7 +363,37 @@ class TestAWindowsPortableInstall:
         assert len(saved["drive_toggles"]) == 3
         assert saved["library_path"] == str(old / paths.DOWNLOAD_FOLDER_NAME)
 
+    def test_launcher_1_3_still_leads_to_it(self, old, monkeypatch):
+        """That launcher does not update itself and names its folder only as
+        SYNCHOTIC_ROOT, which counts once the app is in the OS dirs."""
+        monkeypatch.setenv("SYNCHOTIC_ROOT", str(old))
+        assert self._startup() != []
+        assert (paths.get_data_dir() / "token.json").exists()
+
     def test_the_old_folder_is_left_as_it_was(self, old, monkeypatch):
         monkeypatch.setenv(paths.LEGACY_ROOT_ENV, str(old))
         self._startup()
         assert (old / paths.DATA_DIR_NAME / "token.json").exists()
+
+
+class TestAFrozenWindowsAppChoosesTheOsDirs:
+    """Launcher 1.3 sets only SYNCHOTIC_ROOT, so the app decides for itself."""
+
+    @pytest.fixture
+    def frozen_windows(self, monkeypatch):
+        monkeypatch.setattr(paths.sys, "platform", "win32")
+        monkeypatch.setattr(paths.sys, "frozen", True, raising=False)
+        monkeypatch.delenv(paths.OS_DIRS_ENV, raising=False)
+
+    def test_unset_means_os_dirs(self, frozen_windows):
+        assert paths._using_os_dirs() is True
+
+    def test_a_dev_run_can_still_say_no(self, frozen_windows, monkeypatch):
+        monkeypatch.setenv(paths.OS_DIRS_ENV, "0")
+        assert paths._using_os_dirs() is False
+
+    def test_a_source_run_stays_beside_the_checkout(self, monkeypatch):
+        monkeypatch.setattr(paths.sys, "platform", "win32")
+        monkeypatch.setattr(paths.sys, "frozen", False, raising=False)
+        monkeypatch.delenv(paths.OS_DIRS_ENV, raising=False)
+        assert paths._using_os_dirs() is False

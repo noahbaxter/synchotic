@@ -1,19 +1,11 @@
 """
-Centralized path management for DM Chart Sync.
+Centralized path management for Synchotic.
 
-All app data is stored in .dm-sync/ folder next to the executable.
-This makes the app portable - everything stays together.
-
-Directory structure:
-    path/to/dm-sync.exe (or sync.py)
-    path/to/.dm-sync/
-        settings.json       - User preferences (drive toggles, etc.)
-        token.json          - User OAuth token (required for scanning and syncing)
-        local_manifest.json - Custom drives added by user
-        markers/            - Archive sync markers (source of truth)
-        logs/               - Debug logs
-        stats_cache.json    - Persistent stats for fast startup
-    path/to/Sync Charts/    - Downloaded chart files
+Every shipped build keeps its state in the OS dirs (_os_dir): settings, token,
+custom drives and rclone config in data, scan and stats caches in cache, and
+logs. Source runs, tests and a --dev launcher keep the same files in .dm-sync/
+beside the app instead. Markers live in the library, with the charts they
+describe, and the library is wherever the user pointed it.
 """
 
 import os
@@ -36,10 +28,6 @@ def get_certifi_ssl_context() -> str:
 # Directory name for app data (hidden on Unix)
 DATA_DIR_NAME = ".dm-sync"
 
-# OS-standard dirs, used when the app ships as a .app in /Applications, where
-# writing beside the executable is neither possible nor wanted. Portable installs
-# (launcher sitting in a folder, and every dev run) keep the .dm-sync layout, so
-# SYNCHOTIC_ROOT still wins when it is set.
 APP_DIRNAME = "Synchotic"
 
 
@@ -47,14 +35,18 @@ OS_DIRS_ENV = "SYNCHOTIC_OS_DIRS"
 
 
 def _using_os_dirs() -> bool:
-    """True only when the caller opts in.
+    """Whether state goes in the OS dirs. SYNCHOTIC_OS_DIRS decides when set:
+    launchers from 1.4 set it, and --first-run and a --dev launcher set "0".
 
-    Opt-in, not inferred: every existing install is portable, and a mode that
-    switched itself on whenever SYNCHOTIC_ROOT happened to be unset would also
-    override an injected get_app_dir, which is how the tests and every dev run
-    point the app at a scratch directory.
+    Unset, a frozen Windows app still uses them. Launcher 1.3 starts it with
+    only SYNCHOTIC_ROOT, the portable .dm-sync it kept beside the exe, and that
+    launcher does not update itself, so the app moves on its own and adopts
+    that folder (legacy_install_candidates).
     """
-    return os.environ.get(OS_DIRS_ENV) == "1"
+    env = os.environ.get(OS_DIRS_ENV)
+    if env:
+        return env == "1"
+    return sys.platform == "win32" and bool(getattr(sys, "frozen", False))
 
 
 def _os_dir(kind: str) -> Path:
@@ -263,8 +255,7 @@ def get_data_dir() -> Path:
     """
     Small precious state: settings, OAuth token, credentials, rclone config.
 
-    Portable installs keep .dm-sync/ next to the executable; a .app uses the
-    OS data dir.
+    The OS data dir for a shipped build, .dm-sync/ beside the app otherwise.
     """
     data_dir = _os_dir("data") if _using_os_dirs() else get_app_dir() / DATA_DIR_NAME
     data_dir.mkdir(parents=True, exist_ok=True)

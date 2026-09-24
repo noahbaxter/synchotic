@@ -62,10 +62,15 @@ def legacy_install_candidates(explicit=None) -> list:
 
 def _legacy_roots() -> list:
     """Folders a portable launcher kept .dm-sync in: SYNCHOTIC_LEGACY_ROOT,
-    which the bundles set to the folder they sit in (os.pathsep separates
-    several)."""
+    which launchers from 1.4 set to the folder they sit in (os.pathsep
+    separates several), and SYNCHOTIC_ROOT, which launcher 1.3 still sets on
+    Windows after the app has moved to the OS dirs by itself."""
     env = os.environ.get(LEGACY_ROOT_ENV) or ""
-    return [Path(r) for r in env.split(os.pathsep) if r]
+    roots = [Path(r) for r in env.split(os.pathsep) if r]
+    root = os.environ.get("SYNCHOTIC_ROOT")
+    if root and paths._using_os_dirs():
+        roots.append(Path(root))
+    return roots
 
 
 FRESH_ENV = "SYNCHOTIC_FRESH"  # see sync.py --first-run
