@@ -48,8 +48,21 @@ def test_a_path_under_home_is_shortened(monkeypatch):
 
     printed = _printed(monkeypatch, Path.home() / "Synchotic" / "Sync Charts")
 
-    assert "~/Synchotic/Sync Charts" in printed
+    # One separator throughout: "~/Documents\Clone Hero" on Windows otherwise.
+    assert str(Path("~") / "Synchotic" / "Sync Charts") in printed
     assert str(Path.home()) not in printed
+
+
+def test_the_long_path_prefix_is_not_shown(monkeypatch):
+    """The library carries \\\\?\\ on Windows to get past MAX_PATH. It is for
+    the filesystem, not for anyone reading the banner. Short, so shortening
+    from the front cannot hide it either way."""
+    from src.core import paths
+
+    printed = _printed(monkeypatch, paths.EXTENDED_PREFIX + "C:\\Songs")
+
+    assert paths.EXTENDED_PREFIX not in printed
+    assert "C:\\Songs" in printed
 
 
 def test_moving_the_library_updates_the_header(monkeypatch, tmp_path):
