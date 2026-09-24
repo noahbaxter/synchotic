@@ -283,8 +283,10 @@ class SyncFlowMixin:
                 else:
                     progress.advance_run()
             else:
-                # Nothing ready — are we done?
-                if len(downloaded_ids) >= total_setlists or scanner.is_done():
+                # Nothing ready — are we done? Every enabled setlist downloaded
+                # or failed is enough. Waiting on is_done() waited for every
+                # disabled setlist too, game rips included.
+                if len(downloaded_ids) >= total_setlists or scanner.is_all_enabled_scanned():
                     break
 
                 # Wait for the scanner; the divider shows its progress.
