@@ -50,3 +50,35 @@ class TestTheSandbox:
     def test_a_previous_install_is_not_imported(self, sandbox):
         """The sandbox is portable, and only OS-dirs installs adopt."""
         assert paths._using_os_dirs() is False
+
+
+class TestCredentials:
+    """Copied by default, so walking BYOC does not need a second Google Cloud
+    project. The token stays behind, so the run still starts signed out."""
+
+    @pytest.fixture
+    def make(self, monkeypatch, tmp_path):
+        real = tmp_path / "real"
+        for name in ("SYNCHOTIC_ROOT", "SYNCHOTIC_OS_DIRS", FRESH_ENV,
+                     "SYNCHOTIC_LIBRARY", "SYNCHOTIC_LEGACY_ROOT"):
+            monkeypatch.setenv(name, os.environ.get(name, ""))
+        monkeypatch.setenv("SYNCHOTIC_ROOT", str(real))
+        monkeypatch.setenv("SYNCHOTIC_OS_DIRS", "0")
+        data = paths.get_data_dir()
+        data.mkdir(parents=True, exist_ok=True)
+        (data / "credentials.json").write_text('{"installed": {}}')
+        (data / "token.json").write_text("{}")
+
+        def run(keep_creds):
+            sync_entry.use_first_run_sandbox(keep_creds=keep_creds)
+            return paths.get_data_dir()
+        yield run
+        paths.set_library_path(None)
+
+    def test_they_are_copied_and_the_token_is_not(self, make):
+        data = make(keep_creds=True)
+        assert (data / "credentials.json").exists()
+        assert not (data / "token.json").exists()
+
+    def test_no_creds_leaves_them_out(self, make):
+        assert not (make(keep_creds=False) / "credentials.json").exists()

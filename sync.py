@@ -252,17 +252,20 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
                 menu_cache = None
 
 
-def use_first_run_sandbox() -> Path:
+def use_first_run_sandbox(keep_creds: bool = False) -> Path:
     """Point this run at an empty install in a throwaway temp folder, so a
     machine that already runs Synchotic can show what a new user sees.
-    Nothing installed is read or adopted. Returns the folder."""
+    Nothing installed is adopted; `keep_creds` copies credentials.json across
+    so BYOC can be walked. Returns the folder."""
     import shutil
     import tempfile
 
     from src.core.legacy_migration import FRESH_ENV
-    from src.core.paths import get_drives_config_path
+    from src.core.paths import get_data_dir, get_drives_config_path
 
     sandbox = Path(tempfile.mkdtemp(prefix="synchotic-first-run-"))
+    # Read before the environment moves, so this is the real install's.
+    real_creds = get_data_dir() / "credentials.json" if keep_creds else None
     # SYNCHOTIC_ROOT moves the bundled drives.json too. Without it the sandbox
     # has no drives, which no real install ever sees.
     drives = get_drives_config_path()
@@ -274,6 +277,10 @@ def use_first_run_sandbox() -> Path:
     # Both would hand the sandbox a real install to adopt.
     os.environ.pop("SYNCHOTIC_LIBRARY", None)
     os.environ.pop("SYNCHOTIC_LEGACY_ROOT", None)
+    # The token never comes across, so the run still starts signed out.
+    if real_creds and real_creds.exists():
+        get_data_dir().mkdir(parents=True, exist_ok=True)
+        shutil.copy2(real_creds, get_data_dir() / real_creds.name)
     return sandbox
 
 
@@ -342,8 +349,14 @@ def main():
     parser.add_argument(
         "--first-run", "--firsttime", action="store_true", dest="first_run",
         help="run against an empty throwaway install, for seeing what a new "
-             "user sees. Nothing on this machine is read or written: no "
-             "settings, no sign-in, no library, and no adoption of either.",
+             "user sees: no settings, no sign-in, no library, and nothing "
+             "adopted from this machine. Your credentials.json is copied in "
+             "so BYOC works; see --no-creds.",
+    )
+    parser.add_argument(
+        "--no-creds", action="store_true", dest="no_creds",
+        help="with --first-run, leave this machine's credentials.json out of "
+             "the sandbox, to see the setup that asks for it.",
     )
     parser.add_argument(
         "--download-mode", choices=DOWNLOAD_MODES, default=None,
@@ -357,7 +370,7 @@ def main():
     cli_args = parser.parse_args()
 
     if cli_args.first_run:
-        sandbox = use_first_run_sandbox()
+        sandbox = use_first_run_sandbox(keep_creds=not cli_args.no_creds)
         # Before the alternate screen opens, so it is still there after quitting.
         print(f"  first-run sandbox: {sandbox}")
 

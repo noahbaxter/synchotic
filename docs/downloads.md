@@ -62,10 +62,36 @@ authenticated download pipe.
 set. Throughput against the OAuth path has never been measured. See the backlog
 entry before assuming it is fast or slow.
 
+## rclone's shared client id is being retired (noted 2026-09-20)
+
+Tier 4 has an expiry date.
+
+- Google will charge for API requests through rclone's built-in Drive client id,
+  so rclone will disable and then remove it.
+  <https://forum.rclone.org/t/google-drive-and-google-photos-users-action-required/54005>
+- Tracking issue, opened 2026-07-07, no date or milestone yet:
+  <https://github.com/rclone/rclone/issues/9580>
+- Phases: forum notice, warning in the binary (where it is now), ~90 days notice,
+  disable, remove. rclone v1.75.1 already prints the warning against every remote
+  Synchotic creates, since we set no client id.
+- After removal, an rclone remote needs the user's own client id: the same Cloud
+  project and OAuth client as BYOC, plus a sequential download pipe.
+- No free "just sign in" path exists. `drive.readonly` and `drive` are restricted
+  scopes (verification + CASA) for any client id we own. `drive.file` is
+  per-file, and picking a folder in the Google Picker does not grant access to
+  its contents.
+  <https://developers.google.com/workspace/drive/api/guides/api-specific-auth>
+
+The chooser now favours BYOC ("best") and marks rclone deprecated ("easiest").
+When rclone starts its 90-day notice, choose between paying for verification
+and BYOC for everyone. Tracked in BACKLOG.md.
+
 ## Rejected, and why
 
 - **CASA Tier 2 ($540/yr).** Buys only what rclone gives for free. Revisit if
-  there is ever revenue.
+  there is ever revenue. **Re-read this since rclone's shared client id is being
+  retired (above): it no longer buys what rclone gives, it buys the only path
+  where a normal user just signs in.**
 - **R2 mirror ($4-7/mo).** Cost is not the issue. Mirroring ~116GB turns Synchotic
   from an index pointing at other people's Drive folders into a distributor, which
   is a licensing and DMCA surface we do not have today, and drive maintainers may
