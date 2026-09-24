@@ -379,7 +379,7 @@ KEY_SCROLL = "↑↓ scroll"
 KEY_ALL_CHARTS = "E all charts"
 KEY_ERRORS_ONLY = "E errors only"
 SHOWING_ERRORS = "errors only · {n}"
-HELD = "paused · END to resume"
+HELD = "END follow"
 
 NETWORK = "network"
 EXTRACTING = "extracting…"

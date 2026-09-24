@@ -486,21 +486,24 @@ class SyncScreen:
     def _divider_label(self) -> str:
         if self.errors_only:
             return copy.SHOWING_ERRORS.format(n=self.entries.failed)
-        if not self.following:
-            return copy.HELD
-        if self.status_getter:
-            try:
-                status = self.status_getter()
-            except Exception:
-                return ""
-            if not status:
-                return ""
-            return f"{spinner_frame(self.clock())} {status}"
-        return ""
+        # Held or not: scrolling moves the view, never the run, and swapping the
+        # activity for a note made a scrolled screen look stopped.
+        return self._activity()
+
+    def _activity(self) -> str:
+        """What the run is doing right now, with the spinner, or ""."""
+        if not self.status_getter:
+            return ""
+        try:
+            status = self.status_getter()
+        except Exception:
+            return ""
+        return f"{spinner_frame(self.clock())} {status}" if status else ""
 
     def _controls(self) -> str:
         toggle = copy.KEY_ALL_CHARTS if self.errors_only else copy.KEY_ERRORS_ONLY
-        return f"{self.controls} · {copy.KEY_SCROLL} · {toggle}"
+        keys = f"{self.controls} · {copy.KEY_SCROLL} · {toggle}"
+        return keys if self.following else f"{keys} · {copy.HELD}"
 
     @property
     def number_width(self) -> int:

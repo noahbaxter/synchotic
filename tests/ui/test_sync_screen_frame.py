@@ -347,7 +347,9 @@ class TestTheDividerShowsItIsAlive:
 
         assert self._divider(screen).strip("├┤─ ") == ""
 
-    def test_a_held_view_is_a_state_not_an_activity(self):
+    def test_a_held_view_still_says_what_the_run_is_doing(self):
+        """Scrolling holds the list, not the run. Replacing the activity with a
+        note made a scrolled screen look like the download had stopped."""
         screen, _clock = self._screen_at("checking Rock Band (17/80)")
         for i in range(30):
             screen.entries.finish(f"chart{i}", name=f"Chart {i}.7z")
@@ -355,8 +357,14 @@ class TestTheDividerShowsItIsAlive:
         screen.scroll(-1)
         assert not screen.following, "the view did not actually hold"
 
-        assert copy.HELD in self._divider(screen)
-        assert not any(glyph in self._divider(screen) for glyph in SPINNER)
+        divider = self._divider(screen)
+        assert "checking Rock Band (17/80)" in divider
+        assert any(glyph in divider for glyph in SPINNER)
+
+        bottom = [strip_ansi(ln) for ln in screen.frame(width=78, height=14)][-1]
+        assert copy.HELD in bottom, "the way back belongs with the other keys"
+        screen.follow()
+        assert copy.HELD not in [strip_ansi(ln) for ln in screen.frame(width=78, height=14)][-1]
 
     def test_the_spinner_does_not_break_the_frame_width(self):
         """The glyph is multi-byte; padding is measured in columns."""
