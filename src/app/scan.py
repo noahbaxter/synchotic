@@ -130,11 +130,24 @@ class ScanMixin:
         self._start_background_scan(force_rescan=True)
 
     def _scan_failure(self) -> tuple[str, int] | None:
-        """(reason, failed setlist count) when scans failed, else None."""
+        """(reason, failed setlist count) when scans of what is turned on
+        failed, else None. A setlist that is off failing to scan cost the sync
+        nothing, and counting it made an up to date library report FAILURE.
+        A drive that would not list counts as one."""
         scanner = self._background_scanner
         if not (scanner and scanner.has_scan_failures()):
             return None
-        reason = scanner.get_failure_reason() or copy.FAIL_UNKNOWN
-        count = sum(len(scanner.get_failed_setlist_names(f.get("folder_id", "")))
-                    for f in self.folders)
-        return reason, count
+        settings = self.user_settings
+        count = 0
+        for f in self.folders:
+            folder_id = f.get("folder_id", "")
+            if not settings.is_drive_enabled(folder_id):
+                continue
+            if scanner.discovery_failed(folder_id):
+                count += 1
+                continue
+            count += sum(1 for name in scanner.get_failed_setlist_names(folder_id)
+                         if settings.is_subfolder_enabled(folder_id, name))
+        if not count:
+            return None
+        return scanner.get_failure_reason() or copy.FAIL_UNKNOWN, count
