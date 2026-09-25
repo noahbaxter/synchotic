@@ -20,6 +20,9 @@ class _Auth:
     def get_token(self):
         return "oauth-token"
 
+    def get_token_getter(self):
+        return self.get_token
+
 
 class _Scanner:
     """A folder scan that returns one file and never touches the network."""

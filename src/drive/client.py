@@ -36,19 +36,28 @@ class DriveClient:
     API_FILES = f"{API_BASE}/files"
     API_CHANGES = f"{API_BASE}/changes"
 
-    def __init__(self, config: DriveClientConfig, auth_token: Optional[str] = None):
+    def __init__(self, config: DriveClientConfig, auth_token=None):
         """
         Initialize the Drive client.
 
         Args:
             config: Client configuration
-            auth_token: Optional OAuth token (for Changes API)
+            auth_token: Optional OAuth token, or a callable returning a fresh
+                one. A client that lives longer than an hour needs the
+                callable: access tokens expire, and a stale one turns every
+                request into a 401.
         """
         self.config = config
-        self.auth_token = auth_token
+        self._auth_token = auth_token
         self._api_calls = 0
         self._last_request_time = 0.0
         self._min_request_interval = 1.0 / config.max_qps if config.max_qps > 0 else 0
+
+    @property
+    def auth_token(self) -> Optional[str]:
+        """The token to send now, fetched afresh when given a getter."""
+        token = self._auth_token
+        return token() if callable(token) else token
 
     @property
     def api_calls(self) -> int:

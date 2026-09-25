@@ -161,9 +161,10 @@ class BackgroundScanner:
 
         self._stats.start_time = time.time()
 
-        auth_token = self._auth.get_token()
+        # A getter, not the token: the scanner lives as long as the app, and
+        # an access token lasts an hour. Past that every listing was a 401.
         client_config = DriveClientConfig(api_key=self._api_key)
-        self._client = DriveClient(client_config, auth_token=auth_token)
+        self._client = DriveClient(client_config, auth_token=self._auth.get_token_getter())
 
         self._discover_all_setlists(on_progress)
 

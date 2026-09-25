@@ -45,6 +45,9 @@ class _Auth:
     def get_token(self):
         return "oauth-token"
 
+    def get_token_getter(self):
+        return self.get_token
+
 
 @pytest.fixture
 def library():

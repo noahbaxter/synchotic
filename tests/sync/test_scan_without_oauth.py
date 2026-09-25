@@ -24,6 +24,9 @@ class _NoSignIn:
     def get_token(self):
         return None
 
+    def get_token_getter(self):
+        return None
+
 
 class _Settings:
     def is_drive_enabled(self, folder_id):
@@ -95,3 +98,29 @@ def test_a_signed_out_scan_actually_discovers_setlists(google):
     scanner, _ = _discover("baked-ci-key", google)
 
     assert scanner.get_enabled_setlist_count() == 1
+
+
+def test_a_signed_in_scan_sends_the_token_current_at_each_request(google):
+    """The scanner lives as long as the app and an access token lasts an hour.
+    Holding the one from startup made every listing after that a 401, so the
+    setlists it could not rescan were never downloaded."""
+    class Refreshing:
+        is_signed_in = True
+        token = "at-startup"
+
+        def get_token(self):
+            return self.token
+
+        def get_token_getter(self):
+            return self.get_token
+
+    auth = Refreshing()
+    folder = {"folder_id": "drive1", "name": "Drive One", "files": None}
+    scanner = BackgroundScanner([folder], auth, api_key="key",
+                                user_settings=_Settings())
+    scanner.discover()
+    auth.token = "an-hour-later"
+    scanner._client.list_folder("setlist1")
+
+    assert google[0]["headers"]["Authorization"] == "Bearer at-startup"
+    assert google[-1]["headers"]["Authorization"] == "Bearer an-hour-later"
