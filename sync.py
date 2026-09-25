@@ -428,17 +428,27 @@ def main():
     # An unreachable library has to stop startup right here. Every path helper
     # below raises once the library is gone, and mkdir on an absent mountpoint
     # would quietly build an empty library that the next sync fills and the
-    # remount then hides. Offer a retry so plugging the drive in is enough.
+    # remount then hides. Offer a retry so plugging the drive in is enough, and
+    # the picker, since a drive that is gone for good would otherwise lock
+    # Settings > Library behind a library that never comes back.
     from src.core.paths import get_library_path as _get_library_path
     from src.core.paths import library_is_available as _library_is_available
     from src.core.paths import plain_path as _plain_path
     while not _library_is_available():
-        display.library_unavailable(_plain_path(_get_library_path()))
         if not sys.stdin.isatty():
+            display.library_unavailable(_plain_path(_get_library_path()))
             sys.exit(1)
-        from src.ui.widgets.confirm import ConfirmDialog
-        if not ConfirmDialog(f"{copy.UNFINISHED_RETRY}?", copy.LIBRARY_MISSING).run():
+        from src.ui.screens.library import ask, show_library_screen
+        choice = ask(copy.LIBRARY_MISSING,
+                     f"{_plain_path(_get_library_path())}\n\n{copy.FIX_RECONNECT}",
+                     ((copy.UNFINISHED_RETRY, "retry"),
+                      (copy.LIBRARY_BROWSE, "pick"),
+                      (copy.BTN_QUIT, None)),
+                     esc_label=copy.BTN_QUIT)
+        if choice is None:
             sys.exit(1)
+        if choice == "pick":
+            show_library_screen(_early)
 
     # A bundle that used to be portable has its settings, token and rclone
     # config in a .dm-sync somewhere. The shim and the launcher both name that
