@@ -113,11 +113,11 @@ class _Drive:
 
     def on_disk(self):
         root = self.library / DRIVE
-        return sorted(str(p.relative_to(root)) for p in root.rglob("*") if p.is_file())
+        return sorted(p.relative_to(root).as_posix() for p in root.rglob("*") if p.is_file())
 
     def purge(self, settings):
         files, _ = plan_purge([self.folder], self.library, settings, None)
-        return sorted(str(p.relative_to(self.library / DRIVE)) for p, _ in files)
+        return sorted(p.relative_to(self.library / DRIVE).as_posix() for p, _ in files)
 
     def status(self, settings):
         return get_setlist_sync_status(self.folder, SETLIST, self.library,

@@ -32,7 +32,7 @@ class TestChartsResolving:
     def test_a_chart_of_loose_files_resolves_once_its_last_file_lands(self):
         """One row per chart, not one per album.png inside it."""
         progress = _progress()
-        progress.folder_progress["/songs/DM/Chart"] = {
+        progress.folder_progress[str(Path("/songs/DM/Chart"))] = {
             "expected": 2, "completed": 0, "is_chart": True, "path_context": "TestSetlist",
         }
 

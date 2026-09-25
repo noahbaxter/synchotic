@@ -1,5 +1,6 @@
 """The library path, beside the version on every screen."""
 import io
+import os
 import re
 from contextlib import redirect_stdout
 
@@ -89,7 +90,7 @@ def test_a_long_path_is_shortened_from_the_front(monkeypatch, tmp_path):
 
     status = [ln for ln in printed.split("\n") if " v" in ln][0]
     assert status.endswith("Songs")
-    assert "…/" in status
+    assert f"…{os.sep}" in status
     assert len(status) <= 60
 
 

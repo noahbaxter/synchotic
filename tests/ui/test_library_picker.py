@@ -80,7 +80,7 @@ class TestChoosingAFolder:
         # Path helpers read module state, so a stale value would keep writing
         # into the old library until restart.
         from src.sync import markers
-        assert markers.get_markers_dir().is_relative_to(target)
+        assert Path(paths.plain_path(markers.get_markers_dir())).is_relative_to(target)
 
     def test_tilde_is_expanded(self, tmp_path, drive, monkeypatch):
         monkeypatch.setenv("HOME", str(tmp_path))
