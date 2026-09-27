@@ -6,6 +6,8 @@ import shutil
 import sys
 import threading
 
+from chotic_ui.primitives.terminal import truncate_ansi
+
 from ..primitives import strip_ansi
 from .sync_screen import ACTIVE, OVERFLOW, CHROME_LINES
 
@@ -74,8 +76,11 @@ class ScreenPainter:
 
             if self._drawn:
                 self._write(f"\x1b[{self._drawn}A")
+            # The frame is never narrower than 40; clipped, so a line that
+            # wrapped cannot push the frame down a row on every paint.
+            cols = self._size()[0]
             for line in self.screen.frame(width, height):
-                self._write(f"\r{line}\x1b[K\n")
+                self._write(f"\r{truncate_ansi(line, cols)}\x1b[K\n")
             self._drawn = height
 
     def close(self) -> None:
