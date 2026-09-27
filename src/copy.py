@@ -282,6 +282,10 @@ UNFINISHED_BYOC_BODY = (f"Looks like you haven't added your {CREDENTIALS_FILE} y
 
 UNFINISHED_RETRY = "Try again"
 
+# --- the launcher, replaced in the background -------------------------------
+
+LAUNCHER_UPDATING = "Updating the launcher. Synchotic will reopen by itself."
+
 # --- rclone -----------------------------------------------------------------
 
 RCLONE_CONSENT = "Please sign in to Google to give rclone read-only access to your Drive."

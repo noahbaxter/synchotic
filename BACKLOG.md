@@ -7,10 +7,6 @@
   - Once 1.5.5 upgrades are confirmed, delete on a later launch only what provably arrived: each file present at its destination, and every marker present in the library. A marker deleted before it arrived turns its charts into purge extras. Purge-adjacent, so manual verification.
   - Never `_app`, `wezterm` or launcher logs: launcher 1.3 still runs from there, so the folder itself stays until people have a newer launcher.
 
-- [ ] [feature] let the app update the launcher *(2026-09-24)*
-  - The app updates every run, the launcher never does, and there is no channel to tell people to download it again. Launcher-side changes (e.g. the OS-dirs layout in `eb19d72`) reach nobody until they do.
-  - The app knows when launcher 1.3 started it (frozen Windows, `SYNCHOTIC_ROOT` set). Windows will not overwrite a running exe, and the 1.3 launcher waits on the app, so it would have to rename the old exe aside and drop the new one in place.
-
 - [ ] [ux] first-run gaps left from the Discord thread *(2026-09-12, #ask-anything)*
   - Guided setup, checks on every launch, the unowned-library warning and the library row confusion all landed after 1.5.4. What is left:
   - **"Which drives?" recommendations.** Three toggles, one per top-level category (drums, guitar/community, official game setlists), each flipping its whole group. The community tab is mostly guitar charts, so a drummer who enables everything gets hundreds of GB they never wanted.

@@ -408,6 +408,18 @@ def main():
 
     debug_log(f"[timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")
 
+    # First, before any setup or screen: launchers never updated themselves,
+    # so Windows users sat on 1.1 and 1.3 in consoles the app was never built
+    # for. An outdated one is replaced and Synchotic reopens through it.
+    from src.core.launcher_update import update_at_startup
+    from src.ui.primitives.spinner import working as _working
+
+    def _reopening(job):
+        print_header()
+        return _working(copy.LAUNCHER_UPDATING, job)
+
+    update_at_startup(work=_reopening)
+
     # The library location has to be known before anything resolves a path.
     # migrate_legacy_files moves markers INTO the library, so if this ran after
     # it, every marker would land in the default library and the real one would
