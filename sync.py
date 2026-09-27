@@ -65,7 +65,7 @@ from src.ui.primitives import CancelInput, clear_screen
 from src.ui.screens.first_run import run_setup, setup_needs
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
-from src.core.logging import TeeOutput, prune_old_logs
+from src.core.logging import TeeOutput, debug_log, prune_old_logs
 from src.drive.client import DriveClientConfig
 
 # ============================================================================
@@ -94,12 +94,12 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         # Unified auth manager (handles user + admin fallback, token refresh)
         self.auth = AuthManager(token_path=get_token_path())
 
-        print(f"    [init] configs loaded: {(_t.time() - _t0)*1000:.0f}ms")
+        debug_log(f"[init] configs loaded: {(_t.time() - _t0)*1000:.0f}ms")
 
         # Clean up any leftover temp files from interrupted operations
         _t1 = _t.time()
         cleanup_tmp_dir()
-        print(f"    [init] cleanup_tmp_dir: {(_t.time() - _t1)*1000:.0f}ms")
+        debug_log(f"[init] cleanup_tmp_dir: {(_t.time() - _t1)*1000:.0f}ms")
 
         self.sync = FolderSync(
             self.client,
@@ -134,7 +134,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         import time as _time
         _t_drives = _time.time()
         self.load_drives()
-        print(f"  [timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
+        debug_log(f"[timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
         # However the library got here (setup, SYNCHOTIC_LIBRARY, adoption),
         # a drive it holds charts for is never left off by default.
         self._turn_on_library_drives(undecided_only=True)
@@ -151,7 +151,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         _t_scan = _time.time()
         self._start_background_scan(force_rescan=force)
         if self._background_scanner:
-            print(f"  [timing] bg_scanner started: {(_time.time() - _t_scan)*1000:.0f}ms")
+            debug_log(f"[timing] bg_scanner started: {(_time.time() - _t_scan)*1000:.0f}ms")
 
         selected_index = 0  # Track selected position for maintaining after actions
         menu_cache = None  # Cache for expensive menu calculations
@@ -174,7 +174,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
             if start_time:
                 import time
                 elapsed = time.time() - float(start_time)
-                print(f"  Ready in {elapsed:.2f}s")
+                debug_log(f"[timing] ready in {elapsed:.2f}s")
                 start_time = None  # Only show once
 
             action, value, menu_pos = show_main_menu_panes(
@@ -400,8 +400,13 @@ def main():
         version = version_file.read_text().strip()
     tee = TeeOutput(log_path, version=version)
     sys.stdout = tee
+    # Outside the tee, so it sees only what the program prints: whatever
+    # nobody has read yet is carried into the next screen instead of being
+    # drawn over.
+    from chotic_ui.primitives import notices
+    notices.install()
 
-    print(f"  [timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")
+    debug_log(f"[timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")
 
     # The library location has to be known before anything resolves a path.
     # migrate_legacy_files moves markers INTO the library, so if this ran after
@@ -498,7 +503,7 @@ def main():
         from chotic_ui.primitives.host import leave_alt_screen
         leave_alt_screen()
         sys.exit(0)
-    print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
+    debug_log(f"[timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()
 
