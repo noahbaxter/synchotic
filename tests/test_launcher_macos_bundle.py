@@ -142,6 +142,63 @@ class TestADevRun:
         assert env["SYNCHOTIC_ROOT"] == str(windows_exe.parent)
 
 
+class TestADevZip:
+    """A zip beside the binary turns dev mode on without --dev, and dev mode
+    deletes that zip once it is extracted. The run that deleted it has to stay
+    in dev mode, or it launches the OS-dir app instead of the one it just
+    extracted."""
+
+    @pytest.fixture(autouse=True)
+    def zip_beside(self, windows_exe, monkeypatch):
+        monkeypatch.setattr(sys, "argv", ["synchotic-launcher"])
+        monkeypatch.setattr(launcher, "_dev_mode", None)
+        zip_path = windows_exe.parent / "app-windows.zip"
+        zip_path.touch()
+        return zip_path
+
+    def test_deleting_the_zip_keeps_the_run_in_dev_mode(self, windows_exe, zip_beside):
+        assert launcher.decide_dev_mode() is True
+        zip_beside.unlink()
+        assert launcher.is_installed() is False
+        assert launcher.get_app_dir() == windows_exe.parent / ".dm-sync" / "_app"
+
+    def test_the_next_run_is_a_real_install(self, windows_exe, zip_beside):
+        launcher.decide_dev_mode()
+        zip_beside.unlink()
+        assert launcher.decide_dev_mode() is False
+        assert launcher.is_installed() is True
+
+
+class TestWhatTheAppMayReplace:
+    """The app replaces the launcher at SYNCHOTIC_LAUNCHER_PATH, so only an
+    installed release launcher may hand it over."""
+
+    def test_an_installed_release_launcher_gives_its_path(self, windows_exe, monkeypatch):
+        monkeypatch.setattr(sys, "argv", ["synchotic-launcher"])
+        monkeypatch.setattr(launcher, "_dev_mode", None)
+        identity = launcher.launcher_identity()
+        assert identity["SYNCHOTIC_LAUNCHER_PATH"] == str(windows_exe)
+
+    def test_a_dev_run_does_not(self, windows_exe, monkeypatch):
+        monkeypatch.setattr(sys, "argv", ["synchotic-launcher", "--dev"])
+        monkeypatch.setattr(launcher, "_dev_mode", None)
+        assert launcher.launcher_identity() == {
+            "SYNCHOTIC_LAUNCHER_VERSION": launcher.LAUNCHER_VERSION}
+
+    def test_the_dev_channel_does_not(self, windows_exe, monkeypatch):
+        monkeypatch.setattr(sys, "argv", ["synchotic-launcher"])
+        monkeypatch.setattr(launcher, "_dev_mode", None)
+        monkeypatch.setattr(launcher, "RELEASE_TAG", "dev-latest")
+        assert "SYNCHOTIC_LAUNCHER_PATH" not in launcher.launcher_identity()
+
+    def test_a_source_run_does_not(self, monkeypatch):
+        monkeypatch.setattr(sys, "argv", ["launcher.py"])
+        monkeypatch.setattr(launcher, "_dev_mode", None)
+        monkeypatch.delattr(sys, "frozen", raising=False)
+        monkeypatch.delenv("APPIMAGE", raising=False)
+        assert "SYNCHOTIC_LAUNCHER_PATH" not in launcher.launcher_identity()
+
+
 class TestTheTwoHalvesAgree:
     """The launcher and the app resolve the same directories independently.
 
