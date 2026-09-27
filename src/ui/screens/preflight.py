@@ -44,23 +44,40 @@ def confirm_sync(concerns, destination: str, free_bytes: int, ask=_ask,
         return True
 
     c = Colors
-    blockers = [x for x in concerns if x.severity == BLOCK]
-
-    clear_screen()
-    print_header()
-    print()
-    if blockers:
+    if any(x.severity == BLOCK for x in concerns):
+        # Nothing to ask: a sync in this state cannot work. Printed, since no
+        # dialog follows to draw over it.
+        clear_screen()
+        print_header()
+        print()
         print(f"  {c.BOLD}{copy.PRE_TITLE_BLOCKED}{c.RESET}")
         print()
-    for concern in concerns:
-        _print_concern(concern, blocking=concern.severity == BLOCK)
-    print(f"  {c.MUTED}→ {destination}{c.RESET}")
-    print(f"  {c.MUTED}  {copy.PRE_FREE.format(size=format_size(free_bytes))}{c.RESET}")
-    print()
-
-    if blockers:
-        # Nothing to ask: a sync in this state cannot work.
+        for concern in concerns:
+            _print_concern(concern, blocking=concern.severity == BLOCK)
+        print(f"  {c.MUTED}→ {destination}{c.RESET}")
+        print(f"  {c.MUTED}  {copy.PRE_FREE.format(size=format_size(free_bytes))}{c.RESET}")
+        print()
         (pause or wait_with_skip)(5)
         return False
 
-    return ask(copy.PRE_ASK, "")
+    # The dialog repaints from the top of the screen, so everything printed
+    # above is gone the moment it opens. The concerns go inside it.
+    return ask(copy.PRE_ASK, _message(concerns, destination, free_bytes))
+
+
+def _message(concerns, destination: str, free_bytes: int) -> str:
+    """The concerns as the dialog's subtitle. Only the short runs are coloured:
+    the menu never breaks a coloured run across lines, so a coloured sentence
+    would run off the box instead of wrapping. Plain text shows muted there."""
+    c = Colors
+    lines = []
+    for concern in concerns:
+        lines.append(f"{c.INFO}!{c.RESET} {c.BOLD}{concern.headline}{c.RESET}")
+        if concern.detail:
+            lines.append(concern.detail)
+        if concern.fix:
+            lines.append(f"{c.PRIMARY}→{c.RESET} {concern.fix}")
+        lines.append("")
+    lines.append(f"→ {destination}")
+    lines.append(copy.PRE_FREE.format(size=format_size(free_bytes)))
+    return "\n".join(lines)
