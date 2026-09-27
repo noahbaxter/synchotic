@@ -128,6 +128,9 @@ SETTING_FIELDS = (
 
 KNOWN_KEYS = frozenset(f.name for f in SETTING_FIELDS) | {"version"}
 
+# Kept in the file between migrating a 1.5.4 one and settle_drive_defaults.
+_OWED_KEY = "drive_defaults_owed"
+
 # Written by 1.5.4 and earlier, dropped on upgrade.
 _RETIRED_KEYS = ("delete_videos", "group_expanded", "use_default_drives",
                  "oauth_prompted", "delta_mode")
@@ -241,6 +244,7 @@ class UserSettings:
                 for f in SETTING_FIELDS:
                     setattr(settings, f.name, f.read(data))
                 settings._extra = unknown_settings(data)
+                settings._owed_drive_defaults = _as_bool(settings._extra.get(_OWED_KEY)) is True
                 settings._migrate(data)
             except (json.JSONDecodeError, OSError):
                 _keep_unreadable(path)
@@ -267,6 +271,13 @@ class UserSettings:
         self._owed_drive_defaults = written_by_old_version and not was_new
         for gone in _RETIRED_KEYS:
             self._extra.pop(gone, None)
+        # This save drops the keys the answer came from, and the drives are
+        # only known later, after setup. Keep the answer in the file until
+        # then: any load or save in between, or a launch that quits first,
+        # would otherwise lose it and leave those drives off.
+        self._extra.pop(_OWED_KEY, None)
+        if self._owed_drive_defaults:
+            self._extra[_OWED_KEY] = True
         self.save()
 
     def settle_drive_defaults(self, drive_ids) -> bool:
@@ -275,13 +286,13 @@ class UserSettings:
         if not self._owed_drive_defaults:
             return False
         self._owed_drive_defaults = False
+        self._extra.pop(_OWED_KEY, None)
         added = False
         for drive_id in drive_ids:
             if drive_id not in self.drive_toggles:
                 self.drive_toggles[drive_id] = True
                 added = True
-        if added:
-            self.save()
+        self.save()
         return added
 
     def reload(self):

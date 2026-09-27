@@ -40,6 +40,55 @@ class TestUserSettingsDefaults:
 
         assert settings.drive_toggles == {"any_drive_id": True, "another_drive": True}
 
+    def test_an_upgrade_that_quits_in_setup_still_keeps_them(self, temp_dir, monkeypatch):
+        """Loading a 1.5.4 file rewrites it straight away. The drives it had on
+        used to be written down only once drives loaded, after setup, so a
+        launch that quit or crashed in setup lost them for good. Charts on disk
+        under a drive that reads as off are what purge deletes."""
+        import json
+        import sync
+
+        settings_path = temp_dir / "settings.json"
+        settings_path.write_text(json.dumps({
+            "download_mode": "rclone", "delete_videos": True,
+            "drive_toggles": {"picked_drive": True}}))
+        drives = temp_dir / "drives.json"
+        drives.write_text(json.dumps({"drives": [
+            {"name": "Picked", "folder_id": "picked_drive"},
+            {"name": "Untouched", "folder_id": "untouched_drive"}]}))
+        monkeypatch.setattr(sync, "get_settings_path", lambda: settings_path)
+        monkeypatch.setattr(sync, "get_drives_config_path", lambda: drives)
+        monkeypatch.setattr(sync, "get_local_manifest_path", lambda: temp_dir / "local.json")
+        monkeypatch.setattr(sync, "get_token_path", lambda: temp_dir / "token.json")
+        monkeypatch.setattr(sync, "cleanup_tmp_dir", lambda: None)
+
+        # main() loads (and so migrates and saves) settings before SyncApp
+        # exists, and may save again. Then this launch quits in setup.
+        UserSettings.load(settings_path).save()
+        UserSettings.load(settings_path)
+
+        sync.SyncApp()  # the next launch
+
+        after = UserSettings.load(settings_path)
+        assert after.is_drive_enabled("untouched_drive") is True
+        assert after.is_drive_enabled("picked_drive") is True
+        assert "drive_defaults_owed" not in settings_path.read_text()
+
+    @pytest.mark.parametrize("stale", [
+        '{"version": 1, "drive_defaults_owed": "false"}',
+        '{"drive_toggles": {"a": false}, "drive_defaults_owed": true}',
+    ])
+    def test_a_stale_or_hand_edited_debt_turns_nothing_on(self, temp_dir, stale):
+        """A "false" typed by hand, or one left in a file that is not a 1.5.4
+        one, is not an upgrade that owes its drives."""
+        settings_path = temp_dir / "settings.json"
+        settings_path.write_text(stale)
+        UserSettings.load(settings_path).save()
+
+        settings = UserSettings.load(settings_path)
+        assert settings.settle_drive_defaults(["b"]) is False
+        assert "b" not in settings.drive_toggles
+
     def test_a_hand_written_file_turns_nothing_on(self, temp_dir):
         """No version and no retired keys is a person's file, not an old one."""
         settings_path = temp_dir / "settings.json"

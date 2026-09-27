@@ -91,6 +91,14 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         # Load custom folders
         self.custom_folders = CustomFolders.load(get_local_manifest_path())
 
+        # Loading a 1.5.4 file already rewrote it without the answer to which
+        # drives were on, so write that answer down before anything can exit.
+        # Waiting for load_drives lost it to any launch that quit or crashed in
+        # setup, and those drives then read as off: their charts as a purge.
+        self.user_settings.settle_drive_defaults(
+            [d.folder_id for d in self.drives_config.drives if not d.hidden]
+            + [c.folder_id for c in self.custom_folders.folders])
+
         # Unified auth manager (handles user + admin fallback, token refresh)
         self.auth = AuthManager(token_path=get_token_path())
 
