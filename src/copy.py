@@ -38,6 +38,9 @@ ROW_SIGN_OUT = "Sign out"
 ROW_LIBRARY = "Library"
 ROW_OPEN_CHARTS = "Open library"
 ROW_LOCATION = "Edit path"
+ROW_PURGE = "Purge on sync"
+VALUE_ON = "On"
+VALUE_OFF = "Off"
 ROW_APP = "App"
 ROW_OPEN_DATA = "Open data"
 ROW_DRIVES = "Drives"
@@ -71,6 +74,7 @@ SETUP_NEEDS_TERMINAL = "Something is misconfigured. Run Synchotic interactively 
 STEP_LIBRARY = "Chart Library"
 STEP_MODE = "Download Mode"
 STEP_DRIVES = ROW_DRIVES
+STEP_PURGE = "Purge"
 
 # --- deleting ---------------------------------------------------------------
 
@@ -79,6 +83,9 @@ DELETION_WARNING = (
     "{warn_open}BE WARNED:{warn_close} {what} in this folder "
     "{warn_open}WILL BE DELETED{warn_close} on sync."
 )
+PURGE_QUESTION = ROW_PURGE + "?"
+PURGE_BODY = ("On: sync deletes charts that are not on the drives and setlists "
+              "you have enabled. Off: sync only adds and updates.")
 DELETION_ANY = "any unmanaged files"
 DELETION_ALL = "all {files}"   # {files} is count(n, "unmanaged file")
 
@@ -182,7 +189,11 @@ SCAN_PROGRESS = SCANNING + " {folders}, {files}"
 
 LIBRARY_INTRO = (
     "Synchotic keeps one local folder in sync with the drives and setlists "
-    "you choose. {warning} Pick an empty folder or a previous sync folder or "
+    "you choose."
+)
+# Appended to LIBRARY_INTRO only when sync purges.
+LIBRARY_RISK = (
+    "{warning} Pick an empty folder or a previous sync folder or "
     "face the consequences..."
 )
 
@@ -324,6 +335,8 @@ READY_LAYOUT = ("In the left column are chart {bold_open}drives{bold_close} that
 READY_DETECTED = "Synchotic has detected the following:\n\n{setlists}"
 READY_SYNC = ("To sync press S. This will download, update and delete files to "
               "match exclusively the setlists you've selected.")
+READY_SYNC_NO_PURGE = ("To sync press S. This will download and update files "
+                       "for the setlists you've selected.")
 READY_GO = "Ready"
 
 
@@ -403,7 +416,7 @@ NOTE_PARTIALS = "Partial downloads"
 NOTE_DELETED = "{files} deleted"
 NOTE_DELETED_SIZE = NOTE_DELETED + " ({size})"
 
-PURGE_CONFIRM = "Delete {files} ({size}) from {name}?"
+PURGE_CONFIRM = "Delete {files} ({size})?"
 
 # --- why a chart failed ------------------------------------------------------
 #

@@ -9,6 +9,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import List, Tuple, Set
 
+from ..config.settings import purges
 from ..core.paths import is_library_state_path
 from ..core.formatting import relative_posix, parent_posix, sanitize_path, sanitize_drive_name, normalize_path_key
 from ..core.logging import debug_log
@@ -191,6 +192,10 @@ def plan_purge(
     """
     stats = PurgeStats()
     all_files = []
+
+    # Deleting turned off: whatever else is true, sync only adds and updates.
+    if not purges(user_settings):
+        return all_files, stats
 
     # Get ALL tracked files from markers (one lookup, used for all folders)
     if precomputed_markers is not None:

@@ -153,7 +153,7 @@ def library_contents(contents) -> str:
 
 def library_summary(path, *, chart_folders: int, files: int, folders: int,
                     more: bool, drive_matches=(), has_markers: bool = False,
-                    contents=()) -> tuple:
+                    contents=(), purges: bool = True) -> tuple:
     """(question, body, risky) for the folder somebody just picked. `risky`
     is true when a sync would delete what is in it, and puts the cursor on
     No."""
@@ -163,7 +163,11 @@ def library_summary(path, *, chart_folders: int, files: int, folders: int,
     if has_markers or drive_matches:
         return (copy.CONFIRM_Q, where + copy.KNOWN_LIBRARY + listing, False)
 
-    # Anything in here that is not ours gets deleted on sync, charts or not.
+    # Anything in here that is not ours gets deleted on sync, charts or not,
+    # unless sync never deletes.
+    if (files or folders) and not purges:
+        return (copy.CONFIRM_Q,
+                where + _counts(chart_folders, files, folders, more), False)
     if files or folders:
         return (copy.CONFIRM_RISKY_Q,
                 library_not_empty(path, chart_folders, files, folders, more),

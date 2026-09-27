@@ -310,8 +310,14 @@ def startup_setup(app) -> bool:
         mode_chosen=lambda: bool(app.user_settings.download_mode),
         blocked_step=lambda: app._drive_blocked_step(),
         pick_starting_drives=lambda: _found_summary(app),
+        choose_purge=lambda on: _set_purge(app, on),
         first_run=first_run,
     )
+
+
+def _set_purge(app, on: bool) -> None:
+    app.user_settings.purge_on_sync = on
+    app.user_settings.save()
 
 
 def _found_summary(app) -> str:

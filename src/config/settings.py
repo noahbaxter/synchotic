@@ -90,6 +90,29 @@ def _as_map(value):
     return value if isinstance(value, dict) else None
 
 
+def _as_bool(value):
+    """true/false, and the ways people type them by hand. purge_on_sync is
+    the one bool, and reading a hand-edited "false" as the default turned
+    deleting on."""
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, int):
+        return bool(value) if value in (0, 1) else None
+    if isinstance(value, str):
+        word = value.strip().lower()
+        if word in ("false", "no", "off", "0"):
+            return False
+        if word in ("true", "yes", "on", "1"):
+            return True
+    return None
+
+
+def purges(user_settings) -> bool:
+    """Whether sync deletes what the enabled drives and setlists do not have.
+    No settings means the default."""
+    return getattr(user_settings, "purge_on_sync", True)
+
+
 # Written in this order. People read this file, so the editable settings come
 # first and the Drive ID maps last.
 SETTING_FIELDS = (
@@ -97,6 +120,7 @@ SETTING_FIELDS = (
     _Field("download_mode", "", coerce=_as_mode),
     _Field("download_ignore", lambda: list(DEFAULT_DOWNLOAD_IGNORE),
            coerce=_as_patterns),
+    _Field("purge_on_sync", True, coerce=_as_bool),
     _Field("purge_ignore", lambda: list(DEFAULT_PURGE_IGNORE), coerce=_as_patterns),
     _Field("drive_toggles", dict, coerce=_as_map),
     _Field("subfolder_toggles", dict, coerce=_as_map),

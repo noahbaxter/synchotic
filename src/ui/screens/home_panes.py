@@ -24,6 +24,7 @@ from chotic_ui.primitives.terminal import get_terminal_width, truncate_ansi
 
 from src import copy
 from src.config import UserSettings, DrivesConfig
+from src.config.settings import purges
 from src.core.formatting import count, sort_by_name, format_duration, format_size
 from src.core.logging import debug_log
 from src.sync import get_persistent_stats_cache, compute_setlist_stats
@@ -290,7 +291,8 @@ def show_main_menu_panes(
         disk_size = cached.disk_size if cached else 0
         disk_charts = cached.disk_charts if cached else 0
 
-        purge_size = disk_size if drive_enabled and not enabled and disk_files > 0 else 0
+        purge_size = (disk_size if purges(user_settings) and drive_enabled
+                      and not enabled and disk_files > 0 else 0)
 
         columns, delta, check = format_setlist_item(
             total_charts=total_charts, synced_charts=synced_charts,
@@ -461,6 +463,9 @@ def show_main_menu_panes(
             # act that needs nothing from Drive, and gating it told a new user
             # to connect rclone before they could say where their charts go.
             opt(copy.ROW_LOCATION, location, ("act", "library")),
+            opt(copy.ROW_PURGE,
+                copy.VALUE_ON if purges(user_settings) else copy.VALUE_OFF,
+                ("toggle_purge",)),
             _spacer(),
             _header_row(copy.ROW_APP),
             # Opens a local folder, so it works with no Drive access at all.
@@ -539,6 +544,18 @@ def show_main_menu_panes(
         kind = value[0]
         if kind == "act":
             return (value[1], None)
+        if kind == "toggle_purge":
+            user_settings.purge_on_sync = not purges(user_settings)
+            user_settings.save()
+            # Every drive's minus figure changes, so recompute the lot.
+            menu_cache_warmer.invalidate()
+            if folder_stats_cache is not None:
+                folder_stats_cache.invalidate_all()
+            _copy_cache(cache, compute_main_menu_cache(
+                folders, user_settings, download_path, drives_config,
+                background_scanner=background_scanner, measure=False,
+            ))
+            return None
         if kind == "setlist":
             _, folder_id, name = value
             if not user_settings.is_drive_enabled(folder_id):

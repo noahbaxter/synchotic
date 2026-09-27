@@ -15,6 +15,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import TYPE_CHECKING
 
+from ..config.settings import purges
 from ..stats import clear_local_stats_cache
 from ..core.formatting import normalize_fs_name, sanitize_drive_name
 from ..core.paths import get_data_dir, get_cache_dir
@@ -302,6 +303,8 @@ class PersistentStatsCache:
         enabled = user_settings.is_drive_enabled(folder_id)
         disabled_setlists = sorted(user_settings.get_disabled_subfolders(folder_id))
         key = f"{enabled}:{','.join(disabled_setlists)}"
+        if not purges(user_settings):
+            key += ":keep"  # only when off, so turning it on matches old hashes
         return hashlib.md5(key.encode()).hexdigest()[:8]
 
 
@@ -325,6 +328,8 @@ def aggregate_folder_stats(
     """
     result = AggregatedFolderStats(total_setlists=len(setlist_names))
     drive_enabled = user_settings.is_drive_enabled(folder_id) if user_settings else True
+    # With deleting off, content that is off stays put, so none of it counts.
+    deletes = purges(user_settings)
 
     for setlist_name in setlist_names:
         cached = persistent_cache.get_setlist(folder_id, setlist_name)
@@ -343,6 +348,8 @@ def aggregate_folder_stats(
             result.disk_size += cached.disk_size
             result.disk_charts += cached.disk_charts
             result.enabled_setlists += 1
+        elif not deletes:
+            continue
         elif drive_enabled and not setlist_enabled and cached.disk_files > 0:
             # Disabled with disk content: contributes to purgeable
             result.purgeable_files += cached.disk_files

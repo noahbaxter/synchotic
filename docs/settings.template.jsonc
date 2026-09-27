@@ -28,6 +28,10 @@
     "*.mov"
   ],
 
+  // Deletes charts that are no longer on the drives and setlists you have enabled.
+  // false: sync only adds and updates.
+  "purge_on_sync": true,
+
   // Never deletes these files from the local library.
   // Files IN this list are never deleted.
   // Files NOT IN this list will be deleted if they're missing from the remote drive, or if their drive is disabled.
