@@ -78,6 +78,24 @@ def test_it_is_not_under_the_library_heading(rows):
     assert library < charts < app < data
 
 
+def test_the_logs_row_sits_under_app(rows):
+    """Logs moved to the OS dirs in 1.5.5 and people went looking beside the
+    launcher. The app is the one place that can show them where."""
+    out = rows()["rows"]
+    data = next(i for i, r in enumerate(out) if r[1] == ("act", "open_data_folder"))
+    logs = [i for i, r in enumerate(out) if r[1] == ("act", "open_log_folder")]
+    assert logs == [data + 1]
+
+
+def test_the_logs_row_opens_the_log_folder(monkeypatch, tmp_path):
+    from sync import SyncApp
+    opened = []
+    monkeypatch.setattr("src.core.files.open_folder", lambda p: opened.append(p) or True)
+    monkeypatch.setattr("src.core.paths.get_log_dir", lambda: tmp_path / "Logs")
+    object.__new__(SyncApp).handle_open_log_folder()
+    assert opened == [tmp_path / "Logs"]
+
+
 class TestOpeningTheLibrary:
     @pytest.fixture
     def app(self, monkeypatch):

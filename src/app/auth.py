@@ -126,22 +126,30 @@ class AuthMixin:
         return chosen
 
     def handle_open_data_folder(self):
-        """Open the data folder, and say nothing if that worked.
+        from src.core.paths import get_data_dir
+        self._open_app_folder(get_data_dir())
+
+    def handle_open_log_folder(self):
+        """Logs moved to the OS dirs in 1.5.5, away from the folder people
+        knew, so the app has to be the one that shows where they are."""
+        from src.core.paths import get_log_dir
+        self._open_app_folder(get_log_dir())
+
+    def _open_app_folder(self, folder):
+        """Open one of the app's own folders, and say nothing if that worked.
 
         The folder is now in front of the user; announcing it under the menu
         pushed the whole layout down and held it there for four seconds. The
         path is still worth printing when opening fails, which is the only case
         where the user has to find it themselves."""
         from src.core.files import open_folder
-        from src.core.paths import get_data_dir
 
-        data_dir = get_data_dir()
-        data_dir.mkdir(parents=True, exist_ok=True)
-        if open_folder(data_dir):
+        folder.mkdir(parents=True, exist_ok=True)
+        if open_folder(folder):
             return
         print()
         print(f"  {copy.FAILURE}:")
-        print(f"    {data_dir}")
+        print(f"    {folder}")
         print()
         wait_with_skip(4)
 

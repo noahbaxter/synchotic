@@ -470,6 +470,7 @@ def show_main_menu_panes(
             _header_row(copy.ROW_APP),
             # Opens a local folder, so it works with no Drive access at all.
             opt(copy.ROW_OPEN_DATA, "", ("act", "open_data_folder")),
+            opt(copy.ROW_OPEN_LOGS, "", ("act", "open_log_folder")),
             _spacer(),
             _header_row(copy.ROW_DRIVES),
             # Resolving a folder is a Drive call: without a working mode it

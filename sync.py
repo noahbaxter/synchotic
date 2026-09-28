@@ -234,6 +234,9 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
             elif action == "open_data_folder":
                 self.handle_open_data_folder()
 
+            elif action == "open_log_folder":
+                self.handle_open_log_folder()
+
             elif action == "open_library":
                 self.handle_open_library_folder()
 
