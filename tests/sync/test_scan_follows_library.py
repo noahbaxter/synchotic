@@ -8,8 +8,6 @@ just emptied: an empty library reporting a full one, and no way back but a
 forced re-scan.
 """
 
-from pathlib import Path
-
 import pytest
 
 from src.core import paths
@@ -72,5 +70,5 @@ def test_stats_follow_a_library_changed_mid_scan(tmp_path, monkeypatch):
     paths.set_library_path(new)
     scanner._scan_setlist(setlist, _Scanner())
 
-    measured = [Path(paths.plain_path(p)) for p in measured]
+    measured = [paths.unextended(p) for p in measured]
     assert measured == [new], "measured the library the user just left"

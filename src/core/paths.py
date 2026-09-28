@@ -122,6 +122,12 @@ def plain_path(path) -> str:
     return text
 
 
+def unextended(path) -> Path:
+    """The path without the MAX_PATH prefix, for comparing against paths a user
+    or a test wrote. plain_path is the string form, for display."""
+    return Path(plain_path(path))
+
+
 def set_library_path(path) -> None:
     """Point the app at a library. Call before anything resolves paths."""
     global _library_override
@@ -214,7 +220,7 @@ def is_library_state_path(path) -> bool:
     """
     state = plain_path(get_library_path() / LIBRARY_STATE_DIR_NAME)
     try:
-        Path(plain_path(path)).relative_to(state)
+        unextended(path).relative_to(state)
         return True
     except ValueError:
         return False

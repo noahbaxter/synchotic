@@ -91,11 +91,10 @@ class TestOpeningTheLibrary:
         return a
 
     def test_it_opens_the_library_not_the_data_folder(self, app, monkeypatch, tmp_path):
-        from pathlib import Path
         from src.core import paths
         monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path))
         app.handle_open_library_folder()
-        assert [Path(paths.plain_path(p)) for p in app.opened] == [tmp_path]
+        assert [paths.unextended(p) for p in app.opened] == [tmp_path]
 
     def test_a_disconnected_library_says_so_instead_of_opening(self, app, monkeypatch,
                                                                tmp_path, capsys):

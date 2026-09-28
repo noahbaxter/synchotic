@@ -18,7 +18,7 @@ from src.core import paths
 
 def _library():
     """The library without the Windows MAX_PATH prefix."""
-    return Path(paths.plain_path(paths.get_library_path()))
+    return paths.unextended(paths.get_library_path())
 
 
 @pytest.fixture(autouse=True)
@@ -58,13 +58,13 @@ class TestStateTravelsWithLibrary:
         from src.sync import markers
         (tmp_path / "lib").mkdir(parents=True, exist_ok=True)
         paths.set_library_path(tmp_path / "lib")
-        assert Path(paths.plain_path(markers.get_markers_dir())) == tmp_path / "lib" / paths.LIBRARY_STATE_DIR_NAME / "markers"
+        assert paths.unextended(markers.get_markers_dir()) == tmp_path / "lib" / paths.LIBRARY_STATE_DIR_NAME / "markers"
 
     def test_staging_lives_in_the_library(self, tmp_path):
         """Same filesystem as the charts, so the final move is an atomic rename."""
         (tmp_path / "lib").mkdir(parents=True, exist_ok=True)
         paths.set_library_path(tmp_path / "lib")
-        assert Path(paths.plain_path(paths.get_tmp_dir())).is_relative_to(tmp_path / "lib")
+        assert paths.unextended(paths.get_tmp_dir()).is_relative_to(tmp_path / "lib")
 
     def test_state_dir_is_recognised(self, tmp_path):
         (tmp_path / "lib").mkdir(parents=True, exist_ok=True)
@@ -281,7 +281,7 @@ class TestUnmountedLibrary:
         lib.mkdir()
         paths.set_library_path(lib)
         assert paths.library_is_available() is True
-        assert Path(paths.plain_path(paths.get_library_state_dir())) == lib / paths.LIBRARY_STATE_DIR_NAME
+        assert paths.unextended(paths.get_library_state_dir()) == lib / paths.LIBRARY_STATE_DIR_NAME
 
     def test_the_default_library_is_still_created_on_demand(self, tmp_path, monkeypatch):
         """Only a library the user chose is treated as must-already-exist."""

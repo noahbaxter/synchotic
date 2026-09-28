@@ -1,7 +1,5 @@
 """Choosing where charts live. The library is self-contained, so pointing at a
 different folder just looks somewhere else."""
-from pathlib import Path
-
 import pytest
 
 from src.config.settings import UserSettings
@@ -11,7 +9,7 @@ from src.ui.screens.library import show_library_screen
 
 def _library():
     """The library as a plain path, without Windows' extended-length prefix."""
-    return Path(paths.plain_path(paths.get_library_path()))
+    return paths.unextended(paths.get_library_path())
 
 
 @pytest.fixture(autouse=True)
@@ -80,7 +78,7 @@ class TestChoosingAFolder:
         # Path helpers read module state, so a stale value would keep writing
         # into the old library until restart.
         from src.sync import markers
-        assert Path(paths.plain_path(markers.get_markers_dir())).is_relative_to(target)
+        assert paths.unextended(markers.get_markers_dir()).is_relative_to(target)
 
     def test_tilde_is_expanded(self, tmp_path, drive, monkeypatch):
         monkeypatch.setenv("HOME", str(tmp_path))
