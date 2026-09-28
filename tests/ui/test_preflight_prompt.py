@@ -5,6 +5,7 @@ from contextlib import redirect_stdout
 
 from src import copy
 from src.sync.preflight import GB, Concern
+from src.ui.components import strip_ansi
 from src.ui.screens.preflight import confirm_sync
 
 
@@ -35,18 +36,26 @@ def test_nothing_to_say_means_no_prompt_at_all():
     assert asked == []
 
 
-def test_every_concern_is_shown_before_the_question():
-    _, printed, _ = _run([SPACE, PURGE])
+def _in_dialog(concerns):
+    """What the question box itself says. It repaints from the top of the
+    screen, so anything printed before it is gone: this is all anyone sees.
+    Shipped as a bare "Sync anyway?" for exactly that reason."""
+    _, _, asked = _run(concerns)
+    return strip_ansi(asked[0][1])
+
+
+def test_every_concern_is_inside_the_question():
+    shown = _in_dialog([SPACE, PURGE])
     for concern in (SPACE, PURGE):
-        assert concern.headline in printed
-        assert concern.detail in printed
+        assert concern.headline in shown
+        assert concern.detail in shown
 
 
 def test_the_destination_and_what_is_left_are_on_screen():
     """Where the charts go is the question people ask after starting a sync."""
-    _, printed, _ = _run([SPACE])
-    assert "/Users/noah/Clone Hero/Songs" in printed
-    assert "18.0 GB" in printed
+    shown = _in_dialog([SPACE])
+    assert "/Users/noah/Clone Hero/Songs" in shown
+    assert "18.0 GB" in shown
 
 
 class TestABlockerIsNotAQuestion:
@@ -76,11 +85,10 @@ class TestABlockerIsNotAQuestion:
         assert ok is True and len(asked) == 1
 
 
-def test_a_fix_is_printed_for_warnings_too():
+def test_a_fix_is_shown_for_warnings_too():
     warned = Concern("space", "Not enough space", "It needs 40.0 GB.",
                      fix="Free up space, or turn off drives you do not need.")
-    _, printed, _ = _run([warned])
-    assert "Free up space" in printed
+    assert "Free up space" in _in_dialog([warned])
 
 
 def test_answering_no_stops_the_sync():

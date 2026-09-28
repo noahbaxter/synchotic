@@ -52,6 +52,15 @@ class TestWhatItSaysIsInThere:
         assert "12+ chart folders, 89+ files, 20+ folders" in strip_ansi(body)
         assert risky is True
 
+    def test_a_full_folder_is_not_a_risk_when_sync_never_purges(self):
+        question, body, risky = _summary(chart_folders=12, files=89, folders=20,
+                                         purges=False)
+
+        assert "12 chart folders, 89 files, 20 folders" in strip_ansi(body)
+        assert "DELETED" not in body
+        assert question == copy.CONFIRM_Q
+        assert risky is False
+
     def test_an_empty_folder_is_not_a_risk(self):
         _, body, risky = _summary()
 

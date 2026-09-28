@@ -65,7 +65,7 @@ from src.ui.primitives import CancelInput, clear_screen
 from src.ui.screens.first_run import run_setup, setup_needs
 from src.ui.widgets import display
 from src.ui.primitives.terminal import set_terminal_size
-from src.core.logging import TeeOutput, prune_old_logs
+from src.core.logging import TeeOutput, debug_log, prune_old_logs
 from src.drive.client import DriveClientConfig
 
 # ============================================================================
@@ -91,15 +91,23 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         # Load custom folders
         self.custom_folders = CustomFolders.load(get_local_manifest_path())
 
+        # Loading a 1.5.4 file already rewrote it without the answer to which
+        # drives were on, so write that answer down before anything can exit.
+        # Waiting for load_drives lost it to any launch that quit or crashed in
+        # setup, and those drives then read as off: their charts as a purge.
+        self.user_settings.settle_drive_defaults(
+            [d.folder_id for d in self.drives_config.drives if not d.hidden]
+            + [c.folder_id for c in self.custom_folders.folders])
+
         # Unified auth manager (handles user + admin fallback, token refresh)
         self.auth = AuthManager(token_path=get_token_path())
 
-        print(f"    [init] configs loaded: {(_t.time() - _t0)*1000:.0f}ms")
+        debug_log(f"[init] configs loaded: {(_t.time() - _t0)*1000:.0f}ms")
 
         # Clean up any leftover temp files from interrupted operations
         _t1 = _t.time()
         cleanup_tmp_dir()
-        print(f"    [init] cleanup_tmp_dir: {(_t.time() - _t1)*1000:.0f}ms")
+        debug_log(f"[init] cleanup_tmp_dir: {(_t.time() - _t1)*1000:.0f}ms")
 
         self.sync = FolderSync(
             self.client,
@@ -134,7 +142,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         import time as _time
         _t_drives = _time.time()
         self.load_drives()
-        print(f"  [timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
+        debug_log(f"[timing] drives: {(_time.time() - _t_drives)*1000:.0f}ms")
         # However the library got here (setup, SYNCHOTIC_LIBRARY, adoption),
         # a drive it holds charts for is never left off by default.
         self._turn_on_library_drives(undecided_only=True)
@@ -151,7 +159,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         _t_scan = _time.time()
         self._start_background_scan(force_rescan=force)
         if self._background_scanner:
-            print(f"  [timing] bg_scanner started: {(_time.time() - _t_scan)*1000:.0f}ms")
+            debug_log(f"[timing] bg_scanner started: {(_time.time() - _t_scan)*1000:.0f}ms")
 
         selected_index = 0  # Track selected position for maintaining after actions
         menu_cache = None  # Cache for expensive menu calculations
@@ -174,7 +182,7 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
             if start_time:
                 import time
                 elapsed = time.time() - float(start_time)
-                print(f"  Ready in {elapsed:.2f}s")
+                debug_log(f"[timing] ready in {elapsed:.2f}s")
                 start_time = None  # Only show once
 
             action, value, menu_pos = show_main_menu_panes(
@@ -225,6 +233,9 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
 
             elif action == "open_data_folder":
                 self.handle_open_data_folder()
+
+            elif action == "open_log_folder":
+                self.handle_open_log_folder()
 
             elif action == "open_library":
                 self.handle_open_library_folder()
@@ -310,8 +321,14 @@ def startup_setup(app) -> bool:
         mode_chosen=lambda: bool(app.user_settings.download_mode),
         blocked_step=lambda: app._drive_blocked_step(),
         pick_starting_drives=lambda: _found_summary(app),
+        choose_purge=lambda on: _set_purge(app, on),
         first_run=first_run,
     )
+
+
+def _set_purge(app, on: bool) -> None:
+    app.user_settings.purge_on_sync = on
+    app.user_settings.save()
 
 
 def _found_summary(app) -> str:
@@ -400,8 +417,25 @@ def main():
         version = version_file.read_text().strip()
     tee = TeeOutput(log_path, version=version)
     sys.stdout = tee
+    # Outside the tee, so it sees only what the program prints: whatever
+    # nobody has read yet is carried into the next screen instead of being
+    # drawn over.
+    from chotic_ui.primitives import notices
+    notices.install()
 
-    print(f"  [timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")
+    debug_log(f"[timing] imports done: {(_time.time() - _t0)*1000:.0f}ms")
+
+    # First, before any setup or screen: launchers never updated themselves,
+    # so Windows users sat on 1.1 and 1.3 in consoles the app was never built
+    # for. An outdated one is replaced and Synchotic reopens through it.
+    from src.core.launcher_update import update_at_startup
+    from src.ui.primitives.spinner import working as _working
+
+    def _reopening(job):
+        print_header()
+        return _working(copy.LAUNCHER_UPDATING, job)
+
+    update_at_startup(work=_reopening)
 
     # The library location has to be known before anything resolves a path.
     # migrate_legacy_files moves markers INTO the library, so if this ran after
@@ -428,17 +462,27 @@ def main():
     # An unreachable library has to stop startup right here. Every path helper
     # below raises once the library is gone, and mkdir on an absent mountpoint
     # would quietly build an empty library that the next sync fills and the
-    # remount then hides. Offer a retry so plugging the drive in is enough.
+    # remount then hides. Offer a retry so plugging the drive in is enough, and
+    # the picker, since a drive that is gone for good would otherwise lock
+    # Settings > Library behind a library that never comes back.
     from src.core.paths import get_library_path as _get_library_path
     from src.core.paths import library_is_available as _library_is_available
     from src.core.paths import plain_path as _plain_path
     while not _library_is_available():
-        display.library_unavailable(_plain_path(_get_library_path()))
         if not sys.stdin.isatty():
+            display.library_unavailable(_plain_path(_get_library_path()))
             sys.exit(1)
-        from src.ui.widgets.confirm import ConfirmDialog
-        if not ConfirmDialog(f"{copy.UNFINISHED_RETRY}?", copy.LIBRARY_MISSING).run():
+        from src.ui.screens.library import ask, show_library_screen
+        choice = ask(copy.LIBRARY_MISSING,
+                     f"{_plain_path(_get_library_path())}\n\n{copy.FIX_RECONNECT}",
+                     ((copy.UNFINISHED_RETRY, "retry"),
+                      (copy.LIBRARY_BROWSE, "pick"),
+                      (copy.BTN_QUIT, None)),
+                     esc_label=copy.BTN_QUIT)
+        if choice is None:
             sys.exit(1)
+        if choice == "pick":
+            show_library_screen(_early)
 
     # A bundle that used to be portable has its settings, token and rclone
     # config in a .dm-sync somewhere. The shim and the launcher both name that
@@ -488,7 +532,7 @@ def main():
         from chotic_ui.primitives.host import leave_alt_screen
         leave_alt_screen()
         sys.exit(0)
-    print(f"  [timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
+    debug_log(f"[timing] SyncApp init: {(_time.time() - _t1)*1000:.0f}ms")
 
     app.run()
 

@@ -8,6 +8,7 @@ just looks somewhere else, which is why the screen says what it found there.
 from pathlib import Path
 
 from ... import copy
+from ...config.settings import purges
 from ...core.formatting import count
 from ..widgets import display
 from ..widgets.confirm import ConfirmDialog
@@ -170,7 +171,7 @@ def show_library_screen(user_settings, intro: str = "", setup_step=None) -> bool
             plain_path(path), chart_folders=look.chart_folders, files=look.files,
             folders=look.folders, more=look.capped,
             drive_matches=look.drive_matches, has_markers=ours,
-            contents=contents)
+            contents=contents, purges=purges(user_settings))
 
         # When charts are at stake the cursor starts on No, so a reflexive
         # Enter cannot delete a collection.

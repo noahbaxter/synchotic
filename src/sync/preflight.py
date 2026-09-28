@@ -8,6 +8,7 @@ wording says so.
 from dataclasses import dataclass
 
 from .. import copy
+from ..config.settings import purges
 from ..core.formatting import count
 
 GB = 1024 ** 3
@@ -61,6 +62,7 @@ class Setup:
     library_writable: bool = True
     library_adopted: bool = False   # has a sync ever completed into it
     colliding_folders: tuple = ()   # folders here sharing a name with a drive
+    deletes: bool = True            # the purge_on_sync setting
 
     drives_enabled: int = 0
     setlists_enabled: int = 0
@@ -120,7 +122,7 @@ CASES = (
 
     # The detail is filled in from the folder names, see _describe.
     ("unowned_library", WARN,
-     lambda s: bool(s.colliding_folders) and not s.library_adopted,
+     lambda s: s.deletes and bool(s.colliding_folders) and not s.library_adopted,
      copy.PRE_UNOWNED, "", _GO_LOCATION),
 )
 
@@ -236,6 +238,7 @@ def read_setup(user_settings, auth, folders, library_path) -> Setup:
         library_writable=writable,
         library_adopted=is_library_adopted() if available and library.is_dir() else False,
         colliding_folders=colliding,
+        deletes=purges(user_settings),
         drives_enabled=len(enabled_drives),
         setlists_enabled=setlists_on,
     )
@@ -246,15 +249,20 @@ def _size(num_bytes: int) -> str:
     return format_size(num_bytes)
 
 
-def gather(folders, user_settings, cache) -> tuple[int, int, int, int]:
+def gather(folders, user_settings, cache, owned=None) -> tuple[int, int, int, int]:
     """(bytes to download, unmeasured drives, charts to delete, bytes to
     delete), from the stats cache. A drive with no cached setlist at all has
-    never been measured; one measured in part still counts toward the floor."""
+    never been measured; one measured in part still counts toward the floor.
+    `owned` is the drive ids purge may empty when they are off; None counts
+    every drive."""
     needed = purge_bytes = purge_charts = unmeasured = 0
+    deletes = purges(user_settings)
 
     for folder in folders:
         folder_id = folder.get("folder_id", "")
         drive_on = user_settings.is_drive_enabled(folder_id) if user_settings else True
+        # Purge leaves a disabled drive it never synced alone (purge_flow).
+        drive_deletes = deletes and (drive_on or owned is None or folder_id in owned)
         measured = False
 
         for name in folder.get("setlists") or []:
@@ -267,7 +275,7 @@ def gather(folders, user_settings, cache) -> tuple[int, int, int, int]:
 
             if drive_on and setlist_on:
                 needed += max(0, stats.total_size - stats.synced_size)
-            elif stats.disk_files > 0:
+            elif drive_deletes and stats.disk_files > 0:
                 # Off, but its files are still on disk, so sync removes them.
                 purge_bytes += stats.disk_size
                 purge_charts += stats.disk_charts
@@ -292,8 +300,9 @@ def concerns_for(folders, user_settings, cache, library_path,
     except OSError:
         return found, 0
 
+    from .ownership import resolve_owned_drives
     needed, unmeasured, purge_charts, purge_bytes = gather(
-        folders, user_settings, cache)
+        folders, user_settings, cache, owned=resolve_owned_drives(folders))
     found += preflight(needed_bytes=needed, free_bytes=free,
                        unmeasured_drives=unmeasured, purge_charts=purge_charts,
                        purge_bytes=purge_bytes)

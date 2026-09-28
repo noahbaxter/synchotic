@@ -159,6 +159,50 @@ class TestTheRightPane:
         assert rescan[2] is True
 
 
+class TestThePurgeRow:
+    def _row(self, rows):
+        return next(r for r in rows if r[1] == ("toggle_purge",))
+
+    def test_it_says_on_by_default(self, build):
+        from src.ui.components import strip_ansi
+        row = self._row(build()["right_for"](SETTINGS))
+        assert strip_ansi(row[0](False, False)).split()[-1] == copy.VALUE_ON
+
+    def test_enter_turns_it_off_and_saves_without_leaving(self, build, tmp_path):
+        def act(pane):
+            assert pane._on_right_enter(("toggle_purge",)) is None
+
+        out = build(act=act)
+        assert out["settings"].purge_on_sync is False
+        assert UserSettings.load(tmp_path / "settings.json").purge_on_sync is False
+
+    def test_off_drops_a_disabled_setlists_minus_figure(self, build, monkeypatch, tmp_path):
+        """The red -size in a setlist row is what sync would delete."""
+        from src.sync.cache import CachedSetlistStats, PersistentStatsCache
+        from src.ui.components import strip_ansi
+
+        # Its own cache: the global one lives in the real cache dir on macOS.
+        monkeypatch.setattr("src.sync.cache.get_cache_dir", lambda: tmp_path)
+        stats = PersistentStatsCache()
+        monkeypatch.setattr("src.sync.cache._persistent_stats_cache", stats)
+        stats.set_setlist("drive-1", "Setlist A", CachedSetlistStats(
+            total_charts=1, synced_charts=1, total_size=10, synced_size=10,
+            disk_files=1, disk_size=10 * 1024**2, disk_charts=1))
+
+        def row_text(purge):
+            settings = UserSettings(tmp_path / f"settings-{purge}.json")
+            settings.drive_toggles = {"drive-1": True}
+            settings.subfolder_toggles = {"drive-1": {"Setlist A": False}}
+            settings.purge_on_sync = purge
+            out = build(settings=settings)
+            rows = out["right_for"](("drive", "drive-1"))
+            return " ".join(strip_ansi(r[0](False, False)) for r in rows
+                            if r[1] == ("setlist", "drive-1", "Setlist A"))
+
+        assert "-10" in row_text(True)
+        assert "-10" not in row_text(False)
+
+
 class TestTogglingStaysOnTheScreen:
     def test_space_on_a_drive_toggles_it_without_returning(self, build):
         """Nothing has been chosen in this settings object, so the drive is off

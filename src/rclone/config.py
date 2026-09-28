@@ -9,7 +9,11 @@ from ..core.paths import get_rclone_config_path
 
 
 def _default_runner(args, **kw):
-    return subprocess.run(args, capture_output=True, text=True, **kw)
+    # No stdin: the output is captured, so a question rclone asks is one
+    # nobody sees. Without a terminal to read it fails at once instead of
+    # waiting out the timeout. Consent needs none, it goes through the browser.
+    return subprocess.run(args, capture_output=True, text=True,
+                          stdin=subprocess.DEVNULL, **kw)
 
 
 class RcloneConfig:
@@ -52,16 +56,32 @@ class RcloneConfig:
         return True
 
     def reconnect(self, timeout: float = 120.0) -> bool:
-        """Redo consent for a remote that exists but no longer works. `config
-        create` over a live remote does not refresh its token."""
+        """Redo consent for a remote that exists but no longer works: forget it,
+        then create it again. `config create` over a live remote keeps the dead
+        token, and `config reconnect` opens with "Already have a token -
+        refresh?", which waited on the captured output for an answer nobody
+        could see until it timed out.
+
+        A probe that timed out reads as dead too, so the old remote comes back
+        if consent does not finish: an offline user keeps a token that may
+        still work."""
         try:
-            r = self.runner(
-                self._base() + ["config", "reconnect",
-                                f"{constants.RCLONE_REMOTE_NAME}:"],
-                timeout=timeout)
-        except subprocess.TimeoutExpired:
+            before = self.config_path.read_bytes()
+        except OSError:
+            before = None
+        try:
+            self.delete_remote()
+        except (RuntimeError, subprocess.TimeoutExpired) as err:
+            debug_log(f"RCLONE_RECONNECT | could not forget the dead remote: {err}")
             return False
-        return r.returncode == 0 and self.token_works()
+        done = False
+        try:
+            done = self.create_remote(timeout=timeout)
+        finally:
+            # Ctrl+C during consent too, or the old remote is lost with it.
+            if not done and before is not None:
+                self.config_path.write_bytes(before)
+        return done and self.token_works()
 
     def delete_remote(self) -> None:
         """Forget the remote and its token, raising with rclone's reason when
@@ -79,17 +99,32 @@ class RcloneConfig:
         has_remote() afterward so the last runner call is the create itself (keeps the
         command observable and avoids a redundant dump)."""
         self.config_path.parent.mkdir(parents=True, exist_ok=True)
+        # Every question rclone would ask is answered here: its output is
+        # captured, so a prompt would fail on an answer nobody can see. Newer
+        # rclone asks whether to keep its shared client_id, default No (1.69.1
+        # does not know the option and ignores it), and after consent any
+        # account with shared drives is asked whether to use one.
         args = self._base() + [
             "config", "create", constants.RCLONE_REMOTE_NAME, "drive",
             "scope=drive.readonly", "config_is_local=true",
+            "config_shared_client_id=true", "config_change_team_drive=false",
         ]
         try:
             r = self.runner(args, timeout=timeout)
+            done = r.returncode == 0
         except subprocess.TimeoutExpired:
             # Headless box, no browser, nobody to click. 300s of silence was the
             # old behaviour; fail fast and let the caller report it instead.
-            return False
-        return r.returncode == 0
+            done = False
+        if not done:
+            # rclone writes the remote before consent, so an abandoned one
+            # leaves a remote with no token, which every later launch reports
+            # as Google not responding. Only reached with no working remote.
+            try:
+                self.delete_remote()
+            except (RuntimeError, subprocess.TimeoutExpired):
+                pass
+        return done
 
     def is_authed(self) -> bool:
         return self.has_remote()

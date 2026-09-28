@@ -90,6 +90,29 @@ def _as_map(value):
     return value if isinstance(value, dict) else None
 
 
+def _as_bool(value):
+    """true/false, and the ways people type them by hand. purge_on_sync is
+    the one bool, and reading a hand-edited "false" as the default turned
+    deleting on."""
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, int):
+        return bool(value) if value in (0, 1) else None
+    if isinstance(value, str):
+        word = value.strip().lower()
+        if word in ("false", "no", "off", "0"):
+            return False
+        if word in ("true", "yes", "on", "1"):
+            return True
+    return None
+
+
+def purges(user_settings) -> bool:
+    """Whether sync deletes what the enabled drives and setlists do not have.
+    No settings means the default."""
+    return getattr(user_settings, "purge_on_sync", True)
+
+
 # Written in this order. People read this file, so the editable settings come
 # first and the Drive ID maps last.
 SETTING_FIELDS = (
@@ -97,12 +120,16 @@ SETTING_FIELDS = (
     _Field("download_mode", "", coerce=_as_mode),
     _Field("download_ignore", lambda: list(DEFAULT_DOWNLOAD_IGNORE),
            coerce=_as_patterns),
+    _Field("purge_on_sync", True, coerce=_as_bool),
     _Field("purge_ignore", lambda: list(DEFAULT_PURGE_IGNORE), coerce=_as_patterns),
     _Field("drive_toggles", dict, coerce=_as_map),
     _Field("subfolder_toggles", dict, coerce=_as_map),
 )
 
 KNOWN_KEYS = frozenset(f.name for f in SETTING_FIELDS) | {"version"}
+
+# Kept in the file between migrating a 1.5.4 one and settle_drive_defaults.
+_OWED_KEY = "drive_defaults_owed"
 
 # Written by 1.5.4 and earlier, dropped on upgrade.
 _RETIRED_KEYS = ("delete_videos", "group_expanded", "use_default_drives",
@@ -217,6 +244,7 @@ class UserSettings:
                 for f in SETTING_FIELDS:
                     setattr(settings, f.name, f.read(data))
                 settings._extra = unknown_settings(data)
+                settings._owed_drive_defaults = _as_bool(settings._extra.get(_OWED_KEY)) is True
                 settings._migrate(data)
             except (json.JSONDecodeError, OSError):
                 _keep_unreadable(path)
@@ -243,6 +271,13 @@ class UserSettings:
         self._owed_drive_defaults = written_by_old_version and not was_new
         for gone in _RETIRED_KEYS:
             self._extra.pop(gone, None)
+        # This save drops the keys the answer came from, and the drives are
+        # only known later, after setup. Keep the answer in the file until
+        # then: any load or save in between, or a launch that quits first,
+        # would otherwise lose it and leave those drives off.
+        self._extra.pop(_OWED_KEY, None)
+        if self._owed_drive_defaults:
+            self._extra[_OWED_KEY] = True
         self.save()
 
     def settle_drive_defaults(self, drive_ids) -> bool:
@@ -251,13 +286,13 @@ class UserSettings:
         if not self._owed_drive_defaults:
             return False
         self._owed_drive_defaults = False
+        self._extra.pop(_OWED_KEY, None)
         added = False
         for drive_id in drive_ids:
             if drive_id not in self.drive_toggles:
                 self.drive_toggles[drive_id] = True
                 added = True
-        if added:
-            self.save()
+        self.save()
         return added
 
     def reload(self):

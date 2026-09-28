@@ -21,7 +21,7 @@ from typing import NoReturn
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
-LAUNCHER_VERSION = "1.3"
+LAUNCHER_VERSION = "1.4"
 RELEASE_TAG = ""  # Injected to "dev-latest" for dev launcher builds
 WEZTERM_VERSION = "20240203-110809-5046fc22"  # Windows/Linux host, downloaded first-run
 LINUX_WM_CLASS = "synchotic"  # must match the .desktop basename, or KDE cannot pair them
@@ -65,6 +65,11 @@ def is_offline_mode() -> bool:
     return "--offline" in sys.argv
 
 
+# Decided once by main(). Dev mode deletes the zip that detects it, so asking
+# again after extracting would send the rest of the run to the OS-dir app.
+_dev_mode: bool | None = None
+
+
 def is_dev_mode() -> bool:
     """Check if running in dev mode (use local zip, no GitHub).
 
@@ -72,10 +77,20 @@ def is_dev_mode() -> bool:
     - --dev flag is passed, OR
     - A local app zip exists in the launcher directory (auto-detect for dev builds)
     """
+    if _dev_mode is not None:
+        return _dev_mode
     if "--dev" in sys.argv:
         return True
     # Auto-detect: if local zip exists, assume dev mode
     return get_local_zip_path().exists()
+
+
+def decide_dev_mode() -> bool:
+    """Fix dev mode for the rest of this run."""
+    global _dev_mode
+    _dev_mode = None
+    _dev_mode = is_dev_mode()
+    return _dev_mode
 
 
 def is_clean_mode() -> bool:
@@ -188,6 +203,81 @@ def relaunchable_path() -> Path:
     """
     appimage = os.environ.get("APPIMAGE")
     return Path(appimage) if appimage else get_launcher_path()
+
+
+# Set by the app when it replaced the launcher and started this one: the window
+# the old launcher ran in, if it was one that stays open after its program
+# exits (Windows Terminal, the classic console). A WezTerm window closes itself.
+CLOSE_WINDOW_ENV = "SYNCHOTIC_CLOSE_WINDOW"
+CONSOLE_CLASSES = ("CASCADIA_HOSTING_WINDOW_CLASS", "ConsoleWindowClass")
+
+
+def finish_update(hwnd: str = "") -> None:
+    """After the app swapped this launcher in: close the window the old one ran
+    in, and delete the old one, which the app could only move aside while it
+    was running. Called once this launcher's own window is up."""
+    if hwnd.isdigit() and sys.platform == "win32":
+        _close_console_window(int(hwnd))
+
+    target = install_path()
+    old = target.with_name(target.name + ".old")
+    for _ in range(10):  # the old launcher may still be on its way out
+        if not old.exists():
+            return
+        try:
+            if old.is_dir():
+                shutil.rmtree(old)
+            else:
+                old.unlink()
+            log(f"Removed the replaced launcher: {old}")
+            return
+        except OSError:
+            time.sleep(0.5)
+    log(f"Could not remove the replaced launcher yet: {old}")
+
+
+def _close_console_window(hwnd: int) -> None:
+    """Ask a Windows Terminal or console window to close, the way its close
+    button would: a window holding other tabs asks first, as it always does.
+    Checked again here, so a handle reused by some other window is left alone."""
+    try:
+        import ctypes
+        user32 = ctypes.windll.user32
+        cls = ctypes.create_unicode_buffer(256)
+        if not user32.IsWindow(hwnd) or not user32.GetClassNameW(hwnd, cls, 256):
+            log(f"The old launcher's window {hwnd} is already gone")
+            return
+        if cls.value in CONSOLE_CLASSES:
+            user32.PostMessageW(hwnd, 0x0010, 0, 0)  # WM_CLOSE
+            log(f"Closed the window the old launcher ran in ({cls.value})")
+    except Exception as e:
+        log(f"Could not close the old window: {e}")
+
+
+def install_path() -> Path:
+    """What replacing this launcher replaces: the .app bundle on macOS, the
+    exe or AppImage elsewhere. Handed to the app, which does the updating, so
+    a bug in the update can still be fixed by an app release."""
+    path = relaunchable_path()
+    if sys.platform == "darwin":
+        for parent in path.parents:
+            if parent.suffix == ".app":
+                return parent
+    return path
+
+
+def launcher_identity() -> dict:
+    """What the app is told about the launcher that started it. Absent means
+    a launcher from before 1.4, which the app finds another way.
+
+    Only an installed release launcher gives its path, which is what lets the
+    app replace it. A --dev or source run would have the app swap launcher.py
+    or a dev build for a release exe, and the dev channel would land on the
+    production one."""
+    identity = {"SYNCHOTIC_LAUNCHER_VERSION": LAUNCHER_VERSION}
+    if is_installed() and not RELEASE_TAG:
+        identity["SYNCHOTIC_LAUNCHER_PATH"] = str(install_path())
+    return identity
 
 
 def get_app_dir() -> Path:
@@ -483,15 +573,6 @@ def error_exit(message: str) -> NoReturn:
     sys.exit(1)
 
 
-def set_terminal_size(cols: int = 90, rows: int = 40):
-    """Set terminal window size. Works on cmd.exe and PowerShell, not Windows Terminal."""
-    if sys.platform == "win32":
-        os.system(f"mode con: cols={cols} lines={rows}")
-    else:
-        # macOS/Linux: ANSI escape sequence
-        print(f"\x1b[8;{rows};{cols}t", end="", flush=True)
-
-
 
 
 # =============================================================================
@@ -593,27 +674,43 @@ def _resource_path(name: str):
 
 def _double_clicked_windows() -> bool:
     """True when launched from Explorer (we own our console), so a launch from
-    an existing cmd/PowerShell is left alone."""
+    an existing cmd/PowerShell is left alone.
+
+    A frozen onefile exe is two processes on the console, the bootloader and
+    the Python it starts, so a double-click counts 2 there. Counting 1 kept
+    every Windows double-click out of WezTerm and in the default console."""
     try:
         import ctypes
 
         arr = (ctypes.c_uint32 * 8)()
         n = ctypes.windll.kernel32.GetConsoleProcessList(arr, 8)
-        return n <= 1
+        return n <= (2 if getattr(sys, "frozen", False) else 1)
     except Exception:
         return False
 
 
-def _hide_windows_console():
-    """Hide our own console so the re-exec into WezTerm does not flash one."""
+def _hide_windows_console(show: bool = False):
+    """Hide our own console so the re-exec into WezTerm does not flash one, or
+    with `show`, bring it back to run in when WezTerm could not open."""
     try:
         import ctypes
 
         hwnd = ctypes.windll.kernel32.GetConsoleWindow()
         if hwnd:
-            ctypes.windll.user32.ShowWindow(hwnd, 0)  # SW_HIDE
+            ctypes.windll.user32.ShowWindow(hwnd, 5 if show else 0)  # SW_SHOW / SW_HIDE
     except Exception:
         pass
+
+
+def install_host_config(lua: Path) -> None:
+    """Put this launcher's wezterm.lua in place, replacing an older one.
+
+    Copying it only when missing meant a fix to the config never reached anyone
+    who had one. It holds no user state (window.txt keeps the size), so the
+    launcher's own copy always wins."""
+    src = _resource_path("wezterm.lua")
+    if src and (not lua.exists() or lua.read_bytes() != src.read_bytes()):
+        shutil.copyfile(src, lua)
 
 
 def ensure_wezterm_windows() -> bool:
@@ -622,9 +719,7 @@ def ensure_wezterm_windows() -> bool:
     gui = d / "wezterm-gui.exe"
     lua = d / "wezterm.lua"
     d.mkdir(parents=True, exist_ok=True)
-    lua_src = _resource_path("wezterm.lua")
-    if lua_src and not lua.exists():
-        shutil.copyfile(lua_src, lua)
+    install_host_config(lua)
     if gui.exists():
         return True
     url = (f"https://github.com/wezterm/wezterm/releases/download/"
@@ -664,9 +759,7 @@ def ensure_wezterm_linux() -> bool:
     d = wezterm_dir()
     gui, lua = host_paths()
     d.mkdir(parents=True, exist_ok=True)
-    lua_src = _resource_path("wezterm.lua")
-    if lua_src and not lua.exists():
-        shutil.copyfile(lua_src, lua)
+    install_host_config(lua)
     if gui.exists():
         return True
     url = (f"https://github.com/wezterm/wezterm/releases/download/"
@@ -718,21 +811,42 @@ def no_wayland_marker() -> Path:
     return get_dm_sync_dir() / "no-wayland"
 
 
-def host_survived_startup(cmd: list, env: dict) -> bool:
+def host_survived_startup(cmd: list, env: dict, creationflags: int = 0) -> bool:
     """Start WezTerm and wait long enough to see whether the window sticks.
 
     A window that opens and shuts is the whole symptom, and it is the only
     signal available: WezTerm reports the protocol error through a desktop
     notification, so there is nothing on our end to read. Anything still alive
     after the grace period has a real window with the app running in it.
+
+    The one quick exit that is not a failure: the app replaced this launcher
+    and started the new one, which owns the session now. That takes about two
+    seconds, and running the app again here would update over the running one.
+    This process is the replaced launcher then, and the new one waits for it to
+    let go of the file before deleting it, so it leaves without finishing up.
     """
-    proc = subprocess.Popen(cmd, env=env)
+    before = _install_identity()
+    proc = subprocess.Popen(cmd, env=env, creationflags=creationflags, close_fds=True)
     try:
         code = proc.wait(timeout=HOST_STARTUP_GRACE)
     except subprocess.TimeoutExpired:
         return True
+    if before and _install_identity() != before:
+        log("The app replaced this launcher and started the new one")
+        close_logging()
+        sys.exit(0)
     log(f"WezTerm exited {code} within {HOST_STARTUP_GRACE}s of starting")
     return False
+
+
+def _install_identity():
+    """Which file is at install_path() now. The app's update renames the old
+    launcher aside, so a replaced one reads as a different file."""
+    try:
+        st = install_path().stat()
+    except OSError:
+        return None
+    return st.st_ino, st.st_size, st.st_mtime_ns
 
 
 def relaunch_in_host_linux(cmd: list, env: dict) -> NoReturn:
@@ -759,8 +873,9 @@ def relaunch_in_host_linux(cmd: list, env: dict) -> NoReturn:
     sys.exit(0)
 
 
-def maybe_relaunch_in_host():
-    """Re-exec into a WezTerm window when launched from a GUI."""
+def maybe_relaunch_in_host(on_open=None):
+    """Re-exec into a WezTerm window when launched from a GUI. `on_open` runs
+    once the window has proven it stays up, before this process leaves."""
     if "--hosted" in sys.argv:
         return
     if sys.platform == "darwin":
@@ -797,8 +912,15 @@ def maybe_relaunch_in_host():
     env = host_environment()
     if sys.platform == "win32":
         DETACHED_PROCESS = 0x00000008
-        subprocess.Popen(cmd, creationflags=DETACHED_PROCESS, close_fds=True, env=env)
-        sys.exit(0)
+        if host_survived_startup(cmd, env, creationflags=DETACHED_PROCESS):
+            if on_open:
+                on_open()
+            sys.exit(0)  # the window is up and owns the session now
+        # Exiting here left a double-click with no window at all: WezTerm had
+        # failed and nothing was left to show why. The console we have works.
+        log("WezTerm would not open; running in this console")
+        _hide_windows_console(show=True)
+        return
     if sys.platform.startswith("linux"):
         relaunch_in_host_linux(cmd, env)  # may exec, always exits
     os.execve(str(wezterm), cmd, env)  # replaces this process; does not return
@@ -848,14 +970,28 @@ def ensure_linux_desktop():
 
 
 def main():
+    # Before anything else, and without opening a window: the app runs a
+    # downloaded launcher with this to check it starts before swapping it in.
+    if "--version" in sys.argv:
+        print(LAUNCHER_VERSION)
+        sys.exit(0)
+
+    decide_dev_mode()
+
     # Logging first: a GUI launch that dies in the re-exec is exactly the case
     # with no console to print to, and starting the log afterwards meant the
     # only failure a user cannot see anything of was also the only one that
     # left no file behind.
     init_logging()
     log(f"Launcher v{LAUNCHER_VERSION}")
-    maybe_relaunch_in_host()  # may re-exec into WezTerm and not return
-    set_terminal_size(90, 40)
+    # Taken out now so the copy inside WezTerm never sees it.
+    old_window = os.environ.pop(CLOSE_WINDOW_ENV, "")
+    # may re-exec into WezTerm and not return
+    maybe_relaunch_in_host(on_open=lambda: finish_update(old_window))
+    finish_update(old_window)
+    # No resizing here. WezTerm is sized by wezterm.lua, and a console we did
+    # not open is the user's. In Windows Terminal `mode con` changed the size
+    # programs see without resizing the window, so the app drew 40 rows into 30.
     ensure_linux_desktop()
 
     if RELEASE_TAG:
@@ -973,6 +1109,7 @@ def main():
     args = [str(app_exe)] + filtered_args
     env = app_environment()
     env["SYNCHOTIC_START_TIME"] = str(_start_time)
+    env.update(launcher_identity())
 
     close_logging()
 

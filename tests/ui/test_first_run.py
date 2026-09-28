@@ -32,7 +32,7 @@ class TestWhenItRuns:
 
 def _setup(monkeypatch, *, needs=(LIBRARY, MODE), library_after=True,
            blocked=("",), mode_chosen=True, first_run=True, answer=None,
-           mode_answer="rclone"):
+           mode_answer="rclone", choose_purge=None):
     """Run setup with every screen faked. `blocked` is what blocked_step
     returns on successive calls, its last value repeating. `answer` picks the
     reply to every boxed page: None for Esc, else an index into its options."""
@@ -48,7 +48,7 @@ def _setup(monkeypatch, *, needs=(LIBRARY, MODE), library_after=True,
         seen["pages"].append((setup_step, title, body, options))
         if answer is None and kw.get("esc_label") == copy.BTN_QUIT:
             return options[0][1]
-        return None if answer == "esc" else options[answer or 0][1]
+        return None if answer == "esc" else options[min(answer or 0, len(options) - 1)][1]
 
     monkeypatch.setattr("src.ui.screens.library.ask", fake_ask)
 
@@ -71,7 +71,8 @@ def _setup(monkeypatch, *, needs=(LIBRARY, MODE), library_after=True,
                          choose_mode=choose_mode,
                          library_is_set=lambda: library_after,
                          mode_chosen=lambda: chosen["mode"],
-                         blocked_step=blocked_step, first_run=first_run)
+                         blocked_step=blocked_step, choose_purge=choose_purge,
+                         first_run=first_run)
     return finished, seen
 
 
@@ -278,6 +279,46 @@ class TestStartup:
     def test_quitting_setup_quits_the_app(self, monkeypatch):
         finished, _ = self._launch(monkeypatch, library_set=False, finishes=False)
         assert finished is False
+
+
+class TestThePurgeQuestion:
+    """Asked first on a first run, because the library page's warning that
+    its contents WILL BE DELETED is only true when sync purges."""
+
+    def _run(self, monkeypatch, answer, first_run=True):
+        saved = []
+        finished, seen = _setup(monkeypatch, answer=answer, first_run=first_run,
+                                choose_purge=saved.append)
+        return saved, seen
+
+    def test_it_is_the_first_step(self, monkeypatch):
+        _, seen = self._run(monkeypatch, answer=0)
+        assert copy.PURGE_QUESTION in seen["pages"][0][2]
+        assert seen["library_step"] == (2, 4, copy.SETUP_TITLE)
+
+    def test_on_keeps_the_warning(self, monkeypatch):
+        saved, seen = self._run(monkeypatch, answer=0)
+        assert saved == [True]
+        assert "DELETED" in seen["library_intro"]
+
+    def test_off_drops_the_warning(self, monkeypatch):
+        saved, seen = self._run(monkeypatch, answer=1)
+        assert saved == [False]
+        assert seen["library_intro"] == copy.LIBRARY_INTRO
+
+    def test_off_does_not_promise_deleting_on_the_last_page(self, monkeypatch):
+        _, seen = self._run(monkeypatch, answer=1)
+        assert seen["pages"][-1][2].endswith(copy.READY_SYNC_NO_PURGE)
+
+    def test_skipping_keeps_the_default(self, monkeypatch):
+        saved, seen = self._run(monkeypatch, answer="esc")
+        assert saved == []
+        assert "DELETED" in seen["library_intro"]
+
+    def test_a_repair_does_not_ask(self, monkeypatch):
+        saved, seen = self._run(monkeypatch, answer=0, first_run=False)
+        assert saved == []
+        assert not any(copy.PURGE_QUESTION in p[2] for p in seen["pages"])
 
 
 def test_the_chooser_shows_the_intro_it_is_handed(monkeypatch):

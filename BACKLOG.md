@@ -2,14 +2,34 @@
 
 ## Inbox
 
+- [ ] [refactor] one screen owner in chotic-ui *(2026-09-27)*
+  - Every widget writes to the terminal its own way with its own height maths (`Menu`, `TwoPane`, `FilterList`, `ScreenPainter`), and `Menu` still counts the banner as 8 rows when it is 9. So each fix for 1.5.6 (clip to width, hide the logo under 72 cols, repaint on resize, notice rows) had to go into every widget separately, and the next widget will get it wrong again.
+  - Widgets should return lines, and one `paint()` should own the rest: measure the terminal once, add banner and notices, clip width, fit height, diff against the last frame and write only the rows that changed. A repaint with nothing new then writes nothing, which is repaint-on-change for free and less for Windows consoles to shimmer on.
+  - Do it on a chotic-ui branch after 1.5.6. The width, height, resize, notice and animation tests from 1.5.6 have to pass through it unchanged. Textual would solve it too, but it means rewriting every screen and putting a big dependency in three PyInstaller builds.
+
 - [ ] [cleanup] remove adopted data from the old `.dm-sync` beside the Windows exe *(2026-09-24)*
   - 1.5.5 copies settings, token, rclone config, caches, logs and markers into the OS dirs and leaves the originals, as the fallback if an adoption goes wrong in the field.
   - Once 1.5.5 upgrades are confirmed, delete on a later launch only what provably arrived: each file present at its destination, and every marker present in the library. A marker deleted before it arrived turns its charts into purge extras. Purge-adjacent, so manual verification.
   - Never `_app`, `wezterm` or launcher logs: launcher 1.3 still runs from there, so the folder itself stays until people have a newer launcher.
 
-- [ ] [feature] let the app update the launcher *(2026-09-24)*
-  - The app updates every run, the launcher never does, and there is no channel to tell people to download it again. Launcher-side changes (e.g. the OS-dirs layout in `eb19d72`) reach nobody until they do.
-  - The app knows when launcher 1.3 started it (frozen Windows, `SYNCHOTIC_ROOT` set). Windows will not overwrite a running exe, and the 1.3 launcher waits on the app, so it would have to rename the old exe aside and drop the new one in place.
+- [ ] [bug] removing a custom drive says its charts will be deleted, and they never are *(2026-09-27)*
+  - `REMOVE_BODY` says "Its charts WILL BE DELETED on next sync", but `_remove_custom_folder` drops the drive from `self.folders` and purge only walks `self.folders`, so the charts stay forever. Decide which is right: delete them (purge the folder once, owned drives only) or fix the copy.
+
+- [ ] [bug] home "-GB" counts disabled drives purge will not touch *(2026-09-27)*
+  - `aggregate_folder_stats` counts every disabled drive's disk content, but purge only empties drives we own. The preflight warning now takes ownership into account (`gather(owned=)`); the home figure runs per drive with no disk I/O, so it needs the owned set passed in rather than read each time.
+
+- [ ] [cleanup] keep or remove library adoption *(2026-09-28)*
+  - "Adopted" is meant to stop the first sync into a library from purging, but any download writes `owned_drives.json` (`mark_drive_owned`) and any marker counts as proof, so it almost never fires. The unowned-library warning and the purge prompt are what actually protect people.
+  - The per-drive owned list (a disabled drive's folder is only emptied if we synced into it) does work. Keep that, and decide whether the adoption half earns its place. Purge-adjacent, so manual verification.
+
+- [ ] [bug] launcher self-update gaps to close before the first opt-in release *(2026-09-28)*
+  - Pre-1.4 detection trusts any parent process (`launcher_update.py:86-98`): any `.exe` on Windows, any enclosing `.app` on macOS. A `synchotic-launcher-dev.exe` gets the production launcher, and a mac launcher run from the user's own WezTerm could put WezTerm.app up for replacing. Match expected names only.
+  - `_reports` runs the new launcher with the raw environment, not `clean_environment`, so inherited `_PYI*` variables may make its `--version` fail and every launch re-download it.
+  - A release tag that is not `launcher-v$LAUNCHER_VERSION` fails `_reports` on every launch too. Make `release-launcher.yml` refuse it.
+  - Try one real update per OS before adding the opt-in marker.
+
+- [ ] [bug] `--dev` on an AppImage puts its files in the AppImage's mount *(2026-09-27)*
+  - `get_launcher_dir()` returns `sys.executable`'s parent for a non-installed frozen run, which inside an AppImage is the squashfs mount that vanishes on exit, so `.dm-sync`, logs and WezTerm land there. Works only with `SYNCHOTIC_LAUNCHER_DIR` set. Use `relaunchable_path().parent`.
 
 - [ ] [ux] first-run gaps left from the Discord thread *(2026-09-12, #ask-anything)*
   - Guided setup, checks on every launch, the unowned-library warning and the library row confusion all landed after 1.5.4. What is left:

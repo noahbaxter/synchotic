@@ -1,3 +1,5 @@
+import pytest
+
 from src.rclone.config import RcloneConfig
 from src.core import paths, constants
 
@@ -75,12 +77,20 @@ class TestTheRemoteActuallyWorking:
                            raises=subprocess.TimeoutExpired("rclone", 20))
         assert cfg.token_works() is False
 
-    def test_reconnect_redoes_consent_for_the_existing_remote(self, tmp_path, monkeypatch):
-        """`config create` over a live remote does not refresh its token, so
-        this is the only way back for a remote that stopped working."""
+    def test_reconnect_forgets_the_dead_remote_then_creates_it(self, tmp_path, monkeypatch):
+        """`config create` over a live remote keeps the dead token, and
+        `config reconnect` asks "Already have a token - refresh?" on output
+        we capture, so it waited for an answer nobody could see."""
         cfg, calls = self._cfg(tmp_path, monkeypatch, returncode=0)
         assert cfg.reconnect() is True
-        assert ["config", "reconnect"] == [a for a in calls[0] if a in ("config", "reconnect")]
+        verbs = [args[args.index("config", 3) + 1] for args in calls if "config" in args[3:]]
+        assert verbs == ["delete", "create"]
+        assert not any("reconnect" in args for args in calls)
+
+    def test_a_remote_that_cannot_be_forgotten_is_not_recreated(self, tmp_path, monkeypatch):
+        cfg, calls = self._cfg(tmp_path, monkeypatch, returncode=1)
+        assert cfg.reconnect() is False
+        assert not any("create" in args for args in calls)
 
     def test_reconnect_is_only_true_once_the_token_answers(self, tmp_path, monkeypatch):
         """Consent can exit cleanly and still leave a remote that cannot
@@ -138,3 +148,84 @@ def test_create_remote_passes_scope_and_config(tmp_path, monkeypatch):
     assert constants.RCLONE_REMOTE_NAME in args
     assert "scope=drive.readonly" in args
     assert "--config" in args and str(paths.get_rclone_config_path()) in args
+
+
+def test_create_remote_answers_every_question_itself(tmp_path, monkeypatch):
+    """Newer rclone asks whether to keep its retiring shared client_id before
+    consent, default No, and asks about shared drives after it, all on output
+    we capture. Checked against rclone 1.75.1 --non-interactive: nothing left."""
+    monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
+    runner = FakeRunner()
+    RcloneConfig(binary="/x/rclone", runner=runner.run).create_remote()
+    assert "config_shared_client_id=true" in runner.calls[-1]
+    assert "config_change_team_drive=false" in runner.calls[-1]
+
+
+def test_an_abandoned_consent_leaves_no_remote_behind(tmp_path, monkeypatch):
+    """rclone writes the remote before consent. One nobody clicked through
+    has no token, and every later launch called that Google not responding."""
+    import subprocess
+    monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
+    calls = []
+
+    def runner(args, **kw):
+        calls.append(args)
+        if "create" in args:
+            raise subprocess.TimeoutExpired("rclone", 120)
+        return type("R", (), {"returncode": 0, "stdout": "", "stderr": ""})()
+
+    assert RcloneConfig(binary="/x/rclone", runner=runner).create_remote() is False
+    assert "delete" in calls[-1]
+
+
+def _old_remote_then(tmp_path, monkeypatch, on_create):
+    """A config holding a token, and a runner that forgets it on delete and
+    runs `on_create` for the consent."""
+    monkeypatch.setattr(paths, "get_app_dir", lambda: tmp_path)
+    cfg = RcloneConfig(binary="/x/rclone", runner=None)
+    cfg.config_path.parent.mkdir(parents=True, exist_ok=True)
+    cfg.config_path.write_text("[synchotic]\ntoken = maybe-still-good\n")
+
+    def runner(args, **kw):
+        if "delete" in args:
+            cfg.config_path.write_text("")
+        if "create" in args:
+            on_create()
+        return type("R", (), {"returncode": 0, "stdout": "", "stderr": ""})()
+
+    cfg.runner = runner
+    return cfg
+
+
+def test_a_reconnect_nobody_finishes_puts_the_old_remote_back(tmp_path, monkeypatch):
+    """Dead also means a probe that timed out offline, whose token may still
+    be good. Deleting it for a consent that never finished lost it."""
+    import subprocess
+
+    def times_out():
+        raise subprocess.TimeoutExpired("rclone", 120)
+
+    cfg = _old_remote_then(tmp_path, monkeypatch, times_out)
+    assert cfg.reconnect() is False
+    assert "maybe-still-good" in cfg.config_path.read_text()
+
+
+def test_a_reconnect_interrupted_puts_the_old_remote_back(tmp_path, monkeypatch):
+    def interrupted():
+        raise KeyboardInterrupt
+
+    cfg = _old_remote_then(tmp_path, monkeypatch, interrupted)
+    with pytest.raises(KeyboardInterrupt):
+        cfg.reconnect()
+    assert "maybe-still-good" in cfg.config_path.read_text()
+
+
+def test_rclone_never_gets_a_terminal_to_ask_on(monkeypatch):
+    """A question on captured output has to fail at once, not wait it out."""
+    import subprocess
+    from src.rclone import config
+
+    seen = {}
+    monkeypatch.setattr(subprocess, "run", lambda args, **kw: seen.update(kw))
+    config._default_runner(["rclone", "version"])
+    assert seen["stdin"] is subprocess.DEVNULL

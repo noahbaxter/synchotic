@@ -53,6 +53,16 @@ config.window_padding = { left = '1cell', right = '1cell', top = '0.5cell', bott
 -- and initial_rows up to roughly 2x and ignores the intended size.
 config.font_size = 12.0
 
+-- WebGpu on Windows. The default OpenGL front end needs a GPU driver with
+-- OpenGL 3.3, so a machine without one (a VM, an old laptop, some remote
+-- sessions) got "The OpenGL implementation is too old to work with glium" and
+-- no window at all. 'Software' still goes through OpenGL there and fails the
+-- same way. WebGpu runs on Direct3D, which falls back to its own software
+-- renderer, and opened on a Windows 11 VM with no GPU where both others died.
+if wezterm.target_triple:find('windows') then
+  config.front_end = 'WebGpu'
+end
+
 config.colors = {
   foreground = '#dcd7ba',
   background = '#1f1f28',

@@ -11,8 +11,6 @@ import json
 import os
 import time
 
-from pathlib import Path
-
 import pytest
 
 from src.config import jsonc
@@ -21,7 +19,7 @@ from src.core import paths
 
 def _library():
     """The library without the Windows MAX_PATH prefix."""
-    return Path(paths.plain_path(paths.get_library_path()))
+    return paths.unextended(paths.get_library_path())
 
 
 @pytest.fixture(autouse=True)

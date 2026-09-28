@@ -137,7 +137,8 @@ class SyncFlowMixin:
                 created, skipped = rebuild_markers_from_disk(self.folders, get_download_path())
                 debug_log(f"TIMING | rebuild_markers: {_time.time() - t0:.1f}s | created={created}")
 
-                # Purge extra files (no confirmation - sync means make it match)
+                # Purge extra files: asks once past the threshold, and does
+                # nothing but sweep partials when purge_on_sync is off
                 progress.set_phase(copy.PURGE)
                 progress.set_title("")
                 t0 = _time.time()

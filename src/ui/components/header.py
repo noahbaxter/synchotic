@@ -89,7 +89,7 @@ def _library_label() -> str:
     from ...core import paths
 
     try:
-        library = Path(paths.plain_path(paths.get_library_path()))
+        library = paths.unextended(paths.get_library_path())
     except Exception:
         return ""
     try:

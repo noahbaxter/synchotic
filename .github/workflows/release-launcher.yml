@@ -8,7 +8,7 @@ on:
         required: true
         default: 'launcher-v1'
       notes:
-        description: 'Release notes. Say which platforms actually changed.'
+        description: 'Release notes. Say which platforms actually changed. The app replaces installed launchers with this one only if the notes contain <!-- app-updates-launcher -->, so add it once the release is tested by hand.'
         required: false
         default: ''
 

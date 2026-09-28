@@ -21,7 +21,9 @@ def working(label, work, out=None):
     work runs on a thread only so the spinner can animate; an exception in it
     is re-raised here.
     """
-    stream = out or sys.stdout
+    # The real terminal, like every frame: sys.stdout is the log tee, which has
+    # no isatty, so the spinner never drew once the tee went in.
+    stream = out or sys.__stdout__ or sys.stdout
     if not getattr(stream, "isatty", lambda: False)():
         return work()
 
