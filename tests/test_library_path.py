@@ -337,9 +337,13 @@ class TestOsDirsBundleLayout:
         assert paths.DATA_DIR_NAME not in str(paths.get_settings_path())
         assert paths.get_settings_path().is_relative_to(paths._os_dir("data"))
 
-    def test_logs_and_cache_split_off(self):
-        assert paths.get_log_dir() == paths._os_dir("logs")
+    def test_cache_splits_off(self):
         assert paths.get_cache_dir() == paths._os_dir("cache")
+
+    def test_logs_sit_with_the_launchers(self):
+        """The launcher logs to its data dir's logs/. Two folders meant users
+        sent the launcher's logs and never the app's."""
+        assert paths.get_log_dir() == paths._os_dir("data") / "logs"
 
     def test_charts_stay_somewhere_findable(self):
         """Not ~/Library: a chart library is tens of gigabytes of user content."""

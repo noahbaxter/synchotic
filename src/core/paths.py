@@ -2,8 +2,8 @@
 Centralized path management for Synchotic.
 
 Every shipped build keeps its state in the OS dirs (_os_dir): settings, token,
-custom drives and rclone config in data, scan and stats caches in cache, and
-logs. Source runs, tests and a --dev launcher keep the same files in .dm-sync/
+custom drives, rclone config and logs in data, scan and stats caches in
+cache. Source runs, tests and a --dev launcher keep the same files in .dm-sync/
 beside the app instead. Markers live in the library, with the charts they
 describe, and the library is wherever the user pointed it.
 """
@@ -50,21 +50,19 @@ def _using_os_dirs() -> bool:
 
 
 def _os_dir(kind: str) -> Path:
-    """OS-standard data/cache/log dir for this platform."""
+    """OS-standard data/cache dir for this platform."""
     home = Path.home()
     if sys.platform == "darwin":
         return {
             "data": home / "Library" / "Application Support" / APP_DIRNAME,
             "cache": home / "Library" / "Caches" / APP_DIRNAME,
-            "logs": home / "Library" / "Logs" / APP_DIRNAME,
         }[kind]
     if sys.platform == "win32":
         base = Path(os.environ.get("LOCALAPPDATA") or (home / "AppData" / "Local"))
-        return base / APP_DIRNAME / {"data": "Data", "cache": "Cache", "logs": "Logs"}[kind]
+        return base / APP_DIRNAME / {"data": "Data", "cache": "Cache"}[kind]
     xdg = {
         "data": os.environ.get("XDG_DATA_HOME") or (home / ".local" / "share"),
         "cache": os.environ.get("XDG_CACHE_HOME") or (home / ".cache"),
-        "logs": os.environ.get("XDG_STATE_HOME") or (home / ".local" / "state"),
     }[kind]
     return Path(xdg) / "synchotic"
 
@@ -276,9 +274,9 @@ def get_cache_dir() -> Path:
 
 
 def get_log_dir() -> Path:
-    """Debug logs."""
-    log_dir = (_os_dir("logs") if _using_os_dirs()
-               else get_app_dir() / DATA_DIR_NAME / "logs")
+    """Debug logs, the app's and the launcher's in one folder. The launcher
+    writes to its data dir's logs/ too, so a user sends one folder, not two."""
+    log_dir = get_data_dir() / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
     return log_dir
 

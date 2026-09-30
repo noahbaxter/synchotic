@@ -79,8 +79,8 @@ def test_it_is_not_under_the_library_heading(rows):
 
 
 def test_the_logs_row_sits_under_app(rows):
-    """Logs moved to the OS dirs in 1.5.5 and people went looking beside the
-    launcher. The app is the one place that can show them where."""
+    """Logs sit in a data dir nobody goes looking in. The app is the one place
+    that can show them where."""
     out = rows()["rows"]
     data = next(i for i, r in enumerate(out) if r[1] == ("act", "open_data_folder"))
     logs = [i for i, r in enumerate(out) if r[1] == ("act", "open_log_folder")]

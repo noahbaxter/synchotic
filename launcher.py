@@ -287,7 +287,7 @@ def get_app_dir() -> Path:
 
 
 def get_dm_sync_dir() -> Path:
-    """Where the payload and the launcher's own logs go. The OS data dir is
+    """Where the payload and the launcher's own logs/ go. The OS data dir is
     already ours and out of sight; a --dev folder hides them in .dm-sync."""
     return get_launcher_dir() if is_installed() else get_launcher_dir() / ".dm-sync"
 
@@ -331,10 +331,12 @@ def get_installed_version() -> str:
 def init_logging():
     """Initialize daily log file."""
     global _log_file
-    log_dir = get_dm_sync_dir()
+    # The app's own daily file (src/core/paths.get_log_dir), so one log holds
+    # both halves in order. Both append a flushed line at a time.
+    log_dir = get_dm_sync_dir() / "logs"
     log_dir.mkdir(parents=True, exist_ok=True)
     date_str = time.strftime("%Y-%m-%d")
-    log_path = log_dir / f"launcher-{date_str}.log"
+    log_path = log_dir / f"{date_str}.log"
     try:
         _log_file = open(log_path, "a", encoding="utf-8")
         log(f"=== Launcher started at {time.strftime('%Y-%m-%d %H:%M:%S')} ===")
@@ -347,7 +349,7 @@ def log(message: str):
     if _log_file:
         try:
             timestamp = time.strftime("%H:%M:%S")
-            _log_file.write(f"[{timestamp}] {message}\n")
+            _log_file.write(f"[{timestamp}] launcher | {message}\n")
             _log_file.flush()
         except Exception:
             pass

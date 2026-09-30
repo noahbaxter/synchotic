@@ -44,7 +44,7 @@ Change it under **Settings > Account > Mode**.
 
 | Windows | macOS | Linux |
 |---|---|---|
-| `%LOCALAPPDATA%\Synchotic\Logs` | `~/Library/Logs/Synchotic` | `~/.local/state/synchotic` |
+| `%LOCALAPPDATA%\Synchotic\Data\logs` | `~/Library/Application Support/Synchotic/logs` | `~/.local/share/synchotic/logs` |
 
 **macOS security warning.** This shouldn't happen, but if it does let me know, then right-click the app, **Open**, then **Open** again.
 

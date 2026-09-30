@@ -130,8 +130,8 @@ class AuthMixin:
         self._open_app_folder(get_data_dir())
 
     def handle_open_log_folder(self):
-        """Logs moved to the OS dirs in 1.5.5, away from the folder people
-        knew, so the app has to be the one that shows where they are."""
+        """Logs sit in a data dir people never go looking in, so the app has
+        to be the one that shows where they are."""
         from src.core.paths import get_log_dir
         self._open_app_folder(get_log_dir())
 
