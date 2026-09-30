@@ -226,7 +226,7 @@ class SyncFlowMixin:
             ready = scanner.get_scanned_enabled_setlists()
             next_setlist = None
             for s in ready:
-                if s.setlist_id not in downloaded_ids:
+                if s.key not in downloaded_ids:
                     next_setlist = s
                     break
 
@@ -276,7 +276,7 @@ class SyncFlowMixin:
 
                 total_downloaded += downloaded
                 total_bytes += bytes_down
-                downloaded_ids.add(setlist.setlist_id)
+                downloaded_ids.add(setlist.key)
                 synced_drive_ids.add(setlist.drive_id)
 
                 if cancelled:

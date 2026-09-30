@@ -84,6 +84,16 @@ class SetlistInfo:
     drive_name: str      # Parent drive's name
     drive: dict          # Reference to parent drive dict (for accumulating files)
 
+    @property
+    def key(self) -> str:
+        """What the scanner tracks a setlist by. The folder id alone is not
+        unique: a custom drive can hold a shortcut to a released drive's
+        setlist, and keyed by id the two overwrote each other. Whichever drive
+        listed last got the setlist, so it downloaded into a drive that had it
+        off, the other drive's copy went unscanned and read as a purge, and
+        the next launch could go the other way."""
+        return f"{self.drive_id}/{self.setlist_id}"
+
 
 class BackgroundScanner:
     """
@@ -124,7 +134,8 @@ class BackgroundScanner:
         self._thread: threading.Thread | None = None
 
         # The three core sets
-        self._all_setlists: dict[str, SetlistInfo] = {}  # setlist_id -> SetlistInfo
+        # Keyed by SetlistInfo.key, as are the sets below and the scan cache.
+        self._all_setlists: dict[str, SetlistInfo] = {}
         self._order_cache: list | None = None  # scan order, rebuilt when discovery grows
         # Entries on disk per setlist id, the size hint when nothing is remembered.
         self._disk_estimates: dict[str, int] = {}
@@ -137,7 +148,7 @@ class BackgroundScanner:
         self._last_check_count: int = 0
 
         # Per-drive tracking
-        self._drive_setlist_ids: dict[str, list[str]] = {}  # drive_id -> [setlist_ids]
+        self._drive_setlist_ids: dict[str, list[str]] = {}  # drive_id -> [keys]
         self._drive_setlist_names: dict[str, list[str]] = {}  # drive_id -> [names]
 
         # Stats
@@ -354,7 +365,7 @@ class BackgroundScanner:
 
     @property
     def all_setlists(self) -> dict[str, "SetlistInfo"]:
-        """Get all discovered setlists (setlist_id -> SetlistInfo)."""
+        """Get all discovered setlists (SetlistInfo.key -> SetlistInfo)."""
         with self._lock:
             return dict(self._all_setlists)
 
@@ -540,7 +551,7 @@ class BackgroundScanner:
         )
 
         with self._lock:
-            self._all_setlists[setlist_id] = info
+            self._all_setlists[info.key] = info
 
             # Track per-drive. drive["files"] stays None until a scan actually
             # returns: the purge planner skips a folder only while it is None,
@@ -549,12 +560,12 @@ class BackgroundScanner:
             if drive_id not in self._drive_setlist_ids:
                 self._drive_setlist_ids[drive_id] = []
                 self._drive_setlist_names[drive_id] = []
-            self._drive_setlist_ids[drive_id].append(setlist_id)
+            self._drive_setlist_ids[drive_id].append(info.key)
             self._drive_setlist_names[drive_id].append(name)
 
             # Check if enabled
             if self._is_setlist_enabled(drive_id, name):
-                self._enabled_setlist_ids.add(setlist_id)
+                self._enabled_setlist_ids.add(info.key)
 
     def _is_setlist_enabled(self, drive_id: str, setlist_name: str) -> bool:
         """Check if a setlist is enabled (drive enabled AND setlist enabled)."""
@@ -702,7 +713,10 @@ class BackgroundScanner:
 
             # Check scan cache (skip API call if fresh enough)
             scan_cache = get_scan_cache()
-            cached_files = None if self._force_rescan else scan_cache.get(setlist.setlist_id)
+            # Per drive, not per folder: the paths carry this drive's name for
+            # the setlist, and another drive's copy of the folder has its own.
+            cache_key = f"{setlist.drive_id}_{setlist.setlist_id}"
+            cached_files = None if self._force_rescan else scan_cache.get(cache_key)
 
             if cached_files is not None:
                 new_files = cached_files
@@ -724,7 +738,7 @@ class BackgroundScanner:
                     }
                     for f in result.files
                 ]
-                scan_cache.set(setlist.setlist_id, new_files)
+                scan_cache.set(cache_key, new_files)
 
             with self._lock:
                 if drive.get("files") is None:
@@ -736,7 +750,7 @@ class BackgroundScanner:
         except Exception as e:
             # Track failure — do NOT mark as scanned so purge can protect these files
             with self._lock:
-                self._failed_setlist_ids.add(setlist.setlist_id)
+                self._failed_setlist_ids.add(setlist.key)
                 self._stats.current_folder_start = 0
                 if self._failure_reason is None:
                     self._failure_reason = describe_scan_failure(e)
@@ -751,7 +765,7 @@ class BackgroundScanner:
 
         # Mark as scanned
         with self._lock:
-            self._scanned_setlist_ids.add(setlist.setlist_id)
+            self._scanned_setlist_ids.add(setlist.key)
             self._stats.folders_done += 1
             self._stats.current_folder_start = 0
 

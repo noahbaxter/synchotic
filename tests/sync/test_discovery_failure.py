@@ -55,7 +55,7 @@ def test_a_flat_drive_is_not_reported_as_a_failure(tmp_path):
 
 def test_the_home_screen_does_not_show_it_as_scanned(tmp_path):
     scanner = _scanner(tmp_path, Dead())
-    scanner._scanned_setlist_ids.add(DRIVE)  # the stand-in, scanned empty
+    scanner._scanned_setlist_ids.update(scanner._drive_setlist_ids[DRIVE])  # the stand-in, scanned empty
 
     assert _get_display_state(DRIVE, has_files=True, has_cache=False,
                               scanner=scanner) == "none"

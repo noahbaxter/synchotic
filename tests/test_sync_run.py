@@ -103,7 +103,7 @@ def test_a_failed_setlist_does_not_hold_the_run_for_disabled_ones(monkeypatch, t
     from sync import SyncApp
 
     monkeypatch.setenv("SYNCHOTIC_LIBRARY", str(tmp_path))
-    ready = SimpleNamespace(setlist_id="s1", name="Pack", drive_name="Drive",
+    ready = SimpleNamespace(setlist_id="s1", key="d1/s1", name="Pack", drive_name="Drive",
                             drive_id="d1", drive={"name": "Drive", "folder_id": "d1",
                                                   "files": []})
 

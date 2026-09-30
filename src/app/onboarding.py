@@ -95,10 +95,14 @@ class OnboardingMixin:
         released_ids = {d.folder_id for d in self.drives_config.drives}
         from src.sync.markers import get_markers_dir
 
+        # By folder id: the scanner keys setlists by drive as well, and the
+        # custom drive lists its own copy of the folder too.
+        released_setlists = {s.setlist_id: s for s in all_setlists.values()
+                             if s.drive_id in released_ids}
         to_migrate = []
         for custom in self.custom_folders.folders:
-            setlist = all_setlists.get(custom.folder_id)
-            if setlist and setlist.drive_id in released_ids:
+            setlist = released_setlists.get(custom.folder_id)
+            if setlist:
                 to_migrate.append((custom.folder_id, custom.name, setlist))
 
         if not to_migrate:
