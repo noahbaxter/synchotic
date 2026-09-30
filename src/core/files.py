@@ -76,17 +76,23 @@ def system_tool_env() -> dict:
     saying so: the file manager simply never opened. PyInstaller keeps the
     pre-launch value in LD_LIBRARY_PATH_ORIG, so put it back. A no-op off
     Linux, where neither variable exists.
+
+    The pre-launch value is not always the system's either. Launcher 1.3 hands
+    its own bundle's path to the app, once per AppImage it runs through, so
+    drop anything inside an AppImage mount or a onefile unpack dir.
     """
     import os
     import sys
 
     env = os.environ.copy()
     if getattr(sys, "frozen", False):
-        orig = env.pop("LD_LIBRARY_PATH_ORIG", None)
-        if orig is None:
-            env.pop("LD_LIBRARY_PATH", None)
+        orig = env.pop("LD_LIBRARY_PATH_ORIG", None) or ""
+        kept = [p for p in orig.split(os.pathsep) if p and not any(
+            part.startswith((".mount_", "_MEI")) for part in p.split("/"))]
+        if kept:
+            env["LD_LIBRARY_PATH"] = os.pathsep.join(kept)
         else:
-            env["LD_LIBRARY_PATH"] = orig
+            env.pop("LD_LIBRARY_PATH", None)
     return env
 
 
