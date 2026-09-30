@@ -197,6 +197,13 @@ def _reports(exe: Path, version: str) -> bool:
     env = dict(os.environ)
     # Bazzite and the other atomic Fedoras have no libfuse2 to mount it with.
     env["APPIMAGE_EXTRACT_AND_RUN"] = "1"
+    # It unpacks into TMPDIR and runs from there, and a /tmp mounted noexec
+    # fails every check ("AppRun: Permission denied") while the launcher itself
+    # runs fine. Beside the new launcher is where it has to run anyway, and
+    # the scratch dir it sits in is removed after. Linux only: elsewhere exe
+    # is inside a signed .app, where nothing should be unpacked.
+    if _platform() == "linux":
+        env["TMPDIR"] = str(exe.parent)
     for key in ("SYNCHOTIC_LAUNCHER_PATH", "SYNCHOTIC_LAUNCHER_VERSION"):
         env.pop(key, None)
     flags = 0x08000000 if os.name == "nt" else 0  # CREATE_NO_WINDOW
@@ -207,7 +214,13 @@ def _reports(exe: Path, version: str) -> bool:
         debug_log(f"LAUNCHER_UPDATE | new launcher would not run | {e}")
         return False
     said = result.stdout.strip().splitlines()[-1:] or [""]
-    return result.returncode == 0 and said[0] == version
+    if result.returncode == 0 and said[0] == version:
+        return True
+    # Without this a failed check says only that it failed, on every launch.
+    tail = " / ".join(result.stderr.strip().splitlines()[-3:])
+    debug_log(f"LAUNCHER_UPDATE | --version exit {result.returncode} "
+              f"| said {said[0]!r} | {tail}")
+    return False
 
 
 def _swap(target: Path, replacement: Path) -> None:

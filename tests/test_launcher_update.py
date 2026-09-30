@@ -200,6 +200,27 @@ class TestReplacing:
         assert "echo 1.3" in install.read_text()
         assert sorted(p.name for p in install.parent.iterdir()) == [install.name]
 
+    def test_it_unpacks_beside_itself_not_in_tmp(self, install, monkeypatch):
+        """The check makes an AppImage unpack into TMPDIR and run from there.
+        With /tmp mounted noexec every check failed while the launcher itself
+        ran fine, so a Linux user stayed on 1.3 forever."""
+        monkeypatch.setattr(lu, "_platform", lambda: "linux")
+        def download(url, dest):
+            dest.write_text('#!/bin/sh\n[ "$TMPDIR" = "$(dirname "$0")" ] || '
+                            '{ echo "AppRun: Permission denied" >&2; exit 1; }\necho 1.4\n')
+            dest.chmod(0o755)
+        result = lu.update_launcher(fetch=lambda: [_release("launcher-v1.4")], download=download,
+                                    launcher=(lu.UNKNOWN, install), platform="linux")
+        assert result == "updated"
+        assert sorted(p.name for p in install.parent.iterdir()) == [
+            install.name, install.name + ".old"], "and nothing it unpacked is left behind"
+
+    def test_a_failed_check_says_why(self, install, monkeypatch):
+        logged = []
+        monkeypatch.setattr(lu, "debug_log", logged.append)
+        self._update(install, "garbage")
+        assert any("said 'garbage'" in line for line in logged)
+
     def test_the_same_version_is_left_alone(self, install):
         assert self._update(install, "1.4", current=(1, 4)) == "current"
         assert "echo 1.3" in install.read_text()
