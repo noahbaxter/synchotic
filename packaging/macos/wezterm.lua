@@ -63,6 +63,20 @@ if wezterm.target_triple:find('windows') then
   config.front_end = 'WebGpu'
 end
 
+-- WezTerm only pastes on Ctrl+Shift+V, so Ctrl+V and right-click did nothing
+-- for people used to the Windows console. Both add to the defaults. Not on
+-- macOS, where Cmd+V already pastes and Ctrl+V belongs to the app.
+if not wezterm.target_triple:find('darwin') then
+  local act = wezterm.action
+  config.keys = {
+    { key = 'v', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
+  }
+  config.mouse_bindings = {
+    { event = { Down = { streak = 1, button = 'Right' } }, mods = 'NONE',
+      action = act.PasteFrom 'Clipboard' },
+  }
+end
+
 config.colors = {
   foreground = '#dcd7ba',
   background = '#1f1f28',
