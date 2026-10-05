@@ -93,12 +93,19 @@ def adopt_legacy_install() -> list:
     """
     if not paths._using_os_dirs():
         return []
+    from .logging import debug_log
+
     candidates = legacy_install_candidates()
     if not candidates:
+        debug_log("ADOPT | no previous install found")
         return []
     if set(_preferences_in(paths.get_settings_path())) - set(_PICKED_BY_THIS_SESSION):
-        return []
-    return migrate_to_os_dirs(candidates[0])
+        done = _finish_adopting_markers(candidates)
+        debug_log(f"ADOPT | settings already here, markers only | {done or 'nothing to bring'}")
+        return done
+    done = migrate_to_os_dirs(candidates[0])
+    debug_log(f"ADOPT | {candidates[0]} | {done or 'nothing to bring'}")
+    return done
 
 
 def stale_data_dir_warning() -> str:
@@ -226,29 +233,87 @@ def migrate_to_os_dirs(legacy_root=None) -> list:
     # pointed at the default, and everything below writes into the wrong folder.
     _apply_adopted_library()
 
-    # Markers describe the charts, so they belong with them rather than in a
-    # machine dir. 2500 of these are the difference between adopting a library
-    # and re-downloading it.
+    copied = _adopt_markers(legacy)
+    if copied:
+        done.append(count(copied, "marker"))
+    return done
+
+
+# Written into the library once every marker of the install it came from has
+# arrived, so a launch only walks the old folder until then.
+MARKERS_ADOPTED_FLAG = ".legacy_markers_adopted"
+
+
+def _adopt_markers(legacy: Path) -> int:
+    """Copy a previous install's markers into the library. Returns how many.
+
+    Markers describe the charts, so they belong with them rather than in a
+    machine dir, and they are the difference between adopting a library and
+    re-downloading it. Safe to run again: it skips what is already there.
+    """
+    import shutil
+
+    from .logging import debug_log
+
+    copied = 0
     try:
         legacy_markers = legacy / "markers"
-        if legacy_markers.is_dir() and paths.library_is_available():
-            dest_markers = paths.get_library_state_dir() / "markers"
-            dest_markers.mkdir(parents=True, exist_ok=True)
-            copied = 0
-            for m in legacy_markers.iterdir():
-                # macOS writes ._ AppleDouble sidecars on non-native volumes.
-                if m.name.startswith("._") or not m.is_file():
-                    continue
-                target = dest_markers / m.name
-                if target.exists():
-                    continue
-                shutil.copy2(m, target)
-                copied += 1
-            if copied:
-                done.append(count(copied, "marker"))
+        if not legacy_markers.is_dir() or not paths.library_is_available():
+            return 0
+        state = paths.get_library_state_dir()
+        dest_markers = state / "markers"
+        dest_markers.mkdir(parents=True, exist_ok=True)
+        for m in legacy_markers.iterdir():
+            # macOS writes ._ AppleDouble sidecars on non-native volumes.
+            if m.name.startswith("._") or not m.is_file():
+                continue
+            target = dest_markers / m.name
+            if target.exists():
+                continue
+            shutil.copy2(m, target)
+            copied += 1
+        (state / MARKERS_ADOPTED_FLAG).write_text(str(legacy))
+    except Exception as e:
+        debug_log(f"ADOPT | markers stopped after {copied} | {e!r}")
+    debug_log(f"ADOPT | markers | {copied} copied from {legacy}")
+    return copied
+
+
+def _library_of(legacy: Path) -> Path:
+    """The library a previous install kept its charts in: the one its settings
+    name, or the default beside it."""
+    from ..config import jsonc
+
+    try:
+        named = jsonc.loads((legacy / "settings.json").read_text()).get("library_path")
     except Exception:
-        pass
-    return done
+        named = None
+    return Path(named).expanduser() if named else legacy.parent / paths.DOWNLOAD_FOLDER_NAME
+
+
+def _finish_adopting_markers(candidates) -> list:
+    """Bring across the markers an earlier import left behind.
+
+    The import copies settings first and markers last, tens of thousands of
+    small files with nothing on screen, and a window closed partway left the
+    settings in place. Every later launch then saw an install already here and
+    never went back, so each pack without its marker was downloaded again:
+    hundreds of gigabytes for one user. Only from an install that kept its
+    charts in this library, since anyone else's markers describe other files.
+    """
+    try:
+        if not paths.library_is_available():
+            return []
+        if (paths.get_library_state_dir() / MARKERS_ADOPTED_FLAG).exists():
+            return []
+        library = paths.unextended(paths.get_library_path())
+    except Exception:
+        return []
+    for candidate in candidates:
+        if _library_of(candidate) == library:
+            copied = _adopt_markers(candidate)
+            return [count(copied, "marker")] if copied else []
+    return []
 
 
 def _apply_adopted_library() -> None:

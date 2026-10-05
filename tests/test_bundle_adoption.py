@@ -224,6 +224,71 @@ class TestTheAdoptedLibraryTakesEffectImmediately:
         assert _library() == picked
 
 
+class TestAnImportCutShortIsFinished:
+    """Settings come across first and markers last, tens of thousands of small
+    files with nothing on screen. One user's window closed partway: the next
+    launch saw settings already here, called it an install, and never went
+    back for the rest. Every pack without its marker was downloaded again.
+    """
+
+    MARKERS = 5
+
+    @pytest.fixture
+    def previous(self, os_dirs, tmp_path):
+        library = tmp_path / "Charts" / paths.DOWNLOAD_FOLDER_NAME
+        library.mkdir(parents=True)
+        state = _install(os_dirs / "Synchotic", library=str(library), drives=5)
+        (state / "markers").mkdir()
+        for i in range(self.MARKERS):
+            (state / "markers" / f"drive_setlist_pack{i}_abcd.json").write_text('{"files": {}}')
+        return library
+
+    def _arrived(self, library):
+        return len(list((library / paths.LIBRARY_STATE_DIR_NAME / "markers").glob("*.json")))
+
+    def _closed_after(self, n, monkeypatch):
+        """Adopt, with the window closed once `n` markers are across."""
+        import shutil
+        real, seen = shutil.copy2, []
+
+        def copy2(src, dst, *a, **k):
+            if "markers" in str(src):
+                seen.append(src)
+                if len(seen) > n:
+                    raise KeyboardInterrupt
+            return real(src, dst, *a, **k)
+
+        monkeypatch.setattr(shutil, "copy2", copy2)
+        paths.set_library_path(None)
+        with pytest.raises(KeyboardInterrupt):
+            paths.adopt_legacy_install()
+        monkeypatch.setattr(shutil, "copy2", real)
+
+    def test_the_next_launch_brings_the_rest(self, previous, monkeypatch):
+        self._closed_after(2, monkeypatch)
+        assert self._arrived(previous) == 2
+        assert paths.adopt_legacy_install() == ["3 markers"]
+        assert self._arrived(previous) == self.MARKERS
+
+    def test_a_finished_import_is_not_walked_again(self, previous, monkeypatch):
+        paths.set_library_path(None)
+        paths.adopt_legacy_install()
+        import shutil
+        monkeypatch.setattr(shutil, "copy2", lambda *a, **k: pytest.fail("copied again"))
+        late = previous.parent.parent / "home" / "Synchotic" / paths.DATA_DIR_NAME / "markers" / "late.json"
+        late.write_text("{}")
+        assert paths.adopt_legacy_install() == []
+
+    def test_another_librarys_markers_are_left_where_they_are(self, previous, monkeypatch, tmp_path):
+        """They describe files this library does not have."""
+        self._closed_after(2, monkeypatch)
+        elsewhere = tmp_path / "elsewhere"
+        elsewhere.mkdir()
+        paths.set_library_path(elsewhere)
+        assert paths.adopt_legacy_install() == []
+        assert not (elsewhere / paths.LIBRARY_STATE_DIR_NAME / "markers").exists()
+
+
 class TestAnImportKeepsEveryPreference:
     """The library screen writes a file of defaults before adopting. A default
     is not a preference, so it must not beat the install being adopted on keys
