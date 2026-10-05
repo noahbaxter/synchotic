@@ -2,6 +2,12 @@
 
 ## Inbox
 
+- [ ] [ux] a new setlist turns itself on in a drive someone has curated *(2026-10-04)*
+  - `sync_subfolder_names` (`settings.py:396`) leaves a setlist with no saved toggle on, so one that appears in a drive (or is renamed past the normalized match) downloads even when the user picked 3 of 40. Hit in the field 2026-09-29: two setlists added to Popular Charters duplicated charts a user already had in a custom drive.
+  - Follow the drive instead: on when every other setlist there is on, off when anything is off, and always on when its folder is already in the library (as `settle_from_disk` does), or charts on disk read as off and purge takes them. Can only download less. Triangle, so manual verification.
+  - Same family: `_migrate_subfolder_customs` folds a custom into a released setlist without carrying its on state, so into a setlist that is off the moved charts read as a purge. Skip the migration unless the released copy is on.
+  - Icebox candidate: move charts already in the library to where the manifest wants them, by content. Guesses at identity and moves user files, so not without a strong reason.
+
 - [ ] [refactor] one screen owner in chotic-ui *(2026-09-27)*
   - Every widget writes to the terminal its own way with its own height maths (`Menu`, `TwoPane`, `FilterList`, `ScreenPainter`), and `Menu` still counts the banner as 8 rows when it is 9. So each fix for 1.5.6 (clip to width, hide the logo under 72 cols, repaint on resize, notice rows) had to go into every widget separately, and the next widget will get it wrong again.
   - Widgets should return lines, and one `paint()` should own the rest: measure the terminal once, add banner and notices, clip width, fit height, diff against the last frame and write only the rows that changed. A repaint with nothing new then writes nothing, which is repaint-on-change for free and less for Windows consoles to shimmer on.
