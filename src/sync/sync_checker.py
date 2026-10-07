@@ -12,7 +12,7 @@ from pathlib import Path
 
 from ..core.constants import CHART_ARCHIVE_EXTENSIONS
 from ..core.formatting import resolve_existing_path
-from .markers import (load_marker, verify_marker, find_any_marker_for_path,
+from .markers import (GUESSED, load_marker, verify_marker, find_any_marker_for_path,
                       find_marker_delivering)
 
 
@@ -58,8 +58,11 @@ def is_archive_synced(
     else:
         archive_path = f"{folder_name}/{archive_name}"
 
-    # Check marker file (single source of truth)
+    # Check marker file (single source of truth). A guessed marker is no proof:
+    # the rebuild credited the archive with a folder it shares with others.
     marker = load_marker(archive_path, manifest_md5)
+    if marker and marker.get(GUESSED):
+        marker = None
     if marker:
         # Marker exists with matching MD5 - verify extracted files still exist
         if verify_marker(marker, local_base):
@@ -76,7 +79,7 @@ def is_archive_synced(
     # update (charter uploaded a new version) — NOT a case duplicate. In that
     # case, fall through so the user gets the update.
     any_marker = find_any_marker_for_path(archive_path)
-    if any_marker and verify_marker(any_marker, local_base):
+    if any_marker and not any_marker.get(GUESSED) and verify_marker(any_marker, local_base):
         marker_archive_path = any_marker.get("archive_path", "")
         if marker_archive_path != archive_path:
             total_size = sum(any_marker.get("files", {}).values())

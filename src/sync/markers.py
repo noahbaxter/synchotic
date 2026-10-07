@@ -12,6 +12,7 @@ Markers are the primary source of truth for sync verification.
 
 import json
 import os
+from collections import Counter
 from datetime import datetime
 from pathlib import Path
 from typing import Optional
@@ -93,11 +94,20 @@ def load_marker(archive_path: str, md5: str) -> Optional[dict]:
         return None
 
 
+# A marker the rebuild wrote for an archive it never saw extract, crediting it
+# with its whole folder. Purge still honours it, so the files stay protected,
+# but nothing counts it as proof the archive is synced: in a folder holding
+# other archives, the folder's contents say nothing about this one, and taking
+# them as proof marked packs that never downloaded as done, forever.
+GUESSED = "guessed"
+
+
 def save_marker(
     archive_path: str,
     md5: str,
     extracted_files: dict,
     extracted_to: str = "",
+    guessed: bool = False,
 ) -> Path:
     """
     Save marker file for an extracted archive.
@@ -118,6 +128,8 @@ def save_marker(
         "extracted_to": extracted_to,
         "files": extracted_files,
     }
+    if guessed:
+        marker[GUESSED] = True
 
     marker_path = get_marker_path(archive_path, md5)
     marker_path.parent.mkdir(parents=True, exist_ok=True)
@@ -216,6 +228,85 @@ def delete_marker(archive_path: str, md5: str) -> bool:
         except OSError:
             pass
     return False
+
+
+GUESSES_FLAGGED = ".guessed_markers_flagged"
+
+
+def flag_guessed_markers(on_progress=None) -> int:
+    """Tag the guesses older versions wrote untagged, once per library.
+
+    A guess credits its archive with the whole folder, so every archive the
+    rebuild guessed in one folder carries the same file list. Markers sharing
+    a folder and an identical list are those guesses.
+
+    Only a group whose list holds fewer charts than the packs claiming it is
+    tagged: then at least that many packs never arrived, and the next sync
+    downloads the group. With a chart for every pack, all of them can be
+    there, and tagging would re-download what the library has. Measured on a
+    real library by opening every pack: tagging every group spent 7.48 GB
+    re-downloading to recover 1.17 GB; this recovers 26 of those 27 packs for
+    0.62 GB. Purge keeps protecting the files of a tagged marker.
+    `on_progress(done, total)` follows the reading. Returns how many were
+    tagged.
+    """
+    from collections import defaultdict
+    from concurrent.futures import ThreadPoolExecutor
+
+    from ..core.constants import CHART_MARKERS
+    from ..core.logging import debug_log
+
+    flag = get_library_state_dir() / GUESSES_FLAGGED
+    if flag.exists():
+        return 0
+
+    def load(marker_file):
+        try:
+            return marker_file, json.loads(marker_file.read_text())
+        except (ValueError, OSError):
+            return marker_file, None
+
+    # On a library over SMB, reading 3000 markers one at a time took a minute.
+    marker_files = [f for f in _marker_files(get_markers_dir())
+                    if not f.name.startswith("failed_")]
+    loaded = []
+    with ThreadPoolExecutor(32) as pool:
+        for result in pool.map(load, marker_files):
+            loaded.append(result)
+            if on_progress:
+                on_progress(len(loaded), len(marker_files))
+
+    groups = defaultdict(list)
+    for marker_file, marker in loaded:
+        if marker is None:
+            continue
+        files = marker.get("files") or {}
+        if not files or marker.get(GUESSED):
+            continue
+        folder = marker.get("archive_path", "").rsplit("/", 1)[0]
+        groups[(folder, frozenset(files))].append((marker_file, marker))
+
+    tagged = 0
+    for (_, files), members in groups.items():
+        if len(members) < 2:
+            continue
+        charts = {p.rsplit("/", 1)[0] for p in files
+                  if p.rsplit("/", 1)[-1].lower() in CHART_MARKERS}
+        if len(members) <= len(charts):
+            continue  # a chart for every pack: all of them may be there
+        for marker_file, marker in members:
+            marker[GUESSED] = True
+            tmp = marker_file.with_suffix(".json.tmp")
+            try:
+                tmp.write_text(json.dumps(marker, indent=2))
+                tmp.replace(marker_file)
+                tagged += 1
+            except OSError:
+                pass
+    _invalidate_claims()
+    flag.write_text(f"{tagged}\n")
+    debug_log(f"MARKERS | tagged {tagged} guessed markers")
+    return tagged
 
 
 def count_drive_markers(drive_name: str) -> int:
@@ -343,7 +434,7 @@ def find_marker_delivering(files, archive_path: str, base_path: Path) -> Optiona
     for rel_path in files:
         for other in index.get(normalize_path_key(rel_path), ()):
             other_path = other.get("archive_path", "")
-            if other_path == archive_path or other_path in seen:
+            if other_path == archive_path or other_path in seen or other.get(GUESSED):
                 continue
             seen.add(other_path)
             if verify_marker(other, base_path):
@@ -527,6 +618,9 @@ def rebuild_markers_from_disk(
     - Recovering from lost/corrupted markers
     - After manual file operations
 
+    An archive sharing its folder with other archives gets a GUESSED marker:
+    purge honours it, nothing takes it as proof the archive is synced.
+
     Args:
         folders: List of folder dicts from manifest (with files loaded)
         base_path: Base download path (Sync Charts folder)
@@ -565,6 +659,7 @@ def rebuild_markers_from_disk(
                     "parent": parent,
                     "name": file_name,
                 }
+        packs_in = Counter(info["parent"] for info in archives.values())
 
         # Check each archive
         for archive_path, info in archives.items():
@@ -631,11 +726,13 @@ def rebuild_markers_from_disk(
                 skipped += 1
                 continue
 
-            # Create marker
+            # Alone in its folder, the folder is its output. Beside other
+            # archives it may be one that failed or never ran: a guess.
             save_marker(
                 archive_path=archive_path,
                 md5=md5,
                 extracted_files=extracted_files,
+                guessed=packs_in[info["parent"]] > 1,
             )
             created += 1
 

@@ -160,6 +160,8 @@ FOOTER_PANES = "switch panes"
 FOOTER_TOGGLE = "enable/disable"
 CHECKING_DRIVE = "Checking Google Drive {done}/{setlists} · {elapsed}"
 DRIVE_CHECKED = "Google Drive checked"
+CHECKING_LIBRARY = "Checking library"
+CHECKING_LIBRARY_COUNT = CHECKING_LIBRARY + " {done}/{total}"
 
 # Section headings in the drive list, for drives drives.json does not group.
 GROUP_CUSTOM = "Custom"

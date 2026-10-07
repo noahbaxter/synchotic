@@ -530,6 +530,18 @@ def main():
         for r in renamed:
             print(f"  {r}")
 
+    # Markers older versions guessed, untagged, kept packs that never
+    # downloaded marked as done. Tag them once so the next sync fetches them.
+    # It reads every marker, and over SMB a blank window that long got closed
+    # before it finished, so it started again on every launch.
+    from src.sync.markers import flag_guessed_markers
+    from src.ui.primitives.spinner import working
+    read = {}
+    working(lambda: (copy.CHECKING_LIBRARY_COUNT.format(**read) if read
+                     else copy.CHECKING_LIBRARY),
+            lambda: flag_guessed_markers(
+                on_progress=lambda done, total: read.update(done=done, total=total)))
+
     _t1 = _time.time()
     app = SyncApp()
     if cli_args.download_mode:

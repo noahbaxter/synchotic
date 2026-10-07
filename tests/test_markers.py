@@ -557,5 +557,70 @@ class TestRebuildMarkersFromDisk:
         assert skipped_after == 1
 
 
+class TestGuessedMarkers:
+    """The rebuild credits an archive with its whole folder. Beside other
+    archives that is a guess, and taken as proof it marked packs that never
+    downloaded as done, forever."""
+
+    @pytest.fixture
+    def library(self, tmp_path, monkeypatch):
+        markers_dir = tmp_path / ".synchotic" / "markers"
+        markers_dir.mkdir(parents=True)
+        monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
+        monkeypatch.setattr("src.sync.markers.get_library_state_dir", lambda: tmp_path / ".synchotic")
+        return tmp_path
+
+    def _whole_folder(self):
+        return {"Setlist/Real Chart/song.ini": 1, "Setlist/Real Chart/notes.mid": 1}
+
+    def test_old_untagged_guesses_are_tagged_once(self, library):
+        from src.sync.markers import GUESSED, flag_guessed_markers
+
+        for name in ("real", "never1", "never2"):
+            save_marker(f"Drive/Setlist/{name}.7z", "m", self._whole_folder())
+        save_marker("Drive/Alone/pack.7z", "m", {"Alone/Chart/song.ini": 1})
+
+        assert flag_guessed_markers() == 3
+        assert all(load_marker(f"Drive/Setlist/{n}.7z", "m").get(GUESSED) for n in ("real", "never1", "never2"))
+        assert not load_marker("Drive/Alone/pack.7z", "m").get(GUESSED), "a lone marker is real"
+        save_marker("Drive/Setlist/late.7z", "m", self._whole_folder())
+        assert flag_guessed_markers() == 0, "ran a second time"
+
+    def test_a_folder_with_a_chart_for_every_pack_is_left_alone(self, library):
+        """All of them can be there. Measured on a real library: tagging these
+        too re-downloaded 7.48 GB that was already on disk."""
+        from src.sync.markers import GUESSED, flag_guessed_markers
+
+        folder = {f"Setlist/Chart {i}/song.ini": 1 for i in range(3)}
+        for name in ("a", "b", "c"):
+            save_marker(f"Drive/Setlist/{name}.zip", "m", folder)
+        assert flag_guessed_markers() == 0
+        assert not load_marker("Drive/Setlist/a.zip", "m").get(GUESSED)
+
+    def test_a_guess_is_not_taken_as_synced(self, library):
+        from src.sync.sync_checker import is_archive_synced
+
+        drive = library / "Drive"
+        for rel in self._whole_folder():
+            (drive / rel).parent.mkdir(parents=True, exist_ok=True)
+            (drive / rel).write_text("x")
+        save_marker("Drive/Setlist/never.7z", "m", self._whole_folder(), guessed=True)
+        assert is_archive_synced("Drive", "Setlist", "never.7z", "m", drive) == (False, 0)
+
+    def test_a_guess_never_vouches_for_a_twin(self, library):
+        """The twin check takes another marker that put the same files on disk
+        as proof. A guess claims the whole folder, so it would vouch for all."""
+        from src.sync.sync_checker import is_archive_synced
+
+        drive = library / "Drive"
+        for rel in self._whole_folder():
+            (drive / rel).parent.mkdir(parents=True, exist_ok=True)
+            (drive / rel).write_text("x")
+        files = {**self._whole_folder(), "Setlist/Own Chart/song.ini": 1}  # its own chart is gone
+        save_marker("Drive/Setlist/mine.7z", "m", files)
+        save_marker("Drive/Setlist/other.7z", "m2", self._whole_folder(), guessed=True)
+        assert is_archive_synced("Drive", "Setlist", "mine.7z", "m", drive)[0] is False
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

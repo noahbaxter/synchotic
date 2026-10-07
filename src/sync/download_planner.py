@@ -13,7 +13,7 @@ from typing import List, Tuple
 from ..core.files import matches_ignore
 from ..core.paths import EXTENDED_PREFIX
 from ..core.formatting import normalize_path_key
-from .markers import is_permanently_failed, load_marker
+from .markers import GUESSED, is_permanently_failed, load_marker
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 WINDOWS_MAX_PATH = 260
@@ -79,6 +79,7 @@ class DownloadTask:
 # the log whether its markers were lost or every chart was updated upstream.
 REASON_NO_MARKER = "pack, no marker for this version"
 REASON_FILES_GONE = "pack, marker but files missing"
+REASON_GUESSED = "pack, only a guessed marker"
 REASON_NOT_ON_DISK = "file not on disk"
 REASON_SIZE_DIFFERS = "file on disk, size differs"
 
@@ -260,7 +261,9 @@ def plan_downloads(
             skipped += 1
         else:
             if is_archive:
-                reason = REASON_FILES_GONE if load_marker(rel_path, file_md5) else REASON_NO_MARKER
+                marker = load_marker(rel_path, file_md5)
+                reason = (REASON_GUESSED if marker and marker.get(GUESSED)
+                          else REASON_FILES_GONE if marker else REASON_NO_MARKER)
             else:
                 reason = REASON_SIZE_DIFFERS if local_path.exists() else REASON_NOT_ON_DISK
             to_download.append(DownloadTask(

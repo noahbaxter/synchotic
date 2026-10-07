@@ -31,9 +31,28 @@ class MockSettings:
 
 
 class TestMarkerRebuildBeforeSync:
-    """Pre-existing files without markers — rebuild creates markers, planner skips them."""
+    """Pre-existing files without markers: rebuild creates markers. Alone in its
+    folder an archive's marker is trusted; beside others it is only a guess."""
 
-    def test_rebuild_makes_planner_skip(self, sync_env):
+    def test_a_lone_archive_is_trusted(self, sync_env):
+        folder_name = "TestDrive"
+        sync_env.make_files(folder_name, {
+            "Rebuild/Chart1/song.ini": 100,
+            "Rebuild/Chart1/notes.mid": 200,
+        })
+        manifest_files = [sync_env.make_manifest_entry("Rebuild/pack1.7z", md5="md5_1")]
+        folders = [sync_env.make_folder_dict(folder_name, files=manifest_files)]
+
+        created, _ = rebuild_markers_from_disk(folders, sync_env.base_path)
+        assert created == 1
+        tasks, skipped, _ = plan_downloads(
+            manifest_files, sync_env.base_path / folder_name, folder_name=folder_name)
+        assert tasks == [] and skipped == 1
+
+    def test_archives_sharing_a_folder_still_download(self, sync_env):
+        """The rebuild credits each archive with the whole folder. Taken as
+        proof, a pack that failed or never downloaded beside others was marked
+        done for good: 794 markers for 3 extracted packs, in the field."""
         folder_name = "TestDrive"
         setlist = "Rebuild"
 
@@ -59,18 +78,18 @@ class TestMarkerRebuildBeforeSync:
         )
         assert len(tasks_before) == 2
 
-        # Rebuild markers
+        # Rebuild markers: written, so purge still protects the files
         created, _ = rebuild_markers_from_disk(folders, sync_env.base_path)
         assert created == 2
 
-        # After rebuild — planner skips both
+        # ...but only guesses, so the planner still fetches both
         tasks_after, skipped, _ = plan_downloads(
             manifest_files,
             sync_env.base_path / folder_name,
             folder_name=folder_name,
         )
-        assert len(tasks_after) == 0
-        assert skipped == 2
+        assert len(tasks_after) == 2
+        assert {t.reason for t in tasks_after} == {"pack, only a guessed marker"}
 
 
 class TestPartialSyncStateConsistency:
