@@ -283,9 +283,10 @@ def _library_of(legacy: Path) -> Path:
     """The library a previous install kept its charts in: the one its settings
     name, or the default beside it."""
     from ..config import jsonc
+    from ..config.settings import read_settings_text
 
     try:
-        named = jsonc.loads((legacy / "settings.json").read_text()).get("library_path")
+        named = jsonc.loads(read_settings_text(legacy / "settings.json")).get("library_path")
     except Exception:
         named = None
     return Path(named).expanduser() if named else legacy.parent / paths.DOWNLOAD_FOLDER_NAME
@@ -329,11 +330,12 @@ def _apply_adopted_library() -> None:
     with the folder the user just picked, and that pick wins.
     """
     from ..config import jsonc
+    from ..config.settings import read_settings_text
 
     if paths._library_override or os.environ.get("SYNCHOTIC_LIBRARY"):
         return
     try:
-        data = jsonc.loads(paths.get_settings_path().read_text())
+        data = jsonc.loads(read_settings_text(paths.get_settings_path()))
     except Exception:
         return
     adopted = data.get("library_path") if isinstance(data, dict) else ""
@@ -351,10 +353,10 @@ _PICKED_BY_THIS_SESSION = ("library_path",)
 def _preferences_in(settings_file) -> dict:
     """chosen_settings for a path that may be missing or may not be JSON."""
     from ..config import jsonc
-    from ..config.settings import chosen_settings
+    from ..config.settings import chosen_settings, read_settings_text
 
     try:
-        return chosen_settings(jsonc.loads(Path(settings_file).read_text()))
+        return chosen_settings(jsonc.loads(read_settings_text(settings_file)))
     except Exception:
         return {}
 
@@ -371,11 +373,11 @@ def _merge_settings(legacy_file, dest_file) -> bool:
     import json
 
     from ..config import jsonc
-    from ..config.settings import chosen_settings, unknown_settings
+    from ..config.settings import chosen_settings, read_settings_text, unknown_settings
 
     try:
-        legacy = jsonc.loads(legacy_file.read_text())
-        current = jsonc.loads(dest_file.read_text())
+        legacy = jsonc.loads(read_settings_text(legacy_file))
+        current = jsonc.loads(read_settings_text(dest_file))
     except Exception:
         return False
     if not isinstance(legacy, dict) or not isinstance(current, dict):
@@ -391,7 +393,7 @@ def _merge_settings(legacy_file, dest_file) -> bool:
     # Plain JSON, not the template writer: the template would stamp a version
     # and fill in defaults, and the next load would skip migrating the old
     # keys. That load rewrites the file with its comments anyway.
-    dest_file.write_text(json.dumps(merged, indent=2))
+    dest_file.write_text(json.dumps(merged, indent=2), encoding="utf-8")
     return True
 
 

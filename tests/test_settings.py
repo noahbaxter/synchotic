@@ -295,6 +295,44 @@ class TestSettingsRegressions:
         assert not settings2.is_drive_enabled("guitar_hero_drive_id")
 
 
+class TestAHandEditedFile:
+    """settings.json is meant to be edited. Windows reads text in its legacy
+    codepage unless told otherwise, and Notepad or PowerShell can write a BOM,
+    which threw the whole file away as unreadable."""
+
+    def test_a_bom_keeps_every_choice(self, tmp_path):
+        path = tmp_path / "settings.json"
+        path.write_bytes(b'\xef\xbb\xbf{"drive_toggles": {"d1": true}, "download_mode": "byoc"}')
+        settings = UserSettings.load(path)
+        assert settings.is_drive_enabled("d1")
+        assert settings.download_mode == "byoc"
+        assert not list(tmp_path.glob("*.broken-*")), "set aside as unreadable"
+
+    def test_a_utf8_setlist_name_reads_back_as_written(self, tmp_path):
+        path = tmp_path / "settings.json"
+        path.write_bytes('{"subfolder_toggles": {"d1": {"Suc [ゲーミー] Charts": false}}}'.encode("utf-8"))
+        settings = UserSettings.load(path)
+        assert settings.get_disabled_subfolders("d1") == {"Suc [ゲーミー] Charts"}
+
+    def test_one_saved_in_the_legacy_codepage_still_loads(self, tmp_path, monkeypatch):
+        """Not UTF-8 at all, which 1.5.6 read fine on Windows: no crash at
+        launch, and nothing set aside."""
+        monkeypatch.setattr("locale.getpreferredencoding", lambda *a: "cp1252")
+        path = tmp_path / "settings.json"
+        path.write_bytes('{"subfolder_toggles": {"d1": {"Café Charts": false}}}'.encode("cp1252"))
+        settings = UserSettings.load(path)
+        assert settings.get_disabled_subfolders("d1") == {"Café Charts"}
+        assert not list(tmp_path.glob("*.broken-*")), "set aside as unreadable"
+
+    def test_it_saves_as_utf8(self, tmp_path):
+        path = tmp_path / "settings.json"
+        settings = UserSettings.load(path)
+        settings.set_subfolder_enabled("d1", "ЧёЗаУродыНаСцене", False)
+        settings.save()
+        assert UserSettings.load(path).get_disabled_subfolders("d1") == {"ЧёЗаУродыНаСцене"}
+        path.read_bytes().decode("utf-8")
+
+
 class TestGroupExpanded:
     """Tests for group expanded state."""
 

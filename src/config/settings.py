@@ -173,9 +173,25 @@ def template_path() -> Path:
 def template_text() -> str:
     """The commented template, as shipped. Empty if it did not make the build."""
     try:
-        return template_path().read_text()
+        return template_path().read_text(encoding="utf-8")
     except OSError:
         return ""
+
+
+def read_settings_text(path) -> str:
+    """A settings file's text. UTF-8 whatever the platform, and a BOM allowed:
+    Windows reads in its legacy codepage by default, so a hand-edited setlist
+    name came back garbled and switched itself on, and the BOM Notepad or
+    PowerShell can write made the whole file "unreadable" and every choice in
+    it was dropped. A file saved in that codepage, which 1.5.6 read fine,
+    still loads."""
+    import locale
+
+    raw = Path(path).read_bytes()
+    try:
+        return raw.decode("utf-8-sig")
+    except UnicodeDecodeError:
+        return raw.decode(locale.getpreferredencoding(False), errors="replace")
 
 
 def write_settings_file(path, data: dict) -> None:
@@ -184,7 +200,7 @@ def write_settings_file(path, data: dict) -> None:
     text = template_text()
     body = (jsonc.render(text, data) if text
             else json.dumps(data, indent=2) + "\n")
-    Path(path).write_text(body)
+    Path(path).write_text(body, encoding="utf-8")
 
 
 def _keep_unreadable(path) -> None:
@@ -238,7 +254,7 @@ class UserSettings:
 
         if path.exists():
             try:
-                data = jsonc.loads(path.read_text())
+                data = jsonc.loads(read_settings_text(path))
                 if not isinstance(data, dict):
                     raise json.JSONDecodeError("not an object", "", 0)
                 for f in SETTING_FIELDS:
