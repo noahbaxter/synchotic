@@ -2,6 +2,11 @@
 
 ## Inbox
 
+- [ ] [sync] recognize packs already on disk when their markers are gone *(2026-10-06)*
+  - A pack with no marker is downloaded again, even with its charts sitting in the library. One user re-fetched 234 GB this way after an import that never finished (fixed separately: the import now completes on a later launch).
+  - `rebuild_markers_from_disk` cannot do this before a download: it credits a pack with every file in its folder, so a new pack beside old ones would be marked done and never fetched. That is why `sync_flow` skips it until after.
+  - A rule that only trusts a pack's own output (the only pack in its folder, or a folder named exactly like it) recognizes about 40% of the 5702 markers in the dev library, and almost none of Rock Band. Not worth the risk unless lost markers show up again; `PLANNER_WHY` now says when they have (`drive markers=0`).
+
 - [ ] [ux] a new setlist turns itself on in a drive someone has curated *(2026-10-04)*
   - `sync_subfolder_names` (`settings.py:396`) leaves a setlist with no saved toggle on, so one that appears in a drive (or is renamed past the normalized match) downloads even when the user picked 3 of 40. Hit in the field 2026-09-29: two setlists added to Popular Charters duplicated charts a user already had in a custom drive.
   - Follow the drive instead: on when every other setlist there is on, off when anything is off, and always on when its folder is already in the library (as `settle_from_disk` does), or charts on disk read as off and purge takes them. Can only download less. Triangle, so manual verification.
