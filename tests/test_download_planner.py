@@ -592,5 +592,47 @@ class TestCleanupPartialDownloads:
         assert cleaned == 0
 
 
+class TestWhyAFileIsDownloaded:
+    """A 234 GB sync read the same in the log whether markers were lost or
+    every chart had changed upstream. Each download says which."""
+
+    @pytest.fixture
+    def drive(self, tmp_path, monkeypatch):
+        markers_dir = tmp_path / "markers"
+        markers_dir.mkdir()
+        monkeypatch.setattr("src.sync.markers.get_markers_dir", lambda: markers_dir)
+        folder = tmp_path / "TestDrive"
+        (folder / "setlist").mkdir(parents=True)
+        return folder
+
+    def _why(self, drive, files):
+        tasks, _, _ = plan_downloads(files, drive, folder_name="TestDrive")
+        return {t.file_id: t.reason for t in tasks}
+
+    def test_each_reason(self, drive):
+        from src.sync import download_planner as dp
+
+        (drive / "setlist" / "short.ini").write_text("x")
+        save_marker(archive_path="TestDrive/setlist/gone.7z", md5="m1",
+                    extracted_files={"setlist/gone/song.ini": 6})
+        why = self._why(drive, [
+            {"id": "new", "path": "setlist/new.7z", "size": 10, "md5": "m0"},
+            {"id": "gone", "path": "setlist/gone.7z", "size": 10, "md5": "m1"},
+            {"id": "missing", "path": "setlist/song.ini", "size": 10, "md5": "m2"},
+            {"id": "short", "path": "setlist/short.ini", "size": 10, "md5": "m3"},
+        ])
+        assert why == {"new": dp.REASON_NO_MARKER, "gone": dp.REASON_FILES_GONE,
+                       "missing": dp.REASON_NOT_ON_DISK, "short": dp.REASON_SIZE_DIFFERS}
+
+    def test_a_drives_markers_are_counted_by_name(self, drive):
+        """Zero for the drive is lost markers, thousands is upstream updates."""
+        from src.sync.markers import count_drive_markers
+
+        for name in ("TestDrive/setlist/a.7z", "TestDrive/setlist/b.7z", "OtherDrive/x/c.7z"):
+            save_marker(archive_path=name, md5="m", extracted_files={})
+        assert count_drive_markers("TestDrive") == 2
+        assert count_drive_markers("Nothing Here") == 0
+
+
 if __name__ == "__main__":
     pytest.main([__file__, "-v"])

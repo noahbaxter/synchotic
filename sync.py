@@ -103,6 +103,15 @@ class SyncApp(OnboardingMixin, DriveManagementMixin, AuthMixin, ScanMixin, SyncF
         self.auth = AuthManager(token_path=get_token_path())
 
         debug_log(f"[init] configs loaded: {(_t.time() - _t0)*1000:.0f}ms")
+        # Where this session runs, so a report never starts with asking.
+        import platform
+        from src.core.paths import get_data_dir, get_library_path, plain_path
+        launcher = os.environ.get("SYNCHOTIC_LAUNCHER_VERSION") or (
+            "1.3 or older" if os.environ.get("SYNCHOTIC_START_TIME") else "none")
+        debug_log(f"SESSION | {platform.system()} {platform.release()} | launcher {launcher} "
+                  f"| data {plain_path(get_data_dir())} | library {plain_path(get_library_path())} "
+                  f"| mode {self.user_settings.download_mode or 'default'} "
+                  f"| purge_on_sync {self.user_settings.purge_on_sync}")
 
         # Clean up any leftover temp files from interrupted operations
         _t1 = _t.time()

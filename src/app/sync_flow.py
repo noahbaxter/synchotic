@@ -73,6 +73,17 @@ class SyncFlowMixin:
         if not self._background_scanner:
             self._start_background_scan()
 
+        # What is turned on, as this sync sees it. The log otherwise never says,
+        # and "it downloaded something I had off" cannot be checked without it.
+        for f in self.folders:
+            fid = f.get("folder_id", "")
+            if not self.user_settings.is_drive_enabled(fid):
+                debug_log(f"TOGGLES | {f.get('name', '')} | off")
+                continue
+            off = sorted(self.user_settings.get_disabled_subfolders(fid))
+            debug_log(f"TOGGLES | {f.get('name', '')} | on | {len(off)} setlists off"
+                      + (f": {', '.join(off)}" if off else ""))
+
         run_start = _time.time()
 
         from src.ui.widgets.progress import FolderProgress

@@ -13,7 +13,7 @@ from typing import List, Tuple
 from ..core.files import matches_ignore
 from ..core.paths import EXTENDED_PREFIX
 from ..core.formatting import normalize_path_key
-from .markers import is_permanently_failed
+from .markers import is_permanently_failed, load_marker
 from .sync_checker import is_archive_synced, is_file_synced, is_archive_file
 
 WINDOWS_MAX_PATH = 260
@@ -72,6 +72,15 @@ class DownloadTask:
     md5: str = ""
     is_archive: bool = False
     rel_path: str = ""  # Relative path for marker tracking
+    reason: str = ""  # why it is being fetched, for the log (REASON_*)
+
+
+# Why a file is downloaded. A sync of hundreds of gigabytes reads the same in
+# the log whether its markers were lost or every chart was updated upstream.
+REASON_NO_MARKER = "pack, no marker for this version"
+REASON_FILES_GONE = "pack, marker but files missing"
+REASON_NOT_ON_DISK = "file not on disk"
+REASON_SIZE_DIFFERS = "file on disk, size differs"
 
 
 # Below this many entries the planning loop is quick enough that warming costs
@@ -250,6 +259,10 @@ def plan_downloads(
         if is_synced:
             skipped += 1
         else:
+            if is_archive:
+                reason = REASON_FILES_GONE if load_marker(rel_path, file_md5) else REASON_NO_MARKER
+            else:
+                reason = REASON_SIZE_DIFFERS if local_path.exists() else REASON_NOT_ON_DISK
             to_download.append(DownloadTask(
                 file_id=f["id"],
                 local_path=download_path,
@@ -257,6 +270,7 @@ def plan_downloads(
                 md5=file_md5,
                 is_archive=is_archive,
                 rel_path=rel_path,
+                reason=reason,
             ))
 
     if on_progress:

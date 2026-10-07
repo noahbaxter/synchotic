@@ -110,6 +110,16 @@ class FolderSync:
         )
 
         debug_log(f"PLANNER | folder={folder['name']} | total={len(tasks) + skipped} | to_download={len(tasks)} | skipped={skipped}")
+        if tasks:
+            from collections import Counter
+            from .download_planner import REASON_NO_MARKER
+            reasons = Counter(t.reason for t in tasks)
+            why = " | ".join(f"{reason}={n}" for reason, n in reasons.most_common())
+            if reasons[REASON_NO_MARKER]:
+                # None at all for the drive means lost markers, not updates.
+                from .markers import count_drive_markers
+                why += f" | drive markers={count_drive_markers(folder['name'])}"
+            debug_log(f"PLANNER_WHY | folder={folder['name']} | {why}")
 
         if cancel_check and cancel_check():
             return 0, 0, 0, [], True, 0

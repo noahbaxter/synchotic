@@ -218,6 +218,14 @@ def delete_marker(archive_path: str, md5: str) -> bool:
     return False
 
 
+def count_drive_markers(drive_name: str) -> int:
+    """How many markers the library has for one drive, by file name alone."""
+    markers_dir = get_markers_dir()
+    prefix = normalize_path_key(drive_name).replace("/", "_").replace("\\", "_") + "_"
+    return sum(1 for f in _marker_files(markers_dir)
+               if normalize_path_key(f.stem).startswith(prefix))
+
+
 def get_marked_drive_names() -> set[str]:
     """Drive folder names that have at least one marker.
 
