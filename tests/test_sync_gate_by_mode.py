@@ -119,7 +119,7 @@ class TestScanningStartsWithoutOAuth:
                     started["started"] = True
 
             monkeypatch.setattr("src.app.scan.BackgroundScanner", _Scanner)
-            monkeypatch.setattr(a, "_migrate_subfolder_customs", lambda: None)
+            monkeypatch.setattr(a, "_turn_off_shipped_copies", lambda: None)
             return a, started
         return build
 

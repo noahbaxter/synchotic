@@ -1,5 +1,5 @@
-"""One-time migrations run as drives load: custom folders that turned out to
-already be released drives, or subfolders of them."""
+"""Run as drives load: custom folders that turned out to already be released
+drives, or setlists of them."""
 
 from src import copy
 from src.core.formatting import normalize_path_key
@@ -77,79 +77,30 @@ class OnboardingMixin:
 
         self.custom_folders.save()
 
-    def _migrate_subfolder_customs(self):
-        """Migrate custom folders that are subfolders of released drives.
+    def _turn_off_shipped_copies(self):
+        """A custom folder that turns out to be a setlist of a shipped drive
+        stays a custom folder. While it is on, the drive's own copy of that
+        setlist is off, or the same charts download twice. While it is off,
+        the drive's copy is left as the user had it: turning it off then
+        would purge a setlist they sync through the drive."""
+        from src.core.logging import debug_log
 
-        After discovery, the scanner knows every setlist inside every drive.
-        If a custom folder's ID matches a discovered setlist, it means the
-        user added a subfolder of a built-in drive as custom. Silently migrate
-        the download folder and markers to the correct drive/setlist structure.
-        """
-        if not self._background_scanner:
+        scanner = self._background_scanner
+        if not scanner or not scanner.all_setlists:
             return
 
-        all_setlists = self._background_scanner.all_setlists
-        if not all_setlists:
-            return
-
+        settings = self.user_settings
         released_ids = {d.folder_id for d in self.drives_config.drives}
-        from src.sync.markers import get_markers_dir
-
-        # By folder id: the scanner keys setlists by drive as well, and the
-        # custom drive lists its own copy of the folder too.
-        released_setlists = {s.setlist_id: s for s in all_setlists.values()
-                             if s.drive_id in released_ids}
-        to_migrate = []
-        for custom in self.custom_folders.folders:
-            setlist = released_setlists.get(custom.folder_id)
-            if setlist:
-                to_migrate.append((custom.folder_id, custom.name, setlist))
-
-        if not to_migrate:
-            return
-
-        download_path = get_download_path()
-        markers_dir = get_markers_dir()
-
-        for folder_id, custom_name, setlist in to_migrate:
-            drive_name = setlist.drive_name
-            setlist_name = setlist.name
-            target = f"{drive_name}/{setlist_name}"
-            print(f"  {copy.MIGRATE_CUSTOM.format(old=custom_name, new=target)}")
-
-            # a) Move download folder into drive subfolder
-            old_dir = download_path / custom_name
-            drive_dir = download_path / drive_name
-            new_dir = drive_dir / setlist_name
-            if old_dir.exists() and not new_dir.exists():
-                try:
-                    drive_dir.mkdir(parents=True, exist_ok=True)
-                    old_dir.rename(new_dir)
-                except OSError as e:
-                    print(f"    {copy.FAILURE}: {e}")
-            elif old_dir.exists() and new_dir.exists():
-                print(f"    {copy.MIGRATE_EXISTS.format(target=target)}")
-
-            # b) Rename marker files
-            old_prefix = normalize_path_key(custom_name).replace("/", "_").replace("\\", "_") + "_"
-            new_prefix = normalize_path_key(drive_name).replace("/", "_").replace("\\", "_") + "_" + \
-                normalize_path_key(setlist_name).replace("/", "_").replace("\\", "_") + "_"
-            if markers_dir.exists():
-                for marker_file in markers_dir.glob("*.json"):
-                    lower_stem = marker_file.stem.lower()
-                    if lower_stem.startswith(old_prefix):
-                        new_name = new_prefix + marker_file.name[len(old_prefix):]
-                        new_path = markers_dir / new_name
-                        if not new_path.exists():
-                            try:
-                                marker_file.rename(new_path)
-                            except OSError:
-                                pass
-
-            # c) Remove custom folder entry
-            self.custom_folders.remove_folder(folder_id)
-
-            # d) Remove from self.folders so it doesn't appear as a separate drive
-            self.folders[:] = [f for f in self.folders if f.get("folder_id") != folder_id]
-
-        self.custom_folders.save()
+        customs_on = {c.folder_id: c.name for c in self.custom_folders.folders
+                      if settings.is_drive_enabled(c.folder_id)}
+        changed = False
+        for s in list(scanner.all_setlists.values()):
+            if (s.drive_id in released_ids and s.setlist_id in customs_on
+                    and settings.is_subfolder_enabled(s.drive_id, s.name)):
+                settings.set_subfolder_enabled(s.drive_id, s.name, False)
+                scanner.notify_setlist_toggled(s.drive_id, s.name, False)
+                debug_log(f"TOGGLES | {s.drive_name}/{s.name} | off, "
+                          f"custom folder {customs_on[s.setlist_id]} is the same")
+                changed = True
+        if changed:
+            settings.save()

@@ -35,7 +35,7 @@ def app(tmp_path, monkeypatch):
         a._background_scanner = None
         monkeypatch.setattr("src.rclone.is_authed", lambda: False)
         monkeypatch.setattr("src.app.scan.get_download_path", lambda: tmp_path)
-        monkeypatch.setattr(a, "_migrate_subfolder_customs", lambda: None)
+        monkeypatch.setattr(a, "_turn_off_shipped_copies", lambda: None)
         started = {}
 
         class _Scanner:

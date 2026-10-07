@@ -94,8 +94,8 @@ class ScanMixin:
                 print_progress(copy.DISCOVERING.format(done=done, total=total) + suffix)
 
         self._background_scanner.discover(on_progress=_discovery_progress)
-        # Migrate custom folders that are subfolders of released drives
-        self._migrate_subfolder_customs()
+        # A custom folder that is a shipped setlist keeps that setlist off
+        self._turn_off_shipped_copies()
         # Then start background scanning
         self._background_scanner.start()
 
