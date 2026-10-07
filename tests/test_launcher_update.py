@@ -63,10 +63,35 @@ class TestWhichLauncher:
         found = lu.running_launcher({"SYNCHOTIC_START_TIME": "1"}, parent_exe=lambda: exe)
         assert found == (lu.UNKNOWN, Path("/Applications/Synchotic.app"))
 
+    @pytest.mark.parametrize("name", ["synchotic-launcher (1).exe", "Synchotic.exe"])
+    def test_an_old_windows_launcher_under_another_name_is_still_ours(self, monkeypatch, name):
+        monkeypatch.setattr(sys, "platform", "win32")
+        exe = Path("D:/Synchotic") / name
+        assert lu.running_launcher({"SYNCHOTIC_START_TIME": "1"}, parent_exe=lambda: exe) == (lu.UNKNOWN, exe)
+
+    @pytest.mark.parametrize("name", ["synchotic-launcher-dev.exe", "cmd.exe", "wezterm-gui.exe"])
+    def test_a_windows_parent_that_is_not_our_launcher_is_left_alone(self, monkeypatch, name):
+        """A dev build, or whatever else started the app, must never be replaced
+        with the production launcher."""
+        monkeypatch.setattr(sys, "platform", "win32")
+        exe = Path("D:/Synchotic") / name
+        assert lu.running_launcher({"SYNCHOTIC_START_TIME": "1"}, parent_exe=lambda: exe) is None
+
+    def test_someone_elses_macos_app_is_left_alone(self, monkeypatch):
+        """Run from the user's own WezTerm, the first .app up is theirs."""
+        monkeypatch.setattr(sys, "platform", "darwin")
+        exe = Path("/Applications/WezTerm.app/Contents/MacOS/wezterm-gui")
+        assert lu.running_launcher({"SYNCHOTIC_START_TIME": "1"}, parent_exe=lambda: exe) is None
+
     def test_an_old_linux_launcher_is_its_appimage(self, monkeypatch):
         monkeypatch.setattr(sys, "platform", "linux")
         env = {"SYNCHOTIC_START_TIME": "1", "APPIMAGE": "/home/me/Synchotic.AppImage"}
         assert lu.running_launcher(env) == (lu.UNKNOWN, Path("/home/me/Synchotic.AppImage"))
+
+    def test_a_dev_or_someone_elses_appimage_is_left_alone(self, monkeypatch):
+        monkeypatch.setattr(sys, "platform", "linux")
+        for image in ("/home/me/synchotic-launcher-dev-linux.AppImage", "/home/me/some-tool.AppImage"):
+            assert lu.running_launcher({"SYNCHOTIC_START_TIME": "1", "APPIMAGE": image}) is None
 
 
 class TestWhichRelease:
@@ -214,6 +239,17 @@ class TestReplacing:
         assert result == "updated"
         assert sorted(p.name for p in install.parent.iterdir()) == [
             install.name, install.name + ".old"], "and nothing it unpacked is left behind"
+
+    def test_the_check_runs_it_without_our_pyinstaller_state(self, install, monkeypatch):
+        """Started the way reopen starts it: a frozen exe handed another's _PYI_
+        variables can take itself for that one's child."""
+        monkeypatch.setenv("_PYI_ARCHIVE_FILE", "/x/_app/synchotic-app")
+
+        def download(url, dest):
+            dest.write_text('#!/bin/sh\n[ -z "$_PYI_ARCHIVE_FILE" ] || exit 1\necho 1.4\n')
+            dest.chmod(0o755)
+        assert lu.update_launcher(fetch=lambda: [_release("launcher-v1.4")], download=download,
+                                  launcher=(lu.UNKNOWN, install), platform="linux") == "updated"
 
     def test_a_failed_check_says_why(self, install, monkeypatch):
         logged = []

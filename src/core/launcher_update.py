@@ -81,21 +81,33 @@ def running_launcher(env=None, parent_exe=None):
     platform = _platform()
     if platform == "linux":
         image = env.get("APPIMAGE")
-        return (UNKNOWN, Path(image)) if image else None
+        return (UNKNOWN, Path(image)) if image and _ours(Path(image).stem) else None
 
     exe = parent_exe() if parent_exe else _parent_exe()
     if not exe:
         return None
     if platform == "win32":
-        # The app's own exe is never the launcher, whatever started it.
-        if exe.suffix.lower() == ".exe" and exe.name.lower() != "synchotic-app.exe":
+        # The app's own exe is never the launcher, and neither is anything
+        # that is not ours: replacing a dev build, or some other program the
+        # app was started from, with the production launcher.
+        if exe.suffix.lower() == ".exe" and _ours(exe.stem):
             return UNKNOWN, exe
         return None
     if platform == "darwin":
+        # The first .app up, and only if it is ours. Run from someone's own
+        # WezTerm.app, the first one is theirs.
         for folder in exe.parents:
             if folder.suffix == ".app":
-                return UNKNOWN, folder
+                return (UNKNOWN, folder) if _ours(folder.stem) else None
     return None
+
+
+def _ours(name: str) -> bool:
+    """A launcher we shipped, under the name it shipped as or one a browser or
+    the user gave it ("synchotic-launcher (1)", "Synchotic"). Never the app,
+    never a dev build."""
+    name = name.lower()
+    return name.startswith("synchotic") and name != "synchotic-app" and "dev" not in name
 
 
 def _parent_exe():
@@ -194,7 +206,10 @@ def _stage(download: Path, platform: str, beside: Path) -> tuple:
 
 def _reports(exe: Path, version: str) -> bool:
     """Whether the launcher at `exe` starts and says it is `version`."""
-    env = dict(os.environ)
+    # What reopen hands the new launcher, so the check starts it the same way:
+    # none of PyInstaller's variables or library path, which can make one
+    # frozen exe take itself for a child of another.
+    env = clean_environment(os.environ)
     # Bazzite and the other atomic Fedoras have no libfuse2 to mount it with.
     env["APPIMAGE_EXTRACT_AND_RUN"] = "1"
     # It unpacks into TMPDIR and runs from there, and a /tmp mounted noexec
@@ -204,8 +219,6 @@ def _reports(exe: Path, version: str) -> bool:
     # is inside a signed .app, where nothing should be unpacked.
     if _platform() == "linux":
         env["TMPDIR"] = str(exe.parent)
-    for key in ("SYNCHOTIC_LAUNCHER_PATH", "SYNCHOTIC_LAUNCHER_VERSION"):
-        env.pop(key, None)
     flags = 0x08000000 if os.name == "nt" else 0  # CREATE_NO_WINDOW
     try:
         result = subprocess.run([str(exe), "--version"], capture_output=True,
