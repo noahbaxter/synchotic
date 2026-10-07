@@ -9,6 +9,7 @@ from src.sync import purge_all_folders
 from src.sync.markers import rebuild_markers_from_disk
 from src.ui import compute_main_menu_cache, print_header
 from src.ui.primitives import clear_screen, wait_with_skip
+from src.ui.primitives.spinner import working
 from src.ui.widgets import display
 
 
@@ -30,10 +31,16 @@ class SyncFlowMixin:
              "setlists": _get_setlist_names(f, self._background_scanner)}
             for f in self.folders
         ]
-        setup = read_setup(self.user_settings, self.auth, folders, library)
-        concerns, free = concerns_for(folders, self.user_settings,
-                                      get_persistent_stats_cache(), library,
-                                      setup=setup)
+
+        # Reads every marker in the library and asks rclone whether it is
+        # signed in: on a slow disk that was a blank screen long enough to
+        # read as a hang.
+        def gather():
+            setup = read_setup(self.user_settings, self.auth, folders, library)
+            return concerns_for(folders, self.user_settings,
+                                get_persistent_stats_cache(), library, setup=setup)
+
+        concerns, free = working(copy.CHECKING_LIBRARY, gather)
         return confirm_sync(concerns, plain_path(library), free)
 
     def handle_sync(self):
