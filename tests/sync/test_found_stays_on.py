@@ -76,6 +76,54 @@ def test_setlists_with_nothing_on_disk_start_off(library, tmp_path):
     assert scanner.get_enabled_setlist_count() == 1
 
 
+def test_with_deleting_off_nothing_is_turned_on(library, tmp_path):
+    """Turning found drives on only exists to keep purge away from them.
+    Without purge it just starts downloading drives nobody chose."""
+    settings = UserSettings.load(tmp_path / "settings.json")
+    settings.purge_on_sync = False
+
+    assert turn_on_found(settings, library, [_Drive()]) == {DRIVE: [KEPT_ON_DISK]}
+    assert settings.is_drive_enabled(DRIVE) is False
+
+
+class TestPickingALibraryKeepsWhatWasChosen:
+    """Field report: drives the user never had on started downloading after a
+    visit to the library screen, and turning them off then read as a purge."""
+
+    @pytest.fixture
+    def app(self, library, tmp_path):
+        from types import SimpleNamespace
+
+        from sync import SyncApp
+
+        app = object.__new__(SyncApp)
+        app.user_settings = UserSettings.load(tmp_path / "settings.json")
+        app._get_combined_drives_config = lambda: SimpleNamespace(drives=[_Drive()])
+        told = []
+        app._background_scanner = SimpleNamespace(
+            get_discovered_setlist_names=lambda fid: [KEPT, ABSENT],
+            notify_drive_toggled=lambda fid, on: told.append((fid, on)),
+            notify_setlist_toggled=lambda fid, name, on: None,
+        )
+        app.told = told
+        return app
+
+    def test_a_drive_switched_off_stays_off(self, app):
+        app.user_settings.set_drive_enabled(DRIVE, False)
+        app._turn_on_library_drives(undecided_only=True)
+        assert app.user_settings.is_drive_enabled(DRIVE) is False
+
+    def test_the_scanner_is_not_told_to_download_it(self, app):
+        app.user_settings.set_drive_enabled(DRIVE, False)
+        app._turn_on_library_drives(undecided_only=True)
+        assert app.told == []
+
+    def test_an_undecided_drive_with_charts_is_still_kept(self, app):
+        app._turn_on_library_drives(undecided_only=True)
+        assert app.user_settings.is_drive_enabled(DRIVE) is True
+        assert app.told == [(DRIVE, True)]
+
+
 def test_a_drive_somebody_switched_off_stays_off_at_startup(library, tmp_path):
     settings = UserSettings.load(tmp_path / "settings.json")
     settings.set_drive_enabled(DRIVE, False)

@@ -51,7 +51,10 @@ class AuthMixin:
         if not show_library_screen(self.user_settings, intro=intro,
                                    setup_step=setup_step):
             return False
-        self._library_found = self._turn_on_library_drives()
+        # Undecided drives only. Turning on one the user switched off, on any
+        # visit to this screen, started downloading drives they had never
+        # chosen, and turning them back off then read as a purge.
+        self._library_found = self._turn_on_library_drives(undecided_only=True)
         # A dict here would have replaced the cache object outright, leaving
         # later .invalidate()/.set() calls to fail on a plain dict.
         self.folder_stats_cache.invalidate_all()
@@ -76,6 +79,11 @@ class AuthMixin:
             return found
         names_by_id = {d.folder_id: d.name for d in drives}
         for folder_id in found:
+            # A folder alone is not a choice. Telling the scanner every found
+            # drive was on downloaded drives the settings had off, and the next
+            # sync then offered to purge them.
+            if not self.user_settings.is_drive_enabled(folder_id):
+                continue
             setlists = scanner.get_discovered_setlist_names(folder_id) or []
             if self.user_settings.settle_from_disk(
                     folder_id, setlists, setlist_on_disk(library, names_by_id[folder_id])):

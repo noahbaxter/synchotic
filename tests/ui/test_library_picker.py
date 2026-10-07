@@ -229,10 +229,14 @@ def test_a_picked_library_moves_on_without_a_pause(monkeypatch):
     app.user_settings = object()
     app.folder_stats_cache = type("Stats", (), {"invalidate_all": lambda s: None})()
     monkeypatch.setattr("src.ui.screens.show_library_screen", lambda *a, **k: True)
-    monkeypatch.setattr(SyncApp, "_turn_on_library_drives", lambda self: {})
+    asked = []
+    monkeypatch.setattr(SyncApp, "_turn_on_library_drives",
+                        lambda self, **kw: asked.append(kw) or {})
 
     def paused(*a, **k):
         raise AssertionError("paused after picking a library")
     monkeypatch.setattr("src.app.auth.wait_with_skip", paused)
 
     assert app.handle_library() is True
+    # Never a drive somebody switched off: that started downloads they never chose.
+    assert asked == [{"undecided_only": True}]

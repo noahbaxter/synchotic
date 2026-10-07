@@ -153,16 +153,26 @@ def turn_on_found(user_settings, path, drives, undecided_only=False) -> dict:
 
     `undecided_only` leaves alone a drive somebody switched off, which is how
     a drive gets removed on purpose.
+
+    Nothing at all with deleting off: turning a drive on exists only to keep
+    purge away from its charts, and otherwise it just starts a download of a
+    drive the user never chose.
     """
+    from ..config.settings import purges
+    from ..core.logging import debug_log
     from ..core.paths import LIBRARY_STATE_DIR_NAME
 
     found = previous_selection(path, drives, skip=(LIBRARY_STATE_DIR_NAME,))
+    if not purges(user_settings):
+        return found
+    names = {getattr(d, "folder_id", ""): getattr(d, "name", "") for d in drives}
     changed = False
     for folder_id in found:
         if undecided_only and folder_id in user_settings.drive_toggles:
             continue
         if not user_settings.is_drive_enabled(folder_id):
             user_settings.turn_on_from_disk(folder_id)
+            debug_log(f"TOGGLES | {names.get(folder_id, folder_id)} | turned on, its folder is in the library")
             changed = True
     if changed:
         user_settings.save()
