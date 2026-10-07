@@ -68,23 +68,30 @@ class DriveClient:
         """Reset the API call counter."""
         self._api_calls = 0
 
-    def _get_headers(self) -> dict:
-        """Get request headers."""
-        if self.auth_token:
-            return {"Authorization": f"Bearer {self.auth_token}"}
-        return {}
+    def _auth(self, **params) -> tuple[dict, dict]:
+        """(params, headers) for one request, from one read of the token.
 
-    def _get_params(self, **kwargs) -> dict:
-        """Build request params, adding the API key only for anonymous calls.
+        The key goes in only for anonymous calls: Google rejects a request
+        carrying both a key and an OAuth token from different Cloud projects,
+        which is every BYOC user against a release build.
 
-        Google rejects a request carrying both an API key and an OAuth token
-        when the two come from different Cloud projects, which is every BYOC
-        user against a release build. The token alone authorizes the call, so
-        drop the key whenever we have one.
+        One read, because the getter can answer differently twice in a row: a
+        refresh rewrites token.json while other threads read it. Params built
+        on one read and headers on the next sent requests with neither key
+        nor token, which Google refuses as "unregistered callers", and the
+        setlists that failed that way were left out of the purge.
         """
-        if self.auth_token:
-            return dict(kwargs)
-        return {"key": self.config.api_key, **kwargs}
+        token = self.auth_token
+        if token:
+            return dict(params), {"Authorization": f"Bearer {token}"}
+        return {"key": self.config.api_key, **params}, {}
+
+    def _oauth_headers(self) -> dict:
+        """Headers for a call only a signed-in user can make."""
+        token = self.auth_token
+        if not token:
+            raise RuntimeError("OAuth token required for Changes API")
+        return {"Authorization": f"Bearer {token}"}
 
     def _wait_for_rate_limit(self):
         """Wait if necessary to respect rate limit."""
@@ -135,7 +142,7 @@ class DriveClient:
         page_token = None
 
         while True:
-            params = self._get_params(
+            params, headers = self._auth(
                 q=f"'{folder_id}' in parents and trashed = false",
                 fields="nextPageToken, files(id, name, mimeType, size, md5Checksum, modifiedTime, shortcutDetails)",
                 pageSize=1000,
@@ -152,7 +159,7 @@ class DriveClient:
             response = self._request_with_retry(
                 "GET", self.API_FILES,
                 params=params,
-                headers=self._get_headers()
+                headers=headers
             )
             data = response.json()
 
@@ -175,7 +182,7 @@ class DriveClient:
         Returns:
             File metadata dict or None if not found
         """
-        params = self._get_params(
+        params, headers = self._auth(
             fields=fields,
             supportsAllDrives="true",
         )
@@ -184,7 +191,7 @@ class DriveClient:
             response = self._request_with_retry(
                 "GET", f"{self.API_FILES}/{file_id}",
                 params=params,
-                headers=self._get_headers()
+                headers=headers
             )
             return response.json()
         except requests.exceptions.HTTPError:
@@ -199,14 +206,12 @@ class DriveClient:
         Returns:
             Start page token string
         """
-        if not self.auth_token:
-            raise RuntimeError("OAuth token required for Changes API")
-
+        headers = self._oauth_headers()
         params = {"supportsAllDrives": "true"}
         response = self._request_with_retry(
             "GET", f"{self.API_CHANGES}/startPageToken",
             params=params,
-            headers=self._get_headers()
+            headers=headers
         )
         self._api_calls += 1
         return response.json().get("startPageToken")
@@ -223,8 +228,7 @@ class DriveClient:
         Returns:
             Tuple of (changes_list, new_page_token)
         """
-        if not self.auth_token:
-            raise RuntimeError("OAuth token required for Changes API")
+        self._oauth_headers()  # fail before the loop, not on its first page
 
         all_changes = []
         current_token = page_token
@@ -241,7 +245,7 @@ class DriveClient:
             response = self._request_with_retry(
                 "GET", self.API_CHANGES,
                 params=params,
-                headers=self._get_headers()
+                headers=self._oauth_headers()
             )
             data = response.json()
 
@@ -287,16 +291,23 @@ class DriveClient:
 
             boundary = f"batch_{int(time.time() * 1000)}_{i}"
 
+            # One read of the token for every part and the outer request.
+            _, auth_headers = self._auth()
+            with_key = not auth_headers
+
             # Build multipart batch request body
             parts = []
             for folder_id in batch_ids:
-                query_params = urlencode(self._get_params(
-                    q=f"'{folder_id}' in parents and trashed = false",
-                    fields="nextPageToken, files(id, name, mimeType, size, md5Checksum, modifiedTime, shortcutDetails)",
-                    pageSize=1000,
-                    supportsAllDrives="true",
-                    includeItemsFromAllDrives="true",
-                ))
+                query = {
+                    "q": f"'{folder_id}' in parents and trashed = false",
+                    "fields": "nextPageToken, files(id, name, mimeType, size, md5Checksum, modifiedTime, shortcutDetails)",
+                    "pageSize": 1000,
+                    "supportsAllDrives": "true",
+                    "includeItemsFromAllDrives": "true",
+                }
+                if with_key:
+                    query = {"key": self.config.api_key, **query}
+                query_params = urlencode(query)
 
                 part = (
                     f"--{boundary}\r\n"
@@ -311,9 +322,8 @@ class DriveClient:
 
             headers = {
                 "Content-Type": f"multipart/mixed; boundary={boundary}",
+                **auth_headers,
             }
-            if self.auth_token:
-                headers["Authorization"] = f"Bearer {self.auth_token}"
 
             needs_pagination = []
             failed_ids = []
@@ -412,11 +422,11 @@ class DriveClient:
 
         The why is Google's own message where there is one.
         """
-        params = self._get_params(fields="id,name,mimeType", supportsAllDrives="true")
+        params, headers = self._auth(fields="id,name,mimeType", supportsAllDrives="true")
         try:
             response = self._request_with_retry(
                 "GET", f"{self.API_FILES}/{folder_id}",
-                params=params, headers=self._get_headers())
+                params=params, headers=headers)
         except requests.exceptions.HTTPError as e:
             try:
                 return None, e.response.json()["error"]["message"]

@@ -5,6 +5,7 @@ Handles Google OAuth 2.0 flow for the Changes API.
 """
 
 import sys
+import threading
 from pathlib import Path
 from typing import Callable, Optional
 
@@ -129,11 +130,7 @@ class OAuthManager:
 
     def _save_token(self, creds: Credentials):
         """Save credentials to token file."""
-        try:
-            with open(self.token_path, "w") as f:
-                f.write(creds.to_json())
-        except Exception:
-            pass
+        _write_token(self.token_path, creds.to_json())
 
     def get_token(self) -> Optional[str]:
         """
@@ -407,10 +404,36 @@ class UserOAuthManager:
 
     def _save_token(self, creds: Credentials):
         """Save credentials to token file."""
+        _write_token(self.token_path, creds.to_json())
+
+
+def _write_token(path: Path, text: str) -> None:
+    """Replace a token file in one step. Every request reads it, from several
+    threads, and a refresh rewrote it in place: a read landing between the
+    truncate and the write found no token, and that request went out signed
+    out. Best effort, as before: a write that fails keeps the old file, and
+    the next expiry refreshes again.
+
+    Windows refuses to replace a file another thread has open ("Access is
+    denied"), and those reads take milliseconds, so wait them out a little."""
+    import os
+    import time
+
+    tmp = path.with_name(f".{path.name}.{os.getpid()}.{threading.get_ident()}.tmp")
+    try:
+        tmp.write_text(text)
+        for attempt in range(20):
+            try:
+                os.replace(tmp, path)
+                break
+            except PermissionError:
+                if attempt == 19:
+                    raise
+                time.sleep(0.05)
+    except Exception:
         try:
-            with open(self.token_path, "w") as f:
-                f.write(creds.to_json())
-        except Exception:
+            tmp.unlink(missing_ok=True)
+        except OSError:
             pass
 
 

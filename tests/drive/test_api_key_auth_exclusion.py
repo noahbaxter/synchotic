@@ -11,20 +11,23 @@ CONFIG = DriveClientConfig(api_key="test-key")
 
 def test_key_sent_when_anonymous():
     client = DriveClient(CONFIG)
-    assert client._get_params(q="x")["key"] == "test-key"
+    params, headers = client._auth(q="x")
+    assert params["key"] == "test-key"
+    assert headers == {}
 
 
 def test_key_dropped_when_authenticated():
     client = DriveClient(CONFIG, auth_token="tok")
-    params = client._get_params(q="x")
+    params, _ = client._auth(q="x")
     assert "key" not in params
     assert params["q"] == "x"
 
 
 def test_authenticated_request_never_carries_both():
     client = DriveClient(CONFIG, auth_token="tok")
-    assert "Authorization" in client._get_headers()
-    assert "key" not in client._get_params()
+    params, headers = client._auth()
+    assert "Authorization" in headers
+    assert "key" not in params
 
 
 def test_batch_body_omits_key_when_authenticated(monkeypatch):

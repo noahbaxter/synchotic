@@ -137,3 +137,49 @@ def test_credential_less_request_raises_rather_than_reporting_empty(google):
     # Retried to exhaustion first: _request_with_retry treats 403 as transient,
     # so each dead scan costs 3 round trips plus backoff before it gives up.
     assert google.calls == [{"key": False, "token": False}] * 3
+
+
+def _flickering():
+    """A token getter caught mid-refresh: token.json is being rewritten while
+    other threads read it, so consecutive reads disagree."""
+    answers = iter([TOKEN_PROJECT, None] * 50)
+    return lambda: next(answers)
+
+
+@pytest.mark.parametrize("call", [
+    lambda c: c.list_folder("folder1"),
+    lambda c: c.get_file_metadata("file1"),
+    lambda c: c.validate_folder("folder1"),
+])
+def test_a_token_that_changes_mid_request_still_sends_one_credential(google, call):
+    """The field report: "Method doesn't allow unregistered callers" for two
+    setlists, which purge then left alone. The key was dropped on one read
+    of the token and the header skipped on the next."""
+    call(_client(token=_flickering()))
+
+    assert google.calls and all(c["key"] != c["token"] for c in google.calls)
+
+
+def test_a_rewritten_token_file_is_never_read_empty(tmp_path):
+    """Every request reads token.json, and a refresh used to rewrite it in place."""
+    import threading
+
+    from src.drive.auth import _write_token
+
+    path = tmp_path / "token.json"
+    _write_token(path, '{"token": "' + "x" * 4000 + '"}')
+    done, seen = threading.Event(), set()
+
+    def read():
+        while not done.is_set():
+            seen.add(len(path.read_text()))
+
+    reader = threading.Thread(target=read)
+    reader.start()
+    for i in range(300):
+        _write_token(path, '{"token": "' + str(i % 10) * 4000 + '"}')
+    done.set()
+    reader.join()
+
+    assert seen == {4013}, "a reader saw the file half written"
+    assert [p.name for p in tmp_path.iterdir()] == ["token.json"]
