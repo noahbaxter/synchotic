@@ -7,6 +7,7 @@ and the file manager never opened. The picker helpers were already given a
 cleaned environment; open_folder was not.
 """
 
+import os
 import subprocess
 import sys
 
@@ -40,9 +41,9 @@ class TestTheEnvironmentHelpersGet:
     def test_a_launchers_bundle_is_not_the_pre_launch_value(self, frozen, monkeypatch):
         """Launcher 1.3 passes its own _internal down, one per AppImage hop, and
         restoring that loaded its libcrypto into flatpak just the same."""
-        monkeypatch.setenv("LD_LIBRARY_PATH_ORIG",
-                           "/tmp/.mount_SynchA/usr/bin/_internal:/tmp/_MEIxyz"
-                           ":/usr/lib64:/tmp/.mount_SynchB/usr/bin/_internal")
+        monkeypatch.setenv("LD_LIBRARY_PATH_ORIG", os.pathsep.join([
+            "/tmp/.mount_SynchA/usr/bin/_internal", "/tmp/_MEIxyz",
+            "/usr/lib64", "/tmp/.mount_SynchB/usr/bin/_internal"]))
         assert system_tool_env()["LD_LIBRARY_PATH"] == "/usr/lib64"
 
     def test_nothing_left_after_the_bundles_means_none(self, frozen, monkeypatch):
