@@ -2,6 +2,22 @@
 
 ## Inbox
 
+- [ ] [perf] ask Drive only what changed since the last scan *(2026-10-07)*
+  - A scan's listing is cached for an hour (`MAX_AGE_SECONDS`, `cache.py:383`), then every enabled folder is listed again from scratch. The default setlists take 20 to 30 minutes, which is most of what users call slow (two reports on 2026-10-07).
+  - Drive's Changes API answers "what changed since this token" in a few requests. `src/drive/changes.py` (`ChangeTracker`) exists and nothing calls it. Unknown: whether it reports changes inside folders shared with the user but not added to their Drive, and it needs a signed-in user, so the API-key mode keeps the full scan.
+  - `rescan_hours` in drives.json is read by nothing.
+
+- [ ] [bug] two Drive files at one path download again on every sync *(2026-10-07)*
+  - A folder can hold an older and a newer upload under the same name (Drummer's Monthly `Covet - nero [highfine]/notes.chart`: 82,541 and 82,712 bytes). Only one fits on disk, so `is_file_synced` always finds the other "size differs" and fetches it, and home never shows the drive synced (a standing +9.1 MB). Six such files in Drummer's Monthly. Same in 1.5.6.
+  - Keep only the newest by `modified` per normalized path, in the planner and in status alike, or one says synced while the other counts it missing. Triangle, so manual verification.
+
+- [ ] [ux] home still shows a drive's download right after a sync finishes *(2026-10-07)*
+  - On a 330 GB NAS library, Misc read +1.33 GB and 33 charts after a sync that had fetched them; the planner said 0. The figures were recomputed while 3 drives were still mid-rescan. Not reproduced in `scripts/scenarios.py` runs with four small setlists, so it may need a large, slow library.
+
+- [ ] [perf] list a network library in parallel during purge *(2026-10-07)*
+  - Purge walks every file of every enabled drive to find what nothing accounts for, one call at a time. On a NAS over SMB, BirdmanExe Drive (38k files) took 3m03s against 36s natively on the NAS, so about 5x is network round trips. Reading markers in parallel took the same kind of wait from 39s to 13s.
+  - List subfolders on a thread pool (per setlist folder is enough) and merge. The native time is the floor. Triangle (purge), so manual verification against a real library.
+
 - [ ] [sync] recognize packs already on disk when their markers are gone *(2026-10-06)*
   - A pack with no marker is downloaded again, even with its charts sitting in the library. One user re-fetched 234 GB this way after an import that never finished (fixed separately: the import now completes on a later launch).
   - `rebuild_markers_from_disk` cannot do this before a download: it credits a pack with every file in its folder, so a new pack beside old ones would be marked done and never fetched. That is why `sync_flow` skips it until after.
@@ -10,7 +26,6 @@
 - [ ] [ux] a new setlist turns itself on in a drive someone has curated *(2026-10-04)*
   - `sync_subfolder_names` (`settings.py:396`) leaves a setlist with no saved toggle on, so one that appears in a drive (or is renamed past the normalized match) downloads even when the user picked 3 of 40. Hit in the field 2026-09-29: two setlists added to Popular Charters duplicated charts a user already had in a custom drive.
   - Follow the drive instead: on when every other setlist there is on, off when anything is off, and always on when its folder is already in the library (as `settle_from_disk` does), or charts on disk read as off and purge takes them. Can only download less. Triangle, so manual verification.
-  - Same family: `_migrate_subfolder_customs` folds a custom into a released setlist without carrying its on state, so into a setlist that is off the moved charts read as a purge. Skip the migration unless the released copy is on.
   - Icebox candidate: move charts already in the library to where the manifest wants them, by content. Guesses at identity and moves user files, so not without a strong reason.
 
 - [ ] [refactor] one screen owner in chotic-ui *(2026-09-27)*
