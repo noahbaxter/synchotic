@@ -47,6 +47,9 @@ telemetry-id
 # PyInstaller build artifacts
 build/
 dist/
+
+# scripts/scenarios.py output
+runs/
 *.spec
 synchotic-macos
 synchotic.exe

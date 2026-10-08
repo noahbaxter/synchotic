@@ -1,0 +1,16 @@
+# settings.json saved by Notepad after a hand edit gets a BOM. 1.5.6 read it as
+# unreadable, set it aside and started from defaults: every drive off, so
+# everything synced read as "drives you've disabled" and went to purge.
+include common/synced.scn
+quit
+notepad
+launch
+wait "Google Drive checked" 300
+shot after-edit
+expect "100% synced"
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+refute "S sync ["
+settled
+quit

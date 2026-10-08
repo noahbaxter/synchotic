@@ -1,0 +1,34 @@
+# Turning off a setlist big enough to ask about (over 100 MB). No on "Sync
+# anyway?" cancels the sync and keeps every file. Yes, then No on "Delete":
+# syncs without deleting. Yes and Yes: it goes.
+include common/synced.scn
+select "Guitar Hero"
+press Tab
+select "(2008) Guitar Hero On Tour"
+press Space
+press S
+wait "Sync anyway?" 60
+expect "This sync will purge"
+press n
+wait "Google Drive checked" 60
+exists "Guitar Hero/(2008) Guitar Hero On Tour/*"
+
+press S
+wait "Sync anyway?" 60
+press y
+wait "Delete" 600
+shot delete
+press n
+wait "Google Drive checked" 300
+exists "Guitar Hero/(2008) Guitar Hero On Tour/*"
+
+press S
+wait "Sync anyway?" 60
+press y
+wait "Delete" 600
+press y
+wait "Google Drive checked" 300
+missing "Guitar Hero/(2008) Guitar Hero On Tour"
+exists "CSC Released Packs/A Bonus Gift Pack/*"
+settled
+quit

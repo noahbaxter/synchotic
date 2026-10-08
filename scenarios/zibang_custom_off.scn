@@ -1,0 +1,22 @@
+# Zibang, second variant: the custom copy switched off, the shipped setlist
+# on and synced through its drive. Nothing the user syncs may turn into a
+# purge (the code review's case against the 1.5.6 migration).
+setup
+on "CSC Released Packs/A Bonus Gift Pack"
+on "BirdmanExe Drive/BirdmanExe"
+custom "CSC Released Packs/A Bonus Gift Pack" off
+launch
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+relaunch
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+shot after
+refute "S sync ["
+settled
+exists "CSC Released Packs/A Bonus Gift Pack/*"
+quit

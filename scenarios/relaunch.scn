@@ -1,0 +1,9 @@
+# Quit after a sync and come back: still synced, nothing pending.
+include common/synced.scn
+relaunch
+wait "Google Drive checked" 300
+shot home
+expect "100% synced"
+refute "S sync ["
+settled
+quit

@@ -1,0 +1,23 @@
+# Zibang, third variant: syncing a setlist as a custom drive instead of the
+# shipped one, which is off in a drive that is on. The custom copy has to stay
+# and nothing may be offered for deletion.
+setup
+on "CSC Released Packs/A Bonus Gift Pack"
+off "CSC Released Packs/A Bonus Gift Pack"
+on "BirdmanExe Drive/BirdmanExe"
+custom "CSC Released Packs/A Bonus Gift Pack"
+launch
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+relaunch
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+shot after
+refute "S sync ["
+settled
+exists "A Bonus Gift Pack/*"
+quit

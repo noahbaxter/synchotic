@@ -1,0 +1,12 @@
+# A fresh install with four small setlists on, synced once: loose charts, a
+# .7z pack setlist and a .rar pack setlist, about 190 MB.
+setup
+on "BirdmanExe Drive/BirdmanExe"
+on "BirdmanExe Drive/FractalWizz"
+on "CSC Released Packs/A Bonus Gift Pack"
+on "Guitar Hero/(2008) Guitar Hero On Tour"
+launch
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120

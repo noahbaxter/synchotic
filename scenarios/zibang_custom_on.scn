@@ -1,0 +1,24 @@
+# Zibang (2026-10-07): "This sync will purge 7,897 charts, 180.5 GB from drives
+# and setlists you've disabled", Rock Band charts in it, nothing switched off.
+# Suspected cause: a custom drive that is a shipped setlist (added before it
+# shipped, or a shortcut to it), with the shipped copy on too. 1.5.6 kept one
+# setlist per folder id, so one copy read as off and its charts as a purge.
+setup
+on "CSC Released Packs/A Bonus Gift Pack"
+on "BirdmanExe Drive/BirdmanExe"
+custom "CSC Released Packs/A Bonus Gift Pack"
+launch
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+relaunch
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+shot after
+refute "S sync ["
+settled
+exists "A Bonus Gift Pack/*"
+quit

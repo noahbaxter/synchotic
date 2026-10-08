@@ -1,0 +1,19 @@
+# Add a custom drive through Settings, sync it, and stay settled.
+include common/synced.scn
+select "Settings"
+press Tab
+select "Add custom drive"
+press Enter
+wait "Link or ID" 30
+type "$CUSTOM"
+press Enter
+wait "SUCCESS" 60
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 600
+wait "Google Drive checked" 120
+shot synced
+exists "Inferi*/*"
+refute "S sync ["
+settled
+quit

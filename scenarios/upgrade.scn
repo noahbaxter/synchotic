@@ -1,0 +1,20 @@
+# 1.5.6 syncs a library, then this version takes it over: same toggles, the
+# startup marker pass runs once, and nothing downloads or deletes.
+setup
+on "BirdmanExe Drive/BirdmanExe"
+on "BirdmanExe Drive/FractalWizz"
+on "CSC Released Packs/A Bonus Gift Pack"
+on "Guitar Hero/(2008) Guitar Hero On Tour"
+launch v1.5.6
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+quit
+launch
+wait "Google Drive checked" 300
+shot upgraded
+expect "100% synced"
+refute "S sync ["
+settled
+quit

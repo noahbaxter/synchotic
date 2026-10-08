@@ -1,0 +1,21 @@
+# Esc while packs are downloading, then sync again: it finishes, settles, and
+# leaves no partial downloads behind.
+setup
+on "BirdmanExe Drive/BirdmanExe"
+on "BirdmanExe Drive/FractalWizz"
+on "CSC Released Packs/A Bonus Gift Pack"
+on "Guitar Hero/(2008) Guitar Hero On Tour"
+launch
+wait "Google Drive checked" 300
+press S
+wait "downloading" 120
+press Escape
+sleep 5
+shot cancelled
+wait "Google Drive checked" 300
+press S
+wait "Finished in" 900
+wait "Google Drive checked" 120
+settled
+refute "S sync ["
+quit

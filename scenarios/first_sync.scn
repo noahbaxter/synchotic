@@ -1,0 +1,9 @@
+# A first sync gets everything, and the home screen says so straight after.
+include common/synced.scn
+shot home
+settled
+refute "S sync ["
+exists "BirdmanExe Drive/FractalWizz/*/*"
+exists "CSC Released Packs/A Bonus Gift Pack/*"
+exists "Guitar Hero/(2008) Guitar Hero On Tour/*"
+quit

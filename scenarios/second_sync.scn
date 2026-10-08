@@ -1,0 +1,9 @@
+# Sync again straight after: nothing to download, nothing to delete.
+include common/synced.scn
+press S
+sleep 15
+shot second
+wait "Google Drive checked" 300
+refute "S sync ["
+settled
+quit

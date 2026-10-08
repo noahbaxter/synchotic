@@ -1,0 +1,24 @@
+# Turn one small setlist off in the UI: sync deletes exactly it and leaves the
+# rest. Turn it back on: it comes back.
+include common/synced.scn
+select "BirdmanExe Drive"
+press Tab
+select "FractalWizz"
+press Space
+shot off
+press S
+wait "Finished in" 600
+wait "Google Drive checked" 120
+shot after-purge
+missing "BirdmanExe Drive/FractalWizz"
+exists "BirdmanExe Drive/BirdmanExe/*"
+exists "CSC Released Packs/A Bonus Gift Pack/*"
+settled
+select "FractalWizz"
+press Space
+press S
+wait "Finished in" 600
+wait "Google Drive checked" 120
+exists "BirdmanExe Drive/FractalWizz/*/*"
+settled
+quit
