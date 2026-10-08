@@ -385,7 +385,8 @@ class ScanCache:
     def __init__(self):
         self._dir = get_cache_dir() / self.CACHE_DIR
 
-    def get(self, setlist_id: str) -> list[dict] | None:
+    def get(self, setlist_id: str, max_age: float | None = None) -> list[dict] | None:
+        max_age = self.MAX_AGE_SECONDS if max_age is None else max_age
         path = self._dir / f"{setlist_id}.json"
         if not path.exists():
             return None
@@ -396,7 +397,7 @@ class ScanCache:
                 return None
             scanned_at = datetime.fromisoformat(data["scanned_at"])
             age = (datetime.now(timezone.utc) - scanned_at).total_seconds()
-            if age > self.MAX_AGE_SECONDS:
+            if age > max_age:
                 return None
             return data["files"]
         except (json.JSONDecodeError, KeyError, OSError, ValueError):

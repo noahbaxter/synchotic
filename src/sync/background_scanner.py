@@ -18,6 +18,7 @@ from pathlib import Path
 from .. import copy
 from ..drive import DriveClient, FolderScanner
 from ..drive.client import DriveClientConfig
+from ..core.constants import LOCKED_DRIVES
 from ..core.formatting import sanitize_drive_name
 from ..core.logging import debug_log
 
@@ -716,7 +717,9 @@ class BackgroundScanner:
             # Per drive, not per folder: the paths carry this drive's name for
             # the setlist, and another drive's copy of the folder has its own.
             cache_key = f"{setlist.drive_id}_{setlist.setlist_id}"
-            cached_files = None if self._force_rescan else scan_cache.get(cache_key)
+            max_age = float("inf") if setlist.drive_id in LOCKED_DRIVES else None
+            cached_files = (None if self._force_rescan
+                            else scan_cache.get(cache_key, max_age))
 
             if cached_files is not None:
                 new_files = cached_files
