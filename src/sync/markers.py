@@ -31,6 +31,27 @@ def _marker_files(markers_dir: Path, pattern: str = "*.json") -> list:
     return [f for f in markers_dir.glob(pattern) if not f.name.startswith("._")]
 
 
+def _read_markers(marker_files, on_progress=None) -> list:
+    """(file, marker) for each file, None for one that does not parse. On a
+    library over SMB, reading 3000 markers one at a time took a minute; most
+    of that is waiting on the network, so read many at once."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    def load(marker_file):
+        try:
+            return marker_file, json.loads(marker_file.read_text())
+        except (ValueError, OSError):
+            return marker_file, None
+
+    loaded = []
+    with ThreadPoolExecutor(32) as pool:
+        for result in pool.map(load, marker_files):
+            loaded.append(result)
+            if on_progress:
+                on_progress(len(loaded), len(marker_files))
+    return loaded
+
+
 def get_markers_dir() -> Path:
     """Get the markers directory, creating it if needed."""
     markers_dir = get_library_state_dir() / "markers"
@@ -251,7 +272,6 @@ def flag_guessed_markers(on_progress=None) -> int:
     tagged.
     """
     from collections import defaultdict
-    from concurrent.futures import ThreadPoolExecutor
 
     from ..core.constants import CHART_MARKERS
     from ..core.logging import debug_log
@@ -260,21 +280,8 @@ def flag_guessed_markers(on_progress=None) -> int:
     if flag.exists():
         return 0
 
-    def load(marker_file):
-        try:
-            return marker_file, json.loads(marker_file.read_text())
-        except (ValueError, OSError):
-            return marker_file, None
-
-    # On a library over SMB, reading 3000 markers one at a time took a minute.
-    marker_files = [f for f in _marker_files(get_markers_dir())
-                    if not f.name.startswith("failed_")]
-    loaded = []
-    with ThreadPoolExecutor(32) as pool:
-        for result in pool.map(load, marker_files):
-            loaded.append(result)
-            if on_progress:
-                on_progress(len(loaded), len(marker_files))
+    loaded = _read_markers([f for f in _marker_files(get_markers_dir())
+                            if not f.name.startswith("failed_")], on_progress)
 
     groups = defaultdict(list)
     for marker_file, marker in loaded:
@@ -328,12 +335,8 @@ def get_marked_drive_names() -> set[str]:
     markers_dir = get_markers_dir()
     if not markers_dir.exists():
         return names
-    for marker_file in _marker_files(markers_dir):
-        try:
-            with open(marker_file) as f:
-                archive_path = json.load(f).get("archive_path", "")
-        except (ValueError, OSError):
-            continue
+    for _, marker in _read_markers(_marker_files(markers_dir)):
+        archive_path = (marker or {}).get("archive_path", "")
         top = archive_path.split("/")[0] if archive_path else ""
         if top:
             names.add(top)
@@ -353,14 +356,9 @@ def get_all_marker_files() -> set[str]:
     if not markers_dir.exists():
         return all_files
 
-    for marker_file in _marker_files(markers_dir):
-        try:
-            with open(marker_file) as f:
-                marker = json.load(f)
-            for file_path in marker.get("files", {}).keys():
-                all_files.add(file_path)
-        except (ValueError, OSError):
-            continue
+    for _, marker in _read_markers(_marker_files(markers_dir)):
+        if marker:
+            all_files.update(marker.get("files", {}).keys())
 
     return all_files
 
@@ -378,13 +376,7 @@ def get_all_markers() -> list[dict]:
     if not markers_dir.exists():
         return markers
 
-    for marker_file in _marker_files(markers_dir):
-        try:
-            with open(marker_file) as f:
-                marker = json.load(f)
-            markers.append(marker)
-        except (ValueError, OSError):
-            continue
+    markers.extend(m for _, m in _read_markers(_marker_files(markers_dir)) if m is not None)
 
     return markers
 
