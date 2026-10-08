@@ -60,6 +60,13 @@ jobs:
             exit 1
           fi
 
+          # Newest launcher release, the same way launcher_update.py picks it.
+          LAUNCHER="$(gh release list --limit 100 --json tagName --jq '[.[].tagName | select(test("^launcher-v[0-9.]+$"))] | sort_by(ltrimstr("launcher-v") | split(".") | map(tonumber)) | last')"
+          if [ -z "$LAUNCHER" ]; then
+            echo "no launcher-v* release to point the notes at" >&2
+            exit 1
+          fi
+
           NOTES="Synchotic ${VERSION#v} update
           $CHANGES
 
@@ -67,7 +74,7 @@ jobs:
 
           Update payload for the Synchotic launcher. Nothing here is meant to be downloaded by hand.
 
-          **[Get Synchotic here](https://github.com/${{ github.repository }}/releases/tag/launcher-v1.3)** and the launcher keeps itself on $VERSION."
+          **[Get Synchotic here](https://github.com/${{ github.repository }}/releases/tag/$LAUNCHER)** and the launcher keeps itself on $VERSION."
 
           if gh release view "$VERSION" > /dev/null 2>&1; then
             echo "Updating existing release $VERSION..."
