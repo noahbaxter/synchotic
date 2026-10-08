@@ -432,8 +432,10 @@ class TestTheWalkSaysHowFarItHasGot:
             base = Path(tmpdir)
             drive = base / "Drive"
             drive.mkdir()
-            for i in range(600):
-                (drive / f"chart{i}.ogg").write_bytes(b"x")
+            for d in range(12):
+                (drive / f"pack{d}").mkdir()
+                for i in range(50):
+                    (drive / f"pack{d}" / f"chart{i}.ogg").write_bytes(b"x")
 
             seen = []
             files = scan_local_files(drive, on_progress=seen.append)
@@ -445,6 +447,27 @@ class TestTheWalkSaysHowFarItHasGot:
             assert seen[0] < 600, "the first word came after the walk finished"
             assert seen[-1] == 600, f"the last word was {seen[-1]}, not the total"
             assert seen == sorted(seen), "the count went backwards"
+
+    def test_a_nested_tree_comes_back_whole(self):
+        """Directories are listed in parallel; the result is the same tree a
+        plain walk finds, with the same sizes and relative paths."""
+        clear_scan_cache()
+        with tempfile.TemporaryDirectory() as tmpdir:
+            drive = Path(tmpdir) / "Drive"
+            expected = {}
+            for a in range(5):
+                for b in range(4):
+                    folder = drive / f"set{a}" / f"pack{b}" / "deep"
+                    folder.mkdir(parents=True)
+                    for i in range(3):
+                        data = b"x" * (a + b + i + 1)
+                        (folder / f"song{i}.ogg").write_bytes(data)
+                        expected[f"set{a}/pack{b}/deep/song{i}.ogg"] = len(data)
+            (drive / "root.txt").write_bytes(b"abc")
+            expected["root.txt"] = 3
+            (drive / "empty").mkdir()
+
+            assert scan_local_files(drive) == expected
 
     def test_planning_passes_the_count_through(self):
         clear_scan_cache()
