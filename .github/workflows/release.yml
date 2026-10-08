@@ -51,7 +51,21 @@ jobs:
           # non-prerelease, and why nothing else is attached to it. Anyone
           # unpacking a zip by hand gets a build that never updates itself, so
           # the notes send them to the launcher instead.
-          NOTES="Update payload for the Synchotic launcher. Nothing here is meant to be downloaded by hand.
+          #
+          # The per-version changes come from that version's section of
+          # CHANGELOG.md. No section, no release.
+          CHANGES="$(awk -v v="## ${VERSION#v}" '$0 == v {on=1; next} /^## / {on=0} on && NF' CHANGELOG.md)"
+          if [ -z "$CHANGES" ]; then
+            echo "CHANGELOG.md has no '## ${VERSION#v}' section" >&2
+            exit 1
+          fi
+
+          NOTES="Synchotic ${VERSION#v} update
+          $CHANGES
+
+          ---
+
+          Update payload for the Synchotic launcher. Nothing here is meant to be downloaded by hand.
 
           **[Get Synchotic here](https://github.com/${{ github.repository }}/releases/tag/launcher-v1.3)** and the launcher keeps itself on $VERSION."
 
