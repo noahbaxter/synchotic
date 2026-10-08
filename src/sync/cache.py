@@ -569,6 +569,30 @@ def scan_local_files(folder_path: Path, on_progress=None) -> dict[str, int]:
     return local_files
 
 
+class DriveWalks:
+    """Walks drives' folders in the background, one at a time, so that purge
+    finds them already listed. Over a network share a walk is minutes, and a
+    drive whose downloads are done can be walked while the others download."""
+
+    def __init__(self):
+        self._pool = ThreadPoolExecutor(1)
+        self._futures = {}
+
+    def start(self, drive_id: str, folder_path: Path):
+        if drive_id not in self._futures:
+            self._futures[drive_id] = self._pool.submit(scan_local_files, folder_path)
+
+    def wait(self):
+        """Until every walk started has finished."""
+        for future in self._futures.values():
+            future.result()
+        self._pool.shutdown()
+
+    def drop(self):
+        """Nothing will use them: stop the ones not yet begun."""
+        self._pool.shutdown(wait=False, cancel_futures=True)
+
+
 def _scan_actual_charts_uncached(folder_path: Path) -> tuple[int, int]:
     """
     Scan folder for actual chart folders (containing song.ini, notes.mid, etc).

@@ -227,6 +227,12 @@ class BackgroundScanner:
                 return True  # No enabled setlists = ready (nothing to download)
             return all(sid in done for sid in enabled_ids)
 
+    def enabled_setlist_keys(self, drive_id: str) -> set[str]:
+        """Keys of a drive's enabled setlists, scanned or not."""
+        with self._lock:
+            return {k for k in self._drive_setlist_ids.get(drive_id, [])
+                    if k in self._enabled_setlist_ids}
+
     def is_scanned(self, drive_id: str) -> bool:
         """Check if ALL of a drive's setlists are scanned (stats complete)."""
         with self._lock:
