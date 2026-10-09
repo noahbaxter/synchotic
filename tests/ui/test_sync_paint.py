@@ -86,6 +86,50 @@ class TestPaintingInPlace:
         drawn = [ln for ln in term.lines() if ln.startswith(("╭", "│", "├", "╰"))]
         assert len(drawn) == 20 - 1 - 5
 
+    def test_the_banner_gives_way_when_the_frame_would_not_fit_under_it(self, charts):
+        """A frame taller than the window scrolls on every repaint and loses
+        its top border, so the banner is what goes."""
+        term = Terminal(height=12)  # 12 - 1 - 5 leaves too little for a frame
+        painter = self._with_banner(charts, term)
+        painter.paint()
+
+        out = term.out()
+        assert self.BANNER not in out
+        drawn = [ln for ln in term.lines() if ln.startswith(("╭", "│", "├", "╰"))]
+        assert len(drawn) == 12 - 1
+
+    def test_growing_the_window_back_restores_the_banner(self, charts):
+        term = Terminal(height=12)
+        painter = self._with_banner(charts, term)
+        painter.paint()
+        term.size = (78, 24)
+        term.written.clear()
+        painter.paint()
+
+        assert self.BANNER in term.out()
+
+    def test_a_window_too_short_for_any_frame_is_cleared_once(self, charts):
+        """Drawing the frame anyway scrolls it off the top on every repaint."""
+        term = Terminal(height=6)
+        painter = self._with_banner(charts, term)
+        painter.paint()
+        painter.paint()
+
+        out = term.out()
+        assert out.count("\x1b[2J") == 1
+        assert "╭" not in out
+
+    def test_a_window_that_grows_out_of_too_small_gets_the_frame(self, charts):
+        term = Terminal(height=6)
+        painter = self._with_banner(charts, term)
+        painter.paint()
+        term.size = (78, 20)
+        term.written.clear()
+        painter.paint()
+
+        assert "\x1b[2J" in term.out()
+        assert len([ln for ln in term.lines() if ln.startswith("╭")]) == 1
+
     def test_a_redraw_from_scratch_puts_the_banner_back(self, charts):
         """Every run redraws once, when the compact frame opens out. Clearing
         without the banner lost it for the whole sync."""

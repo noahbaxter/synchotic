@@ -12,6 +12,14 @@ from ..primitives import strip_ansi
 from .sync_screen import ACTIVE, OVERFLOW, CHROME_LINES
 
 REFRESH_HZ = 10  # slower and the bars visibly step
+MIN_FRAME = CHROME_LINES + 1  # the header, one list row and the bottom border
+
+
+def _write_stdout(text: str) -> None:
+    # Flushed: a write with no newline in it (the clear for a too-short
+    # window) would otherwise sit in the line buffer.
+    sys.stdout.write(text)
+    sys.stdout.flush()
 
 
 def _terminal_size() -> tuple[int, int]:
@@ -28,7 +36,7 @@ class ScreenPainter:
         the frame, as every other screen has it. The frame fits under it, and a
         redraw from scratch puts it back rather than wiping it."""
         self.screen = screen
-        self._write = write or (lambda text: sys.stdout.write(text))
+        self._write = write or _write_stdout
         self._size = size or _terminal_size
         self._banner_text = banner_text or (lambda: "")
         self._banner_rows = banner_rows or (lambda: 0)
@@ -42,21 +50,29 @@ class ScreenPainter:
 
     # -- in place ---------------------------------------------------------
 
-    def _frame_size(self) -> tuple[int, int]:
-        width, height = self._size()
+    def _frame_size(self) -> tuple[int, int, bool] | None:
+        """(width, height, banner shown), or None when the terminal is too
+        short for any frame. A frame taller than the terminal scrolls on every
+        paint, so it is never drawn."""
+        width, rows = self._size()
         # One row is left free so the shell prompt has somewhere to sit, and the
         # banner keeps its rows above.
-        height = max(8, height - 1 - self._banner_rows())
+        height = rows - 1 - self._banner_rows()
+        banner = True
+        if height < MIN_FRAME:
+            banner, height = False, rows - 1  # the frame matters more
+        if height < MIN_FRAME:
+            return None
         total = self.screen.total_files
         if not total and not self.screen.entries.count():
             # Compact while there is nothing to list: a screen of blank rows
             # looks hung. It grows once, not a row at a time, since every size
             # change costs a full redraw.
-            return max(40, width), min(height, self.screen.compact_height())
+            return max(40, width), min(height, self.screen.compact_height()), banner
         if total:
             # No taller than the run could ever need.
-            height = max(8, min(height, total + CHROME_LINES))
-        return max(40, width), height
+            height = max(MIN_FRAME, min(height, total + CHROME_LINES))
+        return max(40, width), height, banner
 
     def paint(self) -> None:
         """Draw the current state. Safe to call from any thread."""
@@ -65,14 +81,24 @@ class ScreenPainter:
                 self._log_new_rows()
                 return
 
-            width, height = self._frame_size()
-            if self._last_size not in (None, (width, height)):
+            layout = self._frame_size()
+            if layout is None:
+                # Too short for any frame: leave the screen blank until it grows.
+                cols, rows = self._size()
+                if self._last_size != ("small", cols, rows):
+                    self._write("\x1b[2J\x1b[H")
+                self._last_size = ("small", cols, rows)
+                self._drawn = 0
+                return
+            width, height, banner = layout
+            first_without_banner = self._last_size is None and not banner
+            if first_without_banner or self._last_size not in (None, (width, height, banner)):
                 # A resized terminal leaves the old block's rows behind. Every
                 # run resizes once too, when the compact frame opens out, so
                 # clearing without the banner lost it for the whole sync.
-                self._write("\x1b[2J\x1b[H" + self._banner_text())
+                self._write("\x1b[2J\x1b[H" + (self._banner_text() if banner else ""))
                 self._drawn = 0
-            self._last_size = (width, height)
+            self._last_size = (width, height, banner)
 
             if self._drawn:
                 self._write(f"\x1b[{self._drawn}A")
