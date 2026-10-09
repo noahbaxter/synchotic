@@ -12,7 +12,22 @@ from dataclasses import dataclass
 from .. import copy
 from .client import DriveClient
 from ..core.files import file_exists_with_size
-from ..core.formatting import sanitize_drive_name
+from ..core.formatting import normalize_path_key, sanitize_drive_name
+
+
+def newest_per_path(files: list) -> list:
+    """One file per path, the newest upload. A Drive folder can hold two
+    files under one name, and only one fits on disk: the other always read as
+    "size differs" and downloaded again on every sync, and the drive never
+    showed synced. Paths compare normalized, as everywhere else; on a tie the
+    first listed stays."""
+    newest = {}
+    for f in files:
+        key = normalize_path_key(f["path"])
+        kept = newest.get(key)
+        if kept is None or f.get("modified", "") > kept.get("modified", ""):
+            newest[key] = f
+    return list(newest.values())
 
 
 @dataclass

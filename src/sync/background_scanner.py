@@ -17,6 +17,7 @@ from pathlib import Path
 
 from .. import copy
 from ..drive import DriveClient, FolderScanner
+from ..drive.scanner import newest_per_path
 from ..drive.client import DriveClientConfig
 from ..core.constants import LOCKED_DRIVES
 from ..core.formatting import sanitize_drive_name
@@ -750,6 +751,8 @@ class BackgroundScanner:
                 scan_cache.set(cache_key, new_files)
                 debug_log(f"SCAN_DONE | setlist={display_name} | {time.time() - scan_start:.1f}s"
                           f" | files={len(new_files)} | api_calls={result.api_calls}")
+
+            new_files = newest_per_path(new_files)
 
             with self._lock:
                 if drive.get("files") is None:

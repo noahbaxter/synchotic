@@ -7,6 +7,7 @@ from src.config import DrivesConfig
 from src.core.formatting import count, format_size
 from src.drive import DriveClient
 from src.drive.client import DriveClientConfig
+from src.drive.scanner import newest_per_path
 from src.ui import show_add_custom_folder, show_confirmation
 from src.ui.primitives import wait_with_skip
 from src.ui.widgets import display
@@ -104,7 +105,7 @@ class DriveManagementMixin:
             return
 
         # Update folder dict with scan results
-        folder["files"] = [
+        folder["files"] = newest_per_path([
             {
                 "id": f["id"],
                 "path": f["path"],
@@ -114,15 +115,15 @@ class DriveManagementMixin:
                 "modified": f.get("modified", ""),
             }
             for f in result.files
-        ]
-        folder["file_count"] = len(result.files)
-        folder["total_size"] = sum(f.get("size", 0) for f in result.files)
+        ])
+        folder["file_count"] = len(folder["files"])
+        folder["total_size"] = sum(f.get("size", 0) for f in folder["files"])
 
         # Save to custom folders storage
         self.custom_folders.set_files(folder_id, folder["files"])
         self.custom_folders.save()
 
-        print(f"  {copy.SUCCESS}: {count(len(result.files), 'file')} "
+        print(f"  {copy.SUCCESS}: {count(len(folder['files']), 'file')} "
               f"({format_size(folder['total_size'])})")
         print()
         wait_with_skip(2)
