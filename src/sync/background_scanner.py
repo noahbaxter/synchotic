@@ -748,6 +748,8 @@ class BackgroundScanner:
                     for f in result.files
                 ]
                 scan_cache.set(cache_key, new_files)
+                debug_log(f"SCAN_DONE | setlist={display_name} | {time.time() - scan_start:.1f}s"
+                          f" | files={len(new_files)} | api_calls={result.api_calls}")
 
             with self._lock:
                 if drive.get("files") is None:
