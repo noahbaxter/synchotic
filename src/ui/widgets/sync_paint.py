@@ -5,13 +5,17 @@ line per resolved row instead.
 import shutil
 import sys
 import threading
+import time
 
-from chotic_ui.primitives.terminal import truncate_ansi
+from chotic_ui.primitives.terminal import (
+    CLEAR_SCREEN_HOME, ERASE_EOL, cursor_up, truncate_ansi,
+)
 
 from ..primitives import strip_ansi
 from .sync_screen import ACTIVE, OVERFLOW, CHROME_LINES
 
 REFRESH_HZ = 10  # slower and the bars visibly step
+RESIZE_SETTLE = 0.2  # seconds a window must hold a size before the frame follows it
 MIN_FRAME = CHROME_LINES + 1  # the header, one list row and the bottom border
 
 
@@ -31,11 +35,19 @@ class ScreenPainter:
     """Draws a SyncScreen, in place on a terminal or as lines to a pipe."""
 
     def __init__(self, screen, write=None, size=None, is_tty=None,
-                 banner_text=None, banner_rows=None):
+                 banner_text=None, banner_rows=None, settle=0.0, clock=time.monotonic):
         """`banner_text()` and `banner_rows()` are the app banner sitting above
         the frame, as every other screen has it. The frame fits under it, and a
-        redraw from scratch puts it back rather than wiping it."""
+        redraw from scratch puts it back rather than wiping it.
+
+        `settle` is how long the window must hold one size before the frame is
+        redrawn at it. The terminal is busy re-wrapping while it is dragged, so
+        writing a frame per step only adds to what it has to chew through."""
         self.screen = screen
+        self._settle = settle
+        self._clock = clock
+        self._seen_size = None
+        self._changed_at = 0.0
         self._write = write or _write_stdout
         self._size = size or _terminal_size
         self._banner_text = banner_text or (lambda: "")
@@ -74,11 +86,24 @@ class ScreenPainter:
             height = max(MIN_FRAME, min(height, total + CHROME_LINES))
         return max(40, width), height, banner
 
-    def paint(self) -> None:
-        """Draw the current state. Safe to call from any thread."""
+    def _resizing(self) -> bool:
+        """True while the window is still being dragged: it changed size less
+        than `settle` ago and there is a frame on screen to leave alone."""
+        size = self._size()
+        now = self._clock()
+        if size != self._seen_size:
+            self._seen_size, self._changed_at = size, now
+        return self._last_size is not None and now - self._changed_at < self._settle
+
+    def paint(self, force: bool = False) -> None:
+        """Draw the current state. Safe to call from any thread. `force` draws
+        even mid-resize, for the last frame of a run."""
         with self._lock:
             if not self.is_tty:
                 self._log_new_rows()
+                return
+
+            if self._resizing() and not force:
                 return
 
             layout = self._frame_size()
@@ -86,28 +111,31 @@ class ScreenPainter:
                 # Too short for any frame: leave the screen blank until it grows.
                 cols, rows = self._size()
                 if self._last_size != ("small", cols, rows):
-                    self._write("\x1b[2J\x1b[H")
+                    self._write(CLEAR_SCREEN_HOME)
                 self._last_size = ("small", cols, rows)
                 self._drawn = 0
                 return
             width, height, banner = layout
+            out = []
             first_without_banner = self._last_size is None and not banner
             if first_without_banner or self._last_size not in (None, (width, height, banner)):
                 # A resized terminal leaves the old block's rows behind. Every
                 # run resizes once too, when the compact frame opens out, so
                 # clearing without the banner lost it for the whole sync.
-                self._write("\x1b[2J\x1b[H" + (self._banner_text() if banner else ""))
+                out.append(CLEAR_SCREEN_HOME + (self._banner_text() if banner else ""))
                 self._drawn = 0
             self._last_size = (width, height, banner)
 
             if self._drawn:
-                self._write(f"\x1b[{self._drawn}A")
+                out.append(cursor_up(self._drawn))
             # The frame is never narrower than 40; clipped, so a line that
             # wrapped cannot push the frame down a row on every paint.
             cols = self._size()[0]
             for line in self.screen.frame(width, height):
-                self._write(f"\r{truncate_ansi(line, cols)}\x1b[K\n")
+                out.append(f"\r{truncate_ansi(line, cols)}{ERASE_EOL}\n")
             self._drawn = height
+            # One write, so the terminal never sees half a frame.
+            self._write("".join(out))
 
     def close(self) -> None:
         """Stop owning the block and leave the last frame where it is."""
@@ -160,7 +188,7 @@ class PaintLoop:
         self._stop.set()
         if self._thread:
             self._thread.join(timeout=1.0)
-        self.painter.paint()
+        self.painter.paint(force=True)
         self.painter.close()
 
     def __enter__(self):

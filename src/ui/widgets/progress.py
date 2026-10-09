@@ -14,7 +14,7 @@ from ... import copy
 from ...core.constants import CHART_MARKERS
 from ...core.formatting import extract_path_context
 from ...core.progress import ProgressTracker
-from .sync_paint import PaintLoop, ScreenPainter
+from .sync_paint import RESIZE_SETTLE, PaintLoop, ScreenPainter
 from .sync_screen import SyncScreen
 from . import sync_display as display
 
@@ -58,7 +58,7 @@ class FolderProgress(ProgressTracker):
         self.screen = SyncScreen()
         from ..components.header import header_height, header_text
         self.painter = ScreenPainter(self.screen, banner_text=header_text,
-                                     banner_rows=header_height)
+                                     banner_rows=header_height, settle=RESIZE_SETTLE)
         self._loop = None
         self._scan_stats_getter = None
         # What is blocking the run right now, shown ahead of the scan note.

@@ -198,6 +198,71 @@ class TestPaintingInPlace:
         assert term.out().endswith("\n")
 
 
+class TestResizing:
+    """A terminal being dragged is busy re-wrapping; the frame waits it out."""
+
+    def _painter(self, charts, term, clock):
+        return ScreenPainter(_screen(charts), write=term.write, size=lambda: term.size,
+                             is_tty=True, settle=0.2, clock=lambda: clock[0])
+
+    def test_a_frame_is_one_write(self, charts):
+        term = Terminal(height=14)
+        painter = ScreenPainter(_screen(charts), write=term.write,
+                                size=lambda: term.size, is_tty=True)
+        painter.paint()
+        painter.paint()
+
+        assert len(term.written) == 2
+
+    def test_nothing_is_drawn_while_the_size_keeps_changing(self, charts):
+        clock = [0.0]
+        term = Terminal(height=20)
+        painter = self._painter(charts, term, clock)
+        painter.paint()
+        term.written.clear()
+        for step in range(1, 6):
+            clock[0] += 0.05
+            term.size = (78, 20 - step)
+            painter.paint()
+
+        assert term.written == []
+
+    def test_the_frame_follows_once_the_size_holds(self, charts):
+        clock = [0.0]
+        term = Terminal(height=20)
+        painter = self._painter(charts, term, clock)
+        painter.paint()
+        clock[0] += 0.05
+        term.size = (78, 14)
+        painter.paint()
+        term.written.clear()
+        clock[0] += 0.25
+        painter.paint()
+
+        assert "\x1b[2J" in term.out()
+        assert len([ln for ln in term.lines() if ln.startswith("╭")]) == 1
+
+    def test_the_last_frame_is_drawn_even_mid_resize(self, charts):
+        clock = [0.0]
+        term = Terminal(height=20)
+        painter = self._painter(charts, term, clock)
+        painter.paint()
+        clock[0] += 0.05
+        term.size = (78, 14)
+        term.written.clear()
+        painter.paint(force=True)
+
+        assert "╭" in term.out()
+
+    def test_the_first_frame_does_not_wait(self, charts):
+        clock = [0.0]
+        term = Terminal(height=20)
+        painter = self._painter(charts, term, clock)
+        painter.paint()
+
+        assert "╭" in term.out()
+
+
 class TestPipedOutput:
     def test_no_escape_codes_reach_a_pipe(self, charts):
         term = Terminal()
