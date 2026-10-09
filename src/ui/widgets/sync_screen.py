@@ -7,12 +7,12 @@ frames on the terminal.
 import time
 from dataclasses import dataclass
 
-from chotic_ui.primitives.terminal import truncate_ansi
+from chotic_ui.primitives.terminal import pad_right, truncate_ansi, visible_len
 
 from ... import copy
 from ...core.formatting import count, format_size, format_speed
 from ..components.box import BOX_BL, BOX_BR, BOX_H, BOX_TL, BOX_TR, BOX_TL_DIV, BOX_TR_DIV, BOX_V
-from ..primitives import Colors, strip_ansi, truncate_text
+from ..primitives import Colors, truncate_text
 
 BAR_W = 10
 CTX_W = 16
@@ -38,14 +38,14 @@ def _append_right(content: str, right: str, width: int, shrink: bool = False) ->
     collision `shrink` truncates `content`; otherwise `right` is dropped."""
     if not right:
         return content
-    room = width - len(strip_ansi(right)) - RIGHT_MARGIN - 1
+    room = width - visible_len(right) - RIGHT_MARGIN - 1
     if room < 1:
         return content
-    if len(strip_ansi(content)) > room:
+    if visible_len(content) > room:
         if not shrink:
             return content
         content = truncate_ansi(content, room)
-    gap = width - len(strip_ansi(content)) - len(strip_ansi(right)) - RIGHT_MARGIN
+    gap = width - visible_len(content) - visible_len(right) - RIGHT_MARGIN
     return f"{content}{' ' * gap}{right}"
 
 
@@ -251,7 +251,7 @@ def format_row(entry: Entry, width: int, number_width: int = NUM_W) -> str:
     setlist, name. Fixed columns keep the name in place as the row resolves."""
     c = Colors
     if entry.state == OVERFLOW:
-        return f"  {c.MUTED_DIM}{truncate_text(entry.name, width - 2):<{width - 2}}{c.RESET}"
+        return f"  {c.MUTED_DIM}{pad_right(truncate_text(entry.name, width - 2), width - 2)}{c.RESET}"
 
     num_w = max(1, number_width)
     ctx_w, bar_w, status_w = _columns(width - num_w)
@@ -264,8 +264,8 @@ def format_row(entry: Entry, width: int, number_width: int = NUM_W) -> str:
     status = f"{glyph_color}{status}{c.RESET}"
     context = ""
     if ctx_w:
-        context = f"{c.DIM}{truncate_text(entry.context, ctx_w):<{ctx_w}}{c.RESET} "
-    name = f"{truncate_text(entry.name, name_w):<{name_w}}"
+        context = f"{c.DIM}{pad_right(truncate_text(entry.context, ctx_w), ctx_w)}{c.RESET} "
+    name = pad_right(truncate_text(entry.name, name_w), name_w)
     if entry.state != ACTIVE:
         name = f"{c.MUTED if entry.state == FAILED else ''}{name}{c.RESET}"
 
@@ -314,7 +314,7 @@ def _border(left: str, right: str, label: str, width: int, emphasize: bool = Fal
     c = Colors
     label = truncate_text(label, max(0, width - 8))
     plain_lead = f"{left}{BOX_H} {label} " if label else f"{left}{BOX_H}"
-    fill = BOX_H * max(0, width - len(strip_ansi(plain_lead)) - 1)
+    fill = BOX_H * max(0, width - visible_len(plain_lead) - 1)
     if label and emphasize:
         lead = f"{c.MUTED_DIM}{left}{BOX_H} {c.RESET}{label}{c.MUTED_DIM} "
     else:
@@ -332,10 +332,10 @@ def _line(content: str, width: int) -> str:
     a line that overruns wraps and shunts the whole frame."""
     c = Colors
     inner = content_width(width)
-    visible = len(strip_ansi(content))
+    visible = visible_len(content)
     if visible > inner:
         content = truncate_ansi(content, inner)
-        visible = len(strip_ansi(content))
+        visible = visible_len(content)
     content = content + " " * (max(0, inner - visible) + RIGHT_MARGIN)
     return f"{c.MUTED_DIM}{BOX_V}{c.RESET}{content}{c.MUTED_DIM}{BOX_V}{c.RESET}"
 
@@ -534,7 +534,7 @@ class SyncScreen:
         # The network box rides down the right of the header from the bar row;
         # too narrow for it and the figures go inline on the counts row.
         box = self._network_box()
-        if box and cw - len(strip_ansi(box[0])) < MIN_ROOM_BESIDE_BOX:
+        if box and cw - visible_len(box[0]) < MIN_ROOM_BESIDE_BOX:
             box = []
         beside = dict(enumerate(box, start=HEADER_ROWS.index("progress")))
 
@@ -554,7 +554,7 @@ class SyncScreen:
             else:
                 # Built against the room left beside the box, not cut after.
                 alongside = beside.get(i, "")
-                room = cw - (len(strip_ansi(alongside)) + RIGHT_MARGIN + 1
+                room = cw - (visible_len(alongside) + RIGHT_MARGIN + 1
                              if alongside else 0)
                 text = content[row](room)
                 if alongside:

@@ -36,6 +36,23 @@ class TestFrameShape:
             assert len(lines) == height
             assert {len(strip_ansi(line)) for line in lines} == {width}
 
+    def test_wide_characters_do_not_push_a_row_past_the_box(self):
+        """CJK names take two columns a character. Counted as one, the row ran
+        long, its border wrapped onto the next line, and every repaint
+        scrolled the frame (a stack of top borders on the Windows screen)."""
+        from chotic_ui.primitives.terminal import visible_len
+        screen = _screen()
+        for i, name in enumerate(["マクロス MACROSS 82-99 - Sunset.zip",
+                                  "東方 紅魔郷 ～ the Embodiment of Scarlet Devil.zip",
+                                  "Plain - Name.zip"]):
+            screen.entries.start(f"k{i}", name, context="CLUB_MIX1_SL_INDIVIDUAL",
+                                 total_bytes=1000)
+            screen.entries.finish(f"k{i}")
+
+        for width, height in ((60, 14), (78, 20), (120, 30)):
+            lines = screen.frame(width=width, height=height)
+            assert {visible_len(line) for line in lines} == {width}
+
     def test_a_whole_run_never_renders_a_frame_the_wrong_size(self, charts, seed):
         """Every frame of a real-shaped run, not three rows picked by hand."""
         screen = SyncScreen(title="Drummer's Monthly (2/6)")
