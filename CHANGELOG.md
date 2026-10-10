@@ -3,6 +3,17 @@
 Each `## x.y.z` section is published as that version's release notes. Releases fail
 without one for the version in `VERSION`.
 
+## 1.5.8
+*Faster purge on big libraries, and resizing the window no longer breaks the screen*
+
+- Sync screen: chart names with Japanese, Chinese or Korean characters no longer stack borders and break scrolling
+- A window that's too small clips the screen instead of scrolling it, and menus and lists redraw when you resize rather than with a key press (Windows)
+- Add custom drive: backspace and the arrow keys now work across a line that wrapped, Home, End and Delete work, and Ctrl+V pastes
+- Purge lists the library in parallel, and each drive's listing starts as soon as its downloads finish, helps a lot for network drives
+- Guitar Hero and Rock Band are now scanned once and declared synced until you rescan them manually
+- Two files at one path in a Drive folder: the newest is used, so Drummer's Monthly stops showing a download that can never finish
+- Log now records how long each setlist scan took
+
 ## 1.5.7
 *Mostly fixes for drives and setlists getting switched on or purged when they shouldn't*
 
