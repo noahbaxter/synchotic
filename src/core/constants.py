@@ -15,6 +15,13 @@ USER_OAUTH_SCOPES = ["https://www.googleapis.com/auth/drive.readonly"]
 # Archive extensions that contain charts
 CHART_ARCHIVE_EXTENSIONS = {".zip", ".7z", ".rar"}
 
+# Game rips (folder id -> name). Scanned once, never expired; a manual rescan
+# refreshes them. Pinned against drives.json by tests/sync/test_locked_drives.py.
+LOCKED_DRIVES = {
+    "1tQXLCLRbHQfJbnqq-WqliymvqO0mw8e5": "Guitar Hero",
+    "1jUnIkQ3k6j3vnMxxIAfyOewNB10Tygb8": "Rock Band",
+}
+
 
 import platform as _platform
 

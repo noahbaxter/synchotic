@@ -17,7 +17,9 @@ from pathlib import Path
 
 from .. import copy
 from ..drive import DriveClient, FolderScanner
+from ..drive.scanner import newest_per_path
 from ..drive.client import DriveClientConfig
+from ..core.constants import LOCKED_DRIVES
 from ..core.formatting import sanitize_drive_name
 from ..core.logging import debug_log
 
@@ -225,6 +227,12 @@ class BackgroundScanner:
             if not enabled_ids:
                 return True  # No enabled setlists = ready (nothing to download)
             return all(sid in done for sid in enabled_ids)
+
+    def enabled_setlist_keys(self, drive_id: str) -> set[str]:
+        """Keys of a drive's enabled setlists, scanned or not."""
+        with self._lock:
+            return {k for k in self._drive_setlist_ids.get(drive_id, [])
+                    if k in self._enabled_setlist_ids}
 
     def is_scanned(self, drive_id: str) -> bool:
         """Check if ALL of a drive's setlists are scanned (stats complete)."""
@@ -716,7 +724,9 @@ class BackgroundScanner:
             # Per drive, not per folder: the paths carry this drive's name for
             # the setlist, and another drive's copy of the folder has its own.
             cache_key = f"{setlist.drive_id}_{setlist.setlist_id}"
-            cached_files = None if self._force_rescan else scan_cache.get(cache_key)
+            max_age = float("inf") if setlist.drive_id in LOCKED_DRIVES else None
+            cached_files = (None if self._force_rescan
+                            else scan_cache.get(cache_key, max_age))
 
             if cached_files is not None:
                 new_files = cached_files
@@ -739,6 +749,10 @@ class BackgroundScanner:
                     for f in result.files
                 ]
                 scan_cache.set(cache_key, new_files)
+                debug_log(f"SCAN_DONE | setlist={display_name} | {time.time() - scan_start:.1f}s"
+                          f" | files={len(new_files)} | api_calls={result.api_calls}")
+
+            new_files = newest_per_path(new_files)
 
             with self._lock:
                 if drive.get("files") is None:

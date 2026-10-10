@@ -10,6 +10,7 @@ import json
 import os
 import shutil
 import threading
+from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
@@ -385,7 +386,8 @@ class ScanCache:
     def __init__(self):
         self._dir = get_cache_dir() / self.CACHE_DIR
 
-    def get(self, setlist_id: str) -> list[dict] | None:
+    def get(self, setlist_id: str, max_age: float | None = None) -> list[dict] | None:
+        max_age = self.MAX_AGE_SECONDS if max_age is None else max_age
         path = self._dir / f"{setlist_id}.json"
         if not path.exists():
             return None
@@ -396,7 +398,7 @@ class ScanCache:
                 return None
             scanned_at = datetime.fromisoformat(data["scanned_at"])
             age = (datetime.now(timezone.utc) - scanned_at).total_seconds()
-            if age > self.MAX_AGE_SECONDS:
+            if age > max_age:
                 return None
             return data["files"]
         except (json.JSONDecodeError, KeyError, OSError, ValueError):
@@ -506,6 +508,28 @@ def clear_folder_cache(folder_path: Path):
 WALK_REPORT_EVERY = 250
 
 
+WALK_WORKERS = 32
+
+
+def _list_dir(dir_path: str, prefix: str):
+    """(files {rel_path: size}, subdirs [(path, rel prefix)]) of one directory."""
+    files, subdirs = {}, []
+    try:
+        with os.scandir(dir_path) as entries:
+            for entry in entries:
+                rel_path = f"{prefix}{normalize_fs_name(entry.name)}"
+                if entry.is_file(follow_symlinks=False):
+                    try:
+                        files[rel_path] = entry.stat(follow_symlinks=False).st_size
+                    except OSError:
+                        pass
+                elif entry.is_dir(follow_symlinks=False):
+                    subdirs.append((entry.path, f"{rel_path}/"))
+    except OSError:
+        pass
+    return files, subdirs
+
+
 def scan_local_files(folder_path: Path, on_progress=None) -> dict[str, int]:
     """
     Scan local folder and return dict of {relative_path: size}.
@@ -524,29 +548,49 @@ def scan_local_files(folder_path: Path, on_progress=None) -> dict[str, int]:
     if not folder_path.exists():
         return local_files
 
-    def scan_dir(dir_path: Path, prefix: str = ""):
-        try:
-            with os.scandir(dir_path) as entries:
-                for entry in entries:
-                    name = normalize_fs_name(entry.name)
-                    rel_path = f"{prefix}{name}" if prefix else name
-                    if entry.is_file(follow_symlinks=False):
-                        try:
-                            local_files[rel_path] = entry.stat(follow_symlinks=False).st_size
-                        except OSError:
-                            pass
-                        if on_progress and len(local_files) % WALK_REPORT_EVERY == 0:
-                            on_progress(len(local_files))
-                    elif entry.is_dir(follow_symlinks=False):
-                        scan_dir(Path(entry.path), f"{rel_path}/")
-        except OSError:
-            pass
-
-    scan_dir(folder_path)
+    # One directory per task: over SMB almost all of the time is waiting on a
+    # round trip per directory, so many at once. Merged here, on one thread.
+    reported = 0
+    with ThreadPoolExecutor(WALK_WORKERS) as pool:
+        pending = {pool.submit(_list_dir, str(folder_path), "")}
+        while pending:
+            done, pending = wait(pending, return_when=FIRST_COMPLETED)
+            for future in done:
+                files, subdirs = future.result()
+                local_files.update(files)
+                pending.update(pool.submit(_list_dir, path, prefix)
+                               for path, prefix in subdirs)
+            if on_progress and len(local_files) // WALK_REPORT_EVERY > reported:
+                reported = len(local_files) // WALK_REPORT_EVERY
+                on_progress(len(local_files))
     if on_progress:
         on_progress(len(local_files))
     _cache.local_files[cache_key] = local_files
     return local_files
+
+
+class DriveWalks:
+    """Walks drives' folders in the background, one at a time, so that purge
+    finds them already listed. Over a network share a walk is minutes, and a
+    drive whose downloads are done can be walked while the others download."""
+
+    def __init__(self):
+        self._pool = ThreadPoolExecutor(1)
+        self._futures = {}
+
+    def start(self, drive_id: str, folder_path: Path):
+        if drive_id not in self._futures:
+            self._futures[drive_id] = self._pool.submit(scan_local_files, folder_path)
+
+    def wait(self):
+        """Until every walk started has finished."""
+        for future in self._futures.values():
+            future.result()
+        self._pool.shutdown()
+
+    def drop(self):
+        """Nothing will use them: stop the ones not yet begun."""
+        self._pool.shutdown(wait=False, cancel_futures=True)
 
 
 def _scan_actual_charts_uncached(folder_path: Path) -> tuple[int, int]:

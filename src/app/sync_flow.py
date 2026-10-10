@@ -2,10 +2,12 @@
 then handing off to verify and purge."""
 
 from src import copy
+from src.config.settings import purges
 from src.core.formatting import count, format_duration, sanitize_drive_name
 from src.core.logging import debug_log
 from src.core.paths import get_download_path
 from src.sync import purge_all_folders
+from src.sync.cache import DriveWalks
 from src.sync.markers import rebuild_markers_from_disk
 from src.ui import compute_main_menu_cache, print_header
 from src.ui.primitives import clear_screen, wait_with_skip
@@ -120,6 +122,8 @@ class SyncFlowMixin:
 
         menu_cache = None
         was_cancelled = False
+        # Only when purge will walk the drives anyway.
+        self._drive_walks = DriveWalks() if purges(self.user_settings) else None
         try:
             # Download setlists as they become ready from scanner
             t0 = _time.time()
@@ -160,6 +164,9 @@ class SyncFlowMixin:
                 progress.set_phase(copy.PURGE)
                 progress.set_title("")
                 t0 = _time.time()
+                if self._drive_walks:
+                    self._drive_walks.wait()
+                    debug_log(f"TIMING | drive walks finished: {_time.time() - t0:.1f}s after downloads")
                 purged_ids = purge_all_folders(
                     self.folders, get_download_path(), self.user_settings, failed_setlists,
                     progress=progress, cancel_check=lambda: progress.cancelled,
@@ -182,6 +189,8 @@ class SyncFlowMixin:
                 )
                 debug_log(f"TIMING | menu_recompute: {_time.time() - t0:.1f}s")
         finally:
+            if self._drive_walks:
+                self._drive_walks.drop()
             active_keys[0].stop()
             progress.close()
             progress.print_error_summary()
@@ -205,6 +214,14 @@ class SyncFlowMixin:
         # NOW we can say "done" — because it actually is
         wait_with_skip(5, copy.CONTINUING_IN)
         return menu_cache
+
+    def _walk_if_drive_done(self, drive: dict, downloaded_ids: set) -> None:
+        """Purge lists every drive's folder. Once a drive's setlists are all
+        down, start its listing while the others still download."""
+        walks = getattr(self, "_drive_walks", None)
+        drive_id = drive.get("folder_id", "")
+        if walks and self._background_scanner.enabled_setlist_keys(drive_id) <= downloaded_ids:
+            walks.start(drive_id, get_download_path() / drive.get("name", ""))
 
     def _sync_folders_sequentially(self, progress) -> tuple[bool, set[str], int, int, float]:
         """
@@ -301,6 +318,7 @@ class SyncFlowMixin:
                     was_cancelled = True
                 else:
                     progress.advance_run()
+                    self._walk_if_drive_done(drive, downloaded_ids)
             else:
                 # Nothing ready — are we done? Every enabled setlist downloaded
                 # or failed is enough. Waiting on is_done() waited for every
